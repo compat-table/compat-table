@@ -1,0 +1,548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>ECMAScript 5 compatibility tables</title>
+    <style type="text/css">
+      body { font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif; margin: 0; }
+      th { text-align: center; padding-left: 1em; padding-right: 1em; padding-bottom: 1em ; }
+      #body { padding-left: 1em; }
+      td { background: #eee; padding-left: 0.5em; }
+      .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
+      .yes { background: green; }
+      .no { background: red; }
+      .test-name { min-width: 13em; }
+      #header { background: #454545; margin-bottom: 1em; }
+      #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
+      .warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
+      .separator { padding: 0; height: 0.5em; }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1><span title="ECMA-262 5th edition">ECMAScript 5</span> compatibility table</h1>
+    </div>
+    <div id="body">
+      <p class="warning">Please note that these tests represent <strong>existence</strong>, not functionality or full conformance. I hope to test conformance sometime in the future.</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="test-name"></th>
+
+            <th><abbr title="Internet Explorer">IE</abbr> 7</th>
+            <th><abbr title="Inernet Explorer">IE</abbr> 8</th>
+
+            <th><abbr title="Firefox">FF</abbr> 3.5</th>
+            <th><abbr title="Firefox">FF</abbr> 3.6</th>
+            <th><abbr title="Firefox">FF</abbr> 3.7a</th>
+
+            <th><abbr title="Safari">Saf</abbr> 3.2</th>
+            <th><abbr title="Safari">Saf</abbr> 4</th>
+
+            <th><abbr title="Chrome">Ch</abbr> 5</th>
+
+            <th><abbr title="Opera">Op</abbr> 10.10</th>
+            <th><abbr title="Opera">Op</abbr> 10.50</th>
+            
+            <th><abbr title="Konqueror">Konq</abbr> 4.3</th>
+          </tr>
+        </thead>
+        <tfoot></tfoot>
+        <tbody>
+          <tr>
+            <td>Object.create</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.defineProperty</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes*</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.defineProperties</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.getPrototypeOf</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.keys</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.seal</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.freeze</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.getOwnPropertyDescriptor</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <td>Object.getOwnPropertyNames</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
+          <tr>
+            <td>Date.prototype.toISOString</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="no">No</td>
+          </tr>
+
+          <tr>
+            <td>Date.now</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+
+          <tr>
+            <td>Array.isArray</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="no">No</td>
+          </tr>
+
+          <tr>
+            <td>JSON</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="no">No</td>
+          </tr>
+
+          <tr>
+            <td>Function.prototype.bind</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+          </tr>
+
+          <tr>
+            <td>String.prototype.trim</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="no">No</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
+          <tr>
+            <td>Array.prototype.indexOf</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.lastIndexOf</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.every</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.some</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.forEach</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.map</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.filter</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.reduce</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+          <tr>
+            <td>Array.prototype.reduceRight</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+
+            <td class="yes">Yes</td>
+
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes">Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
