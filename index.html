@@ -9,7 +9,8 @@
       th { text-align: center; padding-left: 1em; padding-right: 1em; padding-bottom: 1em ; }
       #body { padding-left: 1em; }
       td { background: #eee; padding-left: 0.5em; }
-      .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
+      .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; 
+                  font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
       .yes { background: green; }
       .no { background: red; }
       .test-name { min-width: 13em; }
@@ -675,8 +676,40 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
           </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
+          <tr>
+            <td>Strict mode <sup><a href="#strict-mode-note">[1]</a></sup></td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            
+            <td class="no">No</td>
+            
+            <td class="yes">Yes</td>
+            <td class="no">No</td>
+          </tr>
         </tbody>
       </table>
+      <p id="strict-mode-note">
+        <sup>[1]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
+          <code>(function(){ "use strict"; return !this; })();</code>
+      </p>
     </div>
   </body>
 </html>
