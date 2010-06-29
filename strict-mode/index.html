@@ -151,19 +151,19 @@
       (function(){
         var error;
         try {
-          eval('var o = { }; o.eval = 1;');
+          eval('({ set x(eval){ } })');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>var o = { }; o.eval = 1;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>({ set x(eval){ } })</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
         var error;
         try {
-          eval('var o = { }; o.arguments = 1;');
+          eval('({ set x(arguments){ } })');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>var o = { }; o.arguments = 1;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>({ set x(arguments){ } })</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
