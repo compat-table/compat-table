@@ -17,6 +17,7 @@
       .no { background: red; }
       .test-name { min-width: 13em; }
       #header { background: #454545; margin-bottom: 1em; }
+      #header a { color: #eee; text-decoration: none; }
       #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
       .warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
       .separator { padding: 0; height: 0.5em; }
@@ -35,7 +36,7 @@
   <body>
     <div id="header">
       <h1>
-        <span title="ECMA-262 5th edition">ECMAScript 5</span> compatibility table
+        <a href="http://kangax.github.com/es5-compat-table/"><span title="ECMA-262 5th edition">ECMAScript 5</span> compatibility table</a>
         <span style="font-size:0.8em;float:right;font-weight:normal;">by 
           <a href="http://twitter.com/kangax/" style="color:#eee">kangax</a>
         </span>
@@ -689,7 +690,8 @@
             <th colspan="11" class="separator"></th>
           </tr>
           <tr>
-            <td>Strict mode <sup><a href="#strict-mode-note">[2]</a></sup></td>
+            <td><a href="http://kangax.github.com/es5-compat-table/strict-mode/" style="text-decoration: underline; font-size: 1em">Strict mode</a> 
+              <sup><a href="#strict-mode-note">[2]</a></sup></td>
 
             <td class="no">No</td>
             <td class="no">No</td>
