@@ -40,7 +40,7 @@
         document.body.appendChild(el);
       }
       function colorResult(result) {
-        return '<span class="' + (result === true ? "pass" : "fail") + '">' + result + '</span>';
+        return '<span class="' + (result === true ? "pass" : "fail") + '">' + (result === true ? 'Yes' : 'No') + '</span>';
       }
       
       (function(){
