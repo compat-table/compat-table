@@ -136,24 +136,6 @@
       })();
       
       (function(){
-        var error;
-        try {
-          eval('({ eval: 1 })');
-        }
-        catch (err) { error = err; }
-        print('<span class="test"><code>({ eval: 1 });</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
-      })();
-      
-      (function(){
-        var error;
-        try {
-          eval('({ arguments: 1 });');
-        }
-        catch (err) { error = err; }
-        print('<span class="test"><code>({ arguments: 1 });</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
-      })();
-      
-      (function(){
         var error1, error2;
         try {
           eval('({ set x(eval){ } })');
