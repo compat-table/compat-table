@@ -40,11 +40,11 @@
         document.body.appendChild(el);
       }
       function colorResult(result) {
-        return '<span class="' + (result === true ? "pass" : "fail") + '">' + (result === true ? 'Yes' : 'No') + '</span>';
+        return '<span class="' + (result === true ? "pass" : "fail") + '">' + (result === true ? 'Yes' : 'No') + '<\/span>';
       }
       
       (function(){
-        print('<span class="test"><code>parseInt("08") !== 0;</code></span>' + colorResult(parseInt('08') !== 0));
+        print('<span class="test"><code>parseInt("08") !== 0;<\/code><\/span>' + colorResult(parseInt('08') !== 0));
       })();
       
       (function(){
@@ -53,7 +53,7 @@
           __i_dont_exist = 1;
         } 
         catch (err) { error = err; }
-        print('<span class="test"><code>__i_dont_exist = 1;</code> is a ReferenceError</span>' + colorResult(error instanceof ReferenceError));
+        print('<span class="test"><code>__i_dont_exist = 1;<\/code> is a ReferenceError<\/span>' + colorResult(error instanceof ReferenceError));
       })();
       
       (function(){
@@ -62,7 +62,7 @@
           eval('eval = 1;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>eval = 1;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>eval = 1;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -71,7 +71,7 @@
           eval('arguments = 1;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>arguments = 1;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>arguments = 1;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -80,7 +80,7 @@
           eval('eval++;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>eval++;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>eval++;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -89,7 +89,7 @@
           eval('arguments++;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>arguments++;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>arguments++;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -98,7 +98,7 @@
           (function(){ return arguments.caller; })();
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>arguments.caller;</code> is a TypeError</span>' + colorResult(error instanceof TypeError));
+        print('<span class="test"><code>arguments.caller;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
       
       (function(){
@@ -107,7 +107,7 @@
           (function(){ return arguments.callee; })();
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>arguments.callee;</code> is a TypeError</span>' + colorResult(error instanceof TypeError));
+        print('<span class="test"><code>arguments.callee;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
       
       (function(){
@@ -115,7 +115,7 @@
           x = 2;
           return arguments[0] === 1;
         })(1);
-        print('<span class="test"><code>(function(x){ x = 2; return arguments[0] === 1; })(1);</code></span>' + colorResult(result));
+        print('<span class="test"><code>(function(x){ x = 2; return arguments[0] === 1; })(1);<\/code><\/span>' + colorResult(result));
       })();
       
       (function(){
@@ -123,7 +123,7 @@
           arguments[0] = 2;
           return x === 1;
         })(1);
-        print('<span class="test"><code>(function(x){ arguments[0] = 2; return x === 1; })(1);</code></span>' + colorResult(result));
+        print('<span class="test"><code>(function(x){ arguments[0] = 2; return x === 1; })(1);<\/code><\/span>' + colorResult(result));
       })();
       
       (function(){
@@ -132,7 +132,7 @@
           eval('({ x: 1, x: 1 })');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>({ x: 1, x: 1 });</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>({ x: 1, x: 1 });<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -145,7 +145,7 @@
           eval('({ set x(y){ } })');
         } 
         catch(err) { error2 = err; }
-        print('<span class="test"><code>({ set x(eval){ } });</code> is a SyntaxError</span>' + 
+        print('<span class="test"><code>({ set x(eval){ } });<\/code> is a SyntaxError<\/span>' + 
           colorResult(error1 instanceof SyntaxError && error2 === undefined));
       })();
       
@@ -159,7 +159,7 @@
           eval('({ set x(y){ } })');
         }
         catch(err) { error2 = err; }
-        print('<span class="test"><code>({ set x(arguments){ } });</code> is a SyntaxError</span>' + 
+        print('<span class="test"><code>({ set x(arguments){ } });<\/code> is a SyntaxError<\/span>' + 
           colorResult(error1 instanceof SyntaxError && error2 === undefined));
       })();
       
@@ -170,17 +170,17 @@
           __some_unique_variable;
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>eval(\'var x\'); x;</code> is a ReferenceError</span>' + colorResult(error instanceof ReferenceError));
+        print('<span class="test"><code>eval(\'var x\'); x;<\/code> is a ReferenceError<\/span>' + colorResult(error instanceof ReferenceError));
       })();
       
       (function(){
         var result = (function(){ return this === undefined; })();
-        print('<span class="test"><code>(function(){ return this === undefined; })();</code></span>' + colorResult(result));
+        print('<span class="test"><code>(function(){ return this === undefined; })();<\/code><\/span>' + colorResult(result));
       })();
       
       (function(){
         var result = (function(){ return this === undefined; }).call();
-        print('<span class="test"><code>(function(){ return this === undefined; }).call();</code></span>' + colorResult(result));
+        print('<span class="test"><code>(function(){ return this === undefined; }).call();<\/code><\/span>' + colorResult(result));
       })();
       
       (function(){
@@ -189,7 +189,7 @@
           eval('var x; delete x;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>var x; delete x;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>var x; delete x;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -198,7 +198,7 @@
           eval('delete (function(){}).length;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>delete (function(){}).length;</code> is a TypeError</span>' + colorResult(error instanceof TypeError));
+        print('<span class="test"><code>delete (function(){}).length;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
       
       (function(){
@@ -207,7 +207,7 @@
           eval('var eval;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>var eval;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>var eval;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -216,7 +216,7 @@
           eval('var arguments;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>var arguments;</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>var arguments;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -225,7 +225,7 @@
           eval('with({}) { }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>with({}){ }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>with({}){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -234,7 +234,7 @@
           eval('try { } catch (eval) { }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>try { } catch (eval) { }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>try { } catch (eval) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -243,7 +243,7 @@
           eval('try { } catch (arguments) { }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>try { } catch (arguments) { }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>try { } catch (arguments) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -252,7 +252,7 @@
           eval('function f(eval) { }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>function f(eval) { }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>function f(eval) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -261,7 +261,7 @@
           eval('function f(arguments) { }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>function f(arguments) { }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>function f(arguments) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -270,7 +270,7 @@
           eval('function f(x, x) { }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>function f(x, x) { }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>function f(x, x) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -279,7 +279,7 @@
           eval('(function(){}).caller');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>(function(){}).caller;</code> is a TypeError</span>' + colorResult(error instanceof TypeError));
+        print('<span class="test"><code>(function(){}).caller;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
       
       (function(){
@@ -288,7 +288,7 @@
           eval('(function(){}).arguments');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>(function(){}).arguments;</code> is a TypeError</span>' + colorResult(error instanceof TypeError));
+        print('<span class="test"><code>(function(){}).arguments;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
       
       (function(){
@@ -297,7 +297,7 @@
           eval('function eval(){ }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>function eval(){ }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>function eval(){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
@@ -306,7 +306,7 @@
           eval('function arguments(){ }');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>function arguments(){ }</code> is a SyntaxError</span>' + colorResult(error instanceof SyntaxError));
+        print('<span class="test"><code>function arguments(){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
     </script>
   </body>

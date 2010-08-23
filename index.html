@@ -23,6 +23,7 @@
       .separator { padding: 0; height: 0.5em; }
       table { margin-bottom: 2em; }
       p { margin-bottom: 0.5em; margin-top: 0; }
+      .this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px; font-size: 13px; vertical-align: top; }
     </style>
     <script type="text/javascript">
       var _gaq = [['_setAccount', 'UA-1128111-24'], ['_trackPageview']];
@@ -31,7 +32,14 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+      
+      function test(expression) {
+        var result = expression ? 'Yes' : 'No';
+        document.write('<td class="' + result.toLowerCase() + '">' + result + '</td><td></td>');
+      }
+      document.write('<style>td:nth-child(3) { outline: #aaf solid 3px; }</style>');
     </script>
+    
   </head>
   <body>
     <div id="header">
@@ -46,21 +54,29 @@
       <p class="warning">Please note that these tests represent <strong>existence</strong>, not functionality or full conformance. 
         I hope to test conformance sometime in the future.</p>
       <table>
+        <colgroup>
+          <col>
+          <col class="this-browser-col">
+        </colgroup>
         <thead>
           <tr>
             <th class="test-name"></th>
-
+            
+            <script>
+              document.write('<th class="this-browser" title="' + navigator.userAgent + '">This browser</th><th></th>');
+            </script>
+            
             <th><abbr title="Internet Explorer">IE</abbr> 7</th>
             <th><abbr title="Inernet Explorer">IE</abbr> 8</th>
-            <th><abbr title="Inernet Explorer">IE</abbr> 9 pre 3</th>
+            <th><abbr title="Inernet Explorer 9 Platform Preview 4">IE 9 PP4</abbr></th>
 
             <th><abbr title="Firefox">FF</abbr> 3.5/3.6</th>
-            <th><abbr title="Firefox">FF</abbr> 4.0b2pre</th>
+            <th><abbr title="Firefox">FF</abbr> 4.0b5pre</th>
 
             <th><abbr title="Safari">Saf</abbr> 3.2</th>
             <th><abbr title="Safari">Saf</abbr> 4</th>
             <th><abbr title="Safari">Saf</abbr> 5</th>
-            <th>WebKit <span title="Jun 28, 2010">r61979</span></th>
+            <th>WebKit <span title="Aug 23, 2010">r65727</span></th>
 
             <th><abbr title="Chrome">Ch</abbr> 5</th>
 
@@ -77,6 +93,10 @@
         <tbody>
           <tr>
             <td>Object.create</td>
+            
+            <script>
+              test(typeof Object.create == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -103,6 +123,10 @@
           <tr>
             <td>Object.defineProperty</td>
 
+            <script>
+              test(typeof Object.defineProperty == 'function');
+            </script>
+            
             <td class="no">No</td>
             <td class="yes">Yes <a href="#define-property-ie-note"><sup>[1]</sup></a></td>
             <td class="yes">Yes</td>
@@ -127,6 +151,10 @@
           </tr>
           <tr>
             <td>Object.defineProperties</td>
+            
+            <script>
+              test(typeof Object.defineProperties == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -152,6 +180,10 @@
           </tr>
           <tr>
             <td>Object.getPrototypeOf</td>
+            
+            <script>
+              test(typeof Object.getPrototypeOf == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -177,6 +209,10 @@
           </tr>
           <tr>
             <td>Object.keys</td>
+            
+            <script>
+              test(typeof Object.keys == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -202,6 +238,10 @@
           </tr>
           <tr>
             <td>Object.seal</td>
+            
+            <script>
+              test(typeof Object.seal == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -227,6 +267,10 @@
           </tr>
           <tr>
             <td>Object.freeze</td>
+            
+            <script>
+              test(typeof Object.freeze == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -238,9 +282,9 @@
             <td class="no">No</td>
             <td class="no">No</td>
             <td class="no safari5">No</td>
-            <td class="no">No</td>
+            <td class="no webkit">No</td>
 
-            <td class="no">No</td>
+            <td class="no chrome">No</td>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -251,8 +295,129 @@
             <td class="yes">Yes</td>
           </tr>
           <tr>
-            <td>Object.getOwnPropertyDescriptor</td>
+            <td>Object.preventExtensions</td>
+            
+            <script>
+              test(typeof Object.preventExtensions == 'function');
+            </script>
 
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
+
+            <td class="no firefox3">No</td>
+            <td class="no firefox4">No</td>
+                       
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+                       
+            <td class="no chrome">No</td>
+                       
+            <td class="no">No</td>
+            <td class="no">No</td>
+                       
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          
+          <tr>
+            <td>Object.isSealed</td>
+            
+            <script>
+              test(typeof Object.isSealed == 'function');
+            </script>
+
+            <td class="no id7">No</td>
+            <td class="no id8">No</td>
+            <td class="yes id9">Yes</td>
+
+            <td class="no firefox3">No</td>
+            <td class="no firefox4">No</td>
+                       
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+                       
+            <td class="no chrome">No</td>
+                       
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+                       
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>Object.isFrozen</td>
+            
+            <script>
+              test(typeof Object.isFrozen == 'function');
+            </script>
+
+            <td class="no id7">No</td>
+            <td class="no id8">No</td>
+            <td class="yes id9">Yes</td>
+
+            <td class="no firefox3">No</td>
+            <td class="no firefox4">No</td>
+                       
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+                       
+            <td class="no chrome">No</td>
+                       
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+                       
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>Object.isExtensible</td>
+            
+            <script>
+              test(typeof Object.isExtensible == 'function');
+            </script>
+
+            <td class="no id7">No</td>
+            <td class="no id8">No</td>
+            <td class="yes id9">Yes</td>
+
+            <td class="no firefox3">No</td>
+            <td class="no firefox4">No</td>
+                       
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+                       
+            <td class="no chrome">No</td>
+                       
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+                       
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>Object.getOwnPropertyDescriptor</td>
+            
+            <script>
+              test(typeof Object.getOwnPropertyDescriptor == 'function');
+            </script>
+            
             <td class="no">No</td>
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
@@ -277,13 +442,17 @@
           </tr>
           <tr>
             <td>Object.getOwnPropertyNames</td>
+            
+            <script>
+              test(typeof Object.getOwnPropertyNames == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
             <td class="yes">Yes</td>
 
             <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="yes">Yes</td>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -305,6 +474,10 @@
           </tr>
           <tr>
             <td>Date.prototype.toISOString</td>
+            
+            <script>
+              test(typeof Date.prototype.toISOString == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -331,6 +504,10 @@
 
           <tr>
             <td>Date.now</td>
+            
+            <script>
+              test(typeof Date.now == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -357,6 +534,10 @@
 
           <tr>
             <td>Array.isArray</td>
+            
+            <script>
+              test(typeof Array.isArray == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -384,6 +565,10 @@
           <tr>
             <td>JSON</td>
 
+            <script>
+              test(typeof JSON == 'object');
+            </script>
+            
             <td class="no">No</td>
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
@@ -409,6 +594,10 @@
 
           <tr>
             <td>Function.prototype.bind</td>
+            
+            <script>
+              test(typeof Function.prototype.bind == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -435,6 +624,10 @@
 
           <tr>
             <td>String.prototype.trim</td>
+            
+            <script>
+              test(typeof String.prototype.trim == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -463,6 +656,10 @@
           </tr>
           <tr>
             <td>Array.prototype.indexOf</td>
+            
+            <script>
+              test(typeof Array.prototype.indexOf == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -488,6 +685,10 @@
           </tr>
           <tr>
             <td>Array.prototype.lastIndexOf</td>
+            
+            <script>
+              test(typeof Array.prototype.lastIndexOf == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -513,6 +714,10 @@
           </tr>
           <tr>
             <td>Array.prototype.every</td>
+            
+            <script>
+              test(typeof Array.prototype.every == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -538,6 +743,10 @@
           </tr>
           <tr>
             <td>Array.prototype.some</td>
+            
+            <script>
+              test(typeof Array.prototype.some == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -563,6 +772,10 @@
           </tr>
           <tr>
             <td>Array.prototype.forEach</td>
+            
+            <script>
+              test(typeof Array.prototype.forEach == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -588,6 +801,10 @@
           </tr>
           <tr>
             <td>Array.prototype.map</td>
+            
+            <script>
+              test(typeof Array.prototype.map == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -613,6 +830,10 @@
           </tr>
           <tr>
             <td>Array.prototype.filter</td>
+            
+            <script>
+              test(typeof Array.prototype.filter == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -638,6 +859,10 @@
           </tr>
           <tr>
             <td>Array.prototype.reduce</td>
+            
+            <script>
+              test(typeof Array.prototype.reduce == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -663,6 +888,10 @@
           </tr>
           <tr>
             <td>Array.prototype.reduceRight</td>
+            
+            <script>
+              test(typeof Array.prototype.reduceRight == 'function');
+            </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
@@ -692,6 +921,10 @@
           <tr>
             <td><a href="http://kangax.github.com/es5-compat-table/strict-mode/" style="text-decoration: underline; font-size: 1em">Strict mode</a> 
               <sup><a href="#strict-mode-note">[2]</a></sup></td>
+            
+              <script>
+                test((function(){"use strict"; return !this; })());
+              </script>
 
             <td class="no">No</td>
             <td class="no">No</td>
