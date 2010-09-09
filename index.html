@@ -4,27 +4,32 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>ECMAScript 5 compatibility table</title>
+    
     <style type="text/css">
       body { font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif; margin: 0; }
       th { text-align: center; padding-left: 1em; padding-right: 1em; padding-bottom: 1em ; }
-      #body { padding-left: 1em; }
       td { background: #eee; padding-left: 0.5em; }
       td a { text-decoration: none; font-size: 14px; }
+      table { margin-bottom: 2em; }
+      p { margin-bottom: 0.5em; margin-top: 0; }
+      
+      #body { padding-left: 1em; }
+      #header { background: #454545; margin-bottom: 1em; }
+      #header a { color: #eee; text-decoration: none; }
+      #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
+      
       .yes a, .no a { color: #fff; font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;  }
       .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; 
                   font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
       .yes { background: green; }
       .no { background: red; }
-      .test-name { min-width: 13em; }
-      #header { background: #454545; margin-bottom: 1em; }
-      #header a { color: #eee; text-decoration: none; }
-      #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
+      .test-name { width: 225px; }
       .warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
       .separator { padding: 0; height: 0.5em; }
-      table { margin-bottom: 2em; }
-      p { margin-bottom: 0.5em; margin-top: 0; }
-      .this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px; font-size: 13px; vertical-align: top; }
+      .this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px; 
+        font-size: 13px; vertical-align: top; }
     </style>
+    
     <script type="text/javascript">
       var _gaq = [['_setAccount', 'UA-1128111-24'], ['_trackPageview']];
       (function() {
@@ -76,7 +81,7 @@
             <th><abbr title="Safari 3.2">SF 3.2</abbr></th>
             <th><abbr title="Safari 4">SF 4</abbr></th>
             <th><abbr title="Safari 5">SF 5</abbr></th>
-            <th title="Webkit r65727 (Aug 23, 2010)">WebKit</th>
+            <th title="Webkit r66961 (Sep 8, 2010)">WebKit</th>
 
             <th><abbr title="Chrome 5 (5.0.375.127)">CH 5</abbr></th>
             <th><abbr title="Chrome 6 (6.0.472.25 dev)">CH 6</abbr></th>
@@ -450,8 +455,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Object.getOwnPropertyNames</td>
@@ -480,8 +485,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <th colspan="11" class="separator"></th>
@@ -513,8 +518,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
 
           <tr>
@@ -544,8 +549,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
 
           <tr>
@@ -575,8 +580,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
 
           <tr>
@@ -606,8 +611,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
 
           <tr>
@@ -637,8 +642,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
 
           <tr>
@@ -668,8 +673,8 @@
             
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <th colspan="11" class="separator"></th>
@@ -701,8 +706,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.lastIndexOf</td>
@@ -731,8 +736,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.every</td>
@@ -761,8 +766,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.some</td>
@@ -791,8 +796,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.forEach</td>
@@ -821,8 +826,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.map</td>
@@ -851,8 +856,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.filter</td>
@@ -881,8 +886,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.reduce</td>
@@ -911,8 +916,8 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>Array.prototype.reduceRight</td>
@@ -941,31 +946,42 @@
             
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <th colspan="11" class="separator"></th>
           </tr>
           <tr>
-            <td><a href="http://kangax.github.com/es5-compat-table/strict-mode/" style="text-decoration: underline; font-size: 1em">Strict mode</a> 
-              <sup><a href="#strict-mode-note">[2]</a></sup></td>
+            <td>
+              Reserved words as property names
+              <sup><a href="#reserved-words-note">[2]</a></sup></td>
+            </td>
             
-              <script>
-                test((function(){"use strict"; return !this; })());
-              </script>
+            <script>
+              test(function(){
+                try { 
+                  var obj = { }; 
+                  eval('obj = ({ if: 1 })'); 
+                  return obj['if'] === 1;
+                } 
+                catch(err) { 
+                  return false;
+                }
+              }());
+            </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="no safari5">No</td>
-            <td class="no">No</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="no chrome5">No</td>
             <td class="no chrome6">No</td>
@@ -973,18 +989,57 @@
             <td class="no">No</td>
             <td class="no">No</td>
             
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://kangax.github.com/es5-compat-table/strict-mode/" style="text-decoration: underline; font-size: 1em">Strict mode</a> 
+              <sup><a href="#strict-mode-note">[3]</a></sup>
+            </td>
+            
+            <script>
+              test((function(){"use strict"; return !this; })());
+            </script>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no">No</td>
+            <td class="no">No</td>
+
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class="no chrome5">No</td>
+            <td class="no chrome6">No</td>
+
+            <td class="no">No</td>
             <td class="no">No</td>
             
-            <td class="yes">Yes</td>
-            <td class="no">No</td>
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="no rhino">No</td>
           </tr>
         </tbody>
       </table>
       <p id="define-property-ie-note">
         <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).
       </p>
+      <p id="reserved-words-note">
+        <sup>[2]</sup> For example: <code>({ if: 1 })</code>
+      </p>
       <p id="strict-mode-note">
-        <sup>[2]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
+        <sup>[3]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
           <code>(function(){ "use strict"; return !this; })();</code>
       </p>
     </div>
