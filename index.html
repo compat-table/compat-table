@@ -14,7 +14,7 @@
       p { margin-bottom: 0.5em; margin-top: 0; }
       
       #body { padding-left: 1em; }
-      #header { background: #454545; margin-bottom: 1em; }
+      #header { background: #454545; margin-bottom: 0.5em; }
       #header a { color: #eee; text-decoration: none; }
       #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
       
@@ -91,7 +91,7 @@
             
             <th><abbr title="Konqueror 4.3">Konq 4.3</abbr></th>
             
-            <th><a title="Bero's EcmaScript Engine" href="http://besen.sourceforge.net/">BESEN</a></th>
+            <th><a title="Bero's EcmaScript Engine (version 1.0.0.471)" href="http://besen.sourceforge.net/">BESEN</a></th>
             
             <th><span title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</span></th>
           </tr>
@@ -640,7 +640,7 @@
             <td class="no">No</td>
             <td class="no">No</td>
             
-            <td class="no">No</td>
+            <td class="no konq">No</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -671,7 +671,7 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
             
-            <td class="no">No</td>
+            <td class="no konq">No</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -704,7 +704,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -734,7 +734,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -764,7 +764,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -794,7 +794,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -824,7 +824,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -840,8 +840,8 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes ff36">Yes</td>
+            <td class="yes ff4">Yes</td>
 
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
@@ -854,7 +854,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -870,8 +870,8 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes ff36">Yes</td>
+            <td class="yes ff4">Yes</td>
 
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
@@ -884,7 +884,7 @@
             <td class="yes">Yes</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -900,8 +900,8 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes ff36">Yes</td>
+            <td class="yes ff4">Yes</td>
 
             <td class="no">No</td>
             <td class="yes">Yes</td>
@@ -914,7 +914,7 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -930,8 +930,8 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes ff36">Yes</td>
+            <td class="yes ff4">Yes</td>
 
             <td class="no">No</td>
             <td class="yes">Yes</td>
@@ -944,7 +944,7 @@
             <td class="no">No</td>
             <td class="yes">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -954,8 +954,41 @@
           </tr>
           <tr>
             <td>
+              Property access on strings
+              <sup><a href="#property-access-on-strings">[2]</a></sup></td>
+            </td>
+            
+            <script>
+              test("foobar"[3] === "b");
+            </script>
+
+            <td class="no ie7">No</td>
+            <td class="yes ie8">Yes</td>
+            <td class="yes ie9">Yes</td>
+
+            <td class="yes ff36">Yes</td>
+            <td class="yes ff4">Yes</td>
+
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
+
+            <td class="yes chrome5">Yes</td>
+            <td class="yes chrome6">Yes</td>
+
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            
+            <td class="yes konq">Yes</td>
+            
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>
               Reserved words as property names
-              <sup><a href="#reserved-words-note">[2]</a></sup></td>
+              <sup><a href="#reserved-words-note">[3]</a></sup></td>
             </td>
             
             <script>
@@ -975,8 +1008,8 @@
             <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes ff36">Yes</td>
+            <td class="yes ff4">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1000,7 +1033,7 @@
           <tr>
             <td>
               <a href="http://kangax.github.com/es5-compat-table/strict-mode/" style="text-decoration: underline; font-size: 1em">Strict mode</a> 
-              <sup><a href="#strict-mode-note">[3]</a></sup>
+              <sup><a href="#strict-mode-note">[4]</a></sup>
             </td>
             
             <script>
@@ -1035,11 +1068,14 @@
       <p id="define-property-ie-note">
         <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).
       </p>
+      <p id="property-access-on-strings">
+        <sup>[2]</sup> For example: <code>"foobar"[3] === "b"</code>
+      </p>
       <p id="reserved-words-note">
-        <sup>[2]</sup> For example: <code>({ if: 1 })</code>
+        <sup>[3]</sup> For example: <code>({ if: 1 })</code>
       </p>
       <p id="strict-mode-note">
-        <sup>[3]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
+        <sup>[4]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
           <code>(function(){ "use strict"; return !this; })();</code>
       </p>
     </div>
