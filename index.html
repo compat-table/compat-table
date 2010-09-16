@@ -17,6 +17,7 @@
       #header { background: #454545; margin-bottom: 0.5em; }
       #header a { color: #eee; text-decoration: none; }
       #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
+      #footnotes { margin-left: 1.75em; margin-bottom: 1em; font-size: 0.9em; }
       
       .yes a, .no a { color: #fff; font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;  }
       .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; 
@@ -71,27 +72,29 @@
               document.write('<th class="this-browser" title="' + navigator.userAgent + '">This browser</th><th></th>');
             </script>
             
-            <th><abbr title="Internet Explorer 7">IE</abbr> 7</th>
-            <th><abbr title="Inernet Explorer 8">IE</abbr> 8</th>
-            <th><abbr title="Inernet Explorer 9 Platform Preview 4">IE 9 PP4</abbr></th>
+            <th><abbr title="Internet Explorer 7">IE 7</abbr></th>
+            <th><abbr title="Inernet Explorer 8">IE 8</abbr></th>
+            <th><abbr title="Inernet Explorer 9 Platform Preview 4">IE 9</abbr></th>
 
-            <th><abbr title="Firefox 3.5 / 3.6">FF 3.5/3.6</abbr></th>
-            <th><abbr title="Firefox 4.0b6pre">FF 4.0b6pre</abbr></th>
+            <th><abbr title="Firefox 3.5, Firefox 3.6">FF 3.5, 3.6</abbr></th>
+            <th><abbr title="Firefox 4.0b6pre">FF 4</abbr></th>
 
             <th><abbr title="Safari 3.2">SF 3.2</abbr></th>
-            <th><abbr title="Safari 4">SF 4</abbr></th>
+            <th><abbr title="Safari 4.0.5">SF 4</abbr></th>
             <th><abbr title="Safari 5">SF 5</abbr></th>
             <th title="Webkit r66961 (Sep 8, 2010)">WebKit</th>
 
             <th><abbr title="Chrome 5 (5.0.375.127)">CH 5</abbr></th>
-            <th><abbr title="Chrome 6 (6.0.472.25 dev)">CH 6</abbr></th>
+            <th><abbr title="Chrome 6 (6.0.472.55)">CH 6</abbr></th>
+            <th><abbr title="Chrome 7 (7.0.517.5)">CH 7</abbr></th>
 
-            <th><abbr title="Opera 10.10">OP 10.10</abbr></th>
-            <th><abbr title="Opera 10.50 / 10.60">OP 10.50/10.60</abbr></th>
+            <th><abbr title="Opera 10.10">OP 10.1</abbr></th>
+            <th><abbr title="Opera 10.50, Opera 10.62 (build 8437)">OP 10.5, 10.6</abbr></th>
+            <th><abbr title="Opera 10.70 (build 9044)">OP 10.7</abbr></th>
             
             <th><abbr title="Konqueror 4.3">Konq 4.3</abbr></th>
             
-            <th><a title="Bero's EcmaScript Engine (version 1.0.0.471)" href="http://besen.sourceforge.net/">BESEN</a></th>
+            <th><a title="Bero's EcmaScript Engine (version 1.0.0.489)" href="http://besen.sourceforge.net/">BESEN</a></th>
             
             <th><span title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</span></th>
           </tr>
@@ -108,8 +111,8 @@
             <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -118,9 +121,11 @@
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -138,19 +143,21 @@
             <td class="yes ie8">Yes <a href="#define-property-ie-note"><sup>[1]</sup></a></td>
             <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -168,19 +175,21 @@
             <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -198,19 +207,21 @@
             <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -228,19 +239,21 @@
             <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -258,19 +271,21 @@
             <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no firefox3">No</td>
+            <td class="no firefox4">No</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="no safari5">No</td>
-            <td class="no">No</td>
+            <td class="no webkit">No</td>
 
             <td class="no chrome5">No</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -284,23 +299,25 @@
               test(typeof Object.freeze == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no firefox3">No</td>
+            <td class="no firefox4">No</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="no safari5">No</td>
             <td class="no webkit">No</td>
 
             <td class="no chrome5">No</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -328,9 +345,11 @@
                        
             <td class="no chrome5">No</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
                        
             <td class="no konq">No</td>
             
@@ -345,9 +364,9 @@
               test(typeof Object.isSealed == 'function');
             </script>
 
-            <td class="no id7">No</td>
-            <td class="no id8">No</td>
-            <td class="yes id9">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
             <td class="no firefox3">No</td>
             <td class="no firefox4">No</td>
@@ -359,9 +378,11 @@
                        
             <td class="no chrome5">No</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
                        
             <td class="no konq">No</td>
             
@@ -375,9 +396,9 @@
               test(typeof Object.isFrozen == 'function');
             </script>
 
-            <td class="no id7">No</td>
-            <td class="no id8">No</td>
-            <td class="yes id9">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
             <td class="no firefox3">No</td>
             <td class="no firefox4">No</td>
@@ -389,9 +410,11 @@
                        
             <td class="no chrome5">No</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
                        
             <td class="no konq">No</td>
             
@@ -405,9 +428,9 @@
               test(typeof Object.isExtensible == 'function');
             </script>
 
-            <td class="no id7">No</td>
-            <td class="no id8">No</td>
-            <td class="yes id9">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
             <td class="no firefox3">No</td>
             <td class="no firefox4">No</td>
@@ -419,9 +442,11 @@
                        
             <td class="no chrome5">No</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
                        
             <td class="no konq">No</td>
             
@@ -435,25 +460,27 @@
               test(typeof Object.getOwnPropertyDescriptor == 'function');
             </script>
             
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="yes ie8">Yes</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
-            <td class="no">No</td>
+            <td class="no konq">No</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -465,25 +492,27 @@
               test(typeof Object.getOwnPropertyNames == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
-            <td class="no">No</td>
+            <td class="no konq">No</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -498,25 +527,27 @@
               test(typeof Date.prototype.toISOString == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no safari3">No</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
-            <td class="no">No</td>
+            <td class="no konq">No</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -529,25 +560,27 @@
               test(typeof Date.now == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no safari3">No</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
-            <td class="yes">Yes</td>
+            <td class="yes konq">Yes</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -560,25 +593,27 @@
               test(typeof Array.isArray == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
-            <td class="no">No</td>
+            <td class="no konq">No</td>
             
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
@@ -591,23 +626,25 @@
               test(typeof JSON == 'object');
             </script>
             
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="yes ie8">Yes</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no safari3">No</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="no">No</td>
             
@@ -623,22 +660,24 @@
             </script>
 
             <td class="no ie7">No</td>
-            <td class="no id8">No</td>
+            <td class="no ie8">No</td>
             <td class="yes ie9">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="no safari5">No</td>
-            <td class="no">No</td>
+            <td class="no webkit">No</td>
 
             <td class="no chrome5">No</td>
             <td class="no chrome6">No</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -653,23 +692,25 @@
               test(typeof String.prototype.trim == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -686,23 +727,25 @@
               test(typeof Array.prototype.indexOf == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -716,23 +759,25 @@
               test(typeof Array.prototype.lastIndexOf == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -746,23 +791,25 @@
               test(typeof Array.prototype.every == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -776,23 +823,25 @@
               test(typeof Array.prototype.some == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -806,23 +855,25 @@
               test(typeof Array.prototype.forEach == 'function');
             </script>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox4">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes webkit">Yes</td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -850,9 +901,11 @@
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -880,9 +933,11 @@
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -910,9 +965,11 @@
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -940,9 +997,11 @@
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="yes">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -976,13 +1035,15 @@
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="yes">Yes</td>
-            <td class="yes">Yes</td>
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            <td class="yes opera10_70">Yes</td>
             
             <td class="yes konq">Yes</td>
             
-            <td class="no besen">No</td>
+            <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
           </tr>
           <tr>
@@ -1018,9 +1079,11 @@
 
             <td class="no chrome5">No</td>
             <td class="no chrome6">No</td>
+            <td class="yes chrome7">Yes</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -1054,9 +1117,11 @@
 
             <td class="no chrome5">No</td>
             <td class="no chrome6">No</td>
+            <td class="no chrome7">No</td>
 
-            <td class="no">No</td>
-            <td class="no">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera10_70">No</td>
             
             <td class="no konq">No</td>
             
@@ -1065,8 +1130,11 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <div id="footnotes">
       <p id="define-property-ie-note">
-        <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).
+        <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects 
+          (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).
       </p>
       <p id="property-access-on-strings">
         <sup>[2]</sup> For example: <code>"foobar"[3] === "b"</code>
