@@ -44,7 +44,8 @@
       }
       
       (function(){
-        print('<span class="test"><code>parseInt("08") !== 0;<\/code><\/span>' + colorResult(parseInt('08') !== 0));
+        var result = (function(){ try { return eval('08') !== 0; } catch(err) { return true } })();
+        print('<span class="test"><code>eval(\'08\') !== 0<\/code><\/span>' + colorResult(result));
       })();
       
       (function(){
