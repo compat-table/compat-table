@@ -13,7 +13,7 @@
       table { margin-bottom: 2em; }
       p { margin-bottom: 0.5em; margin-top: 0; }
       
-      #body { padding-left: 1em; }
+      #body { padding-left: 1em; position: relative; min-width: 1250px; }
       #header { background: #454545; margin-bottom: 0.5em; }
       #header a { color: #eee; text-decoration: none; }
       #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
@@ -31,6 +31,9 @@
         font-size: 13px; vertical-align: top; }
       
       .hide-old-browsers .safari3, .hide-old-browsers .ie7, .hide-old-browsers .firefox3 { display: none; }
+      
+      #show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
+      
     </style>
     
     <script type="text/javascript">
@@ -61,6 +64,10 @@
     <div id="body">
       <p class="warning">Please note that these tests represent <strong>existence</strong>, not functionality or full conformance. 
         I hope to test conformance sometime in the future.</p>
+      <p id="show-old-browsers-wrapper" style="display: none;">
+        <input type="checkbox" id="show-old-browsers">
+        <label for="show-old-browsers">Show older browsers (IE7, Firefox 3, Safari 3.2)</label>
+      </p>
       <table>
         <colgroup>
           <col>
@@ -1164,10 +1171,6 @@
           </tr>
         </tbody>
       </table>
-      <p id="show-old-browsers-wrapper" style="margin-bottom:20px;margin-left:10px;background:#eef;display:inline-block;display:none;">
-        <input type="checkbox" id="show-old-browsers">
-        <label for="show-old-browsers">Show older browsers (IE7, Firefox 3, Safari 3.2)</label>
-      </p>
     </div>
     <div id="footnotes">
       <p id="define-property-ie-note">
