@@ -44,14 +44,14 @@
       }
       
       (function(){
-        var result = (function(){ try { return eval('08') !== 0; } catch(err) { return true } })();
-        print('<span class="test"><code>eval(\'08\') !== 0<\/code><\/span>' + colorResult(result));
+        var result = (function(){ try { eval('010'); return false; } catch(err) { return err instanceof SyntaxError; } })();
+        print('<span class="test"><code>eval(\'010\')<\/code> is a SyntaxError<\/span>' + colorResult(result));
       })();
       
       (function(){
         var error;
         try {
-          __i_dont_exist = 1;
+          eval('__i_dont_exist = 1');
         } 
         catch (err) { error = err; }
         print('<span class="test"><code>__i_dont_exist = 1;<\/code> is a ReferenceError<\/span>' + colorResult(error instanceof ReferenceError));
