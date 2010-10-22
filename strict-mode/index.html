@@ -34,6 +34,8 @@
     <script type="text/javascript">
       "use strict";
       
+      var __global = this;
+      
       function print(message) {
         var el = document.createElement('p');
         el.innerHTML = message;
@@ -308,6 +310,38 @@
         }
         catch (err) { error = err; }
         print('<span class="test"><code>function arguments(){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
+      })();
+      
+      print('<br><strong>NON-STANDARD</strong><br><br>');
+      
+      (function(){
+        __global.__setTimeoutError;
+        setTimeout('"use strict"; try { (function(){ arguments.callee; })() } catch(err) { __global.__setTimeoutError = err; }', 10);
+        setTimeout(function() {
+          print('<span class="test"><code>setTimeout<\/code> follows strict mode rules when string starts with '+
+                'use strict directive (e.g.: <code>setTimeout(\'"use strict"; ...\', ...)<\/code>)<\/span>' +
+            colorResult(__global.__setTimeoutError instanceof TypeError));
+        }, 50)
+      })();
+      
+      (function(){
+        var error;
+        try {
+          var el = document.createElement('p');
+          el.innerHTML = '<button type="button" onclick="\'use strict\';with({ x: 1 }){ }">test</button>';
+          document.body.appendChild(el);
+          try {
+            el.click();
+          }
+          catch(err) {
+            error = err;
+          }
+          document.body.removeChild(el);
+        }
+        catch (err) { error = err; }
+        print('<span class="test">Event handler follows strict mode rules when its body starts with '+
+              'use strict directive (e.g.: <code>&lt;p onclick="\'use strict\'; ...">...&lt;\/p></code>)<\/span>' + 
+              colorResult(error instanceof SyntaxError));
       })();
     </script>
   </body>
