@@ -34,6 +34,8 @@
       </a>
     </p>
     <script type="text/javascript">
+      // enable strict globally
+      
       "use strict";
       
       var __global = this;
@@ -43,9 +45,15 @@
         el.innerHTML = message;
         document.body.appendChild(el);
       }
+      
       function colorResult(result) {
         return '<span class="' + (result === true ? "pass" : "fail") + '">' + (result === true ? 'Yes' : 'No') + '<\/span>';
       }
+      
+      (function(){
+        var result = (function(){ try { eval('"\\010"'); return false; } catch(err) { return err instanceof SyntaxError; } })();
+        print('<span class="test"><code>eval(\'"\\010"\')<\/code> is a SyntaxError<\/span>' + colorResult(result));
+      })();
       
       (function(){
         var result = (function(){ try { eval('010'); return false; } catch(err) { return err instanceof SyntaxError; } })();
