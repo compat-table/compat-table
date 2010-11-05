@@ -1195,5 +1195,33 @@
         document.body.className = this.checked ? '' : 'hide-old-browsers';
       };
     </script>
+    
+    <!--
+    
+      Additional ES5 tests (compat. sensitive changes):
+
+      7.1
+      7.2         eval('var x\uFEFFy = 1') // should be a syntax error
+      7.3         eval('var x = "a\\\nb"'); x === 'ab'
+      7.8.5		    /x/ === /x/
+      7.8.5		    /[/]/ is allowed
+      10.4.2		  (1,eval)('…') <— should be global
+      15.4.4		  [].toString.call({ length: 0 })
+      10.6        (function(x, y){ var arr = []; for (var p in arguments) { arr.push(p) } return arr })(1, 2)
+      10.6        (function(){ return ({}).toString.call(arguments) === 'Arguments' })()
+      12.6.4      for (var p in null) { /* no type error */ }
+      15.1.1      NaN = undefined = Infinity = null; NaN !== null && Infinity !== null && undefined !== null;
+      15.1.2.2    parseInt('010') !== 8
+      15.3.4.3    (function(x){return x}).apply(null, { length: 1, 0: 1 }) === 1
+      15.3.5.2    var arr = []; for (var p in (function(){})) { arr.push(p) }; arr.indexOf('prototype') === -1;
+      15.5.5.2  
+      15.9.4.2  
+      15.10.2.12  /\s/.test('\uFEFF')
+      15.10.4.1
+      15.10.6.4
+      15.11.2.1, 15.11.4.3
+      15.11.4.4
+      
+    -->
   </body>
 </html>
