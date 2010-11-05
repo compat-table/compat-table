@@ -11,6 +11,8 @@
       #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
       p { margin: 0 0 0.25em 1em; }
       .test { display: inline-block; width: 450px; }
+      .non-standard { width: 900px; }
+      .non-standard code { background-color: #ffc; }
       .pass, .fail { color: #fff; padding: 0.1em; width: 2.5em; display: inline-block; text-align: center; }
       .pass { background-color: green; }
       .fail { background-color: red; }
@@ -315,33 +317,41 @@
       print('<br><strong>NON-STANDARD</strong><br><br>');
       
       (function(){
-        __global.__setTimeoutError;
-        setTimeout('"use strict"; try { (function(){ arguments.callee; })() } catch(err) { __global.__setTimeoutError = err; }', 10);
-        setTimeout(function() {
-          print('<span class="test"><code>setTimeout<\/code> follows strict mode rules when string starts with '+
-                'use strict directive (e.g.: <code>setTimeout(\'"use strict"; ...\', ...)<\/code>)<\/span>' +
-            colorResult(__global.__setTimeoutError instanceof TypeError));
-        }, 50)
+        var error;
+        try {
+          eval('if (1) { function f(){ } }');
+        }
+        catch(err) {
+          error = err;
+        }
+        print('<span class="test non-standard">Function declarations in statements are disallowed '+
+          '(e.g.: <code>if (&hellip;) { function f(){ } }<\/code>) '+
+          '[as per <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">ES5 Implementation Best Practice</a>]<\/span>' +
+          colorResult(error instanceof SyntaxError));
       })();
       
       (function(){
-        var error;
+        setTimeout('"use strict"; try { (function(){ arguments.callee; })() } catch(err) { __global.__setTimeoutError = err; }', 10);
+        setTimeout(function() {
+          print('<span class="test non-standard">setTimeout follows strict mode rules when string starts with ' +
+                'use strict directive (e.g.: <code>setTimeout(\'"use strict"; &hellip;\', &hellip;)<\/code>)<\/span>' +
+            colorResult(__global.__setTimeoutError instanceof TypeError));
+        }, 50);
+      })();
+      
+      (function(){
+        var formEl = document.createElement('form');
+        formEl.setAttribute('onreset', 
+          '"use strict"; try { eval(\'with({}){}\') } catch(err) { __global.__eventHandlerError = err; }');
+        document.body.appendChild(formEl);
         try {
-          var el = document.createElement('p');
-          el.innerHTML = '<button type="button" onclick="\'use strict\';with({ x: 1 }){ }">test</button>';
-          document.body.appendChild(el);
-          try {
-            el.click();
-          }
-          catch(err) {
-            error = err;
-          }
-          document.body.removeChild(el);
+          formEl.reset();
         }
-        catch (err) { error = err; }
-        print('<span class="test">Event handler follows strict mode rules when its body starts with '+
-              'use strict directive (e.g.: <code>&lt;p onclick="\'use strict\'; ...">...&lt;\/p></code>)<\/span>' + 
-              colorResult(error instanceof SyntaxError));
+        catch(err) { }
+        document.body.removeChild(formEl);
+        print('<span class="test non-standard">Event handler follows strict mode rules when its body starts with ' +
+              'use strict directive (e.g.: <code>&lt;p onclick="\'use strict\'; &hellip;">&hellip;&lt;\/p></code>)<\/span>' + 
+              colorResult(__global.__eventHandlerError instanceof SyntaxError));
       })();
     </script>
   </body>
