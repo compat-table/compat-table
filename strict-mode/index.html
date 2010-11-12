@@ -239,7 +239,7 @@
       (function(){
         var error;
         try {
-          ({ get x(){ } }).x = 1;
+          eval('({ get x(){ } }).x = 1');
         }
         catch (err) { error = err; }
         print('<span class="test"><code>({ get x(){ } }).x = 1;<\/code> is a TypeError<\/span>' +
