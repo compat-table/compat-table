@@ -10,12 +10,13 @@
       #header a { color: #eee; text-decoration: none; }
       #header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
       p { margin: 0 0 0.25em 1em; }
-      .test { display: inline-block; width: 450px; }
+      .test { display: inline-block; width: 570px; }
       .non-standard { width: 900px; }
       .non-standard code { background-color: #ffc; }
       .pass, .fail { color: #fff; padding: 0.1em; width: 2.5em; display: inline-block; text-align: center; }
       .pass { background-color: green; }
       .fail { background-color: red; }
+      .back-to-the-table-header { margin-bottom: 1em; background: #ffc; padding: 0.5em; width: 595px }
     </style>
   </head>
   <body>
@@ -28,7 +29,7 @@
         </span> 
       </h1> 
     </div>
-    <p style="margin-bottom:1em;background:#ffc;padding:0.5em;width:477px">
+    <p class="back-to-the-table-header">
       <a href="http://kangax.github.com/es5-compat-table/">
         &larr; Back to the main table
       </a>
@@ -217,10 +218,32 @@
       (function(){
         var error;
         try {
-          eval('(function f() { f = 123; })()');
+          (function f() { f = 123; })();
         }
         catch (err) { error = err; }
         print('<span class="test"><code>(function f() { f = 123; })()<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
+      })();
+      
+      (function(){
+        var error;
+        try {
+          if (Object.defineProperty) {
+            Object.defineProperty({ }, 'x', { writable: false }).x = 1;
+          }
+        }
+        catch (err) { error = err; }
+        print('<span class="test"><code>Object.defineProperty({ }, "x", { writable: false }).x = 1<\/code> is a TypeError<\/span>' +
+          colorResult(error instanceof TypeError));
+      })();
+      
+      (function(){
+        var error;
+        try {
+          ({ get x(){ } }).x = 1;
+        }
+        catch (err) { error = err; }
+        print('<span class="test"><code>({ get x(){ } }).x = 1;<\/code> is a TypeError<\/span>' +
+          colorResult(error instanceof TypeError));
       })();
       
       (function(){
