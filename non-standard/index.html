@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title></title>
+    
+    <link rel="stylesheet" href="../master.css" type="text/css">
+    <script src="../master.js" type="text/javascript"></script>
+    
+    <script>
+      var __script_executed;
+    </script>
+    
+  </head>
+  <body class="non-standard">
+    <div id="header">
+      <h1>
+        <a href="http://kangax.github.com/es5-compat-table/non-standard">
+          <span title="ECMA-262">ECMAScript</span> extensions compatibility table
+        </a>
+        <span style="font-size:0.8em;float:right;font-weight:normal;">by 
+          <a href="http://twitter.com/kangax/" style="color:#eee">kangax</a>
+        </span>
+      </h1>
+    </div>
+    <div id="body">
+      <p class="warning">Please note that these tests represent <strong>existence</strong>, not functionality or full conformance. 
+        I hope to test conformance sometime in the future.</p>
+      <p id="show-old-browsers-wrapper" style="display: none;">
+        <input type="checkbox" id="show-old-browsers">
+        <label for="show-old-browsers">Show older browsers (IE7, Firefox 3, Safari 3.2)</label>
+      </p>
+      <table>
+        <colgroup>
+          <col>
+          <col class="this-browser-col">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="test-name"></th>
+            
+            <script>
+              document.write('<th class="this-browser" title="' + navigator.userAgent + '">This browser</th><th></th>');
+            </script>
+            
+            <th class="ie7"><abbr title="Internet Explorer 7">IE 7</abbr></th>
+            <th class="ie8"><abbr title="Inernet Explorer 8">IE 8</abbr></th>
+            <th class="ie9"><abbr title="Inernet Explorer 9 RC">IE 9</abbr></th>
+
+            <th class="firefox3"><abbr title="Firefox 3">FF 3</abbr></th>
+            <th class="firefox3_5"><abbr title="Firefox 3.5, Firefox 3.6">FF 3.5, 3.6</abbr></th>
+            <th class="firefox4"><abbr title="Firefox 4.0b12pre">FF 4</abbr></th>
+
+            <th class="safari3"><abbr title="Safari 3.2">SF 3.2</abbr></th>
+            <th class="safari4"><abbr title="Safari 4.0.5">SF 4</abbr></th>
+            <th class="safari5"><abbr title="Safari 5">SF 5</abbr></th>
+            <th class="webkit" title="Webkit r72487 (Nov 24, 2010)">WebKit</th>
+
+            <th><abbr title="Chrome 5 (5.0.375.127)">CH 5</abbr></th>
+            <th><abbr title="Chrome 6 (6.0.472.55)">CH 6</abbr></th>
+            <th><abbr title="Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)">CH 7-10</abbr></th>
+
+            <th><abbr title="Opera 10.10">OP 10.1</abbr></th>
+            <th><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)">
+              OP 10.5, 10.6, 10.7, 11
+            </abbr></th>
+            
+            <th><abbr title="Konqueror 4.3">Konq 4.3</abbr></th>
+            
+            <th><a title="Bero's EcmaScript Engine (version 1.0.0.489)" href="http://besen.sourceforge.net/">BESEN</a></th>
+            
+            <th><span title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>function name</td>
+            
+            <script>
+              test((function foo(){}).name == 'foo');
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class="no safari3">No</td>
+            <td class="yes safari4">Yes</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="yes chrome7">Yes</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class=" besen">-</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>Proxy</td>
+            
+            <script>
+              test(typeof Proxy !== 'undefined' && typeof Proxy.create == 'function');
+            </script>
+
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
+
+            <td class="no firefox3">No</td>
+            <td class="no firefox3_5">No</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class="no chrome5">No</td>
+            <td class="no chrome6">No</td>
+            <td class="no chrome7">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class="no konq">No</td>
+            
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            
+            <script>
+              test(function(){ 
+                try { eval('const foobarbaz = 12'); return typeof foobarbaz === 'number'; } 
+                catch(err) { return false }
+              }());
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class=" safari4">-</td>
+            <td class=" safari5">-</td>
+            <td class="yes webkit">Yes</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="yes chrome7">Yes</td>
+
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class=" besen">-</td>
+            <td class=" rhino">-</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            
+            <script type="application/javascript;version=1.8">
+              test(function(){ 
+                try { return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()'); }
+                catch(err) { return false; }
+              }());
+              __script_executed = true
+            </script>
+            
+            <script>
+              if (!__script_executed) {
+                test(false);
+                __script_executed = false;
+              }
+            </script>
+            
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class=" safari4">-</td>
+            <td class=" safari5">-</td>
+            <td class="no webkit">No</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="no chrome7">no</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class=" besen">-</td>
+            <td class=" rhino">-</td>
+            
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="footnotes">
+      
+    </div>
+  </body>
+</html>
