@@ -77,18 +77,18 @@
             <td>function statements</td>
             
             <script>
-              test(function(){ 
+              test((function(){ 
                 try {
                   eval('if (1) { function f(){ } } else { function f(){ } }');
                   return typeof f === 'function';
                 } catch(err) {
                   return false;
                 }
-              }());
+              })());
             </script>
             
             <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
+            <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
             <td class="yes firefox3">Yes</td>
@@ -105,12 +105,12 @@
             <td class="yes chrome7">Yes</td>
 
             <td class="yes opera10_10">Yes</td>
-            <td class=" opera10_50">-</td>
+            <td class="yes opera10_50">Yes</td>
             
             <td class=" konq">-</td>
             
-            <td class=" besen">-</td>
-            <td class=" rhino">-</td>
+            <td class="yes besen" title="with 'Javascript-specific extensions' option enabled">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>function "name" property</td>
@@ -120,7 +120,7 @@
             </script>
 
             <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
+            <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
             <td class="yes firefox3">Yes</td>
@@ -141,8 +141,43 @@
             
             <td class=" konq">-</td>
             
-            <td class=" besen">-</td>
+            <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>function "caller" property</td>
+            
+            <script>
+              test('caller' in (function(){}));
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class="yes ie8">Yes</td>
+            <td class="yes ie9">Yes</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class="yes safari4">Yes</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="yes chrome7">Yes</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="yes opera10_50">Yes</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
           </tr>
           <tr>
             <td>__proto__</td>
@@ -152,7 +187,7 @@
             </script>
             
             <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
+            <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
             <td class="yes firefox3">Yes</td>
@@ -173,8 +208,8 @@
             
             <td class=" konq">-</td>
             
-            <td class=" besen">-</td>
-            <td class=" rhino">-</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <td>__count__</td>
@@ -184,7 +219,7 @@
             </script>
             
             <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
+            <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
             <td class="yes firefox3">Yes</td>
@@ -201,25 +236,68 @@
             <td class="no chrome7">No</td>
 
             <td class="no opera10_10">No</td>
-            <td class=" opera10_50">-</td>
+            <td class="no opera10_50">No</td>
             
             <td class=" konq">-</td>
             
-            <td class=" besen">-</td>
-            <td class=" rhino">-</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <td>__noSuchMethod__</td>
+            
+            <script>
+              test((function(){
+                var o = { }, executed = false;
+                o.__noSuchMethod__ = function() { executed = true; }
+                try {
+                  o.__i_dont_exist();
+                }
+                catch(err) { }
+                return executed;
+              })());
+            </script>
+            
+            <td class=" ie7">-</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="no chrome7">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
           </tr>
           <tr>
             <td>const</td>
             
             <script>
-              test(function(){ 
+              test((function(){ 
                 try { eval('const foobarbaz = 12'); return typeof foobarbaz === 'number'; } 
                 catch(err) { return false }
-              }());
+              })());
             </script>
 
             <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
+            <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
             <td class=" firefox3">-</td>
@@ -240,17 +318,17 @@
             
             <td class=" konq">-</td>
             
-            <td class=" besen">-</td>
-            <td class=" rhino">-</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
           </tr>
           <tr>
             <td>let</td>
             
             <script type="application/javascript;version=1.8">
-              test(function(){ 
+              test((function(){ 
                 try { return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()'); }
                 catch(err) { return false; }
-              }());
+              })());
               __script_executed = true
             </script>
             
@@ -262,7 +340,7 @@
             </script>
             
             <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
+            <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
             <td class=" firefox3">-</td>
@@ -283,8 +361,81 @@
             
             <td class=" konq">-</td>
             
-            <td class=" besen">-</td>
-            <td class=" rhino">-</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <td>Array generics</td>
+            
+            <script>
+              test(typeof Array.slice === "function" && Array.slice('123').length === 3);
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
+
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="no chrome7">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>Expression closures</td>
+            
+            <script>
+              test((function(){
+                try {
+                  return eval('(function(x)x)(1)') === 1;
+                } catch(err) {
+                  return false;
+                }
+              })());
+            </script>
+
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
+
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class="no chrome5">No</td>
+            <td class="no chrome6">No</td>
+            <td class="no chrome7">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
           </tr>
           <tr>
             <td>Proxy</td>
@@ -317,76 +468,6 @@
             
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
-          </tr>
-          <tr>
-            <td>Expression closures</td>
-            
-            <script>
-              test(function(){
-                try {
-                  return eval('(function(x)x)(1)') === 1;
-                } catch(err) {
-                  return false;
-                }
-              }());
-            </script>
-
-            <td class="no ie7">No</td>
-            <td class="no ie8">No</td>
-            <td class="no ie9">No</td>
-
-            <td class="yes firefox3">Yes</td>
-            <td class="yes firefox3_5">Yes</td>
-            <td class="yes firefox4">Yes</td>
-
-            <td class="no safari3">No</td>
-            <td class="no safari4">No</td>
-            <td class="no safari5">No</td>
-            <td class="no webkit">No</td>
-
-            <td class="no chrome5">No</td>
-            <td class="no chrome6">No</td>
-            <td class="no chrome7">No</td>
-
-            <td class="no opera10_10">No</td>
-            <td class="no opera10_50">No</td>
-            
-            <td class="no konq">No</td>
-            
-            <td class="no besen">No</td>
-            <td class="no rhino">No</td>
-          </tr>
-          <tr>
-            <td>Array generics</td>
-            
-            <script>
-              test(typeof Array.slice === "function" && Array.slice('123').length === 3);
-            </script>
-
-            <td class=" ie7">-</td>
-            <td class=" ie8">-</td>
-            <td class="no ie9">No</td>
-
-            <td class="yes firefox3">Yes</td>
-            <td class="yes firefox3_5">Yes</td>
-            <td class="yes firefox4">Yes</td>
-
-            <td class=" safari3">-</td>
-            <td class="no safari4">No</td>
-            <td class="no safari5">No</td>
-            <td class="no webkit">No</td>
-
-            <td class=" chrome5">-</td>
-            <td class=" chrome6">-</td>
-            <td class="no chrome7">No</td>
-
-            <td class="no opera10_10">No</td>
-            <td class=" opera10_50">-</td>
-            
-            <td class=" konq">-</td>
-            
-            <td class=" besen">-</td>
-            <td class=" rhino">-</td>
           </tr>
         </tbody>
       </table>
