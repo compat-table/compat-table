@@ -100,7 +100,7 @@
             <td class="yes safari5">Yes</td>
             <td class="yes webkit">Yes</td>
 
-            <td class=" chrome5">-</td>
+            <td class="yes chrome5">Yes</td>
             <td class=" chrome6">-</td>
             <td class="yes chrome7">Yes</td>
 
@@ -132,7 +132,7 @@
             <td class="yes safari5">Yes</td>
             <td class="yes webkit">Yes</td>
 
-            <td class=" chrome5">-</td>
+            <td class="yes chrome5">Yes</td>
             <td class=" chrome6">-</td>
             <td class="yes chrome7">Yes</td>
 
@@ -164,7 +164,7 @@
             <td class="yes safari5">Yes</td>
             <td class="yes webkit">Yes</td>
 
-            <td class=" chrome5">-</td>
+            <td class="yes chrome5">Yes</td>
             <td class=" chrome6">-</td>
             <td class="yes chrome7">Yes</td>
 
@@ -175,6 +175,38 @@
             
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <td>function "toSource" property</td>
+            
+            <script>
+              test('toSource' in (function(){}));
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="no chrome7">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class=" konq">-</td>
+            
+            <td class=" besen">-</td>
+            <td class="yes rhino">Yes</td>
           </tr>
           <tr>
             <th colspan="11" class="separator"></th>
@@ -199,7 +231,7 @@
             <td class="yes safari5">Yes</td>
             <td class="yes webkit">Yes</td>
 
-            <td class=" chrome5">-</td>
+            <td class="yes chrome5">Yes</td>
             <td class=" chrome6">-</td>
             <td class="yes chrome7">Yes</td>
 
@@ -231,7 +263,7 @@
             <td class="no safari5">No</td>
             <td class="no webkit">No</td>
 
-            <td class=" chrome5">-</td>
+            <td class="no chrome5">No</td>
             <td class=" chrome6">-</td>
             <td class="no chrome7">No</td>
 
@@ -242,6 +274,38 @@
             
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+          </tr>
+          <tr>
+            <td>__parent__</td>
+            
+            <script>
+              test(typeof ({}).__parent__ !== "undefined");
+            </script>
+            
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class=" firefox3">-</td>
+            <td class=" firefox3_5">-</td>
+            <td class=" firefox4">-</td>
+
+            <td class=" safari3">-</td>
+            <td class=" safari4">-</td>
+            <td class=" safari5">-</td>
+            <td class=" webkit">-</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class=" chrome7">-</td>
+
+            <td class=" opera10_10">-</td>
+            <td class=" opera10_50">-</td>
+
+            <td class=" konq">-</td>
+
+            <td class=" besen">-</td>
+            <td class=" rhino">-</td>
           </tr>
           <tr>
             <td>__noSuchMethod__</td>
@@ -271,7 +335,7 @@
             <td class="no safari5">No</td>
             <td class="no webkit">No</td>
 
-            <td class=" chrome5">-</td>
+            <td class="no chrome5">No</td>
             <td class=" chrome6">-</td>
             <td class="no chrome7">No</td>
 
@@ -309,7 +373,7 @@
             <td class="yes safari5">Yes</td>
             <td class="yes webkit">Yes</td>
 
-            <td class=" chrome5">-</td>
+            <td class="yes chrome5">Yes</td>
             <td class=" chrome6">-</td>
             <td class="yes chrome7">Yes</td>
 
@@ -352,7 +416,7 @@
             <td class="no safari5">No</td>
             <td class="no webkit">No</td>
 
-            <td class=" chrome5">-</td>
+            <td class="no chrome5">No</td>
             <td class=" chrome6">-</td>
             <td class="no chrome7">no</td>
 
@@ -384,7 +448,7 @@
             <td class="no safari5">No</td>
             <td class="no webkit">No</td>
 
-            <td class=" chrome5">-</td>
+            <td class="no chrome5">No</td>
             <td class=" chrome6">-</td>
             <td class="no chrome7">No</td>
 
@@ -437,6 +501,123 @@
           <tr>
             <th colspan="11" class="separator"></th>
           </tr>
+          
+          <tr>
+            <td>RegExp "y" flag</td>
+            
+            <script>
+              test((function(){
+                try {
+                  var re = new RegExp('\\w');
+                  var re2 = new RegExp('\\w', 'y');
+                  re.exec('xy');
+                  re2.exec('xy');
+                  return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+                } 
+                catch(err) { return false }
+              })());
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class=" safari3">-</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class="no chrome7">No</td>
+
+            <td class="yes opera10_10">Yes</td>
+            <td class="no opera10_50">No</td>
+
+            <td class=" konq">-</td>
+
+            <td class=" besen">-</td>
+            <td class="no rhino">No</td>
+          </tr>
+          
+          <tr>
+            <td>RegExp "lastMatch"</td>
+            
+            <script>
+              test((function(){
+                var re = /\w/;
+                re.exec('x');
+                return RegExp.lastMatch === 'x';
+              })());
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class=" firefox3">-</td>
+            <td class=" firefox3_5">-</td>
+            <td class=" firefox4">-</td>
+
+            <td class=" safari3">-</td>
+            <td class=" safari4">-</td>
+            <td class=" safari5">-</td>
+            <td class=" webkit">-</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class=" chrome7">-</td>
+
+            <td class=" opera10_10">-</td>
+            <td class=" opera10_50">-</td>
+
+            <td class=" konq">-</td>
+
+            <td class=" besen">-</td>
+            <td class=" rhino">-</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
+          <tr>
+            <td>String.prototype.link</td>
+            
+            <script>
+              test(typeof String.prototype.link === 'function');
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class=" firefox3">-</td>
+            <td class=" firefox3_5">-</td>
+            <td class=" firefox4">-</td>
+
+            <td class=" safari3">-</td>
+            <td class=" safari4">-</td>
+            <td class=" safari5">-</td>
+            <td class=" webkit">-</td>
+
+            <td class=" chrome5">-</td>
+            <td class=" chrome6">-</td>
+            <td class=" chrome7">-</td>
+
+            <td class=" opera10_10">-</td>
+            <td class=" opera10_50">-</td>
+
+            <td class=" konq">-</td>
+
+            <td class=" besen">-</td>
+            <td class=" rhino">-</td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
           <tr>
             <td>Proxy</td>
             
@@ -475,5 +656,30 @@
     <div id="footnotes">
       
     </div>
+    
+    <!-- <td class=" ie7">-</td>
+        <td class=" ie8">-</td>
+        <td class=" ie9">-</td>
+
+        <td class=" firefox3">-</td>
+        <td class=" firefox3_5">-</td>
+        <td class=" firefox4">-</td>
+
+        <td class=" safari3">-</td>
+        <td class=" safari4">-</td>
+        <td class=" safari5">-</td>
+        <td class=" webkit">-</td>
+
+        <td class=" chrome5">-</td>
+        <td class=" chrome6">-</td>
+        <td class=" chrome7">-</td>
+
+        <td class=" opera10_10">-</td>
+        <td class=" opera10_50">-</td>
+        
+        <td class=" konq">-</td>
+        
+        <td class=" besen">-</td>
+        <td class=" rhino">-</td> -->
   </body>
 </html>
