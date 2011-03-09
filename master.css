@@ -14,7 +14,7 @@ code { font-family: "Courier New", Courier, monospace; }
 #header a { color: #eee; text-decoration: none; }
 .non-standard #header a { color: #fff; }
 
-#header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em 0.5em 0.25em 0.5em; font-size: 1.25em; }
+#header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em; font-size: 1.25em; }
 .non-standard #header h1 { color: #fff; }
 
 #footnotes { margin-left: 1.75em; margin-bottom: 1em; font-size: 0.9em; }
@@ -33,3 +33,6 @@ code { font-family: "Courier New", Courier, monospace; }
 .hide-old-browsers .safari3, .hide-old-browsers .ie7, .hide-old-browsers .firefox3 { display: none; }
 
 #show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
+
+.also-see { font-size:15px;display:inline-block;background:#ddf;padding:4px 6px;position:absolute;top:0;left:50%;margin-left:-174px; color: #333; }
+.also-see a { color: blue !important; font-weight: normal; margin-left: 10px; }
