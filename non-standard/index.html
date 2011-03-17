@@ -707,6 +707,46 @@
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
           </tr>
+          <tr>
+            <td>RegExp "x" flag</td>
+            
+            <script>
+              test((function(){
+                try {
+                  var re = RegExp("^ ( \\d+ ) \
+                                     ( \\w+ ) \
+                                     ( foo  )", "x");
+                  return re.exec('23xfoo')[0] === '23xfoo';
+                } 
+                catch(err) { return false }
+              })());
+            </script>
+
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class=" ie9">-</td>
+
+            <td class="no firefox3">No</td>
+            <td class="no firefox3_5">No</td>
+            <td class="no firefox4">No</td>
+
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <!-- <td class=" chrome5">-</td>
+                        <td class=" chrome6">-</td> -->
+            <td class="no chrome7">No</td>
+
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+
+            <td class=" konq">-</td>
+
+            <td class=" besen">-</td>
+            <td class="no rhino">No</td>
+          </tr>
           
           <tr>
             <td>RegExp "lastMatch"</td>
