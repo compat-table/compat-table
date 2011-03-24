@@ -128,7 +128,7 @@
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
             <td class="yes safari5">Yes</td>
-            <td class="yes webkit">Yes</td>
+            <td class="yes webkit">Yes <a href="#define-property-webkit-note"><sup>[5]</sup></a></td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
@@ -1124,6 +1124,9 @@
         <sup>[4]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
           <code>(function(){ "use strict"; return !this; })();</code>
       </p>
+			<p id="define-property-webkit-note">
+				<sup>[5]</sup> In WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.
+			</p>
     </div>
     
     <!--
