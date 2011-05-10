@@ -990,6 +990,78 @@
             <th colspan="11" class="separator"></th>
           </tr>
           <tr>
+            <td>Getter in property initializer</td>
+            <script>
+              test((function(){ try { return eval('({ get x(){ return 1 } }).x === 1') } catch(err) { return false } })());
+            </script>
+            <td class="ie7"></td>
+            <td class="ie8"></td>
+            <td class="ie9"></td>
+            
+            <td class="firefox3"></td>
+            <td class="firefox3_5"></td>
+            <td class="yes firefox4">Yes</td>
+                       
+            <td class="safari3"></td>
+            <td class="safari4"></td>
+            <td class="yes safari5">Yes</td>
+            <td class="webkit"></td>
+
+            <td class="chrome5"></td>
+            <td class="chrome6"></td>
+            <td class="yes chrome7">Yes</td>
+
+            <td class="opera10_10"></td>
+            <td class="opera10_50"></td>
+            
+            <td class="konq"></td>
+            
+            <td class="besen"></td>
+            <td class="rhino"></td>
+          </tr>
+          <tr>
+            <td>Setter in property initializer</td>
+            <script>
+              test((function(){ 
+                try { 
+                  var value; 
+                  eval('({ set x(v){ value = v; } }).x = 1'); 
+                  return value === 1;
+                } 
+                catch(err) { 
+                  return false;
+                } 
+              })());
+            </script>
+            <td class="ie7"></td>
+            <td class="ie8"></td>
+            <td class="ie9"></td>
+            
+            <td class="firefox3"></td>
+            <td class="firefox3_5"></td>
+            <td class="yes firefox4">Yes</td>
+                       
+            <td class="safari3"></td>
+            <td class="safari4"></td>
+            <td class="yes safari5">Yes</td>
+            <td class="webkit"></td>
+
+            <td class="chrome5"></td>
+            <td class="chrome6"></td>
+            <td class="yes chrome7">Yes</td>
+
+            <td class="opera10_10"></td>
+            <td class="opera10_50"></td>
+            
+            <td class="konq"></td>
+            
+            <td class="besen"></td>
+            <td class="rhino"></td>
+          </tr>
+          <tr>
+            <th colspan="11" class="separator"></th>
+          </tr>
+          <tr>
             <td>
               Property access on strings
               <sup><a href="#property-access-on-strings">[2]</a></sup></td>
