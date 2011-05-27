@@ -72,9 +72,9 @@
             <!-- <th><abbr title="Chrome 6 (6.0.472.55)">CH 6</abbr></th> -->
             <th><abbr title="Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)">CH 7-10</abbr></th>
 
-            <th><abbr title="Opera 10.10">OP 10.1</abbr></th>
+            <th><abbr title="Opera 10.10">OP 10.10</abbr></th>
             <th><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)">
-              OP 10.5, 10.6, 10.7, 11
+              OP 10.50-11.10
             </abbr></th>
             
             <th><abbr title="Konqueror 4.4">Konq 4.4</abbr></th>
@@ -785,6 +785,41 @@
             <td class="yes rhino">Yes</td>
           </tr>
           <tr>
+            <td>RegExp.$1-$9</td>
+            <script>
+              test((function(){
+                for (var i = 1; i < 10; i++) {
+                  if (!(('$' + i) in RegExp)) return false;
+                }
+                return true;
+              })());
+            </script>
+            <td class=" ie7">-</td>
+            <td class=" ie8">-</td>
+            <td class="yes ie9">Yes</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+
+            <td class="yes safari3">Yes</td>
+            <td class="yes safari4">Yes</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
+
+            <!-- <td class=" chrome5">-</td>
+                        <td class=" chrome6">-</td> -->
+            <td class="yes chrome7">Yes</td>
+
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+
+            <td class=" konq">-</td>
+
+            <td class=" besen">-</td>
+            <td class=" rhino">-</td>
+          </tr>
+          <tr>
             <td>Callable RegExp</td>
             <script>
               test((function(){
@@ -800,7 +835,7 @@
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
-            <td class=" firefox3">-</td>
+            <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
 
@@ -867,7 +902,7 @@
 
             <td class=" ie7">-</td>
 				    <td class=" ie8">-</td>
-				    <td class=" ie9">-</td>
+				    <td class="no ie9">No</td>
 
 				    <td class=" firefox3">-</td>
 				    <td class="yes firefox3_5">Yes</td>
@@ -899,7 +934,7 @@
 
             <td class=" ie7">-</td>
 				    <td class=" ie8">-</td>
-				    <td class=" ie9">-</td>
+				    <td class="no ie9">No</td>
 
 				    <td class=" firefox3">-</td>
 				    <td class="yes firefox3_5">Yes</td>
@@ -1402,7 +1437,7 @@
             
             <td class=" ie7">-</td>
             <td class=" ie8">-</td>
-            <td class=" ie9">-</td>
+            <td class="no ie9">No</td>
 
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
