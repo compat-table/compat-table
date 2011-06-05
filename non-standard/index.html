@@ -101,7 +101,7 @@
               })());
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -136,7 +136,7 @@
               test((function foo(){}).name == 'foo');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -168,7 +168,7 @@
               test('caller' in (function(){}));
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -200,7 +200,7 @@
               test('toSource' in (function(){}));
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -232,7 +232,7 @@
               test((function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y){}).arity === 2);
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -269,7 +269,7 @@
               test(({}).__proto__ === Object.prototype && [].__proto__ === Array.prototype);
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -303,7 +303,7 @@
               test(typeof ({}).__count__ === "number" && ({ x: 1, y: 2 }).__count__ === 2);
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -337,7 +337,7 @@
               test(typeof ({}).__parent__ !== "undefined");
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -379,7 +379,7 @@
               })());
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -413,7 +413,7 @@
               test('__defineGetter__' in ({ }));
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -447,7 +447,7 @@
               test('__defineSetter__' in ({ }));
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -485,7 +485,7 @@
               })());
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -528,7 +528,7 @@
               }
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -560,7 +560,7 @@
               test(typeof Array.slice === "function" && Array.slice('123').length === 3);
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -637,7 +637,7 @@
               })());
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -682,7 +682,7 @@
               })());
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -722,7 +722,7 @@
               })());
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -759,7 +759,7 @@
               })());
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -831,7 +831,7 @@
                 }
               })());
             </script>
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -866,7 +866,7 @@
               test(typeof String.prototype.substr === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -900,7 +900,7 @@
               test(typeof String.prototype.trimLeft === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
 				    <td class="no ie8">No</td>
 				    <td class="no ie9">No</td>
 
@@ -932,7 +932,7 @@
               test(typeof String.prototype.trimRight === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
 				    <td class="no ie8">No</td>
 				    <td class="no ie9">No</td>
 
@@ -964,7 +964,7 @@
               test(typeof String.prototype.anchor === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -996,7 +996,7 @@
               test(typeof String.prototype.big === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -1028,7 +1028,7 @@
               test(typeof String.prototype.blink === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -1060,7 +1060,7 @@
               test(typeof String.prototype.bold === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -1092,7 +1092,7 @@
               test(typeof String.prototype.link === 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -1127,7 +1127,7 @@
               test(typeof Object.prototype.watch == 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -1159,7 +1159,7 @@
               test(typeof Object.prototype.unwatch == 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -1191,7 +1191,7 @@
               test(typeof Object.prototype.eval == 'function');
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -1233,7 +1233,7 @@
               })());
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -1268,7 +1268,7 @@
               test('stack' in new Error);
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -1300,7 +1300,7 @@
               test('lineNumber' in new Error);
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -1332,7 +1332,7 @@
               test('fileName' in new Error);
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
@@ -1364,7 +1364,7 @@
               test('description' in new Error);
             </script>
 
-            <td class=" ie7">-</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
@@ -1435,7 +1435,7 @@
               );
             </script>
             
-            <td class=" ie7">-</td>
+            <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
 
