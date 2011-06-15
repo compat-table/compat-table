@@ -5,10 +5,6 @@
     <title>ECMAScript 5 extensions compatibility table</title>
     
     <link rel="stylesheet" href="../master.css" type="text/css">
-    <style>
-      td a { font-size: 1em; color: #000; text-decoration: underline; }
-      td a:hover, td a:focus { text-decoration: none; }
-    </style>
     <script src="../master.js" type="text/javascript"></script>
     
     <script>
@@ -62,6 +58,8 @@
             <th class="firefox3"><abbr title="Firefox 3">FF 3</abbr></th>
             <th class="firefox3_5"><abbr title="Firefox 3.5, Firefox 3.6">FF 3.5, 3.6</abbr></th>
             <th class="firefox4"><abbr title="Firefox 4.0b12pre">FF 4</abbr></th>
+            <th class="firefox5"><abbr title="Firefox 5">FF 5</abbr></th>
+            <th class="firefox6"><abbr title="Firefox 6">FF 6</abbr></th>
 
             <th class="safari3"><abbr title="Safari 3.2">SF 3.2</abbr></th>
             <th class="safari4"><abbr title="Safari 4.0.5">SF 4</abbr></th>
@@ -105,7 +103,9 @@
 
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
-            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox4">Yes<a href="#function-statments-strict-mode-firefoxe"><sup>[1]</sup></a></td>
+            <td class="yes firefox5">Yes<a href="#function-statments-strict-mode-firefox"><sup>[1]</sup></a></td>
+            <td class="yes firefox6">Yes<a href="#function-statments-strict-mode-firefox"><sup>[1]</sup></a></td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -139,6 +139,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -156,6 +158,39 @@
             <td class="yes rhino">Yes</td>
           </tr>
           <tr>
+            <td>"toSource" method</td>
+            
+            <script>
+              test('toSource' in (function(){}) && 'toSource' in ({}));
+            </script>
+
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
+
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
+
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class="no chrome7">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            
+            <td class="no konq">No</td>
+            
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
+          </tr>          
+          <tr>
             <th colspan="11" class="separator"></th>
           </tr>
           <tr>
@@ -172,6 +207,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="yes safari4">Yes</td>
@@ -202,6 +239,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -219,36 +258,6 @@
             <td class="no rhino">No</td>
           </tr>
           <tr>
-            <td>function "toSource" property</td>
-            
-            <script>
-              test('toSource' in (function(){}));
-            </script>
-
-            <td class="no ie7">No</td>
-            <td class="no ie8">No</td>
-            <td class="no ie9">No</td>
-
-            <td class=" firefox3">-</td>
-            <td class="yes firefox3_5">Yes</td>
-            <td class="yes firefox4">Yes</td>
-
-            <td class="no safari3">No</td>
-            <td class="no safari4">No</td>
-            <td class="no safari5">No</td>
-            <td class="no webkit">No</td>
-
-            <td class="no chrome7">No</td>
-
-            <td class="no opera10_10">No</td>
-            <td class="no opera10_50">No</td>
-            
-            <td class="no konq">No</td>
-            
-            <td class="yes besen">Yes</td>
-            <td class="yes rhino">Yes</td>
-          </tr>
-          <tr>
             <td>function "arity" property</td>
             
             <script>
@@ -262,6 +271,9 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -297,6 +309,9 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -328,7 +343,9 @@
 
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
-            <td class="no firefox4">No</td>
+            <td class="no firefox4">No</td>        
+            <td class="no firefox5">No</td>
+            <td class="no firefox6">No</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -361,6 +378,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="no firefox4">No</td>
+            <td class="no firefox5">No</td>
+            <td class="no firefox6">No</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -401,6 +420,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td> 
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -433,6 +454,9 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
+            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -465,6 +489,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -501,6 +527,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -542,6 +570,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -572,6 +602,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>                        
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -608,6 +640,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>            
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -645,6 +679,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>                        
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -688,6 +724,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>                        
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -726,6 +764,8 @@
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
             <td class="no firefox4">No</td>
+            <td class="no firefox5">No</td>
+            <td class="no firefox6">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -761,7 +801,9 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
-
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
+            
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
@@ -794,6 +836,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -829,6 +873,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="no firefox5">No</td>
+            <td class="no firefox6">No</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -862,6 +908,8 @@
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>                        
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -878,7 +926,7 @@
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
           </tr>
-					<tr>
+          <tr>
             <td>String.prototype.trimLeft</td>
             
             <script>
@@ -886,29 +934,31 @@
             </script>
 
             <td class="no ie7">No</td>
-				    <td class="no ie8">No</td>
-				    <td class="no ie9">No</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
 
-				    <td class=" firefox3">-</td>
-				    <td class="yes firefox3_5">Yes</td>
-				    <td class="yes firefox4">Yes</td>
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>                    
 
-				    <td class="no safari3">No</td>
-				    <td class="no safari4">No</td>
-				    <td class="yes safari5">Yes</td>
-				    <td class="yes webkit">Yes</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
 
-				    <td class="yes chrome7">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-				    <td class="no opera10_10">No</td>
-				    <td class="no opera10_50">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
 
-				    <td class="no konq">No</td>
+            <td class="no konq">No</td>
 
-				    <td class="no besen">No</td>
-				    <td class="no rhino">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
           </tr>
-					<tr>
+        <tr>
             <td>String.prototype.trimRight</td>
             
             <script>
@@ -916,27 +966,29 @@
             </script>
 
             <td class="no ie7">No</td>
-				    <td class="no ie8">No</td>
-				    <td class="no ie9">No</td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
 
-				    <td class=" firefox3">-</td>
-				    <td class="yes firefox3_5">Yes</td>
-				    <td class="yes firefox4">Yes</td>
+            <td class=" firefox3">-</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
-				    <td class="no safari3">No</td>
-				    <td class="no safari4">No</td>
-				    <td class="yes safari5">Yes</td>
-				    <td class="yes webkit">Yes</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
 
-				    <td class="yes chrome7">Yes</td>
+            <td class="yes chrome7">Yes</td>
 
-				    <td class="no opera10_10">No</td>
-				    <td class="no opera10_50">No</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
 
-				    <td class="no konq">No</td>
+            <td class="no konq">No</td>
 
-				    <td class="no besen">No</td>
-				    <td class="no rhino">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
           </tr>
           <tr>
             <td>String.prototype.anchor</td>
@@ -952,11 +1004,14 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
             <td class="yes safari5">Yes</td>
             <td class="yes webkit">Yes</td>
+            
 
             <td class="yes chrome7">Yes</td>
 
@@ -982,6 +1037,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1012,6 +1069,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1042,6 +1101,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1072,6 +1133,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1105,6 +1168,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1135,6 +1200,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1164,7 +1231,9 @@
 
             <td class=" firefox3">-</td>
             <td class="no firefox3_5">No</td>
-            <td class="no firefox4">No</td>
+            <td class="no firefox4">No</td>            
+            <td class="no firefox5">No</td>
+            <td class="no firefox6">No</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1205,6 +1274,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1238,6 +1309,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1268,6 +1341,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1298,6 +1373,8 @@
             <td class=" firefox3">-</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>                        
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1328,6 +1405,8 @@
             <td class=" firefox3">-</td>
             <td class="no firefox3_5">No</td>
             <td class="no firefox4">No</td>
+            <td class="no firefox5">No</td>
+            <td class="no firefox6">No</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1361,6 +1440,8 @@
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
             <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1395,6 +1476,8 @@
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
             <td class="no firefox4">No</td>
+            <td class="no firefox5">No</td>
+            <td class="yes firefox6">Yes</td>             
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1415,7 +1498,11 @@
       </table>
     </div>
     <div id="footnotes">
-      
+      <p id="function-statments-strict-mode-firefox">
+        <sup>[1]</sup> From Firefox 4 on, function statements in 
+		strict mode functions are only accepted at top level or 
+		immediately within another function.
+      </p>
     </div>
     
     <!-- 
