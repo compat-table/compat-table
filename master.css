@@ -30,7 +30,10 @@ code { font-family: "Courier New", Courier, monospace; }
 .this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px; 
   font-size: 13px; vertical-align: top; }
 
-.hide-old-browsers .safari3, .hide-old-browsers .ie7, .hide-old-browsers .firefox3 { display: none; }
+.hide-old-browsers .safari3, 
+.hide-old-browsers .ie7, 
+.hide-old-browsers .firefox3,
+.hide-old-browsers .chrome5 { display: none; }
 
 #show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
 
