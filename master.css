@@ -46,4 +46,4 @@ code { font-family: "Courier New", Courier, monospace; }
   
 .info:hover { background: #555 }
 
-.info-tooltip { position: absolute; padding: 15px; background: #fff; border: 1px solid red; box-shadow: rgba(0,0,0,0.6) 1px 1px 10px; z-index: 10000 }
+.info-tooltip { position: absolute; padding: 15px; background: #fff; border: 2px solid #555; box-shadow: rgba(0,0,0,0.6) 1px 1px 10px; z-index: 10000 }
