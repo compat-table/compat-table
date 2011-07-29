@@ -23,4 +23,43 @@ window.onload = function() {
       document.body.className += 'hide-old-browsers';
     }
   };
+  
+  var mouseoverTimeout;
+  
+  var infoTooltip = document.createElement('pre');
+  infoTooltip.className = 'info-tooltip';
+  infoTooltip.style.display = 'none';
+  document.body.appendChild(infoTooltip);
+  infoTooltip.onmouseout = function() {
+    infoTooltip.style.display = 'none';
+  };
+  infoTooltip.onmouseover = function() {
+    mouseoverTimeout = null;
+  };
+  
+  var rows = document.getElementsByTagName('table')[0].rows;
+  for (var i = 1; i < rows.length; i++) {
+    if (/separator/.test(rows[i].cells[0].className)) continue;
+    
+    var infoEl = document.createElement('span');
+    infoEl.className = 'info';
+    infoEl.innerHTML = 'c';
+    rows[i].cells[0].appendChild(infoEl);
+    
+    infoEl.onmouseover = function(e) {
+      mouseoverTimeout = null;
+      var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
+      infoTooltip.innerHTML = scriptEl.innerHTML.replace(/^\n/, '').replace(/</g, '&lt;');
+      infoTooltip.style.left = e.pageX + 10 + 'px';
+      infoTooltip.style.top = e.pageY + 'px';
+      infoTooltip.style.display = 'block';
+    };
+    infoEl.onmouseout = function(e) {
+      mouseoverTimeout = setTimeout(function() {
+        if (mouseoverTimeout) {
+          infoTooltip.style.display = 'none';
+        }
+      }, 500);
+    };
+  }
 };

@@ -86,16 +86,16 @@
               <a href="http://kangax.github.com/nfe/#function-statements">function statement</a>
             </td>
             
-            <script>
-              test((function(){ 
-                try {
-                  eval('if (1) { function f(){ } } else { function f(){ } }');
-                  return typeof f === 'function';
-                } catch(err) {
-                  return false;
-                }
-              })());
-            </script>
+<script>
+test((function(){ 
+  try {
+    eval('if (1) { function f(){ } } else { function f(){ } }');
+    return typeof f === 'function';
+  } catch(err) {
+    return false;
+  }
+})());
+</script>
             
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -128,9 +128,9 @@
           <tr>
             <td>uneval</td>
             
-            <script>
-              test(typeof uneval == 'function');
-            </script>
+<script>
+test(typeof uneval == 'function');
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -160,9 +160,9 @@
           <tr>
             <td>"toSource" method</td>
             
-            <script>
-              test('toSource' in (function(){}) && 'toSource' in ({}));
-            </script>
+<script>
+test('toSource' in (function(){}) && 'toSource' in ({}));
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -195,9 +195,9 @@
           <tr>
             <td>function "name" property</td>
             
-            <script>
-              test((function foo(){}).name == 'foo');
-            </script>
+<script>
+test((function foo(){}).name == 'foo');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -227,9 +227,9 @@
           <tr>
             <td>function "caller" property</td>
             
-            <script>
-              test('caller' in (function(){}));
-            </script>
+<script>
+test('caller' in (function(){}));
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -259,9 +259,9 @@
           <tr>
             <td>function "arity" property</td>
             
-            <script>
-              test((function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y){}).arity === 2);
-            </script>
+<script>
+test((function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y){}).arity === 2);
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -290,9 +290,9 @@
           </tr>
           <tr>
             <td><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a></td>
-            <script>
-				test(typeof Function.prototype.isGenerator == 'function');
-            </script>
+<script>
+test(typeof Function.prototype.isGenerator == 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -327,9 +327,9 @@
               <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a>
             </td>
             
-            <script>
-              test(({}).__proto__ === Object.prototype && [].__proto__ === Array.prototype);
-            </script>
+<script>
+test(({}).__proto__ === Object.prototype && [].__proto__ === Array.prototype);
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -361,9 +361,9 @@
               <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a>
             </td>
             
-            <script>
-              test(typeof ({}).__count__ === "number" && ({ x: 1, y: 2 }).__count__ === 2);
-            </script>
+<script>
+test(typeof ({}).__count__ === "number" && ({ x: 1, y: 2 }).__count__ === 2);
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -395,9 +395,9 @@
               <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a>
             </td>
             
-            <script>
-              test(typeof ({}).__parent__ !== "undefined");
-            </script>
+<script>
+test(typeof ({}).__parent__ !== "undefined");
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -429,17 +429,17 @@
               <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a>
             </td>
             
-            <script>
-              test((function(){
-                var o = { }, executed = false;
-                o.__noSuchMethod__ = function() { executed = true; }
-                try {
-                  o.__i_dont_exist();
-                }
-                catch(err) { }
-                return executed;
-              })());
-            </script>
+<script>
+test((function(){
+  var o = { }, executed = false;
+  o.__noSuchMethod__ = function() { executed = true; }
+  try {
+    o.__i_dont_exist();
+  }
+  catch(err) { }
+  return executed;
+})());
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -471,9 +471,9 @@
               <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a>
             </td>
             
-            <script>
-              test('__defineGetter__' in ({ }));
-            </script>
+<script>
+test('__defineGetter__' in ({ }));
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -506,9 +506,9 @@
               <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a>
             </td>
             
-            <script>
-              test('__defineSetter__' in ({ }));
-            </script>
+<script>
+test('__defineSetter__' in ({ }));
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -541,12 +541,15 @@
           <tr>
             <td>const</td>
             
-            <script>
-              test((function(){ 
-                try { eval('const foobarbaz = 12'); return typeof foobarbaz === 'number'; } 
-                catch(err) { return false }
-              })());
-            </script>
+<script>
+test((function(){ 
+  try { 
+    eval('const foobarbaz = 12'); 
+    return typeof foobarbaz === 'number'; 
+  } 
+  catch(err) { return false }
+})());
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -576,13 +579,13 @@
           <tr>
             <td>let</td>
             
-            <script type="application/javascript;version=1.8">
-              test((function(){ 
-                try { return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()'); }
-                catch(err) { return false; }
-              })());
-              __script_executed = true
-            </script>
+<script type="application/javascript;version=1.8">
+test((function(){ 
+  try { return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()'); }
+  catch(err) { return false; }
+})());
+__script_executed = true
+</script>
             
             <script>
               if (!__script_executed) {
@@ -619,9 +622,9 @@
           <tr>
             <td>Array generics</td>
             
-            <script>
-              test(typeof Array.slice === "function" && Array.slice('123').length === 3);
-            </script>
+<script>
+test(typeof Array.slice === "function" && Array.slice('123').length === 3);
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -651,15 +654,15 @@
           <tr>
             <td>Expression closures</td>
             
-            <script>
-              test((function(){
-                try {
-                  return eval('(function(x)x)(1)') === 1;
-                } catch(err) {
-                  return false;
-                }
-              })());
-            </script>
+<script>
+test((function(){
+  try {
+    return eval('(function(x)x)(1)') === 1;
+  } catch(err) {
+    return false;
+  }
+})());
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -689,16 +692,16 @@
           <tr>
             <td>e4x</td>
             
-            <script>
-              test((function(){
-                try {
-                  return eval('typeof <foo/> === "xml"');
-                }
-                catch(err) {
-                  return false;
-                }
-              })());
-            </script>
+<script>
+test((function(){
+  try {
+    return eval('typeof <foo/> === "xml"');
+  }
+  catch(err) {
+    return false;
+  }
+})());
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -732,18 +735,18 @@
           <tr>
             <td>RegExp "y" flag</td>
             
-            <script>
-              test((function(){
-                try {
-                  var re = new RegExp('\\w');
-                  var re2 = new RegExp('\\w', 'y');
-                  re.exec('xy');
-                  re2.exec('xy');
-                  return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-                } 
-                catch(err) { return false }
-              })());
-            </script>
+<script>
+test((function(){
+  try {
+    var re = new RegExp('\\w');
+    var re2 = new RegExp('\\w', 'y');
+    re.exec('xy');
+    re2.exec('xy');
+    return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+  } 
+  catch(err) { return false }
+})());
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -773,17 +776,17 @@
           <tr>
             <td>RegExp "x" flag</td>
             
-            <script>
-              test((function(){
-                try {
-                  var re = RegExp("^ ( \\d+ ) \
-                                     ( \\w+ ) \
-                                     ( foo  )", "x");
-                  return re.exec('23xfoo')[0] === '23xfoo';
-                } 
-                catch(err) { return false }
-              })());
-            </script>
+<script>
+test((function(){
+  try {
+    var re = RegExp("^ ( \\d+ ) \
+                       ( \\w+ ) \
+                       ( foo  )", "x");
+    return re.exec('23xfoo')[0] === '23xfoo';
+  } 
+  catch(err) { return false }
+})());
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -814,13 +817,13 @@
           <tr>
             <td>RegExp "lastMatch"</td>
             
-            <script>
-              test((function(){
-                var re = /\w/;
-                re.exec('x');
-                return RegExp.lastMatch === 'x';
-              })());
-            </script>
+<script>
+test((function(){
+  var re = /\w/;
+  re.exec('x');
+  return RegExp.lastMatch === 'x';
+})());
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -849,14 +852,14 @@
           </tr>
           <tr>
             <td>RegExp.$1-$9</td>
-            <script>
-              test((function(){
-                for (var i = 1; i < 10; i++) {
-                  if (!(('$' + i) in RegExp)) return false;
-                }
-                return true;
-              })());
-            </script>
+<script>
+test((function(){
+  for (var i = 1; i < 10; i++) {
+    if (!(('$' + i) in RegExp)) return false;
+  }
+  return true;
+})());
+</script>
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
@@ -884,16 +887,16 @@
           </tr>
           <tr>
             <td>Callable RegExp</td>
-            <script>
-              test((function(){
-                try {
-                  return eval('/\\w/("x")[0] === "x"');
-                }
-                catch(err) {
-                  return false;
-                }
-              })());
-            </script>
+<script>
+test((function(){
+  try {
+    return eval('/\\w/("x")[0] === "x"');
+  }
+  catch(err) {
+    return false;
+  }
+})());
+</script>
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
@@ -925,9 +928,9 @@
           <tr>
             <td>String.prototype.substr</td>
             
-            <script>
-              test(typeof String.prototype.substr === 'function');
-            </script>
+<script>
+test(typeof String.prototype.substr === 'function');
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -957,9 +960,9 @@
           <tr>
             <td>String.prototype.trimLeft</td>
             
-            <script>
-              test(typeof String.prototype.trimLeft === 'function');
-            </script>
+<script>
+test(typeof String.prototype.trimLeft === 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -989,9 +992,9 @@
         <tr>
             <td>String.prototype.trimRight</td>
             
-            <script>
-              test(typeof String.prototype.trimRight === 'function');
-            </script>
+<script>
+test(typeof String.prototype.trimRight === 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1021,9 +1024,9 @@
           <tr>
             <td>String.prototype.anchor</td>
             
-            <script>
-              test(typeof String.prototype.anchor === 'function');
-            </script>
+<script>
+test(typeof String.prototype.anchor === 'function');
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1054,9 +1057,9 @@
           <tr>
             <td>String.prototype.big</td>
             
-            <script>
-              test(typeof String.prototype.big === 'function');
-            </script>
+<script>
+test(typeof String.prototype.big === 'function');
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1086,9 +1089,9 @@
           <tr>
             <td>String.prototype.blink</td>
             
-            <script>
-              test(typeof String.prototype.blink === 'function');
-            </script>
+<script>
+test(typeof String.prototype.blink === 'function');
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1118,9 +1121,9 @@
           <tr>
             <td>String.prototype.bold</td>
             
-            <script>
-              test(typeof String.prototype.bold === 'function');
-            </script>
+<script>
+test(typeof String.prototype.bold === 'function');
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1150,9 +1153,9 @@
           <tr>
             <td>String.prototype.link</td>
             
-            <script>
-              test(typeof String.prototype.link === 'function');
-            </script>
+<script>
+test(typeof String.prototype.link === 'function');
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1185,9 +1188,9 @@
           <tr>
             <td>Object.prototype.watch</td>
             
-            <script>
-              test(typeof Object.prototype.watch == 'function');
-            </script>
+<script>
+test(typeof Object.prototype.watch == 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1217,9 +1220,9 @@
           <tr>
             <td>Object.prototype.unwatch</td>
             
-            <script>
-              test(typeof Object.prototype.unwatch == 'function');
-            </script>
+<script>
+test(typeof Object.prototype.unwatch == 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1249,9 +1252,9 @@
           <tr>
             <td>Object.prototype.eval</td>
             
-            <script>
-              test(typeof Object.prototype.eval == 'function');
-            </script>
+<script>
+test(typeof Object.prototype.eval == 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1284,16 +1287,16 @@
           <tr>
             <td>Octal literals</td>
             
-            <script>
-              test((function(){
-                try {
-                  return eval('070 === 56');
-                }
-                catch(err) {
-                  return false;
-                }
-              })());
-            </script>
+<script>
+test((function(){
+  try {
+    return eval('070 === 56');
+  }
+  catch(err) {
+    return false;
+  }
+})());
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1326,9 +1329,9 @@
           <tr>
             <td>error "stack"</td>
             
-            <script>
-              test('stack' in new Error);
-            </script>
+<script>
+test('stack' in new Error);
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1358,9 +1361,9 @@
           <tr>
             <td>error "lineNumber"</td>
             
-            <script>
-              test('lineNumber' in new Error);
-            </script>
+<script>
+test('lineNumber' in new Error);
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1390,9 +1393,9 @@
           <tr>
             <td>error "fileName"</td>
             
-            <script>
-              test('fileName' in new Error);
-            </script>
+<script>
+test('fileName' in new Error);
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1422,9 +1425,9 @@
           <tr>
             <td>error "description"</td>
             
-            <script>
-              test('description' in new Error);
-            </script>
+<script>
+test('description' in new Error);
+</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie8">Yes</td>
@@ -1457,9 +1460,9 @@
           <tr>
             <td><a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">Proxy</a></td>
             
-            <script>
-              test(typeof Proxy !== 'undefined' && typeof Proxy.create == 'function');
-            </script>
+<script>
+test(typeof Proxy !== 'undefined' && typeof Proxy.create == 'function');
+</script>
 
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
@@ -1489,13 +1492,13 @@
           <tr>
             <td><a href="http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps">WeakMap</a></td>
             
-            <script>
-              test(
-                typeof WeakMap !== 'undefined' && 
-                typeof new WeakMap().get == 'function' && 
-                typeof new WeakMap().set == 'function'
-              );
-            </script>
+<script>
+test(
+  typeof WeakMap !== 'undefined' && 
+  typeof new WeakMap().get == 'function' && 
+  typeof new WeakMap().set == 'function'
+);
+</script>
             
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
