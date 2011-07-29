@@ -33,7 +33,8 @@ code { font-family: "Courier New", Courier, monospace; }
 .hide-old-browsers .safari3, 
 .hide-old-browsers .ie7, 
 .hide-old-browsers .firefox3,
-.hide-old-browsers .chrome5 { display: none; }
+.hide-old-browsers .chrome5,
+.hide-old-browsers .chrome6 { display: none; }
 
 #show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
 
@@ -47,3 +48,5 @@ code { font-family: "Courier New", Courier, monospace; }
 .info:hover { background: #555 }
 
 .info-tooltip { position: absolute; padding: 15px; background: #fff; border: 2px solid #555; box-shadow: rgba(0,0,0,0.6) 1px 1px 10px; z-index: 10000 }
+
+.FlattrButton { margin-right: 15px }
