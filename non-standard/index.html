@@ -306,12 +306,14 @@ test((function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y
             <td>function "arguments" property</td>
             
 <script>
-test((function f(a, b){ return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo' })(1, 'boo'));
-
+test((function() {
+  function f(a, b) { return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo' }
+  return f(1, 'boo');
+})());
 </script>
 
-            <td class="no ie7">No</td>
-            <td class="no ie8">No</td>
+            <td class="yes ie7">Yes</td>
+            <td class="yes ie8">Yes</td>
             <td class="yes ie9">Yes</td>
 
             <td class="yes firefox3">Yes</td>
