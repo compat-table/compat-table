@@ -18,12 +18,26 @@
         <a href="http://kangax.github.com/es5-compat-table/non-standard">
           <span title="ECMA-262">ECMAScript</span> extensions compatibility table
         </a>
-        <span style="font-size:0.8em;float:right;font-weight:normal;">by 
-          <a href="http://twitter.com/kangax/" style="color:#eee">kangax</a>
+        
+        <span style="font-size:0.8em;float:right;font-weight:normal;">
+          <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/es5-compat-table/non-standard"></a>
+          <noscript>
+            <a href="https://flattr.com/thing/138679/ECMAScript-5-compatibility-table-non-standard-extensions" target="_blank">
+              <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0">
+            </a>
+          </noscript>
+          <script>
+            (function() {
+              var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+              s.async = true;
+              s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+              t.parentNode.insertBefore(s, t);
+            })();
+          </script>
           
-          <a href="https://flattr.com/thing/138679/ECMAScript-5-compatibility-table-non-standard-extensions" target="_blank" style="margin-left:10px">
-            <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0">
-          </a>
+          <span style="position:relative;top:-6px">
+            by <a href="http://twitter.com/kangax/" style="color:#eee">kangax</a>
+          </span>
         </span>
       </h1>
     </div>
@@ -284,6 +298,39 @@ test((function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y
             <td class="no opera10_50">No</td>
             
             <td class="no konq">No</td>
+            
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>function "arguments" property</td>
+            
+<script>
+test((function f(a, b){ return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo' })(1, 'boo'));
+
+</script>
+
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
+
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>            
+
+            <td class=" safari3"></td>
+            <td class="yes safari4">Yes</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes webkit">Yes</td>
+
+            <td class="yes chrome7">Yes</td>
+
+            <td class="yes opera10_10">Yes</td>
+            <td class="yes opera10_50">Yes</td>
+            
+            <td class="yes konq">Yes</td>
             
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
