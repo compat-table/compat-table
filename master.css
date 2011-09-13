@@ -34,7 +34,8 @@ code { font-family: "Courier New", Courier, monospace; }
 .hide-old-browsers .ie7, 
 .hide-old-browsers .firefox3,
 .hide-old-browsers .chrome5,
-.hide-old-browsers .chrome6 { display: none; }
+.hide-old-browsers .chrome6,
+.hide-old-browsers .opera10_10 { display: none; }
 
 #show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
 

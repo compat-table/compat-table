@@ -46,7 +46,7 @@
       
       <p id="show-old-browsers-wrapper" style="display: none;">
         <input type="checkbox" id="show-old-browsers">
-        <label for="show-old-browsers">Show older browsers (IE 7; FF 3; SF 3.2; CH 5,6)</label>
+        <label for="show-old-browsers">Show older browsers (IE 7; FF 3; SF 3.2; CH 5,6; OP 10.1)</label>
       </p>
       <table>
         <colgroup>
@@ -81,10 +81,11 @@
             <th class="chrome7"><abbr title="Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev), Chrome 10, Chrome 11, Chrome 12 (12.0.742.91)">CH 7-12</abbr></th>
             <th class="chrome7"><abbr title="Chrome 13 (13.0.782.107 beta), Chrome 14 (14.0.835.8 dev)">CH 13,14</abbr></th>
 
-            <th><abbr title="Opera 10.10">OP 10.1</abbr></th>
-            <th><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156), Opera 11.10 (build 2048), Opera 11.11 (build 2109), Opera 11.50 (build 1074), Opera 12 (build 1020)">
-              OP 10.50-12
+            <th class="opera10_10"><abbr title="Opera 10.10">OP 10.1</abbr></th>
+            <th><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156), Opera 11.10 (build 2048), Opera 11.11 (build 2109), Opera 11.50 (build 1074)">
+              OP 10.50-11.50
             </abbr></th>
+            <th><abbr title="Opera 12 (build 1065)">OP 12</abbr></th>
             
             <th><abbr title="Konqueror 4.3">Konq 4.3</abbr></th>
             
@@ -123,6 +124,7 @@ test(typeof Object.create == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -158,6 +160,7 @@ test(typeof Object.defineProperty == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -193,6 +196,7 @@ test(typeof Object.defineProperties == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -228,6 +232,7 @@ test(typeof Object.getPrototypeOf == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -263,6 +268,7 @@ test(typeof Object.keys == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -298,6 +304,7 @@ test(typeof Object.seal == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -333,6 +340,7 @@ test(typeof Object.freeze == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -368,6 +376,7 @@ test(typeof Object.preventExtensions == 'function');
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
                        
             <td class="no konq">No</td>
             
@@ -404,6 +413,7 @@ test(typeof Object.isSealed == 'function');
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
                        
             <td class="no konq">No</td>
             
@@ -439,6 +449,7 @@ test(typeof Object.isFrozen == 'function');
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
                        
             <td class="no konq">No</td>
             
@@ -474,6 +485,7 @@ test(typeof Object.isExtensible == 'function');
                        
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
                        
             <td class="no konq">No</td>
             
@@ -509,6 +521,7 @@ test(typeof Object.getOwnPropertyDescriptor == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -544,6 +557,7 @@ test(typeof Object.getOwnPropertyNames == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -582,6 +596,7 @@ test(typeof Date.prototype.toISOString == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -618,6 +633,7 @@ test(typeof Date.now == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -654,6 +670,7 @@ test(typeof Array.isArray == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -690,6 +707,7 @@ test(typeof JSON == 'object');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no">No</td>
             
@@ -726,6 +744,7 @@ test(typeof Function.prototype.bind == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -762,6 +781,7 @@ test(typeof String.prototype.trim == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -800,6 +820,7 @@ test(typeof Array.prototype.indexOf == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -835,6 +856,7 @@ test(typeof Array.prototype.lastIndexOf == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -870,6 +892,7 @@ test(typeof Array.prototype.every == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -905,6 +928,7 @@ test(typeof Array.prototype.some == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -940,6 +964,7 @@ test(typeof Array.prototype.forEach == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -975,6 +1000,7 @@ test(typeof Array.prototype.map == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1010,6 +1036,7 @@ test(typeof Array.prototype.filter == 'function');
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1045,6 +1072,7 @@ test(typeof Array.prototype.reduce == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1080,6 +1108,7 @@ test(typeof Array.prototype.reduceRight == 'function');
 
             <td class="no opera10_10">No</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1123,6 +1152,7 @@ test((function(){
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1165,6 +1195,7 @@ test((function(){
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1206,6 +1237,7 @@ test("foobar"[3] === "b");
 
             <td class="yes opera10_10">Yes</td>
             <td class="yes opera10_50">Yes</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="yes konq">Yes</td>
             
@@ -1253,6 +1285,7 @@ test(function(){
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
@@ -1297,6 +1330,7 @@ test((function(){
 
             <td class="no opera10_10">No</td>
             <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
             
             <td class="no konq">No</td>
             
