@@ -425,7 +425,7 @@ print("\n" + 'NON-STANDARD (i.e. not part of ECMA-262 standard)' + "\n");
 })();
 
  (function() {
-    setTimeout(function() {"use strict"; try { (function(){ arguments.callee; })() } catch(err) { __global.__setTimeoutError = err; }}, 10);
+    setTimeout(function() {"use strict"; try { (function(){ arguments.caller; })() } catch(err) { __global.__setTimeoutError = err; }}, 10);
     setTimeout(function() {
         print(getResultOkString(__global.__setTimeoutError instanceof TypeError) + " " + 'setTimeout follows strict mode rules when string starts with ' +
         'use strict directive (e.g.: setTimeout(\'"use strict"; ...\', ...)) ')    
