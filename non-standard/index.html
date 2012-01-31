@@ -74,6 +74,8 @@
             <th class="firefox4"><abbr title="Firefox 4.0b12pre">FF 4</abbr></th>
             <th class="firefox5"><abbr title="Firefox 5">FF 5</abbr></th>
             <th class="firefox6"><abbr title="Firefox 6">FF 6</abbr></th>
+            <th class="firefox7"><abbr title="Firefox 7, Firefox 8, Firefox 9, Firefox 10, Firefox 11">FF 7-11</abbr></th>
+            <th class="firefox12"><abbr title="Firefox 12">FF 12</abbr></th>
 
             <th class="safari3"><abbr title="Safari 3.2">SF 3.2</abbr></th>
             <th class="safari4"><abbr title="Safari 4.0.5">SF 4</abbr></th>
@@ -120,6 +122,8 @@ test((function(){
             <td class="yes firefox4">Yes<a href="#function-statments-strict-mode-firefoxe"><sup>[1]</sup></a></td>
             <td class="yes firefox5">Yes<a href="#function-statments-strict-mode-firefox"><sup>[1]</sup></a></td>
             <td class="yes firefox6">Yes<a href="#function-statments-strict-mode-firefox"><sup>[1]</sup></a></td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -155,6 +159,8 @@ test(typeof uneval == 'function');
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -186,7 +192,9 @@ test('toSource' in (function(){}) && 'toSource' in ({}));
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -221,7 +229,9 @@ test((function foo(){}).name == 'foo');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="yes safari4">Yes</td>
@@ -254,6 +264,8 @@ test('caller' in (function(){}));
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -285,7 +297,9 @@ test((function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -320,7 +334,9 @@ test((function() {
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class=" safari3"></td>
             <td class="yes safari4">Yes</td>
@@ -351,7 +367,9 @@ test(typeof Function.prototype.isGenerator == 'function');
             <td class="no firefox3_5">No</td>
             <td class="no firefox4">No</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -388,7 +406,9 @@ test(({}).__proto__ === Object.prototype && [].__proto__ === Array.prototype);
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -422,7 +442,9 @@ test(typeof ({}).__count__ === "number" && ({ x: 1, y: 2 }).__count__ === 2);
             <td class="yes firefox3_5">Yes</td>
             <td class="no firefox4">No</td>        
             <td class="no firefox5">No</td>
-            <td class="no firefox6">No</td>            
+            <td class="no firefox6">No</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -456,7 +478,9 @@ test(typeof ({}).__parent__ !== "undefined");
             <td class="yes firefox3_5">Yes</td>
             <td class="no firefox4">No</td>
             <td class="no firefox5">No</td>
-            <td class="no firefox6">No</td>            
+            <td class="no firefox6">No</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -498,7 +522,9 @@ test((function(){
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td> 
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -532,8 +558,9 @@ test('__defineGetter__' in ({ }));
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
-            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -567,7 +594,9 @@ test('__defineSetter__' in ({ }));
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -608,7 +637,9 @@ test((function(){
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -652,6 +683,8 @@ __script_executed = true
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -683,7 +716,9 @@ test(typeof Array.slice === "function" && Array.slice('123').length === 3);
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>                        
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -720,8 +755,10 @@ test((function(){
             <td class="yes firefox3">Yes</td>
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
-            <td class="yes firefox5">Yes</td>            
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -760,7 +797,9 @@ test((function(){
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>                        
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -777,6 +816,48 @@ test((function(){
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
           </tr>
+          <tr>
+            <td><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></td>
+
+<script>
+test((function(){
+  try {
+    return eval('(function(){ var arr = #1=[1, #1#, 3]; return arr[1] === arr; })()');
+  }
+  catch(err) {
+    return false;
+  }
+})());
+</script>
+
+            <td class="ie7"></td>
+            <td class="no ie8">No</td>
+            <td class="no ie9">No</td>
+
+            <td class="yes firefox3">Yes</td>
+            <td class="yes firefox3_5">Yes</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="yes firefox5">Yes</td>
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="no firefox12">No</td>
+
+            <td class=" safari3"></td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no webkit">No</td>
+
+            <td class="no chrome7">No</td>
+
+            <td class=" opera10_10"></td>
+            <td class="no opera10_50">No</td>
+
+            <td class=" konq"></td>
+
+            <td class=" besen"></td>
+            <td class="no rhino">No</td>
+          </tr>
+
           <tr>
             <th colspan="11" class="separator"></th>
           </tr>
@@ -805,7 +886,9 @@ test((function(){
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>                        
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -846,6 +929,8 @@ test((function(){
             <td class="no firefox4">No</td>
             <td class="no firefox5">No</td>
             <td class="no firefox6">No</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -883,6 +968,8 @@ test((function(){
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
             
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -918,6 +1005,8 @@ test((function(){
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -955,6 +1044,8 @@ test((function(){
             <td class="yes firefox4">Yes</td>
             <td class="no firefox5">No</td>
             <td class="no firefox6">No</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -989,7 +1080,9 @@ test(typeof String.prototype.substr === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>                        
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1021,7 +1114,9 @@ test(typeof String.prototype.trimLeft === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>                    
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1053,7 +1148,9 @@ test(typeof String.prototype.trimRight === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1085,7 +1182,9 @@ test(typeof String.prototype.anchor === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1118,7 +1217,9 @@ test(typeof String.prototype.big === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1150,7 +1251,9 @@ test(typeof String.prototype.blink === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1182,7 +1285,9 @@ test(typeof String.prototype.bold === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1214,7 +1319,9 @@ test(typeof String.prototype.link === 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1250,6 +1357,8 @@ test(typeof Object.prototype.watch == 'function');
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1281,7 +1390,9 @@ test(typeof Object.prototype.unwatch == 'function');
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1311,9 +1422,11 @@ test(typeof Object.prototype.eval == 'function');
 
             <td class=" firefox3">-</td>
             <td class="no firefox3_5">No</td>
-            <td class="no firefox4">No</td>            
+            <td class="no firefox4">No</td>
             <td class="no firefox5">No</td>
-            <td class="no firefox6">No</td>            
+            <td class="no firefox6">No</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1355,7 +1468,9 @@ test((function(){
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="yes safari3">Yes</td>
             <td class="yes safari4">Yes</td>
@@ -1390,7 +1505,9 @@ test('stack' in new Error);
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1423,6 +1540,8 @@ test('lineNumber' in new Error);
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
             <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1454,7 +1573,9 @@ test('fileName' in new Error);
             <td class="yes firefox3_5">Yes</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>                        
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1486,7 +1607,9 @@ test('description' in new Error);
             <td class="no firefox3_5">No</td>
             <td class="no firefox4">No</td>
             <td class="no firefox5">No</td>
-            <td class="no firefox6">No</td>            
+            <td class="no firefox6">No</td>
+            <td class="no firefox7">No</td>
+            <td class="no firefox12">No</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1521,7 +1644,9 @@ test(typeof Proxy !== 'undefined' && typeof Proxy.create == 'function');
             <td class="no firefox3_5">No</td>
             <td class="yes firefox4">Yes</td>
             <td class="yes firefox5">Yes</td>
-            <td class="yes firefox6">Yes</td>            
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
@@ -1557,7 +1682,9 @@ test(
             <td class="no firefox3_5">No</td>
             <td class="no firefox4">No</td>
             <td class="no firefox5">No</td>
-            <td class="yes firefox6">Yes</td>             
+            <td class="yes firefox6">Yes</td>
+            <td class="yes firefox7">Yes</td>
+            <td class="yes firefox12">Yes</td>
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
