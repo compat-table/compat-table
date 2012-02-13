@@ -241,7 +241,29 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
+          <tr>
+            <td>
+              For..of loops
+            </td>
+            <script>test((function () {
+          try {
+            return eval('(function() {var arr = [5]; for (var item of arr) return item === 5;})()');
+          } catch(error) {
+            return false;
+          }
+        })())</script>
+            <td class="ie10 no">No</td>
+            <td class="firefox no">No</td>
+            <td class="firefoxDev yes">Yes</td>
+            <td class="chrome no">No</td>
+            <td class="chromeDev no">No</td>
+            <td class="safari51 no">No</td>
+            <td class="webkit no">No</td>
+            <td class="opera no">No</td>
+            <td class="rhino17 no">No</td>
+          </tr>
+
           <tr>
             <td>
               Array comprehensions
