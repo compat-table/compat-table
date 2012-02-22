@@ -270,7 +270,7 @@
             </td>
             <script>test((function () {
           try {
-            eval('[a * a for (a of [1, 2, 3]][0] === 1');
+            eval('[a * a for (a of [1, 2, 3])][0] === 1');
             return true;
           } catch(error) {
             return false;
@@ -278,7 +278,7 @@
         })())</script>
             <td class="ie10 no">No</td>
             <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            <td class="firefoxDev yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -294,7 +294,7 @@
             </td>
             <script>test((function () {
           try {
-            eval('(a for (a of [1, 2, 3])');
+            eval('(a for (a of [1, 2, 3]))');
             return true;
           } catch(error) {
             return false;
@@ -302,7 +302,7 @@
         })())</script>
             <td class="ie10 no">No</td>
             <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            <td class="firefoxDev yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -340,7 +340,7 @@
             <td>
               Generators (yield)
             </td>
-            <script>test((function () {
+            <script type="application/javascript;version=1.8">test((function () {
           try {
             eval('(function() {yield 5;})()');
             return true;
@@ -436,7 +436,7 @@
         })())</script>
             <td class="ie10 no">No</td>
             <td class="firefox no">No</td>
-            <td class="firefoxDev no">Yes</td>
+            <td class="firefoxDev yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
@@ -456,7 +456,7 @@
         })())</script>
             <td class="ie10 no">No</td>
             <td class="firefox no">No</td>
-            <td class="firefoxDev no">Yes</td>
+            <td class="firefoxDev yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
