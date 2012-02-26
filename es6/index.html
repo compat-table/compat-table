@@ -3,7 +3,10 @@
     <meta charset="utf-8">
     <title>ECMAScript compatibility table</title>
     <link rel="stylesheet" href="../master.css" type="text/css">
-    <script type="text/javascript" src="../master.js"></script>
+    <script src="../master.js"></script>
+    <script>
+      var __script_executed;
+    </script>
 </head>
 <body class="es6">
   <div id="header">
@@ -13,8 +16,14 @@
       </a>
         
       <span style="font-size:0.8em;float:right;font-weight:normal;">
-        <iframe src="http://api.flattr.com/button/view/?url=http%3A%2F%2Fkangax.github.com%2Fes5-compat-table%2Fnon-standard&amp;button=compact&amp;" class="FlattrButton" width="110" height="20" frameborder="0" scrolling="no" border="0" marginheight="0" marginwidth="0" allowtransparency="true"></iframe>
-        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script async="" src="http://api.flattr.com/js/0.6/load.js?mode=auto"></script><script>
+        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/es5-compat-table/non-standard"></a>
+        <noscript>
+          <a href="https://flattr.com/thing/138679/ECMAScript-5-compatibility-table-non-standard-extensions" target="_blank">
+            <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0">
+          </a>
+        </noscript>
+        <script async="" src="http://www.google-analytics.com/ga.js"></script>
+        <script>
           (function() {
             var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
             s.async = true;
@@ -22,7 +31,6 @@
             t.parentNode.insertBefore(s, t);
           })();
         </script>
-          
         <span style="position:relative;top:-6px">
           by <a href="http://twitter.com/kangax/" style="color:#eee">kangax</a>
         </span>
@@ -31,8 +39,7 @@
   </div>
   <div id="body">
     <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>, 
-      not functionality or full conformance.
-      I hope to test conformance sometime in the future.</p>
+      not functionality or full conformance.</p>
     <div id="table-wrapper">
       <table>
       <colgroup>
@@ -45,10 +52,10 @@
           <th class="current">Current browser</th>
           <th></th>
           <th class="ie10">IE 10</th>
-          <th class="firefox">Firefox</th>
-          <th class="firefoxDev">Firefox (nightly)</th>
-          <th class="chrome">Chrome</th>
-          <th class="chromeDev">Chrome (dev channel)</th>
+          <th class="firefox11">Firefox 11</th>
+          <th class="firefox12">Firefox 12</th>
+          <th class="chrome">Chrome &lt;18</th>
+          <th class="chromeDev">Chrome 18<a href="#experimental-flag"><sup>*</sup></a></th>
           <th class="safari51">Safari 5.1</th>
           <th class="webkit">WebKit</th>
           <th class="opera">Opera 12</th>
@@ -56,13 +63,11 @@
         </tr>
       </thead>
       <tbody>
-    
-      
-          <tr>
-            <td>
-              let
-            </td>
-            <script>test((function () { 
+        <tr>
+          <td>
+            let
+          </td>
+          <script>test((function () { 
           try {
             return eval('(function(){"use strict"; let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
           } catch(error) {
@@ -70,8 +75,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox yes">Yes</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
@@ -93,8 +98,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -115,8 +120,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -138,8 +143,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -161,8 +166,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -184,8 +189,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -208,8 +213,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -231,8 +236,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -254,8 +259,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -277,8 +282,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -301,8 +306,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -325,8 +330,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -340,17 +345,26 @@
             <td>
               Generators (yield)
             </td>
-            <script type="application/javascript;version=1.8">test((function () {
-          try {
-            eval('(function() {yield 5;})()');
-            return true;
-          } catch(error) {
-            return false;
-          }
-        })())</script>
+<script type="application/javascript;version=1.8">
+test((function () {
+  try {
+    eval('(function() {yield 5;})()');
+    return true;
+  } catch(error) {
+    return false;
+  }
+})())
+__script_executed = true;
+</script>
+<script>
+  if (!__script_executed) {
+    test(false);
+    __script_executed = false;
+  }
+</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -366,8 +380,8 @@
             </td>
             <script>test(typeof null === 'null')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
@@ -389,8 +403,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -415,8 +429,8 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox yes">Yes</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -435,8 +449,8 @@
             typeof Map.prototype.set === 'function'
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
@@ -455,8 +469,8 @@
             typeof Set.prototype.add === 'function'
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
@@ -475,8 +489,8 @@
             typeof WeakMap.prototype.set === 'function'
         })())</script>
             <td class="ie10 no">No</td>
-            <td class="firefox yes">Yes</td>
-            <td class="firefoxDev yes">Yes</td>
+            
+            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
             <td class="safari51 no">No</td>
@@ -493,8 +507,8 @@
           return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function';
         })())</script>
               <td class="ie10 no">No</td>
-              <td class="firefox yes">Yes</td>
-              <td class="firefoxDev yes">Yes</td>
+              
+              <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
               <td class="chrome no">No</td>
               <td class="chromeDev yes">Yes</td>
               <td class="safari51 no">No</td>
@@ -509,8 +523,8 @@
             </td>
             <script>test(typeof StructType !== 'undefined')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -526,8 +540,8 @@
             </td>
             <script>test(typeof Object.getOwnPropertyDescriptors === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -543,8 +557,8 @@
             </td>
             <script>test(typeof Object.getPropertyDescriptor === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -560,8 +574,8 @@
             </td>
             <script>test(typeof Object.getPropertyNames === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -577,8 +591,8 @@
             </td>
             <script>test(typeof Object.is === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -594,8 +608,8 @@
             </td>
             <script>test(typeof Object.isnt === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -611,8 +625,8 @@
             </td>
             <script>test(typeof String.prototype.repeat === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -628,8 +642,8 @@
             </td>
             <script>test(typeof String.prototype.startsWith === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -645,8 +659,8 @@
             </td>
             <script>test(typeof String.prototype.endsWith === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -662,8 +676,8 @@
             </td>
             <script>test(typeof String.prototype.contains === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -679,8 +693,8 @@
             </td>
             <script>test(typeof String.prototype.toArray === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -696,8 +710,8 @@
             </td>
             <script>test(typeof Array.from === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -713,8 +727,8 @@
             </td>
             <script>test(typeof Array.of === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -730,8 +744,8 @@
             </td>
             <script>test(typeof Number.isFinite === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -747,8 +761,8 @@
             </td>
             <script>test(typeof Number.isInteger === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -764,8 +778,8 @@
             </td>
             <script>test(typeof Number.isNaN === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -781,8 +795,8 @@
             </td>
             <script>test(typeof Number.toInteger === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -798,8 +812,8 @@
             </td>
             <script>test(typeof Math.sign === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -815,8 +829,8 @@
             </td>
             <script>test(typeof Math.log10 === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -832,8 +846,8 @@
             </td>
             <script>test(typeof Math.log2 === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -849,8 +863,8 @@
             </td>
             <script>test(typeof Math.log1p === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -866,8 +880,8 @@
             </td>
             <script>test(typeof Math.expm1 === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -883,8 +897,8 @@
             </td>
             <script>test(typeof Math.cosh === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -900,8 +914,8 @@
             </td>
             <script>test(typeof Math.sinh === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -917,8 +931,8 @@
             </td>
             <script>test(typeof Math.tanh === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -934,8 +948,8 @@
             </td>
             <script>test(typeof Math.acosh === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -951,8 +965,8 @@
             </td>
             <script>test(typeof Math.asinh === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -968,8 +982,8 @@
             </td>
             <script>test(typeof Math.atanh === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -985,8 +999,8 @@
             </td>
             <script>test(typeof Math.hypot === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -1002,8 +1016,8 @@
             </td>
             <script>test(typeof Math.trunc === 'function')</script>
             <td class="ie10 no">No</td>
-            <td class="firefox no">No</td>
-            <td class="firefoxDev no">No</td>
+            
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
             <td class="safari51 no">No</td>
@@ -1016,8 +1030,12 @@
       </tbody>
     </table>
     </div>
-    <div id="footnotes"></div>
+    <div id="footnotes">
+      <p id="experimental-flag">
+        <sup>*</sup> Have to be enabled via "Experimental Javascript features" flag
+      </p>
+    </div>
   </div>
-  <pre class="info-tooltip" style="display: none; "></pre>
+  <pre class="info-tooltip" style="display:none"></pre>
 </body>
 </html>
