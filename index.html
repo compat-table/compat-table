@@ -154,9 +154,9 @@ test(typeof Object.defineProperty == 'function');
 
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
-            <td class="yes safari5">Yes <a href="#define-property-webkit-note"><sup>[5]</sup></a></td>
+            <td class="yes safari5">Yes <a href="#define-property-webkit-note"><sup>[6]</sup></a></td>
             <td class="yes safari51">Yes</td>
-            <td class="yes webkit">Yes <a href="#define-property-webkit-note"><sup>[5]</sup></a></td>
+            <td class="yes webkit">Yes <a href="#define-property-webkit-note"><sup>[6]</sup></a></td>
 
             <td class="yes chrome5">Yes</td>
             <td class="yes chrome6">Yes</td>
@@ -1302,8 +1302,50 @@ test(function(){
           </tr>
           <tr>
             <td>
+              Zero-width chars in identifiers 
+            </td>
+            
+<script>
+test((function(){ 
+  try {
+    return eval('_\u200c\u200d = true');
+  } catch(e) { }
+})());
+</script>
+
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
+            <td class="yes ie10">Yes</td>
+            
+            <td class="no firefox3">No</td>
+            <td class="no firefox3_5">No</td>
+            <td class="yes firefox4">Yes <sup><a href="#zero-width-char-note">[4]</a></sup></td>
+
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="no safari5">No</td>
+            <td class="no safari51">No</td>
+            <td class="no webkit">No</td>
+
+            <td class="no chrome5">No</td>
+            <td class="no chrome6">No</td>
+            <td class="no chrome7">No</td>
+            <td class="no chrome13">No</td>
+
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="no opera12">No</td>
+            
+            <td class="konq"></td>
+            
+            <td class="besen"></td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td>
               <a href="http://kangax.github.com/es5-compat-table/strict-mode/" style="text-decoration: underline; font-size: 1em">Strict mode</a> 
-              <sup><a href="#strict-mode-note">[4]</a></sup>
+              <sup><a href="#strict-mode-note">[5]</a></sup>
             </td>
             
 <script>
@@ -1316,7 +1358,7 @@ test((function(){
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
-            <td class="no ie10">No<a href="#strict-mode-ie10"><sup>[6]</sup></a></td>
+            <td class="no ie10">No<a href="#strict-mode-ie10"><sup>[7]</sup></a></td>
             
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
@@ -1356,15 +1398,18 @@ test((function(){
       <p id="reserved-words-note">
         <sup>[3]</sup> For example: <code>({ if: 1 })</code>
       </p>
+      <p id="zero-width-char-note">
+        <sup>[4]</sup>Firefox 4 &amp; 5 fail this test
+      </p>
       <p id="strict-mode-note">
-        <sup>[4]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
+        <sup>[5]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
           <code>(function(){ "use strict"; return !this; })();</code>
       </p>
 			<p id="define-property-webkit-note">
-				<sup>[5]</sup> In some versions of WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.
+				<sup>[6]</sup> In some versions of WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.
 			</p>
 			<p id="strict-mode-ie10">
-			 <sup>[6]</sup> IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>
+			 <sup>[7]</sup> IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>
 			</p>
     </div>
     
