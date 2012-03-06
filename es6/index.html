@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../master.css" type="text/css">
     <script src="../master.js"></script>
     <script>
-      var __script_executed;
+      var __yield_script_executed, __let_script_executed;
     </script>
 </head>
 <body class="es6">
@@ -52,8 +52,8 @@
           <th class="current">Current browser</th>
           <th></th>
           <th class="ie10">IE 10</th>
-          <th class="firefox11">Firefox 11</th>
-          <th class="firefox12">Firefox 12</th>
+          <th class="firefox11">Firefox 11,12</th>
+          <th class="firefox12">Firefox 13</th>
           <th class="chrome">Chrome &lt;18</th>
           <th class="chromeDev">Chrome 18<a href="#experimental-flag"><sup>*</sup></a></th>
           <th class="safari51">Safari 5.1</th>
@@ -67,13 +67,22 @@
           <td>
             let
           </td>
-          <script>test((function () { 
-          try {
-            return eval('(function(){"use strict"; let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-          } catch(error) {
-            return false;
+          <script type="application/javascript;version=1.8">
+          test(function () { 
+            try {
+              return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
+            } catch(error) {
+              return false;
+            }
+          }());
+          __let_script_executed = true;
+        </script>
+        <script>
+          if (!__let_script_executed) {
+            test(false);
+            __let_script_executed = false;
           }
-        })())</script>
+        </script>
             <td class="ie10 no">No</td>
             
             <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
@@ -91,8 +100,7 @@
             </td>
             <script>test((function () { 
           try { 
-            eval('(function() {"use strict"; const foobarbaz = 12})()'); 
-            return typeof foobarbaz === 'number'; 
+            return eval('(function() { const foobarbaz = 12; return typeof foobarbaz === "number" })()');
           } catch(error) {
             return false;
           }
@@ -230,7 +238,7 @@
             </td>
             <script>test((function () {
           try {
-            return eval('(function(...args) { return typeof args !== "undefined"; })()')
+            return eval('module foo { }');
           } catch(error) {
             return false;
           }
@@ -354,12 +362,12 @@ test((function () {
     return false;
   }
 })())
-__script_executed = true;
+__yield_script_executed = true;
 </script>
 <script>
-  if (!__script_executed) {
+  if (!__yield_script_executed) {
     test(false);
-    __script_executed = false;
+    __yield_script_executed = false;
   }
 </script>
             <td class="ie10 no">No</td>
