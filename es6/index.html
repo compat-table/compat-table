@@ -512,7 +512,7 @@ __yield_script_executed = true;
               Proxies
             </td>
             <script>test((function () {
-          return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function';
+          return typeof Proxy !== 'undefined' && typeof Proxy.for == 'function' && typeof Proxy.create == 'function';
         })())</script>
               <td class="ie10 no">No</td>
 
