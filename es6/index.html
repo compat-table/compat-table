@@ -14,7 +14,7 @@
       <a href="http://kangax.github.com/es-compat-table/">
         <span title="ECMA-262">ECMAScript</span> 6 compatibility table
       </a>
-        
+
       <span style="font-size:0.8em;float:right;font-weight:normal;">
         <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/es5-compat-table/non-standard"></a>
         <noscript>
@@ -38,7 +38,7 @@
     </h1>
   </div>
   <div id="body">
-    <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>, 
+    <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
       not functionality or full conformance.</p>
     <div id="table-wrapper">
       <table>
@@ -68,7 +68,7 @@
             let
           </td>
           <script type="application/javascript;version=1.8">
-          test(function () { 
+          test(function () {
             try {
               return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
             } catch(error) {
@@ -84,7 +84,7 @@
           }
         </script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
@@ -93,20 +93,20 @@
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               const
             </td>
-            <script>test((function () { 
-          try { 
+            <script>test((function () {
+          try {
             return eval('(function() { const foobarbaz = 12; return typeof foobarbaz === "number" })()');
           } catch(error) {
             return false;
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -115,7 +115,7 @@
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               default function params
@@ -128,7 +128,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -138,7 +138,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               rest parameters
@@ -151,7 +151,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -161,7 +161,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               spread (...) operator
@@ -174,7 +174,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -184,7 +184,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               is / isnt egal operators
@@ -197,7 +197,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -207,7 +207,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Pragmas
@@ -221,7 +221,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -231,7 +231,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Modules
@@ -244,7 +244,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -267,7 +267,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -290,7 +290,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -300,7 +300,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Generator expressions
@@ -314,7 +314,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -324,7 +324,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Iterators
@@ -338,7 +338,7 @@
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -348,7 +348,7 @@
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Generators (yield)
@@ -371,7 +371,7 @@ __yield_script_executed = true;
   }
 </script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -381,14 +381,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Typeof null is null
             </td>
             <script>test(typeof null === 'null')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
@@ -397,7 +397,7 @@ __yield_script_executed = true;
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               Quasi-Literals
@@ -411,7 +411,7 @@ __yield_script_executed = true;
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -420,7 +420,7 @@ __yield_script_executed = true;
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               RegExp "y" flag
@@ -437,7 +437,7 @@ __yield_script_executed = true;
           }
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -446,7 +446,7 @@ __yield_script_executed = true;
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               Maps
@@ -457,7 +457,7 @@ __yield_script_executed = true;
             typeof Map.prototype.set === 'function'
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
@@ -466,7 +466,7 @@ __yield_script_executed = true;
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               Sets
@@ -477,7 +477,7 @@ __yield_script_executed = true;
             typeof Set.prototype.add === 'function'
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
@@ -486,7 +486,7 @@ __yield_script_executed = true;
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               WeakMaps
@@ -497,7 +497,7 @@ __yield_script_executed = true;
             typeof WeakMap.prototype.set === 'function'
         })())</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
             <td class="chrome no">No</td>
             <td class="chromeDev yes">Yes</td>
@@ -506,32 +506,32 @@ __yield_script_executed = true;
             <td class="opera no">No</td>
             <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               Proxies
             </td>
             <script>test((function () {
-          return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function';
+          return typeof Proxy !== 'undefined' && typeof Proxy.for == 'function' && typeof Proxy.create == 'function';
         })())</script>
               <td class="ie10 no">No</td>
-              
-              <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
+
+              <td class="firefox11 No">No</td><td class="firefox12 No">No</td>
               <td class="chrome no">No</td>
-              <td class="chromeDev yes">Yes</td>
+              <td class="chromeDev no">No</td>
               <td class="safari51 no">No</td>
               <td class="webkit no">No</td>
               <td class="opera no">No</td>
               <td class="rhino17 no">No</td>
           </tr>
-    
+
           <tr>
             <td>
               Structs (binary data storage)
             </td>
             <script>test(typeof StructType !== 'undefined')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -541,14 +541,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Object.getOwnPropertyDescriptors
             </td>
             <script>test(typeof Object.getOwnPropertyDescriptors === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -558,14 +558,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Object.getPropertyDescriptor
             </td>
             <script>test(typeof Object.getPropertyDescriptor === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -575,14 +575,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Object.getPropertyNames
             </td>
             <script>test(typeof Object.getPropertyNames === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -592,14 +592,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Object.is
             </td>
             <script>test(typeof Object.is === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -609,14 +609,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Object.isnt
             </td>
             <script>test(typeof Object.isnt === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -626,14 +626,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               String.prototype.repeat
             </td>
             <script>test(typeof String.prototype.repeat === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -643,14 +643,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               String.prototype.startsWith
             </td>
             <script>test(typeof String.prototype.startsWith === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -660,14 +660,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               String.prototype.endsWith
             </td>
             <script>test(typeof String.prototype.endsWith === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -677,14 +677,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               String.prototype.contains
             </td>
             <script>test(typeof String.prototype.contains === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -694,14 +694,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               String.prototype.toArray
             </td>
             <script>test(typeof String.prototype.toArray === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -711,14 +711,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Array.from
             </td>
             <script>test(typeof Array.from === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -728,14 +728,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Array.of
             </td>
             <script>test(typeof Array.of === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -745,14 +745,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Number.isFinite
             </td>
             <script>test(typeof Number.isFinite === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -762,14 +762,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Number.isInteger
             </td>
             <script>test(typeof Number.isInteger === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -779,14 +779,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Number.isNaN
             </td>
             <script>test(typeof Number.isNaN === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -796,14 +796,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Number.toInteger
             </td>
             <script>test(typeof Number.toInteger === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -813,14 +813,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.sign
             </td>
             <script>test(typeof Math.sign === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -830,14 +830,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.log10
             </td>
             <script>test(typeof Math.log10 === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -847,14 +847,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.log2
             </td>
             <script>test(typeof Math.log2 === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -864,14 +864,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.log1p
             </td>
             <script>test(typeof Math.log1p === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -881,14 +881,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.expm1
             </td>
             <script>test(typeof Math.expm1 === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -898,14 +898,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.cosh
             </td>
             <script>test(typeof Math.cosh === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -915,14 +915,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.sinh
             </td>
             <script>test(typeof Math.sinh === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -932,14 +932,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.tanh
             </td>
             <script>test(typeof Math.tanh === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -949,14 +949,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.acosh
             </td>
             <script>test(typeof Math.acosh === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -966,14 +966,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.asinh
             </td>
             <script>test(typeof Math.asinh === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -983,14 +983,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.atanh
             </td>
             <script>test(typeof Math.atanh === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -1000,14 +1000,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.hypot
             </td>
             <script>test(typeof Math.hypot === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -1017,14 +1017,14 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
           <tr>
             <td>
               Math.trunc
             </td>
             <script>test(typeof Math.trunc === 'function')</script>
             <td class="ie10 no">No</td>
-            
+
             <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
             <td class="chrome no">No</td>
             <td class="chromeDev no">No</td>
@@ -1034,7 +1034,7 @@ __yield_script_executed = true;
             <td class="rhino17 no">No</td>
 
           </tr>
-    
+
       </tbody>
     </table>
     </div>
