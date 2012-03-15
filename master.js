@@ -12,17 +12,22 @@ function test(expression) {
 }
 document.write('<style>td:nth-child(3) { outline: #aaf solid 3px; }</style>');
 
-window.onload = function() {
-  document.body.className += ' hide-old-browsers';
+domready(function() {
+  if (!/#showold$/.test(location.href))
+    document.body.className += ' hide-old-browsers';
+  else
+    document.getElementById('show-old-browsers').checked = true
   var wrapper = document.getElementById('show-old-browsers-wrapper');
   if (wrapper) {
     wrapper.style.display = '';
     document.getElementById('show-old-browsers').onclick = function() {
       if (this.checked) {
         document.body.className = document.body.className.replace('hide-old-browsers', '');
+        location.href = location.href.replace(/#*$/, '#showold')
       }
       else {
         document.body.className += 'hide-old-browsers';
+        location.href = location.href.replace(/(#showold)*$/, '#')
       }
     };
   }
@@ -65,4 +70,4 @@ window.onload = function() {
       }, 500);
     };
   }
-};
+})
