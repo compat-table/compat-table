@@ -68,21 +68,31 @@
             let
           </td>
           <script type="application/javascript;version=1.8">
-          test(function () {
-            try {
-              return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-            } catch(error) {
-              return false;
+            test(function () {
+              try {
+                return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
+              } catch(error) {
+                return false;
+              }
+            }());
+            __let_script_executed = true;
+          </script>
+          <script>
+            if ( !__let_script_executed ) {
+              test(function () {
+                try {
+                  return eval('(function( window ){ "use strict"; __let_script_executed = true; try { let foobarbaz2 = 123; return foobarbaz2 == 123; } catch(e) { return false; } })( this )');
+                } catch(error) {
+                  return false;
+                }
+              }());
             }
-          }());
-          __let_script_executed = true;
-        </script>
-        <script>
-          if (!__let_script_executed) {
-            test(false);
-            __let_script_executed = false;
-          }
-        </script>
+
+            if (!__let_script_executed) {
+              test(false);
+              __let_script_executed = false;
+            }
+          </script>
             <td class="ie10 no">No</td>
 
             <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
