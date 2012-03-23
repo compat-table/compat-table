@@ -740,7 +740,7 @@ test(typeof Function.prototype.bind == 'function');
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
             <td class="no safari5">No</td>
-            <td class="no safari51">No</td>
+            <td class="no safari51">No <sup><a href="#safari-bind">[8]</a></sup></td>
             <td class="no webkit">No</td>
 
             <td class="no chrome5">No</td>
@@ -1406,12 +1406,15 @@ test((function(){
         <sup>[5]</sup> Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — 
           <code>(function(){ "use strict"; return !this; })();</code>
       </p>
-			<p id="define-property-webkit-note">
-				<sup>[6]</sup> In some versions of WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.
-			</p>
-			<p id="strict-mode-ie10">
-			 <sup>[7]</sup> IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>
-			</p>
+      <p id="define-property-webkit-note">
+        <sup>[6]</sup> In some versions of WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.
+      </p>
+      <p id="strict-mode-ie10">
+        <sup>[7]</sup> IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>
+      </p>
+      <p id="safari-bind">
+        <sup>[8]</sup> <code>Function.prototype.bind</code> is now supported in Safari 5.1.4
+      </p>
     </div>
     
     <!--
