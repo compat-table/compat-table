@@ -53,10 +53,10 @@
           <th class="current">Current browser</th>
           <th></th>
           <th class="ie10">IE 10</th>
-          <th class="firefox11">Firefox 11,12</th>
+          <th class="firefox11">Firefox 11, 12</th>
           <th class="firefox12">Firefox 13</th>
           <th class="chrome">Chrome &lt;19</th>
-          <th class="chromeDev">Chrome 18<a href="#experimental-flag"><sup>*</sup></a></th>
+          <th class="chromeDev">Chrome 19<a href="#experimental-flag"><sup>*</sup></a></th>
           <th class="safari51">Safari 5.1</th>
           <th class="webkit">WebKit</th>
           <th class="opera">Opera 12</th>
@@ -518,7 +518,7 @@ __yield_script_executed = true;
               Proxies
             </td>
             <script>test((function () {
-          return typeof Proxy !== 'undefined' && typeof Proxy.for == 'function' && typeof Proxy.create == 'function';
+          return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function' && typeof Proxy.createFunction == 'function';
         })())</script>
               <td class="ie10 no">No</td>
 
