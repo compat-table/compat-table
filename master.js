@@ -10,7 +10,7 @@ function test(expression) {
   var result = expression ? 'Yes' : 'No';
   document.write('<td class="' + result.toLowerCase() + '">' + result + '</td><td></td>');
 }
-document.write('<style>td:nth-child(3) { outline: #aaf solid 3px; }</style>');
+document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 domready(function() {
   if (!/#showold$/.test(location.href))
