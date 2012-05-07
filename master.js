@@ -31,9 +31,9 @@ domready(function() {
       }
     };
   }
-  
+
   var mouseoverTimeout;
-  
+
   var infoTooltip = document.createElement('pre');
   infoTooltip.className = 'info-tooltip';
   infoTooltip.style.display = 'none';
@@ -44,16 +44,16 @@ domready(function() {
   infoTooltip.onmouseover = function() {
     mouseoverTimeout = null;
   };
-  
+
   var rows = document.getElementsByTagName('table')[0].rows;
   for (var i = 1; i < rows.length; i++) {
     if (/separator/.test(rows[i].cells[0].className)) continue;
-    
+
     var infoEl = document.createElement('span');
     infoEl.className = 'info';
     infoEl.innerHTML = 'c';
     rows[i].cells[0].appendChild(infoEl);
-    
+
     infoEl.onmouseover = function(e) {
       mouseoverTimeout = null;
       var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
