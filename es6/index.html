@@ -174,7 +174,7 @@
             </td>
             <script>test((function () {
           try {
-            return eval('(function(args) { return typeof args !== "undefined"; })()');
+            return eval('Math.max(...[1, 2, 3]) === 3');
           } catch(error) {
             return false;
           }
