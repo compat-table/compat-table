@@ -21,18 +21,19 @@ code { font-family: "Courier New", Courier, monospace; }
 #footnotes { margin-left: 1.75em; margin-bottom: 1em; font-size: 0.9em; }
 
 .yes a, .no a { color: #fff; font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;  }
-.yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; 
+.yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
             font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
 .yes { background: green; }
 .no { background: red; }
 .test-name { width: 260px; }
 .warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
 .separator { padding: 0; height: 0.5em; }
-.this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px; 
+.this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px;
   font-size: 13px; vertical-align: top; }
 
-.hide-old-browsers .safari3, 
-.hide-old-browsers .ie7, 
+.hide-old-browsers .safari3,
+.hide-old-browsers .safari4,
+.hide-old-browsers .ie7,
 .hide-old-browsers .firefox3,
 .hide-old-browsers .chrome5,
 .hide-old-browsers .chrome6,
@@ -43,10 +44,10 @@ code { font-family: "Courier New", Courier, monospace; }
 .also-see { font-size:15px;display:inline-block;background:#ddf;padding:4px 6px;position:absolute;top:0;left:50%;margin-left:-174px; color: #333; }
 .also-see a { color: blue !important; font-weight: normal; }
 
-.info { color: #eee; float: right; margin-right: 5px; background: #999; display: inline-block; 
-  width: 15px; height: 15px; line-height: 15px; text-align: center; border-radius: 20px; 
+.info { color: #eee; float: right; margin-right: 5px; background: #999; display: inline-block;
+  width: 15px; height: 15px; line-height: 15px; text-align: center; border-radius: 20px;
   font-size: 12px; cursor: default; font-family: monospace }
-  
+
 .info:hover { background: #555 }
 
 .info-tooltip { position: absolute; padding: 15px; background: #fff; border: 2px solid #555; box-shadow: rgba(0,0,0,0.6) 1px 1px 10px; z-index: 10000 }
