@@ -170,11 +170,34 @@
 
           <tr>
             <td>
-              spread (...) operator
+              spread call (...) operator
             </td>
             <script>test((function () {
           try {
             return eval('Math.max(...[1, 2, 3]) === 3');
+          } catch(error) {
+            return false;
+          }
+        })())</script>
+            <td class="ie10 no">No</td>
+
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
+            <td class="chrome no">No</td>
+            <td class="chromeDev no">No</td>
+            <td class="safari51 no">No</td>
+            <td class="webkit no">No</td>
+            <td class="opera no">No</td>
+            <td class="rhino17 no">No</td>
+
+          </tr>
+
+          <tr>
+            <td>
+              spread array (...) operator
+            </td>
+            <script>test((function () {
+          try {
+            return eval('[...[1, 2, 3]][2] === 3');
           } catch(error) {
             return false;
           }
