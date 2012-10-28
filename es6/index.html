@@ -712,6 +712,37 @@ __yield_script_executed = true;
 
           <tr>
             <td>
+              Block-level function declaration
+            </td>
+            <script>
+              test((function() {
+                'use strict';
+                try {
+                  return eval('{function f(){}} typeof f == "undefined"');
+                } catch(error) {
+                  return false;
+                }
+              })());
+            </script>
+            <td class="ie10 no">No</td>
+
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
+            <td class="firefox16 no">No</td>
+            <td class="firefox17 no">No</td>
+            <td class="firefox18 no">No</td>
+            <td class="chrome no">No</td>
+            <td class="chromeDev no">No</td>
+            <td class="chrome21 yes">Yes</td>
+            <td class="safari51 no">No</td>
+            <td class="safari6 no">No</td>
+            <td class="webkit no">No</td>
+            <td class="opera no">No</td>
+            <td class="rhino17 no">No</td>
+
+          </tr>
+
+          <tr>
+            <td>
               Object.getOwnPropertyDescriptors
             </td>
             <script>test(typeof Object.getOwnPropertyDescriptors === 'function')</script>
