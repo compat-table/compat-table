@@ -577,16 +577,21 @@ __yield_script_executed = true;
           return typeof Map !== 'undefined' &&
             typeof Map.prototype.get === 'function' &&
             typeof Map.prototype.set === 'function'
+            typeof Map.prototype.clear === 'function' &&
+            typeof Map.prototype.has === 'function' &&
+            typeof Map.prototype.forEach === 'function' &&
+            typeof Map.prototype.size === 'number' &&
+            Map([["key", "val"]]).has("key");
         })())</script>
             <td class="ie10 no">No</td>
 
-            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
+            <td class="firefox16 no">No</td>
+            <td class="firefox17 no">No</td>
+            <td class="firefox18 no">No</td>
             <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
+            <td class="chromeDev no">No</td>
+            <td class="chrome21 no">No</td>
             <td class="safari51 no">No</td>
             <td class="safari6 no">No</td>
             <td class="webkit no">No</td>
@@ -600,19 +605,25 @@ __yield_script_executed = true;
               Sets
             </td>
             <script>test((function () {
+
           return typeof Set !== 'undefined' &&
+            typeof Set.prototype.add === 'function' &&
+            typeof Set.prototype.values === 'function' &&
+            typeof Set.prototype.clear === 'function' &&
             typeof Set.prototype.has === 'function' &&
-            typeof Set.prototype.add === 'function'
+            typeof Set.prototype.forEach === 'function' &&
+            typeof Set.prototype.size === 'number' &&
+            Set([1]).has(1);
         })())</script>
             <td class="ie10 no">No</td>
 
-            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
+            <td class="firefox16 no">No</td>
+            <td class="firefox17 no">No</td>
+            <td class="firefox18 no">No</td>
             <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
+            <td class="chromeDev no">No</td>
+            <td class="chrome21 no">No</td>
             <td class="safari51 no">No</td>
             <td class="safari6 no">No</td>
             <td class="webkit no">No</td>
@@ -628,17 +639,19 @@ __yield_script_executed = true;
             <script>test((function () {
           return typeof WeakMap !== 'undefined' &&
             typeof WeakMap.prototype.get === 'function' &&
-            typeof WeakMap.prototype.set === 'function'
+            typeof WeakMap.prototype.set === 'function' &&
+            typeof WeakMap.prototype.clear === 'function' &&
+            typeof WeakMap.prototype.has === 'function';
         })())</script>
             <td class="ie10 no">No</td>
 
-            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
+            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
+            <td class="firefox16 no">No</td>
+            <td class="firefox17 no">No</td>
+            <td class="firefox18 no">No</td>
             <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
+            <td class="chromeDev no">No</td>
+            <td class="chrome21 no">No</td>
             <td class="safari51 no">No</td>
             <td class="safari6 no">No</td>
             <td class="webkit no">No</td>
