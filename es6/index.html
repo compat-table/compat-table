@@ -565,7 +565,8 @@ __yield_script_executed = true;
             typeof Map.prototype.clear === 'function' &&
             typeof Map.prototype.has === 'function' &&
             typeof Map.prototype.forEach === 'function' &&
-            typeof Map.prototype.size === 'number'
+            typeof Map.prototype.size === 'number' &&
+            Map([["key", "val"]]).has("key");
         })())</script>
             <td class="ie10 no">No</td>
 
@@ -589,13 +590,15 @@ __yield_script_executed = true;
               Sets
             </td>
             <script>test((function () {
+
           return typeof Set !== 'undefined' &&
             typeof Set.prototype.add === 'function' &&
             typeof Set.prototype.values === 'function' &&
             typeof Set.prototype.clear === 'function' &&
             typeof Set.prototype.has === 'function' &&
             typeof Set.prototype.forEach === 'function' &&
-            typeof Set.prototype.size === 'number'
+            typeof Set.prototype.size === 'number' &&
+            Set([1]).has(1);
         })())</script>
             <td class="ie10 no">No</td>
 
@@ -623,7 +626,7 @@ __yield_script_executed = true;
             typeof WeakMap.prototype.get === 'function' &&
             typeof WeakMap.prototype.set === 'function' &&
             typeof WeakMap.prototype.clear === 'function' &&
-            typeof WeakMap.prototype.has === 'function'
+            typeof WeakMap.prototype.has === 'function';
         })())</script>
             <td class="ie10 no">No</td>
 
