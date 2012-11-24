@@ -52,17 +52,17 @@
           <th class="test-name">Feature name</th>
           <th class="current">Current browser</th>
           <th></th>
-          <th class="ie10" title="Internet Explorer">IE 10</th>
-          <th class="firefox11" title="Firefox">FF 11, 12</th>
-          <th class="firefox12" title="Firefox">FF 13</th>
-          <th class="firefox16" title="Firefox">FF 16</th>
-          <th class="firefox17" title="Firefox">FF 17</th>
-          <th class="firefox18" title="Firefox">FF 18</th>
-          <th class="chrome" title="Chrome">CH &lt;19</th>
-          <th class="chromeDev" title="Chrome">CH 19<a href="#experimental-flag"><sup>*</sup></a></th>
-          <th class="chrome21" title="Chrome">CH 21-24<a href="#experimental-flag"><sup>*</sup></a></th>
-          <th class="safari51" title="Safari">SF 5.1</th>
-          <th class="safari6" title="Safari">SF 6</th>
+          <th class="ie10"><abbr title="Internet Explorer">IE 10</abbr></th>
+          <th class="firefox11"><abbr title="Firefox">FF 11, 12</abbr></th>
+          <th class="firefox12"><abbr title="Firefox">FF 13</abbr></th>
+          <th class="firefox16"><abbr title="Firefox">FF 16</abbr></th>
+          <th class="firefox17"><abbr title="Firefox">FF 17</abbr></th>
+          <th class="firefox18"><abbr title="Firefox">FF 18</abbr></th>
+          <th class="chrome"><abbr title="Chrome">CH &lt;19</abbr></th>
+          <th class="chromeDev"><abbr title="Chrome">CH 19</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome21"><abbr title="Chrome">CH 21-24</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="safari51"><abbr title="Safari">SF 5.1</abbr></th>
+          <th class="safari6"><abbr title="Safari">SF 6</abbr></th>
           <th class="webkit">WebKit</th>
           <th class="opera">Opera 12</th>
           <th class="rhino17">Rhino 1.7</th>
@@ -71,379 +71,367 @@
       </thead>
       <tbody>
         <tr>
-          <td>
-            class
-          </td>
-          <script>
-            test(function () {
-              try {
-                return eval('class C{ constructor() { this.own = true; } } (new C()).own;');
-                /*
-                class C{
-                  constructor() {
-                    this.own = true;
-                  }
-                }
-                (new C()).own; // true
-                */
-              } catch(error) {
-                return false;
-              }
-            }());
-          </script>
-          <td class="ie10 no">No</td>
+          <td>class</td>
+<script>
+test(function () {
+  try {
+    return eval('class C{ constructor() { this.own = true; } } (new C()).own;');
+    /*
+    class C{
+      constructor() {
+        this.own = true;
+      }
+    }
+    (new C()).own; // true
+    */
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-          <td class="firefox16 no">No</td>
-          <td class="firefox17 no">No</td>
-          <td class="firefox18 no">No</td>
-          <td class="chrome no">No</td>
-          <td class="chromeDev no">No</td>
-          <td class="chrome21 no">No</td>
-          <td class="safari51 no">No</td>
-          <td class="safari6 no">No</td>
-          <td class="webkit no">No</td>
-          <td class="opera no">No</td>
-          <td class="rhino17 no">No</td>
-          <td class="node08 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
         </tr>
         <tr>
-          <td>
-            let
-          </td>
-          <script type="application/javascript;version=1.8">
-            test(function () {
-              try {
-                return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-              } catch(error) {
-                return false;
-              }
-            }());
-            __let_script_executed = true;
-          </script>
-          <script>
-            if (!__let_script_executed ) {
-              test(function () {
-                try {
-                  return eval('(function(){ "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-                } catch(error) {
-                  return false;
-                }
-              }());
-            }
-          </script>
-            <td class="ie10 no">No</td>
+          <td>let</td>
+<script type="application/javascript;version=1.8">
+test(function () {
+  try {
+    return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
+  } catch(error) {
+    return false;
+  }
+}());
+__let_script_executed = true;
+</script>
+<script>
+if (!__let_script_executed ) {
+  test(function () {
+    try {
+      return eval('(function(){ "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
+    } catch(error) {
+      return false;
+    }
+  }());
+}
+</script>
 
-            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
+          <td class="no ie10">No</td>
+          <td class="yes firefox11">Yes</td>
+          <td class="yes firefox12">Yes</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="yes chromeDev">Yes</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>const</td>
+<script>
+test(function () {
+  try {
+    return eval('(function() { const foobarbaz = 12; return typeof foobarbaz === "number" })()');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          <tr>
-            <td>
-              const
-            </td>
-            <script>test((function () {
-          try {
-            return eval('(function() { const foobarbaz = 12; return typeof foobarbaz === "number" })()');
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="yes chrome">Yes</td>
+          <td class="yes chromeDev">Yes</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="no rhino17">No</td>
+          <td class="yes node08">Yes</td>
+        </tr>
+        <tr>
+          <td>default function params</td>
+<script>
+test(function () {
+  try {
+    return eval('(function(a = 5) {return a === 5})()');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome yes">Yes</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 yes">Yes</td>
-            <td class="webkit yes">Yes</td>
-            <td class="opera yes">Yes</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 yes">Yes</td>
-          </tr>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>rest parameters</td>
+<script>
+test(function () {
+  try {
+    return eval('(function(...args) { return typeof args !== "undefined"; })()')
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          <tr>
-            <td>
-              default function params
-            </td>
-            <script>test((function () {
-          try {
-            return eval('(function(a = 5) {return a === 5})()');
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>spread call (...) operator</td>
+<script>
+test(function () {
+  try {
+    return eval('Math.max(...[1, 2, 3]) === 3');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>spread array (...) operator</td>
+<script>
+test(function () {
+  try {
+    return eval('[...[1, 2, 3]][2] === 3');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          </tr>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td><del title="Temporarily disabled due to Chrome crash">Modules</del></td>
+<script>
+test(function () {
+  try {
+    // this line crashes Chrome 21-24
+    // return eval('module foo { }');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          <tr>
-            <td>
-              rest parameters
-            </td>
-            <script>test((function () {
-          try {
-            return eval('(function(...args) { return typeof args !== "undefined"; })()')
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>For..of loops</td>
+<script>
+test(function () {
+  try {
+    return eval('(function() {var arr = [5]; for (var item of arr) return item === 5;})()');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="yes firefox12">Yes</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Array comprehensions</td>
+<script>
+test(function () {
+  try {
+    eval('[a * a for (a of [1, 2, 3])][0] === 1');
+    return true;
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          </tr>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="yes firefox12">Yes</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Generator expressions</td>
+<script>
+test(function () {
+  try {
+    eval('(a for (a of [1, 2, 3]))');
+    return true;
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-          <tr>
-            <td>
-              spread call (...) operator
-            </td>
-            <script>test((function () {
-          try {
-            return eval('Math.max(...[1, 2, 3]) === 3');
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="yes firefox12">Yes</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Iterators</td>
+<script>
+test(function () {
+  try {
+    eval('for (var a of {b: 5}) {}');
+    return true;
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
 
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              spread array (...) operator
-            </td>
-            <script>test((function () {
-          try {
-            return eval('[...[1, 2, 3]][2] === 3');
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-          <tr>
-            <td>
-              <del title="Temporarily disabled due to Chrome crash">Modules</del>
-            </td>
-            <script>test((function () {
-          try {
-            // this line crashes Chrome 21-24
-            // return eval('module foo { }');
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              For..of loops
-            </td>
-            <script>test((function () {
-          try {
-            return eval('(function() {var arr = [5]; for (var item of arr) return item === 5;})()');
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              Array comprehensions
-            </td>
-            <script>test((function () {
-          try {
-            eval('[a * a for (a of [1, 2, 3])][0] === 1');
-            return true;
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Generator expressions
-            </td>
-            <script>test((function () {
-          try {
-            eval('(a for (a of [1, 2, 3]))');
-            return true;
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Iterators
-            </td>
-            <script>test((function () {
-          try {
-            eval('for (var a of {b: 5}) {}');
-            return true;
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Generators (yield)
-            </td>
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Generators (yield)</td>
 <script type="application/javascript;version=1.8">
 test((function () {
   try {
@@ -456,1008 +444,962 @@ test((function () {
 __yield_script_executed = true;
 </script>
 <script>
-  if (!__yield_script_executed) {
-    test(false);
-    __yield_script_executed = false;
-  }
+if (!__yield_script_executed) {
+  test(false);
+  __yield_script_executed = false;
+}
 </script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Template Strings
-            </td>
-            <script>test((function () {
-          try {
-            eval('var u = function() {return true}; u`literal`');
-            return true;
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              RegExp "y" flag
-            </td>
-            <script>test((function () {
-          try {
-            var re = new RegExp('\\w');
-            var re2 = new RegExp('\\w', 'y');
-            re.exec('xy');
-            re2.exec('xy');
-            return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-          } catch(err) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 yes">Yes</td><td class="firefox12 yes">Yes</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              Maps
-            </td>
-            <script>test((function () {
-          return typeof Map !== 'undefined' &&
-            typeof Map.prototype.get === 'function' &&
-            typeof Map.prototype.set === 'function' &&
-            typeof Map.prototype.clear === 'function' &&
-            typeof Map.prototype.has === 'function' &&
-            typeof Map.prototype.forEach === 'function' &&
-            typeof Map.prototype.size === 'number' &&
-            Map([["key", "val"]]).has("key");
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              Sets
-            </td>
-            <script>test((function () {
-
-          return typeof Set !== 'undefined' &&
-            typeof Set.prototype.add === 'function' &&
-            typeof Set.prototype.values === 'function' &&
-            typeof Set.prototype.clear === 'function' &&
-            typeof Set.prototype.has === 'function' &&
-            typeof Set.prototype.forEach === 'function' &&
-            typeof Set.prototype.size === 'number' &&
-            Set([1]).has(1);
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              WeakMaps
-            </td>
-            <script>test((function () {
-          return typeof WeakMap !== 'undefined' &&
-            typeof WeakMap.prototype.get === 'function' &&
-            typeof WeakMap.prototype.set === 'function' &&
-            typeof WeakMap.prototype.clear === 'function' &&
-            typeof WeakMap.prototype.has === 'function';
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              Proxies
-            </td>
-            <script>test((function () {
-          return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function' && typeof Proxy.createFunction == 'function';
-        })())</script>
-              <td class="ie10 no">No</td>
-
-              <td class="firefox11 no">No</td><td class="firefox12 No">No</td>
-              <td class="firefox16 yes">Yes</td>
-              <td class="firefox17 yes">Yes</td>
-              <td class="firefox18 yes">Yes</td>
-              <td class="chrome no">No</td>
-              <td class="chromeDev no">No</td>
-              <td class="chrome21 yes">Yes</td>
-              <td class="safari51 no">No</td>
-              <td class="safari6 no">No</td>
-              <td class="webkit no">No</td>
-              <td class="opera no">No</td>
-              <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-          </tr>
-
-          <tr>
-            <td>
-              Structs (binary data storage)
-            </td>
-            <script>test(typeof StructType !== 'undefined')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Block-level function declaration
-            </td>
-            <script>
-              test((function() {
-                'use strict';
-                try {
-                  return eval('{function f(){}} typeof f == "undefined"');
-                } catch(error) {
-                  return false;
-                }
-              })());
-            </script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 yes">Yes</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Object.getOwnPropertyDescriptors
-            </td>
-            <script>test(typeof Object.getOwnPropertyDescriptors === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Object.getPropertyDescriptor
-            </td>
-            <script>test(typeof Object.getPropertyDescriptor === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Object.getPropertyNames
-            </td>
-            <script>test(typeof Object.getPropertyNames === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Object.is
-            </td>
-            <script>test(typeof Object.is === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 yes">Yes</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Object.isnt
-            </td>
-            <script>test(typeof Object.isnt === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.fromCodePoint
-            </td>
-            <script>test(typeof String.fromCodePoint === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.prototype.codePointAt
-            </td>
-            <script>test(typeof String.prototype.codePointAt === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.prototype.repeat
-            </td>
-            <script>test(typeof String.prototype.repeat === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.prototype.startsWith
-            </td>
-            <script>test(typeof String.prototype.startsWith === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.prototype.endsWith
-            </td>
-            <script>test(typeof String.prototype.endsWith === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.prototype.contains
-            </td>
-            <script>test(typeof String.prototype.contains === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              String.prototype.toArray
-            </td>
-            <script>test(typeof String.prototype.toArray === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Unicode code point escapes
-            </td>
-            <script>test((function() {
-          try {
-            return eval("'\\u{1d306}' == '\\ud834\\udf06'");
-          } catch(error) {
-            return false;
-          }
-        })())</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Array.from
-            </td>
-            <script>test(typeof Array.from === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Array.of
-            </td>
-            <script>test(typeof Array.of === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Number.isFinite
-            </td>
-            <script>test(typeof Number.isFinite === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 yes">Yes</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Number.isInteger
-            </td>
-            <script>test(typeof Number.isInteger === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Number.isNaN
-            </td>
-            <script>test(typeof Number.isNaN === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev yes">Yes</td>
-            <td class="chrome21 yes">Yes</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 yes">Yes</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Number.toInteger
-            </td>
-            <script>test(typeof Number.toInteger === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 yes">Yes</td>
-            <td class="firefox17 yes">Yes</td>
-            <td class="firefox18 yes">Yes</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.sign
-            </td>
-            <script>test(typeof Math.sign === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.log10
-            </td>
-            <script>test(typeof Math.log10 === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.log2
-            </td>
-            <script>test(typeof Math.log2 === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.log1p
-            </td>
-            <script>test(typeof Math.log1p === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.expm1
-            </td>
-            <script>test(typeof Math.expm1 === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.cosh
-            </td>
-            <script>test(typeof Math.cosh === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.sinh
-            </td>
-            <script>test(typeof Math.sinh === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.tanh
-            </td>
-            <script>test(typeof Math.tanh === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.acosh
-            </td>
-            <script>test(typeof Math.acosh === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.asinh
-            </td>
-            <script>test(typeof Math.asinh === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.atanh
-            </td>
-            <script>test(typeof Math.atanh === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.hypot
-            </td>
-            <script>test(typeof Math.hypot === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
-
-          <tr>
-            <td>
-              Math.trunc
-            </td>
-            <script>test(typeof Math.trunc === 'function')</script>
-            <td class="ie10 no">No</td>
-
-            <td class="firefox11 no">No</td><td class="firefox12 no">No</td>
-            <td class="firefox16 no">No</td>
-            <td class="firefox17 no">No</td>
-            <td class="firefox18 no">No</td>
-            <td class="chrome no">No</td>
-            <td class="chromeDev no">No</td>
-            <td class="chrome21 no">No</td>
-            <td class="safari51 no">No</td>
-            <td class="safari6 no">No</td>
-            <td class="webkit no">No</td>
-            <td class="opera no">No</td>
-            <td class="rhino17 no">No</td>
-            <td class="node08 no">No</td>
-
-          </tr>
 
+          <td class="no ie10">No</td>
+          <td class="yes firefox11">Yes</td>
+          <td class="yes firefox12">Yes</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Template Strings</td>
+<script>
+test(function () {
+  try {
+    eval('var u = function() {return true}; u`literal`');
+    return true;
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>RegExp "y" flag</td>
+<script>
+test(function () {
+  try {
+    var re = new RegExp('\\w');
+    var re2 = new RegExp('\\w', 'y');
+    re.exec('xy');
+    re2.exec('xy');
+    return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+  } catch(err) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="yes firefox11">Yes</td>
+          <td class="yes firefox12">Yes</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Maps</td>
+<script>
+test(typeof Map !== 'undefined' &&
+    typeof Map.prototype.get === 'function' &&
+    typeof Map.prototype.set === 'function' &&
+    typeof Map.prototype.clear === 'function' &&
+    typeof Map.prototype.has === 'function' &&
+    typeof Map.prototype.forEach === 'function' &&
+    typeof Map.prototype.size === 'number' &&
+    Map([["key", "val"]]).has("key"));
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Sets</td>
+<script>
+test(typeof Set !== 'undefined' &&
+    typeof Set.prototype.add === 'function' &&
+    typeof Set.prototype.values === 'function' &&
+    typeof Set.prototype.clear === 'function' &&
+    typeof Set.prototype.has === 'function' &&
+    typeof Set.prototype.forEach === 'function' &&
+    typeof Set.prototype.size === 'number' &&
+    Set([1]).has(1));
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>WeakMaps</td>
+<script>
+test(typeof WeakMap !== 'undefined' &&
+    typeof WeakMap.prototype.get === 'function' &&
+    typeof WeakMap.prototype.set === 'function' &&
+    typeof WeakMap.prototype.clear === 'function' &&
+    typeof WeakMap.prototype.has === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Proxies</td>
+<script>
+test(typeof Proxy !== 'undefined' && typeof Proxy.create == 'function' && typeof Proxy.createFunction == 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Structs (binary data storage)</td>
+<script>
+test(typeof StructType !== 'undefined');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Block-level function declaration</td>
+<script>
+test(function () {
+  'use strict';
+  try {
+    return eval('{function f(){}} typeof f == "undefined"');
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Object.getOwnPropertyDescriptors</td>
+<script>
+test(typeof Object.getOwnPropertyDescriptors === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Object.getPropertyDescriptor</td>
+<script>
+test(typeof Object.getPropertyDescriptor === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Object.getPropertyNames</td>
+<script>
+test(typeof Object.getPropertyNames === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Object.is</td>
+<script>
+test(typeof Object.is === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="yes chromeDev">Yes</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="yes node08">Yes</td>
+        </tr>
+        <tr>
+          <td>Object.isnt</td>
+<script>
+test(typeof Object.isnt === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.fromCodePoint</td>
+<script>
+test(typeof String.fromCodePoint === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.prototype.codePointAt</td>
+<script>
+test(typeof String.prototype.codePointAt === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.prototype.repeat</td>
+<script>
+test(typeof String.prototype.repeat === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.prototype.startsWith</td>
+<script>
+test(typeof String.prototype.startsWith === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.prototype.endsWith</td>
+<script>
+test(typeof String.prototype.endsWith === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.prototype.contains</td>
+<script>
+test(typeof String.prototype.contains === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>String.prototype.toArray</td>
+<script>
+test(typeof String.prototype.toArray === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Unicode code point escapes</td>
+<script>
+test(function () {
+  try {
+    return eval("'\\u{1d306}' == '\\ud834\\udf06'");
+  } catch(error) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Array.from</td>
+<script>
+test(typeof Array.from === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Array.of</td>
+<script>
+test(typeof Array.of === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Number.isFinite</td>
+<script>
+test(typeof Number.isFinite === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="yes chromeDev">Yes</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="yes node08">Yes</td>
+        </tr>
+        <tr>
+          <td>Number.isInteger</td>
+<script>
+test(typeof Number.isInteger === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Number.isNaN</td>
+<script>
+test(typeof Number.isNaN === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="yes chromeDev">Yes</td>
+          <td class="yes chrome21">Yes</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="yes node08">Yes</td>
+        </tr>
+        <tr>
+          <td>Number.toInteger</td>
+<script>
+test(typeof Number.toInteger === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="yes firefox16">Yes</td>
+          <td class="yes firefox17">Yes</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.sign</td>
+<script>
+test(typeof Math.sign === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.log10</td>
+<script>
+test(typeof Math.log10 === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.log2</td>
+<script>
+test(typeof Math.log2 === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.log1p</td>
+<script>
+test(typeof Math.log1p === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.expm1</td>
+<script>
+test(typeof Math.expm1 === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.cosh</td>
+<script>
+test(typeof Math.cosh === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.sinh</td>
+<script>
+test(typeof Math.sinh === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.tanh</td>
+<script>
+test(typeof Math.tanh === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.acosh</td>
+<script>
+test(typeof Math.acosh === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.asinh</td>
+<script>
+test(typeof Math.asinh === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.atanh</td>
+<script>
+test(typeof Math.atanh === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.hypot</td>
+<script>
+test(typeof Math.hypot === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
+        <tr>
+          <td>Math.trunc</td>
+<script>
+test(typeof Math.trunc === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox12">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chromeDev">No</td>
+          <td class="no chrome21">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+        </tr>
       </tbody>
     </table>
     </div>
     <div id="footnotes">
-      <p id="experimental-flag">
-        <sup>*</sup> Have to be enabled via "Experimental Javascript features" flag
+      <p id="experimental-flag-note">
+        <sup>[1]</sup> Have to be enabled via "Experimental Javascript features" flag
       </p>
     </div>
   </div>
