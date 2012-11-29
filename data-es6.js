@@ -542,10 +542,23 @@ exports.tests = [
   res: {
     ie10: false,
     firefox11: false,
-    firefox12: false,
-    firefox16: false,
-    firefox17: false,
-    firefox18: true,
+    firefox12: {
+      val: false,
+      note_id: 'firefox-map',
+      note_html: 'Firefox 13-18 fails the test because of lacking <code>Map.prototype.forEach</code> and because <code>Map.prototype.size</code> is a function instead of a number'
+    },
+    firefox16: {
+      val: false,
+      note_id: 'firefox-map'
+    },
+    firefox17: {
+      val: false,
+      note_id: 'firefox-map'
+    },
+    firefox18: {
+      val: false,
+      note_id: 'firefox-map'
+    },
     chrome: false,
     chromeDev: false,
     chrome21: false,
