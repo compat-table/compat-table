@@ -107,16 +107,16 @@ exports.tests = [
     firefox3_5: true,
     firefox4: {
       val: true,
-      note_id: 'function-statments-strict-mode-firefox',
+      note_id: 'function-statements-strict-mode-firefox',
       note_html: 'From Firefox 4 on, function statements in strict mode functions are only accepted at top level or immediately within another function.'
     },
     firefox5: {
       val: true,
-      note_id: 'function-statments-strict-mode-firefox'
+      note_id: 'function-statements-strict-mode-firefox'
     },
     firefox6: {
       val: true,
-      note_id: 'function-statments-strict-mode-firefox'
+      note_id: 'function-statements-strict-mode-firefox'
     },
     firefox7: true,
     firefox12: true,
