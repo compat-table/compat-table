@@ -83,7 +83,7 @@ exports.browsers = {
     link: 'http://besen.sourceforge.net/'
   },
   rhino: {
-    full:'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
+    full: 'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
     short: 'Rhino 1.7'
   }
 };
@@ -95,7 +95,7 @@ exports.tests = [
     try {
       eval('if (1) { function f(){ } } else { function f(){ } }');
       return typeof f === 'function';
-    } catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -139,7 +139,9 @@ exports.tests = [
 },
 {
   name: 'uneval',
-  exec: function () { return typeof uneval == 'function'; },
+  exec: function () {
+    return typeof uneval == 'function';
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -165,7 +167,9 @@ exports.tests = [
 },
 {
   name: '"toSource" method',
-  exec: function () { return 'toSource' in (function(){}) && 'toSource' in ({}) },
+  exec: function () {
+    return 'toSource' in (function (){}) && 'toSource' in ({});
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -192,7 +196,9 @@ exports.tests = [
 },
 {
   name: 'function "name" property',
-  exec: function () { return (function foo(){}).name == 'foo' },
+  exec: function () {
+    return (function foo(){}).name == 'foo';
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -218,7 +224,9 @@ exports.tests = [
 },
 {
   name: 'function "caller" property',
-  exec: function () { return 'caller' in (function(){}) },
+  exec: function () {
+    return 'caller' in (function(){});
+  },
   res: {
     ie7: true,
     ie8: true,
@@ -245,7 +253,9 @@ exports.tests = [
 {
   name: 'function "arity" property',
   exec: function () {
-    return (function(){}).arity === 0 && (function(x){}).arity === 1 && (function(x, y){}).arity === 2;
+    return (function (){}).arity === 0 &&
+      (function (x){}).arity === 1 &&
+      (function (x, y){}).arity === 2;
   },
   res: {
     ie7: false,
@@ -273,7 +283,9 @@ exports.tests = [
 {
   name: 'function "arguments" property',
   exec: function () {
-    function f(a, b) { return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo' }
+    function f(a, b) {
+      return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo';
+    }
     return f(1, 'boo');
   },
   res: {
@@ -301,7 +313,9 @@ exports.tests = [
 },
 {
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a>',
-  exec: function () { return typeof Function.prototype.isGenerator == 'function' },
+  exec: function () {
+    return typeof Function.prototype.isGenerator == 'function';
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -328,7 +342,10 @@ exports.tests = [
 },
 {
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a>',
-  exec: function () { return ({}).__proto__ === Object.prototype && [].__proto__ === Array.prototype },
+  exec: function () {
+    return ({}).__proto__ === Object.prototype &&
+      [].__proto__ === Array.prototype;
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -354,7 +371,10 @@ exports.tests = [
 },
 {
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a>',
-  exec: function () { return typeof ({}).__count__ === "number" && ({ x: 1, y: 2 }).__count__ === 2 },
+  exec: function () {
+    return typeof ({}).__count__ === 'number' &&
+      ({ x: 1, y: 2 }).__count__ === 2;
+    },
   res: {
     ie7: false,
     ie8: false,
@@ -380,7 +400,9 @@ exports.tests = [
 },
 {
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a>',
-  exec: function () { return typeof ({}).__parent__ !== "undefined" },
+  exec: function () {
+    return typeof ({}).__parent__ !== 'undefined';
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -408,11 +430,10 @@ exports.tests = [
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a>',
   exec: function () {
     var o = { }, executed = false;
-    o.__noSuchMethod__ = function() { executed = true; }
+    o.__noSuchMethod__ = function () { executed = true; }
     try {
       o.__i_dont_exist();
-    }
-    catch(err) { }
+    } catch (e) { }
     return executed;
   },
   res: {
@@ -440,7 +461,9 @@ exports.tests = [
 },
 {
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a>',
-  exec: function () { return '__defineGetter__' in ({ }) },
+  exec: function () {
+    return '__defineGetter__' in ({ });
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -466,7 +489,9 @@ exports.tests = [
 },
 {
   name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a>',
-  exec: function () { return '__defineSetter__' in ({ }) },
+  exec: function () {
+    return '__defineSetter__' in ({ });
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -497,8 +522,9 @@ exports.tests = [
     try {
       eval('const foobarbaz = 12');
       return typeof foobarbaz === 'number';
+    } catch (e) {
+      return false;
     }
-    catch(err) { return false }
   },
   res: {
     ie7: false,
@@ -530,8 +556,11 @@ exports.tests = [
       type: 'application/javascript;version=1.8',
       script: function () {
         test((function(){ 
-          try { return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()'); }
-          catch(err) { return false; }
+          try {
+            return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
+          } catch (e) {
+            return false;
+          }
         })());
         __script_executed = true
       }
@@ -570,7 +599,9 @@ exports.tests = [
 },
 {
   name: 'Array generics',
-  exec: function () { return typeof Array.slice === "function" && Array.slice('123').length === 3 },
+  exec: function () {
+    return typeof Array.slice === 'function' && Array.slice('123').length === 3;
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -599,7 +630,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('(function(x)x)(1)') === 1;
-    } catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -631,8 +662,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('typeof <foo/> === "xml"');
-    }
-    catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -663,9 +693,8 @@ exports.tests = [
   name: '<a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a>',
   exec: function () {
     try {
-      return eval('(function(){ var arr = #1=[1, #1#, 3]; return arr[1] === arr; })()');
-    }
-    catch(err) {
+      return eval('(function () { var arr = #1=[1, #1#, 3]; return arr[1] === arr; }())');
+    } catch (e) {
       return false;
     }
   },
@@ -702,8 +731,9 @@ exports.tests = [
       re.exec('xy');
       re2.exec('xy');
       return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+    } catch (e) {
+      return false;
     }
-    catch(err) { return false }
   },
   res: {
     ie7: false,
@@ -732,12 +762,13 @@ exports.tests = [
   name: 'RegExp "x" flag',
   exec: function () {
     try {
-      var re = RegExp("^ ( \\d+ ) \
+      var re = RegExp('^ ( \\d+ ) \
                          ( \\w+ ) \
-                         ( foo  )", "x");
+                         ( foo  )', 'x');
       return re.exec('23xfoo')[0] === '23xfoo';
+    } catch (e) {
+      return false;
     }
-    catch(err) { return false }
   },
   res: {
     ie7: false,
@@ -828,8 +859,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('/\\w/("x")[0] === "x"');
-    }
-    catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -860,9 +890,8 @@ exports.tests = [
   name: 'RegExp named groups',
   exec: function () {
     try {
-      return eval("/(?P<name>a)(?P=name)/.test('aa')");
-    }
-    catch(err) {
+      return eval('/(?P<name>a)(?P=name)/.test("aa")');
+    } catch (e) {
       return false;
     }
   },
@@ -1183,8 +1212,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('070 === 56');
-    }
-    catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -1214,7 +1242,9 @@ exports.tests = [
 },
 {
   name: 'error "stack"',
-  exec: function () { return 'stack' in new Error },
+  exec: function () {
+    return 'stack' in new Error;
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -1240,7 +1270,9 @@ exports.tests = [
 },
 {
   name: 'error "lineNumber"',
-  exec: function () { return 'lineNumber' in new Error },
+  exec: function () {
+    return 'lineNumber' in new Error;
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -1266,7 +1298,9 @@ exports.tests = [
 },
 {
   name: 'error "fileName"',
-  exec: function () { return 'fileName' in new Error },
+  exec: function () {
+    return 'fileName' in new Error;
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -1292,7 +1326,9 @@ exports.tests = [
 },
 {
   name: 'error "description"',
-  exec: function () { return 'description' in new Error },
+  exec: function () {
+    return 'description' in new Error;
+  },
   res: {
     ie7: true,
     ie8: true,
@@ -1319,7 +1355,10 @@ exports.tests = [
 },
 {
   name: '<a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">Proxy</a>',
-  exec: function () { return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function' },
+  exec: function () {
+    return typeof Proxy !== 'undefined' &&
+      typeof Proxy.create == 'function';
+  },
   res: {
     ie7: false,
     ie8: false,
@@ -1348,7 +1387,7 @@ exports.tests = [
   exec: function () {
     return typeof WeakMap !== 'undefined' &&
       typeof new WeakMap().get == 'function' &&
-      typeof new WeakMap().set == 'function'
+      typeof new WeakMap().set == 'function';
   },
   res: {
     ie7: false,

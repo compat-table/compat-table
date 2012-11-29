@@ -80,7 +80,7 @@ exports.tests = [
       }
       (new C()).own; // true
       */
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -108,26 +108,26 @@ exports.tests = [
     {
       type: 'application/javascript;version=1.8',
       script: function () {
-        test(function () {
+        test((function () {
           try {
-            return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-          } catch(error) {
+            return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+          } catch (e) {
             return false;
           }
-        }());
+        }()));
         __let_script_executed = true;
       }
     },
     {
       script: function () {
-        if (!__let_script_executed ) {
-          test(function () {
+        if (!__let_script_executed) {
+          test((function () {
             try {
-              return eval('(function(){ "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-            } catch(error) {
+              return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+            } catch (e) {
               return false;
             }
-          }());
+          }()));
         }
       }
     }
@@ -154,8 +154,8 @@ exports.tests = [
   name: 'const',
   exec: function () {
     try {
-      return eval('(function() { const foobarbaz = 12; return typeof foobarbaz === "number" })()');
-    } catch(error) {
+      return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
+    } catch (e) {
       return false;
     }
   },
@@ -181,8 +181,8 @@ exports.tests = [
   name: 'default function params',
   exec: function () {
     try {
-      return eval('(function(a = 5) {return a === 5})()');
-    } catch(error) {
+      return eval('(function (a = 5) { return a === 5; }())');
+    } catch (e) {
       return false;
     }
   },
@@ -208,8 +208,8 @@ exports.tests = [
   name: 'rest parameters',
   exec: function () {
     try {
-      return eval('(function(...args) { return typeof args !== "undefined"; })()')
-    } catch(error) {
+      return eval('(function (...args) { return typeof args !== "undefined"; }())');
+    } catch (e) {
       return false;
     }
   },
@@ -236,7 +236,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('Math.max(...[1, 2, 3]) === 3');
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -263,7 +263,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('[...[1, 2, 3]][2] === 3');
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -291,7 +291,7 @@ exports.tests = [
     try {
       // this line crashes Chrome 21-24
       // return eval('module foo { }');
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -317,8 +317,8 @@ exports.tests = [
   name: 'For..of loops',
   exec: function () {
     try {
-      return eval('(function() {var arr = [5]; for (var item of arr) return item === 5;})()');
-    } catch(error) {
+      return eval('(function () { var arr = [5]; for (var item of arr) return item === 5; }())');
+    } catch (e) {
       return false;
     }
   },
@@ -346,7 +346,7 @@ exports.tests = [
     try {
       eval('[a * a for (a of [1, 2, 3])][0] === 1');
       return true;
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -374,7 +374,7 @@ exports.tests = [
     try {
       eval('(a for (a of [1, 2, 3]))');
       return true;
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -402,7 +402,7 @@ exports.tests = [
     try {
       eval('for (var a of {b: 5}) {}');
       return true;
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -432,12 +432,12 @@ exports.tests = [
       script: function () {
         test((function () {
           try {
-            eval('(function() {yield 5;})()');
+            eval('(function () { yield 5; }())');
             return true;
-          } catch(error) {
+          } catch (e) {
             return false;
           }
-        })())
+        }()));
         __yield_script_executed = true;
       }
     },
@@ -472,9 +472,9 @@ exports.tests = [
   name: 'Template Strings',
   exec: function () {
     try {
-      eval('var u = function() {return true}; u`literal`');
+      eval('var u = function () { return true }; u`literal`');
       return true;
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -505,7 +505,7 @@ exports.tests = [
       re.exec('xy');
       re2.exec('xy');
       return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-    } catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -617,7 +617,9 @@ exports.tests = [
 {
   name: 'Proxies',
   exec: function () {
-    return typeof Proxy !== 'undefined' && typeof Proxy.create == 'function' && typeof Proxy.createFunction == 'function';
+    return typeof Proxy !== 'undefined' &&
+      typeof Proxy.create == 'function' &&
+      typeof Proxy.createFunction == 'function';
   },
   res: {
     ie10: false,
@@ -662,11 +664,11 @@ exports.tests = [
 },
 {
   name: 'Block-level function declaration',
-  exec: function() {
+  exec: function () {
     'use strict';
     try {
       return eval('{function f(){}} typeof f == "undefined"');
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },
@@ -966,10 +968,10 @@ exports.tests = [
 },
 {
   name: 'Unicode code point escapes',
-  exec: function() {
+  exec: function () {
     try {
       return eval("'\\u{1d306}' == '\\ud834\\udf06'");
-    } catch(error) {
+    } catch (e) {
       return false;
     }
   },

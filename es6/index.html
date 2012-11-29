@@ -84,7 +84,7 @@ test(function () {
     }
     (new C()).own; // true
     */
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -109,24 +109,24 @@ test(function () {
         <tr>
           <td>let</td>
 <script type="application/javascript;version=1.8">
-test(function () {
+test((function () {
   try {
-    return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-  } catch(error) {
+    return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+  } catch (e) {
     return false;
   }
-}());
+}()));
 __let_script_executed = true;
 </script>
 <script>
-if (!__let_script_executed ) {
-  test(function () {
+if (!__let_script_executed) {
+  test((function () {
     try {
-      return eval('(function(){ "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-    } catch(error) {
+      return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+    } catch (e) {
       return false;
     }
-  }());
+  }()));
 }
 </script>
 
@@ -151,8 +151,8 @@ if (!__let_script_executed ) {
 <script>
 test(function () {
   try {
-    return eval('(function() { const foobarbaz = 12; return typeof foobarbaz === "number" })()');
-  } catch(error) {
+    return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
+  } catch (e) {
     return false;
   }
 }());
@@ -179,8 +179,8 @@ test(function () {
 <script>
 test(function () {
   try {
-    return eval('(function(a = 5) {return a === 5})()');
-  } catch(error) {
+    return eval('(function (a = 5) { return a === 5; }())');
+  } catch (e) {
     return false;
   }
 }());
@@ -207,8 +207,8 @@ test(function () {
 <script>
 test(function () {
   try {
-    return eval('(function(...args) { return typeof args !== "undefined"; })()')
-  } catch(error) {
+    return eval('(function (...args) { return typeof args !== "undefined"; }())');
+  } catch (e) {
     return false;
   }
 }());
@@ -236,7 +236,7 @@ test(function () {
 test(function () {
   try {
     return eval('Math.max(...[1, 2, 3]) === 3');
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -264,7 +264,7 @@ test(function () {
 test(function () {
   try {
     return eval('[...[1, 2, 3]][2] === 3');
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -293,7 +293,7 @@ test(function () {
   try {
     // this line crashes Chrome 21-24
     // return eval('module foo { }');
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -320,8 +320,8 @@ test(function () {
 <script>
 test(function () {
   try {
-    return eval('(function() {var arr = [5]; for (var item of arr) return item === 5;})()');
-  } catch(error) {
+    return eval('(function () { var arr = [5]; for (var item of arr) return item === 5; }())');
+  } catch (e) {
     return false;
   }
 }());
@@ -350,7 +350,7 @@ test(function () {
   try {
     eval('[a * a for (a of [1, 2, 3])][0] === 1');
     return true;
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -379,7 +379,7 @@ test(function () {
   try {
     eval('(a for (a of [1, 2, 3]))');
     return true;
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -408,7 +408,7 @@ test(function () {
   try {
     eval('for (var a of {b: 5}) {}');
     return true;
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -435,12 +435,12 @@ test(function () {
 <script type="application/javascript;version=1.8">
 test((function () {
   try {
-    eval('(function() {yield 5;})()');
+    eval('(function () { yield 5; }())');
     return true;
-  } catch(error) {
+  } catch (e) {
     return false;
   }
-})())
+}()));
 __yield_script_executed = true;
 </script>
 <script>
@@ -471,9 +471,9 @@ if (!__yield_script_executed) {
 <script>
 test(function () {
   try {
-    eval('var u = function() {return true}; u`literal`');
+    eval('var u = function () { return true }; u`literal`');
     return true;
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -505,7 +505,7 @@ test(function () {
     re.exec('xy');
     re2.exec('xy');
     return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-  } catch(err) {
+  } catch (e) {
     return false;
   }
 }());
@@ -614,7 +614,9 @@ test(typeof WeakMap !== 'undefined' &&
         <tr>
           <td>Proxies</td>
 <script>
-test(typeof Proxy !== 'undefined' && typeof Proxy.create == 'function' && typeof Proxy.createFunction == 'function');
+test(typeof Proxy !== 'undefined' &&
+    typeof Proxy.create == 'function' &&
+    typeof Proxy.createFunction == 'function');
 </script>
 
           <td class="no ie10">No</td>
@@ -662,7 +664,7 @@ test(function () {
   'use strict';
   try {
     return eval('{function f(){}} typeof f == "undefined"');
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
@@ -954,7 +956,7 @@ test(typeof String.prototype.toArray === 'function');
 test(function () {
   try {
     return eval("'\\u{1d306}' == '\\ud834\\udf06'");
-  } catch(error) {
+  } catch (e) {
     return false;
   }
 }());
