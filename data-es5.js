@@ -1232,8 +1232,7 @@ exports.tests = [
   exec: function () {
     try {
       return eval('({ get x(){ return 1 } }).x === 1');
-    }
-    catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -1278,8 +1277,7 @@ exports.tests = [
       var value;
       eval('({ set x(v){ value = v; } }).x = 1');
       return value === 1;
-    }
-    catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -1358,7 +1356,6 @@ exports.tests = [
     besen: true,
     rhino: true
   }
-
 },
 {
   name: 'Reserved words as property names',
@@ -1369,8 +1366,7 @@ exports.tests = [
       var obj = { };
       eval('obj = ({ if: 1 })');
       return obj['if'] === 1;
-    }
-    catch(err) {
+    } catch (e) {
       return false;
     }
   },
@@ -1411,10 +1407,10 @@ exports.tests = [
 },
 {
   name: 'Zero-width chars in identifiers',
-  exec: function (){
+  exec: function () {
     try {
       return eval('_\u200c\u200d = true');
-    } catch(e) { }
+    } catch (e) { }
   },
   res: {
     ie7: false,
@@ -1460,7 +1456,7 @@ exports.tests = [
   note_id: 'strict-mode',
   note_html: 'Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — ' +
     '<code>(function(){ "use strict"; return !this; })();</code>',
-  exec: function (){
+  exec: function () {
     "use strict";
     return !this;
   },
