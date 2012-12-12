@@ -12,7 +12,7 @@
 <body class="es6">
   <div id="header">
     <h1 style="overflow:hidden">
-      <a href="http://kangax.github.com/es5-compat-table/es6" style="float:left">
+      <a href="http://kangax.github.com/es-compat-table/" style="float:left">
         <span title="ECMA-262">ECMAScript</span> 6 compatibility table
       </a>
 
@@ -67,6 +67,7 @@
           <th class="opera">Opera 12</th>
           <th class="rhino17">Rhino 1.7</th>
           <th class="node08">Node 0.8</th>
+          <th class="node08harmony">Node harmony<a href="#harmony-flag-note"><sup>[2]</sup></a></th>
         </tr>
       </thead>
       <tbody>
@@ -105,6 +106,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>let</td>
@@ -145,6 +147,7 @@ if (!__let_script_executed) {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>const</td>
@@ -173,6 +176,7 @@ test(function () {
           <td class="yes opera">Yes</td>
           <td class="no rhino17">No</td>
           <td class="yes node08">Yes</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>default function params</td>
@@ -201,6 +205,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>rest parameters</td>
@@ -229,6 +234,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>spread call (...) operator</td>
@@ -257,6 +263,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>spread array (...) operator</td>
@@ -285,6 +292,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td><del title="Temporarily disabled due to Chrome crash">Modules</del></td>
@@ -314,6 +322,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>For..of loops</td>
@@ -342,6 +351,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Array comprehensions</td>
@@ -371,6 +381,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Generator expressions</td>
@@ -400,6 +411,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Iterators</td>
@@ -429,6 +441,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Generators (yield)</td>
@@ -465,6 +478,7 @@ if (!__yield_script_executed) {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Template Strings</td>
@@ -494,6 +508,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>RegExp "y" flag</td>
@@ -526,6 +541,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Maps</td>
@@ -542,10 +558,10 @@ test(typeof Map !== 'undefined' &&
 
           <td class="no ie10">No</td>
           <td class="no firefox11">No</td>
-          <td class="no firefox13">No<a href="#firefox-map-note"><sup>[2]</sup></a></td>
-          <td class="no firefox16">No<a href="#firefox-map-note"><sup>[2]</sup></a></td>
-          <td class="no firefox17">No<a href="#firefox-map-note"><sup>[2]</sup></a></td>
-          <td class="no firefox18">No<a href="#firefox-map-note"><sup>[2]</sup></a></td>
+          <td class="no firefox13">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
+          <td class="no firefox16">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
+          <td class="no firefox17">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
+          <td class="no firefox18">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -555,6 +571,7 @@ test(typeof Map !== 'undefined' &&
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>Sets</td>
@@ -584,6 +601,7 @@ test(typeof Set !== 'undefined' &&
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>WeakMaps</td>
@@ -610,6 +628,7 @@ test(typeof WeakMap !== 'undefined' &&
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Proxies</td>
@@ -634,6 +653,7 @@ test(typeof Proxy !== 'undefined' &&
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>Structs (binary data storage)</td>
@@ -656,6 +676,7 @@ test(typeof StructType !== 'undefined');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Block-level function declaration</td>
@@ -685,6 +706,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>Object.getOwnPropertyDescriptors</td>
@@ -707,6 +729,7 @@ test(typeof Object.getOwnPropertyDescriptors === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Object.getPropertyDescriptor</td>
@@ -729,6 +752,7 @@ test(typeof Object.getPropertyDescriptor === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Object.getPropertyNames</td>
@@ -751,6 +775,7 @@ test(typeof Object.getPropertyNames === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Object.is</td>
@@ -773,6 +798,7 @@ test(typeof Object.is === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="yes node08">Yes</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>Object.isnt</td>
@@ -795,6 +821,7 @@ test(typeof Object.isnt === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.fromCodePoint</td>
@@ -817,6 +844,7 @@ test(typeof String.fromCodePoint === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.prototype.codePointAt</td>
@@ -839,6 +867,7 @@ test(typeof String.prototype.codePointAt === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.prototype.repeat</td>
@@ -861,6 +890,7 @@ test(typeof String.prototype.repeat === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.prototype.startsWith</td>
@@ -883,6 +913,7 @@ test(typeof String.prototype.startsWith === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.prototype.endsWith</td>
@@ -905,6 +936,7 @@ test(typeof String.prototype.endsWith === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.prototype.contains</td>
@@ -927,6 +959,7 @@ test(typeof String.prototype.contains === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>String.prototype.toArray</td>
@@ -949,6 +982,7 @@ test(typeof String.prototype.toArray === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Unicode code point escapes</td>
@@ -977,6 +1011,7 @@ test(function () {
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Array.from</td>
@@ -999,6 +1034,7 @@ test(typeof Array.from === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Array.of</td>
@@ -1021,6 +1057,7 @@ test(typeof Array.of === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Number.isFinite</td>
@@ -1043,6 +1080,7 @@ test(typeof Number.isFinite === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="yes node08">Yes</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>Number.isInteger</td>
@@ -1065,6 +1103,7 @@ test(typeof Number.isInteger === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Number.isNaN</td>
@@ -1087,6 +1126,7 @@ test(typeof Number.isNaN === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="yes node08">Yes</td>
+          <td class="yes node08harmony">Yes</td>
         </tr>
         <tr>
           <td>Number.toInteger</td>
@@ -1109,6 +1149,7 @@ test(typeof Number.toInteger === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.sign</td>
@@ -1131,6 +1172,7 @@ test(typeof Math.sign === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.log10</td>
@@ -1153,6 +1195,7 @@ test(typeof Math.log10 === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.log2</td>
@@ -1175,6 +1218,7 @@ test(typeof Math.log2 === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.log1p</td>
@@ -1197,6 +1241,7 @@ test(typeof Math.log1p === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.expm1</td>
@@ -1219,6 +1264,7 @@ test(typeof Math.expm1 === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.cosh</td>
@@ -1241,6 +1287,7 @@ test(typeof Math.cosh === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.sinh</td>
@@ -1263,6 +1310,7 @@ test(typeof Math.sinh === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.tanh</td>
@@ -1285,6 +1333,7 @@ test(typeof Math.tanh === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.acosh</td>
@@ -1307,6 +1356,7 @@ test(typeof Math.acosh === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.asinh</td>
@@ -1329,6 +1379,7 @@ test(typeof Math.asinh === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.atanh</td>
@@ -1351,6 +1402,7 @@ test(typeof Math.atanh === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.hypot</td>
@@ -1373,6 +1425,7 @@ test(typeof Math.hypot === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td>Math.trunc</td>
@@ -1395,6 +1448,7 @@ test(typeof Math.trunc === 'function');
           <td class="no opera">No</td>
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
       </tbody>
     </table>
@@ -1403,8 +1457,11 @@ test(typeof Math.trunc === 'function');
       <p id="experimental-flag-note">
         <sup>[1]</sup> Have to be enabled via "Experimental Javascript features" flag
       </p>
+      <p id="harmony-flag-note">
+        <sup>[2]</sup> Have to be enabled via --harmony flag
+      </p>
       <p id="firefox-map-note">
-        <sup>[2]</sup> Firefox 13-18 fails the test because of lacking <code>Map.prototype.forEach</code> and because <code>Map.prototype.size</code> is a function instead of a number
+        <sup>[3]</sup> Firefox 13-18 fails the test because of lacking <code>Map.prototype.forEach</code> and because <code>Map.prototype.size</code> is a function instead of a number
       </p>
     </div>
   </div>

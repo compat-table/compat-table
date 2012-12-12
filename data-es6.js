@@ -63,6 +63,11 @@ exports.browsers = {
   },
   node08: {
     full: 'Node 0.8'
+  },
+  node08harmony: {
+    full: 'Node harmony',
+    note_id: 'harmony-flag',
+    note_html: 'Have to be enabled via --harmony flag'
   }
 };
 
@@ -99,7 +104,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -147,7 +153,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -174,7 +181,8 @@ exports.tests = [
     webkit: true,
     opera: true,
     rhino17: false,
-    node08: true
+    node08: true,
+    node08harmony: true
   }
 },
 {
@@ -201,7 +209,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -228,7 +237,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -255,7 +265,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -282,7 +293,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -310,7 +322,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -337,7 +350,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -365,7 +379,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -393,7 +408,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -421,7 +437,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -465,7 +482,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -493,7 +511,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -524,7 +543,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -567,7 +587,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: true
   }
 },
 {
@@ -597,7 +618,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -624,7 +646,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -649,7 +672,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: true
   }
 },
 {
@@ -672,7 +696,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -700,7 +725,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: true
   }
 },
 {
@@ -723,7 +749,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -746,7 +773,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -769,7 +797,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -792,7 +821,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: true
+    node08: true,
+    node08harmony: true
   }
 },
 {
@@ -815,7 +845,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -838,7 +869,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -861,7 +893,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -884,7 +917,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -907,7 +941,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -930,7 +965,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -953,7 +989,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -976,7 +1013,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1003,7 +1041,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1026,7 +1065,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1049,7 +1089,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1072,7 +1113,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: true
+    node08: true,
+    node08harmony: true
   }
 },
 {
@@ -1095,7 +1137,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1118,7 +1161,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: true
+    node08: true,
+    node08harmony: true
   }
 },
 {
@@ -1141,7 +1185,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1164,7 +1209,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1187,7 +1233,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1210,7 +1257,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1233,7 +1281,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1256,7 +1305,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1279,7 +1329,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1302,7 +1353,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1325,7 +1377,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1348,7 +1401,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1371,7 +1425,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1394,7 +1449,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1417,7 +1473,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 },
 {
@@ -1440,7 +1497,8 @@ exports.tests = [
     webkit: false,
     opera: false,
     rhino17: false,
-    node08: false
+    node08: false,
+    node08harmony: false
   }
 }
 ];
