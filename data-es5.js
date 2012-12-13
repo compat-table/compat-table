@@ -1465,7 +1465,7 @@ exports.tests = [
     ie8: false,
     ie9: false,
     ie10: {
-      val: false,
+      val: true,
       note_id: 'strict-mode-ie10',
       note_html: 'IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>'
     },
