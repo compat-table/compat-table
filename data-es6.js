@@ -74,6 +74,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'class',
+  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
   exec: function () {
     try {
       return eval('class C{ constructor() { this.own = true; } } (new C()).own;');
@@ -110,6 +111,7 @@ exports.tests = [
 },
 {
   name: 'let',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
   exec: [
     {
       type: 'application/javascript;version=1.8',
@@ -159,6 +161,7 @@ exports.tests = [
 },
 {
   name: 'const',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
   exec: function () {
     try {
       return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
@@ -187,6 +190,7 @@ exports.tests = [
 },
 {
   name: 'default function params',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values',
   exec: function () {
     try {
       return eval('(function (a = 5) { return a === 5; }())');
@@ -215,6 +219,7 @@ exports.tests = [
 },
 {
   name: 'rest parameters',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters',
   exec: function () {
     try {
       return eval('(function (...args) { return typeof args !== "undefined"; }())');
@@ -243,6 +248,7 @@ exports.tests = [
 },
 {
   name: 'spread call (...) operator',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
       return eval('Math.max(...[1, 2, 3]) === 3');
@@ -271,6 +277,7 @@ exports.tests = [
 },
 {
   name: 'spread array (...) operator',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
       return eval('[...[1, 2, 3]][2] === 3');
@@ -299,6 +306,7 @@ exports.tests = [
 },
 {
   name: '<del title="Temporarily disabled due to Chrome crash">Modules</del>',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:modules',
   exec: function () {
     try {
       // this line crashes Chrome 21-24
@@ -328,6 +336,7 @@ exports.tests = [
 },
 {
   name: 'For..of loops',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
   exec: function () {
     try {
       return eval('(function () { var arr = [5]; for (var item of arr) return item === 5; }())');
@@ -356,6 +365,7 @@ exports.tests = [
 },
 {
   name: 'Array comprehensions',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {
     try {
       eval('[a * a for (a of [1, 2, 3])][0] === 1');
@@ -385,6 +395,7 @@ exports.tests = [
 },
 {
   name: 'Generator expressions',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generator_expressions',
   exec: function () {
     try {
       eval('(a for (a of [1, 2, 3]))');
@@ -414,6 +425,7 @@ exports.tests = [
 },
 {
   name: 'Iterators',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
   exec: function () {
     try {
       eval('for (var a of {b: 5}) {}');
@@ -443,6 +455,7 @@ exports.tests = [
 },
 {
   name: 'Generators (yield)',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generators',
   exec: [
     {
       type: 'application/javascript;version=1.8',
@@ -488,6 +501,7 @@ exports.tests = [
 },
 {
   name: 'Template Strings',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:quasis',
   exec: function () {
     try {
       eval('var u = function () { return true }; u`literal`');
@@ -517,6 +531,7 @@ exports.tests = [
 },
 {
   name: 'RegExp "y" flag',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:regexp_y_flag',
   exec: function () {
     try {
       var re = new RegExp('\\w');
@@ -549,6 +564,7 @@ exports.tests = [
 },
 {
   name: 'Maps',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets',
   exec: function () {
     return typeof Map !== 'undefined' &&
       typeof Map.prototype.get === 'function' &&
@@ -593,6 +609,7 @@ exports.tests = [
 },
 {
   name: 'Sets',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets',
   exec: function () {
     return typeof Set !== 'undefined' &&
       typeof Set.prototype.add === 'function' &&
@@ -624,6 +641,7 @@ exports.tests = [
 },
 {
   name: 'WeakMaps',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps',
   exec: function () {
     return typeof WeakMap !== 'undefined' &&
       typeof WeakMap.prototype.get === 'function' &&
@@ -652,6 +670,7 @@ exports.tests = [
 },
 {
   name: 'Proxies',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies',
   exec: function () {
     return typeof Proxy !== 'undefined' &&
       typeof Proxy.create == 'function' &&
@@ -678,6 +697,7 @@ exports.tests = [
 },
 {
   name: 'Structs (binary data storage)',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:binary_data',
   exec: function () {
     return typeof StructType !== 'undefined';
   },
@@ -702,6 +722,7 @@ exports.tests = [
 },
 {
   name: 'Block-level function declaration',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:block_functions',
   exec: function () {
     'use strict';
     try {
@@ -851,6 +872,7 @@ exports.tests = [
 },
 {
   name: 'String.fromCodePoint',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.fromCodePoint === 'function';
   },
@@ -875,6 +897,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.codePointAt',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.prototype.codePointAt === 'function';
   },
@@ -899,6 +922,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.repeat',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.prototype.repeat === 'function';
   },
@@ -923,6 +947,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.startsWith',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.prototype.startsWith === 'function';
   },
@@ -947,6 +972,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.endsWith',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.prototype.endsWith === 'function';
   },
@@ -971,6 +997,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.contains',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.prototype.contains === 'function';
   },
@@ -995,6 +1022,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.toArray',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
     return typeof String.prototype.toArray === 'function';
   },
@@ -1095,6 +1123,7 @@ exports.tests = [
 },
 {
   name: 'Number.isFinite',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.isfinite',
   exec: function () {
     return typeof Number.isFinite === 'function';
   },
@@ -1119,6 +1148,7 @@ exports.tests = [
 },
 {
   name: 'Number.isInteger',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.isinteger',
   exec: function () {
     return typeof Number.isInteger === 'function';
   },
@@ -1143,6 +1173,7 @@ exports.tests = [
 },
 {
   name: 'Number.isNaN',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan',
   exec: function () {
     return typeof Number.isNaN === 'function';
   },
@@ -1167,6 +1198,7 @@ exports.tests = [
 },
 {
   name: 'Number.toInteger',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.tointeger',
   exec: function () {
     return typeof Number.toInteger === 'function';
   },
@@ -1191,6 +1223,7 @@ exports.tests = [
 },
 {
   name: 'Math.sign',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.sign === 'function';
   },
@@ -1215,6 +1248,7 @@ exports.tests = [
 },
 {
   name: 'Math.log10',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.log10 === 'function';
   },
@@ -1239,6 +1273,7 @@ exports.tests = [
 },
 {
   name: 'Math.log2',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.log2 === 'function';
   },
@@ -1263,6 +1298,7 @@ exports.tests = [
 },
 {
   name: 'Math.log1p',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.log1p === 'function';
   },
@@ -1287,6 +1323,7 @@ exports.tests = [
 },
 {
   name: 'Math.expm1',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.expm1 === 'function';
   },
@@ -1311,6 +1348,7 @@ exports.tests = [
 },
 {
   name: 'Math.cosh',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.cosh === 'function';
   },
@@ -1335,6 +1373,7 @@ exports.tests = [
 },
 {
   name: 'Math.sinh',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.sinh === 'function';
   },
@@ -1359,6 +1398,7 @@ exports.tests = [
 },
 {
   name: 'Math.tanh',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.tanh === 'function';
   },
@@ -1383,6 +1423,7 @@ exports.tests = [
 },
 {
   name: 'Math.acosh',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.acosh === 'function';
   },
@@ -1407,6 +1448,7 @@ exports.tests = [
 },
 {
   name: 'Math.asinh',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.asinh === 'function';
   },
@@ -1431,6 +1473,7 @@ exports.tests = [
 },
 {
   name: 'Math.atanh',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.atanh === 'function';
   },
@@ -1455,6 +1498,7 @@ exports.tests = [
 },
 {
   name: 'Math.hypot',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.hypot === 'function';
   },
@@ -1479,6 +1523,7 @@ exports.tests = [
 },
 {
   name: 'Math.trunc',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
   exec: function () {
     return typeof Math.trunc === 'function';
   },

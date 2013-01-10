@@ -72,7 +72,7 @@
             <th class="ie10"><abbr title="Internet Explorer 10 PP2">IE 10</abbr></th>
             <th class="firefox3"><abbr title="Firefox 3">FF 3</abbr></th>
             <th class="firefox3_5"><abbr title="Firefox 3.5, Firefox 3.6">FF 3.5, 3.6</abbr></th>
-            <th class="firefox4"><abbr title="Firefox 4, Firefox 5, Firefox 6.0, Firefox 7.0.1, Firefox 8.0, Firefox 9.0, Firefox 10.0, Firefox 11.0, Firefox 12.0, Firefox 13.0">FF 4-13</abbr></th>
+            <th class="firefox4"><abbr title="Firefox 4+">FF 4+</abbr></th>
             <th class="safari3"><abbr title="Safari 3.2">SF 3.2</abbr></th>
             <th class="safari4"><abbr title="Safari 4.0.5">SF 4</abbr></th>
             <th class="safari5"><abbr title="Safari 5.0.5">SF 5</abbr></th>
@@ -1187,12 +1187,53 @@ test(function () {
             <td class="no opera10_50">No</td>
             <td class="no opera12">No</td>
             <td class="yes opera12_10">Yes</td>
-            <td class="konq"></td>
+            <td class="no konq">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
           </tr>
           <tr>
-            <td>Strict mode<a href="#strict-mode-note"><sup>[7]</sup></a></td>
+            <td>Immutable undefined</td>
+<script>
+test(function () {
+  var result;
+  try {
+    undefined = 12345;
+    result = typeof undefined == 'undefined';
+    undefined = void 0;
+  } catch (e) { }
+
+  return result;
+}());
+</script>
+
+            <td class="no ie7">No</td>
+            <td class="no ie8">No</td>
+            <td class="yes ie9">Yes</td>
+            <td class="yes ie10">Yes</td>
+            <td class="no firefox3">No</td>
+            <td class="no firefox3_5">No</td>
+            <td class="yes firefox4">Yes</td>
+            <td class="no safari3">No</td>
+            <td class="no safari4">No</td>
+            <td class="yes safari5">Yes</td>
+            <td class="yes safari51">Yes</td>
+            <td class="yes safari6">Yes</td>
+            <td class="yes webkit">Yes</td>
+            <td class="no chrome5">No</td>
+            <td class="no chrome6">No</td>
+            <td class="no chrome7">No</td>
+            <td class="no chrome13">No</td>
+            <td class="yes chrome19">Yes</td>
+            <td class="no opera10_10">No</td>
+            <td class="no opera10_50">No</td>
+            <td class="yes opera12">Yes</td>
+            <td class="yes opera12_10">Yes</td>
+            <td class="no konq">No</td>
+            <td class="yes besen">Yes</td>
+            <td class="yes rhino">Yes</td>
+          </tr>
+          <tr>
+            <td><a href="http://kangax.github.com/es5-compat-table/strict-mode/">Strict mode</a><a href="#strict-mode-note"><sup>[7]</sup></a></td>
 <script>
 test(function () {
   "use strict";

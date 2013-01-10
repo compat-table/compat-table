@@ -31,8 +31,8 @@ exports.browsers = {
     short: 'FF 3.5, 3.6'
   },
   firefox4: {
-    full: 'Firefox 4, Firefox 5, Firefox 6.0, Firefox 7.0.1, Firefox 8.0, Firefox 9.0, Firefox 10.0, Firefox 11.0, Firefox 12.0, Firefox 13.0',
-    short: 'FF 4-13'
+    full: 'Firefox 4+',
+    short: 'FF 4+'
   },
 
   safari3: {
@@ -1444,7 +1444,53 @@ exports.tests = [
     opera12: false,
     opera12_10: true,
 
-    konq: null,
+    konq: false,
+
+    besen: true,
+    rhino: true
+  }
+},
+{
+  name: 'Immutable undefined',
+  exec: function () {
+    var result;
+    try {
+      undefined = 12345;
+      result = typeof undefined == 'undefined';
+      undefined = void 0;
+    } catch (e) { }
+
+    return result;
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: true,
+    ie10: true,
+
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: true,
+
+    safari3: false,
+    safari4: false,
+    safari5: true,
+    safari51: true,
+    safari6: true,
+    webkit: true,
+
+    chrome5: false,
+    chrome6: false,
+    chrome7: false,
+    chrome13: false,
+    chrome19: true,
+
+    opera10_10: false,
+    opera10_50: false,
+    opera12: true,
+    opera12_10: true,
+
+    konq: false,
 
     besen: true,
     rhino: true
