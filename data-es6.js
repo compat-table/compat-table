@@ -427,8 +427,15 @@ exports.tests = [
   name: 'Iterators',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
   exec: function () {
+    var obj = {
+      iterator: function() {
+        return {
+          next: function() { throw StopIteration }
+        }
+      }
+    };
     try {
-      eval('for (var a of {b: 5}) {}');
+      eval('for (var a of obj) {}');
       return true;
     } catch (e) {
       return false;
@@ -439,8 +446,8 @@ exports.tests = [
     firefox11: false,
     firefox13: false,
     firefox16: false,
-    firefox17: false,
-    firefox18: false,
+    firefox17: true,
+    firefox18: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
