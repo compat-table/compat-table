@@ -709,17 +709,16 @@ exports.tests = [
   name: 'Proxies',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies',
   exec: function () {
-    return typeof Proxy !== 'undefined' &&
-      typeof Proxy.create == 'function' &&
-      typeof Proxy.createFunction == 'function';
+    return typeof Proxy === "function" &&
+           new Proxy({}, { get: function () { return 5; } }).foo === 5;
   },
   res: {
     ie10: false,
     firefox11: false,
     firefox13: false,
-    firefox16: true,
-    firefox17: true,
-    firefox18: true,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
     chrome: false,
     chrome19dev: false,
     chrome21dev: true,
@@ -729,7 +728,7 @@ exports.tests = [
     opera: false,
     rhino17: false,
     node08: false,
-    node08harmony: true
+    node08harmony: false
   }
 },
 {
