@@ -485,7 +485,7 @@ test(function () {
 <script type="application/javascript;version=1.8">
 test((function () {
   try {
-    eval('(function () { yield 5; }())');
+    eval('(function* () { yield 5; }())');
     return true;
   } catch (e) {
     return false;
@@ -501,11 +501,11 @@ if (!__yield_script_executed) {
 </script>
 
           <td class="no ie10">No</td>
-          <td class="yes firefox11">Yes</td>
-          <td class="yes firefox13">Yes</td>
-          <td class="yes firefox16">Yes</td>
-          <td class="yes firefox17">Yes</td>
-          <td class="yes firefox18">Yes</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox13">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>

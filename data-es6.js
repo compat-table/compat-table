@@ -499,7 +499,7 @@ exports.tests = [
       script: function () {
         test((function () {
           try {
-            eval('(function () { yield 5; }())');
+            eval('(function* () { yield 5; }())');
             return true;
           } catch (e) {
             return false;
@@ -519,11 +519,11 @@ exports.tests = [
   ],
   res: {
     ie10: false,
-    firefox11: true,
-    firefox13: true,
-    firefox16: true,
-    firefox17: true,
-    firefox18: true,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
