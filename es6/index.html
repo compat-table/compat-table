@@ -72,6 +72,36 @@
       </thead>
       <tbody>
         <tr>
+          <td><a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">arrow functions</a></td>
+<script>
+test(function () {
+  try {
+    eval('var a = () => 5;');
+  } catch (e) {
+    return false;
+  }
+  return true;
+}());
+</script>
+
+          <td class="ie10"></td>
+          <td class="firefox11"></td>
+          <td class="firefox13"></td>
+          <td class="firefox16"></td>
+          <td class="firefox17"></td>
+          <td class="firefox18"></td>
+          <td class="chrome"></td>
+          <td class="chrome19dev"></td>
+          <td class="chrome21dev"></td>
+          <td class="safari51"></td>
+          <td class="safari6"></td>
+          <td class="webkit"></td>
+          <td class="opera"></td>
+          <td class="rhino17"></td>
+          <td class="node08"></td>
+          <td class="node08harmony"></td>
+        </tr>
+        <tr>
           <td><a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">class</a></td>
 <script>
 test(function () {

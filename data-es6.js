@@ -73,6 +73,36 @@ exports.browsers = {
 
 exports.tests = [
 {
+  name: 'arrow functions',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
+  exec: function() {
+    try {
+      eval('var a = () => 5;');
+    } catch (e) {
+      return false;
+    }
+    return true;
+  },
+  res: {
+    ie10: null,
+    firefox11: null,
+    firefox13: null,
+    firefox16: null,
+    firefox17: null,
+    firefox18: null,
+    chrome: null,
+    chrome19dev: null,
+    chrome21dev: null,
+    safari51: null,
+    safari6: null,
+    webkit: null,
+    opera: null,
+    rhino17: null,
+    node08: null,
+    node08harmony: null
+  }
+},
+{
   name: 'class',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
   exec: function () {
