@@ -1133,6 +1133,7 @@ exports.tests = [
     opera10_10: true,
     opera10_50: true,
     konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
