@@ -73,9 +73,13 @@ exports.browsers = {
     full: 'Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)',
     short: 'OP 10.50-11.10'
   },
-  konq: {
+  konq44: {
     full: 'Konqueror 4.4',
     short: 'Konq 4.4'
+  },
+  konq49: {
+    full: 'Konqueror 4.9',
+    short: 'Konq 4.9'
   },
   besen: {
     full: 'Bero\'s EcmaScript Engine (version 1.0.0.489)',
@@ -127,7 +131,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: {
       val: true,
       note_id: 'besen-extensions',
@@ -160,7 +165,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -188,7 +194,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: true,
     rhino: true
   },
@@ -217,7 +224,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
@@ -245,7 +253,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: false,
     rhino: false
   }
@@ -275,7 +284,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -306,7 +316,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: false,
     rhino: true
   }
@@ -334,7 +345,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   },
@@ -364,7 +376,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
@@ -393,7 +406,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -421,7 +435,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -454,7 +469,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -482,7 +498,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: false,
     rhino: true
   }
@@ -510,7 +527,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: false,
     rhino: true
   },
@@ -544,7 +562,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -592,7 +611,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -620,7 +640,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -652,7 +673,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: true,
     rhino: false
   }
@@ -684,7 +706,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -716,7 +739,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: null,
     opera10_50: false,
-    konq: null,
+    konq44: null,
+    konq49: false,
     besen: null,
     rhino: false
   },
@@ -753,7 +777,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: true,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -788,7 +813,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: true,
     opera10_50: true,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -818,7 +844,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: false,
     rhino: true
   }
@@ -849,7 +876,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: false,
     rhino: true
   }
@@ -881,7 +909,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -913,7 +942,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: null,
     opera10_50: true,
-    konq: null,
+    konq44: null,
+    konq49: true,
     besen: null,
     rhino: false
   },
@@ -940,7 +970,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
@@ -966,7 +997,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: true,
     besen: false,
     rhino: false
   }
@@ -992,7 +1024,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: true,
     besen: false,
     rhino: false
   }
@@ -1018,7 +1051,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
@@ -1044,7 +1078,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
@@ -1070,7 +1105,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   }
@@ -1096,7 +1132,7 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
     besen: true,
     rhino: true
   }
@@ -1122,7 +1158,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   },
@@ -1149,7 +1186,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -1175,7 +1213,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -1201,7 +1240,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: true,
     rhino: false
   },
@@ -1234,7 +1274,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: true,
     opera10_50: true,
-    konq: true,
+    konq44: true,
+    konq49: true,
     besen: true,
     rhino: true
   },
@@ -1263,7 +1304,8 @@ exports.tests = [
     chrome7: true,
     opera10_10: false,
     opera10_50: true,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -1291,7 +1333,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -1319,7 +1362,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: true
   }
@@ -1347,7 +1391,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   },
@@ -1377,7 +1422,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }
@@ -1407,7 +1453,8 @@ exports.tests = [
     chrome7: false,
     opera10_10: false,
     opera10_50: false,
-    konq: false,
+    konq44: false,
+    konq49: false,
     besen: false,
     rhino: false
   }

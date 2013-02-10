@@ -84,7 +84,8 @@
             <th class="chrome7"><abbr title="Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)">CH 7-10</abbr></th>
             <th class="opera10_10"><abbr title="Opera 10.10">OP 10.10</abbr></th>
             <th class="opera10_50"><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)">OP 10.50-11.10</abbr></th>
-            <th class="konq"><abbr title="Konqueror 4.4">Konq 4.4</abbr></th>
+            <th class="konq44"><abbr title="Konqueror 4.4">Konq 4.4</abbr></th>
+            <th class="konq49"><abbr title="Konqueror 4.9">Konq 4.9</abbr></th>
             <th class="besen"><a href="http://besen.sourceforge.net/"><abbr title="Bero's EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
             <th class="rhino"><abbr title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</abbr></th>
           </tr>
@@ -120,12 +121,13 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes<a href="#besen-extensions-note"><sup>[2]</sup></a></td>
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>uneval</td>
@@ -150,7 +152,8 @@ test(typeof uneval == 'function');
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -177,12 +180,13 @@ test('toSource' in (function (){}) && 'toSource' in ({}));
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>function "name" property</td>
@@ -207,7 +211,8 @@ test((function foo(){}).name == 'foo');
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -234,7 +239,8 @@ test('caller' in (function(){}));
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -263,7 +269,8 @@ test((function (){}).arity === 0 &&
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -295,7 +302,8 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -322,12 +330,13 @@ test(typeof Function.prototype.isGenerator == 'function');
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></td>
@@ -353,7 +362,8 @@ test(({}).__proto__ === Object.prototype &&
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -381,7 +391,8 @@ test(typeof ({}).__count__ === 'number' &&
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -408,7 +419,8 @@ test(typeof ({}).__parent__ !== 'undefined');
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -442,7 +454,8 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -469,7 +482,8 @@ test('__defineGetter__' in ({ }));
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -496,12 +510,13 @@ test('__defineSetter__' in ({ }));
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>const</td>
@@ -533,7 +548,8 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -573,7 +589,8 @@ if (!__script_executed) {
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -600,7 +617,8 @@ test(typeof Array.slice === 'function' && Array.slice('123').length === 3);
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -633,7 +651,8 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="yes besen">Yes</td>
               <td class="no rhino">No</td>
             </tr>
@@ -666,7 +685,8 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -699,12 +719,13 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="opera10_10"></td>
               <td class="no opera10_50">No</td>
-              <td class="konq"></td>
+              <td class="konq44"></td>
+              <td class="no konq49">No</td>
               <td class="besen"></td>
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>RegExp "y" flag</td>
@@ -739,7 +760,8 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="yes opera10_10">Yes</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -775,7 +797,8 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -806,7 +829,8 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -838,7 +862,8 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -871,7 +896,8 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -904,12 +930,13 @@ test(function () {
               <td class="no chrome7">No</td>
               <td class="opera10_10"></td>
               <td class="yes opera10_50">Yes</td>
-              <td class="konq"></td>
+              <td class="konq44"></td>
+              <td class="yes konq49">Yes</td>
               <td class="besen"></td>
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>String.prototype.substr</td>
@@ -934,7 +961,8 @@ test(typeof String.prototype.substr === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -961,7 +989,8 @@ test(typeof String.prototype.trimLeft === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -988,7 +1017,8 @@ test(typeof String.prototype.trimRight === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="yes konq49">Yes</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -1015,7 +1045,8 @@ test(typeof String.prototype.anchor === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -1042,7 +1073,8 @@ test(typeof String.prototype.big === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -1069,7 +1101,8 @@ test(typeof String.prototype.blink === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -1096,7 +1129,8 @@ test(typeof String.prototype.bold === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="konq49"></td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -1123,12 +1157,13 @@ test(typeof String.prototype.link === 'function');
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>Object.prototype.watch</td>
@@ -1153,7 +1188,8 @@ test(typeof Object.prototype.watch == 'function');
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -1180,7 +1216,8 @@ test(typeof Object.prototype.unwatch == 'function');
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -1207,12 +1244,13 @@ test(typeof Object.prototype.eval == 'function');
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="yes besen">Yes</td>
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>Octal literals</td>
@@ -1243,12 +1281,13 @@ test(function () {
               <td class="yes chrome7">Yes</td>
               <td class="yes opera10_10">Yes</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="yes konq">Yes</td>
+              <td class="yes konq44">Yes</td>
+              <td class="yes konq49">Yes</td>
               <td class="yes besen">Yes</td>
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td>error "stack"</td>
@@ -1273,7 +1312,8 @@ test('stack' in new Error);
               <td class="yes chrome7">Yes</td>
               <td class="no opera10_10">No</td>
               <td class="yes opera10_50">Yes</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -1300,7 +1340,8 @@ test('lineNumber' in new Error);
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -1327,7 +1368,8 @@ test('fileName' in new Error);
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="yes rhino">Yes</td>
             </tr>
@@ -1354,12 +1396,13 @@ test('description' in new Error);
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <th colspan="23" class="separator"></th>
+              <th colspan="24" class="separator"></th>
             </tr>
             <tr>
               <td><a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">Proxy</a></td>
@@ -1385,7 +1428,8 @@ test(typeof Proxy !== 'undefined' &&
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>
@@ -1414,7 +1458,8 @@ test(typeof WeakMap !== 'undefined' &&
               <td class="no chrome7">No</td>
               <td class="no opera10_10">No</td>
               <td class="no opera10_50">No</td>
-              <td class="no konq">No</td>
+              <td class="no konq44">No</td>
+              <td class="no konq49">No</td>
               <td class="no besen">No</td>
               <td class="no rhino">No</td>
             </tr>

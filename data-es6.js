@@ -58,6 +58,10 @@ exports.browsers = {
   opera: {
     full: 'Opera 12'
   },
+  konq49: {
+    full: 'Konqueror 4.9',
+    short: 'Konq 4.9'
+  },
   rhino17: {
     full: 'Rhino 1.7'
   },
@@ -97,6 +101,7 @@ exports.tests = [
     safari6: null,
     webkit: null,
     opera: null,
+    konq49: false,
     rhino17: null,
     node08: null,
     node08harmony: null
@@ -134,6 +139,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -183,6 +189,7 @@ exports.tests = [
     safari51: false,
     safari6: false,
     webkit: false,
+    konq49: false,
     opera: false,
     rhino17: false,
     node08: false,
@@ -213,6 +220,7 @@ exports.tests = [
     safari6: true,
     webkit: true,
     opera: true,
+    konq49: true,
     rhino17: false,
     node08: true,
     node08harmony: true
@@ -242,6 +250,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -271,6 +280,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -300,6 +310,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -329,6 +340,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -359,6 +371,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -388,6 +401,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -418,6 +432,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -448,6 +463,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -485,6 +501,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -531,6 +548,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -561,6 +579,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -594,6 +613,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -639,6 +659,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: true
@@ -671,6 +692,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -700,6 +722,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -726,6 +749,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -751,6 +775,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -781,6 +806,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: true
@@ -805,6 +831,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -829,6 +856,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -853,6 +881,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -877,6 +906,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: true,
     node08harmony: true
@@ -901,6 +931,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -926,6 +957,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -951,6 +983,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -976,6 +1009,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1001,6 +1035,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1026,6 +1061,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1051,6 +1087,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1076,6 +1113,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1104,6 +1142,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1128,6 +1167,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1152,6 +1192,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1177,6 +1218,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: true,
     node08harmony: true
@@ -1202,6 +1244,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1227,6 +1270,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: true,
     node08harmony: true
@@ -1252,6 +1296,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1277,6 +1322,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1302,6 +1348,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1327,6 +1374,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1352,6 +1400,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1377,6 +1426,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1402,6 +1452,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1427,6 +1478,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1452,6 +1504,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1477,6 +1530,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1502,6 +1556,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1527,6 +1582,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1552,6 +1608,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
@@ -1577,6 +1634,7 @@ exports.tests = [
     safari6: false,
     webkit: false,
     opera: false,
+    konq49: false,
     rhino17: false,
     node08: false,
     node08harmony: false
