@@ -98,9 +98,13 @@ exports.browsers = {
     short: 'OP 12.10'
   },
 
-  konq: {
+  konq43: {
     full: 'Konqueror 4.3',
     short: 'Konq 4.3'
+  },
+  konq49: {
+    full: 'Konqueror 4.9',
+    short: 'Konq 4.9'
   },
 
   besen: {
@@ -149,7 +153,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -200,7 +205,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -239,7 +245,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -278,7 +285,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -317,7 +325,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -356,7 +365,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -395,7 +405,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -434,7 +445,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -473,7 +485,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -512,7 +525,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -551,7 +565,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -590,7 +605,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -629,7 +645,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -669,7 +686,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -708,7 +726,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -747,7 +766,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -786,7 +806,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -829,7 +850,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -868,7 +890,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -908,7 +931,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -947,7 +971,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -986,7 +1011,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1025,7 +1051,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1064,7 +1091,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1103,7 +1131,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1142,7 +1171,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1181,7 +1211,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1220,7 +1251,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1264,7 +1296,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1309,7 +1342,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1351,7 +1385,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: true,
+    konq43: true,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1398,7 +1433,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: false
@@ -1444,7 +1480,8 @@ exports.tests = [
     opera12: false,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: true
@@ -1490,7 +1527,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: true,
 
     besen: true,
     rhino: true
@@ -1538,7 +1576,8 @@ exports.tests = [
     opera12: true,
     opera12_10: true,
 
-    konq: false,
+    konq43: false,
+    konq49: false,
 
     besen: true,
     rhino: false
