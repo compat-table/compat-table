@@ -1537,9 +1537,6 @@ exports.tests = [
 {
   name: 'Strict mode',
   link: 'http://kangax.github.com/es5-compat-table/strict-mode/',
-  note_id: 'strict-mode',
-  note_html: 'Strict mode is assumed to be supported when the following expression evaluates to <code>true</code> — ' +
-    '<code>(function(){ "use strict"; return !this; })();</code>',
   exec: function () {
     "use strict";
     return !this;

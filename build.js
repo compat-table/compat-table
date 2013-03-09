@@ -79,13 +79,14 @@ function dataToHtml(browsers, tests) {
   // body rows
   var val,
     body = [],
-    name;
+    name, id;
   for (i = 0; i < tests.length; i++) {
     t = tests[i];
+    id = t.name;
     name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
     body.push(
       '<tr>',
-      '\t<td>' + name + footnoter.get(t) + '</td>\n' +
+      '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
       testScript(t.exec)
     );
 

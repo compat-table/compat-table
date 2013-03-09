@@ -70,4 +70,38 @@ domready(function() {
       }, 500);
     };
   }
-})
+
+  function highlightSelected() {
+    var hash = document.location.hash.slice(1);
+    var trs = document.getElementsByTagName('tr');
+    for (var i = 0, len = trs.length; i < len; i++) {
+      if (trs[i].cells[0].id === hash) {
+        trs[i].className = 'selected';
+      }
+      else {
+        if (hash) {
+          trs[i].className = 'dimmed';
+        }
+        else {
+          trs[i].className = '';
+        }
+      }
+    }
+  }
+
+  if (document.location.hash) {
+    highlightSelected();
+  }
+  document.onclick = function(e) {
+    if (e.target.className === 'anchor') {
+      setTimeout(highlightSelected, 10);
+    }
+    else {
+      document.location.hash = '';
+      setTimeout(highlightSelected, 10);
+    }
+  };
+  window.onhashchange = function() {
+    setTimeout(highlightSelected, 10);
+  };
+});

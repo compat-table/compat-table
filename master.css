@@ -1,10 +1,17 @@
 body { font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif; margin: 0; }
 th { text-align: center; padding-left: 1em; padding-right: 1em; padding-bottom: 1em ; }
-td { background: #eee; padding-left: 0.5em; }
+td { background: #eee; padding-left: 5px; margin-left: -10px; }
+td span { position: relative; display: inline-block; }
+td:hover .anchor { display: block; }
+td .anchor { display: none; position: absolute; top: -5px; left: -22px; text-decoration: none; padding: 5px; }
+td:first-child { min-width: 285px; }
 th a { text-decoration: none; }
 table { margin-bottom: 2em; }
 p { margin-bottom: 0.5em; margin-top: 0; }
 code { font-family: "Courier New", Courier, monospace; }
+
+tr.selected td { padding-top: 30px; padding-bottom: 30px; }
+tr.dimmed td { opacity: 0.4; }
 
 #body { padding-left: 1em; position: relative; min-width: 1250px; }
 
