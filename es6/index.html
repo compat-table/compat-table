@@ -58,6 +58,7 @@
           <th class="firefox16"><abbr title="Firefox">FF 16</abbr></th>
           <th class="firefox17"><abbr title="Firefox">FF 17</abbr></th>
           <th class="firefox18"><abbr title="Firefox">FF 18</abbr></th>
+          <th class="firefox23"><abbr title="Firefox">FF 23</abbr></th>
           <th class="chrome"><abbr title="Chrome">CH &lt;19</abbr></th>
           <th class="chrome19dev"><abbr title="Chrome">CH 19</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
           <th class="chrome21dev"><abbr title="Chrome">CH 21-24</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
@@ -86,18 +87,19 @@ test(function () {
 </script>
 
           <td class="ie10"></td>
-          <td class="firefox11"></td>
-          <td class="firefox13"></td>
-          <td class="firefox16"></td>
-          <td class="firefox17"></td>
-          <td class="firefox18"></td>
-          <td class="chrome"></td>
-          <td class="chrome19dev"></td>
-          <td class="chrome21dev"></td>
-          <td class="safari51"></td>
-          <td class="safari6"></td>
-          <td class="webkit"></td>
-          <td class="opera"></td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox13">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="yes firefox23">Yes</td>
+          <td class="no chrome">No</td>
+          <td class="no chrome19dev">No</td>
+          <td class="no chrome21dev">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="rhino17"></td>
           <td class="node08"></td>
@@ -129,6 +131,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -171,6 +174,7 @@ if (!__let_script_executed) {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="yes chrome19dev">Yes</td>
           <td class="yes chrome21dev">Yes</td>
@@ -201,6 +205,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="yes chrome">Yes</td>
           <td class="yes chrome19dev">Yes</td>
           <td class="yes chrome21dev">Yes</td>
@@ -231,6 +236,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -261,6 +267,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -291,6 +298,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -321,6 +329,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -352,6 +361,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -382,6 +392,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -413,6 +424,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -444,6 +456,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -482,6 +495,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -520,6 +534,7 @@ if (!__yield_script_executed) {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -551,6 +566,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -585,6 +601,7 @@ test(function () {
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -616,6 +633,7 @@ test(typeof Map !== 'undefined' &&
           <td class="no firefox16">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
           <td class="no firefox17">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
           <td class="no firefox18">No<a href="#firefox-map-note"><sup>[3]</sup></a></td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -647,6 +665,7 @@ test(typeof Set !== 'undefined' &&
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -675,6 +694,7 @@ test(typeof WeakMap !== 'undefined' &&
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -700,6 +720,7 @@ test(typeof Proxy === "function" &&
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="yes chrome21dev">Yes</td>
@@ -724,6 +745,7 @@ test(typeof StructType !== 'undefined');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -755,6 +777,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="yes chrome21dev">Yes</td>
@@ -779,6 +802,7 @@ test(typeof Object.getOwnPropertyDescriptors === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -803,6 +827,7 @@ test(typeof Object.getPropertyDescriptor === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -827,6 +852,7 @@ test(typeof Object.getPropertyNames === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -851,6 +877,7 @@ test(typeof Object.is === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="yes chrome19dev">Yes</td>
           <td class="yes chrome21dev">Yes</td>
@@ -875,6 +902,7 @@ test(typeof Object.isnt === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -899,6 +927,7 @@ test(typeof String.fromCodePoint === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -923,6 +952,7 @@ test(typeof String.prototype.codePointAt === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -947,6 +977,7 @@ test(typeof String.prototype.repeat === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -971,6 +1002,7 @@ test(typeof String.prototype.startsWith === 'function');
           <td class="no firefox16">No</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -995,6 +1027,7 @@ test(typeof String.prototype.endsWith === 'function');
           <td class="no firefox16">No</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1019,6 +1052,7 @@ test(typeof String.prototype.contains === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1043,6 +1077,7 @@ test(typeof String.prototype.toArray === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1073,6 +1108,7 @@ test(function () {
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1097,6 +1133,7 @@ test(typeof Array.from === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1121,6 +1158,7 @@ test(typeof Array.of === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1145,6 +1183,7 @@ test(typeof Number.isFinite === 'function');
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="yes chrome19dev">Yes</td>
           <td class="yes chrome21dev">Yes</td>
@@ -1169,6 +1208,7 @@ test(typeof Number.isInteger === 'function');
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1193,6 +1233,7 @@ test(typeof Number.isNaN === 'function');
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="yes chrome19dev">Yes</td>
           <td class="yes chrome21dev">Yes</td>
@@ -1217,6 +1258,7 @@ test(typeof Number.toInteger === 'function');
           <td class="yes firefox16">Yes</td>
           <td class="yes firefox17">Yes</td>
           <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1241,6 +1283,7 @@ test(typeof Math.sign === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1265,6 +1308,7 @@ test(typeof Math.log10 === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1289,6 +1333,7 @@ test(typeof Math.log2 === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1313,6 +1358,7 @@ test(typeof Math.log1p === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1337,6 +1383,7 @@ test(typeof Math.expm1 === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1361,6 +1408,7 @@ test(typeof Math.cosh === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1385,6 +1433,7 @@ test(typeof Math.sinh === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1409,6 +1458,7 @@ test(typeof Math.tanh === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1433,6 +1483,7 @@ test(typeof Math.acosh === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1457,6 +1508,7 @@ test(typeof Math.asinh === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1481,6 +1533,7 @@ test(typeof Math.atanh === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1505,6 +1558,7 @@ test(typeof Math.hypot === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
@@ -1529,6 +1583,7 @@ test(typeof Math.trunc === 'function');
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
           <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="no chrome21dev">No</td>
