@@ -13,7 +13,11 @@ var fs = require('fs')
     }
 
 $('#body tbody tr').each(function () {
-  var desc = this.find('td')[0].children[0].data.trim()
+  var desc = (function (el) {
+        while (el && !el.data)
+          el = el.children[0]
+        return (el && el.data) || 'ERROR!'
+      }(this.find('td>span>a')[1] || this.find('td>span')[0].children[1]))
     , scripts = this.find('script')
     , result = false
     , i = 0, scr
