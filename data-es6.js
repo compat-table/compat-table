@@ -755,7 +755,7 @@ exports.tests = [
   name: 'Proxies',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies',
   exec: function () {
-    return typeof Proxy === "function" &&
+    return typeof Proxy === "object" &&
            new Proxy({}, { get: function () { return 5; } }).foo === 5;
   },
   res: {
@@ -764,8 +764,8 @@ exports.tests = [
     firefox13: false,
     firefox16: false,
     firefox17: false,
-    firefox18: false,
-    firefox23: false,
+    firefox18: true,
+    firefox23: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: true,
