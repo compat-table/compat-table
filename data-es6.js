@@ -840,8 +840,36 @@ exports.tests = [
 },
 {
   name: 'Object.assign',
+  link: "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.17",
   exec: function () {
     return typeof Object.assign === 'function';
+  },
+  res: {
+    ie10: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    safari51: false,
+    safari6: false,
+    webkit: false,
+    opera: false,
+    konq49: false,
+    rhino17: false,
+    node08: false,
+    node08harmony: false
+  }
+},
+{
+  name: 'Object.mixin',
+  link: "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.18",
+  exec: function () {
+    return typeof Object.mixin === 'function';
   },
   res: {
     ie10: false,
