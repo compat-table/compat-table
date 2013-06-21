@@ -94,7 +94,8 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: '<a href="http://kangax.github.com/nfe/#function-statements">function statement</a>',
+  name: 'function statement',
+  link: 'http://kangax.github.com/nfe/#function-statements',
   exec: function () {
     try {
       eval('if (1) { function f(){ } } else { function f(){ } }');
@@ -323,7 +324,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a>',
+  name: 'Function.prototype.isGenerator',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator',
   exec: function () {
     return typeof Function.prototype.isGenerator == 'function';
   },
@@ -353,7 +355,8 @@ exports.tests = [
   separator: 'after'
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a>',
+  name: '__proto__',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto',
   exec: function () {
     return ({}).__proto__ === Object.prototype &&
       [].__proto__ === Array.prototype;
@@ -383,7 +386,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a>',
+  name: '__count__',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype',
   exec: function () {
     return typeof ({}).__count__ === 'number' &&
       ({ x: 1, y: 2 }).__count__ === 2;
@@ -413,7 +417,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a>',
+  name: '__parent__',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent',
   exec: function () {
     return typeof ({}).__parent__ !== 'undefined';
   },
@@ -442,7 +447,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a>',
+  name: '__noSuchMethod__',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod',
   exec: function () {
     var o = { }, executed = false;
     o.__noSuchMethod__ = function () { executed = true; }
@@ -476,7 +482,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a>',
+  name: '__defineGetter__',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter',
   exec: function () {
     return '__defineGetter__' in ({ });
   },
@@ -505,7 +512,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a>',
+  name: '__defineSetter__',
+  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter',
   exec: function () {
     return '__defineSetter__' in ({ });
   },
@@ -574,7 +582,7 @@ exports.tests = [
     {
       type: 'application/javascript;version=1.8',
       script: function () {
-        test((function(){ 
+        test((function(){
           try {
             return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
           } catch (e) {
@@ -713,7 +721,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a>',
+  name: 'Sharp variables',
+  link: 'https://developer.mozilla.org/en/Sharp_variables_in_JavaScript',
   exec: function () {
     try {
       return eval('(function () { var arr = #1=[1, #1#, 3]; return arr[1] === arr; }())');
@@ -1400,7 +1409,8 @@ exports.tests = [
   separator: 'after'
 },
 {
-  name: '<a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">Proxy</a>',
+  name: 'Proxy',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:proxies',
   exec: function () {
     return typeof Proxy !== 'undefined' &&
       typeof Proxy.create == 'function';
@@ -1430,7 +1440,8 @@ exports.tests = [
   }
 },
 {
-  name: '<a href="http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps">WeakMap</a>',
+  name: 'WeakMap',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps',
   exec: function () {
     return typeof WeakMap !== 'undefined' &&
       typeof new WeakMap().get == 'function' &&
