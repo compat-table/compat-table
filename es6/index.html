@@ -343,7 +343,7 @@ test(function () {
           <td class="no node08harmony">No</td>
         </tr>
         <tr>
-          <td id="Modules"><span><a class="anchor" href="#Modules">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:modules"><del title="Temporarily disabled due to Chrome crash">Modules</del></a></span></td>
+          <td id="<del title="Temporarily disabled due to Chrome crash">Modules</del>"><span><a class="anchor" href="#<del title="Temporarily disabled due to Chrome crash">Modules</del>">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:modules"><del title="Temporarily disabled due to Chrome crash">Modules</del></a></span></td>
 <script>
 test(function () {
   try {
@@ -710,7 +710,7 @@ test(typeof WeakMap !== 'undefined' &&
         <tr>
           <td id="Proxies"><span><a class="anchor" href="#Proxies">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies">Proxies</a></span></td>
 <script>
-test(typeof Proxy === "function" &&
+test(typeof Proxy === "object" &&
          new Proxy({}, { get: function () { return 5; } }).foo === 5);
 </script>
 
@@ -719,8 +719,8 @@ test(typeof Proxy === "function" &&
           <td class="no firefox13">No</td>
           <td class="no firefox16">No</td>
           <td class="no firefox17">No</td>
-          <td class="no firefox18">No</td>
-          <td class="no firefox23">No</td>
+          <td class="yes firefox18">Yes</td>
+          <td class="yes firefox23">Yes</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
           <td class="yes chrome21dev">Yes</td>
@@ -789,6 +789,56 @@ test(function () {
           <td class="no rhino17">No</td>
           <td class="no node08">No</td>
           <td class="yes node08harmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="Object.assign"><span><a class="anchor" href="#Object.assign">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.17">Object.assign</a></span></td>
+<script>
+test(typeof Object.assign === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox13">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chrome19dev">No</td>
+          <td class="no chrome21dev">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
+        </tr>
+        <tr>
+          <td id="Object.mixin"><span><a class="anchor" href="#Object.mixin">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.18">Object.mixin</a></span></td>
+<script>
+test(typeof Object.mixin === 'function');
+</script>
+
+          <td class="no ie10">No</td>
+          <td class="no firefox11">No</td>
+          <td class="no firefox13">No</td>
+          <td class="no firefox16">No</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
+          <td class="no chrome">No</td>
+          <td class="no chrome19dev">No</td>
+          <td class="no chrome21dev">No</td>
+          <td class="no safari51">No</td>
+          <td class="no safari6">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no node08">No</td>
+          <td class="no node08harmony">No</td>
         </tr>
         <tr>
           <td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&sect;</a>Object.getOwnPropertyDescriptors</span></td>
