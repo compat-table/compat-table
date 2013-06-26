@@ -668,32 +668,17 @@ exports.tests = [
       typeof Map.prototype.set === 'function' &&
       typeof Map.prototype.clear === 'function' &&
       typeof Map.prototype.has === 'function' &&
-      typeof Map.prototype.forEach === 'function' &&
-      typeof Map.prototype.size === 'number' &&
-      Map([["key", "val"]]).has("key");
+      Map([["key", "val"]]).has("key") && Map([["key", "val"]]).size === 1;
   },
   res: {
     ie10: false,
     firefox11: false,
-    firefox13: {
-      val: false,
-      note_id: 'firefox-map',
-      note_html: 'Firefox 13-18 fails the test because of lacking <code>Map.prototype.forEach</code> and because <code>Map.prototype.size</code> is a function instead of a number'
-    },
-    firefox16: {
-      val: false,
-      note_id: 'firefox-map'
-    },
-    firefox17: {
-      val: false,
-      note_id: 'firefox-map'
-    },
-    firefox18: {
-      val: false,
-      note_id: 'firefox-map'
-    },
-    firefox23: false,
-    firefox24: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: true,
+    firefox23: true,
+    firefox24: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
