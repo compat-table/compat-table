@@ -96,7 +96,7 @@ exports.tests = [
     return true;
   },
   res: {
-    ie10: null,
+    ie10: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
