@@ -748,7 +748,7 @@ test(typeof WeakMap !== 'undefined' &&
 <script>
 test(function () {
   try {
-    return typeof Proxy === "object" &&
+    return typeof Proxy !== "undefined" &&
          new Proxy({}, { get: function () { return 5; } }).foo === 5;
   }
   catch(err) { }

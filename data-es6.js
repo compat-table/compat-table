@@ -785,7 +785,7 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies',
   exec: function () {
     try {
-      return typeof Proxy === "object" &&
+      return typeof Proxy !== "undefined" &&
            new Proxy({}, { get: function () { return 5; } }).foo === 5;
     }
     catch(err) { }
