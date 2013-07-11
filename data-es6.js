@@ -9,6 +9,10 @@ exports.browsers = {
     full: 'Internet Explorer',
     short: 'IE 10'
   },
+  ie11: {
+    full: 'Internet Explorer',
+    short: 'IE 11'
+  },
   firefox11: {
     full: 'Firefox',
     short: 'FF 11, 12'
@@ -97,6 +101,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -137,6 +142,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -190,6 +196,7 @@ exports.tests = [
   ],
   res: {
     ie10: false,
+    ie11: true,
     firefox11: true,
     firefox13: true,
     firefox16: true,
@@ -222,6 +229,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: true,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -254,6 +262,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -286,6 +295,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -318,6 +328,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -350,6 +361,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -383,6 +395,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -415,6 +428,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: true,
     firefox16: true,
@@ -448,6 +462,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: true,
     firefox16: true,
@@ -481,6 +496,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: true,
     firefox16: true,
@@ -521,6 +537,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -570,6 +587,7 @@ exports.tests = [
   ],
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -603,6 +621,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -639,6 +658,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: true,
     firefox13: true,
     firefox16: true,
@@ -672,6 +692,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -705,6 +726,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -737,6 +759,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: true,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -770,6 +793,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -798,6 +822,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -831,6 +856,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: true,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -859,6 +885,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -887,6 +914,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -914,6 +942,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -941,6 +970,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -968,6 +998,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -995,6 +1026,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1022,6 +1054,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1050,6 +1083,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1078,6 +1112,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1106,6 +1141,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1134,6 +1170,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1162,6 +1199,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1190,6 +1228,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1218,6 +1257,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1249,6 +1289,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1276,6 +1317,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1303,6 +1345,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1331,6 +1374,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -1359,6 +1403,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -1387,6 +1432,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -1415,6 +1461,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: true,
@@ -1443,6 +1490,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1471,6 +1519,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1499,6 +1548,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1527,6 +1577,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1555,6 +1606,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1583,6 +1635,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1611,6 +1664,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1639,6 +1693,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1667,6 +1722,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1695,6 +1751,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1723,6 +1780,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1751,6 +1809,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -1779,6 +1838,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
+    ie11: false,
     firefox11: false,
     firefox13: false,
     firefox16: false,

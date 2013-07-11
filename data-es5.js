@@ -18,8 +18,8 @@ exports.browsers = {
     short: 'IE 9'
   },
   ie10: {
-    full: 'Internet Explorer 10 PP2',
-    short: 'IE 10'
+    full: 'Internet Explorer 10, 11',
+    short: 'IE 10, 11'
   },
 
   firefox3: {
