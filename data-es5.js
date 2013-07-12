@@ -94,8 +94,8 @@ exports.browsers = {
     short: 'OP 12'
   },
   opera12_10: {
-    full: 'Opera 12.10 (build 1652)',
-    short: 'OP 12.10'
+    full: 'Opera 12.10 (build 1652), Opera 15.0',
+    short: 'OP 12.10, 15'
   },
 
   konq43: {
