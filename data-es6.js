@@ -715,7 +715,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
-    ie11: false,
+    ie11: true,
     firefox11: false,
     firefox13: false,
     firefox16: false,
@@ -752,7 +752,7 @@ exports.tests = [
   },
   res: {
     ie10: false,
-    ie11: false,
+    ie11: true,
     firefox11: false,
     firefox13: false,
     firefox16: false,
