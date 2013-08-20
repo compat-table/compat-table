@@ -1114,6 +1114,36 @@ exports.tests = [
   }
 },
 {
+  name: 'Object.setPrototypeOf',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.19',
+  exec: function () {
+    return typeof Object.setPrototypeOf === 'function';
+  },
+  res: {
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    safari51: false,
+    safari6: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    node08: false,
+    node08harmony: false
+  }
+},
+{
   name: 'String.fromCodePoint',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
   exec: function () {
