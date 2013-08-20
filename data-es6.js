@@ -128,7 +128,7 @@ exports.tests = [
     opera: false,
     opera15: false,
     konq49: false,
-    rhino17: null,
+    rhino17: false,
     node08: false,
     node08harmony: false
   }
@@ -1642,7 +1642,7 @@ exports.tests = [
     opera: false,
     opera15: true,
     konq49: false,
-    rhino17: null,
+    rhino17: false,
     node08: false,
     node08harmony: false
   }
