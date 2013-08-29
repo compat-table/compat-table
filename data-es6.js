@@ -935,6 +935,43 @@ exports.tests = [
   }
 },
 {
+  name: 'Destructuring',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  exec: function () {
+    'use strict';
+    try {
+      eval('var [a] = [5];');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    ie10: false,
+    ie11: false,
+    firefox11: true,
+    firefox13: true,
+    firefox16: true,
+    firefox17: true,
+    firefox18: true,
+    firefox23: true,
+    firefox24: true,
+    firefox25: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    safari51: false,
+    safari6: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    node08: false,
+    node08harmony: false
+  }
+},
+{
   name: 'Object.assign',
   link: "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.17",
   exec: function () {
