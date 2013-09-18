@@ -591,11 +591,7 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
   exec: function () {
     var obj = {
-      iterator: function() {
-        return {
-          next: function() { throw StopIteration }
-        }
-      }
+      next: function() { return {done:true,value:1} }
     };
     try {
       eval('for (var a of obj) {}');
@@ -618,8 +614,8 @@ exports.tests = [
     firefox26: true,
     chrome: false,
     chrome19dev: false,
-    chrome21dev: false,
-    chrome30: false,
+    chrome21dev: true,
+    chrome30: true,
     safari51: false,
     safari6: false,
     webkit: false,
@@ -652,8 +648,15 @@ exports.tests = [
     {
       script: function () {
         if (!__yield_script_executed) {
-          test(false);
-          __yield_script_executed = false;
+          test((function () {
+            try {
+              eval('(function* () { yield 5; }())');
+              return true;
+            } catch (e) {
+              return false;
+            }
+          }()));
+          __yield_script_executed = true;
         }
       }
     }
@@ -672,8 +675,8 @@ exports.tests = [
     firefox26: true,
     chrome: false,
     chrome19dev: false,
-    chrome21dev: false,
-    chrome30: false,
+    chrome21dev: true,
+    chrome30: true,
     safari51: false,
     safari6: false,
     webkit: false,
@@ -848,11 +851,15 @@ exports.tests = [
   name: 'WeakMaps',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps',
   exec: function () {
-    return typeof WeakMap !== 'undefined' &&
-      typeof WeakMap.prototype.get === 'function' &&
-      typeof WeakMap.prototype.set === 'function' &&
-      typeof WeakMap.prototype.clear === 'function' &&
-      typeof WeakMap.prototype.has === 'function';
+    try {
+      var weakMap = new WeakMap();
+      var key = [1,2,3];
+      weakMap.set(key, 123);
+      return map.weakMap(key) && weakMap.get(key) === 123;
+    }
+    catch(err) {
+      return false;
+    }
   },
   res: {
     ie10: false,
@@ -868,8 +875,8 @@ exports.tests = [
     firefox26: true,
     chrome: false,
     chrome19dev: false,
-    chrome21dev: false,
-    chrome30: false,
+    chrome21dev: true,
+    chrome30: true,
     safari51: false,
     safari6: false,
     webkit: false,
