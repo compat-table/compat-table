@@ -29,8 +29,8 @@ tr.dimmed td { opacity: 0.4; }
 .yes a, .no a { color: #fff; font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;  }
 .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
             font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
-.yes { background: green; }
-.no { background: red; }
+.yes { background: #393; }
+.no { background: #c11; }
 .test-name { width: 260px; }
 .warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
 .separator { padding: 0; height: 0.5em; }
