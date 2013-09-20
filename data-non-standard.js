@@ -1286,6 +1286,36 @@ exports.tests = [
     konq49: true,
     besen: true,
     rhino: true
+  }
+},
+{
+  name: 'String.prototype.quote',
+  exec: function () { return typeof String.prototype.quote === 'function' },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: null,
+    konq49: null,
+    besen: null,
+    rhino: false
   },
   separator: 'after'
 },
