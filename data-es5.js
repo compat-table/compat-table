@@ -579,7 +579,12 @@ exports.tests = [
   },
   res: {
     ie7: false,
-    ie8: true,
+    ie8: {
+      val: true,
+      note_id: 'get-own-property-descriptor-ie',
+      note_html: 'In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects ' +
+        '(<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).'
+    },
     ie9: true,
     ie10: true,
 

@@ -465,7 +465,7 @@ test(typeof Object.getOwnPropertyDescriptor == 'function');
 </script>
 
             <td class="no ie7">No</td>
-            <td class="yes ie8">Yes</td>
+            <td class="yes ie8">Yes<a href="#get-own-property-descriptor-ie-note"><sup>[3]</sup></a></td>
             <td class="yes ie9">Yes</td>
             <td class="yes ie10">Yes</td>
             <td class="no firefox3">No</td>
@@ -675,7 +675,7 @@ test(typeof Function.prototype.bind == 'function');
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
             <td class="no safari5">No</td>
-            <td class="no safari51">No<a href="#safari-bind-note"><sup>[3]</sup></a></td>
+            <td class="no safari51">No<a href="#safari-bind-note"><sup>[4]</sup></a></td>
             <td class="yes safari6">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="no chrome5">No</td>
@@ -1112,7 +1112,7 @@ test(function () {
             <th colspan="29" class="separator"></th>
           </tr>
           <tr>
-            <td id="Property access on strings"><span><a class="anchor" href="#Property access on strings">&sect;</a>Property access on strings<a href="#property-access-on-strings-note"><sup>[4]</sup></a></span></td>
+            <td id="Property access on strings"><span><a class="anchor" href="#Property access on strings">&sect;</a>Property access on strings<a href="#property-access-on-strings-note"><sup>[5]</sup></a></span></td>
 <script>
 test("foobar"[3] === "b");
 </script>
@@ -1145,7 +1145,7 @@ test("foobar"[3] === "b");
             <td class="yes rhino">Yes</td>
           </tr>
           <tr>
-            <td id="Reserved words as property names"><span><a class="anchor" href="#Reserved words as property names">&sect;</a>Reserved words as property names<a href="#reserved-words-note"><sup>[5]</sup></a></span></td>
+            <td id="Reserved words as property names"><span><a class="anchor" href="#Reserved words as property names">&sect;</a>Reserved words as property names<a href="#reserved-words-note"><sup>[6]</sup></a></span></td>
 <script>
 test(function () {
   try {
@@ -1204,7 +1204,7 @@ test(function () {
             <td class="yes ie10">Yes</td>
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
-            <td class="yes firefox4">Yes<a href="#zero-width-char-note"><sup>[6]</sup></a></td>
+            <td class="yes firefox4">Yes<a href="#zero-width-char-note"><sup>[7]</sup></a></td>
             <td class="no safari3">No</td>
             <td class="no safari4">No</td>
             <td class="no safari5">No</td>
@@ -1279,7 +1279,7 @@ test(function () {
             <td class="no ie7">No</td>
             <td class="no ie8">No</td>
             <td class="no ie9">No</td>
-            <td class="yes ie10">Yes<a href="#strict-mode-ie10-note"><sup>[7]</sup></a></td>
+            <td class="yes ie10">Yes<a href="#strict-mode-ie10-note"><sup>[8]</sup></a></td>
             <td class="no firefox3">No</td>
             <td class="no firefox3_5">No</td>
             <td class="yes firefox4">Yes</td>
@@ -1314,20 +1314,23 @@ test(function () {
       <p id="define-property-webkit-note">
         <sup>[2]</sup> In some versions of WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.
       </p>
+      <p id="get-own-property-descriptor-ie-note">
+        <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).
+      </p>
       <p id="safari-bind-note">
-        <sup>[3]</sup> <code>Function.prototype.bind</code> is now supported in Safari 5.1.4
+        <sup>[4]</sup> <code>Function.prototype.bind</code> is now supported in Safari 5.1.4
       </p>
       <p id="property-access-on-strings-note">
-        <sup>[4]</sup> For example: <code>"foobar"[3] === "b"</code>
+        <sup>[5]</sup> For example: <code>"foobar"[3] === "b"</code>
       </p>
       <p id="reserved-words-note">
-        <sup>[5]</sup> For example: <code>({ if: 1 })</code>
+        <sup>[6]</sup> For example: <code>({ if: 1 })</code>
       </p>
       <p id="zero-width-char-note">
-        <sup>[6]</sup> Firefox 4 &amp; 5 fail this test
+        <sup>[7]</sup> Firefox 4 &amp; 5 fail this test
       </p>
       <p id="strict-mode-ie10-note">
-        <sup>[7]</sup> IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>
+        <sup>[8]</sup> IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>
       </p>
     </div>
   </body>
