@@ -6,7 +6,7 @@
     <script src="../ready.js"></script>
     <script src="../master.js"></script>
     <script>
-      var __yield_script_executed, __let_script_executed;
+      var __yield_script_executed = false, __let_script_executed = false;
     </script>
 </head>
 <body class="es6">
@@ -552,11 +552,7 @@ test(function () {
 <script>
 test(function () {
   var obj = {
-    iterator: function() {
-      return {
-        next: function() { throw StopIteration }
-      }
-    }
+      next: function() { return {done:true,value:1} }
   };
   try {
     eval('for (var a of obj) {}');
@@ -607,8 +603,15 @@ __yield_script_executed = true;
 </script>
 <script>
 if (!__yield_script_executed) {
-  test(false);
-  __yield_script_executed = false;
+  test((function () {
+    try {
+      eval('(function* () { yield 5; }())');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }()));
+  __yield_script_executed = true;
 }
 </script>
 
@@ -799,11 +802,17 @@ test(function () {
         <tr>
           <td id="WeakMaps"><span><a class="anchor" href="#WeakMaps">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps">WeakMaps</a></span></td>
 <script>
-test(typeof WeakMap !== 'undefined' &&
-    typeof WeakMap.prototype.get === 'function' &&
-    typeof WeakMap.prototype.set === 'function' &&
-    typeof WeakMap.prototype.clear === 'function' &&
-    typeof WeakMap.prototype.has === 'function');
+test(function () {
+  try {
+    var weakMap = new WeakMap();
+    var key = [1,2,3];
+    weakMap.set(key, 123);
+    return weakMap.has(key) && weakMap.get(key) === 123;
+    }
+  catch(err) {
+    return false;
+  }
+}());
 </script>
 
           <td class="no ie10">No</td>
