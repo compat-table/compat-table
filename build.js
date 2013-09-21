@@ -82,7 +82,7 @@ function dataToHtml(browsers, tests) {
     name, id;
   for (i = 0; i < tests.length; i++) {
     t = tests[i];
-    id = t.name;
+    id = t.name.replace(/\s/g, '_');
     name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
     body.push(
       '<tr>',
