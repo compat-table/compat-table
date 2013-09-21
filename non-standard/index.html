@@ -95,7 +95,7 @@
         </thead>
         <tbody>
             <tr>
-              <td id="function statement"><span><a class="anchor" href="#function statement">&sect;</a><a href="http://kangax.github.com/nfe/#function-statements">function statement</a></span></td>
+              <td id="function_statement"><span><a class="anchor" href="#function_statement">&sect;</a><a href="http://kangax.github.com/nfe/#function-statements">function statement</a></span></td>
 <script>
 test(function () {
   try {
@@ -167,7 +167,7 @@ test(typeof uneval == 'function');
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id=""toSource" method"><span><a class="anchor" href="#"toSource" method">&sect;</a>"toSource" method</span></td>
+              <td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a>"toSource" method</span></td>
 <script>
 test('toSource' in (function (){}) && 'toSource' in ({}));
 </script>
@@ -201,7 +201,7 @@ test('toSource' in (function (){}) && 'toSource' in ({}));
               <th colspan="27" class="separator"></th>
             </tr>
             <tr>
-              <td id="function "name" property"><span><a class="anchor" href="#function "name" property">&sect;</a>function "name" property</span></td>
+              <td id="function_name_property"><span><a class="anchor" href="#function_name_property">&sect;</a>function "name" property</span></td>
 <script>
 test((function foo(){}).name == 'foo');
 </script>
@@ -232,7 +232,7 @@ test((function foo(){}).name == 'foo');
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="function "caller" property"><span><a class="anchor" href="#function "caller" property">&sect;</a>function "caller" property</span></td>
+              <td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&sect;</a>function "caller" property</span></td>
 <script>
 test('caller' in (function(){}));
 </script>
@@ -263,7 +263,7 @@ test('caller' in (function(){}));
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <td id="function "arity" property"><span><a class="anchor" href="#function "arity" property">&sect;</a>function "arity" property</span></td>
+              <td id="function_arity_property"><span><a class="anchor" href="#function_arity_property">&sect;</a>function "arity" property</span></td>
 <script>
 test((function (){}).arity === 0 &&
     (function (x){}).arity === 1 &&
@@ -296,7 +296,7 @@ test((function (){}).arity === 0 &&
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="function "arguments" property"><span><a class="anchor" href="#function "arguments" property">&sect;</a>function "arguments" property</span></td>
+              <td id="function_arguments_property"><span><a class="anchor" href="#function_arguments_property">&sect;</a>function "arguments" property</span></td>
 <script>
 test(function () {
   function f(a, b) {
@@ -646,7 +646,7 @@ if (!__script_executed) {
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <td id="Array generics"><span><a class="anchor" href="#Array generics">&sect;</a>Array generics</span></td>
+              <td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span></td>
 <script>
 test(typeof Array.slice === 'function' && Array.slice('123').length === 3);
 </script>
@@ -677,7 +677,7 @@ test(typeof Array.slice === 'function' && Array.slice('123').length === 3);
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="Expression closures"><span><a class="anchor" href="#Expression closures">&sect;</a>Expression closures</span></td>
+              <td id="Expression_closures"><span><a class="anchor" href="#Expression_closures">&sect;</a>Expression closures</span></td>
 <script>
 test(function () {
   try {
@@ -751,7 +751,7 @@ test(function () {
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="Sharp variables"><span><a class="anchor" href="#Sharp variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span></td>
+              <td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span></td>
 <script>
 test(function () {
   try {
@@ -791,7 +791,7 @@ test(function () {
               <th colspan="27" class="separator"></th>
             </tr>
             <tr>
-              <td id="RegExp "y" flag"><span><a class="anchor" href="#RegExp "y" flag">&sect;</a>RegExp "y" flag</span></td>
+              <td id="RegExp_y_flag"><span><a class="anchor" href="#RegExp_y_flag">&sect;</a>RegExp "y" flag</span></td>
 <script>
 test(function () {
   try {
@@ -832,7 +832,7 @@ test(function () {
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <td id="RegExp "x" flag"><span><a class="anchor" href="#RegExp "x" flag">&sect;</a>RegExp "x" flag</span></td>
+              <td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&sect;</a>RegExp "x" flag</span></td>
 <script>
 test(function () {
   try {
@@ -872,7 +872,7 @@ test(function () {
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <td id="RegExp "lastMatch""><span><a class="anchor" href="#RegExp "lastMatch"">&sect;</a>RegExp "lastMatch"</span></td>
+              <td id="RegExp_lastMatch"><span><a class="anchor" href="#RegExp_lastMatch">&sect;</a>RegExp "lastMatch"</span></td>
 <script>
 test(function () {
   var re = /\w/;
@@ -943,7 +943,7 @@ test(function () {
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="Callable RegExp"><span><a class="anchor" href="#Callable RegExp">&sect;</a>Callable RegExp</span></td>
+              <td id="Callable_RegExp"><span><a class="anchor" href="#Callable_RegExp">&sect;</a>Callable RegExp</span></td>
 <script>
 test(function () {
   try {
@@ -980,7 +980,7 @@ test(function () {
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="RegExp named groups"><span><a class="anchor" href="#RegExp named groups">&sect;</a>RegExp named groups</span></td>
+              <td id="RegExp_named_groups"><span><a class="anchor" href="#RegExp_named_groups">&sect;</a>RegExp named groups</span></td>
 <script>
 test(function () {
   try {
@@ -1398,7 +1398,7 @@ test(typeof Object.prototype.eval == 'function');
               <th colspan="27" class="separator"></th>
             </tr>
             <tr>
-              <td id="Octal literals"><span><a class="anchor" href="#Octal literals">&sect;</a>Octal literals</span></td>
+              <td id="Octal_literals"><span><a class="anchor" href="#Octal_literals">&sect;</a>Octal literals</span></td>
 <script>
 test(function () {
   try {
@@ -1438,7 +1438,7 @@ test(function () {
               <th colspan="27" class="separator"></th>
             </tr>
             <tr>
-              <td id="error "stack""><span><a class="anchor" href="#error "stack"">&sect;</a>error "stack"</span></td>
+              <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a>error "stack"</span></td>
 <script>
 test('stack' in new Error);
 </script>
@@ -1469,7 +1469,7 @@ test('stack' in new Error);
               <td class="no rhino">No</td>
             </tr>
             <tr>
-              <td id="error "lineNumber""><span><a class="anchor" href="#error "lineNumber"">&sect;</a>error "lineNumber"</span></td>
+              <td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a>error "lineNumber"</span></td>
 <script>
 test('lineNumber' in new Error);
 </script>
@@ -1500,7 +1500,7 @@ test('lineNumber' in new Error);
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="error "fileName""><span><a class="anchor" href="#error "fileName"">&sect;</a>error "fileName"</span></td>
+              <td id="error_fileName"><span><a class="anchor" href="#error_fileName">&sect;</a>error "fileName"</span></td>
 <script>
 test('fileName' in new Error);
 </script>
@@ -1531,7 +1531,7 @@ test('fileName' in new Error);
               <td class="yes rhino">Yes</td>
             </tr>
             <tr>
-              <td id="error "description""><span><a class="anchor" href="#error "description"">&sect;</a>error "description"</span></td>
+              <td id="error_description"><span><a class="anchor" href="#error_description">&sect;</a>error "description"</span></td>
 <script>
 test('description' in new Error);
 </script>
