@@ -551,12 +551,18 @@ test(function () {
           <td id="Iterators"><span><a class="anchor" href="#Iterators">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:iterators">Iterators</a></span></td>
 <script>
 test(function () {
-  var obj = {
-    next: function() { return {done:true,value:1} }
+  if (typeof Symbol !== 'function' || typeof Symbol.iterator !== 'symbol') {
+    return false;
+  }
+
+  var iterator = {
+    next: function () { return { done: true, value: 1 }; }
   };
+  var iterable = {};
+  iterable[Symbol.iterator] = iterator;
+
   try {
-    eval('for (var a of obj) {}');
-    return true;
+    eval('for (var a of iterable) { return a === 1; }');
   } catch (e) {
     return false;
   }
@@ -568,16 +574,16 @@ test(function () {
           <td class="no firefox11">No</td>
           <td class="no firefox13">No</td>
           <td class="no firefox16">No</td>
-          <td class="yes firefox17">Yes</td>
-          <td class="yes firefox18">Yes</td>
-          <td class="yes firefox23">Yes</td>
-          <td class="yes firefox24">Yes</td>
-          <td class="yes firefox25">Yes</td>
-          <td class="yes firefox26">Yes</td>
+          <td class="no firefox17">No</td>
+          <td class="no firefox18">No</td>
+          <td class="no firefox23">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25">No</td>
+          <td class="no firefox26">No</td>
           <td class="no chrome">No</td>
           <td class="no chrome19dev">No</td>
-          <td class="yes chrome21dev">Yes</td>
-          <td class="yes chrome30">Yes</td>
+          <td class="no chrome21dev">No</td>
+          <td class="no chrome30">No</td>
           <td class="no safari51">No</td>
           <td class="no safari6">No</td>
           <td class="no webkit">No</td>

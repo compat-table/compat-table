@@ -590,12 +590,18 @@ exports.tests = [
   name: 'Iterators',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
   exec: function () {
-    var obj = {
-      next: function() { return {done:true,value:1} }
+    if (typeof Symbol !== 'function' || typeof Symbol.iterator !== 'symbol') {
+      return false;
+    }
+
+    var iterator = {
+      next: function () { return { done: true, value: 1 }; }
     };
+    var iterable = {};
+    iterable[Symbol.iterator] = iterator;
+
     try {
-      eval('for (var a of obj) {}');
-      return true;
+      eval('for (var a of iterable) { return a === 1; }');
     } catch (e) {
       return false;
     }
@@ -606,16 +612,16 @@ exports.tests = [
     firefox11: false,
     firefox13: false,
     firefox16: false,
-    firefox17: true,
-    firefox18: true,
-    firefox23: true,
-    firefox24: true,
-    firefox25: true,
-    firefox26: true,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox26: false,
     chrome: false,
     chrome19dev: false,
-    chrome21dev: true,
-    chrome30: true,
+    chrome21dev: false,
+    chrome30: false,
     safari51: false,
     safari6: false,
     webkit: false,
