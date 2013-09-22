@@ -549,7 +549,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Generator expressions',
+  name: 'Generator comprehensions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generator_expressions',
   exec: function () {
     try {
