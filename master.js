@@ -71,37 +71,40 @@ domready(function() {
     };
   }
 
-  function highlightSelected() {
-    var hash = document.location.hash.slice(1);
-    var trs = document.getElementsByTagName('tr');
-    for (var i = 0, len = trs.length; i < len; i++) {
-      if (trs[i].cells[0].id === hash) {
-        trs[i].className = 'selected';
-      }
-      else {
-        if (hash) {
-          trs[i].className = 'dimmed';
-        }
-        else {
-          trs[i].className = '';
-        }
+  var last_highlighted;
+  var table = document.getElementsByTagName('table')[0];
+  function highlightSelected(tr) {
+    if (tr === undefined) {
+      // actually finds the <td>
+      tr = document.getElementById(location.hash.slice(1));
+      if (tr) {
+        tr = tr.parentNode;
       }
     }
+    table.className = tr ? 'one-selected' : '';
+    if (last_highlighted) {
+      last_highlighted.className = '';
+    }
+    if (tr) {
+      tr.className = 'selected';
+    }
+    last_highlighted = tr;
   }
 
-  if (document.location.hash) {
+  if (location.hash) {
     highlightSelected();
   }
   document.onclick = function(e) {
     if (e.target.className === 'anchor') {
-      setTimeout(highlightSelected, 10);
+      // <tr><td><span><a>
+      highlightSelected(e.target.parentNode.parentNode.parentNode);
     }
     else {
-      document.location.hash = '';
-      setTimeout(highlightSelected, 10);
+      location.hash = '';
+      highlightSelected(false);
     }
   };
   window.onhashchange = function() {
-    setTimeout(highlightSelected, 10);
+    highlightSelected();
   };
 });
