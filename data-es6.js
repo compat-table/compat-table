@@ -861,7 +861,7 @@ exports.tests = [
       var weakMap = new WeakMap();
       var key = [1,2,3];
       weakMap.set(key, 123);
-      return map.weakMap(key) && weakMap.get(key) === 123;
+      return weakMap.has(key) && weakMap.get(key) === 123;
     }
     catch(err) {
       return false;
