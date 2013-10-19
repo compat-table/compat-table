@@ -5,6 +5,11 @@ exports.target_file = 'es6/index.html';
 exports.skeleton_file = 'es6/skeleton.html';
 
 exports.browsers = {
+  tr: {
+    full: 'Traceur compiler',
+    short: 'Traceur',
+    link: 'https://github.com/google/traceur-compiler'
+  },
   ie10: {
     full: 'Internet Explorer',
     short: 'IE 10'
@@ -122,6 +127,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -160,6 +166,7 @@ exports.tests = [
     return true;
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -205,6 +212,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -263,6 +271,7 @@ exports.tests = [
     }
   ],
   res: {
+    tr: true,
     ie10: false,
     ie11: true,
     firefox11: true,
@@ -300,6 +309,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -337,6 +347,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -374,6 +385,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -411,6 +423,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -448,6 +461,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -486,6 +500,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -523,6 +538,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -561,6 +577,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -599,6 +616,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -646,6 +664,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -707,6 +726,7 @@ exports.tests = [
     }
   ],
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -745,6 +765,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -786,6 +807,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: true,
@@ -826,6 +848,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -866,6 +889,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -907,6 +931,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -945,6 +970,7 @@ exports.tests = [
     return false;
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -978,6 +1004,7 @@ exports.tests = [
     return typeof StructType !== 'undefined';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1016,6 +1043,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -1055,6 +1083,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: true,
@@ -1088,6 +1117,7 @@ exports.tests = [
     return typeof Object.assign === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1121,6 +1151,7 @@ exports.tests = [
     return typeof Object.mixin === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1153,6 +1184,7 @@ exports.tests = [
     return typeof Object.getOwnPropertyDescriptors === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1185,6 +1217,7 @@ exports.tests = [
     return typeof Object.getPropertyDescriptor === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1217,6 +1250,7 @@ exports.tests = [
     return typeof Object.getPropertyNames === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1249,6 +1283,7 @@ exports.tests = [
     return typeof Object.is === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1282,6 +1317,7 @@ exports.tests = [
     return typeof Object.setPrototypeOf === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1315,6 +1351,7 @@ exports.tests = [
     return typeof String.fromCodePoint === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1348,6 +1385,7 @@ exports.tests = [
     return typeof String.prototype.codePointAt === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1381,6 +1419,7 @@ exports.tests = [
     return typeof String.prototype.repeat === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1414,6 +1453,7 @@ exports.tests = [
     return typeof String.prototype.startsWith === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1447,6 +1487,7 @@ exports.tests = [
     return typeof String.prototype.endsWith === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1480,6 +1521,7 @@ exports.tests = [
     return typeof String.prototype.contains === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1513,6 +1555,7 @@ exports.tests = [
     return typeof String.prototype.toArray === 'function';
   },
   res: {
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1549,6 +1592,7 @@ exports.tests = [
     }
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1582,6 +1626,7 @@ exports.tests = [
     return typeof Array.from === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1615,6 +1660,7 @@ exports.tests = [
     return typeof Array.of === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1648,6 +1694,7 @@ exports.tests = [
     return typeof Array.prototype.find === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1681,6 +1728,7 @@ exports.tests = [
     return typeof Array.prototype.findIndex === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1714,6 +1762,7 @@ exports.tests = [
     return typeof Array.prototype.fill === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1747,6 +1796,7 @@ exports.tests = [
     return typeof Number.isFinite === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1780,6 +1830,7 @@ exports.tests = [
     return typeof Number.isInteger === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1813,6 +1864,7 @@ exports.tests = [
     return typeof Number.isNaN === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1846,6 +1898,7 @@ exports.tests = [
     return typeof Number.toInteger === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1879,6 +1932,7 @@ exports.tests = [
     return typeof Number.prototype.clz === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1912,6 +1966,7 @@ exports.tests = [
     return typeof Math.imul === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1949,6 +2004,7 @@ exports.tests = [
     return typeof Math.sign === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1982,6 +2038,7 @@ exports.tests = [
     return typeof Math.log10 === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2015,6 +2072,7 @@ exports.tests = [
     return typeof Math.log2 === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2048,6 +2106,7 @@ exports.tests = [
     return typeof Math.log1p === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2081,6 +2140,7 @@ exports.tests = [
     return typeof Math.expm1 === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2114,6 +2174,7 @@ exports.tests = [
     return typeof Math.cosh === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2147,6 +2208,7 @@ exports.tests = [
     return typeof Math.sinh === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2180,6 +2242,7 @@ exports.tests = [
     return typeof Math.tanh === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2213,6 +2276,7 @@ exports.tests = [
     return typeof Math.acosh === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2246,6 +2310,7 @@ exports.tests = [
     return typeof Math.asinh === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2279,6 +2344,7 @@ exports.tests = [
     return typeof Math.atanh === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2312,6 +2378,7 @@ exports.tests = [
     return typeof Math.hypot === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2345,6 +2412,7 @@ exports.tests = [
     return typeof Math.trunc === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2378,6 +2446,7 @@ exports.tests = [
     return typeof Math.fround === 'function';
   },
   res: {
+    tr: false,
     ie10: false,
     ie11: false,
     firefox11: false,
