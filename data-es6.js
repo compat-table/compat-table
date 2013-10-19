@@ -110,6 +110,45 @@ exports.browsers = {
 
 exports.tests = [
 {
+  name: 'computed properties',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
+  exec: function() {
+    try {
+      var x = 'y';
+      return eval("({ [x]: 1 })['y'] === 1");
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox26: false,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    safari51: false,
+    safari6: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    node08: false,
+    node08harmony: false
+  }
+},
+{
   name: 'arrow functions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
   exec: function() {
