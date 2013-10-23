@@ -1354,7 +1354,7 @@ exports.tests = [
     return typeof String.fromCodePoint === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1388,7 +1388,7 @@ exports.tests = [
     return typeof String.prototype.codePointAt === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
