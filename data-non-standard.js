@@ -7,100 +7,124 @@ exports.skeleton_file = 'non-standard/skeleton.html';
 exports.browsers = {
   ie7: {
     full: 'Internet Explorer 7',
-    short: 'IE 7'
+    short: 'IE 7',
+    obsolete: true
   },
   ie8: {
     full: 'Inernet Explorer 8',
-    short: 'IE 8'
+    short: 'IE 8',
+    obsolete: true
   },
   ie9: {
     full: 'Inernet Explorer 9',
-    short: 'IE 9'
+    short: 'IE 9',
+    obsolete: false
   },
   ie10: {
     full: 'Internet Explorer 10',
-    short: 'IE 10'
+    short: 'IE 10',
+    obsolete: false
   },
   ie11: {
     full: 'Internet Explorer 11',
-    short: 'IE11'
+    short: 'IE11',
+    obsolete: false
   },
   firefox3: {
     full: 'Firefox 3',
-    short: 'FF 3'
+    short: 'FF 3',
+    obsolete: true
   },
   firefox3_5: {
     full: 'Firefox 3.5, Firefox 3.6',
-    short: 'FF 3.5, 3.6'
+    short: 'FF 3.5, 3.6',
+    obsolete: true
   },
   firefox4: {
     full: 'Firefox 4.0b12pre',
-    short: 'FF 4'
+    short: 'FF 4',
+    obsolete: true
   },
   firefox5: {
     full: 'Firefox 5',
-    short: 'FF 5'
+    short: 'FF 5',
+    obsolete: true
   },
   firefox6: {
     full: 'Firefox 6',
-    short: 'FF 6'
+    short: 'FF 6',
+    obsolete: true
   },
   firefox7: {
     full: 'Firefox 7, Firefox 8, Firefox 9, Firefox 10, Firefox 11',
-    short: 'FF 7-11'
+    short: 'FF 7-11',
+    obsolete: true
   },
   firefox12: {
     full: 'Firefox 12',
-    short: 'FF 12'
+    short: 'FF 12',
+    obsolete: true
   },
   safari3: {
     full: 'Safari 3.2',
-    short: 'SF 3.2'
+    short: 'SF 3.2',
+    obsolete: true
   },
   safari4: {
     full: 'Safari 4.0.5',
-    short: 'SF 4'
+    short: 'SF 4',
+    obsolete: true
   },
   safari5: {
     full: 'Safari 5',
-    short: 'SF 5'
+    short: 'SF 5',
+    obsolete: true
   },
   webkit: {
     full: 'Webkit r72487 (Nov 24, 2010)',
-    short: 'WebKit'
+    short: 'WebKit',
+    obsolete: false
   },
   chrome7: {
     full: 'Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)',
-    short: 'CH 7-10'
+    short: 'CH 7-10',
+    obsolete: true
   },
   opera10_10: {
     full: 'Opera 10.10',
-    short: 'OP 10.10'
+    short: 'OP 10.10',
+    obsolete: true
   },
   opera10_50: {
     full: 'Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)',
-    short: 'OP 10.50-11.10'
+    short: 'OP 10.50-11.10',
+    obsolete: true
   },
   opera15: {
     full: 'Opera 15.0',
-    short: 'OP 15'
+    short: 'OP 15',
+    obsolete: false
   },
   konq44: {
     full: 'Konqueror 4.4',
-    short: 'Konq 4.4'
+    short: 'Konq 4.4',
+    obsolete: true
   },
   konq49: {
     full: 'Konqueror 4.9',
-    short: 'Konq 4.9'
+    short: 'Konq 4.9',
+    obsolete: false
   },
   besen: {
     full: 'Bero\'s EcmaScript Engine (version 1.0.0.489)',
     short: 'BESEN',
-    link: 'http://besen.sourceforge.net/'
+    link: 'http://besen.sourceforge.net/',
+    obsolete: false
   },
   rhino: {
     full: 'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
-    short: 'Rhino 1.7'
+    short: 'Rhino 1.7',
+    obsolete: false
   }
 };
 

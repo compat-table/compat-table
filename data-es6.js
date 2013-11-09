@@ -18,7 +18,8 @@ exports.browsers = {
   },
   ie11: {
     full: 'Internet Explorer',
-    short: 'IE 11'
+    short: 'IE 11',
+    obsolete: false
   },
   firefox11: {
     full: 'Firefox',

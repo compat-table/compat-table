@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>ECMAScript 5 extensions compatibility table</title>
-    
+
     <link rel="stylesheet" href="../master.css">
-    
+
     <script src="../ready.js"></script>
     <script src="../master.js"></script>
-    
+
     <script>
       var __script_executed;
     </script>
-    
+
   </head>
   <body class="non-standard">
     <div id="header">
@@ -20,7 +20,14 @@
         <a href="http://kangax.github.com/es5-compat-table/non-standard">
           <span title="ECMA-262">ECMAScript</span> extensions compatibility table
         </a>
-        
+
+        <p class="also-see">
+          Also see compatibility tables for
+          <a href="../"><strong>ES5</strong></a> or
+          <a href="../es6"><strong>ES6</strong></a>
+          features
+        </p>
+
         <span style="font-size:0.8em;float:right;font-weight:normal;">
           <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/es5-compat-table/non-standard"></a>
           <noscript>
@@ -44,17 +51,13 @@
       </h1>
     </div>
     <div id="body">
-      <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>, 
-        not functionality or full conformance.
-        I hope to test conformance sometime in the future.</p>
-      <p>
-        <a href="http://kangax.github.com/es5-compat-table/">&larr; back to the main table</a>
-      </p>
-      <p id="show-old-browsers-wrapper" style="display: none;">
-        <input type="checkbox" id="show-old-browsers">
-        <label for="show-old-browsers">Show older browsers (IE7, Firefox 3, Safari 3.2)</label>
-      </p>
-      <table>
+      <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
+        not functionality or full conformance. I hope to test conformance sometime in the future.</p>
+
+      <label for="show-obsolete">Show obsolete browsers?</label>
+      <input id="show-obsolete" type="checkbox" checked>
+
+      <table id="table-wrapper">
         <colgroup>
           <col>
           <col class="this-browser-col">
@@ -62,11 +65,11 @@
         <thead>
           <tr>
             <th class="test-name"></th>
-            
+
             <script>
               document.write('<th class="this-browser" title="' + navigator.userAgent + '">This browser</th><th></th>');
             </script>
-            
+
             <!-- TABLE HEADERS -->
           </tr>
         </thead>
@@ -78,8 +81,8 @@
     <div id="footnotes">
         <!-- FOOTNOTES -->
     </div>
-    
-    <!-- 
+
+    <!--
     <td class=" ie7">-</td>
     <td class=" ie8">-</td>
     <td class=" ie9">-</td>
@@ -97,11 +100,11 @@
 
     <td class=" opera10_10">-</td>
     <td class=" opera10_50">-</td>
-    
+
     <td class=" konq">-</td>
-    
+
     <td class=" besen">-</td>
-    <td class=" rhino">-</td> 
+    <td class=" rhino">-</td>
     -->
   </body>
 </html>

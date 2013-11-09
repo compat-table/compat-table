@@ -16,13 +16,14 @@
         <a href="http://kangax.github.com/es5-compat-table/">
           <span title="ECMA-262 5th edition">ECMAScript 5</span> compatibility table
         </a>
+
         <p class="also-see">
-          Also see:
-          Compatibility table of
-          <a href="es6"><strong>ES6</strong></a> /
+          Also see compatibility tables for
+          <a href="es6"><strong>ES6</strong></a> or
           <a href="non-standard"><strong>non-standard</strong></a>
           features
         </p>
+
         <span style="font-size:0.8em;float:right;font-weight:normal;">
           <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/es5-compat-table/"></a>
           <noscript>
@@ -49,11 +50,15 @@
       <p class="warning">Please note that these tests represent <strong>existence</strong>, not functionality or full conformance.
         I hope to test conformance sometime in the future.</p>
 
-      <p id="show-old-browsers-wrapper" style="display: none;">
+<!--       <p id="show-old-browsers-wrapper" style="display: none;">
         <input type="checkbox" id="show-old-browsers">
         <label for="show-old-browsers">Show older browsers (IE 7; FF 3; SF 3.2, 4; CH 5,6; OP 10.1)</label>
-      </p>
-      <table>
+      </p> -->
+
+      <label for="show-obsolete">Show obsolete browsers?</label>
+      <input id="show-obsolete" type="checkbox" checked>
+
+      <table id="table-wrapper">
         <colgroup>
           <col>
           <col class="this-browser-col">

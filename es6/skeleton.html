@@ -11,10 +11,17 @@
 </head>
 <body class="es6">
   <div id="header">
-    <h1 style="overflow:hidden">
+    <h1>
       <a href="http://kangax.github.com/es5-compat-table/es6" style="float:left">
         <span title="ECMA-262">ECMAScript</span> 6 compatibility table
       </a>
+
+      <p class="also-see">
+        Also see compatibility tables for
+        <a href="../"><strong>ES5</strong></a> or
+        <a href="../non-standard"><strong>non-standard</strong></a>
+        features
+      </p>
 
       <span style="font-size:0.8em;float:right;font-weight:normal;">
         <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/es5-compat-table/non-standard"></a>
@@ -41,7 +48,10 @@
   <div id="body">
     <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
       not functionality or full conformance.</p>
-    <label for="show-obsolete">Show obsolete browsers?</label><input id="show-obsolete" type="checkbox"/>
+
+    <label for="show-obsolete">Show obsolete browsers?</label>
+    <input id="show-obsolete" type="checkbox">
+
     <div id="table-wrapper">
       <table>
       <colgroup>

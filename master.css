@@ -21,7 +21,7 @@ tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
 #header a { color: #eee; text-decoration: none; }
 .non-standard #header a { color: #fff; }
 
-#header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em; font-size: 1.25em; }
+#header h1 { margin: 0 0 0 0.5em; color: #eee; padding: 0.5em; font-size: 1.25em; overflow: hidden }
 .non-standard #header h1 { color: #fff; }
 
 #footnotes { margin-left: 1.75em; margin-bottom: 1em; font-size: 0.9em; }
@@ -37,21 +37,12 @@ tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
 .this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px;
   font-size: 13px; vertical-align: top; }
 
-.hide-old-browsers .safari3,
-.hide-old-browsers .safari4,
-.hide-old-browsers .ie7,
-.hide-old-browsers .firefox3,
-.hide-old-browsers .chrome5,
-.hide-old-browsers .chrome6,
-.hide-old-browsers .opera10_10 { display: none; }
+#table-wrapper .obsolete { display: none; }
+#show-obsolete:checked + #table-wrapper .obsolete { display: table-cell; }
+label[for="show-obsolete"] { background: #eef; padding: 5px; margin-left: 10px; margin-right: -30px; padding-right: 30px; }
 
-#show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
-
-#table-wrapper > table .obsolete { display: none; }
-#show-obsolete:checked + #table-wrapper > table .obsolete { display: table-cell; }
-
-.also-see { font-size:15px;display:inline-block;background:#ddf;padding:4px 6px;position:absolute;top:0;left:50%;margin-left:-174px; color: #333; }
-.also-see a { color: blue !important; font-weight: normal; }
+.also-see { font-size: 14px; display: inline-block; background:#ddf; padding: 12px; position:absolute;top:0;left:50%;margin-left:-174px; color: #333; font-family: Arial, Helvetica, sans-serif; }
+.also-see a { color: blue !important; text-decoration: underline !important; }
 
 .info { color: #eee; float: right; margin-right: 5px; background: #999; display: inline-block;
   width: 15px; height: 15px; line-height: 15px; text-align: center; border-radius: 20px;
@@ -62,3 +53,6 @@ tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
 .info-tooltip { position: absolute; padding: 15px; background: #fff; border: 2px solid #555; box-shadow: rgba(0,0,0,0.6) 1px 1px 10px; z-index: 10000 }
 
 .FlattrButton { margin-right: 15px }
+
+.back { font-size: 14px; font-weight: normal; text-decoration: underline !important; margin-left: 20px; font-family: monospace; }
+.back:hover, .back:focus { text-decoration: none !important; }
