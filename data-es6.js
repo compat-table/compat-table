@@ -134,7 +134,7 @@ exports.browsers = {
     obsolete: false // current version
   },
   nodeharmony: {
-    full: 'Node 0.10 harmony',
+    full: 'Node 0.11.7 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
     note_id: 'harmony-flag',
@@ -285,12 +285,12 @@ exports.tests = [
             return false;
           }
         }()));
-        __let_script_executed = true;
+        global.__let_script_executed = true;
       }
     },
     {
       script: function () {
-        if (!__let_script_executed) {
+        if (!global.__let_script_executed) {
           test((function () {
             try {
               return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
@@ -749,12 +749,12 @@ exports.tests = [
             return false;
           }
         }()));
-        __yield_script_executed = true;
+        global.__yield_script_executed = true;
       }
     },
     {
       script: function () {
-        if (!__yield_script_executed) {
+        if (!global.__yield_script_executed) {
           test((function () {
             try {
               eval('(function* () { yield 5; }())');
@@ -763,7 +763,7 @@ exports.tests = [
               return false;
             }
           }()));
-          __yield_script_executed = true;
+          global.__yield_script_executed = true;
         }
       }
     }
@@ -961,7 +961,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1506,7 +1506,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1541,7 +1541,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1576,7 +1576,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1611,7 +1611,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1789,7 +1789,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1824,7 +1824,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -2073,7 +2073,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {

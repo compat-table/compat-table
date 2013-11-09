@@ -7,11 +7,14 @@
     <script src="../master.js"></script>
     <script>
       var __yield_script_executed, __let_script_executed;
+      if (typeof global === 'undefined') {
+        var global = this;
+      }
     </script>
 </head>
 <body class="es6">
   <div id="header">
-    <h1 style="overflow:hidden">
+    <h1>
       <a href="http://kangax.github.com/es5-compat-table/es6" style="float:left">
         <span title="ECMA-262">ECMAScript</span> 6 compatibility table
       </a>
@@ -88,7 +91,7 @@
           <th class="konq49"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
           <th class="rhino17"><abbr title="Rhino 1.7">RH</abbr></th>
           <th class="node"><abbr title="Node 0.10">Node</abbr></th>
-          <th class="nodeharmony"><abbr title="Node 0.10 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
+          <th class="nodeharmony"><abbr title="Node 0.11.7 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
         </tr>
       </thead>
       <tbody>
@@ -230,10 +233,10 @@ test((function () {
     return false;
   }
 }()));
-__let_script_executed = true;
+global.__let_script_executed = true;
 </script>
 <script>
-if (!__let_script_executed) {
+if (!global.__let_script_executed) {
   test((function () {
     try {
       return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
@@ -685,10 +688,10 @@ test((function () {
     return false;
   }
 }()));
-__yield_script_executed = true;
+global.__yield_script_executed = true;
 </script>
 <script>
-if (!__yield_script_executed) {
+if (!global.__yield_script_executed) {
   test((function () {
     try {
       eval('(function* () { yield 5; }())');
@@ -697,7 +700,7 @@ if (!__yield_script_executed) {
       return false;
     }
   }()));
-  __yield_script_executed = true;
+  global.__yield_script_executed = true;
 }
 </script>
 
@@ -893,7 +896,7 @@ test(function () {
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="WeakMaps"><span><a class="anchor" href="#WeakMaps">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps">WeakMaps</a></span></td>
@@ -1420,7 +1423,7 @@ test(typeof String.prototype.repeat === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="String.prototype.startsWith"><span><a class="anchor" href="#String.prototype.startsWith">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.startsWith</a></span></td>
@@ -1453,7 +1456,7 @@ test(typeof String.prototype.startsWith === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="String.prototype.endsWith"><span><a class="anchor" href="#String.prototype.endsWith">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.endsWith</a></span></td>
@@ -1486,7 +1489,7 @@ test(typeof String.prototype.endsWith === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="String.prototype.contains"><span><a class="anchor" href="#String.prototype.contains">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.contains</a></span></td>
@@ -1519,7 +1522,7 @@ test(typeof String.prototype.contains === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="String.prototype.toArray"><span><a class="anchor" href="#String.prototype.toArray">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.toArray</a></span></td>
@@ -1690,7 +1693,7 @@ test(typeof Array.prototype.find === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.findIndex"><span><a class="anchor" href="#Array.prototype.findIndex">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.9">Array.prototype.findIndex</a></span></td>
@@ -1723,7 +1726,7 @@ test(typeof Array.prototype.findIndex === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.fill"><span><a class="anchor" href="#Array.prototype.fill">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.6">Array.prototype.fill</a></span></td>
@@ -1954,7 +1957,7 @@ test(typeof Math.imul === 'function');
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.sign"><span><a class="anchor" href="#Math.sign">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.sign</a></span></td>
