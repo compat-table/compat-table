@@ -67,7 +67,7 @@ function dataToHtml(browsers, tests) {
       throw new Error('No browser with ID ' + browserId);
     }
     headers.push(
-      '<th class="' + browserId + '">' +
+      '<th class="' + browserTableClass(browserId, b) + '">' +
       (b.link ? '<a href="' + b.link + '">' : '') +
       (b.short ? '<abbr title="' + b.full + '">' + b.short + '</abbr>' : b.full) +
       (b.link ? '</a>' : '') +
@@ -94,10 +94,10 @@ function dataToHtml(browsers, tests) {
     for (browserId in browsers) {
       val = t.res[browserId];
       if (val == null) {
-        body.push('\t<td class="' + browserId + '"></td>');
+        body.push('\t<td class="' + browserTableClass(browserId, browsers[browserId]) + '"></td>');
       } else {
         body.push(
-          '\t<td class="' + boolToString(val).toLowerCase() + ' ' + browserId + '">' +
+          '\t<td class="' + boolToString(val).toLowerCase() + ' ' + browserTableClass(browserId, browsers[browserId]) + '">' +
           boolToString(val) +
           footnoter.get(val) +
           '</td>'
@@ -120,6 +120,10 @@ function dataToHtml(browsers, tests) {
     tableBody: body,
     footnotes: footnoter.getAll()
   };
+}
+
+function browserTableClass(browserId, entry) {
+  return browserId + (entry.obsolete ? ' obsolete' : '');
 }
 
 function boolToString(val) {

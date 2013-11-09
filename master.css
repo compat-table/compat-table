@@ -47,6 +47,9 @@ tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
 
 #show-old-browsers-wrapper { position: absolute; top: 5px; right: 20px; background: #eef; display: inline-block; }
 
+#table-wrapper > table .obsolete { display: none; }
+#show-obsolete:checked + #table-wrapper > table .obsolete { display: table-cell; }
+
 .also-see { font-size:15px;display:inline-block;background:#ddf;padding:4px 6px;position:absolute;top:0;left:50%;margin-left:-174px; color: #333; }
 .also-see a { color: blue !important; font-weight: normal; }
 
