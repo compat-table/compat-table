@@ -8,10 +8,6 @@ var fs = require('fs')
   , page = fs.readFileSync(path.join(__dirname, 'es6', 'index.html')).toString()
   , $ = cheerio.load(page)
 
-  , test = function test (expression) {
-      return expression
-    }
-
 $('#body tbody tr').each(function () {
   var desc = (function (el) {
         while (el && !el.data)
@@ -22,10 +18,14 @@ $('#body tbody tr').each(function () {
     , result = false
     , i = 0, scr
 
+    , test = function test (expression) {
+        result = result || expression
+      }
+
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {
     scr = scripts[i].children[0].data.trim()
-    result = eval(scr)
+    eval(scr)
   }
 
   console.log(((result ? '\u2714' : '\u2718') + '\t' + desc + '\t')[result ? 'green' : 'red'])
