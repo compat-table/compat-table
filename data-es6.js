@@ -328,7 +328,7 @@ exports.tests = [
     opera15: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -794,7 +794,7 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
