@@ -107,4 +107,25 @@ domready(function() {
   window.onhashchange = function() {
     highlightSelected();
   };
+
+  var table = document.getElementById('table-wrapper');
+  for (var i = 0, len = table.rows.length; i < len; i++) {
+    var row = table.rows[i];
+    for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
+      row.cells[j].onmouseover = (function(i, j) {
+        return function() {
+          if (row.cells[j].className.indexOf('yes') > -1 || row.cells[j].className.indexOf('no') > -1) {
+
+            for (var k = 0; k < len; k++) {
+              for (var l = 0; l < jlen; l++) {
+                rows[k].cells[l] && (rows[k].cells[l].className = rows[k].cells[l].className.replace('hover', ''));
+              }
+              rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
+            }
+
+          }
+        };
+      })(i, j);
+    }
+  }
 });

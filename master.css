@@ -13,6 +13,10 @@ code { font-family: "Courier New", Courier, monospace; }
 table.one-selected td { opacity: 0.4;}
 tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
 
+#table-wrapper tr:hover td { background: #ddd; }
+#table-wrapper tr:hover td.yes, #table-wrapper td.hover.yes { background: #171; }
+#table-wrapper tr:hover td.no, #table-wrapper td.hover.no { background: #b11; }
+
 #body { padding-left: 1em; position: relative; min-width: 1250px; }
 
 #header { background: #454545; margin-bottom: 0.5em; }
@@ -29,8 +33,8 @@ tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
 .yes a, .no a { color: #fff; font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;  }
 .yes, .no { text-align: center; font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
             font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
-.yes { background: #393; }
-.no { background: #c11; }
+.yes { background: #4a4; }
+.no { background: #e11; }
 .test-name { width: 260px; }
 .warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
 .separator { padding: 0; height: 0.5em; }
@@ -56,3 +60,4 @@ label[for="show-obsolete"] { background: #eef; padding: 5px; margin-left: 10px; 
 
 .back { font-size: 14px; font-weight: normal; text-decoration: underline !important; margin-left: 20px; font-family: monospace; }
 .back:hover, .back:focus { text-decoration: none !important; }
+
