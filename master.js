@@ -93,7 +93,9 @@ domready(function() {
 
   if (location.hash) {
     highlightSelected();
+    highlightColumn();
   }
+
   document.onclick = function(e) {
     if (e.target.className === 'anchor') {
       // <tr><td><span><a>
@@ -104,16 +106,61 @@ domready(function() {
       highlightSelected(false);
     }
   };
+
   window.onhashchange = function() {
     highlightSelected();
+    highlightColumn();
+  };
+
+  function highlightColumn(index) {
+    var table = document.getElementById('table-wrapper');
+
+    if (typeof index === 'undefined' && location.hash) {
+      for (var i = 0, len = table.rows[0].cells.length; i < len; i++) {
+        var cell = table.rows[0].cells[i];
+        if (cell.innerHTML.indexOf('"' + location.hash + '"') > -1) {
+          highlightColumn(i);
+        }
+      }
+      return;
+    }
+
+    table.className = 'one-selected';
+
+    for (var i = 0, len = table.rows.length; i < len; i++) {
+      var row = table.rows[i];
+      for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
+        row.cells[j].className = row.cells[j].className.replace('selected', '');
+        if (j === index || j === 1) {
+          row.cells[j].className += ' selected';
+        }
+      }
+    }
+  }
+
+  document.onclick = function(e) {
+    if (e.target.className === 'browser-name' ||
+        e.target.parentNode.className === 'browser-name') {
+
+      var target = e.target.className ? e.target : e.target.parentNode;
+      var table = document.getElementById('table-wrapper');
+      var headerCells = [].slice.call(table.rows[0].cells);
+      var index = headerCells.indexOf(target.parentNode);
+
+      highlightColumn(index);
+    }
   };
 
   var table = document.getElementById('table-wrapper');
+
   for (var i = 0, len = table.rows.length; i < len; i++) {
     var row = table.rows[i];
     for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
       row.cells[j].onmouseover = (function(i, j) {
         return function() {
+
+          if (!row.cells[j]) return;
+
           if (row.cells[j].className.indexOf('yes') > -1 || row.cells[j].className.indexOf('no') > -1) {
 
             for (var k = 0; k < len; k++) {
@@ -128,4 +175,6 @@ domready(function() {
       })(i, j);
     }
   }
+
+
 });

@@ -7,8 +7,7 @@ exports.skeleton_file = 'es6/skeleton.html';
 exports.browsers = {
   tr: {
     full: 'Traceur compiler',
-    short: 'TR',
-    link: 'https://github.com/google/traceur-compiler',
+    short: 'Traceur',
     obsolete: false // always up-to-date version
   },
   ie10: {

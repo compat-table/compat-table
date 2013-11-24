@@ -68,7 +68,7 @@ function dataToHtml(browsers, tests) {
     }
     headers.push(
       '<th class="' + browserTableClass(browserId, b) + '">' +
-      (b.link ? '<a href="' + b.link + '">' : '') +
+      ('<a href="#' + browserId + '" class="browser-name">') +
       (b.short ? '<abbr title="' + b.full + '">' + b.short + '</abbr>' : b.full) +
       (b.link ? '</a>' : '') +
       footnoter.get(b) +
