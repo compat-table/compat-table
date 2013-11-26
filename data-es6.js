@@ -1164,7 +1164,7 @@ exports.tests = [
 },
 {
   name: 'Object.assign',
-  link: "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.17",
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.1',
   exec: function () {
     return typeof Object.assign === 'function';
   },
@@ -1199,7 +1199,7 @@ exports.tests = [
 },
 {
   name: 'Object.mixin',
-  link: "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.18",
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.15',
   exec: function () {
     return typeof Object.mixin === 'function';
   },
@@ -1370,7 +1370,7 @@ exports.tests = [
 },
 {
   name: 'Object.setPrototypeOf',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.2.3.19',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.19',
   exec: function () {
     return typeof Object.setPrototypeOf === 'function';
   },
