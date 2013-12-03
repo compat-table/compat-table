@@ -1198,41 +1198,6 @@ exports.tests = [
   }
 },
 {
-  name: 'Object.mixin',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.15',
-  exec: function () {
-    return typeof Object.mixin === 'function';
-  },
-  res: {
-    tr: true,
-    ie10: false,
-    ie11: false,
-    firefox11: false,
-    firefox13: false,
-    firefox16: false,
-    firefox17: false,
-    firefox18: false,
-    firefox23: false,
-    firefox24: false,
-    firefox25: false,
-    firefox27: false,
-    firefox28: false,
-    chrome: false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30: false,
-    safari51: false,
-    safari6: false,
-    webkit: false,
-    opera: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    node: false,
-    nodeharmony: false
-  }
-},
-{
   name: 'Object.getOwnPropertyDescriptors',
   exec: function () {
     return typeof Object.getOwnPropertyDescriptors === 'function';
