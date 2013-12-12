@@ -1342,7 +1342,7 @@ exports.tests = [
   res: {
     tr: false,
     ie10: false,
-    ie11: false,
+    ie11: true,
     firefox11: false,
     firefox13: false,
     firefox16: false,
