@@ -63,8 +63,8 @@ exports.browsers = {
     obsolete: false
   },
   safari6: {
-    full: 'Safari 6.0',
-    short: 'SF 6',
+    full: 'Safari 6.0, Safari 7.0',
+    short: 'SF 6,7',
     obsolete: false
   },
   webkit: {
