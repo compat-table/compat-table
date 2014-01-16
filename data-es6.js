@@ -960,7 +960,7 @@ exports.tests = [
     }
   },
   res: {
-    tr: true,
+    tr: false,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -1005,7 +1005,7 @@ exports.tests = [
     }
   },
   res: {
-    tr: true,
+    tr: false,
     ie10: false,
     ie11: true,
     firefox11: false,
@@ -1051,7 +1051,7 @@ exports.tests = [
     }
   },
   res: {
-    tr: true,
+    tr: false,
     ie10: false,
     ie11: true,
     firefox11: false,
