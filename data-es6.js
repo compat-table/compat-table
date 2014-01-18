@@ -1864,6 +1864,55 @@ exports.tests = [
   }
 },
 {
+  name: 'Symbol',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
+  exec: function() {
+    try {
+      var object = {};
+      var symbol = Symbol();
+      var value = Math.random();
+      object[symbol] = value;
+      return object[symbol] === value && 
+             Object.keys(object).length === 0 && 
+             Object.getOwnPropertyNames(object).length === 0;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox27: false,
+    firefox28: false,
+    firefox29: false,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: true,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Unicode code point escapes',
   exec: function () {
     try {
