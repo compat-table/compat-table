@@ -659,18 +659,8 @@ test(function () {
           <td id="Iterators"><span><a class="anchor" href="#Iterators">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:iterators">Iterators</a></span></td>
 <script>
 test(function () {
-  if (typeof Symbol !== 'function' || typeof Symbol.iterator !== 'symbol') {
-    return false;
-  }
-
-  var iterator = {
-    next: function () { return { done: true, value: 1 }; }
-  };
-  var iterable = {};
-  iterable[Symbol.iterator] = iterator;
-
   try {
-    eval('for (var a of iterable) { return a === 1; }');
+    return eval("(function(){ var it = Iterator({ key: 'v' }); for(var pair of it){return pair[0] === 'key' && pair[1] === 'v'}}())");
   } catch (e) {
     return false;
   }
@@ -681,15 +671,15 @@ test(function () {
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
-          <td class="no firefox13 obsolete">No</td>
-          <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No</td>
-          <td class="no firefox23 obsolete">No</td>
-          <td class="no firefox24">No</td>
-          <td class="no firefox25">No</td>
-          <td class="no firefox27">No</td>
-          <td class="no firefox29">No</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25">Yes</td>
+          <td class="yes firefox27">Yes</td>
+          <td class="yes firefox29">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -1723,8 +1713,8 @@ test(function () {
     var symbol = Symbol();
     var value = Math.random();
     object[symbol] = value;
-    return object[symbol] === value && 
-           Object.keys(object).length === 0 && 
+    return object[symbol] === value &&
+           Object.keys(object).length === 0 &&
            Object.getOwnPropertyNames(object).length === 0;
   }
   catch(e) {

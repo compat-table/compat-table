@@ -743,18 +743,8 @@ exports.tests = [
   name: 'Iterators',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
   exec: function () {
-    if (typeof Symbol !== 'function' || typeof Symbol.iterator !== 'symbol') {
-      return false;
-    }
-
-    var iterator = {
-      next: function () { return { done: true, value: 1 }; }
-    };
-    var iterable = {};
-    iterable[Symbol.iterator] = iterator;
-
     try {
-      eval('for (var a of iterable) { return a === 1; }');
+      return eval("(function(){ var it = Iterator({ key: 'v' }); for(var pair of it){return pair[0] === 'key' && pair[1] === 'v'}}())");
     } catch (e) {
       return false;
     }
@@ -764,16 +754,16 @@ exports.tests = [
     ie10: false,
     ie11: false,
     firefox11: false,
-    firefox13: false,
-    firefox16: false,
-    firefox17: false,
-    firefox18: false,
-    firefox23: false,
-    firefox24: false,
-    firefox25: false,
-    firefox27: false,
-    firefox28: false,
-    firefox29: false,
+    firefox13: true,
+    firefox16: true,
+    firefox17: true,
+    firefox18: true,
+    firefox23: true,
+    firefox24: true,
+    firefox25: true,
+    firefox27: true,
+    firefox28: true,
+    firefox29: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
@@ -1872,8 +1862,8 @@ exports.tests = [
       var symbol = Symbol();
       var value = Math.random();
       object[symbol] = value;
-      return object[symbol] === value && 
-             Object.keys(object).length === 0 && 
+      return object[symbol] === value &&
+             Object.keys(object).length === 0 &&
              Object.getOwnPropertyNames(object).length === 0;
     }
     catch(e) {
