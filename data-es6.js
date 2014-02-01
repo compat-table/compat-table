@@ -1300,7 +1300,7 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:promises',
   exec: function () {
     return typeof Promise !== 'undefined' &&
-           typeof Promise.all !== 'undefined';
+           typeof Promise.all === 'function';
   },
   res: {
     tr: false,
