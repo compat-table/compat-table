@@ -151,30 +151,101 @@ domready(function() {
     }
   };
 
-  var table = document.getElementById('table-wrapper');
+  function initColumnHighlight() {
+    var table = document.getElementById('table-wrapper');
+    for (var i = 0, len = table.rows.length; i < len; i++) {
+      var row = table.rows[i];
+      for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
+        row.cells[j].onmouseover = (function(i, j) {
+          return function() {
 
-  for (var i = 0, len = table.rows.length; i < len; i++) {
-    var row = table.rows[i];
-    for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
-      row.cells[j].onmouseover = (function(i, j) {
-        return function() {
+            if (!row.cells[j]) return;
 
-          if (!row.cells[j]) return;
+            if (row.cells[j].className.indexOf('yes') > -1 || row.cells[j].className.indexOf('no') > -1) {
 
-          if (row.cells[j].className.indexOf('yes') > -1 || row.cells[j].className.indexOf('no') > -1) {
-
-            for (var k = 0; k < len; k++) {
-              for (var l = 0; l < jlen; l++) {
-                rows[k].cells[l] && (rows[k].cells[l].className = rows[k].cells[l].className.replace('hover', ''));
+              for (var k = 0; k < len; k++) {
+                for (var l = 0; l < jlen; l++) {
+                  rows[k].cells[l] && (rows[k].cells[l].className = rows[k].cells[l].className.replace('hover', ''));
+                }
+                rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
               }
-              rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
-            }
 
-          }
-        };
-      })(i, j);
+            }
+          };
+        })(i, j);
+      }
     }
   }
+  initColumnHighlight();
+
+  var numFeaturesPerColumn = window.numFeaturesPerColumn = { };
+
+  var table = document.getElementById('table-wrapper');
+
+  // count number of features for each column/browser
+  for (var i = 1, len = table.rows.length; i < len; i++) {
+    for (var j = 3, jlen = table.rows[i].cells.length; j < jlen; j++) {
+      if (typeof numFeaturesPerColumn[j] === 'undefined') {
+        numFeaturesPerColumn[j] = 0;
+      }
+      if (table.rows[i].cells[j].className.indexOf('yes') > -1) {
+        numFeaturesPerColumn[j]++;
+      }
+    }
+  }
+
+  // store number of features for each column/browser and numeric index
+  for (var i = 0, len = table.rows.length; i < len; i++) {
+    for (var j = 0, jlen = table.rows[i].cells.length; j < jlen; j++) {
+      table.rows[i].cells[j].setAttribute('data-features', numFeaturesPerColumn[j]);
+      table.rows[i].cells[j].setAttribute('data-num', j);
+    }
+  }
+
+
+  document.getElementById('sort').onclick = function() {
+
+    var sortByFeatures = this.checked;
+
+    // sort
+    for (var i = 0, len = table.rows.length; i < len; i++) {
+
+      var cells = [].slice.call(table.rows[i].cells, 3);
+
+      var sorted = cells.sort(function(a, b) {
+
+        if (sortByFeatures) {
+
+          var numFeaturesPerA = parseInt(a.getAttribute('data-features'), 10);
+          var numFeaturesPerB = parseInt(b.getAttribute('data-features'), 10);
+
+          return numFeaturesPerB - numFeaturesPerA;
+        }
+        else {
+          var aNum = parseInt(a.getAttribute('data-num'), 10);
+          var bNum = parseInt(b.getAttribute('data-num'), 10);
+
+          return aNum - bNum;
+        }
+      });
+
+      var firstCell = table.rows[i].cells[0];
+      var secondCell = table.rows[i].cells[1];
+      var thirdCell = table.rows[i].cells[2];
+
+      table.rows[i].innerHTML = '';
+
+      table.rows[i].appendChild(firstCell);
+      table.rows[i].appendChild(secondCell);
+      table.rows[i].appendChild(thirdCell);
+
+      for (var j = 0, jlen = sorted.length; j < jlen; j++) {
+        table.rows[i].appendChild(sorted[j]);
+      }
+    }
+
+    initColumnHighlight();
+  };
 
 
 });
