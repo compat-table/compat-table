@@ -2397,10 +2397,9 @@ exports.tests = [
   }
 },
 {
-  name: 'Number.prototype.clz',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-20.1.3.1',
+  name: 'Math.clz32',
   exec: function () {
-    return typeof Number.prototype.clz === 'function';
+    return typeof Math.clz32 === 'function';
   },
   res: {
     tr: false,
