@@ -95,6 +95,7 @@
             <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">Konq 4.9</abbr></th>
             <th class="besen"><a href="#besen" class="browser-name"><abbr title="Bero's EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
             <th class="rhino"><a href="#rhino" class="browser-name"><abbr title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</abbr></th>
+            <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">Phantom</abbr></th>
           </tr>
         </thead>
         <tbody>
@@ -136,9 +137,10 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes<a href="#besen-extensions-note"><sup>[2]</sup></a></td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="uneval"><span><a class="anchor" href="#uneval">&sect;</a>uneval</span></td>
@@ -171,6 +173,7 @@ test(typeof uneval == 'function');
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a>"toSource" method</span></td>
@@ -203,9 +206,10 @@ test('toSource' in (function (){}) && 'toSource' in ({}));
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="function_name_property"><span><a class="anchor" href="#function_name_property">&sect;</a>function "name" property</span></td>
@@ -238,6 +242,7 @@ test((function foo(){}).name == 'foo');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&sect;</a>function "caller" property</span></td>
@@ -270,6 +275,7 @@ test('caller' in (function(){}));
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="function_arity_property"><span><a class="anchor" href="#function_arity_property">&sect;</a>function "arity" property</span></td>
@@ -304,6 +310,7 @@ test((function (){}).arity === 0 &&
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="function_arguments_property"><span><a class="anchor" href="#function_arguments_property">&sect;</a>function "arguments" property</span></td>
@@ -341,6 +348,7 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Function.prototype.isGenerator"><span><a class="anchor" href="#Function.prototype.isGenerator">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a></span></td>
@@ -373,9 +381,10 @@ test(typeof Function.prototype.isGenerator == 'function');
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="__proto__"><span><a class="anchor" href="#__proto__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></span></td>
@@ -409,6 +418,7 @@ test(({}).__proto__ === Object.prototype &&
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="__count__"><span><a class="anchor" href="#__count__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span></td>
@@ -442,6 +452,7 @@ test(typeof ({}).__count__ === 'number' &&
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="__parent__"><span><a class="anchor" href="#__parent__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a></span></td>
@@ -474,6 +485,7 @@ test(typeof ({}).__parent__ !== 'undefined');
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="__noSuchMethod__"><span><a class="anchor" href="#__noSuchMethod__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a></span></td>
@@ -513,6 +525,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="__defineGetter__"><span><a class="anchor" href="#__defineGetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a></span></td>
@@ -545,6 +558,7 @@ test('__defineGetter__' in ({ }));
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="__defineSetter__"><span><a class="anchor" href="#__defineSetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a></span></td>
@@ -577,9 +591,10 @@ test('__defineSetter__' in ({ }));
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="const"><span><a class="anchor" href="#const">&sect;</a>const</span></td>
@@ -619,6 +634,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="let"><span><a class="anchor" href="#let">&sect;</a>let</span></td>
@@ -630,7 +646,7 @@ test((function(){
     return false;
   }
 })());
-__script_executed = true
+__script_executed = true;
 </script>
 <script>
 if (!__script_executed) {
@@ -664,6 +680,7 @@ if (!__script_executed) {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span></td>
@@ -696,6 +713,7 @@ test(typeof Array.slice === 'function' && Array.slice('123').length === 3);
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="Expression_closures"><span><a class="anchor" href="#Expression_closures">&sect;</a>Expression closures</span></td>
@@ -734,6 +752,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="e4x"><span><a class="anchor" href="#e4x">&sect;</a>e4x</span></td>
@@ -772,6 +791,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span></td>
@@ -810,9 +830,10 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="besen"></td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="RegExp_y_flag"><span><a class="anchor" href="#RegExp_y_flag">&sect;</a>RegExp "y" flag</span></td>
@@ -855,6 +876,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&sect;</a>RegExp "x" flag</span></td>
@@ -896,6 +918,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="RegExp_lastMatch"><span><a class="anchor" href="#RegExp_lastMatch">&sect;</a>RegExp "lastMatch"</span></td>
@@ -932,6 +955,7 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="RegExp.$1-$9"><span><a class="anchor" href="#RegExp.$1-$9">&sect;</a>RegExp.$1-$9</span></td>
@@ -969,6 +993,7 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Callable_RegExp"><span><a class="anchor" href="#Callable_RegExp">&sect;</a>Callable RegExp</span></td>
@@ -1007,6 +1032,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="RegExp_named_groups"><span><a class="anchor" href="#RegExp_named_groups">&sect;</a>RegExp named groups</span></td>
@@ -1045,9 +1071,10 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="besen"></td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="String.prototype.substr"><span><a class="anchor" href="#String.prototype.substr">&sect;</a>String.prototype.substr</span></td>
@@ -1080,6 +1107,7 @@ test(typeof String.prototype.substr === 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a>String.prototype.trimLeft</span></td>
@@ -1112,6 +1140,7 @@ test(typeof String.prototype.trimLeft === 'function');
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.trimRight"><span><a class="anchor" href="#String.prototype.trimRight">&sect;</a>String.prototype.trimRight</span></td>
@@ -1144,6 +1173,7 @@ test(typeof String.prototype.trimRight === 'function');
             <td class="yes konq49">Yes</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.anchor"><span><a class="anchor" href="#String.prototype.anchor">&sect;</a>String.prototype.anchor</span></td>
@@ -1176,6 +1206,7 @@ test(typeof String.prototype.anchor === 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.big"><span><a class="anchor" href="#String.prototype.big">&sect;</a>String.prototype.big</span></td>
@@ -1208,6 +1239,7 @@ test(typeof String.prototype.big === 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.blink"><span><a class="anchor" href="#String.prototype.blink">&sect;</a>String.prototype.blink</span></td>
@@ -1240,6 +1272,7 @@ test(typeof String.prototype.blink === 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.bold"><span><a class="anchor" href="#String.prototype.bold">&sect;</a>String.prototype.bold</span></td>
@@ -1272,6 +1305,7 @@ test(typeof String.prototype.bold === 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.link"><span><a class="anchor" href="#String.prototype.link">&sect;</a>String.prototype.link</span></td>
@@ -1304,6 +1338,7 @@ test(typeof String.prototype.link === 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="String.prototype.quote"><span><a class="anchor" href="#String.prototype.quote">&sect;</a>String.prototype.quote</span></td>
@@ -1336,9 +1371,10 @@ test(typeof String.prototype.quote === 'function');
             <td class="konq49"></td>
             <td class="besen"></td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a>Object.prototype.watch</span></td>
@@ -1371,6 +1407,7 @@ test(typeof Object.prototype.watch == 'function');
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="Object.prototype.unwatch"><span><a class="anchor" href="#Object.prototype.unwatch">&sect;</a>Object.prototype.unwatch</span></td>
@@ -1403,6 +1440,7 @@ test(typeof Object.prototype.unwatch == 'function');
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="Object.prototype.eval"><span><a class="anchor" href="#Object.prototype.eval">&sect;</a>Object.prototype.eval</span></td>
@@ -1435,9 +1473,10 @@ test(typeof Object.prototype.eval == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="Octal_literals"><span><a class="anchor" href="#Octal_literals">&sect;</a>Octal literals</span></td>
@@ -1476,9 +1515,10 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
           <tr>
             <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a>error "stack"</span></td>
@@ -1511,6 +1551,7 @@ test('stack' in new Error);
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a>error "lineNumber"</span></td>
@@ -1543,6 +1584,7 @@ test('lineNumber' in new Error);
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="error_fileName"><span><a class="anchor" href="#error_fileName">&sect;</a>error "fileName"</span></td>
@@ -1575,6 +1617,7 @@ test('fileName' in new Error);
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="error_description"><span><a class="anchor" href="#error_description">&sect;</a>error "description"</span></td>
@@ -1607,9 +1650,10 @@ test('description' in new Error);
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
             <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="28" class="separator"></th>
+            <th colspan="29" class="separator"></th>
           </tr>
         </tbody>
       </table>

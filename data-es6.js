@@ -150,6 +150,10 @@ exports.browsers = {
     full: 'Rhino 1.7',
     short: 'RH'
   },
+  phantom: {
+    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
+    short: 'PH'
+  },
   node: {
     full: 'Node 0.10',
     short: 'Node',
@@ -206,6 +210,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -250,6 +255,7 @@ exports.tests = [
     opera15: true,
     konq49: true,
     rhino17: false,
+    phantom: true,
     node: true,
     nodeharmony: true
   }
@@ -315,6 +321,7 @@ exports.tests = [
     opera: false,
     opera15: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -359,6 +366,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -403,6 +411,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -447,6 +456,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -491,6 +501,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -543,6 +554,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -589,6 +601,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -634,6 +647,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -678,6 +692,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -723,6 +738,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -768,6 +784,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -812,6 +829,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -880,6 +898,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -925,6 +944,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -973,6 +993,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1020,6 +1041,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1067,6 +1089,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1115,6 +1138,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1162,6 +1186,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1207,6 +1232,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1247,6 +1273,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1292,6 +1319,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1338,6 +1366,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1379,6 +1408,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1419,6 +1449,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1458,6 +1489,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1497,6 +1529,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1536,6 +1569,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1575,6 +1609,7 @@ exports.tests = [
     opera15: true,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: true,
     nodeharmony: true
   }
@@ -1615,6 +1650,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1654,6 +1690,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1696,6 +1733,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1738,6 +1776,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1778,6 +1817,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1818,6 +1858,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1858,6 +1899,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1898,6 +1940,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -1949,6 +1992,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -1992,6 +2036,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2032,6 +2077,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2072,6 +2118,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2112,6 +2159,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -2152,6 +2200,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -2192,6 +2241,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2232,6 +2282,7 @@ exports.tests = [
     opera15: true,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: true,
     nodeharmony: true
   }
@@ -2272,6 +2323,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2312,6 +2364,7 @@ exports.tests = [
     opera15: true,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: true,
     nodeharmony: true
   }
@@ -2352,6 +2405,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2391,6 +2445,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2435,6 +2490,7 @@ exports.tests = [
     opera15: true,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: true
   }
@@ -2475,6 +2531,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2515,6 +2572,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2555,6 +2613,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2595,6 +2654,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2635,6 +2695,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2675,6 +2736,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2715,6 +2777,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2755,6 +2818,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2795,6 +2859,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2835,6 +2900,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2875,6 +2941,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2915,6 +2982,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -2955,6 +3023,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
@@ -3002,6 +3071,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
