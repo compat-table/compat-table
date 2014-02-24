@@ -92,6 +92,7 @@
             <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">Konq 4.9</abbr></th>
             <th class="besen"><a href="#besen" class="browser-name"><abbr title="Bero's EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
             <th class="rhino"><a href="#rhino" class="browser-name"><abbr title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</abbr></th>
+            <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">Phantom</abbr></th>
           </tr>
         </thead>
         <tbody>
@@ -127,6 +128,7 @@ test(typeof Object.create == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.defineProperty"><span><a class="anchor" href="#Object.defineProperty">&sect;</a>Object.defineProperty</span></td>
@@ -160,6 +162,7 @@ test(typeof Object.defineProperty == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.defineProperties"><span><a class="anchor" href="#Object.defineProperties">&sect;</a>Object.defineProperties</span></td>
@@ -193,6 +196,7 @@ test(typeof Object.defineProperties == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.getPrototypeOf"><span><a class="anchor" href="#Object.getPrototypeOf">&sect;</a>Object.getPrototypeOf</span></td>
@@ -226,6 +230,7 @@ test(typeof Object.getPrototypeOf == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.keys"><span><a class="anchor" href="#Object.keys">&sect;</a>Object.keys</span></td>
@@ -259,6 +264,7 @@ test(typeof Object.keys == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.seal"><span><a class="anchor" href="#Object.seal">&sect;</a>Object.seal</span></td>
@@ -292,6 +298,7 @@ test(typeof Object.seal == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.freeze"><span><a class="anchor" href="#Object.freeze">&sect;</a>Object.freeze</span></td>
@@ -325,6 +332,7 @@ test(typeof Object.freeze == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.preventExtensions"><span><a class="anchor" href="#Object.preventExtensions">&sect;</a>Object.preventExtensions</span></td>
@@ -358,6 +366,7 @@ test(typeof Object.preventExtensions == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.isSealed"><span><a class="anchor" href="#Object.isSealed">&sect;</a>Object.isSealed</span></td>
@@ -391,6 +400,7 @@ test(typeof Object.isSealed == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.isFrozen"><span><a class="anchor" href="#Object.isFrozen">&sect;</a>Object.isFrozen</span></td>
@@ -424,6 +434,7 @@ test(typeof Object.isFrozen == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.isExtensible"><span><a class="anchor" href="#Object.isExtensible">&sect;</a>Object.isExtensible</span></td>
@@ -457,6 +468,7 @@ test(typeof Object.isExtensible == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.getOwnPropertyDescriptor"><span><a class="anchor" href="#Object.getOwnPropertyDescriptor">&sect;</a>Object.getOwnPropertyDescriptor</span></td>
@@ -490,6 +502,7 @@ test(typeof Object.getOwnPropertyDescriptor == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Object.getOwnPropertyNames"><span><a class="anchor" href="#Object.getOwnPropertyNames">&sect;</a>Object.getOwnPropertyNames</span></td>
@@ -523,9 +536,10 @@ test(typeof Object.getOwnPropertyNames == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="29" class="separator"></th>
+            <th colspan="30" class="separator"></th>
           </tr>
           <tr>
             <td id="Date.prototype.toISOString"><span><a class="anchor" href="#Date.prototype.toISOString">&sect;</a>Date.prototype.toISOString</span></td>
@@ -559,6 +573,7 @@ test(typeof Date.prototype.toISOString == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Date.now"><span><a class="anchor" href="#Date.now">&sect;</a>Date.now</span></td>
@@ -592,6 +607,7 @@ test(typeof Date.now == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.isArray"><span><a class="anchor" href="#Array.isArray">&sect;</a>Array.isArray</span></td>
@@ -625,6 +641,7 @@ test(typeof Array.isArray == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="JSON"><span><a class="anchor" href="#JSON">&sect;</a>JSON</span></td>
@@ -658,6 +675,7 @@ test(typeof JSON == 'object');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Function.prototype.bind"><span><a class="anchor" href="#Function.prototype.bind">&sect;</a>Function.prototype.bind</span></td>
@@ -691,6 +709,7 @@ test(typeof Function.prototype.bind == 'function');
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="String.prototype.trim"><span><a class="anchor" href="#String.prototype.trim">&sect;</a>String.prototype.trim</span></td>
@@ -724,9 +743,10 @@ test(typeof String.prototype.trim == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="29" class="separator"></th>
+            <th colspan="30" class="separator"></th>
           </tr>
           <tr>
             <td id="Array.prototype.indexOf"><span><a class="anchor" href="#Array.prototype.indexOf">&sect;</a>Array.prototype.indexOf</span></td>
@@ -760,6 +780,7 @@ test(typeof Array.prototype.indexOf == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.lastIndexOf"><span><a class="anchor" href="#Array.prototype.lastIndexOf">&sect;</a>Array.prototype.lastIndexOf</span></td>
@@ -793,6 +814,7 @@ test(typeof Array.prototype.lastIndexOf == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.every"><span><a class="anchor" href="#Array.prototype.every">&sect;</a>Array.prototype.every</span></td>
@@ -826,6 +848,7 @@ test(typeof Array.prototype.every == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.some"><span><a class="anchor" href="#Array.prototype.some">&sect;</a>Array.prototype.some</span></td>
@@ -859,6 +882,7 @@ test(typeof Array.prototype.some == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.forEach"><span><a class="anchor" href="#Array.prototype.forEach">&sect;</a>Array.prototype.forEach</span></td>
@@ -892,6 +916,7 @@ test(typeof Array.prototype.forEach == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.map"><span><a class="anchor" href="#Array.prototype.map">&sect;</a>Array.prototype.map</span></td>
@@ -925,6 +950,7 @@ test(typeof Array.prototype.map == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.filter"><span><a class="anchor" href="#Array.prototype.filter">&sect;</a>Array.prototype.filter</span></td>
@@ -958,6 +984,7 @@ test(typeof Array.prototype.filter == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.reduce"><span><a class="anchor" href="#Array.prototype.reduce">&sect;</a>Array.prototype.reduce</span></td>
@@ -991,6 +1018,7 @@ test(typeof Array.prototype.reduce == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Array.prototype.reduceRight"><span><a class="anchor" href="#Array.prototype.reduceRight">&sect;</a>Array.prototype.reduceRight</span></td>
@@ -1024,9 +1052,10 @@ test(typeof Array.prototype.reduceRight == 'function');
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="29" class="separator"></th>
+            <th colspan="30" class="separator"></th>
           </tr>
           <tr>
             <td id="Getter_in_property_initializer"><span><a class="anchor" href="#Getter_in_property_initializer">&sect;</a>Getter in property initializer</span></td>
@@ -1066,6 +1095,7 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Setter_in_property_initializer"><span><a class="anchor" href="#Setter_in_property_initializer">&sect;</a>Setter in property initializer</span></td>
@@ -1107,9 +1137,10 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="29" class="separator"></th>
+            <th colspan="30" class="separator"></th>
           </tr>
           <tr>
             <td id="Property_access_on_strings"><span><a class="anchor" href="#Property_access_on_strings">&sect;</a>Property access on strings<a href="#property-access-on-strings-note"><sup>[5]</sup></a></span></td>
@@ -1143,6 +1174,7 @@ test("foobar"[3] === "b");
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Reserved_words_as_property_names"><span><a class="anchor" href="#Reserved_words_as_property_names">&sect;</a>Reserved words as property names<a href="#reserved-words-note"><sup>[6]</sup></a></span></td>
@@ -1184,9 +1216,10 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="no rhino">No</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="29" class="separator"></th>
+            <th colspan="30" class="separator"></th>
           </tr>
           <tr>
             <td id="Zero-width_chars_in_identifiers"><span><a class="anchor" href="#Zero-width_chars_in_identifiers">&sect;</a>Zero-width chars in identifiers</span></td>
@@ -1224,6 +1257,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
           </tr>
           <tr>
             <td id="Immutable_undefined"><span><a class="anchor" href="#Immutable_undefined">&sect;</a>Immutable undefined</span></td>
@@ -1266,6 +1300,7 @@ test(function () {
             <td class="yes konq49">Yes</td>
             <td class="yes besen">Yes</td>
             <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
           </tr>
           <tr>
             <td id="Strict_mode"><span><a class="anchor" href="#Strict_mode">&sect;</a><a href="http://kangax.github.com/es5-compat-table/strict-mode/">Strict mode</a></span></td>
@@ -1302,6 +1337,7 @@ test(function () {
             <td class="no konq49">No</td>
             <td class="yes besen">Yes</td>
             <td class="no rhino">No</td>
+            <td class="yes phantom">Yes</td>
           </tr>
         </tbody>
       </table>

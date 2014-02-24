@@ -130,6 +130,11 @@ exports.browsers = {
     full: 'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
     short: 'Rhino 1.7',
     obsolete: false
+  },
+  phantom: {
+    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
+    short: 'Phantom',
+    obsolete: false
   }
 };
 
@@ -184,7 +189,8 @@ exports.tests = [
       note_id: 'besen-extensions',
       note_html: "With 'Javascript-specific extensions' option enabled"
     },
-    rhino: true
+    rhino: true,
+    phantom: true
   },
   separator: 'after'
 },
@@ -218,7 +224,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -251,7 +258,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: false
   },
   separator: 'after'
 },
@@ -285,7 +293,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -318,7 +327,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: true
   }
 },
 {
@@ -353,7 +363,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -389,7 +400,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -423,7 +435,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   },
   separator: 'after'
 },
@@ -459,7 +472,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -494,7 +508,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -528,7 +543,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -567,7 +583,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -601,7 +618,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -635,7 +653,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: true
   },
   separator: 'after'
 },
@@ -674,7 +693,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: true
   }
 },
 {
@@ -690,7 +710,7 @@ exports.tests = [
             return false;
           }
         })());
-        __script_executed = true
+        __script_executed = true;
       }
     },
     {
@@ -727,7 +747,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -760,7 +781,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -797,7 +819,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: true,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -834,7 +857,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -872,7 +896,8 @@ exports.tests = [
     konq44: null,
     konq49: false,
     besen: null,
-    rhino: false
+    rhino: false,
+    phantom: false
   },
   separator: 'after'
 },
@@ -914,7 +939,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -954,7 +980,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -989,7 +1016,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1025,7 +1053,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1062,7 +1091,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -1099,7 +1129,8 @@ exports.tests = [
     konq44: null,
     konq49: true,
     besen: null,
-    rhino: false
+    rhino: false,
+    phantom: false
   },
   separator: 'after'
 },
@@ -1131,7 +1162,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1162,7 +1194,8 @@ exports.tests = [
     konq44: false,
     konq49: true,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: true
   }
 },
 {
@@ -1193,7 +1226,8 @@ exports.tests = [
     konq44: false,
     konq49: true,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: true
   }
 },
 {
@@ -1224,7 +1258,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1255,7 +1290,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1286,7 +1322,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1317,7 +1354,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1348,7 +1386,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   }
 },
 {
@@ -1379,7 +1418,8 @@ exports.tests = [
     konq44: null,
     konq49: null,
     besen: null,
-    rhino: false
+    rhino: false,
+    phantom: false
   },
   separator: 'after'
 },
@@ -1411,7 +1451,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -1442,7 +1483,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -1473,7 +1515,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: true,
-    rhino: false
+    rhino: false,
+    phantom: false
   },
   separator: 'after'
 },
@@ -1511,7 +1554,8 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: true,
-    rhino: true
+    rhino: true,
+    phantom: true
   },
   separator: 'after'
 },
@@ -1545,7 +1589,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -1578,7 +1623,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -1611,7 +1657,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true
+    rhino: true,
+    phantom: false
   }
 },
 {
@@ -1644,7 +1691,8 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false
+    rhino: false,
+    phantom: false
   },
   separator: 'after'
 }
