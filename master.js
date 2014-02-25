@@ -203,49 +203,49 @@ domready(function() {
   }
 
 
-  document.getElementById('sort').onclick = function() {
+  var sortButton = document.getElementById('sort');
+  if (sortButton) {
+    sortButton.onclick = function() {
 
-    var sortByFeatures = this.checked;
+      var sortByFeatures = this.checked;
 
-    // sort
-    for (var i = 0, len = table.rows.length; i < len; i++) {
+      var comparator = sortByFeatures ? function(a, b) {
+        var numFeaturesPerA = parseInt(a.getAttribute('data-features'), 10);
+        var numFeaturesPerB = parseInt(b.getAttribute('data-features'), 10);
 
-      var cells = [].slice.call(table.rows[i].cells, 3);
+        return numFeaturesPerB - numFeaturesPerA;
+      } : function(a, b) {
+        var aNum = parseInt(a.getAttribute('data-num'), 10);
+        var bNum = parseInt(b.getAttribute('data-num'), 10);
 
-      var sorted = cells.sort(function(a, b) {
+        return aNum - bNum;
+      };
 
-        if (sortByFeatures) {
+      // sort
+      for (var i = 0, len = table.rows.length; i < len; i++) {
 
-          var numFeaturesPerA = parseInt(a.getAttribute('data-features'), 10);
-          var numFeaturesPerB = parseInt(b.getAttribute('data-features'), 10);
+        var row = table.rows[i];
+        var cells = [].slice.call(row.cells, 3);
+        var sorted = cells.sort(comparator);
 
-          return numFeaturesPerB - numFeaturesPerA;
+        var firstCell = row.cells[0];
+        var secondCell = row.cells[1];
+        var thirdCell = row.cells[2];
+
+        row.innerHTML = '';
+
+        row.appendChild(firstCell);
+        row.appendChild(secondCell);
+        row.appendChild(thirdCell);
+
+        for (var j = 0, jlen = sorted.length; j < jlen; j++) {
+          row.appendChild(sorted[j]);
         }
-        else {
-          var aNum = parseInt(a.getAttribute('data-num'), 10);
-          var bNum = parseInt(b.getAttribute('data-num'), 10);
-
-          return aNum - bNum;
-        }
-      });
-
-      var firstCell = table.rows[i].cells[0];
-      var secondCell = table.rows[i].cells[1];
-      var thirdCell = table.rows[i].cells[2];
-
-      table.rows[i].innerHTML = '';
-
-      table.rows[i].appendChild(firstCell);
-      table.rows[i].appendChild(secondCell);
-      table.rows[i].appendChild(thirdCell);
-
-      for (var j = 0, jlen = sorted.length; j < jlen; j++) {
-        table.rows[i].appendChild(sorted[j]);
       }
-    }
 
-    initColumnHighlight();
-  };
+      initColumnHighlight();
+    };
+  }
 
 
 });
