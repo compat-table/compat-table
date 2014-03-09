@@ -160,7 +160,7 @@ exports.browsers = {
     obsolete: false // current version
   },
   nodeharmony: {
-    full: 'Node 0.11.7 harmony',
+    full: 'Node 0.11.11 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
     note_id: 'harmony-flag',
@@ -1188,7 +1188,7 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1692,7 +1692,7 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -1994,7 +1994,7 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -2533,7 +2533,7 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -3025,7 +3025,7 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
