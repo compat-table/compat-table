@@ -3051,10 +3051,7 @@ exports.tests = [
       note_id: 'fx-fround',
       note_html: 'Available since Firefox 26'
     },
-
-
     firefox28: true,
-
     firefox29: true,
     firefox30: true,
     chrome: false,
@@ -3072,6 +3069,45 @@ exports.tests = [
     konq49: false,
     rhino17: false,
     phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Math.cbrt',
+  exec: function () {
+    return typeof Math.cbrt === 'function';
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: true,
+    firefox27: true,
+    firefox28: true,
+    firefox29: true,
+    firefox30: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: true,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: true,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
     node: false,
     nodeharmony: false
   }
