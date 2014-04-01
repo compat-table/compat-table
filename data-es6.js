@@ -3108,6 +3108,7 @@ exports.tests = [
     opera15: false,
     konq49: false,
     rhino17: false,
+    phantom: false,
     node: false,
     nodeharmony: false
   }
