@@ -181,6 +181,7 @@ domready(function() {
   var numFeaturesPerColumn = window.numFeaturesPerColumn = { };
 
   var table = document.getElementById('table-wrapper');
+  var totalResultsInColum = table.rows.length - table.getElementsByClassName('separator').length - 1 /* header */;
 
   // count number of features for each column/browser
   for (var i = 1, len = table.rows.length; i < len; i++) {
@@ -204,7 +205,11 @@ domready(function() {
       cell.setAttribute('data-num', j);
 
       if (cell.tagName.toLowerCase() === 'th' && typeof num === 'number') {
-        cell.innerHTML += (' <sup class="num-features" title="Number of implemented features"><b>' + num + '</b>/' + (len - 1) + '</sup>');
+        cell.innerHTML += (
+          ' <sup class="num-features" title="Number of implemented features"><b>' +
+            num +
+            '</b>/' +
+            totalResultsInColum + '</sup>');
       }
     }
   }
