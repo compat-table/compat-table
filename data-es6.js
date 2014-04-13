@@ -1044,6 +1044,54 @@ exports.tests = [
   }
 },
 {
+  name: 'RegExp "u" flag',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.unicode',
+  exec: function() {
+    try {
+      return eval('"𠮷".match(/./u)[0].length === 2');
+    }
+    catch(err) {
+      return false;
+    }
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox27: false,
+    firefox28: false,
+    firefox29: false,
+    firefox30: false,
+    firefox31: false,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Map',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets',
   exec: function () {
