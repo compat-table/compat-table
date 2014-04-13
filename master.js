@@ -204,7 +204,7 @@ domready(function() {
       cell.setAttribute('data-num', j);
 
       if (cell.tagName.toLowerCase() === 'th' && typeof num === 'number') {
-        cell.innerHTML += (' <sup class="num-features" title="Number of implemented features">' + num + '</sup>');
+        cell.innerHTML += (' <sup class="num-features" title="Number of implemented features"><b>' + num + '</b>/' + len + '</sup>');
       }
     }
   }

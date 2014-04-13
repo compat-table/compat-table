@@ -1,5 +1,6 @@
 body { font-family: 'Open Sans', sans-serif; margin: 0; font-weight: 300; }
 th { font-weight: normal; text-align: center; padding-left: 0.45em; padding-right: 0.45em; padding-bottom: 1em; padding-top: 1em; position: relative; min-width: 40px; font-size: 13px; background: #eee; vertical-align: middle; }
+th abbr { font-weight: bold; }
 td { background: #eee; padding-left: 5px; margin-left: -10px; font-size: 14px; }
 td span { position: relative; display: inline-block; }
 td:hover .anchor, td .anchor:focus { color: #00c; }
@@ -38,8 +39,8 @@ td.selected { padding-left: 30px; padding-right: 30px; opacity: 1 !important; }
 .yes { background: #4a4; }
 .no { background: #e11; }
 .test-name { width: 260px; }
-.warning { background: #ffc; display: inline-block; margin: 0 0 1.5em 0; padding: 0.25em; }
-.separator { padding: 0; height: 0.5em; }
+.warning { background: #ffc; display: inline-block; margin: 0 0 2em 0; padding: 0.25em; }
+.separator { padding: 0; height: 0.5em; background: none; }
 .this-browser { background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px;
   font-size: 13px; vertical-align: top; }
 
@@ -67,4 +68,5 @@ label[for="sort"] { margin-left: 20px; background: #fee; padding: 5px; margin-ri
 
 .browser-name:hover { opacity: 0.9; }
 
-.num-features { position: absolute; top: -12px; right: 0px; font-size: 11px; }
+.num-features { position: absolute; top: -13px; right: 0px; font-size: 11px; }
+.num-features b { font-weight: bold; }
