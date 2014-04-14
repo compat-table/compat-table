@@ -2573,6 +2573,7 @@ exports.tests = [
 },
 {
   name: 'Math.clz32',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32',
   exec: function () {
     return typeof Math.clz32 === 'function';
   },
