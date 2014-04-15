@@ -139,7 +139,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit rev. 163695',
+    full: 'WebKit rev. 167020',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -2593,7 +2593,7 @@ exports.tests = [
     firefox28: false,
     firefox29: false,
     firefox30: false,
-    firefox31: false,
+    firefox31: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
@@ -3167,7 +3167,7 @@ exports.tests = [
     safari51: false,
     safari6: false,
     safari7: false,
-    webkit: false,
+    webkit: true,
     opera: false,
     opera15: false,
     konq49: false,
