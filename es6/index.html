@@ -94,7 +94,7 @@
           <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
           <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
           <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
-          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit rev. 167020">WK</abbr></th>
+          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r167733">WK</abbr></th>
           <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12">OP 12</abbr></th>
           <th class="opera15"><a href="#opera15" class="browser-name"><abbr title="Opera 15.0">OP 15</abbr></th>
           <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
@@ -2210,7 +2210,7 @@ test(typeof Array.prototype.fill === 'function');
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="no webkit">No</td>
+          <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="no opera15">No</td>
           <td class="no konq49">No</td>
@@ -2260,7 +2260,7 @@ test(typeof Number.isFinite === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Number.isInteger"><span><a class="anchor" href="#Number.isInteger">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:number.isinteger">Number.isInteger</a></span></td>
+          <td id="Number.isInteger"><span><a class="anchor" href="#Number.isInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger">Number.isInteger</a></span></td>
 <script>
 test(typeof Number.isInteger === 'function');
 </script>
@@ -2280,6 +2280,46 @@ test(typeof Number.isInteger === 'function');
           <td class="yes firefox29">Yes</td>
           <td class="yes firefox30">Yes</td>
           <td class="yes firefox31">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Number.isSafeInteger"><span><a class="anchor" href="#Number.isSafeInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger">Number.isSafeInteger</a></span></td>
+<script>
+test(typeof Number.isSafeInteger === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25">No</td>
+          <td class="no firefox27">No</td>
+          <td class="no firefox29">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -2367,6 +2407,126 @@ test(typeof Number.toInteger === 'function');
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
           <td class="no chrome35">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Number.EPSILON"><span><a class="anchor" href="#Number.EPSILON">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon">Number.EPSILON</a></span></td>
+<script>
+test(typeof Number.EPSILON === 'number');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="yes firefox25">Yes</td>
+          <td class="yes firefox27">Yes</td>
+          <td class="yes firefox29">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Number.MIN_SAFE_INTEGER"><span><a class="anchor" href="#Number.MIN_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer">Number.MIN_SAFE_INTEGER</a></span></td>
+<script>
+test(typeof Number.MIN_SAFE_INTEGER === 'number');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25">No</td>
+          <td class="no firefox27">No</td>
+          <td class="no firefox29">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Number.MAX_SAFE_INTEGER"><span><a class="anchor" href="#Number.MAX_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer">Number.MAX_SAFE_INTEGER</a></span></td>
+<script>
+test(typeof Number.MAX_SAFE_INTEGER === 'number');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25">No</td>
+          <td class="no firefox27">No</td>
+          <td class="no firefox29">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>

@@ -185,7 +185,10 @@ domready(function() {
 
   // count number of features for each column/browser
   for (var i = 1, len = table.rows.length; i < len; i++) {
-    for (var j = 3, jlen = table.rows[i].cells.length; j < jlen; j++) {
+    for (var j = 1, jlen = table.rows[i].cells.length; j < jlen; j++) {
+
+      if (j === 2) continue;
+
       if (typeof numFeaturesPerColumn[j] === 'undefined') {
         numFeaturesPerColumn[j] = 0;
       }
