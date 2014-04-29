@@ -1501,7 +1501,7 @@ exports.tests = [
     firefox25: false,
     firefox27: false,
     firefox28: false,
-    firefox29: false,
+    firefox29: true,
     firefox30: true,
     firefox31: true,
     chrome: false,
