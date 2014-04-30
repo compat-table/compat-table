@@ -732,10 +732,10 @@ exports.tests = [
 },
 {
   name: 'Array comprehensions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-comprehension',
   exec: function () {
     try {
-      eval('[a * a for (a of [1, 2, 3])][0] === 1');
+      eval('[for (a of [1, 2, 3]) a * a][0] === 1');
       return true;
     } catch (e) {
       return false;
@@ -780,10 +780,10 @@ exports.tests = [
 },
 {
   name: 'Generator comprehensions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generator_expressions',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-comprehensions',
   exec: function () {
     try {
-      eval('(a for (a of [1, 2, 3]))');
+      eval('(for (a of [1, 2, 3]) a * a)');
       return true;
     } catch (e) {
       return false;
