@@ -181,10 +181,14 @@ domready(function() {
   var numFeaturesPerColumn = window.numFeaturesPerColumn = { };
 
   var table = document.getElementById('table-wrapper');
+  var totalResultsInColum = table.rows.length - table.getElementsByClassName('separator').length - 1 /* header */;
 
   // count number of features for each column/browser
   for (var i = 1, len = table.rows.length; i < len; i++) {
-    for (var j = 3, jlen = table.rows[i].cells.length; j < jlen; j++) {
+    for (var j = 1, jlen = table.rows[i].cells.length; j < jlen; j++) {
+
+      if (j === 2) continue;
+
       if (typeof numFeaturesPerColumn[j] === 'undefined') {
         numFeaturesPerColumn[j] = 0;
       }
@@ -197,8 +201,19 @@ domready(function() {
   // store number of features for each column/browser and numeric index
   for (var i = 0, len = table.rows.length; i < len; i++) {
     for (var j = 0, jlen = table.rows[i].cells.length; j < jlen; j++) {
-      table.rows[i].cells[j].setAttribute('data-features', numFeaturesPerColumn[j]);
-      table.rows[i].cells[j].setAttribute('data-num', j);
+      var num = numFeaturesPerColumn[j];
+      var cell = table.rows[i].cells[j];
+
+      cell.setAttribute('data-features', num);
+      cell.setAttribute('data-num', j);
+
+      if (cell.tagName.toLowerCase() === 'th' && typeof num === 'number') {
+        cell.innerHTML += (
+          ' <sup class="num-features" title="Number of implemented features"><b>' +
+            num +
+            '</b>/' +
+            totalResultsInColum + '</sup>');
+      }
     }
   }
 

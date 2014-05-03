@@ -144,7 +144,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit rev. 163695',
+    full: 'WebKit r167733',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -748,10 +748,10 @@ exports.tests = [
 },
 {
   name: 'Array comprehensions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-comprehension',
   exec: function () {
     try {
-      eval('[a * a for (a of [1, 2, 3])][0] === 1');
+      eval('[for (a of [1, 2, 3]) a * a][0] === 1');
       return true;
     } catch (e) {
       return false;
@@ -797,10 +797,10 @@ exports.tests = [
 },
 {
   name: 'Generator comprehensions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generator_expressions',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-comprehensions',
   exec: function () {
     try {
-      eval('(a for (a of [1, 2, 3]))');
+      eval('(for (a of [1, 2, 3]) a * a)');
       return true;
     } catch (e) {
       return false;
@@ -1045,6 +1045,54 @@ exports.tests = [
     firefox29: true,
     firefox30: true,
     firefox31: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'RegExp "u" flag',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.unicode',
+  exec: function() {
+    try {
+      return eval('"𠮷".match(/./u)[0].length === 2');
+    }
+    catch(err) {
+      return false;
+    }
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox27: false,
+    firefox28: false,
+    firefox29: false,
+    firefox30: false,
+    firefox31: false,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
@@ -1484,7 +1532,7 @@ exports.tests = [
     firefox25: false,
     firefox27: false,
     firefox28: false,
-    firefox29: false,
+    firefox29: true,
     firefox30: true,
     firefox31: true,
     chrome: false,
@@ -2381,7 +2429,7 @@ exports.tests = [
     firefox28: false,
     firefox29: false,
     firefox30: false,
-    firefox31: false,
+    firefox31: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
@@ -2392,7 +2440,7 @@ exports.tests = [
     safari51: false,
     safari6: false,
     safari7: false,
-    webkit: false,
+    webkit: true,
     opera: false,
     opera15: false,
     konq49: false,
@@ -2448,7 +2496,7 @@ exports.tests = [
 },
 {
   name: 'Number.isInteger',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.isinteger',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger',
   exec: function () {
     return typeof Number.isInteger === 'function';
   },
@@ -2470,6 +2518,49 @@ exports.tests = [
     firefox29: true,
     firefox30: true,
     firefox31: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: true,
+    chrome35: true,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Number.isSafeInteger',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger',
+  exec: function () {
+    return typeof Number.isSafeInteger === 'function';
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox27: false,
+    firefox28: false,
+    firefox29: false,
+    firefox30: false,
+    firefox31: false,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
@@ -2579,7 +2670,137 @@ exports.tests = [
   }
 },
 {
+  name: 'Number.EPSILON',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon',
+  exec: function () {
+    return typeof Number.EPSILON === 'number';
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: true,
+    firefox27: true,
+    firefox28: true,
+    firefox29: true,
+    firefox30: true,
+    firefox31: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: true,
+    chrome35: true,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Number.MIN_SAFE_INTEGER',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer',
+  exec: function () {
+    return typeof Number.MIN_SAFE_INTEGER === 'number';
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox27: false,
+    firefox28: false,
+    firefox29: false,
+    firefox30: false,
+    firefox31: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: true,
+    chrome35: true,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Number.MAX_SAFE_INTEGER',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer',
+  exec: function () {
+    return typeof Number.MAX_SAFE_INTEGER === 'number';
+  },
+  res: {
+    tr: false,
+    ie10: false,
+    ie11: false,
+    firefox11: false,
+    firefox13: false,
+    firefox16: false,
+    firefox17: false,
+    firefox18: false,
+    firefox23: false,
+    firefox24: false,
+    firefox25: false,
+    firefox27: false,
+    firefox28: false,
+    firefox29: false,
+    firefox30: false,
+    firefox31: true,
+    chrome: false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: true,
+    chrome35: true,
+    safari51: false,
+    safari6: false,
+    safari7: false,
+    webkit: false,
+    opera: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Math.clz32',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32',
   exec: function () {
     return typeof Math.clz32 === 'function';
   },
@@ -2600,7 +2821,7 @@ exports.tests = [
     firefox28: false,
     firefox29: false,
     firefox30: false,
-    firefox31: false,
+    firefox31: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
@@ -3187,7 +3408,7 @@ exports.tests = [
     safari51: false,
     safari6: false,
     safari7: false,
-    webkit: false,
+    webkit: true,
     opera: false,
     opera15: false,
     konq49: false,
