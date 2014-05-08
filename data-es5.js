@@ -1,8 +1,8 @@
 // exports browsers and tests
 
 exports.name = 'ES5';
-exports.target_file = 'index.html';
-exports.skeleton_file = 'skeleton.html';
+exports.target_file = 'es5/index.html';
+exports.skeleton_file = 'es5/skeleton.html';
 
 exports.browsers = {
   ie7: {
