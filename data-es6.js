@@ -790,7 +790,7 @@ exports.tests = [
     }
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -837,7 +837,7 @@ exports.tests = [
     }
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -1488,7 +1488,7 @@ exports.tests = [
            typeof Promise.all === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
