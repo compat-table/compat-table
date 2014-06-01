@@ -242,12 +242,15 @@ domready(function() {
         var row = table.rows[i];
         var cells = [].slice.call(row.cells, 3);
         var sorted = cells.sort(comparator);
+        var scriptEl = row.getElementsByTagName('script')[0];
 
         var firstCell = row.cells[0];
         var secondCell = row.cells[1];
         var thirdCell = row.cells[2];
 
         row.innerHTML = '';
+
+        scriptEl && row.appendChild(scriptEl);
 
         row.appendChild(firstCell);
         row.appendChild(secondCell);
