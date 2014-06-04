@@ -148,6 +148,12 @@ exports.browsers = {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
     short: 'Phantom',
     obsolete: false
+  },
+
+  ejs: {
+    full: 'Echo JS',
+    short: 'EJS',
+    obsolete: false
   }
 };
 
@@ -190,7 +196,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -243,7 +250,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -284,7 +292,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -325,7 +334,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -366,7 +376,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -407,7 +418,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -448,7 +460,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -489,7 +502,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -530,7 +544,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -571,7 +586,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -612,7 +628,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -658,7 +675,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -699,7 +717,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   },
   separator: 'after'
 },
@@ -741,7 +760,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: false
   }
 },
 {
@@ -782,7 +802,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -823,7 +844,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -864,7 +886,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -909,7 +932,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: false
+    phantom: false,
+    ejs: true
   }
 },
 {
@@ -950,7 +974,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   },
   separator: 'after'
 },
@@ -992,7 +1017,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1033,7 +1059,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1074,7 +1101,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1115,7 +1143,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1156,7 +1185,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1197,7 +1227,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1238,7 +1269,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1279,7 +1311,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1320,7 +1353,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   },
   separator: 'after'
 },
@@ -1366,7 +1400,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1413,7 +1448,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   },
   separator: 'after'
 },
@@ -1457,7 +1493,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 },
 {
@@ -1506,7 +1543,8 @@ exports.tests = [
 
     besen: true,
     rhino: false,
-    phantom: true
+    phantom: true,
+    ejs: true
   },
   separator: 'after'
 },
@@ -1554,7 +1592,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: false
+    phantom: false,
+    ejs: true
   }
 },
 {
@@ -1602,7 +1641,8 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: true
+    phantom: true,
+    ejs: false
   }
 },
 {
@@ -1649,7 +1689,8 @@ exports.tests = [
 
     besen: true,
     rhino: false,
-    phantom: true
+    phantom: true,
+    ejs: true
   }
 }
 ];
