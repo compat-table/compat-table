@@ -2743,52 +2743,6 @@ exports.tests = [
   }
 },
 {
-  name: 'Number.toInteger',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.tointeger',
-  exec: function () {
-    return typeof Number.toInteger === 'function';
-  },
-  res: {
-    tr: false,
-    ejs: true,
-    ie10: false,
-    ie11: false,
-    firefox11: false,
-    firefox13: false,
-    firefox16: true,
-    firefox17: true,
-    firefox18: true,
-    firefox23: true,
-    firefox24: true,
-    firefox25: true,
-    firefox27: true,
-    firefox28: true,
-    firefox29: true,
-    firefox30: true,
-    firefox31: true,
-    firefox32: true,
-    chrome: false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari51: false,
-    safari6: false,
-    safari7: false,
-    webkit: false,
-    opera: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false
-  }
-},
-{
   name: 'Number.EPSILON',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon',
   exec: function () {
