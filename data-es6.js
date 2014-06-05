@@ -1715,6 +1715,7 @@ exports.tests = [
 },
 {
   name: 'Object.is',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.is',
   exec: function () {
     return typeof Object.is === 'function';
   },
