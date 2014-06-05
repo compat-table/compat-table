@@ -1623,7 +1623,7 @@ exports.tests = [
 },
 {
   name: 'Object.assign',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.1',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign',
   exec: function () {
     return typeof Object.assign === 'function';
   },
