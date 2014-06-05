@@ -1668,7 +1668,8 @@ exports.tests = [
   }
 },
 {
-  name: 'Object.getOwnPropertyDescriptors',
+  name: 'Object.getOwnPropertyDescriptors (proposed for <b>ES7</b>)',
+  link: 'https://gist.github.com/WebReflection/9353781',
   exec: function () {
     return typeof Object.getOwnPropertyDescriptors === 'function';
   },
