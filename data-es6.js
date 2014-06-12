@@ -1502,7 +1502,7 @@ exports.tests = [
     phantom: false,
     node: false,
     nodeharmony: true,
-    jsdc: false
+    jsdc: true
   }
 },
 {
