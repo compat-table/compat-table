@@ -15,6 +15,11 @@ exports.browsers = {
     short: 'EJS',
     obsolete: false // always up-to-date version
   },
+  jsdc: {
+    full: 'Javascript Downcast',
+    short: 'Jsdc',
+    obsolete: false // always up-to-date version
+  },
   ie10: {
     full: 'Internet Explorer',
     short: 'IE 10',
@@ -244,7 +249,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -294,7 +300,8 @@ exports.tests = [
     rhino17: false,
     phantom: true,
     node: true,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: true
   }
 },
 {
@@ -365,7 +372,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: true
   }
 },
 {
@@ -415,7 +423,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -465,7 +474,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -515,7 +525,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -565,7 +576,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -623,7 +635,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -675,7 +688,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -726,7 +740,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -776,7 +791,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -827,7 +843,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -878,7 +895,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -928,7 +946,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1002,7 +1021,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: true
   }
 },
 {
@@ -1053,7 +1073,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -1107,7 +1128,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1158,7 +1180,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1211,7 +1234,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1264,7 +1288,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1318,7 +1343,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1371,7 +1397,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1422,7 +1449,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1473,7 +1501,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: true
   }
 },
 {
@@ -1525,7 +1554,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -1572,7 +1602,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1618,7 +1649,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1664,7 +1696,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: true,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1710,7 +1743,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1760,7 +1794,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1810,7 +1845,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -1856,7 +1892,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1902,7 +1939,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1948,7 +1986,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -1994,7 +2033,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2051,7 +2091,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2100,7 +2141,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: true
   }
 },
 {
@@ -2146,7 +2188,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2192,7 +2235,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2238,7 +2282,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2284,7 +2329,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2330,7 +2376,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2376,7 +2423,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: true,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2422,7 +2470,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2468,7 +2517,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2514,7 +2564,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: true,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2560,7 +2611,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2606,7 +2658,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2652,7 +2705,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2698,7 +2752,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2748,7 +2803,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2794,7 +2850,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -2840,7 +2897,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2886,7 +2944,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2932,7 +2991,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -2978,7 +3038,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3024,7 +3085,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3070,7 +3132,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3116,7 +3179,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3162,7 +3226,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3208,7 +3273,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3254,7 +3320,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3300,7 +3367,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3346,7 +3414,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -3396,7 +3465,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3441,7 +3511,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   },
   separator: 'after'
 },
@@ -3488,7 +3559,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 },
 {
@@ -3533,7 +3605,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    jsdc: false
   }
 },
 {
@@ -3579,7 +3652,8 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    jsdc: false
   }
 }
 ];
