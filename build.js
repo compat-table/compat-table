@@ -26,6 +26,7 @@ var fs = require('fs');
 process.nextTick(function () {
   handle(require('./data-es5'));
   handle(require('./data-es6'));
+  handle(require('./data-es7'));
   handle(require('./data-non-standard'));
 });
 
