@@ -1,0 +1,192 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECMAScript compatibility table</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../master.css" type="text/css">
+    <script src="../ready.js"></script>
+    <script src="../master.js"></script>
+    <script>
+      var __yield_script_executed, __let_script_executed;
+      if (typeof global === 'undefined') {
+        var global = this;
+      }
+    </script>
+</head>
+<body class="es7">
+  <div id="header">
+    <h1>
+      <a href="http://kangax.github.com/compat-table/es7" style="float:left">
+        <span title="ECMA-262">ECMAScript</span> 7 compatibility table
+      </a>
+
+      <p class="also-see">
+        Also see compatibility tables for
+        <a href="../es5"><strong>ES5</strong></a> or
+        <a href="../es6"><strong>ES6</strong></a>
+        features
+      </p>
+
+      <span style="font-size:0.8em;float:right;font-weight:normal;">
+        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.com/compat-table/non-standard"></a>
+        <noscript>
+          <a href="https://flattr.com/thing/138679/ECMAScript-5-compatibility-table-non-standard-extensions" target="_blank">
+            <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0">
+          </a>
+        </noscript>
+        <script async="" src="http://www.google-analytics.com/ga.js"></script>
+        <script>
+          (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.async = true;
+            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+          })();
+        </script>
+        <span style="position:relative;top:-6px">
+          by <a href="http://twitter.com/kangax" style="color:#eee">kangax</a>
+        </span>
+      </span>
+    </h1>
+  </div>
+  <div id="body">
+    <p class="warning">Current proposal, subject to change</p>
+
+    <label for="show-obsolete">Show obsolete browsers?</label>
+    <input id="show-obsolete" type="checkbox">
+
+    <label for="sort">Sort by number of features?</label>
+    <input id="sort" type="checkbox">
+
+    <table id="table-wrapper">
+      <colgroup>
+        <col>
+        <col class="this-browser-col">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="test-name">Feature name</th>
+          <th class="current">Current browser</th>
+          <th></th>
+          <th class="tr"><a href="#tr" class="browser-name"><abbr title="Traceur compiler">Traceur</abbr></th>
+          <th class="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">EJS</abbr></th>
+          <th class="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></th>
+          <th class="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></th>
+          <th class="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></th>
+          <th class="chrome obsolete"><a href="#chrome" class="browser-name"><abbr title="Chrome">CH &lt;19</abbr></th>
+          <th class="chrome19dev obsolete"><a href="#chrome19dev" class="browser-name"><abbr title="Chrome">CH 19</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome21dev obsolete"><a href="#chrome21dev" class="browser-name"><abbr title="Chrome">CH 21-29</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome">CH 30</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome33"><a href="#chrome33" class="browser-name"><abbr title="Chrome">CH 33</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome34"><a href="#chrome34" class="browser-name"><abbr title="Chrome">CH 34</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome35"><a href="#chrome35" class="browser-name"><abbr title="Chrome">CH 35</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="chrome37"><a href="#chrome37" class="browser-name"><abbr title="Chrome">CH 37</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
+          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r168571">WK</abbr></th>
+          <th class="opera15"><a href="#opera15" class="browser-name"><abbr title="Opera 15.0">OP 15</abbr></th>
+          <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
+          <th class="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></th>
+          <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
+          <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
+          <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.11 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="Typed_Objects"><span><a class="anchor" href="#Typed_Objects">&sect;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects</a></span></td>
+<script>
+test(typeof StructType !== 'undefined');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Object.observe"><span><a class="anchor" href="#Object.observe">&sect;</a>Object.observe</span></td>
+<script>
+test(typeof Object.observe === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&sect;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span></td>
+<script>
+test(typeof Object.getOwnPropertyDescriptors === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="footnotes">
+      <p id="experimental-flag-note">
+        <sup>[1]</sup> Have to be enabled via "Experimental Javascript features" flag
+      </p>
+      <p id="harmony-flag-note">
+        <sup>[2]</sup> Have to be enabled via --harmony flag
+      </p>
+    </div>
+  </div>
+  <pre class="info-tooltip" style="display:none"></pre>
+</body>
+</html>
