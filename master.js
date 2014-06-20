@@ -252,9 +252,9 @@ domready(function() {
 
         scriptEl && row.appendChild(scriptEl);
 
-        row.appendChild(firstCell);
-        row.appendChild(secondCell);
-        row.appendChild(thirdCell);
+        firstCell && row.appendChild(firstCell);
+        secondCell && row.appendChild(secondCell);
+        thirdCell && row.appendChild(thirdCell);
 
         for (var j = 0, jlen = sorted.length; j < jlen; j++) {
           row.appendChild(sorted[j]);
