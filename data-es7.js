@@ -28,25 +28,6 @@ exports.browsers = {
     full: 'Firefox',
     short: 'FF 32'
   },
-  chrome: {
-    full: 'Chrome',
-    short: 'CH &lt;19',
-    obsolete: true
-  },
-  chrome19dev: {
-    full: 'Chrome',
-    short: 'CH 19',
-    obsolete: true,
-    note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
-  },
-  chrome21dev: {
-    full: 'Chrome',
-    short: 'CH 21-29',
-    obsolete: true,
-    note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
-  },
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
@@ -137,9 +118,6 @@ exports.tests = [
     firefox30: false,
     firefox31: false,
     firefox32: false,
-    chrome: false,
-    chrome19dev: false,
-    chrome21dev: false,
     chrome30: false,
     chrome33: false,
     chrome34: false,
@@ -166,9 +144,6 @@ exports.tests = [
     ie11: false,
     firefox31: false,
     firefox32: false,
-    chrome: false,
-    chrome19dev: false,
-    chrome21dev: false,
     chrome30: false,
     chrome33: true,
     chrome34: true,
@@ -196,9 +171,6 @@ exports.tests = [
     ie11: false,
     firefox31: false,
     firefox32: false,
-    chrome: false,
-    chrome19dev: false,
-    chrome21dev: false,
     chrome30: false,
     chrome33: false,
     chrome34: false,
