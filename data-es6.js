@@ -2067,7 +2067,7 @@ exports.tests = [
     firefox30: false,
     firefox31: false,
     firefox32: false,
-    firefox33: false,
+    firefox33: true,
     chrome: false,
     chrome19dev: false,
     chrome21dev: false,
