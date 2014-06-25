@@ -63,19 +63,22 @@ exports.browsers = {
   firefox25: {
     full: 'Firefox',
     short: 'FF 25',
-    obsolete: false // current version
+    obsolete: true
   },
   firefox27: {
     full: 'Firefox',
-    short: 'FF 27-28'
+    short: 'FF 27-28',
+    obsolete: true
   },
   firefox29: {
     full: 'Firefox',
-    short: 'FF 29'
+    short: 'FF 29',
+    obsolete: true
   },
   firefox30: {
     full: 'Firefox',
-    short: 'FF 30'
+    short: 'FF 30',
+    obsolete: false // current version
   },
   firefox31: {
     full: 'Firefox',
