@@ -246,7 +246,7 @@ exports.tests = [
     webkit:      false,
     opera:       false,
     opera15:     false,
-    konq49:      false,
+    konq49:      true,
     rhino17:     false,
     phantom:     false,
     node:        false,
@@ -1711,8 +1711,7 @@ exports.tests = [
   exec: function () {
     'use strict';
     try {
-      eval('var [a,b] = [5,6], {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
-      return true;
+      return eval('var [a,b] = [5,6], {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
     } catch (e) {
       return false;
     }
@@ -1748,7 +1747,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      true,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
@@ -1931,8 +1930,8 @@ exports.tests = [
     chrome21dev: false,
     chrome30:    false,
     chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
+    chrome34:    false,
+    chrome35:    false,
     chrome37:    true,
     safari51:    false,
     safari6:     false,
@@ -2012,10 +2011,10 @@ exports.tests = [
     ejs:         false,
     ie10:        false,
     ie11:        true,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
     firefox18:   true,
     firefox23:   true,
     firefox24:   true,
@@ -2028,8 +2027,8 @@ exports.tests = [
     firefox32:   true,
     firefox33:   true,
     chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
+    chrome19dev: false,
+    chrome21dev: false,
     chrome30:    true,
     chrome33:    true,
     chrome34:    true,
