@@ -78,7 +78,6 @@ exports.browsers = {
   firefox30: {
     full: 'Firefox',
     short: 'FF 30',
-    obsolete: false // current version
   },
   firefox31: {
     full: 'Firefox',
@@ -203,6 +202,58 @@ exports.browsers = {
 };
 
 exports.tests = [
+{
+  name: 'proper tail calls (tail call optimisation)',
+  link: 'http://bbenvie.com/articles/2013-01-06/JavaScript-ES6-Has-Tail-Call-Optimization',
+  exec: function() {
+    try {
+      (function f(n){ return n > 0 ? f(n - 1) : 0;}(50000));
+    } catch (e) {
+      return false;
+    }
+    return true;
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
 {
   name: 'arrow functions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
