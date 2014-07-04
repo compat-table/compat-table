@@ -204,7 +204,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'proper tail calls (tail call optimisation)',
-  link: 'http://bbenvie.com/articles/2013-01-06/JavaScript-ES6-Has-Tail-Call-Optimization',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:proper_tail_calls',
   exec: function() {
     try {
       return (function f(n){ return n > 0 ? f(n - 1) : true;}(50000));
@@ -2374,6 +2374,7 @@ exports.tests = [
 },
 {
   name: 'Unicode code point escapes',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals'
   exec: function () {
     try {
       return eval("'\\u{1d306}' == '\\ud834\\udf06'");
@@ -3094,7 +3095,7 @@ exports.tests = [
 },
 {
   name: 'Number.isFinite',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.isfinite',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
   exec: function () {
     return typeof Number.isFinite === 'function';
   },
@@ -3235,7 +3236,7 @@ exports.tests = [
 },
 {
   name: 'Number.isNaN',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan',
   exec: function () {
     return typeof Number.isNaN === 'function';
   },
@@ -3521,7 +3522,7 @@ exports.tests = [
 },
 {
   name: 'Math.sign',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign',
   exec: function () {
     return typeof Math.sign === 'function';
   },
@@ -3568,7 +3569,7 @@ exports.tests = [
 },
 {
   name: 'Math.log10',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10',
   exec: function () {
     return typeof Math.log10 === 'function';
   },
@@ -3615,7 +3616,7 @@ exports.tests = [
 },
 {
   name: 'Math.log2',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2',
   exec: function () {
     return typeof Math.log2 === 'function';
   },
@@ -3662,7 +3663,7 @@ exports.tests = [
 },
 {
   name: 'Math.log1p',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p',
   exec: function () {
     return typeof Math.log1p === 'function';
   },
@@ -3709,7 +3710,7 @@ exports.tests = [
 },
 {
   name: 'Math.expm1',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1',
   exec: function () {
     return typeof Math.expm1 === 'function';
   },
@@ -3756,7 +3757,7 @@ exports.tests = [
 },
 {
   name: 'Math.cosh',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh',
   exec: function () {
     return typeof Math.cosh === 'function';
   },
@@ -3803,7 +3804,7 @@ exports.tests = [
 },
 {
   name: 'Math.sinh',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh',
   exec: function () {
     return typeof Math.sinh === 'function';
   },
@@ -3850,7 +3851,7 @@ exports.tests = [
 },
 {
   name: 'Math.tanh',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh',
   exec: function () {
     return typeof Math.tanh === 'function';
   },
@@ -3897,7 +3898,7 @@ exports.tests = [
 },
 {
   name: 'Math.acosh',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh',
   exec: function () {
     return typeof Math.acosh === 'function';
   },
@@ -3944,7 +3945,7 @@ exports.tests = [
 },
 {
   name: 'Math.asinh',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh',
   exec: function () {
     return typeof Math.asinh === 'function';
   },
@@ -3991,7 +3992,7 @@ exports.tests = [
 },
 {
   name: 'Math.atanh',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh',
   exec: function () {
     return typeof Math.atanh === 'function';
   },
@@ -4038,7 +4039,7 @@ exports.tests = [
 },
 {
   name: 'Math.hypot',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot',
   exec: function () {
     return typeof Math.hypot === 'function';
   },
@@ -4085,7 +4086,7 @@ exports.tests = [
 },
 {
   name: 'Math.trunc',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc',
   exec: function () {
     return typeof Math.trunc === 'function';
   },
@@ -4132,7 +4133,7 @@ exports.tests = [
 },
 {
   name: 'Math.fround',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround',
   exec: function () {
     return typeof Math.fround === 'function';
   },
