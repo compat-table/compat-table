@@ -207,11 +207,10 @@ exports.tests = [
   link: 'http://bbenvie.com/articles/2013-01-06/JavaScript-ES6-Has-Tail-Call-Optimization',
   exec: function() {
     try {
-      (function f(n){ return n > 0 ? f(n - 1) : 0;}(50000));
+      return (function f(n){ return n > 0 ? f(n - 1) : true;}(50000));
     } catch (e) {
       return false;
     }
-    return true;
   },
   res: {
     tr:          false,
@@ -839,6 +838,58 @@ exports.tests = [
     phantom:     false,
     node:        false,
     nodeharmony: false
+  }
+},
+{
+  name: '__proto__ in object literals',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
+  exec: function() {
+    try {
+      return eval("({ __proto__ : [] }) instanceof Array");
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        true,
+    firefox11:   true,
+    firefox13:   true,
+    firefox16:   true,
+    firefox17:   true,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    chrome:      true,
+    chrome19dev: true,
+    chrome21dev: true,
+    chrome30:    true,
+    chrome33:    true,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    true,
+    safari6:     true,
+    safari7:     true,
+    webkit:      true,
+    opera:       true,
+    opera15:     true,
+    konq49:      true,
+    rhino17:     true,
+    phantom:     true,
+    node:        true,
+    nodeharmony: true
   }
 },
 {
@@ -1850,6 +1901,53 @@ exports.tests = [
   }
 },
 {
+  name: 'Object.getOwnPropertySymbols',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.getownpropertysymbols',
+  exec: function () {
+    return typeof Object.getOwnPropertySymbols === 'function';
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Object.setPrototypeOf',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.19',
   exec: function () {
@@ -1883,6 +1981,154 @@ exports.tests = [
     chrome34:    true,
     chrome35:    true,
     chrome37:    true,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Object.prototype.__proto__',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
+  exec: function () {
+    var a = {},
+        desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+    return desc
+        && "get" in desc
+        && "set" in desc
+        && desc.configurable
+        && !desc.enumerable
+        && Object.create(a).__proto__ === a;
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        true,
+    firefox11:   true,
+    firefox13:   true,
+    firefox16:   true,
+    firefox17:   true,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    chrome:      true,
+    chrome19dev: true,
+    chrome21dev: true,
+    chrome30:    true,
+    chrome33:    true,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    true,
+    safari6:     true,
+    safari7:     true,
+    webkit:      true,
+    opera:       true,
+    opera15:     true,
+    konq49:      false,
+    rhino17:     true,
+    phantom:     true,
+    node:        false,
+    nodeharmony: true
+  }
+},
+{
+  name: 'Function.prototype.toMethod',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod',
+  exec: function f() {
+    return typeof f.toMethod === "function";
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'String.raw',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw',
+  exec: function () {
+    return typeof String.raw === 'function';
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2179,6 +2425,56 @@ exports.tests = [
   }
 },
 {
+  name: 'Unicode code point escapes',
+  exec: function () {
+    try {
+      return eval("'\\u{1d306}' == '\\ud834\\udf06'");
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Symbol',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
   exec: function() {
@@ -2234,56 +2530,6 @@ exports.tests = [
     phantom:     false,
     node:        false,
     nodeharmony: true
-  }
-},
-{
-  name: 'Unicode code point escapes',
-  exec: function () {
-    try {
-      return eval("'\\u{1d306}' == '\\ud834\\udf06'");
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      false,
-    opera:       false,
-    opera15:     false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false
   }
 },
 {
