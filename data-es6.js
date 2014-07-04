@@ -204,10 +204,10 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'proper tail calls (tail call optimisation)',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:proper_tail_calls',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
   exec: function() {
     try {
-      return (function f(n){ return n > 0 ? f(n - 1) : true;}(50000));
+      return (function f(n){ "use strict"; if (n <= 0) return true; return f(n - 1);}(5e12));
     } catch (e) {
       return false;
     }
@@ -223,15 +223,15 @@ exports.tests = [
     firefox17:   false,
     firefox18:   false,
     firefox23:   false,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
@@ -246,7 +246,7 @@ exports.tests = [
     webkit:      false,
     opera:       false,
     opera15:     false,
-    konq49:      true,
+    konq49:      false,
     rhino17:     false,
     phantom:     false,
     node:        false,
@@ -2374,7 +2374,7 @@ exports.tests = [
 },
 {
   name: 'Unicode code point escapes',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals'
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
   exec: function () {
     try {
       return eval("'\\u{1d306}' == '\\ud834\\udf06'");
