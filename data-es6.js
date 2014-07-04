@@ -638,15 +638,7 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
   exec: function () {
     try {
-      return eval('class C{ constructor() { this.own = true; } } (new C()).own;');
-      /*
-      class C{
-        constructor() {
-          this.own = true;
-        }
-      }
-      (new C()).own; // true
-      */
+      return eval('class C extends Array { constructor() { this.b = true; } a(){} static a(){} } return C.a && new C().a && new C().b');
     } catch (e) {
       return false;
     }
@@ -746,7 +738,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Modules',
+  name: 'modules',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:modules',
   exec: function () {
     try {
