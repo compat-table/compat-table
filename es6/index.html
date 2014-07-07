@@ -98,7 +98,7 @@
           <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
           <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
           <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
-          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r168571">WK</abbr></th>
+          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r170754">WK</abbr></th>
           <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12">OP 12</abbr></th>
           <th class="opera15"><a href="#opera15" class="browser-name"><abbr title="Opera 15.0">OP 15</abbr></th>
           <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
@@ -1523,7 +1523,7 @@ test(function () {
 test(function () {
   'use strict';
   try {
-    return eval('var [a,b] = [5,6], {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
+    return eval('var [a,b] = [5,6]; var {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
   } catch (e) {
     return false;
   }
@@ -1559,7 +1559,7 @@ test(function () {
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="no webkit">No</td>
+          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[3]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no opera15">No</td>
           <td class="no konq49">No</td>
@@ -3298,7 +3298,7 @@ test(typeof Math.imul === 'function');
           <td class="yes firefox33">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[3]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[4]</sup></a></td>
           <td class="yes chrome30">Yes</td>
           <td class="yes chrome33">Yes</td>
           <td class="yes chrome34">Yes</td>
@@ -3906,7 +3906,7 @@ test(typeof Math.fround === 'function');
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[4]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[5]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -3988,11 +3988,14 @@ test(typeof Math.cbrt === 'function');
       <p id="harmony-flag-note">
         <sup>[2]</sup> Have to be enabled via --harmony flag
       </p>
+      <p id="fx-destructuring-note">
+        <sup>[3]</sup> As of r170754, WebKit fails to support multiple destructurings in a single var statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+      </p>
       <p id="chromu-imul-note">
-        <sup>[3]</sup> Available since Chrome 28
+        <sup>[4]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[4]</sup> Available since Firefox 26
+        <sup>[5]</sup> Available since Firefox 26
       </p>
     </div>
   </div>

@@ -161,7 +161,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r168571',
+    full: 'WebKit r170754',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -1661,7 +1661,7 @@ exports.tests = [
   exec: function () {
     'use strict';
     try {
-      return eval('var [a,b] = [5,6], {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
+      return eval('var [a,b] = [5,6]; var {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
     } catch (e) {
       return false;
     }
@@ -1697,7 +1697,11 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      false,
+    webkit: {
+      val: true,
+      note_id: 'fx-destructuring',
+      note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single var statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+    },
     opera:       false,
     opera15:     false,
     konq49:      false,
