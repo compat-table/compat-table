@@ -2954,6 +2954,53 @@ exports.tests = [
   }
 },
 {
+  name: 'Array.prototype.copyWithin',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.copywithin',
+  exec: function () {
+    return typeof Array.prototype.copyWithin === 'function';
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   true,
+    firefox33:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Array.prototype.find',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.find',
   exec: function () {
