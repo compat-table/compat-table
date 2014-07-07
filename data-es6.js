@@ -2406,7 +2406,7 @@ exports.tests = [
     return typeof Number.isFinite === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2449,7 +2449,7 @@ exports.tests = [
     return typeof Number.isInteger === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2492,7 +2492,7 @@ exports.tests = [
     return typeof Number.isSafeInteger === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2535,7 +2535,7 @@ exports.tests = [
     return typeof Number.isNaN === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2578,7 +2578,7 @@ exports.tests = [
     return typeof Number.toInteger === 'function';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2621,7 +2621,7 @@ exports.tests = [
     return typeof Number.EPSILON === 'number';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2664,7 +2664,7 @@ exports.tests = [
     return typeof Number.MIN_SAFE_INTEGER === 'number';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
@@ -2707,7 +2707,7 @@ exports.tests = [
     return typeof Number.MAX_SAFE_INTEGER === 'number';
   },
   res: {
-    tr: false,
+    tr: true,
     ie10: false,
     ie11: false,
     firefox11: false,
