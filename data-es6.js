@@ -208,7 +208,7 @@ exports.tests = [
   exec: function() {
     "use strict";
     try {
-      return (function f(n){ if (n <= 0) return true; return f(n - 1);}(5e12));
+      return (function f(n){ if (n <= 0) return true; return f(n - 1);}(1e6));
     } catch (e) {
       return false;
     }
