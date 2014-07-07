@@ -206,8 +206,9 @@ exports.tests = [
   name: 'proper tail calls (tail call optimisation)',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
   exec: function() {
+    "use strict";
     try {
-      return (function f(n){ "use strict"; if (n <= 0) return true; return f(n - 1);}(5e12));
+      return (function f(n){ if (n <= 0) return true; return f(n - 1);}(5e12));
     } catch (e) {
       return false;
     }
@@ -1335,7 +1336,7 @@ exports.tests = [
 },
 {
   name: 'Map',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   exec: function () {
     try {
       var map = new Map();
@@ -1389,7 +1390,7 @@ exports.tests = [
 },
 {
   name: 'Set',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
   exec: function () {
     try {
       var set = new Set();
@@ -1443,7 +1444,7 @@ exports.tests = [
 },
 {
   name: 'WeakMap',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
   exec: function () {
     try {
       var weakMap = new WeakMap();
@@ -1708,7 +1709,7 @@ exports.tests = [
 },
 {
   name: 'Promise',
-  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:promises',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
   exec: function () {
     return typeof Promise !== 'undefined' &&
            typeof Promise.all === 'function';
@@ -1897,7 +1898,7 @@ exports.tests = [
 },
 {
   name: 'Object.setPrototypeOf',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.19',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof',
   exec: function () {
     return typeof Object.setPrototypeOf === 'function';
   },
@@ -2092,7 +2093,7 @@ exports.tests = [
 },
 {
   name: 'String.fromCodePoint',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint',
   exec: function () {
     return typeof String.fromCodePoint === 'function';
   },
@@ -2139,7 +2140,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.codePointAt',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat',
   exec: function () {
     return typeof String.prototype.codePointAt === 'function';
   },
@@ -2186,7 +2187,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.repeat',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat',
   exec: function () {
     return typeof String.prototype.repeat === 'function';
   },
@@ -2233,7 +2234,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.startsWith',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith',
   exec: function () {
     return typeof String.prototype.startsWith === 'function';
   },
@@ -2280,7 +2281,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.endsWith',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith',
   exec: function () {
     return typeof String.prototype.endsWith === 'function';
   },
@@ -2327,7 +2328,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.contains',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:string_extras',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains',
   exec: function () {
     return typeof String.prototype.contains === 'function';
   },
@@ -2860,7 +2861,7 @@ exports.tests = [
 },
 {
   name: 'Array.from',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.2.1',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from',
   exec: function () {
     return typeof Array.from === 'function';
   },
@@ -2907,7 +2908,7 @@ exports.tests = [
 },
 {
   name: 'Array.of',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.2.3',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.of',
   exec: function () {
     return typeof Array.of === 'function';
   },
@@ -2954,7 +2955,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.find',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.8',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.find',
   exec: function () {
     return typeof Array.prototype.find === 'function';
   },
@@ -3001,7 +3002,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.findIndex',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.9',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.findindex',
   exec: function () {
     return typeof Array.prototype.findIndex === 'function';
   },
@@ -3048,7 +3049,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.fill',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.6',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.fill',
   exec: function () {
     return typeof Array.prototype.fill === 'function';
   },
@@ -3471,7 +3472,7 @@ exports.tests = [
 },
 {
   name: 'Math.imul',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.8.2.33',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul',
   exec: function () {
     return typeof Math.imul === 'function';
   },
@@ -4184,6 +4185,7 @@ exports.tests = [
 },
 {
   name: 'Math.cbrt',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt',
   exec: function () {
     return typeof Math.cbrt === 'function';
   },
