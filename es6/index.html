@@ -2197,6 +2197,59 @@ test(typeof String.prototype.contains === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
+          <td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
+<script>
+test(function () {
+  var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
+    "italics", "link", "small", "strike", "sub", "sup"];
+  for (i = 0; i < names.length; i++) {
+    if (typeof String.prototype[names[i]] !== 'function') {
+      return false;
+    }
+  }
+  return true;
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes firefox11 obsolete">Yes</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="yes opera15">Yes</td>
+          <td class="yes konq49">Yes</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
           <td id="Unicode_code_point_escapes"><span><a class="anchor" href="#Unicode_code_point_escapes">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals">Unicode code point escapes</a></span></td>
 <script>
 test(function () {
