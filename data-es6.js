@@ -638,7 +638,7 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
   exec: function () {
     try {
-      return eval('class C extends Array { constructor() { this.b = true; } a(){} static a(){} } return C.a && new C().a && new C().b');
+      return eval('class C extends Array { constructor() { this.b = true; } a(){} static a(){} } C.a && new C().a && new C().b');
     } catch (e) {
       return false;
     }
