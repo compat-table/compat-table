@@ -3156,6 +3156,53 @@ exports.tests = [
   }
 },
 {
+  name: 'RegExp.prototype.compile',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
+  exec: function () {
+    return typeof RegExp.prototype.compile === 'function';
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        true,
+    ie11:        true,
+    firefox11:   true,
+    firefox13:   true,
+    firefox16:   true,
+    firefox17:   true,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    chrome:      true,
+    chrome19dev: true,
+    chrome21dev: true,
+    chrome30:    true,
+    chrome33:    true,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    true,
+    safari6:     true,
+    safari7:     true,
+    webkit:      true,
+    opera:       true,
+    opera15:     true,
+    konq49:      true,
+    rhino17:     true,
+    phantom:     true,
+    node:        true,
+    nodeharmony: true
+  }
+},
+{
   name: 'Array.from',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from',
   exec: function () {
