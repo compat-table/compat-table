@@ -1700,7 +1700,7 @@ exports.tests = [
     webkit: {
       val: true,
       note_id: 'fx-destructuring',
-      note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single var statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+      note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single "var" or "let" statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
     },
     opera:       false,
     opera15:     false,
@@ -2491,7 +2491,13 @@ exports.tests = [
   name: 'Symbol.create',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.create === "symbol";
+    if (Symbol && typeof Symbol.create === "symbol") {
+      var a = 2, b = function(){};
+      b[Symbol.create] = function() { a = 4; return {};};
+      new b();
+      return a === 4;
+    }
+    return false;
   },
   res: {
     tr:          false,
@@ -2519,8 +2525,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2538,7 +2544,13 @@ exports.tests = [
   name: 'Symbol.hasInstance',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.hasInstance === "symbol";
+    if (Symbol && typeof Symbol.hasInstance === "symbol") {
+      var a = 2, b = function(){};
+      b[Symbol.hasInstance] = function() { a = 4; return false; };
+      ({}) instanceof b;
+      return a === 4;
+    }
+    return false;
   },
   res: {
     tr:          false,
@@ -2566,8 +2578,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2585,7 +2597,13 @@ exports.tests = [
   name: 'Symbol.isConcatSpreadable',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.isConcatSpreadable === "symbol";
+    if (Symbol && typeof Symbol.isConcatSpreadable === "symbol") {
+      var a = [], b = [];
+      b[Symbol.isConcatSpreadable] = false;
+      a = a.concat(b);
+      return a[0] === b;
+    }
+    return false;
   },
   res: {
     tr:          false,
@@ -2613,8 +2631,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2632,7 +2650,7 @@ exports.tests = [
   name: 'Symbol.isRegExp',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.isRegExp === "symbol";
+    return Symbol && typeof Symbol.isRegExp === "symbol" && RegExp.prototype[Symbol.isRegExp] === true;
   },
   res: {
     tr:          false,
@@ -2660,8 +2678,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2679,7 +2697,20 @@ exports.tests = [
   name: 'Symbol.iterator',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.isRegExp === "symbol";
+    try {
+      var a = 1, b = {};
+      b[Symbol.iterator] = function() {
+        return {
+          next: function() {
+            return { value: "foo", done: true };
+          }
+        };
+      };
+      return Function("for (var c of b) { return c === 'foo'; } return false;")();
+    }
+    catch(e) {
+      return false;
+    }
   },
   res: {
     tr:          false,
@@ -2707,8 +2738,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2726,7 +2757,12 @@ exports.tests = [
   name: 'Symbol.toPrimitive',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.toPrimitive === "symbol";
+    if (Symbol && typeof Symbol.toPrimitive === "symbol") {
+      var a = {};
+      a[Symbol.toPrimitive] = function() { return 7; };
+      return a == 7;
+    }
+    return false;
   },
   res: {
     tr:          false,
@@ -2773,7 +2809,12 @@ exports.tests = [
   name: 'Symbol.toStringTag',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.toStringTag === "symbol";
+    if (Symbol && typeof Symbol.toStringTag === "symbol") {
+      var a = {};
+      a[Symbol.toStringTag] = "foo";
+      return (a + "") === "[object foo]";
+    }
+    return false;
   },
   res: {
     tr:          false,
@@ -2801,8 +2842,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -2820,7 +2861,14 @@ exports.tests = [
   name: 'Symbol.unscopables',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.unscopables === "symbol";
+    if (Symbol && typeof Symbol.unscopables === "symbol") {
+      var a = { foo: 1, bar: 2 };
+      a[Symbol.unscopables] = ["bar"];
+      with (a) {
+        return foo === 1 && typeof bar === "undefined";
+      }
+    }
+    return false;
   },
   res: {
     tr:          false,
@@ -2848,8 +2896,8 @@ exports.tests = [
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
