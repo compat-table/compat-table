@@ -843,6 +843,8 @@ exports.tests = [
 },
 {
   name: '__proto__ in object literals',
+  note_id: 'proto-in-object-literals',
+  note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
   exec: function() {
     try {
@@ -1700,7 +1702,7 @@ exports.tests = [
     webkit: {
       val: true,
       note_id: 'fx-destructuring',
-      note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single "var" or "let" statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+      note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
     },
     opera:       false,
     opera15:     false,

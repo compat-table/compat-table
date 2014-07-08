@@ -728,7 +728,7 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[3]</sup></a></span></td>
 <script>
 test(function () {
   try {
@@ -1559,7 +1559,7 @@ test(function () {
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[3]</sup></a></td>
+          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[4]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no opera15">No</td>
           <td class="no konq49">No</td>
@@ -3360,7 +3360,7 @@ test(typeof Math.imul === 'function');
           <td class="yes firefox33">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[4]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[5]</sup></a></td>
           <td class="yes chrome30">Yes</td>
           <td class="yes chrome33">Yes</td>
           <td class="yes chrome34">Yes</td>
@@ -3968,7 +3968,7 @@ test(typeof Math.fround === 'function');
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[6]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -4050,14 +4050,17 @@ test(typeof Math.cbrt === 'function');
       <p id="harmony-flag-note">
         <sup>[2]</sup> Have to be enabled via --harmony flag
       </p>
+      <p id="proto-in-object-literals-note">
+        <sup>[3]</sup> Note that this is distinct from the existence of <code>Object.prototype.__proto__</code>.
+      </p>
       <p id="fx-destructuring-note">
-        <sup>[3]</sup> As of r170754, WebKit fails to support multiple destructurings in a single "var" or "let" statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+        <sup>[4]</sup> As of r170754, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[4]</sup> Available since Chrome 28
+        <sup>[5]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[5]</sup> Available since Firefox 26
+        <sup>[6]</sup> Available since Firefox 26
       </p>
     </div>
   </div>
