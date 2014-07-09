@@ -1606,6 +1606,186 @@ exports.tests = [
   }
 },
 {
+  name: 'Reflect',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
+  exec: function () {
+    var i, names =
+      ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
+      "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
+    
+    if (typeof Reflect !== "object") {
+      return false;
+    }
+    for (i = 0; i < names.length; i++) {
+      if (!(names[i] in Reflect)) {
+        return false;
+      }
+    }
+    return true;
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Reflect.Realm',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-realm-objects',
+  exec: function () {
+    var i, names =
+      ["eval", "global", "intrinsics", "stdlib", "directEval",
+      "indirectEval", "initGlobal", "nonEval"];
+    
+    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+        || typeof Reflect.Realm.prototype !== "object") {
+      return false;
+    }
+    for (i = 0; i < names.length; i++) {
+      if (!(names[i] in Reflect.Realm.prototype)) {
+        return false;
+      }
+    }
+    return true;
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Reflect.Loader',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-loader-objects',
+  exec: function () {
+    var i, names =
+      ["define", "delete", "entries", "get", "global", "has", "import",
+      "keys", "load", "module", "newModule", "realm", "set", "values",
+      "normalize", "locate", "fetch", "translate", "instantiate"];
+    
+    if (typeof Reflect !== "object" || typeof Reflect.Loader !== "function"
+        || typeof Reflect.Loader.prototype !== "object") {
+      return false;
+    }
+    for (i = 0; i < names.length; i++) {
+      if (!(names[i] in Reflect.Loader.prototype)) {
+        return false;
+      }
+    }
+    return true;
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Block-level function declaration',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:block_functions',
   exec: function () {
