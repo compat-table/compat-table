@@ -853,11 +853,15 @@ exports.tests = [
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
   exec: function() {
+    var passed = { __proto__ : [] } instanceof Array;
+    // If computed properties are supported, the following
+    // check must also be passed.
+    var a = "__proto__";
     try {
-      return eval("({ __proto__ : [] }) instanceof Array");
+      return eval("passed && !({ [a] : [] } instanceof Array)");
     }
     catch(e) {
-      return false;
+      return passed;
     }
   },
   res: {

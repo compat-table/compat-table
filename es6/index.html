@@ -737,11 +737,15 @@ test(function () {
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[3]</sup></a></span></td>
 <script>
 test(function () {
+  var passed = { __proto__ : [] } instanceof Array;
+  // If computed properties are supported, the following
+  // check must also be passed.
+  var a = "__proto__";
   try {
-    return eval("({ __proto__ : [] }) instanceof Array");
+    return eval("passed && !({ [a] : [] } instanceof Array)");
   }
   catch(e) {
-    return false;
+    return passed;
   }
 }());
 </script>
