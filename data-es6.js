@@ -638,7 +638,13 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
   exec: function () {
     try {
-      return eval('class C extends Array { constructor() { this.b = true; } a(){} static a(){} } C.a && new C().a && new C().b');
+      return eval(
+         'class C extends Array {'
+        +'  constructor() { this.b = true; }'
+        +'  a(){}'
+        +'  static d(){}'
+        +'}'
+        +'C.d && new C().a && new C().b && new C() instanceof Array');
     } catch (e) {
       return false;
     }
@@ -767,7 +773,7 @@ exports.tests = [
     firefox30:   false,
     firefox31:   false,
     firefox32:   false,
-    firefox33:   false,
+    firefox33:   true,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
@@ -1843,7 +1849,14 @@ exports.tests = [
   exec: function () {
     'use strict';
     try {
-      return eval('var [a,b] = [5,6]; var {c,d} = {c:7,d:8}; a === 5 && b === 6 && c === 7 && d === 8;');
+      return eval(
+        // Array destructuring
+         'var [a, , [b]] = [5, null, [6]];'
+        // Object destructuring
+        +'var {c, x:d} = {c:7, x:8};'
+        // Combined destructuring
+        +'var [e, {x:f}] = [9, {x:10}];'
+        +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10');
     } catch (e) {
       return false;
     }
@@ -1884,6 +1897,171 @@ exports.tests = [
       note_id: 'fx-destructuring',
       note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
     },
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Destructuring parameters',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  exec: function () {
+    'use strict';
+    try {
+      return eval(
+         '(function({a, x:b}, [c, d]) {'
+        +'  return a === 1 && b === 2 && c === 3 && d === 4;'
+        +'}({a:1, x:2},[3, 4]))'
+      );
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   true,
+    firefox13:   true,
+    firefox16:   true,
+    firefox17:   true,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      true,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Destructuring defaults',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  exec: function () {
+    'use strict';
+    try {
+      return eval(
+         'var {a = 1, b = 1, c = 3} = {b:2, c:undefined};'
+        +'a === 1 && b === 2 && c === 3'
+      );
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Destructuring rest',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  exec: function () {
+    'use strict';
+    try {
+      return eval(
+        'var [a, ...b] = [3, 4, 5]; a === 3 && (b + "") === "4,5";'
+      );
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
@@ -2066,8 +2244,8 @@ exports.tests = [
     chrome21dev: false,
     chrome30:    false,
     chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
+    chrome34:    true,
+    chrome35:    true,
     chrome37:    true,
     safari51:    false,
     safari6:     false,
@@ -2721,6 +2899,60 @@ exports.tests = [
     phantom:     false,
     node:        false,
     nodeharmony: true
+  }
+},
+{
+  name: 'Global symbol registry',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
+  exec: function() {
+    try {
+      var symbol = Symbol('foo');
+      return Symbol.for('foo') === symbol &&
+             Symbol.keyFor(symbol) === 'foo';
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
   }
 },
 {
@@ -3804,6 +4036,56 @@ exports.tests = [
     safari6:     false,
     safari7:     false,
     webkit:      true,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Array.prototype[Symbol.unscopables]',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables',
+  exec: function () {
+    return Symbol && typeof Symbol.unscopables === "symbol"
+      && Array.prototype[Symbol.unscopables] instanceof Array
+      && Array.prototype[Symbol.unscopables] + ""
+        === "find,findIndex,fill,copyWithin,entries,keys,values";
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
