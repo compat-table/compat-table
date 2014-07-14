@@ -1851,12 +1851,13 @@ exports.tests = [
     try {
       return eval(
         // Array destructuring
-         'var [a, , [b]] = [5, null, [6]];'
+         'var [a, , [b], g] = [5, null, [6]];'
         // Object destructuring
-        +'var {c, x:d} = {c:7, x:8};'
+        +'var {c, x:d, h} = {c:7, x:8};'
         // Combined destructuring
-        +'var [e, {x:f}] = [9, {x:10}];'
-        +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10');
+        +'var [e, {x:f, i}] = [9, {x:10}];'
+        +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10 &&'
+        +'g === undefined && h === undefined && i === undefined');
     } catch (e) {
       return false;
     }
@@ -1895,7 +1896,7 @@ exports.tests = [
     webkit: {
       val: true,
       note_id: 'fx-destructuring',
-      note_html: 'As of r170754, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+      note_html: 'As of '+exports.browsers.webkit.full+', WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
     },
     opera:       false,
     opera15:     false,
@@ -2024,7 +2025,10 @@ exports.tests = [
     'use strict';
     try {
       return eval(
-        'var [a, ...b] = [3, 4, 5]; a === 3 && (b + "") === "4,5";'
+         'var [a, ...b] = [3, 4, 5];'
+        +'var [c, ...d] = [6];'
+        +'a === 3 && b instanceof Array && (b + "") === "4,5" && '
+        +'c === 6 && d instanceof Array && d.length === 0'
       );
     } catch (e) {
       return false;
@@ -2904,7 +2908,7 @@ exports.tests = [
 },
 {
   name: 'Global symbol registry',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
   exec: function() {
     try {
       var symbol = Symbol('foo');

@@ -1708,12 +1708,13 @@ test(function () {
   try {
     return eval(
       // Array destructuring
-       'var [a, , [b]] = [5, null, [6]];'
+       'var [a, , [b], g] = [5, null, [6]];'
       // Object destructuring
-      +'var {c, x:d} = {c:7, x:8};'
+      +'var {c, x:d, h} = {c:7, x:8};'
       // Combined destructuring
-      +'var [e, {x:f}] = [9, {x:10}];'
-      +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10');
+      +'var [e, {x:f, i}] = [9, {x:10}];'
+      +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10 &&'
+      +'g === undefined && h === undefined && i === undefined');
   } catch (e) {
     return false;
   }
@@ -1874,7 +1875,10 @@ test(function () {
   'use strict';
   try {
     return eval(
-      'var [a, ...b] = [3, 4, 5]; a === 3 && (b + "") === "4,5";'
+       'var [a, ...b] = [3, 4, 5];'
+      +'var [c, ...d] = [6];'
+      +'a === 3 && b instanceof Array && (b + "") === "4,5" && '
+      +'c === 6 && d instanceof Array && d.length === 0'
     );
   } catch (e) {
     return false;
@@ -2711,7 +2715,7 @@ test(function () {
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Global_symbol_registry"><span><a class="anchor" href="#Global_symbol_registry">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Global symbol registry</a></span></td>
+          <td id="Global_symbol_registry"><span><a class="anchor" href="#Global_symbol_registry">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for">Global symbol registry</a></span></td>
 <script>
 test(function () {
   try {
@@ -4912,7 +4916,7 @@ test(typeof Math.cbrt === 'function');
         <sup>[3]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
       <p id="fx-destructuring-note">
-        <sup>[4]</sup> As of r170754, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+        <sup>[4]</sup> As of WebKit r170830, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
       </p>
       <p id="fx-array-prototype-values-note">
         <sup>[5]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
