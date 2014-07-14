@@ -98,7 +98,7 @@
           <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
           <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
           <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
-          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r168571">WK</abbr></th>
+          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r170830">WK</abbr></th>
           <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12">OP 12</abbr></th>
           <th class="opera15"><a href="#opera15" class="browser-name"><abbr title="Opera 15.0">OP 15</abbr></th>
           <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
@@ -109,6 +109,57 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td id="proper_tail_calls_(tail_call_optimisation)"><span><a class="anchor" href="#proper_tail_calls_(tail_call_optimisation)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls">proper tail calls (tail call optimisation)</a></span></td>
+<script>
+test(function () {
+  "use strict";
+  try {
+    return (function f(n){ if (n <= 0) return true; return f(n - 1);}(1e6));
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
         <tr>
           <td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">arrow functions</a></span></td>
 <script>
@@ -477,15 +528,13 @@ test(function () {
 <script>
 test(function () {
   try {
-    return eval('class C{ constructor() { this.own = true; } } (new C()).own;');
-    /*
-    class C{
-      constructor() {
-        this.own = true;
-      }
-    }
-    (new C()).own; // true
-    */
+    return eval(
+       'class C extends Array {'
+      +'  constructor() { this.b = true; }'
+      +'  a(){}'
+      +'  static d(){}'
+      +'}'
+      +'C.d && new C().a && new C().b && new C() instanceof Array');
   } catch (e) {
     return false;
   }
@@ -583,7 +632,164 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Modules"><span><a class="anchor" href="#Modules">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:modules">Modules</a></span></td>
+          <td id="shorthand_properties"><span><a class="anchor" href="#shorthand_properties">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">shorthand properties</a></span></td>
+<script>
+test(function () {
+  try {
+    return eval("var a = 7, b = 8, c = {a,b}; c.a === 7 && c.b === 8");
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="shorthand_methods"><span><a class="anchor" href="#shorthand_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">shorthand methods</a></span></td>
+<script>
+test(function () {
+  try {
+    return eval("({ y() { return 2; } }).y() === 2");
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[3]</sup></a></span></td>
+<script>
+test(function () {
+  var passed = { __proto__ : [] } instanceof Array;
+  // If computed properties are supported, the following
+  // check must also be passed.
+  var a = "__proto__";
+  try {
+    return eval("passed && !({ [a] : [] } instanceof Array)");
+  }
+  catch(e) {
+    return passed;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes firefox11 obsolete">Yes</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="yes opera15">Yes</td>
+          <td class="yes konq49">Yes</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="modules"><span><a class="anchor" href="#modules">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:modules">modules</a></span></td>
 <script>
 test(function () {
   try {
@@ -761,56 +967,6 @@ test(function () {
           <td class="no firefox25 obsolete">No</td>
           <td class="no firefox27 obsolete">No</td>
           <td class="no firefox29 obsolete">No</td>
-          <td class="yes firefox30">Yes</td>
-          <td class="yes firefox31">Yes</td>
-          <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="no chrome obsolete">No</td>
-          <td class="no chrome19dev obsolete">No</td>
-          <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30">No</td>
-          <td class="no chrome33">No</td>
-          <td class="no chrome34">No</td>
-          <td class="no chrome35">No</td>
-          <td class="no chrome37">No</td>
-          <td class="no safari51 obsolete">No</td>
-          <td class="no safari6">No</td>
-          <td class="no safari7">No</td>
-          <td class="no webkit">No</td>
-          <td class="no opera">No</td>
-          <td class="no opera15">No</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
-          <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
-        </tr>
-        <tr>
-          <td id="Iterators"><span><a class="anchor" href="#Iterators">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:iterators">Iterators</a></span></td>
-<script>
-test(function () {
-  try {
-    return eval("(function(){ var it = Iterator({ key: 'v' }); for(var pair of it){return pair[0] === 'key' && pair[1] === 'v'}}())");
-  } catch (e) {
-    return false;
-  }
-}());
-</script>
-
-          <td class="yes tr">Yes</td>
-          <td class="no ejs">No</td>
-          <td class="no ie10">No</td>
-          <td class="no ie11">No</td>
-          <td class="no firefox11 obsolete">No</td>
-          <td class="yes firefox13 obsolete">Yes</td>
-          <td class="yes firefox16 obsolete">Yes</td>
-          <td class="yes firefox17 obsolete">Yes</td>
-          <td class="yes firefox18 obsolete">Yes</td>
-          <td class="yes firefox23 obsolete">Yes</td>
-          <td class="yes firefox24">Yes</td>
-          <td class="yes firefox25 obsolete">Yes</td>
-          <td class="yes firefox27 obsolete">Yes</td>
-          <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
@@ -1057,7 +1213,7 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Map"><span><a class="anchor" href="#Map">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets">Map</a></span></td>
+          <td id="Map"><span><a class="anchor" href="#Map">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects">Map</a></span></td>
 <script>
 test(function () {
   try {
@@ -1110,7 +1266,7 @@ test(function () {
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets">Set</a></span></td>
+          <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
 <script>
 test(function () {
   try {
@@ -1163,7 +1319,7 @@ test(function () {
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:weak_maps">WeakMap</a></span></td>
+          <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
 <script>
 test(function () {
   try {
@@ -1321,6 +1477,183 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
+          <td id="Reflect"><span><a class="anchor" href="#Reflect">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
+<script>
+test(function () {
+  var i, names =
+    ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
+    "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
+  
+  if (typeof Reflect !== "object") {
+    return false;
+  }
+  for (i = 0; i < names.length; i++) {
+    if (!(names[i] in Reflect)) {
+      return false;
+    }
+  }
+  return true;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-realm-objects">Reflect.Realm</a></span></td>
+<script>
+test(function () {
+  var i, names =
+    ["eval", "global", "intrinsics", "stdlib", "directEval",
+    "indirectEval", "initGlobal", "nonEval"];
+  
+  if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+      || typeof Reflect.Realm.prototype !== "object") {
+    return false;
+  }
+  for (i = 0; i < names.length; i++) {
+    if (!(names[i] in Reflect.Realm.prototype)) {
+      return false;
+    }
+  }
+  return true;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Reflect.Loader"><span><a class="anchor" href="#Reflect.Loader">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-loader-objects">Reflect.Loader</a></span></td>
+<script>
+test(function () {
+  var i, names =
+    ["define", "delete", "entries", "get", "global", "has", "import",
+    "keys", "load", "module", "newModule", "realm", "set", "values",
+    "normalize", "locate", "fetch", "translate", "instantiate"];
+  
+  if (typeof Reflect !== "object" || typeof Reflect.Loader !== "function"
+      || typeof Reflect.Loader.prototype !== "object") {
+    return false;
+  }
+  for (i = 0; i < names.length; i++) {
+    if (!(names[i] in Reflect.Loader.prototype)) {
+      return false;
+    }
+  }
+  return true;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
           <td id="Block-level_function_declaration"><span><a class="anchor" href="#Block-level_function_declaration">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:block_functions">Block-level function declaration</a></span></td>
 <script>
 test(function () {
@@ -1377,8 +1710,70 @@ test(function () {
 test(function () {
   'use strict';
   try {
-    eval('var [a] = [5];');
-    return true;
+    return eval(
+      // Array destructuring
+       'var [a, , [b], g] = [5, null, [6]];'
+      // Object destructuring
+      +'var {c, x:d, h} = {c:7, x:8};'
+      // Combined destructuring
+      +'var [e, {x:f, i}] = [9, {x:10}];'
+      +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10 &&'
+      +'g === undefined && h === undefined && i === undefined');
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes firefox11 obsolete">Yes</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[4]</sup></a></td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Destructuring_parameters"><span><a class="anchor" href="#Destructuring_parameters">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:destructuring">Destructuring parameters</a></span></td>
+<script>
+test(function () {
+  'use strict';
+  try {
+    return eval(
+       '(function({a, x:b}, [c, d]) {'
+      +'  return a === 1 && b === 2 && c === 3 && d === 4;'
+      +'}({a:1, x:2},[3, 4]))'
+    );
   } catch (e) {
     return false;
   }
@@ -1424,7 +1819,117 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:promises">Promise</a></span></td>
+          <td id="Destructuring_defaults"><span><a class="anchor" href="#Destructuring_defaults">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:destructuring">Destructuring defaults</a></span></td>
+<script>
+test(function () {
+  'use strict';
+  try {
+    return eval(
+       'var {a = 1, b = 1, c = 3} = {b:2, c:undefined};'
+      +'a === 1 && b === 2 && c === 3'
+    );
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Destructuring_rest"><span><a class="anchor" href="#Destructuring_rest">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:destructuring">Destructuring rest</a></span></td>
+<script>
+test(function () {
+  'use strict';
+  try {
+    return eval(
+       'var [a, ...b] = [3, 4, 5];'
+      +'var [c, ...d] = [6];'
+      +'a === 3 && b instanceof Array && (b + "") === "4,5" && '
+      +'c === 6 && d instanceof Array && d.length === 0'
+    );
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
 <script>
 test(typeof Promise !== 'undefined' &&
          typeof Promise.all === 'function');
@@ -1557,7 +2062,51 @@ test(typeof Object.is === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Object.setPrototypeOf"><span><a class="anchor" href="#Object.setPrototypeOf">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-19.1.2.19">Object.setPrototypeOf</a></span></td>
+          <td id="Object.getOwnPropertySymbols"><span><a class="anchor" href="#Object.getOwnPropertySymbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.getownpropertysymbols">Object.getOwnPropertySymbols</a></span></td>
+<script>
+test(typeof Object.getOwnPropertySymbols === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Object.setPrototypeOf"><span><a class="anchor" href="#Object.setPrototypeOf">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof">Object.setPrototypeOf</a></span></td>
 <script>
 test(typeof Object.setPrototypeOf === 'function');
 </script>
@@ -1601,7 +2150,151 @@ test(typeof Object.setPrototypeOf === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="String.fromCodePoint"><span><a class="anchor" href="#String.fromCodePoint">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.fromCodePoint</a></span></td>
+          <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
+<script>
+test(function () {
+  var a = {},
+      desc = Object.getOwnPropertyDescriptor
+          && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+  return desc
+      && "get" in desc
+      && "set" in desc
+      && desc.configurable
+      && !desc.enumerable
+      && Object.create(a).__proto__ === a;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="yes ie11">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="yes opera15">Yes</td>
+          <td class="no konq49">No</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="Function.prototype.toMethod"><span><a class="anchor" href="#Function.prototype.toMethod">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod">Function.prototype.toMethod</a></span></td>
+<script>
+test(function f() {
+  return typeof f.toMethod === "function";
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="String.raw"><span><a class="anchor" href="#String.raw">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw">String.raw</a></span></td>
+<script>
+test(typeof String.raw === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="String.fromCodePoint"><span><a class="anchor" href="#String.fromCodePoint">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint">String.fromCodePoint</a></span></td>
 <script>
 test(typeof String.fromCodePoint === 'function');
 </script>
@@ -1645,7 +2338,7 @@ test(typeof String.fromCodePoint === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="String.prototype.codePointAt"><span><a class="anchor" href="#String.prototype.codePointAt">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.codePointAt</a></span></td>
+          <td id="String.prototype.codePointAt"><span><a class="anchor" href="#String.prototype.codePointAt">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat">String.prototype.codePointAt</a></span></td>
 <script>
 test(typeof String.prototype.codePointAt === 'function');
 </script>
@@ -1689,7 +2382,7 @@ test(typeof String.prototype.codePointAt === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="String.prototype.repeat"><span><a class="anchor" href="#String.prototype.repeat">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.repeat</a></span></td>
+          <td id="String.prototype.repeat"><span><a class="anchor" href="#String.prototype.repeat">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat">String.prototype.repeat</a></span></td>
 <script>
 test(typeof String.prototype.repeat === 'function');
 </script>
@@ -1733,7 +2426,7 @@ test(typeof String.prototype.repeat === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="String.prototype.startsWith"><span><a class="anchor" href="#String.prototype.startsWith">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.startsWith</a></span></td>
+          <td id="String.prototype.startsWith"><span><a class="anchor" href="#String.prototype.startsWith">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith">String.prototype.startsWith</a></span></td>
 <script>
 test(typeof String.prototype.startsWith === 'function');
 </script>
@@ -1777,7 +2470,7 @@ test(typeof String.prototype.startsWith === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="String.prototype.endsWith"><span><a class="anchor" href="#String.prototype.endsWith">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.endsWith</a></span></td>
+          <td id="String.prototype.endsWith"><span><a class="anchor" href="#String.prototype.endsWith">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith">String.prototype.endsWith</a></span></td>
 <script>
 test(typeof String.prototype.endsWith === 'function');
 </script>
@@ -1821,7 +2514,7 @@ test(typeof String.prototype.endsWith === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="String.prototype.contains"><span><a class="anchor" href="#String.prototype.contains">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:string_extras">String.prototype.contains</a></span></td>
+          <td id="String.prototype.contains"><span><a class="anchor" href="#String.prototype.contains">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains">String.prototype.contains</a></span></td>
 <script>
 test(typeof String.prototype.contains === 'function');
 </script>
@@ -1865,64 +2558,60 @@ test(typeof String.prototype.contains === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Symbol"><span><a class="anchor" href="#Symbol">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
+          <td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
 <script>
 test(function () {
-  try {
-    var object = {};
-    var symbol = Symbol();
-    var value = Math.random();
-    object[symbol] = value;
-    return object[symbol] === value &&
-           Object.keys(object).length === 0 &&
-           Object.getOwnPropertyNames(object).length === 0;
+  var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
+    "italics", "link", "small", "strike", "sub", "sup"];
+  for (i = 0; i < names.length; i++) {
+    if (typeof String.prototype[names[i]] !== 'function') {
+      return false;
+    }
   }
-  catch(e) {
-    return false;
-  }
+  return true;
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
-          <td class="no ie10">No</td>
-          <td class="no ie11">No</td>
-          <td class="no firefox11 obsolete">No</td>
-          <td class="no firefox13 obsolete">No</td>
-          <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No</td>
-          <td class="no firefox23 obsolete">No</td>
-          <td class="no firefox24">No</td>
-          <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No</td>
-          <td class="no firefox29 obsolete">No</td>
-          <td class="no firefox30">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32">No</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes firefox11 obsolete">Yes</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
           <td class="yes firefox33">Yes</td>
-          <td class="no chrome obsolete">No</td>
-          <td class="no chrome19dev obsolete">No</td>
-          <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30">No</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30">Yes</td>
           <td class="yes chrome33">Yes</td>
           <td class="yes chrome34">Yes</td>
           <td class="yes chrome35">Yes</td>
           <td class="yes chrome37">Yes</td>
-          <td class="no safari51 obsolete">No</td>
-          <td class="no safari6">No</td>
-          <td class="no safari7">No</td>
-          <td class="no webkit">No</td>
-          <td class="no opera">No</td>
-          <td class="no opera15">No</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
-          <td class="no node">No</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="yes opera15">Yes</td>
+          <td class="yes konq49">Yes</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Unicode_code_point_escapes"><span><a class="anchor" href="#Unicode_code_point_escapes">&sect;</a>Unicode code point escapes</span></td>
+          <td id="Unicode_code_point_escapes"><span><a class="anchor" href="#Unicode_code_point_escapes">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals">Unicode code point escapes</a></span></td>
 <script>
 test(function () {
   try {
@@ -1972,7 +2661,752 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Array.from"><span><a class="anchor" href="#Array.from">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.2.1">Array.from</a></span></td>
+          <td id="Symbol"><span><a class="anchor" href="#Symbol">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
+<script>
+test(function () {
+  try {
+    var object = {};
+    var symbol = Symbol();
+    var value = Math.random();
+    object[symbol] = value;
+    return typeof symbol === "symbol" &&
+           object[symbol] === value &&
+           Object.keys(object).length === 0 &&
+           Object.getOwnPropertyNames(object).length === 0;
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="Global_symbol_registry"><span><a class="anchor" href="#Global_symbol_registry">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for">Global symbol registry</a></span></td>
+<script>
+test(function () {
+  try {
+    var symbol = Symbol('foo');
+    return Symbol.for('foo') === symbol &&
+           Symbol.keyFor(symbol) === 'foo';
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.create"><span><a class="anchor" href="#Symbol.create">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.create</a></span></td>
+<script>
+test(function () {
+  if (Symbol && typeof Symbol.create === "symbol") {
+    var a = 2, b = function(){};
+    b[Symbol.create] = function() { a = 4; return {};};
+    new b();
+    return a === 4;
+  }
+  return false;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.hasInstance"><span><a class="anchor" href="#Symbol.hasInstance">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.hasInstance</a></span></td>
+<script>
+test(function () {
+  if (Symbol && typeof Symbol.hasInstance === "symbol") {
+    var a = 2, b = function(){};
+    b[Symbol.hasInstance] = function() { a = 4; return false; };
+    ({}) instanceof b;
+    return a === 4;
+  }
+  return false;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.isConcatSpreadable"><span><a class="anchor" href="#Symbol.isConcatSpreadable">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isConcatSpreadable</a></span></td>
+<script>
+test(function () {
+  if (Symbol && typeof Symbol.isConcatSpreadable === "symbol") {
+    var a = [], b = [];
+    b[Symbol.isConcatSpreadable] = false;
+    a = a.concat(b);
+    return a[0] === b;
+  }
+  return false;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.isRegExp"><span><a class="anchor" href="#Symbol.isRegExp">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isRegExp</a></span></td>
+<script>
+test(Symbol && typeof Symbol.isRegExp === "symbol" && RegExp.prototype[Symbol.isRegExp] === true);
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.iterator"><span><a class="anchor" href="#Symbol.iterator">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.iterator</a></span></td>
+<script>
+test(function () {
+  try {
+    var a = 1, b = {};
+    b[Symbol.iterator] = function() {
+      return {
+        next: function() {
+          return { value: "foo", done: true };
+        }
+      };
+    };
+    return Function("for (var c of b) { return c === 'foo'; } return false;")();
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.toPrimitive"><span><a class="anchor" href="#Symbol.toPrimitive">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toPrimitive</a></span></td>
+<script>
+test(function () {
+  if (Symbol && typeof Symbol.toPrimitive === "symbol") {
+    var a = {};
+    a[Symbol.toPrimitive] = function() { return 7; };
+    return a == 7;
+  }
+  return false;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.toStringTag"><span><a class="anchor" href="#Symbol.toStringTag">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toStringTag</a></span></td>
+<script>
+test(function () {
+  if (Symbol && typeof Symbol.toStringTag === "symbol") {
+    var a = {};
+    a[Symbol.toStringTag] = "foo";
+    return (a + "") === "[object foo]";
+  }
+  return false;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Symbol.unscopables"><span><a class="anchor" href="#Symbol.unscopables">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.unscopables</a></span></td>
+<script>
+test(function () {
+  if (Symbol && typeof Symbol.unscopables === "symbol") {
+    var a = { foo: 1, bar: 2 };
+    a[Symbol.unscopables] = ["bar"];
+    with (a) {
+      return foo === 1 && typeof bar === "undefined";
+    }
+  }
+  return false;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="RegExp.prototype.match"><span><a class="anchor" href="#RegExp.prototype.match">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match">RegExp.prototype.match</a></span></td>
+<script>
+test(typeof RegExp.prototype.match === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="RegExp.prototype.replace"><span><a class="anchor" href="#RegExp.prototype.replace">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.replace">RegExp.prototype.replace</a></span></td>
+<script>
+test(typeof RegExp.prototype.replace === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="RegExp.prototype.search"><span><a class="anchor" href="#RegExp.prototype.search">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search">RegExp.prototype.search</a></span></td>
+<script>
+test(typeof RegExp.prototype.search === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="RegExp.prototype.split"><span><a class="anchor" href="#RegExp.prototype.split">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.split">RegExp.prototype.split</a></span></td>
+<script>
+test(typeof RegExp.prototype.split === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span></td>
+<script>
+test(typeof RegExp.prototype.compile === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes firefox11 obsolete">Yes</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="yes opera15">Yes</td>
+          <td class="yes konq49">Yes</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="Array.from"><span><a class="anchor" href="#Array.from">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from">Array.from</a></span></td>
 <script>
 test(typeof Array.from === 'function');
 </script>
@@ -2016,7 +3450,7 @@ test(typeof Array.from === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Array.of"><span><a class="anchor" href="#Array.of">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.2.3">Array.of</a></span></td>
+          <td id="Array.of"><span><a class="anchor" href="#Array.of">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.of">Array.of</a></span></td>
 <script>
 test(typeof Array.of === 'function');
 </script>
@@ -2060,7 +3494,51 @@ test(typeof Array.of === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Array.prototype.find"><span><a class="anchor" href="#Array.prototype.find">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.8">Array.prototype.find</a></span></td>
+          <td id="Array.prototype.copyWithin"><span><a class="anchor" href="#Array.prototype.copyWithin">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.copywithin">Array.prototype.copyWithin</a></span></td>
+<script>
+test(typeof Array.prototype.copyWithin === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Array.prototype.find"><span><a class="anchor" href="#Array.prototype.find">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.find">Array.prototype.find</a></span></td>
 <script>
 test(typeof Array.prototype.find === 'function');
 </script>
@@ -2104,7 +3582,7 @@ test(typeof Array.prototype.find === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Array.prototype.findIndex"><span><a class="anchor" href="#Array.prototype.findIndex">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.9">Array.prototype.findIndex</a></span></td>
+          <td id="Array.prototype.findIndex"><span><a class="anchor" href="#Array.prototype.findIndex">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.findindex">Array.prototype.findIndex</a></span></td>
 <script>
 test(typeof Array.prototype.findIndex === 'function');
 </script>
@@ -2148,7 +3626,7 @@ test(typeof Array.prototype.findIndex === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Array.prototype.fill"><span><a class="anchor" href="#Array.prototype.fill">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.3.6">Array.prototype.fill</a></span></td>
+          <td id="Array.prototype.fill"><span><a class="anchor" href="#Array.prototype.fill">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.fill">Array.prototype.fill</a></span></td>
 <script>
 test(typeof Array.prototype.fill === 'function');
 </script>
@@ -2192,7 +3670,186 @@ test(typeof Array.prototype.fill === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Number.isFinite"><span><a class="anchor" href="#Number.isFinite">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:number.isfinite">Number.isFinite</a></span></td>
+          <td id="Array.prototype.keys"><span><a class="anchor" href="#Array.prototype.keys">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.keys">Array.prototype.keys</a></span></td>
+<script>
+test(typeof Array.prototype.keys === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="yes webkit">Yes</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Array.prototype.values"><span><a class="anchor" href="#Array.prototype.values">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.values">Array.prototype.values</a></span></td>
+<script>
+test(typeof Array.prototype.values === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[5]</sup></a></td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[6]</sup></a></td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Array.prototype.entries"><span><a class="anchor" href="#Array.prototype.entries">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.entries">Array.prototype.entries</a></span></td>
+<script>
+test(typeof Array.prototype.entries === 'function');
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="yes chrome30">Yes</td>
+          <td class="yes chrome33">Yes</td>
+          <td class="yes chrome34">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="yes webkit">Yes</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Array.prototype[Symbol.unscopables]"><span><a class="anchor" href="#Array.prototype[Symbol.unscopables]">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables">Array.prototype[Symbol.unscopables]</a></span></td>
+<script>
+test(Symbol && typeof Symbol.unscopables === "symbol"
+    && Array.prototype[Symbol.unscopables] instanceof Array
+    && (Array.prototype[Symbol.unscopables] + "")
+      .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1);
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Number.isFinite"><span><a class="anchor" href="#Number.isFinite">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number.isFinite</a></span></td>
 <script>
 test(typeof Number.isFinite === 'function');
 </script>
@@ -2324,7 +3981,7 @@ test(typeof Number.isSafeInteger === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Number.isNaN"><span><a class="anchor" href="#Number.isNaN">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan">Number.isNaN</a></span></td>
+          <td id="Number.isNaN"><span><a class="anchor" href="#Number.isNaN">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan">Number.isNaN</a></span></td>
 <script>
 test(typeof Number.isNaN === 'function');
 </script>
@@ -2544,7 +4201,7 @@ test(typeof Math.clz32 === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.imul"><span><a class="anchor" href="#Math.imul">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.8.2.33">Math.imul</a></span></td>
+          <td id="Math.imul"><span><a class="anchor" href="#Math.imul">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul">Math.imul</a></span></td>
 <script>
 test(typeof Math.imul === 'function');
 </script>
@@ -2569,7 +4226,7 @@ test(typeof Math.imul === 'function');
           <td class="yes firefox33">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[3]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[7]</sup></a></td>
           <td class="yes chrome30">Yes</td>
           <td class="yes chrome33">Yes</td>
           <td class="yes chrome34">Yes</td>
@@ -2588,7 +4245,7 @@ test(typeof Math.imul === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Math.sign"><span><a class="anchor" href="#Math.sign">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.sign</a></span></td>
+          <td id="Math.sign"><span><a class="anchor" href="#Math.sign">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign">Math.sign</a></span></td>
 <script>
 test(typeof Math.sign === 'function');
 </script>
@@ -2632,7 +4289,7 @@ test(typeof Math.sign === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Math.log10"><span><a class="anchor" href="#Math.log10">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.log10</a></span></td>
+          <td id="Math.log10"><span><a class="anchor" href="#Math.log10">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10">Math.log10</a></span></td>
 <script>
 test(typeof Math.log10 === 'function');
 </script>
@@ -2676,7 +4333,7 @@ test(typeof Math.log10 === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.log2"><span><a class="anchor" href="#Math.log2">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.log2</a></span></td>
+          <td id="Math.log2"><span><a class="anchor" href="#Math.log2">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2">Math.log2</a></span></td>
 <script>
 test(typeof Math.log2 === 'function');
 </script>
@@ -2720,7 +4377,7 @@ test(typeof Math.log2 === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.log1p"><span><a class="anchor" href="#Math.log1p">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.log1p</a></span></td>
+          <td id="Math.log1p"><span><a class="anchor" href="#Math.log1p">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p">Math.log1p</a></span></td>
 <script>
 test(typeof Math.log1p === 'function');
 </script>
@@ -2764,7 +4421,7 @@ test(typeof Math.log1p === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.expm1"><span><a class="anchor" href="#Math.expm1">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.expm1</a></span></td>
+          <td id="Math.expm1"><span><a class="anchor" href="#Math.expm1">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1">Math.expm1</a></span></td>
 <script>
 test(typeof Math.expm1 === 'function');
 </script>
@@ -2808,7 +4465,7 @@ test(typeof Math.expm1 === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.cosh"><span><a class="anchor" href="#Math.cosh">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.cosh</a></span></td>
+          <td id="Math.cosh"><span><a class="anchor" href="#Math.cosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh">Math.cosh</a></span></td>
 <script>
 test(typeof Math.cosh === 'function');
 </script>
@@ -2852,7 +4509,7 @@ test(typeof Math.cosh === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.sinh"><span><a class="anchor" href="#Math.sinh">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.sinh</a></span></td>
+          <td id="Math.sinh"><span><a class="anchor" href="#Math.sinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh">Math.sinh</a></span></td>
 <script>
 test(typeof Math.sinh === 'function');
 </script>
@@ -2896,7 +4553,7 @@ test(typeof Math.sinh === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.tanh"><span><a class="anchor" href="#Math.tanh">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.tanh</a></span></td>
+          <td id="Math.tanh"><span><a class="anchor" href="#Math.tanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.tanh</a></span></td>
 <script>
 test(typeof Math.tanh === 'function');
 </script>
@@ -2940,7 +4597,7 @@ test(typeof Math.tanh === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.acosh"><span><a class="anchor" href="#Math.acosh">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.acosh</a></span></td>
+          <td id="Math.acosh"><span><a class="anchor" href="#Math.acosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh">Math.acosh</a></span></td>
 <script>
 test(typeof Math.acosh === 'function');
 </script>
@@ -2984,7 +4641,7 @@ test(typeof Math.acosh === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.asinh"><span><a class="anchor" href="#Math.asinh">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.asinh</a></span></td>
+          <td id="Math.asinh"><span><a class="anchor" href="#Math.asinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh">Math.asinh</a></span></td>
 <script>
 test(typeof Math.asinh === 'function');
 </script>
@@ -3028,7 +4685,7 @@ test(typeof Math.asinh === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.atanh"><span><a class="anchor" href="#Math.atanh">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.atanh</a></span></td>
+          <td id="Math.atanh"><span><a class="anchor" href="#Math.atanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.atanh</a></span></td>
 <script>
 test(typeof Math.atanh === 'function');
 </script>
@@ -3072,7 +4729,7 @@ test(typeof Math.atanh === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.hypot"><span><a class="anchor" href="#Math.hypot">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.hypot</a></span></td>
+          <td id="Math.hypot"><span><a class="anchor" href="#Math.hypot">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot">Math.hypot</a></span></td>
 <script>
 test(typeof Math.hypot === 'function');
 </script>
@@ -3116,7 +4773,7 @@ test(typeof Math.hypot === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.trunc"><span><a class="anchor" href="#Math.trunc">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.trunc</a></span></td>
+          <td id="Math.trunc"><span><a class="anchor" href="#Math.trunc">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc">Math.trunc</a></span></td>
 <script>
 test(typeof Math.trunc === 'function');
 </script>
@@ -3160,7 +4817,7 @@ test(typeof Math.trunc === 'function');
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="Math.fround"><span><a class="anchor" href="#Math.fround">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">Math.fround</a></span></td>
+          <td id="Math.fround"><span><a class="anchor" href="#Math.fround">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround">Math.fround</a></span></td>
 <script>
 test(typeof Math.fround === 'function');
 </script>
@@ -3177,7 +4834,7 @@ test(typeof Math.fround === 'function');
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[4]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[8]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -3204,7 +4861,7 @@ test(typeof Math.fround === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Math.cbrt"><span><a class="anchor" href="#Math.cbrt">&sect;</a>Math.cbrt</span></td>
+          <td id="Math.cbrt"><span><a class="anchor" href="#Math.cbrt">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt">Math.cbrt</a></span></td>
 <script>
 test(typeof Math.cbrt === 'function');
 </script>
@@ -3248,7 +4905,7 @@ test(typeof Math.cbrt === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <th colspan="39" class="separator"></th>
+          <th colspan="40" class="separator"></th>
         </tr>
       </tbody>
     </table>
@@ -3259,11 +4916,23 @@ test(typeof Math.cbrt === 'function');
       <p id="harmony-flag-note">
         <sup>[2]</sup> Have to be enabled via --harmony flag
       </p>
+      <p id="proto-in-object-literals-note">
+        <sup>[3]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+      </p>
+      <p id="fx-destructuring-note">
+        <sup>[4]</sup> As of WebKit r170830, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+      </p>
+      <p id="fx-array-prototype-values-note">
+        <sup>[5]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+      </p>
+      <p id="fx-array-prototype-values-2-note">
+        <sup>[6]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+      </p>
       <p id="chromu-imul-note">
-        <sup>[3]</sup> Available since Chrome 28
+        <sup>[7]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[4]</sup> Available since Firefox 26
+        <sup>[8]</sup> Available since Firefox 26
       </p>
     </div>
   </div>
