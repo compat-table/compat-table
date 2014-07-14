@@ -161,7 +161,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r170754',
+    full: 'WebKit r170830',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -2312,7 +2312,8 @@ exports.tests = [
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
   exec: function () {
     var a = {},
-        desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+        desc = Object.getOwnPropertyDescriptor
+            && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
     return desc
         && "get" in desc
         && "set" in desc
@@ -2356,7 +2357,7 @@ exports.tests = [
     opera15:     true,
     konq49:      false,
     rhino17:     true,
-    phantom:     true,
+    phantom:     false,
     node:        false,
     nodeharmony: true
   }

@@ -98,7 +98,7 @@
           <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
           <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
           <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
-          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r170754">WK</abbr></th>
+          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r170830">WK</abbr></th>
           <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12">OP 12</abbr></th>
           <th class="opera15"><a href="#opera15" class="browser-name"><abbr title="Opera 15.0">OP 15</abbr></th>
           <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
@@ -2146,7 +2146,8 @@ test(typeof Object.setPrototypeOf === 'function');
 <script>
 test(function () {
   var a = {},
-      desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+      desc = Object.getOwnPropertyDescriptor
+          && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
   return desc
       && "get" in desc
       && "set" in desc
@@ -2190,7 +2191,7 @@ test(function () {
           <td class="yes opera15">Yes</td>
           <td class="no konq49">No</td>
           <td class="yes rhino17">Yes</td>
-          <td class="yes phantom">Yes</td>
+          <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
         </tr>
