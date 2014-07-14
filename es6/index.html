@@ -3806,8 +3806,8 @@ test(typeof Array.prototype.entries === 'function');
 <script>
 test(Symbol && typeof Symbol.unscopables === "symbol"
     && Array.prototype[Symbol.unscopables] instanceof Array
-    && Array.prototype[Symbol.unscopables] + ""
-      === "find,findIndex,fill,copyWithin,entries,keys,values");
+    && (Array.prototype[Symbol.unscopables] + "")
+      .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1);
 </script>
 
           <td class="no tr">No</td>

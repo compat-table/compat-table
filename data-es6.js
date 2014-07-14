@@ -4060,8 +4060,8 @@ exports.tests = [
   exec: function () {
     return Symbol && typeof Symbol.unscopables === "symbol"
       && Array.prototype[Symbol.unscopables] instanceof Array
-      && Array.prototype[Symbol.unscopables] + ""
-        === "find,findIndex,fill,copyWithin,entries,keys,values";
+      && (Array.prototype[Symbol.unscopables] + "")
+        .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1;
   },
   res: {
     tr:          false,
