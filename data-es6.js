@@ -865,7 +865,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        false,
     ie11:        true,
@@ -910,8 +910,7 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:modules',
   exec: function () {
     try {
-      // this line crashes Chrome 21-24
-      // return eval('module foo { }');
+      return eval('export var foo = 1;');
     } catch (e) {
       return false;
     }
@@ -1254,7 +1253,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         false,
     ie10:        false,
     ie11:        false,
@@ -1306,7 +1305,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        false,
     ie11:        false,
@@ -1360,7 +1359,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        true,
@@ -1414,7 +1413,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        true,
@@ -1622,7 +1621,7 @@ exports.tests = [
     var i, names =
       ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
       "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
-    
+
     if (typeof Reflect !== "object") {
       return false;
     }
@@ -1681,7 +1680,7 @@ exports.tests = [
     var i, names =
       ["eval", "global", "intrinsics", "stdlib", "directEval",
       "indirectEval", "initGlobal", "nonEval"];
-    
+
     if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
         || typeof Reflect.Realm.prototype !== "object") {
       return false;
@@ -1742,7 +1741,7 @@ exports.tests = [
       ["define", "delete", "entries", "get", "global", "has", "import",
       "keys", "load", "module", "newModule", "realm", "set", "values",
       "normalize", "locate", "fetch", "translate", "instantiate"];
-    
+
     if (typeof Reflect !== "object" || typeof Reflect.Loader !== "function"
         || typeof Reflect.Loader.prototype !== "object") {
       return false;
@@ -1807,7 +1806,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        false,
     ie11:        true,
@@ -2228,7 +2227,7 @@ exports.tests = [
     return typeof Object.getOwnPropertySymbols === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        false,
     ie11:        false,
@@ -2322,12 +2321,12 @@ exports.tests = [
     var a = {},
         desc = Object.getOwnPropertyDescriptor
             && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-    return desc
+    return !!(desc
         && "get" in desc
         && "set" in desc
         && desc.configurable
         && !desc.enumerable
-        && Object.create(a).__proto__ === a;
+        && Object.create(a).__proto__ === a);
   },
   res: {
     tr:          false,
@@ -2424,7 +2423,7 @@ exports.tests = [
     return typeof String.raw === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        false,
     ie11:        false,
@@ -2565,7 +2564,7 @@ exports.tests = [
     return typeof String.prototype.repeat === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -2811,7 +2810,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        false,
     ie11:        false,
@@ -3583,7 +3582,7 @@ exports.tests = [
     return typeof RegExp.prototype.compile === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        true,
     ie11:        true,
@@ -3630,7 +3629,7 @@ exports.tests = [
     return typeof Array.from === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -3771,7 +3770,7 @@ exports.tests = [
     return typeof Array.prototype.find === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -3818,7 +3817,7 @@ exports.tests = [
     return typeof Array.prototype.findIndex === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -3865,7 +3864,7 @@ exports.tests = [
     return typeof Array.prototype.fill === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -3912,7 +3911,7 @@ exports.tests = [
     return typeof Array.prototype.keys === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -3959,7 +3958,7 @@ exports.tests = [
     return typeof Array.prototype.values === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4014,7 +4013,7 @@ exports.tests = [
     return typeof Array.prototype.entries === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4111,7 +4110,7 @@ exports.tests = [
     return typeof Number.isFinite === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4158,7 +4157,7 @@ exports.tests = [
     return typeof Number.isInteger === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4205,7 +4204,7 @@ exports.tests = [
     return typeof Number.isSafeInteger === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4252,7 +4251,7 @@ exports.tests = [
     return typeof Number.isNaN === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4299,7 +4298,7 @@ exports.tests = [
     return typeof Number.EPSILON === 'number';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4346,7 +4345,7 @@ exports.tests = [
     return typeof Number.MIN_SAFE_INTEGER === 'number';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -4393,7 +4392,7 @@ exports.tests = [
     return typeof Number.MAX_SAFE_INTEGER === 'number';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
