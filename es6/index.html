@@ -750,7 +750,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
@@ -793,8 +793,7 @@ test(function () {
 <script>
 test(function () {
   try {
-    // this line crashes Chrome 21-24
-    // return eval('module foo { }');
+    return eval('export var foo = 1;');
   } catch (e) {
     return false;
   }
@@ -1123,7 +1122,7 @@ test(function () {
 }());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -1174,7 +1173,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -1227,7 +1226,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
@@ -1280,7 +1279,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
@@ -1483,7 +1482,7 @@ test(function () {
   var i, names =
     ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
     "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
-  
+
   if (typeof Reflect !== "object") {
     return false;
   }
@@ -1541,7 +1540,7 @@ test(function () {
   var i, names =
     ["eval", "global", "intrinsics", "stdlib", "directEval",
     "indirectEval", "initGlobal", "nonEval"];
-  
+
   if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
       || typeof Reflect.Realm.prototype !== "object") {
     return false;
@@ -1601,7 +1600,7 @@ test(function () {
     ["define", "delete", "entries", "get", "global", "has", "import",
     "keys", "load", "module", "newModule", "realm", "set", "values",
     "normalize", "locate", "fetch", "translate", "instantiate"];
-  
+
   if (typeof Reflect !== "object" || typeof Reflect.Loader !== "function"
       || typeof Reflect.Loader.prototype !== "object") {
     return false;
@@ -1666,7 +1665,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
@@ -2067,7 +2066,7 @@ test(typeof Object.is === 'function');
 test(typeof Object.getOwnPropertySymbols === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -2156,12 +2155,12 @@ test(function () {
   var a = {},
       desc = Object.getOwnPropertyDescriptor
           && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-  return desc
+  return !!(desc
       && "get" in desc
       && "set" in desc
       && desc.configurable
       && !desc.enumerable
-      && Object.create(a).__proto__ === a;
+      && Object.create(a).__proto__ === a);
 }());
 </script>
 
@@ -2255,7 +2254,7 @@ test(function f() {
 test(typeof String.raw === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -2387,7 +2386,7 @@ test(typeof String.prototype.codePointAt === 'function');
 test(typeof String.prototype.repeat === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -2622,7 +2621,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3367,7 +3366,7 @@ test(typeof RegExp.prototype.split === 'function');
 test(typeof RegExp.prototype.compile === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
@@ -3411,7 +3410,7 @@ test(typeof RegExp.prototype.compile === 'function');
 test(typeof Array.from === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3543,7 +3542,7 @@ test(typeof Array.prototype.copyWithin === 'function');
 test(typeof Array.prototype.find === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3587,7 +3586,7 @@ test(typeof Array.prototype.find === 'function');
 test(typeof Array.prototype.findIndex === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3631,7 +3630,7 @@ test(typeof Array.prototype.findIndex === 'function');
 test(typeof Array.prototype.fill === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3675,7 +3674,7 @@ test(typeof Array.prototype.fill === 'function');
 test(typeof Array.prototype.keys === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3719,7 +3718,7 @@ test(typeof Array.prototype.keys === 'function');
 test(typeof Array.prototype.values === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3763,7 +3762,7 @@ test(typeof Array.prototype.values === 'function');
 test(typeof Array.prototype.entries === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3854,7 +3853,7 @@ test(Symbol && typeof Symbol.unscopables === "symbol"
 test(typeof Number.isFinite === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3898,7 +3897,7 @@ test(typeof Number.isFinite === 'function');
 test(typeof Number.isInteger === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3942,7 +3941,7 @@ test(typeof Number.isInteger === 'function');
 test(typeof Number.isSafeInteger === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3986,7 +3985,7 @@ test(typeof Number.isSafeInteger === 'function');
 test(typeof Number.isNaN === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -4030,7 +4029,7 @@ test(typeof Number.isNaN === 'function');
 test(typeof Number.EPSILON === 'number');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -4074,7 +4073,7 @@ test(typeof Number.EPSILON === 'number');
 test(typeof Number.MIN_SAFE_INTEGER === 'number');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -4118,7 +4117,7 @@ test(typeof Number.MIN_SAFE_INTEGER === 'number');
 test(typeof Number.MAX_SAFE_INTEGER === 'number');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
