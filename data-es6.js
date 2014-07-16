@@ -360,62 +360,75 @@ exports.tests = [
 {
   name: 'let',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function () {
-          try {
-            return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-          } catch (e) {
-            return false;
-          }
-        }()));
-        global.__let_script_executed = true;
-      }
-    },
-    {
-      script: function () {
-        if (!global.__let_script_executed) {
-          test((function () {
-            try {
-              return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-            } catch (e) {
-              return false;
-            }
-          }()));
-        }
-      }
-    }
-  ],
+  exec: function () {
+    try {
+	  return Function(
+		 'let foo = 123;'
+		+'let passed = (foo === 123);'
+		
+		 // bar is not hoisted outside of its block,
+		 // baz is not hoisted outside of the for-loop,
+		 // and qux is not defined until its let statement is executed.
+		 
+		+'{ let bar = 456; }'
+		+'for(let baz = 0; false;) {}'
+		+'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+		+'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+		+'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
+		+'let qux = 789;'
+		
+		 // duplicated lets are errors
+		 
+		+'passed &= (function(){ try { let a; let a; } catch(e) { return true; }}());'
+		
+		 // for-loop iterations create new bindings
+		 
+		+'let scopes = [];'
+		+'for(let i = 0; i <= 2; i++) {'
+		+'  scopes.push(function(){ return i; });'
+		+'}'
+		+'passed &= (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+		
+		+'scopes = [];'
+		+'for(let i in { a:1, b:1, c:1 }) {'
+		+'  scopes.push(function(){ return i; });'
+		+'}'
+		+'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+		
+		+'return passed;'
+	  )();
+	} catch (e) {
+	  return false;
+	}
+  },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         true,
     ie10:        false,
     ie11:        true,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
     chrome:      false,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -426,7 +439,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: false
   }
 },
 {
