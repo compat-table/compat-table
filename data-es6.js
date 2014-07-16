@@ -543,7 +543,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -594,7 +594,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -704,7 +704,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -756,7 +756,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -808,7 +808,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -968,7 +968,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2087,7 +2087,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2228,7 +2228,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2811,7 +2811,7 @@ exports.tests = [
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3294,7 +3294,7 @@ exports.tests = [
   },
   res: {
     tr:          false,
-    ejs:         false,
+    ejs:         true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
