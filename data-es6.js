@@ -362,8 +362,9 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
   exec: function () {
     try {
-	  return Function(
-		 'let foo = 123;'
+	  return !!Function(
+         '"use strict";'
+		+'let foo = 123;'
 		+'let passed = (foo === 123);'
 		
 		 // bar is not hoisted outside of its block,
@@ -377,9 +378,11 @@ exports.tests = [
 		+'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
 		+'let qux = 789;'
 		
-		 // duplicated lets are errors
+		 // duplicate lets are syntax errors
 		 
-		+'passed &= (function(){ try { let a; let a; } catch(e) { return true; }}());'
+		+'passed &= (function() {'
+		+'  try { Function("\'use strict\'; let a; let a;")();} catch(e) { return true; }'
+		+'}());'
 		
 		 // for-loop iterations create new bindings
 		 
