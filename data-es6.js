@@ -3174,15 +3174,18 @@ exports.tests = [
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
     try {
-      var a = 1, b = {};
+      var a = 0, b = {};
       b[Symbol.iterator] = function() {
         return {
           next: function() {
-            return { value: "foo", done: true };
+            return { 
+              done: a === 1,
+              value: a++ 
+            };
           }
         };
       };
-      return Function("for (var c of b) { return c === 'foo'; } return false;")();
+      return Function("for (var c of b) { return c === 0; } return false;")();
     }
     catch(e) {
       return false;
