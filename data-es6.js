@@ -311,50 +311,84 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
   exec: function () {
     try {
-      return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
-    } catch (e) {
-      return false;
-    }
+	  return !!Function(
+		+'const foo = 123;'
+		+'var passed = (foo === 123);'
+		
+		 // bar is not hoisted outside of its block,
+		 // baz is not hoisted outside of the for-loop,
+		 // and qux is not defined until its let statement is executed.
+		 
+		+'{ const bar = 456; }'
+		+'for(const baz = 0; false;) {}'
+		+'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+		+'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+		+'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
+		+'const qux = 789;'
+		
+		 // uninitialized const is a syntax error (13.2.1.1)
+		 
+		+'passed &= (function() {'
+		+'  try { Function("const a;")();} catch(e) { return true; }'
+		+'}());'
+		
+		 // duplicate consts are syntax errors (13.2.1.1)
+		 
+		+'passed &= (function() {'
+		+'  try { Function("const a = 1; const a = 2;")();} catch(e) { return true; }'
+		+'}());'
+
+		 // redefining a const is a syntax error (12.14.1)
+		 
+		+'passed &= (function() {'
+		+'  try { Function("const a = 1; a = 2;")(); } catch(e) { return true; }'
+		+'}());'
+		
+		+'return passed;'
+	  )();
+	} catch (e) {
+	  return false;
+	}
   },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         true,
     ie10:        false,
     ie11:        true,
     firefox11:   false,
     firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
-    safari6:     true,
-    safari7:     true,
-    webkit:      true,
-    opera:       true,
-    opera15:     true,
-    konq49:      true,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
     rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
   }
 },
 {
@@ -363,7 +397,6 @@ exports.tests = [
   exec: function () {
     try {
 	  return !!Function(
-         '"use strict";'
 		+'let foo = 123;'
 		+'let passed = (foo === 123);'
 		
@@ -378,13 +411,13 @@ exports.tests = [
 		+'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
 		+'let qux = 789;'
 		
-		 // duplicate lets are syntax errors
+		 // duplicate lets are syntax errors (13.2.1.1)
 		 
 		+'passed &= (function() {'
-		+'  try { Function("\'use strict\'; let a; let a;")();} catch(e) { return true; }'
+		+'  try { Function("let a; let a;")();} catch(e) { return true; }'
 		+'}());'
 		
-		 // for-loop iterations create new bindings
+		 // for-loop iterations create new bindings (13.6.3.3)
 		 
 		+'let scopes = [];'
 		+'for(let i = 0; i <= 2; i++) {'
