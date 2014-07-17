@@ -311,44 +311,44 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
   exec: function () {
     try {
-	  return !!Function(
-		+'const foo = 123;'
-		+'var passed = (foo === 123);'
-		
-		 // bar is not hoisted outside of its block,
-		 // baz is not hoisted outside of the for-loop,
-		 // and qux is not defined until its let statement is executed.
-		 
-		+'{ const bar = 456; }'
-		+'for(const baz = 0; false;) {}'
-		+'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
-		+'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
-		+'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
-		+'const qux = 789;'
-		
-		 // uninitialized const is a syntax error (13.2.1.1)
-		 
-		+'passed &= (function() {'
-		+'  try { Function("const a;")();} catch(e) { return true; }'
-		+'}());'
-		
-		 // duplicate consts are syntax errors (13.2.1.1)
-		 
-		+'passed &= (function() {'
-		+'  try { Function("const a = 1; const a = 2;")();} catch(e) { return true; }'
-		+'}());'
+      return !!Function(
+        +'const foo = 123;'
+        +'var passed = (foo === 123);'
+        
+         // bar is not hoisted outside of its block,
+         // baz is not hoisted outside of the for-loop,
+         // and qux is not defined until its let statement is executed.
+         
+        +'{ const bar = 456; }'
+        +'for(const baz = 0; false;) {}'
+        +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+        +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+        +'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
+        +'const qux = 789;'
+        
+         // uninitialized const is a syntax error (13.2.1.1)
+         
+        +'passed &= (function() {'
+        +'  try { Function("const a;")();} catch(e) { return true; }'
+        +'}());'
+        
+         // duplicate consts are syntax errors (13.2.1.1)
+         
+        +'passed &= (function() {'
+        +'  try { Function("const a = 1; const a = 2;")();} catch(e) { return true; }'
+        +'}());'
 
-		 // redefining a const is a syntax error (12.14.1)
-		 
-		+'passed &= (function() {'
-		+'  try { Function("const a = 1; a = 2;")(); } catch(e) { return true; }'
-		+'}());'
-		
-		+'return passed;'
-	  )();
-	} catch (e) {
-	  return false;
-	}
+         // redefining a const is a syntax error (12.14.1)
+         
+        +'passed &= (function() {'
+        +'  try { Function("const a = 1; a = 2;")(); } catch(e) { return true; }'
+        +'}());'
+        
+        +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
   },
   res: {
     tr:          false,
@@ -396,46 +396,46 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
   exec: function () {
     try {
-	  return !!Function(
-		+'let foo = 123;'
-		+'let passed = (foo === 123);'
-		
-		 // bar is not hoisted outside of its block,
-		 // baz is not hoisted outside of the for-loop,
-		 // and qux is not defined until its let statement is executed.
-		 
-		+'{ let bar = 456; }'
-		+'for(let baz = 0; false;) {}'
-		+'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
-		+'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
-		+'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
-		+'let qux = 789;'
-		
-		 // duplicate lets are syntax errors (13.2.1.1)
-		 
-		+'passed &= (function() {'
-		+'  try { Function("let a; let a;")();} catch(e) { return true; }'
-		+'}());'
-		
-		 // for-loop iterations create new bindings (13.6.3.3)
-		 
-		+'let scopes = [];'
-		+'for(let i = 0; i <= 2; i++) {'
-		+'  scopes.push(function(){ return i; });'
-		+'}'
-		+'passed &= (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
-		
-		+'scopes = [];'
-		+'for(let i in { a:1, b:1, c:1 }) {'
-		+'  scopes.push(function(){ return i; });'
-		+'}'
-		+'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
-		
-		+'return passed;'
-	  )();
-	} catch (e) {
-	  return false;
-	}
+      return !!Function(
+        +'let foo = 123;'
+        +'let passed = (foo === 123);'
+        
+         // bar is not hoisted outside of its block,
+         // baz is not hoisted outside of the for-loop,
+         // and qux is not defined until its let statement is executed.
+         
+        +'{ let bar = 456; }'
+        +'for(let baz = 0; false;) {}'
+        +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+        +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+        +'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
+        +'let qux = 789;'
+        
+         // duplicate lets are syntax errors (13.2.1.1)
+         
+        +'passed &= (function() {'
+        +'  try { Function("let a; let a;")();} catch(e) { return true; }'
+        +'}());'
+        
+         // for-loop iterations create new bindings (13.6.3.3)
+         
+        +'let scopes = [];'
+        +'for(let i = 0; i <= 2; i++) {'
+        +'  scopes.push(function(){ return i; });'
+        +'}'
+        +'passed &= (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+        
+        +'scopes = [];'
+        +'for(let i in { a:1, b:1, c:1 }) {'
+        +'  scopes.push(function(){ return i; });'
+        +'}'
+        +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+        
+        +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
   },
   res: {
     tr:          false,
