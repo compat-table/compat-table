@@ -312,17 +312,14 @@ exports.tests = [
   exec: function () {
     try {
       return !!Function(
-        +'const foo = 123;'
+         'const foo = 123;'
         +'var passed = (foo === 123);'
         
          // bar is not hoisted outside of its block,
-         // baz is not hoisted outside of the for-loop,
-         // and qux is not defined until its let statement is executed.
+         // and qux is not defined until its const statement is executed.
          
         +'{ const bar = 456; }'
-        +'for(const baz = 0; false;) {}'
         +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
-        +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
         +'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
         +'const qux = 789;'
         
@@ -397,7 +394,7 @@ exports.tests = [
   exec: function () {
     try {
       return !!Function(
-        +'let foo = 123;'
+         'let foo = 123;'
         +'let passed = (foo === 123);'
         
          // bar is not hoisted outside of its block,
