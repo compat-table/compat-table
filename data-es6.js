@@ -259,14 +259,45 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
   exec: function() {
     try {
-      eval('var a = () => 5;');
+      var passed;
+      eval(
+         // 0 parameters
+         'var a = () => 5;'
+        +'passed = (a() === 5);'
+
+         // 1 parameter, no brackets
+        +'var b = x => x + "foo";'
+        +'passed &= (b("fee fie foe ") === "fee fie foe foo");'
+
+         // multiple parameters
+        +'var c = (v, w, x, y, z) => v+w-x*y/z;'
+        +'passed &= (c(6, 5, 4, 3, 2) === 5);'
+
+         // arrows are anonymous non-constructors
+        +'passed &= (a.name === "") && !("prototype" in a);'
+        +'passed &= (function(){ try { new a; } catch(e) { return true; }}());'
+
+         // arrows have a lexical "this" binding (14.2.17)
+        +'var d = { x : "bar", y : function() { return z => this.x + z; }}.y();'
+        +'var e = { x : "baz", y : d };'
+        +'passed &= d("ley") === "barley" && e.y("ley") === "barley";'
+
+         // arrows' lexical "this" cannot be re-bound,
+         // but they can still be curried.
+        +'passed &= d.bind(e, "ley")("man") === "barley";'
+
+         // arrows have a lexical 'arguments' binding (14.2.17)
+        +'var f = (function(x) { return y => arguments[0]; }("qux"));'
+        +'passed &= f("corge") === "qux";'
+      );
+      return passed;
     } catch (e) {
       return false;
     }
     return true;
   },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -275,16 +306,16 @@ exports.tests = [
     firefox16:   false,
     firefox17:   false,
     firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
