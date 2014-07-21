@@ -580,7 +580,35 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
-      return eval('Math.max(...[1, 2, 3]) === 3');
+      var passed;
+      function two() { return arguments[1]; }
+      eval(
+         // Array spreading
+         'passed  = two(...[1, 2, 3]) === 2;'
+         
+         // String spreading
+        +'passed &= two(..."graults") === "r";'
+         
+         // If iterators are supported, iterable
+         // objects must also be spreadable.
+        +'if (Symbol && typeof Symbol.iterator === "symbol" &&'
+        +'    Function('
+        +'      "try {'
+        +'        for (var i of []){ return true; }'
+        +'      } catch(e){ false; }"'
+        +'    )()){'
+        +'  var a = 0, b = {}, c;'
+        +'  b[Symbol.iterator] = function() {'
+        +'    return { next: function() { return { value: "X" + a, done: ++a === 7 }}};'
+        +'  };'
+        +'  for (var c of b) { break; }'
+        +'  if (c === "X0") {'
+        +'    a = 0;'
+        +'    passed &= two(...b) === "X1"'
+        +'  }'
+        +'}'
+      );
+      return passed;
     } catch (e) {
       return false;
     }
@@ -631,7 +659,35 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
-      return eval('[...[1, 2, 3]][2] === 3');
+      var passed;
+      eval(
+         // Array spreading
+         'passed  = [...[1, 2, 3]][1] === 2;'
+         
+         // String spreading
+        +'passed &= [..."graults"][1] === "r";'
+        
+         // If iterators are supported, iterable
+         // objects must also be spreadable.
+        +'if (Symbol && typeof Symbol.iterator === "symbol" &&'
+        +'    Function('
+        +'      "try {'
+        +'        for (var i of []){ return true; }'
+        +'      } catch(e){ false; }"'
+        +'    )()){'
+        +'  var a = 0, b = {}, c;'
+        +'  b[Symbol.iterator] = function() {'
+        +'    return { next: function() { return { value: "X" + a, done: ++a === 7 }}};'
+        +'  };'
+        +'  for (c of b) { break; }'
+        +'  if (c === "X0") {'
+        +'    a = 0;'
+        +'    c = [...b];'
+        +'    passed &= c.length === 6 && c[1] === "X1";'
+        +'  }'
+        +'}'
+      );
+      return passed;
     } catch (e) {
       return false;
     }
