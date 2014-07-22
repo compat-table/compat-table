@@ -256,7 +256,7 @@ exports.tests = [
 },
 {
   name: 'arrow functions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
   exec: function() {
     try {
       var passed;
@@ -289,6 +289,9 @@ exports.tests = [
          // arrows have a lexical 'arguments' binding (14.2.17)
         +'var f = (function(x) { return y => arguments[0]; }("qux"));'
         +'passed &= f("corge") === "qux";'
+        
+        // a line terminator between parameters and arrow is a syntax error
+        +'passed &= eval("try { var g = a \\n => 4; false; } catch(e) { true; }");'
       );
       return passed;
     } catch (e) {

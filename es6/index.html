@@ -161,7 +161,7 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">arrow functions</a></span></td>
+          <td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions">arrow functions</a></span></td>
 <script>
 test(function () {
   try {
@@ -195,6 +195,9 @@ test(function () {
        // arrows have a lexical 'arguments' binding (14.2.17)
       +'var f = (function(x) { return y => arguments[0]; }("qux"));'
       +'passed &= f("corge") === "qux";'
+      
+      // a line terminator between parameters and arrow is a syntax error
+      +'passed &= eval("try { var g = a \\n => 4; false; } catch(e) { true; }");'
     );
     return passed;
   } catch (e) {
