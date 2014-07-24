@@ -580,33 +580,22 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
-      var passed;
+      function one() { return arguments[0]; }
       function two() { return arguments[1]; }
+      var passed;
       eval(
          // Array spreading
          'passed  = two(...[1, 2, 3]) === 2;'
+        +'passed  = one(...[]) === undefined;'
          
          // String spreading
         +'passed &= two(..."graults") === "r";'
+        +'passed  = one(..."") === undefined;'
          
-         // If iterators are supported, iterable
-         // objects must also be spreadable.
-        +'if (Symbol && typeof Symbol.iterator === "symbol" &&'
-        +'    Function('
-        +'      "try {'
-        +'        for (var i of []){ return true; }'
-        +'      } catch(e){ false; }"'
-        +'    )()){'
-        +'  var a = 0, b = {}, c;'
-        +'  b[Symbol.iterator] = function() {'
-        +'    return { next: function() { return { value: "X" + a, done: ++a === 7 }}};'
-        +'  };'
-        +'  for (var c of b) { break; }'
-        +'  if (c === "X0") {'
-        +'    a = 0;'
-        +'    passed &= two(...b) === "X1"'
-        +'  }'
-        +'}'
+         // Other primitives, and objects with no valid iterator,
+         // should throw a TypeError when attempting to spread.
+        +'passed &= eval("try { one(...{0:1}); false; } catch(e) { true; }");'
+        +'passed &= eval("try { one(    ...1); false; } catch(e) { true; }");'
       );
       return passed;
     } catch (e) {
@@ -644,7 +633,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      true,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
@@ -662,30 +651,19 @@ exports.tests = [
       var passed;
       eval(
          // Array spreading
-         'passed  = [...[1, 2, 3]][1] === 2;'
+         'var a = [...[1, 2, 3]];'
+        +'passed  = a instanceof Array && a[1] === 2;'
+        +'passed &= [...[]].length === 0;'
          
          // String spreading
-        +'passed &= [..."graults"][1] === "r";'
+        +'var b = [..."graults"];'
+        +'passed &= b instanceof Array && b[1] === "r";'
+        +'passed &= [...""].length === 0;'
         
-         // If iterators are supported, iterable
-         // objects must also be spreadable.
-        +'if (Symbol && typeof Symbol.iterator === "symbol" &&'
-        +'    Function('
-        +'      "try {'
-        +'        for (var i of []){ return true; }'
-        +'      } catch(e){ false; }"'
-        +'    )()){'
-        +'  var a = 0, b = {}, c;'
-        +'  b[Symbol.iterator] = function() {'
-        +'    return { next: function() { return { value: "X" + a, done: ++a === 7 }}};'
-        +'  };'
-        +'  for (c of b) { break; }'
-        +'  if (c === "X0") {'
-        +'    a = 0;'
-        +'    c = [...b];'
-        +'    passed &= c.length === 6 && c[1] === "X1";'
-        +'  }'
-        +'}'
+         // Other primitives, and objects with no valid iterator,
+         // should throw a TypeError when attempting to spread.
+        +'passed &= eval("try { [...{0:1}]; false; } catch(e) { true; }");'
+        +'passed &= eval("try { [    ...1]; false; } catch(e) { true; }");'
       );
       return passed;
     } catch (e) {
@@ -723,7 +701,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      true,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
