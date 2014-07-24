@@ -311,111 +311,155 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
   exec: function () {
     try {
-      return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
+      return !!Function(
+         'const foo = 123;'
+        +'var passed = (foo === 123);'
+        
+         // bar is not hoisted outside of its block
+        +'{ const bar = 456; }'
+        +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+         // qux is not defined until its const statement is executed,
+         // and accessing it prior to that will result in a ReferenceError.
+        +'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
+        +'const qux = 789;'
+        
+         // uninitialized const is a syntax error (13.2.1.1)
+        +'passed &= (function() {'
+        +'  try { Function("const a;")();} catch(e) { return true; }'
+        +'}());'
+        
+         // duplicate consts are syntax errors (13.2.1.1)
+        +'passed &= (function() {'
+        +'  try { Function("const a = 1; const a = 2;")();} catch(e) { return true; }'
+        +'}());'
+
+         // redefining a const is a syntax error (12.14.1)
+        +'passed &= (function() {'
+        +'  try { Function("const a = 1; a = 2;")(); } catch(e) { return true; }'
+        +'}());'
+        
+        +'return passed;'
+      )();
     } catch (e) {
       return false;
     }
   },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         true,
     ie10:        false,
     ie11:        true,
     firefox11:   false,
     firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
-    safari6:     true,
-    safari7:     true,
-    webkit:      true,
-    opera:       true,
-    opera15:     true,
-    konq49:      true,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
     rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
   }
 },
 {
   name: 'let',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function () {
-          try {
-            return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-          } catch (e) {
-            return false;
-          }
-        }()));
-        global.__let_script_executed = true;
-      }
-    },
-    {
-      script: function () {
-        if (!global.__let_script_executed) {
-          test((function () {
-            try {
-              return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-            } catch (e) {
-              return false;
-            }
-          }()));
-        }
-      }
+  exec: function () {
+    try {
+      return !!Function(
+         'let foo = 123;'
+        +'let passed = (foo === 123);'
+        
+         // bar is not hoisted outside of its block
+        +'{ let bar = 456; }'
+        +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+         // baz is not hoisted outside of the for-loop
+        +'for(let baz = 0; false;) {}'
+        +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+
+         // qux is not defined until its let statement is executed,
+         // and accessing it prior to that will result in a ReferenceError.
+        +'passed &= (function(){ try { qux; } catch(e) { return true; }}());'
+        +'let qux = 789;'
+        
+         // duplicate lets are syntax errors (13.2.1.1)
+        +'passed &= (function() {'
+        +'  try { Function("let a; let a;")();} catch(e) { return true; }'
+        +'}());'
+        
+         // for-loop iterations create new bindings (13.6.3.3)
+        +'let scopes = [];'
+        +'for(let i = 0; i <= 2; i++) {'
+        +'  scopes.push(function(){ return i; });'
+        +'}'
+        +'passed &= (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+        
+        +'scopes = [];'
+        +'for(let i in { a:1, b:1, c:1 }) {'
+        +'  scopes.push(function(){ return i; });'
+        +'}'
+        +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+        
+        +'return passed;'
+      )();
+    } catch (e) {
+      return false;
     }
-  ],
+  },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         true,
     ie10:        false,
     ie11:        true,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
     chrome:      false,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -426,7 +470,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: false
   }
 },
 {
@@ -536,7 +580,24 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
-      return eval('Math.max(...[1, 2, 3]) === 3');
+      function one() { return arguments[0]; }
+      function two() { return arguments[1]; }
+      var passed;
+      eval(
+         // Array spreading
+         'passed  = two(...[1, 2, 3]) === 2;'
+        +'passed  = one(...[]) === undefined;'
+         
+         // String spreading
+        +'passed &= two(..."graults") === "r";'
+        +'passed  = one(..."") === undefined;'
+         
+         // Other primitives, and objects with no valid iterator,
+         // should throw a TypeError when attempting to spread.
+        +'passed &= eval("try { one(...{0:1}); false; } catch(e) { true; }");'
+        +'passed &= eval("try { one(    ...1); false; } catch(e) { true; }");'
+      );
+      return passed;
     } catch (e) {
       return false;
     }
@@ -572,7 +633,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      true,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
@@ -587,7 +648,24 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
   exec: function () {
     try {
-      return eval('[...[1, 2, 3]][2] === 3');
+      var passed;
+      eval(
+         // Array spreading
+         'var a = [...[1, 2, 3]];'
+        +'passed  = a instanceof Array && a[1] === 2;'
+        +'passed &= [...[]].length === 0;'
+         
+         // String spreading
+        +'var b = [..."graults"];'
+        +'passed &= b instanceof Array && b[1] === "r";'
+        +'passed &= [...""].length === 0;'
+        
+         // Other primitives, and objects with no valid iterator,
+         // should throw a TypeError when attempting to spread.
+        +'passed &= eval("try { [...{0:1}]; false; } catch(e) { true; }");'
+        +'passed &= eval("try { [    ...1]; false; } catch(e) { true; }");'
+      );
+      return passed;
     } catch (e) {
       return false;
     }
@@ -623,7 +701,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      true,
+    webkit:      false,
     opera:       false,
     opera15:     false,
     konq49:      false,
