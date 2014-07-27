@@ -78,6 +78,7 @@ exports.browsers = {
   firefox30: {
     full: 'Firefox',
     short: 'FF 30',
+    obsolete: true
   },
   firefox31: {
     full: 'Firefox',
