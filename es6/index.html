@@ -83,7 +83,7 @@
           <th class="firefox25 obsolete"><a href="#firefox25" class="browser-name"><abbr title="Firefox">FF 25</abbr></th>
           <th class="firefox27 obsolete"><a href="#firefox27" class="browser-name"><abbr title="Firefox">FF 27-28</abbr></th>
           <th class="firefox29 obsolete"><a href="#firefox29" class="browser-name"><abbr title="Firefox">FF 29</abbr></th>
-          <th class="firefox30 obsolete"><a href="#firefox30 obsolete" class="browser-name"><abbr title="Firefox">FF 30</abbr></th>
+          <th class="firefox30 obsolete"><a href="#firefox30" class="browser-name"><abbr title="Firefox">FF 30</abbr></th>
           <th class="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></th>
           <th class="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></th>
           <th class="firefox33"><a href="#firefox33" class="browser-name"><abbr title="Firefox">FF 33</abbr></th>
@@ -2620,7 +2620,7 @@ test(function () {
 }());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
@@ -2774,7 +2774,7 @@ test(function () {
 <script>
 test(function () {
   try {
-    var symbol = Symbol.for('foo');
+    var symbol = Symbol('foo');
     return Symbol.for('foo') === symbol &&
            Symbol.keyFor(symbol) === 'foo';
   }
@@ -3032,15 +3032,18 @@ test(Symbol && typeof Symbol.isRegExp === "symbol" && RegExp.prototype[Symbol.is
 <script>
 test(function () {
   try {
-    var a = 1, b = {};
+    var a = 0, b = {};
     b[Symbol.iterator] = function() {
       return {
         next: function() {
-          return { value: "foo", done: true };
+          return { 
+            done: a === 1,
+            value: a++ 
+          };
         }
       };
     };
-    return Function("for (var c of b) { return c === 'foo'; } return false;")();
+    return Function("for (var c of b) { return c === 0; } return false;")();
   }
   catch(e) {
     return false;
@@ -3431,7 +3434,7 @@ test(typeof RegExp.prototype.split === 'function');
 test(typeof RegExp.prototype.compile === 'function');
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
@@ -5004,7 +5007,7 @@ test(typeof Math.cbrt === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <th colspan="40" class="separator"></th>
+          <th colspan="41" class="separator"></th>
         </tr>
       </tbody>
     </table>
