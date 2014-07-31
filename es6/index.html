@@ -83,7 +83,7 @@
           <th class="firefox25 obsolete"><a href="#firefox25" class="browser-name"><abbr title="Firefox">FF 25</abbr></th>
           <th class="firefox27 obsolete"><a href="#firefox27" class="browser-name"><abbr title="Firefox">FF 27-28</abbr></th>
           <th class="firefox29 obsolete"><a href="#firefox29" class="browser-name"><abbr title="Firefox">FF 29</abbr></th>
-          <th class="firefox30 obsolete"><a href="#firefox30 obsolete" class="browser-name"><abbr title="Firefox">FF 30</abbr></th>
+          <th class="firefox30 obsolete"><a href="#firefox30" class="browser-name"><abbr title="Firefox">FF 30</abbr></th>
           <th class="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></th>
           <th class="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></th>
           <th class="firefox33"><a href="#firefox33" class="browser-name"><abbr title="Firefox">FF 33</abbr></th>
@@ -533,6 +533,57 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
+          <td id="string_spreading"><span><a class="anchor" href="#string_spreading">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:spread">string spreading</a></span></td>
+<script>
+test(function () {
+  try {
+    return eval('["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4');
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no opera15">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">class</a></span></td>
 <script>
 test(function () {
@@ -747,7 +798,7 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[3]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[4]</sup></a></span></td>
 <script>
 test(function () {
   var passed = { __proto__ : [] } instanceof Array;
@@ -1785,7 +1836,7 @@ test(function () {
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[4]</sup></a></td>
+          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[5]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no opera15">No</td>
           <td class="no konq49">No</td>
@@ -2774,7 +2825,7 @@ test(function () {
 <script>
 test(function () {
   try {
-    var symbol = Symbol.for('foo');
+    var symbol = Symbol('foo');
     return Symbol.for('foo') === symbol &&
            Symbol.keyFor(symbol) === 'foo';
   }
@@ -3032,15 +3083,18 @@ test(Symbol && typeof Symbol.isRegExp === "symbol" && RegExp.prototype[Symbol.is
 <script>
 test(function () {
   try {
-    var a = 1, b = {};
+    var a = 0, b = {};
     b[Symbol.iterator] = function() {
       return {
         next: function() {
-          return { value: "foo", done: true };
+          return { 
+            done: a === 1,
+            value: a++ 
+          };
         }
       };
     };
-    return Function("for (var c of b) { return c === 'foo'; } return false;")();
+    return Function("for (var c of b) { return c === 0; } return false;")();
   }
   catch(e) {
     return false;
@@ -3798,12 +3852,12 @@ test(typeof Array.prototype.values === 'function');
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[5]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[6]</sup></a></td>
           <td class="no firefox18 obsolete">No</td>
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[6]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[7]</sup></a></td>
           <td class="no firefox29 obsolete">No</td>
           <td class="no firefox30 obsolete">No</td>
           <td class="no firefox31">No</td>
@@ -4310,7 +4364,7 @@ test(typeof Math.imul === 'function');
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[7]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[8]</sup></a></td>
           <td class="yes chrome30">Yes</td>
           <td class="yes chrome33">Yes</td>
           <td class="yes chrome34">Yes</td>
@@ -4931,7 +4985,7 @@ test(typeof Math.fround === 'function');
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[8]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[9]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -5004,7 +5058,7 @@ test(typeof Math.cbrt === 'function');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <th colspan="40" class="separator"></th>
+          <th colspan="41" class="separator"></th>
         </tr>
       </tbody>
     </table>
@@ -5015,23 +5069,26 @@ test(typeof Math.cbrt === 'function');
       <p id="harmony-flag-note">
         <sup>[2]</sup> Have to be enabled via --harmony flag
       </p>
+      <p id="fx-spreading-strings-note">
+        <sup>[3]</sup> Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.
+      </p>
       <p id="proto-in-object-literals-note">
-        <sup>[3]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[4]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
       <p id="fx-destructuring-note">
-        <sup>[4]</sup> As of WebKit r170830, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+        <sup>[5]</sup> As of WebKit r170830, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
       </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[5]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[6]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[6]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[7]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[7]</sup> Available since Chrome 28
+        <sup>[8]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[8]</sup> Available since Firefox 26
+        <sup>[9]</sup> Available since Firefox 26
       </p>
     </div>
   </div>
