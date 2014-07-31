@@ -647,6 +647,62 @@ exports.tests = [
   }
 },
 {
+  name: 'string spreading',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
+  exec: function () {
+    try {
+      return eval('["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4');
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   {
+      val: false,
+      note_id: 'fx-spreading-strings',
+      note_html: 'Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.'
+    },
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'class',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
   exec: function () {
