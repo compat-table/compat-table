@@ -2868,7 +2868,7 @@ exports.tests = [
     return true;
   },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         true,
     ie10:        true,
     ie11:        true,
@@ -3710,7 +3710,7 @@ exports.tests = [
     return typeof RegExp.prototype.compile === 'function';
   },
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         false,
     ie10:        true,
     ie11:        true,
