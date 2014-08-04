@@ -17,8 +17,10 @@ table.one-selected tr.selected td { padding-top: 30px; padding-bottom: 30px; opa
 table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacity: 1; }
 
 #table-wrapper tr:hover td { background: #ddd; }
-#table-wrapper tr:hover td.yes, #table-wrapper td.hover.yes { background: #171; }
-#table-wrapper tr:hover td.no, #table-wrapper td.hover.no { background: #b11; }
+#table-wrapper tr:hover td.yes, #table-wrapper td.hover.yes { background: hsl(120,  74%,  27%); }
+#table-wrapper tr:hover td.no,  #table-wrapper td.hover.no  { background: hsl(  0,  83%,  40%); }
+#table-wrapper tr:hover td.yes.obsolete, #table-wrapper td.hover.yes.obsolete { background: hsl(120,  24%,  37%); }
+#table-wrapper tr:hover td.no.obsolete,  #table-wrapper td.hover.no.obsolete  { background: hsl(  0,  33%,  50%); }
 
 #body { padding-left: 1em; position: relative; min-width: 1250px; }
 
@@ -36,8 +38,12 @@ table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacit
 .yes a, .no a { color: #fff; font-family: 'Open Sans', sans-serif;  }
 .yes, .no { text-align: center; font-family: 'Open Sans', sans-serif;
             font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
-.yes { background: #4a4; }
-.no { background: #e11; }
+
+.yes          { background: hsl(120,  43%,  47%); }
+.no           { background: hsl(  0,  87%,  50%); }
+.yes.obsolete { background: hsl(120,  28%,  61%); }
+.no.obsolete  { background: hsl(  0,  72%,  65%); }
+
 .test-name { width: 260px; }
 .warning { background: #ffc; display: inline-block; margin: 0 0 2em 0; padding: 0.25em; }
 .separator { padding: 0; height: 0.5em; background: none; }
