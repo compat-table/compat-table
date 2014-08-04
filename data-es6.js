@@ -118,21 +118,21 @@ exports.browsers = {
   chrome30: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;30,<br>OP&nbsp;17',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome33: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;33,<br>OP&nbsp;20',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome34: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;34,<br>OP&nbsp;21',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
