@@ -406,36 +406,41 @@ exports.tests = [
   }
 },
 {
-  name: 'let',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function () {
-          try {
-            return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-          } catch (e) {
-            return false;
-          }
-        }()));
-        global.__let_script_executed = true;
-      }
-    },
-    {
-      script: function () {
-        if (!global.__let_script_executed) {
-          test((function () {
-            try {
-              return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-            } catch (e) {
-              return false;
-            }
-          }()));
+  name: 'let (block scope)',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  exec: (function() {
+    var script = function () {
+      test(function() {
+        try {
+          return !!Function(
+             '"use strict";'
+            +'let foo = 123;'
+            +'let passed = (foo === 123);'
+   
+             // bar is not hoisted outside of its block
+            +'{ let bar = 456; }'
+            +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+             // baz is not hoisted outside of the for-loop
+            +'for(let baz = 0; false;) {}'
+            +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+            +'return passed;'
+          )();
+        } catch (e) {
+          return false;
         }
-      }
+      }());
+      global.__script_executed['let'] = true;
     }
-  ],
+    return [{
+      type: 'application/javascript;version=1.8',
+      script: script
+    },{
+      script: eval(("0,"+script).replace("{",
+        "{if (!global.__script_executed['let']) {")+"}")
+    }];
+  }()),
   res: {
     tr:          true,
     ejs:         true,
@@ -480,6 +485,155 @@ exports.tests = [
     nodeharmony: true,
     ios7:        false,
     ios8:        false
+  }
+},
+{
+  name: 'let (temporal dead zone)',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  exec: (function() {
+    var script = function () {
+      test(function() {
+        try {
+          return !!Function(
+             '"use strict";'
+            // qux is not defined until its let statement is executed,
+            // and accessing it prior to that will result in a ReferenceError.
+            +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
+            +'let qux = 789;'
+            +'return passed;'
+          )();
+        } catch (e) {
+          return false;
+        }
+      }());
+      global.__script_executed['let TDZ'] = true;
+    }
+    return [{
+      type: 'application/javascript;version=1.8',
+      script: script
+    },{
+      script: eval(("0,"+script).replace("{",
+        "{if (!global.__script_executed['let TDZ']) {")+"}")
+    }];
+  }()),
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        true,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    konq49:      false,
+    opera:       false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'let (for-loop iteration scope)',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-statement-runtime-semantics-labelledevaluation',
+  exec: (function() {
+    var script = function () {
+      test(function() {
+        try {
+          return !!Function(    
+            '"use strict";'   
+             // for-loop iterations create new bindings
+            +'let scopes = [];'
+            +'for(let i = 0; i <= 2; i++) {'
+			+'  scopes.push(function(){ return i; });'
+			+'}'
+			+'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+	
+			+'scopes = [];'
+			+'for(let i in { a:1, b:1, c:1 }) {'
+			+'  scopes.push(function(){ return i; });'
+			+'}'
+			+'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+	
+			+'return passed;'
+		  )();
+		} catch (e) {
+		  return false;
+		}
+      }());
+      global.__script_executed['let for'] = true;
+    }
+    return [{
+      type: 'application/javascript;version=1.8',
+      script: script
+    },{
+      script: eval(("0,"+script).replace("{",
+        "{if (!global.__script_executed['let for']) {")+"}")
+    }];
+  }()),
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        true,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    konq49:      false,
+    opera:       false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
   }
 },
 {

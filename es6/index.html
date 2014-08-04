@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
     <script>
-      var __yield_script_executed, __let_script_executed;
+      var __script_executed = {};
       if (typeof global === 'undefined') {
         var global = this;
       }
@@ -302,39 +302,97 @@ try {
           <td class="yes ios8">Yes</td>
         </tr>
         <tr>
-          <td id="let"><span><a class="anchor" href="#let">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:let">let</a></span></td>
-<script type="application/javascript;version=1.8" data-source="test((function () {
+          <td id="let_(block_scope)"><span><a class="anchor" href="#let_(block_scope)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let (block scope)</a></span></td>
+<script type="application/javascript;version=1.8" data-source="test(function() {
 try {
-  return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+  return !!Function(
+     '&quot;use strict&quot;;'
+    +'let foo = 123;'
+    +'let passed = (foo === 123);'
+   
+     // bar is not hoisted outside of its block
+    +'{ let bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+     // baz is not hoisted outside of the for-loop
+    +'for(let baz = 0; false;) {}'
+    +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+    +'return passed;'
+  )();
 } catch (e) {
   return false;
 }
-        }()));
-        global.__let_script_executed = true;">test((function () {
+      }());
+      global.__script_executed['let'] = true;">test(function() {
 try {
-  return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+  return !!Function(
+     '"use strict";'
+    +'let foo = 123;'
+    +'let passed = (foo === 123);'
+   
+     // bar is not hoisted outside of its block
+    +'{ let bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+     // baz is not hoisted outside of the for-loop
+    +'for(let baz = 0; false;) {}'
+    +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+    +'return passed;'
+  )();
 } catch (e) {
   return false;
 }
-        }()));
-        global.__let_script_executed = true;</script>
-<script data-source="if (!global.__let_script_executed) {
-test((function () {
+      }());
+      global.__script_executed['let'] = true;</script>
+<script data-source="if (!global.__script_executed['let']) {
+test(function() {
   try {
-    return eval('(function () { &quot;use strict&quot;; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+    return !!Function(
+       '&quot;use strict&quot;;'
+      +'let foo = 123;'
+      +'let passed = (foo === 123);'
+   
+       // bar is not hoisted outside of its block
+      +'{ let bar = 456; }'
+      +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+       // baz is not hoisted outside of the for-loop
+      +'for(let baz = 0; false;) {}'
+      +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+      +'return passed;'
+    )();
   } catch (e) {
     return false;
   }
-}()));
-        }">if (!global.__let_script_executed) {
-test((function () {
+}());
+global.__script_executed['let'] = true;
+    }">if (!global.__script_executed['let']) {
+test(function() {
   try {
-    return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+    return !!Function(
+       '"use strict";'
+      +'let foo = 123;'
+      +'let passed = (foo === 123);'
+   
+       // bar is not hoisted outside of its block
+      +'{ let bar = 456; }'
+      +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+       // baz is not hoisted outside of the for-loop
+      +'for(let baz = 0; false;) {}'
+      +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+      +'return passed;'
+    )();
   } catch (e) {
     return false;
   }
-}()));
-        }</script>
+}());
+global.__script_executed['let'] = true;
+    }</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -378,6 +436,248 @@ test((function () {
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
+        </tr>
+        <tr>
+          <td id="let_(temporal_dead_zone)"><span><a class="anchor" href="#let_(temporal_dead_zone)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let (temporal dead zone)</a></span></td>
+<script type="application/javascript;version=1.8" data-source="test(function() {
+try {
+  return !!Function(
+     '&quot;use strict&quot;;'
+    // qux is not defined until its let statement is executed,
+    // and accessing it prior to that will result in a ReferenceError.
+    +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
+    +'let qux = 789;'
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
+      }());
+      global.__script_executed['let TDZ'] = true;">test(function() {
+try {
+  return !!Function(
+     '"use strict";'
+    // qux is not defined until its let statement is executed,
+    // and accessing it prior to that will result in a ReferenceError.
+    +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
+    +'let qux = 789;'
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
+      }());
+      global.__script_executed['let TDZ'] = true;</script>
+<script data-source="if (!global.__script_executed['let TDZ']) {
+test(function() {
+  try {
+    return !!Function(
+       '&quot;use strict&quot;;'
+      // qux is not defined until its let statement is executed,
+      // and accessing it prior to that will result in a ReferenceError.
+      +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
+      +'let qux = 789;'
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+global.__script_executed['let TDZ'] = true;
+    }">if (!global.__script_executed['let TDZ']) {
+test(function() {
+  try {
+    return !!Function(
+       '"use strict";'
+      // qux is not defined until its let statement is executed,
+      // and accessing it prior to that will result in a ReferenceError.
+      +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
+      +'let qux = 789;'
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+global.__script_executed['let TDZ'] = true;
+    }</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="yes ie11">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="let_(for-loop_iteration_scope)"><span><a class="anchor" href="#let_(for-loop_iteration_scope)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-statement-runtime-semantics-labelledevaluation">let (for-loop iteration scope)</a></span></td>
+<script type="application/javascript;version=1.8" data-source="test(function() {
+try {
+  return !!Function(    
+    '&quot;use strict&quot;;'   
+     // for-loop iterations create new bindings
+    +'let scopes = [];'
+    +'for(let i = 0; i <= 2; i++) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+  
+      +'scopes = [];'
+      +'for(let i in { a:1, b:1, c:1 }) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
+  
+      +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
+      }());
+      global.__script_executed['let for'] = true;">test(function() {
+try {
+  return !!Function(    
+    '"use strict";'   
+     // for-loop iterations create new bindings
+    +'let scopes = [];'
+    +'for(let i = 0; i <= 2; i++) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+  
+      +'scopes = [];'
+      +'for(let i in { a:1, b:1, c:1 }) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+  
+      +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
+      }());
+      global.__script_executed['let for'] = true;</script>
+<script data-source="if (!global.__script_executed['let for']) {
+test(function() {
+  try {
+    return !!Function(    
+      '&quot;use strict&quot;;'   
+       // for-loop iterations create new bindings
+      +'let scopes = [];'
+      +'for(let i = 0; i <= 2; i++) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+  
+      +'scopes = [];'
+      +'for(let i in { a:1, b:1, c:1 }) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
+  
+      +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
+}());
+global.__script_executed['let for'] = true;
+    }">if (!global.__script_executed['let for']) {
+test(function() {
+  try {
+    return !!Function(    
+      '"use strict";'   
+       // for-loop iterations create new bindings
+      +'let scopes = [];'
+      +'for(let i = 0; i <= 2; i++) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+  
+      +'scopes = [];'
+      +'for(let i in { a:1, b:1, c:1 }) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+  
+      +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
+}());
+global.__script_executed['let for'] = true;
+    }</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="yes ie11">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
         </tr>
         <tr>
           <td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
