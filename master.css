@@ -12,9 +12,9 @@ table { margin-bottom: 2em; width: 100%; }
 p { margin-bottom: 0.5em; margin-top: 0; }
 code { font-family: "Courier New", Courier, monospace; }
 
-table.one-selected td { opacity: 0.3; }
-tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
-td.selected { padding-left: 30px; padding-right: 30px; opacity: 1 !important; }
+table.one-selected td:not(:first-child) { opacity: 0.3; }
+table.one-selected tr.selected td { padding-top: 30px; padding-bottom: 30px; opacity: 1; }
+table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacity: 1; }
 
 #table-wrapper tr:hover td { background: #ddd; }
 #table-wrapper tr:hover td.yes, #table-wrapper td.hover.yes { background: #171; }
