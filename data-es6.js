@@ -351,10 +351,20 @@ exports.tests = [
 },
 {
   name: 'const',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   exec: function () {
     try {
-      return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
+      return !!Function(
+         'const foo = 123;'
+        +'var passed = (foo === 123);'
+		
+         // redefining a const is a syntax error (12.14.1)
+        +'passed &= (function() {'
+        +'  try { Function("foo = 2;")(); } catch(e) { return true; }'
+        +'}());'
+        
+        +'return passed;'
+	  )();
     } catch (e) {
       return false;
     }
@@ -571,21 +581,21 @@ exports.tests = [
              // for-loop iterations create new bindings
             +'let scopes = [];'
             +'for(let i = 0; i <= 2; i++) {'
-			+'  scopes.push(function(){ return i; });'
-			+'}'
-			+'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
-	
-			+'scopes = [];'
-			+'for(let i in { a:1, b:1, c:1 }) {'
-			+'  scopes.push(function(){ return i; });'
-			+'}'
-			+'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
-	
-			+'return passed;'
-		  )();
-		} catch (e) {
-		  return false;
-		}
+            +'  scopes.push(function(){ return i; });'
+            +'}'
+            +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+    
+            +'scopes = [];'
+            +'for(let i in { a:1, b:1, c:1 }) {'
+            +'  scopes.push(function(){ return i; });'
+            +'}'
+            +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+    
+            +'return passed;'
+          )();
+        } catch (e) {
+          return false;
+        }
       }());
       global.__script_executed['let for'] = true;
     }

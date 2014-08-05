@@ -242,17 +242,37 @@ return true;
           <td class="no ios8">No</td>
         </tr>
         <tr>
-          <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:const">const</a></span></td>
+          <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">const</a></span></td>
 <script data-source="function () {
 try {
-  return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === &quot;number&quot;; }())');
+  return !!Function(
+     'const foo = 123;'
+    +'var passed = (foo === 123);'
+    
+     // redefining a const is a syntax error (12.14.1)
+    +'passed &= (function() {'
+    +'  try { Function(&quot;foo = 2;&quot;)(); } catch(e) { return true; }'
+    +'}());'
+    
+    +'return passed;'
+    )();
 } catch (e) {
   return false;
 }
   }">test(
 function () {
 try {
-  return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
+  return !!Function(
+     'const foo = 123;'
+    +'var passed = (foo === 123);'
+    
+     // redefining a const is a syntax error (12.14.1)
+    +'passed &= (function() {'
+    +'  try { Function("foo = 2;")(); } catch(e) { return true; }'
+    +'}());'
+    
+    +'return passed;'
+    )();
 } catch (e) {
   return false;
 }
@@ -557,21 +577,21 @@ try {
      // for-loop iterations create new bindings
     +'let scopes = [];'
     +'for(let i = 0; i <= 2; i++) {'
-      +'  scopes.push(function(){ return i; });'
-      +'}'
-      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
-  
-      +'scopes = [];'
-      +'for(let i in { a:1, b:1, c:1 }) {'
-      +'  scopes.push(function(){ return i; });'
-      +'}'
-      +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
-  
-      +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+    
+    +'scopes = [];'
+    +'for(let i in { a:1, b:1, c:1 }) {'
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
+    
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
       }());
       global.__script_executed['let for'] = true;">test(function() {
 try {
@@ -580,21 +600,21 @@ try {
      // for-loop iterations create new bindings
     +'let scopes = [];'
     +'for(let i = 0; i <= 2; i++) {'
-      +'  scopes.push(function(){ return i; });'
-      +'}'
-      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
-  
-      +'scopes = [];'
-      +'for(let i in { a:1, b:1, c:1 }) {'
-      +'  scopes.push(function(){ return i; });'
-      +'}'
-      +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
-  
-      +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+    
+    +'scopes = [];'
+    +'for(let i in { a:1, b:1, c:1 }) {'
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+    
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
       }());
       global.__script_executed['let for'] = true;</script>
 <script data-source="if (!global.__script_executed['let for']) {
@@ -608,18 +628,18 @@ test(function() {
       +'  scopes.push(function(){ return i; });'
       +'}'
       +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
-  
+    
       +'scopes = [];'
       +'for(let i in { a:1, b:1, c:1 }) {'
       +'  scopes.push(function(){ return i; });'
       +'}'
       +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
-  
+    
       +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
+    )();
+  } catch (e) {
+    return false;
+  }
 }());
 global.__script_executed['let for'] = true;
     }">if (!global.__script_executed['let for']) {
@@ -633,18 +653,18 @@ test(function() {
       +'  scopes.push(function(){ return i; });'
       +'}'
       +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
-  
+    
       +'scopes = [];'
       +'for(let i in { a:1, b:1, c:1 }) {'
       +'  scopes.push(function(){ return i; });'
       +'}'
       +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
-  
+    
       +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
+    )();
+  } catch (e) {
+    return false;
+  }
 }());
 global.__script_executed['let for'] = true;
     }</script>
