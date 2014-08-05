@@ -488,7 +488,7 @@ exports.tests = [
   }
 },
 {
-  name: 'let (temporal dead zone)',
+  name: 'let/const temporal dead zone',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   exec: (function() {
     var script = function () {
@@ -496,10 +496,12 @@ exports.tests = [
         try {
           return !!Function(
              '"use strict";'
-            // qux is not defined until its let statement is executed,
-            // and accessing it prior to that will result in a ReferenceError.
-            +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
-            +'let qux = 789;'
+            // qux and quux are not defined until the let/const statements execute,
+            // and accessing them prior to that will result in a ReferenceError.
+            +'passed  = (function(){ try {  qux; } catch(e) { return true; }}());'
+            +'let qux = 456;'
+            +'passed &= (function(){ try { quux; } catch(e) { return true; }}());'
+            +'const quux = 789;'
             +'return passed;'
           )();
         } catch (e) {

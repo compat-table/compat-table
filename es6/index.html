@@ -438,15 +438,17 @@ global.__script_executed['let'] = true;
           <td class="no ios8">No</td>
         </tr>
         <tr>
-          <td id="let_(temporal_dead_zone)"><span><a class="anchor" href="#let_(temporal_dead_zone)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let (temporal dead zone)</a></span></td>
+          <td id="let/const_temporal_dead_zone"><span><a class="anchor" href="#let/const_temporal_dead_zone">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let/const temporal dead zone</a></span></td>
 <script type="application/javascript;version=1.8" data-source="test(function() {
 try {
   return !!Function(
      '&quot;use strict&quot;;'
-    // qux is not defined until its let statement is executed,
-    // and accessing it prior to that will result in a ReferenceError.
-    +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
-    +'let qux = 789;'
+    // qux and quux are not defined until the let/const statements execute,
+    // and accessing them prior to that will result in a ReferenceError.
+    +'passed  = (function(){ try {  qux; } catch(e) { return true; }}());'
+    +'let qux = 456;'
+    +'passed &= (function(){ try { quux; } catch(e) { return true; }}());'
+    +'const quux = 789;'
     +'return passed;'
   )();
 } catch (e) {
@@ -457,10 +459,12 @@ try {
 try {
   return !!Function(
      '"use strict";'
-    // qux is not defined until its let statement is executed,
-    // and accessing it prior to that will result in a ReferenceError.
-    +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
-    +'let qux = 789;'
+    // qux and quux are not defined until the let/const statements execute,
+    // and accessing them prior to that will result in a ReferenceError.
+    +'passed  = (function(){ try {  qux; } catch(e) { return true; }}());'
+    +'let qux = 456;'
+    +'passed &= (function(){ try { quux; } catch(e) { return true; }}());'
+    +'const quux = 789;'
     +'return passed;'
   )();
 } catch (e) {
@@ -473,10 +477,12 @@ test(function() {
   try {
     return !!Function(
        '&quot;use strict&quot;;'
-      // qux is not defined until its let statement is executed,
-      // and accessing it prior to that will result in a ReferenceError.
-      +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
-      +'let qux = 789;'
+      // qux and quux are not defined until the let/const statements execute,
+      // and accessing them prior to that will result in a ReferenceError.
+      +'passed  = (function(){ try {  qux; } catch(e) { return true; }}());'
+      +'let qux = 456;'
+      +'passed &= (function(){ try { quux; } catch(e) { return true; }}());'
+      +'const quux = 789;'
       +'return passed;'
     )();
   } catch (e) {
@@ -489,10 +495,12 @@ test(function() {
   try {
     return !!Function(
        '"use strict";'
-      // qux is not defined until its let statement is executed,
-      // and accessing it prior to that will result in a ReferenceError.
-      +'passed = (function(){ try { qux; } catch(e) { return true; }}());'
-      +'let qux = 789;'
+      // qux and quux are not defined until the let/const statements execute,
+      // and accessing them prior to that will result in a ReferenceError.
+      +'passed  = (function(){ try {  qux; } catch(e) { return true; }}());'
+      +'let qux = 456;'
+      +'passed &= (function(){ try { quux; } catch(e) { return true; }}());'
+      +'const quux = 789;'
       +'return passed;'
     )();
   } catch (e) {
