@@ -498,9 +498,9 @@ exports.tests = [
              '"use strict";'
             // qux and quux are not defined until the let/const statements execute,
             // and accessing them prior to that will result in a ReferenceError.
-            +'passed  = (function(){ try {  qux; } catch(e) { return true; }}());'
+            +'let passed = (function(){ try {  qux; } catch(e) { return true; }}());'
             +'let qux = 456;'
-            +'passed &= (function(){ try { quux; } catch(e) { return true; }}());'
+            +'passed    &= (function(){ try { quux; } catch(e) { return true; }}());'
             +'const quux = 789;'
             +'return passed;'
           )();
@@ -601,7 +601,7 @@ exports.tests = [
     tr:          false,
     ejs:         true,
     ie10:        false,
-    ie11:        true,
+    ie11:        false,
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
