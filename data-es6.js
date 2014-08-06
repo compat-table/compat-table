@@ -644,7 +644,7 @@ exports.tests = [
     }
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
@@ -2814,7 +2814,7 @@ exports.tests = [
     return true;
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        true,
     ie11:        true,
@@ -3233,9 +3233,9 @@ exports.tests = [
       b[Symbol.iterator] = function() {
         return {
           next: function() {
-            return { 
+            return {
               done: a === 1,
-              value: a++ 
+              value: a++
             };
           }
         };
@@ -3640,7 +3640,7 @@ exports.tests = [
     return typeof RegExp.prototype.compile === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         false,
     ie10:        true,
     ie11:        true,
@@ -3734,7 +3734,7 @@ exports.tests = [
     return typeof Array.of === 'function';
   },
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
