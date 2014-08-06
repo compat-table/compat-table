@@ -94,7 +94,10 @@ function dataToHtml(browsers, tests) {
     // each browser for this test
     for (browserId in browsers) {
       val = t.res[browserId];
-      if (val == null) {
+      if (browsers[browserId].nonbrowser && t.annex_b && !val) {
+        body.push('\t<td class="not-applicable ' + browserTableClass(browserId, browsers[browserId]) + '">n/a</td>');
+      }
+      else if (val == null) {
         body.push('\t<td class="' + browserTableClass(browserId, browsers[browserId]) + '"></td>');
       } else {
         body.push(
