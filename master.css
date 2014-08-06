@@ -44,7 +44,7 @@ table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacit
 .no           { background: hsl(  0,  87%,  50%); }
 .yes.obsolete { background: hsl(120,  28%,  61%); }
 .no.obsolete  { background: hsl(  0,  72%,  65%); }
-.not-applicable          { background: hsl(120,  14%,  67%); }
+.not-applicable { background: hsl(120,  14%,  67%); cursor: help; }
 
 .test-name { width: 260px; }
 .warning { background: #ffc; display: inline-block; margin: 0 0 2em 0; padding: 0.25em; }

@@ -188,7 +188,8 @@ exports.browsers = {
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'PH'
+    short: 'PH',
+    nonbrowser: true,
   },
   node: {
     full: 'Node 0.10',
