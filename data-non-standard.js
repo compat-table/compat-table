@@ -145,62 +145,6 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'function statement',
-  link: 'http://kangax.github.com/nfe/#function-statements',
-  exec: function () {
-    try {
-      eval('if (1) { function f(){ } } else { function f(){ } }');
-      return typeof f === 'function';
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: {
-      val: true,
-      note_id: 'function-statements-strict-mode-firefox',
-      note_html: 'From Firefox 4 on, function statements in strict mode functions are only accepted at top level or immediately within another function.'
-    },
-    firefox5: {
-      val: true,
-      note_id: 'function-statements-strict-mode-firefox'
-    },
-    firefox6: {
-      val: true,
-      note_id: 'function-statements-strict-mode-firefox'
-    },
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: {
-      val: true,
-      note_id: 'besen-extensions',
-      note_html: "With 'Javascript-specific extensions' option enabled"
-    },
-    rhino: true,
-    phantom: true
-  },
-  separator: 'after'
-},
-{
   name: 'uneval',
   exec: function () {
     return typeof uneval == 'function';
@@ -270,41 +214,6 @@ exports.tests = [
     phantom: false
   },
   separator: 'after'
-},
-{
-  name: 'function "name" property',
-  exec: function () {
-    return (function foo(){}).name == 'foo';
-  },
-  res: {
-    ie7: false,
-    ie8: false,
-    ie9: false,
-    ie10: false,
-    ie11: false,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: false,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: false,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
 },
 {
   name: 'function "caller" property',
@@ -452,43 +361,6 @@ exports.tests = [
     phantom: false
   },
   separator: 'after'
-},
-{
-  name: '__proto__',
-  link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/proto',
-  exec: function () {
-    return ({}).__proto__ === Object.prototype &&
-      [].__proto__ === Array.prototype;
-  },
-  res: {
-    ie7: false,
-    ie8: false,
-    ie9: false,
-    ie10: false,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: false,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
 },
 {
   name: '__count__',
@@ -678,101 +550,6 @@ exports.tests = [
   separator: 'after'
 },
 {
-  name: 'const',
-  exec: function () {
-    try {
-      eval('const foobarbaz = 12');
-      return typeof foobarbaz === 'number';
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    ie7: false,
-    ie8: false,
-    ie9: false,
-    ie10: false,
-    ie11: false,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: false,
-    konq49: false,
-    besen: false,
-    rhino: false,
-    phantom: true
-  }
-},
-{
-  name: 'let',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function(){
-          try {
-            return eval('(function(){ let foobarbaz2 = 123; return foobarbaz2 == 123; })()');
-          } catch (e) {
-            return false;
-          }
-        })());
-        __script_executed = true;
-      }
-    },
-    {
-      script: function () {
-        if (!__script_executed) {
-          test(false);
-          __script_executed = false;
-        }
-      }
-    }
-  ],
-  res: {
-    ie7: false,
-    ie8: false,
-    ie9: false,
-    ie10: false,
-    ie11: false,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: false,
-    safari4: false,
-    safari5: false,
-    safari7: false,
-    webkit: false,
-    chrome7: false,
-    opera10_10: false,
-    opera10_50: false,
-    opera15: false,
-    konq44: false,
-    konq49: false,
-    besen: false,
-    rhino: false,
-    phantom: false
-  }
-},
-{
   name: 'Array generics',
   exec: function () {
     return typeof Array.slice === 'function' && Array.slice('123').length === 3;
@@ -925,49 +702,6 @@ exports.tests = [
     phantom: false
   },
   separator: 'after'
-},
-{
-  name: 'RegExp "y" flag',
-  exec: function () {
-    try {
-      var re = new RegExp('\\w');
-      var re2 = new RegExp('\\w', 'y');
-      re.exec('xy');
-      re2.exec('xy');
-      return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    ie7: false,
-    ie8: false,
-    ie9: false,
-    ie10: false,
-    ie11: false,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: false,
-    safari4: false,
-    safari5: false,
-    safari7: false,
-    webkit: false,
-    chrome7: false,
-    opera10_10: true,
-    opera10_50: false,
-    opera15: false,
-    konq44: false,
-    konq49: false,
-    besen: false,
-    rhino: false,
-    phantom: false
-  }
 },
 {
   name: 'RegExp "x" flag',
@@ -1166,39 +900,6 @@ exports.tests = [
   separator: 'after'
 },
 {
-  name: 'String.prototype.substr',
-  exec: function () { return typeof String.prototype.substr === 'function' },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
-},
-{
   name: 'String.prototype.trimLeft',
   exec: function () { return typeof String.prototype.trimLeft === 'function' },
   res: {
@@ -1261,171 +962,6 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: false,
-    phantom: true
-  }
-},
-{
-  name: 'String.prototype.anchor',
-  exec: function () { return typeof String.prototype.anchor === 'function' },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
-},
-{
-  name: 'String.prototype.big',
-  exec: function () { return typeof String.prototype.big === 'function' },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
-},
-{
-  name: 'String.prototype.blink',
-  exec: function () { return typeof String.prototype.blink === 'function' },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
-},
-{
-  name: 'String.prototype.bold',
-  exec: function () { return typeof String.prototype.bold === 'function' },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
-  }
-},
-{
-  name: 'String.prototype.link',
-  exec: function () { return typeof String.prototype.link === 'function' },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
     phantom: true
   }
 },
@@ -1593,46 +1129,6 @@ exports.tests = [
     besen: true,
     rhino: false,
     phantom: false
-  },
-  separator: 'after'
-},
-{
-  name: 'Octal literals',
-  exec: function () {
-    try {
-      return eval('070 === 56');
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    ie7: true,
-    ie8: true,
-    ie9: true,
-    ie10: true,
-    ie11: true,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
-    firefox28: true,
-    safari3: true,
-    safari4: true,
-    safari5: true,
-    safari7: true,
-    webkit: true,
-    chrome7: true,
-    opera10_10: true,
-    opera10_50: true,
-    opera15: true,
-    konq44: true,
-    konq49: true,
-    besen: true,
-    rhino: true,
-    phantom: true
   },
   separator: 'after'
 },
