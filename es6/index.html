@@ -105,7 +105,7 @@
           <th class="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></th>
           <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
           <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
-          <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.11 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
+          <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.13 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
         </tr>
       </thead>
       <tbody>
@@ -2020,7 +2020,7 @@ test(typeof Promise !== 'undefined' &&
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Object.assign"><span><a class="anchor" href="#Object.assign">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign">Object.assign</a></span></td>
@@ -2152,7 +2152,7 @@ test(typeof Object.getOwnPropertySymbols === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Object.setPrototypeOf"><span><a class="anchor" href="#Object.setPrototypeOf">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof">Object.setPrototypeOf</a></span></td>
@@ -2196,7 +2196,7 @@ test(typeof Object.setPrototypeOf === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
@@ -2818,7 +2818,7 @@ test(function () {
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Symbol.create"><span><a class="anchor" href="#Symbol.create">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.create</a></span></td>
@@ -3764,7 +3764,7 @@ test(typeof Array.prototype.keys === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.values"><span><a class="anchor" href="#Array.prototype.values">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.values">Array.prototype.values</a></span></td>
@@ -3808,7 +3808,7 @@ test(typeof Array.prototype.values === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.entries"><span><a class="anchor" href="#Array.prototype.entries">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.entries">Array.prototype.entries</a></span></td>
@@ -3852,7 +3852,7 @@ test(typeof Array.prototype.entries === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype[Symbol.unscopables]"><span><a class="anchor" href="#Array.prototype[Symbol.unscopables]">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables">Array.prototype[Symbol.unscopables]</a></span></td>
@@ -3987,7 +3987,7 @@ test(typeof Number.isInteger === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Number.isSafeInteger"><span><a class="anchor" href="#Number.isSafeInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger">Number.isSafeInteger</a></span></td>
@@ -4031,7 +4031,7 @@ test(typeof Number.isSafeInteger === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Number.isNaN"><span><a class="anchor" href="#Number.isNaN">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan">Number.isNaN</a></span></td>
@@ -4119,7 +4119,7 @@ test(typeof Number.EPSILON === 'number');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Number.MIN_SAFE_INTEGER"><span><a class="anchor" href="#Number.MIN_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer">Number.MIN_SAFE_INTEGER</a></span></td>
@@ -4163,7 +4163,7 @@ test(typeof Number.MIN_SAFE_INTEGER === 'number');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Number.MAX_SAFE_INTEGER"><span><a class="anchor" href="#Number.MAX_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer">Number.MAX_SAFE_INTEGER</a></span></td>
@@ -4207,7 +4207,7 @@ test(typeof Number.MAX_SAFE_INTEGER === 'number');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.clz32"><span><a class="anchor" href="#Math.clz32">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32">Math.clz32</a></span></td>
@@ -4251,7 +4251,7 @@ test(typeof Math.clz32 === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.imul"><span><a class="anchor" href="#Math.imul">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul">Math.imul</a></span></td>
@@ -4383,7 +4383,7 @@ test(typeof Math.log10 === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.log2"><span><a class="anchor" href="#Math.log2">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2">Math.log2</a></span></td>
@@ -4427,7 +4427,7 @@ test(typeof Math.log2 === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.log1p"><span><a class="anchor" href="#Math.log1p">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p">Math.log1p</a></span></td>
@@ -4471,7 +4471,7 @@ test(typeof Math.log1p === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.expm1"><span><a class="anchor" href="#Math.expm1">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1">Math.expm1</a></span></td>
@@ -4515,7 +4515,7 @@ test(typeof Math.expm1 === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.cosh"><span><a class="anchor" href="#Math.cosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh">Math.cosh</a></span></td>
@@ -4559,7 +4559,7 @@ test(typeof Math.cosh === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.sinh"><span><a class="anchor" href="#Math.sinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh">Math.sinh</a></span></td>
@@ -4603,7 +4603,7 @@ test(typeof Math.sinh === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.tanh"><span><a class="anchor" href="#Math.tanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.tanh</a></span></td>
@@ -4647,7 +4647,7 @@ test(typeof Math.tanh === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.acosh"><span><a class="anchor" href="#Math.acosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh">Math.acosh</a></span></td>
@@ -4691,7 +4691,7 @@ test(typeof Math.acosh === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.asinh"><span><a class="anchor" href="#Math.asinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh">Math.asinh</a></span></td>
@@ -4735,7 +4735,7 @@ test(typeof Math.asinh === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.atanh"><span><a class="anchor" href="#Math.atanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.atanh</a></span></td>
@@ -4779,7 +4779,7 @@ test(typeof Math.atanh === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.hypot"><span><a class="anchor" href="#Math.hypot">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot">Math.hypot</a></span></td>
@@ -4823,7 +4823,7 @@ test(typeof Math.hypot === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.trunc"><span><a class="anchor" href="#Math.trunc">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc">Math.trunc</a></span></td>
@@ -4911,7 +4911,7 @@ test(typeof Math.fround === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <td id="Math.cbrt"><span><a class="anchor" href="#Math.cbrt">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt">Math.cbrt</a></span></td>
@@ -4955,7 +4955,7 @@ test(typeof Math.cbrt === 'function');
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
           <th colspan="40" class="separator"></th>
