@@ -535,7 +535,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -2621,7 +2621,7 @@ test(function () {
 }());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
@@ -2824,7 +2824,7 @@ test(function () {
           <td id="Symbol.create"><span><a class="anchor" href="#Symbol.create">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.create</a></span></td>
 <script>
 test(function () {
-  if (Symbol && typeof Symbol.create === "symbol") {
+  if (typeof Symbol === "function" && typeof Symbol.create === "symbol") {
     var a = 2, b = function(){};
     b[Symbol.create] = function() { a = 4; return {};};
     new b();
@@ -2876,7 +2876,7 @@ test(function () {
           <td id="Symbol.hasInstance"><span><a class="anchor" href="#Symbol.hasInstance">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.hasInstance</a></span></td>
 <script>
 test(function () {
-  if (Symbol && typeof Symbol.hasInstance === "symbol") {
+  if (typeof Symbol === "function" && typeof Symbol.hasInstance === "symbol") {
     var a = 2, b = function(){};
     b[Symbol.hasInstance] = function() { a = 4; return false; };
     ({}) instanceof b;
@@ -2928,7 +2928,7 @@ test(function () {
           <td id="Symbol.isConcatSpreadable"><span><a class="anchor" href="#Symbol.isConcatSpreadable">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isConcatSpreadable</a></span></td>
 <script>
 test(function () {
-  if (Symbol && typeof Symbol.isConcatSpreadable === "symbol") {
+  if (typeof Symbol === "function" && typeof Symbol.isConcatSpreadable === "symbol") {
     var a = [], b = [];
     b[Symbol.isConcatSpreadable] = false;
     a = a.concat(b);
@@ -2979,7 +2979,8 @@ test(function () {
         <tr>
           <td id="Symbol.isRegExp"><span><a class="anchor" href="#Symbol.isRegExp">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isRegExp</a></span></td>
 <script>
-test(Symbol && typeof Symbol.isRegExp === "symbol" && RegExp.prototype[Symbol.isRegExp] === true);
+test(typeof Symbol === "function" && typeof Symbol.isRegExp === "symbol"
+    && RegExp.prototype[Symbol.isRegExp] === true);
 </script>
 
           <td class="no tr">No</td>
@@ -3029,9 +3030,9 @@ test(function () {
     b[Symbol.iterator] = function() {
       return {
         next: function() {
-          return { 
+          return {
             done: a === 1,
-            value: a++ 
+            value: a++
           };
         }
       };
@@ -3086,7 +3087,7 @@ test(function () {
           <td id="Symbol.toPrimitive"><span><a class="anchor" href="#Symbol.toPrimitive">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toPrimitive</a></span></td>
 <script>
 test(function () {
-  if (Symbol && typeof Symbol.toPrimitive === "symbol") {
+  if (typeof Symbol === "function" && typeof Symbol.toPrimitive === "symbol") {
     var a = {};
     a[Symbol.toPrimitive] = function() { return 7; };
     return a == 7;
@@ -3137,7 +3138,7 @@ test(function () {
           <td id="Symbol.toStringTag"><span><a class="anchor" href="#Symbol.toStringTag">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toStringTag</a></span></td>
 <script>
 test(function () {
-  if (Symbol && typeof Symbol.toStringTag === "symbol") {
+  if (typeof Symbol === "function" && typeof Symbol.toStringTag === "symbol") {
     var a = {};
     a[Symbol.toStringTag] = "foo";
     return (a + "") === "[object foo]";
@@ -3188,7 +3189,7 @@ test(function () {
           <td id="Symbol.unscopables"><span><a class="anchor" href="#Symbol.unscopables">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.unscopables</a></span></td>
 <script>
 test(function () {
-  if (Symbol && typeof Symbol.unscopables === "symbol") {
+  if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
     var a = { foo: 1, bar: 2 };
     a[Symbol.unscopables] = ["bar"];
     with (a) {
@@ -3419,7 +3420,7 @@ test(typeof RegExp.prototype.split === 'function');
 test(typeof RegExp.prototype.compile === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
@@ -3507,7 +3508,7 @@ test(typeof Array.from === 'function');
 test(typeof Array.of === 'function');
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3856,7 +3857,7 @@ test(typeof Array.prototype.entries === 'function');
         <tr>
           <td id="Array.prototype[Symbol.unscopables]"><span><a class="anchor" href="#Array.prototype[Symbol.unscopables]">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables">Array.prototype[Symbol.unscopables]</a></span></td>
 <script>
-test(Symbol && typeof Symbol.unscopables === "symbol"
+test(typeof Symbol === "function" && typeof Symbol.unscopables === "symbol"
     && Array.prototype[Symbol.unscopables] instanceof Array
     && (Array.prototype[Symbol.unscopables] + "")
       .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1);
