@@ -1,7 +1,7 @@
 // run `npm install` to install deps first, then `node ./` to execute
 
 var fs = require('fs')
-  , colors = require('colors')
+  , chalk = require('chalk')
   , path = require('path')
   , cheerio = require('cheerio')
 
@@ -30,5 +30,5 @@ $('#body tbody tr').each(function () {
     eval(scr)
   }
 
-  console.log(((result ? '\u2714' : '\u2718') + '\t' + desc + '\t')[result ? 'green' : 'red'])
+  console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + desc + '\t'))
 })
