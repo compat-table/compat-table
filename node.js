@@ -1,7 +1,7 @@
 // run `npm install` to install deps first, then `node ./` to execute
 
 var fs = require('fs')
-  , colors = require('colors')
+  , chalk = require('chalk')
   , path = require('path')
   , cheerio = require('cheerio')
 
@@ -9,11 +9,13 @@ var fs = require('fs')
   , $ = cheerio.load(page)
 
 $('#body tbody tr').each(function () {
+  if (this.find('.separator')[0])
+    return
   var desc = (function (el) {
         while (el && !el.data)
           el = el.children[0]
         return (el && el.data) || 'ERROR!'
-      }(this.find('td>span>a')[1] || this.find('td>span')[0].children[1]))
+      }(this.find('td>span')[0].children[1]))
     , scripts = this.find('script')
     , result = false
     , i = 0, scr
@@ -28,5 +30,5 @@ $('#body tbody tr').each(function () {
     eval(scr)
   }
 
-  console.log(((result ? '\u2714' : '\u2718') + '\t' + desc + '\t')[result ? 'green' : 'red'])
+  console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + desc + '\t'))
 })

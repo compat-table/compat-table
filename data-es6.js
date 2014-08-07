@@ -193,7 +193,7 @@ exports.browsers = {
     obsolete: false // current version
   },
   nodeharmony: {
-    full: 'Node 0.11.11 harmony',
+    full: 'Node 0.11.13 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
     note_id: 'harmony-flag',
@@ -2178,7 +2178,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -2319,7 +2319,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -2366,7 +2366,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -3015,14 +3015,14 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
   name: 'Symbol.create',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    if (Symbol && typeof Symbol.create === "symbol") {
+    if (typeof Symbol === "function" && typeof Symbol.create === "symbol") {
       var a = 2, b = function(){};
       b[Symbol.create] = function() { a = 4; return {};};
       new b();
@@ -3075,7 +3075,7 @@ exports.tests = [
   name: 'Symbol.hasInstance',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    if (Symbol && typeof Symbol.hasInstance === "symbol") {
+    if (typeof Symbol === "function" && typeof Symbol.hasInstance === "symbol") {
       var a = 2, b = function(){};
       b[Symbol.hasInstance] = function() { a = 4; return false; };
       ({}) instanceof b;
@@ -3128,7 +3128,7 @@ exports.tests = [
   name: 'Symbol.isConcatSpreadable',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    if (Symbol && typeof Symbol.isConcatSpreadable === "symbol") {
+    if (typeof Symbol === "function" && typeof Symbol.isConcatSpreadable === "symbol") {
       var a = [], b = [];
       b[Symbol.isConcatSpreadable] = false;
       a = a.concat(b);
@@ -3181,7 +3181,8 @@ exports.tests = [
   name: 'Symbol.isRegExp',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    return Symbol && typeof Symbol.isRegExp === "symbol" && RegExp.prototype[Symbol.isRegExp] === true;
+    return typeof Symbol === "function" && typeof Symbol.isRegExp === "symbol"
+      && RegExp.prototype[Symbol.isRegExp] === true;
   },
   res: {
     tr:          false,
@@ -3291,7 +3292,7 @@ exports.tests = [
   name: 'Symbol.toPrimitive',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    if (Symbol && typeof Symbol.toPrimitive === "symbol") {
+    if (typeof Symbol === "function" && typeof Symbol.toPrimitive === "symbol") {
       var a = {};
       a[Symbol.toPrimitive] = function() { return 7; };
       return a == 7;
@@ -3343,7 +3344,7 @@ exports.tests = [
   name: 'Symbol.toStringTag',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    if (Symbol && typeof Symbol.toStringTag === "symbol") {
+    if (typeof Symbol === "function" && typeof Symbol.toStringTag === "symbol") {
       var a = {};
       a[Symbol.toStringTag] = "foo";
       return (a + "") === "[object foo]";
@@ -3395,7 +3396,7 @@ exports.tests = [
   name: 'Symbol.unscopables',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {
-    if (Symbol && typeof Symbol.unscopables === "symbol") {
+    if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
       var a = { foo: 1, bar: 2 };
       a[Symbol.unscopables] = ["bar"];
       with (a) {
@@ -4006,7 +4007,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4061,7 +4062,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4108,14 +4109,14 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
   name: 'Array.prototype[Symbol.unscopables]',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables',
   exec: function () {
-    return Symbol && typeof Symbol.unscopables === "symbol"
+    return typeof Symbol === "function" && typeof Symbol.unscopables === "symbol"
       && Array.prototype[Symbol.unscopables] instanceof Array
       && (Array.prototype[Symbol.unscopables] + "")
         .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1;
@@ -4252,7 +4253,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4299,7 +4300,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4393,7 +4394,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4440,7 +4441,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4487,7 +4488,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4534,7 +4535,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4679,7 +4680,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4726,7 +4727,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4773,7 +4774,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4820,7 +4821,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4867,7 +4868,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4914,7 +4915,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -4961,7 +4962,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -5008,7 +5009,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -5055,7 +5056,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -5102,7 +5103,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -5149,7 +5150,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -5247,7 +5248,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
@@ -5294,7 +5295,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   },
   separator: 'after'
 }
