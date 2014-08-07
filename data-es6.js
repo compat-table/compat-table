@@ -5310,3 +5310,7 @@ exports.tests = [
   separator: 'after'
 }
 ];
+
+//Shift annex B features to the bottom
+exports.tests = exports.tests.filter(function(e) { return !e.annex_b })
+        .concat(exports.tests.filter(function(e) { return  e.annex_b }));
