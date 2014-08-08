@@ -2969,7 +2969,7 @@ exports.tests = [
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
   exec: function() {
     try {
-      var symbol = Symbol('foo');
+      var symbol = Symbol.for('foo');
       return Symbol.for('foo') === symbol &&
              Symbol.keyFor(symbol) === 'foo';
     }
