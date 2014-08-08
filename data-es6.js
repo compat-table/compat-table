@@ -280,10 +280,24 @@ exports.tests = [
 },
 {
   name: 'arrow functions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
   exec: function() {
     try {
-      eval('var a = () => 5;');
+      return !!Function(
+         // 0 parameters
+         'var a = () => 5;'
+        +'var passed = (a() === 5);'
+
+         // 1 parameter, no brackets
+        +'var b = x => x + "foo";'
+        +'passed &= (b("fee fie foe ") === "fee fie foe foo");'
+
+         // multiple parameters
+        +'var c = (v, w, x, y, z) => v+w-x*y/z;'
+        +'passed &= (c(6, 5, 4, 3, 2) === 5);'
+        
+        +'return passed;'
+      )();
     } catch (e) {
       return false;
     }
@@ -331,6 +345,68 @@ exports.tests = [
     nodeharmony: false,
     ios7:        false,
     ios8:        false
+  }
+},
+{
+  name: 'lexical "this" in arrow functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
+  exec: function() {
+    try {
+      return !!Function(
+         // arrows have a lexical "this" binding (14.2.17)
+         'var d = { x : "bar", y : function() { return z => this.x + z; }}.y();'
+        +'var e = { x : "baz", y : d };'
+        +'var passed = d("ley") === "barley" && e.y("ley") === "barley";'
+
+         // arrows' lexical "this" cannot be re-bound,
+         // but they can still be curried.
+        +'passed &= d.bind(e, "ley")("man") === "barley";'
+        +'return passed;'
+      )();
+    } catch (e) {
+      return false;
+    }
+    return true;
+  },
+  res: {
+    tr:          true,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
   }
 },
 {
