@@ -324,11 +324,18 @@ if (!global.__let_script_executed) {
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
-          <td id="default_function_params"><span><a class="anchor" href="#default_function_params">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values">default function params</a></span></td>
+          <td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
 <script>
 test(function () {
   try {
-    return eval('(function (a = 5) { return a === 5; }())');
+    return !!Function(
+       'var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));'
+       // explicit undefined will defer to the default
+      +'passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));'
+       // defaults can refer to previous parameters
+      +'passed    &= (function (a, b = a) { return b === 5; }(5));'
+      +'return passed;'
+      )();
   } catch (e) {
     return false;
   }
@@ -341,8 +348,8 @@ test(function () {
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
-          <td class="yes firefox16 obsolete">Yes</td>
-          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
           <td class="yes firefox18 obsolete">Yes</td>
           <td class="yes firefox23 obsolete">Yes</td>
           <td class="yes firefox24">Yes</td>
