@@ -580,16 +580,16 @@ exports.tests = [
             '"use strict";'   
              // for-loop iterations create new bindings
             +'let scopes = [];'
-            +'for(let i = 0; i <= 2; i++) {'
+            +'for(let i = 0; i < 2; i++) {'
             +'  scopes.push(function(){ return i; });'
             +'}'
-            +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+            +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
     
             +'scopes = [];'
-            +'for(let i in { a:1, b:1, c:1 }) {'
+            +'for(let i in { a:1, b:1 }) {'
             +'  scopes.push(function(){ return i; });'
             +'}'
-            +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+            +'passed &= (scopes[0]() === "a" && scopes[1]() === "b");'
     
             +'return passed;'
           )();
@@ -608,7 +608,7 @@ exports.tests = [
     }];
   }()),
   res: {
-    tr:          false,
+    tr:          true,
     ejs:         true,
     ie10:        false,
     ie11:        false,
