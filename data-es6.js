@@ -550,13 +550,13 @@ exports.tests = [
     firefox33:   false,
     firefox34:   false,
     chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
+    chrome19dev: true,
+    chrome21dev: true,
+    chrome30:    true,
+    chrome33:    true,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -566,7 +566,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: true
   }
 },
 {
