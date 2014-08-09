@@ -8,6 +8,8 @@ var fs = require('fs')
   , page = fs.readFileSync(path.join(__dirname, 'es6', 'index.html')).toString().replace(/data-source="[^"]*"/g,'')
   , $ = cheerio.load(page)
 
+global.__script_executed = {};
+
 $('#body tbody tr').each(function () {
   if (this.find('.separator')[0])
     return
