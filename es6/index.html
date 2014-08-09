@@ -1699,6 +1699,62 @@ test(function () {
           <td class="yes nodeharmony">Yes</td>
         </tr>
         <tr>
+          <td id="Hoisted_block-level_function_declaration"><span><a class="anchor" href="#Hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">Hoisted block-level function declaration</a></span></td>
+<script>
+test(function () {
+  // Note: only available outside of strict mode.
+  try {
+    return !!Function(
+       'var passed = f() === 2 && g() === 4;'
+      +'if (true) { function f(){ return 1; } } else { function f(){ return 2; } }'
+      +'if (false){ function g(){ return 3; } } else { function g(){ return 4; } }'
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30 obsolete">Yes</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="yes konq49">Yes</td>
+          <td class="no rhino17">No</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
           <td id="Destructuring"><span><a class="anchor" href="#Destructuring">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:destructuring">Destructuring</a></span></td>
 <script>
 test(function () {
