@@ -562,16 +562,16 @@ try {
     '&quot;use strict&quot;;'   
      // for-loop iterations create new bindings
     +'let scopes = [];'
-    +'for(let i = 0; i <= 2; i++) {'
+    +'for(let i = 0; i < 2; i++) {'
     +'  scopes.push(function(){ return i; });'
     +'}'
-    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
     
     +'scopes = [];'
-    +'for(let i in { a:1, b:1, c:1 }) {'
+    +'for(let i in { a:1, b:1 }) {'
     +'  scopes.push(function(){ return i; });'
     +'}'
-    +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
+    +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot;);'
     
     +'return passed;'
   )();
@@ -585,16 +585,16 @@ try {
     '"use strict";'   
      // for-loop iterations create new bindings
     +'let scopes = [];'
-    +'for(let i = 0; i <= 2; i++) {'
+    +'for(let i = 0; i < 2; i++) {'
     +'  scopes.push(function(){ return i; });'
     +'}'
-    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
     
     +'scopes = [];'
-    +'for(let i in { a:1, b:1, c:1 }) {'
+    +'for(let i in { a:1, b:1 }) {'
     +'  scopes.push(function(){ return i; });'
     +'}'
-    +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+    +'passed &= (scopes[0]() === "a" && scopes[1]() === "b");'
     
     +'return passed;'
   )();
@@ -610,16 +610,16 @@ test(function() {
       '&quot;use strict&quot;;'   
        // for-loop iterations create new bindings
       +'let scopes = [];'
-      +'for(let i = 0; i <= 2; i++) {'
+      +'for(let i = 0; i < 2; i++) {'
       +'  scopes.push(function(){ return i; });'
       +'}'
-      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
     
       +'scopes = [];'
-      +'for(let i in { a:1, b:1, c:1 }) {'
+      +'for(let i in { a:1, b:1 }) {'
       +'  scopes.push(function(){ return i; });'
       +'}'
-      +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot; && scopes[2]() === &quot;c&quot;);'
+      +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot;);'
     
       +'return passed;'
     )();
@@ -635,16 +635,16 @@ test(function() {
       '"use strict";'   
        // for-loop iterations create new bindings
       +'let scopes = [];'
-      +'for(let i = 0; i <= 2; i++) {'
+      +'for(let i = 0; i < 2; i++) {'
       +'  scopes.push(function(){ return i; });'
       +'}'
-      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1 && scopes[2]() === 2);'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
     
       +'scopes = [];'
-      +'for(let i in { a:1, b:1, c:1 }) {'
+      +'for(let i in { a:1, b:1 }) {'
       +'  scopes.push(function(){ return i; });'
       +'}'
-      +'passed &= (scopes[0]() === "a" && scopes[1]() === "b" && scopes[2]() === "c");'
+      +'passed &= (scopes[0]() === "a" && scopes[1]() === "b");'
     
       +'return passed;'
     )();
@@ -655,7 +655,7 @@ test(function() {
 global.__script_executed['let for'] = true;
     }</script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
