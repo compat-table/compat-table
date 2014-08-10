@@ -21,6 +21,7 @@ table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacit
 #table-wrapper tr:hover td.no,  #table-wrapper td.hover.no  { background: hsl(  0,  83%,  40%); }
 #table-wrapper tr:hover td.yes.obsolete, #table-wrapper td.hover.yes.obsolete { background: hsl(120,  24%,  37%); }
 #table-wrapper tr:hover td.no.obsolete,  #table-wrapper td.hover.no.obsolete  { background: hsl(  0,  33%,  50%); }
+#table-wrapper tr:hover td.not-applicable, #table-wrapper td.hover.not-applicable { background: hsl(120,  14%,  47%); }
 
 #body { padding-left: 1em; position: relative; min-width: 1250px; }
 
@@ -36,13 +37,14 @@ table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacit
 #footnotes { margin-left: 1.75em; margin-bottom: 1em; font-size: 0.9em; }
 
 .yes a, .no a { color: #fff; font-family: 'Open Sans', sans-serif;  }
-.yes, .no { text-align: center; font-family: 'Open Sans', sans-serif;
+.yes, .no, .not-applicable { text-align: center; font-family: 'Open Sans', sans-serif;
             font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; }
 
 .yes          { background: hsl(120,  43%,  47%); }
 .no           { background: hsl(  0,  87%,  50%); }
 .yes.obsolete { background: hsl(120,  28%,  61%); }
 .no.obsolete  { background: hsl(  0,  72%,  65%); }
+.not-applicable { background: hsl(120,  14%,  67%); cursor: help; }
 
 .test-name { width: 260px; }
 .warning { background: #ffc; display: inline-block; margin: 0 0 2em 0; padding: 0.25em; }

@@ -8,12 +8,14 @@ exports.browsers = {
   tr: {
     full: 'Traceur compiler',
     short: 'Traceur',
-    obsolete: false // always up-to-date version
+    obsolete: false, // always up-to-date version
+    nonbrowser: true
   },
   ejs: {
     full: 'Echo JS',
     short: 'EJS',
-    obsolete: false // always up-to-date version
+    obsolete: false, // always up-to-date version
+    nonbrowser: true
   },
   ie10: {
     full: 'Internet Explorer',
@@ -181,21 +183,25 @@ exports.browsers = {
   },
   rhino17: {
     full: 'Rhino 1.7',
-    short: 'RH'
+    short: 'RH',
+    nonbrowser: true
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'PH'
+    short: 'PH',
+    nonbrowser: true,
   },
   node: {
     full: 'Node 0.10',
     short: 'Node',
-    obsolete: false // current version
+    obsolete: false, // current version
+    nonbrowser: true
   },
   nodeharmony: {
     full: 'Node 0.11.13 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
+    nonbrowser: true,
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
   }
@@ -904,6 +910,7 @@ exports.tests = [
 },
 {
   name: '__proto__ in object literals',
+  annex_b: true,
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
@@ -2371,6 +2378,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.__proto__',
+  annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
   exec: function () {
     var a = {},
@@ -2802,6 +2810,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype HTML methods',
+  annex_b: true,
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
   exec: function () {
     var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
@@ -3636,6 +3645,7 @@ exports.tests = [
 },
 {
   name: 'RegExp.prototype.compile',
+  annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
   exec: function () {
     return typeof RegExp.prototype.compile === 'function';
@@ -5300,3 +5310,7 @@ exports.tests = [
   separator: 'after'
 }
 ];
+
+//Shift annex B features to the bottom
+exports.tests = exports.tests.filter(function(e) { return !e.annex_b })
+        .concat(exports.tests.filter(function(e) { return  e.annex_b }));

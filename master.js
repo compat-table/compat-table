@@ -181,19 +181,20 @@ domready(function() {
   var numFeaturesPerColumn = window.numFeaturesPerColumn = { };
 
   var table = document.getElementById('table-wrapper');
-  var totalResultsInColum = table.rows.length - table.getElementsByClassName('separator').length - 1 /* header */;
 
   // count number of features for each column/browser
   for (var i = 1, len = table.rows.length; i < len; i++) {
     for (var j = 1, jlen = table.rows[i].cells.length; j < jlen; j++) {
 
       if (j === 2) continue;
-
-      if (typeof numFeaturesPerColumn[j] === 'undefined') {
-        numFeaturesPerColumn[j] = 0;
+      if (numFeaturesPerColumn[j] === undefined) {
+        numFeaturesPerColumn[j] = [0,0];
       }
       if (table.rows[i].cells[j].className.indexOf('yes') > -1) {
-        numFeaturesPerColumn[j]++;
+        numFeaturesPerColumn[j][0]++;
+      }
+      if (table.rows[i].cells[j].className.indexOf('not-applicable') == -1) {
+        numFeaturesPerColumn[j][1]++;
       }
     }
   }
@@ -201,10 +202,13 @@ domready(function() {
   // store number of features for each column/browser and numeric index
   for (var i = 0, len = table.rows.length; i < len; i++) {
     for (var j = 0, jlen = table.rows[i].cells.length; j < jlen; j++) {
-      var num = numFeaturesPerColumn[j];
+      if (numFeaturesPerColumn[j] === undefined) continue;
+      
+      var num = numFeaturesPerColumn[j][0];
+      var totalResultsInColum = numFeaturesPerColumn[j][1];
       var cell = table.rows[i].cells[j];
 
-      cell.setAttribute('data-features', num);
+      cell.setAttribute('data-features', num/totalResultsInColum);
       cell.setAttribute('data-num', j);
 
       if (cell.tagName.toLowerCase() === 'th' && typeof num === 'number') {
@@ -225,8 +229,8 @@ domready(function() {
       var sortByFeatures = this.checked;
 
       var comparator = sortByFeatures ? function(a, b) {
-        var numFeaturesPerA = parseInt(a.getAttribute('data-features'), 10);
-        var numFeaturesPerB = parseInt(b.getAttribute('data-features'), 10);
+        var numFeaturesPerA = parseFloat(a.getAttribute('data-features'), 10);
+        var numFeaturesPerB = parseFloat(b.getAttribute('data-features'), 10);
 
         return numFeaturesPerB - numFeaturesPerA;
       } : function(a, b) {
