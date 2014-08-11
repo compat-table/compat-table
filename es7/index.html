@@ -77,8 +77,7 @@
           <th class="chrome37"><a href="#chrome37" class="browser-name"><abbr title="Chrome">CH 37</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
           <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
           <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r168571">WK</abbr></th>
-          <th class="opera15"><a href="#opera15" class="browser-name"><abbr title="Opera 15.0">OP 15</abbr></th>
-          <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">KQ 4.9</abbr></th>
+          <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.13">KQ 4.13</abbr></th>
           <th class="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></th>
           <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
           <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
@@ -87,7 +86,108 @@
       </thead>
       <tbody>
         <tr>
-          <td id="Typed_Objects"><span><a class="anchor" href="#Typed_Objects">&sect;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects</a></span></td>
+          <td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span></td>
+<script>
+test(function () {
+  try {
+    eval('[for (a of [1, 2, 3]) a * a][0] === 1');
+    return true;
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span></td>
+<script>
+test(function () {
+  try {
+    eval('(for (a of [1, 2, 3]) a * a)');
+    return true;
+  } catch (e) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span></td>
+<script>
+test(function () {
+  var i, names =
+    ["eval", "global", "intrinsics", "stdlib", "directEval",
+    "indirectEval", "initGlobal", "nonEval"];
+
+  if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+      || typeof Reflect.Realm.prototype !== "object") {
+    return false;
+  }
+  for (i = 0; i < names.length; i++) {
+    if (!(names[i] in Reflect.Realm.prototype)) {
+      return false;
+    }
+  }
+  return true;
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&sect;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span></td>
 <script>
 test(typeof StructType !== 'undefined');
 </script>
@@ -104,7 +204,6 @@ test(typeof StructType !== 'undefined');
           <td class="no chrome37">No</td>
           <td class="no safari7">No</td>
           <td class="no webkit">No</td>
-          <td class="no opera15">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
@@ -112,7 +211,7 @@ test(typeof StructType !== 'undefined');
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Object.observe"><span><a class="anchor" href="#Object.observe">&sect;</a>Object.observe</span></td>
+          <td id="Object.observe"><span><a class="anchor" href="#Object.observe">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span></td>
 <script>
 test(typeof Object.observe === 'function');
 </script>
@@ -129,7 +228,6 @@ test(typeof Object.observe === 'function');
           <td class="yes chrome37">Yes</td>
           <td class="no safari7">No</td>
           <td class="no webkit">No</td>
-          <td class="no opera15">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
@@ -154,7 +252,6 @@ test(typeof Object.getOwnPropertyDescriptors === 'function');
           <td class="no chrome37">No</td>
           <td class="no safari7">No</td>
           <td class="no webkit">No</td>
-          <td class="no opera15">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>

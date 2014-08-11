@@ -73,14 +73,9 @@ exports.browsers = {
     short: 'WK',
     obsolete: false // always up-to-date
   },
-  opera15: {
-    full: 'Opera 15.0',
-    short: 'OP 15',
-    obsolete: false // current version
-  },
   konq49: {
-    full: 'Konqueror 4.9',
-    short: 'KQ 4.9'
+    full: 'Konqueror 4.13',
+    short: 'KQ 4.13'
   },
   rhino17: {
     full: 'Rhino 1.7',
@@ -106,7 +101,114 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'Typed Objects',
+  name: 'Array comprehensions',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  exec: function () {
+    try {
+      eval('[for (a of [1, 2, 3]) a * a][0] === 1');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari7:     false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Generator comprehensions',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  exec: function () {
+    try {
+      eval('(for (a of [1, 2, 3]) a * a)');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari7:     false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Reflect.Realm',
+  link: 'https://gist.github.com/dherman/7568885',
+  exec: function () {
+    var i, names =
+      ["eval", "global", "intrinsics", "stdlib", "directEval",
+      "indirectEval", "initGlobal", "nonEval"];
+
+    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+        || typeof Reflect.Realm.prototype !== "object") {
+      return false;
+    }
+    for (i = 0; i < names.length; i++) {
+      if (!(names[i] in Reflect.Realm.prototype)) {
+        return false;
+      }
+    }
+    return true;
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari7:     false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Typed objects',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
   exec: function () {
     return typeof StructType !== 'undefined';
@@ -115,7 +217,6 @@ exports.tests = [
     tr: false,
     ejs: false,
     ie11: false,
-    firefox30: false,
     firefox31: false,
     firefox32: false,
     chrome30: false,
@@ -135,6 +236,7 @@ exports.tests = [
 },
 {
   name: 'Object.observe',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
   exec: function () {
     return typeof Object.observe === 'function';
   },
