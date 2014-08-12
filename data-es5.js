@@ -58,9 +58,9 @@ exports.browsers = {
     obsolete: true
   },
   safari51: {
-    full: 'Safari 5.1',
-    short: 'SF 5.1',
-    obsolete: true
+    full: 'Safari 5.1.4',
+    short: 'SF 5.1.4',
+    obsolete: false
   },
   safari6: {
     full: 'Safari 6.0, Safari 7.0',
@@ -927,11 +927,7 @@ exports.tests = [
     safari3: false,
     safari4: false,
     safari5: false,
-    safari51: {
-      val: false,
-      note_id: 'safari-bind',
-      note_html: '<code>Function.prototype.bind</code> is now supported in Safari 5.1.4'
-    },
+    safari51: true,
     safari6: true,
     webkit: true,
 
