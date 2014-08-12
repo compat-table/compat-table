@@ -59,7 +59,7 @@ label[for="show-obsolete"] { background: #eef; padding: 5px; margin-left: 10px; 
 label[for="sort"] { margin-left: 20px; background: #fee; padding: 5px; margin-right: -30px; padding-right: 30px; }
 
 .also-see { font-size: 14px; display: inline-block; background:#ddf; padding: 12px; position:absolute;top:0;left:50%;margin-left:-174px; color: #333; font-family: 'Open Sans', sans-serif; }
-.also-see a { color: blue !important; text-decoration: underline !important; }
+.also-see a { font-weight: bold; color: blue !important; text-decoration: underline !important; }
 
 .info { color: #eee; float: right; margin-right: 5px; background: #999; display: inline-block;
   width: 15px; height: 15px; line-height: 15px; text-align: center; border-radius: 20px;
