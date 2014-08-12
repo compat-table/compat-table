@@ -218,7 +218,7 @@
       (function(){
         var error;
         try {
-          (function f() { f = 123; })();
+          eval("(function f() { f = 123; })()");
         }
         catch (err) { error = err; }
         print('<span class="test"><code>(function f() { f = 123; })()<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
