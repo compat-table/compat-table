@@ -32,6 +32,8 @@ domready(function() {
     };
   }
 
+  var table = document.getElementById('table-wrapper');
+  
   var mouseoverTimeout;
 
   var infoTooltip = document.createElement('pre');
@@ -45,7 +47,7 @@ domready(function() {
     mouseoverTimeout = null;
   };
 
-  var rows = document.getElementsByTagName('table')[0].rows;
+  var rows = table.rows;
   for (var i = 1; i < rows.length; i++) {
     if (/separator/.test(rows[i].cells[0].className)) continue;
 
@@ -72,7 +74,6 @@ domready(function() {
   }
 
   var last_highlighted;
-  var table = document.getElementsByTagName('table')[0];
   function highlightSelected(tr) {
     if (tr === undefined) {
       // actually finds the <td>
@@ -101,6 +102,15 @@ domready(function() {
       // <tr><td><span><a>
       highlightSelected(e.target.parentNode.parentNode.parentNode);
     }
+    else if (e.target.className === 'browser-name' ||
+        e.target.parentNode.className === 'browser-name') {
+
+      var target = e.target.className ? e.target : e.target.parentNode;
+      var headerCells = [].slice.call(table.rows[0].cells);
+      var index = headerCells.indexOf(target.parentNode);
+
+      highlightColumn(index);
+    }
     else {
       location.hash = '';
       highlightSelected(false);
@@ -108,13 +118,13 @@ domready(function() {
   };
 
   window.onhashchange = function() {
-    highlightSelected();
-    highlightColumn();
+    if (location.hash) {
+      highlightSelected();
+      highlightColumn();
+    }
   };
 
   function highlightColumn(index) {
-    var table = document.getElementById('table-wrapper');
-
     if (typeof index === 'undefined' && location.hash) {
       for (var i = 0, len = table.rows[0].cells.length; i < len; i++) {
         var cell = table.rows[0].cells[i];
@@ -137,22 +147,8 @@ domready(function() {
       }
     }
   }
-
-  document.onclick = function(e) {
-    if (e.target.className === 'browser-name' ||
-        e.target.parentNode.className === 'browser-name') {
-
-      var target = e.target.className ? e.target : e.target.parentNode;
-      var table = document.getElementById('table-wrapper');
-      var headerCells = [].slice.call(table.rows[0].cells);
-      var index = headerCells.indexOf(target.parentNode);
-
-      highlightColumn(index);
-    }
-  };
-
+  
   function initColumnHighlight() {
-    var table = document.getElementById('table-wrapper');
     for (var i = 0, len = table.rows.length; i < len; i++) {
       var row = table.rows[i];
       for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
@@ -165,7 +161,7 @@ domready(function() {
 
               for (var k = 0; k < len; k++) {
                 for (var l = 0; l < jlen; l++) {
-                  rows[k].cells[l] && (rows[k].cells[l].className = rows[k].cells[l].className.replace('hover', ''));
+                  rows[k].cells[l] && (rows[k].cells[l].className = rows[k].cells[l].className.replace(' hover', ''));
                 }
                 rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
               }
@@ -179,8 +175,6 @@ domready(function() {
   initColumnHighlight();
 
   var numFeaturesPerColumn = window.numFeaturesPerColumn = { };
-
-  var table = document.getElementById('table-wrapper');
 
   // count number of features for each column/browser
   for (var i = 1, len = table.rows.length; i < len; i++) {
