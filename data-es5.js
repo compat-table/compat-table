@@ -60,7 +60,7 @@ exports.browsers = {
   safari51: {
     full: 'Safari 5.1',
     short: 'SF 5.1',
-    obsolete: false
+    obsolete: true
   },
   safari6: {
     full: 'Safari 6.0, Safari 7.0',
@@ -91,11 +91,11 @@ exports.browsers = {
   chrome13: {
     full: 'Chrome 13 (13.0.782.107 beta), Chrome 14 (14.0.835.8 dev), Chrome 15, Chrome 16 (16.0.891.0 dev)',
     short: 'CH 13-16',
-    obsolete: false
+    obsolete: true
   },
   chrome19: {
-    full: 'Chrome 19 (19.0.1084.56 stable)',
-    short: 'CH 19+',
+    full: 'Chrome 19 (19.0.1084.56 stable), Opera 15+',
+    short: 'CH 19+, OP 15+',
     obsolete: false
   },
 
@@ -112,11 +112,11 @@ exports.browsers = {
   opera12: {
     full: 'Opera 12 (build 1065)',
     short: 'OP 12',
-    obsolete: false
+    obsolete: true
   },
   opera12_10: {
-    full: 'Opera 12.10 (build 1652), Opera 15.0',
-    short: 'OP 12.10, 15',
+    full: 'Opera 12.15',
+    short: 'OP 12.10',
     obsolete: false
   },
 
@@ -128,6 +128,11 @@ exports.browsers = {
   konq49: {
     full: 'Konqueror 4.9',
     short: 'Konq 4.9',
+    obsolete: true
+  },
+  konq413: {
+    full: 'Konqueror 4.13',
+    short: 'Konq 4.13',
     obsolete: false
   },
 
@@ -193,6 +198,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -225,14 +231,11 @@ exports.tests = [
     safari5: {
       val: true,
       note_id: 'define-property-webkit',
-      note_html: 'In some versions of WebKit <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.'
+      note_html: 'In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.'
     },
     safari51: true,
     safari6: true,
-    webkit: {
-      val: true,
-      note_id: 'define-property-webkit'
-    },
+    webkit: true,
 
     chrome5: true,
     chrome6: true,
@@ -247,6 +250,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -289,6 +293,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -331,6 +336,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -373,6 +379,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -415,6 +422,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -457,6 +465,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -499,6 +508,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -541,6 +551,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -583,6 +594,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -625,6 +637,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -672,6 +685,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -714,6 +728,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -757,6 +772,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -799,6 +815,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -841,6 +858,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -883,6 +901,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -929,6 +948,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -971,6 +991,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1014,6 +1035,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1056,6 +1078,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1098,6 +1121,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1140,6 +1164,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1182,6 +1207,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1224,6 +1250,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1266,6 +1293,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1308,6 +1336,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1350,6 +1379,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1397,6 +1427,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1445,6 +1476,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1455,8 +1487,6 @@ exports.tests = [
 },
 {
   name: 'Property access on strings',
-  note_id: 'property-access-on-strings',
-  note_html: 'For example: <code>"foobar"[3] === "b"</code>',
   exec: function () {
     return "foobar"[3] === "b";
   },
@@ -1490,6 +1520,7 @@ exports.tests = [
 
     konq43: true,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1499,8 +1530,6 @@ exports.tests = [
 },
 {
   name: 'Reserved words as property names',
-  note_id: 'reserved-words',
-  note_html: 'For example: <code>({ if: 1 })</code>',
   exec: function () {
     try {
       var obj = { };
@@ -1540,6 +1569,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: true,
 
     besen: true,
     rhino: false,
@@ -1589,6 +1619,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: false,
 
     besen: true,
     rhino: true,
@@ -1638,6 +1669,7 @@ exports.tests = [
 
     konq43: false,
     konq49: true,
+    konq413: true,
 
     besen: true,
     rhino: true,
@@ -1686,6 +1718,7 @@ exports.tests = [
 
     konq43: false,
     konq49: false,
+    konq413: false,
 
     besen: true,
     rhino: false,
