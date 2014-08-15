@@ -3618,10 +3618,17 @@ test(typeof Array.prototype.entries === 'function');
         <tr>
           <td id="Array.prototype[Symbol.unscopables]"><span><a class="anchor" href="#Array.prototype[Symbol.unscopables]">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables">Array.prototype[Symbol.unscopables]</a></span></td>
 <script>
-test(typeof Symbol === "function" && typeof Symbol.unscopables === "symbol"
-    && Array.prototype[Symbol.unscopables] instanceof Array
-    && (Array.prototype[Symbol.unscopables] + "")
-      .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1);
+test(function () {
+  if (typeof Symbol !== "function") return false;
+  if (typeof Symbol.unscopables !== "symbol") return false;
+  var unscopables = Array.prototype[Symbol.unscopables];
+  if (!unscopables) return false;
+  var ns = "find,findIndex,fill,copyWithin,entries,keys,values".split(",");
+  for (var i = 0; i < ns.length; i++) {
+    if (!unscopables[ns[i]]) return false;
+  }
+  return true;
+}());
 </script>
 
           <td class="no tr">No</td>

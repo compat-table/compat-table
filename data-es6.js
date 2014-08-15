@@ -4156,10 +4156,15 @@ exports.tests = [
   name: 'Array.prototype[Symbol.unscopables]',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables',
   exec: function () {
-    return typeof Symbol === "function" && typeof Symbol.unscopables === "symbol"
-      && Array.prototype[Symbol.unscopables] instanceof Array
-      && (Array.prototype[Symbol.unscopables] + "")
-        .indexOf("find,findIndex,fill,copyWithin,entries,keys,values") >-1;
+    if (typeof Symbol !== "function") return false;
+    if (typeof Symbol.unscopables !== "symbol") return false;
+    var unscopables = Array.prototype[Symbol.unscopables];
+    if (!unscopables) return false;
+    var ns = "find,findIndex,fill,copyWithin,entries,keys,values".split(",");
+    for (var i = 0; i < ns.length; i++) {
+      if (!unscopables[ns[i]]) return false;
+    }
+    return true;
   },
   res: {
     tr:          false,
