@@ -3004,17 +3004,25 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
 <script data-source="function () {
 try {
   var object = {};
-  var symbols = [Symbol(), Symbol()]
-  var values = [Math.random(), Math.random()]
-  
+  var symbols = [Symbol(), Symbol()];
+  var values = [Math.random(), Math.random()];
   object[symbols[0]] = values[0];
-  Object.defineProperty(object, symbols[1], { value: values[1] });
   
-  return typeof symbols[0] === &quot;symbol&quot; &&
-        object[symbols[0]] === values[0] &&
-        object[symbols[1]] === values[1] &&
-        Object.keys(object).length === 0 &&
-        Object.getOwnPropertyNames(object).length === 0;
+  var passed = symbols[0] in object  &&
+     typeof symbols[0]  === &quot;symbol&quot; &&
+     object[symbols[0]] === values[0];
+  
+  if (Object.keys) {
+    passed &= Object.keys(object).length === 0;
+  }
+  if (Object.getOwnPropertyNames) {
+    passed &= Object.getOwnPropertyNames(object).length === 0;
+  }
+  if (Object.defineProperty) {
+    Object.defineProperty(object, symbols[1], { value: values[1] });
+    passed &= object[symbols[1]] === values[1];
+  }
+  return passed;
 }
 catch(e) {
   return false;
@@ -3023,17 +3031,25 @@ catch(e) {
 function () {
 try {
   var object = {};
-  var symbols = [Symbol(), Symbol()]
-  var values = [Math.random(), Math.random()]
-  
+  var symbols = [Symbol(), Symbol()];
+  var values = [Math.random(), Math.random()];
   object[symbols[0]] = values[0];
-  Object.defineProperty(object, symbols[1], { value: values[1] });
   
-  return typeof symbols[0] === "symbol" &&
-        object[symbols[0]] === values[0] &&
-        object[symbols[1]] === values[1] &&
-        Object.keys(object).length === 0 &&
-        Object.getOwnPropertyNames(object).length === 0;
+  var passed = symbols[0] in object  &&
+     typeof symbols[0]  === "symbol" &&
+     object[symbols[0]] === values[0];
+  
+  if (Object.keys) {
+    passed &= Object.keys(object).length === 0;
+  }
+  if (Object.getOwnPropertyNames) {
+    passed &= Object.getOwnPropertyNames(object).length === 0;
+  }
+  if (Object.defineProperty) {
+    Object.defineProperty(object, symbols[1], { value: values[1] });
+    passed &= object[symbols[1]] === values[1];
+  }
+  return passed;
 }
 catch(e) {
   return false;
@@ -5606,26 +5622,28 @@ test(function(){try{return Function("\n// Note: only available outside of strict
         <tr>
           <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
 <script data-source="function () {
-var a = {},
-    desc = Object.getOwnPropertyDescriptor
+var desc = Object.getOwnPropertyDescriptor
         && Object.getOwnPropertyDescriptor(Object.prototype,&quot;__proto__&quot;);
+var A = function(){};
+
 return !!(desc
     && &quot;get&quot; in desc
     && &quot;set&quot; in desc
     && desc.configurable
     && !desc.enumerable
-    && Object.create(a).__proto__ === a);
+    && (new A()).__proto__ === A.prototype);
   }">test(
 function () {
-var a = {},
-    desc = Object.getOwnPropertyDescriptor
+var desc = Object.getOwnPropertyDescriptor
         && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+var A = function(){};
+
 return !!(desc
     && "get" in desc
     && "set" in desc
     && desc.configurable
     && !desc.enumerable
-    && Object.create(a).__proto__ === a);
+    && (new A()).__proto__ === A.prototype);
   }())</script>
 
           <td title="This feature is optional on non-browser platforms." class="not-applicable tr">No</td>
