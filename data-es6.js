@@ -3372,13 +3372,17 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function() {
     try {
       var object = {};
-      var symbol = Symbol();
-      var value = Math.random();
-      object[symbol] = value;
-      return typeof symbol === "symbol" &&
-             object[symbol] === value &&
-             Object.keys(object).length === 0 &&
-             Object.getOwnPropertyNames(object).length === 0;
+      var symbols = [Symbol(), Symbol()]
+      var values = [Math.random(), Math.random()]
+      
+      object[symbols[0]] = values[0];
+      Object.defineProperty(object, symbols[1], { value: values[1] });
+      
+      return typeof symbols[0] === "symbol" &&
+            object[symbols[0]] === values[0] &&
+            object[symbols[1]] === values[1] &&
+            Object.keys(object).length === 0 &&
+            Object.getOwnPropertyNames(object).length === 0;
     }
     catch(e) {
       return false;
