@@ -2763,7 +2763,9 @@ test(function () {
         }
       };
     };
-    return Function("for (var c of b) { return c === 0; } return false;")();
+    var c;
+    eval("for (c of b) {}");
+    return c === 0;
   }
   catch(e) {
     return false;
