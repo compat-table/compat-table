@@ -2919,7 +2919,7 @@ test(function () {
 test(function () {
   if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
     var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = ["bar"];
+    a[Symbol.unscopables] = { bar: true };
     with (a) {
       return foo === 1 && typeof bar === "undefined";
     }
