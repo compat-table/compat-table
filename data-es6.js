@@ -1334,12 +1334,74 @@ exports.tests = [
   }
 },
 {
-  name: 'Template Strings',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:quasis',
+  name: 'template strings',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
   exec: function () {
     try {
-      eval('var u = function () { return true }; u`literal`');
-      return true;
+      var a = "ba", b = "QUX";
+      return eval('`foo bar\n${a + "z"} ${b.toLowerCase()}`') === "foo bar\nbaz qux";
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'tagged template strings',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
+  exec: function () {
+    try {
+      var called = false;
+      function fn(parts, a, b) {
+        called = true;
+        return parts instanceof Array &&
+          parts[0]     === "foo"      &&
+          parts[1]     === "bar\n"    &&
+          parts.raw[0] === "foo"      &&
+          parts.raw[1] === "bar\\n"   &&
+          a === 123                   &&
+          b === 456;
+      }
+      return eval('fn `foo${123}bar\\n${456}`') && called;
     } catch (e) {
       return false;
     }
