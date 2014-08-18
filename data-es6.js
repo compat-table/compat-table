@@ -1309,6 +1309,76 @@ exports.tests = [
   }
 },
 {
+  name: 'Typed Arrays',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
+  exec: function () {
+    try {
+      var buffer = new ArrayBuffer(64);
+      var views = [Int8Array, Uint8Array, Uint8ClampedArray,
+                   Int16Array, Uint16Array, Int32Array, Uint32Array,
+                   Float32Array, Float64Array];
+      var values = [[0x7F,-0x80], [0xFF, 0], [0xFF, 0xFF],
+                    [0x7FFF,-0x8000], [0xFFFF, 0],
+                    [0x7FFFFFFF, -0x80000000], [0xFFFFFFFF, 0],
+                    [0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFF],
+                    [0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
+                     0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]];
+      var passed = true;
+      
+      for(var i = 0; i < views.length; i++){
+        var view = new views[i](buffer);
+        // Check that each value overflows as expected.
+        view[0] = values[i][0] + 1;
+        passed &= view[0] === values[i][1];
+      }
+      return passed;
+    }
+    catch(err) {
+      return false;
+    }
+  },
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        true,
+    ie11:        true,
+    firefox11:   true,
+    firefox13:   true,
+    firefox16:   true,
+    firefox17:   true,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      true,
+    chrome19dev: true,
+    chrome21dev: true,
+    chrome30:    true,
+    chrome33:    true,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    true,
+    safari6:     true,
+    safari7:     true,
+    webkit:      true,
+    opera:       true,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     true,
+    node:        true,
+    nodeharmony: true
+  }
+},
+{
   name: 'Map',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   exec: function () {
