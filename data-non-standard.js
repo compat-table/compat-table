@@ -434,7 +434,7 @@ exports.tests = [
   name: '__defineGetter__',
   link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter',
   exec: function () {
-    return '__defineGetter__' in ({ });
+    return '__defineGetter__' in {};
   },
   res: {
     ie7: false,
@@ -466,7 +466,7 @@ exports.tests = [
   name: '__defineSetter__',
   link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter',
   exec: function () {
-    return '__defineSetter__' in ({ });
+    return '__defineSetter__' in {};
   },
   res: {
     ie7: false,
@@ -632,13 +632,9 @@ exports.tests = [
 },
 {
   name: 'Expression closures',
-  exec: function () {
-    try {
-      return eval('(function(x)x)(1)') === 1;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return (function(x)x)(1) === 1;
+  */},
   res: {
     ie7: false,
     ie11: false,
@@ -668,13 +664,9 @@ exports.tests = [
 {
   name: 'ECMAScript for XML (E4X)',
   link: 'https://developer.mozilla.org/en-US/docs/Archive/Web/E4X',
-  exec: function () {
-    try {
-      return eval('typeof <foo/> === "xml"');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return typeof <foo/> === "xml";
+  */},
   res: {
     ie7: false,
     ie11: false,
@@ -742,13 +734,10 @@ exports.tests = [
 {
   name: 'Sharp variables',
   link: 'https://developer.mozilla.org/en/Sharp_variables_in_JavaScript',
-  exec: function () {
-    try {
-      return eval('(function () { var arr = #1=[1, #1#, 3]; return arr[1] === arr; }())');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var arr = #1=[1, #1#, 3]; 
+	return arr[1] === arr;
+  */},
   res: {
     ie7: false,
     ie11: false,
@@ -1074,13 +1063,9 @@ exports.tests = [
 },
 {
   name: 'Callable RegExp',
-  exec: function () {
-    try {
-      return eval('/\\w/("x")[0] === "x"');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return /\\w/("x")[0] === "x";
+  */},
   res: {
     ie7: false,
     ie11: false,
@@ -1109,13 +1094,9 @@ exports.tests = [
 },
 {
   name: 'RegExp named groups',
-  exec: function () {
-    try {
-      return eval('/(?P<name>a)(?P=name)/.test("aa")');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return /(?P<name>a)(?P=name)/.test("aa");
+  */},
   res: {
     ie7: false,
     ie11: false,

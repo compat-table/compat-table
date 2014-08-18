@@ -197,8 +197,8 @@ function replaceAndIndent(str, replacements) {
 }
 
 function deindentFunc(fn) {
-  fn += '';
-  var indent = /\n([\t ]*)[^\n]*$/.exec(fn);
+  fn = (fn+'');
+  var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
   if (indent) {
     fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
   }
@@ -207,20 +207,19 @@ function deindentFunc(fn) {
 
 function testScript(fn) {
   if (typeof fn === 'function') {
-    fn = deindentFunc(fn);
-
-    // find the expression if it's there
-    var expr = /^function \(\) \{\s*return\s+([\s\S]+?);?\s*\}$/.exec(fn);
-    expr = expr && expr[1];
+  
+    // see if the code is encoded in a comment
+    var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
 
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
-      expr = fn + '()';
+      return '<script>test(\n' + deindentFunc(fn) + '())</script>\n';
     }
-
-    return '<script>\n' +
-      'test(' + expr + ');\n' +
+    else {
+      return '<script>\n' +
+      'test(function(){try{return Function(' + JSON.stringify(deindentFunc(expr[1])) + ')()}catch(e){return false;}}());\n' +
       '</script>\n';
+    }
   } else {
     // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }

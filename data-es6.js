@@ -211,19 +211,15 @@ exports.tests = [
 {
   name: 'proper tail calls (tail call optimisation)',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
-  exec: function() {
+  exec: function() {/*
     "use strict";
-    try {
-      return (function f(n){
-        if (n <= 0) {
-          return  "foo";
-        }
-        return f(n - 1);
-      }(1e6)) === "foo";
-    } catch (e) {
-      return false;
-    }
-  },
+    return (function f(n){
+      if (n <= 0) {
+        return  "foo";
+      }
+      return f(n - 1);
+    }(1e6)) === "foo";
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -501,13 +497,9 @@ exports.tests = [
 {
   name: 'rest parameters',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters',
-  exec: function () {
-    try {
-      return eval('(function (...args) { return typeof args !== "undefined"; }())');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    return (function (...args) { return typeof args !== "undefined"; }())
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -552,13 +544,9 @@ exports.tests = [
 {
   name: 'spread call (...) operator',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
-  exec: function () {
-    try {
-      return eval('Math.max(...[1, 2, 3]) === 3');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return Math.max(...[1, 2, 3]) === 3
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -603,13 +591,9 @@ exports.tests = [
 {
   name: 'spread array (...) operator',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
-  exec: function () {
-    try {
-      return eval('[...[1, 2, 3]][2] === 3');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    return [...[1, 2, 3]][2] === 3;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -654,13 +638,9 @@ exports.tests = [
 {
   name: 'string spreading',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
-  exec: function () {
-    try {
-      return eval('["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    return ["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -709,19 +689,14 @@ exports.tests = [
 {
   name: 'class',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
-  exec: function () {
-    try {
-      return eval(
-         'class C extends Array {'
-        +'  constructor() { this.b = true; }'
-        +'  a(){}'
-        +'  static d(){}'
-        +'}'
-        +'C.d && new C().a && new C().b && new C() instanceof Array');
-    } catch (e) {
-      return false;
+  exec: function () {/*
+    class C extends Array {
+      constructor() { this.b = true; }
+      a(){}
+      static d(){}
     }
-  },
+    return C.d && new C().a && new C().b && new C() instanceof Array;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -844,15 +819,9 @@ exports.tests = [
 {
   name: 'computed properties',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
-  exec: function() {
-    try {
-      var x = 'y';
-      return eval("({ [x]: 1 })['y'] === 1");
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    return ({ [x]: 1 })['y'] === 1;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -897,14 +866,10 @@ exports.tests = [
 {
   name: 'shorthand properties',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
-  exec: function() {
-    try {
-      return eval("var a = 7, b = 8, c = {a,b}; c.a === 7 && c.b === 8");
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var a = 7, b = 8, c = {a,b};
+    return c.a === 7 && c.b === 8;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -949,14 +914,9 @@ exports.tests = [
 {
   name: 'shorthand methods',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
-  exec: function() {
-    try {
-      return eval("({ y() { return 2; } }).y() === 2");
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    return ({ y() { return 2; } }).y() === 2;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -1111,13 +1071,11 @@ exports.tests = [
 {
   name: 'For..of loops',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
-  exec: function () {
-    try {
-      return eval('(function () { var arr = [5]; for (var item of arr) return item === 5; }())');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var arr = [5];
+    for (var item of arr)
+      return item === 5;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -1448,17 +1406,13 @@ exports.tests = [
 {
   name: 'RegExp "y" flag',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:regexp_y_flag',
-  exec: function () {
-    try {
-      var re = new RegExp('\\w');
-      var re2 = new RegExp('\\w', 'y');
-      re.exec('xy');
-      re2.exec('xy');
-      return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var re = new RegExp('\\w');
+    var re2 = new RegExp('\\w', 'y');
+    re.exec('xy');
+    re2.exec('xy');
+    return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -1503,14 +1457,9 @@ exports.tests = [
 {
   name: 'RegExp "u" flag',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.unicode',
-  exec: function() {
-    try {
-      return eval('"𠮷".match(/./u)[0].length === 2');
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    return "𠮷".match(/./u)[0].length === 2;
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -1695,16 +1644,15 @@ exports.tests = [
 {
   name: 'Map',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
-  exec: function () {
-    try {
-      var map = new Map();
-      map.set('key', 123);
-      return map.has("key") && map.get('key') === 123 && map.size === 1;
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var key = {};
+    var map = new Map();
+    
+    map.set(key, 123);
+    
+    return map.has(key) && map.get(key) === 123 &&
+           map.size === 1;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -1753,16 +1701,15 @@ exports.tests = [
 {
   name: 'Set',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
-  exec: function () {
-    try {
-      var set = new Set();
-      set.add(123);
-      return set.has(123) && set.size === 1;
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var obj = {};
+    var set = new Set();
+    
+    set.add(123);
+    set.add(123);
+    
+    return set.has(123) && set.size === 1;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -1807,17 +1754,14 @@ exports.tests = [
 {
   name: 'WeakMap',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
-  exec: function () {
-    try {
-      var weakMap = new WeakMap();
-      var key = [1,2,3];
-      weakMap.set(key, 123);
-      return weakMap.has(key) && weakMap.get(key) === 123;
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var key1 = {};
+    var weakmap = new WeakMap();
+    
+    weakmap.set(key1, 123);
+    
+    return weakmap.has(key1) && weakmap.get(key1) === 123;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -1866,16 +1810,15 @@ exports.tests = [
 {
   name: 'WeakSet',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
-  exec: function () {
-    try {
-      var set = new WeakSet(), obj = { };
-      set.add(obj);
-      return set.has(obj);
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var obj1 = {}, obj2 = {};
+    var weakset = new WeakSet();
+    
+    weakset.add(obj1);
+    weakset.add(obj1);
+    
+    return weakset.has(obj1);
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -2092,14 +2035,13 @@ exports.tests = [
 {
   name: 'Block-level function declaration',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:block_functions',
-  exec: function () {
+  exec: function () {/*
     'use strict';
-    try {
-      return eval('{function f(){}} typeof f == "undefined"');
-    } catch (e) {
-      return false;
+    {
+      function f(){}
     }
-  },
+    return typeof f === "undefined";
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -2145,19 +2087,13 @@ exports.tests = [
   name: 'Hoisted block-level function declaration',
   annex_b: true,
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
-  exec: function () {
+  exec: function () {/*
     // Note: only available outside of strict mode.
-    try {
-      return !!Function(
-         'var passed = f() === 2 && g() === 4;'
-        +'if (true) { function f(){ return 1; } } else { function f(){ return 2; } }'
-        +'if (false){ function g(){ return 3; } } else { function g(){ return 4; } }'
-        +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
-  },
+    var passed = f() === 2 && g() === 4;
+    if (true) { function f(){ return 1; } } else { function f(){ return 2; } }
+    if (false){ function g(){ return 3; } } else { function g(){ return 4; } }
+    return passed;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -2202,22 +2138,18 @@ exports.tests = [
 {
   name: 'Destructuring',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
-  exec: function () {
-    'use strict';
-    try {
-      return eval(
-        // Array destructuring
-         'var [a, , [b], g] = [5, null, [6]];'
-        // Object destructuring
-        +'var {c, x:d, h} = {c:7, x:8};'
-        // Combined destructuring
-        +'var [e, {x:f, i}] = [9, {x:10}];'
-        +'a === 5 && b === 6 && c === 7 && d === 8 && e === 9 && f === 10 &&'
-        +'g === undefined && h === undefined && i === undefined');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    // Array destructuring
+    var [a, , [b], g] = [5, null, [6]];
+    // Object destructuring
+    var {c, x:d, h} = {c:7, x:8};
+    // Combined destructuring
+    var [e, {x:f, i}] = [9, {x:10}];
+    
+    return a === 5 && b === 6 && c === 7 &&
+           d === 8 && e === 9 && f === 10 &&
+           g === undefined && h === undefined && i === undefined;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -2262,18 +2194,11 @@ exports.tests = [
 {
   name: 'Destructuring parameters',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
-  exec: function () {
-    'use strict';
-    try {
-      return eval(
-         '(function({a, x:b}, [c, d]) {'
-        +'  return a === 1 && b === 2 && c === 3 && d === 4;'
-        +'}({a:1, x:2},[3, 4]))'
-      );
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return (function({a, x:b}, [c, d]) {
+      return a === 1 && b === 2 && c === 3 && d === 4;
+    }({a:1, x:2},[3, 4]));
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -2318,17 +2243,10 @@ exports.tests = [
 {
   name: 'Destructuring defaults',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
-  exec: function () {
-    'use strict';
-    try {
-      return eval(
-         'var {a = 1, b = 1, c = 3} = {b:2, c:undefined};'
-        +'a === 1 && b === 2 && c === 3'
-      );
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var {a = 1, b = 1, c = 3} = {b:2, c:undefined};
+    return a === 1 && b === 2 && c === 3;
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -2373,19 +2291,12 @@ exports.tests = [
 {
   name: 'Destructuring rest',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
-  exec: function () {
-    'use strict';
-    try {
-      return eval(
-         'var [a, ...b] = [3, 4, 5];'
-        +'var [c, ...d] = [6];'
-        +'a === 3 && b instanceof Array && (b + "") === "4,5" && '
-        +'c === 6 && d instanceof Array && d.length === 0'
-      );
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var [a, ...b] = [3, 4, 5];
+    var [c, ...d] = [6];
+    return a === 3 && b instanceof Array && (b + "") === "4,5" &&
+           c === 6 && d instanceof Array && d.length === 0;
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -2769,8 +2680,8 @@ exports.tests = [
 {
   name: 'Function.prototype.toMethod',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod',
-  exec: function f() {
-    return typeof f.toMethod === "function";
+  exec: function () {
+    return typeof Function.prototype.toMethod === "function";
   },
   res: {
     tr:          false,
@@ -3249,13 +3160,9 @@ exports.tests = [
 {
   name: 'Unicode code point escapes',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
-  exec: function () {
-    try {
-      return eval("'\\u{1d306}' == '\\ud834\\udf06'");
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return '\u{1d306}' == '\ud834\udf06';
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -3359,16 +3266,11 @@ exports.tests = [
 {
   name: 'Global symbol registry',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
-  exec: function() {
-    try {
-      var symbol = Symbol.for('foo');
-      return Symbol.for('foo') === symbol &&
-             Symbol.keyFor(symbol) === 'foo';
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    var symbol = Symbol.for('foo');
+    return Symbol.for('foo') === symbol &&
+           Symbol.keyFor(symbol) === 'foo';
+  */},
   res: {
     tr:          false,
     ejs:         true,
