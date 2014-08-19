@@ -168,7 +168,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r170830',
+    full: 'WebKit r172711',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -1858,11 +1858,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit: {
-      val: true,
-      note_id: 'fx-destructuring',
-      note_html: 'As of '+exports.browsers.webkit.full+', WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
-    },
+    webkit:      true,
     opera:       false,
     konq49:      false,
     rhino17:     false,
@@ -4583,7 +4579,7 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    webkit:      false,
+    webkit:      true,
     opera:       false,
     konq49:      true,
     rhino17:     false,

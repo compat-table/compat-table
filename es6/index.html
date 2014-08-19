@@ -99,7 +99,7 @@
           <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
           <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
           <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7</abbr></th>
-          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r170830">WK</abbr></th>
+          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r172711">WK</abbr></th>
           <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></th>
           <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.13">KQ 4.13</abbr></th>
           <th class="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></th>
@@ -1593,7 +1593,7 @@ test(function () {
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="yes webkit">Yes<a href="#fx-destructuring-note"><sup>[4]</sup></a></td>
+          <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
@@ -2763,9 +2763,7 @@ test(function () {
         }
       };
     };
-    var c;
-    eval("for (c of b) {}");
-    return c === 0;
+    return Function("for (var c of b) { return c === 0; } return false;")();
   }
   catch(e) {
     return false;
@@ -2919,7 +2917,7 @@ test(function () {
 test(function () {
   if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
     var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = { bar: true };
+    a[Symbol.unscopables] = ["bar"];
     with (a) {
       return foo === 1 && typeof bar === "undefined";
     }
@@ -3463,12 +3461,12 @@ test(typeof Array.prototype.values === 'function');
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[5]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[4]</sup></a></td>
           <td class="no firefox18 obsolete">No</td>
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[6]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[5]</sup></a></td>
           <td class="no firefox29 obsolete">No</td>
           <td class="no firefox30 obsolete">No</td>
           <td class="no firefox31">No</td>
@@ -3964,7 +3962,7 @@ test(typeof Math.imul === 'function');
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[7]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[6]</sup></a></td>
           <td class="yes chrome30 obsolete">Yes</td>
           <td class="yes chrome33 obsolete">Yes</td>
           <td class="yes chrome34 obsolete">Yes</td>
@@ -4017,7 +4015,7 @@ test(typeof Math.sign === 'function');
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="no webkit">No</td>
+          <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="yes konq49">Yes</td>
           <td class="no rhino17">No</td>
@@ -4571,7 +4569,7 @@ test(typeof Math.fround === 'function');
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[8]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[7]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -4645,7 +4643,7 @@ test(typeof Math.cbrt === 'function');
           <th colspan="40" class="separator"></th>
         </tr>
         <tr>
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[9]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[8]</sup></a></span></td>
 <script>
 test(function () {
   var passed = { __proto__ : [] } instanceof Array;
@@ -4918,23 +4916,20 @@ test(typeof RegExp.prototype.compile === 'function');
       <p id="fx-spreading-strings-note">
         <sup>[3]</sup> Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.
       </p>
-      <p id="fx-destructuring-note">
-        <sup>[4]</sup> As of WebKit r170830, WebKit fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
-      </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[5]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[4]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[6]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[5]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[7]</sup> Available since Chrome 28
+        <sup>[6]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[8]</sup> Available since Firefox 26
+        <sup>[7]</sup> Available since Firefox 26
       </p>
       <p id="proto-in-object-literals-note">
-        <sup>[9]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[8]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
     </div>
   </div>
