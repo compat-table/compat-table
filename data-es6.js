@@ -3196,7 +3196,9 @@ exports.tests = [
           }
         };
       };
-      return Function("for (var c of b) { return c === 0; } return false;")();
+      var c;
+      eval("for (c of b) {}");
+      return c === 0;
     }
     catch(e) {
       return false;
@@ -3353,7 +3355,7 @@ exports.tests = [
   exec: function() {
     if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
       var a = { foo: 1, bar: 2 };
-      a[Symbol.unscopables] = ["bar"];
+      a[Symbol.unscopables] = { bar: true };
       with (a) {
         return foo === 1 && typeof bar === "undefined";
       }
