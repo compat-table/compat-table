@@ -1077,37 +1077,28 @@ exports.tests = [
 {
   name: 'Generators (yield)',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generators',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function () {
-          try {
-            eval('(function* () { yield 5; }())');
-            return true;
-          } catch (e) {
-            return false;
-          }
-        }()));
-        global.__yield_script_executed = true;
-      }
-    },
-    {
-      script: function () {
-        if (!global.__yield_script_executed) {
-          test((function () {
-            try {
-              eval('(function* () { yield 5; }())');
-              return true;
-            } catch (e) {
-              return false;
-            }
-          }()));
-          global.__yield_script_executed = true;
-        }
-      }
+  exec: function () {
+    try {
+      var generator = eval(
+         '(function* () {'
+        +'  yield* (function* () {'
+        +'    yield 5; yield 6;'
+        +'  }());'
+        +'}())'
+      );
+      
+      var item = generator.next();
+      var passed = item.value === 5 && item.done === false;
+      item = generator.next();
+      passed    &= item.value === 6 && item.done === false;
+      item = generator.next();
+      passed    &= item.value === undefined && item.done === true;
+      
+      return passed;
+    } catch (e) {
+      return false;
     }
-  ],
+  },
   res: {
     tr:          true,
     ejs:         false,
