@@ -970,7 +970,7 @@ exports.tests = [
     firefox31:   false,
     firefox32:   false,
     firefox33:   false,
-    firefox34:   false,
+    firefox34:   true,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
