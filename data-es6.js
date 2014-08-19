@@ -757,6 +757,84 @@ exports.tests = [
   }
 },
 {
+  name: 'super',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
+  exec: function () {
+    try {
+      var passed = false;
+      var B = eval(
+         "class extends class {"
+        +"  constructor(a) { return this.id + a; }"
+        +"  foo(a)         { return a + this.id; }"
+        +"} {"
+        +"  constructor(a) {"
+        +"    this.id = 'AB';"
+          // "super" in the constructor calls
+          // the superclass's constructor on "this".
+        +"    passed  = super(a)     === 'ABCD';"
+          // "super" can be also used to call
+          // superclass methods on "this".
+        +"    passed &= super.foo(a) === 'CDAB';"
+        +"  }"
+        +"  foo(a) {"
+          // "super" in methods calls the
+          // superclass's same-named method on "this".
+        +"    passed &= super(a) === 'YZEF';"
+        +"    passed &= super(a) === super.foo(a);"
+        +"  }"
+        +"}"
+      );
+      var b = new B("CD");
+      // "super" is bound statically, even though "this" isn't
+      var obj = { foo: b.foo, id:"EF" };
+      obj.foo("YZ");
+      return passed;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'computed properties',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
   exec: function() {
