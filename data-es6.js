@@ -1314,23 +1314,29 @@ exports.tests = [
   exec: function () {
     try {
       var buffer = new ArrayBuffer(64);
-      var views = [Int8Array, Uint8Array, Uint8ClampedArray,
-                   Int16Array, Uint16Array, Int32Array, Uint32Array,
-                   Float32Array, Float64Array];
-      var values = [[0x7F,-0x80], [0xFF, 0], [0xFF, 0xFF],
-                    [0x7FFF,-0x8000], [0xFFFF, 0],
-                    [0x7FFFFFFF, -0x80000000], [0xFFFFFFFF, 0],
-                    [0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFF],
-                    [0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
-                     0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]];
       var passed = true;
+      var view;
       
-      for(var i = 0; i < views.length; i++){
-        var view = new views[i](buffer);
-        // Check that each value overflows as expected.
-        view[0] = values[i][0] + 1;
-        passed &= view[0] === values[i][1];
-      }
+      // Check that each int type overflows as expected.
+      view = new Int8Array(buffer);         view[0] = 0x80;
+      passed &= view[0] === -0x80;
+      view = new Uint8Array(buffer);        view[0] = 0x100;
+      passed &= view[0] === 0;
+      view = new Uint8ClampedArray(buffer); view[0] = 0x100;
+      passed &= view[0] === 0xFF;
+      view = new Int16Array(buffer);        view[0] = 0x8000;
+      passed &= view[0] === -0x8000;
+      view = new Uint16Array(buffer);       view[0] = 0x10000;
+      passed &= view[0] === 0;
+      view = new Int32Array(buffer);        view[0] = 0x80000000;
+      passed &= view[0] === -0x80000000;
+      view = new Uint32Array(buffer);       view[0] = 0x100000000;
+      passed &= view[0] === 0;
+      // Check that each float type loses precision as expected.
+      view = new Float32Array(buffer);      view[0] = 0.1;
+      passed &= view[0] === 0.10000000149011612;
+      view = new Float64Array(buffer);      view[0] = 0.1;
+      passed &= view[0] === 0.1;
       return passed;
     }
     catch(err) {
@@ -1344,6 +1350,70 @@ exports.tests = [
     ie11:        true,
     firefox11:   true,
     firefox13:   true,
+    firefox16:   true,
+    firefox17:   true,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      true,
+    chrome19dev: true,
+    chrome21dev: true,
+    chrome30:    true,
+    chrome33:    true,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    true,
+    safari6:     true,
+    safari7:     true,
+    webkit:      true,
+    opera:       true,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     true,
+    node:        true,
+    nodeharmony: true
+  }
+},
+{
+  name: 'Typed Arrays (DataView)',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-dataview-objects',
+  exec: function () {
+    try {
+      var buffer = new ArrayBuffer(64);
+      var view = new DataView(buffer);
+      var passed = true;
+      
+      view.setInt8 (0, 0x80);        passed &= view.getInt8(0)   === -0x80;
+      view.setUint8(0, 0x100);       passed &= view.getUint8(0)  === 0;
+      view.setInt16(0, 0x8000);      passed &= view.getInt16(0)  === -0x8000;
+      view.setUint16(0,0x10000);     passed &= view.getUint16(0) === 0;
+      view.setInt32(0, 0x80000000);  passed &= view.getInt32(0)  === -0x80000000;
+      view.setUint32(0,0x100000000); passed &= view.getUint32(0) === 0;
+      view.setFloat32(0, 0.1);       passed &= view.getFloat32(0)=== 0.10000000149011612;
+      view.setFloat64(0, 0.1);       passed &= view.getFloat64(0)=== 0.1;
+      return passed;
+    }
+    catch(err) {
+      return false;
+    }
+  },
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        true,
+    ie11:        true,
+    firefox11:   false,
+    firefox13:   false,
     firefox16:   true,
     firefox17:   true,
     firefox18:   true,
