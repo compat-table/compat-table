@@ -182,7 +182,15 @@ exports.tests = [
 {
   name: '"toSource" method',
   exec: function () {
-    return 'toSource' in (function (){}) && 'toSource' in ({});
+    return Object   .prototype.hasOwnProperty('toSource')
+        && Number   .prototype.hasOwnProperty('toSource')
+        && Boolean  .prototype.hasOwnProperty('toSource')
+        && String   .prototype.hasOwnProperty('toSource')
+        && Function .prototype.hasOwnProperty('toSource')
+        && Array    .prototype.hasOwnProperty('toSource')
+        && RegExp   .prototype.hasOwnProperty('toSource')
+        && Date     .prototype.hasOwnProperty('toSource')
+        && Error    .prototype.hasOwnProperty('toSource');
   },
   res: {
     ie7: false,
@@ -546,8 +554,46 @@ exports.tests = [
     besen: false,
     rhino: true,
     phantom: true
+  }
+},
+{
+  name: '__lookupGetter__',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__',
+  exec: function () {
+    var obj = { get foo() { return "bar"; } };
+    var func = obj.__lookupGetter__("foo");
+    return typeof func === "function" && func() === "bar";
   },
-  separator: 'after'
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: true,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: true,
+    safari4: true,
+    safari5: true,
+    safari7: true,
+    webkit: true,
+    chrome7: true,
+    opera10_10: true,
+    opera10_50: true,
+    opera15: true,
+    konq44: true,
+    konq49: true,
+    besen: false,
+    rhino: true,
+    phantom: true
+  },
+  separator: 'after',
 },
 {
   name: 'Array generics',
@@ -1033,6 +1079,41 @@ exports.tests = [
   separator: 'after'
 },
 {
+  name: 'Date.prototype.toLocaleFormat',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat',
+  exec: function () { return typeof Date.prototype.toLocaleFormat == 'function' },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  },
+  separator: 'after'
+},
+{
   name: 'Object.prototype.watch',
   exec: function () { return typeof Object.prototype.watch == 'function' },
   res: {
@@ -1171,6 +1252,41 @@ exports.tests = [
   name: 'error "lineNumber"',
   exec: function () {
     return 'lineNumber' in new Error;
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: true,
+    phantom: false
+  }
+},
+{
+  name: 'error "columnNumber"',
+  exec: function () {
+    return 'columnNumber' in new Error;
   },
   res: {
     ie7: false,

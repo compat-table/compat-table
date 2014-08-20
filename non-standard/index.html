@@ -137,7 +137,15 @@ test(typeof uneval == 'function');
           <tr>
             <td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a>"toSource" method</span></td>
 <script>
-test('toSource' in (function (){}) && 'toSource' in ({}));
+test(Object   .prototype.hasOwnProperty('toSource')
+      && Number   .prototype.hasOwnProperty('toSource')
+      && Boolean  .prototype.hasOwnProperty('toSource')
+      && String   .prototype.hasOwnProperty('toSource')
+      && Function .prototype.hasOwnProperty('toSource')
+      && Array    .prototype.hasOwnProperty('toSource')
+      && RegExp   .prototype.hasOwnProperty('toSource')
+      && Date     .prototype.hasOwnProperty('toSource')
+      && Error    .prototype.hasOwnProperty('toSource'));
 </script>
 
             <td class="no ie7 obsolete">No</td>
@@ -465,6 +473,44 @@ test('__defineGetter__' in ({ }));
             <td id="__defineSetter__"><span><a class="anchor" href="#__defineSetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a></span></td>
 <script>
 test('__defineSetter__' in ({ }));
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="yes ie11">Yes</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="yes safari3 obsolete">Yes</td>
+            <td class="yes safari4 obsolete">Yes</td>
+            <td class="yes safari5 obsolete">Yes</td>
+            <td class="yes safari7">Yes</td>
+            <td class="yes webkit">Yes</td>
+            <td class="yes chrome7 obsolete">Yes</td>
+            <td class="yes opera10_10 obsolete">Yes</td>
+            <td class="yes opera10_50 obsolete">Yes</td>
+            <td class="yes opera15">Yes</td>
+            <td class="yes konq44 obsolete">Yes</td>
+            <td class="yes konq49">Yes</td>
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+            <td class="yes phantom">Yes</td>
+          </tr>
+          <tr>
+            <td id="__lookupGetter__"><span><a class="anchor" href="#__lookupGetter__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__">__lookupGetter__</a></span></td>
+<script>
+test(function () {
+  var obj = { get foo() { return "bar"; } };
+  var func = obj.__lookupGetter__("foo");
+  return typeof func === "function" && func() === "bar";
+}());
 </script>
 
             <td class="no ie7 obsolete">No</td>
@@ -998,6 +1044,43 @@ test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
             <th colspan="30" class="separator"></th>
           </tr>
           <tr>
+            <td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span></td>
+<script>
+test(typeof Date.prototype.toLocaleFormat == 'function');
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <th colspan="30" class="separator"></th>
+          </tr>
+          <tr>
             <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a>Object.prototype.watch</span></td>
 <script>
 test(typeof Object.prototype.watch == 'function');
@@ -1140,6 +1223,40 @@ test('stack' in new Error);
             <td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a>error "lineNumber"</span></td>
 <script>
 test('lineNumber' in new Error);
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <td id="error_columnNumber"><span><a class="anchor" href="#error_columnNumber">&sect;</a>error "columnNumber"</span></td>
+<script>
+test('columnNumber' in new Error);
 </script>
 
             <td class="no ie7 obsolete">No</td>
