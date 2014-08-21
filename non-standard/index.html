@@ -10,7 +10,7 @@
     <script src="../master.js"></script>
 
     <script>
-      var __script_executed;
+      var __script_executed = {};
     </script>
 
   </head>
@@ -923,18 +923,35 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="Generators_(_yield_in_plain_functions)"><span><a class="anchor" href="#Generators_(_yield_in_plain_functions)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators ("yield" in plain functions)</a></span></td>
+            <td id="Generators_(JS_1.8)"><span><a class="anchor" href="#Generators_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span></td>
+<script type="application/javascript;version=1.8">
+console.log(JSON.stringify(__script_executed));
+        test(function () {
+          try {
+            var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+            var passed = g.next() === "foo";
+            return passed && (g.send("bar") === "barbaz");
+          }
+          catch(e) {
+            return false;
+          }
+        }());
+__script_executed["generators"] = true;
+</script>
 <script>
-test(function () {
-  try {
-    var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
-    var passed = g.next() === "foo";
-    return passed && (g.send("bar") === "barbaz");
-  }
-  catch(e) {
-    alert(e);
-  }
-}());
+console.log(JSON.stringify(__script_executed));
+if (!__script_executed["generators"]) {
+      test(function () {
+    try {
+      var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+      var passed = g.next() === "foo";
+      return passed && (g.send("bar") === "barbaz");
+    }
+    catch(e) {
+      return false;
+    }
+  }());
+}
 </script>
 
             <td class="no ie7 obsolete">No</td>
@@ -942,8 +959,8 @@ test(function () {
             <td class="no ie9">No</td>
             <td class="no ie10">No</td>
             <td class="no ie11">No</td>
-            <td class="no firefox3 obsolete">No</td>
-            <td class="no firefox3_5 obsolete">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
             <td class="yes firefox6 obsolete">Yes</td>
@@ -962,14 +979,11 @@ test(function () {
             <td class="no konq44 obsolete">No</td>
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
-            <td class="no rhino">No</td>
+            <td class="yes rhino">Yes</td>
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
-          </tr>
-          <tr>
-            <td id="Generator_comprehensions_(right-to-left)"><span><a class="anchor" href="#Generator_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions">Generator comprehensions (right-to-left)</a></span></td>
+            <td id="Generator_comprehensions_(JS_1.8)"><span><a class="anchor" href="#Generator_comprehensions_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions">Generator comprehensions (JS 1.8)</a></span></td>
 <script>
 test(function () {
   try {

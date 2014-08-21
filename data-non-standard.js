@@ -967,28 +967,51 @@ exports.tests = [
     rhino: false,
     phantom: false
   }
-},/*
+},
 {
-  name: 'Generators ("yield" in plain functions)',
+  name: 'Generators (JS 1.8)',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators',
-  exec: function () {
-    try {
-      var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
-      var passed = g.next() === "foo";
-      return passed && (g.send("bar") === "barbaz");
-    }
-    catch(e) {
-      alert(e);
-    }
-  },
+  exec:[{
+      type: 'application/javascript;version=1.8',
+      script: function () {
+	  console.log(JSON.stringify(__script_executed));
+        test(function () {
+          try {
+            var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+            var passed = g.next() === "foo";
+            return passed && (g.send("bar") === "barbaz");
+          }
+          catch(e) {
+            return false;
+          }
+        }());
+		__script_executed["generators"] = true;
+      }
+  },{
+      script: function () {		
+	  console.log(JSON.stringify(__script_executed));
+        if (!__script_executed["generators"]) {
+		  test(function () {
+            try {
+              var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+              var passed = g.next() === "foo";
+              return passed && (g.send("bar") === "barbaz");
+            }
+            catch(e) {
+              return false;
+            }
+          }());
+        }
+	  }
+  }],
   res: {
     ie7: false,
     ie8: false,
     ie9: false,
     ie10: false,
     ie11: false,
-    firefox3: false,
-    firefox3_5: false,
+    firefox3: true,
+    firefox3_5: true,
     firefox4: true,
     firefox5: true,
     firefox6: true,
@@ -1007,13 +1030,12 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino: true,
     phantom: false
   },
-  separator: 'after'
-},*/
+},
 {
-  name: 'Generator comprehensions (right-to-left)',
+  name: 'Generator comprehensions (JS 1.8)',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions',
   exec: function () {
     try {
