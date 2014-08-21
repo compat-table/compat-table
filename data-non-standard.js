@@ -663,6 +663,49 @@ exports.tests = [
     besen: false,
     rhino: true,
     phantom: false
+  },
+  separator: 'after'
+},
+{
+  name: 'Array comprehensions (right-to-left)',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions',
+  exec: function () {
+    try {
+      var a = eval('[i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo")]');
+      return a instanceof Array && a[0] === 4 && a[1] === 8;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
   }
 },
 {
@@ -890,6 +933,92 @@ exports.tests = [
         total += item.foo;
       }
       return total === 10;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  }
+},/*
+{
+  name: 'Generators ("yield" in plain functions)',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators',
+  exec: function () {
+    try {
+      var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+      var passed = g.next() === "foo";
+      return passed && (g.send("bar") === "barbaz");
+    }
+    catch(e) {
+      alert(e);
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  },
+  separator: 'after'
+},*/
+{
+  name: 'Generator comprehensions (right-to-left)',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions',
+  exec: function () {
+    try {
+      var g = eval('(i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo"))');
+      return g.next() === 4 && g.next() === 8;
     }
     catch(e) {
       return false;

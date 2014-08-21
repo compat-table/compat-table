@@ -613,6 +613,51 @@ test(typeof String.slice === 'function' && String.slice(123, 1) === "23");
             <td class="no phantom">No</td>
           </tr>
           <tr>
+            <th colspan="30" class="separator"></th>
+          </tr>
+          <tr>
+            <td id="Array_comprehensions_(right-to-left)"><span><a class="anchor" href="#Array_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (right-to-left)</a></span></td>
+<script>
+test(function () {
+  try {
+    var a = eval('[i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo")]');
+    return a instanceof Array && a[0] === 4 && a[1] === 8;
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
             <td id="Expression_closures"><span><a class="anchor" href="#Expression_closures">&sect;</a>Expression closures</span></td>
 <script>
 test(function () {
@@ -842,6 +887,94 @@ test(function () {
       total += item.foo;
     }
     return total === 10;
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <td id="Generators_(_yield_in_plain_functions)"><span><a class="anchor" href="#Generators_(_yield_in_plain_functions)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators ("yield" in plain functions)</a></span></td>
+<script>
+test(function () {
+  try {
+    var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+    var passed = g.next() === "foo";
+    return passed && (g.send("bar") === "barbaz");
+  }
+  catch(e) {
+    alert(e);
+  }
+}());
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="no firefox3 obsolete">No</td>
+            <td class="no firefox3_5 obsolete">No</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <th colspan="30" class="separator"></th>
+          </tr>
+          <tr>
+            <td id="Generator_comprehensions_(right-to-left)"><span><a class="anchor" href="#Generator_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions">Generator comprehensions (right-to-left)</a></span></td>
+<script>
+test(function () {
+  try {
+    var g = eval('(i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo"))');
+    return g.next() === 4 && g.next() === 8;
   }
   catch(e) {
     return false;
