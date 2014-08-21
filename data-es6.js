@@ -1228,6 +1228,112 @@ exports.tests = [
   }
 },
 {
+  name: 'octal literals',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
+  exec: function () {
+    try {
+      return eval('0o10') === 8 && eval('0O10') === 8;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    {
+      val: true,
+      note_id: 'octal-to-string',
+      note_html: '<code>Number("0o1")</code> and <code>Number("0b1")</code> <a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tonumber-applied-to-the-string-type">incorrectly</a> evaluate to 1 instead of <code>NaN</code>.'
+    },
+    chrome33:    { val: true, note_id: 'octal-to-string' },
+    chrome34:    { val: true, note_id: 'octal-to-string' },
+    chrome35:    { val: true, note_id: 'octal-to-string' },
+    chrome37:    { val: true, note_id: 'octal-to-string' },
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'binary literals',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
+  exec: function () {
+    try {
+      return eval('0b10') === 2 && eval('0B10') === 2;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    tr:          true,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    { val: true, note_id: 'octal-to-string' },
+    chrome33:    { val: true, note_id: 'octal-to-string' },
+    chrome34:    { val: true, note_id: 'octal-to-string' },
+    chrome35:    { val: true, note_id: 'octal-to-string' },
+    chrome37:    { val: true, note_id: 'octal-to-string' },
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Template Strings',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:quasis',
   exec: function () {
