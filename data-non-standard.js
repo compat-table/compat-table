@@ -598,7 +598,42 @@ exports.tests = [
 {
   name: 'Array generics',
   exec: function () {
-    return typeof Array.slice === 'function' && Array.slice('123').length === 3;
+    return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: true,
+    phantom: false
+  }
+},
+{
+  name: 'String generics',
+  exec: function () {
+    return typeof String.slice === 'function' && String.slice(123, 1) === "23";
   },
   res: {
     ie7: false,
@@ -709,6 +744,47 @@ exports.tests = [
   }
 },
 {
+  name: '"for each..in" loops',
+  exec: function () {
+    var str = '';
+    try {
+      eval('for each (var item in {a: "foo", b: "bar", c: "baz"}) { str += item; }');
+      return str === "foobarbaz";
+    } catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: false,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  }
+},
+{
   name: 'Sharp variables',
   link: 'https://developer.mozilla.org/en/Sharp_variables_in_JavaScript',
   exec: function () {
@@ -744,6 +820,107 @@ exports.tests = [
     konq44: null,
     konq49: false,
     besen: null,
+    rhino: false,
+    phantom: false
+  },
+  separator: 'after'
+},
+{
+  name: 'Iterator',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators',
+  exec: function () {
+    try {
+      var it = Iterator({ foo: 1, bar: 2 });
+      var keys = "";
+      var values = 0;
+      for (var pair in it) {
+        keys   += pair[0];
+        values += pair[1];
+      }
+      return keys === "foobar" && values === 3;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  }
+},
+{
+  name: '__iterator__',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators',
+  exec: function () {
+    try {
+      var x = 5;
+      var iter = {
+        next: function() {
+          if (x > 0) return { foo: --x };
+          else throw StopIteration;
+        }
+      };
+      var total = 0;
+      for (var item in { __iterator__ : function() { return iter; }}) {
+        total += item.foo;
+      }
+      return total === 10;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
     rhino: false,
     phantom: false
   },
@@ -1053,13 +1230,13 @@ exports.tests = [
     ie9: false,
     ie10: false,
     ie11: false,
-    //firefox3: true,
-    //firefox3_5: true,
-    //firefox4: true,
-    //firefox5: true,
-    //firefox6: true,
-    //firefox7: true,
-    //firefox12: true,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
     firefox28: true,
     //safari3: false,
     //safari4: false,
@@ -1294,13 +1471,13 @@ exports.tests = [
     ie9: false,
     ie10: false,
     ie11: false,
-    firefox3: true,
-    firefox3_5: true,
-    firefox4: true,
-    firefox5: true,
-    firefox6: true,
-    firefox7: true,
-    firefox12: true,
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: false,
+    firefox5: false,
+    firefox6: false,
+    firefox7: false,
+    firefox12: false,
     firefox28: true,
     safari3: false,
     safari4: false,
@@ -1314,7 +1491,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino: false,
     phantom: false
   }
 },

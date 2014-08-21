@@ -547,7 +547,41 @@ test(function () {
           <tr>
             <td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span></td>
 <script>
-test(typeof Array.slice === 'function' && Array.slice('123').length === 3);
+test(typeof Array.slice === 'function' && Array.slice('abc').length === 3);
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="yes rhino">Yes</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <td id="String_generics"><span><a class="anchor" href="#String_generics">&sect;</a>String generics</span></td>
+<script>
+test(typeof String.slice === 'function' && String.slice(123, 1) === "23");
 </script>
 
             <td class="no ie7 obsolete">No</td>
@@ -659,6 +693,48 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
+            <td id="for_each..in_loops"><span><a class="anchor" href="#for_each..in_loops">&sect;</a>"for each..in" loops</span></td>
+<script>
+test(function () {
+  var str = '';
+  try {
+    eval('for each (var item in {a: "foo", b: "bar", c: "baz"}) { str += item; }');
+    return str === "foobarbaz";
+  } catch(e) {
+    return false;
+  }
+}());
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="no firefox28">No</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
             <td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span></td>
 <script>
 test(function () {
@@ -695,6 +771,109 @@ test(function () {
             <td class="konq44 obsolete"></td>
             <td class="no konq49">No</td>
             <td class="besen"></td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <th colspan="30" class="separator"></th>
+          </tr>
+          <tr>
+            <td id="Iterator"><span><a class="anchor" href="#Iterator">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span></td>
+<script>
+test(function () {
+  try {
+    var it = Iterator({ foo: 1, bar: 2 });
+    var keys = "";
+    var values = 0;
+    for (var pair in it) {
+      keys   += pair[0];
+      values += pair[1];
+    }
+    return keys === "foobar" && values === 3;
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
+            <td class="no rhino">No</td>
+            <td class="no phantom">No</td>
+          </tr>
+          <tr>
+            <td id="__iterator__"><span><a class="anchor" href="#__iterator__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">__iterator__</a></span></td>
+<script>
+test(function () {
+  try {
+    var x = 5;
+    var iter = {
+      next: function() {
+        if (x > 0) return { foo: --x };
+        else throw StopIteration;
+      }
+    };
+    var total = 0;
+    for (var item in { __iterator__ : function() { return iter; }}) {
+      total += item.foo;
+    }
+    return total === 10;
+  }
+  catch(e) {
+    return false;
+  }
+}());
+</script>
+
+            <td class="no ie7 obsolete">No</td>
+            <td class="no ie8 obsolete">No</td>
+            <td class="no ie9">No</td>
+            <td class="no ie10">No</td>
+            <td class="no ie11">No</td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="yes firefox28">Yes</td>
+            <td class="no safari3 obsolete">No</td>
+            <td class="no safari4 obsolete">No</td>
+            <td class="no safari5 obsolete">No</td>
+            <td class="no safari7">No</td>
+            <td class="no webkit">No</td>
+            <td class="no chrome7 obsolete">No</td>
+            <td class="no opera10_10 obsolete">No</td>
+            <td class="no opera10_50 obsolete">No</td>
+            <td class="no opera15">No</td>
+            <td class="no konq44 obsolete">No</td>
+            <td class="no konq49">No</td>
+            <td class="no besen">No</td>
             <td class="no rhino">No</td>
             <td class="no phantom">No</td>
           </tr>
@@ -1017,13 +1196,13 @@ test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
             <td class="no ie9">No</td>
             <td class="no ie10">No</td>
             <td class="no ie11">No</td>
-            <td class="firefox3 obsolete"></td>
-            <td class="firefox3_5 obsolete"></td>
-            <td class="firefox4 obsolete"></td>
-            <td class="firefox5 obsolete"></td>
-            <td class="firefox6 obsolete"></td>
-            <td class="firefox7 obsolete"></td>
-            <td class="firefox12 obsolete"></td>
+            <td class="yes firefox3 obsolete">Yes</td>
+            <td class="yes firefox3_5 obsolete">Yes</td>
+            <td class="yes firefox4 obsolete">Yes</td>
+            <td class="yes firefox5 obsolete">Yes</td>
+            <td class="yes firefox6 obsolete">Yes</td>
+            <td class="yes firefox7 obsolete">Yes</td>
+            <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
             <td class="safari3 obsolete"></td>
             <td class="safari4 obsolete"></td>
@@ -1264,13 +1443,13 @@ test('columnNumber' in new Error);
             <td class="no ie9">No</td>
             <td class="no ie10">No</td>
             <td class="no ie11">No</td>
-            <td class="yes firefox3 obsolete">Yes</td>
-            <td class="yes firefox3_5 obsolete">Yes</td>
-            <td class="yes firefox4 obsolete">Yes</td>
-            <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
-            <td class="yes firefox7 obsolete">Yes</td>
-            <td class="yes firefox12 obsolete">Yes</td>
+            <td class="no firefox3 obsolete">No</td>
+            <td class="no firefox3_5 obsolete">No</td>
+            <td class="no firefox4 obsolete">No</td>
+            <td class="no firefox5 obsolete">No</td>
+            <td class="no firefox6 obsolete">No</td>
+            <td class="no firefox7 obsolete">No</td>
+            <td class="no firefox12 obsolete">No</td>
             <td class="yes firefox28">Yes</td>
             <td class="no safari3 obsolete">No</td>
             <td class="no safari4 obsolete">No</td>
@@ -1284,7 +1463,7 @@ test('columnNumber' in new Error);
             <td class="no konq44 obsolete">No</td>
             <td class="no konq49">No</td>
             <td class="no besen">No</td>
-            <td class="yes rhino">Yes</td>
+            <td class="no rhino">No</td>
             <td class="no phantom">No</td>
           </tr>
           <tr>
