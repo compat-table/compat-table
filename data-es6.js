@@ -2649,6 +2649,55 @@ exports.tests = [
   }
 },
 {
+  name: 'String.prototype.normalize',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.normalize',
+  exec: function () {
+    return typeof String.prototype.normalize === "function"
+      && "c\u0327\u0301".normalize("NFC") === "\u1e09"
+      && "\u1e09".normalize("NFD") === "c\u0327\u0301";
+  },
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    true,
+    chrome35:    true,
+    chrome37:    true,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false
+  }
+},
+{
   name: 'String.prototype.repeat',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat',
   exec: function () {
