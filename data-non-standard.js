@@ -146,6 +146,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'uneval',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
   exec: function () {
     return typeof uneval == 'function';
   },
@@ -181,8 +182,9 @@ exports.tests = [
 },
 {
   name: '"toSource" method',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource',
   exec: function () {
-    return Object   .prototype.hasOwnProperty('toSource')
+    return 'toSource' in Object.prototype
         && Number   .prototype.hasOwnProperty('toSource')
         && Boolean  .prototype.hasOwnProperty('toSource')
         && String   .prototype.hasOwnProperty('toSource')
@@ -748,7 +750,8 @@ exports.tests = [
   }
 },
 {
-  name: 'e4x',
+  name: 'ECMAScript for XML (E4X)',
+  link: 'https://developer.mozilla.org/en-US/docs/Archive/Web/E4X',
   exec: function () {
     try {
       return eval('typeof <foo/> === "xml"');
@@ -788,6 +791,7 @@ exports.tests = [
 },
 {
   name: '"for each..in" loops',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in',
   exec: function () {
     var str = '';
     try {
@@ -974,7 +978,6 @@ exports.tests = [
   exec:[{
       type: 'application/javascript;version=1.8',
       script: function () {
-	  console.log(JSON.stringify(__script_executed));
         test(function () {
           try {
             var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
@@ -985,13 +988,12 @@ exports.tests = [
             return false;
           }
         }());
-		__script_executed["generators"] = true;
+        __script_executed["generators"] = true;
       }
   },{
-      script: function () {		
-	  console.log(JSON.stringify(__script_executed));
+      script: function () {     
         if (!__script_executed["generators"]) {
-		  test(function () {
+          test(function () {
             try {
               var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
               var passed = g.next() === "foo";
@@ -1002,7 +1004,7 @@ exports.tests = [
             }
           }());
         }
-	  }
+      }
   }],
   res: {
     ie7: false,
@@ -1275,6 +1277,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.trimLeft',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft',
   exec: function () { return typeof String.prototype.trimLeft === 'function' },
   res: {
     ie7: false,
@@ -1308,6 +1311,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.trimRight',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight',
   exec: function () { return typeof String.prototype.trimRight === 'function' },
   res: {
     ie7: false,
@@ -1374,6 +1378,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.replace flags',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace',
   exec: function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' },
   res: {
     ie7: false,
@@ -1409,7 +1414,7 @@ exports.tests = [
 {
   name: 'Date.prototype.toLocaleFormat',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat',
-  exec: function () { return typeof Date.prototype.toLocaleFormat == 'function' },
+  exec: function () { return typeof Date.prototype.toLocaleFormat === 'function' },
   res: {
     ie7: false,
     ie8: false,
@@ -1443,6 +1448,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.watch',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch',
   exec: function () { return typeof Object.prototype.watch == 'function' },
   res: {
     ie7: false,
@@ -1476,6 +1482,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.unwatch',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch',
   exec: function () { return typeof Object.prototype.unwatch == 'function' },
   res: {
     ie7: false,
@@ -1509,6 +1516,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.eval',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval',
   exec: function () { return typeof Object.prototype.eval == 'function' },
   res: {
     ie7: false,
@@ -1543,6 +1551,7 @@ exports.tests = [
 },
 {
   name: 'error "stack"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack',
   exec: function () {
     return 'stack' in new Error;
   },
@@ -1578,6 +1587,7 @@ exports.tests = [
 },
 {
   name: 'error "lineNumber"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber',
   exec: function () {
     return 'lineNumber' in new Error;
   },
@@ -1613,6 +1623,7 @@ exports.tests = [
 },
 {
   name: 'error "columnNumber"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber',
   exec: function () {
     return 'columnNumber' in new Error;
   },
@@ -1648,6 +1659,7 @@ exports.tests = [
 },
 {
   name: 'error "fileName"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName',
   exec: function () {
     return 'fileName' in new Error;
   },
@@ -1683,6 +1695,7 @@ exports.tests = [
 },
 {
   name: 'error "description"',
+  link: 'http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx',
   exec: function () {
     return 'description' in new Error;
   },

@@ -101,7 +101,7 @@
         </thead>
         <tbody>
           <tr>
-            <td id="uneval"><span><a class="anchor" href="#uneval">&sect;</a>uneval</span></td>
+            <td id="uneval"><span><a class="anchor" href="#uneval">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval">uneval</a></span></td>
 <script>
 test(typeof uneval == 'function');
 </script>
@@ -135,9 +135,9 @@ test(typeof uneval == 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a>"toSource" method</span></td>
+            <td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource">"toSource" method</a></span></td>
 <script>
-test(Object   .prototype.hasOwnProperty('toSource')
+test('toSource' in Object.prototype
       && Number   .prototype.hasOwnProperty('toSource')
       && Boolean  .prototype.hasOwnProperty('toSource')
       && String   .prototype.hasOwnProperty('toSource')
@@ -698,7 +698,7 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="e4x"><span><a class="anchor" href="#e4x">&sect;</a>e4x</span></td>
+            <td id="ECMAScript_for_XML_(E4X)"><span><a class="anchor" href="#ECMAScript_for_XML_(E4X)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Archive/Web/E4X">ECMAScript for XML (E4X)</a></span></td>
 <script>
 test(function () {
   try {
@@ -738,7 +738,7 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="for_each..in_loops"><span><a class="anchor" href="#for_each..in_loops">&sect;</a>"for each..in" loops</span></td>
+            <td id="for_each..in_loops"><span><a class="anchor" href="#for_each..in_loops">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">"for each..in" loops</a></span></td>
 <script>
 test(function () {
   var str = '';
@@ -925,23 +925,21 @@ test(function () {
           <tr>
             <td id="Generators_(JS_1.8)"><span><a class="anchor" href="#Generators_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span></td>
 <script type="application/javascript;version=1.8">
-console.log(JSON.stringify(__script_executed));
-        test(function () {
-          try {
-            var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
-            var passed = g.next() === "foo";
-            return passed && (g.send("bar") === "barbaz");
-          }
-          catch(e) {
-            return false;
-          }
-        }());
+test(function () {
+  try {
+    var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+    var passed = g.next() === "foo";
+    return passed && (g.send("bar") === "barbaz");
+  }
+  catch(e) {
+    return false;
+  }
+}());
 __script_executed["generators"] = true;
 </script>
 <script>
-console.log(JSON.stringify(__script_executed));
 if (!__script_executed["generators"]) {
-      test(function () {
+  test(function () {
     try {
       var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
       var passed = g.next() === "foo";
@@ -1231,7 +1229,7 @@ test(function () {
             <th colspan="30" class="separator"></th>
           </tr>
           <tr>
-            <td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a>String.prototype.trimLeft</span></td>
+            <td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span></td>
 <script>
 test(typeof String.prototype.trimLeft === 'function');
 </script>
@@ -1265,7 +1263,7 @@ test(typeof String.prototype.trimLeft === 'function');
             <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <td id="String.prototype.trimRight"><span><a class="anchor" href="#String.prototype.trimRight">&sect;</a>String.prototype.trimRight</span></td>
+            <td id="String.prototype.trimRight"><span><a class="anchor" href="#String.prototype.trimRight">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight">String.prototype.trimRight</a></span></td>
 <script>
 test(typeof String.prototype.trimRight === 'function');
 </script>
@@ -1333,7 +1331,7 @@ test(typeof String.prototype.quote === 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="String.prototype.replace_flags"><span><a class="anchor" href="#String.prototype.replace_flags">&sect;</a>String.prototype.replace flags</span></td>
+            <td id="String.prototype.replace_flags"><span><a class="anchor" href="#String.prototype.replace_flags">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace flags</a></span></td>
 <script>
 test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
 </script>
@@ -1372,7 +1370,7 @@ test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
           <tr>
             <td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span></td>
 <script>
-test(typeof Date.prototype.toLocaleFormat == 'function');
+test(typeof Date.prototype.toLocaleFormat === 'function');
 </script>
 
             <td class="no ie7 obsolete">No</td>
@@ -1407,7 +1405,7 @@ test(typeof Date.prototype.toLocaleFormat == 'function');
             <th colspan="30" class="separator"></th>
           </tr>
           <tr>
-            <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a>Object.prototype.watch</span></td>
+            <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span></td>
 <script>
 test(typeof Object.prototype.watch == 'function');
 </script>
@@ -1441,7 +1439,7 @@ test(typeof Object.prototype.watch == 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="Object.prototype.unwatch"><span><a class="anchor" href="#Object.prototype.unwatch">&sect;</a>Object.prototype.unwatch</span></td>
+            <td id="Object.prototype.unwatch"><span><a class="anchor" href="#Object.prototype.unwatch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch">Object.prototype.unwatch</a></span></td>
 <script>
 test(typeof Object.prototype.unwatch == 'function');
 </script>
@@ -1475,7 +1473,7 @@ test(typeof Object.prototype.unwatch == 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="Object.prototype.eval"><span><a class="anchor" href="#Object.prototype.eval">&sect;</a>Object.prototype.eval</span></td>
+            <td id="Object.prototype.eval"><span><a class="anchor" href="#Object.prototype.eval">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval">Object.prototype.eval</a></span></td>
 <script>
 test(typeof Object.prototype.eval == 'function');
 </script>
@@ -1512,7 +1510,7 @@ test(typeof Object.prototype.eval == 'function');
             <th colspan="30" class="separator"></th>
           </tr>
           <tr>
-            <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a>error "stack"</span></td>
+            <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error "stack"</a></span></td>
 <script>
 test('stack' in new Error);
 </script>
@@ -1546,7 +1544,7 @@ test('stack' in new Error);
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a>error "lineNumber"</span></td>
+            <td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber">error "lineNumber"</a></span></td>
 <script>
 test('lineNumber' in new Error);
 </script>
@@ -1580,7 +1578,7 @@ test('lineNumber' in new Error);
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="error_columnNumber"><span><a class="anchor" href="#error_columnNumber">&sect;</a>error "columnNumber"</span></td>
+            <td id="error_columnNumber"><span><a class="anchor" href="#error_columnNumber">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber">error "columnNumber"</a></span></td>
 <script>
 test('columnNumber' in new Error);
 </script>
@@ -1614,7 +1612,7 @@ test('columnNumber' in new Error);
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="error_fileName"><span><a class="anchor" href="#error_fileName">&sect;</a>error "fileName"</span></td>
+            <td id="error_fileName"><span><a class="anchor" href="#error_fileName">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName">error "fileName"</a></span></td>
 <script>
 test('fileName' in new Error);
 </script>
@@ -1648,7 +1646,7 @@ test('fileName' in new Error);
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <td id="error_description"><span><a class="anchor" href="#error_description">&sect;</a>error "description"</span></td>
+            <td id="error_description"><span><a class="anchor" href="#error_description">&sect;</a><a href="http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx">error "description"</a></span></td>
 <script>
 test('description' in new Error);
 </script>
