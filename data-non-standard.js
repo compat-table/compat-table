@@ -146,6 +146,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'uneval',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
   exec: function () {
     return typeof uneval == 'function';
   },
@@ -181,8 +182,17 @@ exports.tests = [
 },
 {
   name: '"toSource" method',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource',
   exec: function () {
-    return 'toSource' in (function (){}) && 'toSource' in ({});
+    return 'toSource' in Object.prototype
+        && Number   .prototype.hasOwnProperty('toSource')
+        && Boolean  .prototype.hasOwnProperty('toSource')
+        && String   .prototype.hasOwnProperty('toSource')
+        && Function .prototype.hasOwnProperty('toSource')
+        && Array    .prototype.hasOwnProperty('toSource')
+        && RegExp   .prototype.hasOwnProperty('toSource')
+        && Date     .prototype.hasOwnProperty('toSource')
+        && Error    .prototype.hasOwnProperty('toSource');
   },
   res: {
     ie7: false,
@@ -546,13 +556,51 @@ exports.tests = [
     besen: false,
     rhino: true,
     phantom: true
+  }
+},
+{
+  name: '__lookupGetter__',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__',
+  exec: function () {
+    var obj = { get foo() { return "bar"; } };
+    var func = obj.__lookupGetter__("foo");
+    return typeof func === "function" && func() === "bar";
   },
-  separator: 'after'
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: true,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: true,
+    safari4: true,
+    safari5: true,
+    safari7: true,
+    webkit: true,
+    chrome7: true,
+    opera10_10: true,
+    opera10_50: true,
+    opera15: true,
+    konq44: true,
+    konq49: true,
+    besen: false,
+    rhino: true,
+    phantom: true
+  },
+  separator: 'after',
 },
 {
   name: 'Array generics',
   exec: function () {
-    return typeof Array.slice === 'function' && Array.slice('123').length === 3;
+    return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
   },
   res: {
     ie7: false,
@@ -581,6 +629,84 @@ exports.tests = [
     konq49: false,
     besen: false,
     rhino: true,
+    phantom: false
+  }
+},
+{
+  name: 'String generics',
+  exec: function () {
+    return typeof String.slice === 'function' && String.slice(123, 1) === "23";
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: true,
+    phantom: false
+  },
+  separator: 'after'
+},
+{
+  name: 'Array comprehensions (right-to-left)',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions',
+  exec: function () {
+    try {
+      var a = eval('[i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo")]');
+      return a instanceof Array && a[0] === 4 && a[1] === 8;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
     phantom: false
   }
 },
@@ -624,7 +750,8 @@ exports.tests = [
   }
 },
 {
-  name: 'e4x',
+  name: 'ECMAScript for XML (E4X)',
+  link: 'https://developer.mozilla.org/en-US/docs/Archive/Web/E4X',
   exec: function () {
     try {
       return eval('typeof <foo/> === "xml"');
@@ -659,6 +786,48 @@ exports.tests = [
     konq49: false,
     besen: false,
     rhino: true,
+    phantom: false
+  }
+},
+{
+  name: '"for each..in" loops',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in',
+  exec: function () {
+    var str = '';
+    try {
+      eval('for each (var item in {a: "foo", b: "bar", c: "baz"}) { str += item; }');
+      return str === "foobarbaz";
+    } catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: false,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
     phantom: false
   }
 },
@@ -698,6 +867,213 @@ exports.tests = [
     konq44: null,
     konq49: false,
     besen: null,
+    rhino: false,
+    phantom: false
+  },
+  separator: 'after'
+},
+{
+  name: 'Iterator',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators',
+  exec: function () {
+    try {
+      var it = Iterator({ foo: 1, bar: 2 });
+      var keys = "";
+      var values = 0;
+      for (var pair in it) {
+        keys   += pair[0];
+        values += pair[1];
+      }
+      return keys === "foobar" && values === 3;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  }
+},
+{
+  name: '__iterator__',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators',
+  exec: function () {
+    try {
+      var x = 5;
+      var iter = {
+        next: function() {
+          if (x > 0) return { foo: --x };
+          else throw StopIteration;
+        }
+      };
+      var total = 0;
+      for (var item in { __iterator__ : function() { return iter; }}) {
+        total += item.foo;
+      }
+      return total === 10;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  }
+},
+{
+  name: 'Generators (JS 1.8)',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators',
+  exec:[{
+      type: 'application/javascript;version=1.8',
+      script: function () {
+        test(function () {
+          try {
+            var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+            var passed = g.next() === "foo";
+            return passed && (g.send("bar") === "barbaz");
+          }
+          catch(e) {
+            return false;
+          }
+        }());
+        __script_executed["generators"] = true;
+      }
+  },{
+      script: function () {     
+        if (!__script_executed["generators"]) {
+          test(function () {
+            try {
+              var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+              var passed = g.next() === "foo";
+              return passed && (g.send("bar") === "barbaz");
+            }
+            catch(e) {
+              return false;
+            }
+          }());
+        }
+      }
+  }],
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: true,
+    phantom: false
+  },
+},
+{
+  name: 'Generator comprehensions (JS 1.8)',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions',
+  exec: function () {
+    try {
+      var g = eval('(i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo"))');
+      return g.next() === 4 && g.next() === 8;
+    }
+    catch(e) {
+      return false;
+    }
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
     rhino: false,
     phantom: false
   },
@@ -901,6 +1277,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.trimLeft',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft',
   exec: function () { return typeof String.prototype.trimLeft === 'function' },
   res: {
     ie7: false,
@@ -934,6 +1311,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.trimRight',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight',
   exec: function () { return typeof String.prototype.trimRight === 'function' },
   res: {
     ie7: false,
@@ -1000,6 +1378,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.replace flags',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace',
   exec: function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' },
   res: {
     ie7: false,
@@ -1007,13 +1386,13 @@ exports.tests = [
     ie9: false,
     ie10: false,
     ie11: false,
-    //firefox3: true,
-    //firefox3_5: true,
-    //firefox4: true,
-    //firefox5: true,
-    //firefox6: true,
-    //firefox7: true,
-    //firefox12: true,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
     firefox28: true,
     //safari3: false,
     //safari4: false,
@@ -1033,7 +1412,43 @@ exports.tests = [
   separator: 'after'
 },
 {
+  name: 'Date.prototype.toLocaleFormat',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat',
+  exec: function () { return typeof Date.prototype.toLocaleFormat === 'function' },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: true,
+    firefox3_5: true,
+    firefox4: true,
+    firefox5: true,
+    firefox6: true,
+    firefox7: true,
+    firefox12: true,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  },
+  separator: 'after'
+},
+{
   name: 'Object.prototype.watch',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch',
   exec: function () { return typeof Object.prototype.watch == 'function' },
   res: {
     ie7: false,
@@ -1067,6 +1482,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.unwatch',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch',
   exec: function () { return typeof Object.prototype.unwatch == 'function' },
   res: {
     ie7: false,
@@ -1100,6 +1516,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.eval',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval',
   exec: function () { return typeof Object.prototype.eval == 'function' },
   res: {
     ie7: false,
@@ -1134,6 +1551,7 @@ exports.tests = [
 },
 {
   name: 'error "stack"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack',
   exec: function () {
     return 'stack' in new Error;
   },
@@ -1169,6 +1587,7 @@ exports.tests = [
 },
 {
   name: 'error "lineNumber"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber',
   exec: function () {
     return 'lineNumber' in new Error;
   },
@@ -1203,7 +1622,44 @@ exports.tests = [
   }
 },
 {
+  name: 'error "columnNumber"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber',
+  exec: function () {
+    return 'columnNumber' in new Error;
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+    ie11: false,
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: false,
+    firefox5: false,
+    firefox6: false,
+    firefox7: false,
+    firefox12: false,
+    firefox28: true,
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari7: false,
+    webkit: false,
+    chrome7: false,
+    opera10_10: false,
+    opera10_50: false,
+    opera15: false,
+    konq44: false,
+    konq49: false,
+    besen: false,
+    rhino: false,
+    phantom: false
+  }
+},
+{
   name: 'error "fileName"',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName',
   exec: function () {
     return 'fileName' in new Error;
   },
@@ -1239,6 +1695,7 @@ exports.tests = [
 },
 {
   name: 'error "description"',
+  link: 'http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx',
   exec: function () {
     return 'description' in new Error;
   },
