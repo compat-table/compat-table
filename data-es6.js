@@ -1625,7 +1625,7 @@ exports.tests = [
     ie11:        {
       val: true,
       note_id: 'weakmap-constructor',
-      note_html: 'WeakMap and WeakSet constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.'
+      note_html: 'WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.'
     },
     firefox11:   false,
     firefox13:   false,
