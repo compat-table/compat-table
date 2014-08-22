@@ -70,16 +70,12 @@
               document.write('<th class="current" title="' + navigator.userAgent + '">Current browser</th><th></th>');
             </script>
 
-            <th class="ie7 obsolete"><a href="#ie7" class="browser-name"><abbr title="Internet Explorer 7">IE 7</abbr></th>
-            <th class="ie8 obsolete"><a href="#ie8" class="browser-name"><abbr title="Internet Explorer 8">IE 8</abbr></th>
-            <th class="ie9"><a href="#ie9" class="browser-name"><abbr title="Internet Explorer 9">IE 9</abbr></th>
-            <th class="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer 10">IE 10</abbr></th>
+            <th class="ie7"><a href="#ie7" class="browser-name"><abbr title="Internet Explorer 7-10">IE 7-10</abbr></th>
             <th class="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer 11">IE 11</abbr></th>
             <th class="firefox3 obsolete"><a href="#firefox3" class="browser-name"><abbr title="Firefox 3">FF 3</abbr></th>
             <th class="firefox3_5 obsolete"><a href="#firefox3_5" class="browser-name"><abbr title="Firefox 3.5, Firefox 3.6">FF 3.5, 3.6</abbr></th>
             <th class="firefox4 obsolete"><a href="#firefox4" class="browser-name"><abbr title="Firefox 4.0b12pre">FF 4</abbr></th>
-            <th class="firefox5 obsolete"><a href="#firefox5" class="browser-name"><abbr title="Firefox 5">FF 5</abbr></th>
-            <th class="firefox6 obsolete"><a href="#firefox6" class="browser-name"><abbr title="Firefox 6">FF 6</abbr></th>
+            <th class="firefox5 obsolete"><a href="#firefox5" class="browser-name"><abbr title="Firefox 5-6">FF 5-6</abbr></th>
             <th class="firefox7 obsolete"><a href="#firefox7" class="browser-name"><abbr title="Firefox 7, Firefox 8, Firefox 9, Firefox 10, Firefox 11">FF 7-11</abbr></th>
             <th class="firefox12 obsolete"><a href="#firefox12" class="browser-name"><abbr title="Firefox 12">FF 12</abbr></th>
             <th class="firefox28"><a href="#firefox28" class="browser-name"><abbr title="Firefox 28">FF 28</abbr></th>
@@ -106,16 +102,12 @@
 test(typeof uneval == 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -148,16 +140,12 @@ test('toSource' in Object.prototype
       && Error    .prototype.hasOwnProperty('toSource'));
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -177,7 +165,7 @@ test('toSource' in Object.prototype
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&sect;</a>function "caller" property</span></td>
@@ -185,16 +173,12 @@ test('toSource' in Object.prototype
 test('caller' in (function(){}));
 </script>
 
-            <td class="yes ie7 obsolete">Yes</td>
-            <td class="yes ie8 obsolete">Yes</td>
-            <td class="yes ie9">Yes</td>
-            <td class="yes ie10">Yes</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -221,16 +205,12 @@ test((function (){}).arity === 0 &&
     (function (x, y){}).arity === 2);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -260,16 +240,12 @@ test(function () {
 }());
 </script>
 
-            <td class="yes ie7 obsolete">Yes</td>
-            <td class="yes ie8 obsolete">Yes</td>
-            <td class="yes ie9">Yes</td>
-            <td class="yes ie10">Yes</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -294,16 +270,12 @@ test(function () {
 test(typeof Function.prototype.isGenerator == 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="no firefox3_5 obsolete">No</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -323,7 +295,7 @@ test(typeof Function.prototype.isGenerator == 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="__count__"><span><a class="anchor" href="#__count__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span></td>
@@ -332,16 +304,12 @@ test(typeof ({}).__count__ === 'number' &&
   ({ x: 1, y: 2 }).__count__ === 2);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -366,16 +334,12 @@ test(typeof ({}).__count__ === 'number' &&
 test(typeof ({}).__parent__ !== 'undefined');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -407,16 +371,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -441,16 +401,12 @@ test(function () {
 test('__defineGetter__' in ({ }));
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -475,16 +431,12 @@ test('__defineGetter__' in ({ }));
 test('__defineSetter__' in ({ }));
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -513,16 +465,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -542,7 +490,7 @@ test(function () {
             <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span></td>
@@ -550,16 +498,12 @@ test(function () {
 test(typeof Array.slice === 'function' && Array.slice('abc').length === 3);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -584,16 +528,12 @@ test(typeof Array.slice === 'function' && Array.slice('abc').length === 3);
 test(typeof String.slice === 'function' && String.slice(123, 1) === "23");
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -613,7 +553,7 @@ test(typeof String.slice === 'function' && String.slice(123, 1) === "23");
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="Array_comprehensions_(right-to-left)"><span><a class="anchor" href="#Array_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (right-to-left)</a></span></td>
@@ -629,16 +569,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -669,16 +605,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -709,16 +641,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="no firefox28">No</td>
@@ -751,16 +679,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="no firefox28">No</td>
@@ -791,16 +715,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -820,7 +740,7 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="Iterator"><span><a class="anchor" href="#Iterator">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span></td>
@@ -842,16 +762,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -894,16 +810,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -952,16 +864,12 @@ if (!__script_executed["generators"]) {
 }
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -994,16 +902,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1023,7 +927,7 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&sect;</a>RegExp "x" flag</span></td>
@@ -1040,16 +944,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="no firefox3_5 obsolete">No</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -1078,16 +978,12 @@ test(function () {
 }());
 </script>
 
-            <td class="yes ie7 obsolete">Yes</td>
-            <td class="yes ie8 obsolete">Yes</td>
-            <td class="yes ie9">Yes</td>
-            <td class="yes ie10">Yes</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1117,16 +1013,12 @@ test(function () {
 }());
 </script>
 
-            <td class="yes ie7 obsolete">Yes</td>
-            <td class="yes ie8 obsolete">Yes</td>
-            <td class="yes ie9">Yes</td>
-            <td class="yes ie10">Yes</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1157,16 +1049,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -1197,16 +1085,12 @@ test(function () {
 }());
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="no firefox3_5 obsolete">No</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -1226,7 +1110,7 @@ test(function () {
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span></td>
@@ -1234,16 +1118,12 @@ test(function () {
 test(typeof String.prototype.trimLeft === 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1268,16 +1148,12 @@ test(typeof String.prototype.trimLeft === 'function');
 test(typeof String.prototype.trimRight === 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1302,16 +1178,12 @@ test(typeof String.prototype.trimRight === 'function');
 test(typeof String.prototype.quote === 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1336,16 +1208,12 @@ test(typeof String.prototype.quote === 'function');
 test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1365,7 +1233,7 @@ test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span></td>
@@ -1373,16 +1241,12 @@ test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
 test(typeof Date.prototype.toLocaleFormat === 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1402,7 +1266,7 @@ test(typeof Date.prototype.toLocaleFormat === 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span></td>
@@ -1410,16 +1274,12 @@ test(typeof Date.prototype.toLocaleFormat === 'function');
 test(typeof Object.prototype.watch == 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1444,16 +1304,12 @@ test(typeof Object.prototype.watch == 'function');
 test(typeof Object.prototype.unwatch == 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1478,16 +1334,12 @@ test(typeof Object.prototype.unwatch == 'function');
 test(typeof Object.prototype.eval == 'function');
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="no firefox3_5 obsolete">No</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -1507,7 +1359,7 @@ test(typeof Object.prototype.eval == 'function');
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
           <tr>
             <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error "stack"</a></span></td>
@@ -1515,16 +1367,12 @@ test(typeof Object.prototype.eval == 'function');
 test('stack' in new Error);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1549,16 +1397,12 @@ test('stack' in new Error);
 test('lineNumber' in new Error);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1583,16 +1427,12 @@ test('lineNumber' in new Error);
 test('columnNumber' in new Error);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="no firefox3_5 obsolete">No</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="yes firefox28">Yes</td>
@@ -1617,16 +1457,12 @@ test('columnNumber' in new Error);
 test('fileName' in new Error);
 </script>
 
-            <td class="no ie7 obsolete">No</td>
-            <td class="no ie8 obsolete">No</td>
-            <td class="no ie9">No</td>
-            <td class="no ie10">No</td>
+            <td class="no ie7">No</td>
             <td class="no ie11">No</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
             <td class="yes firefox5 obsolete">Yes</td>
-            <td class="yes firefox6 obsolete">Yes</td>
             <td class="yes firefox7 obsolete">Yes</td>
             <td class="yes firefox12 obsolete">Yes</td>
             <td class="yes firefox28">Yes</td>
@@ -1651,16 +1487,12 @@ test('fileName' in new Error);
 test('description' in new Error);
 </script>
 
-            <td class="yes ie7 obsolete">Yes</td>
-            <td class="yes ie8 obsolete">Yes</td>
-            <td class="yes ie9">Yes</td>
-            <td class="yes ie10">Yes</td>
+            <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
             <td class="no firefox3 obsolete">No</td>
             <td class="no firefox3_5 obsolete">No</td>
             <td class="no firefox4 obsolete">No</td>
             <td class="no firefox5 obsolete">No</td>
-            <td class="no firefox6 obsolete">No</td>
             <td class="no firefox7 obsolete">No</td>
             <td class="no firefox12 obsolete">No</td>
             <td class="no firefox28">No</td>
@@ -1680,7 +1512,7 @@ test('description' in new Error);
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="30" class="separator"></th>
+            <th colspan="26" class="separator"></th>
           </tr>
         </tbody>
       </table>
