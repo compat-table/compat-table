@@ -1287,6 +1287,144 @@ test(function () {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
+          <td id="Typed_Arrays"><span><a class="anchor" href="#Typed_Arrays">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects">Typed Arrays</a></span></td>
+<script>
+test(function () {
+  try {
+    var buffer = new ArrayBuffer(64);
+    var passed = true;
+    var view;
+    
+    // Check that each int type overflows as expected.
+    view = new Int8Array(buffer);         view[0] = 0x80;
+    passed &= view[0] === -0x80;
+    view = new Uint8Array(buffer);        view[0] = 0x100;
+    passed &= view[0] === 0;
+    view = new Uint8ClampedArray(buffer); view[0] = 0x100;
+    passed &= view[0] === 0xFF;
+    view = new Int16Array(buffer);        view[0] = 0x8000;
+    passed &= view[0] === -0x8000;
+    view = new Uint16Array(buffer);       view[0] = 0x10000;
+    passed &= view[0] === 0;
+    view = new Int32Array(buffer);        view[0] = 0x80000000;
+    passed &= view[0] === -0x80000000;
+    view = new Uint32Array(buffer);       view[0] = 0x100000000;
+    passed &= view[0] === 0;
+    // Check that each float type loses precision as expected.
+    view = new Float32Array(buffer);      view[0] = 0.1;
+    passed &= view[0] === 0.10000000149011612;
+    view = new Float64Array(buffer);      view[0] = 0.1;
+    passed &= view[0] === 0.1;
+    return passed;
+  }
+  catch(err) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes firefox11 obsolete">Yes</td>
+          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30 obsolete">Yes</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
+          <td id="Typed_Arrays_(DataView)"><span><a class="anchor" href="#Typed_Arrays_(DataView)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-dataview-objects">Typed Arrays (DataView)</a></span></td>
+<script>
+test(function () {
+  try {
+    var buffer = new ArrayBuffer(64);
+    var view = new DataView(buffer);
+    var passed = true;
+    
+    view.setInt8 (0, 0x80);        passed &= view.getInt8(0)   === -0x80;
+    view.setUint8(0, 0x100);       passed &= view.getUint8(0)  === 0;
+    view.setInt16(0, 0x8000);      passed &= view.getInt16(0)  === -0x8000;
+    view.setUint16(0,0x10000);     passed &= view.getUint16(0) === 0;
+    view.setInt32(0, 0x80000000);  passed &= view.getInt32(0)  === -0x80000000;
+    view.setUint32(0,0x100000000); passed &= view.getUint32(0) === 0;
+    view.setFloat32(0, 0.1);       passed &= view.getFloat32(0)=== 0.10000000149011612;
+    view.setFloat64(0, 0.1);       passed &= view.getFloat64(0)=== 0.1;
+    return passed;
+  }
+  catch(err) {
+    return false;
+  }
+}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes chrome obsolete">Yes</td>
+          <td class="yes chrome19dev obsolete">Yes</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30 obsolete">Yes</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes safari51 obsolete">Yes</td>
+          <td class="yes safari6">Yes</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes webkit">Yes</td>
+          <td class="yes opera">Yes</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="yes phantom">Yes</td>
+          <td class="yes node">Yes</td>
+          <td class="yes nodeharmony">Yes</td>
+        </tr>
+        <tr>
           <td id="Map"><span><a class="anchor" href="#Map">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects">Map</a></span></td>
 <script>
 test(function () {
