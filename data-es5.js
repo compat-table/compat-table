@@ -22,7 +22,7 @@ exports.browsers = {
   },
   ie10: {
     full: 'Internet Explorer 10, 11',
-    short: 'IE 10, 11',
+    short: 'IE 10+',
     obsolete: false
   },
 
@@ -37,8 +37,13 @@ exports.browsers = {
     obsolete: true
   },
   firefox4: {
-    full: 'Firefox 4+',
-    short: 'FF 4+',
+    full: 'Firefox 4-20',
+    short: 'FF 4-20',
+    obsolete: true
+  },
+  firefox21: {
+    full: 'Firefox 21+',
+    short: 'FF 21+',
     obsolete: false
   },
 
@@ -60,11 +65,11 @@ exports.browsers = {
   safari51: {
     full: 'Safari 5.1.4',
     short: 'SF 5.1.4',
-    obsolete: false
+    obsolete: true
   },
   safari6: {
     full: 'Safari 6.0, Safari 7.0',
-    short: 'SF 6,7',
+    short: 'SF 6+',
     obsolete: false
   },
   webkit: {
@@ -94,8 +99,13 @@ exports.browsers = {
     obsolete: true
   },
   chrome19: {
-    full: 'Chrome 19 (19.0.1084.56 stable), Opera 15+',
-    short: 'CH 19+, OP 15+',
+    full: 'Chrome 19 (19.0.1084.56 stable), Chrome 22',
+    short: 'CH 19-22',
+    obsolete: true
+  },
+  chrome23: {
+    full: 'Chrome 23+, Opera 15+',
+    short: 'CH 23+,<br>OP 15+',
     obsolete: false
   },
 
@@ -177,6 +187,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -190,6 +201,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -225,6 +237,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -242,6 +255,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -272,6 +286,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -285,6 +300,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -315,6 +331,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -328,6 +345,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -358,6 +376,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -371,6 +390,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -401,6 +421,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -414,6 +435,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -444,6 +466,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -457,6 +480,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -487,6 +511,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -500,6 +525,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -530,6 +556,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -543,6 +570,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -573,6 +601,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -586,6 +615,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -616,6 +646,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -629,6 +660,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -664,6 +696,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -677,6 +710,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -707,6 +741,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -720,6 +755,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -751,6 +787,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: true,
@@ -764,6 +801,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -794,6 +832,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: true,
@@ -807,6 +846,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -837,6 +877,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -850,6 +891,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -880,6 +922,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: true,
@@ -893,6 +936,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -923,6 +967,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -936,6 +981,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -966,6 +1012,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -979,6 +1026,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -1010,6 +1058,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1023,6 +1072,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1053,6 +1103,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1066,6 +1117,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1096,6 +1148,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1109,6 +1162,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1139,6 +1193,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1152,6 +1207,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1182,6 +1238,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1195,6 +1252,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1225,6 +1283,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1238,6 +1297,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1268,6 +1328,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1281,6 +1342,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1311,6 +1373,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: true,
@@ -1324,6 +1387,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -1354,6 +1418,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: true,
@@ -1367,6 +1432,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: true,
@@ -1402,6 +1468,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1415,6 +1482,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1451,6 +1519,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1464,6 +1533,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1495,6 +1565,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: true,
     safari4: true,
@@ -1508,6 +1579,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: true,
     opera10_50: true,
@@ -1544,6 +1616,7 @@ exports.tests = [
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -1557,6 +1630,7 @@ exports.tests = [
     chrome7: true,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -1594,6 +1668,7 @@ exports.tests = [
       note_id: 'zero-width-char',
       note_html: 'Firefox 4 &amp; 5 fail this test'
     },
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -1607,6 +1682,7 @@ exports.tests = [
     chrome7: false,
     chrome13: false,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -1619,6 +1695,51 @@ exports.tests = [
 
     besen: true,
     rhino: true,
+    phantom: false,
+    ejs: true
+  }
+},
+{
+  name: 'parseInt() ignores leading zeros',
+  exec: function () {
+    return parseInt('010') === 10;
+  },
+  res: {
+    ie7: false,
+    ie8: false,
+    ie9: true,
+    ie10: true,
+
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: false,
+    firefox21: true,
+
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari51: false,
+    safari6: true,
+    webkit: true,
+
+    chrome5: false,
+    chrome6: false,
+    chrome7: false,
+    chrome13: false,
+    chrome19: false,
+    chrome23: true,
+
+    opera10_10: false,
+    opera10_50: false,
+    opera12: false,
+    opera12_10: false,
+
+    konq43: false,
+    konq49: false,
+    konq413: false,
+
+    besen: true,
+    rhino: false,
     phantom: false,
     ejs: true
   }
@@ -1644,6 +1765,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -1657,6 +1779,7 @@ exports.tests = [
     chrome7: false,
     chrome13: false,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
@@ -1693,6 +1816,7 @@ exports.tests = [
     firefox3: false,
     firefox3_5: false,
     firefox4: true,
+    firefox21: true,
 
     safari3: false,
     safari4: false,
@@ -1706,6 +1830,7 @@ exports.tests = [
     chrome7: false,
     chrome13: true,
     chrome19: true,
+    chrome23: true,
 
     opera10_10: false,
     opera10_50: false,
