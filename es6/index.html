@@ -967,29 +967,29 @@ test(function () {
         </tr>
         <tr>
           <td id="Generators_(yield)"><span><a class="anchor" href="#Generators_(yield)">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">Generators (yield)</a></span></td>
-<script type="application/javascript;version=1.8">
-test((function () {
+<script>
+test(function () {
   try {
-    eval('(function* () { yield 5; }())');
-    return true;
+    var generator = eval(
+       '(function* () {'
+      +'  yield* (function* () {'
+      +'    yield 5; yield 6;'
+      +'  }());'
+      +'}())'
+    );
+    
+    var item = generator.next();
+    var passed = item.value === 5 && item.done === false;
+    item = generator.next();
+    passed    &= item.value === 6 && item.done === false;
+    item = generator.next();
+    passed    &= item.value === undefined && item.done === true;
+    
+    return passed;
   } catch (e) {
     return false;
   }
-}()));
-global.__yield_script_executed = true;
-</script>
-<script>
-if (!global.__yield_script_executed) {
-  test((function () {
-    try {
-      eval('(function* () { yield 5; }())');
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }()));
-  global.__yield_script_executed = true;
-}
+}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3124,9 +3124,7 @@ test(function () {
         }
       };
     };
-    var c;
-    eval("for (c of b) {}");
-    return c === 0;
+    return Function("for (var c of b) { return c === 0; } return false;")();
   }
   catch(e) {
     return false;
@@ -3280,7 +3278,7 @@ test(function () {
 test(function () {
   if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
     var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = { bar: true };
+    a[Symbol.unscopables] = ["bar"];
     with (a) {
       return foo === 1 && typeof bar === "undefined";
     }
