@@ -441,11 +441,18 @@ exports.tests = [
   }
 },
 {
-  name: 'default function params',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values',
+  name: 'default function parameters',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   exec: function () {
     try {
-      return eval('(function (a = 5) { return a === 5; }())');
+      return !!Function(
+         'var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));'
+         // explicit undefined will defer to the default
+        +'passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));'
+         // defaults can refer to previous parameters
+        +'passed    &= (function (a, b = a) { return b === 5; }(5));'
+        +'return passed;'
+        )();
     } catch (e) {
       return false;
     }
@@ -457,8 +464,8 @@ exports.tests = [
     ie11:        false,
     firefox11:   false,
     firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
+    firefox16:   false,
+    firefox17:   false,
     firefox18:   true,
     firefox23:   true,
     firefox24:   true,
