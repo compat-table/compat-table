@@ -1798,7 +1798,7 @@ exports.tests = [
 },
 {
   name: 'Strict mode',
-  link: 'http://kangax.github.com/es5-compat-table/strict-mode/',
+  link: '../strict-mode/',
   exec: function () {
     "use strict";
     return !this;
