@@ -3192,7 +3192,9 @@ test(function () {
         }
       };
     };
-    return Function("for (var c of b) { return c === 0; } return false;")();
+    var c;
+    eval("for (c of b) {}");
+    return c === 0;
   }
   catch(e) {
     return false;
@@ -3346,7 +3348,7 @@ test(function () {
 test(function () {
   if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
     var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = ["bar"];
+    a[Symbol.unscopables] = { bar: true };
     with (a) {
       return foo === 1 && typeof bar === "undefined";
     }
@@ -5082,16 +5084,17 @@ test(typeof Math.cbrt === 'function');
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[11]</sup></a></span></td>
 <script>
 test(function () {
-  var passed = { __proto__ : [] } instanceof Array;
+  var passed = { __proto__ : [] } instanceof Array
+    && !({ __proto__ : null } instanceof Object);
+    
   // If computed properties are supported, the following
   // check must also be passed.
   var a = "__proto__";
   try {
-    return eval("passed && !({ [a] : [] } instanceof Array)");
+    eval("passed &= !({ [a] : [] } instanceof Array)");
   }
-  catch(e) {
-    return passed;
-  }
+  catch(e) {}
+  return passed;
 }());
 </script>
 
@@ -5112,8 +5115,8 @@ test(function () {
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox33">Yes<a href="#fx-proto-shorthand-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#fx-proto-shorthand-note"><sup>[12]</sup></a></td>
           <td class="yes chrome obsolete">Yes</td>
           <td class="yes chrome19dev obsolete">Yes</td>
           <td class="yes chrome21dev obsolete">Yes</td>
@@ -5375,6 +5378,9 @@ test(typeof RegExp.prototype.compile === 'function');
       </p>
       <p id="proto-in-object-literals-note">
         <sup>[11]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+      </p>
+      <p id="fx-proto-shorthand-note">
+        <sup>[12]</sup> Firefox 33+ incorrectly regards both of the following as true: <ul style="list-style-type: circle;"><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
       </p>
     </div>
   </div>

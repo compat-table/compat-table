@@ -957,16 +957,17 @@ exports.tests = [
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
   exec: function() {
-    var passed = { __proto__ : [] } instanceof Array;
+    var passed = { __proto__ : [] } instanceof Array
+      && !({ __proto__ : null } instanceof Object);
+      
     // If computed properties are supported, the following
     // check must also be passed.
     var a = "__proto__";
     try {
-      return eval("passed && !({ [a] : [] } instanceof Array)");
+      eval("passed &= !({ [a] : [] } instanceof Array)");
     }
-    catch(e) {
-      return passed;
-    }
+    catch(e) {}
+    return passed;
   },
   res: {
     tr:          true,
@@ -987,8 +988,15 @@ exports.tests = [
     firefox30:   true,
     firefox31:   true,
     firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
+    firefox33:   {
+      val: true,
+      note_id: 'fx-proto-shorthand',
+      note_html: 'Firefox 33+ incorrectly regards both of the following as true: <ul>'
+      +'<li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code>'
+      +'<li><code>({ __proto__(){} }) instanceof Function</code>'
+      +'</ul>'
+    },
+    firefox34:   { val: true, note_id: 'fx-proto-shorthand' },
     chrome:      true,
     chrome19dev: true,
     chrome21dev: true,
