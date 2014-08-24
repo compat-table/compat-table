@@ -812,7 +812,7 @@ exports.tests = [
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
   exec: function() {/*
     var x = 'y';
-    return ({ [x]: 1 })['y'] === 1;
+    return ({ [x]: 1 }).y === 1;
   */},
   res: {
     tr:          true,
@@ -1122,7 +1122,7 @@ exports.tests = [
     passed    &= item.value === 6 && item.done === false;
     item = generator.next();
     passed    &= item.value === undefined && item.done === true;
-	return passed;
+    return passed;
   */},
   res: {
     tr:          true,

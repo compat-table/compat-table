@@ -207,34 +207,32 @@ function deindentFunc(fn) {
 
 function testScript(fn) {
   if (typeof fn === 'function') {
-  
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
 
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
-      return '<script>test(\n' + deindentFunc(fn) + '())</script>\n';
+      expr = deindentFunc(fn);
+      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
     }
     else {
-      return '<script>\n' +
-      'test(function(){try{return Function(' + JSON.stringify(deindentFunc(expr[1])) + ')()}catch(e){return false;}}());\n' +
+      expr = deindentFunc(expr[1]);
+      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
+      'test(function(){try{return Function(' + JSON.stringify(expr) + ')()}catch(e){return false;}}());\n' +
       '</script>\n';
     }
   } else {
     // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }
-    var i, script,
-      scripts = [];
-    for (i = 0; i < fn.length; i++) {
-      script = fn[i];
-      scripts.push(
-        '<script' + (script.type ? ' type="' + script.type + '"' : '') + '>',
-        deindentFunc(
+    return fn.reduce(function(text, script) {
+      var expr = deindentFunc(
           (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
-        ),
-        '</script>'
-      );
-    }
-    return scripts.join('\n') + '\n';
+        );
+      return text
+        + '<script' + (script.type ? ' type="' + script.type + '"' : '')
+        + ' data-source="' + expr.replace(/"/g,'&quot;') + '">'
+        + expr
+        + '</script>\n';
+    },'');
   }
 }

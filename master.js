@@ -56,21 +56,16 @@ domready(function() {
     infoEl.innerHTML = 'c';
     rows[i].cells[0].appendChild(infoEl);
 
-    var tooltipCache = {};
-    
     infoEl.onmouseover = function(e) {
       mouseoverTimeout = null;
-	  
+      
       var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
       var id = "tooltip_" + this.parentNode.id;
-	  
-      infoTooltip.innerHTML = tooltipCache[id] = tooltipCache[id] || scriptEl.innerHTML
-        // unwrap "multi-line comment" code
-        .replace(/\s*test\(function\(\){try{return Function\((.*?)\)\(\)}catch\(e\){return false;}}\(\)\);\n/, function(_,a){return eval(a);})
-        // unwrap ES5 code
-        .replace(/\s*test\(\(?\s*function\s*\(\)\s*\{/m,'').replace(/\}\s*\(\){2,3}[^\(\)]*$/m,'')
-		// trim sides, and escape <
-        .replace(/^\s*|\s*$/g,'').replace(/</g, '&lt;');
+      
+      infoTooltip.innerHTML = scriptEl.getAttribute('data-source')
+        // trim sides, and escape <
+        .trim().replace(/</g, '&lt;');
+      
       infoTooltip.style.left = e.pageX + 10 + 'px';
       infoTooltip.style.top = e.pageY + 'px';
       infoTooltip.style.display = 'block';
