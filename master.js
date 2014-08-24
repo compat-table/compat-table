@@ -58,8 +58,14 @@ domready(function() {
 
     infoEl.onmouseover = function(e) {
       mouseoverTimeout = null;
+      
       var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
-      infoTooltip.innerHTML = scriptEl.innerHTML.replace(/^\n/, '').replace(/</g, '&lt;');
+      var id = "tooltip_" + this.parentNode.id;
+      
+      infoTooltip.innerHTML = scriptEl.getAttribute('data-source')
+        // trim sides, and escape <
+        .trim().replace(/</g, '&lt;');
+      
       infoTooltip.style.left = e.pageX + 10 + 'px';
       infoTooltip.style.top = e.pageY + 'px';
       infoTooltip.style.display = 'block';

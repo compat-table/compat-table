@@ -197,8 +197,8 @@ function replaceAndIndent(str, replacements) {
 }
 
 function deindentFunc(fn) {
-  fn += '';
-  var indent = /\n([\t ]*)[^\n]*$/.exec(fn);
+  fn = (fn+'');
+  var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
   if (indent) {
     fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
   }
@@ -207,35 +207,32 @@ function deindentFunc(fn) {
 
 function testScript(fn) {
   if (typeof fn === 'function') {
-    fn = deindentFunc(fn);
-
-    // find the expression if it's there
-    var expr = /^function \(\) \{\s*return\s+([\s\S]+?);?\s*\}$/.exec(fn);
-    expr = expr && expr[1];
+    // see if the code is encoded in a comment
+    var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
 
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
-      expr = fn + '()';
+      expr = deindentFunc(fn);
+      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
     }
-
-    return '<script>\n' +
-      'test(' + expr + ');\n' +
+    else {
+      expr = deindentFunc(expr[1]);
+      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
+      'test(function(){try{return Function(' + JSON.stringify(expr) + ')()}catch(e){return false;}}());\n' +
       '</script>\n';
+    }
   } else {
     // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }
-    var i, script,
-      scripts = [];
-    for (i = 0; i < fn.length; i++) {
-      script = fn[i];
-      scripts.push(
-        '<script' + (script.type ? ' type="' + script.type + '"' : '') + '>',
-        deindentFunc(
+    return fn.reduce(function(text, script) {
+      var expr = deindentFunc(
           (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
-        ),
-        '</script>'
-      );
-    }
-    return scripts.join('\n') + '\n';
+        );
+      return text
+        + '<script' + (script.type ? ' type="' + script.type + '"' : '')
+        + ' data-source="' + expr.replace(/"/g,'&quot;') + '">'
+        + expr
+        + '</script>\n';
+    },'');
   }
 }
