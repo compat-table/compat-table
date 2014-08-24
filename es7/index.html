@@ -86,23 +86,38 @@
       </thead>
       <tbody>
         <tr>
+          <td id="Exponentiation_operator"><span><a class="anchor" href="#Exponentiation_operator">&sect;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">Exponentiation operator</a></span></td>
+<script data-source="
+return 2 ** 3 === 8;
+  ">
+test(function(){try{return Function("\nreturn 2 ** 3 === 8;\n  ")()}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
           <td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span></td>
-<script data-source="function () {
-try {
-  eval('[for (a of [1, 2, 3]) a * a][0] === 1');
-  return true;
-} catch (e) {
-  return false;
-}
-  }">test(
-function () {
-try {
-  eval('[for (a of [1, 2, 3]) a * a][0] === 1');
-  return true;
-} catch (e) {
-  return false;
-}
-  }())</script>
+<script data-source="
+return [for (a of [1, 2, 3]) a * a][0] === 1
+  ">
+test(function(){try{return Function("\nreturn [for (a of [1, 2, 3]) a * a][0] === 1\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
@@ -124,22 +139,11 @@ try {
         </tr>
         <tr>
           <td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span></td>
-<script data-source="function () {
-try {
-  eval('(for (a of [1, 2, 3]) a * a)');
-  return true;
-} catch (e) {
-  return false;
-}
-  }">test(
-function () {
-try {
-  eval('(for (a of [1, 2, 3]) a * a)');
-  return true;
-} catch (e) {
-  return false;
-}
-  }())</script>
+<script data-source="
+(for (a of [1, 2, 3]) a * a)
+  ">
+test(function(){try{return Function("\n(for (a of [1, 2, 3]) a * a)\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
@@ -160,66 +164,12 @@ try {
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
-          <td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span></td>
-<script data-source="function () {
-var i, names =
-  [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;,
-  &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;];
-
-if (typeof Reflect !== &quot;object&quot; || typeof Reflect.Realm !== &quot;function&quot;
-    || typeof Reflect.Realm.prototype !== &quot;object&quot;) {
-  return false;
-}
-for (i = 0; i < names.length; i++) {
-  if (!(names[i] in Reflect.Realm.prototype)) {
-    return false;
-  }
-}
-return true;
-  }">test(
-function () {
-var i, names =
-  ["eval", "global", "intrinsics", "stdlib", "directEval",
-  "indirectEval", "initGlobal", "nonEval"];
-
-if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
-    || typeof Reflect.Realm.prototype !== "object") {
-  return false;
-}
-for (i = 0; i < names.length; i++) {
-  if (!(names[i] in Reflect.Realm.prototype)) {
-    return false;
-  }
-}
-return true;
-  }())</script>
-
-          <td class="no tr">No</td>
-          <td class="no ejs">No</td>
-          <td class="no ie11">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32">No</td>
-          <td class="no chrome30">No</td>
-          <td class="no chrome33">No</td>
-          <td class="no chrome34">No</td>
-          <td class="no chrome35">No</td>
-          <td class="no chrome37">No</td>
-          <td class="no safari7">No</td>
-          <td class="no webkit">No</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
-          <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
-        </tr>
-        <tr>
           <td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&sect;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span></td>
-<script data-source="function () {
+<script data-source="
 return typeof StructType !== 'undefined';
-  }">test(
-function () {
-return typeof StructType !== 'undefined';
-  }())</script>
+  ">
+test(function(){try{return Function("\nreturn typeof StructType !== 'undefined';\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -241,12 +191,11 @@ return typeof StructType !== 'undefined';
         </tr>
         <tr>
           <td id="Object.observe"><span><a class="anchor" href="#Object.observe">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span></td>
-<script data-source="function () {
+<script data-source="
 return typeof Object.observe === 'function';
-  }">test(
-function () {
-return typeof Object.observe === 'function';
-  }())</script>
+  ">
+test(function(){try{return Function("\nreturn typeof Object.observe === 'function';\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -268,12 +217,50 @@ return typeof Object.observe === 'function';
         </tr>
         <tr>
           <td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&sect;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span></td>
-<script data-source="function () {
+<script data-source="
 return typeof Object.getOwnPropertyDescriptors === 'function';
-  }">test(
-function () {
-return typeof Object.getOwnPropertyDescriptors === 'function';
-  }())</script>
+  ">
+test(function(){try{return Function("\nreturn typeof Object.getOwnPropertyDescriptors === 'function';\n  ")()}catch(e){return false;}}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
+          <td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span></td>
+<script data-source="
+var i, names =
+  [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;,
+  &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;];
+
+if (typeof Reflect !== &quot;object&quot; || typeof Reflect.Realm !== &quot;function&quot;
+    || typeof Reflect.Realm.prototype !== &quot;object&quot;) {
+  return false;
+}
+for (i = 0; i < names.length; i++) {
+  if (!(names[i] in Reflect.Realm.prototype)) {
+    return false;
+  }
+}
+return true;
+  ">
+test(function(){try{return Function("\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>

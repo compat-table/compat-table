@@ -101,16 +101,38 @@ exports.browsers = {
 
 exports.tests = [
 {
+  name: 'Exponentiation operator',
+  link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
+  exec: function () {/*
+    return 2 ** 3 === 8;
+  */},
+  res: {
+    tr: true,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari7: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
+{
   name: 'Array comprehensions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
-  exec: function () {
-    try {
-      eval('[for (a of [1, 2, 3]) a * a][0] === 1');
-      return true;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return [for (a of [1, 2, 3]) a * a][0] === 1
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -136,14 +158,9 @@ exports.tests = [
 {
   name: 'Generator comprehensions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
-  exec: function () {
-    try {
-      eval('(for (a of [1, 2, 3]) a * a)');
-      return true;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    (for (a of [1, 2, 3]) a * a)
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -167,52 +184,11 @@ exports.tests = [
   }
 },
 {
-  name: 'Reflect.Realm',
-  link: 'https://gist.github.com/dherman/7568885',
-  exec: function () {
-    var i, names =
-      ["eval", "global", "intrinsics", "stdlib", "directEval",
-      "indirectEval", "initGlobal", "nonEval"];
-
-    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
-        || typeof Reflect.Realm.prototype !== "object") {
-      return false;
-    }
-    for (i = 0; i < names.length; i++) {
-      if (!(names[i] in Reflect.Realm.prototype)) {
-        return false;
-      }
-    }
-    return true;
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari7:     false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false
-  }
-},
-{
   name: 'Typed objects',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
-  exec: function () {
+  exec: function () {/*
     return typeof StructType !== 'undefined';
-  },
+  */},
   res: {
     tr: false,
     ejs: false,
@@ -237,9 +213,9 @@ exports.tests = [
 {
   name: 'Object.observe',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
-  exec: function () {
+  exec: function () {/*
     return typeof Object.observe === 'function';
-  },
+  */},
   res: {
     tr: false,
     ejs: false,
@@ -264,9 +240,9 @@ exports.tests = [
 {
   name: 'Object.getOwnPropertyDescriptors',
   link: 'https://gist.github.com/WebReflection/9353781',
-  exec: function () {
+  exec: function () {/*
     return typeof Object.getOwnPropertyDescriptors === 'function';
-  },
+  */},
   res: {
     tr: false,
     ejs: false,
@@ -285,6 +261,47 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
+    nodeharmony: false
+  }
+},
+{
+  name: 'Reflect.Realm',
+  link: 'https://gist.github.com/dherman/7568885',
+  exec: function () {/*
+    var i, names =
+      ["eval", "global", "intrinsics", "stdlib", "directEval",
+      "indirectEval", "initGlobal", "nonEval"];
+
+    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+        || typeof Reflect.Realm.prototype !== "object") {
+      return false;
+    }
+    for (i = 0; i < names.length; i++) {
+      if (!(names[i] in Reflect.Realm.prototype)) {
+        return false;
+      }
+    }
+    return true;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari7:     false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
     nodeharmony: false
   }
 }
