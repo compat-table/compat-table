@@ -358,6 +358,10 @@ exports.tests = [
          'const foo = 123;'
         +'var passed = (foo === 123);'
         
+         // bar is not hoisted outside of its block
+        +'{ const bar = 456; }'
+        +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+        
          // redefining a const is a syntax error (12.14.1)
         +'passed &= (function() {'
         +'  try { Function("foo = 2;")(); } catch(e) { return true; }'
@@ -378,7 +382,7 @@ exports.tests = [
     firefox11:   {
       val: false,
       note_id: 'const-reassign',
-      note_html: 'In all of these browsers, reassigning to a <code>const</code> is merely a silent failure instead of an error.'
+      note_html: 'In all of these browsers, <code>const</code> is not block-scoped, and reassigning to a <code>const</code> is a silent failure instead of an error.'
     },
     firefox13:   { val: false, note_id: 'const-reassign' },
     firefox16:   { val: false, note_id: 'const-reassign' },

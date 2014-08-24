@@ -249,6 +249,10 @@ try {
      'const foo = 123;'
     +'var passed = (foo === 123);'
     
+     // bar is not hoisted outside of its block
+    +'{ const bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+    
      // redefining a const is a syntax error (12.14.1)
     +'passed &= (function() {'
     +'  try { Function(&quot;foo = 2;&quot;)(); } catch(e) { return true; }'
@@ -265,6 +269,10 @@ try {
   return !!Function(
      'const foo = 123;'
     +'var passed = (foo === 123);'
+    
+     // bar is not hoisted outside of its block
+    +'{ const bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
     
      // redefining a const is a syntax error (12.14.1)
     +'passed &= (function() {'
@@ -6277,7 +6285,7 @@ return typeof RegExp.prototype.compile === 'function';
         <sup>[2]</sup> Have to be enabled via --harmony flag
       </p>
       <p id="const-reassign-note">
-        <sup>[3]</sup> In all of these browsers, reassigning to a <code>const</code> is merely a silent failure instead of an error.
+        <sup>[3]</sup> In all of these browsers, <code>const</code> is not block-scoped, and reassigning to a <code>const</code> is a silent failure instead of an error.
       </p>
       <p id="let-javascript18-note">
         <sup>[4]</sup> Firefox incorrectly prohibits <code>let</code> outside of a <code>&lt;script type="application/javascript;version=1.8"&gt;</code> tag.
