@@ -493,7 +493,7 @@ exports.tests = [
 },
 {
   name: 'rest parameters',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
   exec: function() {/*
     return (function (...args) { return typeof args !== "undefined"; }())
   */},
@@ -540,7 +540,7 @@ exports.tests = [
 },
 {
   name: 'spread call (...) operator',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   exec: function () {/*
     return Math.max(...[1, 2, 3]) === 3
   */},
@@ -587,7 +587,7 @@ exports.tests = [
 },
 {
   name: 'spread array (...) operator',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal',
   exec: function() {/*
     return [...[1, 2, 3]][2] === 3;
   */},
@@ -634,7 +634,7 @@ exports.tests = [
 },
 {
   name: 'string spreading',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:spread',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal',
   exec: function() {/*
     return ["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4;
   */},
@@ -685,7 +685,7 @@ exports.tests = [
 },
 {
   name: 'class',
-  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
   exec: function () {/*
     class C extends Array {
       constructor() { this.b = true; }
@@ -1011,7 +1011,7 @@ exports.tests = [
 },
 {
   name: 'modules',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:modules',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-modules',
   exec: function () {/*
     export var foo = 1;
     return true;
@@ -1058,8 +1058,8 @@ exports.tests = [
   }
 },
 {
-  name: 'For..of loops',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
+  name: 'for..of loops',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements',
   exec: function () {/*
     var arr = [5];
     for (var item of arr)
@@ -1107,8 +1107,8 @@ exports.tests = [
   }
 },
 {
-  name: 'Generators (yield)',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generators',
+  name: 'generators (yield)',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
   exec: function () {/*
     var generator = (function* () {
       yield* (function* () {
@@ -1372,7 +1372,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 },
 {
   name: 'RegExp "y" flag',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:regexp_y_flag',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
   exec: function () {/*
     var re = new RegExp('\\w');
     var re2 = new RegExp('\\w', 'y');
@@ -1469,40 +1469,35 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Typed Arrays',
+  name: 'typed arrays',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
-  exec: function () {
-    try {
-      var buffer = new ArrayBuffer(64);
-      var passed = true;
-      var view;
-      
-      // Check that each int type overflows as expected.
-      view = new Int8Array(buffer);         view[0] = 0x80;
-      passed &= view[0] === -0x80;
-      view = new Uint8Array(buffer);        view[0] = 0x100;
-      passed &= view[0] === 0;
-      view = new Uint8ClampedArray(buffer); view[0] = 0x100;
-      passed &= view[0] === 0xFF;
-      view = new Int16Array(buffer);        view[0] = 0x8000;
-      passed &= view[0] === -0x8000;
-      view = new Uint16Array(buffer);       view[0] = 0x10000;
-      passed &= view[0] === 0;
-      view = new Int32Array(buffer);        view[0] = 0x80000000;
-      passed &= view[0] === -0x80000000;
-      view = new Uint32Array(buffer);       view[0] = 0x100000000;
-      passed &= view[0] === 0;
-      // Check that each float type loses precision as expected.
-      view = new Float32Array(buffer);      view[0] = 0.1;
-      passed &= view[0] === 0.10000000149011612;
-      view = new Float64Array(buffer);      view[0] = 0.1;
-      passed &= view[0] === 0.1;
-      return passed;
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function () {/*
+	var buffer = new ArrayBuffer(64);
+	var passed = true;
+	var view;
+
+	// Check that each int type overflows as expected.
+	view = new Int8Array(buffer);         view[0] = 0x80;
+	passed &= view[0] === -0x80;
+	view = new Uint8Array(buffer);        view[0] = 0x100;
+	passed &= view[0] === 0;
+	view = new Uint8ClampedArray(buffer); view[0] = 0x100;
+	passed &= view[0] === 0xFF;
+	view = new Int16Array(buffer);        view[0] = 0x8000;
+	passed &= view[0] === -0x8000;
+	view = new Uint16Array(buffer);       view[0] = 0x10000;
+	passed &= view[0] === 0;
+	view = new Int32Array(buffer);        view[0] = 0x80000000;
+	passed &= view[0] === -0x80000000;
+	view = new Uint32Array(buffer);       view[0] = 0x100000000;
+	passed &= view[0] === 0;
+	// Check that each float type loses precision as expected.
+	view = new Float32Array(buffer);      view[0] = 0.1;
+	passed &= view[0] === 0.10000000149011612;
+	view = new Float64Array(buffer);      view[0] = 0.1;
+	passed &= view[0] === 0.1;
+	return passed;
+  */},
   res: {
     tr:          false,
     ejs:         true,
@@ -1545,28 +1540,23 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Typed Arrays (DataView)',
+  name: 'typed arrays (DataView)',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-dataview-objects',
-  exec: function () {
-    try {
-      var buffer = new ArrayBuffer(64);
-      var view = new DataView(buffer);
-      var passed = true;
-      
-      view.setInt8 (0, 0x80);        passed &= view.getInt8(0)   === -0x80;
-      view.setUint8(0, 0x100);       passed &= view.getUint8(0)  === 0;
-      view.setInt16(0, 0x8000);      passed &= view.getInt16(0)  === -0x8000;
-      view.setUint16(0,0x10000);     passed &= view.getUint16(0) === 0;
-      view.setInt32(0, 0x80000000);  passed &= view.getInt32(0)  === -0x80000000;
-      view.setUint32(0,0x100000000); passed &= view.getUint32(0) === 0;
-      view.setFloat32(0, 0.1);       passed &= view.getFloat32(0)=== 0.10000000149011612;
-      view.setFloat64(0, 0.1);       passed &= view.getFloat64(0)=== 0.1;
-      return passed;
-    }
-    catch(err) {
-      return false;
-    }
-  },
+  exec: function () {/*
+	var buffer = new ArrayBuffer(64);
+	var view = new DataView(buffer);
+	var passed = true;
+
+	view.setInt8 (0, 0x80);        passed &= view.getInt8(0)   === -0x80;
+	view.setUint8(0, 0x100);       passed &= view.getUint8(0)  === 0;
+	view.setInt16(0, 0x8000);      passed &= view.getInt16(0)  === -0x8000;
+	view.setUint16(0,0x10000);     passed &= view.getUint16(0) === 0;
+	view.setInt32(0, 0x80000000);  passed &= view.getInt32(0)  === -0x80000000;
+	view.setUint32(0,0x100000000); passed &= view.getUint32(0) === 0;
+	view.setFloat32(0, 0.1);       passed &= view.getFloat32(0)=== 0.10000000149011612;
+	view.setFloat64(0, 0.1);       passed &= view.getFloat64(0)=== 0.1;
+	return passed;
+  */},
   res: {
     tr:          false,
     ejs:         true,
@@ -2001,7 +1991,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 },
 {
   name: 'Block-level function declaration',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:block_functions',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
     {
@@ -2103,8 +2093,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Destructuring',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  name: 'destructuring',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   exec: function () {/*
     // Array destructuring
     var [a, , [b], g] = [5, null, [6]];
@@ -2159,8 +2149,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Destructuring parameters',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  name: 'destructuring parameters',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   exec: function () {/*
     return (function({a, x:b}, [c, d]) {
       return a === 1 && b === 2 && c === 3 && d === 4;
@@ -2208,8 +2198,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Destructuring defaults',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  name: 'destructuring defaults',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   exec: function () {/*
     var {a = 1, b = 1, c = 3} = {b:2, c:undefined};
     return a === 1 && b === 2 && c === 3;
@@ -2256,8 +2246,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Destructuring rest',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:destructuring',
+  name: 'destructuring rest',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   exec: function () {/*
     var [a, ...b] = [3, 4, 5];
     var [c, ...d] = [6];
@@ -3335,15 +3325,12 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.hasInstance',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.hasInstance === "symbol") {
-      var a = 2, b = function(){};
-      b[Symbol.hasInstance] = function() { a = 4; return false; };
-      ({}) instanceof b;
-      return a === 4;
-    }
-    return false;
-  },
+  exec: function() {/*
+    var a = 2, b = function(){};
+    b[Symbol.hasInstance] = function() { a = 4; return false; };
+    ({}) instanceof b;
+    return a === 4;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -3388,15 +3375,12 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.isConcatSpreadable',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.isConcatSpreadable === "symbol") {
-      var a = [], b = [];
-      b[Symbol.isConcatSpreadable] = false;
-      a = a.concat(b);
-      return a[0] === b;
-    }
-    return false;
-  },
+  exec: function() {/*
+    var a = [], b = [];
+    b[Symbol.isConcatSpreadable] = false;
+    a = a.concat(b);
+    return a[0] === b;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -3441,10 +3425,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.isRegExp',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    return typeof Symbol === "function" && typeof Symbol.isRegExp === "symbol"
-      && RegExp.prototype[Symbol.isRegExp] === true;
-  },
+  exec: function() {/*
+    return RegExp.prototype[Symbol.isRegExp] === true;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -3489,27 +3472,22 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.iterator',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    try {
-      var a = 0, b = {};
-      b[Symbol.iterator] = function() {
-        return {
-          next: function() {
-            return {
-              done: a === 1,
-              value: a++
-            };
-          }
-        };
-      };
-      var c;
-      eval("for (c of b) {}");
-      return c === 0;
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function() {/*
+    var a = 0, b = {};
+    b[Symbol.iterator] = function() {
+      return {
+	    next: function() {
+		  return {
+		    done: a === 1,
+		    value: a++
+		  };
+	    }
+	  };
+    };
+    var c;
+    for (c of b) {}
+    return c === 0;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -3554,14 +3532,11 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.toPrimitive',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.toPrimitive === "symbol") {
-      var a = {};
-      a[Symbol.toPrimitive] = function() { return 7; };
-      return a == 7;
-    }
-    return false;
-  },
+  exec: function() {/*
+    var a = {};
+    a[Symbol.toPrimitive] = function() { return 7; };
+    return a == 7;
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -3606,14 +3581,11 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.toStringTag',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.toStringTag === "symbol") {
-      var a = {};
-      a[Symbol.toStringTag] = "foo";
-      return (a + "") === "[object foo]";
-    }
-    return false;
-  },
+  exec: function() {/*
+    var a = {};
+    a[Symbol.toStringTag] = "foo";
+    return (a + "") === "[object foo]";
+  */},
   res: {
     tr:          false,
     ejs:         true,
@@ -3658,16 +3630,13 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol.unscopables',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.unscopables === "symbol") {
-      var a = { foo: 1, bar: 2 };
-      a[Symbol.unscopables] = { bar: true };
-      with (a) {
-        return foo === 1 && typeof bar === "undefined";
-      }
+  exec: function() {/*
+    var a = { foo: 1, bar: 2 };
+    a[Symbol.unscopables] = { bar: true };
+    with (a) {
+      return foo === 1 && typeof bar === "undefined";
     }
-    return false;
-  },
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -4379,17 +4348,14 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Array.prototype[Symbol.unscopables]',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables',
-  exec: function () {
-    if (typeof Symbol !== "function") return false;
-    if (typeof Symbol.unscopables !== "symbol") return false;
+  exec: function () {/*
     var unscopables = Array.prototype[Symbol.unscopables];
-    if (!unscopables) return false;
     var ns = "find,findIndex,fill,copyWithin,entries,keys,values".split(",");
     for (var i = 0; i < ns.length; i++) {
       if (!unscopables[ns[i]]) return false;
     }
     return true;
-  },
+  */},
   res: {
     tr:          false,
     ejs:         false,
