@@ -98,9 +98,12 @@
         <tbody>
           <tr>
             <td id="uneval"><span><a class="anchor" href="#uneval">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval">uneval</a></span></td>
-<script>
-test(typeof uneval == 'function');
-</script>
+<script data-source="function () {
+return typeof uneval == 'function';
+  }">test(
+function () {
+return typeof uneval == 'function';
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -128,17 +131,28 @@ test(typeof uneval == 'function');
           </tr>
           <tr>
             <td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource">"toSource" method</a></span></td>
-<script>
-test('toSource' in Object.prototype
-      && Number   .prototype.hasOwnProperty('toSource')
-      && Boolean  .prototype.hasOwnProperty('toSource')
-      && String   .prototype.hasOwnProperty('toSource')
-      && Function .prototype.hasOwnProperty('toSource')
-      && Array    .prototype.hasOwnProperty('toSource')
-      && RegExp   .prototype.hasOwnProperty('toSource')
-      && Date     .prototype.hasOwnProperty('toSource')
-      && Error    .prototype.hasOwnProperty('toSource'));
-</script>
+<script data-source="function () {
+return 'toSource' in Object.prototype
+    && Number   .prototype.hasOwnProperty('toSource')
+    && Boolean  .prototype.hasOwnProperty('toSource')
+    && String   .prototype.hasOwnProperty('toSource')
+    && Function .prototype.hasOwnProperty('toSource')
+    && Array    .prototype.hasOwnProperty('toSource')
+    && RegExp   .prototype.hasOwnProperty('toSource')
+    && Date     .prototype.hasOwnProperty('toSource')
+    && Error    .prototype.hasOwnProperty('toSource');
+  }">test(
+function () {
+return 'toSource' in Object.prototype
+    && Number   .prototype.hasOwnProperty('toSource')
+    && Boolean  .prototype.hasOwnProperty('toSource')
+    && String   .prototype.hasOwnProperty('toSource')
+    && Function .prototype.hasOwnProperty('toSource')
+    && Array    .prototype.hasOwnProperty('toSource')
+    && RegExp   .prototype.hasOwnProperty('toSource')
+    && Date     .prototype.hasOwnProperty('toSource')
+    && Error    .prototype.hasOwnProperty('toSource');
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -169,9 +183,12 @@ test('toSource' in Object.prototype
           </tr>
           <tr>
             <td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&sect;</a>function "caller" property</span></td>
-<script>
-test('caller' in (function(){}));
-</script>
+<script data-source="function () {
+return 'caller' in (function(){});
+  }">test(
+function () {
+return 'caller' in (function(){});
+  }())</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
@@ -199,11 +216,16 @@ test('caller' in (function(){}));
           </tr>
           <tr>
             <td id="function_arity_property"><span><a class="anchor" href="#function_arity_property">&sect;</a>function "arity" property</span></td>
-<script>
-test((function (){}).arity === 0 &&
-    (function (x){}).arity === 1 &&
-    (function (x, y){}).arity === 2);
-</script>
+<script data-source="function () {
+return (function (){}).arity === 0 &&
+  (function (x){}).arity === 1 &&
+  (function (x, y){}).arity === 2;
+  }">test(
+function () {
+return (function (){}).arity === 0 &&
+  (function (x){}).arity === 1 &&
+  (function (x, y){}).arity === 2;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -231,14 +253,18 @@ test((function (){}).arity === 0 &&
           </tr>
           <tr>
             <td id="function_arguments_property"><span><a class="anchor" href="#function_arguments_property">&sect;</a>function "arguments" property</span></td>
-<script>
-test(function () {
-  function f(a, b) {
-    return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo';
-  }
-  return f(1, 'boo');
-}());
-</script>
+<script data-source="function () {
+function f(a, b) {
+  return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo';
+}
+return f(1, 'boo');
+  }">test(
+function () {
+function f(a, b) {
+  return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo';
+}
+return f(1, 'boo');
+  }())</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
@@ -266,9 +292,12 @@ test(function () {
           </tr>
           <tr>
             <td id="Function.prototype.isGenerator"><span><a class="anchor" href="#Function.prototype.isGenerator">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a></span></td>
-<script>
-test(typeof Function.prototype.isGenerator == 'function');
-</script>
+<script data-source="function () {
+return typeof Function.prototype.isGenerator == 'function';
+  }">test(
+function () {
+return typeof Function.prototype.isGenerator == 'function';
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -299,10 +328,14 @@ test(typeof Function.prototype.isGenerator == 'function');
           </tr>
           <tr>
             <td id="__count__"><span><a class="anchor" href="#__count__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span></td>
-<script>
-test(typeof ({}).__count__ === 'number' &&
-  ({ x: 1, y: 2 }).__count__ === 2);
-</script>
+<script data-source="function () {
+return typeof ({}).__count__ === 'number' &&
+  ({ x: 1, y: 2 }).__count__ === 2;
+}">test(
+function () {
+return typeof ({}).__count__ === 'number' &&
+  ({ x: 1, y: 2 }).__count__ === 2;
+}())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -330,9 +363,12 @@ test(typeof ({}).__count__ === 'number' &&
           </tr>
           <tr>
             <td id="__parent__"><span><a class="anchor" href="#__parent__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a></span></td>
-<script>
-test(typeof ({}).__parent__ !== 'undefined');
-</script>
+<script data-source="function () {
+return typeof ({}).__parent__ !== 'undefined';
+  }">test(
+function () {
+return typeof ({}).__parent__ !== 'undefined';
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -360,16 +396,22 @@ test(typeof ({}).__parent__ !== 'undefined');
           </tr>
           <tr>
             <td id="__noSuchMethod__"><span><a class="anchor" href="#__noSuchMethod__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a></span></td>
-<script>
-test(function () {
-  var o = { }, executed = false;
-  o.__noSuchMethod__ = function () { executed = true; }
-  try {
-    o.__i_dont_exist();
-  } catch (e) { }
-  return executed;
-}());
-</script>
+<script data-source="function () {
+var o = { }, executed = false;
+o.__noSuchMethod__ = function () { executed = true; }
+try {
+  o.__i_dont_exist();
+} catch (e) { }
+return executed;
+  }">test(
+function () {
+var o = { }, executed = false;
+o.__noSuchMethod__ = function () { executed = true; }
+try {
+  o.__i_dont_exist();
+} catch (e) { }
+return executed;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -397,9 +439,12 @@ test(function () {
           </tr>
           <tr>
             <td id="__defineGetter__"><span><a class="anchor" href="#__defineGetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a></span></td>
-<script>
-test('__defineGetter__' in ({ }));
-</script>
+<script data-source="function () {
+return '__defineGetter__' in {};
+  }">test(
+function () {
+return '__defineGetter__' in {};
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>
@@ -427,9 +472,12 @@ test('__defineGetter__' in ({ }));
           </tr>
           <tr>
             <td id="__defineSetter__"><span><a class="anchor" href="#__defineSetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a></span></td>
-<script>
-test('__defineSetter__' in ({ }));
-</script>
+<script data-source="function () {
+return '__defineSetter__' in {};
+  }">test(
+function () {
+return '__defineSetter__' in {};
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>
@@ -457,13 +505,16 @@ test('__defineSetter__' in ({ }));
           </tr>
           <tr>
             <td id="__lookupGetter__"><span><a class="anchor" href="#__lookupGetter__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__">__lookupGetter__</a></span></td>
-<script>
-test(function () {
-  var obj = { get foo() { return "bar"; } };
-  var func = obj.__lookupGetter__("foo");
-  return typeof func === "function" && func() === "bar";
-}());
-</script>
+<script data-source="function () {
+var obj = { get foo() { return &quot;bar&quot;; } };
+var func = obj.__lookupGetter__(&quot;foo&quot;);
+return typeof func === &quot;function&quot; && func() === &quot;bar&quot;;
+  }">test(
+function () {
+var obj = { get foo() { return "bar"; } };
+var func = obj.__lookupGetter__("foo");
+return typeof func === "function" && func() === "bar";
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>
@@ -494,9 +545,12 @@ test(function () {
           </tr>
           <tr>
             <td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span></td>
-<script>
-test(typeof Array.slice === 'function' && Array.slice('abc').length === 3);
-</script>
+<script data-source="function () {
+return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
+  }">test(
+function () {
+return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -524,9 +578,12 @@ test(typeof Array.slice === 'function' && Array.slice('abc').length === 3);
           </tr>
           <tr>
             <td id="String_generics"><span><a class="anchor" href="#String_generics">&sect;</a>String generics</span></td>
-<script>
-test(typeof String.slice === 'function' && String.slice(123, 1) === "23");
-</script>
+<script data-source="function () {
+return typeof String.slice === 'function' && String.slice(123, 1) === &quot;23&quot;;
+  }">test(
+function () {
+return typeof String.slice === 'function' && String.slice(123, 1) === "23";
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -557,16 +614,12 @@ test(typeof String.slice === 'function' && String.slice(123, 1) === "23");
           </tr>
           <tr>
             <td id="Array_comprehensions_(right-to-left)"><span><a class="anchor" href="#Array_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (right-to-left)</a></span></td>
-<script>
-test(function () {
-  try {
-    var a = eval('[i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo")]');
-    return a instanceof Array && a[0] === 4 && a[1] === 8;
-  }
-  catch(e) {
-    return false;
-  }
-}());
+<script data-source="
+var obj = { 2: true, &quot;foo&quot;: true, 4: true };
+var a = [i * 2 for (i in obj) if (i !== &quot;foo&quot;)];
+return a instanceof Array && a[0] === 4 && a[1] === 8;
+  ">
+test(function(){try{return Function("\nvar obj = { 2: true, \"foo\": true, 4: true };\nvar a = [i * 2 for (i in obj) if (i !== \"foo\")];\nreturn a instanceof Array && a[0] === 4 && a[1] === 8;\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -595,14 +648,10 @@ test(function () {
           </tr>
           <tr>
             <td id="Expression_closures"><span><a class="anchor" href="#Expression_closures">&sect;</a>Expression closures</span></td>
-<script>
-test(function () {
-  try {
-    return eval('(function(x)x)(1)') === 1;
-  } catch (e) {
-    return false;
-  }
-}());
+<script data-source="
+return (function(x)x)(1) === 1;
+  ">
+test(function(){try{return Function("\nreturn (function(x)x)(1) === 1;\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -631,14 +680,10 @@ test(function () {
           </tr>
           <tr>
             <td id="ECMAScript_for_XML_(E4X)"><span><a class="anchor" href="#ECMAScript_for_XML_(E4X)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Archive/Web/E4X">ECMAScript for XML (E4X)</a></span></td>
-<script>
-test(function () {
-  try {
-    return eval('typeof <foo/> === "xml"');
-  } catch (e) {
-    return false;
-  }
-}());
+<script data-source="
+return typeof <foo/> === &quot;xml&quot;;
+  ">
+test(function(){try{return Function("\nreturn typeof <foo/> === \"xml\";\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -667,16 +712,14 @@ test(function () {
           </tr>
           <tr>
             <td id="for_each..in_loops"><span><a class="anchor" href="#for_each..in_loops">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">"for each..in" loops</a></span></td>
-<script>
-test(function () {
-  var str = '';
-  try {
-    eval('for each (var item in {a: "foo", b: "bar", c: "baz"}) { str += item; }');
-    return str === "foobarbaz";
-  } catch(e) {
-    return false;
+<script data-source="
+var str = '';
+for each (var item in {a: &quot;foo&quot;, b: &quot;bar&quot;, c: &quot;baz&quot;}) {
+    str += item;
   }
-}());
+return str === &quot;foobarbaz&quot;;
+  ">
+test(function(){try{return Function("\nvar str = '';\nfor each (var item in {a: \"foo\", b: \"bar\", c: \"baz\"}) {\n\t  str += item;\n\t}\nreturn str === \"foobarbaz\";\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -705,14 +748,11 @@ test(function () {
           </tr>
           <tr>
             <td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span></td>
-<script>
-test(function () {
-  try {
-    return eval('(function () { var arr = #1=[1, #1#, 3]; return arr[1] === arr; }())');
-  } catch (e) {
-    return false;
-  }
-}());
+<script data-source="
+var arr = #1=[1, #1#, 3]; 
+  return arr[1] === arr;
+  ">
+test(function(){try{return Function("\nvar arr = #1=[1, #1#, 3]; \n\treturn arr[1] === arr;\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -744,23 +784,36 @@ test(function () {
           </tr>
           <tr>
             <td id="Iterator"><span><a class="anchor" href="#Iterator">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span></td>
-<script>
-test(function () {
-  try {
-    var it = Iterator({ foo: 1, bar: 2 });
-    var keys = "";
-    var values = 0;
-    for (var pair in it) {
-      keys   += pair[0];
-      values += pair[1];
-    }
-    return keys === "foobar" && values === 3;
+<script data-source="function () {
+try {
+  var it = Iterator({ foo: 1, bar: 2 });
+  var keys = &quot;&quot;;
+  var values = 0;
+  for (var pair in it) {
+    keys   += pair[0];
+    values += pair[1];
   }
-  catch(e) {
-    return false;
+  return keys === &quot;foobar&quot; && values === 3;
+}
+catch(e) {
+  return false;
+}
+  }">test(
+function () {
+try {
+  var it = Iterator({ foo: 1, bar: 2 });
+  var keys = "";
+  var values = 0;
+  for (var pair in it) {
+    keys   += pair[0];
+    values += pair[1];
   }
-}());
-</script>
+  return keys === "foobar" && values === 3;
+}
+catch(e) {
+  return false;
+}
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -788,27 +841,44 @@ test(function () {
           </tr>
           <tr>
             <td id="__iterator__"><span><a class="anchor" href="#__iterator__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">__iterator__</a></span></td>
-<script>
-test(function () {
-  try {
-    var x = 5;
-    var iter = {
-      next: function() {
-        if (x > 0) return { foo: --x };
-        else throw StopIteration;
-      }
-    };
-    var total = 0;
-    for (var item in { __iterator__ : function() { return iter; }}) {
-      total += item.foo;
+<script data-source="function () {
+try {
+  var x = 5;
+  var iter = {
+    next: function() {
+      if (x > 0) return { foo: --x };
+      else throw StopIteration;
     }
-    return total === 10;
+  };
+  var total = 0;
+  for (var item in { __iterator__ : function() { return iter; }}) {
+    total += item.foo;
   }
-  catch(e) {
-    return false;
+  return total === 10;
+}
+catch(e) {
+  return false;
+}
+  }">test(
+function () {
+try {
+  var x = 5;
+  var iter = {
+    next: function() {
+      if (x > 0) return { foo: --x };
+      else throw StopIteration;
+    }
+  };
+  var total = 0;
+  for (var item in { __iterator__ : function() { return iter; }}) {
+    total += item.foo;
   }
-}());
-</script>
+  return total === 10;
+}
+catch(e) {
+  return false;
+}
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -836,7 +906,39 @@ test(function () {
           </tr>
           <tr>
             <td id="Generators_(JS_1.8)"><span><a class="anchor" href="#Generators_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span></td>
-<script type="application/javascript;version=1.8">
+<script type="application/javascript;version=1.8" data-source="test(function () {
+try {
+  var g = eval('(function() { var a = yield &quot;foo&quot;; yield a + &quot;baz&quot;;})')();
+  var passed = g.next() === &quot;foo&quot;;
+  return passed && (g.send(&quot;bar&quot;) === &quot;barbaz&quot;);
+}
+catch(e) {
+  return false;
+}
+        }());
+        __script_executed[&quot;generators&quot;] = true;">test(function () {
+try {
+  var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
+  var passed = g.next() === "foo";
+  return passed && (g.send("bar") === "barbaz");
+}
+catch(e) {
+  return false;
+}
+        }());
+        __script_executed["generators"] = true;</script>
+<script data-source="if (!__script_executed[&quot;generators&quot;]) {
+test(function () {
+  try {
+    var g = eval('(function() { var a = yield &quot;foo&quot;; yield a + &quot;baz&quot;;})')();
+    var passed = g.next() === &quot;foo&quot;;
+    return passed && (g.send(&quot;bar&quot;) === &quot;barbaz&quot;);
+  }
+  catch(e) {
+    return false;
+  }
+}());
+        }">if (!__script_executed["generators"]) {
 test(function () {
   try {
     var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
@@ -847,22 +949,7 @@ test(function () {
     return false;
   }
 }());
-__script_executed["generators"] = true;
-</script>
-<script>
-if (!__script_executed["generators"]) {
-  test(function () {
-    try {
-      var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
-      var passed = g.next() === "foo";
-      return passed && (g.send("bar") === "barbaz");
-    }
-    catch(e) {
-      return false;
-    }
-  }());
-}
-</script>
+        }</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -890,16 +977,12 @@ if (!__script_executed["generators"]) {
           </tr>
           <tr>
             <td id="Generator_comprehensions_(JS_1.8)"><span><a class="anchor" href="#Generator_comprehensions_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions">Generator comprehensions (JS 1.8)</a></span></td>
-<script>
-test(function () {
-  try {
-    var g = eval('(i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo"))');
-    return g.next() === 4 && g.next() === 8;
-  }
-  catch(e) {
-    return false;
-  }
-}());
+<script data-source="
+var obj = { 2: true, &quot;foo&quot;: true, 4: true };
+var g = (i * 2 for (i in obj) if (i !== &quot;foo&quot;));
+return g.next() === 4 && g.next() === 8;
+  ">
+test(function(){try{return Function("\nvar obj = { 2: true, \"foo\": true, 4: true };\nvar g = (i * 2 for (i in obj) if (i !== \"foo\"));\nreturn g.next() === 4 && g.next() === 8;\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -931,18 +1014,26 @@ test(function () {
           </tr>
           <tr>
             <td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&sect;</a>RegExp "x" flag</span></td>
-<script>
-test(function () {
-  try {
-    var re = RegExp('^ ( \\d+ ) \
-                       ( \\w+ ) \
-                       ( foo  )', 'x');
-    return re.exec('23xfoo')[0] === '23xfoo';
-  } catch (e) {
-    return false;
-  }
-}());
-</script>
+<script data-source="function () {
+try {
+  var re = RegExp('^ ( \\d+ ) \
+                     ( \\w+ ) \
+                     ( foo  )', 'x');
+  return re.exec('23xfoo')[0] === '23xfoo';
+} catch (e) {
+  return false;
+}
+  }">test(
+function () {
+try {
+  var re = RegExp('^ ( \\d+ ) \
+                     ( \\w+ ) \
+                     ( foo  )', 'x');
+  return re.exec('23xfoo')[0] === '23xfoo';
+} catch (e) {
+  return false;
+}
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -970,13 +1061,16 @@ test(function () {
           </tr>
           <tr>
             <td id="RegExp_lastMatch"><span><a class="anchor" href="#RegExp_lastMatch">&sect;</a>RegExp "lastMatch"</span></td>
-<script>
-test(function () {
-  var re = /\w/;
-  re.exec('x');
-  return RegExp.lastMatch === 'x';
-}());
-</script>
+<script data-source="function () {
+var re = /\w/;
+re.exec('x');
+return RegExp.lastMatch === 'x';
+  }">test(
+function () {
+var re = /\w/;
+re.exec('x');
+return RegExp.lastMatch === 'x';
+  }())</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
@@ -1004,14 +1098,18 @@ test(function () {
           </tr>
           <tr>
             <td id="RegExp.$1-$9"><span><a class="anchor" href="#RegExp.$1-$9">&sect;</a>RegExp.$1-$9</span></td>
-<script>
-test(function () {
-  for (var i = 1; i < 10; i++) {
-    if (!(('$' + i) in RegExp)) return false;
-  }
-  return true;
-}());
-</script>
+<script data-source="function () {
+for (var i = 1; i < 10; i++) {
+  if (!(('$' + i) in RegExp)) return false;
+}
+return true;
+  }">test(
+function () {
+for (var i = 1; i < 10; i++) {
+  if (!(('$' + i) in RegExp)) return false;
+}
+return true;
+  }())</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
@@ -1039,14 +1137,10 @@ test(function () {
           </tr>
           <tr>
             <td id="Callable_RegExp"><span><a class="anchor" href="#Callable_RegExp">&sect;</a>Callable RegExp</span></td>
-<script>
-test(function () {
-  try {
-    return eval('/\\w/("x")[0] === "x"');
-  } catch (e) {
-    return false;
-  }
-}());
+<script data-source="
+return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
+  ">
+test(function(){try{return Function("\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -1075,14 +1169,10 @@ test(function () {
           </tr>
           <tr>
             <td id="RegExp_named_groups"><span><a class="anchor" href="#RegExp_named_groups">&sect;</a>RegExp named groups</span></td>
-<script>
-test(function () {
-  try {
-    return eval('/(?P<name>a)(?P=name)/.test("aa")');
-  } catch (e) {
-    return false;
-  }
-}());
+<script data-source="
+return /(?P<name>a)(?P=name)/.test(&quot;aa&quot;);
+  ">
+test(function(){try{return Function("\nreturn /(?P<name>a)(?P=name)/.test(\"aa\");\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -1114,9 +1204,8 @@ test(function () {
           </tr>
           <tr>
             <td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span></td>
-<script>
-test(typeof String.prototype.trimLeft === 'function');
-</script>
+<script data-source="function () { return typeof String.prototype.trimLeft === 'function' }">test(
+function () { return typeof String.prototype.trimLeft === 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1144,9 +1233,8 @@ test(typeof String.prototype.trimLeft === 'function');
           </tr>
           <tr>
             <td id="String.prototype.trimRight"><span><a class="anchor" href="#String.prototype.trimRight">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight">String.prototype.trimRight</a></span></td>
-<script>
-test(typeof String.prototype.trimRight === 'function');
-</script>
+<script data-source="function () { return typeof String.prototype.trimRight === 'function' }">test(
+function () { return typeof String.prototype.trimRight === 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1174,9 +1262,8 @@ test(typeof String.prototype.trimRight === 'function');
           </tr>
           <tr>
             <td id="String.prototype.quote"><span><a class="anchor" href="#String.prototype.quote">&sect;</a>String.prototype.quote</span></td>
-<script>
-test(typeof String.prototype.quote === 'function');
-</script>
+<script data-source="function () { return typeof String.prototype.quote === 'function' }">test(
+function () { return typeof String.prototype.quote === 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1204,9 +1291,8 @@ test(typeof String.prototype.quote === 'function');
           </tr>
           <tr>
             <td id="String.prototype.replace_flags"><span><a class="anchor" href="#String.prototype.replace_flags">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace flags</a></span></td>
-<script>
-test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
-</script>
+<script data-source="function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }">test(
+function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1237,9 +1323,8 @@ test('foofoo'.replace('foo', 'bar', 'g') === 'barbar');
           </tr>
           <tr>
             <td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span></td>
-<script>
-test(typeof Date.prototype.toLocaleFormat === 'function');
-</script>
+<script data-source="function () { return typeof Date.prototype.toLocaleFormat === 'function' }">test(
+function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1270,9 +1355,8 @@ test(typeof Date.prototype.toLocaleFormat === 'function');
           </tr>
           <tr>
             <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span></td>
-<script>
-test(typeof Object.prototype.watch == 'function');
-</script>
+<script data-source="function () { return typeof Object.prototype.watch == 'function' }">test(
+function () { return typeof Object.prototype.watch == 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1300,9 +1384,8 @@ test(typeof Object.prototype.watch == 'function');
           </tr>
           <tr>
             <td id="Object.prototype.unwatch"><span><a class="anchor" href="#Object.prototype.unwatch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch">Object.prototype.unwatch</a></span></td>
-<script>
-test(typeof Object.prototype.unwatch == 'function');
-</script>
+<script data-source="function () { return typeof Object.prototype.unwatch == 'function' }">test(
+function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1330,9 +1413,8 @@ test(typeof Object.prototype.unwatch == 'function');
           </tr>
           <tr>
             <td id="Object.prototype.eval"><span><a class="anchor" href="#Object.prototype.eval">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval">Object.prototype.eval</a></span></td>
-<script>
-test(typeof Object.prototype.eval == 'function');
-</script>
+<script data-source="function () { return typeof Object.prototype.eval == 'function' }">test(
+function () { return typeof Object.prototype.eval == 'function' }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1363,9 +1445,12 @@ test(typeof Object.prototype.eval == 'function');
           </tr>
           <tr>
             <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error "stack"</a></span></td>
-<script>
-test('stack' in new Error);
-</script>
+<script data-source="function () {
+return 'stack' in new Error;
+  }">test(
+function () {
+return 'stack' in new Error;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1393,9 +1478,12 @@ test('stack' in new Error);
           </tr>
           <tr>
             <td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber">error "lineNumber"</a></span></td>
-<script>
-test('lineNumber' in new Error);
-</script>
+<script data-source="function () {
+return 'lineNumber' in new Error;
+  }">test(
+function () {
+return 'lineNumber' in new Error;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1423,9 +1511,12 @@ test('lineNumber' in new Error);
           </tr>
           <tr>
             <td id="error_columnNumber"><span><a class="anchor" href="#error_columnNumber">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber">error "columnNumber"</a></span></td>
-<script>
-test('columnNumber' in new Error);
-</script>
+<script data-source="function () {
+return 'columnNumber' in new Error;
+  }">test(
+function () {
+return 'columnNumber' in new Error;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1453,9 +1544,12 @@ test('columnNumber' in new Error);
           </tr>
           <tr>
             <td id="error_fileName"><span><a class="anchor" href="#error_fileName">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName">error "fileName"</a></span></td>
-<script>
-test('fileName' in new Error);
-</script>
+<script data-source="function () {
+return 'fileName' in new Error;
+  }">test(
+function () {
+return 'fileName' in new Error;
+  }())</script>
 
             <td class="no ie7">No</td>
             <td class="no ie11">No</td>
@@ -1483,9 +1577,12 @@ test('fileName' in new Error);
           </tr>
           <tr>
             <td id="error_description"><span><a class="anchor" href="#error_description">&sect;</a><a href="http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx">error "description"</a></span></td>
-<script>
-test('description' in new Error);
-</script>
+<script data-source="function () {
+return 'description' in new Error;
+  }">test(
+function () {
+return 'description' in new Error;
+  }())</script>
 
             <td class="yes ie7">Yes</td>
             <td class="yes ie11">Yes</td>
