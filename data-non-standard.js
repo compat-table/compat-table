@@ -595,15 +595,11 @@ exports.tests = [
 {
   name: 'Array comprehensions (right-to-left)',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions',
-  exec: function () {
-    try {
-      var a = eval('[i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo")]');
-      return a instanceof Array && a[0] === 4 && a[1] === 8;
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var obj = { 2: true, "foo": true, 4: true };
+    var a = [i * 2 for (i in obj) if (i !== "foo")];
+    return a instanceof Array && a[0] === 4 && a[1] === 8;
+  */},
   res: {
     ie7: false,
     ie11: false,
@@ -696,15 +692,13 @@ exports.tests = [
 {
   name: '"for each..in" loops',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in',
-  exec: function () {
+  exec: function () {/*
     var str = '';
-    try {
-      eval('for each (var item in {a: "foo", b: "bar", c: "baz"}) { str += item; }');
-      return str === "foobarbaz";
-    } catch(e) {
-      return false;
-    }
-  },
+    for each (var item in {a: "foo", b: "bar", c: "baz"}) {
+	  str += item;
+	}
+    return str === "foobarbaz";
+  */},
   res: {
     ie7: false,
     ie11: false,
@@ -920,15 +914,11 @@ exports.tests = [
 {
   name: 'Generator comprehensions (JS 1.8)',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions',
-  exec: function () {
-    try {
-      var g = eval('(i * 2 for (i in { 2: true, "foo": true, 4: true }) if (i !== "foo"))');
-      return g.next() === 4 && g.next() === 8;
-    }
-    catch(e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var obj = { 2: true, "foo": true, 4: true };
+    var g = (i * 2 for (i in obj) if (i !== "foo"));
+    return g.next() === 4 && g.next() === 8;
+  */},
   res: {
     ie7: false,
     ie11: false,

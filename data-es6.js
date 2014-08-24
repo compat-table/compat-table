@@ -439,20 +439,17 @@ exports.tests = [
 {
   name: 'default function parameters',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
-  exec: function () {
-    try {
-      return !!Function(
-         'var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));'
-         // explicit undefined will defer to the default
-        +'passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));'
-         // defaults can refer to previous parameters
-        +'passed    &= (function (a, b = a) { return b === 5; }(5));'
-        +'return passed;'
-        )();
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
+    
+    // explicit undefined will defer to the default
+    passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
+    
+    // defaults can refer to previous parameters
+    passed    &= (function (a, b = a) { return b === 5; }(5));
+    
+    return passed;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -741,40 +738,34 @@ exports.tests = [
 {
   name: 'super',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
-  exec: function () {
-    try {
-      var passed = false;
-      var B = eval(
-         "class extends class {"
-        +"  constructor(a) { return this.id + a; }"
-        +"  foo(a)         { return a + this.id; }"
-        +"} {"
-        +"  constructor(a) {"
-        +"    this.id = 'AB';"
-          // "super" in the constructor calls
-          // the superclass's constructor on "this".
-        +"    passed  = super(a)     === 'ABCD';"
-          // "super" can be also used to call
-          // superclass methods on "this".
-        +"    passed &= super.foo(a) === 'CDAB';"
-        +"  }"
-        +"  foo(a) {"
-          // "super" in methods calls the
-          // superclass's same-named method on "this".
-        +"    passed &= super(a) === 'YZEF';"
-        +"    passed &= super(a) === super.foo(a);"
-        +"  }"
-        +"}"
-      );
-      var b = new B("CD");
-      // "super" is bound statically, even though "this" isn't
-      var obj = { foo: b.foo, id:"EF" };
-      obj.foo("YZ");
-      return passed;
-    } catch (e) {
-      return false;
+  exec: function () {/*
+    var passed = true;
+    var B = class extends class {
+      constructor(a) { return this.id + a; }
+      foo(a)         { return a + this.id; }
+    } {
+      constructor(a) {
+        this.id = 'AB';
+        // "super" in the constructor calls
+        // the superclass's constructor on "this".
+        passed &= super(a)     === 'ABCD';
+        // "super" can be also used to call
+        // superclass methods on "this".
+        passed &= super.foo(a) === 'CDAB';
+      }
+      foo(a) {
+        // "super" in methods calls the
+        // superclass's same-named method on "this".
+        passed &= super(a) === 'YZEF';
+        passed &= super(a) === super.foo(a);
+      }
     }
-  },
+    var b = new B("CD");
+    // "super" is bound statically, even though "this" isn't
+    var obj = { foo: b.foo, id:"EF" };
+    obj.foo("YZ");
+    return passed;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -820,6 +811,7 @@ exports.tests = [
   name: 'computed properties',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
   exec: function() {/*
+    var x = 'y';
     return ({ [x]: 1 })['y'] === 1;
   */},
   res: {
@@ -1020,13 +1012,10 @@ exports.tests = [
 {
   name: 'modules',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:modules',
-  exec: function () {
-    try {
-      return eval('export var foo = 1;');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    export var foo = 1;
+    return true;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -1120,28 +1109,21 @@ exports.tests = [
 {
   name: 'Generators (yield)',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:generators',
-  exec: function () {
-    try {
-      var generator = eval(
-         '(function* () {'
-        +'  yield* (function* () {'
-        +'    yield 5; yield 6;'
-        +'  }());'
-        +'}())'
-      );
-      
-      var item = generator.next();
-      var passed = item.value === 5 && item.done === false;
-      item = generator.next();
-      passed    &= item.value === 6 && item.done === false;
-      item = generator.next();
-      passed    &= item.value === undefined && item.done === true;
-      
-      return passed;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var generator = (function* () {
+      yield* (function* () {
+        yield 5; yield 6;
+      }());
+    }());
+    
+    var item = generator.next();
+    var passed = item.value === 5 && item.done === false;
+    item = generator.next();
+    passed    &= item.value === 6 && item.done === false;
+    item = generator.next();
+    passed    &= item.value === undefined && item.done === true;
+	return passed;
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -1186,13 +1168,9 @@ exports.tests = [
 {
   name: 'octal literals',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
-  exec: function () {
-    try {
-      return eval('0o10') === 8 && eval('0O10') === 8;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return 0o10 === 8 && 0O10 === 8;
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -1241,13 +1219,9 @@ exports.tests = [
 {
   name: 'binary literals',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
-  exec: function () {
-    try {
-      return eval('0b10') === 2 && eval('0B10') === 2;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return 0b10 === 2 && 0B10 === 2;
+  */},
   res: {
     tr:          true,
     ejs:         false,
@@ -1292,14 +1266,11 @@ exports.tests = [
 {
   name: 'template strings',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
-  exec: function () {
-    try {
-      var a = "ba", b = "QUX";
-      return eval('`foo bar\n${a + "z"} ${b.toLowerCase()}`') === "foo bar\nbaz qux";
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var a = "ba", b = "QUX";
+    return `foo bar
+${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -1344,24 +1315,20 @@ exports.tests = [
 {
   name: 'tagged template strings',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
-  exec: function () {
-    try {
-      var called = false;
-      function fn(parts, a, b) {
-        called = true;
-        return parts instanceof Array &&
-          parts[0]     === "foo"      &&
-          parts[1]     === "bar\n"    &&
-          parts.raw[0] === "foo"      &&
-          parts.raw[1] === "bar\\n"   &&
-          a === 123                   &&
-          b === 456;
-      }
-      return eval('fn `foo${123}bar\\n${456}`') && called;
-    } catch (e) {
-      return false;
+  exec: function () {/*
+    var called = false;
+    function fn(parts, a, b) {
+      called = true;
+      return parts instanceof Array &&
+        parts[0]     === "foo"      &&
+        parts[1]     === "bar\n"    &&
+        parts.raw[0] === "foo"      &&
+        parts.raw[1] === "bar\\n"   &&
+        a === 123                   &&
+        b === 456;
     }
-  },
+    return fn `foo${123}bar\n${456}` && called;
+  */},
   res: {
     tr:          true,
     ejs:         true,
