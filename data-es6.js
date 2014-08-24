@@ -3283,7 +3283,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function() {
     if (typeof Symbol === "function" && typeof Symbol.create === "symbol") {
       var a = 2, b = function(){};
-      b[Symbol.create] = function() { a = 4; return {};};
+      Object.defineProperty(b, Symbol.create, { value: function() { a = 4; return {};} });
       new b();
       return a === 4;
     }
