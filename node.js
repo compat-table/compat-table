@@ -5,7 +5,7 @@ var fs = require('fs')
   , path = require('path')
   , cheerio = require('cheerio')
 
-  , page = fs.readFileSync(path.join(__dirname, 'es6', 'index.html')).toString()
+  , page = fs.readFileSync(path.join(__dirname, 'es6', 'index.html')).toString().replace(/data-source="[^"]*"/g,'')
   , $ = cheerio.load(page)
 
 $('#body tbody tr').each(function () {
