@@ -218,7 +218,7 @@ function testScript(fn) {
     else {
       expr = deindentFunc(expr[1]);
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
-      'test(function(){try{return Function(' + JSON.stringify(expr) + ')()}catch(e){return false;}}());\n' +
+      'test(function(){try{return Function(' + JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}());\n' +
       '</script>\n';
     }
   } else {
