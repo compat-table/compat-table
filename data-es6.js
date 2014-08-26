@@ -281,28 +281,27 @@ exports.tests = [
 {
   name: 'arrow functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
-  exec: function() {
-    try {
-      return !!Function(
-         // 0 parameters
-         'var a = () => 5;'
-        +'var passed = (a() === 5);'
-
-         // 1 parameter, no brackets
-        +'var b = x => x + "foo";'
-        +'passed &= (b("fee fie foe ") === "fee fie foe foo");'
-
-         // multiple parameters
-        +'var c = (v, w, x, y, z) => v+w-x*y/z;'
-        +'passed &= (c(6, 5, 4, 3, 2) === 5);'
-        
-        +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
-    return true;
-  },
+  exec: function() {/*
+    // 0 parameters
+    var passed = (() => 5)() === 5;
+    
+    // 1 parameter, no brackets
+    var b = x => x + "foo";
+    passed &= (b("fee fie foe ") === "fee fie foe foo");
+    
+    // multiple parameters
+    var c = (v, w, x, y, z) => "" + v + w + x + y + z;
+    passed &= (c(6, 5, 4, 3, 2) === "65432");
+    
+    // arrows have a lexical "this" binding (14.2.17)
+    var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+    var e = { x : "baz", y : d };
+    passed &= d("ley") === "barley" && e.y("ley") === "barley";
+    
+    // arrows cannot be re-bound, but they can still be curried.
+    passed &= d.bind(e, "ley")() === "barley";
+    return passed;
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -313,17 +312,21 @@ exports.tests = [
     firefox16:   false,
     firefox17:   false,
     firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
+    firefox23:   {
+      val: true,
+      note_id: 'fx-arrow',
+      note_html: 'Firefox\'s arrows do not lexically bind <code>arguments</code>, and incorrectly allow line breaks between the arrow\'s parameters and the <code>=></code> token.'
+    },
+    firefox24:   { val: true, note_id: 'fx-arrow' },
+    firefox25:   { val: true, note_id: 'fx-arrow' },
+    firefox27:   { val: true, note_id: 'fx-arrow' },
+    firefox28:   { val: true, note_id: 'fx-arrow' },
+    firefox29:   { val: true, note_id: 'fx-arrow' },
+    firefox30:   { val: true, note_id: 'fx-arrow' },
+    firefox31:   { val: true, note_id: 'fx-arrow' },
+    firefox32:   { val: true, note_id: 'fx-arrow' },
+    firefox33:   { val: true, note_id: 'fx-arrow' },
+    firefox34:   { val: true, note_id: 'fx-arrow' },
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
@@ -331,8 +334,8 @@ exports.tests = [
     chrome33:    false,
     chrome34:    false,
     chrome35:    false,
-    chrome37:    true,
-    chrome39:    true,
+    chrome37:    false,
+    chrome39:    false,
     safari51:    false,
     safari6:     false,
     safari7:     false,
@@ -345,68 +348,6 @@ exports.tests = [
     nodeharmony: false,
     ios7:        false,
     ios8:        false
-  }
-},
-{
-  name: 'lexical "this" in arrow functions',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
-  exec: function() {
-    try {
-      return !!Function(
-         // arrows have a lexical "this" binding (14.2.17)
-         'var d = { x : "bar", y : function() { return z => this.x + z; }}.y();'
-        +'var e = { x : "baz", y : d };'
-        +'var passed = d("ley") === "barley" && e.y("ley") === "barley";'
-
-         // arrows' lexical "this" cannot be re-bound,
-         // but they can still be curried.
-        +'passed &= d.bind(e, "ley")("man") === "barley";'
-        +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
-    return true;
-  },
-  res: {
-    tr:          true,
-    ejs:         true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false
   }
 },
 {
