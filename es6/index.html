@@ -3164,19 +3164,19 @@ test(function(){try{return Function("\nreturn RegExp.prototype[Symbol.isRegExp] 
 var a = 0, b = {};
 b[Symbol.iterator] = function() {
   return {
-      next: function() {
+    next: function() {
       return {
         done: a === 1,
         value: a++
       };
-      }
-    };
+    }
+  };
 };
 var c;
 for (c of b) {}
 return c === 0;
   ">
-test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n\t    next: function() {\n\t\t  return {\n\t\t    done: a === 1,\n\t\t    value: a++\n\t\t  };\n\t    }\n\t  };\n};\nvar c;\nfor (c of b) {}\nreturn c === 0;\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n    next: function() {\n      return {\n        done: a === 1,\n        value: a++\n      };\n    }\n  };\n};\nvar c;\nfor (c of b) {}\nreturn c === 0;\n  ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
