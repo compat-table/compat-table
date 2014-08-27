@@ -3017,12 +3017,14 @@ return false;
         <tr>
           <td id="Symbol.hasInstance"><span><a class="anchor" href="#Symbol.hasInstance">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.hasInstance</a></span></td>
 <script data-source="
-var a = 2, b = function(){};
-b[Symbol.hasInstance] = function() { a = 4; return false; };
-({}) instanceof b;
-return a === 4;
+var passed = false;
+var obj = { foo: true };
+var class = function(){};
+class[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+obj instanceof class;
+return passed;
   ">
-test(function(){try{return Function("\nvar a = 2, b = function(){};\nb[Symbol.hasInstance] = function() { a = 4; return false; };\n({}) instanceof b;\nreturn a === 4;\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: true };\nvar class = function(){};\nclass[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };\nobj instanceof class;\nreturn passed;\n  ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -3220,11 +3222,18 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
         <tr>
           <td id="Symbol.toPrimitive"><span><a class="anchor" href="#Symbol.toPrimitive">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toPrimitive</a></span></td>
 <script data-source="
-var a = {};
-a[Symbol.toPrimitive] = function() { return 7; };
-return a == 7;
+var a = {}, b = {}, c = {};
+var passed = 0;
+a[Symbol.toPrimitive] = function(hint) { passed += hint === &quot;number&quot;;  return 0; };
+b[Symbol.toPrimitive] = function(hint) { passed += hint === &quot;string&quot;;  return 0; };
+c[Symbol.toPrimitive] = function(hint) { passed += hint === &quot;default&quot;; return 0; };
+
+a >= 0;
+b in {};
+c == 0;
+return passed === 3;
   ">
-test(function(){try{return Function("\nvar a = {};\na[Symbol.toPrimitive] = function() { return 7; };\nreturn a == 7;\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed = 0;\na[Symbol.toPrimitive] = function(hint) { passed += hint === \"number\";  return 0; };\nb[Symbol.toPrimitive] = function(hint) { passed += hint === \"string\";  return 0; };\nc[Symbol.toPrimitive] = function(hint) { passed += hint === \"default\"; return 0; };\n\na >= 0;\nb in {};\nc == 0;\nreturn passed === 3;\n  ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
