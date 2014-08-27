@@ -213,7 +213,7 @@ function testScript(fn) {
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
       expr = deindentFunc(fn);
-      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
+      return '<script data-source="' + expr.replace(/"/g,'&quot;').replace(/^\s*function ?\(\) ?{|\s*}\s*$/g,'') + '">test(\n' + expr + '())</script>\n';
     }
     else {
       expr = deindentFunc(expr[1]);
