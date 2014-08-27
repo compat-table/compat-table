@@ -1259,20 +1259,11 @@ return typeof Array.prototype.reduceRight == 'function';
           </tr>
           <tr>
             <td id="Getter_in_property_initializer"><span><a class="anchor" href="#Getter_in_property_initializer">&sect;</a>Getter in property initializer</span></td>
-<script data-source="function () {
-try {
-  return eval('({ get x(){ return 1 } }).x === 1');
-} catch (e) {
-  return false;
-}
-  }">test(
-function () {
-try {
-  return eval('({ get x(){ return 1 } }).x === 1');
-} catch (e) {
-  return false;
-}
-  }())</script>
+<script data-source="
+return ({ get x(){ return 1 } }).x === 1;
+  ">
+test(function(){try{return Function("\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")()}catch(e){return false;}}());
+</script>
 
             <td class="no ie7 obsolete">No</td>
             <td class="no ie8 obsolete">No</td>
@@ -1308,24 +1299,13 @@ try {
           </tr>
           <tr>
             <td id="Setter_in_property_initializer"><span><a class="anchor" href="#Setter_in_property_initializer">&sect;</a>Setter in property initializer</span></td>
-<script data-source="function () {
-try {
-  var value;
-  eval('({ set x(v){ value = v; } }).x = 1');
-  return value === 1;
-} catch (e) {
-  return false;
-}
-  }">test(
-function () {
-try {
-  var value;
-  eval('({ set x(v){ value = v; } }).x = 1');
-  return value === 1;
-} catch (e) {
-  return false;
-}
-  }())</script>
+<script data-source="
+var value = 0;
+({ set x(v){ value = v; } }).x = 1;
+return value === 1;
+  ">
+test(function(){try{return Function("\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")()}catch(e){return false;}}());
+</script>
 
             <td class="no ie7 obsolete">No</td>
             <td class="no ie8 obsolete">No</td>
@@ -1405,24 +1385,11 @@ return "foobar"[3] === "b";
           </tr>
           <tr>
             <td id="Reserved_words_as_property_names"><span><a class="anchor" href="#Reserved_words_as_property_names">&sect;</a>Reserved words as property names</span></td>
-<script data-source="function () {
-try {
-  var obj = { };
-  eval('obj = ({ if: 1 })');
-  return obj['if'] === 1;
-} catch (e) {
-  return false;
-}
-  }">test(
-function () {
-try {
-  var obj = { };
-  eval('obj = ({ if: 1 })');
-  return obj['if'] === 1;
-} catch (e) {
-  return false;
-}
-  }())</script>
+<script data-source="
+return ({ if: 1 }).if === 1;
+  ">
+test(function(){try{return Function("\nreturn ({ if: 1 }).if === 1;\n  ")()}catch(e){return false;}}());
+</script>
 
             <td class="no ie7 obsolete">No</td>
             <td class="no ie8 obsolete">No</td>
@@ -1461,16 +1428,12 @@ try {
           </tr>
           <tr>
             <td id="Zero-width_chars_in_identifiers"><span><a class="anchor" href="#Zero-width_chars_in_identifiers">&sect;</a>Zero-width chars in identifiers</span></td>
-<script data-source="function () {
-try {
-  return eval('_\u200c\u200d = true');
-} catch (e) { }
-  }">test(
-function () {
-try {
-  return eval('_\u200c\u200d = true');
-} catch (e) { }
-  }())</script>
+<script data-source="
+var _\u200c\u200d = true;
+return _\u200c\u200d;
+  ">
+test(function(){try{return Function("\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")()}catch(e){return false;}}());
+</script>
 
             <td class="no ie7 obsolete">No</td>
             <td class="no ie8 obsolete">No</td>
@@ -1547,26 +1510,14 @@ return parseInt('010') === 10;
           </tr>
           <tr>
             <td id="Immutable_undefined"><span><a class="anchor" href="#Immutable_undefined">&sect;</a>Immutable undefined</span></td>
-<script data-source="function () {
-var result;
-try {
-  undefined = 12345;
-  result = typeof undefined == 'undefined';
-  undefined = void 0;
-} catch (e) { }
-
+<script data-source="
+undefined = 12345;
+var result = typeof undefined == 'undefined';
+undefined = void 0;
 return result;
-  }">test(
-function () {
-var result;
-try {
-  undefined = 12345;
-  result = typeof undefined == 'undefined';
-  undefined = void 0;
-} catch (e) { }
-
-return result;
-  }())</script>
+  ">
+test(function(){try{return Function("\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")()}catch(e){return false;}}());
+</script>
 
             <td class="no ie7 obsolete">No</td>
             <td class="no ie8 obsolete">No</td>
