@@ -1452,13 +1452,9 @@ exports.tests = [
 },
 {
   name: 'Getter in property initializer',
-  exec: function () {
-    try {
-      return eval('({ get x(){ return 1 } }).x === 1');
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return ({ get x(){ return 1 } }).x === 1;
+  */},
   res: {
     ie7: false,
     ie8: false,
@@ -1501,15 +1497,11 @@ exports.tests = [
 },
 {
   name: 'Setter in property initializer',
-  exec: function () {
-    try {
-      var value;
-      eval('({ set x(v){ value = v; } }).x = 1');
-      return value === 1;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    var value = 0;
+    ({ set x(v){ value = v; } }).x = 1;
+    return value === 1;
+  */},
   res: {
     ie7: false,
     ie8: false,
@@ -1598,15 +1590,9 @@ exports.tests = [
 },
 {
   name: 'Reserved words as property names',
-  exec: function () {
-    try {
-      var obj = { };
-      eval('obj = ({ if: 1 })');
-      return obj['if'] === 1;
-    } catch (e) {
-      return false;
-    }
-  },
+  exec: function () {/*
+    return ({ if: 1 }).if === 1;
+  */},
   res: {
     ie7: false,
     ie8: false,
@@ -1650,11 +1636,10 @@ exports.tests = [
 },
 {
   name: 'Zero-width chars in identifiers',
-  exec: function () {
-    try {
-      return eval('_\u200c\u200d = true');
-    } catch (e) { }
-  },
+  exec: function () {/*
+    var _\u200c\u200d = true;
+    return _\u200c\u200d;
+  */},
   res: {
     ie7: false,
     ie8: false,
@@ -1746,16 +1731,12 @@ exports.tests = [
 },
 {
   name: 'Immutable undefined',
-  exec: function () {
-    var result;
-    try {
-      undefined = 12345;
-      result = typeof undefined == 'undefined';
-      undefined = void 0;
-    } catch (e) { }
-
+  exec: function () {/*
+    undefined = 12345;
+    var result = typeof undefined == 'undefined';
+    undefined = void 0;
     return result;
-  },
+  */},
   res: {
     ie7: false,
     ie8: false,
