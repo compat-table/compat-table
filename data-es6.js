@@ -3334,10 +3334,12 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Symbol.hasInstance',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {/*
-    var a = 2, b = function(){};
-    b[Symbol.hasInstance] = function() { a = 4; return false; };
-    ({}) instanceof b;
-    return a === 4;
+    var passed = false;
+    var obj = { foo: true };
+    var class = function(){};
+    class[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+    obj instanceof class;
+    return passed;
   */},
   res: {
     tr:          false,
@@ -3541,9 +3543,16 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Symbol.toPrimitive',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {/*
-    var a = {};
-    a[Symbol.toPrimitive] = function() { return 7; };
-    return a == 7;
+    var a = {}, b = {}, c = {};
+    var passed = 0;
+    a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
+    b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
+    c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
+    
+    a >= 0;
+    b in {};
+    c == 0;
+    return passed === 3;
   */},
   res: {
     tr:          false,
