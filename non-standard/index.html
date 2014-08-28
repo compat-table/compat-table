@@ -505,16 +505,18 @@ return '__defineSetter__' in {};
           </tr>
           <tr>
             <td id="__lookupGetter__"><span><a class="anchor" href="#__lookupGetter__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__">__lookupGetter__</a></span></td>
-<script data-source="function () {
-var obj = { get foo() { return &quot;bar&quot;; } };
+<script data-source="
+try {
+    var obj = eval('{ get foo() { return &quot;bar&quot;; } }');
+  }
+  catch(e) {
+  obj = {}; obj.__defineGetter__(&quot;foo&quot;, function(){ return &quot;bar&quot;; });
+  }
 var func = obj.__lookupGetter__(&quot;foo&quot;);
 return typeof func === &quot;function&quot; && func() === &quot;bar&quot;;
-  }">test(
-function () {
-var obj = { get foo() { return "bar"; } };
-var func = obj.__lookupGetter__("foo");
-return typeof func === "function" && func() === "bar";
-  }())</script>
+  ">
+test(function(){try{return Function("\ntry {\n\t  var obj = eval('{ get foo() { return \"bar\"; } }');\n\t}\n\tcatch(e) {\n  obj = {}; obj.__defineGetter__(\"foo\", function(){ return \"bar\"; });\n\t}\nvar func = obj.__lookupGetter__(\"foo\");\nreturn typeof func === \"function\" && func() === \"bar\";\n  ")()}catch(e){return false;}}());
+</script>
 
             <td class="no ie7">No</td>
             <td class="yes ie11">Yes</td>

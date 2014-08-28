@@ -497,11 +497,16 @@ exports.tests = [
 {
   name: '__lookupGetter__',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__',
-  exec: function () {
-    var obj = { get foo() { return "bar"; } };
+  exec: function () {/*
+    try {
+      var obj = eval('{ get foo() { return "bar"; } }');
+    }
+    catch(e) {
+      obj = {}; obj.__defineGetter__("foo", function(){ return "bar"; });
+    }
     var func = obj.__lookupGetter__("foo");
     return typeof func === "function" && func() === "bar";
-  },
+  */},
   res: {
     ie7: false,
     ie11: true,
@@ -695,8 +700,8 @@ exports.tests = [
   exec: function () {/*
     var str = '';
     for each (var item in {a: "foo", b: "bar", c: "baz"}) {
-	  str += item;
-	}
+      str += item;
+    }
     return str === "foobarbaz";
   */},
   res: {
@@ -730,7 +735,7 @@ exports.tests = [
   link: 'https://developer.mozilla.org/en/Sharp_variables_in_JavaScript',
   exec: function () {/*
     var arr = #1=[1, #1#, 3]; 
-	return arr[1] === arr;
+    return arr[1] === arr;
   */},
   res: {
     ie7: false,

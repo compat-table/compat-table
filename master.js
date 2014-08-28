@@ -13,25 +13,12 @@ function test(expression) {
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 domready(function() {
-  if (!/#showold$/.test(location.href))
-    document.body.className += ' hide-old-browsers';
-  else
-    document.getElementById('show-old-browsers').checked = true
-  var wrapper = document.getElementById('show-old-browsers-wrapper');
-  if (wrapper) {
-    wrapper.style.display = '';
-    document.getElementById('show-old-browsers').onclick = function() {
-      if (this.checked) {
-        document.body.className = document.body.className.replace('hide-old-browsers', '');
-        location.href = location.href.replace(/#*$/, '#showold')
-      }
-      else {
-        document.body.className += 'hide-old-browsers';
-        location.href = location.href.replace(/(#showold)*$/, '#')
-      }
-    };
+  var showObsolete = document.getElementById('show-obsolete');
+  showObsolete.onclick = function() {
+    this.setAttribute('value',this.getAttribute('value')==="on" ? "off" : "on");
   }
-
+  showObsolete.setAttribute('value', showObsolete.checked);
+  
   var table = document.getElementById('table-wrapper');
   
   var mouseoverTimeout;
@@ -57,6 +44,7 @@ domready(function() {
     rows[i].cells[0].appendChild(infoEl);
 
     infoEl.onmouseover = function(e) {
+      e = e || window.event;
       mouseoverTimeout = null;
       
       var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
@@ -64,10 +52,14 @@ domready(function() {
       
       infoTooltip.innerHTML = scriptEl.getAttribute('data-source')
         // trim sides, and escape <
-        .trim().replace(/</g, '&lt;');
+        .replace(/^\s*|\s*$/g,'').replace(/</g, '&lt;');
       
+      if (!e.pageX) {
+        e.pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+        e.pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+      }
       infoTooltip.style.left = e.pageX + 10 + 'px';
-      infoTooltip.style.top = e.pageY + 'px';
+      infoTooltip.style.top  = e.pageY + 'px';
       infoTooltip.style.display = 'block';
     };
     infoEl.onmouseout = function(e) {
@@ -104,6 +96,8 @@ domready(function() {
   }
 
   document.onclick = function(e) {
+    e = e || window.event;
+    e.target = e.target || e.srcElement;
     if (e.target.className === 'anchor') {
       // <tr><td><span><a>
       highlightSelected(e.target.parentNode.parentNode.parentNode);
@@ -112,8 +106,12 @@ domready(function() {
         e.target.parentNode.className === 'browser-name') {
 
       var target = e.target.className ? e.target : e.target.parentNode;
-      var headerCells = [].slice.call(table.rows[0].cells);
-      var index = headerCells.indexOf(target.parentNode);
+      
+      for(var i=0; i<table.rows[0].cells.length;i++) {
+        if (table.rows[0].cells===target.parentNode) {
+          var index = i;
+        }
+      }
 
       highlightColumn(index);
     }
@@ -142,7 +140,6 @@ domready(function() {
     }
 
     table.className = 'one-selected';
-
     for (var i = 0, len = table.rows.length; i < len; i++) {
       var row = table.rows[i];
       for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
