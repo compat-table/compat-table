@@ -105,15 +105,15 @@ domready(function() {
     else if (e.target.className === 'browser-name' ||
         e.target.parentNode.className === 'browser-name') {
 
-      var target = e.target.className ? e.target : e.target.parentNode;
+      var i, target = e.target.className ? e.target : e.target.parentNode;
       
-      for(var i=0; i<table.rows[0].cells.length;i++) {
-        if (table.rows[0].cells===target.parentNode) {
-          var index = i;
+      for(i=0; i<table.rows[0].cells.length; i++) {
+        if (table.rows[0].cells[i]===target.parentNode) {
+          break;
         }
       }
 
-      highlightColumn(index);
+      highlightColumn(i);
     }
     else {
       location.hash = '';
