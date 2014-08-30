@@ -2002,7 +2002,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Block-level function declaration',
+  name: 'block-level function declaration',
+  note_id: 'block-level-function',
+  note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
@@ -2053,7 +2055,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Hoisted block-level function declaration',
+  name: 'hoisted block-level function declaration',
+  note_id: 'hoisted-block-level-function',
+  note_html: 'Note that the specified semantics is identical to that used by Internet Explorer prior to IE 9.',
   annex_b: true,
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
   exec: function () {/*
