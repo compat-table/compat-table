@@ -441,13 +441,13 @@ exports.tests = [
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   exec: function () {/*
     var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
-    
+
     // explicit undefined will defer to the default
     passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
-    
+
     // defaults can refer to previous parameters
     passed    &= (function (a, b = a) { return b === 5; }(5));
-    
+
     return passed;
   */},
   res: {
@@ -963,7 +963,7 @@ exports.tests = [
   exec: function() {
     var passed = { __proto__ : [] } instanceof Array
       && !({ __proto__ : null } instanceof Object);
-      
+
     // If computed properties are supported, the following
     // check must also be passed.
     var a = "__proto__";
@@ -1127,7 +1127,7 @@ exports.tests = [
         yield 5; yield 6;
       }());
     }());
-    
+
     var item = generator.next();
     var passed = item.value === 5 && item.done === false;
     item = generator.next();
@@ -1616,9 +1616,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function () {/*
     var key = {};
     var map = new Map();
-    
+
     map.set(key, 123);
-    
+
     return map.has(key) && map.get(key) === 123 &&
            map.size === 1;
   */},
@@ -1673,10 +1673,10 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function () {/*
     var obj = {};
     var set = new Set();
-    
+
     set.add(123);
     set.add(123);
-    
+
     return set.has(123) && set.size === 1;
   */},
   res: {
@@ -1726,9 +1726,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function () {/*
     var key1 = {};
     var weakmap = new WeakMap();
-    
+
     weakmap.set(key1, 123);
-    
+
     return weakmap.has(key1) && weakmap.get(key1) === 123;
   */},
   res: {
@@ -1782,10 +1782,10 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function () {/*
     var obj1 = {}, obj2 = {};
     var weakset = new WeakSet();
-    
+
     weakset.add(obj1);
     weakset.add(obj1);
-    
+
     return weakset.has(obj1);
   */},
   res: {
@@ -2114,7 +2114,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     var {c, x:d, h} = {c:7, x:8};
     // Combined destructuring
     var [e, {x:f, i}] = [9, {x:10}];
-    
+
     return a === 5 && b === 6 && c === 7 &&
            d === 8 && e === 9 && f === 10 &&
            g === undefined && h === undefined && i === undefined;
@@ -2286,7 +2286,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     firefox31:   false,
     firefox32:   false,
     firefox33:   false,
-    firefox34:   false,
+    firefox34:   true,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
@@ -3552,7 +3552,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
     b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
     c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
-    
+
     a >= 0;
     b in {};
     c == 0;

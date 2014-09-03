@@ -2059,7 +2059,7 @@ test(function(){try{return Function("\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d]
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
           <td class="no firefox33">No</td>
-          <td class="no firefox34">No</td>
+          <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -5170,7 +5170,7 @@ return typeof Math.cbrt === 'function';
 <script data-source="function () {
 var passed = { __proto__ : [] } instanceof Array
   && !({ __proto__ : null } instanceof Object);
-  
+
 // If computed properties are supported, the following
 // check must also be passed.
 var a = &quot;__proto__&quot;;
@@ -5183,7 +5183,7 @@ return passed;
 function () {
 var passed = { __proto__ : [] } instanceof Array
   && !({ __proto__ : null } instanceof Object);
-  
+
 // If computed properties are supported, the following
 // check must also be passed.
 var a = "__proto__";
