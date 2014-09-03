@@ -4272,10 +4272,12 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
         <tr>
           <td id="Number.isFinite"><span><a class="anchor" href="#Number.isFinite">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number.isFinite</a></span></td>
 <script data-source="function () {
-return typeof Number.isFinite === 'function';
+return typeof Number.isFinite === &quot;function&quot;
+  && Number.isFinite(2) && !Number.isFinite(1/0);
   }">test(
 function () {
-return typeof Number.isFinite === 'function';
+return typeof Number.isFinite === "function"
+  && Number.isFinite(2) && !Number.isFinite(1/0);
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4322,10 +4324,12 @@ return typeof Number.isFinite === 'function';
         <tr>
           <td id="Number.isInteger"><span><a class="anchor" href="#Number.isInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger">Number.isInteger</a></span></td>
 <script data-source="function () {
-return typeof Number.isInteger === 'function';
+return typeof Number.isInteger === 'function'
+  && Number.isInteger(1) && !Number.isInteger(2/3);
   }">test(
 function () {
-return typeof Number.isInteger === 'function';
+return typeof Number.isInteger === 'function'
+  && Number.isInteger(1) && !Number.isInteger(2/3);
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4372,10 +4376,12 @@ return typeof Number.isInteger === 'function';
         <tr>
           <td id="Number.isSafeInteger"><span><a class="anchor" href="#Number.isSafeInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger">Number.isSafeInteger</a></span></td>
 <script data-source="function () {
-return typeof Number.isSafeInteger === 'function';
+return typeof Number.isSafeInteger === 'function'
+  && Number.isSafeInteger(1) && !Number.isSafeInteger(2e16);
   }">test(
 function () {
-return typeof Number.isSafeInteger === 'function';
+return typeof Number.isSafeInteger === 'function'
+  && Number.isSafeInteger(1) && !Number.isSafeInteger(2e16);
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4422,10 +4428,12 @@ return typeof Number.isSafeInteger === 'function';
         <tr>
           <td id="Number.isNaN"><span><a class="anchor" href="#Number.isNaN">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan">Number.isNaN</a></span></td>
 <script data-source="function () {
-return typeof Number.isNaN === 'function';
+return typeof Number.isNaN === 'function'
+  && Number.isNaN(NaN) && !Number.isNaN(&quot;foo&quot;);
   }">test(
 function () {
-return typeof Number.isNaN === 'function';
+return typeof Number.isNaN === 'function'
+  && Number.isNaN(NaN) && !Number.isNaN("foo");
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4472,10 +4480,10 @@ return typeof Number.isNaN === 'function';
         <tr>
           <td id="Number.EPSILON"><span><a class="anchor" href="#Number.EPSILON">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon">Number.EPSILON</a></span></td>
 <script data-source="function () {
-return typeof Number.EPSILON === 'number';
+return Number.EPSILON === 2.2204460492503130808472633361816e-16;
   }">test(
 function () {
-return typeof Number.EPSILON === 'number';
+return Number.EPSILON === 2.2204460492503130808472633361816e-16;
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4522,10 +4530,10 @@ return typeof Number.EPSILON === 'number';
         <tr>
           <td id="Number.MIN_SAFE_INTEGER"><span><a class="anchor" href="#Number.MIN_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer">Number.MIN_SAFE_INTEGER</a></span></td>
 <script data-source="function () {
-return typeof Number.MIN_SAFE_INTEGER === 'number';
+return Number.MIN_SAFE_INTEGER === -9007199254740991;
   }">test(
 function () {
-return typeof Number.MIN_SAFE_INTEGER === 'number';
+return Number.MIN_SAFE_INTEGER === -9007199254740991;
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4572,10 +4580,10 @@ return typeof Number.MIN_SAFE_INTEGER === 'number';
         <tr>
           <td id="Number.MAX_SAFE_INTEGER"><span><a class="anchor" href="#Number.MAX_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer">Number.MAX_SAFE_INTEGER</a></span></td>
 <script data-source="function () {
-return typeof Number.MAX_SAFE_INTEGER === 'number';
+return Number.MAX_SAFE_INTEGER === 9007199254740991;
   }">test(
 function () {
-return typeof Number.MAX_SAFE_INTEGER === 'number';
+return Number.MAX_SAFE_INTEGER === 9007199254740991;
   }())</script>
 
           <td class="yes tr">Yes</td>
@@ -4622,10 +4630,14 @@ return typeof Number.MAX_SAFE_INTEGER === 'number';
         <tr>
           <td id="Math.clz32"><span><a class="anchor" href="#Math.clz32">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32">Math.clz32</a></span></td>
 <script data-source="function () {
-return typeof Math.clz32 === 'function';
+return typeof Math.clz32 === 'function'
+  && Math.clz32(0)     === 32
+  && Math.clz32(2<<30) === 0;
   }">test(
 function () {
-return typeof Math.clz32 === 'function';
+return typeof Math.clz32 === 'function'
+  && Math.clz32(0)     === 32
+  && Math.clz32(2<<30) === 0;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4672,10 +4684,14 @@ return typeof Math.clz32 === 'function';
         <tr>
           <td id="Math.imul"><span><a class="anchor" href="#Math.imul">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul">Math.imul</a></span></td>
 <script data-source="function () {
-return typeof Math.imul === 'function';
+return typeof Math.imul === 'function'
+  && Math.imul(2147483647, 1) ===  2147483647
+  && Math.imul(2147483648, 1) === -2147483648;
   }">test(
 function () {
-return typeof Math.imul === 'function';
+return typeof Math.imul === 'function'
+  && Math.imul(2147483647, 1) ===  2147483647
+  && Math.imul(2147483648, 1) === -2147483648;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4699,7 +4715,7 @@ return typeof Math.imul === 'function';
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chrome-imul-note"><sup>[12]</sup></a></td>
           <td class="yes chrome30 obsolete">Yes</td>
           <td class="yes chrome33 obsolete">Yes</td>
           <td class="yes chrome34 obsolete">Yes</td>
@@ -4722,10 +4738,16 @@ return typeof Math.imul === 'function';
         <tr>
           <td id="Math.sign"><span><a class="anchor" href="#Math.sign">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign">Math.sign</a></span></td>
 <script data-source="function () {
-return typeof Math.sign === 'function';
+return typeof Math.sign === 'function'
+  && Math.sign(25)  ===  1
+  && Math.sign(-7)  === -1
+  && Math.sign( 0)  ===  0;
   }">test(
 function () {
-return typeof Math.sign === 'function';
+return typeof Math.sign === 'function'
+  && Math.sign(25)  ===  1
+  && Math.sign(-7)  === -1
+  && Math.sign( 0)  ===  0;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4772,10 +4794,12 @@ return typeof Math.sign === 'function';
         <tr>
           <td id="Math.log10"><span><a class="anchor" href="#Math.log10">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10">Math.log10</a></span></td>
 <script data-source="function () {
-return typeof Math.log10 === 'function';
+return typeof Math.log10 === 'function'
+  && Math.log10(Math.pow(10,123)) === 123;
   }">test(
 function () {
-return typeof Math.log10 === 'function';
+return typeof Math.log10 === 'function'
+  && Math.log10(Math.pow(10,123)) === 123;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4822,10 +4846,12 @@ return typeof Math.log10 === 'function';
         <tr>
           <td id="Math.log2"><span><a class="anchor" href="#Math.log2">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2">Math.log2</a></span></td>
 <script data-source="function () {
-return typeof Math.log2 === 'function';
+return typeof Math.log2 === 'function'
+  && Math.log2(1 << 9) === 9;
   }">test(
 function () {
-return typeof Math.log2 === 'function';
+return typeof Math.log2 === 'function'
+  && Math.log2(1 << 9) === 9;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4872,10 +4898,12 @@ return typeof Math.log2 === 'function';
         <tr>
           <td id="Math.log1p"><span><a class="anchor" href="#Math.log1p">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p">Math.log1p</a></span></td>
 <script data-source="function () {
-return typeof Math.log1p === 'function';
+return typeof Math.log1p === 'function'
+  && Math.log1p(Math.E - 1) === 1;
   }">test(
 function () {
-return typeof Math.log1p === 'function';
+return typeof Math.log1p === 'function'
+  && Math.log1p(Math.E - 1) === 1;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4922,10 +4950,12 @@ return typeof Math.log1p === 'function';
         <tr>
           <td id="Math.expm1"><span><a class="anchor" href="#Math.expm1">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1">Math.expm1</a></span></td>
 <script data-source="function () {
-return typeof Math.expm1 === 'function';
+return typeof Math.expm1 === 'function'
+ && Math.expm1(3) === Math.exp(3) - 1;
   }">test(
 function () {
-return typeof Math.expm1 === 'function';
+return typeof Math.expm1 === 'function'
+ && Math.expm1(3) === Math.exp(3) - 1;
   }())</script>
 
           <td class="no tr">No</td>
@@ -4972,10 +5002,12 @@ return typeof Math.expm1 === 'function';
         <tr>
           <td id="Math.cosh"><span><a class="anchor" href="#Math.cosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh">Math.cosh</a></span></td>
 <script data-source="function () {
-return typeof Math.cosh === 'function';
+return typeof Math.cosh === 'function'
+  && Math.cosh(12) === (Math.exp(12) + Math.exp(-12)) / 2;
   }">test(
 function () {
-return typeof Math.cosh === 'function';
+return typeof Math.cosh === 'function'
+  && Math.cosh(12) === (Math.exp(12) + Math.exp(-12)) / 2;
   }())</script>
 
           <td class="no tr">No</td>
@@ -5022,10 +5054,12 @@ return typeof Math.cosh === 'function';
         <tr>
           <td id="Math.sinh"><span><a class="anchor" href="#Math.sinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh">Math.sinh</a></span></td>
 <script data-source="function () {
-return typeof Math.sinh === 'function';
+return typeof Math.sinh === 'function'
+  && Math.sinh(45) === (Math.exp(45) - Math.exp(-45)) / 2;
   }">test(
 function () {
-return typeof Math.sinh === 'function';
+return typeof Math.sinh === 'function'
+  && Math.sinh(45) === (Math.exp(45) - Math.exp(-45)) / 2;
   }())</script>
 
           <td class="no tr">No</td>
@@ -5072,10 +5106,14 @@ return typeof Math.sinh === 'function';
         <tr>
           <td id="Math.tanh"><span><a class="anchor" href="#Math.tanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.tanh</a></span></td>
 <script data-source="function () {
-return typeof Math.tanh === 'function';
+return typeof Math.tanh === 'function'
+  && Math.tanh(29) === (Math.exp(29) - Math.exp(-29)) /
+                       (Math.exp(29) + Math.exp(-29));
   }">test(
 function () {
-return typeof Math.tanh === 'function';
+return typeof Math.tanh === 'function'
+  && Math.tanh(29) === (Math.exp(29) - Math.exp(-29)) /
+                       (Math.exp(29) + Math.exp(-29));
   }())</script>
 
           <td class="no tr">No</td>
@@ -5122,10 +5160,12 @@ return typeof Math.tanh === 'function';
         <tr>
           <td id="Math.acosh"><span><a class="anchor" href="#Math.acosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh">Math.acosh</a></span></td>
 <script data-source="function () {
-return typeof Math.acosh === 'function';
+return typeof Math.acosh === 'function'
+  && Math.acosh(51) === Math.log(51 + Math.sqrt(51*51 - 1));
   }">test(
 function () {
-return typeof Math.acosh === 'function';
+return typeof Math.acosh === 'function'
+  && Math.acosh(51) === Math.log(51 + Math.sqrt(51*51 - 1));
   }())</script>
 
           <td class="no tr">No</td>
@@ -5172,10 +5212,12 @@ return typeof Math.acosh === 'function';
         <tr>
           <td id="Math.asinh"><span><a class="anchor" href="#Math.asinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh">Math.asinh</a></span></td>
 <script data-source="function () {
-return typeof Math.asinh === 'function';
+return typeof Math.asinh === 'function'
+  && Math.asinh(17) === Math.log(17 + Math.sqrt(17*17 + 1));
   }">test(
 function () {
-return typeof Math.asinh === 'function';
+return typeof Math.asinh === 'function'
+  && Math.asinh(17) === Math.log(17 + Math.sqrt(17*17 + 1));
   }())</script>
 
           <td class="no tr">No</td>
@@ -5222,10 +5264,12 @@ return typeof Math.asinh === 'function';
         <tr>
           <td id="Math.atanh"><span><a class="anchor" href="#Math.atanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.atanh</a></span></td>
 <script data-source="function () {
-return typeof Math.atanh === 'function';
+return typeof Math.atanh === 'function'
+  && Math.atanh(0.7) === Math.log((1 + 0.7) / (1 - 0.7)) / 2;
   }">test(
 function () {
-return typeof Math.atanh === 'function';
+return typeof Math.atanh === 'function'
+  && Math.atanh(0.7) === Math.log((1 + 0.7) / (1 - 0.7)) / 2;
   }())</script>
 
           <td class="no tr">No</td>
@@ -5272,10 +5316,12 @@ return typeof Math.atanh === 'function';
         <tr>
           <td id="Math.hypot"><span><a class="anchor" href="#Math.hypot">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot">Math.hypot</a></span></td>
 <script data-source="function () {
-return typeof Math.hypot === 'function';
+return typeof Math.hypot === 'function'
+  && Math.hypot(6,7,8) === Math.sqrt(6*6 + 7*7 + 8*8);
   }">test(
 function () {
-return typeof Math.hypot === 'function';
+return typeof Math.hypot === 'function'
+  && Math.hypot(6,7,8) === Math.sqrt(6*6 + 7*7 + 8*8);
   }())</script>
 
           <td class="no tr">No</td>
@@ -5322,10 +5368,14 @@ return typeof Math.hypot === 'function';
         <tr>
           <td id="Math.trunc"><span><a class="anchor" href="#Math.trunc">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc">Math.trunc</a></span></td>
 <script data-source="function () {
-return typeof Math.trunc === 'function';
+return typeof Math.trunc === 'function'
+  && Math.trunc( 61.9) ===  61
+  && Math.trunc(-61.9) === -61;
   }">test(
 function () {
-return typeof Math.trunc === 'function';
+return typeof Math.trunc === 'function'
+  && Math.trunc( 61.9) ===  61
+  && Math.trunc(-61.9) === -61;
   }())</script>
 
           <td class="no tr">No</td>
@@ -5372,10 +5422,12 @@ return typeof Math.trunc === 'function';
         <tr>
           <td id="Math.fround"><span><a class="anchor" href="#Math.fround">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround">Math.fround</a></span></td>
 <script data-source="function () {
-return typeof Math.fround === 'function';
+return typeof Math.fround === 'function'
+  && Math.fround(0.1) === 0.10000000149011612;
   }">test(
 function () {
-return typeof Math.fround === 'function';
+return typeof Math.fround === 'function'
+  && Math.fround(0.1) === 0.10000000149011612;
   }())</script>
 
           <td class="no tr">No</td>
@@ -5422,10 +5474,14 @@ return typeof Math.fround === 'function';
         <tr>
           <td id="Math.cbrt"><span><a class="anchor" href="#Math.cbrt">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt">Math.cbrt</a></span></td>
 <script data-source="function () {
-return typeof Math.cbrt === 'function';
+return typeof Math.cbrt === 'function'
+  && Math.cbrt( 71) ===  Math.pow(71, 1/3)
+  && Math.cbrt(-44) === -Math.pow(44, 1/3);
   }">test(
 function () {
-return typeof Math.cbrt === 'function';
+return typeof Math.cbrt === 'function'
+  && Math.cbrt( 71) ===  Math.pow(71, 1/3)
+  && Math.cbrt(-44) === -Math.pow(44, 1/3);
   }())</script>
 
           <td class="no tr">No</td>
@@ -5811,7 +5867,7 @@ return typeof RegExp.prototype.compile === 'function';
       <p id="fx-array-prototype-values-2-note">
         <sup>[11]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
-      <p id="chromu-imul-note">
+      <p id="chrome-imul-note">
         <sup>[12]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
