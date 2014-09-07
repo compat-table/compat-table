@@ -33,6 +33,7 @@ process.nextTick(function () {
 
 function handle(options) {
   var skeleton = fs.readFileSync(__dirname + '/' + options.skeleton_file, 'utf-8');
+  interpolateResults(options.browsers, options.tests);
   var html = dataToHtml(options.browsers, options.tests);
 
   var result = replaceAndIndent(skeleton, [
@@ -51,6 +52,28 @@ function handle(options) {
   } else {
     fs.writeFileSync(target_file, result);
     console.log('[' + options.name + '] Write to file ' + options.target_file);
+  }
+}
+
+function interpolateResults(browsers, tests) {
+  var browser, prev, res, prevRes, bid, prevBid, j;
+  // For each browser, check if the previous browser has the same
+  // browser full name as this one.
+  for (var bid in browsers) {
+    browser = browsers[bid];
+	if (prev && prev.full === browser.full) {
+	  // For each test, check if the previous browser has a result
+	  // that this browser lacks. 
+	  for (j = 0; j < tests.length; j++) {
+        res     = tests[j].res[bid];
+		prevRes = tests[j].res[prevBid];
+		if (prevRes !== undefined && res === undefined) {
+		  tests[j].res[bid] = prevRes;
+		}
+	  }
+	}
+	prev = browser;
+	prevBid = bid;
   }
 }
 
