@@ -3340,9 +3340,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function() {/*
     var passed = false;
     var obj = { foo: true };
-    var class = function(){};
-    class[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
-    obj instanceof class;
+    var C = function(){};
+    C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+    obj instanceof C;
     return passed;
   */},
   res: {
