@@ -105,15 +105,15 @@ domready(function() {
     else if (e.target.className === 'browser-name' ||
         e.target.parentNode.className === 'browser-name') {
 
-      var target = e.target.className ? e.target : e.target.parentNode;
+      var i, target = e.target.className ? e.target : e.target.parentNode;
       
-      for(var i=0; i<table.rows[0].cells.length;i++) {
-        if (table.rows[0].cells===target.parentNode) {
-          var index = i;
+      for(i=0; i<table.rows[0].cells.length; i++) {
+        if (table.rows[0].cells[i]===target.parentNode) {
+          break;
         }
       }
 
-      highlightColumn(index);
+      highlightColumn(i);
     }
     else {
       location.hash = '';
@@ -155,23 +155,17 @@ domready(function() {
     for (var i = 0, len = table.rows.length; i < len; i++) {
       var row = table.rows[i];
       for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
-        row.cells[j].onmouseover = (function(i, j) {
+        row.cells[j].onmouseover = (function(i, j, jlen) {
           return function() {
-
-            if (!row.cells[j]) return;
-
-            if (row.cells[j].className.indexOf('yes') > -1 || row.cells[j].className.indexOf('no') > -1) {
-
-              for (var k = 0; k < len; k++) {
-                for (var l = 0; l < jlen; l++) {
-                  rows[k].cells[l] && (rows[k].cells[l].className = rows[k].cells[l].className.replace(' hover', ''));
-                }
-                rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
+            for (var k = 0; k < len; k++) {
+              for (var l = 0; l < jlen; l++) {
+                var c = table.rows[k].cells[l];
+                c && (c.className = c.className.replace(' hover', ''));
               }
-
+              table.rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
             }
           };
-        })(i, j);
+        })(i, j, jlen);
       }
     }
   }

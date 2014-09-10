@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>ECMAScript extensions compatibility table</title>
-
-    <link rel="stylesheet" href="../master.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../master.css" type="text/css">
     <script src="../ready.js"></script>
     <script src="../master.js"></script>
 
@@ -52,10 +51,10 @@
     </div>
     <div id="body">
       <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
-        not functionality or full conformance. I hope to test conformance sometime in the future.</p>
+        not functionality or full conformance.</p>
 
       <label for="show-obsolete">Show obsolete browsers?</label>
-      <input id="show-obsolete" type="checkbox" checked>
+      <input id="show-obsolete" type="checkbox">
 
       <table id="table-wrapper">
         <colgroup>
@@ -64,7 +63,7 @@
         </colgroup>
         <thead>
           <tr>
-            <th class="test-name"></th>
+            <th class="test-name">Feature name</th>
 
             <script>
               document.write('<th class="current" title="' + navigator.userAgent + '">Current browser</th><th></th>');
@@ -81,5 +80,6 @@
     <div id="footnotes">
       <!-- FOOTNOTES -->
     </div>
+    <pre class="info-tooltip" style="display:none"></pre>
   </body>
 </html>
