@@ -269,7 +269,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       .append($('<td></td>')
         .attr('id',id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
-        .append(testScript(t.exec, compiler))
+        .append(testScript(t.exec, compiler, id))
       );
     body.append(testRow);
     
@@ -315,7 +315,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
           .append(
             $('<td></td>')
               .append('<span>' + subtestName + '</span>')
-              .append(testScript(subtest.exec, compiler))
+              .append(testScript(subtest.exec, compiler, id))
           );
         body.append(subtestRow);
         
@@ -401,7 +401,7 @@ function replaceAndIndent(str, replacements) {
   return str;
 }
 
-function testScript(fn, transformFn) {
+function testScript(fn, transformFn, id) {
   
   function deindentFunc(fn) {
     fn = (fn+'');
@@ -447,10 +447,16 @@ function testScript(fn, transformFn) {
           expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
+      var async = !!/asyncTestPassed/.exec(fn);
+      var codeString = JSON.stringify(expr).replace(/\\r/g,'');
+      var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + id.replace(/"/g,'\\"') + '")';
+      var funcString =
+        transformed ? '' + asyncFn + ' && eval(' + codeString + ')'
+        : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
+      
       return cheerio.load()('<script>' +
-      'test(function(){try{return ' +
-      (transformed ? 'eval(' : 'Function(') +
-      JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}()' + 
+        'test(function(){try{var asyncTestPassed=' + asyncFn + ';return ' +
+        funcString + '}catch(e){return false;}}()' + 
       ');\n</script>').attr('data-source', expr);
     }
   } else {
