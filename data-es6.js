@@ -2966,21 +2966,39 @@ exports.tests = [
     },
   },
 },
+
 {
   name: 'Promise',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
-  exec: function () {/*
-    return typeof Promise !== 'undefined' &&
-           typeof Promise.all === 'function';
+  exec: function (passTest) {/*
+    var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
+    var p2 = new Promise(function(resolve, reject) { reject("quux"); });
+    var score = 0;
+    
+    function thenFn(result)  { score += (result === "foo");  check(); }
+    function catchFn(result) { score += (result === "quux"); check(); }
+    function shouldNotRun(result)  { score = -Infinity;   }
+    
+    p1.then(thenFn, shouldNotRun);
+    p2.then(shouldNotRun, catchFn);
+    p1.catch(shouldNotRun);
+    p2.catch(catchFn);
+    
+    p1.then(function() {
+      // Promise.prototype.then() should return a new Promise
+      score += p1.then() !== p1;
+      check();
+    });
+    
+    function check() {
+      if (score === 4) asyncTestPassed();
+    }
   */},
   res: {
     tr:          true,
-    _6to5:       true,
     ejs:         true,
-    closure:     false,
     ie10:        false,
     ie11:        false,
-    ie11tp:      true,
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
@@ -3009,7 +3027,6 @@ exports.tests = [
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    safari71_8:  true,
     webkit:      true,
     opera:       false,
     konq49:      false,
