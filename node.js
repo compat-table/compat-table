@@ -21,7 +21,7 @@ $('#body tbody tr').each(function () {
     , test = function test (expression) {
       results[id] = results[id] || expression
     }
-	, asyncTestPassed = function passTest (id) {
+	, asyncTestPassed = function asyncTestPassed () {
 	  results[id] = true
     }
   
@@ -34,8 +34,8 @@ $('#body tbody tr').each(function () {
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {
     scr = scripts[i].children[0].data.trim()
+      .replace(/global\.__asyncPassedFn && __asyncPassedFn\(".*?"\)/g, "asyncTestPassed")
     eval(scr)
-	console.log(id, results[id])
   }
 })
 
