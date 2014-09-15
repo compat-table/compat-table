@@ -13,18 +13,16 @@ var fs = require('fs')
 
 global.__script_executed = {};
 
-$('#body tbody tr').each(function () {
+$('#body tbody tr').each(function (index) {
   if (this.find('.separator')[0])
     return
   var scripts = this.find('script')
-    , result = null
-	, id = this.find('td').attr('id')
     , i = 0, scr
     , test = function test (expression) {
-      results[id] = results[id] || expression
+      results[index] = results[index] || expression
     }
-	, asyncTestPassed = function passTest (id) {
-	  results[id] = true
+	, asyncPassed = function asyncPassed () {
+	  results[index] = true
     }
     , __createIterableObject = function(a, b, c) {
       if (typeof Symbol === "function" && Symbol.iterator) {
@@ -42,33 +40,27 @@ $('#body tbody tr').each(function () {
       }
     }
   
-  desc[id] = (function (el) {
-    while (el && !el.data)
-      el = el.children[0]
-    return (el && el.data) || 'ERROR!'
-  }(this.find('td>span')[0].children[1]))
+  results[index] = null
+  
+  desc[index] = this.find('td>span:first-child').text()
 
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {
     scr = scripts[i].children[0].data.trim()
+      .replace(/global\.__asyncPassedFn && __asyncPassedFn\(".*?"\)/g, "asyncPassed")
     eval(scr)
-  }
-  if (result === null) {
-    console.log('\u25BC\t' + desc.replace('§',''))
-  }
-  else {
-    console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (desc[0]!== '§' ? '\t' + desc : desc.slice(1)) + '\t'))
   }
 })
 
 setTimeout(function(){
   Object.keys(results).forEach(function(test) {
-    var result = results[test];
+    var result = results[test]
+    var name = desc[test]
     if (result === null) {
-      console.log('\u25BC\t' + desc.replace('§',''))
+      console.log('\u25BC\t' + name.replace('§',''))
     }
     else {
-      console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (desc[0]!== '§' ? '\t' + desc : desc.slice(1)) + '\t'))
+      console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (name[0]!== '§' ? '\t' + name : name.slice(1)) + '\t'))
     }
   })
 },500)
