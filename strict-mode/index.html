@@ -1,10 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <title>Strict mode support test — Strict mode support</title>
-    <style type="text/css">
+    <style>
       body { font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif; margin: 0; }
       #header { background: #454545; margin-bottom: 1em; }
       #header a { color: #eee; text-decoration: none; }
@@ -20,56 +19,56 @@
     </style>
   </head>
   <body>
-    <div id="header"> 
-      <h1> 
-        <a href="http://kangax.github.com/es5-compat-table/"><span title="ECMA-262 5th edition">ECMAScript 5</span> compatibility table</a> —
+    <div id="header">
+      <h1>
+        <a href="https://kangax.github.io/es5-compat-table/"><span title="ECMA-262 5th edition">ECMAScript 5</span> compatibility table</a> —
         <span style="color:#afa;font-weight:normal;">Strict mode support</span>
-        <span style="font-size:0.8em;float:right;font-weight:normal;">by 
-          <a href="http://twitter.com/kangax/" style="color:#eee">kangax</a> 
-        </span> 
-      </h1> 
+        <span style="font-size:0.8em;float:right;font-weight:normal;">by
+          <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
+        </span>
+      </h1>
     </div>
     <p class="back-to-the-table-header">
-      <a href="http://kangax.github.com/es5-compat-table/">
+      <a href="https://kangax.github.io/es5-compat-table/">
         &larr; Back to the main table
       </a>
     </p>
-    <script type="text/javascript">
+    <script>
       // enable strict globally
-      
+
       "use strict";
-      
+
       var __global = this;
-      
+
       function print(message) {
         var el = document.createElement('p');
         el.innerHTML = message;
         document.body.appendChild(el);
       }
-      
+
       function colorResult(result) {
         return '<span class="' + (result === true ? "pass" : "fail") + '">' + (result === true ? 'Yes' : 'No') + '<\/span>';
       }
-      
+
       (function(){
         var result = (function(){ try { eval('"\\010"'); return false; } catch(err) { return err instanceof SyntaxError; } })();
         print('<span class="test"><code>eval(\'"\\010"\')<\/code> is a SyntaxError<\/span>' + colorResult(result));
       })();
-      
+
       (function(){
         var result = (function(){ try { eval('010'); return false; } catch(err) { return err instanceof SyntaxError; } })();
         print('<span class="test"><code>eval(\'010\')<\/code> is a SyntaxError<\/span>' + colorResult(result));
       })();
-      
+
       (function(){
         var error;
         try {
           eval('__i_dont_exist = 1');
-        } 
+        }
         catch (err) { error = err; }
         print('<span class="test"><code>__i_dont_exist = 1;<\/code> is a ReferenceError<\/span>' + colorResult(error instanceof ReferenceError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -78,7 +77,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>eval = 1;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -87,7 +86,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>arguments = 1;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -96,7 +95,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>eval++;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -105,7 +104,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>arguments++;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -114,7 +113,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>arguments.caller;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -123,7 +122,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>arguments.callee;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var result = (function(x){
           x = 2;
@@ -131,7 +130,7 @@
         })(1);
         print('<span class="test"><code>(function(x){ x = 2; return arguments[0] === 1; })(1);<\/code><\/span>' + colorResult(result));
       })();
-      
+
       (function(){
         var result = (function(x){
           arguments[0] = 2;
@@ -139,7 +138,7 @@
         })(1);
         print('<span class="test"><code>(function(x){ arguments[0] = 2; return x === 1; })(1);<\/code><\/span>' + colorResult(result));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -148,7 +147,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>({ x: 1, x: 1 });<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error1, error2;
         try {
@@ -157,12 +156,12 @@
         catch (err) { error1 = err; }
         try {
           eval('({ set x(y){ } })');
-        } 
+        }
         catch(err) { error2 = err; }
-        print('<span class="test"><code>({ set x(eval){ } });<\/code> is a SyntaxError<\/span>' + 
+        print('<span class="test"><code>({ set x(eval){ } });<\/code> is a SyntaxError<\/span>' +
           colorResult(error1 instanceof SyntaxError && error2 === undefined));
       })();
-      
+
       (function(){
         var error1, error2;
         try {
@@ -173,10 +172,10 @@
           eval('({ set x(y){ } })');
         }
         catch(err) { error2 = err; }
-        print('<span class="test"><code>({ set x(arguments){ } });<\/code> is a SyntaxError<\/span>' + 
+        print('<span class="test"><code>({ set x(arguments){ } });<\/code> is a SyntaxError<\/span>' +
           colorResult(error1 instanceof SyntaxError && error2 === undefined));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -186,17 +185,17 @@
         catch (err) { error = err; }
         print('<span class="test"><code>eval(\'var x\'); x;<\/code> is a ReferenceError<\/span>' + colorResult(error instanceof ReferenceError));
       })();
-      
+
       (function(){
         var result = (function(){ return this === undefined; })();
         print('<span class="test"><code>(function(){ return this === undefined; })();<\/code><\/span>' + colorResult(result));
       })();
-      
+
       (function(){
         var result = (function(){ return this === undefined; }).call();
         print('<span class="test"><code>(function(){ return this === undefined; }).call();<\/code><\/span>' + colorResult(result));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -205,7 +204,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>var x; delete x;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -214,7 +213,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>delete (function(){}).length;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -223,7 +222,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>(function f() { f = 123; })()<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -235,7 +234,7 @@
         print('<span class="test"><code>Object.defineProperty({ }, "x", { writable: false }).x = 1<\/code> is a TypeError<\/span>' +
           colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -245,7 +244,7 @@
         print('<span class="test"><code>({ get x(){ } }).x = 1;<\/code> is a TypeError<\/span>' +
           colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -254,7 +253,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>var eval;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -263,7 +262,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>var arguments;<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -272,7 +271,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>with({}){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -281,7 +280,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>try { } catch (eval) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -290,7 +289,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>try { } catch (arguments) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -299,7 +298,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>function f(eval) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -308,7 +307,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>function f(arguments) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -317,7 +316,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>function f(x, x) { }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -326,7 +325,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>(function(){}).caller;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -335,7 +334,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>(function(){}).arguments;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -344,7 +343,7 @@
         catch (err) { error = err; }
         print('<span class="test"><code>function eval(){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         var error;
         try {
@@ -353,9 +352,9 @@
         catch (err) { error = err; }
         print('<span class="test"><code>function arguments(){ }<\/code> is a SyntaxError<\/span>' + colorResult(error instanceof SyntaxError));
       })();
-      
+
       print('<br><strong>NON-STANDARD</strong> (i.e. not part of ECMA-262 standard)<br><br>');
-      
+
       (function(){
         var error;
         try {
@@ -369,7 +368,7 @@
           '[as per <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">ES5 Implementation Best Practice</a>]<\/span>' +
           colorResult(error instanceof SyntaxError));
       })();
-      
+
       (function(){
         setTimeout('"use strict"; try { (function(){ arguments.callee; })() } catch(err) { __global.__setTimeoutError = err; }', 10);
         setTimeout(function() {
@@ -378,10 +377,10 @@
             colorResult(__global.__setTimeoutError instanceof TypeError));
         }, 50);
       })();
-      
+
       (function(){
         var formEl = document.createElement('form');
-        formEl.setAttribute('onreset', 
+        formEl.setAttribute('onreset',
           '"use strict"; try { eval(\'with({}){}\') } catch(err) { __global.__eventHandlerError = err; }');
         document.body.appendChild(formEl);
         try {
@@ -390,7 +389,7 @@
         catch(err) { }
         document.body.removeChild(formEl);
         print('<span class="test non-standard">Event handler follows strict mode rules when its body starts with ' +
-              'use strict directive (e.g.: <code>&lt;p onclick="\'use strict\'; &hellip;">&hellip;&lt;\/p></code>)<\/span>' + 
+              'use strict directive (e.g.: <code>&lt;p onclick="\'use strict\'; &hellip;">&hellip;&lt;\/p></code>)<\/span>' +
               colorResult(__global.__eventHandlerError instanceof SyntaxError));
       })();
     </script>
