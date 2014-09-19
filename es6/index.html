@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ECMAScript compatibility table</title>
+    <title>ECMAScript 6 compatibility table</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
     <script src="../ready.js"></script>
@@ -107,6 +107,8 @@
           <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
           <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
           <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.13 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
+          <th class="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari 7">iOS7</abbr></th>
+          <th class="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari 8">iOS8</abbr></th>
         </tr>
       </thead>
       <tbody>
@@ -161,6 +163,8 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">arrow functions</a></span></td>
@@ -218,6 +222,8 @@ return true;
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:const">const</a></span></td>
@@ -273,6 +279,8 @@ try {
           <td class="yes phantom">Yes</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="let"><span><a class="anchor" href="#let">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:let">let</a></span></td>
@@ -346,6 +354,8 @@ test((function () {
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
@@ -400,6 +410,8 @@ test(function(){try{return Function("\nvar passed = (function (a = 1, b = 2) { r
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
@@ -446,6 +458,8 @@ test(function(){try{return Function("\nreturn (function (...args) { return typeo
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="spread_call_(...)_operator"><span><a class="anchor" href="#spread_call_(...)_operator">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation">spread call (...) operator</a></span></td>
@@ -492,6 +506,8 @@ test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n  ")
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="spread_array_(...)_operator"><span><a class="anchor" href="#spread_array_(...)_operator">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal">spread array (...) operator</a></span></td>
@@ -538,6 +554,8 @@ test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n  ")()}c
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="string_spreading"><span><a class="anchor" href="#string_spreading">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal">string spreading</a></span></td>
@@ -584,6 +602,8 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
@@ -635,6 +655,8 @@ test(function(){try{return Function("\nclass C extends Array {\n  constructor() 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="super"><span><a class="anchor" href="#super">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword">super</a></span></td>
@@ -706,6 +728,8 @@ test(function(){try{return Function("\nvar passed = true;\nvar B = class extends
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="computed_properties"><span><a class="anchor" href="#computed_properties">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">computed properties</a></span></td>
@@ -753,6 +777,8 @@ test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="shorthand_properties"><span><a class="anchor" href="#shorthand_properties">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">shorthand properties</a></span></td>
@@ -800,6 +826,8 @@ test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="shorthand_methods"><span><a class="anchor" href="#shorthand_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">shorthand methods</a></span></td>
@@ -846,6 +874,8 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="modules"><span><a class="anchor" href="#modules">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-modules">modules</a></span></td>
@@ -893,6 +923,8 @@ test(function(){try{return Function("\nexport var foo = 1;\nreturn true;\n  ")()
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="for..of_loops"><span><a class="anchor" href="#for..of_loops">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements">for..of loops</a></span></td>
@@ -941,6 +973,8 @@ test(function(){try{return Function("\nvar arr = [5];\nfor (var item of arr)\n  
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="generators_(yield)"><span><a class="anchor" href="#generators_(yield)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions">generators (yield)</a></span></td>
@@ -999,6 +1033,8 @@ test(function(){try{return Function("\nvar generator = (function* () {\n  yield*
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="octal_literals"><span><a class="anchor" href="#octal_literals">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals">octal literals</a></span></td>
@@ -1045,6 +1081,8 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n  ")()}
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="binary_literals"><span><a class="anchor" href="#binary_literals">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals">binary literals</a></span></td>
@@ -1091,6 +1129,8 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="template_strings"><span><a class="anchor" href="#template_strings">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">template strings</a></span></td>
@@ -1139,6 +1179,8 @@ test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="tagged_template_strings"><span><a class="anchor" href="#tagged_template_strings">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">tagged template strings</a></span></td>
@@ -1196,6 +1238,8 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="RegExp_y_flag"><span><a class="anchor" href="#RegExp_y_flag">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky">RegExp "y" flag</a></span></td>
@@ -1246,6 +1290,8 @@ test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="RegExp_u_flag"><span><a class="anchor" href="#RegExp_u_flag">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.unicode">RegExp "u" flag</a></span></td>
@@ -1292,6 +1338,8 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="typed_arrays"><span><a class="anchor" href="#typed_arrays">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects">typed arrays</a></span></td>
@@ -1362,6 +1410,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar pa
           <td class="yes phantom">Yes</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="typed_arrays_(DataView)"><span><a class="anchor" href="#typed_arrays_(DataView)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-dataview-objects">typed arrays (DataView)</a></span></td>
@@ -1420,6 +1470,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes phantom">Yes</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Map"><span><a class="anchor" href="#Map">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects">Map</a></span></td>
@@ -1472,6 +1524,8 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -1524,6 +1578,8 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -1575,6 +1631,8 @@ test(function(){try{return Function("\nvar key1 = {};\nvar weakmap = new WeakMap
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -1627,6 +1685,8 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Proxy"><span><a class="anchor" href="#Proxy">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies">Proxy</a></span></td>
@@ -1684,6 +1744,8 @@ return false;
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Reflect"><span><a class="anchor" href="#Reflect">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
@@ -1755,6 +1817,8 @@ return true;
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Reflect.Loader"><span><a class="anchor" href="#Reflect.Loader">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-loader-objects">Reflect.Loader</a></span></td>
@@ -1830,6 +1894,8 @@ return true;
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[8]</sup></a></span></td>
@@ -1880,6 +1946,8 @@ test(function(){try{return Function("\n'use strict';\n{\n  function f(){}\n}\nre
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
@@ -1935,6 +2003,8 @@ test(function(){try{return Function("\n// Array destructuring\nvar [a, , [b], g]
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="destructuring_parameters"><span><a class="anchor" href="#destructuring_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring parameters</a></span></td>
@@ -1983,6 +2053,8 @@ test(function(){try{return Function("\nreturn (function({a, x:b}, [c, d]) {\n  r
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="destructuring_defaults"><span><a class="anchor" href="#destructuring_defaults">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring defaults</a></span></td>
@@ -2030,6 +2102,8 @@ test(function(){try{return Function("\nvar {a = 1, b = 1, c = 3} = {b:2, c:undef
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="destructuring_rest"><span><a class="anchor" href="#destructuring_rest">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring rest</a></span></td>
@@ -2079,6 +2153,8 @@ test(function(){try{return Function("\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d]
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
@@ -2128,6 +2204,8 @@ return typeof Promise !== 'undefined' &&
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Object.assign"><span><a class="anchor" href="#Object.assign">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign">Object.assign</a></span></td>
@@ -2175,6 +2253,8 @@ return typeof Object.assign === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Object.is"><span><a class="anchor" href="#Object.is">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.is">Object.is</a></span></td>
@@ -2222,6 +2302,8 @@ return typeof Object.is === 'function';
           <td class="no phantom">No</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Object.getOwnPropertySymbols"><span><a class="anchor" href="#Object.getOwnPropertySymbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.getownpropertysymbols">Object.getOwnPropertySymbols</a></span></td>
@@ -2269,6 +2351,8 @@ return typeof Object.getOwnPropertySymbols === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Object.setPrototypeOf"><span><a class="anchor" href="#Object.setPrototypeOf">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof">Object.setPrototypeOf</a></span></td>
@@ -2316,6 +2400,8 @@ return typeof Object.setPrototypeOf === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="function_name_property"><span><a class="anchor" href="#function_name_property">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function "name" property</a></span></td>
@@ -2363,6 +2449,8 @@ return (function foo(){}).name == 'foo';
           <td class="yes phantom">Yes</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Function.prototype.toMethod"><span><a class="anchor" href="#Function.prototype.toMethod">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod">Function.prototype.toMethod</a></span></td>
@@ -2410,6 +2498,8 @@ return typeof Function.prototype.toMethod === "function";
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.raw"><span><a class="anchor" href="#String.raw">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw">String.raw</a></span></td>
@@ -2457,6 +2547,8 @@ return typeof String.raw === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.fromCodePoint"><span><a class="anchor" href="#String.fromCodePoint">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint">String.fromCodePoint</a></span></td>
@@ -2504,6 +2596,8 @@ return typeof String.fromCodePoint === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.prototype.codePointAt"><span><a class="anchor" href="#String.prototype.codePointAt">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat">String.prototype.codePointAt</a></span></td>
@@ -2551,6 +2645,8 @@ return typeof String.prototype.codePointAt === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.prototype.normalize"><span><a class="anchor" href="#String.prototype.normalize">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.normalize">String.prototype.normalize</a></span></td>
@@ -2602,6 +2698,8 @@ return typeof String.prototype.normalize === "function"
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.prototype.repeat"><span><a class="anchor" href="#String.prototype.repeat">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat">String.prototype.repeat</a></span></td>
@@ -2649,6 +2747,8 @@ return typeof String.prototype.repeat === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.prototype.startsWith"><span><a class="anchor" href="#String.prototype.startsWith">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith">String.prototype.startsWith</a></span></td>
@@ -2696,6 +2796,8 @@ return typeof String.prototype.startsWith === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.prototype.endsWith"><span><a class="anchor" href="#String.prototype.endsWith">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith">String.prototype.endsWith</a></span></td>
@@ -2743,6 +2845,8 @@ return typeof String.prototype.endsWith === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="String.prototype.contains"><span><a class="anchor" href="#String.prototype.contains">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains">String.prototype.contains</a></span></td>
@@ -2790,6 +2894,8 @@ return typeof String.prototype.contains === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Unicode_code_point_escapes"><span><a class="anchor" href="#Unicode_code_point_escapes">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals">Unicode code point escapes</a></span></td>
@@ -2836,6 +2942,8 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol"><span><a class="anchor" href="#Symbol">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
@@ -2907,6 +3015,8 @@ catch(e) {
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Global_symbol_registry"><span><a class="anchor" href="#Global_symbol_registry">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for">Global symbol registry</a></span></td>
@@ -2955,6 +3065,8 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.create"><span><a class="anchor" href="#Symbol.create">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.create</a></span></td>
@@ -3014,6 +3126,8 @@ return false;
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.hasInstance"><span><a class="anchor" href="#Symbol.hasInstance">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.hasInstance</a></span></td>
@@ -3065,6 +3179,8 @@ test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: tru
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.isConcatSpreadable"><span><a class="anchor" href="#Symbol.isConcatSpreadable">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isConcatSpreadable</a></span></td>
@@ -3114,6 +3230,8 @@ test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpr
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.isRegExp"><span><a class="anchor" href="#Symbol.isRegExp">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isRegExp</a></span></td>
@@ -3160,6 +3278,8 @@ test(function(){try{return Function("\nreturn RegExp.prototype[Symbol.isRegExp] 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.iterator"><span><a class="anchor" href="#Symbol.iterator">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.iterator</a></span></td>
@@ -3219,6 +3339,8 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.toPrimitive"><span><a class="anchor" href="#Symbol.toPrimitive">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toPrimitive</a></span></td>
@@ -3274,6 +3396,8 @@ test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed =
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.toStringTag"><span><a class="anchor" href="#Symbol.toStringTag">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toStringTag</a></span></td>
@@ -3322,6 +3446,8 @@ test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"fo
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Symbol.unscopables"><span><a class="anchor" href="#Symbol.unscopables">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.unscopables</a></span></td>
@@ -3372,6 +3498,8 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="RegExp.prototype.match"><span><a class="anchor" href="#RegExp.prototype.match">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match">RegExp.prototype.match</a></span></td>
@@ -3419,6 +3547,8 @@ return typeof RegExp.prototype.match === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="RegExp.prototype.replace"><span><a class="anchor" href="#RegExp.prototype.replace">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.replace">RegExp.prototype.replace</a></span></td>
@@ -3466,6 +3596,8 @@ return typeof RegExp.prototype.replace === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="RegExp.prototype.search"><span><a class="anchor" href="#RegExp.prototype.search">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search">RegExp.prototype.search</a></span></td>
@@ -3513,6 +3645,8 @@ return typeof RegExp.prototype.search === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="RegExp.prototype.split"><span><a class="anchor" href="#RegExp.prototype.split">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.split">RegExp.prototype.split</a></span></td>
@@ -3560,6 +3694,8 @@ return typeof RegExp.prototype.split === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array.from"><span><a class="anchor" href="#Array.from">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from">Array.from</a></span></td>
@@ -3607,6 +3743,8 @@ return typeof Array.from === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array.of"><span><a class="anchor" href="#Array.of">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.of">Array.of</a></span></td>
@@ -3654,6 +3792,8 @@ return typeof Array.of === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array.prototype.copyWithin"><span><a class="anchor" href="#Array.prototype.copyWithin">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.copywithin">Array.prototype.copyWithin</a></span></td>
@@ -3701,6 +3841,8 @@ return typeof Array.prototype.copyWithin === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array.prototype.find"><span><a class="anchor" href="#Array.prototype.find">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.find">Array.prototype.find</a></span></td>
@@ -3748,6 +3890,8 @@ return typeof Array.prototype.find === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.findIndex"><span><a class="anchor" href="#Array.prototype.findIndex">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.findindex">Array.prototype.findIndex</a></span></td>
@@ -3795,6 +3939,8 @@ return typeof Array.prototype.findIndex === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.fill"><span><a class="anchor" href="#Array.prototype.fill">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.fill">Array.prototype.fill</a></span></td>
@@ -3842,6 +3988,8 @@ return typeof Array.prototype.fill === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.keys"><span><a class="anchor" href="#Array.prototype.keys">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.keys">Array.prototype.keys</a></span></td>
@@ -3889,6 +4037,8 @@ return typeof Array.prototype.keys === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype.values"><span><a class="anchor" href="#Array.prototype.values">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.values">Array.prototype.values</a></span></td>
@@ -3936,6 +4086,8 @@ return typeof Array.prototype.values === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array.prototype.entries"><span><a class="anchor" href="#Array.prototype.entries">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.entries">Array.prototype.entries</a></span></td>
@@ -3983,6 +4135,8 @@ return typeof Array.prototype.entries === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Array.prototype[Symbol.unscopables]"><span><a class="anchor" href="#Array.prototype[Symbol.unscopables]">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables">Array.prototype[Symbol.unscopables]</a></span></td>
@@ -4034,6 +4188,8 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.isFinite"><span><a class="anchor" href="#Number.isFinite">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number.isFinite</a></span></td>
@@ -4081,6 +4237,8 @@ return typeof Number.isFinite === 'function';
           <td class="no phantom">No</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.isInteger"><span><a class="anchor" href="#Number.isInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger">Number.isInteger</a></span></td>
@@ -4128,6 +4286,8 @@ return typeof Number.isInteger === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.isSafeInteger"><span><a class="anchor" href="#Number.isSafeInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger">Number.isSafeInteger</a></span></td>
@@ -4175,6 +4335,8 @@ return typeof Number.isSafeInteger === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.isNaN"><span><a class="anchor" href="#Number.isNaN">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan">Number.isNaN</a></span></td>
@@ -4222,6 +4384,8 @@ return typeof Number.isNaN === 'function';
           <td class="no phantom">No</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.EPSILON"><span><a class="anchor" href="#Number.EPSILON">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon">Number.EPSILON</a></span></td>
@@ -4269,6 +4433,8 @@ return typeof Number.EPSILON === 'number';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.MIN_SAFE_INTEGER"><span><a class="anchor" href="#Number.MIN_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer">Number.MIN_SAFE_INTEGER</a></span></td>
@@ -4316,6 +4482,8 @@ return typeof Number.MIN_SAFE_INTEGER === 'number';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Number.MAX_SAFE_INTEGER"><span><a class="anchor" href="#Number.MAX_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer">Number.MAX_SAFE_INTEGER</a></span></td>
@@ -4363,6 +4531,8 @@ return typeof Number.MAX_SAFE_INTEGER === 'number';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Math.clz32"><span><a class="anchor" href="#Math.clz32">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32">Math.clz32</a></span></td>
@@ -4410,6 +4580,8 @@ return typeof Math.clz32 === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Math.imul"><span><a class="anchor" href="#Math.imul">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul">Math.imul</a></span></td>
@@ -4457,6 +4629,8 @@ return typeof Math.imul === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.sign"><span><a class="anchor" href="#Math.sign">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign">Math.sign</a></span></td>
@@ -4504,6 +4678,8 @@ return typeof Math.sign === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Math.log10"><span><a class="anchor" href="#Math.log10">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10">Math.log10</a></span></td>
@@ -4551,6 +4727,8 @@ return typeof Math.log10 === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.log2"><span><a class="anchor" href="#Math.log2">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2">Math.log2</a></span></td>
@@ -4598,6 +4776,8 @@ return typeof Math.log2 === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.log1p"><span><a class="anchor" href="#Math.log1p">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p">Math.log1p</a></span></td>
@@ -4645,6 +4825,8 @@ return typeof Math.log1p === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.expm1"><span><a class="anchor" href="#Math.expm1">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1">Math.expm1</a></span></td>
@@ -4692,6 +4874,8 @@ return typeof Math.expm1 === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.cosh"><span><a class="anchor" href="#Math.cosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh">Math.cosh</a></span></td>
@@ -4739,6 +4923,8 @@ return typeof Math.cosh === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.sinh"><span><a class="anchor" href="#Math.sinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh">Math.sinh</a></span></td>
@@ -4786,6 +4972,8 @@ return typeof Math.sinh === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.tanh"><span><a class="anchor" href="#Math.tanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.tanh</a></span></td>
@@ -4833,6 +5021,8 @@ return typeof Math.tanh === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.acosh"><span><a class="anchor" href="#Math.acosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh">Math.acosh</a></span></td>
@@ -4880,6 +5070,8 @@ return typeof Math.acosh === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.asinh"><span><a class="anchor" href="#Math.asinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh">Math.asinh</a></span></td>
@@ -4927,6 +5119,8 @@ return typeof Math.asinh === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.atanh"><span><a class="anchor" href="#Math.atanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.atanh</a></span></td>
@@ -4974,6 +5168,8 @@ return typeof Math.atanh === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.hypot"><span><a class="anchor" href="#Math.hypot">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot">Math.hypot</a></span></td>
@@ -5021,6 +5217,8 @@ return typeof Math.hypot === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.trunc"><span><a class="anchor" href="#Math.trunc">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc">Math.trunc</a></span></td>
@@ -5068,6 +5266,8 @@ return typeof Math.trunc === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.fround"><span><a class="anchor" href="#Math.fround">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround">Math.fround</a></span></td>
@@ -5115,6 +5315,8 @@ return typeof Math.fround === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Math.cbrt"><span><a class="anchor" href="#Math.cbrt">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt">Math.cbrt</a></span></td>
@@ -5162,9 +5364,11 @@ return typeof Math.cbrt === 'function';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
-          <th colspan="40" class="separator"></th>
+          <th colspan="42" class="separator"></th>
         </tr>
         <tr>
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[13]</sup></a></span></td>
@@ -5232,6 +5436,8 @@ return passed;
           <td title="This feature is optional on non-browser platforms." class="not-applicable phantom">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable node">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[15]</sup></a></span></td>
@@ -5282,6 +5488,8 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td title="This feature is optional on non-browser platforms." class="not-applicable phantom">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable node">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
@@ -5345,6 +5553,8 @@ return !!(desc
           <td title="This feature is optional on non-browser platforms." class="not-applicable phantom">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable node">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
@@ -5406,6 +5616,8 @@ return true;
           <td title="This feature is optional on non-browser platforms." class="not-applicable phantom">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable node">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
         <tr>
           <td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span></td>
@@ -5453,6 +5665,8 @@ return typeof RegExp.prototype.compile === 'function';
           <td title="This feature is optional on non-browser platforms." class="not-applicable phantom">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable node">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable nodeharmony">Yes</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         </tr>
       </tbody>
     </table>

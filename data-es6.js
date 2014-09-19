@@ -204,6 +204,14 @@ exports.browsers = {
     nonbrowser: true,
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
+  },
+  ios7: {
+    full: 'iOS Safari 7',
+    short: 'iOS7'
+  },
+  ios8: {
+    full: 'iOS Safari 8',
+    short: 'iOS8'
   }
 };
 
@@ -258,7 +266,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -310,7 +320,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -361,7 +373,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -433,7 +447,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -492,7 +508,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -539,7 +557,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -586,7 +606,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -633,7 +655,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -684,7 +708,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -736,7 +762,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -808,7 +836,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -856,7 +886,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -904,7 +936,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -951,7 +985,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1018,7 +1054,9 @@ exports.tests = [
     rhino17:     true,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -1066,7 +1104,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1115,7 +1155,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -1174,7 +1216,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1225,7 +1269,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1272,7 +1318,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1321,7 +1369,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1379,7 +1429,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1430,7 +1482,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1477,7 +1531,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1548,7 +1604,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -1607,7 +1665,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -1664,7 +1724,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: { val: true, note_id: 'map-constructor' }
+    nodeharmony: { val: true, note_id: 'map-constructor' },
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -1717,7 +1779,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: { val: true, note_id: 'map-constructor' }
+    nodeharmony: { val: true, note_id: 'map-constructor' },
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -1773,7 +1837,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: { val: true, note_id: 'weakmap-constructor' }
+    nodeharmony: { val: true, note_id: 'weakmap-constructor' },
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -1826,7 +1892,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: { val: true, note_id: 'weakmap-constructor' }
+    nodeharmony: { val: true, note_id: 'weakmap-constructor' },
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1878,7 +1946,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1937,7 +2007,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1998,7 +2070,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2051,7 +2125,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2105,7 +2181,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -2161,7 +2239,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -2210,7 +2290,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -2258,7 +2340,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2308,7 +2392,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2356,7 +2442,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -2403,7 +2491,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2450,7 +2540,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2497,7 +2589,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2544,7 +2638,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2600,7 +2696,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     true,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -2647,7 +2745,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     true,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -2694,7 +2794,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2741,7 +2843,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2788,7 +2892,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2835,7 +2941,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2884,7 +2992,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2931,7 +3041,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -2978,7 +3090,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3025,7 +3139,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3072,7 +3188,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3127,7 +3245,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     true,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -3174,7 +3294,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3233,7 +3355,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3282,7 +3406,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3335,7 +3461,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3387,7 +3515,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3437,7 +3567,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3484,7 +3616,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3544,7 +3678,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3600,7 +3736,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3649,7 +3787,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3700,7 +3840,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3747,7 +3889,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3794,7 +3938,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3841,7 +3987,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3888,7 +4036,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -3936,7 +4086,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     true,
     phantom:     true,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -3983,7 +4135,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4030,7 +4184,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4077,7 +4233,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4124,7 +4282,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -4171,7 +4331,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -4218,7 +4380,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -4265,7 +4429,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -4320,7 +4486,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4367,7 +4535,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -4419,7 +4589,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4466,7 +4638,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4513,7 +4687,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4560,7 +4736,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4607,7 +4785,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        true,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4654,7 +4834,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4701,7 +4883,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4748,7 +4932,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4795,7 +4981,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4846,7 +5034,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        true,
+    ios8:        true
   }
 },
 {
@@ -4893,7 +5083,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -4940,7 +5132,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -4987,7 +5181,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5034,7 +5230,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5081,7 +5279,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5128,7 +5328,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5175,7 +5377,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5222,7 +5426,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5269,7 +5475,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5316,7 +5524,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5363,7 +5573,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5410,7 +5622,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5457,7 +5671,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5508,7 +5724,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   }
 },
 {
@@ -5555,7 +5773,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        true
   },
   separator: 'after'
 }
