@@ -2709,49 +2709,66 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'function "name" property',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
   exec: function () {
-    return (function foo(){}).name == 'foo';
+    var foo = function() {};
+    var bound = foo.bind({});
+    var o = {
+      a: function() {},
+      b: function c() {},
+      get foo() {},
+      set foo(x) {}
+    };
+    var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+
+    return foo.name === 'foo' &&
+      bound.name === 'bound foo' &&
+      o.a.name === 'a' &&
+      o.b.name === 'c' &&
+      descriptor.get.name === 'get foo' &&
+      descriptor.set.name === 'set foo' &&
+      (function() {}).name === '' &&
+      (new Function).name === 'anonymous';
   },
   res: {
     tr:          false,
-    ejs:         true,
+    ejs:         false,
     ie10:        false,
     ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    safari51:    true,
-    safari6:     true,
-    safari7:     true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     true,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
   }
 },
 {
