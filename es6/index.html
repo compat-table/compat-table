@@ -2406,51 +2406,85 @@ return typeof Object.setPrototypeOf === 'function';
         <tr>
           <td id="function_name_property"><span><a class="anchor" href="#function_name_property">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function "name" property</a></span></td>
 <script data-source="function () {
-return (function foo(){}).name == 'foo';
+var foo = function() {};
+var bound = foo.bind({});
+var o = {
+  a: function() {},
+  b: function c() {},
+  get foo() {},
+  set foo(x) {}
+};
+var descriptor = Object.getOwnPropertyDescriptor(o, &quot;foo&quot;);
+
+return foo.name === 'foo' &&
+  bound.name === 'bound foo' &&
+  o.a.name === 'a' &&
+  o.b.name === 'c' &&
+  descriptor.get.name === 'get foo' &&
+  descriptor.set.name === 'set foo' &&
+  (function() {}).name === '' &&
+  (new Function).name === 'anonymous';
   }">test(
 function () {
-return (function foo(){}).name == 'foo';
+var foo = function() {};
+var bound = foo.bind({});
+var o = {
+  a: function() {},
+  b: function c() {},
+  get foo() {},
+  set foo(x) {}
+};
+var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+
+return foo.name === 'foo' &&
+  bound.name === 'bound foo' &&
+  o.a.name === 'a' &&
+  o.b.name === 'c' &&
+  descriptor.get.name === 'get foo' &&
+  descriptor.set.name === 'set foo' &&
+  (function() {}).name === '' &&
+  (new Function).name === 'anonymous';
   }())</script>
 
           <td class="no tr">No</td>
-          <td class="yes ejs">Yes</td>
+          <td class="no ejs">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
-          <td class="yes firefox11 obsolete">Yes</td>
-          <td class="yes firefox13 obsolete">Yes</td>
-          <td class="yes firefox16 obsolete">Yes</td>
-          <td class="yes firefox17 obsolete">Yes</td>
-          <td class="yes firefox18 obsolete">Yes</td>
-          <td class="yes firefox23 obsolete">Yes</td>
-          <td class="yes firefox24">Yes</td>
-          <td class="yes firefox25 obsolete">Yes</td>
-          <td class="yes firefox27 obsolete">Yes</td>
-          <td class="yes firefox29 obsolete">Yes</td>
-          <td class="yes firefox30 obsolete">Yes</td>
-          <td class="yes firefox31">Yes</td>
-          <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
-          <td class="yes chrome obsolete">Yes</td>
-          <td class="yes chrome19dev obsolete">Yes</td>
-          <td class="yes chrome21dev obsolete">Yes</td>
-          <td class="yes chrome30 obsolete">Yes</td>
-          <td class="yes chrome33 obsolete">Yes</td>
-          <td class="yes chrome34 obsolete">Yes</td>
-          <td class="yes chrome35">Yes</td>
-          <td class="yes chrome37">Yes</td>
-          <td class="yes safari51 obsolete">Yes</td>
-          <td class="yes safari6">Yes</td>
-          <td class="yes safari7">Yes</td>
-          <td class="yes webkit">Yes</td>
-          <td class="yes opera">Yes</td>
-          <td class="yes konq49">Yes</td>
-          <td class="yes rhino17">Yes</td>
-          <td class="yes phantom">Yes</td>
-          <td class="yes node">Yes</td>
-          <td class="yes nodeharmony">Yes</td>
-          <td class="yes ios7">Yes</td>
-          <td class="yes ios8">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Function.prototype.toMethod"><span><a class="anchor" href="#Function.prototype.toMethod">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod">Function.prototype.toMethod</a></span></td>

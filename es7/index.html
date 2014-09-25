@@ -243,6 +243,32 @@ test(function(){try{return Function("\nreturn typeof Object.getOwnPropertyDescri
           <td class="no nodeharmony">No</td>
         </tr>
         <tr>
+          <td id="Array.prototype.contains"><span><a class="anchor" href="#Array.prototype.contains">&sect;</a><a href="https://github.com/domenic/Array.prototype.contains/blob/master/spec.md">Array.prototype.contains</a></span></td>
+<script data-source="
+return typeof Array.prototype.contains === 'function';
+  ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.contains === 'function';\n  ")()}catch(e){return false;}}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no chrome30">No</td>
+          <td class="no chrome33">No</td>
+          <td class="no chrome34">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+        </tr>
+        <tr>
           <td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span></td>
 <script data-source="
 var i, names =
