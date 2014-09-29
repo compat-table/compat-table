@@ -264,6 +264,37 @@ exports.tests = [
     nodeharmony: false
   }
 },
+
+{
+  name: 'Array.prototype.contains',
+  link: 'https://github.com/domenic/Array.prototype.contains/blob/master/spec.md',
+  exec: function () {/*
+    return typeof Array.prototype.contains === 'function';
+  */},
+  res: {
+    tr: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false, // Only enabled in Nightly builds
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari7: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false
+  }
+},
 {
   name: 'Reflect.Realm',
   link: 'https://gist.github.com/dherman/7568885',
