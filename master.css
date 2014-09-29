@@ -1,4 +1,4 @@
-body { font-family: 'Open Sans', sans-serif; margin: 0; font-weight: 300; }
+body { font-family: 'Open Sans', sans-serif; margin: 0; font-weight: 300; display: inline-block; }
 th { font-weight: normal; text-align: center; padding-left: 0.45em; padding-right: 0.45em; padding-bottom: 1em; padding-top: 1em; position: relative; min-width: 40px; font-size: 13px; background: #eee; vertical-align: middle; }
 th abbr { font-weight: bold; }
 td { background: #eee; padding-left: 5px; margin-left: -10px; font-size: 14px; }
@@ -24,9 +24,9 @@ table.one-selected td.selected { padding-left: 30px; padding-right: 30px; opacit
 #table-wrapper tr:hover td.no.obsolete,  #table-wrapper td.hover.no.obsolete  { background: hsl(  0,  33%,  50%); background: #a55; }
 #table-wrapper tr:hover td.not-applicable, #table-wrapper td.hover.not-applicable { background: hsl(120,  14%,  47%); background: #678967; }
 
-#body { padding-left: 1em; position: relative; min-width: 1250px; }
+#body { padding-left: 1em; position: relative; min-width: 1250px; display: inline-block; }
 
-#header { background: #454545; margin-bottom: 0.5em; }
+#header { background: #454545; margin-bottom: 0.5em; width: 100%; }
 .non-standard #header { background: #0094c0; }
 
 #header a { color: #eee; text-decoration: none; }
