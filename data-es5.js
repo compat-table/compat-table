@@ -169,6 +169,10 @@ exports.browsers = {
     full: 'Echo JS',
     short: 'EJS',
     obsolete: false
+  },
+  ios78: {
+    full: 'iOS Safari 7/8',
+    short: 'iOS7/8'
   }
 };
 
@@ -215,7 +219,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -269,7 +274,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -314,7 +320,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -359,7 +366,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -404,7 +412,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -449,7 +458,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -494,7 +504,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -539,7 +550,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -584,7 +596,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -629,7 +642,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -674,7 +688,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -724,7 +739,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -769,7 +785,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   },
   separator: 'after'
 },
@@ -815,7 +832,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: false
+    ejs: false,
+    ios78: true
   }
 },
 {
@@ -860,7 +878,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -905,7 +924,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -950,7 +970,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -995,7 +1016,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: false,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1040,7 +1062,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   },
   separator: 'after'
 },
@@ -1086,7 +1109,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1131,7 +1155,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1176,7 +1201,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1221,7 +1247,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1266,7 +1293,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1311,7 +1339,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1356,7 +1385,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1401,7 +1431,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1446,7 +1477,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   },
   separator: 'after'
 },
@@ -1492,7 +1524,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1539,7 +1572,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   },
   separator: 'after'
 },
@@ -1585,7 +1619,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1630,7 +1665,8 @@ exports.tests = [
     besen: true,
     rhino: false,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   },
   separator: 'after'
 },
@@ -1681,7 +1717,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: false,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1726,7 +1763,8 @@ exports.tests = [
     besen: true,
     rhino: false,
     phantom: false,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 },
 {
@@ -1774,7 +1812,8 @@ exports.tests = [
     besen: true,
     rhino: true,
     phantom: true,
-    ejs: false
+    ejs: false,
+    ios78: true
   }
 },
 {
@@ -1825,7 +1864,8 @@ exports.tests = [
     besen: true,
     rhino: false,
     phantom: true,
-    ejs: true
+    ejs: true,
+    ios78: true
   }
 }
 ];
