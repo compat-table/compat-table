@@ -56,6 +56,9 @@
     <label for="sort">Sort by number of features?</label>
     <input id="sort" type="checkbox">
 
+    <label for="show-obsolete">Show obsolete browsers?</label>
+    <input id="show-obsolete" type="checkbox">
+
     <table id="table-wrapper">
       <colgroup>
         <col>
@@ -71,6 +74,8 @@
           <th class="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></th>
           <th class="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></th>
           <th class="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></th>
+          <th class="firefox34"><a href="#firefox34" class="browser-name"><abbr title="Firefox">FF34</abbr></th>
+          <th class="firefox35"><a href="#firefox35" class="browser-name"><abbr title="Firefox">FF35</abbr></th>
           <th class="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome">CH 30</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
           <th class="chrome33"><a href="#chrome33" class="browser-name"><abbr title="Chrome">CH 33</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
           <th class="chrome34"><a href="#chrome34" class="browser-name"><abbr title="Chrome">CH 34</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
@@ -83,6 +88,8 @@
           <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
           <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
           <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.11 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
+          <th class="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari 7">iOS7</abbr></th>
+          <th class="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari 8">iOS8</abbr></th>
         </tr>
       </thead>
       <tbody>
@@ -99,6 +106,8 @@ test(function(){try{return Function("\nreturn 2 ** 3 === 8;\n  ")()}catch(e){ret
           <td class="no ie11">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -111,6 +120,8 @@ test(function(){try{return Function("\nreturn 2 ** 3 === 8;\n  ")()}catch(e){ret
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span></td>
@@ -125,6 +136,8 @@ test(function(){try{return Function("\nreturn [for (a of [1, 2, 3]) a * a][0] ==
           <td class="no ie11">No</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -137,6 +150,8 @@ test(function(){try{return Function("\nreturn [for (a of [1, 2, 3]) a * a][0] ==
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span></td>
@@ -151,6 +166,8 @@ test(function(){try{return Function("\n(for (a of [1, 2, 3]) a * a)\n  ")()}catc
           <td class="no ie11">No</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -163,6 +180,8 @@ test(function(){try{return Function("\n(for (a of [1, 2, 3]) a * a)\n  ")()}catc
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&sect;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span></td>
@@ -177,6 +196,8 @@ test(function(){try{return Function("\nreturn typeof StructType !== 'undefined';
           <td class="no ie11">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -189,6 +210,8 @@ test(function(){try{return Function("\nreturn typeof StructType !== 'undefined';
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Object.observe"><span><a class="anchor" href="#Object.observe">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span></td>
@@ -203,6 +226,8 @@ test(function(){try{return Function("\nreturn typeof Object.observe === 'functio
           <td class="no ie11">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
           <td class="no chrome30">No</td>
           <td class="yes chrome33">Yes</td>
           <td class="yes chrome34">Yes</td>
@@ -215,6 +240,8 @@ test(function(){try{return Function("\nreturn typeof Object.observe === 'functio
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&sect;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span></td>
@@ -229,6 +256,8 @@ test(function(){try{return Function("\nreturn typeof Object.getOwnPropertyDescri
           <td class="no ie11">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -241,6 +270,8 @@ test(function(){try{return Function("\nreturn typeof Object.getOwnPropertyDescri
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Array.prototype.contains"><span><a class="anchor" href="#Array.prototype.contains">&sect;</a><a href="https://github.com/domenic/Array.prototype.contains/blob/master/spec.md">Array.prototype.contains</a></span></td>
@@ -255,6 +286,8 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.contains ==
           <td class="no ie11">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
+          <td class="no firefox34">No</td>
+          <td class="yes firefox35">Yes<a href="#contains-nightly-note"><sup>[3]</sup></a></td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -267,6 +300,8 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.contains ==
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
         <tr>
           <td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span></td>
@@ -294,6 +329,8 @@ test(function(){try{return Function("\nvar i, names =\n  [\"eval\", \"global\", 
           <td class="no ie11">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
           <td class="no chrome30">No</td>
           <td class="no chrome33">No</td>
           <td class="no chrome34">No</td>
@@ -306,6 +343,8 @@ test(function(){try{return Function("\nvar i, names =\n  [\"eval\", \"global\", 
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         </tr>
       </tbody>
     </table>
@@ -315,6 +354,9 @@ test(function(){try{return Function("\nvar i, names =\n  [\"eval\", \"global\", 
       </p>
       <p id="harmony-flag-note">
         <sup>[2]</sup> Have to be enabled via --harmony flag
+      </p>
+      <p id="contains-nightly-note">
+        <sup>[3]</sup> Only enabled in Nightly builds
       </p>
     </div>
   </div>

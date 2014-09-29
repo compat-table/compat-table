@@ -28,6 +28,14 @@ exports.browsers = {
     full: 'Firefox',
     short: 'FF 32'
   },
+  firefox34: {
+    full: 'Firefox',
+    short: 'FF34'
+  },
+  firefox35: {
+    full: 'Firefox',
+    short: 'FF35'
+  },
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
@@ -96,6 +104,14 @@ exports.browsers = {
     obsolete: false, // current version
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
+  },
+  ios7: {
+    full: 'iOS Safari 7',
+    short: 'iOS7'
+  },
+  ios8: {
+    full: 'iOS Safari 8',
+    short: 'iOS8'
   }
 };
 
@@ -112,6 +128,9 @@ exports.tests = [
     ie11: false,
     firefox31: false,
     firefox32: false,
+    firefox33: true,
+    firefox34: true,
+    firefox35: true,
     chrome30: false,
     chrome33: false,
     chrome34: false,
@@ -124,7 +143,9 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -141,6 +162,7 @@ exports.tests = [
     firefox32:   true,
     firefox33:   true,
     firefox34:   true,
+    firefox35:   true,
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
@@ -152,7 +174,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -169,6 +193,7 @@ exports.tests = [
     firefox32:   true,
     firefox33:   true,
     firefox34:   true,
+    firefox35:   true,
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
@@ -180,7 +205,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -195,6 +222,9 @@ exports.tests = [
     ie11: false,
     firefox31: false,
     firefox32: false,
+    firefox33: true,
+    firefox34: true,
+    firefox35: true,
     chrome30: false,
     chrome33: false,
     chrome34: false,
@@ -207,7 +237,9 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -222,6 +254,9 @@ exports.tests = [
     ie11: false,
     firefox31: false,
     firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
     chrome30: false,
     chrome33: true,
     chrome34: true,
@@ -234,7 +269,9 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: true
+    nodeharmony: true,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -249,6 +286,9 @@ exports.tests = [
     ie11: false,
     firefox31: false,
     firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
     chrome30: false,
     chrome33: false,
     chrome34: false,
@@ -261,7 +301,9 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 
@@ -279,7 +321,11 @@ exports.tests = [
     firefox32: false,
     firefox33: false,
     firefox34: false,
-    firefox35: false, // Only enabled in Nightly builds
+    firefox35:   {
+      val: true,
+      note_id: 'contains-nightly',
+      note_html: 'Only enabled in Nightly builds'
+    },
     chrome30: false,
     chrome33: false,
     chrome34: false,
@@ -292,7 +338,9 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     node: false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -322,6 +370,7 @@ exports.tests = [
     firefox32:   false,
     firefox33:   false,
     firefox34:   false,
+    firefox35:   false,
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,
@@ -333,7 +382,9 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 }
 ];
