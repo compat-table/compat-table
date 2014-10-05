@@ -1073,23 +1073,23 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n  ")()}
           <td class="no firefox18 obsolete">No</td>
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
-          <td class="yes firefox25 obsolete">Yes</td>
-          <td class="yes firefox27 obsolete">Yes</td>
-          <td class="yes firefox29 obsolete">Yes</td>
-          <td class="yes firefox30 obsolete">Yes</td>
-          <td class="yes firefox31">Yes</td>
-          <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox25 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
-          <td class="yes chrome30 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome33 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome34 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome35">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome37">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome39">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome30 obsolete">Yes</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -1122,23 +1122,23 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
           <td class="no firefox18 obsolete">No</td>
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
-          <td class="yes firefox25 obsolete">Yes</td>
-          <td class="yes firefox27 obsolete">Yes</td>
-          <td class="yes firefox29 obsolete">Yes</td>
-          <td class="yes firefox30 obsolete">Yes</td>
-          <td class="yes firefox31">Yes</td>
-          <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox25 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
-          <td class="yes chrome30 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome33 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome34 obsolete">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome35">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome37">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
-          <td class="yes chrome39">Yes<a href="#octal-to-string-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome30 obsolete">Yes</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -5791,7 +5791,7 @@ return typeof RegExp.prototype.compile === 'function';
         <sup>[4]</sup> Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.
       </p>
       <p id="octal-to-string-note">
-        <sup>[5]</sup> <code>Number("0o1")</code> and <code>Number("0b1")</code> <a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tonumber-applied-to-the-string-type">incorrectly</a> evaluate to 1 instead of <code>NaN</code>.
+        <sup>[5]</sup> Firefox doesn't support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.
       </p>
       <p id="ie-typedarray-note">
         <sup>[6]</sup> Internet Explorer supports every typed array class except <code>Uint8ClampedArray</code>.
