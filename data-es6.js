@@ -17,6 +17,12 @@ exports.browsers = {
     obsolete: false, // always up-to-date version
     nonbrowser: true
   },
+  closure: {
+    full: 'Closure Compiler v20140923',
+    short: 'Closure Compiler',
+    obsolete: false, // always up-to-date version
+    nonbrowser: true
+  },
   ie10: {
     full: 'Internet Explorer',
     short: 'IE 10',
@@ -237,6 +243,7 @@ exports.tests = [
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -292,6 +299,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -346,6 +354,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        true,
     firefox11:   false,
@@ -421,6 +430,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        true,
     firefox11:   true,
@@ -479,6 +489,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -533,6 +544,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -583,6 +595,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -633,6 +646,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -683,6 +697,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -742,6 +757,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -814,6 +830,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -865,6 +882,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -916,6 +934,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -966,6 +985,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1029,6 +1049,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        true,
     firefox11:   true,
@@ -1087,6 +1108,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1139,6 +1161,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1201,6 +1224,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         false,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1251,6 +1275,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         false,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1305,6 +1330,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         false,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1357,6 +1383,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1418,6 +1445,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1472,6 +1500,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   true,
@@ -1522,6 +1551,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1596,6 +1626,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        {
       val: false,
       note_id: 'ie-typedarray',
@@ -1662,6 +1693,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        true,
     ie11:        true,
     firefox11:   false,
@@ -1718,6 +1750,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        {
       val: true,
@@ -1778,6 +1811,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        { val: true, note_id: 'map-constructor' },
     firefox11:   false,
@@ -1833,6 +1867,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        {
       val: true,
@@ -1893,6 +1928,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -1948,6 +1984,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2010,6 +2047,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2074,6 +2112,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2130,6 +2169,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         false,
+    closure:     true,
     ie10:        false,
     ie11:        true,
     firefox11:   false,
@@ -2187,6 +2227,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        true,
     ie11:        false,
     firefox11:   false,
@@ -2246,6 +2287,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   true,
@@ -2302,6 +2344,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   true,
@@ -2353,6 +2396,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         false,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2406,6 +2450,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         false,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2457,6 +2502,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2507,6 +2553,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2557,6 +2604,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2607,6 +2655,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2657,6 +2706,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        true,
     firefox11:   false,
@@ -2716,6 +2766,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        true,
     firefox11:   false,
@@ -2766,6 +2817,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   true,
@@ -2816,6 +2868,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2866,6 +2919,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2916,6 +2970,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -2966,6 +3021,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3018,6 +3074,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3068,6 +3125,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3118,6 +3176,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3168,6 +3227,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3218,6 +3278,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3276,6 +3337,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        true,
     ie11:        true,
     firefox11:   true,
@@ -3326,6 +3388,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3388,6 +3451,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3440,6 +3504,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3495,6 +3560,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3548,6 +3614,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3598,6 +3665,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3661,6 +3729,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3720,6 +3789,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3772,6 +3842,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3826,6 +3897,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3876,6 +3948,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3926,6 +3999,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -3976,6 +4050,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4026,6 +4101,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4077,6 +4153,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         false,
+    closure:     false,
     ie10:        true,
     ie11:        true,
     firefox11:   true,
@@ -4127,6 +4204,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4177,6 +4255,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4227,6 +4306,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4277,6 +4357,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4327,6 +4408,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4377,6 +4459,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4427,6 +4510,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4477,6 +4561,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4535,6 +4620,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4590,6 +4676,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         false,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4640,6 +4727,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4690,6 +4778,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4740,6 +4829,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4790,6 +4880,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4840,6 +4931,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4890,6 +4982,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4940,6 +5033,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          true,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -4990,6 +5084,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5040,6 +5135,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5094,6 +5190,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5144,6 +5241,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5194,6 +5292,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5244,6 +5343,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5294,6 +5394,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5344,6 +5445,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5394,6 +5496,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5444,6 +5547,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5494,6 +5598,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5544,6 +5649,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5594,6 +5700,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5642,6 +5749,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     return typeof Math.hypot === 'function';
   },
   res: {
+    closure:     false,
     tr:          false,
     ejs:         true,
     ie10:        false,
@@ -5694,6 +5802,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5744,6 +5853,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
@@ -5798,6 +5908,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   res: {
     tr:          false,
     ejs:         true,
+    closure:     false,
     ie10:        false,
     ie11:        false,
     firefox11:   false,
