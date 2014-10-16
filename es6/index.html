@@ -8,10 +8,22 @@
     <script src="../ready.js"></script>
     <script src="../master.js"></script>
     <script>
-      var __yield_script_executed, __let_script_executed;
+      var __script_executed = {};
       if (typeof global === 'undefined') {
         var global = this;
       }
+    // For async tests, this returned function is used to set results
+    // instead of returning true/false.
+    var __asyncPassedFn = function(id) {
+      return function() {
+      // Uses nextSibling for IE < 9 compatibility
+      // rather than document.querySelector("#" + id + " ~ td")
+        var elem = document.getElementById(id)
+        .nextSibling.nextSibling.nextSibling;
+        elem.className = "yes";
+      elem.textContent = "Yes";
+    }
+    }
     </script>
 </head>
 <body class="es6">
@@ -236,17 +248,45 @@ test(function(){try{return Function("\n// 0 parameters\nvar passed = (() => 5)()
           <td class="no ios8">No</td>
         </tr>
         <tr>
-          <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:const">const</a></span></td>
+          <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">const</a></span></td>
 <script data-source="function () {
 try {
-  return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === &quot;number&quot;; }())');
+  return !!Function(
+     'const foo = 123;'
+    +'var passed = (foo === 123);'
+    
+     // bar is not hoisted outside of its block
+    +'{ const bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+    
+     // redefining a const is a syntax error (12.14.1)
+    +'passed &= (function() {'
+    +'  try { Function(&quot;foo = 2;&quot;)(); } catch(e) { return true; }'
+    +'}());'
+    
+    +'return passed;'
+  )();
 } catch (e) {
   return false;
 }
   }">test(
 function () {
 try {
-  return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
+  return !!Function(
+     'const foo = 123;'
+    +'var passed = (foo === 123);'
+    
+     // bar is not hoisted outside of its block
+    +'{ const bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+    
+     // redefining a const is a syntax error (12.14.1)
+    +'passed &= (function() {'
+    +'  try { Function("foo = 2;")(); } catch(e) { return true; }'
+    +'}());'
+    
+    +'return passed;'
+  )();
 } catch (e) {
   return false;
 }
@@ -256,97 +296,269 @@ try {
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
-          <td class="no firefox11 obsolete">No</td>
-          <td class="no firefox13 obsolete">No</td>
-          <td class="yes firefox16 obsolete">Yes</td>
-          <td class="yes firefox17 obsolete">Yes</td>
-          <td class="yes firefox18 obsolete">Yes</td>
-          <td class="yes firefox23 obsolete">Yes</td>
-          <td class="yes firefox24">Yes</td>
-          <td class="yes firefox25 obsolete">Yes</td>
-          <td class="yes firefox27 obsolete">Yes</td>
-          <td class="yes firefox29 obsolete">Yes</td>
-          <td class="yes firefox30 obsolete">Yes</td>
-          <td class="yes firefox31">Yes</td>
-          <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
-          <td class="yes chrome obsolete">Yes</td>
-          <td class="yes chrome19dev obsolete">Yes</td>
-          <td class="yes chrome21dev obsolete">Yes</td>
-          <td class="yes chrome30 obsolete">Yes</td>
-          <td class="yes chrome33 obsolete">Yes</td>
-          <td class="yes chrome34 obsolete">Yes</td>
-          <td class="yes chrome35">Yes</td>
-          <td class="yes chrome37">Yes</td>
-          <td class="yes chrome39">Yes</td>
+          <td class="no firefox11 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox13 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox16 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox24">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox31">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox32">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox33">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no firefox34">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome19dev obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome21dev obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome30 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome33 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome34 obsolete">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome35">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome37">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no chrome39">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
-          <td class="yes safari6">Yes</td>
-          <td class="yes safari7">Yes</td>
-          <td class="yes webkit">Yes</td>
-          <td class="yes opera">Yes</td>
-          <td class="yes konq49">Yes</td>
+          <td class="no safari6">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no safari7">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no webkit">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no opera">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no konq49">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
           <td class="no rhino17">No</td>
-          <td class="yes phantom">Yes</td>
-          <td class="yes node">Yes</td>
-          <td class="yes nodeharmony">Yes</td>
-          <td class="yes ios7">Yes</td>
-          <td class="yes ios8">Yes</td>
+          <td class="no phantom">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no node">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no nodeharmony">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no ios7">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
+          <td class="no ios8">No<a href="#const-reassign-note"><sup>[4]</sup></a></td>
         </tr>
         <tr>
-          <td id="let"><span><a class="anchor" href="#let">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:let">let</a></span></td>
-<script type="application/javascript;version=1.8" data-source="test((function () {
+          <td id="let_(block_scope)"><span><a class="anchor" href="#let_(block_scope)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let (block scope)</a></span></td>
+<script type="application/javascript;version=1.8" data-source="test(function() {
 try {
-  return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+  return !!Function(
+     '&quot;use strict&quot;;'
+    +'let foo = 123;'
+    +'let passed = (foo === 123);'
+   
+     // bar is not hoisted outside of its block
+    +'{ let bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+     // baz is not hoisted outside of the for-loop
+    +'for(let baz = 0; false;) {}'
+    +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+    +'return passed;'
+  )();
 } catch (e) {
   return false;
 }
-        }()));
-        global.__let_script_executed = true;">test((function () {
+      }());
+      global.__script_executed['let'] = true;">test(function() {
 try {
-  return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+  return !!Function(
+     '"use strict";'
+    +'let foo = 123;'
+    +'let passed = (foo === 123);'
+   
+     // bar is not hoisted outside of its block
+    +'{ let bar = 456; }'
+    +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+     // baz is not hoisted outside of the for-loop
+    +'for(let baz = 0; false;) {}'
+    +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+    +'return passed;'
+  )();
 } catch (e) {
   return false;
 }
-        }()));
-        global.__let_script_executed = true;</script>
-<script data-source="if (!global.__let_script_executed) {
-test((function () {
+      }());
+      global.__script_executed['let'] = true;</script>
+<script data-source="if (!global.__script_executed['let']) {
+test(function() {
   try {
-    return eval('(function () { &quot;use strict&quot;; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+    return !!Function(
+       '&quot;use strict&quot;;'
+      +'let foo = 123;'
+      +'let passed = (foo === 123);'
+   
+       // bar is not hoisted outside of its block
+      +'{ let bar = 456; }'
+      +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+       // baz is not hoisted outside of the for-loop
+      +'for(let baz = 0; false;) {}'
+      +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+      +'return passed;'
+    )();
   } catch (e) {
     return false;
   }
-}()));
-        }">if (!global.__let_script_executed) {
-test((function () {
+}());
+global.__script_executed['let'] = true;
+    }">if (!global.__script_executed['let']) {
+test(function() {
   try {
-    return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
+    return !!Function(
+       '"use strict";'
+      +'let foo = 123;'
+      +'let passed = (foo === 123);'
+   
+       // bar is not hoisted outside of its block
+      +'{ let bar = 456; }'
+      +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
+
+       // baz is not hoisted outside of the for-loop
+      +'for(let baz = 0; false;) {}'
+      +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
+  
+      +'return passed;'
+    )();
   } catch (e) {
     return false;
   }
-}()));
-        }</script>
+}());
+global.__script_executed['let'] = true;
+    }</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
-          <td class="yes firefox11 obsolete">Yes</td>
-          <td class="yes firefox13 obsolete">Yes</td>
-          <td class="yes firefox16 obsolete">Yes</td>
-          <td class="yes firefox17 obsolete">Yes</td>
-          <td class="yes firefox18 obsolete">Yes</td>
-          <td class="yes firefox23 obsolete">Yes</td>
-          <td class="yes firefox24">Yes</td>
-          <td class="yes firefox25 obsolete">Yes</td>
-          <td class="yes firefox27 obsolete">Yes</td>
-          <td class="yes firefox29 obsolete">Yes</td>
-          <td class="yes firefox30 obsolete">Yes</td>
-          <td class="yes firefox31">Yes</td>
-          <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox11 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox13 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox16 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox17 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox18 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox23 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox24">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#let-javascript18-note"><sup>[5]</sup></a></td>
+          <td class="no chrome obsolete">No</td>
+          <td class="yes chrome19dev obsolete">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome30 obsolete">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome33 obsolete">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome34 obsolete">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome35">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome37">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome39">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="yes nodeharmony">Yes<a href="#let-extended-mode-note"><sup>[6]</sup></a></td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        </tr>
+        <tr>
+          <td id="let/const_temporal_dead_zone"><span><a class="anchor" href="#let/const_temporal_dead_zone">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let/const temporal dead zone</a></span></td>
+<script type="application/javascript;version=1.8" data-source="test(function() {
+try {
+  return !!Function(
+     '&quot;use strict&quot;;'
+    // qux and quux are not defined until the let/const statements execute,
+    // and accessing them prior to that will result in a ReferenceError.
+    +'let passed = (function(){ try {  qux; } catch(e) { return true; }}());'
+    +'let qux = 456;'
+    +'passed    &= (function(){ try { quux; } catch(e) { return true; }}());'
+    +'const quux = 789;'
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
+      }());
+      global.__script_executed['let TDZ'] = true;">test(function() {
+try {
+  return !!Function(
+     '"use strict";'
+    // qux and quux are not defined until the let/const statements execute,
+    // and accessing them prior to that will result in a ReferenceError.
+    +'let passed = (function(){ try {  qux; } catch(e) { return true; }}());'
+    +'let qux = 456;'
+    +'passed    &= (function(){ try { quux; } catch(e) { return true; }}());'
+    +'const quux = 789;'
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
+      }());
+      global.__script_executed['let TDZ'] = true;</script>
+<script data-source="if (!global.__script_executed['let TDZ']) {
+test(function() {
+  try {
+    return !!Function(
+       '&quot;use strict&quot;;'
+      // qux and quux are not defined until the let/const statements execute,
+      // and accessing them prior to that will result in a ReferenceError.
+      +'let passed = (function(){ try {  qux; } catch(e) { return true; }}());'
+      +'let qux = 456;'
+      +'passed    &= (function(){ try { quux; } catch(e) { return true; }}());'
+      +'const quux = 789;'
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+global.__script_executed['let TDZ'] = true;
+    }">if (!global.__script_executed['let TDZ']) {
+test(function() {
+  try {
+    return !!Function(
+       '"use strict";'
+      // qux and quux are not defined until the let/const statements execute,
+      // and accessing them prior to that will result in a ReferenceError.
+      +'let passed = (function(){ try {  qux; } catch(e) { return true; }}());'
+      +'let qux = 456;'
+      +'passed    &= (function(){ try { quux; } catch(e) { return true; }}());'
+      +'const quux = 789;'
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+global.__script_executed['let TDZ'] = true;
+    }</script>
+
+          <td class="no tr">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="yes ie11">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
           <td class="no chrome obsolete">No</td>
           <td class="yes chrome19dev obsolete">Yes</td>
           <td class="yes chrome21dev obsolete">Yes</td>
@@ -355,7 +567,7 @@ test((function () {
           <td class="yes chrome34 obsolete">Yes</td>
           <td class="yes chrome35">Yes</td>
           <td class="yes chrome37">Yes</td>
-          <td class="yes chrome39">Yes</td>
+          <td class="chrome39"></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -366,8 +578,150 @@ test((function () {
           <td class="no phantom">No</td>
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
-          <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
+          <td class="ios7"></td>
+          <td class="ios8"></td>
+        </tr>
+        <tr>
+          <td id="let_(for-loop_iteration_scope)"><span><a class="anchor" href="#let_(for-loop_iteration_scope)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-statement-runtime-semantics-labelledevaluation">let (for-loop iteration scope)</a></span></td>
+<script type="application/javascript;version=1.8" data-source="test(function() {
+try {
+  return !!Function(    
+    '&quot;use strict&quot;;'   
+     // for-loop iterations create new bindings
+    +'let scopes = [];'
+    +'for(let i = 0; i < 2; i++) {'
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
+    
+    +'scopes = [];'
+    +'for(let i in { a:1, b:1 }) {'
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot;);'
+    
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
+      }());
+      global.__script_executed['let for'] = true;">test(function() {
+try {
+  return !!Function(    
+    '"use strict";'   
+     // for-loop iterations create new bindings
+    +'let scopes = [];'
+    +'for(let i = 0; i < 2; i++) {'
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
+    
+    +'scopes = [];'
+    +'for(let i in { a:1, b:1 }) {'
+    +'  scopes.push(function(){ return i; });'
+    +'}'
+    +'passed &= (scopes[0]() === "a" && scopes[1]() === "b");'
+    
+    +'return passed;'
+  )();
+} catch (e) {
+  return false;
+}
+      }());
+      global.__script_executed['let for'] = true;</script>
+<script data-source="if (!global.__script_executed['let for']) {
+test(function() {
+  try {
+    return !!Function(    
+      '&quot;use strict&quot;;'   
+       // for-loop iterations create new bindings
+      +'let scopes = [];'
+      +'for(let i = 0; i < 2; i++) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
+    
+      +'scopes = [];'
+      +'for(let i in { a:1, b:1 }) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'passed &= (scopes[0]() === &quot;a&quot; && scopes[1]() === &quot;b&quot;);'
+    
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+global.__script_executed['let for'] = true;
+    }">if (!global.__script_executed['let for']) {
+test(function() {
+  try {
+    return !!Function(    
+      '"use strict";'   
+       // for-loop iterations create new bindings
+      +'let scopes = [];'
+      +'for(let i = 0; i < 2; i++) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
+    
+      +'scopes = [];'
+      +'for(let i in { a:1, b:1 }) {'
+      +'  scopes.push(function(){ return i; });'
+      +'}'
+      +'passed &= (scopes[0]() === "a" && scopes[1]() === "b");'
+    
+      +'return passed;'
+    )();
+  } catch (e) {
+    return false;
+  }
+}());
+global.__script_executed['let for'] = true;
+    }</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32">No</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35">No</td>
+          <td class="no chrome37">No</td>
+          <td class="chrome39"></td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="ios7"></td>
+          <td class="ios8"></td>
         </tr>
         <tr>
           <td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
@@ -393,17 +747,17 @@ test(function(){try{return Function("\nvar passed = (function (a = 1, b = 2) { r
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="yes firefox18 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox23 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox24">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox25 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox29 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox30 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox31">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox32">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox33">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#fx-defaults-scope-note"><sup>[4]</sup></a></td>
+          <td class="yes firefox18 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox23 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox24">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#fx-defaults-scope-note"><sup>[7]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -587,12 +941,12 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
-          <td class="no firefox16 obsolete">No<a href="#fx-spreading-strings-note"><sup>[5]</sup></a></td>
-          <td class="no firefox17 obsolete">No<a href="#fx-spreading-strings-note"><sup>[5]</sup></a></td>
-          <td class="no firefox18 obsolete">No<a href="#fx-spreading-strings-note"><sup>[5]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-spreading-strings-note"><sup>[5]</sup></a></td>
-          <td class="no firefox24">No<a href="#fx-spreading-strings-note"><sup>[5]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-spreading-strings-note"><sup>[5]</sup></a></td>
+          <td class="no firefox16 obsolete">No<a href="#fx-spreading-strings-note"><sup>[8]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-spreading-strings-note"><sup>[8]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-spreading-strings-note"><sup>[8]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-spreading-strings-note"><sup>[8]</sup></a></td>
+          <td class="no firefox24">No<a href="#fx-spreading-strings-note"><sup>[8]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-spreading-strings-note"><sup>[8]</sup></a></td>
           <td class="yes firefox27 obsolete">Yes</td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
@@ -1077,14 +1431,14 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n  ")()}
           <td class="no firefox18 obsolete">No</td>
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
-          <td class="yes firefox25 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox27 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox29 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox30 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox31">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox32">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox33">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -1126,14 +1480,14 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
           <td class="no firefox18 obsolete">No</td>
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
-          <td class="yes firefox25 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox27 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox29 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox30 obsolete">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox31">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox32">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox33">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#octal-to-string-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#octal-to-string-note"><sup>[9]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -1403,8 +1757,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar pa
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
-          <td class="no ie10">No<a href="#ie-typedarray-note"><sup>[7]</sup></a></td>
-          <td class="no ie11">No<a href="#ie-typedarray-note"><sup>[7]</sup></a></td>
+          <td class="no ie10">No<a href="#ie-typedarray-note"><sup>[10]</sup></a></td>
+          <td class="no ie11">No<a href="#ie-typedarray-note"><sup>[10]</sup></a></td>
           <td class="yes firefox11 obsolete">Yes</td>
           <td class="yes firefox13 obsolete">Yes</td>
           <td class="yes firefox16 obsolete">Yes</td>
@@ -1520,7 +1874,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
-          <td class="yes ie11">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes ie11">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
@@ -1538,25 +1892,25 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome30 obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome33 obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome34 obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome35">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome37">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome39">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome30 obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome33 obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome34 obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome35">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome37">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome39">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="yes webkit">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes webkit">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes ios8">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
         </tr>
         <tr>
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -1575,7 +1929,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no ie10">No</td>
-          <td class="yes ie11">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes ie11">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
@@ -1593,25 +1947,25 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome30 obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome33 obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome34 obsolete">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome35">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome37">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
-          <td class="yes chrome39">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome30 obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome33 obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome34 obsolete">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome35">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome37">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
+          <td class="yes chrome39">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="yes webkit">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes webkit">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes<a href="#map-constructor-note"><sup>[8]</sup></a></td>
+          <td class="yes ios8">Yes<a href="#map-constructor-note"><sup>[11]</sup></a></td>
         </tr>
         <tr>
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -1629,43 +1983,43 @@ test(function(){try{return Function("\nvar key1 = {};\nvar weakmap = new WeakMap
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no ie10">No</td>
-          <td class="yes ie11">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes ie11">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
           <td class="no firefox18 obsolete">No</td>
-          <td class="yes firefox23 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox24">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox25 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox27 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox29 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox30 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox31">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox32">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox33">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes firefox23 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox24">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome30 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome33 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome34 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome35">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome37">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome39">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome30 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome33 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome34 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome35">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome37">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome39">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="yes webkit">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes webkit">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes ios8">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
         </tr>
         <tr>
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -1704,11 +2058,11 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
           <td class="no chrome30 obsolete">No</td>
-          <td class="yes chrome33 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome34 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome35">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome37">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
-          <td class="yes chrome39">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes chrome33 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome34 obsolete">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome35">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome37">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome39">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -1718,7 +2072,7 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[9]</sup></a></td>
+          <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[12]</sup></a></td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
@@ -1744,17 +2098,17 @@ test(function(){try{return Function("\nvar proxied = { };\nvar proxy = new Proxy
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="yes firefox18 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox23 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox24">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox25 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox29 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox30 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox31">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox32">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox33">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#fx-proxy-get-note"><sup>[10]</sup></a></td>
+          <td class="yes firefox18 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox23 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox24">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -1801,17 +2155,17 @@ test(function(){try{return Function("\nvar proxied = { };\nvar passed = false;\n
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="yes firefox18 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox23 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox24">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox25 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox29 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox30 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox31">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox32">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox33">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#fx-proxy-set-note"><sup>[11]</sup></a></td>
+          <td class="yes firefox18 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox23 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox24">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox25 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox29 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox30 obsolete">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox31">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox32">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#fx-proxy-set-note"><sup>[14]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -1975,12 +2329,12 @@ test(function(){try{return Function("\nvar proxied = {};\nvar fakeDesc = { value
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#fx-proxy-getown-note"><sup>[12]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-proxy-getown-note"><sup>[12]</sup></a></td>
-          <td class="no firefox24">No<a href="#fx-proxy-getown-note"><sup>[12]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-proxy-getown-note"><sup>[12]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-proxy-getown-note"><sup>[12]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-proxy-getown-note"><sup>[12]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-proxy-getown-note"><sup>[15]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-proxy-getown-note"><sup>[15]</sup></a></td>
+          <td class="no firefox24">No<a href="#fx-proxy-getown-note"><sup>[15]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-proxy-getown-note"><sup>[15]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-proxy-getown-note"><sup>[15]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-proxy-getown-note"><sup>[15]</sup></a></td>
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
@@ -2387,15 +2741,15 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox24">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
-          <td class="no firefox32">No<a href="#fx-proxy-ownkeys-note"><sup>[13]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox24">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
+          <td class="no firefox32">No<a href="#fx-proxy-ownkeys-note"><sup>[16]</sup></a></td>
           <td class="yes firefox33">Yes</td>
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
@@ -2748,7 +3102,7 @@ return true;
           <td class="no ios8">No</td>
         </tr>
         <tr>
-          <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[14]</sup></a></span></td>
+          <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[17]</sup></a></span></td>
 <script data-source="
 'use strict';
 {
@@ -2856,7 +3210,7 @@ test(function(){try{return Function("\n// Array destructuring\nvar [a, , [b], g]
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes<a href="#fx-destructuring-note"><sup>[15]</sup></a></td>
+          <td class="yes ios8">Yes<a href="#fx-destructuring-note"><sup>[18]</sup></a></td>
         </tr>
         <tr>
           <td id="destructuring_parameters"><span><a class="anchor" href="#destructuring_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring parameters</a></span></td>
@@ -3013,14 +3367,32 @@ test(function(){try{return Function("\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d]
         </tr>
         <tr>
           <td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
-<script data-source="function () {
-return typeof Promise !== 'undefined' &&
-       typeof Promise.all === 'function';
-  }">test(
-function () {
-return typeof Promise !== 'undefined' &&
-       typeof Promise.all === 'function';
-  }())</script>
+<script data-source="
+var p1 = new Promise(function(resolve, reject) { resolve(&quot;foo&quot;); });
+var p2 = new Promise(function(resolve, reject) { reject(&quot;quux&quot;); });
+var score = 0;
+
+function thenFn(result)  { score += (result === &quot;foo&quot;);  check(); }
+function catchFn(result) { score += (result === &quot;quux&quot;); check(); }
+function shouldNotRun(result)  { score = -Infinity;   }
+
+p1.then(thenFn, shouldNotRun);
+p2.then(shouldNotRun, catchFn);
+p1.catch(shouldNotRun);
+p2.catch(catchFn);
+
+p1.then(function() {
+  // Promise.prototype.then() should return a new Promise
+  score += p1.then() !== p1;
+  check();
+});
+
+function check() {
+  if (score === 4) asyncTestPassed();
+}
+  ">
+test(function(){try{return Function("asyncTestPassed","\nvar p1 = new Promise(function(resolve, reject) { resolve(\"foo\"); });\nvar p2 = new Promise(function(resolve, reject) { reject(\"quux\"); });\nvar score = 0;\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\np1.then(function() {\n  // Promise.prototype.then() should return a new Promise\n  score += p1.then() !== p1;\n  check();\n});\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n  ")(global.__asyncPassedFn && __asyncPassedFn("Promise"))}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -3062,6 +3434,132 @@ return typeof Promise !== 'undefined' &&
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
+        </tr>
+        <tr>
+          <td id="Promise.all"><span><a class="anchor" href="#Promise.all">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise.all">Promise.all</a></span></td>
+<script data-source="
+var fulfills = Promise.all([
+  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+]);
+var rejects = Promise.all([
+  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+]);
+var score = 0;
+fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
+rejects.catch(function(result) { score += (result === &quot;qux&quot;); check(); });
+
+function check() {
+  if (score === 2) asyncTestPassed();
+}
+  ">
+test(function(){try{return Function("asyncTestPassed","\nvar fulfills = Promise.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = Promise.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n  ")(global.__asyncPassedFn && __asyncPassedFn("Promise.all"))}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="chrome39"></td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="yes webkit">Yes</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="yes nodeharmony">Yes</td>
+          <td class="ios7"></td>
+          <td class="ios8"></td>
+        </tr>
+        <tr>
+          <td id="Promise.race"><span><a class="anchor" href="#Promise.race">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise.race">Promise.race</a></span></td>
+<script data-source="
+var fulfills = Promise.race([
+  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+]);
+var rejects = Promise.race([
+  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+]);
+var score = 0;
+fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
+rejects.catch(function(result) { score += (result === &quot;baz&quot;); check(); });
+
+function check() {
+  if (score === 2) asyncTestPassed();
+}
+  ">
+test(function(){try{return Function("asyncTestPassed","\nvar fulfills = Promise.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = Promise.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n  ")(global.__asyncPassedFn && __asyncPassedFn("Promise.race"))}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35">Yes</td>
+          <td class="yes chrome37">Yes</td>
+          <td class="chrome39"></td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="yes webkit">Yes</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="yes nodeharmony">Yes</td>
+          <td class="ios7"></td>
+          <td class="ios8"></td>
         </tr>
         <tr>
           <td id="Object.assign"><span><a class="anchor" href="#Object.assign">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign">Object.assign</a></span></td>
@@ -4886,18 +5384,18 @@ return typeof Array.prototype.values === 'function';
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[16]</sup></a></td>
-          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[16]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[16]</sup></a></td>
-          <td class="no firefox24">No<a href="#fx-array-prototype-values-note"><sup>[16]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[16]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
-          <td class="no firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
-          <td class="no firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
-          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[17]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[19]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[19]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[19]</sup></a></td>
+          <td class="no firefox24">No<a href="#fx-array-prototype-values-note"><sup>[19]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[19]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
+          <td class="no firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
+          <td class="no firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
+          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[20]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -5454,7 +5952,7 @@ return typeof Math.imul === 'function';
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[18]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[21]</sup></a></td>
           <td class="yes chrome30 obsolete">Yes</td>
           <td class="yes chrome33 obsolete">Yes</td>
           <td class="yes chrome34 obsolete">Yes</td>
@@ -6145,7 +6643,7 @@ return typeof Math.fround === 'function';
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[19]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[22]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -6228,7 +6726,7 @@ return typeof Math.cbrt === 'function';
           <th colspan="43" class="separator"></th>
         </tr>
         <tr>
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[20]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[23]</sup></a></span></td>
 <script data-source="function () {
 var passed = { __proto__ : [] } instanceof Array
   && !({ __proto__ : null } instanceof Object);
@@ -6273,8 +6771,8 @@ return passed;
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes<a href="#fx-proto-shorthand-note"><sup>[21]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#fx-proto-shorthand-note"><sup>[21]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#fx-proto-shorthand-note"><sup>[24]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#fx-proto-shorthand-note"><sup>[24]</sup></a></td>
           <td class="yes chrome obsolete">Yes</td>
           <td class="yes chrome19dev obsolete">Yes</td>
           <td class="yes chrome21dev obsolete">Yes</td>
@@ -6298,7 +6796,7 @@ return passed;
           <td class="yes ios8">Yes</td>
         </tr>
         <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[22]</sup></a></span></td>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[25]</sup></a></span></td>
 <script data-source="
 // Note: only available outside of strict mode.
 var passed = f() === 2 && g() === 4;
@@ -6542,62 +7040,71 @@ return typeof RegExp.prototype.compile === 'function';
       <p id="fx-arrow-note">
         <sup>[3]</sup> Firefox's arrows do not lexically bind <code>arguments</code>, and incorrectly allow line breaks between the arrow's parameters and the <code>=></code> token.
       </p>
+      <p id="const-reassign-note">
+        <sup>[4]</sup> In all of these browsers, <code>const</code> is not block-scoped, and reassigning to a <code>const</code> is a silent failure instead of an error.
+      </p>
+      <p id="let-javascript18-note">
+        <sup>[5]</sup> Firefox incorrectly prohibits <code>let</code> outside of a <code>&lt;script type="application/javascript;version=1.8"&gt;</code> tag.
+      </p>
+      <p id="let-extended-mode-note">
+        <sup>[6]</sup> Chrome and Node incorrectly prohibit <code>let</code> outside of strict mode.
+      </p>
       <p id="fx-defaults-scope-note">
-        <sup>[4]</sup> In Firefox, defaults can incorrectly refer to later parameters (<code>a=b, b</code>), themselves (<code>a=a</code>), and/or identifiers in the function body (<code>function(a=function(){ return b; }){ var b=true; ... }</code>)
+        <sup>[7]</sup> In Firefox, defaults can incorrectly refer to later parameters (<code>a=b, b</code>), themselves (<code>a=a</code>), and/or identifiers in the function body (<code>function(a=function(){ return b; }){ var b=true; ... }</code>)
       </p>
       <p id="fx-spreading-strings-note">
-        <sup>[5]</sup> Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.
+        <sup>[8]</sup> Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.
       </p>
       <p id="octal-to-string-note">
-        <sup>[6]</sup> Firefox doesn't support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.
+        <sup>[9]</sup> Firefox doesn't support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.
       </p>
       <p id="ie-typedarray-note">
-        <sup>[7]</sup> Internet Explorer supports every typed array class except <code>Uint8ClampedArray</code>.
+        <sup>[10]</sup> Internet Explorer supports every typed array class except <code>Uint8ClampedArray</code>.
       </p>
       <p id="map-constructor-note">
-        <sup>[8]</sup> Map and Set constructor arguments, such as <code>new Map([[key, val]])</code> or <code>new Set([obj1, obj2])</code>, are not supported.
+        <sup>[11]</sup> Map and Set constructor arguments, such as <code>new Map([[key, val]])</code> or <code>new Set([obj1, obj2])</code>, are not supported.
       </p>
       <p id="weakmap-constructor-note">
-        <sup>[9]</sup> WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.
+        <sup>[12]</sup> WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.
       </p>
       <p id="fx-proxy-get-note">
-        <sup>[10]</sup> Firefox doesn't allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy's "get" handler via the prototype chain, unless the proxied object actually does possess the named property.
+        <sup>[13]</sup> Firefox doesn't allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy's "get" handler via the prototype chain, unless the proxied object actually does possess the named property.
       </p>
       <p id="fx-proxy-set-note">
-        <sup>[11]</sup> Firefox doesn't allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy's "set" handler via the prototype chain.
+        <sup>[14]</sup> Firefox doesn't allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy's "set" handler via the prototype chain.
       </p>
       <p id="fx-proxy-getown-note">
-        <sup>[12]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible
+        <sup>[15]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible
       </p>
       <p id="fx-proxy-ownkeys-note">
-        <sup>[13]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler
+        <sup>[16]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler
       </p>
       <p id="block-level-function-note">
-        <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
+        <sup>[17]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
       </p>
       <p id="fx-destructuring-note">
-        <sup>[15]</sup> iOS 8 fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+        <sup>[18]</sup> iOS 8 fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
       </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[16]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[19]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[17]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[20]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[18]</sup> Available since Chrome 28
+        <sup>[21]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[19]</sup> Available since Firefox 26
+        <sup>[22]</sup> Available since Firefox 26
       </p>
       <p id="proto-in-object-literals-note">
-        <sup>[20]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[23]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
       <p id="fx-proto-shorthand-note">
-        <sup>[21]</sup> Firefox 33+ incorrectly regards both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
+        <sup>[24]</sup> Firefox 33+ incorrectly regards both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
       </p>
       <p id="hoisted-block-level-function-note">
-        <sup>[22]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
+        <sup>[25]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>

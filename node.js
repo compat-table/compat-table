@@ -11,6 +11,8 @@ var fs = require('fs')
   , desc = {}
   , done = false
 
+global.__script_executed = {};
+
 $('#body tbody tr').each(function () {
   if (this.find('.separator')[0])
     return
