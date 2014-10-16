@@ -802,10 +802,7 @@ exports.tests = [
         passed &= super.foo(a) === 'CDAB';
       }
       foo(a) {
-        // "super" in methods calls the
-        // superclass's same-named method on "this".
-        passed &= super(a) === 'YZEF';
-        passed &= super(a) === super.foo(a);
+        passed &= super.foo(a) === 'YZEF';
       }
     }
     var b = new B("CD");
@@ -3480,62 +3477,6 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     phantom:     false,
     node:        false,
     nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.create',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.create === "symbol") {
-      var a = 2, b = function(){};
-      Object.defineProperty(b, Symbol.create, { value: function() { a = 4; return {};} });
-      new b();
-      return a === 4;
-    }
-    return false;
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
     ios7:        false,
     ios8:        false
   }
