@@ -1552,7 +1552,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[7]</sup></a></td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes</td>
+          <td class="yes ios8">Yes<a href="#map-constructor-note"><sup>[7]</sup></a></td>
         </tr>
         <tr>
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -1607,7 +1607,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#map-constructor-note"><sup>[7]</sup></a></td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes</td>
+          <td class="yes ios8">Yes<a href="#map-constructor-note"><sup>[7]</sup></a></td>
         </tr>
         <tr>
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -1661,7 +1661,7 @@ test(function(){try{return Function("\nvar key1 = {};\nvar weakmap = new WeakMap
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes<a href="#weakmap-constructor-note"><sup>[8]</sup></a></td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes</td>
+          <td class="yes ios8">Yes<a href="#weakmap-constructor-note"><sup>[8]</sup></a></td>
         </tr>
         <tr>
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -2039,7 +2039,7 @@ test(function(){try{return Function("\n// Array destructuring\nvar [a, , [b], g]
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
-          <td class="yes ios8">Yes</td>
+          <td class="yes ios8">Yes<a href="#fx-destructuring-note"><sup>[10]</sup></a></td>
         </tr>
         <tr>
           <td id="destructuring_parameters"><span><a class="anchor" href="#destructuring_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring parameters</a></span></td>
@@ -4131,18 +4131,18 @@ return typeof Array.prototype.values === 'function';
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox24">No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[11]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[11]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[11]</sup></a></td>
+          <td class="no firefox24">No<a href="#fx-array-prototype-values-note"><sup>[11]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[11]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
+          <td class="no firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
+          <td class="no firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
+          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[12]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -4699,7 +4699,7 @@ return typeof Math.imul === 'function';
           <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[13]</sup></a></td>
           <td class="yes chrome30 obsolete">Yes</td>
           <td class="yes chrome33 obsolete">Yes</td>
           <td class="yes chrome34 obsolete">Yes</td>
@@ -5390,7 +5390,7 @@ return typeof Math.fround === 'function';
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[14]</sup></a></td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
@@ -5473,7 +5473,7 @@ return typeof Math.cbrt === 'function';
           <th colspan="43" class="separator"></th>
         </tr>
         <tr>
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[14]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[15]</sup></a></span></td>
 <script data-source="function () {
 var passed = { __proto__ : [] } instanceof Array
   && !({ __proto__ : null } instanceof Object);
@@ -5518,8 +5518,8 @@ return passed;
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32">Yes</td>
-          <td class="yes firefox33">Yes<a href="#fx-proto-shorthand-note"><sup>[15]</sup></a></td>
-          <td class="yes firefox34">Yes<a href="#fx-proto-shorthand-note"><sup>[15]</sup></a></td>
+          <td class="yes firefox33">Yes<a href="#fx-proto-shorthand-note"><sup>[16]</sup></a></td>
+          <td class="yes firefox34">Yes<a href="#fx-proto-shorthand-note"><sup>[16]</sup></a></td>
           <td class="yes chrome obsolete">Yes</td>
           <td class="yes chrome19dev obsolete">Yes</td>
           <td class="yes chrome21dev obsolete">Yes</td>
@@ -5543,7 +5543,7 @@ return passed;
           <td class="yes ios8">Yes</td>
         </tr>
         <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[16]</sup></a></span></td>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[17]</sup></a></span></td>
 <script data-source="
 // Note: only available outside of strict mode.
 var passed = f() === 2 && g() === 4;
@@ -5805,26 +5805,29 @@ return typeof RegExp.prototype.compile === 'function';
       <p id="block-level-function-note">
         <sup>[9]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
       </p>
+      <p id="fx-destructuring-note">
+        <sup>[10]</sup> iOS 8 fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+      </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[10]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[11]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[11]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[12]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[12]</sup> Available since Chrome 28
+        <sup>[13]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[13]</sup> Available since Firefox 26
+        <sup>[14]</sup> Available since Firefox 26
       </p>
       <p id="proto-in-object-literals-note">
-        <sup>[14]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[15]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
       <p id="fx-proto-shorthand-note">
-        <sup>[15]</sup> Firefox 33+ incorrectly regards both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
+        <sup>[16]</sup> Firefox 33+ incorrectly regards both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
       </p>
       <p id="hoisted-block-level-function-note">
-        <sup>[16]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
+        <sup>[17]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>

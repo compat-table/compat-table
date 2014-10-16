@@ -1763,7 +1763,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: { val: true, note_id: 'map-constructor' },
     ios7:        false,
-    ios8:        true
+    ios8:        { val: true, note_id: 'map-constructor' },
   }
 },
 {
@@ -1819,7 +1819,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: { val: true, note_id: 'map-constructor' },
     ios7:        false,
-    ios8:        true
+    ios8:        { val: true, note_id: 'map-constructor' },
   }
 },
 {
@@ -1878,7 +1878,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: { val: true, note_id: 'weakmap-constructor' },
     ios7:        false,
-    ios8:        true
+    ios8:        { val: true, note_id: 'weakmap-constructor' },
   }
 },
 {
@@ -2287,7 +2287,11 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: false,
     ios7:        false,
-    ios8:        true
+    ios8:        {
+      val: true,
+      note_id: 'fx-destructuring',
+      note_html: 'iOS 8 fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+    },
   }
 },
 {
