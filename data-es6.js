@@ -692,11 +692,11 @@ exports.tests = [
       note_id: 'fx-spreading-strings',
       note_html: 'Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.'
     },
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
+    firefox17:   { val: false, note_id: 'fx-spreading-strings' },
+    firefox18:   { val: false, note_id: 'fx-spreading-strings' },
+    firefox23:   { val: false, note_id: 'fx-spreading-strings' },
+    firefox24:   { val: false, note_id: 'fx-spreading-strings' },
+    firefox25:   { val: false, note_id: 'fx-spreading-strings' },
     firefox27:   true,
     firefox28:   true,
     firefox29:   true,
@@ -802,10 +802,7 @@ exports.tests = [
         passed &= super.foo(a) === 'CDAB';
       }
       foo(a) {
-        // "super" in methods calls the
-        // superclass's same-named method on "this".
-        passed &= super(a) === 'YZEF';
-        passed &= super(a) === super.foo(a);
+        passed &= super.foo(a) === 'YZEF';
       }
     }
     var b = new B("CD");
@@ -1763,7 +1760,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: { val: true, note_id: 'map-constructor' },
     ios7:        false,
-    ios8:        true
+    ios8:        { val: true, note_id: 'map-constructor' },
   }
 },
 {
@@ -1788,7 +1785,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     firefox16:   false,
     firefox17:   false,
     firefox18:   false,
-    firefox23:   false,
+    firefox23:   true,
     firefox24:   true,
     firefox25:   true,
     firefox27:   true,
@@ -1819,7 +1816,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: { val: true, note_id: 'map-constructor' },
     ios7:        false,
-    ios8:        true
+    ios8:        { val: true, note_id: 'map-constructor' },
   }
 },
 {
@@ -1878,7 +1875,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: { val: true, note_id: 'weakmap-constructor' },
     ios7:        false,
-    ios8:        true
+    ios8:        { val: true, note_id: 'weakmap-constructor' },
   }
 },
 {
@@ -2287,7 +2284,11 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: false,
     ios7:        false,
-    ios8:        true
+    ios8:        {
+      val: true,
+      note_id: 'fx-destructuring',
+      note_html: 'iOS 8 fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+    },
   }
 },
 {
@@ -3481,62 +3482,6 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Symbol.create',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {
-    if (typeof Symbol === "function" && typeof Symbol.create === "symbol") {
-      var a = 2, b = function(){};
-      Object.defineProperty(b, Symbol.create, { value: function() { a = 4; return {};} });
-      new b();
-      return a === 4;
-    }
-    return false;
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
   name: 'Symbol.hasInstance',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   exec: function() {/*
@@ -4542,22 +4487,22 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
       note_id: 'fx-array-prototype-values',
       note_html: 'Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>'
     },
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
+    firefox18:   { val: false, note_id: 'fx-array-prototype-values' },
+    firefox23:   { val: false, note_id: 'fx-array-prototype-values' },
+    firefox24:   { val: false, note_id: 'fx-array-prototype-values' },
+    firefox25:   { val: false, note_id: 'fx-array-prototype-values' },
     firefox27:   {
       val: false,
       note_id: 'fx-array-prototype-values-2',
       note_html: 'Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>'
     },
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
+    firefox28:   { val: false, note_id: 'fx-array-prototype-values-2' },
+    firefox29:   { val: false, note_id: 'fx-array-prototype-values-2' },
+    firefox30:   { val: false, note_id: 'fx-array-prototype-values-2' },
+    firefox31:   { val: false, note_id: 'fx-array-prototype-values-2' },
+    firefox32:   { val: false, note_id: 'fx-array-prototype-values-2' },
+    firefox33:   { val: false, note_id: 'fx-array-prototype-values-2' },
+    firefox34:   { val: false, note_id: 'fx-array-prototype-values-2' },
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
