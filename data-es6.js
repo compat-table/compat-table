@@ -1935,16 +1935,140 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Proxy',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies',
-  exec: function () {
-    try {
-      return typeof Proxy !== "undefined" &&
-           new Proxy({}, { get: function () { return 5; } }).foo === 5;
-    }
-    catch(err) { }
-    return false;
-  },
+  name: 'Proxy "get" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver',
+  exec: function () {/*
+    var proxied = { };
+    var proxy = new Proxy(proxied, {
+      get: function (t, k, r) {
+        return t === proxied && k === "foo" && r === proxy && 5;
+      }
+    });
+    return proxy.foo === 5;
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   {
+      val: true,
+      note_id: 'fx-proxy-get',
+      note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "get" handler via the prototype chain, unless the proxied object actually does possess the named property.'
+    },
+    firefox23:   { val: true, note_id: 'fx-proxy-get' },
+    firefox24:   { val: true, note_id: 'fx-proxy-get' },
+    firefox25:   { val: true, note_id: 'fx-proxy-get' },
+    firefox27:   { val: true, note_id: 'fx-proxy-get' },
+    firefox28:   { val: true, note_id: 'fx-proxy-get' },
+    firefox29:   { val: true, note_id: 'fx-proxy-get' },
+    firefox30:   { val: true, note_id: 'fx-proxy-get' },
+    firefox31:   { val: true, note_id: 'fx-proxy-get' },
+    firefox32:   { val: true, note_id: 'fx-proxy-get' },
+    firefox33:   { val: true, note_id: 'fx-proxy-get' },
+    firefox34:   { val: true, note_id: 'fx-proxy-get' },
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "set" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver',
+  exec: function () {/*
+    var proxied = { };
+    var passed = false;
+    var proxy = new Proxy(proxied, {
+      set: function (t, k, v, r) {
+        passed = t === proxied && k + v === "foobar" && r === proxy;
+      }
+    });
+    proxy.foo = "bar";
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   {
+      val: true,
+      note_id: 'fx-proxy-set',
+      note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "set" handler via the prototype chain.'
+    },
+    firefox23:   { val: true, note_id: 'fx-proxy-set' },
+    firefox24:   { val: true, note_id: 'fx-proxy-set' },
+    firefox25:   { val: true, note_id: 'fx-proxy-set' },
+    firefox27:   { val: true, note_id: 'fx-proxy-set' },
+    firefox28:   { val: true, note_id: 'fx-proxy-set' },
+    firefox29:   { val: true, note_id: 'fx-proxy-set' },
+    firefox30:   { val: true, note_id: 'fx-proxy-set' },
+    firefox31:   { val: true, note_id: 'fx-proxy-set' },
+    firefox32:   { val: true, note_id: 'fx-proxy-set' },
+    firefox33:   { val: true, note_id: 'fx-proxy-set' },
+    firefox34:   { val: true, note_id: 'fx-proxy-set' },
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "has" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    "foo" in new Proxy(proxied, {
+      has: function (t, k) {
+        passed = t === proxied && k === "foo";
+      }
+    });
+    return passed;
+  */},
   res: {
     tr:          false,
     ejs:         true,
@@ -1990,12 +2114,736 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
+  name: 'Proxy "deleteProperty" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-delete-p',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    delete new Proxy(proxied, {
+      deleteProperty: function (t, k) {
+        passed = t === proxied && k === "foo";
+      }
+    }).foo;
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "getOwnPropertyDescriptor" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p',
+  exec: function () {/*
+    var proxied = {};
+    var fakeDesc = { value: "foo", configurable: true };
+    var returnedDesc = Object.getOwnPropertyDescriptor(
+      new Proxy(proxied, {
+        getOwnPropertyDescriptor: function (t, k) {
+          return t === proxied && k === "foo" && fakeDesc;
+        }
+      }),
+      "foo"
+    );
+    return (returnedDesc.value     === fakeDesc.value
+      && returnedDesc.configurable === fakeDesc.configurable
+      && returnedDesc.writable     === false
+      && returnedDesc.enumerable   === false);
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:    {
+      val: false,
+      note_id: 'fx-proxy-getown',
+      note_html: 'From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible'
+    },
+    firefox23:   { val: false, note_id: 'fx-proxy-getown' },
+    firefox24:   { val: false, note_id: 'fx-proxy-getown' },
+    firefox25:   { val: false, note_id: 'fx-proxy-getown' },
+    firefox27:   { val: false, note_id: 'fx-proxy-getown' },
+    firefox28:   { val: false, note_id: 'fx-proxy-getown' },
+    firefox29:   { val: false, note_id: 'fx-proxy-getown' },
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "defineProperty" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    Object.defineProperty(
+      new Proxy(proxied, {
+        defineProperty: function (t, k, d) {
+          passed = t === proxied && k === "foo" && d.value === 5;
+        }
+      }),
+      "foo",
+      { value: 5 }
+    );
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "getPrototypeOf" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof',
+  exec: function () {/*
+    var proxied = {};
+    var fakeProto = {};
+    var proxy = new Proxy(proxied, {
+      getPrototypeOf: function (t) {
+        return t === proxied && fakeProto;
+      }
+    });
+    return Object.getPrototypeOf(proxy) === fakeProto;
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "setPrototypeOf" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof',
+  exec: function () {/*
+    var proxied = {};
+    var newProto = {};
+    var passed = false;
+    Object.setPrototypeOf(
+      new Proxy(proxied, {
+        setPrototypeOf: function (t, p) {
+          passed = t === proxied && p === newProto;
+        }
+      }),
+      newProto
+    );
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "isExtensible" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-isextensible',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    Object.isExtensible(
+      new Proxy(proxied, {
+        isExtensible: function (t) {
+          passed = t === proxied; return true;
+        }
+      })
+    );
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy "preventExtensions" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-preventextensions',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    Object.preventExtensions(
+      new Proxy(proxied, {
+        preventExtensions: function (t) {
+          passed = t === proxied;
+          return Object.preventExtensions(proxied);
+        }
+      })
+    );
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false,
+  }
+},
+{
+  name: 'Proxy "enumerate" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-enumerate',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    for (var i in
+      new Proxy(proxied, {
+        enumerate: function (t) {
+          passed = t === proxied;
+          return {
+            next: function(){ return { done: true, value: null };}
+          };
+        }
+      })
+    ) { }
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false,
+  }
+},
+{
+  name: 'Proxy "ownKeys" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys',
+  exec: function () {/*
+    var proxied = {};
+    var passed = false;
+    Object.keys(
+      new Proxy(proxied, {
+        ownKeys: function (t) {
+          passed = t === proxied; return [];
+        }
+      })
+    );
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   {
+      val: false,
+      note_id: 'fx-proxy-ownkeys',
+      note_html: 'Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler'
+    },
+    firefox23:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox24:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox25:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox27:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox28:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox29:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox30:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox31:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox32:   { val: false, note_id: 'fx-proxy-ownkeys' },
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false,
+  }
+},
+{
+  name: 'Proxy "apply" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist',
+  exec: function () {/*
+    var proxied = function(){};
+    var passed = false;
+    var host = {
+      method: new Proxy(proxied, { 
+        apply: function (t, thisArg, args) { console.log(arguments);
+          passed = t === proxied && thisArg === host && args + "" === "foo,bar";
+        }
+      })
+    };
+    host.method("foo", "bar");
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false,
+  }
+},
+{
+  name: 'Proxy "construct" handler',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-construct-internal-method',
+  exec: function () {/*
+    var proxied = function(){};
+    var passed = false;
+    new new Proxy(proxied, {
+      construct: function (t, args) {
+        passed = t === proxied && args + "" === "foo,bar";
+        return {};
+      }
+    })("foo","bar");
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   true,
+    firefox23:   true,
+    firefox24:   true,
+    firefox25:   true,
+    firefox27:   true,
+    firefox28:   true,
+    firefox29:   true,
+    firefox30:   true,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
+  name: 'Proxy.revocable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy.revocable',
+  exec: function () {/*
+    var obj = Proxy.revocable({}, { get: function() { return 5; } });
+    var passed = (obj.proxy.foo === 5);
+    obj.revoke();
+    try {
+      obj.proxy.foo;
+    } catch(e) {
+      passed &= e instanceof TypeError;
+    }
+    return passed;
+  */},
+  res: {
+    tr:          false,
+    ejs:         false,
+    ie10:        false,
+    ie11:        false,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   true,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    chrome39:    false,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7:        false,
+    ios8:        false
+  }
+},
+{
   name: 'Reflect',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
   exec: function () {
     var i, names =
-      ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
-      "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
+      ["apply","construct","defineProperty","deleteProperty","enumerate","get",
+      "getOwnPropertyDescriptor","getPrototypeOf","has","isExtensible","ownKeys",
+      "preventExtensions","set","setPrototypeOf"];
 
     if (typeof Reflect !== "object") {
       return false;
