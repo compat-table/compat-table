@@ -88,7 +88,7 @@ function dataToHtml(browsers, tests) {
     body.push(
       '<tr>',
       '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
-      testScript(t.exec)
+      testScript(t.exec, id)
     );
 
     // each browser for this test
@@ -205,7 +205,7 @@ function deindentFunc(fn) {
   return fn;
 }
 
-function testScript(fn) {
+function testScript(fn, id) {
   if (typeof fn === 'function') {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
@@ -217,8 +217,13 @@ function testScript(fn) {
     }
     else {
       expr = deindentFunc(expr[1]);
+      var async = !!/asyncTestPassed/.exec(fn);
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
-      'test(function(){try{return Function(' + JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}());\n' +
+      'test(function(){try{return Function(' +
+      (async ? '"asyncTestPassed",' : '') +
+      JSON.stringify(expr).replace(/\\r/g,'') + ')(' +
+      (async ? 'global.__asyncPassedFn && __asyncPassedFn("' + id.replace(/"/g,'\\"') + '")' : '') +
+      ')}catch(e){return false;}}());\n' +
       '</script>\n';
     }
   } else {
