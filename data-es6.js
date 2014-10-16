@@ -4690,7 +4690,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.isFinite',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
   exec: function () {
-    return typeof Number.isFinite === 'function';
+    return typeof Number.isFinite === "function"
+      && Number.isFinite(2) && !Number.isFinite(1/0);
   },
   res: {
     tr:          true,
@@ -4740,7 +4741,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.isInteger',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger',
   exec: function () {
-    return typeof Number.isInteger === 'function';
+    return typeof Number.isInteger === 'function'
+      && Number.isInteger(1) && !Number.isInteger(2/3);
   },
   res: {
     tr:          true,
@@ -4790,7 +4792,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.isSafeInteger',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger',
   exec: function () {
-    return typeof Number.isSafeInteger === 'function';
+    return typeof Number.isSafeInteger === 'function'
+      && Number.isSafeInteger(1) && !Number.isSafeInteger(2e16);
   },
   res: {
     tr:          true,
@@ -4840,7 +4843,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.isNaN',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan',
   exec: function () {
-    return typeof Number.isNaN === 'function';
+    return typeof Number.isNaN === 'function'
+      && Number.isNaN(NaN) && !Number.isNaN("foo");
   },
   res: {
     tr:          true,
@@ -4890,7 +4894,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.EPSILON',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon',
   exec: function () {
-    return typeof Number.EPSILON === 'number';
+    return Number.EPSILON === 2.2204460492503130808472633361816e-16;
   },
   res: {
     tr:          true,
@@ -4940,7 +4944,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.MIN_SAFE_INTEGER',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer',
   exec: function () {
-    return typeof Number.MIN_SAFE_INTEGER === 'number';
+    return Number.MIN_SAFE_INTEGER === -9007199254740991;
   },
   res: {
     tr:          true,
@@ -4990,7 +4994,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Number.MAX_SAFE_INTEGER',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer',
   exec: function () {
-    return typeof Number.MAX_SAFE_INTEGER === 'number';
+    return Number.MAX_SAFE_INTEGER === 9007199254740991;
   },
   res: {
     tr:          true,
@@ -5040,7 +5044,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.clz32',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32',
   exec: function () {
-    return typeof Math.clz32 === 'function';
+    return typeof Math.clz32 === 'function'
+      && Math.clz32(0)     === 32
+      && Math.clz32(2<<30) === 0;
   },
   res: {
     tr:          false,
@@ -5090,7 +5096,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.imul',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul',
   exec: function () {
-    return typeof Math.imul === 'function';
+    return typeof Math.imul === 'function'
+      && Math.imul(2147483647, 1) ===  2147483647
+      && Math.imul(2147483648, 1) === -2147483648;
   },
   res: {
     tr:          false,
@@ -5117,7 +5125,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     chrome19dev: false,
     chrome21dev: {
       val: true,
-      note_id: 'chromu-imul',
+      note_id: 'chrome-imul',
       note_html: 'Available since Chrome 28'
     },
     chrome30:    true,
@@ -5144,7 +5152,10 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.sign',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign',
   exec: function () {
-    return typeof Math.sign === 'function';
+    return typeof Math.sign === 'function'
+      && Math.sign(25)  ===  1
+      && Math.sign(-7)  === -1
+      && Math.sign( 0)  ===  0;
   },
   res: {
     tr:          false,
@@ -5194,7 +5205,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.log10',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10',
   exec: function () {
-    return typeof Math.log10 === 'function';
+    return typeof Math.log10 === 'function'
+      && Math.log10(Math.pow(10,123)) === 123;
   },
   res: {
     tr:          false,
@@ -5244,7 +5256,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.log2',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2',
   exec: function () {
-    return typeof Math.log2 === 'function';
+    return typeof Math.log2 === 'function'
+      && Math.log2(1 << 9) === 9;
   },
   res: {
     tr:          false,
@@ -5294,7 +5307,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.log1p',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p',
   exec: function () {
-    return typeof Math.log1p === 'function';
+    return typeof Math.log1p === 'function'
+      && Math.log1p(Math.E - 1) === 1;
   },
   res: {
     tr:          false,
@@ -5344,7 +5358,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.expm1',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1',
   exec: function () {
-    return typeof Math.expm1 === 'function';
+    return typeof Math.expm1 === 'function'
+     && Math.expm1(3) === Math.exp(3) - 1;
   },
   res: {
     tr:          false,
@@ -5394,7 +5409,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.cosh',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh',
   exec: function () {
-    return typeof Math.cosh === 'function';
+    return typeof Math.cosh === 'function'
+      && Math.cosh(12) === (Math.exp(12) + Math.exp(-12)) / 2;
   },
   res: {
     tr:          false,
@@ -5444,7 +5460,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.sinh',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh',
   exec: function () {
-    return typeof Math.sinh === 'function';
+    return typeof Math.sinh === 'function'
+      && Math.sinh(45) === (Math.exp(45) - Math.exp(-45)) / 2;
   },
   res: {
     tr:          false,
@@ -5494,7 +5511,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.tanh',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh',
   exec: function () {
-    return typeof Math.tanh === 'function';
+    return typeof Math.tanh === 'function'
+      && Math.tanh(29) === (Math.exp(29) - Math.exp(-29)) /
+                           (Math.exp(29) + Math.exp(-29));
   },
   res: {
     tr:          false,
@@ -5544,7 +5563,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.acosh',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh',
   exec: function () {
-    return typeof Math.acosh === 'function';
+    return typeof Math.acosh === 'function'
+      && Math.acosh(51) === Math.log(51 + Math.sqrt(51*51 - 1));
   },
   res: {
     tr:          false,
@@ -5594,7 +5614,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.asinh',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh',
   exec: function () {
-    return typeof Math.asinh === 'function';
+    return typeof Math.asinh === 'function'
+      && Math.asinh(17) === Math.log(17 + Math.sqrt(17*17 + 1));
   },
   res: {
     tr:          false,
@@ -5644,7 +5665,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.atanh',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh',
   exec: function () {
-    return typeof Math.atanh === 'function';
+    return typeof Math.atanh === 'function'
+      && Math.atanh(0.7) === Math.log((1 + 0.7) / (1 - 0.7)) / 2;
   },
   res: {
     tr:          false,
@@ -5694,7 +5716,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.hypot',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot',
   exec: function () {
-    return typeof Math.hypot === 'function';
+    return typeof Math.hypot === 'function'
+      && Math.hypot(6,7,8) === Math.sqrt(6*6 + 7*7 + 8*8);
   },
   res: {
     tr:          false,
@@ -5744,7 +5767,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.trunc',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc',
   exec: function () {
-    return typeof Math.trunc === 'function';
+    return typeof Math.trunc === 'function'
+      && Math.trunc( 61.9) ===  61
+      && Math.trunc(-61.9) === -61;
   },
   res: {
     tr:          false,
@@ -5794,7 +5819,8 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.fround',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround',
   exec: function () {
-    return typeof Math.fround === 'function';
+    return typeof Math.fround === 'function'
+      && Math.fround(0.1) === 0.10000000149011612;
   },
   res: {
     tr:          false,
@@ -5848,7 +5874,9 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Math.cbrt',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt',
   exec: function () {
-    return typeof Math.cbrt === 'function';
+    return typeof Math.cbrt === 'function'
+      && Math.cbrt( 71) ===  Math.pow(71, 1/3)
+      && Math.cbrt(-44) === -Math.pow(44, 1/3);
   },
   res: {
     tr:          false,
