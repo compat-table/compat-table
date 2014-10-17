@@ -15,12 +15,14 @@ document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 domready(function() {
   var showObsolete = document.getElementById('show-obsolete');
   showObsolete.onclick = function() {
-    this.setAttribute('value',this.getAttribute('value')==="on" ? "off" : "on");
-  }
+    this.setAttribute('value', this.getAttribute('value') === "on" ? "off" : "on");
+
+    document.getElementsByClassName('desktop')[0].colSpan = showObsolete.checked ? 32 : 15;
+  };
   showObsolete.setAttribute('value', showObsolete.checked);
-  
+
   var table = document.getElementById('table-wrapper');
-  
+
   var mouseoverTimeout;
 
   var infoTooltip = document.createElement('pre');
@@ -35,7 +37,7 @@ domready(function() {
   };
 
   var rows = table.rows;
-  for (var i = 1; i < rows.length; i++) {
+  for (var i = 2; i < rows.length; i++) {
     if (/separator/.test(rows[i].cells[0].className)) continue;
 
     var infoEl = document.createElement('span');
@@ -46,14 +48,14 @@ domready(function() {
     infoEl.onmouseover = function(e) {
       e = e || window.event;
       mouseoverTimeout = null;
-      
+
       var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
       var id = "tooltip_" + this.parentNode.id;
-      
+
       infoTooltip.innerHTML = scriptEl.getAttribute('data-source')
         // trim sides, and escape <
         .replace(/^\s*|\s*$/g,'').replace(/</g, '&lt;');
-      
+
       if (!e.pageX) {
         e.pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
         e.pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
@@ -106,7 +108,7 @@ domready(function() {
         e.target.parentNode.className === 'browser-name') {
 
       var i, target = e.target.className ? e.target : e.target.parentNode;
-      
+
       for(i=0; i<table.rows[0].cells.length; i++) {
         if (table.rows[0].cells[i]===target.parentNode) {
           break;
@@ -150,9 +152,9 @@ domready(function() {
       }
     }
   }
-  
+
   function initColumnHighlight() {
-    for (var i = 0, len = table.rows.length; i < len; i++) {
+    for (var i = 1, len = table.rows.length; i < len; i++) {
       var row = table.rows[i];
       for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
         row.cells[j].onmouseover = (function(i, j, jlen) {
@@ -194,7 +196,7 @@ domready(function() {
   for (var i = 0, len = table.rows.length; i < len; i++) {
     for (var j = 0, jlen = table.rows[i].cells.length; j < jlen; j++) {
       if (numFeaturesPerColumn[j] === undefined) continue;
-      
+
       var num = numFeaturesPerColumn[j][0];
       var totalResultsInColum = numFeaturesPerColumn[j][1];
       var cell = table.rows[i].cells[j];
@@ -202,7 +204,12 @@ domready(function() {
       cell.setAttribute('data-features', num/totalResultsInColum);
       cell.setAttribute('data-num', j);
 
-      if (cell.tagName.toLowerCase() === 'th' && typeof num === 'number') {
+      var shouldAppendInfo = (
+        cell.tagName.toLowerCase() === 'th' &&
+        typeof num === 'number' &&
+        cell.className.indexOf('ignore') === -1);
+
+      if (shouldAppendInfo) {
         cell.innerHTML += (
           ' <sup class="num-features" title="Number of implemented features"><b>' +
             num +
@@ -230,6 +237,8 @@ domready(function() {
 
         return aNum - bNum;
       };
+
+      table.rows[0].style.display = sortByFeatures ? 'none' : '';
 
       // sort
       for (var i = 0, len = table.rows.length; i < len; i++) {

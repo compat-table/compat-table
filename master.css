@@ -79,5 +79,7 @@ label[for="sort"] { margin-left: 20px; background: #fee; padding: 5px; margin-ri
 
 .browser-name:hover { opacity: 0.9; }
 
-.num-features { position: absolute; top: -13px; right: 0px; font-size: 11px; }
+.num-features { position: absolute; top: -15px; right: 0px; font-size: 11px; }
 .num-features b { font-weight: bold; }
+
+.ignore span { position: relative; top: -10px; font-weight: bold; }
