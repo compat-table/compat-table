@@ -173,6 +173,9 @@ label[for="sort"] {
 .also-see a {
     font-weight: bold; color: blue !important; text-decoration: underline !important; 
 }
+.platformtype {
+	font-weight: bold;
+}
 
 /* page-specific header colors */
 .es6 #header {
@@ -215,4 +218,36 @@ label[for="sort"] {
 }
 .this-browser {
     background-color: #eef; color: #55f; text-transform: uppercase; padding: 4px 5px; width: 110px; font-size: 13px; vertical-align: top; 
+}
+
+/* browser engine color stripes */
+
+/* Trident */
+th[class^=ie] {
+  border-bottom: 5px solid #2571ed;
+}
+/* SpiderMonkey */
+th[class^=firefox],
+th[class^=rhino] {
+  border-bottom: 5px solid #E66000;
+}
+/* JavaScriptCore */
+th[class^=webkit],
+th[class^=safari],
+th[class^=phantom],
+th[class^=ios] {
+  border-bottom: 5px solid #b2b2b2;
+}
+/* V8 */
+th[class^=chrome],
+th[class^=node] {
+  border-bottom: 5px solid #4db848;
+}
+/* Carakan */
+th[class^=opera] {
+  border-bottom: 5px solid #CC0F16;
+}
+/* KJS */
+th[class^=konq] {
+  border-bottom: 5px solid #7BD2FF;
 }
