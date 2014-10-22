@@ -72,7 +72,8 @@
             <th class="safari3 obsolete"><a href="#safari3" class="browser-name"><abbr title="Safari 3.2">SF 3.2</abbr></th>
             <th class="safari4 obsolete"><a href="#safari4" class="browser-name"><abbr title="Safari 4.0.5">SF 4</abbr></th>
             <th class="safari5 obsolete"><a href="#safari5" class="browser-name"><abbr title="Safari 5">SF 5</abbr></th>
-            <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari 7">SF 7</abbr></th>
+            <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari 7.0">SF 7.0</abbr></th>
+            <th class="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari 7.1, Safari 8">SF 7.1, SF 8</abbr></th>
             <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r72487 (Nov 24, 2010)">WebKit</abbr></th>
             <th class="chrome7 obsolete"><a href="#chrome7" class="browser-name"><abbr title="Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)">CH 7-10</abbr></th>
             <th class="opera10_10 obsolete"><a href="#opera10_10" class="browser-name"><abbr title="Opera 10.10">OP 10.10</abbr></th>
@@ -108,6 +109,7 @@ return typeof uneval == 'function';
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -157,6 +159,7 @@ return 'toSource' in Object.prototype
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -169,7 +172,7 @@ return 'toSource' in Object.prototype
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&sect;</a>function "caller" property</span></td>
@@ -193,6 +196,7 @@ return 'caller' in (function(){});
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -230,6 +234,7 @@ return (function (){}).arity === 0 &&
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -269,6 +274,7 @@ return f(1, 'boo');
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -302,6 +308,7 @@ return typeof Function.prototype.isGenerator == 'function';
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -314,7 +321,7 @@ return typeof Function.prototype.isGenerator == 'function';
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="__count__"><span><a class="anchor" href="#__count__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span></td>
@@ -340,6 +347,7 @@ return typeof ({}).__count__ === 'number' &&
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -373,6 +381,7 @@ return typeof ({}).__parent__ !== 'undefined';
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -416,6 +425,7 @@ return executed;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -449,6 +459,7 @@ return '__defineGetter__' in {};
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -482,6 +493,7 @@ return '__defineSetter__' in {};
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -521,6 +533,7 @@ test(function(){try{return Function("\ntry {\n  var obj = eval('{ get foo() { re
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -533,7 +546,7 @@ test(function(){try{return Function("\ntry {\n  var obj = eval('{ get foo() { re
             <td class="yes phantom">Yes</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span></td>
@@ -557,6 +570,7 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -590,6 +604,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -602,7 +617,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="Array_comprehensions_(right-to-left)"><span><a class="anchor" href="#Array_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (right-to-left)</a></span></td>
@@ -627,6 +642,7 @@ test(function(){try{return Function("\nvar obj = { 2: true, \"foo\": true, 4: tr
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -659,6 +675,7 @@ test(function(){try{return Function("\nreturn (function(x)x)(1) === 1;\n  ")()}c
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -691,6 +708,7 @@ test(function(){try{return Function("\nreturn typeof <foo/> === \"xml\";\n  ")()
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -727,6 +745,7 @@ test(function(){try{return Function("\nvar str = '';\nfor each (var item in {a: 
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -741,10 +760,10 @@ test(function(){try{return Function("\nvar str = '';\nfor each (var item in {a: 
           <tr>
             <td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span></td>
 <script data-source="
-var arr = #1=[1, #1#, 3]; 
+var arr = #1=[1, #1#, 3];
 return arr[1] === arr;
   ">
-test(function(){try{return Function("\nvar arr = #1=[1, #1#, 3]; \nreturn arr[1] === arr;\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar arr = #1=[1, #1#, 3];\nreturn arr[1] === arr;\n  ")()}catch(e){return false;}}());
 </script>
 
             <td class="no ie7">No</td>
@@ -760,6 +779,7 @@ test(function(){try{return Function("\nvar arr = #1=[1, #1#, 3]; \nreturn arr[1]
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="opera10_10 obsolete"></td>
@@ -772,7 +792,7 @@ test(function(){try{return Function("\nvar arr = #1=[1, #1#, 3]; \nreturn arr[1]
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="Iterator"><span><a class="anchor" href="#Iterator">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span></td>
@@ -820,6 +840,7 @@ catch(e) {
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -885,6 +906,7 @@ catch(e) {
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -956,6 +978,7 @@ test(function () {
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -990,6 +1013,7 @@ test(function(){try{return Function("\nvar obj = { 2: true, \"foo\": true, 4: tr
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1002,7 +1026,7 @@ test(function(){try{return Function("\nvar obj = { 2: true, \"foo\": true, 4: tr
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&sect;</a>RegExp "x" flag</span></td>
@@ -1040,6 +1064,7 @@ try {
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -1077,6 +1102,7 @@ return RegExp.lastMatch === 'x';
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1116,6 +1142,7 @@ return true;
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -1148,6 +1175,7 @@ test(function(){try{return Function("\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")
             <td class="yes safari4 obsolete">Yes</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="yes opera10_10 obsolete">Yes</td>
@@ -1180,6 +1208,7 @@ test(function(){try{return Function("\nreturn /(?P<name>a)(?P=name)/.test(\"aa\"
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="opera10_10 obsolete"></td>
@@ -1192,7 +1221,7 @@ test(function(){try{return Function("\nreturn /(?P<name>a)(?P=name)/.test(\"aa\"
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span></td>
@@ -1212,6 +1241,7 @@ function () { return typeof String.prototype.trimLeft === 'function' }())</scrip
             <td class="no safari4 obsolete">No</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1241,6 +1271,7 @@ function () { return typeof String.prototype.trimRight === 'function' }())</scri
             <td class="no safari4 obsolete">No</td>
             <td class="yes safari5 obsolete">Yes</td>
             <td class="yes safari7">Yes</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1270,6 +1301,7 @@ function () { return typeof String.prototype.quote === 'function' }())</script>
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1299,6 +1331,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
             <td class="safari4 obsolete"></td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="webkit"></td>
             <td class="chrome7 obsolete"></td>
             <td class="opera10_10 obsolete"></td>
@@ -1311,7 +1344,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span></td>
@@ -1331,6 +1364,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1343,7 +1377,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span></td>
@@ -1363,6 +1397,7 @@ function () { return typeof Object.prototype.watch == 'function' }())</script>
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1392,6 +1427,7 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1421,6 +1457,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script>
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1433,7 +1470,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script>
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
           <tr>
             <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error "stack"</a></span></td>
@@ -1457,6 +1494,7 @@ return 'stack' in new Error;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="yes safari71_8">Yes</td>
             <td class="yes webkit">Yes</td>
             <td class="yes chrome7 obsolete">Yes</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1490,6 +1528,7 @@ return 'lineNumber' in new Error;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1523,6 +1562,7 @@ return 'columnNumber' in new Error;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1556,6 +1596,7 @@ return 'fileName' in new Error;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1589,6 +1630,7 @@ return 'description' in new Error;
             <td class="no safari4 obsolete">No</td>
             <td class="no safari5 obsolete">No</td>
             <td class="no safari7">No</td>
+            <td class="no safari71_8">No</td>
             <td class="no webkit">No</td>
             <td class="no chrome7 obsolete">No</td>
             <td class="no opera10_10 obsolete">No</td>
@@ -1601,7 +1643,7 @@ return 'description' in new Error;
             <td class="no phantom">No</td>
           </tr>
           <tr>
-            <th colspan="26" class="separator"></th>
+            <th colspan="27" class="separator"></th>
           </tr>
         </tbody>
       </table>
