@@ -14,7 +14,7 @@ th:nth-child(3) {
     min-width: 10px; 
 }
 td {
-    background: #eee; padding-left: 5px; margin-left: -10px; font-size: 14px; 
+    background: #eee; position:relative; padding-left: 5px; margin-left: -10px; font-size: 14px; 
 }
 td:hover .anchor,
 td .anchor:focus {
