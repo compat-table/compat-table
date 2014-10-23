@@ -17,7 +17,7 @@ domready(function() {
   showObsolete.onclick = function() {
     this.setAttribute('value', this.getAttribute('value') === "on" ? "off" : "on");
 
-    document.getElementsByClassName('desktop')[0].colSpan = showObsolete.checked ? 32 : 15;
+    document.getElementsByClassName('desktop')[0].colSpan = showObsolete.checked ? 33 : 16;
   };
   showObsolete.setAttribute('value', showObsolete.checked);
 
