@@ -1816,7 +1816,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    safari71_8:  true,
+    safari71_8:  { val: true, note_id: 'map-constructor' },
     webkit:      { val: true, note_id: 'map-constructor' },
     opera:       false,
     konq49:      false,
@@ -1874,7 +1874,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    safari71_8:  true,
+    safari71_8:  { val: true, note_id: 'map-constructor' },
     webkit:      { val: true, note_id: 'map-constructor' },
     opera:       false,
     konq49:      false,
@@ -1935,7 +1935,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    safari71_8:  true,
+    safari71_8:  { val: true, note_id: 'weakmap-constructor' },
     webkit:      { val: true, note_id: 'weakmap-constructor' },
     opera:       false,
     konq49:      false,
@@ -2358,7 +2358,11 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     safari51:    false,
     safari6:     false,
     safari7:     false,
-    safari71_8:  true,
+    safari71_8:  {
+      val: true,
+      note_id: 'fx-destructuring',
+      note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+    },
     webkit:      true,
     opera:       false,
     konq49:      false,
@@ -2367,11 +2371,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     node:        false,
     nodeharmony: false,
     ios7:        false,
-    ios8:        {
-      val: true,
-      note_id: 'fx-destructuring',
-      note_html: 'iOS 8 fails to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
-    },
+    ios8:        { val: true, note_id: 'fx-destructuring' },
   }
 },
 {
