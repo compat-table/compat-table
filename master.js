@@ -153,11 +153,9 @@ $(function() {
         '</b>/' +
         results.length + '</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
-      .append('<style>th.' + elem.attr('class').replace(/\s.*$/,'') + 
-        '{background-image:linear-gradient(to top, #ddd 0%, #ddd ' +
+      .css({'background-image':'linear-gradient(to top, #ddd 0%, #ddd ' +
         (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
-        '%,transparent 100%);}' +
-        '</style>');
+        '%,transparent 100%)'});
   });
   
   // Cached array of sort orderings
