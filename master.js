@@ -23,6 +23,7 @@ window.test = function(expression) {
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 $(function() {
+  'use strict';
   var table = $('#table-wrapper');
   var currentBrowserSelector = ":nth-of-type(2)";
 
