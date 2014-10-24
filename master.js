@@ -1,21 +1,25 @@
+// jshint ignore:start
 var _gaq = [
   ['_setAccount', 'UA-1128111-24'],
   ['_trackPageview']
 ];
+// jshint ignore:end
 
 (function() {
   var ga = document.createElement('script');
   ga.type = 'text/javascript';
   ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') +
+            '.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(ga, s);
 })();
 
-function test(expression) {
+window.test = function(expression) {
   var result = expression ? 'Yes' : 'No';
   document.write('<td class="' + result.toLowerCase() + '">' + result + '</td><td></td>');
-}
+};
+
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 $(function() {
@@ -31,12 +35,14 @@ $(function() {
     })
     .attr('value', $('#show-obsolete').checked);
 
+  var mouseoverTimeout;
+
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
     .appendTo('body')
     .on('mouseleave', function() {
-      $(this).hide()
+      $(this).hide();
     })
     .on('mouseenter', function() {
       mouseoverTimeout = null;
@@ -45,8 +51,6 @@ $(function() {
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
     var td = $(this);
-
-    var mouseoverTimeout;
 
     $('<span class="info">c</span>')
       .appendTo(td)
@@ -64,7 +68,7 @@ $(function() {
           })
           .show();
       })
-      .on('mouseleave', function(e) {
+      .on('mouseleave', function() {
         mouseoverTimeout = setTimeout(function() {
           if (mouseoverTimeout) {
             $(this).hide();
@@ -78,7 +82,7 @@ $(function() {
     return ($(elem).attr('class') || '')
         .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover)(?:\s|$)|\s/g, '');
   }
-  
+
   // Since you can't add a :hover effect for columns,
   // these handlers must suffice.
   function addRemoveHover(name) {
@@ -87,7 +91,7 @@ $(function() {
       if (c) {
         $("." + c)[name]('hover');
       }
-    }
+    };
   }
   table
     .on('mouseenter', 'td', addRemoveHover('addClass'))
@@ -128,15 +132,16 @@ $(function() {
   };
   window.onhashchange();
 
-  var numFeaturesPerColumn = {};
-
   // store number of features for each column/browser and numeric index
   $('.browser-name, th.current').each(function(i) {
     var elem = $(this);
+    var name;
+
     if (elem.is('.browser-name')) {
       name = elem.attr('href').replace("#", '.');
-      elem = elem.parent()
-    } else {
+      elem = elem.parent();
+    }
+    else {
       name = currentBrowserSelector;
     }
     var results = table.find('td:not(not-applicable)' + name);
@@ -157,20 +162,21 @@ $(function() {
         (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
         '%,transparent 100%)'});
   });
-  
+
   // Cached array of sort orderings
-  ordering = [];
-  
+  var ordering = [];
+
   $('#sort').on('click', function() {
     var elem = $(this);
     var sortByFeatures = elem.prop('checked');
+    var comparator;
 
     // First, hide the platformtype bar if we're sorting by features.
-    $('.platformtype')[sortByFeatures ? 'hide' : 'show']()
+    $('.platformtype')[sortByFeatures ? 'hide' : 'show']();
 
     // Next, cache the sort orderings
     if (!ordering[sortByFeatures]) {
-      var comparator = sortByFeatures ? function(a, b) {
+      comparator = sortByFeatures ? function(a, b) {
         var numFeaturesPerA = parseFloat(a.getAttribute('data-features'));
         var numFeaturesPerB = parseFloat(b.getAttribute('data-features'));
 
@@ -194,10 +200,10 @@ $(function() {
     }
 
     // Define a comparison function using the orderings
-    var comparator = function(a, b) {
+    comparator = function(a, b) {
       return ordering[sortByFeatures].indexOf(platformOf(a))
            - ordering[sortByFeatures].indexOf(platformOf(b));
-    }
+    };
 
     // Now sort the columns using the comparison function
     table.detach().find('tr').each(function() {
