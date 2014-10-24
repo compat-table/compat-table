@@ -1088,7 +1088,7 @@ exports.tests = [
     firefox33:   {
       val: true,
       note_id: 'fx-proto-shorthand',
-      note_html: 'Firefox 33+ incorrectly regards both of the following as true: <ul>'
+      note_html: 'Firefox 33 and 34 incorrectly regard both of the following as true: <ul>'
       +'<li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code>'
       +'<li><code>({ __proto__(){} }) instanceof Function</code>'
       +'</ul>'

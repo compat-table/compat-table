@@ -5978,7 +5978,7 @@ return typeof RegExp.prototype.compile === 'function';
         <sup>[15]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
       <p id="fx-proto-shorthand-note">
-        <sup>[16]</sup> Firefox 33+ incorrectly regards both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
+        <sup>[16]</sup> Firefox 33 and 34 incorrectly regard both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
       </p>
       <p id="hoisted-block-level-function-note">
         <sup>[17]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
