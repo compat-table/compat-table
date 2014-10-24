@@ -1,9 +1,15 @@
-var _gaq = [['_setAccount', 'UA-1128111-24'], ['_trackPageview']];
+var _gaq = [
+  ['_setAccount', 'UA-1128111-24'],
+  ['_trackPageview']
+];
 
 (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
 })();
 
 function test(expression) {
@@ -12,223 +18,161 @@ function test(expression) {
 }
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
-domready(function() {
-  var showObsolete = document.getElementById('show-obsolete');
-  showObsolete.onclick = function() {
-    this.setAttribute('value', this.getAttribute('value') === "on" ? "off" : "on");
+$(function() {
+  var table = $('#table-wrapper');
+  var currentBrowserSelector = ":nth-of-type(2)";
 
-    document.getElementsByClassName('desktop')[0].colSpan = showObsolete.checked ? 33 : 16;
-  };
-  showObsolete.setAttribute('value', showObsolete.checked);
+  // Set up the Show Obsolete checkbox
+  $('#show-obsolete').on('click', function() {
+      var elem = $(this);
+      elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
-  var table = document.getElementById('table-wrapper');
+      $('.desktop')[0].colSpan = elem.prop('checked') ? 33 : 16;
+    })
+    .attr('value', $('#show-obsolete').checked);
 
-  var mouseoverTimeout;
-
-  var infoTooltip = document.createElement('pre');
-  infoTooltip.className = 'info-tooltip';
-  infoTooltip.style.display = 'none';
-  document.body.appendChild(infoTooltip);
-  infoTooltip.onmouseout = function() {
-    infoTooltip.style.display = 'none';
-  };
-  infoTooltip.onmouseover = function() {
-    mouseoverTimeout = null;
-  };
-
-  var rows = table.rows;
-  for (var i = 2; i < rows.length; i++) {
-    if (/separator/.test(rows[i].cells[0].className)) continue;
-
-    var infoEl = document.createElement('span');
-    infoEl.className = 'info';
-    infoEl.innerHTML = 'c';
-    rows[i].cells[0].appendChild(infoEl);
-
-    infoEl.onmouseover = function(e) {
-      e = e || window.event;
+  // Set up the tooltip HTML
+  var infoTooltip = $('<pre class="info-tooltip">')
+    .hide()
+    .appendTo('body')
+    .on('mouseleave', function() {
+      $(this).hide()
+    })
+    .on('mouseenter', function() {
       mouseoverTimeout = null;
+    });
 
-      var scriptEl = this.parentNode.parentNode.getElementsByTagName('script')[0];
-      var id = "tooltip_" + this.parentNode.id;
+  // Attach tooltip buttons to each feature <tr>
+  $('#table-wrapper td:first-child').each(function() {
+    var td = $(this);
 
-      infoTooltip.innerHTML = scriptEl.getAttribute('data-source')
-        // trim sides, and escape <
-        .replace(/^\s*|\s*$/g,'').replace(/</g, '&lt;');
+    var mouseoverTimeout;
 
-      if (!e.pageX) {
-        e.pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-        e.pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+    $('<span class="info">c</span>')
+      .appendTo(td)
+      .on('mouseenter', function(e) {
+        var tooltip = $(this);
+
+        infoTooltip.html(
+            tooltip.parents('tr').find('script').attr('data-source')
+            // trim sides, and escape <
+            .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
+          )
+          .offset({
+            left: e.pageX + 10,
+            top: e.pageY
+          })
+          .show();
+      })
+      .on('mouseleave', function(e) {
+        mouseoverTimeout = setTimeout(function() {
+          if (mouseoverTimeout) {
+            $(this).hide();
+          }
+        }, 500);
+      });
+  });
+
+  // Function to retrieve the platform name of a given <td> cell
+  function platformOf(elem) {
+    return ($(elem).attr('class') || '')
+        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover)(?:\s|$)|\s/g, '');
+  }
+  
+  // Since you can't add a :hover effect for columns,
+  // these handlers must suffice.
+  function addRemoveHover(name) {
+    return function() {
+      var c = platformOf(this);
+      if (c) {
+        $("." + c)[name]('hover');
       }
-      infoTooltip.style.left = e.pageX + 10 + 'px';
-      infoTooltip.style.top  = e.pageY + 'px';
-      infoTooltip.style.display = 'block';
-    };
-    infoEl.onmouseout = function(e) {
-      mouseoverTimeout = setTimeout(function() {
-        if (mouseoverTimeout) {
-          infoTooltip.style.display = 'none';
-        }
-      }, 500);
-    };
+    }
+  }
+  table
+    .on('mouseenter', 'td', addRemoveHover('addClass'))
+    .on('mouseleave', 'td', addRemoveHover('removeClass'));
+
+  // Cell highlighting function
+  function highlightSelected(elem) {
+    table.find('.selected').removeClass('selected');
+
+    elem.addClass('selected');
+    table.addClass('one-selected');
   }
 
-  var last_highlighted;
-  function highlightSelected(tr) {
-    if (tr === undefined) {
-      // actually finds the <td>
-      tr = document.getElementById(location.hash.slice(1));
-      if (tr) {
-        tr = tr.parentNode;
-      }
-    }
-    table.className = tr ? 'one-selected' : '';
-    if (last_highlighted) {
-      last_highlighted.className = '';
-    }
-    if (tr) {
-      tr.className = 'selected';
-    }
-    last_highlighted = tr;
-  }
-
-  if (location.hash) {
-    highlightSelected();
-    highlightColumn();
-  }
-
-  document.onclick = function(e) {
-    e = e || window.event;
-    e.target = e.target || e.srcElement;
-    if (e.target.className === 'anchor') {
-      // <tr><td><span><a>
-      highlightSelected(e.target.parentNode.parentNode.parentNode);
-    }
-    else if (e.target.className === 'browser-name' ||
-        e.target.parentNode.className === 'browser-name') {
-
-      var i, target = e.target.className ? e.target : e.target.parentNode;
-
-      for(i=0; i<table.rows[0].cells.length; i++) {
-        if (table.rows[0].cells[i]===target.parentNode) {
-          break;
-        }
-      }
-
-      highlightColumn(i);
-    }
-    else {
-      location.hash = '';
-      highlightSelected(false);
-    }
-  };
+  $(document).on('click', function removeHighlighting(event) {
+    // Don't remove all dimming if another link was clicked in this event.
+    if ($(event.target).is('[href],[href] *'))
+      return;
+    table.removeClass('one-selected');
+  });
 
   window.onhashchange = function() {
     if (location.hash) {
-      highlightSelected();
-      highlightColumn();
+      var elem = $('[href="' + location.hash + '"]');
+
+      // If it's a feature anchor, select only the <tr>.
+      // (The CSS widens the selected row only vertically.)
+      if (elem.is('.anchor')) {
+        highlightSelected(elem.parents('tr'));
+      }
+      // If it's a browser name, select all matching <td> elements
+      // (The CSS widens the selected column only horizontally.)
+      else if (elem.is('.browser-name')) {
+        // This assumes that all <td>s in the column have a class that matches
+        // the browser-name's ID.
+        highlightSelected(table.find('td' + currentBrowserSelector + ', td.' + elem.attr('href').slice(1)));
+      }
     }
   };
+  window.onhashchange();
 
-  function highlightColumn(index) {
-    if (typeof index === 'undefined' && location.hash) {
-      for (var i = 0, len = table.rows[0].cells.length; i < len; i++) {
-        var cell = table.rows[0].cells[i];
-        if (cell.innerHTML.indexOf('"' + location.hash + '"') > -1) {
-          highlightColumn(i);
-        }
-      }
-      return;
-    }
-
-    table.className = 'one-selected';
-    for (var i = 0, len = table.rows.length; i < len; i++) {
-      var row = table.rows[i];
-      for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
-        row.cells[j].className = row.cells[j].className.replace('selected', '');
-        if (j === index || j === 1) {
-          row.cells[j].className += ' selected';
-        }
-      }
-    }
-  }
-
-  function initColumnHighlight() {
-    for (var i = 1, len = table.rows.length; i < len; i++) {
-      var row = table.rows[i];
-      for (var j = 0, jlen = row.cells.length; j < jlen; j++) {
-        row.cells[j].onmouseover = (function(i, j, jlen) {
-          return function() {
-            for (var k = 0; k < len; k++) {
-              for (var l = 0; l < jlen; l++) {
-                var c = table.rows[k].cells[l];
-                c && (c.className = c.className.replace(' hover', ''));
-              }
-              table.rows[k].cells[j] && (rows[k].cells[j].className += ' hover');
-            }
-          };
-        })(i, j, jlen);
-      }
-    }
-  }
-  initColumnHighlight();
-
-  var numFeaturesPerColumn = window.numFeaturesPerColumn = { };
-
-  // count number of features for each column/browser
-  for (var i = 1, len = table.rows.length; i < len; i++) {
-    for (var j = 1, jlen = table.rows[i].cells.length; j < jlen; j++) {
-
-      if (j === 2) continue;
-      if (numFeaturesPerColumn[j] === undefined) {
-        numFeaturesPerColumn[j] = [0,0];
-      }
-      if (table.rows[i].cells[j].className.indexOf('yes') > -1) {
-        numFeaturesPerColumn[j][0]++;
-      }
-      if (table.rows[i].cells[j].className.indexOf('not-applicable') == -1) {
-        numFeaturesPerColumn[j][1]++;
-      }
-    }
-  }
+  var numFeaturesPerColumn = {};
 
   // store number of features for each column/browser and numeric index
-  for (var i = 0, len = table.rows.length; i < len; i++) {
-    for (var j = 0, jlen = table.rows[i].cells.length; j < jlen; j++) {
-      if (numFeaturesPerColumn[j] === undefined) continue;
-
-      var num = numFeaturesPerColumn[j][0];
-      var totalResultsInColum = numFeaturesPerColumn[j][1];
-      var cell = table.rows[i].cells[j];
-
-      cell.setAttribute('data-features', num/totalResultsInColum);
-      cell.setAttribute('data-num', j);
-
-      var shouldAppendInfo = (
-        cell.tagName.toLowerCase() === 'th' &&
-        typeof num === 'number' &&
-        cell.className.indexOf('ignore') === -1);
-
-      if (shouldAppendInfo) {
-        cell.innerHTML += (
-          ' <sup class="num-features" title="Number of implemented features"><b>' +
-            num +
-            '</b>/' +
-            totalResultsInColum + '</sup>');
-      }
+  $('.browser-name, th.current').each(function(i) {
+    var elem = $(this);
+    if (elem.is('.browser-name')) {
+      name = elem.attr('href').replace("#", '.');
+      elem = elem.parent()
+    } else {
+      name = currentBrowserSelector;
     }
-  }
+    var results = table.find('td:not(not-applicable)' + name);
+    var yesResults = results.filter('.yes');
+    var featuresCount = yesResults.length / results.length;
 
+    elem
+      .attr('data-num', i)
+      .attr('data-features', featuresCount)
+      .append('<sup class="num-features" title="Number of implemented features">' +
+        // Don't bother with a HSL fallback for IE 8.
+        '<b style="color:hsl(' + (featuresCount * 120|0) + ',100%,25%)">' +
+        yesResults.length +
+        '</b>/' +
+        results.length + '</sup>')
+      // Fancy bar graph background garnish (again, no fallback required).
+      .css({'background-image':'linear-gradient(to top, #ddd 0%, #ddd ' +
+        (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
+        '%,transparent 100%)'});
+  });
+  
+  // Cached array of sort orderings
+  ordering = [];
+  
+  $('#sort').on('click', function() {
+    var elem = $(this);
+    var sortByFeatures = elem.prop('checked');
 
-  var sortButton = document.getElementById('sort');
-  if (sortButton) {
-    sortButton.onclick = function() {
+    // First, hide the platformtype bar if we're sorting by features.
+    $('.platformtype')[sortByFeatures ? 'hide' : 'show']()
 
-      var sortByFeatures = this.checked;
-
+    // Next, cache the sort orderings
+    if (!ordering[sortByFeatures]) {
       var comparator = sortByFeatures ? function(a, b) {
-        var numFeaturesPerA = parseFloat(a.getAttribute('data-features'), 10);
-        var numFeaturesPerB = parseFloat(b.getAttribute('data-features'), 10);
+        var numFeaturesPerA = parseFloat(a.getAttribute('data-features'));
+        var numFeaturesPerB = parseFloat(b.getAttribute('data-features'));
 
         return numFeaturesPerB - numFeaturesPerA;
       } : function(a, b) {
@@ -238,36 +182,30 @@ domready(function() {
         return aNum - bNum;
       };
 
-      table.rows[0].style.display = sortByFeatures ? 'none' : '';
+      // Sort the platforms
+      var platforms = $('th.current').parent();
 
-      // sort
-      for (var i = 0, len = table.rows.length; i < len; i++) {
+      var cells = [].slice.call(platforms.children('[data-features]:not(.current)'))
+        .sort(comparator);
 
-        var row = table.rows[i];
-        var cells = [].slice.call(row.cells, 3);
-        var sorted = cells.sort(comparator);
-        var scriptEl = row.getElementsByTagName('script')[0];
+      ordering[sortByFeatures] = $.map(cells, function(e) {
+        return e.className;
+      });
+    }
 
-        var firstCell = row.cells[0];
-        var secondCell = row.cells[1];
-        var thirdCell = row.cells[2];
+    // Define a comparison function using the orderings
+    var comparator = function(a, b) {
+      return ordering[sortByFeatures].indexOf(platformOf(a))
+           - ordering[sortByFeatures].indexOf(platformOf(b));
+    }
 
-        row.innerHTML = '';
-
-        scriptEl && row.appendChild(scriptEl);
-
-        firstCell && row.appendChild(firstCell);
-        secondCell && row.appendChild(secondCell);
-        thirdCell && row.appendChild(thirdCell);
-
-        for (var j = 0, jlen = sorted.length; j < jlen; j++) {
-          row.appendChild(sorted[j]);
-        }
-      }
-
-      initColumnHighlight();
-    };
-  }
-
-
+    // Now sort the columns using the comparison function
+    table.detach().find('tr').each(function() {
+      var row = $(this);
+      var cells = [].slice.call(row.children(), 3 + row.children('script').length)
+        .sort(comparator);
+      row.append(cells);
+    });
+    table.insertBefore('#footnotes');
+  });
 });
