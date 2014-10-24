@@ -132,6 +132,38 @@ $(function() {
     }
   };
   window.onhashchange();
+  
+  // browser engine color stripes
+  function getBrowserColour(name) {
+    /* Trident */
+    if (/^ie/.exec(name)) { 
+      return "hsla(217, 85%, 54%, .5)";
+    }
+    /* SpiderMonkey */
+    if (/^(firefox|rhino)/.exec(name)) {
+      return "hsla(35, 100%, 50%, .5)";
+    }
+    /* JavaScriptCore */
+    if (/^(webkit|safari|phantom|ios)/.exec(name)) {
+      return "hsla(0, 0%, 70%, .5)";
+    }
+    /* V8 */
+    if (/^(chrome|node)/.exec(name)) {
+      return "hsla(79, 100%, 37%, .5)";
+    }
+    /* Carakan */
+    if (/^opera/.exec(name)) {
+      return "hsla(358, 86%, 43%, .5)";
+    }
+    /* KJS */
+    if (/^konq/.exec(name)) {
+      return "hsla(200, 100%, 74%, .5)";
+    }
+    if (name === "current") {
+      return "hsla(0, 0%, 88%, .5)";
+    }
+    return "hsla(52, 85%, 63%, .5)";
+  }
 
   // store number of features for each column/browser and numeric index
   $('.browser-name, th.current').each(function(i) {
@@ -149,6 +181,7 @@ $(function() {
     var yesResults = results.filter('.yes');
     var featuresCount = yesResults.length / results.length;
 
+    var colour = getBrowserColour(elem.attr('class'));
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
@@ -159,7 +192,8 @@ $(function() {
         '</b>/' +
         results.length + '</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
-      .css({'background-image':'linear-gradient(to top, #ddd 0%, #ddd ' +
+      .css({'background-image':'linear-gradient(to top, ' +
+        colour + ' 0%, ' + colour + ' ' +
         (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
         '%,transparent 100%)'});
   });
