@@ -66,7 +66,7 @@ exports.browsers = {
   firefox24: {
     full: 'Firefox',
     short: 'FF 24',
-    obsolete: false // ESR (EOL at end of 2014)
+    obsolete: true
   },
   firefox25: {
     full: 'Firefox',
@@ -90,7 +90,8 @@ exports.browsers = {
   },
   firefox31: {
     full: 'Firefox',
-    short: 'FF 31'
+    short: 'FF 31',
+    obsolete: false // ESR (EOL at Aug 2015)
   },
   firefox32: {
     full: 'Firefox',
