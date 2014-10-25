@@ -145,7 +145,7 @@ $(function() {
     }
     /* JavaScriptCore */
     if (/^(webkit|safari|phantom|ios)/.exec(name)) {
-      return "hsla(0, 0%, 70%, .5)";
+      return "hsla(220, 25%, 70%, .5)";
     }
     /* V8 */
     if (/^(chrome|node)/.exec(name)) {
@@ -159,13 +159,22 @@ $(function() {
     if (/^konq/.exec(name)) {
       return "hsla(200, 100%, 74%, .5)";
     }
-    if (name === "current") {
-      return "hsla(0, 0%, 88%, .5)";
+    /* BESEN */
+    if (name === "besen") {
+      return "rgba(173, 108, 23, .5)";
     }
-    return "hsla(52, 85%, 63%, .5)";
+    /* Current browser */
+    if (name === "current") {
+      return "hsla(0, 0%, 75%, .5)";
+    }
+    /* Compilers */
+    return "hsla(52, 85%, 63%, .5)";    
   }
 
-  // store number of features for each column/browser and numeric index
+  // Store number of features for each column/browser and numeric index.
+  // The reason this is done at runtime instead of build time is because
+  // the current browser's totals must be done at runtime, and to save on
+  // duplicated code, we may as well do the predefined results too.
   $('.browser-name, th.current').each(function(i) {
     var elem = $(this);
     var name;
