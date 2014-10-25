@@ -23,6 +23,7 @@ window.test = function(expression) {
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 $(function() {
+  'use strict';
   var table = $('#table-wrapper');
   var currentBrowserSelector = ":nth-of-type(2)";
 
@@ -131,8 +132,49 @@ $(function() {
     }
   };
   window.onhashchange();
+  
+  // browser engine color stripes
+  function getBrowserColour(name) {
+    /* Trident */
+    if (/^ie/.exec(name)) { 
+      return "hsla(217, 85%, 54%, .5)";
+    }
+    /* SpiderMonkey */
+    if (/^(firefox|rhino)/.exec(name)) {
+      return "hsla(35, 100%, 50%, .5)";
+    }
+    /* JavaScriptCore */
+    if (/^(webkit|safari|phantom|ios)/.exec(name)) {
+      return "hsla(220, 25%, 70%, .5)";
+    }
+    /* V8 */
+    if (/^(chrome|node)/.exec(name)) {
+      return "hsla(79, 100%, 37%, .5)";
+    }
+    /* Carakan */
+    if (/^opera/.exec(name)) {
+      return "hsla(358, 86%, 43%, .5)";
+    }
+    /* KJS */
+    if (/^konq/.exec(name)) {
+      return "hsla(200, 100%, 74%, .5)";
+    }
+    /* BESEN */
+    if (name === "besen") {
+      return "rgba(173, 108, 23, .5)";
+    }
+    /* Current browser */
+    if (name === "current") {
+      return "hsla(0, 0%, 75%, .5)";
+    }
+    /* Compilers */
+    return "hsla(52, 85%, 63%, .5)";    
+  }
 
-  // store number of features for each column/browser and numeric index
+  // Store number of features for each column/browser and numeric index.
+  // The reason this is done at runtime instead of build time is because
+  // the current browser's totals must be done at runtime, and to save on
+  // duplicated code, we may as well do the predefined results too.
   $('.browser-name, th.current').each(function(i) {
     var elem = $(this);
     var name;
@@ -148,6 +190,7 @@ $(function() {
     var yesResults = results.filter('.yes');
     var featuresCount = yesResults.length / results.length;
 
+    var colour = getBrowserColour(elem.attr('class'));
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
@@ -158,7 +201,8 @@ $(function() {
         '</b>/' +
         results.length + '</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
-      .css({'background-image':'linear-gradient(to top, #ddd 0%, #ddd ' +
+      .css({'background-image':'linear-gradient(to top, ' +
+        colour + ' 0%, ' + colour + ' ' +
         (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
         '%,transparent 100%)'});
   });
