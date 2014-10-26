@@ -38,6 +38,20 @@ $(function() {
 
   var mouseoverTimeout;
 
+  // Work out tallies for the current browser's tally features
+  $('tr:not(.subtest)').each(function() {
+    var tr = $(this);
+    var subtests = tr.nextUntil('tr:not(.subtest)');
+    if (subtests.length === 0) {
+      return;
+    }
+    var tally = subtests.find(".yes" + currentBrowserSelector).length;
+    tr.find('td' + currentBrowserSelector).before(
+      '<td class="tally" data-tally="' + tally/subtests.length + '">' +
+      tally + '/' + subtests.length + '</td><td></td>'
+    );
+  });
+  
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
@@ -52,14 +66,17 @@ $(function() {
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
     var td = $(this);
-
+    var scriptTag = td.parents('tr').find('script');
+    if (scriptTag.length === 0) {
+      return;
+    }
     $('<span class="info">c</span>')
       .appendTo(td)
       .on('mouseenter', function(e) {
         var tooltip = $(this);
 
         infoTooltip.html(
-            tooltip.parents('tr').find('script').attr('data-source')
+            scriptTag.attr('data-source')
             // trim sides, and escape <
             .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
           )
@@ -81,7 +98,7 @@ $(function() {
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
     return ($(elem).attr('class') || '')
-        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover)(?:\s|$)|\s/g, '');
+        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover|tally)(?:\s|$)|\s/g, '');
   }
 
   // Since you can't add a :hover effect for columns,
@@ -186,8 +203,8 @@ $(function() {
     else {
       name = currentBrowserSelector;
     }
-    var results = table.find('td:not(not-applicable)' + name);
-    var yesResults = results.filter('.yes');
+    var results = table.find('tr:not(.subtest) td:not(.not-applicable)' + name);
+    var yesResults = results.filter('.yes, [data-tally="1"]');
     var featuresCount = yesResults.length / results.length;
 
     var colour = getBrowserColour(elem.attr('class'));

@@ -52,50 +52,126 @@ table.one-selected td.selected {
     padding-left: 30px; padding-right: 30px; opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
 }
 
+/* subtests */
+
+.subtest td:first-child {
+  padding-left: 2em;
+}
+.subtest {
+  font-size: 0.5em;
+  height: 0.5em;
+}
+.subtest td.yes, .subtest td.no {
+  border-left: solid 5px #eee;
+  border-right: solid 5px #eee;
+  -color:transparent;
+}
+
 /* yes/no grid text colors */
 .yes a,
+.tally a,
 .no a {
     color: #fff;  
 }
 .yes,
+.tally,
 .no,
 .not-applicable {
     text-align: center; font-size: 0.8em; padding: 0.25em 0.5em; color: #fff; 
 }
 
-/* yes/no grid cell colors */
-.yes {
-    background: hsl(120,  43%,  47%); background: #44ab44;
+/* yes/no/tally grid cell colors */
+[data-tally] {
+    background: #acc20a;
+}
+tr:hover td[data-tally],
+td.hover[data-tally] {
+    background: #8da000;
+}
+[data-tally].obsolete {
+    background: #cedd5c;
+}
+tr:hover td[data-tally].obsolete,
+td.hover[data-tally].obsolete {
+    background: #b0c037;
+}
+
+/* yes */
+.yes,
+[data-tally="1"] {
+    background: #44ab44;
 }
 tr:hover td.yes,
-td.hover.yes {
-    background: hsl(120,  74%,  27%); background: #127812; 
+td.hover.yes,
+tr:hover td[data-tally="1"],
+td.hover[data-tally="1"] {
+    background: #269326; 
 }
-
-.no {
-    background: hsl(  0,  87%,  50%); background: #e11; 
-}
-tr:hover td.no,
-td.hover.no {
-    background: hsl(  0,  83%,  40%); background: #b11; 
-}
-
 .yes.obsolete {
-    background: hsl(120,  28%,  61%); background: #80b780; 
+    background: #9fe09f; 
 }
 tr:hover td.yes.obsolete,
-td.hover.yes.obsolete {
-    background: hsl(120,  24%,  37%); background: #487548; 
+td.hover.yes.obsolete,
+tr:hover td[data-tally="1"].obsolete,
+td.hover[data-tally="1"].obsolete {
+    background: #73cc73;
 }
 
-.no.obsolete {
-    background: hsl(  0,  72%,  65%); background: #e66565; 
+/* no */
+.no,
+[data-tally="0"] {
+    background: #e11;
+}
+tr:hover td.no,
+td.hover.no,
+tr:hover td[data-tally="0"],
+td.hover[data-tally="0"] {
+    background: #bb0606;
+}
+.no.obsolete,
+[data-tally="0"].obsolete {
+    background: #ff6e6e;
 }
 tr:hover td.no.obsolete,
-td.hover.no.obsolete {
-    background: hsl(  0,  33%,  50%); background: #a55; 
+td.hover.no.obsolete,
+tr:hover td[data-tally="0"].obsolete,
+td.hover[data-tally="0"].obsolete {
+    background: #e24545; 
 }
+/* yes subtest 
+.subtest .yes {
+    background: #338080;
+}
+tr:hover.subtest td.yes,
+.subtest td.hover.yes {
+    background: #1d6e6e; 
+}
+.subtest .yes.obsolete {
+    background: #539797; 
+}
+tr:hover.subtest td.yes.obsolete,
+.subtest td.hover.yes.obsolete {
+    background: #348080; 
+}
+*/
+/* no subtest 
+.subtest .no {
+    background: #bf0e72;
+}
+tr:hover.subtest td.no,
+.subtest td.hover.no {
+    background: #950557; 
+}
+.subtest .no.obsolete {
+    background: #c63788; 
+}
+tr:hover.subtest td.no.obsolete,
+.subtest td.hover.yes.obsolete {
+    background: #bb1172; 
+}
+*/
 
+/* not applicable */
 .not-applicable {
     background: hsl(120,  14%,  67%); background: #9fb79f; cursor: help; 
 }
