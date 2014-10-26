@@ -75,7 +75,12 @@ exports.browsers = {
   },
   firefox27: {
     full: 'Firefox',
-    short: 'FF 27-28',
+    short: 'FF 27',
+    obsolete: true
+  },
+  firefox28: {
+    full: 'Firefox',
+    short: 'FF 28',
     obsolete: true
   },
   firefox29: {
@@ -352,317 +357,167 @@ exports.tests = [
 {
   name: 'const',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
-  exec: function () {
-    try {
-      return !!Function(
-         'const foo = 123;'
-        +'var passed = (foo === 123);'
+  subtests: {
+    'basic support': {
+     exec: function() {/*
+        const foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }
+    },
+    'is block-scoped': {
+      exec: function() {/*
+        { const bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'redefining a const is a syntax error': {
+      exec: function() {/*
+        return (function() {
+          try { Function("foo = 2;")(); } catch(e) { return true; }'
+        }());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        'use strict';
+        const passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+  }
+},
+{
+  name: 'let',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  subtests: {
+    'basic support': {
+      exec: function(){/*
+        'use strict';
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'can be used outside of strict mode': {
+      exec: function(){/*
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'is block-scoped': {
+      exec: function(){/*
+        'use strict';
+        { let bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'is block-scoped within a for-loop': {
+      exec: function(){/*
+        'use strict';
+        for(let baz = 0; false;) {}
+        return (function(){ try { baz; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        'use strict';
+        let passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        let qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'for-loop iteration scope': {
+      exec: function(){/*
+        'use strict';
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
+        }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
         
-         // bar is not hoisted outside of its block
-        +'{ const bar = 456; }'
-        +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
-        
-         // redefining a const is a syntax error (12.14.1)
-        +'passed &= (function() {'
-        +'  try { Function("foo = 2;")(); } catch(e) { return true; }'
-        +'}());'
-        
-        +'return passed;'
-      )();
-    } catch (e) {
-      return false;
-    }
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
   },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   {
-      val: false,
-      note_id: 'const-reassign',
-      note_html: 'In all of these browsers, <code>const</code> is not block-scoped, and reassigning to a <code>const</code> is a silent failure instead of an error.'
-    },
-    firefox13:   { val: false, note_id: 'const-reassign' },
-    firefox16:   { val: false, note_id: 'const-reassign' },
-    firefox17:   { val: false, note_id: 'const-reassign' },
-    firefox18:   { val: false, note_id: 'const-reassign' },
-    firefox23:   { val: false, note_id: 'const-reassign' },
-    firefox24:   { val: false, note_id: 'const-reassign' },
-    firefox25:   { val: false, note_id: 'const-reassign' },
-    firefox27:   { val: false, note_id: 'const-reassign' },
-    firefox28:   { val: false, note_id: 'const-reassign' },
-    firefox29:   { val: false, note_id: 'const-reassign' },
-    firefox30:   { val: false, note_id: 'const-reassign' },
-    firefox31:   { val: false, note_id: 'const-reassign' },
-    firefox32:   { val: false, note_id: 'const-reassign' },
-    firefox33:   { val: false, note_id: 'const-reassign' },
-    firefox34:   { val: false, note_id: 'const-reassign' },
-    chrome:      { val: false, note_id: 'const-reassign' },
-    chrome19dev: { val: false, note_id: 'const-reassign' },
-    chrome21dev: { val: false, note_id: 'const-reassign' },
-    chrome30:    { val: false, note_id: 'const-reassign' },
-    chrome33:    { val: false, note_id: 'const-reassign' },
-    chrome34:    { val: false, note_id: 'const-reassign' },
-    chrome35:    { val: false, note_id: 'const-reassign' },
-    chrome37:    { val: false, note_id: 'const-reassign' },
-    chrome39:    { val: false, note_id: 'const-reassign' },
-    safari51:    false,
-    safari6:     { val: false, note_id: 'const-reassign' },
-    safari7:     { val: false, note_id: 'const-reassign' },
-    safari71_8:  { val: false, note_id: 'const-reassign' },
-    webkit:      { val: false, note_id: 'const-reassign' },
-    opera:       { val: false, note_id: 'const-reassign' },
-    konq49:      { val: false, note_id: 'const-reassign' },
-    rhino17:     false,
-    phantom:     { val: false, note_id: 'const-reassign' },
-    node:        { val: false, note_id: 'const-reassign' },
-    nodeharmony: { val: false, note_id: 'const-reassign' },
-    ios7:        { val: false, note_id: 'const-reassign' },
-    ios8:        { val: false, note_id: 'const-reassign' },
-  }
-},
-{
-  name: 'let (block scope)',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
-  exec: (function() {
-    var script = function () {
-      test(function() {
-        try {
-          return !!Function(
-             '"use strict";'
-            +'let foo = 123;'
-            +'let passed = (foo === 123);'
-   
-             // bar is not hoisted outside of its block
-            +'{ let bar = 456; }'
-            +'passed &= (function(){ try { bar; } catch(e) { return true; }}());'
-
-             // baz is not hoisted outside of the for-loop
-            +'for(let baz = 0; false;) {}'
-            +'passed &= (function(){ try { baz; } catch(e) { return true; }}());'
-  
-            +'return passed;'
-          )();
-        } catch (e) {
-          return false;
-        }
-      }());
-      global.__script_executed['let'] = true;
-    }
-    return [{
-      type: 'application/javascript;version=1.8',
-      script: script
-    },{
-      script: eval(("0,"+script).replace("{",
-        "{if (!global.__script_executed['let']) {")+"}")
-    }];
-  }()),
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   {
-      val: true,
-      note_id: 'let-javascript18',
-      note_html: 'Firefox incorrectly prohibits <code>let</code> outside of a <code>&lt;script type="application/javascript;version=1.8"&gt;</code> tag.'
-    },
-    firefox13:   { val: true, note_id: 'let-javascript18' },
-    firefox16:   { val: true, note_id: 'let-javascript18' },
-    firefox17:   { val: true, note_id: 'let-javascript18' },
-    firefox18:   { val: true, note_id: 'let-javascript18' },
-    firefox23:   { val: true, note_id: 'let-javascript18' },
-    firefox24:   { val: true, note_id: 'let-javascript18' },
-    firefox25:   { val: true, note_id: 'let-javascript18' },
-    firefox27:   { val: true, note_id: 'let-javascript18' },
-    firefox28:   { val: true, note_id: 'let-javascript18' },
-    firefox29:   { val: true, note_id: 'let-javascript18' },
-    firefox30:   { val: true, note_id: 'let-javascript18' },
-    firefox31:   { val: true, note_id: 'let-javascript18' },
-    firefox32:   { val: true, note_id: 'let-javascript18' },
-    firefox33:   { val: true, note_id: 'let-javascript18' },
-    firefox34:   { val: true, note_id: 'let-javascript18' },
-    chrome:      false,
-    chrome19dev: {
-      val: true,
-      note_id: 'let-extended-mode',
-      note_html: 'Chrome and Node incorrectly prohibit <code>let</code> outside of strict mode.'
-    },
-    chrome21dev: { val: true, note_id: 'let-extended-mode' },
-    chrome30:    { val: true, note_id: 'let-extended-mode' },
-    chrome33:    { val: true, note_id: 'let-extended-mode' },
-    chrome34:    { val: true, note_id: 'let-extended-mode' },
-    chrome35:    { val: true, note_id: 'let-extended-mode' },
-    chrome37:    { val: true, note_id: 'let-extended-mode' },
-    chrome39:    { val: true, note_id: 'let-extended-mode' },
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    konq49:      false,
-    opera:       false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: { val: true, note_id: 'let-extended-mode' },
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'let/const temporal dead zone',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
-  exec: (function() {
-    var script = function () {
-      test(function() {
-        try {
-          return !!Function(
-             '"use strict";'
-            // qux and quux are not defined until the let/const statements execute,
-            // and accessing them prior to that will result in a ReferenceError.
-            +'let passed = (function(){ try {  qux; } catch(e) { return true; }}());'
-            +'let qux = 456;'
-            +'passed    &= (function(){ try { quux; } catch(e) { return true; }}());'
-            +'const quux = 789;'
-            +'return passed;'
-          )();
-        } catch (e) {
-          return false;
-        }
-      }());
-      global.__script_executed['let TDZ'] = true;
-    }
-    return [{
-      type: 'application/javascript;version=1.8',
-      script: script
-    },{
-      script: eval(("0,"+script).replace("{",
-        "{if (!global.__script_executed['let TDZ']) {")+"}")
-    }];
-  }()),
-  res: {
-    tr:          false,
-    ejs:         true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      false,
-    konq49:      false,
-    opera:       false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true
-  }
-},
-{
-  name: 'let (for-loop iteration scope)',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-statement-runtime-semantics-labelledevaluation',
-  exec: (function() {
-    var script = function () {
-      test(function() {
-        try {
-          return !!Function(    
-            '"use strict";'   
-             // for-loop iterations create new bindings
-            +'let scopes = [];'
-            +'for(let i = 0; i < 2; i++) {'
-            +'  scopes.push(function(){ return i; });'
-            +'}'
-            +'let passed = (scopes[0]() === 0 && scopes[1]() === 1);'
-    
-            +'scopes = [];'
-            +'for(let i in { a:1, b:1 }) {'
-            +'  scopes.push(function(){ return i; });'
-            +'}'
-            +'passed &= (scopes[0]() === "a" && scopes[1]() === "b");'
-    
-            +'return passed;'
-          )();
-        } catch (e) {
-          return false;
-        }
-      }());
-      global.__script_executed['let for'] = true;
-    }
-    return [{
-      type: 'application/javascript;version=1.8',
-      script: script
-    },{
-      script: eval(("0,"+script).replace("{",
-        "{if (!global.__script_executed['let for']) {")+"}")
-    }];
-  }()),
-  res: {
-    tr:          true,
-    ejs:         true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      false,
-    konq49:      false,
-    opera:       false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false
-  }
 },
 {
   name: 'default function parameters',
