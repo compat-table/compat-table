@@ -1478,7 +1478,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar pa
           <td class="yes chrome35">Yes</td>
           <td class="yes chrome37">Yes</td>
           <td class="yes chrome39">Yes</td>
-          <td class="yes safari51 obsolete">Yes</td>
+          <td class="no safari51 obsolete">No<a href="#ie-typedarray-note"><sup>[6]</sup></a></td>
           <td class="yes safari6">Yes</td>
           <td class="yes safari7">Yes</td>
           <td class="yes safari71_8">Yes</td>
@@ -5797,7 +5797,7 @@ return !!(desc
           <td class="yes chrome35">Yes</td>
           <td class="yes chrome37">Yes</td>
           <td class="yes chrome39">Yes</td>
-          <td class="yes safari51 obsolete">Yes</td>
+          <td class="no safari51 obsolete">No</td>
           <td class="yes safari6">Yes</td>
           <td class="yes safari7">Yes</td>
           <td class="yes safari71_8">Yes</td>
@@ -5948,7 +5948,7 @@ return typeof RegExp.prototype.compile === 'function';
         <sup>[5]</sup> Firefox doesn't support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.
       </p>
       <p id="ie-typedarray-note">
-        <sup>[6]</sup> Internet Explorer supports every typed array class except <code>Uint8ClampedArray</code>.
+        <sup>[6]</sup> Internet Explorer and Safari 5.1 support every typed array class except <code>Uint8ClampedArray</code>.
       </p>
       <p id="map-constructor-note">
         <sup>[7]</sup> Map and Set constructor arguments, such as <code>new Map([[key, val]])</code> or <code>new Set([obj1, obj2])</code>, are not supported.

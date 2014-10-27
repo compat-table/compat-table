@@ -1660,7 +1660,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     ie10:        {
       val: false,
       note_id: 'ie-typedarray',
-      note_html: 'Internet Explorer supports every typed array class except <code>Uint8ClampedArray</code>.'
+      note_html: 'Internet Explorer and Safari 5.1 support every typed array class except <code>Uint8ClampedArray</code>.'
     },
     ie11:        { val: false, note_id: 'ie-typedarray' },
     firefox11:   true,
@@ -1688,7 +1688,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     chrome35:    true,
     chrome37:    true,
     chrome39:    true,
-    safari51:    true,
+    safari51:    { val: false, note_id: 'ie-typedarray' },
     safari6:     true,
     safari7:     true,
     safari71_8:  true,
@@ -2844,7 +2844,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     chrome35:    true,
     chrome37:    true,
     chrome39:    true,
-    safari51:    true,
+    safari51:    false,
     safari6:     true,
     safari7:     true,
     safari71_8:  true,
