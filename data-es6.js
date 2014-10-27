@@ -559,65 +559,61 @@ exports.tests = [
 {
   name: 'default function parameters',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
-  exec: function () {/*
-    var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
-
-    // explicit undefined will defer to the default
-    passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
-
-    // defaults can refer to previous parameters
-    passed    &= (function (a, b = a) { return b === 5; }(5));
-
-    return passed;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   {
-      val: true,
-      note_id: 'fx-defaults-scope',
-      note_html: 'In Firefox, defaults can incorrectly refer to later parameters (<code>a=b, b</code>), themselves (<code>a=a</code>), and/or identifiers in the function body (<code>function(a=function(){ return b; }){ var b=true; ... }</code>)'
+  subtests: {
+    'basic functionality': {
+      exec: function(){/*
+        return (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox18:   true,
+      },
     },
-    firefox23:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox24:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox25:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox27:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox28:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox29:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox30:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox31:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox32:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox33:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox34:   { val: true, note_id: 'fx-defaults-scope' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
+    'explicit undefined defers to the default': {
+      exec: function(){/*
+        return (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox18:   true,
+      },
+    },
+    'defaults can refer to previous params': {
+      exec: function(){/*
+        return (function (a, b = a) { return b === 5; }(5));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox18:   true,
+      },
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        return (function(x = 1) {
+          try {
+            eval("(function(a=a){}())"); 
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=b,b){}())"); 
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=function(){ return b; }){ var b = 1;}())"); 
+            return false;
+          } catch(e) {}
+          return true;
+        }());
+      */},
+      res: {
+      },
+    }
   }
 },
 {
