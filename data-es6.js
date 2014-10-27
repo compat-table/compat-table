@@ -725,59 +725,85 @@ exports.tests = [
 {
   name: 'class',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
-  exec: function () {/*
-    class C extends Array {
-      constructor() { this.b = true; }
-      a(){}
-      static d(){}
-    }
-    return C.d && new C().a && new C().b && new C() instanceof Array;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'class statement': {
+      exec: function () {/*
+        class C {}
+        return typeof C === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'class expression': {
+      exec: function () {/*
+        return typeof class C {} === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'constructor': {
+      exec: function () {/*
+        class C {
+          constructor() { this.x = 1; }
+        }
+        return C.prototype.constructor === C
+          && new C().x === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'prototype methods': {
+      exec: function () {/*
+        class C {
+          constructor() {}
+          method() { return 2; }
+        }
+        return typeof C.prototype.method === "function"
+          && new C().method() === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'static methods': {
+      exec: function () {/*
+        class C {
+          constructor() {}
+          static method() { return 3; }
+        }
+        return typeof C.method === "function"
+          && C.method() === 3;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'extends': {
+      exec: function () {/*
+        class C extends Array {}
+        return Array.isPrototypeOf(C)
+          && Array.prototype.isPrototypeOf(C.prototype);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+  },
 },
 {
   name: 'super',

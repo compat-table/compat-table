@@ -169,8 +169,8 @@ function dataToHtml(browsers, tests) {
       } else {
         body.push(
           '\t<td ' + (title ? ('title="' + title + '" ') : '') +
-          'class="' + (outOf ? 'tally' : result.toLowerCase()) + ' ' + CSSclass + '" '+
-          (outOf ? 'data-tally="' + eval(result) + '"' : '') + '>' +
+          'class="' + (outOf ? 'tally' : result.toLowerCase()) + ' ' + CSSclass + '"' +
+          (outOf ? ' data-tally="' + eval(result) + '"' : '') + '>' +
           result +
           footnote +
           '</td>'
@@ -316,7 +316,6 @@ function testScript(fn) {
       '</script>\n';
     }
   } else {
-  /*
     // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }
     return fn.reduce(function(text, script) {
@@ -329,6 +328,5 @@ function testScript(fn) {
         + expr
         + '</script>\n';
     },'');
-    */
   }
 }
