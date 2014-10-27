@@ -552,11 +552,11 @@ test(function(){try{return Function("\nvar f = (function() { return z => argumen
         <tr class="subtest" data-parent="arrow_functions">
           <td><span>no line break between params and <code>=></code></span></td>
 <script data-source="
-return (function() {
+return () => {
   try { Function(&quot;x\n => 2&quot;)(); } catch(e) { return true; }
-}());
+}();
       ">
-test(function(){try{return Function("\nreturn (function() {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nreturn () => {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n}();\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -2774,14 +2774,61 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="template_strings"><span><a class="anchor" href="#template_strings">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">template strings</a></span></td>
+
+          <td class="tally tr" data-tally="1">2/2</td>
+          <td class="tally ejs" data-tally="1">2/2</td>
+          <td class="tally closure" data-tally="1">2/2</td>
+          <td class="tally ie10" data-tally="0">0/2</td>
+          <td class="tally ie11" data-tally="0">0/2</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox25 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox27 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox28 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox29 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox30 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox31" data-tally="0">0/2</td>
+          <td class="tally firefox32" data-tally="0">0/2</td>
+          <td class="tally firefox33" data-tally="0">0/2</td>
+          <td class="tally firefox34" data-tally="1">2/2</td>
+          <td class="tally chrome obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome35" data-tally="0">0/2</td>
+          <td class="tally chrome37" data-tally="0">0/2</td>
+          <td class="tally chrome38" data-tally="0">0/2</td>
+          <td class="tally chrome39" data-tally="0">0/2</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/2</td>
+          <td class="tally safari6" data-tally="0">0/2</td>
+          <td class="tally safari7" data-tally="0">0/2</td>
+          <td class="tally safari71_8" data-tally="0">0/2</td>
+          <td class="tally webkit" data-tally="0">0/2</td>
+          <td class="tally opera" data-tally="0">0/2</td>
+          <td class="tally konq49" data-tally="0">0/2</td>
+          <td class="tally rhino17" data-tally="0">0/2</td>
+          <td class="tally phantom" data-tally="0">0/2</td>
+          <td class="tally node" data-tally="0">0/2</td>
+          <td class="tally nodeharmony" data-tally="0">0/2</td>
+          <td class="tally ios7" data-tally="0">0/2</td>
+          <td class="tally ios8" data-tally="0">0/2</td>
+        <tr class="subtest" data-parent="template_strings">
+          <td><span>basic functionality</span></td>
 <script data-source="
 var a = &quot;ba&quot;, b = &quot;QUX&quot;;
 return `foo bar
 ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
-  ">
-test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo bar\n${a + \"z\"} ${b.toLowerCase()}` === \"foo bar\\nbaz qux\";\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo bar\n${a + \"z\"} ${b.toLowerCase()}` === \"foo bar\\nbaz qux\";\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -2828,9 +2875,8 @@ test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="tagged_template_strings"><span><a class="anchor" href="#tagged_template_strings">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">tagged template strings</a></span></td>
+        <tr class="subtest" data-parent="template_strings">
+          <td><span>tagged template strings</span></td>
 <script data-source="
 var called = false;
 function fn(parts, a, b) {
@@ -2844,8 +2890,8 @@ function fn(parts, a, b) {
     b === 456;
 }
 return fn `foo${123}bar\n${456}` && called;
-  ">
-test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a, b) {\n  called = true;\n  return parts instanceof Array &&\n    parts[0]     === \"foo\"      &&\n    parts[1]     === \"bar\\n\"    &&\n    parts.raw[0] === \"foo\"      &&\n    parts.raw[1] === \"bar\\\\n\"   &&\n    a === 123                   &&\n    b === 456;\n}\nreturn fn `foo${123}bar\\n${456}` && called;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a, b) {\n  called = true;\n  return parts instanceof Array &&\n    parts[0]     === \"foo\"      &&\n    parts[1]     === \"bar\\n\"    &&\n    parts.raw[0] === \"foo\"      &&\n    parts.raw[1] === \"bar\\\\n\"   &&\n    a === 123                   &&\n    b === 456;\n}\nreturn fn `foo${123}bar\\n${456}` && called;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>

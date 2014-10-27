@@ -107,7 +107,8 @@ tr:hover td[data-tally="1"],
 td.hover[data-tally="1"] {
     background: #269326; 
 }
-.yes.obsolete {
+.yes.obsolete,
+[data-tally="1"].obsolete {
     background: #9fe09f; 
 }
 tr:hover td.yes.obsolete,
