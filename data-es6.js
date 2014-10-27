@@ -1298,7 +1298,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     closure:     true,
     ie10:        false,
     ie11:        false,
@@ -1354,7 +1354,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     closure:     true,
     ie10:        false,
     ie11:        false,
@@ -2083,7 +2083,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   },
   res: {
     tr:          false,
-    ejs:         false,
+    ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,
@@ -2971,7 +2971,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   },
   res: {
     tr:          true,
-    ejs:         false,
+    ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,
@@ -3624,7 +3624,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   */},
   res: {
     tr:          false,
-    ejs:         false,
+    ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,
@@ -3679,7 +3679,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   */},
   res: {
     tr:          false,
-    ejs:         false,
+    ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,
@@ -3796,7 +3796,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   */},
   res: {
     tr:          false,
-    ejs:         false,
+    ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,
@@ -4384,7 +4384,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   },
   res: {
     tr:          false,
-    ejs:         false,
+    ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,

@@ -1103,7 +1103,7 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n  ")()}
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -1154,7 +1154,7 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -1878,7 +1878,7 @@ return true;
   }())</script>
 
           <td class="no tr">No</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -2650,7 +2650,7 @@ return typeof String.raw === 'function';
   }())</script>
 
           <td class="yes tr">Yes</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3254,7 +3254,7 @@ test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: tru
 </script>
 
           <td class="no tr">No</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3308,7 +3308,7 @@ test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpr
 </script>
 
           <td class="no tr">No</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3423,7 +3423,7 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
 </script>
 
           <td class="no tr">No</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3955,7 +3955,7 @@ return typeof Array.prototype.copyWithin === 'function';
   }())</script>
 
           <td class="no tr">No</td>
-          <td class="no ejs">No</td>
+          <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
