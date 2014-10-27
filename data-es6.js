@@ -300,59 +300,96 @@ exports.tests = [
 {
   name: 'arrow functions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
-  exec: function() {
-    try {
-      eval('var a = () => 5;');
-    } catch (e) {
-      return false;
-    }
-    return true;
+  subtests: {
+    '0 parameters': {
+      exec: function(){/*
+        return (() => 5)() === 5;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
+    '1 parameter, no brackets': {
+      exec: function(){/*
+        var b = x => x + "foo";
+        return (b("fee fie foe ") === "fee fie foe foo");
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
+    'multiple parameters': {
+      exec: function(){/*
+        var c = (v, w, x, y, z) => "" + v + w + x + y + z;
+        return (c(6, 5, 4, 3, 2) === "65432");
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
+    'lexical "this" binding': {
+      exec: function(){/*
+        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var e = { x : "baz", y : d };
+        return d("ley") === "barley" && e.y("ley") === "barley";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+      },
+    },
+    'can\'t be bound, can be curried': {
+      exec: function(){/*
+        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var e = { x : "baz" };
+        return d.bind(e, "ley")() === "barley";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+      },
+    },
+    'lexical "arguments" binding': {
+      exec: function(){/*
+        var f = (function() { return z => arguments[0]; }(5));
+        return f(6) === 5;
+      */},
+      res: {
+      },
+    },
+    'no line break between parameters and =>': {
+      exec: function(){/*
+        return (function() {
+          try { Function("x\n => 2")(); } catch(e) { return true; }'
+        }());
+      */},
+      res: {
+      },
+    },
+    'no "prototype" and "name" properties': {
+      exec: function(){/*
+        var a = () => 5;
+        return !a.hasOwnProperty("prototype") && a.name === ""; 
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
   },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
   name: 'const',
