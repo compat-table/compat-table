@@ -32,7 +32,10 @@ $(function() {
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
-      $('.desktop')[0].colSpan = elem.prop('checked') ? 33 : 16;
+      var desktop = $('.desktop');
+      if (desktop.length) {
+        desktop[0].colSpan = elem.prop('checked') ? 33 : 16;
+      }
     })
     .attr('value', $('#show-obsolete').checked);
 
