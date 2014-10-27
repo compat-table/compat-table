@@ -371,7 +371,7 @@ exports.tests = [
     'no line break between params and <code>=></code>': {
       exec: function(){/*
         return (function() {
-          try { Function("x\n => 2")(); } catch(e) { return true; }'
+          try { Function("x\n => 2")(); } catch(e) { return true; }
         }());
       */},
       res: {
@@ -669,163 +669,57 @@ exports.tests = [
   }
 },
 {
-  name: 'spread call (...) operator',
+  name: 'spread (...) operator',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
-  exec: function () {/*
-    return Math.max(...[1, 2, 3]) === 3
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'spread array (...) operator',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal',
-  exec: function() {/*
-    return [...[1, 2, 3]][2] === 3;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'string spreading',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal',
-  exec: function() {/*
-    return ["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   {
-      val: false,
-      note_id: 'fx-spreading-strings',
-      note_html: 'Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.'
+  subtests: {
+    'with arrays, in function calls': {
+      exec: function () {/*
+        return Math.max(...[1, 2, 3]) === 3
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox27:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true
+      },
     },
-    firefox17:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox18:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox23:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox24:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox25:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
+    'with arrays, in array literals': {
+      exec: function() {/*
+       return [...[1, 2, 3]][2] === 3;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox16:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true
+      },
+    },
+    'with strings, in function calls': {
+      exec: function() {/*
+       return Math.max(..."1234") === 4;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox27:   true,
+      },
+    },
+    'with strings, in array literals': {
+      exec: function() {/*
+       return ["a", ..."bcd", "e"][3] === "d";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox16:   true,
+      },
+    },
   }
 },
 {

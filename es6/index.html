@@ -544,10 +544,10 @@ test(function(){try{return Function("\nvar f = (function() { return z => argumen
           <td><span>no line break between params and <code>=></code></span></td>
 <script data-source="
 return (function() {
-  try { Function(&quot;x\n => 2&quot;)(); } catch(e) { return true; }'
+  try { Function(&quot;x\n => 2&quot;)(); } catch(e) { return true; }
 }());
       ">
-test(function(){try{return Function("\nreturn (function() {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }'\n}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nreturn (function() {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n}());\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr" >No</td>
@@ -1596,12 +1596,58 @@ test(function(){try{return Function("\nreturn (function (...args) { return typeo
           <td class="no ios7" >No</td>
           <td class="no ios8" >No</td>
         </tr>
-        <tr>
-          <td id="spread_call_(...)_operator"><span><a class="anchor" href="#spread_call_(...)_operator">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation">spread call (...) operator</a></span></td>
+        <tr class="supertest">
+          <td id="spread_(...)_operator"><span><a class="anchor" href="#spread_(...)_operator">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation">spread (...) operator</a></span></td>
+
+          <td class="tally tr" data-tally="1">4/4</td>
+          <td class="tally ejs" data-tally="1">4/4</td>
+          <td class="tally closure" data-tally="0.5">2/4</td>
+          <td class="tally ie10" data-tally="0">0/4</td>
+          <td class="tally ie11" data-tally="0">0/4</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox16 obsolete" data-tally="0.5">2/4</td>
+          <td class="tally firefox17 obsolete" data-tally="0.5">2/4</td>
+          <td class="tally firefox18 obsolete" data-tally="0.5">2/4</td>
+          <td class="tally firefox23 obsolete" data-tally="0.5">2/4</td>
+          <td class="tally firefox24 obsolete" data-tally="0.5">2/4</td>
+          <td class="tally firefox25 obsolete" data-tally="0.5">2/4</td>
+          <td class="tally firefox27 obsolete" data-tally="1">4/4</td>
+          <td class="tally firefox28 obsolete" data-tally="1">4/4</td>
+          <td class="tally firefox29 obsolete" data-tally="1">4/4</td>
+          <td class="tally firefox30 obsolete" data-tally="1">4/4</td>
+          <td class="tally firefox31" data-tally="1">4/4</td>
+          <td class="tally firefox32" data-tally="1">4/4</td>
+          <td class="tally firefox33" data-tally="1">4/4</td>
+          <td class="tally firefox34" data-tally="1">4/4</td>
+          <td class="tally chrome obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome35" data-tally="0">0/4</td>
+          <td class="tally chrome37" data-tally="0">0/4</td>
+          <td class="tally chrome39" data-tally="0">0/4</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/4</td>
+          <td class="tally safari6" data-tally="0">0/4</td>
+          <td class="tally safari7" data-tally="0">0/4</td>
+          <td class="tally safari71_8" data-tally="0.5">2/4</td>
+          <td class="tally webkit" data-tally="0.5">2/4</td>
+          <td class="tally opera" data-tally="0">0/4</td>
+          <td class="tally konq49" data-tally="0">0/4</td>
+          <td class="tally rhino17" data-tally="0">0/4</td>
+          <td class="tally phantom" data-tally="0">0/4</td>
+          <td class="tally node" data-tally="0">0/4</td>
+          <td class="tally nodeharmony" data-tally="0">0/4</td>
+          <td class="tally ios7" data-tally="0">0/4</td>
+          <td class="tally ios8" data-tally="0.5">2/4</td>
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with arrays, in function calls</span></td>
 <script data-source="
 return Math.max(...[1, 2, 3]) === 3
-  ">
-test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr" >Yes</td>
@@ -1647,13 +1693,12 @@ test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n  ")
           <td class="no nodeharmony" >No</td>
           <td class="no ios7" >No</td>
           <td class="yes ios8" >Yes</td>
-        </tr>
-        <tr>
-          <td id="spread_array_(...)_operator"><span><a class="anchor" href="#spread_array_(...)_operator">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal">spread array (...) operator</a></span></td>
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with arrays, in array literals</span></td>
 <script data-source="
 return [...[1, 2, 3]][2] === 3;
-  ">
-test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr" >Yes</td>
@@ -1699,13 +1744,12 @@ test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n  ")()}c
           <td class="no nodeharmony" >No</td>
           <td class="no ios7" >No</td>
           <td class="yes ios8" >Yes</td>
-        </tr>
-        <tr>
-          <td id="string_spreading"><span><a class="anchor" href="#string_spreading">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal">string spreading</a></span></td>
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with strings, in function calls</span></td>
 <script data-source="
-return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot; && Math.max(...&quot;1234&quot;) === 4;
-  ">
-test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === \"d\" && Math.max(...\"1234\") === 4;\n  ")()}catch(e){return false;}}());
+return Math.max(...&quot;1234&quot;) === 4;
+      ">
+test(function(){try{return Function("\nreturn Math.max(...\"1234\") === 4;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr" >Yes</td>
@@ -1715,12 +1759,63 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
           <td class="no ie11" >No</td>
           <td class="no firefox11 obsolete" >No</td>
           <td class="no firefox13 obsolete" >No</td>
-          <td class="no firefox16 obsolete" >No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
-          <td class="no firefox17 obsolete" >No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
-          <td class="no firefox18 obsolete" >No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
-          <td class="no firefox23 obsolete" >No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
-          <td class="no firefox24 obsolete" >No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
-          <td class="no firefox25 obsolete" >No<a href="#fx-spreading-strings-note"><sup>[3]</sup></a></td>
+          <td class="no firefox16 obsolete" >No</td>
+          <td class="no firefox17 obsolete" >No</td>
+          <td class="no firefox18 obsolete" >No</td>
+          <td class="no firefox23 obsolete" >No</td>
+          <td class="no firefox24 obsolete" >No</td>
+          <td class="no firefox25 obsolete" >No</td>
+          <td class="yes firefox27 obsolete" >Yes</td>
+          <td class="yes firefox28 obsolete" >Yes</td>
+          <td class="yes firefox29 obsolete" >Yes</td>
+          <td class="yes firefox30 obsolete" >Yes</td>
+          <td class="yes firefox31" >Yes</td>
+          <td class="yes firefox32" >Yes</td>
+          <td class="yes firefox33" >Yes</td>
+          <td class="yes firefox34" >Yes</td>
+          <td class="no chrome obsolete" >No</td>
+          <td class="no chrome19dev obsolete" >No</td>
+          <td class="no chrome21dev obsolete" >No</td>
+          <td class="no chrome30 obsolete" >No</td>
+          <td class="no chrome33 obsolete" >No</td>
+          <td class="no chrome34 obsolete" >No</td>
+          <td class="no chrome35" >No</td>
+          <td class="no chrome37" >No</td>
+          <td class="no chrome39" >No</td>
+          <td class="no safari51 obsolete" >No</td>
+          <td class="no safari6" >No</td>
+          <td class="no safari7" >No</td>
+          <td class="no safari71_8" >No</td>
+          <td class="no webkit" >No</td>
+          <td class="no opera" >No</td>
+          <td class="no konq49" >No</td>
+          <td class="no rhino17" >No</td>
+          <td class="no phantom" >No</td>
+          <td class="no node" >No</td>
+          <td class="no nodeharmony" >No</td>
+          <td class="no ios7" >No</td>
+          <td class="no ios8" >No</td>
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with strings, in array literals</span></td>
+<script data-source="
+return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;
+      ">
+test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === \"d\";\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr" >Yes</td>
+          <td class="yes ejs" >Yes</td>
+          <td class="no closure" >No</td>
+          <td class="no ie10" >No</td>
+          <td class="no ie11" >No</td>
+          <td class="no firefox11 obsolete" >No</td>
+          <td class="no firefox13 obsolete" >No</td>
+          <td class="yes firefox16 obsolete" >Yes</td>
+          <td class="yes firefox17 obsolete" >Yes</td>
+          <td class="yes firefox18 obsolete" >Yes</td>
+          <td class="yes firefox23 obsolete" >Yes</td>
+          <td class="yes firefox24 obsolete" >Yes</td>
+          <td class="yes firefox25 obsolete" >Yes</td>
           <td class="yes firefox27 obsolete" >Yes</td>
           <td class="yes firefox28 obsolete" >Yes</td>
           <td class="yes firefox29 obsolete" >Yes</td>
@@ -2232,15 +2327,15 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n  ")()}
           <td class="no firefox18 obsolete" >No</td>
           <td class="no firefox23 obsolete" >No</td>
           <td class="no firefox24 obsolete" >No</td>
-          <td class="yes firefox25 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox27 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox28 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox29 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox30 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox31" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox32" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox33" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox34" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
+          <td class="yes firefox25 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox27 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox28 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox29 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox30 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox31" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox32" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox33" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox34" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
           <td class="no chrome21dev obsolete" >No</td>
@@ -2284,15 +2379,15 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
           <td class="no firefox18 obsolete" >No</td>
           <td class="no firefox23 obsolete" >No</td>
           <td class="no firefox24 obsolete" >No</td>
-          <td class="yes firefox25 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox27 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox28 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox29 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox30 obsolete" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox31" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox32" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox33" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
-          <td class="yes firefox34" >Yes<a href="#octal-to-string-note"><sup>[4]</sup></a></td>
+          <td class="yes firefox25 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox27 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox28 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox29 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox30 obsolete" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox31" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox32" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox33" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
+          <td class="yes firefox34" >Yes<a href="#octal-to-string-note"><sup>[3]</sup></a></td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
           <td class="no chrome21dev obsolete" >No</td>
@@ -2576,8 +2671,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar pa
           <td class="no tr" >No</td>
           <td class="yes ejs" >Yes</td>
           <td class="no closure" >No</td>
-          <td class="no ie10" >No<a href="#ie-typedarray-note"><sup>[5]</sup></a></td>
-          <td class="no ie11" >No<a href="#ie-typedarray-note"><sup>[5]</sup></a></td>
+          <td class="no ie10" >No<a href="#ie-typedarray-note"><sup>[4]</sup></a></td>
+          <td class="no ie11" >No<a href="#ie-typedarray-note"><sup>[4]</sup></a></td>
           <td class="yes firefox11 obsolete" >Yes</td>
           <td class="yes firefox13 obsolete" >Yes</td>
           <td class="yes firefox16 obsolete" >Yes</td>
@@ -2603,7 +2698,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar pa
           <td class="yes chrome35" >Yes</td>
           <td class="yes chrome37" >Yes</td>
           <td class="yes chrome39" >Yes</td>
-          <td class="no safari51 obsolete" >No<a href="#ie-typedarray-note"><sup>[5]</sup></a></td>
+          <td class="no safari51 obsolete" >No<a href="#ie-typedarray-note"><sup>[4]</sup></a></td>
           <td class="yes safari6" >Yes</td>
           <td class="yes safari7" >Yes</td>
           <td class="yes safari71_8" >Yes</td>
@@ -2699,7 +2794,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes ejs" >Yes</td>
           <td class="no closure" >No</td>
           <td class="no ie10" >No</td>
-          <td class="yes ie11" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes ie11" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no firefox11 obsolete" >No</td>
           <td class="no firefox13 obsolete" >No</td>
           <td class="no firefox16 obsolete" >No</td>
@@ -2718,26 +2813,26 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes firefox34" >Yes</td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
-          <td class="yes chrome21dev obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome30 obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome33 obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome34 obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome35" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome37" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome39" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome21dev obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome30 obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome33 obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome34 obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome35" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome37" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome39" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no safari51 obsolete" >No</td>
           <td class="no safari6" >No</td>
           <td class="no safari7" >No</td>
-          <td class="yes safari71_8" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes webkit" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes safari71_8" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes webkit" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no opera" >No</td>
           <td class="no konq49" >No</td>
           <td class="no rhino17" >No</td>
           <td class="no phantom" >No</td>
           <td class="no node" >No</td>
-          <td class="yes nodeharmony" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes nodeharmony" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no ios7" >No</td>
-          <td class="yes ios8" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes ios8" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
         </tr>
         <tr>
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -2757,7 +2852,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes ejs" >Yes</td>
           <td class="no closure" >No</td>
           <td class="no ie10" >No</td>
-          <td class="yes ie11" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes ie11" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no firefox11 obsolete" >No</td>
           <td class="no firefox13 obsolete" >No</td>
           <td class="no firefox16 obsolete" >No</td>
@@ -2776,26 +2871,26 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes firefox34" >Yes</td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
-          <td class="yes chrome21dev obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome30 obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome33 obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome34 obsolete" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome35" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome37" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes chrome39" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome21dev obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome30 obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome33 obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome34 obsolete" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome35" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome37" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes chrome39" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no safari51 obsolete" >No</td>
           <td class="no safari6" >No</td>
           <td class="no safari7" >No</td>
-          <td class="yes safari71_8" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
-          <td class="yes webkit" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes safari71_8" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
+          <td class="yes webkit" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no opera" >No</td>
           <td class="no konq49" >No</td>
           <td class="no rhino17" >No</td>
           <td class="no phantom" >No</td>
           <td class="no node" >No</td>
-          <td class="yes nodeharmony" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes nodeharmony" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
           <td class="no ios7" >No</td>
-          <td class="yes ios8" >Yes<a href="#map-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes ios8" >Yes<a href="#map-constructor-note"><sup>[5]</sup></a></td>
         </tr>
         <tr>
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -2814,45 +2909,45 @@ test(function(){try{return Function("\nvar key1 = {};\nvar weakmap = new WeakMap
           <td class="no ejs" >No</td>
           <td class="no closure" >No</td>
           <td class="no ie10" >No</td>
-          <td class="yes ie11" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes ie11" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no firefox11 obsolete" >No</td>
           <td class="no firefox13 obsolete" >No</td>
           <td class="no firefox16 obsolete" >No</td>
           <td class="no firefox17 obsolete" >No</td>
           <td class="no firefox18 obsolete" >No</td>
-          <td class="yes firefox23 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox24 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox25 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox27 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox28 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox29 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox30 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox31" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox32" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox33" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes firefox34" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes firefox23 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox24 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox25 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox27 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox28 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox29 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox30 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox31" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox32" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox33" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes firefox34" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
-          <td class="yes chrome21dev obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome30 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome33 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome34 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome35" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome37" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome39" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes chrome21dev obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome30 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome33 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome34 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome35" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome37" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome39" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no safari51 obsolete" >No</td>
           <td class="no safari6" >No</td>
           <td class="no safari7" >No</td>
-          <td class="yes safari71_8" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes webkit" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes safari71_8" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes webkit" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no opera" >No</td>
           <td class="no konq49" >No</td>
           <td class="no rhino17" >No</td>
           <td class="no phantom" >No</td>
           <td class="no node" >No</td>
-          <td class="yes nodeharmony" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes nodeharmony" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no ios7" >No</td>
-          <td class="yes ios8" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes ios8" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
         </tr>
         <tr>
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -2893,11 +2988,11 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no chrome19dev obsolete" >No</td>
           <td class="no chrome21dev obsolete" >No</td>
           <td class="no chrome30 obsolete" >No</td>
-          <td class="yes chrome33 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome34 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome35" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome37" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
-          <td class="yes chrome39" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes chrome33 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome34 obsolete" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome35" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome37" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
+          <td class="yes chrome39" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no safari51 obsolete" >No</td>
           <td class="no safari6" >No</td>
           <td class="no safari7" >No</td>
@@ -2908,7 +3003,7 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no rhino17" >No</td>
           <td class="no phantom" >No</td>
           <td class="no node" >No</td>
-          <td class="yes nodeharmony" >Yes<a href="#weakmap-constructor-note"><sup>[7]</sup></a></td>
+          <td class="yes nodeharmony" >Yes<a href="#weakmap-constructor-note"><sup>[6]</sup></a></td>
           <td class="no ios7" >No</td>
           <td class="no ios8" >No</td>
         </tr>
@@ -3134,7 +3229,7 @@ return true;
           <td class="no ios8" >No</td>
         </tr>
         <tr>
-          <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[8]</sup></a></span></td>
+          <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[7]</sup></a></span></td>
 <script data-source="
 'use strict';
 {
@@ -3239,7 +3334,7 @@ test(function(){try{return Function("\n// Array destructuring\nvar [a, , [b], g]
           <td class="no safari51 obsolete" >No</td>
           <td class="no safari6" >No</td>
           <td class="no safari7" >No</td>
-          <td class="yes safari71_8" >Yes<a href="#fx-destructuring-note"><sup>[9]</sup></a></td>
+          <td class="yes safari71_8" >Yes<a href="#fx-destructuring-note"><sup>[8]</sup></a></td>
           <td class="yes webkit" >Yes</td>
           <td class="no opera" >No</td>
           <td class="no konq49" >No</td>
@@ -3248,7 +3343,7 @@ test(function(){try{return Function("\n// Array destructuring\nvar [a, , [b], g]
           <td class="no node" >No</td>
           <td class="no nodeharmony" >No</td>
           <td class="no ios7" >No</td>
-          <td class="yes ios8" >Yes<a href="#fx-destructuring-note"><sup>[9]</sup></a></td>
+          <td class="yes ios8" >Yes<a href="#fx-destructuring-note"><sup>[8]</sup></a></td>
         </tr>
         <tr>
           <td id="destructuring_parameters"><span><a class="anchor" href="#destructuring_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring parameters</a></span></td>
@@ -5396,19 +5491,19 @@ return typeof Array.prototype.values === 'function';
           <td class="no firefox11 obsolete" >No</td>
           <td class="no firefox13 obsolete" >No</td>
           <td class="no firefox16 obsolete" >No</td>
-          <td class="no firefox17 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox18 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox23 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox24 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox25 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[10]</sup></a></td>
-          <td class="no firefox27 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox28 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox29 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox30 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox31" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox32" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox33" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
-          <td class="no firefox34" >No<a href="#fx-array-prototype-values-2-note"><sup>[11]</sup></a></td>
+          <td class="no firefox17 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[9]</sup></a></td>
+          <td class="no firefox18 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[9]</sup></a></td>
+          <td class="no firefox23 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[9]</sup></a></td>
+          <td class="no firefox24 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[9]</sup></a></td>
+          <td class="no firefox25 obsolete" >No<a href="#fx-array-prototype-values-note"><sup>[9]</sup></a></td>
+          <td class="no firefox27 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox28 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox29 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox30 obsolete" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox31" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox32" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox33" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
+          <td class="no firefox34" >No<a href="#fx-array-prototype-values-2-note"><sup>[10]</sup></a></td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
           <td class="no chrome21dev obsolete" >No</td>
@@ -5998,7 +6093,7 @@ return typeof Math.imul === 'function';
           <td class="yes firefox34" >Yes</td>
           <td class="no chrome obsolete" >No</td>
           <td class="no chrome19dev obsolete" >No</td>
-          <td class="yes chrome21dev obsolete" >Yes<a href="#chromu-imul-note"><sup>[12]</sup></a></td>
+          <td class="yes chrome21dev obsolete" >Yes<a href="#chromu-imul-note"><sup>[11]</sup></a></td>
           <td class="yes chrome30 obsolete" >Yes</td>
           <td class="yes chrome33 obsolete" >Yes</td>
           <td class="yes chrome34 obsolete" >Yes</td>
@@ -6730,7 +6825,7 @@ return typeof Math.fround === 'function';
           <td class="no firefox23 obsolete" >No</td>
           <td class="no firefox24 obsolete" >No</td>
           <td class="no firefox25 obsolete" >No</td>
-          <td class="yes firefox27 obsolete" >Yes<a href="#fx-fround-note"><sup>[13]</sup></a></td>
+          <td class="yes firefox27 obsolete" >Yes<a href="#fx-fround-note"><sup>[12]</sup></a></td>
           <td class="yes firefox28 obsolete" >Yes</td>
           <td class="yes firefox29 obsolete" >Yes</td>
           <td class="yes firefox30 obsolete" >Yes</td>
@@ -6818,7 +6913,7 @@ return typeof Math.cbrt === 'function';
           <th colspan="46" class="separator"></th>
         </tr>
         <tr>
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[14]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[13]</sup></a></span></td>
 <script data-source="function () {
 var passed = { __proto__ : [] } instanceof Array
   && !({ __proto__ : null } instanceof Object);
@@ -6865,8 +6960,8 @@ return passed;
           <td class="yes firefox30 obsolete" >Yes</td>
           <td class="yes firefox31" >Yes</td>
           <td class="yes firefox32" >Yes</td>
-          <td class="yes firefox33" >Yes<a href="#fx-proto-shorthand-note"><sup>[15]</sup></a></td>
-          <td class="yes firefox34" >Yes<a href="#fx-proto-shorthand-note"><sup>[15]</sup></a></td>
+          <td class="yes firefox33" >Yes<a href="#fx-proto-shorthand-note"><sup>[14]</sup></a></td>
+          <td class="yes firefox34" >Yes<a href="#fx-proto-shorthand-note"><sup>[14]</sup></a></td>
           <td class="yes chrome obsolete" >Yes</td>
           <td class="yes chrome19dev obsolete" >Yes</td>
           <td class="yes chrome21dev obsolete" >Yes</td>
@@ -6891,7 +6986,7 @@ return passed;
           <td class="yes ios8" >Yes</td>
         </tr>
         <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[16]</sup></a></span></td>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[15]</sup></a></span></td>
 <script data-source="
 // Note: only available outside of strict mode.
 var passed = f() === 2 && g() === 4;
@@ -7144,47 +7239,44 @@ return typeof RegExp.prototype.compile === 'function';
       <p id="harmony-flag-note">
         <sup>[2]</sup> Have to be enabled via --harmony flag
       </p>
-      <p id="fx-spreading-strings-note">
-        <sup>[3]</sup> Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.
-      </p>
       <p id="octal-to-string-note">
-        <sup>[4]</sup> Firefox doesn't support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.
+        <sup>[3]</sup> Firefox doesn't support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.
       </p>
       <p id="ie-typedarray-note">
-        <sup>[5]</sup> Internet Explorer and Safari 5.1 support every typed array class except <code>Uint8ClampedArray</code>.
+        <sup>[4]</sup> Internet Explorer and Safari 5.1 support every typed array class except <code>Uint8ClampedArray</code>.
       </p>
       <p id="map-constructor-note">
-        <sup>[6]</sup> Map and Set constructor arguments, such as <code>new Map([[key, val]])</code> or <code>new Set([obj1, obj2])</code>, are not supported.
+        <sup>[5]</sup> Map and Set constructor arguments, such as <code>new Map([[key, val]])</code> or <code>new Set([obj1, obj2])</code>, are not supported.
       </p>
       <p id="weakmap-constructor-note">
-        <sup>[7]</sup> WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.
+        <sup>[6]</sup> WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.
       </p>
       <p id="block-level-function-note">
-        <sup>[8]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
+        <sup>[7]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
       </p>
       <p id="fx-destructuring-note">
-        <sup>[9]</sup> Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
+        <sup>[8]</sup> Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
       </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[10]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[9]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[11]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[10]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[12]</sup> Available since Chrome 28
+        <sup>[11]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[13]</sup> Available since Firefox 26
+        <sup>[12]</sup> Available since Firefox 26
       </p>
       <p id="proto-in-object-literals-note">
-        <sup>[14]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[13]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
       <p id="fx-proto-shorthand-note">
-        <sup>[15]</sup> Firefox 33 and 34 incorrectly regard both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
+        <sup>[14]</sup> Firefox 33 and 34 incorrectly regard both of the following as true: <ul><li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code><li><code>({ __proto__(){} }) instanceof Function</code></ul>
       </p>
       <p id="hoisted-block-level-function-note">
-        <sup>[16]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
+        <sup>[15]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>
