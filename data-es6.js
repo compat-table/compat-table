@@ -75,7 +75,12 @@ exports.browsers = {
   },
   firefox27: {
     full: 'Firefox',
-    short: 'FF 27-28',
+    short: 'FF 27',
+    obsolete: true
+  },
+  firefox28: {
+    full: 'Firefox',
+    short: 'FF 28',
     obsolete: true
   },
   firefox29: {
@@ -351,136 +356,168 @@ exports.tests = [
 },
 {
   name: 'const',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
-  exec: function () {
-    try {
-      return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  subtests: {
+    'basic support': {
+     exec: function() {/*
+        const foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }
+    },
+    'is block-scoped': {
+      exec: function() {/*
+        { const bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'redefining a const is a syntax error': {
+      exec: function() {/*
+        return (function() {
+          try { Function("foo = 2;")(); } catch(e) { return true; }'
+        }());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        'use strict';
+        const passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
   }
 },
 {
   name: 'let',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function () {
-          try {
-            return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-          } catch (e) {
-            return false;
-          }
-        }()));
-        global.__let_script_executed = true;
-      }
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  subtests: {
+    'basic support': {
+      exec: function(){/*
+        'use strict';
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
     },
-    {
-      script: function () {
-        if (!global.__let_script_executed) {
-          test((function () {
-            try {
-              return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-            } catch (e) {
-              return false;
-            }
-          }()));
+    'can be used outside of strict mode': {
+      exec: function(){/*
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'is block-scoped': {
+      exec: function(){/*
+        'use strict';
+        { let bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'is block-scoped within a for-loop': {
+      exec: function(){/*
+        'use strict';
+        for(let baz = 0; false;) {}
+        return (function(){ try { baz; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        'use strict';
+        let passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        let qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'for-loop iteration scope': {
+      exec: function(){/*
+        'use strict';
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
         }
-      }
-    }
-  ],
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    konq49:      false,
-    opera:       false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+        
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+  },
 },
 {
   name: 'default function parameters',
