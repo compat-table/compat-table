@@ -41,13 +41,21 @@ $(function() {
 
   var mouseoverTimeout;
 
-  // Work out tallies for the current browser's tally features
-  $('tr:not(.subtest)').each(function() {
+  
+  $('tr.supertest').each(function() {
     var tr = $(this);
     var subtests = tr.nextUntil('tr:not(.subtest)');
     if (subtests.length === 0) {
       return;
     }
+    // Attach dropdown buttons to those tests with subtests
+    $('<span class="folddown">&#9660;</span>')
+      .appendTo(tr.children()[0])
+      .on('click', function() {
+        subtests.toggle();
+      });
+      
+    // Also, work out tallies for the current browser's tally features
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
     tr.find('td' + currentBrowserSelector).before(
       '<td class="tally" data-tally="' + tally/subtests.length + '">' +

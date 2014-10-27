@@ -55,16 +55,16 @@ table.one-selected td.selected {
 /* subtests */
 
 .subtest td:first-child {
-  padding-left: 2em;
+  padding-left: 1.2em;
+  font-style: italic;
 }
 .subtest {
   font-size: 0.5em;
-  height: 0.5em;
+  display:none;
 }
 .subtest td.yes, .subtest td.no {
   border-left: solid 5px #eee;
   border-right: solid 5px #eee;
-  -color:transparent;
 }
 
 /* yes/no grid text colors */
@@ -198,9 +198,15 @@ td.hover.not-applicable {
 }
 
 /* tooltip button/box */
+.info, .folddown {
+    float: right; margin-right: 5px; display: inline-block; width: 15px; height: 15px; line-height: 15px; text-align: center;
+    cursor: default; font-family: "Courier New", Courier, monospace 
+}
 .info {
-    color: #eee; float: right; margin-right: 5px; background: #999; display: inline-block; width: 15px; height: 15px; line-height: 15px; text-align: center; border-radius: 20px; 
-    font-size: 12px; cursor: default; font-family: "Courier New", Courier, monospace 
+    color: #eee;
+    background: #999;
+    border-radius: 20px;
+    font-size: 12px; 
 }
 .info:hover {
     background: #555 

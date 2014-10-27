@@ -368,7 +368,7 @@ exports.tests = [
       res: {
       },
     },
-    'no line break between parameters and =>': {
+    'no line break between params and <code>=></code>': {
       exec: function(){/*
         return (function() {
           try { Function("x\n => 2")(); } catch(e) { return true; }'
@@ -386,7 +386,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome39:    true,
       },
     },
   },
@@ -445,7 +445,7 @@ exports.tests = [
     'temporal dead zone': {
       exec: function(){/*
         'use strict';
-        const passed = (function(){ try { qux; } catch(e) { return true; }}());
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
         const qux = 456;
         return passed;
       */},
@@ -522,7 +522,7 @@ exports.tests = [
     'temporal dead zone': {
       exec: function(){/*
         'use strict';
-        let passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
         let qux = 456;
         return passed;
       */},

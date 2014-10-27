@@ -107,12 +107,12 @@ function dataToHtml(browsers, tests) {
   
   // Now print the results.
   tests.forEach(function(t) {
-  
+    var subtests;
     // Calculate the result totals for tests which consist solely of subtests.
     if ("subtests" in t) {
       t.res = t.res || {};
       
-      var subtests = t.subtests;
+      subtests = t.subtests;
       Object.keys(t.subtests).forEach(function(st) {
         var subtest = subtests[st];
         // For each of the subtest's results, add 1 to the main test's
@@ -134,7 +134,7 @@ function dataToHtml(browsers, tests) {
     var name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
     
     body.push(
-      '<tr>',
+      '<tr' + (subtests ? ' class="supertest"' : '') + '>',
       '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
       testScript(t.exec)
     );

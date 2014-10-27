@@ -181,7 +181,7 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="no ios7" >No</td>
           <td class="no ios8" >No</td>
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">arrow functions</a></span></td>
 
           <td class="tally tr" data-tally="0.75">6/8</td>
@@ -212,7 +212,7 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="tally chrome33 obsolete" data-tally="0">0/8</td>
           <td class="tally chrome34 obsolete" data-tally="0">0/8</td>
           <td class="tally chrome35" data-tally="0">0/8</td>
-          <td class="tally chrome37" data-tally="0.5">4/8</td>
+          <td class="tally chrome37" data-tally="0.375">3/8</td>
           <td class="tally chrome39" data-tally="0.5">4/8</td>
           <td class="tally safari51 obsolete" data-tally="0">0/8</td>
           <td class="tally safari6" data-tally="0">0/8</td>
@@ -541,7 +541,7 @@ test(function(){try{return Function("\nvar f = (function() { return z => argumen
           <td class="no ios7" >No</td>
           <td class="no ios8" >No</td>
         <tr class="subtest" data-parent="arrow_functions">
-          <td><span>no line break between parameters and =></span></td>
+          <td><span>no line break between params and <code>=></code></span></td>
 <script data-source="
 return (function() {
   try { Function(&quot;x\n => 2&quot;)(); } catch(e) { return true; }'
@@ -630,7 +630,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td class="no chrome33 obsolete" >No</td>
           <td class="no chrome34 obsolete" >No</td>
           <td class="no chrome35" >No</td>
-          <td class="yes chrome37" >Yes</td>
+          <td class="no chrome37" >No</td>
           <td class="yes chrome39" >Yes</td>
           <td class="no safari51 obsolete" >No</td>
           <td class="no safari6" >No</td>
@@ -646,7 +646,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td class="no ios7" >No</td>
           <td class="no ios8" >No</td>
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">const</a></span></td>
 
           <td class="tally tr" data-tally="0.75">3/4</td>
@@ -853,11 +853,11 @@ test(function(){try{return Function("\nreturn (function() {\n  try { Function(\"
           <td><span>temporal dead zone</span></td>
 <script data-source="
 'use strict';
-const passed = (function(){ try { qux; } catch(e) { return true; }}());
+var passed = (function(){ try { qux; } catch(e) { return true; }}());
 const qux = 456;
 return passed;
       ">
-test(function(){try{return Function("\n'use strict';\nconst passed = (function(){ try { qux; } catch(e) { return true; }}());\nconst qux = 456;\nreturn passed;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nconst qux = 456;\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr" >No</td>
@@ -904,7 +904,7 @@ test(function(){try{return Function("\n'use strict';\nconst passed = (function()
           <td class="no ios7" >No</td>
           <td class="no ios8" >No</td>
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="let"><span><a class="anchor" href="#let">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let</a></span></td>
 
           <td class="tally tr" data-tally="0.8333333333333334">5/6</td>
@@ -1165,11 +1165,11 @@ test(function(){try{return Function("\n'use strict';\nfor(let baz = 0; false;) {
           <td><span>temporal dead zone</span></td>
 <script data-source="
 'use strict';
-let passed = (function(){ try {  qux; } catch(e) { return true; }}());
+var passed = (function(){ try {  qux; } catch(e) { return true; }}());
 let qux = 456;
 return passed;
       ">
-test(function(){try{return Function("\n'use strict';\nlet passed = (function(){ try {  qux; } catch(e) { return true; }}());\nlet qux = 456;\nreturn passed;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nlet qux = 456;\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr" >No</td>
