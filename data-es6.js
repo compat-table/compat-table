@@ -2403,229 +2403,93 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'destructuring',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    // Array destructuring
-    var [a, , [b], g] = [5, null, [6]];
-    // Object destructuring
-    var {c, x:d, h} = {c:7, x:8};
-    // Combined destructuring
-    var [e, {x:f, i}] = [9, {x:10}];
-
-    return a === 5 && b === 6 && c === 7 &&
-           d === 8 && e === 9 && f === 10 &&
-           g === undefined && h === undefined && i === undefined;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  {
-      val: true,
-      note_id: 'fx-destructuring',
-      note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+  subtests: {
+    'array destructuring': {
+      exec: function(){/*
+        var [a, , [b], c] = [5, null, [6]];
+        return a === 5 && b === 6 && c === undefined;
+      */},
+      res: (temp.destructuringResults = {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  {
+          val: true,
+          note_id: 'fx-destructuring',
+          note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+        },
+        webkit:      true,
+        ios8:        { val: true, note_id: 'fx-destructuring' },
+      }),
     },
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        { val: true, note_id: 'fx-destructuring' },
-  }
-},
-{
-  name: 'destructuring parameters',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    return (function({a, x:b}, [c, d]) {
-      return a === 1 && b === 2 && c === 3 && d === 4;
-    }({a:1, x:2},[3, 4]));
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'destructuring defaults',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    var {a = 1, b = 1, c = 3} = {b:2, c:undefined};
-    return a === 1 && b === 2 && c === 3;
-  */},
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'destructuring rest',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    var [a, ...b] = [3, 4, 5];
-    var [c, ...d] = [6];
-    return a === 3 && b instanceof Array && (b + "") === "4,5" &&
+    'object destructuring': {
+      exec: function(){/*
+        var {c, x:d, e} = {c:7, x:8};
+        return c === 7 && d === 8 && e === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
+    'combined destructuring': {
+      exec: function(){/*
+        var [e, {x:f, g}] = [9, {x:10}];
+        return e === 9 && f === 10 && g === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
+    'destructuring parameters': {
+      exec: function(){/*
+        return (function({a, x:b, y:e}, [c, d]) {
+          return a === 1 && b === 2 && c === 3 &&
+            d === 4 && e === undefined;
+        }({a:1, x:2},[3, 4]));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'destructuring rest': {
+      exec: function(){/*
+        var [a, ...b] = [3, 4, 5];
+        var [c, ...d] = [6];
+        return a === 3 && b instanceof Array && (b + "") === "4,5" &&
            c === 6 && d instanceof Array && d.length === 0;
-  */},
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+        firefox34:   true,
+      },
+    },
+    'destructuring defaults': {
+      exec: function(){/*
+        var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
+        return a === 1 && b === 2 && c === 3;
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+      },
+    },
+    'defaults in parameters': {
+      exec: function(){/*
+        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
+          return a === 1 && b === 2 && c === 3 && d === 4 && 
+            e === 5 && f === undefined;
+        }({b:2, c:undefined, x:4}));
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+      },
+    },
+  },
 },
 {
   name: 'Promise',
