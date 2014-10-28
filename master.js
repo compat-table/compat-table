@@ -214,9 +214,15 @@ $(function() {
     else {
       name = currentBrowserSelector;
     }
-    var results = table.find('tr:not(.subtest) td:not(.not-applicable)' + name);
-    var yesResults = results.filter('.yes, [data-tally="1"]');
-    var featuresCount = yesResults.length / results.length;
+    var results = table.find('tr:not([class*=test]) td:not(.not-applicable)' + name);
+    var yesResults = results.filter('.yes').length;
+    results = results.length;
+    console.log(yesResults,results);
+    table.find('tr.supertest td[data-tally]' + name).filter(function() {
+      yesResults += +$(this).attr('data-tally') || 0;
+      results += 1;
+    });
+    var featuresCount = yesResults / results;
 
     var colour = getBrowserColour(elem.attr('class'));
     elem
@@ -225,9 +231,9 @@ $(function() {
       .append('<sup class="num-features" title="Number of implemented features">' +
         // Don't bother with a HSL fallback for IE 8.
         '<b style="color:hsl(' + (featuresCount * 120|0) + ',100%,25%)">' +
-        yesResults.length +
+        Math.round(yesResults) +
         '</b>/' +
-        results.length + '</sup>')
+        results + '</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
       .css({'background-image':'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +
