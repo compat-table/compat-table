@@ -382,9 +382,9 @@ exports.tests = [
     },
     'no line break between params and <code>=></code>': {
       exec: function(){/*
-        return (function() {
+        return () => {
           try { Function("x\n => 2")(); } catch(e) { return true; }
-        }());
+        }();
       */},
       res: {
       },
