@@ -7519,17 +7519,17 @@ b[Symbol.iterator] = function() {
   return {
     next: function() {
       return {
-        done: a === 1,
-        value: a++
+        done: a++ === 1,
+        value: &quot;foo&quot;
       };
     }
   };
 };
 var c;
 for (c of b) {}
-return c === 0;
+return c === &quot;foo&quot;;
       ">
-test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n    next: function() {\n      return {\n        done: a === 1,\n        value: a++\n      };\n    }\n  };\n};\nvar c;\nfor (c of b) {}\nreturn c === 0;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n    next: function() {\n      return {\n        done: a++ === 1,\n        value: \"foo\"\n      };\n    }\n  };\n};\nvar c;\nfor (c of b) {}\nreturn c === \"foo\";\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7748,14 +7748,61 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="RegExp.prototype.match"><span><a class="anchor" href="#RegExp.prototype.match">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match">RegExp.prototype.match</a></span></td>
+        <tr class="supertest">
+          <td id="RegExp.prototype_methods"><span><a class="anchor" href="#RegExp.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype methods</a></span></td>
+
+          <td class="tally tr" data-tally="0">0/4</td>
+          <td class="tally ejs" data-tally="0">0/4</td>
+          <td class="tally closure" data-tally="0">0/4</td>
+          <td class="tally ie10" data-tally="0">0/4</td>
+          <td class="tally ie11" data-tally="0">0/4</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox25 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox27 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox28 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox29 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox30 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox31" data-tally="0">0/4</td>
+          <td class="tally firefox32" data-tally="0">0/4</td>
+          <td class="tally firefox33" data-tally="0">0/4</td>
+          <td class="tally firefox34" data-tally="0">0/4</td>
+          <td class="tally chrome obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome35" data-tally="0">0/4</td>
+          <td class="tally chrome37" data-tally="0">0/4</td>
+          <td class="tally chrome38" data-tally="0">0/4</td>
+          <td class="tally chrome39" data-tally="0">0/4</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/4</td>
+          <td class="tally safari6" data-tally="0">0/4</td>
+          <td class="tally safari7" data-tally="0">0/4</td>
+          <td class="tally safari71_8" data-tally="0">0/4</td>
+          <td class="tally webkit" data-tally="0">0/4</td>
+          <td class="tally opera" data-tally="0">0/4</td>
+          <td class="tally konq49" data-tally="0">0/4</td>
+          <td class="tally rhino17" data-tally="0">0/4</td>
+          <td class="tally phantom" data-tally="0">0/4</td>
+          <td class="tally node" data-tally="0">0/4</td>
+          <td class="tally nodeharmony" data-tally="0">0/4</td>
+          <td class="tally ios7" data-tally="0">0/4</td>
+          <td class="tally ios8" data-tally="0">0/4</td>
+        <tr class="subtest" data-parent="RegExp.prototype_methods">
+          <td><span>RegExp.prototype.match</span></td>
 <script data-source="function () {
 return typeof RegExp.prototype.match === 'function';
-  }">test(
+      }">test(
 function () {
 return typeof RegExp.prototype.match === 'function';
-  }())</script>
+      }())</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -7801,15 +7848,14 @@ return typeof RegExp.prototype.match === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="RegExp.prototype.replace"><span><a class="anchor" href="#RegExp.prototype.replace">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.replace">RegExp.prototype.replace</a></span></td>
+        <tr class="subtest" data-parent="RegExp.prototype_methods">
+          <td><span>RegExp.prototype.replace</span></td>
 <script data-source="function () {
 return typeof RegExp.prototype.replace === 'function';
-  }">test(
+      }">test(
 function () {
 return typeof RegExp.prototype.replace === 'function';
-  }())</script>
+      }())</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -7855,15 +7901,14 @@ return typeof RegExp.prototype.replace === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="RegExp.prototype.search"><span><a class="anchor" href="#RegExp.prototype.search">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search">RegExp.prototype.search</a></span></td>
+        <tr class="subtest" data-parent="RegExp.prototype_methods">
+          <td><span>RegExp.prototype.split</span></td>
 <script data-source="function () {
-return typeof RegExp.prototype.search === 'function';
-  }">test(
+return typeof RegExp.prototype.split === 'function';
+      }">test(
 function () {
-return typeof RegExp.prototype.search === 'function';
-  }())</script>
+return typeof RegExp.prototype.split === 'function';
+      }())</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -7909,15 +7954,14 @@ return typeof RegExp.prototype.search === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="RegExp.prototype.split"><span><a class="anchor" href="#RegExp.prototype.split">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.split">RegExp.prototype.split</a></span></td>
+        <tr class="subtest" data-parent="RegExp.prototype_methods">
+          <td><span>RegExp.prototype.search</span></td>
 <script data-source="function () {
-return typeof RegExp.prototype.split === 'function';
-  }">test(
+return typeof RegExp.prototype.search === 'function';
+      }">test(
 function () {
-return typeof RegExp.prototype.split === 'function';
-  }())</script>
+return typeof RegExp.prototype.search === 'function';
+      }())</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
