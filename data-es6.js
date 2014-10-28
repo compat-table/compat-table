@@ -177,7 +177,7 @@ exports.browsers = {
   },
   chrome39: {
     full: 'Chrome, Opera',
-    short: 'Chrome 39,<br>OP&nbsp;26',
+    short: 'CH 39,<br>OP&nbsp;26',
     obsolete: false,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
@@ -408,7 +408,7 @@ exports.tests = [
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
-     exec: function() {/*
+      exec: function() {/*
         const foo = 123;
         return (foo === 123);
       */},
@@ -419,7 +419,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         chrome:      true,
-        safari6:     true,
+        safari51:    true,
         webkit:      true,
         opera:       true,
         konq49:      true,
@@ -443,6 +443,7 @@ exports.tests = [
     },
     'redefining a const is a syntax error': {
       exec: function() {/*
+        const foo = 1;
         return (function() {
           try { Function("foo = 2;")(); } catch(e) { return true; }'
         }());
@@ -455,6 +456,67 @@ exports.tests = [
       }
     },
     'temporal dead zone': {
+      exec: function(){/*
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        nodeharmony: true,
+      },
+    },
+   'basic support (strict mode)': {
+      exec: function() {/*
+        "use strict";
+        const foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        nodeharmony: true,
+        ios7:        true,
+      }
+    },
+    'is block-scoped (strict mode)': {
+      exec: function() {/*
+        'use strict';
+        { const bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome19dev: true,
+        ie11:        true,
+        nodeharmony: true,
+      }
+    },
+    'redefining a const (strict mode)': {
+      exec: function() {/*
+        'use strict';
+        const foo = 1;
+        return (function() {
+          try { Function("foo = 2;")(); } catch(e) { return true; }'
+        }());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'temporal dead zone (strict mode)': {
       exec: function(){/*
         'use strict';
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
@@ -476,6 +538,73 @@ exports.tests = [
   subtests: {
     'basic support': {
       exec: function(){/*
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'is block-scoped': {
+      exec: function(){/*
+        { let bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'for-loop statement scope': {
+      exec: function(){/*
+        for(let baz = 0; false;) {}
+        return (function(){ try { baz; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        let qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+      },
+    },
+    'for-loop iteration scope': {
+      exec: function(){/*
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
+        }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+        
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+    'basic support (strict mode)': {
+      exec: function(){/*
         'use strict';
         let foo = 123;
         return (foo === 123);
@@ -489,19 +618,7 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'can be used outside of strict mode': {
-      exec: function(){/*
-        let foo = 123;
-        return (foo === 123);
-      */},
-      res: {
-        tr:          true,
-        ejs:         true,
-        closure:     true,
-        ie11:        true,
-      },
-    },
-    'is block-scoped': {
+    'is block-scoped (strict mode)': {
       exec: function(){/*
         'use strict';
         { let bar = 456; }
@@ -516,7 +633,7 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'is block-scoped within a for-loop': {
+    'for-loop statement scope (strict mode)': {
       exec: function(){/*
         'use strict';
         for(let baz = 0; false;) {}
@@ -531,7 +648,7 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'temporal dead zone': {
+    'temporal dead zone (strict mode)': {
       exec: function(){/*
         'use strict';
         var passed = (function(){ try {  qux; } catch(e) { return true; }}());
@@ -545,7 +662,7 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'for-loop iteration scope': {
+    'for-loop iteration scope (strict mode)': {
       exec: function(){/*
         'use strict';
         let scopes = [];
