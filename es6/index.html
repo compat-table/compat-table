@@ -110,8 +110,8 @@
           <th class="chrome39"><a href="#chrome39" class="browser-name"><abbr title="Chrome, Opera">CH 39,<br>OP&nbsp;26</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
           <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
           <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
-          <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari 7.0">SF 7.0</abbr></th>
-          <th class="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari 7.1, Safari 8">SF 7.1, SF 8</abbr></th>
+          <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7.0</abbr></th>
+          <th class="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1, SF 8</abbr></th>
           <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r173886">WK</abbr></th>
           <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></th>
           <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.13">KQ 4.13</abbr></th>
@@ -119,8 +119,8 @@
           <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
           <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
           <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.13 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
-          <th class="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari 7">iOS7</abbr></th>
-          <th class="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari 8">iOS8</abbr></th>
+          <th class="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></th>
+          <th class="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></th>
         </tr>
       </thead>
       <tbody>
@@ -693,8 +693,8 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td class="tally chrome39" data-tally="0.5">4/8</td>
           <td class="tally safari51 obsolete" data-tally="0.125">1/8</td>
           <td class="tally safari6" data-tally="0.25">2/8</td>
-          <td class="tally safari7" data-tally="0">0/8</td>
-          <td class="tally safari71_8" data-tally="0">0/8</td>
+          <td class="tally safari7" data-tally="0.25">2/8</td>
+          <td class="tally safari71_8" data-tally="0.25">2/8</td>
           <td class="tally webkit" data-tally="0.25">2/8</td>
           <td class="tally opera" data-tally="0.125">1/8</td>
           <td class="tally konq49" data-tally="0.125">1/8</td>
@@ -703,7 +703,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td class="tally node" data-tally="0.125">1/8</td>
           <td class="tally nodeharmony" data-tally="0.625">5/8</td>
           <td class="tally ios7" data-tally="0.25">2/8</td>
-          <td class="tally ios8" data-tally="0">0/8</td>
+          <td class="tally ios8" data-tally="0.25">2/8</td>
         <tr class="subtest" data-parent="const">
           <td><span>basic support</span></td>
 <script data-source="
@@ -746,8 +746,8 @@ test(function(){try{return Function("\nconst foo = 123;\nreturn (foo === 123);\n
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="yes konq49">Yes</td>
@@ -756,7 +756,7 @@ test(function(){try{return Function("\nconst foo = 123;\nreturn (foo === 123);\n
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped</span></td>
 <script data-source="
@@ -962,8 +962,8 @@ test(function(){try{return Function("\n\"use strict\";\nconst foo = 123;\nreturn
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
@@ -972,7 +972,7 @@ test(function(){try{return Function("\n\"use strict\";\nconst foo = 123;\nreturn
           <td class="no node">No</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped (strict mode)</span></td>
 <script data-source="
@@ -3677,8 +3677,8 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally chrome39" data-tally="0.525">21/40</td>
           <td class="tally safari51 obsolete" data-tally="0.425">17/40</td>
           <td class="tally safari6" data-tally="0.45">18/40</td>
-          <td class="tally safari7" data-tally="0">0/40</td>
-          <td class="tally safari71_8" data-tally="0">0/40</td>
+          <td class="tally safari7" data-tally="0.45">18/40</td>
+          <td class="tally safari71_8" data-tally="0.45">18/40</td>
           <td class="tally webkit" data-tally="0.45">18/40</td>
           <td class="tally opera" data-tally="0.45">18/40</td>
           <td class="tally konq49" data-tally="0">0/40</td>
@@ -3687,7 +3687,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally node" data-tally="0.45">18/40</td>
           <td class="tally nodeharmony" data-tally="0.45">18/40</td>
           <td class="tally ios7" data-tally="0.45">18/40</td>
-          <td class="tally ios8" data-tally="0">0/40</td>
+          <td class="tally ios8" data-tally="0.45">18/40</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Int8Array</span></td>
 <script data-source="
@@ -3731,8 +3731,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -3741,7 +3741,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Uint8Array</span></td>
 <script data-source="
@@ -3785,8 +3785,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -3795,7 +3795,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Uint8ClampedArray</span></td>
 <script data-source="
@@ -3839,8 +3839,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -3849,7 +3849,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Int16Array</span></td>
 <script data-source="
@@ -3893,8 +3893,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -3903,7 +3903,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Uint16Array</span></td>
 <script data-source="
@@ -3947,8 +3947,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -3957,7 +3957,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Int32Array</span></td>
 <script data-source="
@@ -4001,8 +4001,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4011,7 +4011,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Uint32Array</span></td>
 <script data-source="
@@ -4055,8 +4055,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4065,7 +4065,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Float32Array</span></td>
 <script data-source="
@@ -4109,8 +4109,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4119,7 +4119,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>Float64Array</span></td>
 <script data-source="
@@ -4163,8 +4163,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4173,7 +4173,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Int8)</span></td>
 <script data-source="
@@ -4218,8 +4218,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4228,7 +4228,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Uint8)</span></td>
 <script data-source="
@@ -4273,8 +4273,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4283,7 +4283,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Int16)</span></td>
 <script data-source="
@@ -4328,8 +4328,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4338,7 +4338,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Uint16)</span></td>
 <script data-source="
@@ -4383,8 +4383,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4393,7 +4393,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Int32)</span></td>
 <script data-source="
@@ -4438,8 +4438,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4448,7 +4448,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Uint32)</span></td>
 <script data-source="
@@ -4493,8 +4493,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4503,7 +4503,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Float32)</span></td>
 <script data-source="
@@ -4548,8 +4548,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4558,7 +4558,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>DataView (Float64)</span></td>
 <script data-source="
@@ -4603,8 +4603,8 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4613,7 +4613,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>%TypedArray%.from</span></td>
 <script data-source="
@@ -4783,8 +4783,8 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
           <td class="yes chrome39">Yes</td>
           <td class="yes safari51 obsolete">Yes</td>
           <td class="yes safari6">Yes</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
+          <td class="yes safari7">Yes</td>
+          <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
@@ -4793,7 +4793,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="typed_arrays">
           <td><span>%TypedArray%.prototype.join</span></td>
 <script data-source="
@@ -10426,14 +10426,60 @@ return typeof Number.MAX_SAFE_INTEGER === 'number';
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="Math.clz32"><span><a class="anchor" href="#Math.clz32">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32">Math.clz32</a></span></td>
-<script data-source="function () {
-return typeof Math.clz32 === 'function';
-  }">test(
-function () {
-return typeof Math.clz32 === 'function';
-  }())</script>
+        <tr class="supertest">
+          <td id="Math_methods"><span><a class="anchor" href="#Math_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math">Math methods</a></span></td>
+
+          <td class="tally tr" data-tally="0">0/17</td>
+          <td class="tally ejs" data-tally="1">17/17</td>
+          <td class="tally closure" data-tally="0">0/17</td>
+          <td class="tally ie10" data-tally="0">0/17</td>
+          <td class="tally ie11" data-tally="0">0/17</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/17</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/17</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/17</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/17</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/17</td>
+          <td class="tally firefox23 obsolete" data-tally="0.058823529411764705">1/17</td>
+          <td class="tally firefox24 obsolete" data-tally="0.058823529411764705">1/17</td>
+          <td class="tally firefox25 obsolete" data-tally="0.8235294117647058">14/17</td>
+          <td class="tally firefox27 obsolete" data-tally="0.8823529411764706">15/17</td>
+          <td class="tally firefox28 obsolete" data-tally="0.9411764705882353">16/17</td>
+          <td class="tally firefox29 obsolete" data-tally="0.9411764705882353">16/17</td>
+          <td class="tally firefox30 obsolete" data-tally="0.9411764705882353">16/17</td>
+          <td class="tally firefox31" data-tally="1">17/17</td>
+          <td class="tally firefox32" data-tally="1">17/17</td>
+          <td class="tally firefox33" data-tally="1">17/17</td>
+          <td class="tally firefox34" data-tally="1">17/17</td>
+          <td class="tally chrome obsolete" data-tally="0">0/17</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/17</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/17</td>
+          <td class="tally chrome30 obsolete" data-tally="0.058823529411764705">1/17</td>
+          <td class="tally chrome33 obsolete" data-tally="0.058823529411764705">1/17</td>
+          <td class="tally chrome34 obsolete" data-tally="0.7647058823529411">13/17</td>
+          <td class="tally chrome35" data-tally="1">17/17</td>
+          <td class="tally chrome37" data-tally="1">17/17</td>
+          <td class="tally chrome38" data-tally="1">17/17</td>
+          <td class="tally chrome39" data-tally="1">17/17</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/17</td>
+          <td class="tally safari6" data-tally="0">0/17</td>
+          <td class="tally safari7" data-tally="0.058823529411764705">1/17</td>
+          <td class="tally safari71_8" data-tally="0.8823529411764706">15/17</td>
+          <td class="tally webkit" data-tally="0.9411764705882353">16/17</td>
+          <td class="tally opera" data-tally="0">0/17</td>
+          <td class="tally konq49" data-tally="0.8235294117647058">14/17</td>
+          <td class="tally rhino17" data-tally="0">0/17</td>
+          <td class="tally phantom" data-tally="0">0/17</td>
+          <td class="tally node" data-tally="0">0/17</td>
+          <td class="tally nodeharmony" data-tally="1">17/17</td>
+          <td class="tally ios7" data-tally="0.058823529411764705">1/17</td>
+          <td class="tally ios8" data-tally="0.8823529411764706">15/17</td>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.clz32</span></td>
+<script data-source="
+return typeof Math.clz32 === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.clz32 === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10479,15 +10525,13 @@ return typeof Math.clz32 === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Math.imul"><span><a class="anchor" href="#Math.imul">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul">Math.imul</a></span></td>
-<script data-source="function () {
-return typeof Math.imul === 'function';
-  }">test(
-function () {
-return typeof Math.imul === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.imul</span></td>
+<script data-source="
+return typeof Math.imul === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.imul === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10533,15 +10577,13 @@ return typeof Math.imul === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.sign"><span><a class="anchor" href="#Math.sign">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign">Math.sign</a></span></td>
-<script data-source="function () {
-return typeof Math.sign === 'function';
-  }">test(
-function () {
-return typeof Math.sign === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.sign</span></td>
+<script data-source="
+return typeof Math.sign === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.sign === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10587,15 +10629,13 @@ return typeof Math.sign === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Math.log10"><span><a class="anchor" href="#Math.log10">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10">Math.log10</a></span></td>
-<script data-source="function () {
-return typeof Math.log10 === 'function';
-  }">test(
-function () {
-return typeof Math.log10 === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.log10</span></td>
+<script data-source="
+return typeof Math.log10 === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.log10 === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10641,15 +10681,13 @@ return typeof Math.log10 === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.log2"><span><a class="anchor" href="#Math.log2">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2">Math.log2</a></span></td>
-<script data-source="function () {
-return typeof Math.log2 === 'function';
-  }">test(
-function () {
-return typeof Math.log2 === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.log2</span></td>
+<script data-source="
+return typeof Math.log2 === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.log2 === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10695,15 +10733,13 @@ return typeof Math.log2 === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.log1p"><span><a class="anchor" href="#Math.log1p">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p">Math.log1p</a></span></td>
-<script data-source="function () {
-return typeof Math.log1p === 'function';
-  }">test(
-function () {
-return typeof Math.log1p === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.log1p</span></td>
+<script data-source="
+return typeof Math.log1p === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.log1p === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10749,15 +10785,13 @@ return typeof Math.log1p === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.expm1"><span><a class="anchor" href="#Math.expm1">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1">Math.expm1</a></span></td>
-<script data-source="function () {
-return typeof Math.expm1 === 'function';
-  }">test(
-function () {
-return typeof Math.expm1 === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.expm1</span></td>
+<script data-source="
+return typeof Math.expm1 === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.expm1 === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10803,15 +10837,13 @@ return typeof Math.expm1 === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.cosh"><span><a class="anchor" href="#Math.cosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh">Math.cosh</a></span></td>
-<script data-source="function () {
-return typeof Math.cosh === 'function';
-  }">test(
-function () {
-return typeof Math.cosh === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.cosh</span></td>
+<script data-source="
+return typeof Math.cosh === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.cosh === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10857,15 +10889,13 @@ return typeof Math.cosh === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.sinh"><span><a class="anchor" href="#Math.sinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh">Math.sinh</a></span></td>
-<script data-source="function () {
-return typeof Math.sinh === 'function';
-  }">test(
-function () {
-return typeof Math.sinh === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.sinh</span></td>
+<script data-source="
+return typeof Math.sinh === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.sinh === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10911,15 +10941,13 @@ return typeof Math.sinh === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.tanh"><span><a class="anchor" href="#Math.tanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.tanh</a></span></td>
-<script data-source="function () {
-return typeof Math.tanh === 'function';
-  }">test(
-function () {
-return typeof Math.tanh === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.tanh</span></td>
+<script data-source="
+return typeof Math.tanh === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.tanh === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -10965,15 +10993,13 @@ return typeof Math.tanh === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.acosh"><span><a class="anchor" href="#Math.acosh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh">Math.acosh</a></span></td>
-<script data-source="function () {
-return typeof Math.acosh === 'function';
-  }">test(
-function () {
-return typeof Math.acosh === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.acosh</span></td>
+<script data-source="
+return typeof Math.acosh === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.acosh === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11019,15 +11045,13 @@ return typeof Math.acosh === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.asinh"><span><a class="anchor" href="#Math.asinh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh">Math.asinh</a></span></td>
-<script data-source="function () {
-return typeof Math.asinh === 'function';
-  }">test(
-function () {
-return typeof Math.asinh === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.asinh</span></td>
+<script data-source="
+return typeof Math.asinh === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.asinh === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11073,15 +11097,13 @@ return typeof Math.asinh === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.atanh"><span><a class="anchor" href="#Math.atanh">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh">Math.atanh</a></span></td>
-<script data-source="function () {
-return typeof Math.atanh === 'function';
-  }">test(
-function () {
-return typeof Math.atanh === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.atanh</span></td>
+<script data-source="
+return typeof Math.atanh === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.atanh === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11127,15 +11149,13 @@ return typeof Math.atanh === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.hypot"><span><a class="anchor" href="#Math.hypot">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot">Math.hypot</a></span></td>
-<script data-source="function () {
-return typeof Math.hypot === 'function';
-  }">test(
-function () {
-return typeof Math.hypot === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.hypot</span></td>
+<script data-source="
+return typeof Math.hypot === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.hypot === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11181,15 +11201,13 @@ return typeof Math.hypot === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.trunc"><span><a class="anchor" href="#Math.trunc">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc">Math.trunc</a></span></td>
-<script data-source="function () {
-return typeof Math.trunc === 'function';
-  }">test(
-function () {
-return typeof Math.trunc === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.trunc</span></td>
+<script data-source="
+return typeof Math.trunc === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.trunc === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11235,15 +11253,13 @@ return typeof Math.trunc === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.fround"><span><a class="anchor" href="#Math.fround">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround">Math.fround</a></span></td>
-<script data-source="function () {
-return typeof Math.fround === 'function';
-  }">test(
-function () {
-return typeof Math.fround === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.fround</span></td>
+<script data-source="
+return typeof Math.fround === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.fround === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11289,15 +11305,13 @@ return typeof Math.fround === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Math.cbrt"><span><a class="anchor" href="#Math.cbrt">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt">Math.cbrt</a></span></td>
-<script data-source="function () {
-return typeof Math.cbrt === 'function';
-  }">test(
-function () {
-return typeof Math.cbrt === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Math_methods">
+          <td><span>Math.cbrt</span></td>
+<script data-source="
+return typeof Math.cbrt === &quot;function&quot;;
+">
+test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";\n")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
