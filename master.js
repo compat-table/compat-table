@@ -34,7 +34,7 @@ $(function() {
 
       var desktop = $('.desktop');
       if (desktop.length) {
-        desktop[0].colSpan = elem.prop('checked') ? 33 : 16;
+        desktop[0].colSpan = elem.prop('checked') ? 35 : 16;
       }
     })
     .attr('value', $('#show-obsolete').checked);
@@ -217,7 +217,7 @@ $(function() {
     var results = table.find('tr:not([class*=test]) td:not(.not-applicable)' + name);
     var yesResults = results.filter('.yes').length;
     results = results.length;
-    console.log(yesResults,results);
+    
     table.find('tr.supertest td[data-tally]' + name).filter(function() {
       yesResults += +$(this).attr('data-tally') || 0;
       results += 1;
