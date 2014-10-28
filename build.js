@@ -122,7 +122,12 @@ function dataToHtml(browsers, tests) {
         }
         interpolateResults(subtest.res);
         Object.keys(subtest.res).forEach(function(browserId) {
-          t.res[browserId] = (t.res[browserId] || 0) + +(subtest.res[browserId] === true);
+          var res = subtest.res[browserId];
+          // If the result is an object representing a footnote, use the raw val
+          if (res.val) {
+            res = res.val;
+          }
+          t.res[browserId] = (t.res[browserId] || 0) + +(res === true);
         });
       });
     }
