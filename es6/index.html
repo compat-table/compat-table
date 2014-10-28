@@ -7300,8 +7300,55 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="Symbol.hasInstance"><span><a class="anchor" href="#Symbol.hasInstance">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.hasInstance</a></span></td>
+        <tr class="supertest">
+          <td id="Well-known_symbols"><span><a class="anchor" href="#Well-known_symbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Well-known symbols</a></span></td>
+
+          <td class="tally tr" data-tally="0">0/7</td>
+          <td class="tally ejs" data-tally="0.5714285714285714">4/7</td>
+          <td class="tally closure" data-tally="0">0/7</td>
+          <td class="tally ie10" data-tally="0">0/7</td>
+          <td class="tally ie11" data-tally="0">0/7</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox25 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox27 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox28 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox29 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox30 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox31" data-tally="0">0/7</td>
+          <td class="tally firefox32" data-tally="0">0/7</td>
+          <td class="tally firefox33" data-tally="0">0/7</td>
+          <td class="tally firefox34" data-tally="0">0/7</td>
+          <td class="tally chrome obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome35" data-tally="0">0/7</td>
+          <td class="tally chrome37" data-tally="0">0/7</td>
+          <td class="tally chrome38" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally chrome39" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/7</td>
+          <td class="tally safari6" data-tally="0">0/7</td>
+          <td class="tally safari7" data-tally="0">0/7</td>
+          <td class="tally safari71_8" data-tally="0">0/7</td>
+          <td class="tally webkit" data-tally="0">0/7</td>
+          <td class="tally opera" data-tally="0">0/7</td>
+          <td class="tally konq49" data-tally="0">0/7</td>
+          <td class="tally rhino17" data-tally="0">0/7</td>
+          <td class="tally phantom" data-tally="0">0/7</td>
+          <td class="tally node" data-tally="0">0/7</td>
+          <td class="tally nodeharmony" data-tally="0">0/7</td>
+          <td class="tally ios7" data-tally="0">0/7</td>
+          <td class="tally ios8" data-tally="0">0/7</td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.hasInstance</span></td>
 <script data-source="
 var passed = false;
 var obj = { foo: true };
@@ -7309,8 +7356,8 @@ var C = function(){};
 C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
 obj instanceof C;
 return passed;
-  ">
-test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: true };\nvar C = function(){};\nC[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };\nobj instanceof C;\nreturn passed;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: true };\nvar C = function(){};\nC[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };\nobj instanceof C;\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7357,16 +7404,15 @@ test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: tru
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Symbol.isConcatSpreadable"><span><a class="anchor" href="#Symbol.isConcatSpreadable">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isConcatSpreadable</a></span></td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.isConcatSpreadable</span></td>
 <script data-source="
 var a = [], b = [];
 b[Symbol.isConcatSpreadable] = false;
 a = a.concat(b);
 return a[0] === b;
-  ">
-test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpreadable] = false;\na = a.concat(b);\nreturn a[0] === b;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpreadable] = false;\na = a.concat(b);\nreturn a[0] === b;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7413,13 +7459,12 @@ test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpr
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Symbol.isRegExp"><span><a class="anchor" href="#Symbol.isRegExp">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.isRegExp</a></span></td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.isRegExp</span></td>
 <script data-source="
 return RegExp.prototype[Symbol.isRegExp] === true;
-  ">
-test(function(){try{return Function("\nreturn RegExp.prototype[Symbol.isRegExp] === true;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nreturn RegExp.prototype[Symbol.isRegExp] === true;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7466,9 +7511,8 @@ test(function(){try{return Function("\nreturn RegExp.prototype[Symbol.isRegExp] 
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Symbol.iterator"><span><a class="anchor" href="#Symbol.iterator">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.iterator</a></span></td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.iterator</span></td>
 <script data-source="
 var a = 0, b = {};
 b[Symbol.iterator] = function() {
@@ -7484,8 +7528,8 @@ b[Symbol.iterator] = function() {
 var c;
 for (c of b) {}
 return c === 0;
-  ">
-test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n    next: function() {\n      return {\n        done: a === 1,\n        value: a++\n      };\n    }\n  };\n};\nvar c;\nfor (c of b) {}\nreturn c === 0;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n    next: function() {\n      return {\n        done: a === 1,\n        value: a++\n      };\n    }\n  };\n};\nvar c;\nfor (c of b) {}\nreturn c === 0;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7517,7 +7561,7 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
           <td class="no chrome34 obsolete">No</td>
           <td class="no chrome35">No</td>
           <td class="no chrome37">No</td>
-          <td class="no chrome38">No</td>
+          <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
@@ -7532,9 +7576,8 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Symbol.toPrimitive"><span><a class="anchor" href="#Symbol.toPrimitive">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toPrimitive</a></span></td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.toPrimitive</span></td>
 <script data-source="
 var a = {}, b = {}, c = {};
 var passed = 0;
@@ -7546,8 +7589,8 @@ a >= 0;
 b in {};
 c == 0;
 return passed === 3;
-  ">
-test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed = 0;\na[Symbol.toPrimitive] = function(hint) { passed += hint === \"number\";  return 0; };\nb[Symbol.toPrimitive] = function(hint) { passed += hint === \"string\";  return 0; };\nc[Symbol.toPrimitive] = function(hint) { passed += hint === \"default\"; return 0; };\n\na >= 0;\nb in {};\nc == 0;\nreturn passed === 3;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed = 0;\na[Symbol.toPrimitive] = function(hint) { passed += hint === \"number\";  return 0; };\nb[Symbol.toPrimitive] = function(hint) { passed += hint === \"string\";  return 0; };\nc[Symbol.toPrimitive] = function(hint) { passed += hint === \"default\"; return 0; };\n\na >= 0;\nb in {};\nc == 0;\nreturn passed === 3;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7594,15 +7637,14 @@ test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed =
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Symbol.toStringTag"><span><a class="anchor" href="#Symbol.toStringTag">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.toStringTag</a></span></td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.toStringTag</span></td>
 <script data-source="
 var a = {};
 a[Symbol.toStringTag] = &quot;foo&quot;;
 return (a + &quot;&quot;) === &quot;[object foo]&quot;;
-  ">
-test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"foo\";\nreturn (a + \"\") === \"[object foo]\";\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"foo\";\nreturn (a + \"\") === \"[object foo]\";\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7649,17 +7691,16 @@ test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"fo
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Symbol.unscopables"><span><a class="anchor" href="#Symbol.unscopables">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">Symbol.unscopables</a></span></td>
+        <tr class="subtest" data-parent="Well-known_symbols">
+          <td><span>Symbol.unscopables</span></td>
 <script data-source="
 var a = { foo: 1, bar: 2 };
 a[Symbol.unscopables] = { bar: true };
 with (a) {
   return foo === 1 && typeof bar === &quot;undefined&quot;;
 }
-  ">
-test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.unscopables] = { bar: true };\nwith (a) {\n  return foo === 1 && typeof bar === \"undefined\";\n}\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.unscopables] = { bar: true };\nwith (a) {\n  return foo === 1 && typeof bar === \"undefined\";\n}\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -7691,7 +7732,7 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="no chrome34 obsolete">No</td>
           <td class="no chrome35">No</td>
           <td class="no chrome37">No</td>
-          <td class="no chrome38">No</td>
+          <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>

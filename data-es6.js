@@ -3566,404 +3566,101 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Symbol.hasInstance',
+  name: 'Well-known symbols',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var passed = false;
-    var obj = { foo: true };
-    var C = function(){};
-    C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
-    obj instanceof C;
-    return passed;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.isConcatSpreadable',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = [], b = [];
-    b[Symbol.isConcatSpreadable] = false;
-    a = a.concat(b);
-    return a[0] === b;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.isRegExp',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    return RegExp.prototype[Symbol.isRegExp] === true;
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.iterator',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = 0, b = {};
-    b[Symbol.iterator] = function() {
-      return {
-        next: function() {
+  subtests: {
+    'Symbol.hasInstance': {
+      exec: function() {/*
+        var passed = false;
+        var obj = { foo: true };
+        var C = function(){};
+        C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+        obj instanceof C;
+        return passed;
+      */},
+      res: {
+       ejs:         true,
+      },
+    },
+    'Symbol.isConcatSpreadable': {
+      exec: function() {/*
+        var a = [], b = [];
+        b[Symbol.isConcatSpreadable] = false;
+        a = a.concat(b);
+        return a[0] === b;
+      */},
+      res: {
+       ejs:         true,
+      },
+    },
+    'Symbol.isRegExp': {
+      exec: function() {/*
+        return RegExp.prototype[Symbol.isRegExp] === true;
+      */},
+      res: {
+      },
+    },
+    'Symbol.iterator': {
+      exec: function() {/*
+        var a = 0, b = {};
+        b[Symbol.iterator] = function() {
           return {
-            done: a === 1,
-            value: a++
+            next: function() {
+              return {
+                done: a++ === 1,
+                value: "foo"
+              };
+            }
           };
-        }
-      };
-    };
-    var c;
-    for (c of b) {}
-    return c === 0;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.toPrimitive',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = {}, b = {}, c = {};
-    var passed = 0;
-    a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
-    b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
-    c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
+        };
+        var c;
+        for (c of b) {}
+        return c === "foo";
+      */},
+      res: {
+        chrome38:    true,
+        ejs:         true,
+      },
+    },
+    'Symbol.toPrimitive': {
+      exec: function() {/*
+        var a = {}, b = {}, c = {};
+        var passed = 0;
+        a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
+        b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
+        c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
 
-    a >= 0;
-    b in {};
-    c == 0;
-    return passed === 3;
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.toStringTag',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = {};
-    a[Symbol.toStringTag] = "foo";
-    return (a + "") === "[object foo]";
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.unscopables',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = { bar: true };
-    with (a) {
-      return foo === 1 && typeof bar === "undefined";
-    }
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+        a >= 0;
+        b in {};
+        c == 0;
+        return passed === 3;
+      */},
+      res: {
+      },
+    },
+    'Symbol.toStringTag': {
+      exec: function() {/*
+        var a = {};
+        a[Symbol.toStringTag] = "foo";
+        return (a + "") === "[object foo]";
+      */},
+      res: {
+        ejs:         true,
+      },
+    },
+    'Symbol.unscopables': {
+      exec: function() {/*
+        var a = { foo: 1, bar: 2 };
+        a[Symbol.unscopables] = { bar: true };
+        with (a) {
+          return foo === 1 && typeof bar === "undefined";
+        }
+      */},
+      res: {
+        chrome38:    true,
+      },
+    },
+  },
 },
 {
   name: 'RegExp.prototype.match',
