@@ -2803,15 +2803,16 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
   exec: function () {
-    var a = {},
-        desc = Object.getOwnPropertyDescriptor
+    var desc = Object.getOwnPropertyDescriptor
             && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+    var A = function(){};
+    
     return !!(desc
         && "get" in desc
         && "set" in desc
         && desc.configurable
         && !desc.enumerable
-        && Object.create(a).__proto__ === a);
+        && (new A()).__proto__ === A.prototype);
   },
   res: {
     tr:          false,
@@ -3499,13 +3500,25 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   exec: function() {
     try {
       var object = {};
-      var symbol = Symbol();
-      var value = Math.random();
-      object[symbol] = value;
-      return typeof symbol === "symbol" &&
-             object[symbol] === value &&
-             Object.keys(object).length === 0 &&
-             Object.getOwnPropertyNames(object).length === 0;
+      var symbols = [Symbol(), Symbol()];
+      var values = [Math.random(), Math.random()];
+      object[symbols[0]] = values[0];
+      
+      var passed = symbols[0] in object  &&
+         typeof symbols[0]  === "symbol" &&
+         object[symbols[0]] === values[0];
+      
+      if (Object.keys) {
+        passed &= Object.keys(object).length === 0;
+      }
+      if (Object.getOwnPropertyNames) {
+        passed &= Object.getOwnPropertyNames(object).length === 0;
+      }
+      if (Object.defineProperty) {
+        Object.defineProperty(object, symbols[1], { value: values[1] });
+        passed &= object[symbols[1]] === values[1];
+      }
+      return passed;
     }
     catch(e) {
       return false;
