@@ -3399,66 +3399,89 @@ exports.tests = [
 {
   name: 'Symbol',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
-  exec: function() {
-    try {
-      var object = {};
-      var symbol = Symbol();
-      var value = Math.random();
-      object[symbol] = value;
-      return typeof symbol === "symbol" &&
-             object[symbol] === value &&
-             Object.keys(object).length === 0 &&
-             Object.getOwnPropertyNames(object).length === 0;
-    }
-    catch(e) {
-      return false;
-    }
+  subtests: {
+    'basic functionality': {
+      exec: function(){/*
+        var object = {};
+        var symbol = Symbol();
+        var value = {};
+        object[symbol] = value;
+        return object[symbol] === value;
+      */},
+      res:(temp.basicSymbolResults = {
+        ejs:         true,
+        firefox33:   true,
+        chrome33:    true,
+        nodeharmony: true,
+      }),
+    },
+    'typeof support': {
+      exec: function(){/*
+        return typeof Symbol() === "symbol";
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'symbol keys are hidden to pre-ES6 code': {
+      exec: function(){/*
+        var object = {};
+        var symbol = Symbol();
+        object[symbol] = 1;
+        
+        for (var x in object){}
+        var passed = (x !== symbol);
+        
+        if (Object.keys && Object.getOwnPropertyNames) {
+          passed &= Object.keys(object).length === 0
+            && Object.getOwnPropertyNames(object).length === 0;
+        }
+        
+        return passed;
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'Object.defineProperty support': {
+      exec: function(){/*
+        var object = {};
+        var symbol = Symbol();
+        var value = {};
+        
+        if (Object.defineProperty) {
+          Object.defineProperty(object, symbol, { value: value });
+          return object[symbol] === value;
+        }
+        
+        return passed;
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'cannot coerce to string': {
+      exec: function(){/*
+        var symbol = Symbol();
+        try {
+          symbol + "";
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'can convert with String()': {
+      exec: function(){/*
+        return String(Symbol("foo")) === "Symbol(foo)";
+      */},
+      res: {},
+    },
+    'new Symbol()': {
+      exec: function(){/*
+        var symbol = Symbol();
+        var symbolObject = new Symbol(symbol);
+        return typeof symbolObject === "object" &&
+          symbolObject.valueOf() === symbol;
+      */},
+      res: {},
+    },
   },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
   name: 'Global symbol registry',
