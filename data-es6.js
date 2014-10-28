@@ -1410,112 +1410,56 @@ exports.tests = [
   }
 },
 {
-  name: 'octal literals',
+  name: 'octal and binary literals',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
-  exec: function () {/*
-    return 0o10 === 8 && 0O10 === 8;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   {
-      val: true,
-      note_id: 'octal-to-string',
-      note_html: 'Firefox doesn\'t support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.'
+  subtests: {
+    'octal literals': {
+      exec: function () {/*
+        return 0o10 === 8 && 0O10 === 8;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox25:   true,
+        chrome30:    true,
+      },
     },
-    firefox27:   { val: true, note_id: 'octal-to-string' },
-    firefox28:   { val: true, note_id: 'octal-to-string' },
-    firefox29:   { val: true, note_id: 'octal-to-string' },
-    firefox30:   { val: true, note_id: 'octal-to-string' },
-    firefox31:   { val: true, note_id: 'octal-to-string' },
-    firefox32:   { val: true, note_id: 'octal-to-string' },
-    firefox33:   { val: true, note_id: 'octal-to-string' },
-    firefox34:   { val: true, note_id: 'octal-to-string' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'binary literals',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
-  exec: function () {/*
-    return 0b10 === 2 && 0B10 === 2;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   { val: true, note_id: 'octal-to-string' },
-    firefox27:   { val: true, note_id: 'octal-to-string' },
-    firefox28:   { val: true, note_id: 'octal-to-string' },
-    firefox29:   { val: true, note_id: 'octal-to-string' },
-    firefox30:   { val: true, note_id: 'octal-to-string' },
-    firefox31:   { val: true, note_id: 'octal-to-string' },
-    firefox32:   { val: true, note_id: 'octal-to-string' },
-    firefox33:   { val: true, note_id: 'octal-to-string' },
-    firefox34:   { val: true, note_id: 'octal-to-string' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+    'binary literals': {
+      exec: function () {/*
+        return 0b10 === 2 && 0B10 === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox25:   true,
+        chrome30:    true,
+      },
+    },
+    'octal supported by Number()': {
+      exec: function () {/*
+        return Number('0o1') === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome30:    true,
+      },
+    },
+    'binary supported by Number()': {
+      exec: function () {/*
+        return Number('0b1') === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome30:    true,
+      },
+    },
+  },
 },
 {
   name: 'template strings',
