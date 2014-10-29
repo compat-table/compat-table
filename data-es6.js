@@ -131,56 +131,48 @@ exports.browsers = {
     short: 'CH 21-29',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome30: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;30,<br>OP&nbsp;17',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome33: {
     full: 'Chrome, Opera',
-    short: 'CH&nbsp;33,<br>OP&nbsp;20',
+    short: 'CH&nbsp;32-33,<br>OP&nbsp;19-20',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome34: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;34,<br>OP&nbsp;21',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome35: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;35,<br>OP&nbsp;22',
     obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome37: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;37,<br>OP&nbsp;24',
     obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome38: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;38,<br>OP&nbsp;25',
     obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome39: {
     full: 'Chrome, Opera',
     short: 'CH 39,<br>OP&nbsp;26',
     obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   safari51: {
     full: 'Safari',
@@ -233,7 +225,7 @@ exports.browsers = {
     nonbrowser: true
   },
   nodeharmony: {
-    full: 'Node 0.11.13 harmony',
+    full: 'Node 0.11.14 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
     nonbrowser: true,
@@ -378,6 +370,8 @@ exports.tests = [
         return f(6) === 5;
       */},
       res: {
+        firefox23:   true,
+        firefox24:   false,
       },
     },
     'no line break between params and <code>=></code>': {
@@ -443,10 +437,12 @@ exports.tests = [
     },
     'redefining a const is a syntax error': {
       exec: function() {/*
-        const foo = 1;
-        return (function() {
-          try { Function("foo = 2;")(); } catch(e) { return true; }'
-        }());
+        const baz = 1;
+        try {
+          Function("const foo = 1; foo = 2;")();
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         tr:          true,
@@ -464,7 +460,6 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11:        true,
-        nodeharmony: true,
       },
     },
    'basic support (strict mode)': {
@@ -480,10 +475,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         chrome:      true,
-        safari6:     true,
-        webkit:      true,
         nodeharmony: true,
-        ios7:        true,
       }
     },
     'is block-scoped (strict mode)': {
@@ -503,17 +495,21 @@ exports.tests = [
     },
     'redefining a const (strict mode)': {
       exec: function() {/*
-        'use strict';
-        const foo = 1;
-        return (function() {
-          try { Function("foo = 2;")(); } catch(e) { return true; }'
-        }());
+        const baz = 1;
+        try {
+          Function("'use strict'; const foo = 1; foo = 2;")();
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         tr:          true,
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox11:   true,
+        chrome33:    true,
+        nodeharmony: true,
       }
     },
     'temporal dead zone (strict mode)': {
@@ -692,6 +688,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        chrome37:    true,
       },
     },
   },
@@ -708,7 +705,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         closure:     true,
-        firefox18:   true,
+        firefox16:   true,
       },
     },
     'explicit undefined defers to the default': {
@@ -730,7 +727,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         closure:     true,
-        firefox18:   true,
+        firefox16:   true,
       },
     },
     'temporal dead zone': {
@@ -857,7 +854,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox16:   true,
+        firefox17:   true,
       },
     },
   }
@@ -1434,6 +1431,7 @@ exports.tests = [
         closure:     true,
         firefox25:   true,
         chrome30:    true,
+        nodeharmony: true,
       },
     },
     'binary literals': {
@@ -1446,6 +1444,7 @@ exports.tests = [
         closure:     true,
         firefox25:   true,
         chrome30:    true,
+        nodeharmony: true,
       },
     },
     'octal supported by Number()': {
@@ -1457,6 +1456,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         chrome30:    true,
+        nodeharmony: true,
       },
     },
     'binary supported by Number()': {
@@ -1468,6 +1468,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         chrome30:    true,
+        nodeharmony: true,
       },
     },
   },
@@ -1823,7 +1824,7 @@ exports.tests = [
     '.prototype.reverse':     {},
     '.prototype.some':        {},
     '.prototype.sort':        {},
-    '.prototype.copyWithin':  {},
+    '.prototype.copyWithin':  { firefox35: true },
     '.prototype.find':        {},
     '.prototype.findIndex':   {},
     '.prototype.fill':        {},
@@ -1879,7 +1880,7 @@ exports.tests = [
     firefox13:   false,
     firefox16:   false,
     firefox17:   false,
-    firefox18:   true,
+    firefox18:   false,
     firefox23:   true,
     firefox24:   true,
     firefox25:   true,
@@ -1994,11 +1995,11 @@ exports.tests = [
       note_id: 'weakmap-constructor',
       note_html: 'WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.'
     },
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
+    firefox11:   { val: true, note_id: 'weakmap-constructor' },
+    firefox13:   { val: true, note_id: 'weakmap-constructor' },
+    firefox16:   { val: true, note_id: 'weakmap-constructor' },
+    firefox17:   { val: true, note_id: 'weakmap-constructor' },
+    firefox18:   { val: true, note_id: 'weakmap-constructor' },
     firefox23:   { val: true, note_id: 'weakmap-constructor' },
     firefox24:   { val: true, note_id: 'weakmap-constructor' },
     firefox25:   { val: true, note_id: 'weakmap-constructor' },
@@ -2335,7 +2336,7 @@ exports.tests = [
         var passed = false;
         var host = {
           method: new Proxy(proxied, { 
-            apply: function (t, thisArg, args) { console.log(arguments);
+            apply: function (t, thisArg, args) {
               passed = t === proxied && thisArg === host && args + "" === "foo,bar";
             }
           })
@@ -2968,7 +2969,7 @@ exports.tests = [
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
-    firefox17:   false,
+    firefox17:   true,
     firefox18:   true,
     firefox23:   true,
     firefox24:   true,
@@ -3653,8 +3654,7 @@ exports.tests = [
       */},
       res:(temp.basicSymbolResults = {
         ejs:         true,
-        firefox33:   true,
-        chrome33:    true,
+        chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       }),
     },
@@ -3697,15 +3697,22 @@ exports.tests = [
       */},
       res: temp.basicSymbolResults,
     },
-    'cannot coerce to string': {
+    'cannot coerce to string or number': {
       exec: function(){/*
         var symbol = Symbol();
+        
         try {
           symbol + "";
+          return false;
         }
-        catch(e) {
-          return true;
-        }
+        catch(e) {}
+        
+        try {
+          symbol + 0;
+          return false;
+        } catch(e) {}
+        
+        return true;
       */},
       res: temp.basicSymbolResults,
     },
@@ -3715,19 +3722,37 @@ exports.tests = [
       */},
       res: {},
     },
-    'new Symbol()': {
+    'new Symbol() throws': {
       exec: function(){/*
         var symbol = Symbol();
-        var symbolObject = new Symbol(symbol);
+        try {
+          new Symbol();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        chrome35:   true,
+      },
+    },
+    'Object(symbol)': {
+      exec: function(){/*
+        var symbol = Symbol();
+        var symbolObject = Object(symbol);
+        
         return typeof symbolObject === "object" &&
+          symbolObject == symbol &&
           symbolObject.valueOf() === symbol;
       */},
-      res: {},
+      res: {
+        chrome30:   true,
+        chrome35:   false,
+      },
     },
   },
 },
 {
-  name: 'Global symbol registry',
+  name: 'global symbol registry',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
   exec: function() {/*
     var symbol = Symbol.for('foo');
@@ -3755,7 +3780,7 @@ exports.tests = [
     firefox31:   false,
     firefox32:   false,
     firefox33:   false,
-    firefox34:   true,
+    firefox34:   false,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
@@ -3781,7 +3806,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Well-known symbols',
+  name: 'well-known symbols',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   subtests: {
     'Symbol.hasInstance': {
@@ -3907,6 +3932,7 @@ exports.tests = [
     },
   }
 },
+// As this one is Annex B, it is separate from the above.
 {
   name: 'RegExp.prototype.compile',
   annex_b: true,
@@ -4267,7 +4293,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false,
+    nodeharmony: true,
     ios7:        false,
     ios8:        true
   }
@@ -4886,7 +4912,7 @@ exports.tests = [
       'sign': {
         ejs:         true,
         firefox25:   true,
-        chrome34:    true,
+        chrome33:    true,
         webkit:      true,
         konq49:      true,
         nodeharmony: true,
@@ -5002,7 +5028,7 @@ exports.tests = [
       'trunc': {
         ejs:         true,
         firefox25:   true,
-        chrome34:    true,
+        chrome33:    true,
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
