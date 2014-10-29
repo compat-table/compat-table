@@ -1032,6 +1032,7 @@ test(function(){try{return Function("\n'use strict';\n{ const bar = 456; }\nretu
         <tr class="subtest" data-parent="const">
           <td><span>redefining a const (strict mode)</span></td>
 <script data-source="
+'use strict';
 const baz = 1;
 try {
   Function(&quot;'use strict'; const foo = 1; foo = 2;&quot;)();
@@ -1039,7 +1040,7 @@ try {
   return true;
 }
       ">
-test(function(){try{return Function("\nconst baz = 1;\ntry {\n  Function(\"'use strict'; const foo = 1; foo = 2;\")();\n} catch(e) {\n  return true;\n}\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nconst baz = 1;\ntry {\n  Function(\"'use strict'; const foo = 1; foo = 2;\")();\n} catch(e) {\n  return true;\n}\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3650,10 +3651,10 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally tr" data-tally="0">0/40</td>
           <td class="tally ejs" data-tally="0.45">18/40</td>
           <td class="tally closure" data-tally="0">0/40</td>
-          <td class="tally ie10" data-tally="0.425">17/40</td>
-          <td class="tally ie11" data-tally="0.425">17/40</td>
-          <td class="tally firefox11 obsolete" data-tally="0.25">10/40</td>
-          <td class="tally firefox13 obsolete" data-tally="0.25">10/40</td>
+          <td class="tally ie10" data-tally="0.4">16/40</td>
+          <td class="tally ie11" data-tally="0.4">16/40</td>
+          <td class="tally firefox11 obsolete" data-tally="0.225">9/40</td>
+          <td class="tally firefox13 obsolete" data-tally="0.225">9/40</td>
           <td class="tally firefox16 obsolete" data-tally="0.45">18/40</td>
           <td class="tally firefox17 obsolete" data-tally="0.45">18/40</td>
           <td class="tally firefox18 obsolete" data-tally="0.45">18/40</td>
@@ -3678,7 +3679,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally chrome37" data-tally="0.45">18/40</td>
           <td class="tally chrome38" data-tally="0.525">21/40</td>
           <td class="tally chrome39" data-tally="0.525">21/40</td>
-          <td class="tally safari51 obsolete" data-tally="0.425">17/40</td>
+          <td class="tally safari51 obsolete" data-tally="0.4">16/40</td>
           <td class="tally safari6" data-tally="0.45">18/40</td>
           <td class="tally safari7" data-tally="0.45">18/40</td>
           <td class="tally safari71_8" data-tally="0.45">18/40</td>
@@ -3686,7 +3687,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally opera" data-tally="0.45">18/40</td>
           <td class="tally konq49" data-tally="0">0/40</td>
           <td class="tally rhino17" data-tally="0">0/40</td>
-          <td class="tally phantom" data-tally="0.45">18/40</td>
+          <td class="tally phantom" data-tally="0.4">16/40</td>
           <td class="tally node" data-tally="0.45">18/40</td>
           <td class="tally nodeharmony" data-tally="0.45">18/40</td>
           <td class="tally ios7" data-tally="0.45">18/40</td>
@@ -3848,7 +3849,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
-          <td class="yes phantom">Yes</td>
+          <td class="no phantom">No</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>
@@ -4756,10 +4757,10 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
-          <td class="yes ie10">Yes</td>
-          <td class="yes ie11">Yes</td>
-          <td class="yes firefox11 obsolete">Yes</td>
-          <td class="yes firefox13 obsolete">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
           <td class="yes firefox16 obsolete">Yes</td>
           <td class="yes firefox17 obsolete">Yes</td>
           <td class="yes firefox18 obsolete">Yes</td>
@@ -4784,7 +4785,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
           <td class="yes chrome37">Yes</td>
           <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
-          <td class="yes safari51 obsolete">Yes</td>
+          <td class="no safari51 obsolete">No</td>
           <td class="yes safari6">Yes</td>
           <td class="yes safari7">Yes</td>
           <td class="yes safari71_8">Yes</td>
@@ -4792,7 +4793,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
           <td class="yes opera">Yes</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
-          <td class="yes phantom">Yes</td>
+          <td class="no phantom">No</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
           <td class="yes ios7">Yes</td>

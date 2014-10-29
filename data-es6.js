@@ -495,6 +495,7 @@ exports.tests = [
     },
     'redefining a const (strict mode)': {
       exec: function() {/*
+        'use strict';
         const baz = 1;
         try {
           Function("'use strict'; const foo = 1; foo = 2;")();
@@ -1667,7 +1668,6 @@ exports.tests = [
         safari6:     true,
         webkit:      true,
         opera:       true,
-        phantom:     true,
         node:        true,
         nodeharmony: true,
         ios7:        true,
@@ -1810,7 +1810,17 @@ exports.tests = [
     var methods = {
     '.from':                  {},
     '.of':                    {},
-    '.prototype.subarray':    temp.basicTypedArrayResults,
+    '.prototype.subarray':    {
+        ejs:         true,
+        firefox16:   true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+    },
     '.prototype.join':        {},
     '.prototype.indexOf':     {},
     '.prototype.lastIndexOf': {},
