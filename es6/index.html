@@ -68,7 +68,7 @@
       <thead>
         <tr>
           <th colspan="3"  class="platformtype ignore"></th>
-          <th colspan="3"  class="platformtype ignore compiler" style="background: #ffdfa4">Compilers</th>
+          <th colspan="4"  class="platformtype ignore compiler" style="background: #ffdfa4">Compilers</th>
           <th colspan="16" class="platformtype ignore desktop"  style="background: #fff4c3">Desktop browsers</th>
           <th colspan="4"  class="platformtype ignore server"   style="background: #f8e8a0">Server-ish</th>
           <th colspan="2"  class="platformtype ignore mobile"   style="background: #f8daa0">Mobile</th>
@@ -80,6 +80,7 @@
           <th class="tr"><a href="#tr" class="browser-name"><abbr title="Traceur compiler">Traceur</abbr></th>
           <th class="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">EJS</abbr></th>
           <th class="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20140923">Closure Compiler</abbr></th>
+          <th class="6to5"><a href="#6to5" class="browser-name"><abbr title="6to5 v1.10.7">6to5</abbr></th>
           <th class="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></th>
           <th class="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></th>
           <th class="firefox11 obsolete"><a href="#firefox11" class="browser-name"><abbr title="Firefox">FF 11-12</abbr></th>
@@ -139,6 +140,7 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -201,6 +203,7 @@ return true;
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -261,6 +264,7 @@ try {
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="no firefox11 obsolete">No</td>
@@ -339,6 +343,7 @@ test((function () {
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -398,6 +403,7 @@ test(function(){try{return Function("\nvar passed = (function (a = 1, b = 2) { r
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -449,6 +455,7 @@ test(function(){try{return Function("\nreturn (function (...args) { return typeo
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -500,6 +507,7 @@ test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n  ")
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -551,6 +559,7 @@ test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n  ")()}c
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -602,6 +611,7 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -658,6 +668,7 @@ test(function(){try{return Function("\nclass C extends Array {\n  constructor() 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -731,6 +742,7 @@ test(function(){try{return Function("\nvar passed = true;\nvar B = class extends
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -783,6 +795,7 @@ test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -835,6 +848,7 @@ test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -886,6 +900,7 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -938,6 +953,7 @@ test(function(){try{return Function("\nexport var foo = 1;\nreturn true;\n  ")()
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -991,6 +1007,7 @@ test(function(){try{return Function("\nvar arr = [5];\nfor (var item of arr)\n  
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1054,6 +1071,7 @@ test(function(){try{return Function("\nvar generator = (function* () {\n  yield*
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1105,6 +1123,7 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n  ")()}
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1156,6 +1175,7 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n  ")()}
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1209,6 +1229,7 @@ test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1271,6 +1292,7 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1326,6 +1348,7 @@ test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -1377,6 +1400,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1452,6 +1476,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar pa
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No<a href="#ie-typedarray-note"><sup>[6]</sup></a></td>
           <td class="no ie11">No<a href="#ie-typedarray-note"><sup>[6]</sup></a></td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -1515,6 +1540,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1572,6 +1598,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes<a href="#map-constructor-note"><sup>[7]</sup></a></td>
           <td class="no firefox11 obsolete">No</td>
@@ -1629,6 +1656,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes<a href="#map-constructor-note"><sup>[7]</sup></a></td>
           <td class="no firefox11 obsolete">No</td>
@@ -1685,6 +1713,7 @@ test(function(){try{return Function("\nvar key1 = {};\nvar weakmap = new WeakMap
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes<a href="#weakmap-constructor-note"><sup>[8]</sup></a></td>
           <td class="no firefox11 obsolete">No</td>
@@ -1742,6 +1771,7 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1804,6 +1834,7 @@ return false;
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1880,6 +1911,7 @@ return true;
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -1960,6 +1992,7 @@ return true;
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2015,6 +2048,7 @@ test(function(){try{return Function("\n'use strict';\n{\n  function f(){}\n}\nre
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2075,6 +2109,7 @@ test(function(){try{return Function("\n// Array destructuring\nvar [a, , [b], g]
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -2128,6 +2163,7 @@ test(function(){try{return Function("\nreturn (function({a, x:b}, [c, d]) {\n  r
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -2180,6 +2216,7 @@ test(function(){try{return Function("\nvar {a = 1, b = 1, c = 3} = {b:2, c:undef
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2234,6 +2271,7 @@ test(function(){try{return Function("\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d]
           <td class="yes tr">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2288,6 +2326,7 @@ return typeof Promise !== 'undefined' &&
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2340,6 +2379,7 @@ return typeof Object.assign === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2392,6 +2432,7 @@ return typeof Object.is === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2444,6 +2485,7 @@ return typeof Object.getOwnPropertySymbols === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2496,6 +2538,7 @@ return typeof Object.setPrototypeOf === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2548,6 +2591,7 @@ return (function foo(){}).name == 'foo';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -2600,6 +2644,7 @@ return typeof Function.prototype.toMethod === "function";
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2652,6 +2697,7 @@ return typeof String.raw === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2704,6 +2750,7 @@ return typeof String.fromCodePoint === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2756,6 +2803,7 @@ return typeof String.prototype.codePointAt === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2812,6 +2860,7 @@ return typeof String.prototype.normalize === "function"
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2864,6 +2913,7 @@ return typeof String.prototype.repeat === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2916,6 +2966,7 @@ return typeof String.prototype.startsWith === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -2968,6 +3019,7 @@ return typeof String.prototype.endsWith === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3020,6 +3072,7 @@ return typeof String.prototype.contains === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3071,6 +3124,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3147,6 +3201,7 @@ catch(e) {
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3200,6 +3255,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3256,6 +3312,7 @@ test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: tru
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3310,6 +3367,7 @@ test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpr
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3361,6 +3419,7 @@ test(function(){try{return Function("\nreturn RegExp.prototype[Symbol.isRegExp] 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3425,6 +3484,7 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3485,6 +3545,7 @@ test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed =
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3538,6 +3599,7 @@ test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"fo
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3593,6 +3655,7 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3645,6 +3708,7 @@ return typeof RegExp.prototype.match === 'function';
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3697,6 +3761,7 @@ return typeof RegExp.prototype.replace === 'function';
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3749,6 +3814,7 @@ return typeof RegExp.prototype.search === 'function';
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3801,6 +3867,7 @@ return typeof RegExp.prototype.split === 'function';
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3853,6 +3920,7 @@ return typeof Array.from === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3905,6 +3973,7 @@ return typeof Array.of === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -3957,6 +4026,7 @@ return typeof Array.prototype.copyWithin === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4009,6 +4079,7 @@ return typeof Array.prototype.find === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4061,6 +4132,7 @@ return typeof Array.prototype.findIndex === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4113,6 +4185,7 @@ return typeof Array.prototype.fill === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4165,6 +4238,7 @@ return typeof Array.prototype.keys === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4217,6 +4291,7 @@ return typeof Array.prototype.values === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4269,6 +4344,7 @@ return typeof Array.prototype.entries === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4325,6 +4401,7 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4377,6 +4454,7 @@ return typeof Number.isFinite === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4429,6 +4507,7 @@ return typeof Number.isInteger === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4481,6 +4560,7 @@ return typeof Number.isSafeInteger === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4533,6 +4613,7 @@ return typeof Number.isNaN === 'function';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes 6to5">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4585,6 +4666,7 @@ return typeof Number.EPSILON === 'number';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4637,6 +4719,7 @@ return typeof Number.MIN_SAFE_INTEGER === 'number';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4689,6 +4772,7 @@ return typeof Number.MAX_SAFE_INTEGER === 'number';
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4741,6 +4825,7 @@ return typeof Math.clz32 === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4793,6 +4878,7 @@ return typeof Math.imul === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4845,6 +4931,7 @@ return typeof Math.sign === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4897,6 +4984,7 @@ return typeof Math.log10 === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -4949,6 +5037,7 @@ return typeof Math.log2 === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5001,6 +5090,7 @@ return typeof Math.log1p === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5053,6 +5143,7 @@ return typeof Math.expm1 === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5105,6 +5196,7 @@ return typeof Math.cosh === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5157,6 +5249,7 @@ return typeof Math.sinh === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5209,6 +5302,7 @@ return typeof Math.tanh === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5261,6 +5355,7 @@ return typeof Math.acosh === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5313,6 +5408,7 @@ return typeof Math.asinh === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5365,6 +5461,7 @@ return typeof Math.atanh === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5417,6 +5514,7 @@ return typeof Math.hypot === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5469,6 +5567,7 @@ return typeof Math.trunc === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5521,6 +5620,7 @@ return typeof Math.fround === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5573,6 +5673,7 @@ return typeof Math.cbrt === 'function';
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5614,7 +5715,7 @@ return typeof Math.cbrt === 'function';
           <td class="yes ios8">Yes</td>
         </tr>
         <tr>
-          <th colspan="45" class="separator"></th>
+          <th colspan="46" class="separator"></th>
         </tr>
         <tr>
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[15]</sup></a></span></td>
@@ -5648,6 +5749,7 @@ return passed;
           <td title="This feature is optional on non-browser platforms." class="not-applicable tr">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable ejs">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable closure">No</td>
+          <td title="This feature is optional on non-browser platforms." class="not-applicable 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -5703,6 +5805,7 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td title="This feature is optional on non-browser platforms." class="not-applicable tr">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable ejs">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable closure">No</td>
+          <td title="This feature is optional on non-browser platforms." class="not-applicable 6to5">No</td>
           <td class="yes ie10">Yes</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5771,6 +5874,7 @@ return !!(desc
           <td title="This feature is optional on non-browser platforms." class="not-applicable tr">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable ejs">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable closure">No</td>
+          <td title="This feature is optional on non-browser platforms." class="not-applicable 6to5">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="no firefox11 obsolete">No</td>
@@ -5837,6 +5941,7 @@ return true;
           <td title="This feature is optional on non-browser platforms." class="not-applicable tr">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable ejs">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable closure">No</td>
+          <td title="This feature is optional on non-browser platforms." class="not-applicable 6to5">Yes</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes firefox11 obsolete">Yes</td>
@@ -5889,6 +5994,7 @@ return typeof RegExp.prototype.compile === 'function';
           <td title="This feature is optional on non-browser platforms." class="not-applicable tr">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable ejs">No</td>
           <td title="This feature is optional on non-browser platforms." class="not-applicable closure">No</td>
+          <td title="This feature is optional on non-browser platforms." class="not-applicable 6to5">Yes</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes firefox11 obsolete">Yes</td>
