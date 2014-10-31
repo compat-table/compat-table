@@ -820,10 +820,11 @@ exports.tests = [
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
   exec: function () {/*
     var passed = true;
-    var B = class extends class {
+    var Base = class {
       constructor(a) { return this.id + a; }
       foo(a)         { return a + this.id; }
-    } {
+    };
+    var B = class extends Base {
       constructor(a) {
         this.id = 'AB';
         // "super" in the constructor calls
@@ -846,7 +847,7 @@ exports.tests = [
   res: {
     tr:          true,
     ejs:         true,
-    closure:     false,
+    closure:     true,
     ie10:        false,
     ie11:        false,
     firefox11:   false,

@@ -702,10 +702,11 @@ test(function(){try{return Function("\nclass C extends Array {\n  constructor() 
           <td id="super"><span><a class="anchor" href="#super">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword">super</a></span></td>
 <script data-source="
 var passed = true;
-var B = class extends class {
+var Base = class {
   constructor(a) { return this.id + a; }
   foo(a)         { return a + this.id; }
-} {
+};
+var B = class extends Base {
   constructor(a) {
     this.id = 'AB';
     // &quot;super&quot; in the constructor calls
@@ -725,12 +726,12 @@ var obj = { foo: b.foo, id:&quot;EF&quot; };
 obj.foo(&quot;YZ&quot;);
 return passed;
   ">
-test(function(){try{return Function("\nvar passed = true;\nvar B = class extends class {\n  constructor(a) { return this.id + a; }\n  foo(a)         { return a + this.id; }\n} {\n  constructor(a) {\n    this.id = 'AB';\n    // \"super\" in the constructor calls\n    // the superclass's constructor on \"this\".\n    passed &= super(a)     === 'ABCD';\n    // \"super\" can be also used to call\n    // superclass methods on \"this\".\n    passed &= super.foo(a) === 'CDAB';\n  }\n  foo(a) {\n    passed &= super.foo(a) === 'YZEF';\n  }\n}\nvar b = new B(\"CD\");\n// \"super\" is bound statically, even though \"this\" isn't\nvar obj = { foo: b.foo, id:\"EF\" };\nobj.foo(\"YZ\");\nreturn passed;\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar passed = true;\nvar Base = class {\n  constructor(a) { return this.id + a; }\n  foo(a)         { return a + this.id; }\n};\nvar B = class extends Base {\n  constructor(a) {\n    this.id = 'AB';\n    // \"super\" in the constructor calls\n    // the superclass's constructor on \"this\".\n    passed &= super(a)     === 'ABCD';\n    // \"super\" can be also used to call\n    // superclass methods on \"this\".\n    passed &= super.foo(a) === 'CDAB';\n  }\n  foo(a) {\n    passed &= super.foo(a) === 'YZEF';\n  }\n}\nvar b = new B(\"CD\");\n// \"super\" is bound statically, even though \"this\" isn't\nvar obj = { foo: b.foo, id:\"EF\" };\nobj.foo(\"YZ\");\nreturn passed;\n  ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
-          <td class="no closure">No</td>
+          <td class="yes closure">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
