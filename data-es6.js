@@ -1090,7 +1090,7 @@ exports.tests = [
     tr:          true,
     ejs:         false,
     closure:     false,
-    '6to5':      true,
+    '6to5':      false,
     ie10:        false,
     ie11:        true,
     firefox11:   true,
