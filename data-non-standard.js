@@ -1237,8 +1237,8 @@ exports.tests = [
     opera10_10: false,
     opera10_50: false,
     opera15: false,
-    konq44: null,
-    konq49: null,
+    konq44: false,
+    konq49: false,
     besen: null,
     rhino: false,
     phantom: false

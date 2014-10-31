@@ -205,8 +205,10 @@ exports.browsers = {
     obsolete: false // still supported
   },
   konq49: {
-    full: 'Konqueror 4.13',
-    short: 'KQ 4.13'
+    full: 'Konqueror 4.14',
+    short: 'KQ 4.14',
+    note_id: 'khtml',
+    note_html: 'Results are only applicable for the KHTML rendering engine.'
   },
   rhino17: {
     full: 'Rhino 1.7',
@@ -475,6 +477,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         chrome:      true,
+        konq49:      true,
         nodeharmony: true,
       }
     },
@@ -1641,6 +1644,7 @@ exports.tests = [
         safari51:    true,
         webkit:      true,
         opera:       true,
+        konq49:      true,
         phantom:     true,
         node:        true,
         nodeharmony: true,
