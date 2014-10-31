@@ -2963,17 +2963,17 @@ exports.tests = [
   name: 'Object.prototype.__proto__',
   annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
-  exec: function () {
-    var a = {},
-        desc = Object.getOwnPropertyDescriptor
-            && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-    return !!(desc
+  exec: function () {/*
+    var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+    var A = function(){};
+    
+    return (desc
         && "get" in desc
         && "set" in desc
         && desc.configurable
         && !desc.enumerable
-        && Object.create(a).__proto__ === a);
-  },
+        && (new A()).__proto__ === A.prototype);
+  */},
   res: {
     tr:          false,
     ejs:         false,

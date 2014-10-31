@@ -12464,28 +12464,19 @@ test(function(){try{return Function("\n// Note: only available outside of strict
         </tr>
         <tr>
           <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
-<script data-source="function () {
-var a = {},
-    desc = Object.getOwnPropertyDescriptor
-        && Object.getOwnPropertyDescriptor(Object.prototype,&quot;__proto__&quot;);
-return !!(desc
+<script data-source="
+var desc = Object.getOwnPropertyDescriptor(Object.prototype,&quot;__proto__&quot;);
+var A = function(){};
+
+return (desc
     && &quot;get&quot; in desc
     && &quot;set&quot; in desc
     && desc.configurable
     && !desc.enumerable
-    && Object.create(a).__proto__ === a);
-  }">test(
-function () {
-var a = {},
-    desc = Object.getOwnPropertyDescriptor
-        && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-return !!(desc
-    && "get" in desc
-    && "set" in desc
-    && desc.configurable
-    && !desc.enumerable
-    && Object.create(a).__proto__ === a);
-  }())</script>
+    && (new A()).__proto__ === A.prototype);
+  ">
+test(function(){try{return Function("\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n    && \"get\" in desc\n    && \"set\" in desc\n    && desc.configurable\n    && !desc.enumerable\n    && (new A()).__proto__ === A.prototype);\n  ")()}catch(e){return false;}}());
+</script>
 
           <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
