@@ -2904,54 +2904,164 @@ exports.tests = [
 {
   name: 'function "name" property',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
-  exec: function () {
-    return (function foo(){}).name == 'foo';
+  subtests: {
+    'function statements': {
+      exec: function () {/*
+        function foo(){};
+        return foo.name === 'foo' &&
+          (function(){}).name === '';
+      */},
+      res: (temp.legacyFunctionNameResults = {
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }),
+    },
+    'function expressions': {
+      exec: function () {/*
+        return (function foo(){}).name === 'foo' &&
+          (function(){}).name === '';
+      */},
+      res: temp.legacyFunctionNameResults,
+    },
+    'new Function': {
+      exec: function () {/*
+        return (new Function).name === "anonymous";
+      */},
+      res: {
+        firefox11:   true,
+        safari51:    true,
+        webkit:      true,
+        rhino17:     true,
+        phantom:     true,
+        ios7:        true,
+      },
+    },
+    'bound functions': {
+      exec: function() {/*
+        function foo() {};
+        return foo.bind({}).name === "bound foo" &&
+          (function(){}).bind({}).name === "bound ";
+      */},
+      res: {},
+    },
+    'variables (function)': {
+      exec: function() {/*
+        var foo = function() {};
+        var bar = function baz() {};
+        return foo.name === "foo" && bar.name === "baz";
+      */},
+      res: {},
+    },
+    'object methods (function)': {
+      exec: function() {/*
+        var o = { foo: function(){}, bar: function baz(){}};
+        o.qux = function(){};
+        return o.foo.name === "foo" &&
+               o.bar.name === "baz" &&
+               o.qux.name === "qux";
+      */},
+      res: {},
+    },
+    'accessor properties': {
+      exec: function() {/*
+        var o = { get foo(){}, set foo(){} };
+        var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+        return descriptor.get.name === "get foo" &&
+               descriptor.get.name === "set foo";
+      */},
+      res: {},
+    },
+    'shorthand methods': {
+      exec: function() {/*
+        var o = { foo(){} };
+        return o.foo.name === "foo";
+      */},
+      res: {},
+    },
+    'symbol-keyed methods': {
+      exec: function() {/*
+        var o = {};
+        var sym = Symbol("foo");
+        var sym2 = Symbol();
+        
+        o[sym] = function(){};
+        o[sym2] = function(){};
+        
+        return o[sym].name === "[foo]" &&
+               o[sym2].name === "";
+      */},
+      res: {},
+    },
+    'class statements': {
+      exec: function() {/*
+        class foo {};
+        class bar { static name() {} };
+        return foo.name === "foo" &&
+          typeof bar.name === "function";
+      */},
+      res: {},
+    },
+    'class expressions': {
+      exec: function() {/*
+        return class foo {}.name === "foo" &&
+          typeof class bar { static name() {} }.name === "function";
+      */},
+      res: {},
+    },
+    'variables (class)': {
+      exec: function() {/*
+        var foo = class {};
+        var bar = class baz {};
+        var qux = class { static name() {} };
+        return foo.name === "foo" &&
+               bar.name === "baz" &&
+               typeof qux.name === "function";
+      */},
+      res: {},
+    },
+    'object methods (class)': {
+      exec: function() {/*
+        var o = { foo: class {}, bar: class baz {}};
+        o.qux = class {};
+        return o.foo.name === "foo" &&
+               o.bar.name === "baz" &&
+               o.qux.name === "qux";
+      */},
+      res: {},
+    },
+    'class prototype methods': {
+      exec: function() {/*
+        class C { foo(){} };
+        return (new C).foo.name === "foo";
+      */},
+      res: {},
+    },
+    'class static methods': {
+      exec: function() {/*
+        class C { static foo(){} };
+        return C.foo.name === "foo";
+      */},
+      res: {},
+    },
+    'isn\'t writable, is configurable': {
+      exec: function () {/*
+        var descriptor = Object.getOwnPropertyDescriptor(function(){},"name");
+        return descriptor.enumerable   === false &&
+               descriptor.writable     === false &&
+               descriptor.configurable === true;
+      */},
+      res: {},
+    },
   },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    true,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     true,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
 },
 {
   name: 'Function.prototype.toMethod',
