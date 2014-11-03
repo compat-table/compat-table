@@ -8250,14 +8250,61 @@ return typeof Promise !== 'undefined' &&
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
         </tr>
-        <tr>
-          <td id="Object.assign"><span><a class="anchor" href="#Object.assign">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign">Object.assign</a></span></td>
-<script data-source="function () {
-return typeof Object.assign === 'function';
-  }">test(
-function () {
-return typeof Object.assign === 'function';
-  }())</script>
+        <tr class="supertest">
+          <td id="Object_static_methods"><span><a class="anchor" href="#Object_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
+
+          <td class="tally tr" data-tally="0.75">3/4</td>
+          <td class="tally ejs" data-tally="1">4/4</td>
+          <td class="tally closure" data-tally="0">0/4</td>
+          <td class="tally ie10" data-tally="0">0/4</td>
+          <td class="tally ie11" data-tally="0.25">1/4</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/4</td>
+          <td class="tally firefox23 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox24 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox25 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox27 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox28 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox29 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox30 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally firefox31" data-tally="0.5">2/4</td>
+          <td class="tally firefox32" data-tally="0.5">2/4</td>
+          <td class="tally firefox33" data-tally="0.75">3/4</td>
+          <td class="tally firefox34" data-tally="1">4/4</td>
+          <td class="tally chrome obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome19dev obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome21dev obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome30 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome33 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome34 obsolete" data-tally="0.75">3/4</td>
+          <td class="tally chrome35" data-tally="0.75">3/4</td>
+          <td class="tally chrome37" data-tally="0.75">3/4</td>
+          <td class="tally chrome38" data-tally="0.75">3/4</td>
+          <td class="tally chrome39" data-tally="0.75">3/4</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/4</td>
+          <td class="tally safari6" data-tally="0">0/4</td>
+          <td class="tally safari7" data-tally="0">0/4</td>
+          <td class="tally safari71_8" data-tally="0">0/4</td>
+          <td class="tally webkit" data-tally="0">0/4</td>
+          <td class="tally opera" data-tally="0">0/4</td>
+          <td class="tally konq49" data-tally="0.25">1/4</td>
+          <td class="tally rhino17" data-tally="0">0/4</td>
+          <td class="tally phantom" data-tally="0">0/4</td>
+          <td class="tally node" data-tally="0.25">1/4</td>
+          <td class="tally nodeharmony" data-tally="0.75">3/4</td>
+          <td class="tally ios7" data-tally="0">0/4</td>
+          <td class="tally ios8" data-tally="0">0/4</td>
+        <tr class="subtest" data-parent="Object_static_methods">
+          <td><span>Object.assign</span></td>
+<script data-source="
+var o = Object.assign({a:true}, {b:true}, {c:true});
+return &quot;a&quot; in o && &quot;b&quot; in o && &quot;c&quot; in o;
+      ">
+test(function(){try{return Function("\nvar o = Object.assign({a:true}, {b:true}, {c:true});\nreturn \"a\" in o && \"b\" in o && \"c\" in o;\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -8303,15 +8350,15 @@ return typeof Object.assign === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Object.is"><span><a class="anchor" href="#Object.is">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.is">Object.is</a></span></td>
-<script data-source="function () {
-return typeof Object.is === 'function';
-  }">test(
-function () {
-return typeof Object.is === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Object_static_methods">
+          <td><span>Object.is</span></td>
+<script data-source="
+return typeof Object.is === 'function' &&
+  Object.is(NaN, NaN) &&
+ !Object.is(Math.round(-0.1), Math.round(0.1));
+      ">
+test(function(){try{return Function("\nreturn typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(Math.round(-0.1), Math.round(0.1));\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -8357,15 +8404,16 @@ return typeof Object.is === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Object.getOwnPropertySymbols"><span><a class="anchor" href="#Object.getOwnPropertySymbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.getownpropertysymbols">Object.getOwnPropertySymbols</a></span></td>
-<script data-source="function () {
-return typeof Object.getOwnPropertySymbols === 'function';
-  }">test(
-function () {
-return typeof Object.getOwnPropertySymbols === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Object_static_methods">
+          <td><span>Object.getOwnPropertySymbols</span></td>
+<script data-source="
+var o = {};
+var sym = Symbol();
+o[sym] = &quot;foo&quot;;
+return Object.getOwnPropertySymbols(o)[0] === sym;
+      ">
+test(function(){try{return Function("\nvar o = {};\nvar sym = Symbol();\no[sym] = \"foo\";\nreturn Object.getOwnPropertySymbols(o)[0] === sym;\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -8411,15 +8459,13 @@ return typeof Object.getOwnPropertySymbols === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Object.setPrototypeOf"><span><a class="anchor" href="#Object.setPrototypeOf">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof">Object.setPrototypeOf</a></span></td>
-<script data-source="function () {
-return typeof Object.setPrototypeOf === 'function';
-  }">test(
-function () {
-return typeof Object.setPrototypeOf === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Object_static_methods">
+          <td><span>Object.setPrototypeOf</span></td>
+<script data-source="
+return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
+      ">
+test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.prototype) instanceof Array;\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -9549,14 +9595,60 @@ return typeof String.fromCodePoint === 'function';
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="String.prototype.codePointAt"><span><a class="anchor" href="#String.prototype.codePointAt">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat">String.prototype.codePointAt</a></span></td>
-<script data-source="function () {
+        <tr class="supertest">
+          <td id="String.prototype_methods"><span><a class="anchor" href="#String.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object">String.prototype methods</a></span></td>
+
+          <td class="tally tr" data-tally="0.8333333333333334">5/6</td>
+          <td class="tally ejs" data-tally="0.8333333333333334">5/6</td>
+          <td class="tally closure" data-tally="0">0/6</td>
+          <td class="tally ie10" data-tally="0">0/6</td>
+          <td class="tally ie11" data-tally="0">0/6</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/6</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/6</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/6</td>
+          <td class="tally firefox17 obsolete" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally firefox18 obsolete" data-tally="0.5">3/6</td>
+          <td class="tally firefox23 obsolete" data-tally="0.5">3/6</td>
+          <td class="tally firefox24 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox25 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox27 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox28 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox29 obsolete" data-tally="0.8333333333333334">5/6</td>
+          <td class="tally firefox30 obsolete" data-tally="0.8333333333333334">5/6</td>
+          <td class="tally firefox31" data-tally="1">6/6</td>
+          <td class="tally firefox32" data-tally="1">6/6</td>
+          <td class="tally firefox33" data-tally="1">6/6</td>
+          <td class="tally firefox34" data-tally="1">6/6</td>
+          <td class="tally chrome obsolete" data-tally="0">0/6</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/6</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/6</td>
+          <td class="tally chrome30 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally chrome33 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally chrome34 obsolete" data-tally="0.8333333333333334">5/6</td>
+          <td class="tally chrome35" data-tally="0.8333333333333334">5/6</td>
+          <td class="tally chrome37" data-tally="1">6/6</td>
+          <td class="tally chrome38" data-tally="1">6/6</td>
+          <td class="tally chrome39" data-tally="1">6/6</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/6</td>
+          <td class="tally safari6" data-tally="0">0/6</td>
+          <td class="tally safari7" data-tally="0">0/6</td>
+          <td class="tally safari71_8" data-tally="0">0/6</td>
+          <td class="tally webkit" data-tally="0.5">3/6</td>
+          <td class="tally opera" data-tally="0">0/6</td>
+          <td class="tally konq49" data-tally="0">0/6</td>
+          <td class="tally rhino17" data-tally="0">0/6</td>
+          <td class="tally phantom" data-tally="0">0/6</td>
+          <td class="tally node" data-tally="0">0/6</td>
+          <td class="tally nodeharmony" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally ios7" data-tally="0">0/6</td>
+          <td class="tally ios8" data-tally="0">0/6</td>
+        <tr class="subtest" data-parent="String.prototype_methods">
+          <td><span>String.prototype.codePointAt</span></td>
+<script data-source="
 return typeof String.prototype.codePointAt === 'function';
-  }">test(
-function () {
-return typeof String.prototype.codePointAt === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof String.prototype.codePointAt === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -9602,19 +9694,15 @@ return typeof String.prototype.codePointAt === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="String.prototype.normalize"><span><a class="anchor" href="#String.prototype.normalize">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.normalize">String.prototype.normalize</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="String.prototype_methods">
+          <td><span>String.prototype.normalize</span></td>
+<script data-source="
 return typeof String.prototype.normalize === &quot;function&quot;
   && &quot;c\u0327\u0301&quot;.normalize(&quot;NFC&quot;) === &quot;\u1e09&quot;
   && &quot;\u1e09&quot;.normalize(&quot;NFD&quot;) === &quot;c\u0327\u0301&quot;;
-  }">test(
-function () {
-return typeof String.prototype.normalize === "function"
-  && "c\u0327\u0301".normalize("NFC") === "\u1e09"
-  && "\u1e09".normalize("NFD") === "c\u0327\u0301";
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof String.prototype.normalize === \"function\"\n  && \"c\\u0327\\u0301\".normalize(\"NFC\") === \"\\u1e09\"\n  && \"\\u1e09\".normalize(\"NFD\") === \"c\\u0327\\u0301\";\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -9660,15 +9748,14 @@ return typeof String.prototype.normalize === "function"
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="String.prototype.repeat"><span><a class="anchor" href="#String.prototype.repeat">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat">String.prototype.repeat</a></span></td>
-<script data-source="function () {
-return typeof String.prototype.repeat === 'function';
-  }">test(
-function () {
-return typeof String.prototype.repeat === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="String.prototype_methods">
+          <td><span>String.prototype.repeat</span></td>
+<script data-source="
+return typeof String.prototype.repeat === 'function'
+  && &quot;foo&quot;.repeat(3) === &quot;foofoofoo&quot;;
+      ">
+test(function(){try{return Function("\nreturn typeof String.prototype.repeat === 'function'\n  && \"foo\".repeat(3) === \"foofoofoo\";\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -9714,15 +9801,14 @@ return typeof String.prototype.repeat === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="String.prototype.startsWith"><span><a class="anchor" href="#String.prototype.startsWith">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith">String.prototype.startsWith</a></span></td>
-<script data-source="function () {
-return typeof String.prototype.startsWith === 'function';
-  }">test(
-function () {
-return typeof String.prototype.startsWith === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="String.prototype_methods">
+          <td><span>String.prototype.startsWith</span></td>
+<script data-source="
+return typeof String.prototype.startsWith === 'function'
+  && &quot;foobar&quot;.startsWith(&quot;foo&quot;);
+      ">
+test(function(){try{return Function("\nreturn typeof String.prototype.startsWith === 'function'\n  && \"foobar\".startsWith(\"foo\");\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -9768,15 +9854,14 @@ return typeof String.prototype.startsWith === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="String.prototype.endsWith"><span><a class="anchor" href="#String.prototype.endsWith">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith">String.prototype.endsWith</a></span></td>
-<script data-source="function () {
-return typeof String.prototype.endsWith === 'function';
-  }">test(
-function () {
-return typeof String.prototype.endsWith === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="String.prototype_methods">
+          <td><span>String.prototype.endsWith</span></td>
+<script data-source="
+return typeof String.prototype.endsWith === 'function'
+  && &quot;foobar&quot;.endsWith(&quot;bar&quot;);
+      ">
+test(function(){try{return Function("\nreturn typeof String.prototype.endsWith === 'function'\n  && \"foobar\".endsWith(\"bar\");\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -9822,15 +9907,14 @@ return typeof String.prototype.endsWith === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="String.prototype.contains"><span><a class="anchor" href="#String.prototype.contains">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains">String.prototype.contains</a></span></td>
-<script data-source="function () {
-return typeof String.prototype.contains === 'function';
-  }">test(
-function () {
-return typeof String.prototype.contains === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="String.prototype_methods">
+          <td><span>String.prototype.contains</span></td>
+<script data-source="
+return typeof String.prototype.endsWith === 'function'
+  && &quot;foobar&quot;.endsWith(&quot;bar&quot;);
+      ">
+test(function(){try{return Function("\nreturn typeof String.prototype.endsWith === 'function'\n  && \"foobar\".endsWith(\"bar\");\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11205,14 +11289,60 @@ return typeof RegExp.prototype.search === 'function';
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="Array.from"><span><a class="anchor" href="#Array.from">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from">Array.from</a></span></td>
-<script data-source="function () {
+        <tr class="supertest">
+          <td id="Array_static_methods"><span><a class="anchor" href="#Array_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor">Array static methods</a></span></td>
+
+          <td class="tally tr" data-tally="1">2/2</td>
+          <td class="tally ejs" data-tally="1">2/2</td>
+          <td class="tally closure" data-tally="0">0/2</td>
+          <td class="tally ie10" data-tally="0">0/2</td>
+          <td class="tally ie11" data-tally="0">0/2</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox25 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox27 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox28 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox29 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox30 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox31" data-tally="0.5">1/2</td>
+          <td class="tally firefox32" data-tally="1">2/2</td>
+          <td class="tally firefox33" data-tally="1">2/2</td>
+          <td class="tally firefox34" data-tally="1">2/2</td>
+          <td class="tally chrome obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome35" data-tally="0">0/2</td>
+          <td class="tally chrome37" data-tally="0">0/2</td>
+          <td class="tally chrome38" data-tally="0">0/2</td>
+          <td class="tally chrome39" data-tally="0.5">1/2</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/2</td>
+          <td class="tally safari6" data-tally="0">0/2</td>
+          <td class="tally safari7" data-tally="0">0/2</td>
+          <td class="tally safari71_8" data-tally="0">0/2</td>
+          <td class="tally webkit" data-tally="0">0/2</td>
+          <td class="tally opera" data-tally="0">0/2</td>
+          <td class="tally konq49" data-tally="0">0/2</td>
+          <td class="tally rhino17" data-tally="0">0/2</td>
+          <td class="tally phantom" data-tally="0">0/2</td>
+          <td class="tally node" data-tally="0">0/2</td>
+          <td class="tally nodeharmony" data-tally="0">0/2</td>
+          <td class="tally ios7" data-tally="0">0/2</td>
+          <td class="tally ios8" data-tally="0">0/2</td>
+        <tr class="subtest" data-parent="Array_static_methods">
+          <td><span>Array.from</span></td>
+<script data-source="
 return typeof Array.from === 'function';
-  }">test(
-function () {
-return typeof Array.from === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.from === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11258,15 +11388,14 @@ return typeof Array.from === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Array.of"><span><a class="anchor" href="#Array.of">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.of">Array.of</a></span></td>
-<script data-source="function () {
-return typeof Array.of === 'function';
-  }">test(
-function () {
-return typeof Array.of === 'function';
-  }())</script>
+        <tr class="subtest" data-parent="Array_static_methods">
+          <td><span>Array.of</span></td>
+<script data-source="
+return typeof Array.of === 'function' &&
+  Array.of(2)[0] === 2;
+      ">
+test(function(){try{return Function("\nreturn typeof Array.of === 'function' &&\n  Array.of(2)[0] === 2;\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11313,14 +11442,60 @@ return typeof Array.of === 'function';
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="Array.prototype.copyWithin"><span><a class="anchor" href="#Array.prototype.copyWithin">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.copywithin">Array.prototype.copyWithin</a></span></td>
-<script data-source="function () {
+        <tr class="supertest">
+          <td id="Array.prototype_methods"><span><a class="anchor" href="#Array.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object">Array.prototype methods</a></span></td>
+
+          <td class="tally tr" data-tally="0.75">6/8</td>
+          <td class="tally ejs" data-tally="0.875">7/8</td>
+          <td class="tally closure" data-tally="0">0/8</td>
+          <td class="tally ie10" data-tally="0">0/8</td>
+          <td class="tally ie11" data-tally="0">0/8</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/8</td>
+          <td class="tally firefox25 obsolete" data-tally="0.25">2/8</td>
+          <td class="tally firefox27 obsolete" data-tally="0.25">2/8</td>
+          <td class="tally firefox28 obsolete" data-tally="0.5">4/8</td>
+          <td class="tally firefox29 obsolete" data-tally="0.5">4/8</td>
+          <td class="tally firefox30 obsolete" data-tally="0.5">4/8</td>
+          <td class="tally firefox31" data-tally="0.625">5/8</td>
+          <td class="tally firefox32" data-tally="0.75">6/8</td>
+          <td class="tally firefox33" data-tally="0.75">6/8</td>
+          <td class="tally firefox34" data-tally="0.75">6/8</td>
+          <td class="tally chrome obsolete" data-tally="0">0/8</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/8</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/8</td>
+          <td class="tally chrome30 obsolete" data-tally="0.625">5/8</td>
+          <td class="tally chrome33 obsolete" data-tally="0.625">5/8</td>
+          <td class="tally chrome34 obsolete" data-tally="0.625">5/8</td>
+          <td class="tally chrome35" data-tally="0.625">5/8</td>
+          <td class="tally chrome37" data-tally="0.75">6/8</td>
+          <td class="tally chrome38" data-tally="0.75">6/8</td>
+          <td class="tally chrome39" data-tally="0.75">6/8</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/8</td>
+          <td class="tally safari6" data-tally="0">0/8</td>
+          <td class="tally safari7" data-tally="0">0/8</td>
+          <td class="tally safari71_8" data-tally="0.625">5/8</td>
+          <td class="tally webkit" data-tally="0.625">5/8</td>
+          <td class="tally opera" data-tally="0">0/8</td>
+          <td class="tally konq49" data-tally="0">0/8</td>
+          <td class="tally rhino17" data-tally="0">0/8</td>
+          <td class="tally phantom" data-tally="0">0/8</td>
+          <td class="tally node" data-tally="0">0/8</td>
+          <td class="tally nodeharmony" data-tally="0.75">6/8</td>
+          <td class="tally ios7" data-tally="0">0/8</td>
+          <td class="tally ios8" data-tally="0.625">5/8</td>
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.copyWithin</span></td>
+<script data-source="
 return typeof Array.prototype.copyWithin === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.copyWithin === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.copyWithin === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="yes ejs">Yes</td>
@@ -11366,15 +11541,13 @@ return typeof Array.prototype.copyWithin === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype.find"><span><a class="anchor" href="#Array.prototype.find">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.find">Array.prototype.find</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.find</span></td>
+<script data-source="
 return typeof Array.prototype.find === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.find === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.find === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11420,15 +11593,13 @@ return typeof Array.prototype.find === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype.findIndex"><span><a class="anchor" href="#Array.prototype.findIndex">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.findindex">Array.prototype.findIndex</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.findIndex</span></td>
+<script data-source="
 return typeof Array.prototype.findIndex === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.findIndex === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.findIndex === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11474,15 +11645,13 @@ return typeof Array.prototype.findIndex === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype.fill"><span><a class="anchor" href="#Array.prototype.fill">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.fill">Array.prototype.fill</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.fill</span></td>
+<script data-source="
 return typeof Array.prototype.fill === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.fill === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.fill === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11528,15 +11697,13 @@ return typeof Array.prototype.fill === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype.keys"><span><a class="anchor" href="#Array.prototype.keys">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.keys">Array.prototype.keys</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.keys</span></td>
+<script data-source="
 return typeof Array.prototype.keys === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.keys === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.keys === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11582,15 +11749,13 @@ return typeof Array.prototype.keys === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype.values"><span><a class="anchor" href="#Array.prototype.values">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.values">Array.prototype.values</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.values</span></td>
+<script data-source="
 return typeof Array.prototype.values === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.values === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.values === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11636,15 +11801,13 @@ return typeof Array.prototype.values === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype.entries"><span><a class="anchor" href="#Array.prototype.entries">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.entries">Array.prototype.entries</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype.entries</span></td>
+<script data-source="
 return typeof Array.prototype.entries === 'function';
-  }">test(
-function () {
-return typeof Array.prototype.entries === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Array.prototype.entries === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11690,18 +11853,17 @@ return typeof Array.prototype.entries === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="Array.prototype[Symbol.unscopables]"><span><a class="anchor" href="#Array.prototype[Symbol.unscopables]">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@unscopables">Array.prototype[Symbol.unscopables]</a></span></td>
+        <tr class="subtest" data-parent="Array.prototype_methods">
+          <td><span>Array.prototype[Symbol.unscopables]</span></td>
 <script data-source="
 var unscopables = Array.prototype[Symbol.unscopables];
 var ns = &quot;find,findIndex,fill,copyWithin,entries,keys,values&quot;.split(&quot;,&quot;);
 for (var i = 0; i < ns.length; i++) {
-  if (!unscopables[ns[i]]) return false;
+  if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;
 }
 return true;
-  ">
-test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.unscopables];\nvar ns = \"find,findIndex,fill,copyWithin,entries,keys,values\".split(\",\");\nfor (var i = 0; i < ns.length; i++) {\n  if (!unscopables[ns[i]]) return false;\n}\nreturn true;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.unscopables];\nvar ns = \"find,findIndex,fill,copyWithin,entries,keys,values\".split(\",\");\nfor (var i = 0; i < ns.length; i++) {\n  if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;\n}\nreturn true;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -11733,7 +11895,7 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
           <td class="no chrome34 obsolete">No</td>
           <td class="no chrome35">No</td>
           <td class="no chrome37">No</td>
-          <td class="no chrome38">No</td>
+          <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
@@ -11749,14 +11911,60 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="Number.isFinite"><span><a class="anchor" href="#Number.isFinite">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number.isFinite</a></span></td>
-<script data-source="function () {
+        <tr class="supertest">
+          <td id="Number_properties"><span><a class="anchor" href="#Number_properties">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number properties</a></span></td>
+
+          <td class="tally tr" data-tally="1">7/7</td>
+          <td class="tally ejs" data-tally="1">7/7</td>
+          <td class="tally closure" data-tally="0">0/7</td>
+          <td class="tally ie10" data-tally="0">0/7</td>
+          <td class="tally ie11" data-tally="0">0/7</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/7</td>
+          <td class="tally firefox16 obsolete" data-tally="0.42857142857142855">3/7</td>
+          <td class="tally firefox17 obsolete" data-tally="0.42857142857142855">3/7</td>
+          <td class="tally firefox18 obsolete" data-tally="0.42857142857142855">3/7</td>
+          <td class="tally firefox23 obsolete" data-tally="0.42857142857142855">3/7</td>
+          <td class="tally firefox24 obsolete" data-tally="0.42857142857142855">3/7</td>
+          <td class="tally firefox25 obsolete" data-tally="0.5714285714285714">4/7</td>
+          <td class="tally firefox27 obsolete" data-tally="0.5714285714285714">4/7</td>
+          <td class="tally firefox28 obsolete" data-tally="0.5714285714285714">4/7</td>
+          <td class="tally firefox29 obsolete" data-tally="0.5714285714285714">4/7</td>
+          <td class="tally firefox30 obsolete" data-tally="0.5714285714285714">4/7</td>
+          <td class="tally firefox31" data-tally="0.8571428571428571">6/7</td>
+          <td class="tally firefox32" data-tally="1">7/7</td>
+          <td class="tally firefox33" data-tally="1">7/7</td>
+          <td class="tally firefox34" data-tally="1">7/7</td>
+          <td class="tally chrome obsolete" data-tally="0">0/7</td>
+          <td class="tally chrome19dev obsolete" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally chrome21dev obsolete" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally chrome30 obsolete" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally chrome33 obsolete" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally chrome34 obsolete" data-tally="1">7/7</td>
+          <td class="tally chrome35" data-tally="1">7/7</td>
+          <td class="tally chrome37" data-tally="1">7/7</td>
+          <td class="tally chrome38" data-tally="1">7/7</td>
+          <td class="tally chrome39" data-tally="1">7/7</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/7</td>
+          <td class="tally safari6" data-tally="0">0/7</td>
+          <td class="tally safari7" data-tally="0">0/7</td>
+          <td class="tally safari71_8" data-tally="0">0/7</td>
+          <td class="tally webkit" data-tally="1">7/7</td>
+          <td class="tally opera" data-tally="0">0/7</td>
+          <td class="tally konq49" data-tally="0.8571428571428571">6/7</td>
+          <td class="tally rhino17" data-tally="0">0/7</td>
+          <td class="tally phantom" data-tally="0">0/7</td>
+          <td class="tally node" data-tally="0.2857142857142857">2/7</td>
+          <td class="tally nodeharmony" data-tally="1">7/7</td>
+          <td class="tally ios7" data-tally="0">0/7</td>
+          <td class="tally ios8" data-tally="0">0/7</td>
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.isFinite</span></td>
+<script data-source="
 return typeof Number.isFinite === 'function';
-  }">test(
-function () {
-return typeof Number.isFinite === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.isFinite === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11787,8 +11995,8 @@ return typeof Number.isFinite === 'function';
           <td class="yes chrome34 obsolete">Yes</td>
           <td class="yes chrome35">Yes</td>
           <td class="yes chrome37">Yes</td>
-          <td class="yes chrome38">Yes</td>
-          <td class="yes chrome39">Yes</td>
+          <td class="no chrome38">No<a href="#array-prototype-iterator-note"><sup>[14]</sup></a></td>
+          <td class="no chrome39">No<a href="#array-prototype-iterator-note"><sup>[14]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -11802,15 +12010,13 @@ return typeof Number.isFinite === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Number.isInteger"><span><a class="anchor" href="#Number.isInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger">Number.isInteger</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.isInteger</span></td>
+<script data-source="
 return typeof Number.isInteger === 'function';
-  }">test(
-function () {
-return typeof Number.isInteger === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.isInteger === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11856,15 +12062,13 @@ return typeof Number.isInteger === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Number.isSafeInteger"><span><a class="anchor" href="#Number.isSafeInteger">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger">Number.isSafeInteger</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.isSafeInteger</span></td>
+<script data-source="
 return typeof Number.isSafeInteger === 'function';
-  }">test(
-function () {
-return typeof Number.isSafeInteger === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.isSafeInteger === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11910,15 +12114,13 @@ return typeof Number.isSafeInteger === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Number.isNaN"><span><a class="anchor" href="#Number.isNaN">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan">Number.isNaN</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.isNaN</span></td>
+<script data-source="
 return typeof Number.isNaN === 'function';
-  }">test(
-function () {
-return typeof Number.isNaN === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.isNaN === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -11964,15 +12166,13 @@ return typeof Number.isNaN === 'function';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Number.EPSILON"><span><a class="anchor" href="#Number.EPSILON">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon">Number.EPSILON</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.EPSILON</span></td>
+<script data-source="
 return typeof Number.EPSILON === 'number';
-  }">test(
-function () {
-return typeof Number.EPSILON === 'number';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.EPSILON === 'number';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -12018,15 +12218,13 @@ return typeof Number.EPSILON === 'number';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Number.MIN_SAFE_INTEGER"><span><a class="anchor" href="#Number.MIN_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.min_safe_integer">Number.MIN_SAFE_INTEGER</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.MIN_SAFE_INTEGER</span></td>
+<script data-source="
 return typeof Number.MIN_SAFE_INTEGER === 'number';
-  }">test(
-function () {
-return typeof Number.MIN_SAFE_INTEGER === 'number';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.MIN_SAFE_INTEGER === 'number';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -12072,15 +12270,13 @@ return typeof Number.MIN_SAFE_INTEGER === 'number';
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="Number.MAX_SAFE_INTEGER"><span><a class="anchor" href="#Number.MAX_SAFE_INTEGER">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer">Number.MAX_SAFE_INTEGER</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="Number_properties">
+          <td><span>Number.MAX_SAFE_INTEGER</span></td>
+<script data-source="
 return typeof Number.MAX_SAFE_INTEGER === 'number';
-  }">test(
-function () {
-return typeof Number.MAX_SAFE_INTEGER === 'number';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof Number.MAX_SAFE_INTEGER === 'number';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -13420,6 +13616,9 @@ return typeof RegExp.prototype.compile === 'function';
       </p>
       <p id="fx-array-prototype-values-2-note">
         <sup>[14]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+      </p>
+      <p id="array-prototype-iterator-note">
+        <sup>[14]</sup> Available as <code>Array.prototype[Symbol.iterator]</code>
       </p>
       <p id="chromu-imul-note">
         <sup>[15]</sup> Available since Chrome 28
