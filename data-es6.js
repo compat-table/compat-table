@@ -6063,7 +6063,21 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   separator: 'after'
 }
 ];
-
 //Shift annex B features to the bottom
 exports.tests = exports.tests.filter(function(e) { return !e.annex_b })
         .concat(exports.tests.filter(function(e) { return  e.annex_b }));
+        
+//Convert all test functions to strings of ES code,
+//which interpreter platforms etc. can examine.
+exports.tests.forEach(function (test) {
+  function unwrap(s) {
+    return (s+'').replace(/^\s*function ?\(\) ?{|\s*}\s*$/g,'');
+  }
+  if (Array.isArray(test.exec)) {
+    test.exec.forEach(function(test) { test.script = unwrap(test.script); });
+    return;
+  }
+  if (m = /[^]*\/\*([^]*)\*\/\s*$/.exec(test.exec = unwrap(test.exec))) {
+    test.exec = m[1];
+  }
+});

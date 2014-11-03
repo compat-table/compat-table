@@ -205,34 +205,27 @@ function deindentFunc(fn) {
   return fn;
 }
 
-function testScript(fn) {
-  if (typeof fn === 'function') {
-    // see if the code is encoded in a comment
-    var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
-
-    // if there wasn't an expression, make the function statement into one
-    if (!expr) {
-      expr = deindentFunc(fn);
-      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
-    }
-    else {
-      expr = deindentFunc(expr[1]);
-      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
-      'test(function(){try{return Function(' + JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}());\n' +
-      '</script>\n';
-    }
-  } else {
+function testScript(fn, type) {
+  if (typeof fn === 'string') {
+    fn = deindentFunc(fn);
+    return '<script ' + (type ? ' type="' + type + '"' : '')
+	  + ' data-source="' + fn.replace(/"/g,'&quot;') + '">\n'
+	  // The code inside the eval() should be
+	  // "(function(){...})()"
+      + 'try{test(Function('
+	  // Escape the fn string using JSON.stringify
+	  + JSON.stringify(fn).replace(/\\r/g,'')
+	  + ')());}catch(e){test(false);}\n'
+	  + '</script>\n';
+  } else if (Array.isArray(fn)) {
     // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }
-    return fn.reduce(function(text, script) {
-      var expr = deindentFunc(
-          (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
-        );
-      return text
-        + '<script' + (script.type ? ' type="' + script.type + '"' : '')
-        + ' data-source="' + expr.replace(/"/g,'&quot;') + '">'
-        + expr
-        + '</script>\n';
-    },'');
+    return fn.reduce(function(text, test) {
+      return text + '<script ' + (test.type ? ' type="' + test.type + '"' : '')
+	  + ' data-source="' + test.script.replace(/"/g,'&quot;') + '">\n'
+	  + deindentFunc(test.script)
+	  + '</script>\n';
+    }, '');
   }
+  return fn;
 }
