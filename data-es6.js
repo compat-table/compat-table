@@ -2696,62 +2696,57 @@ exports.tests = [
   name: 'Object.prototype.__proto__',
   annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
-  exec: function () {/*
-    var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-    var A = function(){};
+  subtests: {
+    'get prototype': {
+      exec: function() {/*
+        var A = function(){};
+        return (new A()).__proto__ === A.prototype;
+      */},
+      res: (temp.basicProtoResults = {
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        rhino17:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }),
+    },
+    'set prototype': {
+      exec: function() {/*
+        var o = {};
+        o.__proto__ = Array.prototype;
+        return o instanceof Array;
+      */},
+      res: temp.basicProtoResults,
+    },
+    'correct property descriptor': {
+      exec: function () {/*
+        var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+        var A = function(){};
     
-    return (desc
-        && "get" in desc
-        && "set" in desc
-        && desc.configurable
-        && !desc.enumerable
-        && (new A()).__proto__ === A.prototype);
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      false,
-    rhino17:     true,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
+        return (desc
+          && "get" in desc
+          && "set" in desc
+          && desc.configurable
+          && !desc.enumerable);
+      */},
+      res: {
+        ie11:        true,
+        firefox17:   true,
+        chrome30:    true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        rhino17:     true,
+        nodeharmony: true,
+        ios7:        true,
+      },
+    },
+  },
 },
 {
   name: 'function "name" property',
