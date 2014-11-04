@@ -32,12 +32,37 @@ $(function() {
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
-      $('.desktop')[0].colSpan = elem.prop('checked') ? 33 : 16;
+      var desktop = $('.desktop');
+      if (desktop.length) {
+        desktop[0].colSpan = elem.prop('checked') ? 35 : 16;
+      }
     })
     .attr('value', $('#show-obsolete').checked);
 
   var mouseoverTimeout;
 
+  
+  $('tr.supertest').each(function() {
+    var tr = $(this);
+    var subtests = tr.nextUntil('tr:not(.subtest)');
+    if (subtests.length === 0) {
+      return;
+    }
+    // Attach dropdown buttons to those tests with subtests
+    $('<span class="folddown">&#9660;</span>')
+      .appendTo(tr.children()[0])
+      .on('click', function() {
+        subtests.toggle();
+      });
+      
+    // Also, work out tallies for the current browser's tally features
+    var tally = subtests.find(".yes" + currentBrowserSelector).length;
+    tr.find('td' + currentBrowserSelector).before(
+      '<td class="tally" data-tally="' + tally/subtests.length + '">' +
+      tally + '/' + subtests.length + '</td><td></td>'
+    );
+  });
+  
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
@@ -52,14 +77,17 @@ $(function() {
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
     var td = $(this);
-
+    var scriptTag = td.parents('tr').find('script');
+    if (scriptTag.length === 0) {
+      return;
+    }
     $('<span class="info">c</span>')
       .appendTo(td)
       .on('mouseenter', function(e) {
         var tooltip = $(this);
 
         infoTooltip.html(
-            tooltip.parents('tr').find('script').attr('data-source')
+            scriptTag.attr('data-source')
             // trim sides, and escape <
             .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
           )
@@ -81,7 +109,7 @@ $(function() {
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
     return ($(elem).attr('class') || '')
-        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover)(?:\s|$)|\s/g, '');
+        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover|tally)(?:\s|$)|\s/g, '');
   }
 
   // Since you can't add a :hover effect for columns,
@@ -186,9 +214,15 @@ $(function() {
     else {
       name = currentBrowserSelector;
     }
-    var results = table.find('td:not(not-applicable)' + name);
-    var yesResults = results.filter('.yes');
-    var featuresCount = yesResults.length / results.length;
+    var results = table.find('tr:not([class*=test]) td:not(.not-applicable)' + name);
+    var yesResults = results.filter('.yes').length;
+    results = results.length;
+    
+    table.find('tr.supertest td[data-tally]' + name).filter(function() {
+      yesResults += +$(this).attr('data-tally') || 0;
+      results += 1;
+    });
+    var featuresCount = yesResults / results;
 
     var colour = getBrowserColour(elem.attr('class'));
     elem
@@ -197,9 +231,9 @@ $(function() {
       .append('<sup class="num-features" title="Number of implemented features">' +
         // Don't bother with a HSL fallback for IE 8.
         '<b style="color:hsl(' + (featuresCount * 120|0) + ',100%,25%)">' +
-        yesResults.length +
+        Math.round(yesResults) +
         '</b>/' +
-        results.length + '</sup>')
+        results + '</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
       .css({'background-image':'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +

@@ -1,5 +1,9 @@
 // exports browsers and tests
 
+Object.assign = require('object-assign');
+
+var temp = {};
+
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
 exports.skeleton_file = 'es6/skeleton.html';
@@ -75,7 +79,12 @@ exports.browsers = {
   },
   firefox27: {
     full: 'Firefox',
-    short: 'FF 27-28',
+    short: 'FF 27',
+    obsolete: true
+  },
+  firefox28: {
+    full: 'Firefox',
+    short: 'FF 28',
     obsolete: true
   },
   firefox29: {
@@ -122,48 +131,48 @@ exports.browsers = {
     short: 'CH 21-29',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome30: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;30,<br>OP&nbsp;17',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome33: {
     full: 'Chrome, Opera',
-    short: 'CH&nbsp;33,<br>OP&nbsp;20',
+    short: 'CH&nbsp;32-33,<br>OP&nbsp;19-20',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome34: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;34,<br>OP&nbsp;21',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome35: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;35,<br>OP&nbsp;22',
     obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome37: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;37,<br>OP&nbsp;24',
     obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome38: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;38,<br>OP&nbsp;25',
+    obsolete: false,
+    note_id: 'experimental-flag',
   },
   chrome39: {
-    full: 'Chrome',
-    short: 'Chrome 39',
+    full: 'Chrome, Opera',
+    short: 'CH 39,<br>OP&nbsp;26',
+    obsolete: false,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   safari51: {
     full: 'Safari',
@@ -176,12 +185,12 @@ exports.browsers = {
     obsolete: false // EOLs together with OS X 10.8
   },
   safari7: {
-    full: 'Safari 7.0',
+    full: 'Safari',
     short: 'SF 7.0',
     obsolete: false
   },
   safari71_8: {
-    full: 'Safari 7.1, Safari 8',
+    full: 'Safari',
     short: 'SF 7.1, SF 8',
     obsolete: false
   },
@@ -196,8 +205,10 @@ exports.browsers = {
     obsolete: false // still supported
   },
   konq49: {
-    full: 'Konqueror 4.13',
-    short: 'KQ 4.13'
+    full: 'Konqueror 4.14',
+    short: 'KQ 4.14',
+    note_id: 'khtml',
+    note_html: 'Results are only applicable for the KHTML rendering engine.'
   },
   rhino17: {
     full: 'Rhino 1.7',
@@ -216,7 +227,7 @@ exports.browsers = {
     nonbrowser: true
   },
   nodeharmony: {
-    full: 'Node 0.11.13 harmony',
+    full: 'Node 0.11.14 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
     nonbrowser: true,
@@ -224,11 +235,11 @@ exports.browsers = {
     note_html: 'Have to be enabled via --harmony flag'
   },
   ios7: {
-    full: 'iOS Safari 7',
+    full: 'iOS Safari',
     short: 'iOS7'
   },
   ios8: {
-    full: 'iOS Safari 8',
+    full: 'iOS Safari',
     short: 'iOS8'
   }
 };
@@ -295,255 +306,455 @@ exports.tests = [
 {
   name: 'arrow functions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
-  exec: function() {
-    try {
-      eval('var a = () => 5;');
-    } catch (e) {
-      return false;
-    }
-    return true;
+  subtests: {
+    '0 parameters': {
+      exec: function(){/*
+        return (() => 5)() === 5;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
+    '1 parameter, no brackets': {
+      exec: function(){/*
+        var b = x => x + "foo";
+        return (b("fee fie foe ") === "fee fie foe foo");
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
+    'multiple parameters': {
+      exec: function(){/*
+        var c = (v, w, x, y, z) => "" + v + w + x + y + z;
+        return (c(6, 5, 4, 3, 2) === "65432");
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome37:    true,
+      },
+    },
+    'lexical "this" binding': {
+      exec: function(){/*
+        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var e = { x : "baz", y : d };
+        return d("ley") === "barley" && e.y("ley") === "barley";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+      },
+    },
+    'can\'t be bound, can be curried': {
+      exec: function(){/*
+        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var e = { x : "baz" };
+        return d.bind(e, "ley")() === "barley";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+      },
+    },
+    'lexical "arguments" binding': {
+      exec: function(){/*
+        var f = (function() { return z => arguments[0]; }(5));
+        return f(6) === 5;
+      */},
+      res: {
+        firefox23:   true,
+        firefox24:   false,
+      },
+    },
+    'no line break between params and <code>=></code>': {
+      exec: function(){/*
+        return () => {
+          try { Function("x\n => 2")(); } catch(e) { return true; }
+        }();
+      */},
+      res: {
+      },
+    },
+    'no "prototype" and "name" properties': {
+      exec: function(){/*
+        var a = () => 5;
+        return !a.hasOwnProperty("prototype") && a.name === ""; 
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        chrome39:    true,
+      },
+    },
   },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
   name: 'const',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:const',
-  exec: function () {
-    try {
-      return eval('(function () { const foobarbaz = 12; return typeof foobarbaz === "number"; }())');
-    } catch (e) {
-      return false;
-    }
-  },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  subtests: {
+    'basic support': {
+      exec: function() {/*
+        const foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }
+    },
+    'is block-scoped': {
+      exec: function() {/*
+        { const bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'redefining a const is a syntax error': {
+      exec: function() {/*
+        const baz = 1;
+        try {
+          Function("const foo = 1; foo = 2;")();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      }
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+      },
+    },
+   'basic support (strict mode)': {
+      exec: function() {/*
+        "use strict";
+        const foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        konq49:      true,
+        nodeharmony: true,
+      }
+    },
+    'is block-scoped (strict mode)': {
+      exec: function() {/*
+        'use strict';
+        { const bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome19dev: true,
+        ie11:        true,
+        nodeharmony: true,
+      }
+    },
+    'redefining a const (strict mode)': {
+      exec: function() {/*
+        'use strict';
+        const baz = 1;
+        try {
+          Function("'use strict'; const foo = 1; foo = 2;")();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   true,
+        chrome33:    true,
+        nodeharmony: true,
+      }
+    },
+    'temporal dead zone (strict mode)': {
+      exec: function(){/*
+        'use strict';
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
   }
 },
 {
   name: 'let',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:let',
-  exec: [
-    {
-      type: 'application/javascript;version=1.8',
-      script: function () {
-        test((function () {
-          try {
-            return eval('(function () { let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-          } catch (e) {
-            return false;
-          }
-        }()));
-        global.__let_script_executed = true;
-      }
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  subtests: {
+    'basic support': {
+      exec: function(){/*
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   {
+          val: false,
+          note_id: 'fx-let',
+          note_html: 'Available from Firefox 2 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
+        },
+      },
     },
-    {
-      script: function () {
-        if (!global.__let_script_executed) {
-          test((function () {
-            try {
-              return eval('(function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }())');
-            } catch (e) {
-              return false;
-            }
-          }()));
+    'is block-scoped': {
+      exec: function(){/*
+        { let bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'for-loop statement scope': {
+      exec: function(){/*
+        for(let baz = 0; false;) {}
+        return (function(){ try { baz; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+      },
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        let qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        firefox35: {
+          val: false,
+          note_id: 'fx-let-tdz',
+          note_html: 'Available from Firefox 35 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
+        },
+      },
+    },
+    'for-loop iteration scope': {
+      exec: function(){/*
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
         }
-      }
-    }
-  ],
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    konq49:      false,
-    opera:       false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+        
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+    'basic support (strict mode)': {
+      exec: function(){/*
+        'use strict';
+        let foo = 123;
+        return (foo === 123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+        firefox11:   { val: false, note_id: 'fx-let' },
+      },
+    },
+    'is block-scoped (strict mode)': {
+      exec: function(){/*
+        'use strict';
+        { let bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'for-loop statement scope (strict mode)': {
+      exec: function(){/*
+        'use strict';
+        for(let baz = 0; false;) {}
+        return (function(){ try { baz; } catch(e) { return true; }}());
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'temporal dead zone (strict mode)': {
+      exec: function(){/*
+        'use strict';
+        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        let qux = 456;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11:        true,
+        chrome19dev: true,
+        nodeharmony: true,
+      },
+    },
+    'for-loop iteration scope (strict mode)': {
+      exec: function(){/*
+        'use strict';
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
+        }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+        
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        chrome37:    true,
+      },
+    },
+  },
 },
 {
   name: 'default function parameters',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
-  exec: function () {/*
-    var passed = (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
-
-    // explicit undefined will defer to the default
-    passed    &= (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
-
-    // defaults can refer to previous parameters
-    passed    &= (function (a, b = a) { return b === 5; }(5));
-
-    return passed;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   {
-      val: true,
-      note_id: 'fx-defaults-scope',
-      note_html: 'In Firefox, defaults can incorrectly refer to later parameters (<code>a=b, b</code>), themselves (<code>a=a</code>), and/or identifiers in the function body (<code>function(a=function(){ return b; }){ var b=true; ... }</code>)'
+  subtests: {
+    'basic functionality': {
+      exec: function(){/*
+        return (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox16:   true,
+      },
     },
-    firefox23:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox24:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox25:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox27:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox28:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox29:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox30:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox31:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox32:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox33:   { val: true, note_id: 'fx-defaults-scope' },
-    firefox34:   { val: true, note_id: 'fx-defaults-scope' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
+    'explicit undefined defers to the default': {
+      exec: function(){/*
+        return (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox18:   true,
+      },
+    },
+    'defaults can refer to previous params': {
+      exec: function(){/*
+        return (function (a, b = a) { return b === 5; }(5));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox16:   true,
+      },
+    },
+    'temporal dead zone': {
+      exec: function(){/*
+        return (function(x = 1) {
+          try {
+            eval("(function(a=a){}())"); 
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=b,b){}())"); 
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=function(){ return b; }){ var b = 1;}())"); 
+            return false;
+          } catch(e) {}
+          return true;
+        }());
+      */},
+      res: {
+      },
+    }
   }
 },
 {
@@ -599,221 +810,141 @@ exports.tests = [
   }
 },
 {
-  name: 'spread call (...) operator',
+  name: 'spread (...) operator',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
-  exec: function () {/*
-    return Math.max(...[1, 2, 3]) === 3
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'spread array (...) operator',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal',
-  exec: function() {/*
-    return [...[1, 2, 3]][2] === 3;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'string spreading',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-literal',
-  exec: function() {/*
-    return ["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   {
-      val: false,
-      note_id: 'fx-spreading-strings',
-      note_html: 'Spreading strings in array literals, but not in calls, is supported from Firefox 16 up.'
+  subtests: {
+    'with arrays, in function calls': {
+      exec: function () {/*
+        return Math.max(...[1, 2, 3]) === 3
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox27:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true
+      },
     },
-    firefox17:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox18:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox23:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox24:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox25:   { val: false, note_id: 'fx-spreading-strings' },
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
+    'with arrays, in array literals': {
+      exec: function() {/*
+       return [...[1, 2, 3]][2] === 3;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox16:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true
+      },
+    },
+    'with strings, in function calls': {
+      exec: function() {/*
+       return Math.max(..."1234") === 4;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox27:   true,
+      },
+    },
+    'with strings, in array literals': {
+      exec: function() {/*
+       return ["a", ..."bcd", "e"][3] === "d";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox17:   true,
+      },
+    },
   }
 },
 {
   name: 'class',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
-  exec: function () {/*
-    class C extends Array {
-      constructor() { this.b = true; }
-      a(){}
-      static d(){}
-    }
-    return C.d && new C().a && new C().b && new C() instanceof Array;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'class statement': {
+      exec: function () {/*
+        class C {}
+        return typeof C === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'class expression': {
+      exec: function () {/*
+        return typeof class C {} === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'constructor': {
+      exec: function () {/*
+        class C {
+          constructor() { this.x = 1; }
+        }
+        return C.prototype.constructor === C
+          && new C().x === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'prototype methods': {
+      exec: function () {/*
+        class C {
+          constructor() {}
+          method() { return 2; }
+        }
+        return typeof C.prototype.method === "function"
+          && new C().method() === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'static methods': {
+      exec: function () {/*
+        class C {
+          constructor() {}
+          static method() { return 3; }
+        }
+        return typeof C.method === "function"
+          && C.method() === 3;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+    'extends': {
+      exec: function () {/*
+        class C extends Array {}
+        return Array.isPrototypeOf(C)
+          && Array.prototype.isPrototypeOf(C.prototype);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
+  },
 },
 {
   name: 'super',
@@ -1291,229 +1422,101 @@ exports.tests = [
   }
 },
 {
-  name: 'octal literals',
+  name: 'octal and binary literals',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
-  exec: function () {/*
-    return 0o10 === 8 && 0O10 === 8;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   {
-      val: true,
-      note_id: 'octal-to-string',
-      note_html: 'Firefox doesn\'t support <code>Number("0o1")</code> and <code>Number("0b1")</code> evaluating to 1 instead of NaN.'
+  subtests: {
+    'octal literals': {
+      exec: function () {/*
+        return 0o10 === 8 && 0O10 === 8;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox25:   true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
     },
-    firefox27:   { val: true, note_id: 'octal-to-string' },
-    firefox28:   { val: true, note_id: 'octal-to-string' },
-    firefox29:   { val: true, note_id: 'octal-to-string' },
-    firefox30:   { val: true, note_id: 'octal-to-string' },
-    firefox31:   { val: true, note_id: 'octal-to-string' },
-    firefox32:   { val: true, note_id: 'octal-to-string' },
-    firefox33:   { val: true, note_id: 'octal-to-string' },
-    firefox34:   { val: true, note_id: 'octal-to-string' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'binary literals',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
-  exec: function () {/*
-    return 0b10 === 2 && 0B10 === 2;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   { val: true, note_id: 'octal-to-string' },
-    firefox27:   { val: true, note_id: 'octal-to-string' },
-    firefox28:   { val: true, note_id: 'octal-to-string' },
-    firefox29:   { val: true, note_id: 'octal-to-string' },
-    firefox30:   { val: true, note_id: 'octal-to-string' },
-    firefox31:   { val: true, note_id: 'octal-to-string' },
-    firefox32:   { val: true, note_id: 'octal-to-string' },
-    firefox33:   { val: true, note_id: 'octal-to-string' },
-    firefox34:   { val: true, note_id: 'octal-to-string' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+    'binary literals': {
+      exec: function () {/*
+        return 0b10 === 2 && 0B10 === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox25:   true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+    'octal supported by Number()': {
+      exec: function () {/*
+        return Number('0o1') === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+    'binary supported by Number()': {
+      exec: function () {/*
+        return Number('0b1') === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+  },
 },
 {
   name: 'template strings',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
-  exec: function () {/*
-    var a = "ba", b = "QUX";
-    return `foo bar
-${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'tagged template strings',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
-  exec: function () {/*
-    var called = false;
-    function fn(parts, a, b) {
-      called = true;
-      return parts instanceof Array &&
-        parts[0]     === "foo"      &&
-        parts[1]     === "bar\n"    &&
-        parts.raw[0] === "foo"      &&
-        parts.raw[1] === "bar\\n"   &&
-        a === 123                   &&
-        b === 456;
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        var a = "ba", b = "QUX";
+        return `foo bar
+        ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox34:   true,
+      },
+    },
+    'tagged template strings': {
+      exec: function () {/*
+        var called = false;
+        function fn(parts, a, b) {
+          called = true;
+          return parts instanceof Array &&
+            parts[0]     === "foo"      &&
+            parts[1]     === "bar\n"    &&
+            parts.raw[0] === "foo"      &&
+            parts.raw[1] === "bar\\n"   &&
+            a === 123                   &&
+            b === 456;
+        }
+        return fn `foo${123}bar\n${456}` && called;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox34:   true,
+      },
     }
-    return fn `foo${123}bar\n${456}` && called;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  },
 },
 {
   name: 'RegExp "y" flag',
@@ -1626,146 +1629,244 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'typed arrays',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
-  exec: function () {/*
-    var buffer = new ArrayBuffer(64);
-    var passed = true;
-    var view;
-
-    // Check that each int type overflows as expected.
-    view = new Int8Array(buffer);         view[0] = 0x80;
-    passed &= view[0] === -0x80;
-    view = new Uint8Array(buffer);        view[0] = 0x100;
-    passed &= view[0] === 0;
-    view = new Uint8ClampedArray(buffer); view[0] = 0x100;
-    passed &= view[0] === 0xFF;
-    view = new Int16Array(buffer);        view[0] = 0x8000;
-    passed &= view[0] === -0x8000;
-    view = new Uint16Array(buffer);       view[0] = 0x10000;
-    passed &= view[0] === 0;
-    view = new Int32Array(buffer);        view[0] = 0x80000000;
-    passed &= view[0] === -0x80000000;
-    view = new Uint32Array(buffer);       view[0] = 0x100000000;
-    passed &= view[0] === 0;
-    // Check that each float type loses precision as expected.
-    view = new Float32Array(buffer);      view[0] = 0.1;
-    passed &= view[0] === 0.10000000149011612;
-    view = new Float64Array(buffer);      view[0] = 0.1;
-    passed &= view[0] === 0.1;
-    return passed;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        {
-      val: false,
-      note_id: 'ie-typedarray',
-      note_html: 'Internet Explorer and Safari 5.1 support every typed array class except <code>Uint8ClampedArray</code>.'
+  subtests: Object.assign({
+    'Int8Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Int8Array(buffer);         view[0] = 0x80;
+        return view[0] === -0x80;
+      */},
+      res: (temp.basicTypedArrayResults = {
+        ejs:         true,
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }),
     },
-    ie11:        { val: false, note_id: 'ie-typedarray' },
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    { val: false, note_id: 'ie-typedarray' },
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
-},
-{
-  name: 'typed arrays (DataView)',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-dataview-objects',
-  exec: function () {/*
-    var buffer = new ArrayBuffer(64);
-    var view = new DataView(buffer);
-    var passed = true;
-
-    view.setInt8 (0, 0x80);        passed &= view.getInt8(0)   === -0x80;
-    view.setUint8(0, 0x100);       passed &= view.getUint8(0)  === 0;
-    view.setInt16(0, 0x8000);      passed &= view.getInt16(0)  === -0x8000;
-    view.setUint16(0,0x10000);     passed &= view.getUint16(0) === 0;
-    view.setInt32(0, 0x80000000);  passed &= view.getInt32(0)  === -0x80000000;
-    view.setUint32(0,0x100000000); passed &= view.getUint32(0) === 0;
-    view.setFloat32(0, 0.1);       passed &= view.getFloat32(0)=== 0.10000000149011612;
-    view.setFloat64(0, 0.1);       passed &= view.getFloat64(0)=== 0.1;
-    return passed;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        true,
-    ie11:        true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    true,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
+    'Uint8Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Uint8Array(buffer);        view[0] = 0x100;
+        return view[0] === 0;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'Uint8ClampedArray': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
+        return view[0] === 0xFF;
+      */},
+      res: {
+        ejs:         true,
+        firefox11:   true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      },
+    },
+    'Int16Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Int16Array(buffer);        view[0] = 0x8000;
+        return view[0] === -0x8000;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'Uint16Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Uint16Array(buffer);       view[0] = 0x10000;
+        return view[0] === 0;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'Int32Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Int32Array(buffer);        view[0] = 0x80000000;
+        return view[0] === -0x80000000;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'Uint32Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Uint32Array(buffer);       view[0] = 0x100000000;
+        return view[0] === 0;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'Float32Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Float32Array(buffer);       view[0] = 0.1;
+        return view[0] === 0.10000000149011612;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'Float64Array': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new Float64Array(buffer);       view[0] = 0.1;
+        return view[0] === 0.1;
+      */},
+      res: temp.basicTypedArrayResults,
+    },
+    'DataView (Int8)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setInt8 (0, 0x80);
+        return view.getInt8(0) === -0x80;
+      */},
+      res: (temp.basicDataViewResults = {
+        ejs:         true,
+        ie10:        true,
+        firefox16:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      }),
+    },
+    'DataView (Uint8)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setUint8(0, 0x100); 
+        return view.getUint8(0) === 0;
+      */},
+      res: temp.basicDataViewResults,
+    },
+    'DataView (Int16)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setInt16(0, 0x8000); 
+        return view.getInt16(0) === -0x8000;
+      */},
+      res: temp.basicDataViewResults,
+    },
+    'DataView (Uint16)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setUint16(0, 0x10000); 
+        return view.getUint16(0) === 0;
+      */},
+      res: temp.basicDataViewResults,
+    },
+    'DataView (Int32)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setInt32(0, 0x80000000); 
+        return view.getInt32(0) === -0x80000000;
+      */},
+      res: temp.basicDataViewResults,
+    },
+    'DataView (Uint32)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setUint32(0, 0x100000000); 
+        return view.getUint32(0) === 0;
+      */},
+      res: temp.basicDataViewResults,
+    },
+    'DataView (Float32)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setFloat32(0, 0.1); 
+        return view.getFloat32(0) === 0.10000000149011612;
+      */},
+      res: temp.basicDataViewResults,
+    },
+    'DataView (Float64)': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setFloat64(0, 0.1); 
+        return view.getFloat64(0) === 0.1;
+      */},
+      res: temp.basicDataViewResults,
+    },
+  },
+  (function(){
+    var methods = {
+    '.from':                  {},
+    '.of':                    {},
+    '.prototype.subarray':    {
+        ejs:         true,
+        firefox16:   true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+    },
+    '.prototype.join':        {},
+    '.prototype.indexOf':     {},
+    '.prototype.lastIndexOf': {},
+    '.prototype.slice':       {},
+    '.prototype.every':       {},
+    '.prototype.filter':      {},
+    '.prototype.forEach':     {},
+    '.prototype.map':         {},
+    '.prototype.reduce':      {},
+    '.prototype.reduceRight': {},
+    '.prototype.reverse':     {},
+    '.prototype.some':        {},
+    '.prototype.sort':        {},
+    '.prototype.copyWithin':  { firefox35: true },
+    '.prototype.find':        {},
+    '.prototype.findIndex':   {},
+    '.prototype.fill':        {},
+    '.prototype.keys':        { chrome38: true },
+    '.prototype.values':      { chrome38: true },
+    '.prototype.entries':     { chrome38: true },
+    };
+    var eqFn = ' === "function"';
+    var obj = {};
+    for (var m in methods) {
+      obj['%TypedArray%' + m] = {
+        exec: eval('0,function(){/*\n  return typeof '
+          + [
+            'Int8Array',
+            'Uint8Array',
+            'Uint8ClampedArray',
+            'Int16Array',
+            'Uint16Array',
+            'Int32Array',
+            'Uint32Array',
+            'Float32Array',
+            'Float64Array'
+          ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/}'),
+        res: methods[m]
+      }
+    };
+    return obj;
+  }())),
 },
 {
   name: 'Map',
@@ -1793,7 +1894,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     firefox13:   false,
     firefox16:   false,
     firefox17:   false,
-    firefox18:   true,
+    firefox18:   false,
     firefox23:   true,
     firefox24:   true,
     firefox25:   true,
@@ -1908,11 +2009,11 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
       note_id: 'weakmap-constructor',
       note_html: 'WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.'
     },
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
+    firefox11:   { val: true, note_id: 'weakmap-constructor' },
+    firefox13:   { val: true, note_id: 'weakmap-constructor' },
+    firefox16:   { val: true, note_id: 'weakmap-constructor' },
+    firefox17:   { val: true, note_id: 'weakmap-constructor' },
+    firefox18:   { val: true, note_id: 'weakmap-constructor' },
     firefox23:   { val: true, note_id: 'weakmap-constructor' },
     firefox24:   { val: true, note_id: 'weakmap-constructor' },
     firefox25:   { val: true, note_id: 'weakmap-constructor' },
@@ -2008,124 +2109,320 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 },
 {
   name: 'Proxy',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies',
-  exec: function () {
-    try {
-      return typeof Proxy !== "undefined" &&
-           new Proxy({}, { get: function () { return 5; } }).foo === 5;
-    }
-    catch(err) { }
-    return false;
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    '"get" handler': {
+      exec: function () {/*
+        var proxied = { };
+        var proxy = new Proxy(proxied, {
+          get: function (t, k, r) {
+            return t === proxied && k === "foo" && r === proxy && 5;
+          }
+        });
+        return proxy.foo === 5;
+      */},
+      res: {
+        ejs:         true,
+        firefox18:   {
+          val: true,
+          note_id: 'fx-proxy-get',
+          note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "get" handler via the prototype chain, unless the proxied object actually does possess the named property.'
+        },
+        firefox23:   { val: true, note_id: 'fx-proxy-get' },
+      },
+    },
+    '"set" handler': {
+      exec: function () {/*
+        var proxied = { };
+        var passed = false;
+        var proxy = new Proxy(proxied, {
+          set: function (t, k, v, r) {
+            passed = t === proxied && k + v === "foobar" && r === proxy;
+          }
+        });
+        proxy.foo = "bar";
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        firefox18:   {
+          val: true,
+          note_id: 'fx-proxy-set',
+          note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "set" handler via the prototype chain.'
+        },
+        firefox23:   { val: true, note_id: 'fx-proxy-set' },
+      },
+    },
+    '"has" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        "foo" in new Proxy(proxied, {
+          has: function (t, k) {
+            passed = t === proxied && k === "foo";
+          }
+        });
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        firefox18:   true,
+      },    
+    },
+    '"deleteProperty" handler': {
+      exec: function () {/*
+      var proxied = {};
+        var passed = false;
+        delete new Proxy(proxied, {
+          deleteProperty: function (t, k) {
+            passed = t === proxied && k === "foo";
+          }
+        }).foo;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        firefox18:   true,
+      },    
+    },
+    '"getOwnPropertyDescriptor" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var fakeDesc = { value: "foo", configurable: true };
+        var returnedDesc = Object.getOwnPropertyDescriptor(
+          new Proxy(proxied, {
+            getOwnPropertyDescriptor: function (t, k) {
+              return t === proxied && k === "foo" && fakeDesc;
+            }
+          }),
+          "foo"
+        );
+        return (returnedDesc.value     === fakeDesc.value
+          && returnedDesc.configurable === fakeDesc.configurable
+          && returnedDesc.writable     === false
+          && returnedDesc.enumerable   === false);
+      */},
+      res: {
+        ejs:         true,
+        firefox18:   {
+          val: false,
+          note_id: 'fx-proxy-getown',
+          note_html: 'From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible'
+        },
+        firefox23:   { val: false, note_id: 'fx-proxy-getown' },
+        firefox30:   true,
+      },    
+    },
+    '"defineProperty" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        Object.defineProperty(
+          new Proxy(proxied, {
+            defineProperty: function (t, k, d) {
+              passed = t === proxied && k === "foo" && d.value === 5;
+            }
+          }),
+          "foo",
+          { value: 5 }
+        );
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        firefox18:   true,
+      },    
+    },
+    '"getPrototypeOf" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var fakeProto = {};
+        var proxy = new Proxy(proxied, {
+          getPrototypeOf: function (t) {
+            return t === proxied && fakeProto;
+          }
+        });
+        return Object.getPrototypeOf(proxy) === fakeProto;
+      */},
+      res: {
+        ejs:         true,
+      },
+    },
+    '"setPrototypeOf" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var newProto = {};
+        var passed = false;
+        Object.setPrototypeOf(
+          new Proxy(proxied, {
+            setPrototypeOf: function (t, p) {
+              passed = t === proxied && p === newProto;
+            }
+          }),
+          newProto
+        );
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+      },
+    },
+    '"isExtensible" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        Object.isExtensible(
+          new Proxy(proxied, {
+            isExtensible: function (t) {
+              passed = t === proxied; return true;
+            }
+          })
+        );
+        return passed;
+      */},
+      res: {
+        firefox31:   true,
+      },
+    },
+    '"preventExtensions" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        Object.preventExtensions(
+          new Proxy(proxied, {
+            preventExtensions: function (t) {
+              passed = t === proxied;
+              return Object.preventExtensions(proxied);
+            }
+          })
+        );
+        return passed;
+      */},
+      res: {
+        firefox23:   true,
+      },
+    },
+    '"enumerate" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        for (var i in
+          new Proxy(proxied, {
+            enumerate: function (t) {
+              passed = t === proxied;
+              return {
+                next: function(){ return { done: true, value: null };}
+              };
+            }
+          })
+        ) { }
+        return passed;
+      */},
+      res: {
+      },
+    },
+    '"ownKeys" handler': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        Object.keys(
+          new Proxy(proxied, {
+            ownKeys: function (t) {
+              passed = t === proxied; return [];
+            }
+          })
+        );
+        return passed;
+      */},
+      res: {
+        firefox18:   {
+          val: false,
+          note_id: 'fx-proxy-ownkeys',
+          note_html: 'Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler'
+        },
+        firefox23:   { val: false, note_id: 'fx-proxy-ownkeys' },
+        firefox33:   true,
+      },
+    },
+    '"apply" handler': {
+      exec: function () {/*
+        var proxied = function(){};
+        var passed = false;
+        var host = {
+          method: new Proxy(proxied, { 
+            apply: function (t, thisArg, args) {
+              passed = t === proxied && thisArg === host && args + "" === "foo,bar";
+            }
+          })
+        };
+        host.method("foo", "bar");
+        return passed;
+      */},
+      res: {
+        firefox18:   true,
+      },
+    },
+    '"construct" handler': {
+      exec: function () {/*
+        var proxied = function(){};
+        var passed = false;
+        new new Proxy(proxied, {
+          construct: function (t, args) {
+            passed = t === proxied && args + "" === "foo,bar";
+            return {};
+          }
+        })("foo","bar");
+        return passed;
+      */},
+      res: {
+        firefox18:   true,
+      },
+    },
+    '"Proxy.revocable': {
+      exec: function () {/*
+        var obj = Proxy.revocable({}, { get: function() { return 5; } });
+        var passed = (obj.proxy.foo === 5);
+        obj.revoke();
+        try {
+          obj.proxy.foo;
+        } catch(e) {
+          passed &= e instanceof TypeError;
+        }
+        return passed;
+      */},
+      res: {
+        firefox34:   true,
+      },
+    },
   },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
   name: 'Reflect',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
-  exec: function () {
-    var i, names =
-      ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
-      "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
-
-    if (typeof Reflect !== "object") {
-      return false;
-    }
-    for (i = 0; i < names.length; i++) {
-      if (!(names[i] in Reflect)) {
-        return false;
+  subtests: (function(){
+    var methods = {
+    'apply':                      { ejs:         true, },
+    'construct':                  { ejs:         true, },
+    'defineProperty':             { ejs:         true, },
+    'deleteProperty':             { ejs:         true, },
+    'getOwnPropertyDescriptor':   { ejs:         true, },
+    'getPrototypeOf':             { ejs:         true, },
+    'has':                        { ejs:         true, },
+    'isExtensible':               { ejs:         true, },
+    'set':                        { ejs:         true, },
+    'setPrototypeOf':             { ejs:         true, },
+    };
+    var eqFn = ' === "function"';
+    var obj = {};
+    for (var m in methods) {
+      obj['Reflect.' + m] = {
+        exec: eval('0,function(){/*\n  return typeof Reflect.' +
+          m + eqFn + ';\n*/}'),
+        res: methods[m]
       }
-    }
-    return true;
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+    };
+    return obj;
+  }()),
 },
 {
   name: 'Reflect.Loader',
@@ -2313,229 +2610,93 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'destructuring',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    // Array destructuring
-    var [a, , [b], g] = [5, null, [6]];
-    // Object destructuring
-    var {c, x:d, h} = {c:7, x:8};
-    // Combined destructuring
-    var [e, {x:f, i}] = [9, {x:10}];
-
-    return a === 5 && b === 6 && c === 7 &&
-           d === 8 && e === 9 && f === 10 &&
-           g === undefined && h === undefined && i === undefined;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  {
-      val: true,
-      note_id: 'fx-destructuring',
-      note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+  subtests: {
+    'array destructuring': {
+      exec: function(){/*
+        var [a, , [b], c] = [5, null, [6]];
+        return a === 5 && b === 6 && c === undefined;
+      */},
+      res: (temp.destructuringResults = {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  {
+          val: true,
+          note_id: 'fx-destructuring',
+          note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
+        },
+        webkit:      true,
+        ios8:        { val: true, note_id: 'fx-destructuring' },
+      }),
     },
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        { val: true, note_id: 'fx-destructuring' },
-  }
-},
-{
-  name: 'destructuring parameters',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    return (function({a, x:b}, [c, d]) {
-      return a === 1 && b === 2 && c === 3 && d === 4;
-    }({a:1, x:2},[3, 4]));
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'destructuring defaults',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    var {a = 1, b = 1, c = 3} = {b:2, c:undefined};
-    return a === 1 && b === 2 && c === 3;
-  */},
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'destructuring rest',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
-  exec: function () {/*
-    var [a, ...b] = [3, 4, 5];
-    var [c, ...d] = [6];
-    return a === 3 && b instanceof Array && (b + "") === "4,5" &&
+    'object destructuring': {
+      exec: function(){/*
+        var {c, x:d, e} = {c:7, x:8};
+        return c === 7 && d === 8 && e === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
+    'combined destructuring': {
+      exec: function(){/*
+        var [e, {x:f, g}] = [9, {x:10}];
+        return e === 9 && f === 10 && g === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
+    'destructuring parameters': {
+      exec: function(){/*
+        return (function({a, x:b, y:e}, [c, d]) {
+          return a === 1 && b === 2 && c === 3 &&
+            d === 4 && e === undefined;
+        }({a:1, x:2},[3, 4]));
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'destructuring rest': {
+      exec: function(){/*
+        var [a, ...b] = [3, 4, 5];
+        var [c, ...d] = [6];
+        return a === 3 && b instanceof Array && (b + "") === "4,5" &&
            c === 6 && d instanceof Array && d.length === 0;
-  */},
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+        firefox34:   true,
+      },
+    },
+    'destructuring defaults': {
+      exec: function(){/*
+        var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
+        return a === 1 && b === 2 && c === 3;
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+      },
+    },
+    'defaults in parameters': {
+      exec: function(){/*
+        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
+          return a === 1 && b === 2 && c === 3 && d === 4 && 
+            e === 5 && f === undefined;
+        }({b:2, c:undefined, x:4}));
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+      },
+    },
+  },
 },
 {
   name: 'Promise',
@@ -2802,17 +2963,17 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   name: 'Object.prototype.__proto__',
   annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
-  exec: function () {
-    var a = {},
-        desc = Object.getOwnPropertyDescriptor
-            && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-    return !!(desc
+  exec: function () {/*
+    var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+    var A = function(){};
+    
+    return (desc
         && "get" in desc
         && "set" in desc
         && desc.configurable
         && !desc.enumerable
-        && Object.create(a).__proto__ === a);
-  },
+        && (new A()).__proto__ === A.prototype);
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -2822,7 +2983,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
-    firefox17:   false,
+    firefox17:   true,
     firefox18:   true,
     firefox23:   true,
     firefox24:   true,
@@ -3496,69 +3657,116 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 {
   name: 'Symbol',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
-  exec: function() {
-    try {
-      var object = {};
-      var symbol = Symbol();
-      var value = Math.random();
-      object[symbol] = value;
-      return typeof symbol === "symbol" &&
-             object[symbol] === value &&
-             Object.keys(object).length === 0 &&
-             Object.getOwnPropertyNames(object).length === 0;
-    }
-    catch(e) {
-      return false;
-    }
+  subtests: {
+    'basic functionality': {
+      exec: function(){/*
+        var object = {};
+        var symbol = Symbol();
+        var value = {};
+        object[symbol] = value;
+        return object[symbol] === value;
+      */},
+      res:(temp.basicSymbolResults = {
+        ejs:         true,
+        chrome30:    true, // Actually Chrome 29
+        nodeharmony: true,
+      }),
+    },
+    'typeof support': {
+      exec: function(){/*
+        return typeof Symbol() === "symbol";
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'symbol keys are hidden to pre-ES6 code': {
+      exec: function(){/*
+        var object = {};
+        var symbol = Symbol();
+        object[symbol] = 1;
+        
+        for (var x in object){}
+        var passed = (x !== symbol);
+        
+        if (Object.keys && Object.getOwnPropertyNames) {
+          passed &= Object.keys(object).length === 0
+            && Object.getOwnPropertyNames(object).length === 0;
+        }
+        
+        return passed;
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'Object.defineProperty support': {
+      exec: function(){/*
+        var object = {};
+        var symbol = Symbol();
+        var value = {};
+        
+        if (Object.defineProperty) {
+          Object.defineProperty(object, symbol, { value: value });
+          return object[symbol] === value;
+        }
+        
+        return passed;
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'cannot coerce to string or number': {
+      exec: function(){/*
+        var symbol = Symbol();
+        
+        try {
+          symbol + "";
+          return false;
+        }
+        catch(e) {}
+        
+        try {
+          symbol + 0;
+          return false;
+        } catch(e) {}
+        
+        return true;
+      */},
+      res: temp.basicSymbolResults,
+    },
+    'can convert with String()': {
+      exec: function(){/*
+        return String(Symbol("foo")) === "Symbol(foo)";
+      */},
+      res: {},
+    },
+    'new Symbol() throws': {
+      exec: function(){/*
+        var symbol = Symbol();
+        try {
+          new Symbol();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        chrome35:   true,
+      },
+    },
+    'Object(symbol)': {
+      exec: function(){/*
+        var symbol = Symbol();
+        var symbolObject = Object(symbol);
+        
+        return typeof symbolObject === "object" &&
+          symbolObject == symbol &&
+          symbolObject.valueOf() === symbol;
+      */},
+      res: {
+        chrome30:   true,
+        chrome35:   false,
+      },
+    },
   },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
-  name: 'Global symbol registry',
+  name: 'global symbol registry',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
   exec: function() {/*
     var symbol = Symbol.for('foo');
@@ -3586,7 +3794,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     firefox31:   false,
     firefox32:   false,
     firefox33:   false,
-    firefox34:   true,
+    firefox34:   false,
     chrome:      false,
     chrome19dev: false,
     chrome21dev: false,
@@ -3612,613 +3820,133 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Symbol.hasInstance',
+  name: 'well-known symbols',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var passed = false;
-    var obj = { foo: true };
-    var C = function(){};
-    C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
-    obj instanceof C;
-    return passed;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.isConcatSpreadable',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = [], b = [];
-    b[Symbol.isConcatSpreadable] = false;
-    a = a.concat(b);
-    return a[0] === b;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.isRegExp',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    return RegExp.prototype[Symbol.isRegExp] === true;
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.iterator',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = 0, b = {};
-    b[Symbol.iterator] = function() {
-      return {
-        next: function() {
+  subtests: {
+    'Symbol.hasInstance': {
+      exec: function() {/*
+        var passed = false;
+        var obj = { foo: true };
+        var C = function(){};
+        C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+        obj instanceof C;
+        return passed;
+      */},
+      res: {
+       ejs:         true,
+      },
+    },
+    'Symbol.isConcatSpreadable': {
+      exec: function() {/*
+        var a = [], b = [];
+        b[Symbol.isConcatSpreadable] = false;
+        a = a.concat(b);
+        return a[0] === b;
+      */},
+      res: {
+       ejs:         true,
+      },
+    },
+    'Symbol.isRegExp': {
+      exec: function() {/*
+        return RegExp.prototype[Symbol.isRegExp] === true;
+      */},
+      res: {
+      },
+    },
+    'Symbol.iterator': {
+      exec: function() {/*
+        var a = 0, b = {};
+        b[Symbol.iterator] = function() {
           return {
-            done: a === 1,
-            value: a++
+            next: function() {
+              return {
+                done: a++ === 1,
+                value: "foo"
+              };
+            }
           };
-        }
-      };
-    };
-    var c;
-    for (c of b) {}
-    return c === 0;
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.toPrimitive',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = {}, b = {}, c = {};
-    var passed = 0;
-    a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
-    b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
-    c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
+        };
+        var c;
+        for (c of b) {}
+        return c === "foo";
+      */},
+      res: {
+        chrome38:    true,
+        ejs:         true,
+      },
+    },
+    'Symbol.toPrimitive': {
+      exec: function() {/*
+        var a = {}, b = {}, c = {};
+        var passed = 0;
+        a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
+        b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
+        c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
 
-    a >= 0;
-    b in {};
-    c == 0;
-    return passed === 3;
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.toStringTag',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = {};
-    a[Symbol.toStringTag] = "foo";
-    return (a + "") === "[object foo]";
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Symbol.unscopables',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
-  exec: function() {/*
-    var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = { bar: true };
-    with (a) {
-      return foo === 1 && typeof bar === "undefined";
-    }
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'RegExp.prototype.match',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match',
-  exec: function () {
-    return typeof RegExp.prototype.match === 'function';
+        a >= 0;
+        b in {};
+        c == 0;
+        return passed === 3;
+      */},
+      res: {
+      },
+    },
+    'Symbol.toStringTag': {
+      exec: function() {/*
+        var a = {};
+        a[Symbol.toStringTag] = "foo";
+        return (a + "") === "[object foo]";
+      */},
+      res: {
+        ejs:         true,
+      },
+    },
+    'Symbol.unscopables': {
+      exec: function() {/*
+        var a = { foo: 1, bar: 2 };
+        a[Symbol.unscopables] = { bar: true };
+        with (a) {
+          return foo === 1 && typeof bar === "undefined";
+        }
+      */},
+      res: {
+        chrome38:    true,
+      },
+    },
   },
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
-  name: 'RegExp.prototype.replace',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.replace',
-  exec: function () {
-    return typeof RegExp.prototype.replace === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
+  name: 'RegExp.prototype methods',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
+  subtests: {
+    'RegExp.prototype.match': {
+      exec: function () {
+        return typeof RegExp.prototype.match === 'function';
+      },
+      res: {},
+    },
+    'RegExp.prototype.replace': {
+      exec: function () {
+        return typeof RegExp.prototype.replace === 'function';
+      },
+      res: {},
+    },
+    'RegExp.prototype.split': {
+      exec: function () {
+        return typeof RegExp.prototype.split === 'function';
+      },
+      res: {},
+    },
+    'RegExp.prototype.search': {
+      exec: function () {
+        return typeof RegExp.prototype.search === 'function';
+      },
+      res: {},
+    },
   }
 },
-{
-  name: 'RegExp.prototype.search',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search',
-  exec: function () {
-    return typeof RegExp.prototype.search === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'RegExp.prototype.split',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.split',
-  exec: function () {
-    return typeof RegExp.prototype.split === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
+// As this one is Annex B, it is separate from the above.
 {
   name: 'RegExp.prototype.compile',
   annex_b: true,
@@ -4579,7 +4307,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false,
+    nodeharmony: true,
     ios7:        false,
     ios8:        true
   }
@@ -5170,898 +4898,196 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   }
 },
 {
-  name: 'Math.clz32',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32',
-  exec: function () {
-    return typeof Math.clz32 === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Math.imul',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul',
-  exec: function () {
-    return typeof Math.imul === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: {
-      val: true,
-      note_id: 'chromu-imul',
-      note_html: 'Available since Chrome 28'
-    },
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.sign',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign',
-  exec: function () {
-    return typeof Math.sign === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'Math.log10',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10',
-  exec: function () {
-    return typeof Math.log10 === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.log2',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2',
-  exec: function () {
-    return typeof Math.log2 === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.log1p',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p',
-  exec: function () {
-    return typeof Math.log1p === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.expm1',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1',
-  exec: function () {
-    return typeof Math.expm1 === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.cosh',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh',
-  exec: function () {
-    return typeof Math.cosh === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.sinh',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh',
-  exec: function () {
-    return typeof Math.sinh === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.tanh',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh',
-  exec: function () {
-    return typeof Math.tanh === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.acosh',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh',
-  exec: function () {
-    return typeof Math.acosh === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.asinh',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh',
-  exec: function () {
-    return typeof Math.asinh === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.atanh',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh',
-  exec: function () {
-    return typeof Math.atanh === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.hypot',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot',
-  exec: function () {
-    return typeof Math.hypot === 'function';
-  },
-  res: {
-    closure:     false,
-    tr:          false,
-    ejs:         true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.trunc',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc',
-  exec: function () {
-    return typeof Math.trunc === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.fround',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround',
-  exec: function () {
-    return typeof Math.fround === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   {
-      val: true,
-      note_id: 'fx-fround',
-      note_html: 'Available since Firefox 26'
-    },
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'Math.cbrt',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt',
-  exec: function () {
-    return typeof Math.cbrt === 'function';
-  },
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        true
-  },
+  name: 'Math methods',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math',
+  subtests: (function(){
+    var methods = {
+      'clz32': {
+        ejs:         true,
+        firefox31:   true,
+        chrome35:    true,
+        nodeharmony: true,
+      },
+      'imul': {
+        ejs:         true,
+        firefox23:   true,
+        chrome21dev: {
+          val: true,
+          note_id: 'chromu-imul',
+          note_html: 'Available since Chrome 28'
+        },
+        chrome30:    true,
+        safari7:     true,
+        webkit:      true,
+        konq49:      true,
+        ios7:        true,
+        nodeharmony: true,
+      },
+      'sign': {
+        ejs:         true,
+        firefox25:   true,
+        chrome33:    true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+      },
+      'log10': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'log2': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'log1p': {
+        ejs:         true,
+        firefox25:   true,
+        chrome35:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'expm1': {
+        ejs:         true,
+        firefox25:   true,
+        chrome35:    true,
+        safari71_8:  true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'cosh': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'sinh': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'tanh': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'acosh': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'asinh': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'atanh': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'hypot': {
+        ejs:         true,
+        firefox27:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'trunc': {
+        ejs:         true,
+        firefox25:   true,
+        chrome33:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'fround': {
+        ejs:         true,
+        firefox27:   {
+          val: true,
+          note_id: 'fx-fround',
+          note_html: 'Available since Firefox 26'
+        },
+        firefox28:   true,
+        chrome35:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+      'cbrt': {
+        ejs:         true,
+        firefox25:   true,
+        chrome34:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+    };
+    var eqFn = ' === "function"';
+    var obj = {};
+    for (var m in methods) {
+      obj['Math.' + m] = {
+        exec: eval('0,function(){/*\n  return typeof Math.' +
+          m + eqFn + ';\n*/}'),
+        res: methods[m]
+      }
+    };
+    return obj;
+  }()),
   separator: 'after'
-}
+},
 ];
 
 //Shift annex B features to the bottom

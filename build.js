@@ -55,61 +55,167 @@ function handle(options) {
 }
 
 function dataToHtml(browsers, tests) {
-  var i, j, browserId, footnote;
-
   var footnoter = new Footnoter();
-
-  // headers
-  var b,
-    headers = [];
-  for (browserId in browsers) {
-    b = browsers[browserId];
+  var headers = [];
+  var body = [];
+  
+  function browserCSSclass(browserId) {
+    var b = browsers[browserId];
+    if (!b) {
+      throw new Error('No browser with ID ' + browserId);
+    }
+    return browserId + (b.obsolete ? ' obsolete' : '');
+  }
+  
+  function interpolateResults(res) {
+    var browser, prevBrowser, result, prevResult, bid, prevBid, j;
+    // For each browser, check if the previous browser has the same
+    // browser full name as this one.
+    for (var bid in browsers) {
+      browser = browsers[bid];
+      if (prevBrowser &&
+          prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'')) {
+        // For each test, check if the previous browser has a result
+        // that this browser lacks. 
+        result     = res[bid];
+        prevResult = res[prevBid];
+        if (prevResult !== undefined && result === undefined) {
+          res[bid] = prevResult;
+        }
+      }
+      prevBrowser = browser;
+      prevBid = bid;
+    }
+  }
+  
+  // Write the browser headers
+  
+  Object.keys(browsers).forEach(function(browserId) {
+    var b = browsers[browserId];
     if (!b) {
       throw new Error('No browser with ID ' + browserId);
     }
     headers.push(
-      '<th class="' + browserTableClass(browserId, b) + '">' +
+      '<th class="' + browserCSSclass(browserId) + '">' +
       ('<a href="#' + browserId + '" class="browser-name">') +
       (b.short ? '<abbr title="' + b.full + '">' + b.short + '</abbr>' : b.full) +
       (b.link ? '</a>' : '') +
       footnoter.get(b) +
       '</th>'
     );
-  }
-
-  // body rows
-  var val,
-    body = [],
-    name, id;
-  for (i = 0; i < tests.length; i++) {
-    t = tests[i];
-    id = t.name.replace(/^[\s<>&"]+|[\s<>&"]+$/g, '').replace(/[\s<>&"]+/g, '_');
-    name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
+  });
+  
+  // Now print the results.
+  tests.forEach(function(t) {
+    var subtests;
+    // Calculate the result totals for tests which consist solely of subtests.
+    if ("subtests" in t) {
+      t.res = t.res || {};
+      
+      subtests = t.subtests;
+      Object.keys(t.subtests).forEach(function(st) {
+        var subtest = subtests[st];
+        // For each of the subtest's results, add 1 to the main test's
+        // results tally for the given browser.
+        if (!subtest.res) {
+          return;
+        }
+        interpolateResults(subtest.res);
+        Object.keys(subtest.res).forEach(function(browserId) {
+          var res = subtest.res[browserId];
+          // If the result is an object representing a footnote, use the raw val
+          if (res.val) {
+            res = res.val;
+          }
+          t.res[browserId] = (t.res[browserId] || 0) + +(res === true);
+        });
+      });
+    }
+    else {
+      interpolateResults(t.res);
+    }
+    
+    var id = t.name.replace(/^[\s<>&"]+|[\s<>&"]+$/g, '').replace(/[\s<>&"]+/g, '_');
+    var name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
+    
     body.push(
-      '<tr>',
+      '<tr' + (subtests ? ' class="supertest"' : '') + '>',
       '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
       testScript(t.exec)
     );
-
-    // each browser for this test
-    for (browserId in browsers) {
-      val = t.res[browserId];
-      if (browsers[browserId].nonbrowser && t.annex_b) {
-        body.push('\t<td title="This feature is optional on non-browser platforms." class="not-applicable '
-          + browserTableClass(browserId, browsers[browserId]) + '">' + boolToString(val) + '</td>');
+    
+    // Function to print out a single <td> result cell.
+    function printResultCell(browserId, result, outOf, footnote) {
+      if (!browsers[browserId]) {
+        return;
       }
-      else if (val == null) {
-        body.push('\t<td class="' + browserTableClass(browserId, browsers[browserId]) + '"></td>');
+      // Prepare the result text
+      if (result && typeof result === 'object') {
+        result = result.val;
+      }
+      if (outOf) {
+        result = (result|0) + "/" + outOf;
+      }
+      if (typeof result === "boolean" || result === undefined) {
+        result = result ? 'Yes' : 'No';
+      }
+      // Prepare the CSS class and title
+      var title = "";
+      var CSSclass = browserCSSclass(browserId);
+      
+      // These change if the result is not applicable.
+      if (browsers[browserId].nonbrowser && t.annex_b) {
+        title="This feature is optional on non-browser platforms.";
+        CSSclass +=" not-applicable ";
+      }
+      
+      if (result == null) {
+        body.push('\t<td class="' + CSSclass + '"></td>');
       } else {
         body.push(
-          '\t<td class="' + boolToString(val).toLowerCase() + ' ' + browserTableClass(browserId, browsers[browserId]) + '">' +
-          boolToString(val) +
-          footnoter.get(val) +
+          '\t<td ' + (title ? ('title="' + title + '" ') : '') +
+          'class="' + (outOf ? 'tally' : result.toLowerCase()) + ' ' + CSSclass + '"' +
+          (outOf ? ' data-tally="' + eval(result) + '"' : '') + '>' +
+          result +
+          footnote +
           '</td>'
         );
       }
     }
-
+    
+    // Print all the results for the main test
+    Object.keys(browsers).forEach(function(browserId) {
+      var result = t.res[browserId];
+      printResultCell(
+        browserId,
+        result,
+        t.subtests ? Object.keys(t.subtests).length : null,
+        footnoter.get(result)
+      );
+    });
+    
+    // Print all the results for the subtests
+    if ("subtests" in t) {
+      Object.keys(t.subtests).forEach(function(subtestName) {
+        var subtest = t.subtests[subtestName];
+        body.push(
+          '<tr class="subtest" data-parent="' + id + '">',
+          '\t<td><span>' + subtestName + '</span></td>\n' +
+          testScript(subtest.exec)
+        );
+        Object.keys(browsers).forEach(function(browserId) {
+          var result = subtest.res[browserId];
+          printResultCell(
+            browserId,
+            result,
+            null,
+            footnoter.get(result)
+          );
+        });
+      });
+    }
+    
+    // Finish the <tr>
     body.push('</tr>');
     if (t.separator === 'after') {
       body.push(
@@ -118,24 +224,13 @@ function dataToHtml(browsers, tests) {
         '</tr>'
       );
     }
-  }
+  });
 
   return {
     tableHeaders: headers,
     tableBody: body,
     footnotes: footnoter.getAll()
   };
-}
-
-function browserTableClass(browserId, entry) {
-  return browserId + (entry.obsolete ? ' obsolete' : '');
-}
-
-function boolToString(val) {
-  if (typeof val === 'object') {
-    val = val.val;
-  }
-  return val ? 'Yes' : 'No';
 }
 
 // Footnoter
@@ -146,7 +241,7 @@ function Footnoter() {
 
 Footnoter.prototype.get = function (val) {
   var id;
-  if (typeof val === 'object' && val.note_id) {
+  if (val && typeof val === 'object' && val.note_id) {
     id = val.note_id;
     // save if it's new
     if (this.indexById[id] == null) {
@@ -196,16 +291,20 @@ function replaceAndIndent(str, replacements) {
   return str;
 }
 
-function deindentFunc(fn) {
-  fn = (fn+'');
-  var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
-  if (indent) {
-    fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
-  }
-  return fn;
-}
-
 function testScript(fn) {
+  
+  function deindentFunc(fn) {
+    fn = (fn+'');
+    var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
+    if (indent) {
+      fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
+    }
+    return fn;
+  }
+  
+  if (!fn) {
+    return '';
+  }
   if (typeof fn === 'function') {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
