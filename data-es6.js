@@ -1298,68 +1298,76 @@ exports.tests = [
   }
 },
 {
-  name: 'generators (yield)',
+  name: 'generators',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
-  exec: function () {/*
-    var generator = (function* () {
-      yield* (function* () {
-        yield 5; yield 6;
-      }());
-    }());
-
-    var item = generator.next();
-    var passed = item.value === 5 && item.done === false;
-    item = generator.next();
-    passed    &= item.value === 6 && item.done === false;
-    item = generator.next();
-    passed    &= item.value === undefined && item.done === true;
-    return passed;
-  */},
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'basic functionality': {
+      exec: function() {/*
+        function* generator(){
+          yield 5; yield 6;
+        };
+        var iterator = generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
+    'yield *': {
+      exec: function () {/*
+        var iterator = (function* generator() {
+          yield* (function* () {
+            yield 5; yield 6;
+          }());
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+        firefox27:   true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+    'shorthand generator methods': {
+      exec: function() {/*
+        var o = {
+          * generator() {
+            yield 5; yield 6;
+          },
+        };
+        var iterator = o.generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+      },
+    },
+  },
 },
 {
   name: 'octal and binary literals',
