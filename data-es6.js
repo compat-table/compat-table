@@ -1184,71 +1184,64 @@ exports.tests = [
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
-  exec: function() {
-    var passed = { __proto__ : [] } instanceof Array
-      && !({ __proto__ : null } instanceof Object);
-
-    // If computed properties are supported, the following
-    // check must also be passed.
-    var a = "__proto__";
-    try {
-      eval("passed &= !({ [a] : [] } instanceof Array)");
-    }
-    catch(e) {}
-    return passed;
-  },
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        true,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   {
-      val: true,
-      note_id: 'fx-proto-shorthand',
-      note_html: 'Firefox 33 and 34 incorrectly regard both of the following as true: <ul>'
-      +'<li><code>var __proto__ = []; ({ __proto__ }) instanceof Array</code>'
-      +'<li><code>({ __proto__(){} }) instanceof Function</code>'
-      +'</ul>'
+  subtests: {
+    'basic support': {
+      exec: function() {/*
+        return { __proto__ : [] } instanceof Array
+          && !({ __proto__ : null } instanceof Object);
+      */},
+      res: {
+        ie11:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      },
     },
-    firefox34:   { val: true, note_id: 'fx-proto-shorthand' },
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    true,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     true,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
+    'multiple __proto__ is an error': {
+      exec: function() {/*
+        try {
+          eval("({ __proto__ : [], __proto__: {} })");
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: {
+      },
+    },
+    'not a computed property': {
+      exec: function() {/*
+        var a = "__proto__";
+        return !({ [a] : [] } instanceof Array);
+      */},
+      res: {
+        firefox34:    true,
+      },
+    },
+    'not a shorthand property': {
+      exec: function() {/*
+        var __proto__ = [];
+        return !({ __proto__ } instanceof Array);
+      */},
+      res: {},
+    },
+    'not a shorthand method': {
+      exec: function() {/*
+        return !({ __proto__(){} }) instanceof Function;
+      */},
+      res: {
+        chrome39:    true,
+      },
+    },
+  },
 },
 {
   name: 'for..of loops',

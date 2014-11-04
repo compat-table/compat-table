@@ -214,7 +214,7 @@ $(function() {
     var yesResults = results.filter('.yes').length;
     results = results.length;
     
-    table.find('tr.supertest td[data-tally]' + name).filter(function() {
+    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).filter(function() {
       yesResults += +$(this).attr('data-tally') || 0;
       results += 1;
     });
