@@ -84,25 +84,21 @@ $(function() {
     $('<span class="info">c</span>')
       .appendTo(td)
       .on('mouseenter', function(e) {
-        var tooltip = $(this);
-
         infoTooltip.html(
             scriptTag.attr('data-source')
             // trim sides, and escape <
             .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
           )
-          .offset({
-            left: e.pageX + 10,
-            top: e.pageY
-          })
           .show();
       })
       .on('mouseleave', function() {
-        mouseoverTimeout = setTimeout(function() {
-          if (mouseoverTimeout) {
-            $(this).hide();
-          }
-        }, 500);
+        infoTooltip.hide();
+      })
+      .on('mousemove', function(e) {
+        infoTooltip.offset({
+          left: e.pageX + 10,
+          top: e.pageY
+        });
       });
   });
 
