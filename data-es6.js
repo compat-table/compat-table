@@ -1126,9 +1126,7 @@ exports.tests = [
       exec: function() {/*
         return !({ __proto__(){} }) instanceof Function;
       */},
-      res: {
-        chrome39:    true,
-      },
+      res: {},
     },
   },
 },
@@ -1593,7 +1591,7 @@ exports.tests = [
     '.prototype.reverse':     {},
     '.prototype.some':        {},
     '.prototype.sort':        {},
-    '.prototype.copyWithin':  { firefox35: true },
+    '.prototype.copyWithin':  { firefox34: true },
     '.prototype.find':        {},
     '.prototype.findIndex':   {},
     '.prototype.fill':        {},
@@ -2481,7 +2479,6 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
         chrome34:    true,
         nodeharmony: true,
       },
@@ -2517,6 +2514,7 @@ exports.tests = [
         safari51:    true,
         webkit:      true,
         opera:       true,
+        konq49:      true,
         rhino17:     true,
         node:        true,
         nodeharmony: true,
@@ -2595,6 +2593,7 @@ exports.tests = [
         firefox11:   true,
         safari51:    true,
         webkit:      true,
+        konq49:      true,
         rhino17:     true,
         phantom:     true,
         ios7:        true,
@@ -2640,7 +2639,9 @@ exports.tests = [
         var o = { foo(){} };
         return o.foo.name === "foo";
       */},
-      res: {},
+      res: {
+        firefox34:    true,
+      },
     },
     'symbol-keyed methods': {
       exec: function() {/*
@@ -2866,8 +2867,8 @@ exports.tests = [
     },
     'String.prototype.contains': {
       exec: function () {/*
-        return typeof String.prototype.endsWith === 'function'
-          && "foobar".endsWith("bar");
+        return typeof String.prototype.contains === 'function'
+          && "foobar".contains("oba");
       */},
       res: {
         tr:          true,
@@ -3483,6 +3484,9 @@ exports.tests = [
     'Array.prototype[Symbol.unscopables]': {
       exec: function () {/*
         var unscopables = Array.prototype[Symbol.unscopables];
+        if (!unscopables) {
+          return false;
+        }
         var ns = "find,findIndex,fill,copyWithin,entries,keys,values".split(",");
         for (var i = 0; i < ns.length; i++) {
           if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;

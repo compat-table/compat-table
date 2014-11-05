@@ -3877,7 +3877,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally firefox31" data-tally="0.45">18/40</td>
           <td class="tally firefox32" data-tally="0.45">18/40</td>
           <td class="tally firefox33" data-tally="0.45">18/40</td>
-          <td class="tally firefox34" data-tally="0.45">18/40</td>
+          <td class="tally firefox34" data-tally="0.475">19/40</td>
           <td class="tally chrome obsolete" data-tally="0.45">18/40</td>
           <td class="tally chrome19dev obsolete" data-tally="0.45">18/40</td>
           <td class="tally chrome21dev obsolete" data-tally="0.45">18/40</td>
@@ -5823,7 +5823,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.copyWit
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
           <td class="no firefox33">No</td>
-          <td class="no firefox34">No</td>
+          <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -8535,8 +8535,8 @@ return typeof Promise !== 'undefined' &&
           <td class="tally firefox30 obsolete" data-tally="0.25">1/4</td>
           <td class="tally firefox31" data-tally="0.5">2/4</td>
           <td class="tally firefox32" data-tally="0.5">2/4</td>
-          <td class="tally firefox33" data-tally="0.75">3/4</td>
-          <td class="tally firefox34" data-tally="1">4/4</td>
+          <td class="tally firefox33" data-tally="0.5">2/4</td>
+          <td class="tally firefox34" data-tally="0.75">3/4</td>
           <td class="tally chrome obsolete" data-tally="0">0/4</td>
           <td class="tally chrome19dev obsolete" data-tally="0.25">1/4</td>
           <td class="tally chrome21dev obsolete" data-tally="0.25">1/4</td>
@@ -8697,8 +8697,8 @@ test(function(){try{return Function("\nvar o = {};\nvar sym = Symbol();\no[sym] 
           <td class="no firefox30 obsolete">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
+          <td class="no firefox33">No</td>
+          <td class="no firefox34">No</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -8798,7 +8798,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
           <td class="tally firefox31" data-tally="0.1875">3/16</td>
           <td class="tally firefox32" data-tally="0.1875">3/16</td>
           <td class="tally firefox33" data-tally="0.1875">3/16</td>
-          <td class="tally firefox34" data-tally="0.1875">3/16</td>
+          <td class="tally firefox34" data-tally="0.25">4/16</td>
           <td class="tally chrome obsolete" data-tally="0.125">2/16</td>
           <td class="tally chrome19dev obsolete" data-tally="0.125">2/16</td>
           <td class="tally chrome21dev obsolete" data-tally="0.125">2/16</td>
@@ -8815,7 +8815,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
           <td class="tally safari71_8" data-tally="0.1875">3/16</td>
           <td class="tally webkit" data-tally="0.1875">3/16</td>
           <td class="tally opera" data-tally="0.125">2/16</td>
-          <td class="tally konq49" data-tally="0.125">2/16</td>
+          <td class="tally konq49" data-tally="0.1875">3/16</td>
           <td class="tally rhino17" data-tally="0.1875">3/16</td>
           <td class="tally phantom" data-tally="0.1875">3/16</td>
           <td class="tally node" data-tally="0.125">2/16</td>
@@ -8974,7 +8974,7 @@ test(function(){try{return Function("\nreturn (new Function).name === \"anonymou
           <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
-          <td class="no konq49">No</td>
+          <td class="yes konq49">Yes</td>
           <td class="yes rhino17">Yes</td>
           <td class="yes phantom">Yes</td>
           <td class="no node">No</td>
@@ -9229,7 +9229,7 @@ test(function(){try{return Function("\nvar o = { foo(){} };\nreturn o.foo.name =
           <td class="no firefox31">No</td>
           <td class="no firefox32">No</td>
           <td class="no firefox33">No</td>
-          <td class="no firefox34">No</td>
+          <td class="yes firefox34">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -10217,10 +10217,10 @@ test(function(){try{return Function("\nreturn typeof String.prototype.endsWith =
         <tr class="subtest" data-parent="String.prototype_methods">
           <td><span>String.prototype.contains</span></td>
 <script data-source="
-return typeof String.prototype.endsWith === 'function'
-  && &quot;foobar&quot;.endsWith(&quot;bar&quot;);
+return typeof String.prototype.contains === 'function'
+  && &quot;foobar&quot;.contains(&quot;oba&quot;);
       ">
-test(function(){try{return Function("\nreturn typeof String.prototype.endsWith === 'function'\n  && \"foobar\".endsWith(\"bar\");\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nreturn typeof String.prototype.contains === 'function'\n  && \"foobar\".contains(\"oba\");\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -12164,13 +12164,16 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.entries ===
           <td><span>Array.prototype[Symbol.unscopables]</span></td>
 <script data-source="
 var unscopables = Array.prototype[Symbol.unscopables];
+if (!unscopables) {
+  return false;
+}
 var ns = &quot;find,findIndex,fill,copyWithin,entries,keys,values&quot;.split(&quot;,&quot;);
 for (var i = 0; i < ns.length; i++) {
   if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;
 }
 return true;
       ">
-test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.unscopables];\nvar ns = \"find,findIndex,fill,copyWithin,entries,keys,values\".split(\",\");\nfor (var i = 0; i < ns.length; i++) {\n  if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;\n}\nreturn true;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.unscopables];\nif (!unscopables) {\n  return false;\n}\nvar ns = \"find,findIndex,fill,copyWithin,entries,keys,values\".split(\",\");\nfor (var i = 0; i < ns.length; i++) {\n  if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;\n}\nreturn true;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -13598,7 +13601,7 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
           <td class="tally chrome35" data-tally="0.2">1/5</td>
           <td class="tally chrome37" data-tally="0.2">1/5</td>
           <td class="tally chrome38" data-tally="0.2">1/5</td>
-          <td class="tally chrome39" data-tally="0.4">2/5</td>
+          <td class="tally chrome39" data-tally="0.2">1/5</td>
           <td class="tally safari51 obsolete" data-tally="0.2">1/5</td>
           <td class="tally safari6" data-tally="0.2">1/5</td>
           <td class="tally safari7" data-tally="0.2">1/5</td>
@@ -13866,7 +13869,7 @@ test(function(){try{return Function("\nreturn !({ __proto__(){} }) instanceof Fu
           <td class="no chrome35">No</td>
           <td class="no chrome37">No</td>
           <td class="no chrome38">No</td>
-          <td class="yes chrome39">Yes</td>
+          <td class="no chrome39">No</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -13978,7 +13981,7 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td class="tally safari71_8" data-tally="1">3/3</td>
           <td class="tally webkit" data-tally="1">3/3</td>
           <td class="tally opera" data-tally="1">3/3</td>
-          <td class="tally konq49" data-tally="0">0/3</td>
+          <td class="tally konq49" data-tally="0.6666666666666666">2/3</td>
           <td title="This feature is optional on non-browser platforms." class="tally rhino17 not-applicable " data-tally="1">3/3</td>
           <td title="This feature is optional on non-browser platforms." class="tally phantom not-applicable " data-tally="0">0/3</td>
           <td title="This feature is optional on non-browser platforms." class="tally node not-applicable " data-tally="0.6666666666666666">2/3</td>
@@ -14031,7 +14034,7 @@ test(function(){try{return Function("\nvar A = function(){};\nreturn (new A())._
           <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
-          <td class="no konq49">No</td>
+          <td class="yes konq49">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="yes rhino17 not-applicable ">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="no phantom not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="yes node not-applicable ">Yes</td>
@@ -14085,7 +14088,7 @@ test(function(){try{return Function("\nvar o = {};\no.__proto__ = Array.prototyp
           <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
-          <td class="no konq49">No</td>
+          <td class="yes konq49">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="yes rhino17 not-applicable ">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="no phantom not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="yes node not-applicable ">Yes</td>
