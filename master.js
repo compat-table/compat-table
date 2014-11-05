@@ -34,7 +34,7 @@ $(function() {
 
       var desktop = $('.desktop');
       if (desktop.length) {
-        desktop[0].colSpan = elem.prop('checked') ? 35 : 16;
+        desktop[0].colSpan = $('th.ie10').nextUntil('th.rhino17').filter('th:visible').length+1;
       }
     })
     .attr('value', $('#show-obsolete').checked);
