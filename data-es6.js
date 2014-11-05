@@ -104,7 +104,8 @@ exports.browsers = {
   },
   firefox32: {
     full: 'Firefox',
-    short: 'FF 32'
+    short: 'FF 32',
+    obsolete: true
   },
   firefox33: {
     full: 'Firefox',
@@ -138,6 +139,12 @@ exports.browsers = {
     obsolete: true,
     note_id: 'experimental-flag',
   },
+  chrome31: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;31,<br>OP&nbsp;18',
+    obsolete: true,
+    note_id: 'experimental-flag',
+  },
   chrome33: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;32-33,<br>OP&nbsp;19-20',
@@ -153,13 +160,19 @@ exports.browsers = {
   chrome35: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;35,<br>OP&nbsp;22',
-    obsolete: false,
+    obsolete: true,
+    note_id: 'experimental-flag',
+  },
+  chrome36: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;36,<br>OP&nbsp;23',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome37: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;37,<br>OP&nbsp;24',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome38: {
@@ -317,7 +330,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     '1 parameter, no brackets': {
@@ -329,7 +342,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     'multiple parameters': {
@@ -341,7 +354,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     'lexical "this" binding': {
@@ -514,7 +527,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox11:   true,
-        chrome33:    true,
+        chrome21dev: true,
         nodeharmony: true,
       }
     },
@@ -658,6 +671,8 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         chrome19dev: true,
+        chrome37:    false, // this test crashes the tab
+        chrome38:    true,
         nodeharmony: true,
       },
     },
@@ -1167,7 +1182,7 @@ exports.tests = [
     chrome33:    false,
     chrome34:    false,
     chrome35:    false,
-    chrome37:    true,
+    chrome38:    true,
     chrome39:    true,
     safari51:    false,
     safari6:     false,
@@ -1229,7 +1244,7 @@ exports.tests = [
         tr:          true,
         closure:     true,
         firefox27:   true,
-        chrome30:    true,
+        chrome21dev: true,
         nodeharmony: true,
       },
     },
@@ -1840,6 +1855,7 @@ exports.tests = [
     chrome19dev: false,
     chrome21dev: false,
     chrome30:    false,
+    chrome31:    true,
     chrome33:    { val: true, note_id: 'weakmap-constructor' },
     chrome34:    { val: true, note_id: 'weakmap-constructor' },
     chrome35:    { val: true, note_id: 'weakmap-constructor' },
@@ -2793,7 +2809,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox29:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
   },
@@ -2810,7 +2826,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox29:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     'String.prototype.normalize': {
@@ -3067,7 +3083,11 @@ exports.tests = [
         
         return true;
       */},
-      res: temp.basicSymbolResults,
+      res: {
+        ejs:         true,
+        chrome38:    true,
+        nodeharmony: true,
+      },
     },
     'can convert with String()': {
       exec: function(){/*
@@ -3211,7 +3231,7 @@ exports.tests = [
         return c === "foo";
       */},
       res: {
-        chrome38:    true,
+        chrome37:    true,
         ejs:         true,
       },
     },
@@ -3418,7 +3438,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox31:   true,
-        chrome37:    true,
+        chrome36:    true,
         safari71_8:  true,
         webkit:      true,
         nodeharmony: true,
