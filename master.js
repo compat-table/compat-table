@@ -32,10 +32,10 @@ $(function() {
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
-      var desktop = $('.desktop');
-      if (desktop.length) {
-        desktop[0].colSpan = $('th.ie10').nextUntil('th.rhino17').filter('th:visible').length+1;
-      }
+      $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible' ).length);
+      $('#compiler-header').prop('colSpan', $('.platform.compiler:visible').length);
+      $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible'  ).length);
+      $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible'  ).length);
     })
     .attr('value', $('#show-obsolete').checked);
 
@@ -105,7 +105,7 @@ $(function() {
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
     return ($(elem).attr('class') || '')
-        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover|tally)(?:\s|$)|\s/g, '');
+        .split(' ')[1];
   }
 
   // Since you can't add a :hover effect for columns,
@@ -220,7 +220,7 @@ $(function() {
     });
     var featuresCount = yesResults / results;
 
-    var colour = getBrowserColour(elem.attr('class'));
+    var colour = getBrowserColour(platformOf(elem));
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
@@ -263,14 +263,9 @@ $(function() {
       };
 
       // Sort the platforms
-      var platforms = $('th.current').parent();
+      var cells = [].slice.call($('th.platform')).sort(comparator);
 
-      var cells = [].slice.call(platforms.children('[data-features]:not(.current)'))
-        .sort(comparator);
-
-      ordering[sortByFeatures] = $.map(cells, function(e) {
-        return e.className;
-      });
+      ordering[sortByFeatures] = $.map(cells, platformOf);
     }
 
     // Define a comparison function using the orderings

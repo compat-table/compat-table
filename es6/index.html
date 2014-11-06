@@ -67,60 +67,60 @@
       </colgroup>
       <thead>
         <tr>
-          <th colspan="3"  class="platformtype ignore"></th>
-          <th colspan="3"  class="platformtype ignore compiler" style="background: #ffdfa4">Compilers</th>
-          <th colspan="16" class="platformtype ignore desktop"  style="background: #fff4c3">Desktop browsers</th>
-          <th colspan="4"  class="platformtype ignore server"   style="background: #f8e8a0">Server-ish</th>
-          <th colspan="2"  class="platformtype ignore mobile"   style="background: #f8daa0">Mobile</th>
+          <th colspan="3"  class="platformtype"></th>
+          <th colspan="3"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
+          <th colspan="16" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+          <th colspan="4"  class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
+          <th colspan="2"  class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
         </tr>
         <tr>
           <th class="test-name">Feature name</th>
           <th class="current">Current browser</th>
           <th></th>
-          <th class="tr"><a href="#tr" class="browser-name"><abbr title="Traceur compiler">Traceur</abbr></th>
-          <th class="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">EJS</abbr></th>
-          <th class="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20140923">Closure Compiler</abbr></th>
-          <th class="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></th>
-          <th class="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></th>
-          <th class="firefox11 obsolete"><a href="#firefox11" class="browser-name"><abbr title="Firefox">FF 11-12</abbr></th>
-          <th class="firefox13 obsolete"><a href="#firefox13" class="browser-name"><abbr title="Firefox">FF 13</abbr></th>
-          <th class="firefox16 obsolete"><a href="#firefox16" class="browser-name"><abbr title="Firefox">FF 16</abbr></th>
-          <th class="firefox17 obsolete"><a href="#firefox17" class="browser-name"><abbr title="Firefox">FF 17</abbr></th>
-          <th class="firefox18 obsolete"><a href="#firefox18" class="browser-name"><abbr title="Firefox">FF 18</abbr></th>
-          <th class="firefox23 obsolete"><a href="#firefox23" class="browser-name"><abbr title="Firefox">FF 23</abbr></th>
-          <th class="firefox24 obsolete"><a href="#firefox24" class="browser-name"><abbr title="Firefox">FF 24</abbr></th>
-          <th class="firefox25 obsolete"><a href="#firefox25" class="browser-name"><abbr title="Firefox">FF 25</abbr></th>
-          <th class="firefox27 obsolete"><a href="#firefox27" class="browser-name"><abbr title="Firefox">FF 27</abbr></th>
-          <th class="firefox28 obsolete"><a href="#firefox28" class="browser-name"><abbr title="Firefox">FF 28</abbr></th>
-          <th class="firefox29 obsolete"><a href="#firefox29" class="browser-name"><abbr title="Firefox">FF 29</abbr></th>
-          <th class="firefox30 obsolete"><a href="#firefox30" class="browser-name"><abbr title="Firefox">FF 30</abbr></th>
-          <th class="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></th>
-          <th class="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></th>
-          <th class="firefox33"><a href="#firefox33" class="browser-name"><abbr title="Firefox">FF 33</abbr></th>
-          <th class="firefox34"><a href="#firefox34" class="browser-name"><abbr title="Firefox">FF 34</abbr></th>
-          <th class="chrome obsolete"><a href="#chrome" class="browser-name"><abbr title="Chrome">CH &lt;19</abbr></th>
-          <th class="chrome19dev obsolete"><a href="#chrome19dev" class="browser-name"><abbr title="Chrome">CH 19</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome21dev obsolete"><a href="#chrome21dev" class="browser-name"><abbr title="Chrome">CH 21-29</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome30 obsolete"><a href="#chrome30" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;30,<br>OP&nbsp;17</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome33 obsolete"><a href="#chrome33" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;32-33,<br>OP&nbsp;19-20</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome34 obsolete"><a href="#chrome34" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;34,<br>OP&nbsp;21</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome35"><a href="#chrome35" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;35,<br>OP&nbsp;22</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome37"><a href="#chrome37" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;37,<br>OP&nbsp;24</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome38"><a href="#chrome38" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;38,<br>OP&nbsp;25</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="chrome39"><a href="#chrome39" class="browser-name"><abbr title="Chrome, Opera">CH 39,<br>OP&nbsp;26</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
-          <th class="safari51 obsolete"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
-          <th class="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
-          <th class="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7.0</abbr></th>
-          <th class="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1, SF 8</abbr></th>
-          <th class="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r173886">WK</abbr></th>
-          <th class="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></th>
-          <th class="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ 4.14</abbr><a href="#khtml-note"><sup>[2]</sup></a></th>
-          <th class="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></th>
-          <th class="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
-          <th class="node"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
-          <th class="nodeharmony"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.14 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
-          <th class="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></th>
-          <th class="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></th>
+          <th class="platform tr compiler"><a href="#tr" class="browser-name"><abbr title="Traceur compiler">Traceur</abbr></th>
+          <th class="platform ejs compiler"><a href="#ejs" class="browser-name"><abbr title="Echo JS">EJS</abbr></th>
+          <th class="platform closure compiler"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20140923">Closure Compiler</abbr></th>
+          <th class="platform ie10 desktop"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></th>
+          <th class="platform ie11 desktop"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></th>
+          <th class="platform firefox11 obsolete desktop"><a href="#firefox11" class="browser-name"><abbr title="Firefox">FF 11-12</abbr></th>
+          <th class="platform firefox13 obsolete desktop"><a href="#firefox13" class="browser-name"><abbr title="Firefox">FF 13</abbr></th>
+          <th class="platform firefox16 obsolete desktop"><a href="#firefox16" class="browser-name"><abbr title="Firefox">FF 16</abbr></th>
+          <th class="platform firefox17 obsolete desktop"><a href="#firefox17" class="browser-name"><abbr title="Firefox">FF 17</abbr></th>
+          <th class="platform firefox18 obsolete desktop"><a href="#firefox18" class="browser-name"><abbr title="Firefox">FF 18</abbr></th>
+          <th class="platform firefox23 obsolete desktop"><a href="#firefox23" class="browser-name"><abbr title="Firefox">FF 23</abbr></th>
+          <th class="platform firefox24 obsolete desktop"><a href="#firefox24" class="browser-name"><abbr title="Firefox">FF 24</abbr></th>
+          <th class="platform firefox25 obsolete desktop"><a href="#firefox25" class="browser-name"><abbr title="Firefox">FF 25</abbr></th>
+          <th class="platform firefox27 obsolete desktop"><a href="#firefox27" class="browser-name"><abbr title="Firefox">FF 27</abbr></th>
+          <th class="platform firefox28 obsolete desktop"><a href="#firefox28" class="browser-name"><abbr title="Firefox">FF 28</abbr></th>
+          <th class="platform firefox29 obsolete desktop"><a href="#firefox29" class="browser-name"><abbr title="Firefox">FF 29</abbr></th>
+          <th class="platform firefox30 obsolete desktop"><a href="#firefox30" class="browser-name"><abbr title="Firefox">FF 30</abbr></th>
+          <th class="platform firefox31 desktop"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></th>
+          <th class="platform firefox32 desktop"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></th>
+          <th class="platform firefox33 desktop"><a href="#firefox33" class="browser-name"><abbr title="Firefox">FF 33</abbr></th>
+          <th class="platform firefox34 desktop"><a href="#firefox34" class="browser-name"><abbr title="Firefox">FF 34</abbr></th>
+          <th class="platform chrome obsolete desktop"><a href="#chrome" class="browser-name"><abbr title="Chrome">CH &lt;19</abbr></th>
+          <th class="platform chrome19dev obsolete desktop"><a href="#chrome19dev" class="browser-name"><abbr title="Chrome">CH 19</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome21dev obsolete desktop"><a href="#chrome21dev" class="browser-name"><abbr title="Chrome">CH 21-29</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome30 obsolete desktop"><a href="#chrome30" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;30,<br>OP&nbsp;17</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome33 obsolete desktop"><a href="#chrome33" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;32-33,<br>OP&nbsp;19-20</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome34 obsolete desktop"><a href="#chrome34" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;34,<br>OP&nbsp;21</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome35 desktop"><a href="#chrome35" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;35,<br>OP&nbsp;22</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome37 desktop"><a href="#chrome37" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;37,<br>OP&nbsp;24</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome38 desktop"><a href="#chrome38" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;38,<br>OP&nbsp;25</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform chrome39 desktop"><a href="#chrome39" class="browser-name"><abbr title="Chrome, Opera">CH 39,<br>OP&nbsp;26</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+          <th class="platform safari51 obsolete desktop"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></th>
+          <th class="platform safari6 desktop"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></th>
+          <th class="platform safari7 desktop"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7.0</abbr></th>
+          <th class="platform safari71_8 desktop"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1, SF 8</abbr></th>
+          <th class="platform webkit desktop"><a href="#webkit" class="browser-name"><abbr title="WebKit r173886">WK</abbr></th>
+          <th class="platform opera desktop"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></th>
+          <th class="platform konq49 desktop"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ 4.14</abbr><a href="#khtml-note"><sup>[2]</sup></a></th>
+          <th class="platform rhino17 engine"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></th>
+          <th class="platform phantom engine"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></th>
+          <th class="platform node engine"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></th>
+          <th class="platform nodeharmony engine"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.14 harmony">Node harmony</abbr><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
+          <th class="platform ios7 mobile"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></th>
+          <th class="platform ios8 mobile"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></th>
         </tr>
       </thead>
       <tbody>

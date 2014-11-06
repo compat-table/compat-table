@@ -150,29 +150,34 @@ exports.browsers = {
     full: 'Bero\'s EcmaScript Engine (version 1.0.0.489)',
     short: 'BESEN',
     link: 'http://besen.sourceforge.net/',
-    obsolete: false
+    obsolete: false,
+    platformtype: 'engine',
   },
 
   rhino: {
     full: 'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
     short: 'Rhino 1.7',
-    obsolete: false
+    obsolete: false,
+    platform: 'engine',
   },
 
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
     short: 'Phantom',
-    obsolete: false
+    obsolete: false,
+    platformtype: 'engine',
   },
 
   ejs: {
     full: 'Echo JS',
     short: 'EJS',
-    obsolete: false
+    obsolete: false,
+    platformtype: 'compiler',
   },
   ios78: {
     full: 'iOS Safari 7/8',
-    short: 'iOS7/8'
+    short: 'iOS7/8',
+    platformtype: 'mobile',
   }
 };
 

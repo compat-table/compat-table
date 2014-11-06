@@ -13,19 +13,19 @@ exports.browsers = {
     full: 'Traceur compiler',
     short: 'Traceur',
     obsolete: false, // always up-to-date version
-    nonbrowser: true
+    platformtype: 'compiler',
   },
   ejs: {
     full: 'Echo JS',
     short: 'EJS',
     obsolete: false, // always up-to-date version
-    nonbrowser: true
+    platformtype: 'compiler',
   },
   closure: {
     full: 'Closure Compiler v20140923',
     short: 'Closure Compiler',
     obsolete: false, // always up-to-date version
-    nonbrowser: true
+    platformtype: 'compiler',
   },
   ie10: {
     full: 'Internet Explorer',
@@ -213,34 +213,36 @@ exports.browsers = {
   rhino17: {
     full: 'Rhino 1.7',
     short: 'RH',
-    nonbrowser: true
+    platformtype: 'engine',
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
     short: 'PH',
-    nonbrowser: true,
+    platformtype: 'engine',
   },
   node: {
     full: 'Node 0.10',
     short: 'Node',
     obsolete: false, // current version
-    nonbrowser: true
+    platformtype: 'engine',
   },
   nodeharmony: {
     full: 'Node 0.11.14 harmony',
     short: 'Node harmony',
     obsolete: false, // current version
-    nonbrowser: true,
+    platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
   },
   ios7: {
     full: 'iOS Safari',
-    short: 'iOS7'
+    short: 'iOS7',
+    platformtype: 'mobile',
   },
   ios8: {
     full: 'iOS Safari',
-    short: 'iOS8'
+    short: 'iOS8',
+    platformtype: 'mobile',
   }
 };
 

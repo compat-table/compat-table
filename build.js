@@ -96,7 +96,7 @@ function dataToHtml(browsers, tests) {
       throw new Error('No browser with ID ' + browserId);
     }
     headers.push(
-      '<th class="' + browserCSSclass(browserId) + '">' +
+      '<th class="platform ' + browserCSSclass(browserId) + ' ' + (b.platformtype || 'desktop') + '">' +
       ('<a href="#' + browserId + '" class="browser-name">') +
       (b.short ? '<abbr title="' + b.full + '">' + b.short + '</abbr>' : b.full) +
       (b.link ? '</a>' : '') +
@@ -164,7 +164,9 @@ function dataToHtml(browsers, tests) {
       var CSSclass = browserCSSclass(browserId);
       
       // These change if the result is not applicable.
-      if (browsers[browserId].nonbrowser && t.annex_b) {
+      if (browsers[browserId].platformtype &&
+          "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
+          t.annex_b) {
         title="This feature is optional on non-browser platforms.";
         CSSclass +=" not-applicable ";
       }
