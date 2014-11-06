@@ -104,7 +104,8 @@ exports.browsers = {
   },
   firefox32: {
     full: 'Firefox',
-    short: 'FF 32'
+    short: 'FF 32',
+    obsolete: true
   },
   firefox33: {
     full: 'Firefox',
@@ -138,6 +139,12 @@ exports.browsers = {
     obsolete: true,
     note_id: 'experimental-flag',
   },
+  chrome31: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;31,<br>OP&nbsp;18',
+    obsolete: true,
+    note_id: 'experimental-flag',
+  },
   chrome33: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;32-33,<br>OP&nbsp;19-20',
@@ -153,13 +160,19 @@ exports.browsers = {
   chrome35: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;35,<br>OP&nbsp;22',
-    obsolete: false,
+    obsolete: true,
+    note_id: 'experimental-flag',
+  },
+  chrome36: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;36,<br>OP&nbsp;23',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome37: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;37,<br>OP&nbsp;24',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome38: {
@@ -317,7 +330,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     '1 parameter, no brackets': {
@@ -329,7 +342,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     'multiple parameters': {
@@ -341,7 +354,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox23:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     'lexical "this" binding': {
@@ -514,7 +527,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox11:   true,
-        chrome33:    true,
+        chrome21dev: true,
         nodeharmony: true,
       }
     },
@@ -658,6 +671,8 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         chrome19dev: true,
+        chrome37:    false, // this test crashes the tab
+        chrome38:    true,
         nodeharmony: true,
       },
     },
@@ -1126,9 +1141,7 @@ exports.tests = [
       exec: function() {/*
         return !({ __proto__(){} }) instanceof Function;
       */},
-      res: {
-        chrome39:    true,
-      },
+      res: {},
     },
   },
 },
@@ -1169,7 +1182,7 @@ exports.tests = [
     chrome33:    false,
     chrome34:    false,
     chrome35:    false,
-    chrome37:    true,
+    chrome38:    true,
     chrome39:    true,
     safari51:    false,
     safari6:     false,
@@ -1231,7 +1244,7 @@ exports.tests = [
         tr:          true,
         closure:     true,
         firefox27:   true,
-        chrome30:    true,
+        chrome21dev: true,
         nodeharmony: true,
       },
     },
@@ -1593,7 +1606,7 @@ exports.tests = [
     '.prototype.reverse':     {},
     '.prototype.some':        {},
     '.prototype.sort':        {},
-    '.prototype.copyWithin':  { firefox35: true },
+    '.prototype.copyWithin':  { firefox34: true },
     '.prototype.find':        {},
     '.prototype.findIndex':   {},
     '.prototype.fill':        {},
@@ -1842,6 +1855,7 @@ exports.tests = [
     chrome19dev: false,
     chrome21dev: false,
     chrome30:    false,
+    chrome31:    true,
     chrome33:    { val: true, note_id: 'weakmap-constructor' },
     chrome34:    { val: true, note_id: 'weakmap-constructor' },
     chrome35:    { val: true, note_id: 'weakmap-constructor' },
@@ -2481,7 +2495,6 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
         chrome34:    true,
         nodeharmony: true,
       },
@@ -2517,6 +2530,7 @@ exports.tests = [
         safari51:    true,
         webkit:      true,
         opera:       true,
+        konq49:      true,
         rhino17:     true,
         node:        true,
         nodeharmony: true,
@@ -2595,6 +2609,7 @@ exports.tests = [
         firefox11:   true,
         safari51:    true,
         webkit:      true,
+        konq49:      true,
         rhino17:     true,
         phantom:     true,
         ios7:        true,
@@ -2640,7 +2655,9 @@ exports.tests = [
         var o = { foo(){} };
         return o.foo.name === "foo";
       */},
-      res: {},
+      res: {
+        firefox34:    true,
+      },
     },
     'symbol-keyed methods': {
       exec: function() {/*
@@ -2792,7 +2809,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox29:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
   },
@@ -2809,7 +2826,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox29:   true,
-        chrome37:    true,
+        chrome38:    true,
       },
     },
     'String.prototype.normalize': {
@@ -2866,8 +2883,8 @@ exports.tests = [
     },
     'String.prototype.contains': {
       exec: function () {/*
-        return typeof String.prototype.endsWith === 'function'
-          && "foobar".endsWith("bar");
+        return typeof String.prototype.contains === 'function'
+          && "foobar".contains("oba");
       */},
       res: {
         tr:          true,
@@ -3066,7 +3083,11 @@ exports.tests = [
         
         return true;
       */},
-      res: temp.basicSymbolResults,
+      res: {
+        ejs:         true,
+        chrome38:    true,
+        nodeharmony: true,
+      },
     },
     'can convert with String()': {
       exec: function(){/*
@@ -3210,7 +3231,7 @@ exports.tests = [
         return c === "foo";
       */},
       res: {
-        chrome38:    true,
+        chrome37:    true,
         ejs:         true,
       },
     },
@@ -3417,7 +3438,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         firefox31:   true,
-        chrome37:    true,
+        chrome36:    true,
         safari71_8:  true,
         webkit:      true,
         nodeharmony: true,
@@ -3483,6 +3504,9 @@ exports.tests = [
     'Array.prototype[Symbol.unscopables]': {
       exec: function () {/*
         var unscopables = Array.prototype[Symbol.unscopables];
+        if (!unscopables) {
+          return false;
+        }
         var ns = "find,findIndex,fill,copyWithin,entries,keys,values".split(",");
         for (var i = 0; i < ns.length; i++) {
           if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;
