@@ -17,7 +17,7 @@ var _gaq = [
 
 window.test = function(expression) {
   var result = expression ? 'Yes' : 'No';
-  document.write('<td class="' + result.toLowerCase() + '">' + result + '</td><td></td>');
+  document.write('<td class="' + result.toLowerCase() + ' current">' + result + '</td><td></td>');
 };
 
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
@@ -58,7 +58,7 @@ $(function() {
     // Also, work out tallies for the current browser's tally features
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
     tr.find('td' + currentBrowserSelector).before(
-      '<td class="tally" data-tally="' + tally/subtests.length + '">' +
+      '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
     );
   });
@@ -104,8 +104,9 @@ $(function() {
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
-    return ($(elem).attr('class') || '')
-        .split(' ')[1];
+    var classList = ($(elem).attr('class') || '')
+        .split(' ');
+    return classList[1] || '';
   }
 
   // Since you can't add a :hover effect for columns,
