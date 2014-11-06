@@ -106,7 +106,7 @@ $(function() {
   function platformOf(elem) {
     var classList = ($(elem).attr('class') || '')
         .split(' ');
-    return classList[1] || '';
+    return classList[1] || classList[0];
   }
 
   // Since you can't add a :hover effect for columns,

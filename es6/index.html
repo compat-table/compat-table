@@ -2779,13 +2779,60 @@ test(function(){try{return Function("\nvar passed = true;\nvar B = class extends
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="computed_properties"><span><a class="anchor" href="#computed_properties">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">computed properties</a></span></td>
+        <tr class="supertest">
+          <td id="object_literal_extensions"><span><a class="anchor" href="#object_literal_extensions">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">object literal extensions</a></span></td>
+
+          <td class="tally tr" data-tally="1">3/3</td>
+          <td class="tally ejs" data-tally="1">3/3</td>
+          <td class="tally closure" data-tally="1">3/3</td>
+          <td class="tally ie10" data-tally="0">0/3</td>
+          <td class="tally ie11" data-tally="0">0/3</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox25 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox27 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox28 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox29 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox30 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox31" data-tally="0">0/3</td>
+          <td class="tally firefox32" data-tally="0">0/3</td>
+          <td class="tally firefox33" data-tally="0.3333333333333333">1/3</td>
+          <td class="tally firefox34" data-tally="1">3/3</td>
+          <td class="tally chrome obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome35" data-tally="0">0/3</td>
+          <td class="tally chrome37" data-tally="0">0/3</td>
+          <td class="tally chrome38" data-tally="0">0/3</td>
+          <td class="tally chrome39" data-tally="0.3333333333333333">1/3</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/3</td>
+          <td class="tally safari6" data-tally="0">0/3</td>
+          <td class="tally safari7" data-tally="0">0/3</td>
+          <td class="tally safari71_8" data-tally="0.3333333333333333">1/3</td>
+          <td class="tally webkit" data-tally="0.3333333333333333">1/3</td>
+          <td class="tally opera" data-tally="0">0/3</td>
+          <td class="tally konq49" data-tally="0">0/3</td>
+          <td class="tally rhino17" data-tally="0">0/3</td>
+          <td class="tally phantom" data-tally="0">0/3</td>
+          <td class="tally node" data-tally="0">0/3</td>
+          <td class="tally nodeharmony" data-tally="0">0/3</td>
+          <td class="tally ios7" data-tally="0">0/3</td>
+          <td class="tally ios8" data-tally="0.3333333333333333">1/3</td>
+        <tr class="subtest" data-parent="object_literal_extensions">
+          <td><span>computed properties</span></td>
 <script data-source="
 var x = 'y';
 return ({ [x]: 1 }).y === 1;
-  ">
-test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -2832,14 +2879,13 @@ test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
-        </tr>
-        <tr>
-          <td id="shorthand_properties"><span><a class="anchor" href="#shorthand_properties">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">shorthand properties</a></span></td>
+        <tr class="subtest" data-parent="object_literal_extensions">
+          <td><span>shorthand properties</span></td>
 <script data-source="
 var a = 7, b = 8, c = {a,b};
 return c.a === 7 && c.b === 8;
-  ">
-test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a === 7 && c.b === 8;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a === 7 && c.b === 8;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -2886,13 +2932,12 @@ test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a 
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="shorthand_methods"><span><a class="anchor" href="#shorthand_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">shorthand methods</a></span></td>
+        <tr class="subtest" data-parent="object_literal_extensions">
+          <td><span>shorthand methods</span></td>
 <script data-source="
 return ({ y() { return 2; } }).y() === 2;
-  ">
-test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3653,16 +3698,63 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="RegExp_y_flag"><span><a class="anchor" href="#RegExp_y_flag">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky">RegExp "y" flag</a></span></td>
+        <tr class="supertest">
+          <td id="RegExp_y_and_u_flags"><span><a class="anchor" href="#RegExp_y_and_u_flags">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky">RegExp "y" and "u" flags</a></span></td>
+
+          <td class="tally tr" data-tally="0.5">1/2</td>
+          <td class="tally ejs" data-tally="0">0/2</td>
+          <td class="tally closure" data-tally="0">0/2</td>
+          <td class="tally ie10" data-tally="0">0/2</td>
+          <td class="tally ie11" data-tally="0">0/2</td>
+          <td class="tally firefox11 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox13 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox16 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox17 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox18 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox23 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox24 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox25 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox27 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox28 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox29 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox30 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox31" data-tally="0.5">1/2</td>
+          <td class="tally firefox32" data-tally="0.5">1/2</td>
+          <td class="tally firefox33" data-tally="0.5">1/2</td>
+          <td class="tally firefox34" data-tally="0.5">1/2</td>
+          <td class="tally chrome obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome35" data-tally="0">0/2</td>
+          <td class="tally chrome37" data-tally="0">0/2</td>
+          <td class="tally chrome38" data-tally="0">0/2</td>
+          <td class="tally chrome39" data-tally="0">0/2</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/2</td>
+          <td class="tally safari6" data-tally="0">0/2</td>
+          <td class="tally safari7" data-tally="0">0/2</td>
+          <td class="tally safari71_8" data-tally="0">0/2</td>
+          <td class="tally webkit" data-tally="0">0/2</td>
+          <td class="tally opera" data-tally="0">0/2</td>
+          <td class="tally konq49" data-tally="0">0/2</td>
+          <td class="tally rhino17" data-tally="0">0/2</td>
+          <td class="tally phantom" data-tally="0">0/2</td>
+          <td class="tally node" data-tally="0">0/2</td>
+          <td class="tally nodeharmony" data-tally="0">0/2</td>
+          <td class="tally ios7" data-tally="0">0/2</td>
+          <td class="tally ios8" data-tally="0">0/2</td>
+        <tr class="subtest" data-parent="RegExp_y_and_u_flags">
+          <td><span>"y" flag</span></td>
 <script data-source="
 var re = new RegExp('\\w');
 var re2 = new RegExp('\\w', 'y');
 re.exec('xy');
 re2.exec('xy');
 return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-  ">
-test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = new RegExp('\\\\w', 'y');\nre.exec('xy');\nre2.exec('xy');\nreturn (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = new RegExp('\\\\w', 'y');\nre.exec('xy');\nre2.exec('xy');\nreturn (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -3709,13 +3801,12 @@ test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = 
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="RegExp_u_flag"><span><a class="anchor" href="#RegExp_u_flag">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.unicode">RegExp "u" flag</a></span></td>
+        <tr class="subtest" data-parent="RegExp_y_and_u_flags">
+          <td><span>"u" flag</span></td>
 <script data-source="
 return &quot;𠮷&quot;.match(/./u)[0].length === 2;
-  ">
-test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length === 2;\n  ")()}catch(e){return false;}}());
+      ">
+test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length === 2;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -7256,7 +7347,7 @@ test(function(){try{return Function("\nvar proxied = function(){};\nvar passed =
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="Proxy">
-          <td><span>"Proxy.revocable</span></td>
+          <td><span>Proxy.revocable</span></td>
 <script data-source="
 var obj = Proxy.revocable({}, { get: function() { return 5; } });
 var passed = (obj.proxy.foo === 5);
@@ -9659,14 +9750,60 @@ return typeof Function.prototype.toMethod === "function";
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
-          <td id="String.raw"><span><a class="anchor" href="#String.raw">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw">String.raw</a></span></td>
-<script data-source="function () {
+        <tr class="supertest">
+          <td id="String_static_methods"><span><a class="anchor" href="#String_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor">String static methods</a></span></td>
+
+          <td class="tally tr" data-tally="1">2/2</td>
+          <td class="tally ejs" data-tally="1">2/2</td>
+          <td class="tally closure" data-tally="0">0/2</td>
+          <td class="tally ie10" data-tally="0">0/2</td>
+          <td class="tally ie11" data-tally="0">0/2</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox25 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox27 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox28 obsolete" data-tally="0">0/2</td>
+          <td class="tally firefox29 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox30 obsolete" data-tally="0.5">1/2</td>
+          <td class="tally firefox31" data-tally="0.5">1/2</td>
+          <td class="tally firefox32" data-tally="0.5">1/2</td>
+          <td class="tally firefox33" data-tally="0.5">1/2</td>
+          <td class="tally firefox34" data-tally="1">2/2</td>
+          <td class="tally chrome obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/2</td>
+          <td class="tally chrome35" data-tally="0">0/2</td>
+          <td class="tally chrome37" data-tally="0.5">1/2</td>
+          <td class="tally chrome38" data-tally="0.5">1/2</td>
+          <td class="tally chrome39" data-tally="0.5">1/2</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/2</td>
+          <td class="tally safari6" data-tally="0">0/2</td>
+          <td class="tally safari7" data-tally="0">0/2</td>
+          <td class="tally safari71_8" data-tally="0">0/2</td>
+          <td class="tally webkit" data-tally="0">0/2</td>
+          <td class="tally opera" data-tally="0">0/2</td>
+          <td class="tally konq49" data-tally="0">0/2</td>
+          <td class="tally rhino17" data-tally="0">0/2</td>
+          <td class="tally phantom" data-tally="0">0/2</td>
+          <td class="tally node" data-tally="0">0/2</td>
+          <td class="tally nodeharmony" data-tally="0">0/2</td>
+          <td class="tally ios7" data-tally="0">0/2</td>
+          <td class="tally ios8" data-tally="0">0/2</td>
+        <tr class="subtest" data-parent="String_static_methods">
+          <td><span>String.raw</span></td>
+<script data-source="
 return typeof String.raw === 'function';
-  }">test(
-function () {
-return typeof String.raw === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof String.raw === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -9712,15 +9849,13 @@ return typeof String.raw === 'function';
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        </tr>
-        <tr>
-          <td id="String.fromCodePoint"><span><a class="anchor" href="#String.fromCodePoint">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint">String.fromCodePoint</a></span></td>
-<script data-source="function () {
+        <tr class="subtest" data-parent="String_static_methods">
+          <td><span>String.fromCodePoint</span></td>
+<script data-source="
 return typeof String.fromCodePoint === 'function';
-  }">test(
-function () {
-return typeof String.fromCodePoint === 'function';
-  }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>

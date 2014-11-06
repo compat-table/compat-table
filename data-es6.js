@@ -1023,162 +1023,49 @@ exports.tests = [
   }
 },
 {
-  name: 'computed properties',
+  name: 'object literal extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
-  exec: function() {/*
-    var x = 'y';
-    return ({ [x]: 1 }).y === 1;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        true
-  }
-},
-{
-  name: 'shorthand properties',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
-  exec: function () {/*
-    var a = 7, b = 8, c = {a,b};
-    return c.a === 7 && c.b === 8;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'shorthand methods',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
-  exec: function() {/*
-    return ({ y() { return 2; } }).y() === 2;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'computed properties': {
+      exec: function() {/*
+        var x = 'y';
+        return ({ [x]: 1 }).y === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox34:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'shorthand properties': {
+      exec: function () {/*
+        var a = 7, b = 8, c = {a,b};
+        return c.a === 7 && c.b === 8;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox33:   true,
+      },
+    },
+    'shorthand methods': {
+      exec: function() {/*
+        return ({ y() { return 2; } }).y() === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        firefox34:   true,
+        chrome39:    true,
+      },
+    },
+  },
 },
 {
   name: '__proto__ in object literals',
@@ -1469,112 +1356,30 @@ exports.tests = [
   },
 },
 {
-  name: 'RegExp "y" flag',
+  name: 'RegExp "y" and "u" flags',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
-  exec: function () {/*
-    var re = new RegExp('\\w');
-    var re2 = new RegExp('\\w', 'y');
-    re.exec('xy');
-    re2.exec('xy');
-    return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   true,
-    firefox13:   true,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'RegExp "u" flag',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.unicode',
-  exec: function() {/*
-    return "𠮷".match(/./u)[0].length === 2;
-  */},
-  res: {
-    tr:          true,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    '"y" flag': {
+      exec: function () {/*
+        var re = new RegExp('\\w');
+        var re2 = new RegExp('\\w', 'y');
+        re.exec('xy');
+        re2.exec('xy');
+        return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+      */},
+      res: {
+        firefox11:   true,
+      },
+    },
+    '"u" flag': {
+      exec: function() {/*
+        return "𠮷".match(/./u)[0].length === 2;
+      */},
+      res: {
+        tr:          true,
+      },
+    },
+  },
 },
 {
   name: 'typed arrays',
@@ -2328,7 +2133,7 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"Proxy.revocable': {
+    'Proxy.revocable': {
       exec: function () {/*
         var obj = Proxy.revocable({}, { get: function() { return 5; } });
         var passed = (obj.proxy.foo === 5);
@@ -2966,108 +2771,31 @@ exports.tests = [
   }
 },
 {
-  name: 'String.raw',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw',
-  exec: function () {
-    return typeof String.raw === 'function';
+  name: 'String static methods',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor',
+  subtests: {
+    'String.raw': {
+      exec: function() {/*
+        return typeof String.raw === 'function';
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox34:   true,
+      },
+    },
+    'String.fromCodePoint': {
+      exec: function() {/*
+        return typeof String.fromCodePoint === 'function';
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox29:   true,
+        chrome37:    true,
+      },
+    },
   },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
-},
-{
-  name: 'String.fromCodePoint',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint',
-  exec: function () {
-    return typeof String.fromCodePoint === 'function';
-  },
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
 },
 {
   name: 'String.prototype methods',
