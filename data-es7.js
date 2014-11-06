@@ -8,12 +8,14 @@ exports.browsers = {
   tr: {
     full: 'Traceur compiler',
     short: 'Traceur',
-    obsolete: false // always up-to-date version
+    obsolete: false, // always up-to-date version
+    platformtype: 'compiler',
   },
   ejs: {
     full: 'Echo JS',
     short: 'EJS',
-    obsolete: false // always up-to-date version
+    obsolete: false, // always up-to-date version
+    platformtype: 'compiler',
   },
   ie11: {
     full: 'Internet Explorer',
@@ -87,16 +89,19 @@ exports.browsers = {
   },
   rhino17: {
     full: 'Rhino 1.7',
-    short: 'RH'
+    short: 'RH',
+    platformtype: 'engine',
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'PH'
+    short: 'PH',
+    platformtype: 'engine',
   },
   node: {
     full: 'Node 0.10',
     short: 'Node',
-    obsolete: false // current version
+    obsolete: false, // current version
+    platformtype: 'engine',
   },
   nodeharmony: {
     full: 'Node 0.11.11 harmony',
@@ -107,11 +112,13 @@ exports.browsers = {
   },
   ios7: {
     full: 'iOS Safari 7',
-    short: 'iOS7'
+    short: 'iOS7',
+    platformtype: 'mobile',
   },
   ios8: {
     full: 'iOS Safari 8',
-    short: 'iOS8'
+    short: 'iOS8',
+    platformtype: 'mobile',
   }
 };
 

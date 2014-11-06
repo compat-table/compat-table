@@ -17,7 +17,7 @@ var _gaq = [
 
 window.test = function(expression) {
   var result = expression ? 'Yes' : 'No';
-  document.write('<td class="' + result.toLowerCase() + '">' + result + '</td><td></td>');
+  document.write('<td class="' + result.toLowerCase() + ' current">' + result + '</td><td></td>');
 };
 
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
@@ -32,10 +32,10 @@ $(function() {
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
-      var desktop = $('.desktop');
-      if (desktop.length) {
-        desktop[0].colSpan = elem.prop('checked') ? 35 : 16;
-      }
+      $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible' ).length);
+      $('#compiler-header').prop('colSpan', $('.platform.compiler:visible').length);
+      $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible'  ).length);
+      $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible'  ).length);
     })
     .attr('value', $('#show-obsolete').checked);
 
@@ -58,7 +58,7 @@ $(function() {
     // Also, work out tallies for the current browser's tally features
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
     tr.find('td' + currentBrowserSelector).before(
-      '<td class="tally" data-tally="' + tally/subtests.length + '">' +
+      '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
     );
   });
@@ -104,8 +104,9 @@ $(function() {
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
-    return ($(elem).attr('class') || '')
-        .replace(/(?:on\-applicable|yes|no|obsolete|selected|hover|tally)(?:\s|$)|\s/g, '');
+    var classList = ($(elem).attr('class') || '')
+        .split(' ');
+    return classList[1] || classList[0];
   }
 
   // Since you can't add a :hover effect for columns,
@@ -214,13 +215,13 @@ $(function() {
     var yesResults = results.filter('.yes').length;
     results = results.length;
     
-    table.find('tr.supertest td[data-tally]' + name).filter(function() {
+    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).filter(function() {
       yesResults += +$(this).attr('data-tally') || 0;
       results += 1;
     });
     var featuresCount = yesResults / results;
 
-    var colour = getBrowserColour(elem.attr('class'));
+    var colour = getBrowserColour(platformOf(elem));
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
@@ -263,14 +264,9 @@ $(function() {
       };
 
       // Sort the platforms
-      var platforms = $('th.current').parent();
+      var cells = [].slice.call($('th.platform')).sort(comparator);
 
-      var cells = [].slice.call(platforms.children('[data-features]:not(.current)'))
-        .sort(comparator);
-
-      ordering[sortByFeatures] = $.map(cells, function(e) {
-        return e.className;
-      });
+      ordering[sortByFeatures] = $.map(cells, platformOf);
     }
 
     // Define a comparison function using the orderings
