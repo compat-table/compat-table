@@ -53,7 +53,17 @@ table.one-selected td.selected {
 }
 
 /* subtests */
-
+.supertest td:first-child {
+    cursor: pointer;
+}
+.supertest td:first-child:hover {
+    left: -1px;
+    top: -1px;
+}
+.supertest td:first-child:active {
+    left: 1px;
+    top: 1px;
+}
 .subtest td:first-child {
   padding-left: 1.2em;
   font-style: italic;
@@ -169,16 +179,14 @@ td.hover.not-applicable {
 /* tooltip button/box */
 .info, .folddown {
     float: right; margin-right: 5px; display: inline-block; width: 15px; height: 15px; line-height: 15px; text-align: center;
-    cursor: default; font-family: "Courier New", Courier, monospace 
+    font-family: "Courier New", Courier, monospace;
 }
 .info {
     color: #eee;
     background: #999;
     border-radius: 20px;
     font-size: 12px;
-}
-.folddown {
-    cursor: pointer;
+    cursor: help;
 }
 .info:hover {
     background: #555 

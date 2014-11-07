@@ -324,7 +324,7 @@ exports.tests = [
 },
 {
   name: 'arrow functions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
   subtests: {
     '0 parameters': {
       exec: function(){/*
