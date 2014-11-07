@@ -23,7 +23,7 @@ exports.browsers = {
   },
   closure: {
     full: 'Closure Compiler v20140923',
-    short: 'Closure Compiler',
+    short: 'Closure<br>Compiler',
     obsolete: false, // always up-to-date version
     platformtype: 'compiler',
   },
@@ -115,6 +115,10 @@ exports.browsers = {
     full: 'Firefox',
     short: 'FF 34'
   },
+  firefox35: {
+    full: 'Firefox',
+    short: 'FF 35'
+  },
   chrome: {
     full: 'Chrome',
     short: 'CH &lt;19',
@@ -204,7 +208,7 @@ exports.browsers = {
   },
   safari71_8: {
     full: 'Safari',
-    short: 'SF 7.1, SF 8',
+    short: 'SF 7.1,<br>SF 8',
     obsolete: false
   },
   webkit: {
@@ -241,7 +245,7 @@ exports.browsers = {
   },
   nodeharmony: {
     full: 'Node 0.11.14 harmony',
-    short: 'Node harmony',
+    short: 'Node<br>harmony',
     obsolete: false, // current version
     platformtype: 'engine',
     note_id: 'harmony-flag',
@@ -578,6 +582,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox11:   { val: false, note_id: 'fx-let', },
       },
     },
     'for-loop statement scope': {
@@ -590,6 +595,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox11:   { val: false, note_id: 'fx-let', },
       },
     },
     'temporal dead zone': {
@@ -655,6 +661,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: true,
         nodeharmony: true,
       },
@@ -670,6 +677,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: true,
         chrome37:    false, // this test crashes the tab
         chrome38:    true,
@@ -686,6 +694,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11:        true,
+        firefox35:   { val: false, note_id: 'fx-let-tdz', },
         chrome19dev: true,
         nodeharmony: true,
       },
@@ -1119,6 +1128,7 @@ exports.tests = [
         }
       */},
       res: {
+        firefox35:    true,
       },
     },
     'not a computed property': {
@@ -1135,13 +1145,17 @@ exports.tests = [
         var __proto__ = [];
         return !({ __proto__ } instanceof Array);
       */},
-      res: {},
+      res: {
+        firefox35:    true,
+      },
     },
     'not a shorthand method': {
       exec: function() {/*
-        return !({ __proto__(){} }) instanceof Function;
+        return !({ __proto__(){} } instanceof Function);
       */},
-      res: {},
+      res: {
+        firefox35:    true,
+      },
     },
   },
 },
@@ -1267,6 +1281,8 @@ exports.tests = [
       res: {
         tr:          true,
         closure:     true,
+        chrome39:    true,
+        firefox35:   true,
       },
     },
   },
@@ -1382,6 +1398,7 @@ exports.tests = [
       */},
       res: {
         firefox11:   true,
+        chrome39:    true,
       },
     },
     '"u" flag': {
@@ -2657,6 +2674,7 @@ exports.tests = [
       */},
       res: {
         firefox34:    true,
+        chrome39:     true,
       },
     },
     'symbol-keyed methods': {
@@ -3093,7 +3111,9 @@ exports.tests = [
       exec: function(){/*
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
-      res: {},
+      res: {
+        chrome39:    true,
+      },
     },
     'new Symbol() throws': {
       exec: function(){/*
