@@ -48,12 +48,16 @@ $(function() {
     if (subtests.length === 0) {
       return;
     }
-    // Attach dropdown buttons to those tests with subtests
-    $('<span class="folddown">&#9660;</span>')
-      .appendTo(tr.children()[0])
-      .on('click', function() {
+    // Attach dropdown indicator and onclick to those tests with subtests
+    $('<span class="folddown">&#9658;</span>')
+      .appendTo(tr.children()[0]);
+    
+    tr.on('click', function(event) {
+      if (!$(event.target).is('a')) {
         subtests.toggle();
-      });
+        tr.find(".folddown").css('transform', 'rotate(' + (subtests.is(':visible') ? '90deg' : '0deg') + ')');
+      }
+    });
       
     // Also, work out tallies for the current browser's tally features
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
@@ -133,7 +137,7 @@ $(function() {
 
   $(document).on('click', function removeHighlighting(event) {
     // Don't remove all dimming if another link was clicked in this event.
-    if ($(event.target).is('[href],[href] *'))
+    if ($(event.target).is('[href],[href] *, .supertest *'))
       return;
     table.removeClass('one-selected');
   });
