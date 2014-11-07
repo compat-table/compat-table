@@ -912,6 +912,20 @@ exports.tests = [
         closure:     true,
       },
     },
+    'is block-scoped': {
+      exec: function () {/*
+        class C {}
+        {
+          class D {}
+        }
+        return typeof C === "function" && typeof D === "undefined";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+      },
+    },
     'class expression': {
       exec: function () {/*
         return typeof class C {} === "function";
@@ -983,76 +997,54 @@ exports.tests = [
 {
   name: 'super',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
-  exec: function () {/*
-    var passed = true;
-    var B = class extends class {
-      constructor(a) { return this.id + a; }
-      foo(a)         { return a + this.id; }
-    } {
-      constructor(a) {
-        this.id = 'AB';
-        // "super" in the constructor calls
-        // the superclass's constructor on "this".
-        passed &= super(a)     === 'ABCD';
-        // "super" can be also used to call
-        // superclass methods on "this".
-        passed &= super.foo(a) === 'CDAB';
-      }
-      foo(a) {
-        passed &= super.foo(a) === 'YZEF';
-      }
-    }
-    var b = new B("CD");
-    // "super" is bound statically, even though "this" isn't
-    var obj = { foo: b.foo, id:"EF" };
-    obj.foo("YZ");
-    return passed;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'in constructors': {
+      exec: function() {/*
+        class B extends class {
+          constructor(a) { return "foo" + a; }
+        } {
+          constructor(a) { return super("bar" + a); }
+        }
+        return new B("baz") === "foobarbaz";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+    'in methods': {
+      exec: function() {/*
+        class B extends class {
+          qux(a) { return "foo" + a; }
+        } {
+          qux(a) { return super.qux("bar" + a); }
+        }
+        return new B().qux("baz") === "foobarbaz";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+    'is statically bound': {
+      exec: function() {/*
+        class B extends class {
+          qux() { return "bar"; }
+        } {
+          qux() { return super.qux() + this.corge; }
+        }
+        var obj = {
+          qux: B.prototype.qux,
+          corge: "ley"
+        };
+        return obj.qux() === "barley";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+  },
 },
 {
   name: 'object literal extensions',
