@@ -980,6 +980,18 @@ exports.tests = [
         closure:     true,
       },
     },
+    'implicit strict mode': {
+      exec: function () {/*
+        var c = class C {
+          static method() { return this === undefined; }
+        }.method;
+        
+        return c();
+      */},
+      res: {
+        tr:          true,
+      },
+    },
     'extends': {
       exec: function () {/*
         class C extends Array {}
