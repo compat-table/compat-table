@@ -377,11 +377,23 @@ exports.tests = [
         firefox23:   true,
       },
     },
+    '"this" unchanged by call or apply': {
+      exec: function(){/*
+        var d = { x : "foo", y : function() { return () => this.x; }};
+        var e = { x : "bar" };
+        return d.y().call(e) === "foo" && d.y().apply(e) === "foo";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+      },
+    },
     'can\'t be bound, can be curried': {
       exec: function(){/*
-        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var d = { x : "bar", y : function() { return z => this.x + z; }};
         var e = { x : "baz" };
-        return d.bind(e, "ley")() === "barley";
+        return d.y().bind(e, "ley")() === "barley";
       */},
       res: {
         tr:          true,
