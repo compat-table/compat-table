@@ -22,7 +22,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20140923',
+    full: 'Closure Compiler v20141023',
     short: 'Closure<br>Compiler',
     obsolete: false, // always up-to-date version
     platformtype: 'compiler',
@@ -333,6 +333,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
         firefox23:   true,
         chrome38:    true,
       },
@@ -345,6 +346,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
         firefox23:   true,
         chrome38:    true,
       },
@@ -357,6 +359,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
         firefox23:   true,
         chrome38:    true,
       },
@@ -370,6 +373,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
         firefox23:   true,
       },
     },
@@ -382,6 +386,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
         firefox23:   true,
       },
     },
@@ -391,6 +396,7 @@ exports.tests = [
         return f(6) === 5;
       */},
       res: {
+        closure:     true,
         firefox23:   true,
         firefox24:   false,
       },
@@ -632,6 +638,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
       },
     },
     'basic support (strict mode)': {
@@ -718,6 +725,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        closure:     true,
         chrome37:    true,
       },
     },
