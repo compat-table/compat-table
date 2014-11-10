@@ -1688,14 +1688,13 @@ exports.tests = [
 
         map.set(key, 123);
 
-        return map.has(key) && map.get(key) === 123 &&
-               map.size === 1;
+        return map.has(key) && map.get(key) === 123;
       */},
       res: {
         tr:          true,
         ejs:         true,
         ie11:        true,
-        firefox23:   true,
+        firefox16:   true,
         chrome21dev: true,
         safari71_8:  true,
         webkit:      true,
@@ -1710,14 +1709,34 @@ exports.tests = [
         var map = new Map([[key1, 123], [key2, 456]]);
 
         return map.has(key1) && map.get(key1) === 123 &&
-               map.has(key2) && map.get(key2) === 456 &&
-               map.size === 2;
+               map.has(key2) && map.get(key2) === 456;;
       */},
       res: {
         tr:          true,
         ejs:         true,
-        firefox23:   true,
+        firefox16:   true,
         chrome38:    true,
+      },
+    },
+    'Map.prototype.size': {
+      exec: function () {/*
+        var key = {};
+        var map = new Map();
+
+        map.set(key, 123);
+
+        return map.size === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'Map.prototype.delete': {
@@ -1727,8 +1746,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox16:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'Map.prototype.clear': {
@@ -1738,8 +1762,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'Map.prototype.forEach': {
@@ -1749,8 +1778,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox25:   true,
+        chrome36:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'Map.prototype.keys': {
@@ -1760,8 +1794,11 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        firefox23:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome36:    true,
       },
     },
     'Map.prototype.values': {
@@ -1771,8 +1808,11 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        firefox23:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome36:    true,
       },
     },
     'Map.prototype.entries': {
@@ -1782,8 +1822,11 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        firefox23:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome36:    true,
       },
     },
   },
@@ -1800,15 +1843,16 @@ exports.tests = [
         set.add(123);
         set.add(123);
 
-        return set.has(123) && set.size === 1;
+        return set.has(123);
       */},
       res: {
         tr:          true,
         ejs:         true,
         ie11:        true,
-        firefox23:   true,
+        firefox16:   true,
         chrome21dev: true,
         safari71_8:  true,
+        ios8:        true,
         webkit:      true,
         nodeharmony: true,
         ios8:        true,
@@ -1820,13 +1864,37 @@ exports.tests = [
         var obj2 = {};
         var set = new Set([obj1, obj2]);
 
-        return set.has(obj1) && set.has(obj2) && set.size === 2;
+        return set.has(obj1) && set.has(obj2);
       */},
       res: {
         tr:          true,
         ejs:         true,
-        firefox23:   true,
+        firefox16:   true,
         chrome38:    true,
+      },
+    },
+    'Set.prototype.size': {
+      exec: function () {/*
+        var obj = {};
+        var set = new Set();
+
+        set.add(123);
+        set.add(123);
+        set.add(456);
+
+        return set.size === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
       },
     },
     'Set.prototype.delete': {
@@ -1836,8 +1904,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox16:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'Set.prototype.clear': {
@@ -1847,8 +1920,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'Set.prototype.forEach': {
@@ -1858,21 +1936,41 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox25:   true,
+        chrome36:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
-    'Set.prototype.keys, Set.prototype.values': {
+    'Set.prototype.keys': {
       exec: function () {/*
-        return typeof Set.prototype.keys === "function"
-          && typeof Set.prototype.values === "function"
-          && Set.prototype.keys === Set.prototype.values;
+        return typeof Set.prototype.keys === "function";
       */},
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
+        firefox24:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
         chrome38:    true,
+      },
+    },
+    'Set.prototype.values': {
+      exec: function () {/*
+        return typeof Set.prototype.values === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox24:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome37:    true,
       },
     },
     'Set.prototype.entries': {
@@ -1882,8 +1980,11 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        firefox24:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome37:    true,
       },
     },
   },
@@ -1931,8 +2032,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox11:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
     'WeakMap.prototype.clear': {
@@ -1942,8 +2048,13 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        firefox33:   true,
-        chrome38:    true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
       },
     },
   },
@@ -1964,7 +2075,7 @@ exports.tests = [
       */},
       res: {
         firefox34:   true,
-        chrome31:    true,
+        chrome30:    true,
         nodeharmony: true,
       },
     },
@@ -1977,8 +2088,6 @@ exports.tests = [
       */},
       res: {
         firefox34:   true,
-        chrome31:    true,
-        chrome33:    false,
         chrome38:    true,
       },
     },
@@ -1989,7 +2098,9 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        chrome38:    true,
+        firefox34:   true,
+        chrome30:    true,
+        nodeharmony: true,
       },
     },
     'WeakSet.prototype.clear': {
@@ -1999,7 +2110,9 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        chrome38:    true,
+        firefox34:   true,
+        chrome30:    true,
+        nodeharmony: true,
       },
     },
   },
