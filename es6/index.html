@@ -579,11 +579,11 @@ test(function(){try{return Function("\nvar f = (function() { return z => argumen
         <tr class="subtest" data-parent="arrow_functions">
           <td><span>no line break between params and <code>=></code></span></td>
 <script data-source="
-return () => {
+return (() => {
   try { Function(&quot;x\n => 2&quot;)(); } catch(e) { return true; }
-}();
+})();
       ">
-test(function(){try{return Function("\nreturn () => {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n}();\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nreturn (() => {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n})();\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
