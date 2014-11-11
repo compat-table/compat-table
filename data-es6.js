@@ -1826,6 +1826,31 @@ exports.tests = [
         chrome36:    true,
       },
     },
+    '`-0` key should be converted to `+0`': {
+      exec: function () {/*
+        var map = new Map();
+        map.set(-0, -0);
+        var k = undefined;
+        map.forEach(function (value, key) {
+          k = 1 / key;
+        });
+        return k === Infinity;
+      */},
+      res: {
+        firefox29:   true,
+        chrome39:    true,
+      },
+    },
+    '"set" should return Map object': {
+      exec: function () {/*
+        var map = new Map();
+        return map.set(0, 0) === map;
+      */},
+      res: {
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
   },
 },
 {
