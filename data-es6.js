@@ -933,9 +933,6 @@ exports.tests = [
         return typeof C === "function" && typeof D === "undefined";
       */},
       res: {
-        tr:          true,
-        ejs:         true,
-        closure:     true,
       },
     },
     'class expression': {

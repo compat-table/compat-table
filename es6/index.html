@@ -2513,9 +2513,9 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
         <tr class="supertest">
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
 
-          <td class="tally tr" data-tally="1">8/8</td>
-          <td class="tally ejs" data-tally="0.875">7/8</td>
-          <td class="tally closure" data-tally="0.875">7/8</td>
+          <td class="tally tr" data-tally="0.875">7/8</td>
+          <td class="tally ejs" data-tally="0.75">6/8</td>
+          <td class="tally closure" data-tally="0.75">6/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
           <td class="tally ie11" data-tally="0">0/8</td>
           <td class="tally firefox11 obsolete" data-tally="0">0/8</td>
@@ -2628,9 +2628,9 @@ return typeof C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
 test(function(){try{return Function("\nclass C {}\n{\n  class D {}\n}\nreturn typeof C === \"function\" && typeof D === \"undefined\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
-          <td class="yes ejs">Yes</td>
-          <td class="yes closure">Yes</td>
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no firefox11 obsolete">No</td>
@@ -7475,7 +7475,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
           <td class="tally safari6" data-tally="0">0/9</td>
           <td class="tally safari7" data-tally="0">0/9</td>
           <td class="tally safari71_8" data-tally="0.8888888888888888">8/9</td>
-          <td class="tally webkit" data-tally="0.7777777777777778">7/9</td>
+          <td class="tally webkit" data-tally="0.8888888888888888">8/9</td>
           <td class="tally opera" data-tally="0">0/9</td>
           <td class="tally konq49" data-tally="0">0/9</td>
           <td class="tally rhino17" data-tally="0">0/9</td>
@@ -7767,7 +7767,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.clear === \"f
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
           <td class="yes safari71_8">Yes</td>
-          <td class="no webkit">No</td>
+          <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
