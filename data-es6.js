@@ -377,11 +377,23 @@ exports.tests = [
         firefox23:   true,
       },
     },
+    '"this" unchanged by call or apply': {
+      exec: function(){/*
+        var d = { x : "foo", y : function() { return () => this.x; }};
+        var e = { x : "bar" };
+        return d.y().call(e) === "foo" && d.y().apply(e) === "foo";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+      },
+    },
     'can\'t be bound, can be curried': {
       exec: function(){/*
-        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var d = { x : "bar", y : function() { return z => this.x + z; }};
         var e = { x : "baz" };
-        return d.bind(e, "ley")() === "barley";
+        return d.y().bind(e, "ley")() === "barley";
       */},
       res: {
         tr:          true,
@@ -912,6 +924,17 @@ exports.tests = [
         closure:     true,
       },
     },
+    'is block-scoped': {
+      exec: function () {/*
+        class C {}
+        {
+          class D {}
+        }
+        return typeof C === "function" && typeof D === "undefined";
+      */},
+      res: {
+      },
+    },
     'class expression': {
       exec: function () {/*
         return typeof class C {} === "function";
@@ -966,6 +989,18 @@ exports.tests = [
         closure:     true,
       },
     },
+    'implicit strict mode': {
+      exec: function () {/*
+        var c = class C {
+          static method() { return this === undefined; }
+        }.method;
+        
+        return c();
+      */},
+      res: {
+        tr:          true,
+      },
+    },
     'extends': {
       exec: function () {/*
         class C extends Array {}
@@ -983,76 +1018,54 @@ exports.tests = [
 {
   name: 'super',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
-  exec: function () {/*
-    var passed = true;
-    var B = class extends class {
-      constructor(a) { return this.id + a; }
-      foo(a)         { return a + this.id; }
-    } {
-      constructor(a) {
-        this.id = 'AB';
-        // "super" in the constructor calls
-        // the superclass's constructor on "this".
-        passed &= super(a)     === 'ABCD';
-        // "super" can be also used to call
-        // superclass methods on "this".
-        passed &= super.foo(a) === 'CDAB';
-      }
-      foo(a) {
-        passed &= super.foo(a) === 'YZEF';
-      }
-    }
-    var b = new B("CD");
-    // "super" is bound statically, even though "this" isn't
-    var obj = { foo: b.foo, id:"EF" };
-    obj.foo("YZ");
-    return passed;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'in constructors': {
+      exec: function() {/*
+        class B extends class {
+          constructor(a) { return "foo" + a; }
+        } {
+          constructor(a) { return super("bar" + a); }
+        }
+        return new B("baz") === "foobarbaz";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+    'in methods': {
+      exec: function() {/*
+        class B extends class {
+          qux(a) { return "foo" + a; }
+        } {
+          qux(a) { return super.qux("bar" + a); }
+        }
+        return new B().qux("baz") === "foobarbaz";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+    'is statically bound': {
+      exec: function() {/*
+        class B extends class {
+          qux() { return "bar"; }
+        } {
+          qux() { return super.qux() + this.corge; }
+        }
+        var obj = {
+          qux: B.prototype.qux,
+          corge: "ley"
+        };
+        return obj.qux() === "barley";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+      },
+    },
+  },
 },
 {
   name: 'object literal extensions',
@@ -1664,242 +1677,442 @@ exports.tests = [
 {
   name: 'Map',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
-  exec: function () {/*
-    var key = {};
-    var map = new Map();
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        var key = {};
+        var map = new Map();
 
-    map.set(key, 123);
+        map.set(key, 123);
 
-    return map.has(key) && map.get(key) === 123 &&
-           map.size === 1;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        {
-      val: true,
-      note_id: 'map-constructor',
-      note_html: 'Map and Set constructor arguments, such as <code>new Map([[key, val]])</code> or <code>new Set([obj1, obj2])</code>, are not supported.'
+        return map.has(key) && map.get(key) === 123;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox16:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
     },
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: { val: true, note_id: 'map-constructor' },
-    chrome30:    { val: true, note_id: 'map-constructor' },
-    chrome33:    { val: true, note_id: 'map-constructor' },
-    chrome34:    { val: true, note_id: 'map-constructor' },
-    chrome35:    { val: true, note_id: 'map-constructor' },
-    chrome37:    { val: true, note_id: 'map-constructor' },
-    chrome39:    { val: true, note_id: 'map-constructor' },
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  { val: true, note_id: 'map-constructor' },
-    webkit:      { val: true, note_id: 'map-constructor' },
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: { val: true, note_id: 'map-constructor' },
-    ios7:        false,
-    ios8:        { val: true, note_id: 'map-constructor' },
-  }
+    'constructor arguments': {
+      exec: function () {/*
+        var key1 = {};
+        var key2 = {};
+        var map = new Map([[key1, 123], [key2, 456]]);
+
+        return map.has(key1) && map.get(key1) === 123 &&
+               map.has(key2) && map.get(key2) === 456;;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox16:   true,
+        chrome38:    true,
+      },
+    },
+    'Map.prototype.size': {
+      exec: function () {/*
+        var key = {};
+        var map = new Map();
+
+        map.set(key, 123);
+
+        return map.size === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Map.prototype.delete': {
+      exec: function () {/*
+        return typeof Map.prototype.delete === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox16:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Map.prototype.clear': {
+      exec: function () {/*
+        return typeof Map.prototype.clear === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Map.prototype.forEach': {
+      exec: function () {/*
+        return typeof Map.prototype.forEach === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox25:   true,
+        chrome36:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Map.prototype.keys': {
+      exec: function () {/*
+        return typeof Map.prototype.keys === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome36:    true,
+      },
+    },
+    'Map.prototype.values': {
+      exec: function () {/*
+        return typeof Map.prototype.values === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome36:    true,
+      },
+    },
+    'Map.prototype.entries': {
+      exec: function () {/*
+        return typeof Map.prototype.entries === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox23:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome36:    true,
+      },
+    },
+  },
 },
 {
   name: 'Set',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
-  exec: function () {/*
-    var obj = {};
-    var set = new Set();
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        var obj = {};
+        var set = new Set();
 
-    set.add(123);
-    set.add(123);
+        set.add(123);
+        set.add(123);
 
-    return set.has(123) && set.size === 1;
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        { val: true, note_id: 'map-constructor' },
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: { val: true, note_id: 'map-constructor' },
-    chrome30:    { val: true, note_id: 'map-constructor' },
-    chrome33:    { val: true, note_id: 'map-constructor' },
-    chrome34:    { val: true, note_id: 'map-constructor' },
-    chrome35:    { val: true, note_id: 'map-constructor' },
-    chrome37:    { val: true, note_id: 'map-constructor' },
-    chrome39:    { val: true, note_id: 'map-constructor' },
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  { val: true, note_id: 'map-constructor' },
-    webkit:      { val: true, note_id: 'map-constructor' },
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: { val: true, note_id: 'map-constructor' },
-    ios7:        false,
-    ios8:        { val: true, note_id: 'map-constructor' },
-  }
+        return set.has(123);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox16:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+    },
+    'constructor arguments': {
+      exec: function () {/*
+        var obj1 = {};
+        var obj2 = {};
+        var set = new Set([obj1, obj2]);
+
+        return set.has(obj1) && set.has(obj2);
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox16:   true,
+        chrome38:    true,
+      },
+    },
+    'Set.prototype.size': {
+      exec: function () {/*
+        var obj = {};
+        var set = new Set();
+
+        set.add(123);
+        set.add(123);
+        set.add(456);
+
+        return set.size === 2;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+    },
+    'Set.prototype.delete': {
+      exec: function () {/*
+        return typeof Set.prototype.delete === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox16:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Set.prototype.clear': {
+      exec: function () {/*
+        return typeof Set.prototype.clear === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Set.prototype.forEach': {
+      exec: function () {/*
+        return typeof Set.prototype.forEach === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox25:   true,
+        chrome36:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Set.prototype.keys': {
+      exec: function () {/*
+        return typeof Set.prototype.keys === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox24:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome38:    true,
+      },
+    },
+    'Set.prototype.values': {
+      exec: function () {/*
+        return typeof Set.prototype.values === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox24:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome37:    true,
+      },
+    },
+    'Set.prototype.entries': {
+      exec: function () {/*
+        return typeof Set.prototype.entries === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox24:   true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        chrome37:    true,
+      },
+    },
+  },
 },
 {
   name: 'WeakMap',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
-  exec: function () {/*
-    var key1 = {};
-    var weakmap = new WeakMap();
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        var key = {};
+        var weakmap = new WeakMap();
 
-    weakmap.set(key1, 123);
+        weakmap.set(key, 123);
 
-    return weakmap.has(key1) && weakmap.get(key1) === 123;
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        {
-      val: true,
-      note_id: 'weakmap-constructor',
-      note_html: 'WeakMap (and, except in Firefox, WeakSet) constructor arguments, such as <code>new WeakMap([[key, val]])</code> or <code>new WeakSet([obj1, obj2])</code>, are not supported.'
+        return weakmap.has(key) && weakmap.get(key) === 123;
+      */},
+      res: {
+        ie11:        true,
+        firefox11:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
     },
-    firefox11:   { val: true, note_id: 'weakmap-constructor' },
-    firefox13:   { val: true, note_id: 'weakmap-constructor' },
-    firefox16:   { val: true, note_id: 'weakmap-constructor' },
-    firefox17:   { val: true, note_id: 'weakmap-constructor' },
-    firefox18:   { val: true, note_id: 'weakmap-constructor' },
-    firefox23:   { val: true, note_id: 'weakmap-constructor' },
-    firefox24:   { val: true, note_id: 'weakmap-constructor' },
-    firefox25:   { val: true, note_id: 'weakmap-constructor' },
-    firefox27:   { val: true, note_id: 'weakmap-constructor' },
-    firefox28:   { val: true, note_id: 'weakmap-constructor' },
-    firefox29:   { val: true, note_id: 'weakmap-constructor' },
-    firefox30:   { val: true, note_id: 'weakmap-constructor' },
-    firefox31:   { val: true, note_id: 'weakmap-constructor' },
-    firefox32:   { val: true, note_id: 'weakmap-constructor' },
-    firefox33:   { val: true, note_id: 'weakmap-constructor' },
-    firefox34:   { val: true, note_id: 'weakmap-constructor' },
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: { val: true, note_id: 'weakmap-constructor' },
-    chrome30:    { val: true, note_id: 'weakmap-constructor' },
-    chrome33:    { val: true, note_id: 'weakmap-constructor' },
-    chrome34:    { val: true, note_id: 'weakmap-constructor' },
-    chrome35:    { val: true, note_id: 'weakmap-constructor' },
-    chrome37:    { val: true, note_id: 'weakmap-constructor' },
-    chrome39:    { val: true, note_id: 'weakmap-constructor' },
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  { val: true, note_id: 'weakmap-constructor' },
-    webkit:      { val: true, note_id: 'weakmap-constructor' },
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: { val: true, note_id: 'weakmap-constructor' },
-    ios7:        false,
-    ios8:        { val: true, note_id: 'weakmap-constructor' },
-  }
+    'constructor arguments': {
+      exec: function () {/*
+        var key1 = {};
+        var key2 = {};
+        var weakmap = new WeakMap([[key1, 123], [key2, 456]]);
+
+        return weakmap.has(key1) && weakmap.get(key1) === 123 &&
+               weakmap.has(key2) && weakmap.get(key2) === 456;
+      */},
+      res: {
+        chrome38:    true,
+      },
+    },
+    'WeakMap.prototype.delete': {
+      exec: function () {/*
+        return typeof WeakMap.prototype.delete === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox11:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'WeakMap.prototype.clear': {
+      exec: function () {/*
+        return typeof WeakMap.prototype.clear === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11:        true,
+        firefox23:   true,
+        chrome21dev: true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+  },
 },
 {
   name: 'WeakSet',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
-  exec: function () {/*
-    var obj1 = {}, obj2 = {};
-    var weakset = new WeakSet();
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        var obj1 = {}, obj2 = {};
+        var weakset = new WeakSet();
 
-    weakset.add(obj1);
-    weakset.add(obj1);
+        weakset.add(obj1);
+        weakset.add(obj1);
 
-    return weakset.has(obj1);
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome31:    true,
-    chrome33:    { val: true, note_id: 'weakmap-constructor' },
-    chrome34:    { val: true, note_id: 'weakmap-constructor' },
-    chrome35:    { val: true, note_id: 'weakmap-constructor' },
-    chrome37:    { val: true, note_id: 'weakmap-constructor' },
-    chrome39:    { val: true, note_id: 'weakmap-constructor' },
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: { val: true, note_id: 'weakmap-constructor' },
-    ios7:        false,
-    ios8:        false
-  }
+        return weakset.has(obj1);
+      */},
+      res: {
+        firefox34:   true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+    'constructor arguments': {
+      exec: function () {/*
+        var obj1 = {}, obj2 = {};
+        var weakset = new WeakSet([obj1, obj2]);
+
+        return weakset.has(obj1) && weakset.has(obj2);
+      */},
+      res: {
+        firefox34:   true,
+        chrome38:    true,
+      },
+    },
+    'WeakSet.prototype.delete': {
+      exec: function () {/*
+        return typeof WeakSet.prototype.delete === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox34:   true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+    'WeakSet.prototype.clear': {
+      exec: function () {/*
+        return typeof WeakSet.prototype.clear === "function";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox34:   true,
+        chrome30:    true,
+        nodeharmony: true,
+      },
+    },
+  },
 },
 {
   name: 'Proxy',
