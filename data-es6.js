@@ -2676,7 +2676,7 @@ exports.tests = [
   name: 'destructuring',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   subtests: {
-    'array destructuring': {
+    'iterable destructuring': {
       exec: function(){/*
         var [a, , [b], c] = [5, null, [6]];
         return a === 5 && b === 6 && c === undefined;

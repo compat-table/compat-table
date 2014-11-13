@@ -691,12 +691,12 @@ test(function(){try{return Function("\nreturn (() => {\n  try { Function(\"x\\n 
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="arrow_functions">
-          <td><span>no "prototype" and "name" properties</span></td>
+          <td><span>no "prototype" property</span></td>
 <script data-source="
 var a = () => 5;
-return !a.hasOwnProperty(&quot;prototype&quot;) && a.name === &quot;&quot;; 
+return !a.hasOwnProperty(&quot;prototype&quot;); 
       ">
-test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\") && a.name === \"\"; \n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\"); \n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3080,13 +3080,13 @@ test(function(){try{return Function("\nclass C extends Array {}\nreturn Array.is
           <td><span>in constructors</span></td>
 <script data-source="
 class B extends class {
-  constructor(a) { return &quot;foo&quot; + a; }
+  constructor(a) { return [&quot;foo&quot; + a]; }
 } {
   constructor(a) { return super(&quot;bar&quot; + a); }
 }
-return new B(&quot;baz&quot;) === &quot;foobarbaz&quot;;
+return new B(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
       ">
-test(function(){try{return Function("\nclass B extends class {\n  constructor(a) { return \"foo\" + a; }\n} {\n  constructor(a) { return super(\"bar\" + a); }\n}\nreturn new B(\"baz\") === \"foobarbaz\";\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nclass B extends class {\n  constructor(a) { return [\"foo\" + a]; }\n} {\n  constructor(a) { return super(\"bar\" + a); }\n}\nreturn new B(\"baz\")[0] === \"foobarbaz\";\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -9062,13 +9062,14 @@ Object.setPrototypeOf(
   new Proxy(proxied, {
     setPrototypeOf: function (t, p) {
       passed = t === proxied && p === newProto;
+      return false;
     }
   }),
   newProto
 );
 return passed;
       ">
-test(function(){try{return Function("\nvar proxied = {};\nvar newProto = {};\nvar passed = false;\nObject.setPrototypeOf(\n  new Proxy(proxied, {\n    setPrototypeOf: function (t, p) {\n      passed = t === proxied && p === newProto;\n    }\n  }),\n  newProto\n);\nreturn passed;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar proxied = {};\nvar newProto = {};\nvar passed = false;\nObject.setPrototypeOf(\n  new Proxy(proxied, {\n    setPrototypeOf: function (t, p) {\n      passed = t === proxied && p === newProto;\n      return false;\n    }\n  }),\n  newProto\n);\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -10526,7 +10527,7 @@ test(function(){try{return Function("\n'use strict';\n{\n  function f(){}\n}\nre
           <td class="tally ios7" data-tally="0">0/7</td>
           <td class="tally ios8" data-tally="0.5714285714285714">4/7</td>
         <tr class="subtest" data-parent="destructuring">
-          <td><span>array destructuring</span></td>
+          <td><span>iterable destructuring</span></td>
 <script data-source="
 var [a, , [b], c] = [5, null, [6]];
 return a === 5 && b === 6 && c === undefined;
@@ -10926,14 +10927,12 @@ test(function(){try{return Function("\nreturn (function({a = 1, b = 0, c = 3, x:
         </tr>
         <tr>
           <td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
-<script data-source="function () {
+<script data-source="
 return typeof Promise !== 'undefined' &&
        typeof Promise.all === 'function';
-  }">test(
-function () {
-return typeof Promise !== 'undefined' &&
-       typeof Promise.all === 'function';
-  }())</script>
+  ">
+test(function(){try{return Function("\nreturn typeof Promise !== 'undefined' &&\n       typeof Promise.all === 'function';\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="yes tr">Yes</td>
           <td class="yes ejs">Yes</td>
@@ -12234,12 +12233,11 @@ test(function(){try{return Function("\nvar descriptor = Object.getOwnPropertyDes
         </tr>
         <tr>
           <td id="Function.prototype.toMethod"><span><a class="anchor" href="#Function.prototype.toMethod">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod">Function.prototype.toMethod</a></span></td>
-<script data-source="function () {
+<script data-source="
 return typeof Function.prototype.toMethod === &quot;function&quot;;
-  }">test(
-function () {
-return typeof Function.prototype.toMethod === "function";
-  }())</script>
+  ">
+test(function(){try{return Function("\nreturn typeof Function.prototype.toMethod === \"function\";\n  ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no ejs">No</td>
@@ -16492,10 +16490,13 @@ test(function(){try{return Function("\ntry {\n  eval(\"({ __proto__ : [], __prot
         <tr class="subtest" data-parent="__proto___in_object_literals">
           <td><span>not a computed property</span></td>
 <script data-source="
+if (!({ __proto__ : [] } instanceof Array)) {
+  return false;
+}
 var a = &quot;__proto__&quot;;
 return !({ [a] : [] } instanceof Array);
       ">
-test(function(){try{return Function("\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);\n      ")()}catch(e){return false;}}());
 </script>
 
           <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
@@ -16548,10 +16549,13 @@ test(function(){try{return Function("\nvar a = \"__proto__\";\nreturn !({ [a] : 
         <tr class="subtest" data-parent="__proto___in_object_literals">
           <td><span>not a shorthand property</span></td>
 <script data-source="
+if (!({ __proto__ : [] } instanceof Array)) {
+  return false;
+}
 var __proto__ = [];
 return !({ __proto__ } instanceof Array);
       ">
-test(function(){try{return Function("\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);\n      ")()}catch(e){return false;}}());
 </script>
 
           <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
@@ -16604,9 +16608,12 @@ test(function(){try{return Function("\nvar __proto__ = [];\nreturn !({ __proto__
         <tr class="subtest" data-parent="__proto___in_object_literals">
           <td><span>not a shorthand method</span></td>
 <script data-source="
+if (!({ __proto__ : [] } instanceof Array)) {
+  return false;
+}
 return !({ __proto__(){} } instanceof Function);
       ">
-test(function(){try{return Function("\nreturn !({ __proto__(){} } instanceof Function);\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);\n      ")()}catch(e){return false;}}());
 </script>
 
           <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
@@ -16945,7 +16952,7 @@ test(function(){try{return Function("\nvar desc = Object.getOwnPropertyDescripto
         </tr>
         <tr>
           <td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
-<script data-source="function () {
+<script data-source="
 var i, names = [&quot;anchor&quot;, &quot;big&quot;, &quot;bold&quot;, &quot;fixed&quot;, &quot;fontcolor&quot;, &quot;fontsize&quot;,
   &quot;italics&quot;, &quot;link&quot;, &quot;small&quot;, &quot;strike&quot;, &quot;sub&quot;, &quot;sup&quot;];
 for (i = 0; i < names.length; i++) {
@@ -16954,17 +16961,9 @@ for (i = 0; i < names.length; i++) {
   }
 }
 return true;
-  }">test(
-function () {
-var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
-  "italics", "link", "small", "strike", "sub", "sup"];
-for (i = 0; i < names.length; i++) {
-  if (typeof String.prototype[names[i]] !== 'function') {
-    return false;
-  }
-}
-return true;
-  }())</script>
+  ">
+test(function(){try{return Function("\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n  ")()}catch(e){return false;}}());
+</script>
 
           <td title="This feature is optional on non-browser platforms." class="yes tr not-applicable ">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="yes ejs not-applicable ">Yes</td>
@@ -17016,12 +17015,11 @@ return true;
         </tr>
         <tr>
           <td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span></td>
-<script data-source="function () {
+<script data-source="
 return typeof RegExp.prototype.compile === 'function';
-  }">test(
-function () {
-return typeof RegExp.prototype.compile === 'function';
-  }())</script>
+  ">
+test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile === 'function';\n  ")()}catch(e){return false;}}());
+</script>
 
           <td title="This feature is optional on non-browser platforms." class="yes tr not-applicable ">Yes</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
