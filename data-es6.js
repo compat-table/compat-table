@@ -422,10 +422,10 @@ exports.tests = [
       res: {
       },
     },
-    'no "prototype" and "name" properties': {
+    'no "prototype" property': {
       exec: function(){/*
         var a = () => 5;
-        return !a.hasOwnProperty("prototype") && a.name === ""; 
+        return !a.hasOwnProperty("prototype"); 
       */},
       res: {
         tr:          true,
@@ -1022,11 +1022,11 @@ exports.tests = [
     'in constructors': {
       exec: function() {/*
         class B extends class {
-          constructor(a) { return "foo" + a; }
+          constructor(a) { return ["foo" + a]; }
         } {
           constructor(a) { return super("bar" + a); }
         }
-        return new B("baz") === "foobarbaz";
+        return new B("baz")[0] === "foobarbaz";
       */},
       res: {
         tr:          true,
@@ -1154,6 +1154,9 @@ exports.tests = [
     },
     'not a computed property': {
       exec: function() {/*
+        if (!({ __proto__ : [] } instanceof Array)) {
+          return false;
+        }
         var a = "__proto__";
         return !({ [a] : [] } instanceof Array);
       */},
@@ -1163,6 +1166,9 @@ exports.tests = [
     },
     'not a shorthand property': {
       exec: function() {/*
+        if (!({ __proto__ : [] } instanceof Array)) {
+          return false;
+        }
         var __proto__ = [];
         return !({ __proto__ } instanceof Array);
       */},
@@ -1172,6 +1178,9 @@ exports.tests = [
     },
     'not a shorthand method': {
       exec: function() {/*
+        if (!({ __proto__ : [] } instanceof Array)) {
+          return false;
+        }
         return !({ __proto__(){} } instanceof Function);
       */},
       res: {
@@ -2264,6 +2273,7 @@ exports.tests = [
           new Proxy(proxied, {
             setPrototypeOf: function (t, p) {
               passed = t === proxied && p === newProto;
+              return false;
             }
           }),
           newProto
@@ -2642,10 +2652,10 @@ exports.tests = [
 {
   name: 'Promise',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
-  exec: function () {
+  exec: function () {/*
     return typeof Promise !== 'undefined' &&
            typeof Promise.all === 'function';
-  },
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -2977,9 +2987,9 @@ exports.tests = [
 {
   name: 'Function.prototype.toMethod',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod',
-  exec: function () {
+  exec: function () {/*
     return typeof Function.prototype.toMethod === "function";
-  },
+  */},
   res: {
     tr:          false,
     ejs:         false,
@@ -3140,7 +3150,7 @@ exports.tests = [
   name: 'String.prototype HTML methods',
   annex_b: true,
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
-  exec: function () {
+  exec: function () {/*
     var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
       "italics", "link", "small", "strike", "sub", "sup"];
     for (i = 0; i < names.length; i++) {
@@ -3149,7 +3159,7 @@ exports.tests = [
       }
     }
     return true;
-  },
+  */},
   res: {
     tr:          true,
     ejs:         true,
@@ -3551,9 +3561,9 @@ exports.tests = [
   name: 'RegExp.prototype.compile',
   annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
-  exec: function () {
+  exec: function () {/*
     return typeof RegExp.prototype.compile === 'function';
-  },
+  */},
   res: {
     tr:          true,
     ejs:         false,
