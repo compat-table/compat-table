@@ -358,7 +358,7 @@ function testScript(fn, transformFn) {
       expr = deindentFunc(expr[1]);
       if (transformFn) {
         try {
-          expr = transformFn("(function(){"+expr+"})");
+          expr = transformFn("return (function(){"+expr+"})()");
         } catch(e) {
           expr = "Function()";
         }
