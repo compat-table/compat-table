@@ -21,19 +21,50 @@
 
 
 var fs = require('fs');
+var to5 = require('6to5');
+var esnext = require('esnext');
+var es6tr = require('es6-transpiler');
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   handle(require('./data-es5'));
-  handle(require('./data-es6'));
   handle(require('./data-es7'));
   handle(require('./data-non-standard'));
+  
+  var es6 = require('./data-es6');
+  handle(es6);
+  
+  // ES6 compilers
+  [
+    {
+	  target_file: "es6/6to5.html",
+	  compiler: function(code) {
+	    return to5.transform(code).code;
+	  },
+    },
+    {
+	  target_file: "es6/esnext.html",
+	  compiler: function(code) {
+	    return esnext.compile(code).code;
+	  },
+    },
+    {
+	  target_file: "es6/es6-transpiler.html",
+	  compiler: function(code) {
+	    return es6tr.run({src:code}).src;
+	  },
+    },
+  ].forEach(function(e){
+    es6.target_file = e.target_file;
+    es6.compiler = e.compiler;
+    handle(es6);
+  });
 });
 
 
-function handle(options) {
+function handle(options, compiler) {
   var skeleton = fs.readFileSync(__dirname + '/' + options.skeleton_file, 'utf-8');
-  var html = dataToHtml(options.browsers, options.tests);
+  var html = dataToHtml(options.browsers, options.tests, options.compiler);
 
   var result = replaceAndIndent(skeleton, [
     ["<!-- TABLE HEADERS -->", html.tableHeaders],
@@ -54,7 +85,7 @@ function handle(options) {
   }
 }
 
-function dataToHtml(browsers, tests) {
+function dataToHtml(browsers, tests, compiler) {
   var footnoter = new Footnoter();
   var headers = [];
   var body = [];
@@ -141,7 +172,7 @@ function dataToHtml(browsers, tests) {
     body.push(
       '<tr' + (subtests ? ' class="supertest"' : '') + '>',
       '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
-      testScript(t.exec)
+      testScript(t.exec, compiler)
     );
     
     // Function to print out a single <td> result cell.
@@ -203,7 +234,7 @@ function dataToHtml(browsers, tests) {
         body.push(
           '<tr class="subtest" data-parent="' + id + '">',
           '\t<td><span>' + subtestName + '</span></td>\n' +
-          testScript(subtest.exec)
+          testScript(subtest.exec, compiler)
         );
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
@@ -293,7 +324,7 @@ function replaceAndIndent(str, replacements) {
   return str;
 }
 
-function testScript(fn) {
+function testScript(fn, transformFn) {
   
   function deindentFunc(fn) {
     fn = (fn+'');
@@ -313,11 +344,25 @@ function testScript(fn) {
 
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
-      expr = deindentFunc(fn);
+      expr = deindentFunc(expr);
+      if (transformFn) {
+        try {
+          expr = transformFn("("+fn+")");
+        } catch(e) {
+          expr = "false";
+        }
+      }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
     }
-    else {
+    else {      
       expr = deindentFunc(expr[1]);
+      if (transformFn) {
+        try {
+          expr = transformFn("(function(){"+expr+"})");
+        } catch(e) {
+          expr = "Function()";
+        }
+      }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
       'test(function(){try{return Function(' + JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}());\n' +
       '</script>\n';
