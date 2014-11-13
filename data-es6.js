@@ -1699,6 +1699,16 @@ exports.tests = [
         ios8:        true,
       },
     },
+    'Map.prototype.set returns this': {
+      exec: function () {/*
+        var map = new Map();
+        return map.set(0, 0) === map;
+      */},
+      res: {
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
     'constructor arguments': {
       exec: function () {/*
         var key1 = {};
@@ -1841,16 +1851,6 @@ exports.tests = [
         chrome39:    true,
       },
     },
-    'Map.prototype.set returns this': {
-      exec: function () {/*
-        var map = new Map();
-        return map.set(0, 0) === map;
-      */},
-      res: {
-        firefox33:   true,
-        chrome39:    true,
-      },
-    },
   },
 },
 {
@@ -1878,6 +1878,16 @@ exports.tests = [
         webkit:      true,
         nodeharmony: true,
         ios8:        true,
+      },
+    },
+    'Set.prototype.add returns this': {
+      exec: function () {/*
+        var set = new Set();
+        return set.add(0) === set;
+      */},
+      res: {
+        firefox33:   true,
+        chrome39:    true,
       },
     },
     'constructor arguments': {
@@ -2021,16 +2031,6 @@ exports.tests = [
       */},
       res: {
         firefox29:   true,
-        chrome39:    true,
-      },
-    },
-    'Set.prototype.add returns this': {
-      exec: function () {/*
-        var set = new Set();
-        return set.add(0) === set;
-      */},
-      res: {
-        firefox33:   true,
         chrome39:    true,
       },
     },

@@ -6984,6 +6984,62 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="Map">
+          <td><span>Map.prototype.set returns this</span></td>
+<script data-source="
+var map = new Map();
+return map.set(0, 0) === map;
+      ">
+test(function(){try{return Function("\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no closure">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24 obsolete">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox28 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32 obsolete">No</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38">No</td>
+          <td class="yes chrome39">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        <tr class="subtest" data-parent="Map">
           <td><span>constructor arguments</span></td>
 <script data-source="
 var key1 = {};
@@ -7494,62 +7550,6 @@ test(function(){try{return Function("\nvar map = new Map();\nmap.set(-0, 42);\nv
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
-        <tr class="subtest" data-parent="Map">
-          <td><span>Map.prototype.set returns this</span></td>
-<script data-source="
-var map = new Map();
-return map.set(0, 0) === map;
-      ">
-test(function(){try{return Function("\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      ")()}catch(e){return false;}}());
-</script>
-
-          <td class="no tr">No</td>
-          <td class="no ejs">No</td>
-          <td class="no closure">No</td>
-          <td class="no ie10">No</td>
-          <td class="no ie11">No</td>
-          <td class="no firefox11 obsolete">No</td>
-          <td class="no firefox13 obsolete">No</td>
-          <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No</td>
-          <td class="no firefox23 obsolete">No</td>
-          <td class="no firefox24 obsolete">No</td>
-          <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No</td>
-          <td class="no firefox28 obsolete">No</td>
-          <td class="no firefox29 obsolete">No</td>
-          <td class="no firefox30 obsolete">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32 obsolete">No</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
-          <td class="yes firefox35">Yes</td>
-          <td class="no chrome obsolete">No</td>
-          <td class="no chrome19dev obsolete">No</td>
-          <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30 obsolete">No</td>
-          <td class="no chrome31 obsolete">No</td>
-          <td class="no chrome33 obsolete">No</td>
-          <td class="no chrome34 obsolete">No</td>
-          <td class="no chrome35 obsolete">No</td>
-          <td class="no chrome36 obsolete">No</td>
-          <td class="no chrome37 obsolete">No</td>
-          <td class="no chrome38">No</td>
-          <td class="yes chrome39">Yes</td>
-          <td class="no safari51 obsolete">No</td>
-          <td class="no safari6">No</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
-          <td class="no webkit">No</td>
-          <td class="no opera">No</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
-          <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
-          <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
         </tr>
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -7662,6 +7662,62 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="yes ios8">Yes</td>
+        <tr class="subtest" data-parent="Set">
+          <td><span>Set.prototype.add returns this</span></td>
+<script data-source="
+var set = new Set();
+return set.add(0) === set;
+      ">
+test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) === set;\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no ejs">No</td>
+          <td class="no closure">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24 obsolete">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox28 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32 obsolete">No</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38">No</td>
+          <td class="yes chrome39">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
         <tr class="subtest" data-parent="Set">
           <td><span>constructor arguments</span></td>
 <script data-source="
@@ -8146,62 +8202,6 @@ test(function(){try{return Function("\nvar set = new Set();\nset.add(-0);\nvar k
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32 obsolete">Yes</td>
-          <td class="yes firefox33">Yes</td>
-          <td class="yes firefox34">Yes</td>
-          <td class="yes firefox35">Yes</td>
-          <td class="no chrome obsolete">No</td>
-          <td class="no chrome19dev obsolete">No</td>
-          <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30 obsolete">No</td>
-          <td class="no chrome31 obsolete">No</td>
-          <td class="no chrome33 obsolete">No</td>
-          <td class="no chrome34 obsolete">No</td>
-          <td class="no chrome35 obsolete">No</td>
-          <td class="no chrome36 obsolete">No</td>
-          <td class="no chrome37 obsolete">No</td>
-          <td class="no chrome38">No</td>
-          <td class="yes chrome39">Yes</td>
-          <td class="no safari51 obsolete">No</td>
-          <td class="no safari6">No</td>
-          <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
-          <td class="no webkit">No</td>
-          <td class="no opera">No</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
-          <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
-          <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
-        <tr class="subtest" data-parent="Set">
-          <td><span>Set.prototype.add returns this</span></td>
-<script data-source="
-var set = new Set();
-return set.add(0) === set;
-      ">
-test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) === set;\n      ")()}catch(e){return false;}}());
-</script>
-
-          <td class="no tr">No</td>
-          <td class="no ejs">No</td>
-          <td class="no closure">No</td>
-          <td class="no ie10">No</td>
-          <td class="no ie11">No</td>
-          <td class="no firefox11 obsolete">No</td>
-          <td class="no firefox13 obsolete">No</td>
-          <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No</td>
-          <td class="no firefox23 obsolete">No</td>
-          <td class="no firefox24 obsolete">No</td>
-          <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No</td>
-          <td class="no firefox28 obsolete">No</td>
-          <td class="no firefox29 obsolete">No</td>
-          <td class="no firefox30 obsolete">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32 obsolete">No</td>
           <td class="yes firefox33">Yes</td>
           <td class="yes firefox34">Yes</td>
           <td class="yes firefox35">Yes</td>
