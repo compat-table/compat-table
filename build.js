@@ -20,43 +20,69 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
+var assign = require('object-assign');
 var fs = require('fs');
 var to5 = require('6to5');
 var esnext = require('esnext');
 var es6tr = require('es6-transpiler');
+var traceur = require('traceur');
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   handle(require('./data-es5'));
-  handle(require('./data-es7'));
-  handle(require('./data-non-standard'));
-  
   var es6 = require('./data-es6');
   handle(es6);
+  handle(require('./data-es7'));
+  handle(require('./data-non-standard'));
   
   // ES6 compilers
   [
     {
-	  target_file: "es6/6to5.html",
-	  compiler: function(code) {
-	    return to5.transform(code).code;
-	  },
+      name: 'Traceur',
+      url: 'https://github.com/google/traceur-compiler/',
+      target_file: 'es6/compilers/traceur.html',
+      polyfills: ['node_modules/traceur/bin/traceur-runtime.js'],
+      compiler: function(code) {
+        return traceur.compile(code);
+      },
     },
     {
-	  target_file: "es6/esnext.html",
-	  compiler: function(code) {
-	    return esnext.compile(code).code;
-	  },
+      name: '6to5',
+      url: 'https://6to5.github.io/',
+      target_file: 'es6/compilers/6to5.html',
+      compiler: function(code) {
+        return to5.transform(code).code;
+      },
     },
     {
-	  target_file: "es6/es6-transpiler.html",
-	  compiler: function(code) {
-	    return es6tr.run({src:code}).src;
-	  },
+      name: '6to5 + polyfill',
+      url: 'https://6to5.github.io/',
+      target_file: 'es6/compilers/6to5-polyfill.html',
+      polyfills: ['node_modules/6to5/browser-polyfill.js'],
+      compiler: function(code) {
+        return to5.transform(code).code;
+      },
+    },
+    {
+      name: 'ESNext',
+      url: 'https://github.com/esnext/esnext',
+      target_file: 'es6/compilers/esnext.html',
+      compiler: function(code) {
+        return esnext.compile(code).code;
+      },
+    },
+    {
+      name: 'ES6 Transpiler',
+      url: 'https://github.com/termi/es6-transpiler',
+      target_file: 'es6/compilers/es6-transpiler.html',
+      compiler: function(code) {
+        return es6tr.run({src:code}).src;
+      },
     },
   ].forEach(function(e){
-    es6.target_file = e.target_file;
-    es6.compiler = e.compiler;
+    assign(es6, e);
+    es6.browsers = {};
+    es6.skeleton_file = 'es6/compiler-skeleton.html';
     handle(es6);
   });
 });
@@ -69,7 +95,12 @@ function handle(options, compiler) {
   var result = replaceAndIndent(skeleton, [
     ["<!-- TABLE HEADERS -->", html.tableHeaders],
     ["<!-- TABLE BODY -->", html.tableBody],
-    ["<!-- FOOTNOTES -->", html.footnotes]
+    ["<!-- FOOTNOTES -->", html.footnotes],
+    ["<!-- NAME -->", [options.name]],
+    ["<!-- URL -->", [options.name.link(options.url)]],
+    ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
+      return '<script>' + fs.readFileSync(__dirname + '/' + e, 'utf-8') + '</script>\n';
+    })],
   ]).replace(/\t/g, '  ');
 
   var target_file = __dirname + '/' + options.target_file;
@@ -80,7 +111,7 @@ function handle(options, compiler) {
   if (old_result === result) {
     console.log('[' + options.name + '] ' + options.target_file + ' not changed');
   } else {
-    fs.writeFileSync(target_file, result);
+    fs.writeFileSync(target_file, result, 'utf-8');
     console.log('[' + options.name + '] Write to file ' + options.target_file);
   }
 }
@@ -315,7 +346,7 @@ function replaceAndIndent(str, replacements) {
     replacement = replacements[i];
     indent = new RegExp('(\n[ \t]*)' + replacement[0]).exec(str);
     if (!indent) {
-      throw new Error('Could not find indent for ' + replacement[0]);
+      indent = [,''];
     }
     str = str
       .split(replacement[0])
@@ -341,16 +372,19 @@ function testScript(fn, transformFn) {
   if (typeof fn === 'function') {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
-
+    var transformed = false;
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
-      expr = deindentFunc(expr);
       if (transformFn) {
         try {
           expr = transformFn("("+fn+")");
+          transformed = true;
         } catch(e) {
           expr = "false";
         }
+      }
+      else {
+        expr = deindentFunc(fn);
       }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
     }
@@ -358,14 +392,20 @@ function testScript(fn, transformFn) {
       expr = deindentFunc(expr[1]);
       if (transformFn) {
         try {
-          expr = transformFn("return (function(){"+expr+"})()");
+          if (expr.search(/Function\s*\(|eval\s*\(/) > -1) {
+            throw new Error("This test's code invokes eval() and cannot be compiled.");
+          }
+          expr = transformFn("(function(){" + expr + "})")
+          transformed = true;
         } catch(e) {
-          expr = "Function()";
+          expr = "'Error during compilation: " + (JSON.stringify(e.message) + '').replace(/\n/g, '') + "'";
         }
       }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
-      'test(function(){try{return Function(' + JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}());\n' +
-      '</script>\n';
+      'test(function(){try{return ' +
+      (transformed ? 'eval(' : 'Function(') +
+      JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}()' + 
+      ');\n</script>\n';
     }
   } else {
     // it's an array of objects like the following:
