@@ -50,6 +50,7 @@ process.nextTick(function () {
       name: '6to5',
       url: 'https://6to5.github.io/',
       target_file: 'es6/compilers/6to5.html',
+      polyfills: [],
       compiler: function(code) {
         return to5.transform(code).code;
       },
@@ -67,6 +68,7 @@ process.nextTick(function () {
       name: 'ESNext',
       url: 'https://github.com/esnext/esnext',
       target_file: 'es6/compilers/esnext.html',
+      polyfills: [],
       compiler: function(code) {
         return esnext.compile(code).code;
       },
@@ -75,6 +77,7 @@ process.nextTick(function () {
       name: 'ES6 Transpiler',
       url: 'https://github.com/termi/es6-transpiler',
       target_file: 'es6/compilers/es6-transpiler.html',
+      polyfills: [],
       compiler: function(code) {
         return es6tr.run({src:code}).src;
       },
