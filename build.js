@@ -20,28 +20,116 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-var fs = require('fs');
+var assign     = require('object-assign');
+
+var fs         = require('fs');
+var path       = require('path');
+var os         = require('os');
+// requires Node v0.11.12
+var child_process = require('child_process');
+
+var to5        = require('6to5');
+var esnext     = require('esnext');
+var es6tr      = require('es6-transpiler');
+var traceur    = require('traceur');
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   handle(require('./data-es5'));
-  handle(require('./data-es6'));
+  var es6 = require('./data-es6');
+  handle(es6);
   handle(require('./data-es7'));
   handle(require('./data-non-standard'));
+  
+  // ES6 compilers
+  [
+    {
+      name: 'Traceur',
+      url: 'https://github.com/google/traceur-compiler/',
+      target_file: 'es6/compilers/traceur.html',
+      polyfills: ['node_modules/traceur/bin/traceur-runtime.js'],
+      compiler: function(code) {
+        return traceur.compile(code);
+      },
+    },
+    {
+      name: '6to5',
+      url: 'https://6to5.github.io/',
+      target_file: 'es6/compilers/6to5.html',
+      polyfills: [],
+      compiler: function(code) {
+        return to5.transform(code).code;
+      },
+    },
+    {
+      name: '6to5 + polyfill',
+      url: 'https://6to5.github.io/',
+      target_file: 'es6/compilers/6to5-polyfill.html',
+      polyfills: ['node_modules/6to5/browser-polyfill.js'],
+      compiler: function(code) {
+        return to5.transform(code).code;
+      },
+    },
+    {
+      name: 'ESNext',
+      url: 'https://github.com/esnext/esnext',
+      target_file: 'es6/compilers/esnext.html',
+      polyfills: [],
+      compiler: function(code) {
+        return esnext.compile(code).code;
+      },
+    },
+    {
+      name: 'ES6 Transpiler',
+      url: 'https://github.com/termi/es6-transpiler',
+      target_file: 'es6/compilers/es6-transpiler.html',
+      polyfills: [],
+      compiler: function(code) {
+        return es6tr.run({src:code}).src;
+      },
+    },
+    {
+      name: 'TypeScript',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es6/compilers/typescript.html',
+      polyfills: [],
+      compiler: function(code) {
+        var fpath = os.tmpDir() + path.sep + 'temp.ts';
+        var file = fs.writeFileSync(fpath, code);
+        try {
+          child_process.execSync('node_modules/typescript/bin/tsc ' + fpath);
+        } catch(e) {
+          throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
+        }
+        var output = fs.readFileSync(fpath.slice(0, -2) + 'js', 'utf-8');
+        return output;
+      },
+    },
+  ].forEach(function(e){
+    assign(es6, e);
+    es6.browsers = {};
+    es6.skeleton_file = 'es6/compiler-skeleton.html';
+    handle(es6);
+  });
 });
 
 
-function handle(options) {
-  var skeleton = fs.readFileSync(__dirname + '/' + options.skeleton_file, 'utf-8');
-  var html = dataToHtml(options.browsers, options.tests);
+function handle(options, compiler) {
+  var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
+  var html = dataToHtml(options.browsers, options.tests, options.compiler);
 
   var result = replaceAndIndent(skeleton, [
     ["<!-- TABLE HEADERS -->", html.tableHeaders],
     ["<!-- TABLE BODY -->", html.tableBody],
-    ["<!-- FOOTNOTES -->", html.footnotes]
+    ["<!-- FOOTNOTES -->", html.footnotes],
+    ["<!-- NAME -->", [options.name]],
+    ["<!-- URL -->", [options.name.link(options.url)]],
+    ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
+      return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8') + '</script>\n';
+    })],
   ]).replace(/\t/g, '  ');
 
-  var target_file = __dirname + '/' + options.target_file;
+  var target_file = __dirname + path.sep + options.target_file;
   var old_result;
   try {
     old_result = fs.readFileSync(target_file, 'utf-8');
@@ -49,12 +137,12 @@ function handle(options) {
   if (old_result === result) {
     console.log('[' + options.name + '] ' + options.target_file + ' not changed');
   } else {
-    fs.writeFileSync(target_file, result);
+    fs.writeFileSync(target_file, result, 'utf-8');
     console.log('[' + options.name + '] Write to file ' + options.target_file);
   }
 }
 
-function dataToHtml(browsers, tests) {
+function dataToHtml(browsers, tests, compiler) {
   var footnoter = new Footnoter();
   var headers = [];
   var body = [];
@@ -141,7 +229,7 @@ function dataToHtml(browsers, tests) {
     body.push(
       '<tr' + (subtests ? ' class="supertest"' : '') + '>',
       '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
-      testScript(t.exec)
+      testScript(t.exec, compiler)
     );
     
     // Function to print out a single <td> result cell.
@@ -203,7 +291,7 @@ function dataToHtml(browsers, tests) {
         body.push(
           '<tr class="subtest" data-parent="' + id + '">',
           '\t<td><span>' + subtestName + '</span></td>\n' +
-          testScript(subtest.exec)
+          testScript(subtest.exec, compiler)
         );
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
@@ -284,7 +372,7 @@ function replaceAndIndent(str, replacements) {
     replacement = replacements[i];
     indent = new RegExp('(\n[ \t]*)' + replacement[0]).exec(str);
     if (!indent) {
-      throw new Error('Could not find indent for ' + replacement[0]);
+      indent = [,''];
     }
     str = str
       .split(replacement[0])
@@ -293,7 +381,7 @@ function replaceAndIndent(str, replacements) {
   return str;
 }
 
-function testScript(fn) {
+function testScript(fn, transformFn) {
   
   function deindentFunc(fn) {
     fn = (fn+'');
@@ -310,17 +398,40 @@ function testScript(fn) {
   if (typeof fn === 'function') {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
-
+    var transformed = false;
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
-      expr = deindentFunc(fn);
+      if (transformFn) {
+        try {
+          expr = transformFn("("+fn+")");
+          transformed = true;
+        } catch(e) {
+          expr = "false";
+        }
+      }
+      else {
+        expr = deindentFunc(fn);
+      }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
     }
-    else {
+    else {      
       expr = deindentFunc(expr[1]);
+      if (transformFn) {
+        try {
+          if (expr.search(/Function\s*\(|eval\s*\(/) > -1) {
+            throw new Error("This test's code invokes eval() and cannot be compiled.");
+          }
+          expr = transformFn("(function(){" + expr + "})")
+          transformed = true;
+        } catch(e) {
+          expr = "/* Error during compilation: " + e.message + "*/";
+        }
+      }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
-      'test(function(){try{return Function(' + JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}());\n' +
-      '</script>\n';
+      'test(function(){try{return ' +
+      (transformed ? 'eval(' : 'Function(') +
+      JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}()' + 
+      ');\n</script>\n';
     }
   } else {
     // it's an array of objects like the following:

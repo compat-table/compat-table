@@ -2,6 +2,7 @@
   "name": "es5-compat-table",
   "version": "0.0.0",
   "main": "node.js",
+  "engine": "node >= 0.11.12",
   "repository": {
     "type": "git",
     "url": "git://github.com/rvagg/es5-compat-table.git"
@@ -10,6 +11,12 @@
   "dependencies": {
     "chalk": "~0.5.0-1",
     "cheerio": "~0.10.1",
-    "object-assign": "~1.0.0"
+    "object-assign": "~1.0.0",
+
+    "6to5":           "*",
+    "esnext":         "*",
+    "es6-transpiler": "*",
+    "traceur":        "*",
+    "typescript":     "*"
   }
 }

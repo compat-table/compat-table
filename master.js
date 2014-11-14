@@ -58,10 +58,10 @@ $(function() {
         tr.find(".folddown").css('transform', 'rotate(' + (subtests.is(':visible') ? '90deg' : '0deg') + ')');
       }
     });
-      
+    
     // Also, work out tallies for the current browser's tally features
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
-    tr.find('td' + currentBrowserSelector).before(
+    tr.find('td:first-child').after(
       '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
     );
