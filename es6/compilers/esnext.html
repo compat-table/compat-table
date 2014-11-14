@@ -139,8 +139,8 @@ test(function(){try{return eval("(function(){\nvar f = (function() {\n      var 
 
         <tr class="subtest" data-parent="arrow_functions">
           <td><span>no line break between params and <code>=></code></span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="arrow_functions">
@@ -178,8 +178,8 @@ test(function(){try{return eval("(function(){\n{ const bar = 456; }\nreturn (fun
 
         <tr class="subtest" data-parent="const">
           <td><span>redefining a const is a syntax error</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -214,8 +214,8 @@ test(function(){try{return eval("(function(){\n'use strict';\n{ const bar = 456;
 
         <tr class="subtest" data-parent="const">
           <td><span>redefining a const (strict mode)</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -391,8 +391,8 @@ test(function(){try{return eval("(function(){\nreturn (function(a) {\n      var 
 
         <tr class="subtest" data-parent="default_function_parameters">
           <td><span>temporal dead zone</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -563,8 +563,8 @@ test(function(){try{return eval("var $__accumulateIteratorValues = function(iter
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with strings, in array literals</span></td>
-<script data-source="'Error during compilation: &quot;Line 2: Spread must be the final element of an element list&quot;'">
-test(function(){try{return Function("'Error during compilation: \"Line 2: Spread must be the final element of an element list\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: Line 2: Spread must be the final element of an element list*/">
+test(function(){try{return Function("/* Error during compilation: Line 2: Spread must be the final element of an element list*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1061,8 +1061,8 @@ test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntim
 
         <tr class="subtest" data-parent="generators">
           <td><span>shorthand generator methods</span></td>
-<script data-source="'Error during compilation: &quot;{callee: [object Object], arguments: [object Object], type: CallExpression, loc: null} does not match type FunctionExpression&quot;'">
-test(function(){try{return Function("'Error during compilation: \"{callee: [object Object], arguments: [object Object], type: CallExpression, loc: null} does not match type FunctionExpression\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: {callee: [object Object], arguments: [object Object], type: CallExpression, loc: null} does not match type FunctionExpression*/">
+test(function(){try{return Function("/* Error during compilation: {callee: [object Object], arguments: [object Object], type: CallExpression, loc: null} does not match type FunctionExpression*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2750,14 +2750,14 @@ test(function(){try{return eval("var $__getIteratorRange = function(iterator, in
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>destructuring defaults</span></td>
-<script data-source="'Error during compilation: &quot;Line 2: Unexpected token =&quot;'">
-test(function(){try{return Function("'Error during compilation: \"Line 2: Unexpected token =\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: Line 2: Unexpected token =*/">
+test(function(){try{return Function("/* Error during compilation: Line 2: Unexpected token =*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>defaults in parameters</span></td>
-<script data-source="'Error during compilation: &quot;Line 2: Unexpected token =&quot;'">
-test(function(){try{return Function("'Error during compilation: \"Line 2: Unexpected token =\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: Line 2: Unexpected token =*/">
+test(function(){try{return Function("/* Error during compilation: Line 2: Unexpected token =*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2877,8 +2877,8 @@ test(function(){try{return eval("(function(){\nvar o = { foo: function(){}, bar:
 
         <tr class="subtest" data-parent="function_name_property">
           <td><span>accessor properties</span></td>
-<script data-source="'Error during compilation: &quot;Line 2: Unexpected token )&quot;'">
-test(function(){try{return Function("'Error during compilation: \"Line 2: Unexpected token )\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: Line 2: Unexpected token )*/">
+test(function(){try{return Function("/* Error during compilation: Line 2: Unexpected token )*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3760,8 +3760,8 @@ test(function(){try{return eval("(function(){\nreturn { __proto__ : [] } instanc
 
         <tr class="subtest" data-parent="__proto___in_object_literals">
           <td><span>multiple __proto__ is an error</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="__proto___in_object_literals">

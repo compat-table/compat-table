@@ -20,12 +20,18 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-var assign = require('object-assign');
-var fs = require('fs');
-var to5 = require('6to5');
-var esnext = require('esnext');
-var es6tr = require('es6-transpiler');
-var traceur = require('traceur');
+var assign     = require('object-assign');
+
+var fs         = require('fs');
+var path       = require('path');
+var os         = require('os');
+// requires Node v0.11.12
+var child_process = require('child_process');
+
+var to5        = require('6to5');
+var esnext     = require('esnext');
+var es6tr      = require('es6-transpiler');
+var traceur    = require('traceur');
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
@@ -82,6 +88,23 @@ process.nextTick(function () {
         return es6tr.run({src:code}).src;
       },
     },
+    {
+      name: 'TypeScript',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es6/compilers/typescript.html',
+      polyfills: [],
+      compiler: function(code) {
+        var fpath = os.tmpDir() + path.sep + 'temp.ts';
+        var file = fs.writeFileSync(fpath, code);
+        try {
+          child_process.execSync('node_modules/typescript/bin/tsc ' + fpath);
+        } catch(e) {
+          throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
+        }
+        var output = fs.readFileSync(fpath.slice(0, -2) + 'js', 'utf-8');
+        return output;
+      },
+    },
   ].forEach(function(e){
     assign(es6, e);
     es6.browsers = {};
@@ -92,7 +115,7 @@ process.nextTick(function () {
 
 
 function handle(options, compiler) {
-  var skeleton = fs.readFileSync(__dirname + '/' + options.skeleton_file, 'utf-8');
+  var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
   var html = dataToHtml(options.browsers, options.tests, options.compiler);
 
   var result = replaceAndIndent(skeleton, [
@@ -102,11 +125,11 @@ function handle(options, compiler) {
     ["<!-- NAME -->", [options.name]],
     ["<!-- URL -->", [options.name.link(options.url)]],
     ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
-      return '<script>' + fs.readFileSync(__dirname + '/' + e, 'utf-8') + '</script>\n';
+      return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8') + '</script>\n';
     })],
   ]).replace(/\t/g, '  ');
 
-  var target_file = __dirname + '/' + options.target_file;
+  var target_file = __dirname + path.sep + options.target_file;
   var old_result;
   try {
     old_result = fs.readFileSync(target_file, 'utf-8');
@@ -401,7 +424,7 @@ function testScript(fn, transformFn) {
           expr = transformFn("(function(){" + expr + "})")
           transformed = true;
         } catch(e) {
-          expr = "'Error during compilation: " + (JSON.stringify(e.message) + '').replace(/\n/g, '') + "'";
+          expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +

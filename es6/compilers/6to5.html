@@ -163,8 +163,8 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var f = (f
 
         <tr class="subtest" data-parent="arrow_functions">
           <td><span>no line break between params and <code>=></code></span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="arrow_functions">
@@ -216,8 +216,8 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var
 
         <tr class="subtest" data-parent="const">
           <td><span>redefining a const is a syntax error</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -272,8 +272,8 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 
         <tr class="subtest" data-parent="const">
           <td><span>redefining a const (strict mode)</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -539,8 +539,8 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (fu
 
         <tr class="subtest" data-parent="default_function_parameters">
           <td><span>temporal dead zone</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2512,14 +2512,25 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>destructuring defaults</span></td>
-<script data-source="'Error during compilation: &quot;unknown: Unexpected token (2:7)\n  1  | (function(){\n> 2  | var {a = 1, b = 0, c = 3} = {b:2, c:undefined};\n     |       ^\n  3  | return a === 1 && b === 2 && c === 3;\n  4  |       })&quot;'">
-test(function(){try{return Function("'Error during compilation: \"unknown: Unexpected token (2:7)\\n  1  | (function(){\\n> 2  | var {a = 1, b = 0, c = 3} = {b:2, c:undefined};\\n     |       ^\\n  3  | return a === 1 && b === 2 && c === 3;\\n  4  |       })\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: unknown: Unexpected token (2:7)
+  1  | (function(){
+> 2  | var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
+     |       ^
+  3  | return a === 1 && b === 2 && c === 3;
+  4  |       })*/">
+test(function(){try{return Function("/* Error during compilation: unknown: Unexpected token (2:7)\n  1  | (function(){\n> 2  | var {a = 1, b = 0, c = 3} = {b:2, c:undefined};\n     |       ^\n  3  | return a === 1 && b === 2 && c === 3;\n  4  |       })*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>defaults in parameters</span></td>
-<script data-source="'Error during compilation: &quot;unknown: Unexpected token (2:20)\n  1  | (function(){\n> 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n     |                    ^\n  3  |   return a === 1 && b === 2 && c === 3 && d === 4 && \n  4  |     e === 5 && f === undefined;\n  5  | }({b:2, c:undefined, x:4}));&quot;'">
-test(function(){try{return Function("'Error during compilation: \"unknown: Unexpected token (2:20)\\n  1  | (function(){\\n> 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\\n     |                    ^\\n  3  |   return a === 1 && b === 2 && c === 3 && d === 4 && \\n  4  |     e === 5 && f === undefined;\\n  5  | }({b:2, c:undefined, x:4}));\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: unknown: Unexpected token (2:20)
+  1  | (function(){
+> 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
+     |                    ^
+  3  |   return a === 1 && b === 2 && c === 3 && d === 4 && 
+  4  |     e === 5 && f === undefined;
+  5  | }({b:2, c:undefined, x:4}));*/">
+test(function(){try{return Function("/* Error during compilation: unknown: Unexpected token (2:20)\n  1  | (function(){\n> 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n     |                    ^\n  3  |   return a === 1 && b === 2 && c === 3 && d === 4 && \n  4  |     e === 5 && f === undefined;\n  5  | }({b:2, c:undefined, x:4}));*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3678,8 +3689,8 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return { _
 
         <tr class="subtest" data-parent="__proto___in_object_literals">
           <td><span>multiple __proto__ is an error</span></td>
-<script data-source="'Error during compilation: &quot;This test's code invokes eval() and cannot be compiled.&quot;'">
-test(function(){try{return Function("'Error during compilation: \"This test's code invokes eval() and cannot be compiled.\"'")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="__proto___in_object_literals">
