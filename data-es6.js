@@ -10,21 +10,27 @@ exports.skeleton_file = 'es6/skeleton.html';
 
 exports.browsers = {
   tr: {
-    full: 'Traceur compiler',
+    full: 'Traceur',
     short: 'Traceur',
-    obsolete: false, // always up-to-date version
+    obsolete: false,
+    platformtype: 'compiler',
+  },
+  _6to5: {
+    full: '6to5',
+    short: '6to5 +<br>polyfill',
+    obsolete: false,
     platformtype: 'compiler',
   },
   ejs: {
     full: 'Echo JS',
     short: 'EJS',
-    obsolete: false, // always up-to-date version
+    obsolete: false,
     platformtype: 'compiler',
   },
   closure: {
     full: 'Closure Compiler v20141023',
     short: 'Closure<br>Compiler',
-    obsolete: false, // always up-to-date version
+    obsolete: false,
     platformtype: 'compiler',
   },
   ie10: {
@@ -36,6 +42,13 @@ exports.browsers = {
     full: 'Internet Explorer',
     short: 'IE 11',
     obsolete: false
+  },
+  ie11tp: {
+    full: 'Internet Explorer',
+    short: 'IE<br>Technical<br>Preview',
+    obsolete: false,
+    note_id: 'ie-experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Web Platform Features" flag'
   },
   firefox11: {
     full: 'Firefox',
@@ -332,8 +345,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox23:   true,
         chrome38:    true,
       },
@@ -345,8 +360,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox23:   true,
         chrome38:    true,
       },
@@ -358,8 +375,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox23:   true,
         chrome38:    true,
       },
@@ -372,8 +391,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox23:   true,
       },
     },
@@ -385,7 +406,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox23:   true,
       },
     },
@@ -397,8 +420,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox23:   true,
       },
     },
@@ -408,7 +433,9 @@ exports.tests = [
         return f(6) === 5;
       */},
       res: {
+        _6to5:       true,
         closure:     true,
+        ie11tp:      true,
         firefox23:   true,
         firefox24:   false,
       },
@@ -430,6 +457,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        ie11tp:      true,
         firefox23:   true,
         chrome39:    true,
       },
@@ -447,6 +475,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -485,6 +514,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -509,6 +539,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -545,6 +576,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -580,6 +612,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -597,6 +630,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -649,6 +683,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
       },
@@ -661,6 +696,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -677,6 +713,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -736,6 +773,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         chrome37:    true,
@@ -753,6 +791,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         firefox16:   true,
@@ -764,6 +803,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         firefox18:   true,
@@ -775,6 +815,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         firefox16:   true,
@@ -811,10 +852,12 @@ exports.tests = [
   */},
   res: {
     tr:          true,
+    _6to5:       true,
     ejs:         true,
     closure:     true,
     ie10:        false,
     ie11:        false,
+    ie11tp:      true,
     firefox11:   false,
     firefox13:   false,
     firefox16:   true,
@@ -865,8 +908,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox27:   true,
         safari71_8:  true,
         webkit:      true,
@@ -879,8 +924,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox16:   true,
         safari71_8:  true,
         webkit:      true,
@@ -893,7 +940,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox27:   true,
       },
     },
@@ -903,7 +952,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox17:   true,
       },
     },
@@ -920,8 +971,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
       },
     },
     'is block-scoped': {
@@ -933,6 +986,7 @@ exports.tests = [
         return typeof C === "function" && typeof D === "undefined";
       */},
       res: {
+        ie11tp:      true,
       },
     },
     'class expression': {
@@ -941,8 +995,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
       },
     },
     'constructor': {
@@ -955,8 +1011,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
       },
     },
     'prototype methods': {
@@ -970,8 +1028,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
       },
     },
     'static methods': {
@@ -985,8 +1045,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
       },
     },
     'implicit strict mode': {
@@ -999,6 +1061,8 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
+        ie11tp:      true,
       },
     },
     'extends': {
@@ -1009,8 +1073,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
       },
     },
   },
@@ -1030,7 +1096,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'in methods': {
@@ -1044,7 +1112,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'is statically bound': {
@@ -1062,7 +1132,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
       },
     },
   },
@@ -1078,8 +1150,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox34:   true,
         safari71_8:  true,
         webkit:      true,
@@ -1093,8 +1167,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox33:   true,
       },
     },
@@ -1104,8 +1180,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox34:   true,
         chrome39:    true,
       },
@@ -1199,10 +1277,12 @@ exports.tests = [
   */},
   res: {
     tr:          true,
+    _6to5:       true,
     ejs:         true,
     closure:     true,
     ie10:        false,
     ie11:        false,
+    ie11tp:      true,
     firefox11:   false,
     firefox13:   true,
     firefox16:   true,
@@ -1263,6 +1343,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: true,
@@ -1286,6 +1367,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: true,
@@ -1310,6 +1392,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         closure:     true,
         chrome39:    true,
         firefox35:   true,
@@ -1327,8 +1410,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox25:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -1340,8 +1425,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox25:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -1385,8 +1472,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
         firefox34:   true,
       },
     },
@@ -1437,6 +1526,8 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
+        ie11tp:      true,
       },
     },
   },
@@ -1483,6 +1574,7 @@ exports.tests = [
       res: {
         ejs:         true,
         firefox11:   true,
+        ie11tp:      true,
         chrome:      true,
         safari6:     true,
         webkit:      true,
@@ -1627,10 +1719,11 @@ exports.tests = [
   },
   (function(){
     var methods = {
-    '.from':                  {},
-    '.of':                    {},
+    '.from':                  { ie11tp: true, },
+    '.of':                    { ie11tp: true, },
     '.prototype.subarray':    {
         ejs:         true,
+        ie11tp:      true,
         firefox16:   true,
         chrome:      true,
         safari6:     true,
@@ -1640,26 +1733,26 @@ exports.tests = [
         nodeharmony: true,
         ios7:        true,
     },
-    '.prototype.join':        {},
-    '.prototype.indexOf':     {},
-    '.prototype.lastIndexOf': {},
-    '.prototype.slice':       {},
-    '.prototype.every':       {},
-    '.prototype.filter':      {},
-    '.prototype.forEach':     {},
-    '.prototype.map':         {},
-    '.prototype.reduce':      {},
-    '.prototype.reduceRight': {},
-    '.prototype.reverse':     {},
-    '.prototype.some':        {},
-    '.prototype.sort':        {},
-    '.prototype.copyWithin':  { firefox34: true },
-    '.prototype.find':        {},
-    '.prototype.findIndex':   {},
-    '.prototype.fill':        {},
-    '.prototype.keys':        { chrome38: true },
-    '.prototype.values':      { chrome38: true },
-    '.prototype.entries':     { chrome38: true },
+    '.prototype.join':        { ie11tp: true, },
+    '.prototype.indexOf':     { ie11tp: true, },
+    '.prototype.lastIndexOf': { ie11tp: true, },
+    '.prototype.slice':       { ie11tp: true, },
+    '.prototype.every':       { ie11tp: true, },
+    '.prototype.filter':      { ie11tp: true, },
+    '.prototype.forEach':     { ie11tp: true, },
+    '.prototype.map':         { ie11tp: true, },
+    '.prototype.reduce':      { ie11tp: true, },
+    '.prototype.reduceRight': { ie11tp: true, },
+    '.prototype.reverse':     { ie11tp: true, },
+    '.prototype.some':        { ie11tp: true, },
+    '.prototype.sort':        { ie11tp: true, },
+    '.prototype.copyWithin':  { ie11tp: true, firefox34: true },
+    '.prototype.find':        { ie11tp: true, },
+    '.prototype.findIndex':   { ie11tp: true, },
+    '.prototype.fill':        { ie11tp: true, },
+    '.prototype.keys':        { ie11tp: true, chrome38: true },
+    '.prototype.values':      { ie11tp: true, chrome38: true },
+    '.prototype.entries':     { ie11tp: true, chrome38: true },
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -1698,6 +1791,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox16:   true,
@@ -1719,7 +1813,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
       },
@@ -1735,6 +1831,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox23:   true,
@@ -1751,6 +1848,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox16:   true,
@@ -1767,6 +1865,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox23:   true,
@@ -1783,6 +1882,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox25:   true,
@@ -1799,7 +1899,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox23:   true,
         safari71_8:  true,
         ios8:        true,
@@ -1813,7 +1915,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox23:   true,
         safari71_8:  true,
         ios8:        true,
@@ -1827,7 +1931,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox23:   true,
         safari71_8:  true,
         ios8:        true,
@@ -1853,6 +1959,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox16:   true,
@@ -1874,7 +1981,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
       },
@@ -1892,6 +2001,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox23:   true,
@@ -1909,6 +2019,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox16:   true,
@@ -1925,6 +2036,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox23:   true,
@@ -1941,6 +2053,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox25:   true,
@@ -1957,7 +2070,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox24:   true,
         safari71_8:  true,
         ios8:        true,
@@ -1971,7 +2086,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox24:   true,
         safari71_8:  true,
         ios8:        true,
@@ -1985,7 +2102,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox24:   true,
         safari71_8:  true,
         ios8:        true,
@@ -2028,6 +2147,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
+        ie11tp:      true,
         chrome38:    true,
       },
     },
@@ -2080,6 +2200,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: {
+        ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -2093,6 +2214,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
+        ie11tp:      true,
         firefox34:   true,
         chrome38:    true,
       },
@@ -2104,6 +2226,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -2116,6 +2239,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -2139,6 +2263,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         firefox18:   {
           val: true,
           note_id: 'fx-proxy-get',
@@ -2161,6 +2286,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         firefox18:   {
           val: true,
           note_id: 'fx-proxy-set',
@@ -2182,6 +2308,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         firefox18:   true,
       },    
     },
@@ -2198,6 +2325,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         firefox18:   true,
       },    
     },
@@ -2220,6 +2348,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         firefox18:   {
           val: false,
           note_id: 'fx-proxy-getown',
@@ -2246,6 +2375,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         firefox18:   true,
       },    
     },
@@ -2262,6 +2392,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     '"setPrototypeOf" handler': {
@@ -2282,6 +2413,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     '"isExtensible" handler': {
@@ -2299,6 +2431,7 @@ exports.tests = [
       */},
       res: {
         firefox31:   true,
+        ie11tp:      true,
       },
     },
     '"preventExtensions" handler': {
@@ -2317,6 +2450,7 @@ exports.tests = [
       */},
       res: {
         firefox23:   true,
+        ie11tp:      true,
       },
     },
     '"enumerate" handler': {
@@ -2336,6 +2470,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ie11tp:      true,
       },
     },
     '"ownKeys" handler': {
@@ -2376,6 +2511,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ie11tp:      true,
         firefox18:   true,
       },
     },
@@ -2392,6 +2528,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ie11tp:      true,
         firefox18:   true,
       },
     },
@@ -2408,6 +2545,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ie11tp:      true,
         firefox34:   true,
       },
     },
@@ -2423,6 +2561,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.set': {
@@ -2433,6 +2572,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.has': {
@@ -2441,6 +2581,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.deleteProperty': {
@@ -2451,6 +2592,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.getOwnPropertyDescriptor': {
@@ -2462,6 +2604,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.defineProperty': {
@@ -2472,6 +2615,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.getPrototypeOf': {
@@ -2480,6 +2624,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.setPrototypeOf': {
@@ -2490,6 +2635,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.isExtensible': {
@@ -2499,6 +2645,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.preventExtensions': {
@@ -2509,6 +2656,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.enumerate': {
@@ -2526,6 +2674,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.ownKeys': {
@@ -2535,6 +2684,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.apply': {
@@ -2543,6 +2693,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'Reflect.construct': {
@@ -2551,6 +2702,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
   },
@@ -2683,6 +2835,7 @@ exports.tests = [
       */},
       res: (temp.destructuringResults = {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -2718,6 +2871,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -2735,6 +2889,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         closure:     true,
         firefox34:   true,
       },
@@ -2772,10 +2927,12 @@ exports.tests = [
   */},
   res: {
     tr:          true,
+    _6to5:       true,
     ejs:         true,
     closure:     false,
     ie10:        false,
     ie11:        false,
+    ie11tp:      true,
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
@@ -2840,6 +2997,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        ie11tp:      true,
         firefox23:   true,
         chrome19dev: true,
         konq49:      true,
@@ -2857,6 +3015,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        ie11tp:      true,
         chrome34:    true,
         nodeharmony: true,
       },
@@ -3160,7 +3319,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox34:   true,
       },
     },
@@ -3170,7 +3331,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox29:   true,
         chrome38:    true,
       },
@@ -3187,7 +3350,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox29:   true,
         chrome38:    true,
       },
@@ -3199,6 +3364,7 @@ exports.tests = [
           && "\u1e09".normalize("NFD") === "c\u0327\u0301";
       */},
       res: {
+        ie11tp:      true,
         firefox31:   true,
         chrome34:    true,
       },
@@ -3210,7 +3376,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox24:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -3223,7 +3391,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox17:   true,
         chrome30:    true,
         webkit:      true,
@@ -3237,7 +3407,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox17:   true,
         chrome30:    true,
         webkit:      true,
@@ -3251,6 +3423,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         firefox18:   true,
         chrome30:    true,
@@ -3328,10 +3501,12 @@ exports.tests = [
   */},
   res: {
     tr:          true,
+    _6to5:       true,
     ejs:         true,
     closure:     true,
     ie10:        false,
     ie11:        false,
+    ie11tp:      true,
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
@@ -3384,8 +3559,10 @@ exports.tests = [
         object[symbol] = value;
         return object[symbol] === value;
       */},
-      res:(temp.basicSymbolResults = {
+      res: (temp.basicSymbolResults = {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       }),
@@ -3394,7 +3571,12 @@ exports.tests = [
       exec: function(){/*
         return typeof Symbol() === "symbol";
       */},
-      res: temp.basicSymbolResults,
+      res: (temp.noPolyfillSymbolResults = {
+        ejs:         true,
+        ie11tp:      true,
+        chrome30:    true, // Actually Chrome 29
+        nodeharmony: true,
+      }),
     },
     'symbol keys are hidden to pre-ES6 code': {
       exec: function(){/*
@@ -3412,7 +3594,7 @@ exports.tests = [
         
         return passed;
       */},
-      res: temp.basicSymbolResults,
+      res: temp.noPolyfillSymbolResults,
     },
     'Object.defineProperty support': {
       exec: function(){/*
@@ -3448,6 +3630,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         chrome38:    true,
         nodeharmony: true,
       },
@@ -3470,6 +3653,8 @@ exports.tests = [
         }
       */},
       res: {
+        _6to5:      true,
+        ie11tp:     true,
         chrome35:   true,
       },
     },
@@ -3483,6 +3668,8 @@ exports.tests = [
           symbolObject.valueOf() === symbol;
       */},
       res: {
+        _6to5:      true,
+        ie11tp:     true,
         chrome30:   true,
         chrome35:   false,
       },
@@ -3503,6 +3690,7 @@ exports.tests = [
     closure:     false,
     ie10:        false,
     ie11:        false,
+    ie11tp:      true,
     firefox11:   false,
     firefox13:   false,
     firefox16:   false,
@@ -3596,6 +3784,7 @@ exports.tests = [
         return c === "foo";
       */},
       res: {
+        ie11tp:      true,
         chrome37:    true,
         ejs:         true,
       },
@@ -3635,6 +3824,7 @@ exports.tests = [
         }
       */},
       res: {
+        ie11tp:      true,
         chrome38:    true,
       },
     },
@@ -3734,7 +3924,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox32:   true,
       }
     },
@@ -3745,7 +3937,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox25:   true,
         chrome39:    true,
       },
@@ -3762,6 +3956,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox32:   true,
       },
     },
@@ -3771,7 +3967,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox25:   true,
         chrome30:    true,
         safari71_8:  true,
@@ -3786,7 +3984,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox25:   true,
         chrome30:    true,
         safari71_8:  true,
@@ -3801,7 +4001,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox31:   true,
         chrome36:    true,
         safari71_8:  true,
@@ -3816,7 +4018,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox28:   true,
         chrome30:    true,
         safari71_8:  true,
@@ -3831,7 +4035,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox17:   {
           val: false,
           note_id: 'fx-array-prototype-values',
@@ -3857,7 +4063,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox28:   true,
         chrome30:    true,
         safari71_8:  true,
@@ -3879,6 +4087,7 @@ exports.tests = [
         return true;
       */},
       res: {
+        ie11tp:      true,
         chrome38:    true,
       },
     },
@@ -3894,7 +4103,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox16:   true,
         chrome19dev: true,
         webkit:      true,
@@ -3909,7 +4120,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox16:   true,
         chrome34:    true,
         webkit:      true,
@@ -3923,7 +4136,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox32:   true,
         chrome34:    true,
         webkit:      true,
@@ -3937,7 +4152,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox16:   true,
         chrome19dev: true,
         webkit:      true,
@@ -3952,7 +4169,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         webkit:      true,
@@ -3965,7 +4184,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox31:   true,
         chrome34:    true,
         webkit:      true,
@@ -3979,7 +4200,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         firefox31:   true,
         chrome34:    true,
         webkit:      true,
@@ -3996,12 +4219,16 @@ exports.tests = [
     var methods = {
       'clz32': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox31:   true,
         chrome35:    true,
         nodeharmony: true,
       },
       'imul': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox23:   true,
         chrome21dev: {
           val: true,
@@ -4017,6 +4244,8 @@ exports.tests = [
       },
       'sign': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome33:    true,
         webkit:      true,
@@ -4025,6 +4254,8 @@ exports.tests = [
       },
       'log10': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4035,6 +4266,8 @@ exports.tests = [
       },
       'log2': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4045,6 +4278,8 @@ exports.tests = [
       },
       'log1p': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome35:    true,
         safari71_8:  true,
@@ -4055,6 +4290,8 @@ exports.tests = [
       },
       'expm1': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome35:    true,
         safari71_8:  true,
@@ -4064,6 +4301,8 @@ exports.tests = [
       },
       'cosh': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4074,6 +4313,8 @@ exports.tests = [
       },
       'sinh': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4084,6 +4325,8 @@ exports.tests = [
       },
       'tanh': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4094,6 +4337,8 @@ exports.tests = [
       },
       'acosh': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4104,6 +4349,8 @@ exports.tests = [
       },
       'asinh': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4113,6 +4360,8 @@ exports.tests = [
       },
       'atanh': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4123,6 +4372,8 @@ exports.tests = [
       },
       'hypot': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox27:   true,
         chrome34:    true,
         safari71_8:  true,
@@ -4133,6 +4384,8 @@ exports.tests = [
       },
       'trunc': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome33:    true,
         safari71_8:  true,
@@ -4143,6 +4396,8 @@ exports.tests = [
       },
       'fround': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox27:   {
           val: true,
           note_id: 'fx-fround',
@@ -4158,6 +4413,8 @@ exports.tests = [
       },
       'cbrt': {
         ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
         firefox25:   true,
         chrome34:    true,
         safari71_8:  true,
