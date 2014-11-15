@@ -33,6 +33,12 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
+  typescript: {
+    full: 'TypeScript 1.3',
+    short: 'TypeScript',
+    obsolete: false,
+    platformtype: 'compiler',
+  },
   ie10: {
     full: 'Internet Explorer',
     short: 'IE 10',
@@ -346,6 +352,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        typescript:  true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -361,6 +368,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        typescript:  true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -376,6 +384,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        typescript:  true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -392,6 +401,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        typescript:  true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -407,6 +417,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        typescript:  true,
         ejs:         true,
         ie11tp:      true,
         firefox23:   true,
@@ -421,6 +432,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        typescript:  true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -798,6 +810,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         firefox16:   true,
       },
     },
@@ -810,6 +823,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         firefox18:   true,
       },
     },
@@ -822,6 +836,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         firefox16:   true,
       },
     },
@@ -867,6 +882,7 @@ exports.tests = [
     _6to5:       true,
     ejs:         true,
     closure:     true,
+    typescript:  true,
     ie10:        false,
     ie11:        false,
     ie11tp:      true,
@@ -1241,6 +1257,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         ie11tp:      true,
         firefox34:   true,
         chrome39:    true,
