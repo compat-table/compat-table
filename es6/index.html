@@ -7110,8 +7110,8 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
         <tr class="supertest">
           <td id="Map"><span><a class="anchor" href="#Map">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects">Map</a></span></td>
 
-          <td class="tally tr" data-tally="0.8181818181818182">9/11</td>
-          <td class="tally _6to5" data-tally="0.9090909090909091">10/11</td>
+          <td class="tally tr" data-tally="0.9090909090909091">10/11</td>
+          <td class="tally _6to5" data-tally="1">11/11</td>
           <td class="tally ejs" data-tally="0.8181818181818182">9/11</td>
           <td class="tally closure" data-tally="0">0/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
@@ -7230,8 +7230,8 @@ return map.set(0, 0) === map;
 test(function(){try{return Function("\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes tr">Yes</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -7812,8 +7812,8 @@ test(function(){try{return Function("\nvar map = new Map();\nmap.set(-0, 42);\nv
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
 
-          <td class="tally tr" data-tally="0.8181818181818182">9/11</td>
-          <td class="tally _6to5" data-tally="0.8181818181818182">9/11</td>
+          <td class="tally tr" data-tally="0.9090909090909091">10/11</td>
+          <td class="tally _6to5" data-tally="0.9090909090909091">10/11</td>
           <td class="tally ejs" data-tally="0.8181818181818182">9/11</td>
           <td class="tally closure" data-tally="0">0/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
@@ -7933,7 +7933,7 @@ return set.add(0) === set;
 test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) === set;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
@@ -8464,7 +8464,7 @@ test(function(){try{return Function("\nvar set = new Set();\nset.add(-0);\nvar k
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>

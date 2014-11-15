@@ -1808,6 +1808,8 @@ exports.tests = [
         return map.set(0, 0) === map;
       */},
       res: {
+        tr:          true,
+        _6to5:       true,
         firefox33:   true,
         chrome39:    true,
       },
@@ -1962,9 +1964,9 @@ exports.tests = [
         return k === Infinity && map.get(+0) == 42;
       */},
       res: {
+        _6to5:       true,
         firefox29:   true,
         chrome39:    true,
-        _6to5:       true,
       },
     },
   },
@@ -2003,6 +2005,7 @@ exports.tests = [
         return set.add(0) === set;
       */},
       res: {
+        tr:          true,
         firefox33:   true,
         chrome39:    true,
       },
@@ -2159,6 +2162,7 @@ exports.tests = [
         return k === Infinity && set.has(+0);
       */},
       res: {
+        _6to5:       true,
         firefox29:   true,
         chrome39:    true,
       },
