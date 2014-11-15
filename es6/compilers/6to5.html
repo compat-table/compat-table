@@ -214,21 +214,14 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var foo = 
 
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped</span></td>
-<script data-source="&quot;use strict&quot;;
-
-(function () {
-  {
-    var bar = 456;
-  }
-  return (function () {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
-});">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var bar = 456;\n  }\n  return (function () {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: unknown: Line 3: bar is read-only
+  1  | (function(){
+  2  | const bar = 123;
+> 3  | { const bar = 456; }
+     |        ^
+  4  | return bar === 123;
+  5  |       })*/">
+test(function(){try{return Function("/* Error during compilation: unknown: Line 3: bar is read-only\n  1  | (function(){\n  2  | const bar = 123;\n> 3  | { const bar = 456; }\n     |        ^\n  4  | return bar === 123;\n  5  |       })*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -269,22 +262,14 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped (strict mode)</span></td>
-<script data-source="&quot;use strict&quot;;
-
-(function () {
-  &quot;use strict&quot;;
-  {
-    var bar = 456;
-  }
-  return (function () {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
-});">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  {\n    var bar = 456;\n  }\n  return (function () {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: unknown: Line 4: bar is read-only
+  2  | 'use strict';
+  3  | const bar = 123;
+> 4  | { const bar = 456; }
+     |        ^
+  5  | return bar === 123;
+  6  |       })*/">
+test(function(){try{return Function("/* Error during compilation: unknown: Line 4: bar is read-only\n  2  | 'use strict';\n  3  | const bar = 123;\n> 4  | { const bar = 456; }\n     |        ^\n  5  | return bar === 123;\n  6  |       })*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -332,18 +317,13 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var foo = 
 <script data-source="&quot;use strict&quot;;
 
 (function () {
+  var bar = 123;
   {
-    var bar = 456;
+    var _bar = 456;
   }
-  return (function () {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
+  return bar === 123;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var bar = 456;\n  }\n  return (function () {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var bar = 123;\n  {\n    var _bar = 456;\n  }\n  return bar === 123;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -351,16 +331,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  for (var baz = 0; false; false) {}
-  return (function () {
-    try {
-      baz;
-    } catch (e) {
-      return true;
-    }
-  }());
+  var baz = 1;
+  for (var _baz = 0; false; false) {}
+  return baz === 1;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  for (var baz = 0; false; false) {}\n  return (function () {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var baz = 1;\n  for (var _baz = 0; false; false) {}\n  return baz === 1;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -428,18 +403,13 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 
 (function () {
   &quot;use strict&quot;;
+  var bar = 123;
   {
-    var bar = 456;
+    var _bar = 456;
   }
-  return (function () {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
+  return bar === 123;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  {\n    var bar = 456;\n  }\n  return (function () {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  var bar = 123;\n  {\n    var _bar = 456;\n  }\n  return bar === 123;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -448,16 +418,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 
 (function () {
   &quot;use strict&quot;;
-  for (var baz = 0; false; false) {}
-  return (function () {
-    try {
-      baz;
-    } catch (e) {
-      return true;
-    }
-  }());
+  var baz = 1;
+  for (var _baz = 0; false; false) {}
+  return baz === 1;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  for (var baz = 0; false; false) {}\n  return (function () {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  var baz = 1;\n  for (var _baz = 0; false; false) {}\n  return baz === 1;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -731,14 +696,18 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = f
 (function () {
   var _C = function _C() {};
 
+  var c1 = _C;
   {
+    var c2;
     (function () {
-      var _D = function _D() {};
+      var _C = function _C() {};
+
+      c2 = _C;
     })();
   }
-  return typeof _C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
+  return _C === c1;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = function _C() {};\n\n  {\n    (function () {\n      var _D = function _D() {};\n    })();\n  }\n  return typeof _C === \"function\" && typeof D === \"undefined\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = function _C() {};\n\n  var c1 = _C;\n  {\n    var c2;\n    (function () {\n      var _C = function _C() {};\n\n      c2 = _C;\n    })();\n  }\n  return _C === c1;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -2734,12 +2703,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return Ref
 
 (function () {
   &quot;use strict&quot;;
-  {
-    function f() {}
+  function f() {
+    return 1;
   }
-  return typeof f === &quot;undefined&quot;;
+  {
+    function f() {
+      return 2;
+    }
+  }
+  return f() === 1;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  {\n    function f() {}\n  }\n  return typeof f === \"undefined\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  function f() {\n    return 1;\n  }\n  {\n    function f() {\n      return 2;\n    }\n  }\n  return f() === 1;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>

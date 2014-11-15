@@ -493,8 +493,9 @@ exports.tests = [
     },
     'is block-scoped': {
       exec: function() {/*
+        const bar = 123;
         { const bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+        return bar === 123;
       */},
       res: {
         tr:          true,
@@ -552,8 +553,9 @@ exports.tests = [
     'is block-scoped (strict mode)': {
       exec: function() {/*
         'use strict';
+        const bar = 123;
         { const bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+        return bar === 123;
       */},
       res: {
         tr:          true,
@@ -625,8 +627,9 @@ exports.tests = [
     },
     'is block-scoped': {
       exec: function(){/*
+        let bar = 123;
         { let bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+        return bar === 123;
       */},
       res: {
         tr:          true,
@@ -639,8 +642,9 @@ exports.tests = [
     },
     'for-loop statement scope': {
       exec: function(){/*
+        let baz = 1;
         for(let baz = 0; false; false) {}
-        return (function(){ try { baz; } catch(e) { return true; }}());
+        return baz === 1;
       */},
       res: {
         tr:          true,
@@ -708,8 +712,9 @@ exports.tests = [
     'is block-scoped (strict mode)': {
       exec: function(){/*
         'use strict';
+        let bar = 123;
         { let bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+        return bar === 123;
       */},
       res: {
         tr:          true,
@@ -725,8 +730,9 @@ exports.tests = [
     'for-loop statement scope (strict mode)': {
       exec: function(){/*
         'use strict';
+        let baz = 1;
         for(let baz = 0; false; false) {}
-        return (function(){ try { baz; } catch(e) { return true; }}());
+        return baz === 1;
       */},
       res: {
         tr:          true,
@@ -1030,10 +1036,12 @@ exports.tests = [
     'is block-scoped': {
       exec: function () {/*
         class C {}
+        var c1 = C;
         {
-          class D {}
+          class C {}
+          var c2 = C;
         }
-        return typeof C === "function" && typeof D === "undefined";
+        return C === c1;
       */},
       res: {
         ie11tp:      true,
@@ -2950,12 +2958,14 @@ exports.tests = [
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
+    function f() { return 1; }
     {
-      function f(){}
+      function f() { return 2; }
     }
-    return typeof f === "undefined";
+    return f() === 1;
   */},
   res: {
+    tr:          true,
     ejs:         false,
     closure:     true,
     ie10:        false,

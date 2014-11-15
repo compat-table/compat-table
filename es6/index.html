@@ -899,10 +899,11 @@ test(function(){try{return Function("\nconst foo = 123;\nreturn (foo === 123);\n
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped</span></td>
 <script data-source="
+const bar = 123;
 { const bar = 456; }
-return (function(){ try { bar; } catch(e) { return true; }}());
+return bar === 123;
       ">
-test(function(){try{return Function("\n{ const bar = 456; }\nreturn (function(){ try { bar; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nconst bar = 123;\n{ const bar = 456; }\nreturn bar === 123;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1138,10 +1139,11 @@ test(function(){try{return Function("\n\"use strict\";\nconst foo = 123;\nreturn
           <td><span>is block-scoped (strict mode)</span></td>
 <script data-source="
 'use strict';
+const bar = 123;
 { const bar = 456; }
-return (function(){ try { bar; } catch(e) { return true; }}());
+return bar === 123;
       ">
-test(function(){try{return Function("\n'use strict';\n{ const bar = 456; }\nreturn (function(){ try { bar; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nconst bar = 123;\n{ const bar = 456; }\nreturn bar === 123;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1430,10 +1432,11 @@ test(function(){try{return Function("\nlet foo = 123;\nreturn (foo === 123);\n  
         <tr class="subtest" data-parent="let">
           <td><span>is block-scoped</span></td>
 <script data-source="
+let bar = 123;
 { let bar = 456; }
-return (function(){ try { bar; } catch(e) { return true; }}());
+return bar === 123;
       ">
-test(function(){try{return Function("\n{ let bar = 456; }\nreturn (function(){ try { bar; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nlet bar = 123;\n{ let bar = 456; }\nreturn bar === 123;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1488,10 +1491,11 @@ test(function(){try{return Function("\n{ let bar = 456; }\nreturn (function(){ t
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
 <script data-source="
+let baz = 1;
 for(let baz = 0; false; false) {}
-return (function(){ try { baz; } catch(e) { return true; }}());
+return baz === 1;
       ">
-test(function(){try{return Function("\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nlet baz = 1;\nfor(let baz = 0; false; false) {}\nreturn baz === 1;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1733,10 +1737,11 @@ test(function(){try{return Function("\n'use strict';\nlet foo = 123;\nreturn (fo
           <td><span>is block-scoped (strict mode)</span></td>
 <script data-source="
 'use strict';
+let bar = 123;
 { let bar = 456; }
-return (function(){ try { bar; } catch(e) { return true; }}());
+return bar === 123;
       ">
-test(function(){try{return Function("\n'use strict';\n{ let bar = 456; }\nreturn (function(){ try { bar; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nlet bar = 123;\n{ let bar = 456; }\nreturn bar === 123;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1792,10 +1797,11 @@ test(function(){try{return Function("\n'use strict';\n{ let bar = 456; }\nreturn
           <td><span>for-loop statement scope (strict mode)</span></td>
 <script data-source="
 'use strict';
+let baz = 1;
 for(let baz = 0; false; false) {}
-return (function(){ try { baz; } catch(e) { return true; }}());
+return baz === 1;
       ">
-test(function(){try{return Function("\n'use strict';\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nlet baz = 1;\nfor(let baz = 0; false; false) {}\nreturn baz === 1;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3015,12 +3021,14 @@ test(function(){try{return Function("\nclass C {}\nreturn typeof C === \"functio
           <td><span>is block-scoped</span></td>
 <script data-source="
 class C {}
+var c1 = C;
 {
-  class D {}
+  class C {}
+  var c2 = C;
 }
-return typeof C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
+return C === c1;
       ">
-test(function(){try{return Function("\nclass C {}\n{\n  class D {}\n}\nreturn typeof C === \"function\" && typeof D === \"undefined\";\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nclass C {}\nvar c1 = C;\n{\n  class C {}\n  var c2 = C;\n}\nreturn C === c1;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -11880,15 +11888,16 @@ test(function(){try{return Function("\nreturn Reflect.construct(function(a, b, c
           <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[11]</sup></a></span></td>
 <script data-source="
 'use strict';
+function f() { return 1; }
 {
-  function f(){}
+  function f() { return 2; }
 }
-return typeof f === &quot;undefined&quot;;
+return f() === 1;
   ">
-test(function(){try{return Function("\n'use strict';\n{\n  function f(){}\n}\nreturn typeof f === \"undefined\";\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }\n{\n  function f() { return 2; }\n}\nreturn f() === 1;\n  ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>

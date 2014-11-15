@@ -158,8 +158,12 @@ test(function(){try{return eval("(function(){\nvar foo = 123;\nreturn (foo === 1
 
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="(function(){
+var bar = 123;
+{ var bar$0 = 456; }
+return bar === 123;
+      })">
+test(function(){try{return eval("(function(){\nvar bar = 123;\n{ var bar$0 = 456; }\nreturn bar === 123;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -217,14 +221,22 @@ test(function(){try{return eval("(function(){\nvar foo = 123;\nreturn (foo === 1
 
         <tr class="subtest" data-parent="let">
           <td><span>is block-scoped</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="(function(){
+var bar = 123;
+{ var bar$0 = 456; }
+return bar === 123;
+      })">
+test(function(){try{return eval("(function(){\nvar bar = 123;\n{ var bar$0 = 456; }\nreturn bar === 123;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="(function(){
+var baz = 1;
+for(var baz$0 = 0; false; false) {}
+return baz === 1;
+      })">
+test(function(){try{return eval("(function(){\nvar baz = 1;\nfor(var baz$0 = 0; false; false) {}\nreturn baz === 1;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -404,8 +416,16 @@ test(function(){try{return eval("(function(){\nvar C = (function(){\"use strict\
 
         <tr class="subtest" data-parent="class">
           <td><span>is block-scoped</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="(function(){var PRS$0 = (function(o,t){o[&quot;__proto__&quot;]={&quot;a&quot;:t};return o[&quot;a&quot;]===t})({},{});var DP$0 = Object.defineProperty;var GOPD$0 = Object.getOwnPropertyDescriptor;var MIXIN$0 = function(t,s){for(var p in s){if(s.hasOwnProperty(p)){DP$0(t,p,GOPD$0(s,p));}}return t};
+var C = (function(){&quot;use strict&quot;;function C() {}DP$0(C,&quot;prototype&quot;,{&quot;configurable&quot;:false,&quot;enumerable&quot;:false,&quot;writable&quot;:false});;return C;})();
+var c1 = C;
+{
+  var C = (function(){&quot;use strict&quot;;function C() {}DP$0(C,&quot;prototype&quot;,{&quot;configurable&quot;:false,&quot;enumerable&quot;:false,&quot;writable&quot;:false});;return C;})();
+  var c2 = C;
+}
+return C === c1;
+      })">
+test(function(){try{return eval("(function(){var PRS$0 = (function(o,t){o[\"__proto__\"]={\"a\":t};return o[\"a\"]===t})({},{});var DP$0 = Object.defineProperty;var GOPD$0 = Object.getOwnPropertyDescriptor;var MIXIN$0 = function(t,s){for(var p in s){if(s.hasOwnProperty(p)){DP$0(t,p,GOPD$0(s,p));}}return t};\nvar C = (function(){\"use strict\";function C() {}DP$0(C,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return C;})();\nvar c1 = C;\n{\n  var C = (function(){\"use strict\";function C() {}DP$0(C,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return C;})();\n  var c2 = C;\n}\nreturn C === c1;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
