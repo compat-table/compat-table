@@ -1802,6 +1802,16 @@ exports.tests = [
         ios8:        true,
       },
     },
+    'Map.prototype.set returns this': {
+      exec: function () {/*
+        var map = new Map();
+        return map.set(0, 0) === map;
+      */},
+      res: {
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
     'constructor arguments': {
       exec: function () {/*
         var key1 = {};
@@ -1941,6 +1951,22 @@ exports.tests = [
         chrome36:    true,
       },
     },
+    '`-0` key should be converted to `+0`': {
+      exec: function () {/*
+        var map = new Map();
+        map.set(-0, 42);
+        var k = undefined;
+        map.forEach(function (value, key) {
+          k = 1 / key;
+        });
+        return k === Infinity && map.get(+0) == 42;
+      */},
+      res: {
+        firefox29:   true,
+        chrome39:    true,
+        _6to5:       true,
+      },
+    },
   },
 },
 {
@@ -1969,6 +1995,16 @@ exports.tests = [
         webkit:      true,
         nodeharmony: true,
         ios8:        true,
+      },
+    },
+    'Set.prototype.add returns this': {
+      exec: function () {/*
+        var set = new Set();
+        return set.add(0) === set;
+      */},
+      res: {
+        firefox33:   true,
+        chrome39:    true,
       },
     },
     'constructor arguments': {
@@ -2110,6 +2146,21 @@ exports.tests = [
         ios8:        true,
         webkit:      true,
         chrome37:    true,
+      },
+    },
+    '`-0` key should be converted to `+0`': {
+      exec: function () {/*
+        var set = new Set();
+        set.add(-0);
+        var k = undefined;
+        set.forEach(function (value) {
+          k = 1 / value;
+        });
+        return k === Infinity && set.has(+0);
+      */},
+      res: {
+        firefox29:   true,
+        chrome39:    true,
       },
     },
   },
