@@ -1439,7 +1439,6 @@ exports.tests = [
         return Number('0o1') === 1;
       */},
       res: {
-        tr:          true,
         ejs:         true,
         closure:     true,
         chrome30:    true,
@@ -1451,7 +1450,6 @@ exports.tests = [
         return Number('0b1') === 1;
       */},
       res: {
-        tr:          true,
         ejs:         true,
         closure:     true,
         chrome30:    true,
@@ -2156,7 +2154,6 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
-        tr:          true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -2172,7 +2169,6 @@ exports.tests = [
         return typeof WeakMap.prototype.clear === "function";
       */},
       res: {
-        tr:          true,
         ejs:         true,
         ie11:        true,
         firefox23:   true,
@@ -2224,7 +2220,6 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
-        tr:          true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -2237,7 +2232,6 @@ exports.tests = [
         return typeof WeakSet.prototype.clear === "function";
       */},
       res: {
-        tr:          true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -2720,7 +2714,6 @@ exports.tests = [
     return typeof f === "undefined";
   */},
   res: {
-    tr:          true,
     ejs:         false,
     closure:     true,
     ie10:        false,
@@ -3448,8 +3441,8 @@ exports.tests = [
     return true;
   */},
   res: {
-    tr:          true,
-    ejs:         true,
+    tr:          false,
+    ejs:         false,
     closure:     false,
     ie10:        true,
     ie11:        true,
@@ -3559,24 +3552,25 @@ exports.tests = [
         object[symbol] = value;
         return object[symbol] === value;
       */},
-      res: (temp.basicSymbolResults = {
+      res: {
+        tr:          true,
         ejs:         true,
         _6to5:       true,
         ie11tp:      true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
-      }),
+      },
     },
     'typeof support': {
       exec: function(){/*
         return typeof Symbol() === "symbol";
       */},
-      res: (temp.noPolyfillSymbolResults = {
+      res: {
         ejs:         true,
         ie11tp:      true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
-      }),
+      },
     },
     'symbol keys are hidden to pre-ES6 code': {
       exec: function(){/*
@@ -3594,7 +3588,13 @@ exports.tests = [
         
         return passed;
       */},
-      res: temp.noPolyfillSymbolResults,
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11tp:      true,
+        chrome30:    true, // Actually Chrome 29
+        nodeharmony: true,
+      },
     },
     'Object.defineProperty support': {
       exec: function(){/*
@@ -3609,7 +3609,14 @@ exports.tests = [
         
         return passed;
       */},
-      res: temp.basicSymbolResults,
+      res: {
+        tr:          true,
+        ejs:         true,
+        _6to5:       true,
+        ie11tp:      true,
+        chrome30:    true, // Actually Chrome 29
+        nodeharmony: true,
+      },
     },
     'cannot coerce to string or number': {
       exec: function(){/*
@@ -3653,6 +3660,7 @@ exports.tests = [
         }
       */},
       res: {
+        tr:         true,
         _6to5:      true,
         ie11tp:     true,
         chrome35:   true,
@@ -3784,6 +3792,7 @@ exports.tests = [
         return c === "foo";
       */},
       res: {
+        tr:          true,
         ie11tp:      true,
         chrome37:    true,
         ejs:         true,
@@ -3835,27 +3844,27 @@ exports.tests = [
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
     'RegExp.prototype.match': {
-      exec: function () {
+      exec: function () {/*
         return typeof RegExp.prototype.match === 'function';
-      },
+      */},
       res: {},
     },
     'RegExp.prototype.replace': {
-      exec: function () {
+      exec: function () {/*
         return typeof RegExp.prototype.replace === 'function';
-      },
+      */},
       res: {},
     },
     'RegExp.prototype.split': {
-      exec: function () {
+      exec: function () {/*
         return typeof RegExp.prototype.split === 'function';
-      },
+      */},
       res: {},
     },
     'RegExp.prototype.search': {
-      exec: function () {
+      exec: function () {/*
         return typeof RegExp.prototype.search === 'function';
-      },
+      */},
       res: {},
     },
   }
@@ -3869,7 +3878,7 @@ exports.tests = [
     return typeof RegExp.prototype.compile === 'function';
   */},
   res: {
-    tr:          true,
+    tr:          false,
     ejs:         false,
     closure:     false,
     ie10:        true,
