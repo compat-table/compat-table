@@ -3919,7 +3919,7 @@ test(function(){try{return Function("\nvar o = {\n  * generator() {\n    yield 5
         <tr class="supertest">
           <td id="octal_and_binary_literals"><span><a class="anchor" href="#octal_and_binary_literals">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals">octal and binary literals</a></span></td>
 
-          <td class="tally tr" data-tally="1">4/4</td>
+          <td class="tally tr" data-tally="0.5">2/4</td>
           <td class="tally _6to5" data-tally="0.5">2/4</td>
           <td class="tally ejs" data-tally="1">4/4</td>
           <td class="tally closure" data-tally="1">4/4</td>
@@ -4090,7 +4090,7 @@ return Number('0o1') === 1;
 test(function(){try{return Function("\nreturn Number('0o1') === 1;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
@@ -4147,7 +4147,7 @@ return Number('0b1') === 1;
 test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
@@ -8274,7 +8274,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
         <tr class="supertest">
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
 
-          <td class="tally tr" data-tally="0.5">2/4</td>
+          <td class="tally tr" data-tally="0">0/4</td>
           <td class="tally _6to5" data-tally="0">0/4</td>
           <td class="tally ejs" data-tally="0.5">2/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
@@ -8455,7 +8455,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete === \"function\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -8512,7 +8512,7 @@ return typeof WeakMap.prototype.clear === &quot;function&quot;;
 test(function(){try{return Function("\nreturn typeof WeakMap.prototype.clear === \"function\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -8565,7 +8565,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.clear ===
         <tr class="supertest">
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
 
-          <td class="tally tr" data-tally="0.5">2/4</td>
+          <td class="tally tr" data-tally="0">0/4</td>
           <td class="tally _6to5" data-tally="0">0/4</td>
           <td class="tally ejs" data-tally="0.5">2/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
@@ -8745,7 +8745,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 test(function(){try{return Function("\nreturn typeof WeakSet.prototype.delete === \"function\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -8802,7 +8802,7 @@ return typeof WeakSet.prototype.clear === &quot;function&quot;;
 test(function(){try{return Function("\nreturn typeof WeakSet.prototype.clear === \"function\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -10784,7 +10784,7 @@ return typeof f === &quot;undefined&quot;;
 test(function(){try{return Function("\n'use strict';\n{\n  function f(){}\n}\nreturn typeof f === \"undefined\";\n  ")()}catch(e){return false;}}());
 </script>
 
-          <td class="yes tr">Yes</td>
+          <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
@@ -13338,7 +13338,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
         <tr class="supertest">
           <td id="Symbol"><span><a class="anchor" href="#Symbol">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
 
-          <td class="tally tr" data-tally="0">0/8</td>
+          <td class="tally tr" data-tally="0.5">4/8</td>
           <td class="tally _6to5" data-tally="0.5">4/8</td>
           <td class="tally ejs" data-tally="0.625">5/8</td>
           <td class="tally closure" data-tally="0">0/8</td>
@@ -13399,7 +13399,7 @@ return object[symbol] === value;
 test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\nvar value = {};\nobject[symbol] = value;\nreturn object[symbol] === value;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -13525,7 +13525,7 @@ return passed;
 test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\nobject[symbol] = 1;\n\nfor (var x in object){}\nvar passed = (x !== symbol);\n\nif (Object.keys && Object.getOwnPropertyNames) {\n  passed &= Object.keys(object).length === 0\n    && Object.getOwnPropertyNames(object).length === 0;\n}\n\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -13591,7 +13591,7 @@ return passed;
 test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\nvar value = {};\n\nif (Object.defineProperty) {\n  Object.defineProperty(object, symbol, { value: value });\n  return object[symbol] === value;\n}\n\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -13780,7 +13780,7 @@ try {
 test(function(){try{return Function("\nvar symbol = Symbol();\ntry {\n  new Symbol();\n} catch(e) {\n  return true;\n}\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
@@ -13955,7 +13955,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
         <tr class="supertest">
           <td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">well-known symbols</a></span></td>
 
-          <td class="tally tr" data-tally="0">0/7</td>
+          <td class="tally tr" data-tally="0.14285714285714285">1/7</td>
           <td class="tally _6to5" data-tally="0">0/7</td>
           <td class="tally ejs" data-tally="0.5714285714285714">4/7</td>
           <td class="tally closure" data-tally="0">0/7</td>
@@ -14204,7 +14204,7 @@ return c === &quot;foo&quot;;
 test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = function() {\n  return {\n    next: function() {\n      return {\n        done: a++ === 1,\n        value: \"foo\"\n      };\n    }\n  };\n};\nvar c;\nfor (c of b) {}\nreturn c === \"foo\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
+          <td class="yes tr">Yes</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
@@ -14494,12 +14494,11 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="tally ios8" data-tally="0">0/4</td>
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.match</span></td>
-<script data-source="function () {
+<script data-source="
 return typeof RegExp.prototype.match === 'function';
-      }">test(
-function () {
-return typeof RegExp.prototype.match === 'function';
-      }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof RegExp.prototype.match === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
@@ -14552,12 +14551,11 @@ return typeof RegExp.prototype.match === 'function';
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.replace</span></td>
-<script data-source="function () {
+<script data-source="
 return typeof RegExp.prototype.replace === 'function';
-      }">test(
-function () {
-return typeof RegExp.prototype.replace === 'function';
-      }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof RegExp.prototype.replace === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
@@ -14610,12 +14608,11 @@ return typeof RegExp.prototype.replace === 'function';
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.split</span></td>
-<script data-source="function () {
+<script data-source="
 return typeof RegExp.prototype.split === 'function';
-      }">test(
-function () {
-return typeof RegExp.prototype.split === 'function';
-      }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof RegExp.prototype.split === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
@@ -14668,12 +14665,11 @@ return typeof RegExp.prototype.split === 'function';
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.search</span></td>
-<script data-source="function () {
+<script data-source="
 return typeof RegExp.prototype.search === 'function';
-      }">test(
-function () {
-return typeof RegExp.prototype.search === 'function';
-      }())</script>
+      ">
+test(function(){try{return Function("\nreturn typeof RegExp.prototype.search === 'function';\n      ")()}catch(e){return false;}}());
+</script>
 
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
@@ -17553,9 +17549,9 @@ return true;
 test(function(){try{return Function("\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n  ")()}catch(e){return false;}}());
 </script>
 
-          <td title="This feature is optional on non-browser platforms." class="yes tr not-applicable ">Yes</td>
+          <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
-          <td title="This feature is optional on non-browser platforms." class="yes ejs not-applicable ">Yes</td>
+          <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
@@ -17611,7 +17607,7 @@ return typeof RegExp.prototype.compile === 'function';
 test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile === 'function';\n  ")()}catch(e){return false;}}());
 </script>
 
-          <td title="This feature is optional on non-browser platforms." class="yes tr not-applicable ">Yes</td>
+          <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
