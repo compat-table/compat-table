@@ -1800,18 +1800,6 @@ exports.tests = [
         ios8:        true,
       },
     },
-    'Map.prototype.set returns this': {
-      exec: function () {/*
-        var map = new Map();
-        return map.set(0, 0) === map;
-      */},
-      res: {
-        tr:          true,
-        _6to5:       true,
-        firefox33:   true,
-        chrome39:    true,
-      },
-    },
     'constructor arguments': {
       exec: function () {/*
         var key1 = {};
@@ -1828,6 +1816,36 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+      },
+    },
+    'Map.prototype.set returns this': {
+      exec: function () {/*
+        var map = new Map();
+        return map.set(0, 0) === map;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ie11tp:      true,
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
+    '-0 key converts to +0': {
+      exec: function () {/*
+        var map = new Map();
+        map.set(-0, "foo");
+        var k;
+        map.forEach(function (value, key) {
+          k = 1 / key;
+        });
+        return k === Infinity && map.get(+0) == "foo";
+      */},
+      res: {
+        _6to5:       true,
+        ie11tp:      true,
+        firefox29:   true,
+        chrome36:    true,
       },
     },
     'Map.prototype.size': {
@@ -1916,7 +1934,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        chrome36:    true,
+        chrome37:    true,
       },
     },
     'Map.prototype.values': {
@@ -1951,22 +1969,6 @@ exports.tests = [
         chrome36:    true,
       },
     },
-    '`-0` key should be converted to `+0`': {
-      exec: function () {/*
-        var map = new Map();
-        map.set(-0, 42);
-        var k = undefined;
-        map.forEach(function (value, key) {
-          k = 1 / key;
-        });
-        return k === Infinity && map.get(+0) == 42;
-      */},
-      res: {
-        _6to5:       true,
-        firefox29:   true,
-        chrome39:    true,
-      },
-    },
   },
 },
 {
@@ -1997,17 +1999,6 @@ exports.tests = [
         ios8:        true,
       },
     },
-    'Set.prototype.add returns this': {
-      exec: function () {/*
-        var set = new Set();
-        return set.add(0) === set;
-      */},
-      res: {
-        tr:          true,
-        firefox33:   true,
-        chrome39:    true,
-      },
-    },
     'constructor arguments': {
       exec: function () {/*
         var obj1 = {};
@@ -2023,6 +2014,35 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+      },
+    },
+    'Set.prototype.add returns this': {
+      exec: function () {/*
+        var set = new Set();
+        return set.add(0) === set;
+      */},
+      res: {
+        tr:          true,
+        ie11tp:      true,
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
+    '-0 key converts to +0': {
+      exec: function () {/*
+        var set = new Set();
+        set.add(-0);
+        var k;
+        set.forEach(function (value) {
+          k = 1 / value;
+        });
+        return k === Infinity && set.has(+0);
+      */},
+      res: {
+        _6to5:       true,
+        ie11tp:      true,
+        firefox29:   true,
+        chrome36:    true,
       },
     },
     'Set.prototype.size': {
@@ -2147,22 +2167,6 @@ exports.tests = [
         ios8:        true,
         webkit:      true,
         chrome37:    true,
-      },
-    },
-    '`-0` key should be converted to `+0`': {
-      exec: function () {/*
-        var set = new Set();
-        set.add(-0);
-        var k = undefined;
-        set.forEach(function (value) {
-          k = 1 / value;
-        });
-        return k === Infinity && set.has(+0);
-      */},
-      res: {
-        _6to5:       true,
-        firefox29:   true,
-        chrome39:    true,
       },
     },
   },
@@ -2453,7 +2457,7 @@ exports.tests = [
           new Proxy(proxied, {
             setPrototypeOf: function (t, p) {
               passed = t === proxied && p === newProto;
-              return false;
+              return true;
             }
           }),
           newProto
