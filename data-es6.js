@@ -2737,7 +2737,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        ie11tp:      true,
       },
     },
     'Reflect.apply': {
@@ -2755,7 +2754,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        ie11tp:      true,
       },
     },
   },
