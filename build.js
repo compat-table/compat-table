@@ -229,7 +229,7 @@ function dataToHtml(browsers, tests, compiler) {
     body.push(
       '<tr' + (subtests ? ' class="supertest"' : '') + '>',
       '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
-      testScript(t.exec, compiler)
+      testScript(t.exec, compiler, id)
     );
     
     // Function to print out a single <td> result cell.
@@ -291,7 +291,7 @@ function dataToHtml(browsers, tests, compiler) {
         body.push(
           '<tr class="subtest" data-parent="' + id + '">',
           '\t<td><span>' + subtestName + '</span></td>\n' +
-          testScript(subtest.exec, compiler)
+          testScript(subtest.exec, compiler, id)
         );
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
@@ -381,7 +381,7 @@ function replaceAndIndent(str, replacements) {
   return str;
 }
 
-function testScript(fn, transformFn) {
+function testScript(fn, transformFn, id) {
   
   function deindentFunc(fn) {
     fn = (fn+'');
@@ -427,10 +427,15 @@ function testScript(fn, transformFn) {
           expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
+      var async = !!/asyncTestPassed/.exec(fn);
+      var codeString = JSON.stringify(expr).replace(/\\r/g,'');
+      var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + id.replace(/"/g,'\\"') + '")';
+      var funcString =
+        transformed ? '' + asyncFn + ' && eval(' + codeString + ')'
+        : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
       return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
-      'test(function(){try{return ' +
-      (transformed ? 'eval(' : 'Function(') +
-      JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}()' + 
+      'test(function(){try{var asyncTestPassed=' + asyncFn + ';return ' +
+      funcString + '}catch(e){return false;}}()' + 
       ');\n</script>\n';
     }
   } else {
