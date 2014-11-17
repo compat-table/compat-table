@@ -3613,167 +3613,102 @@ exports.tests = [
     },
   },
 },
-
 {
   name: 'Promise',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
-  exec: function () {/*
-    var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
-    var p2 = new Promise(function(resolve, reject) { reject("quux"); });
-    var score = 0;
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
+        var p2 = new Promise(function(resolve, reject) { reject("quux"); });
+        var score = 0;
     
-    function thenFn(result)  { score += (result === "foo");  check(); }
-    function catchFn(result) { score += (result === "quux"); check(); }
-    function shouldNotRun(result)  { score = -Infinity;   }
+        function thenFn(result)  { score += (result === "foo");  check(); }
+        function catchFn(result) { score += (result === "quux"); check(); }
+        function shouldNotRun(result)  { score = -Infinity;   }
     
-    p1.then(thenFn, shouldNotRun);
-    p2.then(shouldNotRun, catchFn);
-    p1.catch(shouldNotRun);
-    p2.catch(catchFn);
+        p1.then(thenFn, shouldNotRun);
+        p2.then(shouldNotRun, catchFn);
+        p1.catch(shouldNotRun);
+        p2.catch(catchFn);
     
-    p1.then(function() {
-      // Promise.prototype.then() should return a new Promise
-      score += p1.then() !== p1;
-      check();
-    });
+        p1.then(function() {
+          // Promise.prototype.then() should return a new Promise
+          score += p1.then() !== p1;
+          check();
+        });
+        
+        function check() {
+          if (score === 4) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11tp:      true,
+        firefox29:   true,
+        chrome33:    true,
+        safari71_8:  true,
+        webkit:      true,
+        nodeharmony: true,
+        ios8:        true,
+      },
+    },
+    'Promise.all': {
+      exec: function () {/*
+        var fulfills = Promise.all([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+        ]);
+        var rejects = Promise.all([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+        ]);
+        var score = 0;
+        fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
+        rejects.catch(function(result) { score += (result === "qux"); check(); });
     
-    function check() {
-      if (score === 4) asyncTestPassed();
-    }
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    ie11tp:      true,
-    firefox29:   true,
-    chrome33:    true,
-    safari71_8:  true,
-    webkit:      true,
-    nodeharmony: true,
-    ios8:        true
-  }
-},
-{
-  name: 'Promise.all',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise.all',
-  exec: function () {/*
-    var fulfills = Promise.all([
-      new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-      new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
-    ]);
-    var rejects = Promise.all([
-      new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-      new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
-    ]);
-    var score = 0;
-    fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
-    rejects.catch(function(result) { score += (result === "qux"); check(); });
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox29:   true,
+        chrome33:    true,
+        webkit:      true,
+        nodeharmony: true,
+      },
+    },
+    'Promise.race': {
+      exec: function () {/*
+        var fulfills = Promise.race([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+        ]);
+        var rejects = Promise.race([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+        ]);
+        var score = 0;
+        fulfills.then(function(result) { score += (result === "foo"); check(); });
+        rejects.catch(function(result) { score += (result === "baz"); check(); });
     
-    function check() {
-      if (score === 2) asyncTestPassed();
-    }
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true
-  }
-},
-{
-  name: 'Promise.race',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise.race',
-  exec: function () {/*
-    var fulfills = Promise.race([
-      new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-      new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
-    ]);
-    var rejects = Promise.race([
-      new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-      new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
-    ]);
-    var score = 0;
-    fulfills.then(function(result) { score += (result === "foo"); check(); });
-    rejects.catch(function(result) { score += (result === "baz"); check(); });
-    
-    function check() {
-      if (score === 2) asyncTestPassed();
-    }
-  */},
-  res: {
-    tr:          true,
-    ejs:         true,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    webkit:      true,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true
-  }
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+      tr:          true,
+      ejs:         true,
+      firefox29:   true,
+      chrome33:    true,
+      webkit:      true,
+      nodeharmony: true,
+    },
+  },
+  },
 },
 {
   name: 'Object static methods',
