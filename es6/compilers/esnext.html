@@ -1742,6 +1742,29 @@ test(function(){try{return eval("(function(){\nvar key1 = {};\nvar key2 = {};\nv
 </script>
 
         <tr class="subtest" data-parent="Map">
+          <td><span>Map.prototype.set returns this</span></td>
+<script data-source="(function(){
+var map = new Map();
+return map.set(0, 0) === map;
+      })">
+test(function(){try{return eval("(function(){\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
+          <td><span>-0 key converts to +0</span></td>
+<script data-source="(function(){
+var map = new Map();
+map.set(-0, &quot;foo&quot;);
+var k;
+map.forEach(function (value, key) {
+  k = 1 / key;
+});
+return k === Infinity && map.get(+0) == &quot;foo&quot;;
+      })">
+test(function(){try{return eval("(function(){\nvar map = new Map();\nmap.set(-0, \"foo\");\nvar k;\nmap.forEach(function (value, key) {\n  k = 1 / key;\n});\nreturn k === Infinity && map.get(+0) == \"foo\";\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
           <td><span>Map.prototype.size</span></td>
 <script data-source="(function(){
 var key = {};
@@ -1830,6 +1853,29 @@ var set = new Set([obj1, obj2]);
 return set.has(obj1) && set.has(obj2);
       })">
 test(function(){try{return eval("(function(){\nvar obj1 = {};\nvar obj2 = {};\nvar set = new Set([obj1, obj2]);\n\nreturn set.has(obj1) && set.has(obj2);\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>Set.prototype.add returns this</span></td>
+<script data-source="(function(){
+var set = new Set();
+return set.add(0) === set;
+      })">
+test(function(){try{return eval("(function(){\nvar set = new Set();\nreturn set.add(0) === set;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>-0 key converts to +0</span></td>
+<script data-source="(function(){
+var set = new Set();
+set.add(-0);
+var k;
+set.forEach(function (value) {
+  k = 1 / value;
+});
+return k === Infinity && set.has(+0);
+      })">
+test(function(){try{return eval("(function(){\nvar set = new Set();\nset.add(-0);\nvar k;\nset.forEach(function (value) {\n  k = 1 / value;\n});\nreturn k === Infinity && set.has(+0);\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -2115,14 +2161,14 @@ Object.setPrototypeOf(
   new Proxy(proxied, {
     setPrototypeOf: function (t, p) {
       passed = t === proxied && p === newProto;
-      return false;
+      return true;
     }
   }),
   newProto
 );
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar proxied = {};\nvar newProto = {};\nvar passed = false;\nObject.setPrototypeOf(\n  new Proxy(proxied, {\n    setPrototypeOf: function (t, p) {\n      passed = t === proxied && p === newProto;\n      return false;\n    }\n  }),\n  newProto\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar proxied = {};\nvar newProto = {};\nvar passed = false;\nObject.setPrototypeOf(\n  new Proxy(proxied, {\n    setPrototypeOf: function (t, p) {\n      passed = t === proxied && p === newProto;\n      return true;\n    }\n  }),\n  newProto\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -2382,9 +2428,11 @@ test(function(){try{return eval("(function(){\nreturn Reflect.apply(Array.protot
         <tr class="subtest" data-parent="Reflect">
           <td><span>Reflect.construct</span></td>
 <script data-source="(function(){
-return +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;
+return Reflect.construct(function(a, b, c) {
+  this.qux = a + b + c;
+}, [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]).qux === &quot;foobarbaz&quot;;
       })">
-test(function(){try{return eval("(function(){\nreturn +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn Reflect.construct(function(a, b, c) {\n  this.qux = a + b + c;\n}, [\"foo\", \"bar\", \"baz\"]).qux === \"foobarbaz\";\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3411,39 +3459,35 @@ test(function(){try{return eval("(function(){\nvar a = { foo: 1, bar: 2 };\na[Sy
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.match</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.match === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.match === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.match === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.match === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.replace</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.replace === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.replace === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.replace === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.replace === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.split</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.split === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.split === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.split === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.split === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.search</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.search === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.search === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.search === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.search === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         </tr>
         <tr class="supertest">

@@ -2750,10 +2750,13 @@ exports.tests = [
     },
     'Reflect.construct': {
       exec: function() {/*
-        return +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;
+        return Reflect.construct(function(a, b, c) {
+          this.qux = a + b + c;
+        }, ["foo", "bar", "baz"]).qux === "foobarbaz";
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
   },
