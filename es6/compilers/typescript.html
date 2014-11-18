@@ -1559,6 +1559,17 @@ test(function(){try{return Function("/* Error during compilation: \n(4,15): erro
 </script>
 
         <tr class="subtest" data-parent="WeakMap">
+          <td><span>WeakMap.prototype.set returns this</span></td>
+<script data-source="(function () {
+    var weakmap = new WeakMap();
+    var key = {};
+    return weakmap.set(key, 0) === weakmap;
+});
+">
+test(function(){try{return eval("(function () {\n    var weakmap = new WeakMap();\n    var key = {};\n    return weakmap.set(key, 0) === weakmap;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakMap">
           <td><span>WeakMap.prototype.delete</span></td>
 <script data-source="(function () {
     return typeof WeakMap.prototype.delete === &quot;function&quot;;
@@ -1594,6 +1605,15 @@ test(function(){try{return Function("/* Error during compilation: \n(3,19): erro
 (3,19): error TS2304: Cannot find name 'WeakSet'.
 */">
 test(function(){try{return Function("/* Error during compilation: \n(3,19): error TS2304: Cannot find name 'WeakSet'.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakSet">
+          <td><span>WeakSet.prototype.add returns this</span></td>
+<script data-source="/* Error during compilation: 
+(2,19): error TS2304: Cannot find name 'WeakSet'.
+(4,29): error TS2304: Cannot find name 'set'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,19): error TS2304: Cannot find name 'WeakSet'.\n(4,29): error TS2304: Cannot find name 'set'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">

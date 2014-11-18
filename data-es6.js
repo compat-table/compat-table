@@ -2208,6 +2208,16 @@ exports.tests = [
         chrome38:    true,
       },
     },
+    'WeakMap.prototype.set returns this': {
+      exec: function () {/*
+        var weakmap = new WeakMap();
+        var key = {};
+        return weakmap.set(key, 0) === weakmap;
+      */},
+      res: {
+        ie11tp:      true,
+      },
+    },
     'WeakMap.prototype.delete': {
       exec: function () {/*
         return typeof WeakMap.prototype.delete === "function";
@@ -2272,6 +2282,16 @@ exports.tests = [
         ie11tp:      true,
         firefox34:   true,
         chrome38:    true,
+      },
+    },
+    'WeakSet.prototype.add returns this': {
+      exec: function () {/*
+        var weakset = new WeakSet();
+        var obj = {};
+        return weakset.add(obj) === set;
+      */},
+      res: {
+        ie11tp:      true,
       },
     },
     'WeakSet.prototype.delete': {
@@ -3045,7 +3065,7 @@ exports.tests = [
       exec: function () {/*
         return typeof Object.is === 'function' &&
           Object.is(NaN, NaN) &&
-         !Object.is(Math.round(-0.1), Math.round(0.1));
+         !Object.is(-0, 0);
       */},
       res: {
         tr:          true,

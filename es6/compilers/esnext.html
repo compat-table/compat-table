@@ -1972,6 +1972,16 @@ test(function(){try{return eval("(function(){\nvar key1 = {};\nvar key2 = {};\nv
 </script>
 
         <tr class="subtest" data-parent="WeakMap">
+          <td><span>WeakMap.prototype.set returns this</span></td>
+<script data-source="(function(){
+var weakmap = new WeakMap();
+var key = {};
+return weakmap.set(key, 0) === weakmap;
+      })">
+test(function(){try{return eval("(function(){\nvar weakmap = new WeakMap();\nvar key = {};\nreturn weakmap.set(key, 0) === weakmap;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakMap">
           <td><span>WeakMap.prototype.delete</span></td>
 <script data-source="(function(){
 return typeof WeakMap.prototype.delete === &quot;function&quot;;
@@ -2014,6 +2024,16 @@ var weakset = new WeakSet([obj1, obj2]);
 return weakset.has(obj1) && weakset.has(obj2);
       })">
 test(function(){try{return eval("(function(){\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet([obj1, obj2]);\n\nreturn weakset.has(obj1) && weakset.has(obj2);\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakSet">
+          <td><span>WeakSet.prototype.add returns this</span></td>
+<script data-source="(function(){
+var weakset = new WeakSet();
+var obj = {};
+return weakset.add(obj) === set;
+      })">
+test(function(){try{return eval("(function(){\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === set;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">
@@ -2836,9 +2856,9 @@ test(function(){try{return eval("(function(){\nvar o = Object.assign({a:true}, {
 <script data-source="(function(){
 return typeof Object.is === 'function' &&
   Object.is(NaN, NaN) &&
- !Object.is(Math.round(-0.1), Math.round(0.1));
+ !Object.is(-0, 0);
       })">
-test(function(){try{return eval("(function(){\nreturn typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(Math.round(-0.1), Math.round(0.1));\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(-0, 0);\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Object_static_methods">
