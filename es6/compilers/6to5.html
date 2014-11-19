@@ -502,12 +502,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 
 (function () {
   return (function (a, b) {
-    if (b === undefined) b = 2;
     if (a === undefined) a = 1;
+    if (b === undefined) b = 2;
     return a === 3 && b === 2;
   }(3));
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a, b) {\n    if (b === undefined) b = 2;\n    if (a === undefined) a = 1;\n    return a === 3 && b === 2;\n  }(3));\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a, b) {\n    if (a === undefined) a = 1;\n    if (b === undefined) b = 2;\n    return a === 3 && b === 2;\n  }(3));\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="default_function_parameters">
@@ -516,12 +516,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (fu
 
 (function () {
   return (function (a, b) {
-    if (b === undefined) b = 2;
     if (a === undefined) a = 1;
+    if (b === undefined) b = 2;
     return a === 1 && b === 3;
   }(undefined, 3));
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a, b) {\n    if (b === undefined) b = 2;\n    if (a === undefined) a = 1;\n    return a === 1 && b === 3;\n  }(undefined, 3));\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a, b) {\n    if (a === undefined) a = 1;\n    if (b === undefined) b = 2;\n    return a === 1 && b === 3;\n  }(undefined, 3));\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="default_function_parameters">
@@ -531,10 +531,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (fu
 (function () {
   return (function (a, b) {
     if (b === undefined) b = a;
-    return b === 5;
+    return (function () {
+      return b === 5;
+    })();
   }(5));
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a, b) {\n    if (b === undefined) b = a;\n    return b === 5;\n  }(5));\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a, b) {\n    if (b === undefined) b = a;\n    return (function () {\n      return b === 5;\n    })();\n  }(5));\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="default_function_parameters">
@@ -603,6 +605,78 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return Mat
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return [\"a\"].concat(Array.from(\"bcd\"), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with generic iterables, in calls</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var iterable;
+  try {
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
+            return 1;
+          case 2: context$2$0.next = 4;
+            return 2;
+          case 4: context$2$0.next = 6;
+            return 3;
+          case 6:
+          case &quot;end&quot;: return context$2$0.stop();
+        }
+      }, callee$1$0, this);
+    }))();
+  } catch (e) {
+    var arr = [1, 2, 3,,];
+    iterable = {
+      next: function () {
+        return { value: arr.shift(), done: arr.length <= 0 };
+      } };
+    iterable[Symbol.iterator] = function () {
+      return iterable;
+    };
+  }
+  return Math.max.apply(Math, Array.from(iterable)) === 3;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 1;\n          case 2: context$2$0.next = 4;\n            return 2;\n          case 4: context$2$0.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  return Math.max.apply(Math, Array.from(iterable)) === 3;\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with generic iterables, in arrays</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var iterable;
+  try {
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
+            return &quot;b&quot;;
+          case 2: context$2$0.next = 4;
+            return &quot;c&quot;;
+          case 4: context$2$0.next = 6;
+            return &quot;d&quot;;
+          case 6:
+          case &quot;end&quot;: return context$2$0.stop();
+        }
+      }, callee$1$0, this);
+    }))();
+  } catch (e) {
+    var arr = [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;,,];
+    iterable = {
+      next: function () {
+        return { value: arr.shift(), done: arr.length <= 0 };
+      } };
+    iterable[Symbol.iterator] = function () {
+      return iterable;
+    };
+  }
+  return [&quot;a&quot;].concat(Array.from(iterable), [&quot;e&quot;])[3] === &quot;d&quot;;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return \"b\";\n          case 2: context$2$0.next = 4;\n            return \"c\";\n          case 4: context$2$0.next = 6;\n            return \"d\";\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [\"b\", \"c\", \"d\",,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  return [\"a\"].concat(Array.from(iterable), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr class="supertest">
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
@@ -627,11 +701,13 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var C = fu
   var C = function C() {};
 
   {
-    var D = function D() {};
+    (function () {
+      var D = function D() {};
+    })();
   }
   return typeof C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var C = function C() {};\n\n  {\n    var D = function D() {};\n  }\n  return typeof C === \"function\" && typeof D === \"undefined\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var C = function C() {};\n\n  {\n    (function () {\n      var D = function D() {};\n    })();\n  }\n  return typeof C === \"function\" && typeof D === \"undefined\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -982,8 +1058,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return ({ 
 </script>
 
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="for..of_loops"><span><a class="anchor" href="#for..of_loops">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements">for..of loops</a></span></td>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with arrays</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
@@ -994,6 +1073,63 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return ({ 
   }
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var arr = [5];\n  for (var _iterator = arr[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {\n    var item = _step.value;\n    return item === 5;\n  }\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with strings</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var str = &quot;&quot;;
+  for (var _iterator = &quot;foo&quot;[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {
+    var item = _step.value;
+    str += item;
+  }
+
+  return str === &quot;foo&quot;;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var str = \"\";\n  for (var _iterator = \"foo\"[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {\n    var item = _step.value;\n    str += item;\n  }\n\n  return str === \"foo\";\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with generic iterables</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var iterable, result = &quot;&quot;;
+  try {
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
+            return 1;
+          case 2: context$2$0.next = 4;
+            return 2;
+          case 4: context$2$0.next = 6;
+            return 3;
+          case 6:
+          case &quot;end&quot;: return context$2$0.stop();
+        }
+      }, callee$1$0, this);
+    }))();
+  } catch (e) {
+    var arr = [1, 2, 3,,];
+    iterable = {
+      next: function () {
+        return { value: arr.shift(), done: arr.length <= 0 };
+      } };
+    iterable[Symbol.iterator] = function () {
+      return iterable;
+    };
+  }
+  for (var _iterator = iterable[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {
+    var item = _step.value;
+    result += item;
+  }
+
+  return result === &quot;123&quot;;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable, result = \"\";\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 1;\n          case 2: context$2$0.next = 4;\n            return 2;\n          case 4: context$2$0.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  for (var _iterator = iterable[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {\n    var item = _step.value;\n    result += item;\n  }\n\n  return result === \"123\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1007,7 +1143,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var arr = 
 (function () {
   var generator = regeneratorRuntime.mark(function generator() {
     return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
+      while (true) switch (context$2$0.prev = context$2$0.next) {
         case 0: context$2$0.next = 2;
           return 5;
         case 2: context$2$0.next = 4;
@@ -1028,7 +1164,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var arr = 
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var generator = regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0: context$2$0.next = 2;\n          return 5;\n        case 2: context$2$0.next = 4;\n          return 6;\n        case 4:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  });\n\n  ;\n  var iterator = generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var generator = regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: context$2$0.next = 2;\n          return 5;\n        case 2: context$2$0.next = 4;\n          return 6;\n        case 4:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  });\n\n  ;\n  var iterator = generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1038,10 +1174,10 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var genera
 (function () {
   var iterator = (regeneratorRuntime.mark(function generator() {
     return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
+      while (true) switch (context$2$0.prev = context$2$0.next) {
         case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {
             return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
-              while (1) switch (context$3$0.prev = context$3$0.next) {
+              while (true) switch (context$3$0.prev = context$3$0.next) {
                 case 0: context$3$0.next = 2;
                   return 5;
                 case 2: context$3$0.next = 4;
@@ -1064,7 +1200,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var genera
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {\n            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n              while (1) switch (context$3$0.prev = context$3$0.next) {\n                case 0: context$3$0.next = 2;\n                  return 5;\n                case 2: context$3$0.next = 4;\n                  return 6;\n                case 4:\n                case \"end\": return context$3$0.stop();\n              }\n            }, callee$2$0, this);\n          })()), \"t0\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {\n            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n              while (true) switch (context$3$0.prev = context$3$0.next) {\n                case 0: context$3$0.next = 2;\n                  return 5;\n                case 2: context$3$0.next = 4;\n                  return 6;\n                case 4:\n                case \"end\": return context$3$0.stop();\n              }\n            }, callee$2$0, this);\n          })()), \"t0\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1075,7 +1211,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   var o = {
     generator: regeneratorRuntime.mark(function callee$1$0() {
       return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-        while (1) switch (context$2$0.prev = context$2$0.next) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
           case 0: context$2$0.next = 2;
             return 5;
           case 2: context$2$0.next = 4;
@@ -1094,7 +1230,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {\n    generator: regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (1) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 5;\n          case 2: context$2$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }) };\n  var iterator = o.generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {\n    generator: regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 5;\n          case 2: context$2$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }) };\n  var iterator = o.generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1160,15 +1296,23 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = \"
           <td><span>tagged template strings</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _taggedTemplateLiteral = function (strings, raw) {
+  return Object.defineProperties(strings, {
+    raw: {
+      value: raw
+    }
+  });
+};
+
 (function () {
   var called = false;
   function fn(parts, a, b) {
     called = true;
     return parts instanceof Array && parts[0] === &quot;foo&quot; && parts[1] === &quot;bar\n&quot; && parts.raw[0] === &quot;foo&quot; && parts.raw[1] === &quot;bar\\n&quot; && a === 123 && b === 456;
   }
-  return fn([&quot;foo&quot;, &quot;bar\\n&quot;, &quot;&quot;], 123, 456) && called;
+  return fn(_taggedTemplateLiteral([&quot;foo&quot;, &quot;bar\n&quot;, &quot;&quot;], [&quot;foo&quot;, &quot;bar\\n&quot;, &quot;&quot;]), 123, 456) && called;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var called = false;\n  function fn(parts, a, b) {\n    called = true;\n    return parts instanceof Array && parts[0] === \"foo\" && parts[1] === \"bar\\n\" && parts.raw[0] === \"foo\" && parts.raw[1] === \"bar\\\\n\" && a === 123 && b === 456;\n  }\n  return fn([\"foo\", \"bar\\\\n\", \"\"], 123, 456) && called;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _taggedTemplateLiteral = function (strings, raw) {\n  return Object.defineProperties(strings, {\n    raw: {\n      value: raw\n    }\n  });\n};\n\n(function () {\n  var called = false;\n  function fn(parts, a, b) {\n    called = true;\n    return parts instanceof Array && parts[0] === \"foo\" && parts[1] === \"bar\\n\" && parts.raw[0] === \"foo\" && parts.raw[1] === \"bar\\\\n\" && a === 123 && b === 456;\n  }\n  return fn(_taggedTemplateLiteral([\"foo\", \"bar\\n\", \"\"], [\"foo\", \"bar\\\\n\", \"\"]), 123, 456) && called;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1665,6 +1809,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var key = 
 </script>
 
         <tr class="subtest" data-parent="Map">
+          <td><span>Map.prototype.set returns this</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var map = new Map();
+  return map.set(0, 0) === map;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var map = new Map();\n  return map.set(0, 0) === map;\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
           <td><span>constructor arguments</span></td>
 <script data-source="&quot;use strict&quot;;
 
@@ -1698,9 +1853,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var key = 
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof Map.prototype.delete === &quot;function&quot;;
+  return typeof Map.prototype[&quot;delete&quot;] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof Map.prototype.delete === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof Map.prototype[\"delete\"] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Map">
@@ -1753,6 +1908,22 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof Map.prototype.entries === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="Map">
+          <td><span>`-0` key should be converted to `+0`</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var map = new Map();
+  map.set(-0, 42);
+  var k = undefined;
+  map.forEach(function (value, key) {
+    k = 1 / key;
+  });
+  return k === Infinity && map.get(+0) == 42;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var map = new Map();\n  map.set(-0, 42);\n  var k = undefined;\n  map.forEach(function (value, key) {\n    k = 1 / key;\n  });\n  return k === Infinity && map.get(+0) == 42;\n});")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -1771,6 +1942,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
   return set.has(123);
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var obj = {};\n  var set = new Set();\n\n  set.add(123);\n  set.add(123);\n\n  return set.has(123);\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>Set.prototype.add returns this</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var set = new Set();
+  return set.add(0) === set;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var set = new Set();\n  return set.add(0) === set;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -1809,9 +1991,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var obj = 
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof Set.prototype.delete === &quot;function&quot;;
+  return typeof Set.prototype[&quot;delete&quot;] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof Set.prototype.delete === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof Set.prototype[\"delete\"] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -1864,6 +2046,22 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof Set.prototype.entries === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="Set">
+          <td><span>`-0` key should be converted to `+0`</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var set = new Set();
+  set.add(-0);
+  var k = undefined;
+  set.forEach(function (value) {
+    k = 1 / value;
+  });
+  return k === Infinity && set.has(+0);
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var set = new Set();\n  set.add(-0);\n  var k = undefined;\n  set.forEach(function (value) {\n    k = 1 / value;\n  });\n  return k === Infinity && set.has(+0);\n});")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr class="supertest">
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -1902,9 +2100,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var key1 =
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof WeakMap.prototype.delete === &quot;function&quot;;
+  return typeof WeakMap.prototype[&quot;delete&quot;] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakMap.prototype.delete === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakMap.prototype[\"delete\"] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakMap">
@@ -1955,9 +2153,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var obj1 =
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof WeakSet.prototype.delete === &quot;function&quot;;
+  return typeof WeakSet.prototype[&quot;delete&quot;] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakSet.prototype.delete === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakSet.prototype[\"delete\"] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">
@@ -2430,7 +2628,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>iterable destructuring</span></td>
+          <td><span>array destructuring</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
@@ -2442,6 +2640,60 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
   return a === 5 && b === 6 && c === undefined;
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [5, null, [6]];\n\n  var a = _ref[0];\n  var b = _ref[2][0];\n  var c = _ref[3];\n  return a === 5 && b === 6 && c === undefined;\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>string destructuring</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var _ref = &quot;bar&quot;;
+
+  var a = _ref[0];
+  var b = _ref[1];
+  var c = _ref[2];
+  return a === &quot;b&quot; && b === &quot;a&quot; && c === &quot;r&quot;;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = \"bar\";\n\n  var a = _ref[0];\n  var b = _ref[1];\n  var c = _ref[2];\n  return a === \"b\" && b === \"a\" && c === \"r\";\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>generic iterable destructuring</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  var iterable;
+  try {
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
+            return 1;
+          case 2: context$2$0.next = 4;
+            return 2;
+          case 4: context$2$0.next = 6;
+            return 3;
+          case 6:
+          case &quot;end&quot;: return context$2$0.stop();
+        }
+      }, callee$1$0, this);
+    }))();
+  } catch (e) {
+    var arr = [1, 2, 3,,];
+    iterable = {
+      next: function () {
+        return { value: arr.shift(), done: arr.length <= 0 };
+      } };
+    iterable[Symbol.iterator] = function () {
+      return iterable;
+    };
+  }
+  var a = iterable[0];
+  var b = iterable[1];
+  var c = iterable[2];
+  return a === 1 && b === 2 && c === 3;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 1;\n          case 2: context$2$0.next = 4;\n            return 2;\n          case 4: context$2$0.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  var a = iterable[0];\n  var b = iterable[1];\n  var c = iterable[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -3123,10 +3375,10 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var symbol
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  var symbol = Symbol.for(&quot;foo&quot;);
-  return Symbol.for(&quot;foo&quot;) === symbol && Symbol.keyFor(symbol) === &quot;foo&quot;;
+  var symbol = Symbol[&quot;for&quot;](&quot;foo&quot;);
+  return Symbol[&quot;for&quot;](&quot;foo&quot;) === symbol && Symbol.keyFor(symbol) === &quot;foo&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var symbol = Symbol.for(\"foo\");\n  return Symbol.for(\"foo\") === symbol && Symbol.keyFor(symbol) === \"foo\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var symbol = Symbol[\"for\"](\"foo\");\n  return Symbol[\"for\"](\"foo\") === symbol && Symbol.keyFor(symbol) === \"foo\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3260,12 +3512,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = { 
 
 (function () {
   return typeof RegExp.prototype.match === &quot;function&quot;;
-});">test(
-"use strict";
-
-(function () {
-  return typeof RegExp.prototype.match === "function";
-});())</script>
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.match === \"function\";\n});")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.replace</span></td>
@@ -3273,12 +3522,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = { 
 
 (function () {
   return typeof RegExp.prototype.replace === &quot;function&quot;;
-});">test(
-"use strict";
-
-(function () {
-  return typeof RegExp.prototype.replace === "function";
-});())</script>
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.replace === \"function\";\n});")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.split</span></td>
@@ -3286,12 +3532,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = { 
 
 (function () {
   return typeof RegExp.prototype.split === &quot;function&quot;;
-});">test(
-"use strict";
-
-(function () {
-  return typeof RegExp.prototype.split === "function";
-});())</script>
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.split === \"function\";\n});")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.search</span></td>
@@ -3299,12 +3542,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = { 
 
 (function () {
   return typeof RegExp.prototype.search === &quot;function&quot;;
-});">test(
-"use strict";
-
-(function () {
-  return typeof RegExp.prototype.search === "function";
-});())</script>
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.search === \"function\";\n});")()}catch(e){return false;}}());
+</script>
 
         </tr>
         <tr class="supertest">

@@ -361,6 +361,18 @@ return [&quot;a&quot;].concat(ITER$0(&quot;bcd&quot;), [&quot;e&quot;])[3] === &
 test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol.iterator||'@@iterator';var S_MARK$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol[\"__setObjectSetter__\"];function ITER$0(v,f){if(v){if(Array.isArray(v))return f?v.slice():v;var i,r;if(S_MARK$0)S_MARK$0(v);if(typeof v==='object'&&typeof (f=v[S_ITER$0])==='function'){i=f.call(v);r=[];}else if((v+'')==='[object Generator]'){i=v;r=[];};if(S_MARK$0)S_MARK$0(void 0);if(r) {while((f=i['next']()),f['done']!==true)r.push(f['value']);return r;}}throw new Error(v+' is not iterable')};\nreturn [\"a\"].concat(ITER$0(\"bcd\"), [\"e\"])[3] === \"d\";\n      })")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with generic iterables, in calls</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with generic iterables, in arrays</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr class="supertest">
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
@@ -526,14 +538,34 @@ test(function(){try{return eval("(function(){\nreturn ({ y: function() { return 
 </script>
 
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="for..of_loops"><span><a class="anchor" href="#for..of_loops">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements">for..of loops</a></span></td>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with arrays</span></td>
 <script data-source="(function(){var S_ITER$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol.iterator||'@@iterator';var S_MARK$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol[&quot;__setObjectSetter__&quot;];function GET_ITER$0(v){if(v){if(Array.isArray(v))return 0;var f;if(S_MARK$0)S_MARK$0(v);if(typeof v==='object'&&typeof (f=v[S_ITER$0])==='function'){if(S_MARK$0)S_MARK$0(void 0);return f.call(v);}if(S_MARK$0)S_MARK$0(void 0);if((v+'')==='[object Generator]')return v;}throw new Error(v+' is not iterable')};var $D$0;var $D$1;var $D$2;
 var arr = [5];
 $D$0 = GET_ITER$0(arr);$D$2 = $D$0 === 0;$D$1 = ($D$2 ? arr.length : void 0);for (var item ;$D$2 ? ($D$0 < $D$1) : !($D$1 = $D$0[&quot;next&quot;]())[&quot;done&quot;];)
 {item = ($D$2 ? arr[$D$0++] : $D$1[&quot;value&quot;]);return item === 5;};$D$0 = $D$1 = $D$2 = void 0;
-  })">
-test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol.iterator||'@@iterator';var S_MARK$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol[\"__setObjectSetter__\"];function GET_ITER$0(v){if(v){if(Array.isArray(v))return 0;var f;if(S_MARK$0)S_MARK$0(v);if(typeof v==='object'&&typeof (f=v[S_ITER$0])==='function'){if(S_MARK$0)S_MARK$0(void 0);return f.call(v);}if(S_MARK$0)S_MARK$0(void 0);if((v+'')==='[object Generator]')return v;}throw new Error(v+' is not iterable')};var $D$0;var $D$1;var $D$2;\nvar arr = [5];\n$D$0 = GET_ITER$0(arr);$D$2 = $D$0 === 0;$D$1 = ($D$2 ? arr.length : void 0);for (var item ;$D$2 ? ($D$0 < $D$1) : !($D$1 = $D$0[\"next\"]())[\"done\"];)\n{item = ($D$2 ? arr[$D$0++] : $D$1[\"value\"]);return item === 5;};$D$0 = $D$1 = $D$2 = void 0;\n  })")()}catch(e){return false;}}());
+      })">
+test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol.iterator||'@@iterator';var S_MARK$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol[\"__setObjectSetter__\"];function GET_ITER$0(v){if(v){if(Array.isArray(v))return 0;var f;if(S_MARK$0)S_MARK$0(v);if(typeof v==='object'&&typeof (f=v[S_ITER$0])==='function'){if(S_MARK$0)S_MARK$0(void 0);return f.call(v);}if(S_MARK$0)S_MARK$0(void 0);if((v+'')==='[object Generator]')return v;}throw new Error(v+' is not iterable')};var $D$0;var $D$1;var $D$2;\nvar arr = [5];\n$D$0 = GET_ITER$0(arr);$D$2 = $D$0 === 0;$D$1 = ($D$2 ? arr.length : void 0);for (var item ;$D$2 ? ($D$0 < $D$1) : !($D$1 = $D$0[\"next\"]())[\"done\"];)\n{item = ($D$2 ? arr[$D$0++] : $D$1[\"value\"]);return item === 5;};$D$0 = $D$1 = $D$2 = void 0;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with strings</span></td>
+<script data-source="(function(){var S_ITER$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol.iterator||'@@iterator';var S_MARK$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol[&quot;__setObjectSetter__&quot;];function GET_ITER$0(v){if(v){if(Array.isArray(v))return 0;var f;if(S_MARK$0)S_MARK$0(v);if(typeof v==='object'&&typeof (f=v[S_ITER$0])==='function'){if(S_MARK$0)S_MARK$0(void 0);return f.call(v);}if(S_MARK$0)S_MARK$0(void 0);if((v+'')==='[object Generator]')return v;}throw new Error(v+' is not iterable')};var $D$0;var $D$1;var $D$2;var $D$3;
+var str = &quot;&quot;;
+$D$3 = (&quot;foo&quot;);$D$0 = GET_ITER$0($D$3);$D$2 = $D$0 === 0;$D$1 = ($D$2 ? $D$3.length : void 0);for (var item ;$D$2 ? ($D$0 < $D$1) : !($D$1 = $D$0[&quot;next&quot;]())[&quot;done&quot;];)
+{item = ($D$2 ? $D$3[$D$0++] : $D$1[&quot;value&quot;]);str += item;};$D$0 = $D$1 = $D$2 = $D$3 = void 0;
+return str === &quot;foo&quot;;
+      })">
+test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol.iterator||'@@iterator';var S_MARK$0 = typeof Symbol!=='undefined'&&Symbol&&Symbol[\"__setObjectSetter__\"];function GET_ITER$0(v){if(v){if(Array.isArray(v))return 0;var f;if(S_MARK$0)S_MARK$0(v);if(typeof v==='object'&&typeof (f=v[S_ITER$0])==='function'){if(S_MARK$0)S_MARK$0(void 0);return f.call(v);}if(S_MARK$0)S_MARK$0(void 0);if((v+'')==='[object Generator]')return v;}throw new Error(v+' is not iterable')};var $D$0;var $D$1;var $D$2;var $D$3;\nvar str = \"\";\n$D$3 = (\"foo\");$D$0 = GET_ITER$0($D$3);$D$2 = $D$0 === 0;$D$1 = ($D$2 ? $D$3.length : void 0);for (var item ;$D$2 ? ($D$0 < $D$1) : !($D$1 = $D$0[\"next\"]())[\"done\"];)\n{item = ($D$2 ? $D$3[$D$0++] : $D$1[\"value\"]);str += item;};$D$0 = $D$1 = $D$2 = $D$3 = void 0;\nreturn str === \"foo\";\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with generic iterables</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1258,6 +1290,15 @@ test(function(){try{return eval("(function(){\nvar key = {};\nvar map = new Map(
 </script>
 
         <tr class="subtest" data-parent="Map">
+          <td><span>Map.prototype.set returns this</span></td>
+<script data-source="(function(){
+var map = new Map();
+return map.set(0, 0) === map;
+      })">
+test(function(){try{return eval("(function(){\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
           <td><span>constructor arguments</span></td>
 <script data-source="(function(){
 var key1 = {};
@@ -1331,6 +1372,20 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 test(function(){try{return eval("(function(){\nreturn typeof Map.prototype.entries === \"function\";\n      })")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="Map">
+          <td><span>`-0` key should be converted to `+0`</span></td>
+<script data-source="(function(){
+var map = new Map();
+map.set(-0, 42);
+var k = undefined;
+map.forEach(function (value, key) {
+  k = 1 / key;
+});
+return k === Infinity && map.get(+0) == 42;
+      })">
+test(function(){try{return eval("(function(){\nvar map = new Map();\nmap.set(-0, 42);\nvar k = undefined;\nmap.forEach(function (value, key) {\n  k = 1 / key;\n});\nreturn k === Infinity && map.get(+0) == 42;\n      })")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -1347,6 +1402,15 @@ set.add(123);
 return set.has(123);
       })">
 test(function(){try{return eval("(function(){\nvar obj = {};\nvar set = new Set();\n\nset.add(123);\nset.add(123);\n\nreturn set.has(123);\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>Set.prototype.add returns this</span></td>
+<script data-source="(function(){
+var set = new Set();
+return set.add(0) === set;
+      })">
+test(function(){try{return eval("(function(){\nvar set = new Set();\nreturn set.add(0) === set;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -1422,6 +1486,20 @@ test(function(){try{return eval("(function(){\nreturn typeof Set.prototype.value
 return typeof Set.prototype.entries === &quot;function&quot;;
       })">
 test(function(){try{return eval("(function(){\nreturn typeof Set.prototype.entries === \"function\";\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>`-0` key should be converted to `+0`</span></td>
+<script data-source="(function(){
+var set = new Set();
+set.add(-0);
+var k = undefined;
+set.forEach(function (value) {
+  k = 1 / value;
+});
+return k === Infinity && set.has(+0);
+      })">
+test(function(){try{return eval("(function(){\nvar set = new Set();\nset.add(-0);\nvar k = undefined;\nset.forEach(function (value) {\n  k = 1 / value;\n});\nreturn k === Infinity && set.has(+0);\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1882,12 +1960,27 @@ test(function(){try{return eval("(function(){\n'use strict';\n{\n  function f(){
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>iterable destructuring</span></td>
+          <td><span>array destructuring</span></td>
 <script data-source="(function(){
 var a = (c = [5, null, [6]])[0], b = (c[2])[0], c = c[3];
 return a === 5 && b === 6 && c === undefined;
       })">
 test(function(){try{return eval("(function(){\nvar a = (c = [5, null, [6]])[0], b = (c[2])[0], c = c[3];\nreturn a === 5 && b === 6 && c === undefined;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>string destructuring</span></td>
+<script data-source="(function(){
+var a = (c = &quot;bar&quot;)[0], b = c[1], c = c[2];
+return a === &quot;b&quot; && b === &quot;a&quot; && c === &quot;r&quot;;
+      })">
+test(function(){try{return eval("(function(){\nvar a = (c = \"bar\")[0], b = c[1], c = c[2];\nreturn a === \"b\" && b === \"a\" && c === \"r\";\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>generic iterable destructuring</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2363,39 +2456,35 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.match</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.match === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.match === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.match === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.match === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.replace</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.replace === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.replace === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.replace === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.replace === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.split</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.split === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.split === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.split === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.split === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
           <td><span>RegExp.prototype.search</span></td>
-<script data-source="(function () {
-        return typeof RegExp.prototype.search === 'function';
-      })">test(
-(function () {
-        return typeof RegExp.prototype.search === 'function';
-      })())</script>
+<script data-source="(function(){
+return typeof RegExp.prototype.search === 'function';
+      })">
+test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.search === 'function';\n      })")()}catch(e){return false;}}());
+</script>
 
         </tr>
         <tr class="supertest">
