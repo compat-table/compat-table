@@ -4354,6 +4354,33 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var key1 = {}
 </script>
 
         <tr class="subtest" data-parent="Map">
+          <td><span>Map.prototype.set returns this</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var map = new Map();
+  return map.set(0, 0) === map;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var map = new Map();\n  return map.set(0, 0) === map;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
+          <td><span>-0 key converts to +0</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var map = new Map();
+  map.set(-0, &quot;foo&quot;);
+  var k;
+  map.forEach(function(value, key) {
+    k = 1 / key;
+  });
+  return k === Infinity && map.get(+0) == &quot;foo&quot;;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var map = new Map();\n  map.set(-0, \"foo\");\n  var k;\n  map.forEach(function(value, key) {\n    k = 1 / key;\n  });\n  return k === Infinity && map.get(+0) == \"foo\";\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
           <td><span>Map.prototype.size</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
@@ -4485,6 +4512,33 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var obj1 = {}
 </script>
 
         <tr class="subtest" data-parent="Set">
+          <td><span>Set.prototype.add returns this</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var set = new Set();
+  return set.add(0) === set;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var set = new Set();\n  return set.add(0) === set;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>-0 key converts to +0</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var set = new Set();
+  set.add(-0);
+  var k;
+  set.forEach(function(value) {
+    k = 1 / value;
+  });
+  return k === Infinity && set.has(+0);
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var set = new Set();\n  set.add(-0);\n  var k;\n  set.forEach(function(value) {\n    k = 1 / value;\n  });\n  return k === Infinity && set.has(+0);\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
           <td><span>Set.prototype.size</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
@@ -4606,6 +4660,18 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var key1 = {}
 </script>
 
         <tr class="subtest" data-parent="WeakMap">
+          <td><span>WeakMap.prototype.set returns this</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var weakmap = new WeakMap();
+  var key = {};
+  return weakmap.set(key, 0) === weakmap;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var weakmap = new WeakMap();\n  var key = {};\n  return weakmap.set(key, 0) === weakmap;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakMap">
           <td><span>WeakMap.prototype.delete</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
@@ -4655,6 +4721,18 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var obj1 = {}
 });
 ">
 test(function(){try{return eval("\"use strict\";\n(function() {\n  var obj1 = {},\n      obj2 = {};\n  var weakset = new WeakSet([obj1, obj2]);\n  return weakset.has(obj1) && weakset.has(obj2);\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakSet">
+          <td><span>WeakSet.prototype.add returns this</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var weakset = new WeakSet();
+  var obj = {};
+  return weakset.add(obj) === set;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var weakset = new WeakSet();\n  var obj = {};\n  return weakset.add(obj) === set;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">
@@ -4798,12 +4876,12 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var proxied =
   var passed = false;
   Object.setPrototypeOf(new Proxy(proxied, {setPrototypeOf: function(t, p) {
       passed = t === proxied && p === newProto;
-      return false;
+      return true;
     }}), newProto);
   return passed;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var proxied = {};\n  var newProto = {};\n  var passed = false;\n  Object.setPrototypeOf(new Proxy(proxied, {setPrototypeOf: function(t, p) {\n      passed = t === proxied && p === newProto;\n      return false;\n    }}), newProto);\n  return passed;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var proxied = {};\n  var newProto = {};\n  var passed = false;\n  Object.setPrototypeOf(new Proxy(proxied, {setPrototypeOf: function(t, p) {\n      passed = t === proxied && p === newProto;\n      return true;\n    }}), newProto);\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -5092,10 +5170,12 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return Reflec
           <td><span>Reflect.construct</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
-  return +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;
+  return Reflect.construct(function(a, b, c) {
+    this.qux = a + b + c;
+  }, [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]).qux === &quot;foobarbaz&quot;;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  return +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  return Reflect.construct(function(a, b, c) {\n    this.qux = a + b + c;\n  }, [\"foo\", \"bar\", \"baz\"]).qux === \"foobarbaz\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -5351,10 +5431,10 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = Objec
           <td><span>Object.is</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
-  return typeof Object.is === 'function' && Object.is(NaN, NaN) && !Object.is(Math.round(-0.1), Math.round(0.1));
+  return typeof Object.is === 'function' && Object.is(NaN, NaN) && !Object.is(-0, 0);
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof Object.is === 'function' && Object.is(NaN, NaN) && !Object.is(Math.round(-0.1), Math.round(0.1));\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof Object.is === 'function' && Object.is(NaN, NaN) && !Object.is(-0, 0);\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Object_static_methods">

@@ -1899,6 +1899,29 @@ test(function(){try{return eval("(function(){\nvar key1 = {};\nvar key2 = {};\nv
 </script>
 
         <tr class="subtest" data-parent="Map">
+          <td><span>Map.prototype.set returns this</span></td>
+<script data-source="(function(){
+var map = new Map();
+return map.set(0, 0) === map;
+      })">
+test(function(){try{return eval("(function(){\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
+          <td><span>-0 key converts to +0</span></td>
+<script data-source="(function(){
+var map = new Map();
+map.set(-0, &quot;foo&quot;);
+var k;
+map.forEach(function (value, key) {
+  k = 1 / key;
+});
+return k === Infinity && map.get(+0) == &quot;foo&quot;;
+      })">
+test(function(){try{return eval("(function(){\nvar map = new Map();\nmap.set(-0, \"foo\");\nvar k;\nmap.forEach(function (value, key) {\n  k = 1 / key;\n});\nreturn k === Infinity && map.get(+0) == \"foo\";\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Map">
           <td><span>Map.prototype.size</span></td>
 <script data-source="(function(){
 var key = {};
@@ -2013,6 +2036,29 @@ test(function(){try{return eval("(function(){\nvar obj1 = {};\nvar obj2 = {};\nv
 </script>
 
         <tr class="subtest" data-parent="Set">
+          <td><span>Set.prototype.add returns this</span></td>
+<script data-source="(function(){
+var set = new Set();
+return set.add(0) === set;
+      })">
+test(function(){try{return eval("(function(){\nvar set = new Set();\nreturn set.add(0) === set;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
+          <td><span>-0 key converts to +0</span></td>
+<script data-source="(function(){
+var set = new Set();
+set.add(-0);
+var k;
+set.forEach(function (value) {
+  k = 1 / value;
+});
+return k === Infinity && set.has(+0);
+      })">
+test(function(){try{return eval("(function(){\nvar set = new Set();\nset.add(-0);\nvar k;\nset.forEach(function (value) {\n  k = 1 / value;\n});\nreturn k === Infinity && set.has(+0);\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Set">
           <td><span>Set.prototype.size</span></td>
 <script data-source="(function(){
 var obj = {};
@@ -2120,6 +2166,16 @@ test(function(){try{return eval("(function(){\nvar key1 = {};\nvar key2 = {};\nv
 </script>
 
         <tr class="subtest" data-parent="WeakMap">
+          <td><span>WeakMap.prototype.set returns this</span></td>
+<script data-source="(function(){
+var weakmap = new WeakMap();
+var key = {};
+return weakmap.set(key, 0) === weakmap;
+      })">
+test(function(){try{return eval("(function(){\nvar weakmap = new WeakMap();\nvar key = {};\nreturn weakmap.set(key, 0) === weakmap;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakMap">
           <td><span>WeakMap.prototype.delete</span></td>
 <script data-source="(function(){
 return typeof WeakMap.prototype.delete === &quot;function&quot;;
@@ -2162,6 +2218,16 @@ var weakset = new WeakSet([obj1, obj2]);
 return weakset.has(obj1) && weakset.has(obj2);
       })">
 test(function(){try{return eval("(function(){\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet([obj1, obj2]);\n\nreturn weakset.has(obj1) && weakset.has(obj2);\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="WeakSet">
+          <td><span>WeakSet.prototype.add returns this</span></td>
+<script data-source="(function(){
+var weakset = new WeakSet();
+var obj = {};
+return weakset.add(obj) === set;
+      })">
+test(function(){try{return eval("(function(){\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === set;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">
@@ -2309,14 +2375,14 @@ Object.setPrototypeOf(
   new Proxy(proxied, {
     setPrototypeOf: function (t, p) {
       passed = t === proxied && p === newProto;
-      return false;
+      return true;
     }
   }),
   newProto
 );
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar proxied = {};\nvar newProto = {};\nvar passed = false;\nObject.setPrototypeOf(\n  new Proxy(proxied, {\n    setPrototypeOf: function (t, p) {\n      passed = t === proxied && p === newProto;\n      return false;\n    }\n  }),\n  newProto\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar proxied = {};\nvar newProto = {};\nvar passed = false;\nObject.setPrototypeOf(\n  new Proxy(proxied, {\n    setPrototypeOf: function (t, p) {\n      passed = t === proxied && p === newProto;\n      return true;\n    }\n  }),\n  newProto\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -2576,9 +2642,11 @@ test(function(){try{return eval("(function(){\nreturn Reflect.apply(Array.protot
         <tr class="subtest" data-parent="Reflect">
           <td><span>Reflect.construct</span></td>
 <script data-source="(function(){
-return +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;
+return Reflect.construct(function(a, b, c) {
+  this.qux = a + b + c;
+}, [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]).qux === &quot;foobarbaz&quot;;
       })">
-test(function(){try{return eval("(function(){\nreturn +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn Reflect.construct(function(a, b, c) {\n  this.qux = a + b + c;\n}, [\"foo\", \"bar\", \"baz\"]).qux === \"foobarbaz\";\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3169,9 +3237,9 @@ test(function(){try{return eval("(function(){\nvar o = Object.assign({a:true}, {
 <script data-source="(function(){
 return typeof Object.is === 'function' &&
   Object.is(NaN, NaN) &&
- !Object.is(Math.round(-0.1), Math.round(0.1));
+ !Object.is(-0, 0);
       })">
-test(function(){try{return eval("(function(){\nreturn typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(Math.round(-0.1), Math.round(0.1));\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(-0, 0);\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Object_static_methods">

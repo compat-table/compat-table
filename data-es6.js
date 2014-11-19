@@ -1864,18 +1864,6 @@ exports.tests = [
         ios8:        true,
       },
     },
-    'Map.prototype.set returns this': {
-      exec: function () {/*
-        var map = new Map();
-        return map.set(0, 0) === map;
-      */},
-      res: {
-        tr:          true,
-        _6to5:       true,
-        firefox33:   true,
-        chrome39:    true,
-      },
-    },
     'constructor arguments': {
       exec: function () {/*
         var key1 = {};
@@ -1892,6 +1880,36 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+      },
+    },
+    'Map.prototype.set returns this': {
+      exec: function () {/*
+        var map = new Map();
+        return map.set(0, 0) === map;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ie11tp:      true,
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
+    '-0 key converts to +0': {
+      exec: function () {/*
+        var map = new Map();
+        map.set(-0, "foo");
+        var k;
+        map.forEach(function (value, key) {
+          k = 1 / key;
+        });
+        return k === Infinity && map.get(+0) == "foo";
+      */},
+      res: {
+        _6to5:       true,
+        ie11tp:      true,
+        firefox29:   true,
+        chrome36:    true,
       },
     },
     'Map.prototype.size': {
@@ -1980,7 +1998,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        chrome36:    true,
+        chrome37:    true,
       },
     },
     'Map.prototype.values': {
@@ -2015,22 +2033,6 @@ exports.tests = [
         chrome36:    true,
       },
     },
-    '`-0` key should be converted to `+0`': {
-      exec: function () {/*
-        var map = new Map();
-        map.set(-0, 42);
-        var k = undefined;
-        map.forEach(function (value, key) {
-          k = 1 / key;
-        });
-        return k === Infinity && map.get(+0) == 42;
-      */},
-      res: {
-        _6to5:       true,
-        firefox29:   true,
-        chrome39:    true,
-      },
-    },
   },
 },
 {
@@ -2061,17 +2063,6 @@ exports.tests = [
         ios8:        true,
       },
     },
-    'Set.prototype.add returns this': {
-      exec: function () {/*
-        var set = new Set();
-        return set.add(0) === set;
-      */},
-      res: {
-        tr:          true,
-        firefox33:   true,
-        chrome39:    true,
-      },
-    },
     'constructor arguments': {
       exec: function () {/*
         var obj1 = {};
@@ -2087,6 +2078,35 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+      },
+    },
+    'Set.prototype.add returns this': {
+      exec: function () {/*
+        var set = new Set();
+        return set.add(0) === set;
+      */},
+      res: {
+        tr:          true,
+        ie11tp:      true,
+        firefox33:   true,
+        chrome39:    true,
+      },
+    },
+    '-0 key converts to +0': {
+      exec: function () {/*
+        var set = new Set();
+        set.add(-0);
+        var k;
+        set.forEach(function (value) {
+          k = 1 / value;
+        });
+        return k === Infinity && set.has(+0);
+      */},
+      res: {
+        _6to5:       true,
+        ie11tp:      true,
+        firefox29:   true,
+        chrome36:    true,
       },
     },
     'Set.prototype.size': {
@@ -2213,22 +2233,6 @@ exports.tests = [
         chrome37:    true,
       },
     },
-    '`-0` key should be converted to `+0`': {
-      exec: function () {/*
-        var set = new Set();
-        set.add(-0);
-        var k = undefined;
-        set.forEach(function (value) {
-          k = 1 / value;
-        });
-        return k === Infinity && set.has(+0);
-      */},
-      res: {
-        _6to5:       true,
-        firefox29:   true,
-        chrome39:    true,
-      },
-    },
   },
 },
 {
@@ -2266,6 +2270,16 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+      },
+    },
+    'WeakMap.prototype.set returns this': {
+      exec: function () {/*
+        var weakmap = new WeakMap();
+        var key = {};
+        return weakmap.set(key, 0) === weakmap;
+      */},
+      res: {
+        ie11tp:      true,
       },
     },
     'WeakMap.prototype.delete': {
@@ -2332,6 +2346,16 @@ exports.tests = [
         ie11tp:      true,
         firefox34:   true,
         chrome38:    true,
+      },
+    },
+    'WeakSet.prototype.add returns this': {
+      exec: function () {/*
+        var weakset = new WeakSet();
+        var obj = {};
+        return weakset.add(obj) === set;
+      */},
+      res: {
+        ie11tp:      true,
       },
     },
     'WeakSet.prototype.delete': {
@@ -2517,7 +2541,7 @@ exports.tests = [
           new Proxy(proxied, {
             setPrototypeOf: function (t, p) {
               passed = t === proxied && p === newProto;
-              return false;
+              return true;
             }
           }),
           newProto
@@ -2797,7 +2821,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        ie11tp:      true,
       },
     },
     'Reflect.apply': {
@@ -2811,7 +2834,9 @@ exports.tests = [
     },
     'Reflect.construct': {
       exec: function() {/*
-        return +Reflect.construct(Date, [1995, 8, 20]) === 811519200000;
+        return Reflect.construct(function(a, b, c) {
+          this.qux = a + b + c;
+        }, ["foo", "bar", "baz"]).qux === "foobarbaz";
       */},
       res: {
         ejs:         true,
@@ -3142,7 +3167,7 @@ exports.tests = [
       exec: function () {/*
         return typeof Object.is === 'function' &&
           Object.is(NaN, NaN) &&
-         !Object.is(Math.round(-0.1), Math.round(0.1));
+         !Object.is(-0, 0);
       */},
       res: {
         tr:          true,
