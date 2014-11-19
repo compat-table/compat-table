@@ -1383,6 +1383,7 @@ exports.tests = [
         ie11tp:      true,
         firefox27:   true,
         chrome38:    true,
+        nodeharmony: true,
       },
     },
   },
@@ -1871,7 +1872,7 @@ exports.tests = [
         var map = new Map([[key1, 123], [key2, 456]]);
 
         return map.has(key1) && map.get(key1) === 123 &&
-               map.has(key2) && map.get(key2) === 456;;
+               map.has(key2) && map.get(key2) === 456;
       */},
       res: {
         tr:          true,
@@ -1892,7 +1893,7 @@ exports.tests = [
         _6to5:       true,
         ie11tp:      true,
         firefox33:   true,
-        chrome39:    true,
+        chrome38:    true,
       },
     },
     '-0 key converts to +0': {
@@ -1909,7 +1910,8 @@ exports.tests = [
         _6to5:       true,
         ie11tp:      true,
         firefox29:   true,
-        chrome36:    true,
+        chrome39:    true,
+        nodeharmony: true,
       },
     },
     'Map.prototype.size': {
@@ -2107,6 +2109,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome36:    true,
+        nodeharmony: true,
       },
     },
     'Set.prototype.size': {
@@ -2280,6 +2283,7 @@ exports.tests = [
       */},
       res: {
         ie11tp:      true,
+        chrome38:    true,
       },
     },
     'WeakMap.prototype.delete': {
@@ -2352,10 +2356,11 @@ exports.tests = [
       exec: function () {/*
         var weakset = new WeakSet();
         var obj = {};
-        return weakset.add(obj) === set;
+        return weakset.add(obj) === weakset;
       */},
       res: {
         ie11tp:      true,
+        chrome38:    true,
       },
     },
     'WeakSet.prototype.delete': {
@@ -3846,6 +3851,7 @@ exports.tests = [
         _6to5:      true,
         ie11tp:     true,
         chrome35:   true,
+        nodeharmony:true,
       },
     },
     'Object(symbol)': {

@@ -1399,16 +1399,6 @@ test(function(){try{return eval("(function () {\n    var key = {};\n    var map 
 </script>
 
         <tr class="subtest" data-parent="Map">
-          <td><span>Map.prototype.set returns this</span></td>
-<script data-source="(function () {
-    var map = new Map();
-    return map.set(0, 0) === map;
-});
-">
-test(function(){try{return eval("(function () {\n    var map = new Map();\n    return map.set(0, 0) === map;\n});\n")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="Map">
           <td><span>constructor arguments</span></td>
 <script data-source="/* Error during compilation: 
 (4,11): error TS2346: Supplied parameters do not match any signature of call target.
@@ -1500,14 +1490,6 @@ test(function(){try{return eval("(function () {\n    return typeof Map.prototype
 test(function(){try{return eval("(function () {\n    return typeof Map.prototype.entries === \"function\";\n});\n")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="Map">
-          <td><span>`-0` key should be converted to `+0`</span></td>
-<script data-source="/* Error during compilation: 
-(6,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type.
-*/">
-test(function(){try{return Function("/* Error during compilation: \n(6,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type.\n*/")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -1523,16 +1505,6 @@ test(function(){try{return Function("/* Error during compilation: \n(6,11): erro
 });
 ">
 test(function(){try{return eval("(function () {\n    var obj = {};\n    var set = new Set();\n    set.add(123);\n    set.add(123);\n    return set.has(123);\n});\n")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="Set">
-          <td><span>Set.prototype.add returns this</span></td>
-<script data-source="(function () {
-    var set = new Set();
-    return set.add(0) === set;
-});
-">
-test(function(){try{return eval("(function () {\n    var set = new Set();\n    return set.add(0) === set;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -1629,14 +1601,6 @@ test(function(){try{return eval("(function () {\n    return typeof Set.prototype
 test(function(){try{return eval("(function () {\n    return typeof Set.prototype.entries === \"function\";\n});\n")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="Set">
-          <td><span>`-0` key should be converted to `+0`</span></td>
-<script data-source="/* Error during compilation: 
-(6,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type.
-*/">
-test(function(){try{return Function("/* Error during compilation: \n(6,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type.\n*/")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -1714,9 +1678,8 @@ test(function(){try{return Function("/* Error during compilation: \n(3,19): erro
           <td><span>WeakSet.prototype.add returns this</span></td>
 <script data-source="/* Error during compilation: 
 (2,19): error TS2304: Cannot find name 'WeakSet'.
-(4,29): error TS2304: Cannot find name 'set'.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,19): error TS2304: Cannot find name 'WeakSet'.\n(4,29): error TS2304: Cannot find name 'set'.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,19): error TS2304: Cannot find name 'WeakSet'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">

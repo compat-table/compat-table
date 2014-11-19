@@ -3788,7 +3788,7 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="tally rhino17" data-tally="0">0/3</td>
           <td class="tally phantom" data-tally="0">0/3</td>
           <td class="tally node" data-tally="0">0/3</td>
-          <td class="tally nodeharmony" data-tally="0">0/3</td>
+          <td class="tally nodeharmony" data-tally="0.3333333333333333">1/3</td>
           <td class="tally ios7" data-tally="0">0/3</td>
           <td class="tally ios8" data-tally="0.3333333333333333">1/3</td>
         <tr class="subtest" data-parent="for..of_loops">
@@ -3980,7 +3980,7 @@ test(function(){try{return Function("\nvar iterable, result = \"\";\ntry {\n  it
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
@@ -7467,8 +7467,8 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
           <td class="tally chrome33 obsolete" data-tally="0.36363636363636365">4/11</td>
           <td class="tally chrome34 obsolete" data-tally="0.36363636363636365">4/11</td>
           <td class="tally chrome35 obsolete" data-tally="0.36363636363636365">4/11</td>
-          <td class="tally chrome36 obsolete" data-tally="0.7272727272727273">8/11</td>
-          <td class="tally chrome37 obsolete" data-tally="0.8181818181818182">9/11</td>
+          <td class="tally chrome36 obsolete" data-tally="0.6363636363636364">7/11</td>
+          <td class="tally chrome37 obsolete" data-tally="0.7272727272727273">8/11</td>
           <td class="tally chrome38" data-tally="0.9090909090909091">10/11</td>
           <td class="tally chrome39" data-tally="1">11/11</td>
           <td class="tally safari51 obsolete" data-tally="0">0/11</td>
@@ -7481,7 +7481,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
           <td class="tally rhino17" data-tally="0">0/11</td>
           <td class="tally phantom" data-tally="0">0/11</td>
           <td class="tally node" data-tally="0">0/11</td>
-          <td class="tally nodeharmony" data-tally="0.45454545454545453">5/11</td>
+          <td class="tally nodeharmony" data-tally="0.5454545454545454">6/11</td>
           <td class="tally ios7" data-tally="0">0/11</td>
           <td class="tally ios8" data-tally="0.7272727272727273">8/11</td>
         <tr class="subtest" data-parent="Map">
@@ -7554,9 +7554,9 @@ var key2 = {};
 var map = new Map([[key1, 123], [key2, 456]]);
 
 return map.has(key1) && map.get(key1) === 123 &&
-       map.has(key2) && map.get(key2) === 456;;
+       map.has(key2) && map.get(key2) === 456;
       ">
-test(function(){try{return Function("\nvar key1 = {};\nvar key2 = {};\nvar map = new Map([[key1, 123], [key2, 456]]);\n\nreturn map.has(key1) && map.get(key1) === 123 &&\n       map.has(key2) && map.get(key2) === 456;;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar key1 = {};\nvar key2 = {};\nvar map = new Map([[key1, 123], [key2, 456]]);\n\nreturn map.has(key1) && map.get(key1) === 123 &&\n       map.has(key2) && map.get(key2) === 456;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -7651,7 +7651,7 @@ test(function(){try{return Function("\nvar map = new Map();\nreturn map.set(0, 0
           <td class="no chrome35 obsolete">No</td>
           <td class="no chrome36 obsolete">No</td>
           <td class="no chrome37 obsolete">No</td>
-          <td class="no chrome38">No</td>
+          <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
@@ -7712,9 +7712,9 @@ test(function(){try{return Function("\nvar map = new Map();\nmap.set(-0, \"foo\"
           <td class="no chrome33 obsolete">No</td>
           <td class="no chrome34 obsolete">No</td>
           <td class="no chrome35 obsolete">No</td>
-          <td class="yes chrome36 obsolete">Yes</td>
-          <td class="yes chrome37 obsolete">Yes</td>
-          <td class="yes chrome38">Yes</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38">No</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
@@ -7726,7 +7726,7 @@ test(function(){try{return Function("\nvar map = new Map();\nmap.set(-0, \"foo\"
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="Map">
@@ -8183,7 +8183,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
           <td class="tally rhino17" data-tally="0">0/11</td>
           <td class="tally phantom" data-tally="0">0/11</td>
           <td class="tally node" data-tally="0">0/11</td>
-          <td class="tally nodeharmony" data-tally="0.45454545454545453">5/11</td>
+          <td class="tally nodeharmony" data-tally="0.5454545454545454">6/11</td>
           <td class="tally ios7" data-tally="0">0/11</td>
           <td class="tally ios8" data-tally="0.7272727272727273">8/11</td>
         <tr class="subtest" data-parent="Set">
@@ -8428,7 +8428,7 @@ test(function(){try{return Function("\nvar set = new Set();\nset.add(-0);\nvar k
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="Set">
@@ -8875,8 +8875,8 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
           <td class="tally chrome35 obsolete" data-tally="0.6">3/5</td>
           <td class="tally chrome36 obsolete" data-tally="0.6">3/5</td>
           <td class="tally chrome37 obsolete" data-tally="0.6">3/5</td>
-          <td class="tally chrome38" data-tally="0.8">4/5</td>
-          <td class="tally chrome39" data-tally="0.8">4/5</td>
+          <td class="tally chrome38" data-tally="1">5/5</td>
+          <td class="tally chrome39" data-tally="1">5/5</td>
           <td class="tally safari51 obsolete" data-tally="0">0/5</td>
           <td class="tally safari6" data-tally="0">0/5</td>
           <td class="tally safari7" data-tally="0">0/5</td>
@@ -9058,8 +9058,8 @@ test(function(){try{return Function("\nvar weakmap = new WeakMap();\nvar key = {
           <td class="no chrome35 obsolete">No</td>
           <td class="no chrome36 obsolete">No</td>
           <td class="no chrome37 obsolete">No</td>
-          <td class="no chrome38">No</td>
-          <td class="no chrome39">No</td>
+          <td class="yes chrome38">Yes</td>
+          <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -9225,8 +9225,8 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.clear ===
           <td class="tally chrome35 obsolete" data-tally="0.6">3/5</td>
           <td class="tally chrome36 obsolete" data-tally="0.6">3/5</td>
           <td class="tally chrome37 obsolete" data-tally="0.6">3/5</td>
-          <td class="tally chrome38" data-tally="0.8">4/5</td>
-          <td class="tally chrome39" data-tally="0.8">4/5</td>
+          <td class="tally chrome38" data-tally="1">5/5</td>
+          <td class="tally chrome39" data-tally="1">5/5</td>
           <td class="tally safari51 obsolete" data-tally="0">0/5</td>
           <td class="tally safari6" data-tally="0">0/5</td>
           <td class="tally safari7" data-tally="0">0/5</td>
@@ -9368,9 +9368,9 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
 <script data-source="
 var weakset = new WeakSet();
 var obj = {};
-return weakset.add(obj) === set;
+return weakset.add(obj) === weakset;
       ">
-test(function(){try{return Function("\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === set;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === weakset;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -9407,8 +9407,8 @@ test(function(){try{return Function("\nvar weakset = new WeakSet();\nvar obj = {
           <td class="no chrome35 obsolete">No</td>
           <td class="no chrome36 obsolete">No</td>
           <td class="no chrome37 obsolete">No</td>
-          <td class="no chrome38">No</td>
-          <td class="no chrome39">No</td>
+          <td class="yes chrome38">Yes</td>
+          <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -14200,7 +14200,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
           <td class="tally rhino17" data-tally="0">0/8</td>
           <td class="tally phantom" data-tally="0">0/8</td>
           <td class="tally node" data-tally="0">0/8</td>
-          <td class="tally nodeharmony" data-tally="0.625">5/8</td>
+          <td class="tally nodeharmony" data-tally="0.75">6/8</td>
           <td class="tally ios7" data-tally="0">0/8</td>
           <td class="tally ios8" data-tally="0">0/8</td>
         <tr class="subtest" data-parent="Symbol">
@@ -14642,7 +14642,7 @@ test(function(){try{return Function("\nvar symbol = Symbol();\ntry {\n  new Symb
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No</td>
+          <td class="yes nodeharmony">Yes</td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         <tr class="subtest" data-parent="Symbol">
