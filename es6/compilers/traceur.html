@@ -4329,17 +4329,6 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var key = {};
 </script>
 
         <tr class="subtest" data-parent="Map">
-          <td><span>Map.prototype.set returns this</span></td>
-<script data-source="&quot;use strict&quot;;
-(function() {
-  var map = new Map();
-  return map.set(0, 0) === map;
-});
-">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var map = new Map();\n  return map.set(0, 0) === map;\n});\n")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="Map">
           <td><span>constructor arguments</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
@@ -4347,10 +4336,9 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var map = new
   var key2 = {};
   var map = new Map([[key1, 123], [key2, 456]]);
   return map.has(key1) && map.get(key1) === 123 && map.has(key2) && map.get(key2) === 456;
-  ;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var key1 = {};\n  var key2 = {};\n  var map = new Map([[key1, 123], [key2, 456]]);\n  return map.has(key1) && map.get(key1) === 123 && map.has(key2) && map.get(key2) === 456;\n  ;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var key1 = {};\n  var key2 = {};\n  var map = new Map([[key1, 123], [key2, 456]]);\n  return map.has(key1) && map.get(key1) === 123 && map.has(key2) && map.get(key2) === 456;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Map">
@@ -4453,22 +4441,6 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof
 test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof Map.prototype.entries === \"function\";\n});\n")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="Map">
-          <td><span>`-0` key should be converted to `+0`</span></td>
-<script data-source="&quot;use strict&quot;;
-(function() {
-  var map = new Map();
-  map.set(-0, 42);
-  var k = undefined;
-  map.forEach(function(value, key) {
-    k = 1 / key;
-  });
-  return k === Infinity && map.get(+0) == 42;
-});
-">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var map = new Map();\n  map.set(-0, 42);\n  var k = undefined;\n  map.forEach(function(value, key) {\n    k = 1 / key;\n  });\n  return k === Infinity && map.get(+0) == 42;\n});\n")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -4485,17 +4457,6 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var map = new
 });
 ">
 test(function(){try{return eval("\"use strict\";\n(function() {\n  var obj = {};\n  var set = new Set();\n  set.add(123);\n  set.add(123);\n  return set.has(123);\n});\n")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="Set">
-          <td><span>Set.prototype.add returns this</span></td>
-<script data-source="&quot;use strict&quot;;
-(function() {
-  var set = new Set();
-  return set.add(0) === set;
-});
-">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var set = new Set();\n  return set.add(0) === set;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -4613,22 +4574,6 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof
 test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof Set.prototype.entries === \"function\";\n});\n")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="Set">
-          <td><span>`-0` key should be converted to `+0`</span></td>
-<script data-source="&quot;use strict&quot;;
-(function() {
-  var set = new Set();
-  set.add(-0);
-  var k = undefined;
-  set.forEach(function(value) {
-    k = 1 / value;
-  });
-  return k === Infinity && set.has(+0);
-});
-">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var set = new Set();\n  set.add(-0);\n  var k = undefined;\n  set.forEach(function(value) {\n    k = 1 / value;\n  });\n  return k === Infinity && set.has(+0);\n});\n")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -4729,10 +4674,10 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var obj1 = {}
 (function() {
   var weakset = new WeakSet();
   var obj = {};
-  return weakset.add(obj) === set;
+  return weakset.add(obj) === weakset;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var weakset = new WeakSet();\n  var obj = {};\n  return weakset.add(obj) === set;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var weakset = new WeakSet();\n  var obj = {};\n  return weakset.add(obj) === weakset;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">

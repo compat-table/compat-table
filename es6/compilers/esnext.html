@@ -1877,15 +1877,6 @@ test(function(){try{return eval("(function(){\nvar key = {};\nvar map = new Map(
 </script>
 
         <tr class="subtest" data-parent="Map">
-          <td><span>Map.prototype.set returns this</span></td>
-<script data-source="(function(){
-var map = new Map();
-return map.set(0, 0) === map;
-      })">
-test(function(){try{return eval("(function(){\nvar map = new Map();\nreturn map.set(0, 0) === map;\n      })")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="Map">
           <td><span>constructor arguments</span></td>
 <script data-source="(function(){
 var key1 = {};
@@ -1893,9 +1884,9 @@ var key2 = {};
 var map = new Map([[key1, 123], [key2, 456]]);
 
 return map.has(key1) && map.get(key1) === 123 &&
-       map.has(key2) && map.get(key2) === 456;;
+       map.has(key2) && map.get(key2) === 456;
       })">
-test(function(){try{return eval("(function(){\nvar key1 = {};\nvar key2 = {};\nvar map = new Map([[key1, 123], [key2, 456]]);\n\nreturn map.has(key1) && map.get(key1) === 123 &&\n       map.has(key2) && map.get(key2) === 456;;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar key1 = {};\nvar key2 = {};\nvar map = new Map([[key1, 123], [key2, 456]]);\n\nreturn map.has(key1) && map.get(key1) === 123 &&\n       map.has(key2) && map.get(key2) === 456;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Map">
@@ -1982,20 +1973,6 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 test(function(){try{return eval("(function(){\nreturn typeof Map.prototype.entries === \"function\";\n      })")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="Map">
-          <td><span>`-0` key should be converted to `+0`</span></td>
-<script data-source="(function(){
-var map = new Map();
-map.set(-0, 42);
-var k = undefined;
-map.forEach(function (value, key) {
-  k = 1 / key;
-});
-return k === Infinity && map.get(+0) == 42;
-      })">
-test(function(){try{return eval("(function(){\nvar map = new Map();\nmap.set(-0, 42);\nvar k = undefined;\nmap.forEach(function (value, key) {\n  k = 1 / key;\n});\nreturn k === Infinity && map.get(+0) == 42;\n      })")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
@@ -2012,15 +1989,6 @@ set.add(123);
 return set.has(123);
       })">
 test(function(){try{return eval("(function(){\nvar obj = {};\nvar set = new Set();\n\nset.add(123);\nset.add(123);\n\nreturn set.has(123);\n      })")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="Set">
-          <td><span>Set.prototype.add returns this</span></td>
-<script data-source="(function(){
-var set = new Set();
-return set.add(0) === set;
-      })">
-test(function(){try{return eval("(function(){\nvar set = new Set();\nreturn set.add(0) === set;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Set">
@@ -2121,20 +2089,6 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 test(function(){try{return eval("(function(){\nreturn typeof Set.prototype.entries === \"function\";\n      })")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="Set">
-          <td><span>`-0` key should be converted to `+0`</span></td>
-<script data-source="(function(){
-var set = new Set();
-set.add(-0);
-var k = undefined;
-set.forEach(function (value) {
-  k = 1 / value;
-});
-return k === Infinity && set.has(+0);
-      })">
-test(function(){try{return eval("(function(){\nvar set = new Set();\nset.add(-0);\nvar k = undefined;\nset.forEach(function (value) {\n  k = 1 / value;\n});\nreturn k === Infinity && set.has(+0);\n      })")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
@@ -2225,9 +2179,9 @@ test(function(){try{return eval("(function(){\nvar obj1 = {}, obj2 = {};\nvar we
 <script data-source="(function(){
 var weakset = new WeakSet();
 var obj = {};
-return weakset.add(obj) === set;
+return weakset.add(obj) === weakset;
       })">
-test(function(){try{return eval("(function(){\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === set;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === weakset;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="WeakSet">
