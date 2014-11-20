@@ -363,14 +363,14 @@ test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='und
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -564,8 +564,14 @@ test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='und
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with generic iterables</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1999,8 +2005,8 @@ test(function(){try{return eval("(function(){\nvar a = (c = \"bar\")[0], b = c[1
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>generic iterable destructuring</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">

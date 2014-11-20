@@ -569,88 +569,14 @@ test(function(){try{return Function("/* Error during compilation: Line 2: Spread
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
-<script data-source="var $__accumulateIteratorValues = function(iterator) {
-  var result = [];
-
-  for (var item; !(item = iterator.next()).done; )
-    result.push(item.value);
-
-  return result;
-};
-
-var $__getIterator = function(iterable) {
-  var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
-
-  if (typeof iterable[sym] === &quot;function&quot;) {
-    return iterable[sym]();
-  } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
-    return $__getArrayIterator(iterable);
-  } else {
-    throw new TypeError();
-  }
-};
-
-var $__getArrayIterator = function(array) {
-  var index = 0;
-
-  return {
-    next: function() {
-      if (index < array.length) {
-        return {
-          done: false,
-          value: array[index++]
-        };
-      } else {
-        return {
-          done: true,
-          value: void 0
-        };
-      }
-    }
-  };
-};
-
-(function(){
-  var $__0;
-  var iterable;
-  try {
-    iterable = (regeneratorRuntime.mark(function callee$1$0() {
-      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-        while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return 1;
-        case 2:
-          context$2$0.next = 4;
-          return 2;
-        case 4:
-          context$2$0.next = 6;
-          return 3;
-        case 6:
-        case &quot;end&quot;:
-          return context$2$0.stop();
-        }
-      }, callee$1$0, this);
-    }))();
-  }
-  catch (e) {
-    var arr = [1, 2, 3, ,];
-    iterable = {
-      next: function() {
-        return { value: arr.shift(), done: arr.length <= 0 }; 
-      },
-    };
-    iterable[Symbol.iterator] = function(){ return iterable; }
-  }
-  return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(iterable))) === 3;
-});">
-test(function(){try{return eval("var $__accumulateIteratorValues = function(iterator) {\n  var result = [];\n\n  for (var item; !(item = iterator.next()).done; )\n    result.push(item.value);\n\n  return result;\n};\n\nvar $__getIterator = function(iterable) {\n  var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n  if (typeof iterable[sym] === \"function\") {\n    return iterable[sym]();\n  } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n    return $__getArrayIterator(iterable);\n  } else {\n    throw new TypeError();\n  }\n};\n\nvar $__getArrayIterator = function(array) {\n  var index = 0;\n\n  return {\n    next: function() {\n      if (index < array.length) {\n        return {\n          done: false,\n          value: array[index++]\n        };\n      } else {\n        return {\n          done: true,\n          value: void 0\n        };\n      }\n    }\n  };\n};\n\n(function(){\n  var $__0;\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0:\n          context$2$0.next = 2;\n          return 1;\n        case 2:\n          context$2$0.next = 4;\n          return 2;\n        case 4:\n          context$2$0.next = 6;\n          return 3;\n        case 6:\n        case \"end\":\n          return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  }\n  catch (e) {\n    var arr = [1, 2, 3, ,];\n    iterable = {\n      next: function() {\n        return { value: arr.shift(), done: arr.length <= 0 }; \n      },\n    };\n    iterable[Symbol.iterator] = function(){ return iterable; }\n  }\n  return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(iterable))) === 3;\n});")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
-<script data-source="/* Error during compilation: Line 15: Spread must be the final element of an element list*/">
-test(function(){try{return Function("/* Error during compilation: Line 15: Spread must be the final element of an element list*/")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1091,46 +1017,14 @@ test(function(){try{return eval("(function(){\n  var str = \"\";\n\n  for (var i
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with generic iterables</span></td>
-<script data-source="(function(){
-  var iterable, result = &quot;&quot;;
-  try {
-    iterable = (regeneratorRuntime.mark(function callee$1$0() {
-      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-        while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return 1;
-        case 2:
-          context$2$0.next = 4;
-          return 2;
-        case 4:
-          context$2$0.next = 6;
-          return 3;
-        case 6:
-        case &quot;end&quot;:
-          return context$2$0.stop();
-        }
-      }, callee$1$0, this);
-    }))();
-  }
-  catch (e) {
-    var arr = [1, 2, 3, ,];
-    iterable = {
-      next: function() {
-        return { value: arr.shift(), done: arr.length <= 0 }; 
-      },
-    };
-    iterable[Symbol.iterator] = function(){ return iterable; }
-  }
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+</script>
 
-  for (var item, t$1$0 = regeneratorRuntime.values(iterable), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {
-    item = t$1$1.value;
-    result += item;
-  }
-
-  return result === &quot;123&quot;;
-})">
-test(function(){try{return eval("(function(){\n  var iterable, result = \"\";\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0:\n          context$2$0.next = 2;\n          return 1;\n        case 2:\n          context$2$0.next = 4;\n          return 2;\n        case 4:\n          context$2$0.next = 6;\n          return 3;\n        case 6:\n        case \"end\":\n          return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  }\n  catch (e) {\n    var arr = [1, 2, 3, ,];\n    iterable = {\n      next: function() {\n        return { value: arr.shift(), done: arr.length <= 0 }; \n      },\n    };\n    iterable[Symbol.iterator] = function(){ return iterable; }\n  }\n\n  for (var item, t$1$0 = regeneratorRuntime.values(iterable), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {\n    item = t$1$1.value;\n    result += item;\n  }\n\n  return result === \"123\";\n})")()}catch(e){return false;}}());
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2786,110 +2680,8 @@ test(function(){try{return eval("var $__getIteratorRange = function(iterator, in
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>generic iterable destructuring</span></td>
-<script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
-  if (index > begin) {
-    throw new RangeError();
-  }
-
-  if (typeof len === &quot;undefined&quot;) {
-    len = Infinity;
-  }
-
-  var range = [], end = begin + len;
-
-  while (index < end) {
-    var next = iterator.next();
-
-    if (next.done) {
-      break;
-    }
-
-    if (index >= begin) {
-      range.push(next.value);
-    }
-
-    index++;
-  }
-
-  return {
-    range: range,
-    index: index
-  };
-};
-
-var $__getIterator = function(iterable) {
-  var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
-
-  if (typeof iterable[sym] === &quot;function&quot;) {
-    return iterable[sym]();
-  } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
-    return $__getArrayIterator(iterable);
-  } else {
-    throw new TypeError();
-  }
-};
-
-var $__getArrayIterator = function(array) {
-  var index = 0;
-
-  return {
-    next: function() {
-      if (index < array.length) {
-        return {
-          done: false,
-          value: array[index++]
-        };
-      } else {
-        return {
-          done: true,
-          value: void 0
-        };
-      }
-    }
-  };
-};
-
-(function(){
-var iterable;
-try {
-  iterable = (regeneratorRuntime.mark(function callee$1$0() {
-    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
-      case 0:
-        context$2$0.next = 2;
-        return 1;
-      case 2:
-        context$2$0.next = 4;
-        return 2;
-      case 4:
-        context$2$0.next = 6;
-        return 3;
-      case 6:
-      case &quot;end&quot;:
-        return context$2$0.stop();
-      }
-    }, callee$1$0, this);
-  }))();
-}
-catch (e) {
-  var arr = [1, 2, 3, ,];
-  iterable = {
-    next: function() {
-      return { value: arr.shift(), done: arr.length <= 0 }; 
-    },
-  };
-  iterable[Symbol.iterator] = function(){ return iterable; }
-}
-var iterator$0 = $__getIterator(iterable),
-    iteratorValue$0 = {
-      index: 0
-    },
-    a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),
-    b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),
-    c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);
-return a === 1 && b === 2 && c === 3;
-      });">
-test(function(){try{return eval("var $__getIteratorRange = function(iterator, index, begin, len) {\n  if (index > begin) {\n    throw new RangeError();\n  }\n\n  if (typeof len === \"undefined\") {\n    len = Infinity;\n  }\n\n  var range = [], end = begin + len;\n\n  while (index < end) {\n    var next = iterator.next();\n\n    if (next.done) {\n      break;\n    }\n\n    if (index >= begin) {\n      range.push(next.value);\n    }\n\n    index++;\n  }\n\n  return {\n    range: range,\n    index: index\n  };\n};\n\nvar $__getIterator = function(iterable) {\n  var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n  if (typeof iterable[sym] === \"function\") {\n    return iterable[sym]();\n  } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n    return $__getArrayIterator(iterable);\n  } else {\n    throw new TypeError();\n  }\n};\n\nvar $__getArrayIterator = function(array) {\n  var index = 0;\n\n  return {\n    next: function() {\n      if (index < array.length) {\n        return {\n          done: false,\n          value: array[index++]\n        };\n      } else {\n        return {\n          done: true,\n          value: void 0\n        };\n      }\n    }\n  };\n};\n\n(function(){\nvar iterable;\ntry {\n  iterable = (regeneratorRuntime.mark(function callee$1$0() {\n    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n      while (1) switch (context$2$0.prev = context$2$0.next) {\n      case 0:\n        context$2$0.next = 2;\n        return 1;\n      case 2:\n        context$2$0.next = 4;\n        return 2;\n      case 4:\n        context$2$0.next = 6;\n        return 3;\n      case 6:\n      case \"end\":\n        return context$2$0.stop();\n      }\n    }, callee$1$0, this);\n  }))();\n}\ncatch (e) {\n  var arr = [1, 2, 3, ,];\n  iterable = {\n    next: function() {\n      return { value: arr.shift(), done: arr.length <= 0 }; \n    },\n  };\n  iterable[Symbol.iterator] = function(){ return iterable; }\n}\nvar iterator$0 = $__getIterator(iterable),\n    iteratorValue$0 = {\n      index: 0\n    },\n    a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),\n    b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),\n    c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);\nreturn a === 1 && b === 2 && c === 3;\n      });")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
+test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">

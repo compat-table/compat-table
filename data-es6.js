@@ -962,7 +962,7 @@ exports.tests = [
       exec: function () {/*
         var iterable;
         try {
-          iterable = (function*() { yield 1; yield 2; yield 3; })();
+          iterable = eval("(function*() { yield 1; yield 2; yield 3; }())");
         }
         catch (e) {
           var arr = [1, 2, 3, ,];
@@ -986,7 +986,7 @@ exports.tests = [
       exec: function () {/*
         var iterable;
         try {
-          iterable = (function*() { yield "b"; yield "c"; yield "d"; })();
+          iterable = eval("(function*() { yield 1; yield 2; yield 3; }())");
         }
         catch (e) {
           var arr = ["b", "c", "d", ,];
@@ -1362,7 +1362,7 @@ exports.tests = [
       exec: function () {/*
         var iterable, result = "";
         try {
-          iterable = (function*() { yield 1; yield 2; yield 3; })();
+          iterable = eval("(function*() { yield 1; yield 2; yield 3; }())");
         }
         catch (e) {
           var arr = [1, 2, 3, ,];
@@ -1387,6 +1387,33 @@ exports.tests = [
         firefox27:   true,
         chrome38:    true,
         nodeharmony: true,
+      },
+    },
+    'with instances of generic iterables': {
+      exec: function () {/*
+        var iterable, result = "";
+        try {
+          iterable = eval("(function*() { yield 1; yield 2; yield 3; }())");
+        }
+        catch (e) {
+          var arr = [1, 2, 3, ,];
+          iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 }; 
+            },
+          };
+          iterable[Symbol.iterator] = function(){ return iterable; }
+        }
+        // The test should pass even if the environment 
+        // supports this feature but not Object.create()
+        function instance() {}; instance.prototype = iterable;
+        for (var item of new instance) {
+          result += item;
+        }
+        return result === "123";
+      */},
+      res: {
+        tr:          true,
       },
     },
   },
@@ -3022,7 +3049,7 @@ exports.tests = [
       exec: function(){/*
         var iterable;
         try {
-          iterable = (function*() { yield 1; yield 2; yield 3; })();
+          iterable = eval("(function*() { yield 1; yield 2; yield 3; }())");
         }
         catch (e) {
           var arr = [1, 2, 3, ,];
