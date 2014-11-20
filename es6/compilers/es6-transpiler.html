@@ -8,6 +8,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../../master.js"></script>
     
+    <script>
+      function __createIterableObject(a, b, c) {
+        try {
+          return eval("(function*() { yield a; yield b; yield c; }())");
+        }
+        catch (e) {
+          var arr = [a, b, c, ,];
+          var iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 }; 
+            },
+          };
+          iterable[Symbol.iterator] = function(){ return iterable; }
+          return iterable;
+        }
+      }
+    </script>
 </head>
 <body class="es6">
   <div id="header">
@@ -363,14 +380,26 @@ test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='und
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in calls</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in arrays</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -564,14 +593,14 @@ test(function(){try{return eval("(function(){var S_ITER$0 = typeof Symbol!=='und
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with generic iterables</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with instances of generic iterables</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -597,10 +626,44 @@ test(function(){try{return eval("(function(){\nfunction* generator(){\n  yield 5
 </script>
 
         <tr class="subtest" data-parent="generators">
-          <td><span>yield *</span></td>
+          <td><span>yield *, arrays</span></td>
 <script data-source="(function(){
 var iterator = (function* generator() {
-  yield* (function* () {
+  yield * [5, 6];
+}());
+var item = iterator.next();
+var passed = item.value === 5 && item.done === false;
+item = iterator.next();
+passed    &= item.value === 6 && item.done === false;
+item = iterator.next();
+passed    &= item.value === undefined && item.done === true;
+return passed;
+      })">
+test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * [5, 6];\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, strings</span></td>
+<script data-source="(function(){
+var iterator = (function* generator() {
+  yield * &quot;56&quot;;
+}());
+var item = iterator.next();
+var passed = item.value === &quot;5&quot; && item.done === false;
+item = iterator.next();
+passed    &= item.value === &quot;6&quot; && item.done === false;
+item = iterator.next();
+passed    &= item.value === undefined && item.done === true;
+return passed;
+      })">
+test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * \"56\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"5\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"6\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, generic iterables</span></td>
+<script data-source="(function(){
+var iterator = (function* generator() {
+  yield * (function* () {
     yield 5; yield 6;
   }());
 }());
@@ -612,7 +675,26 @@ item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield* (function* () {\n    yield 5; yield 6;\n  }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * (function* () {\n    yield 5; yield 6;\n  }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, instances of iterables</span></td>
+<script data-source="(function(){
+var iterator = (function* generator() {
+  yield * Object.create(function* () {
+    yield 5; yield 6;
+  }());
+}());
+var item = iterator.next();
+var passed = item.value === 5 && item.done === false;
+item = iterator.next();
+passed    &= item.value === 6 && item.done === false;
+item = iterator.next();
+passed    &= item.value === undefined && item.done === true;
+return passed;
+      })">
+test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * Object.create(function* () {\n    yield 5; yield 6;\n  }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1986,7 +2068,7 @@ test(function(){try{return eval("(function(){\n'use strict';\n{\n  function f(){
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>array destructuring</span></td>
+          <td><span>with arrays</span></td>
 <script data-source="(function(){
 var a = (c = [5, null, [6]])[0], b = (c[2])[0], c = c[3];
 return a === 5 && b === 6 && c === undefined;
@@ -1995,7 +2077,7 @@ test(function(){try{return eval("(function(){\nvar a = (c = [5, null, [6]])[0], 
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>string destructuring</span></td>
+          <td><span>with strings</span></td>
 <script data-source="(function(){
 var a = (c = &quot;bar&quot;)[0], b = c[1], c = c[2];
 return a === &quot;b&quot; && b === &quot;a&quot; && c === &quot;r&quot;;
@@ -2004,13 +2086,19 @@ test(function(){try{return eval("(function(){\nvar a = (c = \"bar\")[0], b = c[1
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>generic iterable destructuring</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+          <td><span>with generic iterables</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>object destructuring</span></td>
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>with objects</span></td>
 <script data-source="(function(){
 var c = (e = {c:7, x:8}).c, d = e.x, e = e.e;
 return c === 7 && d === 8 && e === undefined;
@@ -2019,7 +2107,7 @@ test(function(){try{return eval("(function(){\nvar c = (e = {c:7, x:8}).c, d = e
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>combined destructuring</span></td>
+          <td><span>nested</span></td>
 <script data-source="(function(){
 var e = (g = [9, {x:10}])[0], f = (g = g[1]).x, g = g.g;
 return e === 9 && f === 10 && g === undefined;
@@ -2028,18 +2116,18 @@ test(function(){try{return eval("(function(){\nvar e = (g = [9, {x:10}])[0], f =
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring parameters</span></td>
+          <td><span>parameters</span></td>
 <script data-source="(function(){
 return (function(e, d) {var a = e.a, b = e.x, e = e.y;var c = d[0], d = d[1];
   return a === 1 && b === 2 && c === 3 &&
     d === 4 && e === undefined;
-}({a:1, x:2},[3, 4]));
+}({a:1, x:2}, [3, 4]));
       })">
-test(function(){try{return eval("(function(){\nreturn (function(e, d) {var a = e.a, b = e.x, e = e.y;var c = d[0], d = d[1];\n  return a === 1 && b === 2 && c === 3 &&\n    d === 4 && e === undefined;\n}({a:1, x:2},[3, 4]));\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn (function(e, d) {var a = e.a, b = e.x, e = e.y;var c = d[0], d = d[1];\n  return a === 1 && b === 2 && c === 3 &&\n    d === 4 && e === undefined;\n}({a:1, x:2}, [3, 4]));\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring rest</span></td>
+          <td><span>rest</span></td>
 <script data-source="(function(){var SLICE$0 = Array.prototype.slice;
 var a = (b = [3, 4, 5])[0], b = SLICE$0.call(b, 1);
 var c = (d = [6])[0], d = SLICE$0.call(d, 1);
@@ -2050,7 +2138,7 @@ test(function(){try{return eval("(function(){var SLICE$0 = Array.prototype.slice
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring defaults</span></td>
+          <td><span>defaults</span></td>
 <script data-source="(function(){
 var a = ((a = (c = {b:2, c:undefined}).a) === void 0 ? 1 : a), b = ((b = c.b) === void 0 ? 0 : b), c = ((c = c.c) === void 0 ? 3 : c);
 return a === 1 && b === 2 && c === 3;

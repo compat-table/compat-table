@@ -2544,6 +2544,23 @@ System.register("traceur-runtime@0.0.74/src/runtime/polyfills/polyfills", [], fu
 System.get("traceur-runtime@0.0.74/src/runtime/polyfills/polyfills" + '');
 </script>
 
+    <script>
+      function __createIterableObject(a, b, c) {
+        try {
+          return eval("(function*() { yield a; yield b; yield c; }())");
+        }
+        catch (e) {
+          var arr = [a, b, c, ,];
+          var iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 }; 
+            },
+          };
+          iterable[Symbol.iterator] = function(){ return iterable; }
+          return iterable;
+        }
+      }
+    </script>
 </head>
 <body class="es6">
   <div id="header">
@@ -3163,14 +3180,48 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return $trace
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var $__0;
+  var iterable = __createIterableObject(1, 2, 3);
+  return ($__0 = Math).max.apply($__0, $traceurRuntime.spread(iterable)) === 3;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0;\n  var iterable = __createIterableObject(1, 2, 3);\n  return ($__0 = Math).max.apply($__0, $traceurRuntime.spread(iterable)) === 3;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterable = __createIterableObject(&quot;b&quot;, &quot;c&quot;, &quot;d&quot;);
+  return $traceurRuntime.spread([&quot;a&quot;], iterable, [&quot;e&quot;])[3] === &quot;d&quot;;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterable = __createIterableObject(\"b\", \"c\", \"d\");\n  return $traceurRuntime.spread([\"a\"], iterable, [\"e\"])[3] === \"d\";\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in calls</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var $__0;
+  var iterable = __createIterableObject(1, 2, 3);
+  return ($__0 = Math).max.apply($__0, $traceurRuntime.spread(Object.create(iterable))) === 3;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0;\n  var iterable = __createIterableObject(1, 2, 3);\n  return ($__0 = Math).max.apply($__0, $traceurRuntime.spread(Object.create(iterable))) === 3;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in arrays</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterable = __createIterableObject(&quot;b&quot;, &quot;c&quot;, &quot;d&quot;);
+  return $traceurRuntime.spread([&quot;a&quot;], Object.create(iterable), [&quot;e&quot;])[3] === &quot;d&quot;;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterable = __createIterableObject(\"b\", \"c\", \"d\");\n  return $traceurRuntime.spread([\"a\"], Object.create(iterable), [\"e\"])[3] === \"d\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3440,14 +3491,40 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var str = \"\
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with generic iterables</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var result = &quot;&quot;;
+  var iterable = __createIterableObject(1, 2, 3);
+  for (var $__0 = iterable[$traceurRuntime.toProperty(Symbol.iterator)](),
+      $__1; !($__1 = $__0.next()).done; ) {
+    var item = $__1.value;
+    {
+      result += item;
+    }
+  }
+  return result === &quot;123&quot;;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var result = \"\";\n  var iterable = __createIterableObject(1, 2, 3);\n  for (var $__0 = iterable[$traceurRuntime.toProperty(Symbol.iterator)](),\n      $__1; !($__1 = $__0.next()).done; ) {\n    var item = $__1.value;\n    {\n      result += item;\n    }\n  }\n  return result === \"123\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with instances of generic iterables</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var result = &quot;&quot;;
+  var iterable = __createIterableObject(1, 2, 3);
+  for (var $__0 = Object.create(iterable)[$traceurRuntime.toProperty(Symbol.iterator)](),
+      $__1; !($__1 = $__0.next()).done; ) {
+    var item = $__1.value;
+    {
+      result += item;
+    }
+  }
+  return result === &quot;123&quot;;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var result = \"\";\n  var iterable = __createIterableObject(1, 2, 3);\n  for (var $__0 = Object.create(iterable)[$traceurRuntime.toProperty(Symbol.iterator)](),\n      $__1; !($__1 = $__0.next()).done; ) {\n    var item = $__1.value;\n    {\n      result += item;\n    }\n  }\n  return result === \"123\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3497,7 +3574,101 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = $t
 </script>
 
         <tr class="subtest" data-parent="generators">
-          <td><span>yield *</span></td>
+          <td><span>yield *, arrays</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {
+    var $__0,
+        $__1;
+    return $traceurRuntime.createGeneratorInstance(function($ctx) {
+      while (true)
+        switch ($ctx.state) {
+          case 0:
+            $__0 = [5, 6][Symbol.iterator]();
+            $ctx.sent = void 0;
+            $ctx.action = 'next';
+            $ctx.state = 12;
+            break;
+          case 12:
+            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);
+            $ctx.state = 9;
+            break;
+          case 9:
+            $ctx.state = ($__1.done) ? 3 : 2;
+            break;
+          case 3:
+            $ctx.sent = $__1.value;
+            $ctx.state = -2;
+            break;
+          case 2:
+            $ctx.state = 12;
+            return $__1.value;
+          default:
+            return $ctx.end();
+        }
+    }, generator, this);
+  })());
+  var item = iterator.next();
+  var passed = item.value === 5 && item.done === false;
+  item = iterator.next();
+  passed &= item.value === 6 && item.done === false;
+  item = iterator.next();
+  passed &= item.value === undefined && item.done === true;
+  return passed;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__0,\n        $__1;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__0 = [5, 6][Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__1.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__1.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__1.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, strings</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {
+    var $__0,
+        $__1;
+    return $traceurRuntime.createGeneratorInstance(function($ctx) {
+      while (true)
+        switch ($ctx.state) {
+          case 0:
+            $__0 = &quot;56&quot;[Symbol.iterator]();
+            $ctx.sent = void 0;
+            $ctx.action = 'next';
+            $ctx.state = 12;
+            break;
+          case 12:
+            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);
+            $ctx.state = 9;
+            break;
+          case 9:
+            $ctx.state = ($__1.done) ? 3 : 2;
+            break;
+          case 3:
+            $ctx.sent = $__1.value;
+            $ctx.state = -2;
+            break;
+          case 2:
+            $ctx.state = 12;
+            return $__1.value;
+          default:
+            return $ctx.end();
+        }
+    }, generator, this);
+  })());
+  var item = iterator.next();
+  var passed = item.value === &quot;5&quot; && item.done === false;
+  item = iterator.next();
+  passed &= item.value === &quot;6&quot; && item.done === false;
+  item = iterator.next();
+  passed &= item.value === undefined && item.done === true;
+  return passed;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__0,\n        $__1;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__0 = \"56\"[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__1.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__1.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__1.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === \"5\" && item.done === false;\n  item = iterator.next();\n  passed &= item.value === \"6\" && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, generic iterables</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {
@@ -3563,6 +3734,75 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = $t
 });
 ">
 test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__1,\n        $__2;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__1 = ($traceurRuntime.initGeneratorFunction(function $__0() {\n              return $traceurRuntime.createGeneratorInstance(function($ctx) {\n                while (true)\n                  switch ($ctx.state) {\n                    case 0:\n                      $ctx.state = 2;\n                      return 5;\n                    case 2:\n                      $ctx.maybeThrow();\n                      $ctx.state = 4;\n                      break;\n                    case 4:\n                      $ctx.state = 6;\n                      return 6;\n                    case 6:\n                      $ctx.maybeThrow();\n                      $ctx.state = -2;\n                      break;\n                    default:\n                      return $ctx.end();\n                  }\n              }, $__0, this);\n            })())[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__2.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__2.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__2.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, instances of iterables</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {
+    var $__1,
+        $__2;
+    return $traceurRuntime.createGeneratorInstance(function($ctx) {
+      while (true)
+        switch ($ctx.state) {
+          case 0:
+            $__1 = Object.create($traceurRuntime.initGeneratorFunction(function $__0() {
+              return $traceurRuntime.createGeneratorInstance(function($ctx) {
+                while (true)
+                  switch ($ctx.state) {
+                    case 0:
+                      $ctx.state = 2;
+                      return 5;
+                    case 2:
+                      $ctx.maybeThrow();
+                      $ctx.state = 4;
+                      break;
+                    case 4:
+                      $ctx.state = 6;
+                      return 6;
+                    case 6:
+                      $ctx.maybeThrow();
+                      $ctx.state = -2;
+                      break;
+                    default:
+                      return $ctx.end();
+                  }
+              }, $__0, this);
+            })())[Symbol.iterator]();
+            $ctx.sent = void 0;
+            $ctx.action = 'next';
+            $ctx.state = 12;
+            break;
+          case 12:
+            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);
+            $ctx.state = 9;
+            break;
+          case 9:
+            $ctx.state = ($__2.done) ? 3 : 2;
+            break;
+          case 3:
+            $ctx.sent = $__2.value;
+            $ctx.state = -2;
+            break;
+          case 2:
+            $ctx.state = 12;
+            return $__2.value;
+          default:
+            return $ctx.end();
+        }
+    }, generator, this);
+  })());
+  var item = iterator.next();
+  var passed = item.value === 5 && item.done === false;
+  item = iterator.next();
+  passed &= item.value === 6 && item.done === false;
+  item = iterator.next();
+  passed &= item.value === undefined && item.done === true;
+  return passed;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__1,\n        $__2;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__1 = Object.create($traceurRuntime.initGeneratorFunction(function $__0() {\n              return $traceurRuntime.createGeneratorInstance(function($ctx) {\n                while (true)\n                  switch ($ctx.state) {\n                    case 0:\n                      $ctx.state = 2;\n                      return 5;\n                    case 2:\n                      $ctx.maybeThrow();\n                      $ctx.state = 4;\n                      break;\n                    case 4:\n                      $ctx.state = 6;\n                      return 6;\n                    case 6:\n                      $ctx.maybeThrow();\n                      $ctx.state = -2;\n                      break;\n                    default:\n                      return $ctx.end();\n                  }\n              }, $__0, this);\n            })())[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__2.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__2.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__2.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -4996,7 +5236,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>array destructuring</span></td>
+          <td><span>with arrays</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var $__0 = [5, null, [6]],
@@ -5010,7 +5250,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = [5
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>string destructuring</span></td>
+          <td><span>with strings</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var $__0 = &quot;bar&quot;,
@@ -5024,13 +5264,37 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = \"
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>generic iterable destructuring</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+          <td><span>with generic iterables</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterable = __createIterableObject(1, 2, 3);
+  var $__0 = iterable,
+      a = $__0[0],
+      b = $__0[1],
+      c = $__0[2];
+  return a === 1 && b === 2 && c === 3;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterable = __createIterableObject(1, 2, 3);\n  var $__0 = iterable,\n      a = $__0[0],\n      b = $__0[1],\n      c = $__0[2];\n  return a === 1 && b === 2 && c === 3;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>object destructuring</span></td>
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var iterable = __createIterableObject(1, 2, 3);
+  var $__0 = Object.create(iterable),
+      a = $__0[0],
+      b = $__0[1],
+      c = $__0[2];
+  return a === 1 && b === 2 && c === 3;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterable = __createIterableObject(1, 2, 3);\n  var $__0 = Object.create(iterable),\n      a = $__0[0],\n      b = $__0[1],\n      c = $__0[2];\n  return a === 1 && b === 2 && c === 3;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>with objects</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var $__0 = {
@@ -5047,7 +5311,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = {\
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>combined destructuring</span></td>
+          <td><span>nested</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var $__0 = [9, {x: 10}],
@@ -5062,7 +5326,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = [9
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring parameters</span></td>
+          <td><span>parameters</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   return (function($__0, $__1) {
@@ -5084,7 +5348,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return (funct
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring rest</span></td>
+          <td><span>rest</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var $__0 = [3, 4, 5],
@@ -5100,7 +5364,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0 = [3
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring defaults</span></td>
+          <td><span>defaults</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
   var $__1,

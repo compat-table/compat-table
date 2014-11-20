@@ -20,6 +20,21 @@ $('#body tbody tr').each(function () {
     , test = function test (expression) {
         result = result || expression
       }
+    , __createIterableObject = function(a, b, c) {
+      try {
+        return eval("(function*() { yield a; yield b; yield c; }())");
+      }
+      catch (e) {
+        var arr = [a, b, c, ,];
+        var iterable = {
+          next: function() {
+            return { value: arr.shift(), done: arr.length <= 0 }; 
+          },
+        };
+        iterable[Symbol.iterator] = function(){ return iterable; }
+      }
+      return iterable;
+    }
 
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {

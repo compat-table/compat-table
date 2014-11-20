@@ -8,6 +8,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../../master.js"></script>
     
+    <script>
+      function __createIterableObject(a, b, c) {
+        try {
+          return eval("(function*() { yield a; yield b; yield c; }())");
+        }
+        catch (e) {
+          var arr = [a, b, c, ,];
+          var iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 }; 
+            },
+          };
+          iterable[Symbol.iterator] = function(){ return iterable; }
+          return iterable;
+        }
+      }
+    </script>
 </head>
 <body class="es6">
   <div id="header">
@@ -414,14 +431,34 @@ test(function(){try{return Function("/* Error during compilation: \n(2,14): erro
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: 
+(3,17): error TS1135: Argument expression expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,17): error TS1135: Argument expression expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: 
+(3,14): error TS1137: Expression or comma expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,14): error TS1137: Expression or comma expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in calls</span></td>
+<script data-source="/* Error during compilation: 
+(3,17): error TS1135: Argument expression expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,17): error TS1135: Argument expression expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in arrays</span></td>
+<script data-source="/* Error during compilation: 
+(3,14): error TS1137: Expression or comma expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,14): error TS1137: Expression or comma expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -633,14 +670,32 @@ test(function(){try{return Function("/* Error during compilation: \n(3,15): erro
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with generic iterables</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: 
+(4,15): error TS1005: '=' expected.
+(4,18): error TS1005: ',' expected.
+(4,26): error TS1005: ',' expected.
+(4,28): error TS1134: Variable declaration expected.
+(5,10): error TS1005: ':' expected.
+(5,17): error TS1005: ',' expected.
+(7,1): error TS1005: ';' expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(4,15): error TS1005: '=' expected.\n(4,18): error TS1005: ',' expected.\n(4,26): error TS1005: ',' expected.\n(4,28): error TS1134: Variable declaration expected.\n(5,10): error TS1005: ':' expected.\n(5,17): error TS1005: ',' expected.\n(7,1): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with instances of generic iterables</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: 
+(4,15): error TS1005: '=' expected.
+(4,18): error TS1005: ',' expected.
+(4,24): error TS1005: ',' expected.
+(4,31): error TS1005: '=' expected.
+(4,41): error TS1005: ',' expected.
+(4,43): error TS1134: Variable declaration expected.
+(5,10): error TS1005: ':' expected.
+(5,17): error TS1005: ',' expected.
+(7,1): error TS1005: ';' expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(4,15): error TS1005: '=' expected.\n(4,18): error TS1005: ',' expected.\n(4,24): error TS1005: ',' expected.\n(4,31): error TS1005: '=' expected.\n(4,41): error TS1005: ',' expected.\n(4,43): error TS1134: Variable declaration expected.\n(5,10): error TS1005: ':' expected.\n(5,17): error TS1005: ',' expected.\n(7,1): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -659,13 +714,35 @@ test(function(){try{return Function("/* Error during compilation: \n(2,9): error
 </script>
 
         <tr class="subtest" data-parent="generators">
-          <td><span>yield *</span></td>
+          <td><span>yield *, arrays</span></td>
 <script data-source="/* Error during compilation: 
 (2,25): error TS1005: '(' expected.
 (2,39): error TS1005: ')' expected.
-(3,19): error TS1005: '(' expected.
-(3,22): error TS1109: Expression expected.
-(3,24): error TS1005: ')' expected.
+(4,3): error TS1109: Expression expected.
+(4,4): error TS1005: ';' expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, strings</span></td>
+<script data-source="/* Error during compilation: 
+(2,25): error TS1005: '(' expected.
+(2,39): error TS1005: ')' expected.
+(4,3): error TS1109: Expression expected.
+(4,4): error TS1005: ';' expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, generic iterables</span></td>
+<script data-source="/* Error during compilation: 
+(2,25): error TS1005: '(' expected.
+(2,39): error TS1005: ')' expected.
+(3,20): error TS1005: '(' expected.
+(3,23): error TS1109: Expression expected.
+(3,25): error TS1005: ')' expected.
 (4,11): error TS1005: ';' expected.
 (4,20): error TS1005: ';' expected.
 (5,5): error TS1109: Expression expected.
@@ -673,7 +750,27 @@ test(function(){try{return Function("/* Error during compilation: \n(2,9): error
 (6,3): error TS1109: Expression expected.
 (6,4): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(3,19): error TS1005: '(' expected.\n(3,22): error TS1109: Expression expected.\n(3,24): error TS1005: ')' expected.\n(4,11): error TS1005: ';' expected.\n(4,20): error TS1005: ';' expected.\n(5,5): error TS1109: Expression expected.\n(5,6): error TS1005: ';' expected.\n(6,3): error TS1109: Expression expected.\n(6,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(3,20): error TS1005: '(' expected.\n(3,23): error TS1109: Expression expected.\n(3,25): error TS1005: ')' expected.\n(4,11): error TS1005: ';' expected.\n(4,20): error TS1005: ';' expected.\n(5,5): error TS1109: Expression expected.\n(5,6): error TS1005: ';' expected.\n(6,3): error TS1109: Expression expected.\n(6,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, instances of iterables</span></td>
+<script data-source="/* Error during compilation: 
+(2,25): error TS1005: '(' expected.
+(2,39): error TS1005: ')' expected.
+(3,33): error TS1005: '(' expected.
+(3,36): error TS1109: Expression expected.
+(3,38): error TS1005: ',' expected.
+(4,11): error TS1005: ':' expected.
+(4,12): error TS1005: ',' expected.
+(4,20): error TS1005: ';' expected.
+(5,5): error TS1109: Expression expected.
+(5,6): error TS1005: ';' expected.
+(13,1): error TS1108: A 'return' statement can only be used within a function body.
+(14,7): error TS1128: Declaration or statement expected.
+(14,8): error TS1128: Declaration or statement expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(3,33): error TS1005: '(' expected.\n(3,36): error TS1109: Expression expected.\n(3,38): error TS1005: ',' expected.\n(4,11): error TS1005: ':' expected.\n(4,12): error TS1005: ',' expected.\n(4,20): error TS1005: ';' expected.\n(5,5): error TS1109: Expression expected.\n(5,6): error TS1005: ';' expected.\n(13,1): error TS1108: A 'return' statement can only be used within a function body.\n(14,7): error TS1128: Declaration or statement expected.\n(14,8): error TS1128: Declaration or statement expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1936,7 +2033,7 @@ test(function(){try{return eval("(function () {\n    'use strict';\n    {\n     
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>array destructuring</span></td>
+          <td><span>with arrays</span></td>
 <script data-source="/* Error during compilation: 
 (2,5): error TS1134: Variable declaration expected.
 */">
@@ -1944,7 +2041,7 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>string destructuring</span></td>
+          <td><span>with strings</span></td>
 <script data-source="/* Error during compilation: 
 (2,5): error TS1134: Variable declaration expected.
 */">
@@ -1952,13 +2049,23 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>generic iterable destructuring</span></td>
-<script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
-test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+          <td><span>with generic iterables</span></td>
+<script data-source="/* Error during compilation: 
+(3,5): error TS1134: Variable declaration expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,5): error TS1134: Variable declaration expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>object destructuring</span></td>
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="/* Error during compilation: 
+(3,5): error TS1134: Variable declaration expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,5): error TS1134: Variable declaration expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>with objects</span></td>
 <script data-source="/* Error during compilation: 
 (2,5): error TS1134: Variable declaration expected.
 (2,10): error TS1005: ';' expected.
@@ -1969,7 +2076,7 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>combined destructuring</span></td>
+          <td><span>nested</span></td>
 <script data-source="/* Error during compilation: 
 (2,5): error TS1134: Variable declaration expected.
 (2,16): error TS1005: ':' expected.
@@ -1978,19 +2085,19 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring parameters</span></td>
+          <td><span>parameters</span></td>
 <script data-source="/* Error during compilation: 
 (2,18): error TS1005: ')' expected.
 (2,23): error TS1005: ';' expected.
 (2,28): error TS1005: ';' expected.
 (2,41): error TS1005: ';' expected.
-(5,21): error TS1005: ';' expected.
+(5,22): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,18): error TS1005: ')' expected.\n(2,23): error TS1005: ';' expected.\n(2,28): error TS1005: ';' expected.\n(2,41): error TS1005: ';' expected.\n(5,21): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,18): error TS1005: ')' expected.\n(2,23): error TS1005: ';' expected.\n(2,28): error TS1005: ';' expected.\n(2,41): error TS1005: ';' expected.\n(5,22): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring rest</span></td>
+          <td><span>rest</span></td>
 <script data-source="/* Error during compilation: 
 (2,5): error TS1134: Variable declaration expected.
 (2,9): error TS1137: Expression or comma expected.
@@ -2001,7 +2108,7 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring defaults</span></td>
+          <td><span>defaults</span></td>
 <script data-source="/* Error during compilation: 
 (2,5): error TS1134: Variable declaration expected.
 (2,27): error TS1129: Statement expected.
