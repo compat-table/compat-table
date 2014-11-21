@@ -1288,6 +1288,9 @@ exports.tests = [
       */},
       res: {
         firefox34:    true,
+        safari71_8:   true,
+        webkit:       true,
+        ios8:         true,
       },
     },
     'not a shorthand property': {
@@ -1894,6 +1897,9 @@ exports.tests = [
         ie11tp:      true,
         firefox33:   true,
         chrome38:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
       },
     },
     '-0 key converts to +0': {
@@ -2092,6 +2098,9 @@ exports.tests = [
         ie11tp:      true,
         firefox33:   true,
         chrome39:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
       },
     },
     '-0 key converts to +0': {
@@ -2284,6 +2293,9 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
       },
     },
     'WeakMap.prototype.delete': {
