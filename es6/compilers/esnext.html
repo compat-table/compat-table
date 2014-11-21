@@ -8,6 +8,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../../master.js"></script>
     
+    <script>
+      function __createIterableObject(a, b, c) {
+        try {
+          return eval("(function*() { yield a; yield b; yield c; }())");
+        }
+        catch (e) {
+          var arr = [a, b, c, ,];
+          var iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 }; 
+            },
+          };
+          iterable[Symbol.iterator] = function(){ return iterable; }
+          return iterable;
+        }
+      }
+    </script>
 </head>
 <body class="es6">
   <div id="header">
@@ -254,10 +271,10 @@ test(function(){try{return eval("(function(){\n{ let bar = 456; }\nreturn (funct
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
 <script data-source="(function(){
-for(let baz = 0; false;) {}
+for(let baz = 0; false; false) {}
 return (function(){ try { baz; } catch(e) { return true; }}());
       })">
-test(function(){try{return eval("(function(){\nfor(let baz = 0; false;) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -313,10 +330,10 @@ test(function(){try{return eval("(function(){\n'use strict';\n{ let bar = 456; }
           <td><span>for-loop statement scope (strict mode)</span></td>
 <script data-source="(function(){
 'use strict';
-for(let baz = 0; false;) {}
+for(let baz = 0; false; false) {}
 return (function(){ try { baz; } catch(e) { return true; }}());
       })">
-test(function(){try{return eval("(function(){\n'use strict';\nfor(let baz = 0; false;) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\n'use strict';\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -570,87 +587,115 @@ test(function(){try{return Function("/* Error during compilation: Line 2: Spread
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
 <script data-source="var $__accumulateIteratorValues = function(iterator) {
-  var result = [];
+      var result = [];
 
-  for (var item; !(item = iterator.next()).done; )
-    result.push(item.value);
+      for (var item; !(item = iterator.next()).done; )
+            result.push(item.value);
 
-  return result;
+      return result;
 };
 
 var $__getIterator = function(iterable) {
-  var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
+      var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
 
-  if (typeof iterable[sym] === &quot;function&quot;) {
-    return iterable[sym]();
-  } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
-    return $__getArrayIterator(iterable);
-  } else {
-    throw new TypeError();
-  }
+      if (typeof iterable[sym] === &quot;function&quot;) {
+            return iterable[sym]();
+      } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
+            return $__getArrayIterator(iterable);
+      } else {
+            throw new TypeError();
+      }
 };
 
 var $__getArrayIterator = function(array) {
-  var index = 0;
+      var index = 0;
 
-  return {
-    next: function() {
-      if (index < array.length) {
-        return {
-          done: false,
-          value: array[index++]
-        };
-      } else {
-        return {
-          done: true,
-          value: void 0
-        };
-      }
-    }
-  };
+      return {
+            next: function() {
+                  if (index < array.length) {
+                        return {
+                              done: false,
+                              value: array[index++]
+                        };
+                  } else {
+                        return {
+                              done: true,
+                              value: void 0
+                        };
+                  }
+            }
+      };
 };
 
 (function(){
-  var $__0;
-  var iterable;
-  try {
-    iterable = (regeneratorRuntime.mark(function callee$1$0() {
-      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-        while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return 1;
-        case 2:
-          context$2$0.next = 4;
-          return 2;
-        case 4:
-          context$2$0.next = 6;
-          return 3;
-        case 6:
-        case &quot;end&quot;:
-          return context$2$0.stop();
-        }
-      }, callee$1$0, this);
-    }))();
-  }
-  catch (e) {
-    var arr = [1, 2, 3, ,];
-    iterable = {
-      next: function() {
-        return { value: arr.shift(), done: arr.length <= 0 }; 
-      },
-    };
-    iterable[Symbol.iterator] = function(){ return iterable; }
-  }
-  return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(iterable))) === 3;
+      var $__0;
+      var iterable = __createIterableObject(1, 2, 3);
+      return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(iterable))) === 3;
 });">
-test(function(){try{return eval("var $__accumulateIteratorValues = function(iterator) {\n  var result = [];\n\n  for (var item; !(item = iterator.next()).done; )\n    result.push(item.value);\n\n  return result;\n};\n\nvar $__getIterator = function(iterable) {\n  var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n  if (typeof iterable[sym] === \"function\") {\n    return iterable[sym]();\n  } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n    return $__getArrayIterator(iterable);\n  } else {\n    throw new TypeError();\n  }\n};\n\nvar $__getArrayIterator = function(array) {\n  var index = 0;\n\n  return {\n    next: function() {\n      if (index < array.length) {\n        return {\n          done: false,\n          value: array[index++]\n        };\n      } else {\n        return {\n          done: true,\n          value: void 0\n        };\n      }\n    }\n  };\n};\n\n(function(){\n  var $__0;\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0:\n          context$2$0.next = 2;\n          return 1;\n        case 2:\n          context$2$0.next = 4;\n          return 2;\n        case 4:\n          context$2$0.next = 6;\n          return 3;\n        case 6:\n        case \"end\":\n          return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  }\n  catch (e) {\n    var arr = [1, 2, 3, ,];\n    iterable = {\n      next: function() {\n        return { value: arr.shift(), done: arr.length <= 0 }; \n      },\n    };\n    iterable[Symbol.iterator] = function(){ return iterable; }\n  }\n  return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(iterable))) === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("var $__accumulateIteratorValues = function(iterator) {\n      var result = [];\n\n      for (var item; !(item = iterator.next()).done; )\n            result.push(item.value);\n\n      return result;\n};\n\nvar $__getIterator = function(iterable) {\n      var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n      if (typeof iterable[sym] === \"function\") {\n            return iterable[sym]();\n      } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n            return $__getArrayIterator(iterable);\n      } else {\n            throw new TypeError();\n      }\n};\n\nvar $__getArrayIterator = function(array) {\n      var index = 0;\n\n      return {\n            next: function() {\n                  if (index < array.length) {\n                        return {\n                              done: false,\n                              value: array[index++]\n                        };\n                  } else {\n                        return {\n                              done: true,\n                              value: void 0\n                        };\n                  }\n            }\n      };\n};\n\n(function(){\n      var $__0;\n      var iterable = __createIterableObject(1, 2, 3);\n      return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(iterable))) === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
-<script data-source="/* Error during compilation: Line 15: Spread must be the final element of an element list*/">
-test(function(){try{return Function("/* Error during compilation: Line 15: Spread must be the final element of an element list*/")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: Line 3: Spread must be the final element of an element list*/">
+test(function(){try{return Function("/* Error during compilation: Line 3: Spread must be the final element of an element list*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in calls</span></td>
+<script data-source="var $__accumulateIteratorValues = function(iterator) {
+      var result = [];
+
+      for (var item; !(item = iterator.next()).done; )
+            result.push(item.value);
+
+      return result;
+};
+
+var $__getIterator = function(iterable) {
+      var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
+
+      if (typeof iterable[sym] === &quot;function&quot;) {
+            return iterable[sym]();
+      } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
+            return $__getArrayIterator(iterable);
+      } else {
+            throw new TypeError();
+      }
+};
+
+var $__getArrayIterator = function(array) {
+      var index = 0;
+
+      return {
+            next: function() {
+                  if (index < array.length) {
+                        return {
+                              done: false,
+                              value: array[index++]
+                        };
+                  } else {
+                        return {
+                              done: true,
+                              value: void 0
+                        };
+                  }
+            }
+      };
+};
+
+(function(){
+      var $__0;
+      var iterable = __createIterableObject(1, 2, 3);
+      return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(Object.create(iterable)))) === 3;
+});">
+test(function(){try{return eval("var $__accumulateIteratorValues = function(iterator) {\n      var result = [];\n\n      for (var item; !(item = iterator.next()).done; )\n            result.push(item.value);\n\n      return result;\n};\n\nvar $__getIterator = function(iterable) {\n      var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n      if (typeof iterable[sym] === \"function\") {\n            return iterable[sym]();\n      } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n            return $__getArrayIterator(iterable);\n      } else {\n            throw new TypeError();\n      }\n};\n\nvar $__getArrayIterator = function(array) {\n      var index = 0;\n\n      return {\n            next: function() {\n                  if (index < array.length) {\n                        return {\n                              done: false,\n                              value: array[index++]\n                        };\n                  } else {\n                        return {\n                              done: true,\n                              value: void 0\n                        };\n                  }\n            }\n      };\n};\n\n(function(){\n      var $__0;\n      var iterable = __createIterableObject(1, 2, 3);\n      return ($__0 = Math).max.apply($__0, $__accumulateIteratorValues($__getIterator(Object.create(iterable)))) === 3;\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="spread_(...)_operator">
+          <td><span>with instances of iterables, in arrays</span></td>
+<script data-source="/* Error during compilation: Line 3: Spread must be the final element of an element list*/">
+test(function(){try{return Function("/* Error during compilation: Line 3: Spread must be the final element of an element list*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1092,36 +1137,8 @@ test(function(){try{return eval("(function(){\n  var str = \"\";\n\n  for (var i
         <tr class="subtest" data-parent="for..of_loops">
           <td><span>with generic iterables</span></td>
 <script data-source="(function(){
-  var iterable, result = &quot;&quot;;
-  try {
-    iterable = (regeneratorRuntime.mark(function callee$1$0() {
-      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-        while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return 1;
-        case 2:
-          context$2$0.next = 4;
-          return 2;
-        case 4:
-          context$2$0.next = 6;
-          return 3;
-        case 6:
-        case &quot;end&quot;:
-          return context$2$0.stop();
-        }
-      }, callee$1$0, this);
-    }))();
-  }
-  catch (e) {
-    var arr = [1, 2, 3, ,];
-    iterable = {
-      next: function() {
-        return { value: arr.shift(), done: arr.length <= 0 }; 
-      },
-    };
-    iterable[Symbol.iterator] = function(){ return iterable; }
-  }
+  var result = &quot;&quot;;
+  var iterable = __createIterableObject(1, 2, 3);
 
   for (var item, t$1$0 = regeneratorRuntime.values(iterable), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {
     item = t$1$1.value;
@@ -1130,7 +1147,23 @@ test(function(){try{return eval("(function(){\n  var str = \"\";\n\n  for (var i
 
   return result === &quot;123&quot;;
 })">
-test(function(){try{return eval("(function(){\n  var iterable, result = \"\";\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0:\n          context$2$0.next = 2;\n          return 1;\n        case 2:\n          context$2$0.next = 4;\n          return 2;\n        case 4:\n          context$2$0.next = 6;\n          return 3;\n        case 6:\n        case \"end\":\n          return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  }\n  catch (e) {\n    var arr = [1, 2, 3, ,];\n    iterable = {\n      next: function() {\n        return { value: arr.shift(), done: arr.length <= 0 }; \n      },\n    };\n    iterable[Symbol.iterator] = function(){ return iterable; }\n  }\n\n  for (var item, t$1$0 = regeneratorRuntime.values(iterable), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {\n    item = t$1$1.value;\n    result += item;\n  }\n\n  return result === \"123\";\n})")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\n  var result = \"\";\n  var iterable = __createIterableObject(1, 2, 3);\n\n  for (var item, t$1$0 = regeneratorRuntime.values(iterable), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {\n    item = t$1$1.value;\n    result += item;\n  }\n\n  return result === \"123\";\n})")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="for..of_loops">
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="(function(){
+  var result = &quot;&quot;;
+  var iterable = __createIterableObject(1, 2, 3);
+
+  for (var item, t$1$0 = regeneratorRuntime.values(Object.create(iterable)), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {
+    item = t$1$1.value;
+    result += item;
+  }
+
+  return result === &quot;123&quot;;
+})">
+test(function(){try{return eval("(function(){\n  var result = \"\";\n  var iterable = __createIterableObject(1, 2, 3);\n\n  for (var item, t$1$0 = regeneratorRuntime.values(Object.create(iterable)), t$1$1; !(t$1$1 = t$1$0.next()).done; ) {\n    item = t$1$1.value;\n    result += item;\n  }\n\n  return result === \"123\";\n})")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1169,7 +1202,57 @@ test(function(){try{return eval("(function(){\n  var generator = regeneratorRunt
 </script>
 
         <tr class="subtest" data-parent="generators">
-          <td><span>yield *</span></td>
+          <td><span>yield *, arrays</span></td>
+<script data-source="(function(){
+var iterator = (regeneratorRuntime.mark(function generator() {
+  return regeneratorRuntime.wrap(function generator$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+    case 0:
+      return context$2$0.delegateYield([5, 6], &quot;t0&quot;, 1);
+    case 1:
+    case &quot;end&quot;:
+      return context$2$0.stop();
+    }
+  }, generator, this);
+})());
+var item = iterator.next();
+var passed = item.value === 5 && item.done === false;
+item = iterator.next();
+passed    &= item.value === 6 && item.done === false;
+item = iterator.next();
+passed    &= item.value === undefined && item.done === true;
+return passed;
+      })">
+test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield([5, 6], \"t0\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, strings</span></td>
+<script data-source="(function(){
+var iterator = (regeneratorRuntime.mark(function generator() {
+  return regeneratorRuntime.wrap(function generator$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+    case 0:
+      return context$2$0.delegateYield(&quot;56&quot;, &quot;t1&quot;, 1);
+    case 1:
+    case &quot;end&quot;:
+      return context$2$0.stop();
+    }
+  }, generator, this);
+})());
+var item = iterator.next();
+var passed = item.value === &quot;5&quot; && item.done === false;
+item = iterator.next();
+passed    &= item.value === &quot;6&quot; && item.done === false;
+item = iterator.next();
+passed    &= item.value === undefined && item.done === true;
+return passed;
+      })">
+test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(\"56\", \"t1\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === \"5\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"6\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, generic iterables</span></td>
 <script data-source="(function(){
 var iterator = (regeneratorRuntime.mark(function generator() {
   return regeneratorRuntime.wrap(function generator$(context$2$0) {
@@ -1189,7 +1272,7 @@ var iterator = (regeneratorRuntime.mark(function generator() {
             return context$3$0.stop();
           }
         }, callee$2$0, this);
-      })(), &quot;t0&quot;, 1);
+      })(), &quot;t2&quot;, 1);
     case 1:
     case &quot;end&quot;:
       return context$2$0.stop();
@@ -1204,7 +1287,46 @@ item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(regeneratorRuntime.mark(function callee$2$0() {\n        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n          while (1) switch (context$3$0.prev = context$3$0.next) {\n          case 0:\n            context$3$0.next = 2;\n            return 5;\n          case 2:\n            context$3$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\":\n            return context$3$0.stop();\n          }\n        }, callee$2$0, this);\n      })(), \"t0\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(regeneratorRuntime.mark(function callee$2$0() {\n        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n          while (1) switch (context$3$0.prev = context$3$0.next) {\n          case 0:\n            context$3$0.next = 2;\n            return 5;\n          case 2:\n            context$3$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\":\n            return context$3$0.stop();\n          }\n        }, callee$2$0, this);\n      })(), \"t2\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="generators">
+          <td><span>yield *, instances of iterables</span></td>
+<script data-source="(function(){
+var iterator = (regeneratorRuntime.mark(function generator() {
+  return regeneratorRuntime.wrap(function generator$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+    case 0:
+      return context$2$0.delegateYield(Object.create(regeneratorRuntime.mark(function callee$2$0() {
+        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
+          while (1) switch (context$3$0.prev = context$3$0.next) {
+          case 0:
+            context$3$0.next = 2;
+            return 5;
+          case 2:
+            context$3$0.next = 4;
+            return 6;
+          case 4:
+          case &quot;end&quot;:
+            return context$3$0.stop();
+          }
+        }, callee$2$0, this);
+      })()), &quot;t3&quot;, 1);
+    case 1:
+    case &quot;end&quot;:
+      return context$2$0.stop();
+    }
+  }, generator, this);
+})());
+var item = iterator.next();
+var passed = item.value === 5 && item.done === false;
+item = iterator.next();
+passed    &= item.value === 6 && item.done === false;
+item = iterator.next();
+passed    &= item.value === undefined && item.done === true;
+return passed;
+      })">
+test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(Object.create(regeneratorRuntime.mark(function callee$2$0() {\n        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n          while (1) switch (context$3$0.prev = context$3$0.next) {\n          case 0:\n            context$3$0.next = 2;\n            return 5;\n          case 2:\n            context$3$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\":\n            return context$3$0.stop();\n          }\n        }, callee$2$0, this);\n      })()), \"t3\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -2621,7 +2743,7 @@ test(function(){try{return eval("(function(){\n'use strict';\n{\n  function f(){
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>array destructuring</span></td>
+          <td><span>with arrays</span></td>
 <script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
       if (index > begin) {
             throw new RangeError();
@@ -2706,7 +2828,7 @@ test(function(){try{return eval("var $__getIteratorRange = function(iterator, in
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>string destructuring</span></td>
+          <td><span>with strings</span></td>
 <script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
       if (index > begin) {
             throw new RangeError();
@@ -2785,115 +2907,166 @@ test(function(){try{return eval("var $__getIteratorRange = function(iterator, in
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>generic iterable destructuring</span></td>
+          <td><span>with generic iterables</span></td>
 <script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
-  if (index > begin) {
-    throw new RangeError();
-  }
+      if (index > begin) {
+            throw new RangeError();
+      }
 
-  if (typeof len === &quot;undefined&quot;) {
-    len = Infinity;
-  }
+      if (typeof len === &quot;undefined&quot;) {
+            len = Infinity;
+      }
 
-  var range = [], end = begin + len;
+      var range = [], end = begin + len;
 
-  while (index < end) {
-    var next = iterator.next();
+      while (index < end) {
+            var next = iterator.next();
 
-    if (next.done) {
-      break;
-    }
+            if (next.done) {
+                  break;
+            }
 
-    if (index >= begin) {
-      range.push(next.value);
-    }
+            if (index >= begin) {
+                  range.push(next.value);
+            }
 
-    index++;
-  }
+            index++;
+      }
 
-  return {
-    range: range,
-    index: index
-  };
+      return {
+            range: range,
+            index: index
+      };
 };
 
 var $__getIterator = function(iterable) {
-  var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
+      var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
 
-  if (typeof iterable[sym] === &quot;function&quot;) {
-    return iterable[sym]();
-  } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
-    return $__getArrayIterator(iterable);
-  } else {
-    throw new TypeError();
-  }
+      if (typeof iterable[sym] === &quot;function&quot;) {
+            return iterable[sym]();
+      } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
+            return $__getArrayIterator(iterable);
+      } else {
+            throw new TypeError();
+      }
 };
 
 var $__getArrayIterator = function(array) {
-  var index = 0;
+      var index = 0;
 
-  return {
-    next: function() {
-      if (index < array.length) {
-        return {
-          done: false,
-          value: array[index++]
-        };
-      } else {
-        return {
-          done: true,
-          value: void 0
-        };
-      }
-    }
-  };
+      return {
+            next: function() {
+                  if (index < array.length) {
+                        return {
+                              done: false,
+                              value: array[index++]
+                        };
+                  } else {
+                        return {
+                              done: true,
+                              value: void 0
+                        };
+                  }
+            }
+      };
 };
 
 (function(){
-var iterable;
-try {
-  iterable = (regeneratorRuntime.mark(function callee$1$0() {
-    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
-      case 0:
-        context$2$0.next = 2;
-        return 1;
-      case 2:
-        context$2$0.next = 4;
-        return 2;
-      case 4:
-        context$2$0.next = 6;
-        return 3;
-      case 6:
-      case &quot;end&quot;:
-        return context$2$0.stop();
-      }
-    }, callee$1$0, this);
-  }))();
-}
-catch (e) {
-  var arr = [1, 2, 3, ,];
-  iterable = {
-    next: function() {
-      return { value: arr.shift(), done: arr.length <= 0 }; 
-    },
-  };
-  iterable[Symbol.iterator] = function(){ return iterable; }
-}
+var iterable = __createIterableObject(1, 2, 3);
 var iterator$0 = $__getIterator(iterable),
     iteratorValue$0 = {
-      index: 0
+          index: 0
     },
     a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),
     b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),
     c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);
 return a === 1 && b === 2 && c === 3;
       });">
-test(function(){try{return eval("var $__getIteratorRange = function(iterator, index, begin, len) {\n  if (index > begin) {\n    throw new RangeError();\n  }\n\n  if (typeof len === \"undefined\") {\n    len = Infinity;\n  }\n\n  var range = [], end = begin + len;\n\n  while (index < end) {\n    var next = iterator.next();\n\n    if (next.done) {\n      break;\n    }\n\n    if (index >= begin) {\n      range.push(next.value);\n    }\n\n    index++;\n  }\n\n  return {\n    range: range,\n    index: index\n  };\n};\n\nvar $__getIterator = function(iterable) {\n  var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n  if (typeof iterable[sym] === \"function\") {\n    return iterable[sym]();\n  } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n    return $__getArrayIterator(iterable);\n  } else {\n    throw new TypeError();\n  }\n};\n\nvar $__getArrayIterator = function(array) {\n  var index = 0;\n\n  return {\n    next: function() {\n      if (index < array.length) {\n        return {\n          done: false,\n          value: array[index++]\n        };\n      } else {\n        return {\n          done: true,\n          value: void 0\n        };\n      }\n    }\n  };\n};\n\n(function(){\nvar iterable;\ntry {\n  iterable = (regeneratorRuntime.mark(function callee$1$0() {\n    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n      while (1) switch (context$2$0.prev = context$2$0.next) {\n      case 0:\n        context$2$0.next = 2;\n        return 1;\n      case 2:\n        context$2$0.next = 4;\n        return 2;\n      case 4:\n        context$2$0.next = 6;\n        return 3;\n      case 6:\n      case \"end\":\n        return context$2$0.stop();\n      }\n    }, callee$1$0, this);\n  }))();\n}\ncatch (e) {\n  var arr = [1, 2, 3, ,];\n  iterable = {\n    next: function() {\n      return { value: arr.shift(), done: arr.length <= 0 }; \n    },\n  };\n  iterable[Symbol.iterator] = function(){ return iterable; }\n}\nvar iterator$0 = $__getIterator(iterable),\n    iteratorValue$0 = {\n      index: 0\n    },\n    a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),\n    b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),\n    c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);\nreturn a === 1 && b === 2 && c === 3;\n      });")()}catch(e){return false;}}());
+test(function(){try{return eval("var $__getIteratorRange = function(iterator, index, begin, len) {\n      if (index > begin) {\n            throw new RangeError();\n      }\n\n      if (typeof len === \"undefined\") {\n            len = Infinity;\n      }\n\n      var range = [], end = begin + len;\n\n      while (index < end) {\n            var next = iterator.next();\n\n            if (next.done) {\n                  break;\n            }\n\n            if (index >= begin) {\n                  range.push(next.value);\n            }\n\n            index++;\n      }\n\n      return {\n            range: range,\n            index: index\n      };\n};\n\nvar $__getIterator = function(iterable) {\n      var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n      if (typeof iterable[sym] === \"function\") {\n            return iterable[sym]();\n      } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n            return $__getArrayIterator(iterable);\n      } else {\n            throw new TypeError();\n      }\n};\n\nvar $__getArrayIterator = function(array) {\n      var index = 0;\n\n      return {\n            next: function() {\n                  if (index < array.length) {\n                        return {\n                              done: false,\n                              value: array[index++]\n                        };\n                  } else {\n                        return {\n                              done: true,\n                              value: void 0\n                        };\n                  }\n            }\n      };\n};\n\n(function(){\nvar iterable = __createIterableObject(1, 2, 3);\nvar iterator$0 = $__getIterator(iterable),\n    iteratorValue$0 = {\n          index: 0\n    },\n    a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),\n    b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),\n    c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);\nreturn a === 1 && b === 2 && c === 3;\n      });")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>object destructuring</span></td>
+          <td><span>with instances of generic iterables</span></td>
+<script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
+      if (index > begin) {
+            throw new RangeError();
+      }
+
+      if (typeof len === &quot;undefined&quot;) {
+            len = Infinity;
+      }
+
+      var range = [], end = begin + len;
+
+      while (index < end) {
+            var next = iterator.next();
+
+            if (next.done) {
+                  break;
+            }
+
+            if (index >= begin) {
+                  range.push(next.value);
+            }
+
+            index++;
+      }
+
+      return {
+            range: range,
+            index: index
+      };
+};
+
+var $__getIterator = function(iterable) {
+      var sym = typeof Symbol === &quot;function&quot; && Symbol.iterator || &quot;@@iterator&quot;;
+
+      if (typeof iterable[sym] === &quot;function&quot;) {
+            return iterable[sym]();
+      } else if (typeof iterable === &quot;object&quot; || typeof iterable === &quot;function&quot;) {
+            return $__getArrayIterator(iterable);
+      } else {
+            throw new TypeError();
+      }
+};
+
+var $__getArrayIterator = function(array) {
+      var index = 0;
+
+      return {
+            next: function() {
+                  if (index < array.length) {
+                        return {
+                              done: false,
+                              value: array[index++]
+                        };
+                  } else {
+                        return {
+                              done: true,
+                              value: void 0
+                        };
+                  }
+            }
+      };
+};
+
+(function(){
+var iterable = __createIterableObject(1, 2, 3);
+var var$0 = Object.create(iterable),
+    iterator$0 = $__getIterator(var$0),
+    iteratorValue$0 = {
+          index: 0
+    },
+    a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),
+    b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),
+    c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);
+return a === 1 && b === 2 && c === 3;
+      });">
+test(function(){try{return eval("var $__getIteratorRange = function(iterator, index, begin, len) {\n      if (index > begin) {\n            throw new RangeError();\n      }\n\n      if (typeof len === \"undefined\") {\n            len = Infinity;\n      }\n\n      var range = [], end = begin + len;\n\n      while (index < end) {\n            var next = iterator.next();\n\n            if (next.done) {\n                  break;\n            }\n\n            if (index >= begin) {\n                  range.push(next.value);\n            }\n\n            index++;\n      }\n\n      return {\n            range: range,\n            index: index\n      };\n};\n\nvar $__getIterator = function(iterable) {\n      var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n      if (typeof iterable[sym] === \"function\") {\n            return iterable[sym]();\n      } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n            return $__getArrayIterator(iterable);\n      } else {\n            throw new TypeError();\n      }\n};\n\nvar $__getArrayIterator = function(array) {\n      var index = 0;\n\n      return {\n            next: function() {\n                  if (index < array.length) {\n                        return {\n                              done: false,\n                              value: array[index++]\n                        };\n                  } else {\n                        return {\n                              done: true,\n                              value: void 0\n                        };\n                  }\n            }\n      };\n};\n\n(function(){\nvar iterable = __createIterableObject(1, 2, 3);\nvar var$0 = Object.create(iterable),\n    iterator$0 = $__getIterator(var$0),\n    iteratorValue$0 = {\n          index: 0\n    },\n    a = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),\n    b = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]),\n    c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 2, 1), iteratorValue$0.range[0]);\nreturn a === 1 && b === 2 && c === 3;\n      });")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>with objects</span></td>
 <script data-source="(function(){
 var var$0 = {c:7, x:8}, c = var$0.c, d = var$0.x, e = var$0.e;
 return c === 7 && d === 8 && e === undefined;
@@ -2902,7 +3075,7 @@ test(function(){try{return eval("(function(){\nvar var$0 = {c:7, x:8}, c = var$0
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>combined destructuring</span></td>
+          <td><span>nested</span></td>
 <script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
       if (index > begin) {
             throw new RangeError();
@@ -2982,7 +3155,7 @@ test(function(){try{return eval("var $__getIteratorRange = function(iterator, in
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring parameters</span></td>
+          <td><span>parameters</span></td>
 <script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
   if (index > begin) {
     throw new RangeError();
@@ -3060,13 +3233,13 @@ return (function(arg$0, arg$1) {
 
   return a === 1 && b === 2 && c === 3 &&
     d === 4 && e === undefined;
-}({a:1, x:2},[3, 4]));
+}({a:1, x:2}, [3, 4]));
       });">
-test(function(){try{return eval("var $__getIteratorRange = function(iterator, index, begin, len) {\n  if (index > begin) {\n    throw new RangeError();\n  }\n\n  if (typeof len === \"undefined\") {\n    len = Infinity;\n  }\n\n  var range = [], end = begin + len;\n\n  while (index < end) {\n    var next = iterator.next();\n\n    if (next.done) {\n      break;\n    }\n\n    if (index >= begin) {\n      range.push(next.value);\n    }\n\n    index++;\n  }\n\n  return {\n    range: range,\n    index: index\n  };\n};\n\nvar $__getIterator = function(iterable) {\n  var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n  if (typeof iterable[sym] === \"function\") {\n    return iterable[sym]();\n  } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n    return $__getArrayIterator(iterable);\n  } else {\n    throw new TypeError();\n  }\n};\n\nvar $__getArrayIterator = function(array) {\n  var index = 0;\n\n  return {\n    next: function() {\n      if (index < array.length) {\n        return {\n          done: false,\n          value: array[index++]\n        };\n      } else {\n        return {\n          done: true,\n          value: void 0\n        };\n      }\n    }\n  };\n};\n\n(function(){\nreturn (function(arg$0, arg$1) {\n  var a = arg$0.a,\n      b = arg$0.x,\n      e = arg$0.y,\n      iterator$0 = $__getIterator(arg$1),\n      iteratorValue$0 = {\n        index: 0\n      },\n      c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),\n      d = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]);\n\n  return a === 1 && b === 2 && c === 3 &&\n    d === 4 && e === undefined;\n}({a:1, x:2},[3, 4]));\n      });")()}catch(e){return false;}}());
+test(function(){try{return eval("var $__getIteratorRange = function(iterator, index, begin, len) {\n  if (index > begin) {\n    throw new RangeError();\n  }\n\n  if (typeof len === \"undefined\") {\n    len = Infinity;\n  }\n\n  var range = [], end = begin + len;\n\n  while (index < end) {\n    var next = iterator.next();\n\n    if (next.done) {\n      break;\n    }\n\n    if (index >= begin) {\n      range.push(next.value);\n    }\n\n    index++;\n  }\n\n  return {\n    range: range,\n    index: index\n  };\n};\n\nvar $__getIterator = function(iterable) {\n  var sym = typeof Symbol === \"function\" && Symbol.iterator || \"@@iterator\";\n\n  if (typeof iterable[sym] === \"function\") {\n    return iterable[sym]();\n  } else if (typeof iterable === \"object\" || typeof iterable === \"function\") {\n    return $__getArrayIterator(iterable);\n  } else {\n    throw new TypeError();\n  }\n};\n\nvar $__getArrayIterator = function(array) {\n  var index = 0;\n\n  return {\n    next: function() {\n      if (index < array.length) {\n        return {\n          done: false,\n          value: array[index++]\n        };\n      } else {\n        return {\n          done: true,\n          value: void 0\n        };\n      }\n    }\n  };\n};\n\n(function(){\nreturn (function(arg$0, arg$1) {\n  var a = arg$0.a,\n      b = arg$0.x,\n      e = arg$0.y,\n      iterator$0 = $__getIterator(arg$1),\n      iteratorValue$0 = {\n        index: 0\n      },\n      c = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 0, 1), iteratorValue$0.range[0]),\n      d = (iteratorValue$0 = $__getIteratorRange(iterator$0, iteratorValue$0.index, 1, 1), iteratorValue$0.range[0]);\n\n  return a === 1 && b === 2 && c === 3 &&\n    d === 4 && e === undefined;\n}({a:1, x:2}, [3, 4]));\n      });")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring rest</span></td>
+          <td><span>rest</span></td>
 <script data-source="var $__getIteratorRange = function(iterator, index, begin, len) {
    if (index > begin) {
       throw new RangeError();
@@ -3152,7 +3325,7 @@ test(function(){try{return eval("var $__getIteratorRange = function(iterator, in
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>destructuring defaults</span></td>
+          <td><span>defaults</span></td>
 <script data-source="/* Error during compilation: Line 2: Unexpected token =*/">
 test(function(){try{return Function("/* Error during compilation: Line 2: Unexpected token =*/")()}catch(e){return false;}}());
 </script>

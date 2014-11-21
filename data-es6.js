@@ -639,7 +639,7 @@ exports.tests = [
     },
     'for-loop statement scope': {
       exec: function(){/*
-        for(let baz = 0; false;) {}
+        for(let baz = 0; false; false) {}
         return (function(){ try { baz; } catch(e) { return true; }}());
       */},
       res: {
@@ -725,7 +725,7 @@ exports.tests = [
     'for-loop statement scope (strict mode)': {
       exec: function(){/*
         'use strict';
-        for(let baz = 0; false;) {}
+        for(let baz = 0; false; false) {}
         return (function(){ try { baz; } catch(e) { return true; }}());
       */},
       res: {
@@ -735,8 +735,6 @@ exports.tests = [
         ie11:        true,
         firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: true,
-        chrome37:    false, // this test crashes the tab
-        chrome38:    true,
         nodeharmony: true,
       },
     },
@@ -960,19 +958,7 @@ exports.tests = [
     },
     'with generic iterables, in calls': {
       exec: function () {/*
-        var iterable;
-        try {
-          iterable = (function*() { yield 1; yield 2; yield 3; })();
-        }
-        catch (e) {
-          var arr = [1, 2, 3, ,];
-          iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
-            },
-          };
-          iterable[Symbol.iterator] = function(){ return iterable; }
-        }
+        var iterable = __createIterableObject(1, 2, 3);
         return Math.max(...iterable) === 3;
       */},
       res: {
@@ -984,19 +970,7 @@ exports.tests = [
     },
     'with generic iterables, in arrays': {
       exec: function () {/*
-        var iterable;
-        try {
-          iterable = (function*() { yield "b"; yield "c"; yield "d"; })();
-        }
-        catch (e) {
-          var arr = ["b", "c", "d", ,];
-          iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
-            },
-          };
-          iterable[Symbol.iterator] = function(){ return iterable; }
-        }
+        var iterable = __createIterableObject("b", "c", "d");
         return ["a", ...iterable, "e"][3] === "d";
       */},
       res: {
@@ -1004,6 +978,26 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         firefox27:   true,
+      },
+    },
+    'with instances of iterables, in calls': {
+      exec: function () {/*
+        var iterable = __createIterableObject(1, 2, 3);
+        return Math.max(...Object.create(iterable)) === 3;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+      },
+    },
+    'with instances of iterables, in arrays': {
+      exec: function () {/*
+        var iterable = __createIterableObject("b", "c", "d");
+        return ["a", ...Object.create(iterable), "e"][3] === "d";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
       },
     },
   }
@@ -1360,19 +1354,8 @@ exports.tests = [
     },
     'with generic iterables': {
       exec: function () {/*
-        var iterable, result = "";
-        try {
-          iterable = (function*() { yield 1; yield 2; yield 3; })();
-        }
-        catch (e) {
-          var arr = [1, 2, 3, ,];
-          iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
-            },
-          };
-          iterable[Symbol.iterator] = function(){ return iterable; }
-        }
+        var result = "";
+        var iterable = __createIterableObject(1, 2, 3);
         for (var item of iterable) {
           result += item;
         }
@@ -1385,8 +1368,23 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         firefox27:   true,
-        chrome38:    true,
+        chrome21dev: true,
         nodeharmony: true,
+      },
+    },
+    'with instances of generic iterables': {
+      exec: function () {/*
+        var result = "";
+        var iterable = __createIterableObject(1, 2, 3);
+        for (var item of Object.create(iterable)) {
+          result += item;
+        }
+        return result === "123";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ie11tp:      true,
       },
     },
   },
@@ -1418,10 +1416,50 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'yield *': {
+    'yield *, arrays': {
       exec: function () {/*
         var iterator = (function* generator() {
-          yield* (function* () {
+          yield * [5, 6];
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        firefox27:   true,
+        chrome38:    true,
+      },
+    },
+    'yield *, strings': {
+      exec: function () {/*
+        var iterator = (function* generator() {
+          yield * "56";
+        }());
+        var item = iterator.next();
+        var passed = item.value === "5" && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === "6" && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        firefox27:   true,
+        chrome38:    true,
+      },
+    },
+    'yield *, generic iterables': {
+      exec: function () {/*
+        var iterator = (function* generator() {
+          yield * (function* () {
             yield 5; yield 6;
           }());
         }());
@@ -1440,6 +1478,26 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: true,
         nodeharmony: true,
+      },
+    },
+    'yield *, instances of iterables': {
+      exec: function () {/*
+        var iterator = (function* generator() {
+          yield * Object.create(function* () {
+            yield 5; yield 6;
+          }());
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
       },
     },
     'shorthand generator methods': {
@@ -2097,7 +2155,7 @@ exports.tests = [
         tr:          true,
         ie11tp:      true,
         firefox33:   true,
-        chrome39:    true,
+        chrome38:    true,
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
@@ -2117,7 +2175,7 @@ exports.tests = [
         _6to5:       true,
         ie11tp:      true,
         firefox29:   true,
-        chrome36:    true,
+        chrome39:    true,
         nodeharmony: true,
       },
     },
@@ -2293,6 +2351,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        firefox33:   true,
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
@@ -2373,6 +2432,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        firefox34:   true,
       },
     },
     'WeakSet.prototype.delete': {
@@ -2982,7 +3042,7 @@ exports.tests = [
   name: 'destructuring',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   subtests: {
-    'array destructuring': {
+    'with arrays': {
       exec: function(){/*
         var [a, , [b], c] = [5, null, [6]];
         return a === 5 && b === 6 && c === undefined;
@@ -3002,7 +3062,7 @@ exports.tests = [
         ios8:        { val: true, note_id: 'fx-destructuring' },
       }),
     },
-    'string destructuring': {
+    'with strings': {
       exec: function(){/*
         var [a, b, c] = "bar";
         return a === "b" && b === "a" && c === "r";
@@ -3018,21 +3078,9 @@ exports.tests = [
         ios8:        { val: true, note_id: 'fx-destructuring' },
       }),
     },
-    'generic iterable destructuring': {
+    'with generic iterables': {
       exec: function(){/*
-        var iterable;
-        try {
-          iterable = (function*() { yield 1; yield 2; yield 3; })();
-        }
-        catch (e) {
-          var arr = [1, 2, 3, ,];
-          iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
-            },
-          };
-          iterable[Symbol.iterator] = function(){ return iterable; }
-        }
+        var iterable = __createIterableObject(1, 2, 3);
         var [a, b, c] = iterable;
         return a === 1 && b === 2 && c === 3;
       */},
@@ -3040,26 +3088,35 @@ exports.tests = [
         firefox34:    true,
       },
     },
-    'object destructuring': {
+    'with instances of generic iterables': {
+      exec: function(){/*
+        var iterable = __createIterableObject(1, 2, 3);
+        var [a, b, c] = Object.create(iterable);
+        return a === 1 && b === 2 && c === 3;
+      */},
+      res: {
+      },
+    },
+    'with objects': {
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
         return c === 7 && d === 8 && e === undefined;
       */},
       res: temp.destructuringResults,
     },
-    'combined destructuring': {
+    'nested': {
       exec: function(){/*
         var [e, {x:f, g}] = [9, {x:10}];
         return e === 9 && f === 10 && g === undefined;
       */},
       res: temp.destructuringResults,
     },
-    'destructuring parameters': {
+    'parameters': {
       exec: function(){/*
         return (function({a, x:b, y:e}, [c, d]) {
           return a === 1 && b === 2 && c === 3 &&
             d === 4 && e === undefined;
-        }({a:1, x:2},[3, 4]));
+        }({a:1, x:2}, [3, 4]));
       */},
       res: {
         tr:          true,
@@ -3072,7 +3129,7 @@ exports.tests = [
         ios8:        true,
       },
     },
-    'destructuring rest': {
+    'rest': {
       exec: function(){/*
         var [a, ...b] = [3, 4, 5];
         var [c, ...d] = [6];
@@ -3086,7 +3143,7 @@ exports.tests = [
         firefox34:   true,
       },
     },
-    'destructuring defaults': {
+    'defaults': {
       exec: function(){/*
         var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
         return a === 1 && b === 2 && c === 3;
