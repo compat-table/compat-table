@@ -612,19 +612,19 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return [\"
 (function () {
   var iterable;
   try {
-    iterable = (regeneratorRuntime.mark(function _callee() {
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (true) switch (_context.prev = _context.next) {
-          case 0: _context.next = 2;
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
             return 1;
-          case 2: _context.next = 4;
+          case 2: context$2$0.next = 4;
             return 2;
-          case 4: _context.next = 6;
+          case 4: context$2$0.next = 6;
             return 3;
           case 6:
-          case &quot;end&quot;: return _context.stop();
+          case &quot;end&quot;: return context$2$0.stop();
         }
-      }, _callee, this);
+      }, callee$1$0, this);
     }))();
   } catch (e) {
     var arr = [1, 2, 3,,];
@@ -638,7 +638,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return [\"
   }
   return Math.max.apply(Math, Array.from(iterable)) === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function _callee() {\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (true) switch (_context.prev = _context.next) {\n          case 0: _context.next = 2;\n            return 1;\n          case 2: _context.next = 4;\n            return 2;\n          case 4: _context.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return _context.stop();\n        }\n      }, _callee, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  return Math.max.apply(Math, Array.from(iterable)) === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 1;\n          case 2: context$2$0.next = 4;\n            return 2;\n          case 4: context$2$0.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  return Math.max.apply(Math, Array.from(iterable)) === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
@@ -648,19 +648,19 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterab
 (function () {
   var iterable;
   try {
-    iterable = (regeneratorRuntime.mark(function _callee() {
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (true) switch (_context.prev = _context.next) {
-          case 0: _context.next = 2;
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
             return &quot;b&quot;;
-          case 2: _context.next = 4;
+          case 2: context$2$0.next = 4;
             return &quot;c&quot;;
-          case 4: _context.next = 6;
+          case 4: context$2$0.next = 6;
             return &quot;d&quot;;
           case 6:
-          case &quot;end&quot;: return _context.stop();
+          case &quot;end&quot;: return context$2$0.stop();
         }
-      }, _callee, this);
+      }, callee$1$0, this);
     }))();
   } catch (e) {
     var arr = [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;,,];
@@ -674,7 +674,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterab
   }
   return [&quot;a&quot;].concat(Array.from(iterable), [&quot;e&quot;])[3] === &quot;d&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function _callee() {\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (true) switch (_context.prev = _context.next) {\n          case 0: _context.next = 2;\n            return \"b\";\n          case 2: _context.next = 4;\n            return \"c\";\n          case 4: _context.next = 6;\n            return \"d\";\n          case 6:\n          case \"end\": return _context.stop();\n        }\n      }, _callee, this);\n    }))();\n  } catch (e) {\n    var arr = [\"b\", \"c\", \"d\",,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  return [\"a\"].concat(Array.from(iterable), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return \"b\";\n          case 2: context$2$0.next = 4;\n            return \"c\";\n          case 4: context$2$0.next = 6;\n            return \"d\";\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [\"b\", \"c\", \"d\",,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  return [\"a\"].concat(Array.from(iterable), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -686,11 +686,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterab
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  var _C = function _C() {};
+  var C = function C() {};
 
-  return typeof _C === &quot;function&quot;;
+  return typeof C === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = function _C() {};\n\n  return typeof _C === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var C = function C() {};\n\n  return typeof C === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -698,16 +698,16 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = f
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  var _C = function _C() {};
+  var C = function C() {};
 
   {
     (function () {
-      var _D = function _D() {};
+      var D = function D() {};
     })();
   }
-  return typeof _C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
+  return typeof C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = function _C() {};\n\n  {\n    (function () {\n      var _D = function _D() {};\n    })();\n  }\n  return typeof _C === \"function\" && typeof D === \"undefined\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var C = function C() {};\n\n  {\n    (function () {\n      var D = function D() {};\n    })();\n  }\n  return typeof C === \"function\" && typeof D === \"undefined\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -725,13 +725,13 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  var _C = function _C() {
+  var C = function C() {
     this.x = 1;
   };
 
-  return _C.prototype.constructor === _C && new _C().x === 1;
+  return C.prototype.constructor === C && new C().x === 1;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _C = function _C() {\n    this.x = 1;\n  };\n\n  return _C.prototype.constructor === _C && new _C().x === 1;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var C = function C() {\n    this.x = 1;\n  };\n\n  return C.prototype.constructor === C && new C().x === 1;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -744,10 +744,10 @@ var _classProps = function (child, staticProps, instanceProps) {
 };
 
 (function () {
-  var _C = (function () {
-    var _C = function _C() {};
+  var C = (function () {
+    var C = function C() {};
 
-    _classProps(_C, null, {
+    _classProps(C, null, {
       method: {
         writable: true,
         value: function () {
@@ -756,12 +756,12 @@ var _classProps = function (child, staticProps, instanceProps) {
       }
     });
 
-    return _C;
+    return C;
   })();
 
-  return typeof _C.prototype.method === &quot;function&quot; && new _C().method() === 2;
+  return typeof C.prototype.method === &quot;function&quot; && new C().method() === 2;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var _C = (function () {\n    var _C = function _C() {};\n\n    _classProps(_C, null, {\n      method: {\n        writable: true,\n        value: function () {\n          return 2;\n        }\n      }\n    });\n\n    return _C;\n  })();\n\n  return typeof _C.prototype.method === \"function\" && new _C().method() === 2;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var C = (function () {\n    var C = function C() {};\n\n    _classProps(C, null, {\n      method: {\n        writable: true,\n        value: function () {\n          return 2;\n        }\n      }\n    });\n\n    return C;\n  })();\n\n  return typeof C.prototype.method === \"function\" && new C().method() === 2;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -774,10 +774,10 @@ var _classProps = function (child, staticProps, instanceProps) {
 };
 
 (function () {
-  var _C = (function () {
-    var _C = function _C() {};
+  var C = (function () {
+    var C = function C() {};
 
-    _classProps(_C, {
+    _classProps(C, {
       method: {
         writable: true,
         value: function () {
@@ -786,12 +786,12 @@ var _classProps = function (child, staticProps, instanceProps) {
       }
     });
 
-    return _C;
+    return C;
   })();
 
-  return typeof _C.method === &quot;function&quot; && _C.method() === 3;
+  return typeof C.method === &quot;function&quot; && C.method() === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var _C = (function () {\n    var _C = function _C() {};\n\n    _classProps(_C, {\n      method: {\n        writable: true,\n        value: function () {\n          return 3;\n        }\n      }\n    });\n\n    return _C;\n  })();\n\n  return typeof _C.method === \"function\" && _C.method() === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var C = (function () {\n    var C = function C() {};\n\n    _classProps(C, {\n      method: {\n        writable: true,\n        value: function () {\n          return 3;\n        }\n      }\n    });\n\n    return C;\n  })();\n\n  return typeof C.method === \"function\" && C.method() === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -841,19 +841,19 @@ var _extends = function (child, parent) {
 };
 
 (function () {
-  var _C = (function (Array) {
-    var _C = function _C() {
+  var C = (function (Array) {
+    var C = function C() {
       Array.apply(this, arguments);
     };
 
-    _extends(_C, Array);
+    _extends(C, Array);
 
-    return _C;
+    return C;
   })(Array);
 
-  return Array.isPrototypeOf(_C) && Array.prototype.isPrototypeOf(_C.prototype);
+  return Array.isPrototypeOf(C) && Array.prototype.isPrototypeOf(C.prototype);
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var _C = (function (Array) {\n    var _C = function _C() {\n      Array.apply(this, arguments);\n    };\n\n    _extends(_C, Array);\n\n    return _C;\n  })(Array);\n\n  return Array.isPrototypeOf(_C) && Array.prototype.isPrototypeOf(_C.prototype);\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var C = (function (Array) {\n    var C = function C() {\n      Array.apply(this, arguments);\n    };\n\n    _extends(C, Array);\n\n    return C;\n  })(Array);\n\n  return Array.isPrototypeOf(C) && Array.prototype.isPrototypeOf(C.prototype);\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -877,21 +877,21 @@ var _extends = function (child, parent) {
 };
 
 (function () {
-  var _B = (function (_ref) {
-    var _B = function _B(a) {
+  var B = (function (_ref) {
+    var B = function B(a) {
       return _ref.call(this, &quot;bar&quot; + a);
     };
 
-    _extends(_B, _ref);
+    _extends(B, _ref);
 
-    return _B;
+    return B;
   })(function (a) {
     return [&quot;foo&quot; + a];
   });
 
-  return new _B(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
+  return new B(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var _B = (function (_ref) {\n    var _B = function _B(a) {\n      return _ref.call(this, \"bar\" + a);\n    };\n\n    _extends(_B, _ref);\n\n    return _B;\n  })(function (a) {\n    return [\"foo\" + a];\n  });\n\n  return new _B(\"baz\")[0] === \"foobarbaz\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var B = (function (_ref) {\n    var B = function B(a) {\n      return _ref.call(this, \"bar\" + a);\n    };\n\n    _extends(B, _ref);\n\n    return B;\n  })(function (a) {\n    return [\"foo\" + a];\n  });\n\n  return new B(\"baz\")[0] === \"foobarbaz\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="super">
@@ -916,14 +916,14 @@ var _extends = function (child, parent) {
 };
 
 (function () {
-  var _B = (function (_ref) {
-    var _B = function _B() {
+  var B = (function (_ref) {
+    var B = function B() {
       _ref.apply(this, arguments);
     };
 
-    _extends(_B, _ref);
+    _extends(B, _ref);
 
-    _classProps(_B, null, {
+    _classProps(B, null, {
       qux: {
         writable: true,
         value: function (a) {
@@ -932,7 +932,7 @@ var _extends = function (child, parent) {
       }
     });
 
-    return _B;
+    return B;
   })((function () {
     var _class = function () {};
 
@@ -948,9 +948,9 @@ var _extends = function (child, parent) {
     return _class;
   })());
 
-  return new _B().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
+  return new B().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var _B = (function (_ref) {\n    var _B = function _B() {\n      _ref.apply(this, arguments);\n    };\n\n    _extends(_B, _ref);\n\n    _classProps(_B, null, {\n      qux: {\n        writable: true,\n        value: function (a) {\n          return _ref.prototype.qux.call(this, \"bar\" + a);\n        }\n      }\n    });\n\n    return _B;\n  })((function () {\n    var _class = function () {};\n\n    _classProps(_class, null, {\n      qux: {\n        writable: true,\n        value: function (a) {\n          return \"foo\" + a;\n        }\n      }\n    });\n\n    return _class;\n  })());\n\n  return new _B().qux(\"baz\") === \"foobarbaz\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var B = (function (_ref) {\n    var B = function B() {\n      _ref.apply(this, arguments);\n    };\n\n    _extends(B, _ref);\n\n    _classProps(B, null, {\n      qux: {\n        writable: true,\n        value: function (a) {\n          return _ref.prototype.qux.call(this, \"bar\" + a);\n        }\n      }\n    });\n\n    return B;\n  })((function () {\n    var _class = function () {};\n\n    _classProps(_class, null, {\n      qux: {\n        writable: true,\n        value: function (a) {\n          return \"foo\" + a;\n        }\n      }\n    });\n\n    return _class;\n  })());\n\n  return new B().qux(\"baz\") === \"foobarbaz\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="super">
@@ -975,14 +975,14 @@ var _extends = function (child, parent) {
 };
 
 (function () {
-  var _B = (function (_ref) {
-    var _B = function _B() {
+  var B = (function (_ref) {
+    var B = function B() {
       _ref.apply(this, arguments);
     };
 
-    _extends(_B, _ref);
+    _extends(B, _ref);
 
-    _classProps(_B, null, {
+    _classProps(B, null, {
       qux: {
         writable: true,
         value: function () {
@@ -991,7 +991,7 @@ var _extends = function (child, parent) {
       }
     });
 
-    return _B;
+    return B;
   })((function () {
     var _class = function () {};
 
@@ -1008,12 +1008,12 @@ var _extends = function (child, parent) {
   })());
 
   var obj = {
-    qux: _B.prototype.qux,
+    qux: B.prototype.qux,
     corge: &quot;ley&quot;
   };
   return obj.qux() === &quot;barley&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var _B = (function (_ref) {\n    var _B = function _B() {\n      _ref.apply(this, arguments);\n    };\n\n    _extends(_B, _ref);\n\n    _classProps(_B, null, {\n      qux: {\n        writable: true,\n        value: function () {\n          return _ref.prototype.qux.call(this) + this.corge;\n        }\n      }\n    });\n\n    return _B;\n  })((function () {\n    var _class = function () {};\n\n    _classProps(_class, null, {\n      qux: {\n        writable: true,\n        value: function () {\n          return \"bar\";\n        }\n      }\n    });\n\n    return _class;\n  })());\n\n  var obj = {\n    qux: _B.prototype.qux,\n    corge: \"ley\"\n  };\n  return obj.qux() === \"barley\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\nvar _extends = function (child, parent) {\n  child.prototype = Object.create(parent.prototype, {\n    constructor: {\n      value: child,\n      enumerable: false,\n      writable: true,\n      configurable: true\n    }\n  });\n  child.__proto__ = parent;\n};\n\n(function () {\n  var B = (function (_ref) {\n    var B = function B() {\n      _ref.apply(this, arguments);\n    };\n\n    _extends(B, _ref);\n\n    _classProps(B, null, {\n      qux: {\n        writable: true,\n        value: function () {\n          return _ref.prototype.qux.call(this) + this.corge;\n        }\n      }\n    });\n\n    return B;\n  })((function () {\n    var _class = function () {};\n\n    _classProps(_class, null, {\n      qux: {\n        writable: true,\n        value: function () {\n          return \"bar\";\n        }\n      }\n    });\n\n    return _class;\n  })());\n\n  var obj = {\n    qux: B.prototype.qux,\n    corge: \"ley\"\n  };\n  return obj.qux() === \"barley\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1098,19 +1098,19 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var str = 
 (function () {
   var iterable, result = &quot;&quot;;
   try {
-    iterable = (regeneratorRuntime.mark(function _callee() {
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (true) switch (_context.prev = _context.next) {
-          case 0: _context.next = 2;
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
             return 1;
-          case 2: _context.next = 4;
+          case 2: context$2$0.next = 4;
             return 2;
-          case 4: _context.next = 6;
+          case 4: context$2$0.next = 6;
             return 3;
           case 6:
-          case &quot;end&quot;: return _context.stop();
+          case &quot;end&quot;: return context$2$0.stop();
         }
-      }, _callee, this);
+      }, callee$1$0, this);
     }))();
   } catch (e) {
     var arr = [1, 2, 3,,];
@@ -1129,7 +1129,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var str = 
 
   return result === &quot;123&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable, result = \"\";\n  try {\n    iterable = (regeneratorRuntime.mark(function _callee() {\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (true) switch (_context.prev = _context.next) {\n          case 0: _context.next = 2;\n            return 1;\n          case 2: _context.next = 4;\n            return 2;\n          case 4: _context.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return _context.stop();\n        }\n      }, _callee, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  for (var _iterator = iterable[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {\n    var item = _step.value;\n    result += item;\n  }\n\n  return result === \"123\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable, result = \"\";\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 1;\n          case 2: context$2$0.next = 4;\n            return 2;\n          case 4: context$2$0.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  for (var _iterator = iterable[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {\n    var item = _step.value;\n    result += item;\n  }\n\n  return result === \"123\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1142,14 +1142,14 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterab
 
 (function () {
   var generator = regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(_context) {
-      while (true) switch (_context.prev = _context.next) {
-        case 0: _context.next = 2;
+    return regeneratorRuntime.wrap(function generator$(context$2$0) {
+      while (true) switch (context$2$0.prev = context$2$0.next) {
+        case 0: context$2$0.next = 2;
           return 5;
-        case 2: _context.next = 4;
+        case 2: context$2$0.next = 4;
           return 6;
         case 4:
-        case &quot;end&quot;: return _context.stop();
+        case &quot;end&quot;: return context$2$0.stop();
       }
     }, generator, this);
   });
@@ -1164,7 +1164,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterab
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var generator = regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context) {\n      while (true) switch (_context.prev = _context.next) {\n        case 0: _context.next = 2;\n          return 5;\n        case 2: _context.next = 4;\n          return 6;\n        case 4:\n        case \"end\": return _context.stop();\n      }\n    }, generator, this);\n  });\n\n  ;\n  var iterator = generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var generator = regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: context$2$0.next = 2;\n          return 5;\n        case 2: context$2$0.next = 4;\n          return 6;\n        case 4:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  });\n\n  ;\n  var iterator = generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1173,22 +1173,22 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var genera
 
 (function () {
   var iterator = (regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(_context2) {
-      while (true) switch (_context2.prev = _context2.next) {
-        case 0: return _context2.delegateYield((regeneratorRuntime.mark(function _callee() {
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (true) switch (_context.prev = _context.next) {
-                case 0: _context.next = 2;
+    return regeneratorRuntime.wrap(function generator$(context$2$0) {
+      while (true) switch (context$2$0.prev = context$2$0.next) {
+        case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {
+            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
+              while (true) switch (context$3$0.prev = context$3$0.next) {
+                case 0: context$3$0.next = 2;
                   return 5;
-                case 2: _context.next = 4;
+                case 2: context$3$0.next = 4;
                   return 6;
                 case 4:
-                case &quot;end&quot;: return _context.stop();
+                case &quot;end&quot;: return context$3$0.stop();
               }
-            }, _callee, this);
+            }, callee$2$0, this);
           })()), &quot;t0&quot;, 1);
         case 1:
-        case &quot;end&quot;: return _context2.stop();
+        case &quot;end&quot;: return context$2$0.stop();
       }
     }, generator, this);
   })());
@@ -1200,7 +1200,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var genera
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context2) {\n      while (true) switch (_context2.prev = _context2.next) {\n        case 0: return _context2.delegateYield((regeneratorRuntime.mark(function _callee() {\n            return regeneratorRuntime.wrap(function _callee$(_context) {\n              while (true) switch (_context.prev = _context.next) {\n                case 0: _context.next = 2;\n                  return 5;\n                case 2: _context.next = 4;\n                  return 6;\n                case 4:\n                case \"end\": return _context.stop();\n              }\n            }, _callee, this);\n          })()), \"t0\", 1);\n        case 1:\n        case \"end\": return _context2.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {\n            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n              while (true) switch (context$3$0.prev = context$3$0.next) {\n                case 0: context$3$0.next = 2;\n                  return 5;\n                case 2: context$3$0.next = 4;\n                  return 6;\n                case 4:\n                case \"end\": return context$3$0.stop();\n              }\n            }, callee$2$0, this);\n          })()), \"t0\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1209,17 +1209,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
 
 (function () {
   var o = {
-    generator: regeneratorRuntime.mark(function _callee() {
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (true) switch (_context.prev = _context.next) {
-          case 0: _context.next = 2;
+    generator: regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
             return 5;
-          case 2: _context.next = 4;
+          case 2: context$2$0.next = 4;
             return 6;
           case 4:
-          case &quot;end&quot;: return _context.stop();
+          case &quot;end&quot;: return context$2$0.stop();
         }
-      }, _callee, this);
+      }, callee$1$0, this);
     }) };
   var iterator = o.generator();
   var item = iterator.next();
@@ -1230,7 +1230,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {\n    generator: regeneratorRuntime.mark(function _callee() {\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (true) switch (_context.prev = _context.next) {\n          case 0: _context.next = 2;\n            return 5;\n          case 2: _context.next = 4;\n            return 6;\n          case 4:\n          case \"end\": return _context.stop();\n        }\n      }, _callee, this);\n    }) };\n  var iterator = o.generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {\n    generator: regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 5;\n          case 2: context$2$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }) };\n  var iterator = o.generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2660,16 +2660,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 (function () {
   var _ref = [5, null, [6]];
 
-  var _ref2 = Array.from(_ref);
-
-  var a = _ref2[0];
-  var _ref3 = Array.from(_ref2[2]);
-
-  var b = _ref3[0];
-  var c = _ref2[3];
+  var a = _ref[0];
+  var b = _ref[2][0];
+  var c = _ref[3];
   return a === 5 && b === 6 && c === undefined;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [5, null, [6]];\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var _ref3 = Array.from(_ref2[2]);\n\n  var b = _ref3[0];\n  var c = _ref2[3];\n  return a === 5 && b === 6 && c === undefined;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [5, null, [6]];\n\n  var a = _ref[0];\n  var b = _ref[2][0];\n  var c = _ref[3];\n  return a === 5 && b === 6 && c === undefined;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2679,14 +2675,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
 (function () {
   var _ref = &quot;bar&quot;;
 
-  var _ref2 = Array.from(_ref);
-
-  var a = _ref2[0];
-  var b = _ref2[1];
-  var c = _ref2[2];
+  var a = _ref[0];
+  var b = _ref[1];
+  var c = _ref[2];
   return a === &quot;b&quot; && b === &quot;a&quot; && c === &quot;r&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = \"bar\";\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var b = _ref2[1];\n  var c = _ref2[2];\n  return a === \"b\" && b === \"a\" && c === \"r\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = \"bar\";\n\n  var a = _ref[0];\n  var b = _ref[1];\n  var c = _ref[2];\n  return a === \"b\" && b === \"a\" && c === \"r\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2696,19 +2690,19 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
 (function () {
   var iterable;
   try {
-    iterable = (regeneratorRuntime.mark(function _callee() {
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (true) switch (_context.prev = _context.next) {
-          case 0: _context.next = 2;
+    iterable = (regeneratorRuntime.mark(function callee$1$0() {
+      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+        while (true) switch (context$2$0.prev = context$2$0.next) {
+          case 0: context$2$0.next = 2;
             return 1;
-          case 2: _context.next = 4;
+          case 2: context$2$0.next = 4;
             return 2;
-          case 4: _context.next = 6;
+          case 4: context$2$0.next = 6;
             return 3;
           case 6:
-          case &quot;end&quot;: return _context.stop();
+          case &quot;end&quot;: return context$2$0.stop();
         }
-      }, _callee, this);
+      }, callee$1$0, this);
     }))();
   } catch (e) {
     var arr = [1, 2, 3,,];
@@ -2720,14 +2714,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
       return iterable;
     };
   }
-  var _ref = Array.from(iterable);
-
-  var a = _ref[0];
-  var b = _ref[1];
-  var c = _ref[2];
+  var a = iterable[0];
+  var b = iterable[1];
+  var c = iterable[2];
   return a === 1 && b === 2 && c === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function _callee() {\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (true) switch (_context.prev = _context.next) {\n          case 0: _context.next = 2;\n            return 1;\n          case 2: _context.next = 4;\n            return 2;\n          case 4: _context.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return _context.stop();\n        }\n      }, _callee, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  var _ref = Array.from(iterable);\n\n  var a = _ref[0];\n  var b = _ref[1];\n  var c = _ref[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable;\n  try {\n    iterable = (regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 1;\n          case 2: context$2$0.next = 4;\n            return 2;\n          case 4: context$2$0.next = 6;\n            return 3;\n          case 6:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }))();\n  } catch (e) {\n    var arr = [1, 2, 3,,];\n    iterable = {\n      next: function () {\n        return { value: arr.shift(), done: arr.length <= 0 };\n      } };\n    iterable[Symbol.iterator] = function () {\n      return iterable;\n    };\n  }\n  var a = iterable[0];\n  var b = iterable[1];\n  var c = iterable[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2751,14 +2743,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
 (function () {
   var _ref = [9, { x: 10 }];
 
-  var _ref2 = Array.from(_ref);
-
-  var e = _ref2[0];
-  var f = _ref2[1].x;
-  var g = _ref2[1].g;
+  var e = _ref[0];
+  var f = _ref[1].x;
+  var g = _ref[1].g;
   return e === 9 && f === 10 && g === undefined;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [9, { x: 10 }];\n\n  var _ref2 = Array.from(_ref);\n\n  var e = _ref2[0];\n  var f = _ref2[1].x;\n  var g = _ref2[1].g;\n  return e === 9 && f === 10 && g === undefined;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [9, { x: 10 }];\n\n  var e = _ref[0];\n  var f = _ref[1].x;\n  var g = _ref[1].g;\n  return e === 9 && f === 10 && g === undefined;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2770,14 +2760,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
     var a = _ref.a;
     var b = _ref.x;
     var e = _ref.y;
-    var _ref3 = Array.from(_ref2);
-
-    var c = _ref3[0];
-    var d = _ref3[1];
+    var c = _ref2[0];
+    var d = _ref2[1];
     return a === 1 && b === 2 && c === 3 && d === 4 && e === undefined;
   }({ a: 1, x: 2 }, [3, 4]));
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (_ref, _ref2) {\n    var a = _ref.a;\n    var b = _ref.x;\n    var e = _ref.y;\n    var _ref3 = Array.from(_ref2);\n\n    var c = _ref3[0];\n    var d = _ref3[1];\n    return a === 1 && b === 2 && c === 3 && d === 4 && e === undefined;\n  }({ a: 1, x: 2 }, [3, 4]));\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (_ref, _ref2) {\n    var a = _ref.a;\n    var b = _ref.x;\n    var e = _ref.y;\n    var c = _ref2[0];\n    var d = _ref2[1];\n    return a === 1 && b === 2 && c === 3 && d === 4 && e === undefined;\n  }({ a: 1, x: 2 }, [3, 4]));\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2787,21 +2775,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (fu
 (function () {
   var _ref = [3, 4, 5];
 
-  var _ref2 = Array.from(_ref);
+  var a = _ref[0];
+  var b = _ref.slice(1);
 
-  var a = _ref2[0];
-  var b = Array.from(_ref2).slice(1);
+  var _ref2 = [6];
 
-  var _ref3 = [6];
-
-  var _ref4 = Array.from(_ref3);
-
-  var c = _ref4[0];
-  var d = Array.from(_ref4).slice(1);
+  var c = _ref2[0];
+  var d = _ref2.slice(1);
 
   return a === 3 && b instanceof Array && (b + &quot;&quot;) === &quot;4,5&quot; && c === 6 && d instanceof Array && d.length === 0;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [3, 4, 5];\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var b = Array.from(_ref2).slice(1);\n\n  var _ref3 = [6];\n\n  var _ref4 = Array.from(_ref3);\n\n  var c = _ref4[0];\n  var d = Array.from(_ref4).slice(1);\n\n  return a === 3 && b instanceof Array && (b + \"\") === \"4,5\" && c === 6 && d instanceof Array && d.length === 0;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [3, 4, 5];\n\n  var a = _ref[0];\n  var b = _ref.slice(1);\n\n  var _ref2 = [6];\n\n  var c = _ref2[0];\n  var d = _ref2.slice(1);\n\n  return a === 3 && b instanceof Array && (b + \"\") === \"4,5\" && c === 6 && d instanceof Array && d.length === 0;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -3015,26 +2999,26 @@ var _classProps = function (child, staticProps, instanceProps) {
 };
 
 (function () {
-  var _foo = function _foo() {};
+  var foo = function foo() {};
 
   ;
-  var _bar = (function () {
-    var _bar = function _bar() {};
+  var bar = (function () {
+    var bar = function bar() {};
 
-    _classProps(_bar, {
+    _classProps(bar, {
       name: {
         writable: true,
         value: function () {}
       }
     });
 
-    return _bar;
+    return bar;
   })();
 
   ;
-  return _foo.name === &quot;foo&quot; && typeof _bar.name === &quot;function&quot;;
+  return foo.name === &quot;foo&quot; && typeof bar.name === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var _foo = function _foo() {};\n\n  ;\n  var _bar = (function () {\n    var _bar = function _bar() {};\n\n    _classProps(_bar, {\n      name: {\n        writable: true,\n        value: function () {}\n      }\n    });\n\n    return _bar;\n  })();\n\n  ;\n  return _foo.name === \"foo\" && typeof _bar.name === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var foo = function foo() {};\n\n  ;\n  var bar = (function () {\n    var bar = function bar() {};\n\n    _classProps(bar, {\n      name: {\n        writable: true,\n        value: function () {}\n      }\n    });\n\n    return bar;\n  })();\n\n  ;\n  return foo.name === \"foo\" && typeof bar.name === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3114,23 +3098,23 @@ var _classProps = function (child, staticProps, instanceProps) {
 };
 
 (function () {
-  var _C = (function () {
-    var _C = function _C() {};
+  var C = (function () {
+    var C = function C() {};
 
-    _classProps(_C, null, {
+    _classProps(C, null, {
       foo: {
         writable: true,
         value: function () {}
       }
     });
 
-    return _C;
+    return C;
   })();
 
   ;
-  return (new _C()).foo.name === &quot;foo&quot;;
+  return (new C()).foo.name === &quot;foo&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var _C = (function () {\n    var _C = function _C() {};\n\n    _classProps(_C, null, {\n      foo: {\n        writable: true,\n        value: function () {}\n      }\n    });\n\n    return _C;\n  })();\n\n  ;\n  return (new _C()).foo.name === \"foo\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var C = (function () {\n    var C = function C() {};\n\n    _classProps(C, null, {\n      foo: {\n        writable: true,\n        value: function () {}\n      }\n    });\n\n    return C;\n  })();\n\n  ;\n  return (new C()).foo.name === \"foo\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3143,23 +3127,23 @@ var _classProps = function (child, staticProps, instanceProps) {
 };
 
 (function () {
-  var _C = (function () {
-    var _C = function _C() {};
+  var C = (function () {
+    var C = function C() {};
 
-    _classProps(_C, {
+    _classProps(C, {
       foo: {
         writable: true,
         value: function () {}
       }
     });
 
-    return _C;
+    return C;
   })();
 
   ;
-  return _C.foo.name === &quot;foo&quot;;
+  return C.foo.name === &quot;foo&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var _C = (function () {\n    var _C = function _C() {};\n\n    _classProps(_C, {\n      foo: {\n        writable: true,\n        value: function () {}\n      }\n    });\n\n    return _C;\n  })();\n\n  ;\n  return _C.foo.name === \"foo\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (child, staticProps, instanceProps) {\n  if (staticProps) Object.defineProperties(child, staticProps);\n  if (instanceProps) Object.defineProperties(child.prototype, instanceProps);\n};\n\n(function () {\n  var C = (function () {\n    var C = function C() {};\n\n    _classProps(C, {\n      foo: {\n        writable: true,\n        value: function () {}\n      }\n    });\n\n    return C;\n  })();\n\n  ;\n  return C.foo.name === \"foo\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
