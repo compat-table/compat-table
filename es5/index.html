@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="../master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
+    <script>
+      (function() {
+        var s = document.createElement('script'),
+            t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+      })();
+    </script>
   </head>
   <body>
     <div id="header">
@@ -23,19 +33,9 @@
       compatibility table
 
       <span style="font-size:0.8em;float:right;font-weight:normal;">
-        <a class="FlattrButton" href="http://kangax.github.io/compat-table/es5/" title="ECMAScript 5 compatibility table">
-          ECMAScript 5 compatibility table
-        </a>
+        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.io/compat-table/es5/"></a>
+
         <script async src="https://www.google-analytics.com/ga.js"></script>
-        <script>
-          (function() {
-            var s = document.createElement('script'),
-                t = document.getElementsByTagName('script')[0];
-            s.async = true;
-            s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&button=compact';
-            t.parentNode.insertBefore(s, t);
-          })();
-        </script>
         <span class="by">
           by
           <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
