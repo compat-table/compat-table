@@ -1353,7 +1353,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
           <td class="tally chrome34 obsolete" data-tally="0.4">4/10</td>
           <td class="tally chrome35 obsolete" data-tally="0.4">4/10</td>
           <td class="tally chrome36 obsolete" data-tally="0.4">4/10</td>
-          <td class="tally chrome37 obsolete" data-tally="0.4">4/10</td>
+          <td class="tally chrome37 obsolete" data-tally="0.5">5/10</td>
           <td class="tally chrome38" data-tally="0.5">5/10</td>
           <td class="tally chrome39" data-tally="0.5">5/10</td>
           <td class="tally safari51 obsolete" data-tally="0">0/10</td>
@@ -1488,10 +1488,10 @@ test(function(){try{return Function("\n{ let bar = 456; }\nreturn (function(){ t
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
 <script data-source="
-for(let baz = 0; false;) {}
+for(let baz = 0; false; false) {}
 return (function(){ try { baz; } catch(e) { return true; }}());
       ">
-test(function(){try{return Function("\nfor(let baz = 0; false;) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1792,10 +1792,10 @@ test(function(){try{return Function("\n'use strict';\n{ let bar = 456; }\nreturn
           <td><span>for-loop statement scope (strict mode)</span></td>
 <script data-source="
 'use strict';
-for(let baz = 0; false;) {}
+for(let baz = 0; false; false) {}
 return (function(){ try { baz; } catch(e) { return true; }}());
       ">
-test(function(){try{return Function("\n'use strict';\nfor(let baz = 0; false;) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n'use strict';\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -1831,7 +1831,7 @@ test(function(){try{return Function("\n'use strict';\nfor(let baz = 0; false;) {
           <td class="yes chrome34 obsolete">Yes</td>
           <td class="yes chrome35 obsolete">Yes</td>
           <td class="yes chrome36 obsolete">Yes</td>
-          <td class="no chrome37 obsolete">No</td>
+          <td class="yes chrome37 obsolete">Yes</td>
           <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
@@ -3855,7 +3855,7 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="tally closure" data-tally="0.75">3/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0">0/4</td>
-          <td class="tally ie11tp" data-tally="0.75">3/4</td>
+          <td class="tally ie11tp" data-tally="1">4/4</td>
           <td class="tally firefox11 obsolete" data-tally="0">0/4</td>
           <td class="tally firefox13 obsolete" data-tally="0.25">1/4</td>
           <td class="tally firefox16 obsolete" data-tally="0.25">1/4</td>
@@ -3875,14 +3875,14 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="tally firefox35" data-tally="0.75">3/4</td>
           <td class="tally chrome obsolete" data-tally="0">0/4</td>
           <td class="tally chrome19dev obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome21dev obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome30 obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome31 obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome33 obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome34 obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome35 obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome36 obsolete" data-tally="0">0/4</td>
-          <td class="tally chrome37 obsolete" data-tally="0">0/4</td>
+          <td class="tally chrome21dev obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome30 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome31 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome33 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome34 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome35 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome36 obsolete" data-tally="0.25">1/4</td>
+          <td class="tally chrome37 obsolete" data-tally="0.25">1/4</td>
           <td class="tally chrome38" data-tally="0.75">3/4</td>
           <td class="tally chrome39" data-tally="0.75">3/4</td>
           <td class="tally safari51 obsolete" data-tally="0">0/4</td>
@@ -4056,14 +4056,14 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="yes firefox35">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30 obsolete">No</td>
-          <td class="no chrome31 obsolete">No</td>
-          <td class="no chrome33 obsolete">No</td>
-          <td class="no chrome34 obsolete">No</td>
-          <td class="no chrome35 obsolete">No</td>
-          <td class="no chrome36 obsolete">No</td>
-          <td class="no chrome37 obsolete">No</td>
+          <td class="yes chrome21dev obsolete">Yes</td>
+          <td class="yes chrome30 obsolete">Yes</td>
+          <td class="yes chrome31 obsolete">Yes</td>
+          <td class="yes chrome33 obsolete">Yes</td>
+          <td class="yes chrome34 obsolete">Yes</td>
+          <td class="yes chrome35 obsolete">Yes</td>
+          <td class="yes chrome36 obsolete">Yes</td>
+          <td class="yes chrome37 obsolete">Yes</td>
           <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
@@ -4098,7 +4098,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
-          <td class="no ie11tp">No</td>
+          <td class="yes ie11tp">Yes</td>
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
@@ -4160,12 +4160,12 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="tally firefox23 obsolete" data-tally="0">0/6</td>
           <td class="tally firefox24 obsolete" data-tally="0">0/6</td>
           <td class="tally firefox25 obsolete" data-tally="0">0/6</td>
-          <td class="tally firefox27 obsolete" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally firefox28 obsolete" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally firefox29 obsolete" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally firefox30 obsolete" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally firefox31" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally firefox32 obsolete" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally firefox27 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox28 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox29 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox30 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox31" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox32 obsolete" data-tally="0.6666666666666666">4/6</td>
           <td class="tally firefox33" data-tally="0.6666666666666666">4/6</td>
           <td class="tally firefox34" data-tally="0.6666666666666666">4/6</td>
           <td class="tally firefox35" data-tally="0.8333333333333334">5/6</td>
@@ -4293,12 +4293,12 @@ test(function(){try{return Function("\nvar iterator = (function* generator() {\n
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24 obsolete">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No</td>
-          <td class="no firefox28 obsolete">No</td>
-          <td class="no firefox29 obsolete">No</td>
-          <td class="no firefox30 obsolete">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32 obsolete">No</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox28 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32 obsolete">Yes</td>
           <td class="yes firefox33">Yes</td>
           <td class="yes firefox34">Yes</td>
           <td class="yes firefox35">Yes</td>
@@ -4359,12 +4359,12 @@ test(function(){try{return Function("\nvar iterator = (function* generator() {\n
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24 obsolete">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No</td>
-          <td class="no firefox28 obsolete">No</td>
-          <td class="no firefox29 obsolete">No</td>
-          <td class="no firefox30 obsolete">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32 obsolete">No</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox28 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32 obsolete">Yes</td>
           <td class="yes firefox33">Yes</td>
           <td class="yes firefox34">Yes</td>
           <td class="yes firefox35">Yes</td>
@@ -8527,8 +8527,8 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
           <td class="tally chrome33 obsolete" data-tally="0.36363636363636365">4/11</td>
           <td class="tally chrome34 obsolete" data-tally="0.36363636363636365">4/11</td>
           <td class="tally chrome35 obsolete" data-tally="0.36363636363636365">4/11</td>
-          <td class="tally chrome36 obsolete" data-tally="0.5454545454545454">6/11</td>
-          <td class="tally chrome37 obsolete" data-tally="0.7272727272727273">8/11</td>
+          <td class="tally chrome36 obsolete" data-tally="0.45454545454545453">5/11</td>
+          <td class="tally chrome37 obsolete" data-tally="0.6363636363636364">7/11</td>
           <td class="tally chrome38" data-tally="0.9090909090909091">10/11</td>
           <td class="tally chrome39" data-tally="1">11/11</td>
           <td class="tally safari51 obsolete" data-tally="0">0/11</td>
@@ -8711,7 +8711,7 @@ test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) =
           <td class="no chrome35 obsolete">No</td>
           <td class="no chrome36 obsolete">No</td>
           <td class="no chrome37 obsolete">No</td>
-          <td class="no chrome38">No</td>
+          <td class="yes chrome38">Yes</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
@@ -8772,9 +8772,9 @@ test(function(){try{return Function("\nvar set = new Set();\nset.add(-0);\nvar k
           <td class="no chrome33 obsolete">No</td>
           <td class="no chrome34 obsolete">No</td>
           <td class="no chrome35 obsolete">No</td>
-          <td class="yes chrome36 obsolete">Yes</td>
-          <td class="yes chrome37 obsolete">Yes</td>
-          <td class="yes chrome38">Yes</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38">No</td>
           <td class="yes chrome39">Yes</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
@@ -9220,9 +9220,9 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
           <td class="tally firefox30 obsolete" data-tally="0.6">3/5</td>
           <td class="tally firefox31" data-tally="0.6">3/5</td>
           <td class="tally firefox32 obsolete" data-tally="0.6">3/5</td>
-          <td class="tally firefox33" data-tally="0.6">3/5</td>
-          <td class="tally firefox34" data-tally="0.6">3/5</td>
-          <td class="tally firefox35" data-tally="0.6">3/5</td>
+          <td class="tally firefox33" data-tally="0.8">4/5</td>
+          <td class="tally firefox34" data-tally="0.8">4/5</td>
+          <td class="tally firefox35" data-tally="0.8">4/5</td>
           <td class="tally chrome obsolete" data-tally="0">0/5</td>
           <td class="tally chrome19dev obsolete" data-tally="0">0/5</td>
           <td class="tally chrome21dev obsolete" data-tally="0.6">3/5</td>
@@ -9403,9 +9403,9 @@ test(function(){try{return Function("\nvar weakmap = new WeakMap();\nvar key = {
           <td class="no firefox30 obsolete">No</td>
           <td class="no firefox31">No</td>
           <td class="no firefox32 obsolete">No</td>
-          <td class="no firefox33">No</td>
-          <td class="no firefox34">No</td>
-          <td class="no firefox35">No</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -9571,8 +9571,8 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.clear ===
           <td class="tally firefox31" data-tally="0">0/5</td>
           <td class="tally firefox32 obsolete" data-tally="0">0/5</td>
           <td class="tally firefox33" data-tally="0">0/5</td>
-          <td class="tally firefox34" data-tally="0.8">4/5</td>
-          <td class="tally firefox35" data-tally="0.8">4/5</td>
+          <td class="tally firefox34" data-tally="1">5/5</td>
+          <td class="tally firefox35" data-tally="1">5/5</td>
           <td class="tally chrome obsolete" data-tally="0">0/5</td>
           <td class="tally chrome19dev obsolete" data-tally="0">0/5</td>
           <td class="tally chrome21dev obsolete" data-tally="0">0/5</td>
@@ -9753,8 +9753,8 @@ test(function(){try{return Function("\nvar weakset = new WeakSet();\nvar obj = {
           <td class="no firefox31">No</td>
           <td class="no firefox32 obsolete">No</td>
           <td class="no firefox33">No</td>
-          <td class="no firefox34">No</td>
-          <td class="no firefox35">No</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>

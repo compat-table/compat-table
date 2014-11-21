@@ -2898,7 +2898,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  {\n    var ba
           <td><span>for-loop statement scope</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
-  for (var baz = 0; false; ) {}
+  for (var baz = 0; false; false) {}
   return (function() {
     try {
       baz;
@@ -2908,7 +2908,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  {\n    var ba
   }());
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  for (var baz = 0; false; ) {}\n  return (function() {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  for (var baz = 0; false; false) {}\n  return (function() {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -2999,7 +2999,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';
 <script data-source="&quot;use strict&quot;;
 (function() {
   'use strict';
-  for (var baz = 0; false; ) {}
+  for (var baz = 0; false; false) {}
   return (function() {
     try {
       baz;
@@ -3009,7 +3009,7 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';
   }());
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  for (var baz = 0; false; ) {}\n  return (function() {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  for (var baz = 0; false; false) {}\n  return (function() {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">

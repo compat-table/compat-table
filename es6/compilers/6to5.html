@@ -351,7 +351,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  for (var baz = 0; false;) {}
+  for (var baz = 0; false; false) {}
   return (function () {
     try {
       baz;
@@ -360,7 +360,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var
     }
   }());
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  for (var baz = 0; false;) {}\n  return (function () {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  for (var baz = 0; false; false) {}\n  return (function () {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -448,7 +448,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
 
 (function () {
   &quot;use strict&quot;;
-  for (var baz = 0; false;) {}
+  for (var baz = 0; false; false) {}
   return (function () {
     try {
       baz;
@@ -457,7 +457,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
     }
   }());
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  for (var baz = 0; false;) {}\n  return (function () {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use strict\";\n  for (var baz = 0; false; false) {}\n  return (function () {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">

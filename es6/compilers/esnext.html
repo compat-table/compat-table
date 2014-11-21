@@ -271,10 +271,10 @@ test(function(){try{return eval("(function(){\n{ let bar = 456; }\nreturn (funct
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
 <script data-source="(function(){
-for(let baz = 0; false;) {}
+for(let baz = 0; false; false) {}
 return (function(){ try { baz; } catch(e) { return true; }}());
       })">
-test(function(){try{return eval("(function(){\nfor(let baz = 0; false;) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -330,10 +330,10 @@ test(function(){try{return eval("(function(){\n'use strict';\n{ let bar = 456; }
           <td><span>for-loop statement scope (strict mode)</span></td>
 <script data-source="(function(){
 'use strict';
-for(let baz = 0; false;) {}
+for(let baz = 0; false; false) {}
 return (function(){ try { baz; } catch(e) { return true; }}());
       })">
-test(function(){try{return eval("(function(){\n'use strict';\nfor(let baz = 0; false;) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\n'use strict';\nfor(let baz = 0; false; false) {}\nreturn (function(){ try { baz; } catch(e) { return true; }}());\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">

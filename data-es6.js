@@ -639,7 +639,7 @@ exports.tests = [
     },
     'for-loop statement scope': {
       exec: function(){/*
-        for(let baz = 0; false;) {}
+        for(let baz = 0; false; false) {}
         return (function(){ try { baz; } catch(e) { return true; }}());
       */},
       res: {
@@ -725,7 +725,7 @@ exports.tests = [
     'for-loop statement scope (strict mode)': {
       exec: function(){/*
         'use strict';
-        for(let baz = 0; false;) {}
+        for(let baz = 0; false; false) {}
         return (function(){ try { baz; } catch(e) { return true; }}());
       */},
       res: {
@@ -735,8 +735,6 @@ exports.tests = [
         ie11:        true,
         firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: true,
-        chrome37:    false, // this test crashes the tab
-        chrome38:    true,
         nodeharmony: true,
       },
     },
@@ -1370,7 +1368,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         firefox27:   true,
-        chrome38:    true,
+        chrome21dev: true,
         nodeharmony: true,
       },
     },
@@ -1386,6 +1384,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        ie11tp:      true,
       },
     },
   },
@@ -1433,7 +1432,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        firefox33:   true,
+        firefox27:   true,
         chrome38:    true,
       },
     },
@@ -1453,7 +1452,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        firefox33:   true,
+        firefox27:   true,
         chrome38:    true,
       },
     },
@@ -2156,7 +2155,7 @@ exports.tests = [
         tr:          true,
         ie11tp:      true,
         firefox33:   true,
-        chrome39:    true,
+        chrome38:    true,
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
@@ -2176,7 +2175,7 @@ exports.tests = [
         _6to5:       true,
         ie11tp:      true,
         firefox29:   true,
-        chrome36:    true,
+        chrome39:    true,
         nodeharmony: true,
       },
     },
@@ -2352,6 +2351,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        firefox33:   true,
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
@@ -2432,6 +2432,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        firefox34:   true,
       },
     },
     'WeakSet.prototype.delete': {
