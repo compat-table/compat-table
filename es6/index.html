@@ -21,7 +21,7 @@
           var arr = [a, b, c, ,];
           iterable = {
             next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
+              return { value: arr.shift(), done: arr.length <= 0 };
             },
           };
           iterable[Symbol.iterator] = function(){ return iterable; }
@@ -60,8 +60,10 @@
       <span class="by">
         by
         <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
+        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="http://grtp.co/v1.js"></script>
         &amp;
         <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
+        <script data-gratipay-username="webbedspace" data-gratipay-widget="button" src="http://grtp.co/v1.js"></script>
       </span>
     </span>
   </div>
@@ -731,7 +733,7 @@ test(function(){try{return Function("\nreturn (() => {\n  try { Function(\"x\\n 
           <td><span>no "prototype" property</span></td>
 <script data-source="
 var a = () => 5;
-return !a.hasOwnProperty(&quot;prototype&quot;); 
+return !a.hasOwnProperty(&quot;prototype&quot;);
       ">
 test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\"); \n      ")()}catch(e){return false;}}());
 </script>
@@ -2205,15 +2207,15 @@ test(function(){try{return Function("\nreturn (function (a, b = a) { return b ==
 <script data-source="
 return (function(x = 1) {
   try {
-    eval(&quot;(function(a=a){}())&quot;); 
+    eval(&quot;(function(a=a){}())&quot;);
     return false;
   } catch(e) {}
   try {
-    eval(&quot;(function(a=b,b){}())&quot;); 
+    eval(&quot;(function(a=b,b){}())&quot;);
     return false;
   } catch(e) {}
   try {
-    eval(&quot;(function(a=function(){ return b; }){ var b = 1;}())&quot;); 
+    eval(&quot;(function(a=function(){ return b; }){ var b = 1;}())&quot;);
     return false;
   } catch(e) {}
   return true;
@@ -5879,7 +5881,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint8(0, 0x100); 
+view.setUint8(0, 0x100);
 return view.getUint8(0) === 0;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100); \nreturn view.getUint8(0) === 0;\n      ")()}catch(e){return false;}}());
@@ -5939,7 +5941,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setInt16(0, 0x8000); 
+view.setInt16(0, 0x8000);
 return view.getInt16(0) === -0x8000;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000); \nreturn view.getInt16(0) === -0x8000;\n      ")()}catch(e){return false;}}());
@@ -5999,7 +6001,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint16(0, 0x10000); 
+view.setUint16(0, 0x10000);
 return view.getUint16(0) === 0;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000); \nreturn view.getUint16(0) === 0;\n      ")()}catch(e){return false;}}());
@@ -6059,7 +6061,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setInt32(0, 0x80000000); 
+view.setInt32(0, 0x80000000);
 return view.getInt32(0) === -0x80000000;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000); \nreturn view.getInt32(0) === -0x80000000;\n      ")()}catch(e){return false;}}());
@@ -6119,7 +6121,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint32(0, 0x100000000); 
+view.setUint32(0, 0x100000000);
 return view.getUint32(0) === 0;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000); \nreturn view.getUint32(0) === 0;\n      ")()}catch(e){return false;}}());
@@ -6179,7 +6181,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setFloat32(0, 0.1); 
+view.setFloat32(0, 0.1);
 return view.getFloat32(0) === 0.10000000149011612;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1); \nreturn view.getFloat32(0) === 0.10000000149011612;\n      ")()}catch(e){return false;}}());
@@ -6239,7 +6241,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setFloat64(0, 0.1); 
+view.setFloat64(0, 0.1);
 return view.getFloat64(0) === 0.1;
       ">
 test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1); \nreturn view.getFloat64(0) === 0.1;\n      ")()}catch(e){return false;}}());
@@ -10748,7 +10750,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
 var proxied = function(){};
 var passed = false;
 var host = {
-  method: new Proxy(proxied, { 
+  method: new Proxy(proxied, {
     apply: function (t, thisArg, args) {
       passed = t === proxied && thisArg === host && args + &quot;&quot; === &quot;foo,bar&quot;;
     }
@@ -12463,7 +12465,7 @@ test(function(){try{return Function("\nvar {a = 1, b = 0, c = 3} = {b:2, c:undef
           <td><span>defaults in parameters</span></td>
 <script data-source="
 return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
-  return a === 1 && b === 2 && c === 3 && d === 4 && 
+  return a === 1 && b === 2 && c === 3 && d === 4 &&
     e === 5 && f === undefined;
 }({b:2, c:undefined, x:4}));
       ">
@@ -18695,7 +18697,7 @@ test(function(){try{return Function("\nvar o = {};\no.__proto__ = Array.prototyp
 <script data-source="
 var desc = Object.getOwnPropertyDescriptor(Object.prototype,&quot;__proto__&quot;);
 var A = function(){};
-    
+
 return (desc
   && &quot;get&quot; in desc
   && &quot;set&quot; in desc

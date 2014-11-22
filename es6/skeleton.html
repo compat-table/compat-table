@@ -21,7 +21,7 @@
           var arr = [a, b, c, ,];
           iterable = {
             next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
+              return { value: arr.shift(), done: arr.length <= 0 };
             },
           };
           iterable[Symbol.iterator] = function(){ return iterable; }
