@@ -63,7 +63,6 @@
         <script data-gratipay-username="kangax" data-gratipay-widget="button" src="http://grtp.co/v1.js"></script>
         &amp;
         <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
-        <script data-gratipay-username="webbedspace" data-gratipay-widget="button" src="http://grtp.co/v1.js"></script>
       </span>
     </span>
   </div>
@@ -735,7 +734,7 @@ test(function(){try{return Function("\nreturn (() => {\n  try { Function(\"x\\n 
 var a = () => 5;
 return !a.hasOwnProperty(&quot;prototype&quot;);
       ">
-test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\"); \n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\");\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -2221,7 +2220,7 @@ return (function(x = 1) {
   return true;
 }());
       ">
-test(function(){try{return Function("\nreturn (function(x = 1) {\n  try {\n    eval(\"(function(a=a){}())\"); \n    return false;\n  } catch(e) {}\n  try {\n    eval(\"(function(a=b,b){}())\"); \n    return false;\n  } catch(e) {}\n  try {\n    eval(\"(function(a=function(){ return b; }){ var b = 1;}())\"); \n    return false;\n  } catch(e) {}\n  return true;\n}());\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nreturn (function(x = 1) {\n  try {\n    eval(\"(function(a=a){}())\");\n    return false;\n  } catch(e) {}\n  try {\n    eval(\"(function(a=b,b){}())\");\n    return false;\n  } catch(e) {}\n  try {\n    eval(\"(function(a=function(){ return b; }){ var b = 1;}())\");\n    return false;\n  } catch(e) {}\n  return true;\n}());\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -5884,7 +5883,7 @@ var view = new DataView(buffer);
 view.setUint8(0, 0x100);
 return view.getUint8(0) === 0;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100); \nreturn view.getUint8(0) === 0;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100);\nreturn view.getUint8(0) === 0;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -5944,7 +5943,7 @@ var view = new DataView(buffer);
 view.setInt16(0, 0x8000);
 return view.getInt16(0) === -0x8000;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000); \nreturn view.getInt16(0) === -0x8000;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000);\nreturn view.getInt16(0) === -0x8000;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -6004,7 +6003,7 @@ var view = new DataView(buffer);
 view.setUint16(0, 0x10000);
 return view.getUint16(0) === 0;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000); \nreturn view.getUint16(0) === 0;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000);\nreturn view.getUint16(0) === 0;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -6064,7 +6063,7 @@ var view = new DataView(buffer);
 view.setInt32(0, 0x80000000);
 return view.getInt32(0) === -0x80000000;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000); \nreturn view.getInt32(0) === -0x80000000;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000);\nreturn view.getInt32(0) === -0x80000000;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -6124,7 +6123,7 @@ var view = new DataView(buffer);
 view.setUint32(0, 0x100000000);
 return view.getUint32(0) === 0;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000); \nreturn view.getUint32(0) === 0;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000);\nreturn view.getUint32(0) === 0;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -6184,7 +6183,7 @@ var view = new DataView(buffer);
 view.setFloat32(0, 0.1);
 return view.getFloat32(0) === 0.10000000149011612;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1); \nreturn view.getFloat32(0) === 0.10000000149011612;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1);\nreturn view.getFloat32(0) === 0.10000000149011612;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -6244,7 +6243,7 @@ var view = new DataView(buffer);
 view.setFloat64(0, 0.1);
 return view.getFloat64(0) === 0.1;
       ">
-test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1); \nreturn view.getFloat64(0) === 0.1;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1);\nreturn view.getFloat64(0) === 0.1;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -10759,7 +10758,7 @@ var host = {
 host.method(&quot;foo&quot;, &quot;bar&quot;);
 return passed;
       ">
-test(function(){try{return Function("\nvar proxied = function(){};\nvar passed = false;\nvar host = {\n  method: new Proxy(proxied, { \n    apply: function (t, thisArg, args) {\n      passed = t === proxied && thisArg === host && args + \"\" === \"foo,bar\";\n    }\n  })\n};\nhost.method(\"foo\", \"bar\");\nreturn passed;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar proxied = function(){};\nvar passed = false;\nvar host = {\n  method: new Proxy(proxied, {\n    apply: function (t, thisArg, args) {\n      passed = t === proxied && thisArg === host && args + \"\" === \"foo,bar\";\n    }\n  })\n};\nhost.method(\"foo\", \"bar\");\nreturn passed;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="no tr">No</td>
@@ -12469,7 +12468,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
     e === 5 && f === undefined;
 }({b:2, c:undefined, x:4}));
       ">
-test(function(){try{return Function("\nreturn (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n  return a === 1 && b === 2 && c === 3 && d === 4 && \n    e === 5 && f === undefined;\n}({b:2, c:undefined, x:4}));\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nreturn (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n  return a === 1 && b === 2 && c === 3 && d === 4 &&\n    e === 5 && f === undefined;\n}({b:2, c:undefined, x:4}));\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -18704,7 +18703,7 @@ return (desc
   && desc.configurable
   && !desc.enumerable);
       ">
-test(function(){try{return Function("\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n    \nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      ")()}catch(e){return false;}}());
 </script>
 
           <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>
