@@ -452,7 +452,7 @@ exports.tests = [
     'no "prototype" property': {
       exec: function(){/*
         var a = () => 5;
-        return !a.hasOwnProperty("prototype"); 
+        return !a.hasOwnProperty("prototype");
       */},
       res: {
         tr:          true,
@@ -673,7 +673,7 @@ exports.tests = [
           scopes.push(function(){ return i; });
         }
         let passed = (scopes[0]() === 0 && scopes[1]() === 1);
-        
+
         scopes = [];
         for(let i in { a:1, b:1 }) {
           scopes.push(function(){ return i; });
@@ -761,7 +761,7 @@ exports.tests = [
           scopes.push(function(){ return i; });
         }
         let passed = (scopes[0]() === 0 && scopes[1]() === 1);
-        
+
         scopes = [];
         for(let i in { a:1, b:1 }) {
           scopes.push(function(){ return i; });
@@ -823,15 +823,15 @@ exports.tests = [
       exec: function(){/*
         return (function(x = 1) {
           try {
-            eval("(function(a=a){}())"); 
+            eval("(function(a=a){}())");
             return false;
           } catch(e) {}
           try {
-            eval("(function(a=b,b){}())"); 
+            eval("(function(a=b,b){}())");
             return false;
           } catch(e) {}
           try {
-            eval("(function(a=function(){ return b; }){ var b = 1;}())"); 
+            eval("(function(a=function(){ return b; }){ var b = 1;}())");
             return false;
           } catch(e) {}
           return true;
@@ -1098,7 +1098,7 @@ exports.tests = [
         var c = class C {
           static method() { return this === undefined; }
         }.method;
-        
+
         return c();
       */},
       res: {
@@ -1781,7 +1781,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setUint8(0, 0x100); 
+        view.setUint8(0, 0x100);
         return view.getUint8(0) === 0;
       */},
       res: temp.basicDataViewResults,
@@ -1790,7 +1790,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setInt16(0, 0x8000); 
+        view.setInt16(0, 0x8000);
         return view.getInt16(0) === -0x8000;
       */},
       res: temp.basicDataViewResults,
@@ -1799,7 +1799,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setUint16(0, 0x10000); 
+        view.setUint16(0, 0x10000);
         return view.getUint16(0) === 0;
       */},
       res: temp.basicDataViewResults,
@@ -1808,7 +1808,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setInt32(0, 0x80000000); 
+        view.setInt32(0, 0x80000000);
         return view.getInt32(0) === -0x80000000;
       */},
       res: temp.basicDataViewResults,
@@ -1817,7 +1817,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setUint32(0, 0x100000000); 
+        view.setUint32(0, 0x100000000);
         return view.getUint32(0) === 0;
       */},
       res: temp.basicDataViewResults,
@@ -1826,7 +1826,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setFloat32(0, 0.1); 
+        view.setFloat32(0, 0.1);
         return view.getFloat32(0) === 0.10000000149011612;
       */},
       res: temp.basicDataViewResults,
@@ -1835,7 +1835,7 @@ exports.tests = [
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
-        view.setFloat64(0, 0.1); 
+        view.setFloat64(0, 0.1);
         return view.getFloat64(0) === 0.1;
       */},
       res: temp.basicDataViewResults,
@@ -2524,7 +2524,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox18:   true,
-      },    
+      },
     },
     '"deleteProperty" handler': {
       exec: function () {/*
@@ -2541,7 +2541,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox18:   true,
-      },    
+      },
     },
     '"getOwnPropertyDescriptor" handler': {
       exec: function () {/*
@@ -2570,7 +2570,7 @@ exports.tests = [
         },
         firefox23:   { val: false, note_id: 'fx-proxy-getown' },
         firefox30:   true,
-      },    
+      },
     },
     '"defineProperty" handler': {
       exec: function () {/*
@@ -2591,7 +2591,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox18:   true,
-      },    
+      },
     },
     '"getPrototypeOf" handler': {
       exec: function () {/*
@@ -2715,7 +2715,7 @@ exports.tests = [
         var proxied = function(){};
         var passed = false;
         var host = {
-          method: new Proxy(proxied, { 
+          method: new Proxy(proxied, {
             apply: function (t, thisArg, args) {
               passed = t === proxied && thisArg === host && args + "" === "foo,bar";
             }
@@ -2877,7 +2877,7 @@ exports.tests = [
       exec: function() {/*
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
-        
+
         var item = iterator.next();
         var passed = item.value === "foo" && item.done === false;
         item = iterator.next();
@@ -3156,7 +3156,7 @@ exports.tests = [
     'defaults in parameters': {
       exec: function(){/*
         return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
-          return a === 1 && b === 2 && c === 3 && d === 4 && 
+          return a === 1 && b === 2 && c === 3 && d === 4 &&
             e === 5 && f === undefined;
         }({b:2, c:undefined, x:4}));
       */},
@@ -3319,7 +3319,7 @@ exports.tests = [
       exec: function () {/*
         var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
         var A = function(){};
-    
+
         return (desc
           && "get" in desc
           && "set" in desc
@@ -3435,10 +3435,10 @@ exports.tests = [
         var o = {};
         var sym = Symbol("foo");
         var sym2 = Symbol();
-        
+
         o[sym] = function(){};
         o[sym2] = function(){};
-        
+
         return o[sym].name === "[foo]" &&
                o[sym2].name === "";
       */},
@@ -3833,15 +3833,15 @@ exports.tests = [
         var object = {};
         var symbol = Symbol();
         object[symbol] = 1;
-        
+
         for (var x in object){}
         var passed = (x !== symbol);
-        
+
         if (Object.keys && Object.getOwnPropertyNames) {
           passed &= Object.keys(object).length === 0
             && Object.getOwnPropertyNames(object).length === 0;
         }
-        
+
         return passed;
       */},
       res: {
@@ -3857,12 +3857,12 @@ exports.tests = [
         var object = {};
         var symbol = Symbol();
         var value = {};
-        
+
         if (Object.defineProperty) {
           Object.defineProperty(object, symbol, { value: value });
           return object[symbol] === value;
         }
-        
+
         return passed;
       */},
       res: {
@@ -3877,18 +3877,18 @@ exports.tests = [
     'cannot coerce to string or number': {
       exec: function(){/*
         var symbol = Symbol();
-        
+
         try {
           symbol + "";
           return false;
         }
         catch(e) {}
-        
+
         try {
           symbol + 0;
           return false;
         } catch(e) {}
-        
+
         return true;
       */},
       res: {
@@ -3927,7 +3927,7 @@ exports.tests = [
       exec: function(){/*
         var symbol = Symbol();
         var symbolObject = Object(symbol);
-        
+
         return typeof symbolObject === "object" &&
           symbolObject == symbol &&
           symbolObject.valueOf() === symbol;
