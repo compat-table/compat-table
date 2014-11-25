@@ -2952,12 +2952,12 @@ test(function(){try{return Function("/* Error during compilation: \n(2,20): erro
         <tr>
           <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
 <script data-source="/* Error during compilation: 
-(4,10): error TS2393: Duplicate function implementation.
-(4,39): error TS2393: Duplicate function implementation.
+(4,12): error TS2393: Duplicate function implementation.
 (5,12): error TS2393: Duplicate function implementation.
-(5,41): error TS2393: Duplicate function implementation.
+(6,12): error TS2393: Duplicate function implementation.
+(7,12): error TS2393: Duplicate function implementation.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(4,10): error TS2393: Duplicate function implementation.\n(4,39): error TS2393: Duplicate function implementation.\n(5,12): error TS2393: Duplicate function implementation.\n(5,41): error TS2393: Duplicate function implementation.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(4,12): error TS2393: Duplicate function implementation.\n(5,12): error TS2393: Duplicate function implementation.\n(6,12): error TS2393: Duplicate function implementation.\n(7,12): error TS2393: Duplicate function implementation.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>

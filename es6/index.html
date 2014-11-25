@@ -4218,15 +4218,15 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="tally firefox23 obsolete" data-tally="0">0/6</td>
           <td class="tally firefox24 obsolete" data-tally="0">0/6</td>
           <td class="tally firefox25 obsolete" data-tally="0">0/6</td>
-          <td class="tally firefox27 obsolete" data-tally="0.5">3/6</td>
-          <td class="tally firefox28 obsolete" data-tally="0.5">3/6</td>
-          <td class="tally firefox29 obsolete" data-tally="0.5">3/6</td>
-          <td class="tally firefox30 obsolete" data-tally="0.5">3/6</td>
-          <td class="tally firefox31" data-tally="0.5">3/6</td>
-          <td class="tally firefox32 obsolete" data-tally="0.5">3/6</td>
-          <td class="tally firefox33" data-tally="0.5">3/6</td>
-          <td class="tally firefox34" data-tally="0.5">3/6</td>
-          <td class="tally firefox35" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox27 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox28 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox29 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox30 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox31" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox32 obsolete" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox33" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox34" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally firefox35" data-tally="0.8333333333333334">5/6</td>
           <td class="tally chrome obsolete" data-tally="0">0/6</td>
           <td class="tally chrome19dev obsolete" data-tally="0">0/6</td>
           <td class="tally chrome21dev obsolete" data-tally="0.3333333333333333">2/6</td>
@@ -4485,15 +4485,15 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24 obsolete">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="no firefox27 obsolete">No</td>
-          <td class="no firefox28 obsolete">No</td>
-          <td class="no firefox29 obsolete">No</td>
-          <td class="no firefox30 obsolete">No</td>
-          <td class="no firefox31">No</td>
-          <td class="no firefox32 obsolete">No</td>
-          <td class="no firefox33">No</td>
-          <td class="no firefox34">No</td>
-          <td class="no firefox35">No</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox28 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32 obsolete">Yes</td>
+          <td class="yes firefox33">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="yes chrome21dev obsolete">Yes</td>
@@ -18170,12 +18170,14 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
 <script data-source="
 // Note: only available outside of strict mode.
 { function f() { return 1; } }
-  function g() { return 1; } { function g() { return 2; } }
-{ function h() { return 1; } } function h() { return 2; }
+  function g() { return 1; }
+{ function g() { return 2; } }
+{ function h() { return 1; } }
+  function h() { return 2; }
 
 return f() === 1 && g() === 2 && h() === 1;
   ">
-test(function(){try{return Function("\n// Note: only available outside of strict mode.\n{ function f() { return 1; } }\n  function g() { return 1; } { function g() { return 2; } }\n{ function h() { return 1; } } function h() { return 2; }\n\nreturn f() === 1 && g() === 2 && h() === 1;\n  ")()}catch(e){return false;}}());
+test(function(){try{return Function("\n// Note: only available outside of strict mode.\n{ function f() { return 1; } }\n  function g() { return 1; }\n{ function g() { return 2; } }\n{ function h() { return 1; } }\n  function h() { return 2; }\n\nreturn f() === 1 && g() === 2 && h() === 1;\n  ")()}catch(e){return false;}}());
 </script>
 
           <td title="This feature is optional on non-browser platforms." class="no tr not-applicable ">No</td>

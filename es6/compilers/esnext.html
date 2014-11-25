@@ -4331,12 +4331,14 @@ test(function(){try{return eval("(function(){\nreturn typeof Math.cbrt === \"fun
 <script data-source="(function(){
 // Note: only available outside of strict mode.
 { function f() { return 1; } }
-  function g() { return 1; } { function g() { return 2; } }
-{ function h() { return 1; } } function h() { return 2; }
+  function g() { return 1; }
+{ function g() { return 2; } }
+{ function h() { return 1; } }
+  function h() { return 2; }
 
 return f() === 1 && g() === 2 && h() === 1;
   })">
-test(function(){try{return eval("(function(){\n// Note: only available outside of strict mode.\n{ function f() { return 1; } }\n  function g() { return 1; } { function g() { return 2; } }\n{ function h() { return 1; } } function h() { return 2; }\n\nreturn f() === 1 && g() === 2 && h() === 1;\n  })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\n// Note: only available outside of strict mode.\n{ function f() { return 1; } }\n  function g() { return 1; }\n{ function g() { return 2; } }\n{ function h() { return 1; } }\n  function h() { return 2; }\n\nreturn f() === 1 && g() === 2 && h() === 1;\n  })")()}catch(e){return false;}}());
 </script>
 
         </tr>
