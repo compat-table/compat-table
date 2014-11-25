@@ -377,6 +377,21 @@ test(function(){try{return eval("(function () {\n    return (function (a, b) {\n
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="default_function_parameters">
+          <td><span>separate scope</span></td>
+<script data-source="(function () {
+    return (function (a) {
+        if (a === void 0) { a = function () {
+            return typeof b === 'undefined';
+        }; }
+        var b = 1;
+        return a();
+    }());
+});
+">
+test(function(){try{return eval("(function () {\n    return (function (a) {\n        if (a === void 0) { a = function () {\n            return typeof b === 'undefined';\n        }; }\n        var b = 1;\n        return a();\n    }());\n});\n")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr>
           <td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
@@ -705,72 +720,56 @@ test(function(){try{return Function("/* Error during compilation: \n(4,15): erro
         <tr class="subtest" data-parent="generators">
           <td><span>basic functionality</span></td>
 <script data-source="/* Error during compilation: 
-(2,9): error TS1003: Identifier expected.
-(2,22): error TS1005: ';' expected.
+(2,10): error TS1003: Identifier expected.
+(2,23): error TS1005: ';' expected.
 (3,9): error TS1005: ';' expected.
 (3,18): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,9): error TS1003: Identifier expected.\n(2,22): error TS1005: ';' expected.\n(3,9): error TS1005: ';' expected.\n(3,18): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,10): error TS1003: Identifier expected.\n(2,23): error TS1005: ';' expected.\n(3,9): error TS1005: ';' expected.\n(3,18): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, arrays</span></td>
 <script data-source="/* Error during compilation: 
-(2,25): error TS1005: '(' expected.
-(2,39): error TS1005: ')' expected.
+(2,26): error TS1005: '(' expected.
+(2,40): error TS1005: ')' expected.
 (4,3): error TS1109: Expression expected.
 (4,4): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,26): error TS1005: '(' expected.\n(2,40): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, strings</span></td>
 <script data-source="/* Error during compilation: 
-(2,25): error TS1005: '(' expected.
-(2,39): error TS1005: ')' expected.
+(2,26): error TS1005: '(' expected.
+(2,40): error TS1005: ')' expected.
 (4,3): error TS1109: Expression expected.
 (4,4): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,26): error TS1005: '(' expected.\n(2,40): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, generic iterables</span></td>
 <script data-source="/* Error during compilation: 
-(2,25): error TS1005: '(' expected.
-(2,39): error TS1005: ')' expected.
-(3,20): error TS1005: '(' expected.
-(3,23): error TS1109: Expression expected.
-(3,25): error TS1005: ')' expected.
-(4,11): error TS1005: ';' expected.
-(4,20): error TS1005: ';' expected.
-(5,5): error TS1109: Expression expected.
-(5,6): error TS1005: ';' expected.
-(6,3): error TS1109: Expression expected.
-(6,4): error TS1005: ';' expected.
+(2,26): error TS1005: '(' expected.
+(2,40): error TS1005: ')' expected.
+(4,3): error TS1109: Expression expected.
+(4,4): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(3,20): error TS1005: '(' expected.\n(3,23): error TS1109: Expression expected.\n(3,25): error TS1005: ')' expected.\n(4,11): error TS1005: ';' expected.\n(4,20): error TS1005: ';' expected.\n(5,5): error TS1109: Expression expected.\n(5,6): error TS1005: ';' expected.\n(6,3): error TS1109: Expression expected.\n(6,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,26): error TS1005: '(' expected.\n(2,40): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, instances of iterables</span></td>
 <script data-source="/* Error during compilation: 
-(2,25): error TS1005: '(' expected.
-(2,39): error TS1005: ')' expected.
-(3,33): error TS1005: '(' expected.
-(3,36): error TS1109: Expression expected.
-(3,38): error TS1005: ',' expected.
-(4,11): error TS1005: ':' expected.
-(4,12): error TS1005: ',' expected.
-(4,20): error TS1005: ';' expected.
-(5,5): error TS1109: Expression expected.
-(5,6): error TS1005: ';' expected.
-(13,1): error TS1108: A 'return' statement can only be used within a function body.
-(14,7): error TS1128: Declaration or statement expected.
-(14,8): error TS1128: Declaration or statement expected.
+(2,26): error TS1005: '(' expected.
+(2,40): error TS1005: ')' expected.
+(4,3): error TS1109: Expression expected.
+(4,4): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS1005: '(' expected.\n(2,39): error TS1005: ')' expected.\n(3,33): error TS1005: '(' expected.\n(3,36): error TS1109: Expression expected.\n(3,38): error TS1005: ',' expected.\n(4,11): error TS1005: ':' expected.\n(4,12): error TS1005: ',' expected.\n(4,20): error TS1005: ';' expected.\n(5,5): error TS1109: Expression expected.\n(5,6): error TS1005: ';' expected.\n(13,1): error TS1108: A 'return' statement can only be used within a function body.\n(14,7): error TS1128: Declaration or statement expected.\n(14,8): error TS1128: Declaration or statement expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,26): error TS1005: '(' expected.\n(2,40): error TS1005: ')' expected.\n(4,3): error TS1109: Expression expected.\n(4,4): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -2265,10 +2264,19 @@ test(function(){try{return Function("/* Error during compilation: \n(3,14): erro
         <tr class="subtest" data-parent="function_name_property">
           <td><span>symbol-keyed methods</span></td>
 <script data-source="/* Error during compilation: 
-(3,11): error TS2304: Cannot find name 'Symbol'.
-(4,12): error TS2304: Cannot find name 'Symbol'.
+(5,3): error TS1136: Property assignment expected.
+(5,9): error TS1005: ',' expected.
+(5,11): error TS1134: Variable declaration expected.
+(5,19): error TS1003: Identifier expected.
+(5,23): error TS1129: Statement expected.
+(6,9): error TS1005: ';' expected.
+(6,19): error TS1003: Identifier expected.
+(7,2): error TS1005: ')' expected.
+(9,1): error TS1108: A 'return' statement can only be used within a function body.
+(11,7): error TS1128: Declaration or statement expected.
+(11,8): error TS1128: Declaration or statement expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(3,11): error TS2304: Cannot find name 'Symbol'.\n(4,12): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(5,3): error TS1136: Property assignment expected.\n(5,9): error TS1005: ',' expected.\n(5,11): error TS1134: Variable declaration expected.\n(5,19): error TS1003: Identifier expected.\n(5,23): error TS1129: Statement expected.\n(6,9): error TS1005: ';' expected.\n(6,19): error TS1003: Identifier expected.\n(7,2): error TS1005: ')' expected.\n(9,1): error TS1108: A 'return' statement can only be used within a function body.\n(11,7): error TS1128: Declaration or statement expected.\n(11,8): error TS1128: Declaration or statement expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -2354,12 +2362,12 @@ test(function(){try{return Function("/* Error during compilation: \n(2,1): error
         <tr class="subtest" data-parent="function_name_property">
           <td><span>isn't writable, is configurable</span></td>
 <script data-source="(function () {
-    var descriptor = Object.getOwnPropertyDescriptor(function () {
+    var descriptor = Object.getOwnPropertyDescriptor(function f() {
     }, &quot;name&quot;);
     return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;
 });
 ">
-test(function(){try{return eval("(function () {\n    var descriptor = Object.getOwnPropertyDescriptor(function () {\n    }, \"name\");\n    return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("(function () {\n    var descriptor = Object.getOwnPropertyDescriptor(function f() {\n    }, \"name\");\n    return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2547,9 +2555,9 @@ test(function(){try{return Function("/* Error during compilation: \n(2,14): erro
         <tr class="subtest" data-parent="well-known_symbols">
           <td><span>Symbol.hasInstance</span></td>
 <script data-source="/* Error during compilation: 
-(5,3): error TS2304: Cannot find name 'Symbol'.
+(5,26): error TS2304: Cannot find name 'Symbol'.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(5,3): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(5,26): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
@@ -2941,6 +2949,18 @@ test(function(){try{return Function("/* Error during compilation: \n(2,20): erro
         <tr>
           <th colspan="3" class="separator"></th>
         </tr>
+        <tr>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
+<script data-source="/* Error during compilation: 
+(4,10): error TS2393: Duplicate function implementation.
+(4,39): error TS2393: Duplicate function implementation.
+(5,12): error TS2393: Duplicate function implementation.
+(5,41): error TS2393: Duplicate function implementation.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(4,10): error TS2393: Duplicate function implementation.\n(4,39): error TS2393: Duplicate function implementation.\n(5,12): error TS2393: Duplicate function implementation.\n(5,41): error TS2393: Duplicate function implementation.\n*/")()}catch(e){return false;}}());
+</script>
+
+        </tr>
         <tr class="supertest">
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[2]</sup></a></span></td>
 
@@ -2989,18 +3009,6 @@ test(function(){try{return Function("/* Error during compilation: \n(6,22): erro
 });
 ">
 test(function(){try{return eval("(function () {\n    if (!({ __proto__: [] } instanceof Array)) {\n        return false;\n    }\n    return !({ __proto__: function () {\n    } } instanceof Function);\n});\n")()}catch(e){return false;}}());
-</script>
-
-        </tr>
-        <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[3]</sup></a></span></td>
-<script data-source="/* Error during compilation: 
-(4,22): error TS2393: Duplicate function implementation.
-(4,57): error TS2393: Duplicate function implementation.
-(5,22): error TS2393: Duplicate function implementation.
-(5,57): error TS2393: Duplicate function implementation.
-*/">
-test(function(){try{return Function("/* Error during compilation: \n(4,22): error TS2393: Duplicate function implementation.\n(4,57): error TS2393: Duplicate function implementation.\n(5,22): error TS2393: Duplicate function implementation.\n(5,57): error TS2393: Duplicate function implementation.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3073,9 +3081,6 @@ test(function(){try{return eval("(function () {\n    return typeof RegExp.protot
       </p>
       <p id="proto-in-object-literals-note">
         <sup>[2]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
-      </p>
-      <p id="hoisted-block-level-function-note">
-        <sup>[3]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>

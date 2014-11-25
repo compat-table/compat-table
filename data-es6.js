@@ -830,11 +830,19 @@ exports.tests = [
             eval("(function(a=b,b){}())");
             return false;
           } catch(e) {}
-          try {
-            eval("(function(a=function(){ return b; }){ var b = 1;}())");
-            return false;
-          } catch(e) {}
           return true;
+        }());
+      */},
+      res: {
+      },
+    },
+    'separate scope': {
+      exec: function(){/*
+        return (function(a=function(){
+          return typeof b === 'undefined';
+        }){
+          var b = 1;
+          return a();
         }());
       */},
       res: {
@@ -1233,6 +1241,24 @@ exports.tests = [
   },
 },
 {
+  name: 'hoisted block-level function declaration',
+  annex_b: true,
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
+  exec: function () {/*
+    // Note: only available outside of strict mode.
+    { function f() { return 1; } }
+      function g() { return 1; } { function g() { return 2; } }
+    { function h() { return 1; } } function h() { return 2; }
+
+    return f() === 1 && g() === 2 && h() === 1;
+  */},
+  res: {
+    ie11:        true,
+    firefox11:   true,
+    rhino17:     true,
+  }
+},
+{
   name: '__proto__ in object literals',
   annex_b: true,
   note_id: 'proto-in-object-literals',
@@ -1385,6 +1411,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ie11tp:      true,
+        chrome35:    true,
       },
     },
   },
@@ -1395,7 +1422,7 @@ exports.tests = [
   subtests: {
     'basic functionality': {
       exec: function() {/*
-        function* generator(){
+        function * generator(){
           yield 5; yield 6;
         };
         var iterator = generator();
@@ -1418,7 +1445,7 @@ exports.tests = [
     },
     'yield *, arrays': {
       exec: function () {/*
-        var iterator = (function* generator() {
+        var iterator = (function * generator() {
           yield * [5, 6];
         }());
         var item = iterator.next();
@@ -1438,7 +1465,7 @@ exports.tests = [
     },
     'yield *, strings': {
       exec: function () {/*
-        var iterator = (function* generator() {
+        var iterator = (function * generator() {
           yield * "56";
         }());
         var item = iterator.next();
@@ -1458,15 +1485,15 @@ exports.tests = [
     },
     'yield *, generic iterables': {
       exec: function () {/*
-        var iterator = (function* generator() {
-          yield * (function* () {
-            yield 5; yield 6;
-          }());
+        var iterator = (function * generator() {
+          yield * __createIterableObject(5, 6, 7);
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
         passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 7 && item.done === false;
         item = iterator.next();
         passed    &= item.value === undefined && item.done === true;
         return passed;
@@ -1475,22 +1502,21 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         closure:     true,
-        firefox27:   true,
         chrome21dev: true,
         nodeharmony: true,
       },
     },
     'yield *, instances of iterables': {
       exec: function () {/*
-        var iterator = (function* generator() {
-          yield * Object.create(function* () {
-            yield 5; yield 6;
-          }());
+        var iterator = (function * generator() {
+          yield * Object.create(__createIterableObject(5, 6, 7));
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
         passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 7 && item.done === false;
         item = iterator.next();
         passed    &= item.value === undefined && item.done === true;
         return passed;
@@ -1498,6 +1524,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        chrome35:    true,
       },
     },
     'shorthand generator methods': {
@@ -2580,10 +2607,11 @@ exports.tests = [
           new Proxy(proxied, {
             defineProperty: function (t, k, d) {
               passed = t === proxied && k === "foo" && d.value === 5;
+              return true;
             }
           }),
           "foo",
-          { value: 5 }
+          { value: 5, configurable: true }
         );
         return passed;
       */},
@@ -2980,65 +3008,6 @@ exports.tests = [
   }
 },
 {
-  name: 'hoisted block-level function declaration',
-  note_id: 'hoisted-block-level-function',
-  note_html: 'Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.',
-  annex_b: true,
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
-  exec: function () {/*
-    // Note: only available outside of strict mode.
-    var passed = f() === 2 && g() === 4;
-    if (true) { function f(){ return 1; } } else { function f(){ return 2; } }
-    if (false){ function g(){ return 3; } } else { function g(){ return 4; } }
-    return passed;
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        true,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      true,
-    chrome19dev: true,
-    chrome21dev: true,
-    chrome30:    true,
-    chrome33:    true,
-    chrome34:    true,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    true,
-    safari6:     true,
-    safari7:     true,
-    safari71_8:  true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     false,
-    phantom:     true,
-    node:        true,
-    nodeharmony: true,
-    ios7:        true,
-    ios8:        true
-  }
-},
-{
   name: 'destructuring',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   subtests: {
@@ -3407,16 +3376,16 @@ exports.tests = [
         o.qux = function(){};
         return o.foo.name === "foo" &&
                o.bar.name === "baz" &&
-               o.qux.name === "qux";
+               o.qux.name === "";
       */},
       res: {},
     },
     'accessor properties': {
       exec: function() {/*
-        var o = { get foo(){}, set foo(){} };
+        var o = { get foo(){}, set foo(x){} };
         var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
         return descriptor.get.name === "get foo" &&
-               descriptor.get.name === "set foo";
+               descriptor.set.name === "set foo";
       */},
       res: {},
     },
@@ -3432,12 +3401,12 @@ exports.tests = [
     },
     'symbol-keyed methods': {
       exec: function() {/*
-        var o = {};
-        var sym = Symbol("foo");
+        var sym1 = Symbol("foo");
         var sym2 = Symbol();
-
-        o[sym] = function(){};
-        o[sym2] = function(){};
+        var o = {
+          [sym1]: function(){},
+          [sym2]: function(){}
+        };
 
         return o[sym].name === "[foo]" &&
                o[sym2].name === "";
@@ -3477,7 +3446,7 @@ exports.tests = [
         o.qux = class {};
         return o.foo.name === "foo" &&
                o.bar.name === "baz" &&
-               o.qux.name === "qux";
+               o.qux.name === "";
       */},
       res: {},
     },
@@ -3497,7 +3466,7 @@ exports.tests = [
     },
     'isn\'t writable, is configurable': {
       exec: function () {/*
-        var descriptor = Object.getOwnPropertyDescriptor(function(){},"name");
+        var descriptor = Object.getOwnPropertyDescriptor(function f(){},"name");
         return descriptor.enumerable   === false &&
                descriptor.writable     === false &&
                descriptor.configurable === true;
@@ -4005,7 +3974,9 @@ exports.tests = [
         var passed = false;
         var obj = { foo: true };
         var C = function(){};
-        C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+        Object.defineProperty(C, Symbol.hasInstance, {
+          value: function(inst) { passed = inst.foo; return false; }
+        });
         obj instanceof C;
         return passed;
       */},

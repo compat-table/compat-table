@@ -166,9 +166,9 @@ test(function(){try{return Function("/* Error during compilation: This test's co
 var a = function() {
       return 5;
 };
-return !a.hasOwnProperty(&quot;prototype&quot;); 
+return !a.hasOwnProperty(&quot;prototype&quot;);
       })">
-test(function(){try{return eval("(function(){\nvar a = function() {\n      return 5;\n};\nreturn !a.hasOwnProperty(\"prototype\"); \n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar a = function() {\n      return 5;\n};\nreturn !a.hasOwnProperty(\"prototype\");\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -410,6 +410,21 @@ test(function(){try{return eval("(function(){\nreturn (function(a) {\n      var 
           <td><span>temporal dead zone</span></td>
 <script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="default_function_parameters">
+          <td><span>separate scope</span></td>
+<script data-source="(function(){
+return (function() {
+  var a = (arguments[0] !== void 0 ? arguments[0] : function(){
+    return typeof b === 'undefined';
+  });
+
+  var b = 1;
+  return a();
+}());
+      })">
+test(function(){try{return eval("(function(){\nreturn (function() {\n  var a = (arguments[0] !== void 0 ? arguments[0] : function(){\n    return typeof b === 'undefined';\n  });\n\n  var b = 1;\n  return a();\n}());\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1258,21 +1273,7 @@ var iterator = (regeneratorRuntime.mark(function generator() {
   return regeneratorRuntime.wrap(function generator$(context$2$0) {
     while (1) switch (context$2$0.prev = context$2$0.next) {
     case 0:
-      return context$2$0.delegateYield(regeneratorRuntime.mark(function callee$2$0() {
-        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
-          while (1) switch (context$3$0.prev = context$3$0.next) {
-          case 0:
-            context$3$0.next = 2;
-            return 5;
-          case 2:
-            context$3$0.next = 4;
-            return 6;
-          case 4:
-          case &quot;end&quot;:
-            return context$3$0.stop();
-          }
-        }, callee$2$0, this);
-      })(), &quot;t2&quot;, 1);
+      return context$2$0.delegateYield(__createIterableObject(5, 6, 7), &quot;t2&quot;, 1);
     case 1:
     case &quot;end&quot;:
       return context$2$0.stop();
@@ -1284,10 +1285,12 @@ var passed = item.value === 5 && item.done === false;
 item = iterator.next();
 passed    &= item.value === 6 && item.done === false;
 item = iterator.next();
+passed    &= item.value === 7 && item.done === false;
+item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(regeneratorRuntime.mark(function callee$2$0() {\n        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n          while (1) switch (context$3$0.prev = context$3$0.next) {\n          case 0:\n            context$3$0.next = 2;\n            return 5;\n          case 2:\n            context$3$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\":\n            return context$3$0.stop();\n          }\n        }, callee$2$0, this);\n      })(), \"t2\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(__createIterableObject(5, 6, 7), \"t2\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1297,21 +1300,7 @@ var iterator = (regeneratorRuntime.mark(function generator() {
   return regeneratorRuntime.wrap(function generator$(context$2$0) {
     while (1) switch (context$2$0.prev = context$2$0.next) {
     case 0:
-      return context$2$0.delegateYield(Object.create(regeneratorRuntime.mark(function callee$2$0() {
-        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
-          while (1) switch (context$3$0.prev = context$3$0.next) {
-          case 0:
-            context$3$0.next = 2;
-            return 5;
-          case 2:
-            context$3$0.next = 4;
-            return 6;
-          case 4:
-          case &quot;end&quot;:
-            return context$3$0.stop();
-          }
-        }, callee$2$0, this);
-      })()), &quot;t3&quot;, 1);
+      return context$2$0.delegateYield(Object.create(__createIterableObject(5, 6, 7)), &quot;t3&quot;, 1);
     case 1:
     case &quot;end&quot;:
       return context$2$0.stop();
@@ -1323,10 +1312,12 @@ var passed = item.value === 5 && item.done === false;
 item = iterator.next();
 passed    &= item.value === 6 && item.done === false;
 item = iterator.next();
+passed    &= item.value === 7 && item.done === false;
+item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(Object.create(regeneratorRuntime.mark(function callee$2$0() {\n        return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n          while (1) switch (context$3$0.prev = context$3$0.next) {\n          case 0:\n            context$3$0.next = 2;\n            return 5;\n          case 2:\n            context$3$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\":\n            return context$3$0.stop();\n          }\n        }, callee$2$0, this);\n      })()), \"t3\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar iterator = (regeneratorRuntime.mark(function generator() {\n  return regeneratorRuntime.wrap(function generator$(context$2$0) {\n    while (1) switch (context$2$0.prev = context$2$0.next) {\n    case 0:\n      return context$2$0.delegateYield(Object.create(__createIterableObject(5, 6, 7)), \"t3\", 1);\n    case 1:\n    case \"end\":\n      return context$2$0.stop();\n    }\n  }, generator, this);\n})());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1541,10 +1532,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint8(0, 0x100); 
+view.setUint8(0, 0x100);
 return view.getUint8(0) === 0;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100); \nreturn view.getUint8(0) === 0;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100);\nreturn view.getUint8(0) === 0;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1552,10 +1543,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setInt16(0, 0x8000); 
+view.setInt16(0, 0x8000);
 return view.getInt16(0) === -0x8000;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000); \nreturn view.getInt16(0) === -0x8000;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000);\nreturn view.getInt16(0) === -0x8000;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1563,10 +1554,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint16(0, 0x10000); 
+view.setUint16(0, 0x10000);
 return view.getUint16(0) === 0;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000); \nreturn view.getUint16(0) === 0;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000);\nreturn view.getUint16(0) === 0;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1574,10 +1565,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setInt32(0, 0x80000000); 
+view.setInt32(0, 0x80000000);
 return view.getInt32(0) === -0x80000000;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000); \nreturn view.getInt32(0) === -0x80000000;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000);\nreturn view.getInt32(0) === -0x80000000;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1585,10 +1576,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint32(0, 0x100000000); 
+view.setUint32(0, 0x100000000);
 return view.getUint32(0) === 0;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000); \nreturn view.getUint32(0) === 0;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000);\nreturn view.getUint32(0) === 0;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1596,10 +1587,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setFloat32(0, 0.1); 
+view.setFloat32(0, 0.1);
 return view.getFloat32(0) === 0.10000000149011612;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1); \nreturn view.getFloat32(0) === 0.10000000149011612;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1);\nreturn view.getFloat32(0) === 0.10000000149011612;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1607,10 +1598,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setFloat64(0, 0.1); 
+view.setFloat64(0, 0.1);
 return view.getFloat64(0) === 0.1;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1); \nreturn view.getFloat64(0) === 0.1;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1);\nreturn view.getFloat64(0) === 0.1;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -2416,14 +2407,15 @@ Object.defineProperty(
   new Proxy(proxied, {
     defineProperty: function (t, k, d) {
       passed = t === proxied && k === &quot;foo&quot; && d.value === 5;
+      return true;
     }
   }),
   &quot;foo&quot;,
-  { value: 5 }
+  { value: 5, configurable: true }
 );
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar proxied = {};\nvar passed = false;\nObject.defineProperty(\n  new Proxy(proxied, {\n    defineProperty: function (t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n    }\n  }),\n  \"foo\",\n  { value: 5 }\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar proxied = {};\nvar passed = false;\nObject.defineProperty(\n  new Proxy(proxied, {\n    defineProperty: function (t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n      return true;\n    }\n  }),\n  \"foo\",\n  { value: 5, configurable: true }\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -2539,7 +2531,7 @@ test(function(){try{return eval("(function(){\nvar proxied = {};\nvar passed = f
 var proxied = function(){};
 var passed = false;
 var host = {
-  method: new Proxy(proxied, { 
+  method: new Proxy(proxied, {
     apply: function (t, thisArg, args) {
       passed = t === proxied && thisArg === host && args + &quot;&quot; === &quot;foo,bar&quot;;
     }
@@ -2548,7 +2540,7 @@ var host = {
 host.method(&quot;foo&quot;, &quot;bar&quot;);
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar proxied = function(){};\nvar passed = false;\nvar host = {\n  method: new Proxy(proxied, { \n    apply: function (t, thisArg, args) {\n      passed = t === proxied && thisArg === host && args + \"\" === \"foo,bar\";\n    }\n  })\n};\nhost.method(\"foo\", \"bar\");\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar proxied = function(){};\nvar passed = false;\nvar host = {\n  method: new Proxy(proxied, {\n    apply: function (t, thisArg, args) {\n      passed = t === proxied && thisArg === host && args + \"\" === \"foo,bar\";\n    }\n  })\n};\nhost.method(\"foo\", \"bar\");\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -3446,15 +3438,20 @@ var o = { foo: function(){}, bar: function baz(){}};
 o.qux = function(){};
 return o.foo.name === &quot;foo&quot; &&
        o.bar.name === &quot;baz&quot; &&
-       o.qux.name === &quot;qux&quot;;
+       o.qux.name === &quot;&quot;;
       })">
-test(function(){try{return eval("(function(){\nvar o = { foo: function(){}, bar: function baz(){}};\no.qux = function(){};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"qux\";\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar o = { foo: function(){}, bar: function baz(){}};\no.qux = function(){};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
           <td><span>accessor properties</span></td>
-<script data-source="/* Error during compilation: Line 2: Unexpected token )*/">
-test(function(){try{return Function("/* Error during compilation: Line 2: Unexpected token )*/")()}catch(e){return false;}}());
+<script data-source="(function(){
+var o = { get foo(){}, set foo(x){} };
+var descriptor = Object.getOwnPropertyDescriptor(o, &quot;foo&quot;);
+return descriptor.get.name === &quot;get foo&quot; &&
+       descriptor.set.name === &quot;set foo&quot;;
+      })">
+test(function(){try{return eval("(function(){\nvar o = { get foo(){}, set foo(x){} };\nvar descriptor = Object.getOwnPropertyDescriptor(o, \"foo\");\nreturn descriptor.get.name === \"get foo\" &&\n       descriptor.set.name === \"set foo\";\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3468,18 +3465,27 @@ test(function(){try{return eval("(function(){\nvar o = { foo: function foo() {} 
 
         <tr class="subtest" data-parent="function_name_property">
           <td><span>symbol-keyed methods</span></td>
-<script data-source="(function(){
-var o = {};
-var sym = Symbol(&quot;foo&quot;);
-var sym2 = Symbol();
+<script data-source="var $__Object$defineProperty = Object.defineProperty;
+(function(){
+  var $__0;
+  var sym1 = Symbol(&quot;foo&quot;);
+  var sym2 = Symbol();
+  var o = ($__0 = {}, $__Object$defineProperty($__0, sym1, {
+    value: function(){},
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }), $__Object$defineProperty($__0, sym2, {
+    value: function(){},
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }), $__0);
 
-o[sym] = function(){};
-o[sym2] = function(){};
-
-return o[sym].name === &quot;[foo]&quot; &&
-       o[sym2].name === &quot;&quot;;
-      })">
-test(function(){try{return eval("(function(){\nvar o = {};\nvar sym = Symbol(\"foo\");\nvar sym2 = Symbol();\n\no[sym] = function(){};\no[sym2] = function(){};\n\nreturn o[sym].name === \"[foo]\" &&\n       o[sym2].name === \"\";\n      })")()}catch(e){return false;}}());
+  return o[sym].name === &quot;[foo]&quot; &&
+         o[sym2].name === &quot;&quot;;
+});">
+test(function(){try{return eval("var $__Object$defineProperty = Object.defineProperty;\n(function(){\n  var $__0;\n  var sym1 = Symbol(\"foo\");\n  var sym2 = Symbol();\n  var o = ($__0 = {}, $__Object$defineProperty($__0, sym1, {\n    value: function(){},\n    enumerable: true,\n    configurable: true,\n    writable: true\n  }), $__Object$defineProperty($__0, sym2, {\n    value: function(){},\n    enumerable: true,\n    configurable: true,\n    writable: true\n  }), $__0);\n\n  return o[sym].name === \"[foo]\" &&\n         o[sym2].name === \"\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3594,9 +3600,9 @@ o.qux = function() {
 }();
 return o.foo.name === &quot;foo&quot; &&
        o.bar.name === &quot;baz&quot; &&
-       o.qux.name === &quot;qux&quot;;
+       o.qux.name === &quot;&quot;;
       })">
-test(function(){try{return eval("(function(){\nvar o = { foo: function() {\n \"use strict\";\n function $__0() {}\n return $__0;\n}(), bar: function() {\n \"use strict\";\n function baz() {}\n return baz;\n}()};\no.qux = function() {\n \"use strict\";\n function $__1() {}\n return $__1;\n}();\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"qux\";\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar o = { foo: function() {\n \"use strict\";\n function $__0() {}\n return $__0;\n}(), bar: function() {\n \"use strict\";\n function baz() {}\n return baz;\n}()};\no.qux = function() {\n \"use strict\";\n function $__1() {}\n return $__1;\n}();\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3650,12 +3656,12 @@ test(function(){try{return eval("var $__Object$defineProperties = Object.defineP
         <tr class="subtest" data-parent="function_name_property">
           <td><span>isn't writable, is configurable</span></td>
 <script data-source="(function(){
-var descriptor = Object.getOwnPropertyDescriptor(function(){},&quot;name&quot;);
+var descriptor = Object.getOwnPropertyDescriptor(function f(){},&quot;name&quot;);
 return descriptor.enumerable   === false &&
        descriptor.writable     === false &&
        descriptor.configurable === true;
       })">
-test(function(){try{return eval("(function(){\nvar descriptor = Object.getOwnPropertyDescriptor(function(){},\"name\");\nreturn descriptor.enumerable   === false &&\n       descriptor.writable     === false &&\n       descriptor.configurable === true;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar descriptor = Object.getOwnPropertyDescriptor(function f(){},\"name\");\nreturn descriptor.enumerable   === false &&\n       descriptor.writable     === false &&\n       descriptor.configurable === true;\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3891,11 +3897,13 @@ test(function(){try{return eval("(function(){\nvar symbol = Symbol.for('foo');\n
 var passed = false;
 var obj = { foo: true };
 var C = function(){};
-C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+Object.defineProperty(C, Symbol.hasInstance, {
+  value: function(inst) { passed = inst.foo; return false; }
+});
 obj instanceof C;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar passed = false;\nvar obj = { foo: true };\nvar C = function(){};\nC[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };\nobj instanceof C;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar passed = false;\nvar obj = { foo: true };\nvar C = function(){};\nObject.defineProperty(C, Symbol.hasInstance, {\n  value: function(inst) { passed = inst.foo; return false; }\n});\nobj instanceof C;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
@@ -4318,6 +4326,20 @@ test(function(){try{return eval("(function(){\nreturn typeof Math.cbrt === \"fun
         <tr>
           <th colspan="3" class="separator"></th>
         </tr>
+        <tr>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
+<script data-source="(function(){
+// Note: only available outside of strict mode.
+{ function f() { return 1; } }
+  function g() { return 1; } { function g() { return 2; } }
+{ function h() { return 1; } } function h() { return 2; }
+
+return f() === 1 && g() === 2 && h() === 1;
+  })">
+test(function(){try{return eval("(function(){\n// Note: only available outside of strict mode.\n{ function f() { return 1; } }\n  function g() { return 1; } { function g() { return 2; } }\n{ function h() { return 1; } } function h() { return 2; }\n\nreturn f() === 1 && g() === 2 && h() === 1;\n  })")()}catch(e){return false;}}());
+</script>
+
+        </tr>
         <tr class="supertest">
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[2]</sup></a></span></td>
 
@@ -4379,19 +4401,6 @@ test(function(){try{return eval("(function(){\nif (!({ __proto__ : [] } instance
 </script>
 
         </tr>
-        <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[3]</sup></a></span></td>
-<script data-source="(function(){
-// Note: only available outside of strict mode.
-var passed = f() === 2 && g() === 4;
-if (true) { function f(){ return 1; } } else { function f(){ return 2; } }
-if (false){ function g(){ return 3; } } else { function g(){ return 4; } }
-return passed;
-  })">
-test(function(){try{return eval("(function(){\n// Note: only available outside of strict mode.\nvar passed = f() === 2 && g() === 4;\nif (true) { function f(){ return 1; } } else { function f(){ return 2; } }\nif (false){ function g(){ return 3; } } else { function g(){ return 4; } }\nreturn passed;\n  })")()}catch(e){return false;}}());
-</script>
-
-        </tr>
         <tr class="supertest">
           <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
 
@@ -4419,14 +4428,14 @@ test(function(){try{return eval("(function(){\nvar o = {};\no.__proto__ = Array.
 <script data-source="(function(){
 var desc = Object.getOwnPropertyDescriptor(Object.prototype,&quot;__proto__&quot;);
 var A = function(){};
-    
+
 return (desc
   && &quot;get&quot; in desc
   && &quot;set&quot; in desc
   && desc.configurable
   && !desc.enumerable);
       })">
-test(function(){try{return eval("(function(){\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n    \nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -4463,9 +4472,6 @@ test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.co
       </p>
       <p id="proto-in-object-literals-note">
         <sup>[2]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
-      </p>
-      <p id="hoisted-block-level-function-note">
-        <sup>[3]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>
