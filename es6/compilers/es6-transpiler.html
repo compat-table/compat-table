@@ -146,9 +146,9 @@ test(function(){try{return Function("/* Error during compilation: This test's co
           <td><span>no "prototype" property</span></td>
 <script data-source="(function(){
 var a = function()  {return 5};
-return !a.hasOwnProperty(&quot;prototype&quot;); 
+return !a.hasOwnProperty(&quot;prototype&quot;);
       })">
-test(function(){try{return eval("(function(){\nvar a = function()  {return 5};\nreturn !a.hasOwnProperty(\"prototype\"); \n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar a = function()  {return 5};\nreturn !a.hasOwnProperty(\"prototype\");\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -331,6 +331,19 @@ test(function(){try{return eval("(function(){\nreturn (function (a) {var b = arg
           <td><span>temporal dead zone</span></td>
 <script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="default_function_parameters">
+          <td><span>separate scope</span></td>
+<script data-source="(function(){
+return (function(){var a = arguments[0];if(a === void 0)a = function(){
+  return typeof b === 'undefined';
+};
+  var b = 1;
+  return a();
+}());
+      })">
+test(function(){try{return eval("(function(){\nreturn (function(){var a = arguments[0];if(a === void 0)a = function(){\n  return typeof b === 'undefined';\n};\n  var b = 1;\n  return a();\n}());\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -610,7 +623,7 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
         <tr class="subtest" data-parent="generators">
           <td><span>basic functionality</span></td>
 <script data-source="(function(){
-function* generator(){
+function * generator(){
   yield 5; yield 6;
 };
 var iterator = generator();
@@ -622,13 +635,13 @@ item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nfunction* generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nfunction * generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, arrays</span></td>
 <script data-source="(function(){
-var iterator = (function* generator() {
+var iterator = (function * generator() {
   yield * [5, 6];
 }());
 var item = iterator.next();
@@ -639,13 +652,13 @@ item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * [5, 6];\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar iterator = (function * generator() {\n  yield * [5, 6];\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, strings</span></td>
 <script data-source="(function(){
-var iterator = (function* generator() {
+var iterator = (function * generator() {
   yield * &quot;56&quot;;
 }());
 var item = iterator.next();
@@ -656,45 +669,19 @@ item = iterator.next();
 passed    &= item.value === undefined && item.done === true;
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * \"56\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"5\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"6\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar iterator = (function * generator() {\n  yield * \"56\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"5\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"6\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, generic iterables</span></td>
-<script data-source="(function(){
-var iterator = (function* generator() {
-  yield * (function* () {
-    yield 5; yield 6;
-  }());
-}());
-var item = iterator.next();
-var passed = item.value === 5 && item.done === false;
-item = iterator.next();
-passed    &= item.value === 6 && item.done === false;
-item = iterator.next();
-passed    &= item.value === undefined && item.done === true;
-return passed;
-      })">
-test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * (function* () {\n    yield 5; yield 6;\n  }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
           <td><span>yield *, instances of iterables</span></td>
-<script data-source="(function(){
-var iterator = (function* generator() {
-  yield * Object.create(function* () {
-    yield 5; yield 6;
-  }());
-}());
-var item = iterator.next();
-var passed = item.value === 5 && item.done === false;
-item = iterator.next();
-passed    &= item.value === 6 && item.done === false;
-item = iterator.next();
-passed    &= item.value === undefined && item.done === true;
-return passed;
-      })">
-test(function(){try{return eval("(function(){\nvar iterator = (function* generator() {\n  yield * Object.create(function* () {\n    yield 5; yield 6;\n  }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      })")()}catch(e){return false;}}());
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -920,10 +907,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint8(0, 0x100); 
+view.setUint8(0, 0x100);
 return view.getUint8(0) === 0;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100); \nreturn view.getUint8(0) === 0;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100);\nreturn view.getUint8(0) === 0;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -931,10 +918,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setInt16(0, 0x8000); 
+view.setInt16(0, 0x8000);
 return view.getInt16(0) === -0x8000;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000); \nreturn view.getInt16(0) === -0x8000;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000);\nreturn view.getInt16(0) === -0x8000;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -942,10 +929,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint16(0, 0x10000); 
+view.setUint16(0, 0x10000);
 return view.getUint16(0) === 0;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000); \nreturn view.getUint16(0) === 0;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000);\nreturn view.getUint16(0) === 0;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -953,10 +940,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setInt32(0, 0x80000000); 
+view.setInt32(0, 0x80000000);
 return view.getInt32(0) === -0x80000000;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000); \nreturn view.getInt32(0) === -0x80000000;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000);\nreturn view.getInt32(0) === -0x80000000;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -964,10 +951,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setUint32(0, 0x100000000); 
+view.setUint32(0, 0x100000000);
 return view.getUint32(0) === 0;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000); \nreturn view.getUint32(0) === 0;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000);\nreturn view.getUint32(0) === 0;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -975,10 +962,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setFloat32(0, 0.1); 
+view.setFloat32(0, 0.1);
 return view.getFloat32(0) === 0.10000000149011612;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1); \nreturn view.getFloat32(0) === 0.10000000149011612;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1);\nreturn view.getFloat32(0) === 0.10000000149011612;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -986,10 +973,10 @@ test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);
 <script data-source="(function(){
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
-view.setFloat64(0, 0.1); 
+view.setFloat64(0, 0.1);
 return view.getFloat64(0) === 0.1;
       })">
-test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1); \nreturn view.getFloat64(0) === 0.1;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1);\nreturn view.getFloat64(0) === 0.1;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="typed_arrays">
@@ -1795,14 +1782,15 @@ Object.defineProperty(
   new Proxy(proxied, {
     defineProperty: function (t, k, d) {
       passed = t === proxied && k === &quot;foo&quot; && d.value === 5;
+      return true;
     }
   }),
   &quot;foo&quot;,
-  { value: 5 }
+  { value: 5, configurable: true }
 );
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar proxied = {};\nvar passed = false;\nObject.defineProperty(\n  new Proxy(proxied, {\n    defineProperty: function (t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n    }\n  }),\n  \"foo\",\n  { value: 5 }\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar proxied = {};\nvar passed = false;\nObject.defineProperty(\n  new Proxy(proxied, {\n    defineProperty: function (t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n      return true;\n    }\n  }),\n  \"foo\",\n  { value: 5, configurable: true }\n);\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -1918,7 +1906,7 @@ test(function(){try{return eval("(function(){\nvar proxied = {};\nvar passed = f
 var proxied = function(){};
 var passed = false;
 var host = {
-  method: new Proxy(proxied, { 
+  method: new Proxy(proxied, {
     apply: function (t, thisArg, args) {
       passed = t === proxied && thisArg === host && args + &quot;&quot; === &quot;foo,bar&quot;;
     }
@@ -1927,7 +1915,7 @@ var host = {
 host.method(&quot;foo&quot;, &quot;bar&quot;);
 return passed;
       })">
-test(function(){try{return eval("(function(){\nvar proxied = function(){};\nvar passed = false;\nvar host = {\n  method: new Proxy(proxied, { \n    apply: function (t, thisArg, args) {\n      passed = t === proxied && thisArg === host && args + \"\" === \"foo,bar\";\n    }\n  })\n};\nhost.method(\"foo\", \"bar\");\nreturn passed;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar proxied = function(){};\nvar passed = false;\nvar host = {\n  method: new Proxy(proxied, {\n    apply: function (t, thisArg, args) {\n      passed = t === proxied && thisArg === host && args + \"\" === \"foo,bar\";\n    }\n  })\n};\nhost.method(\"foo\", \"bar\");\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -2150,11 +2138,11 @@ test(function(){try{return eval("(function(){\nvar a = ((a = (c = {b:2, c:undefi
           <td><span>defaults in parameters</span></td>
 <script data-source="(function(){
 return (function(f) {var a = ((a = f.a) === void 0 ? 1 : a), b = ((b = f.b) === void 0 ? 0 : b), c = ((c = f.c) === void 0 ? 3 : c), d = ((d = f.x) === void 0 ? 0 : d), e = ((e = f.y) === void 0 ? 5 : e), f = f.z;
-  return a === 1 && b === 2 && c === 3 && d === 4 && 
+  return a === 1 && b === 2 && c === 3 && d === 4 &&
     e === 5 && f === undefined;
 }({b:2, c:undefined, x:4}));
       })">
-test(function(){try{return eval("(function(){\nreturn (function(f) {var a = ((a = f.a) === void 0 ? 1 : a), b = ((b = f.b) === void 0 ? 0 : b), c = ((c = f.c) === void 0 ? 3 : c), d = ((d = f.x) === void 0 ? 0 : d), e = ((e = f.y) === void 0 ? 5 : e), f = f.z;\n  return a === 1 && b === 2 && c === 3 && d === 4 && \n    e === 5 && f === undefined;\n}({b:2, c:undefined, x:4}));\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn (function(f) {var a = ((a = f.a) === void 0 ? 1 : a), b = ((b = f.b) === void 0 ? 0 : b), c = ((c = f.c) === void 0 ? 3 : c), d = ((d = f.x) === void 0 ? 0 : d), e = ((e = f.y) === void 0 ? 5 : e), f = f.z;\n  return a === 1 && b === 2 && c === 3 && d === 4 &&\n    e === 5 && f === undefined;\n}({b:2, c:undefined, x:4}));\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2262,16 +2250,20 @@ var o = { foo: function(){}, bar: function baz(){}};
 o.qux = function(){};
 return o.foo.name === &quot;foo&quot; &&
        o.bar.name === &quot;baz&quot; &&
-       o.qux.name === &quot;qux&quot;;
+       o.qux.name === &quot;&quot;;
       })">
-test(function(){try{return eval("(function(){\nvar o = { foo: function(){}, bar: function baz(){}};\no.qux = function(){};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"qux\";\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar o = { foo: function(){}, bar: function baz(){}};\no.qux = function(){};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
           <td><span>accessor properties</span></td>
-<script data-source="/* Error during compilation: Line 2: Unexpected token )
-filename: undefined*/">
-test(function(){try{return Function("/* Error during compilation: Line 2: Unexpected token )\nfilename: undefined*/")()}catch(e){return false;}}());
+<script data-source="(function(){
+var o = { get foo(){}, set foo(x){} };
+var descriptor = Object.getOwnPropertyDescriptor(o, &quot;foo&quot;);
+return descriptor.get.name === &quot;get foo&quot; &&
+       descriptor.set.name === &quot;set foo&quot;;
+      })">
+test(function(){try{return eval("(function(){\nvar o = { get foo(){}, set foo(x){} };\nvar descriptor = Object.getOwnPropertyDescriptor(o, \"foo\");\nreturn descriptor.get.name === \"get foo\" &&\n       descriptor.set.name === \"set foo\";\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -2329,9 +2321,9 @@ var o = { foo: ((function(){&quot;use strict&quot;;function constructor$0() {}DP
 o.qux = ((function(){&quot;use strict&quot;;function constructor$1() {}DP$0(constructor$1,&quot;prototype&quot;,{&quot;configurable&quot;:false,&quot;enumerable&quot;:false,&quot;writable&quot;:false});;return constructor$1;})());
 return o.foo.name === &quot;foo&quot; &&
        o.bar.name === &quot;baz&quot; &&
-       o.qux.name === &quot;qux&quot;;
+       o.qux.name === &quot;&quot;;
       })">
-test(function(){try{return eval("(function(){var PRS$0 = (function(o,t){o[\"__proto__\"]={\"a\":t};return o[\"a\"]===t})({},{});var DP$0 = Object.defineProperty;var GOPD$0 = Object.getOwnPropertyDescriptor;var MIXIN$0 = function(t,s){for(var p in s){if(s.hasOwnProperty(p)){DP$0(t,p,GOPD$0(s,p));}}return t};\nvar o = { foo: ((function(){\"use strict\";function constructor$0() {}DP$0(constructor$0,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return constructor$0;})()), bar: ((function(){\"use strict\";function baz() {}DP$0(baz,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return baz;})())};\no.qux = ((function(){\"use strict\";function constructor$1() {}DP$0(constructor$1,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return constructor$1;})());\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"qux\";\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){var PRS$0 = (function(o,t){o[\"__proto__\"]={\"a\":t};return o[\"a\"]===t})({},{});var DP$0 = Object.defineProperty;var GOPD$0 = Object.getOwnPropertyDescriptor;var MIXIN$0 = function(t,s){for(var p in s){if(s.hasOwnProperty(p)){DP$0(t,p,GOPD$0(s,p));}}return t};\nvar o = { foo: ((function(){\"use strict\";function constructor$0() {}DP$0(constructor$0,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return constructor$0;})()), bar: ((function(){\"use strict\";function baz() {}DP$0(baz,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return baz;})())};\no.qux = ((function(){\"use strict\";function constructor$1() {}DP$0(constructor$1,\"prototype\",{\"configurable\":false,\"enumerable\":false,\"writable\":false});;return constructor$1;})());\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      })")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -2355,12 +2347,12 @@ test(function(){try{return eval("(function(){\nvar C = (function(){\"use strict\
         <tr class="subtest" data-parent="function_name_property">
           <td><span>isn't writable, is configurable</span></td>
 <script data-source="(function(){
-var descriptor = Object.getOwnPropertyDescriptor(function(){},&quot;name&quot;);
+var descriptor = Object.getOwnPropertyDescriptor(function f(){},&quot;name&quot;);
 return descriptor.enumerable   === false &&
        descriptor.writable     === false &&
        descriptor.configurable === true;
       })">
-test(function(){try{return eval("(function(){\nvar descriptor = Object.getOwnPropertyDescriptor(function(){},\"name\");\nreturn descriptor.enumerable   === false &&\n       descriptor.writable     === false &&\n       descriptor.configurable === true;\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar descriptor = Object.getOwnPropertyDescriptor(function f(){},\"name\");\nreturn descriptor.enumerable   === false &&\n       descriptor.writable     === false &&\n       descriptor.configurable === true;\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2891,6 +2883,13 @@ test(function(){try{return eval("(function(){\nreturn typeof Math.cbrt === \"fun
         <tr>
           <th colspan="3" class="separator"></th>
         </tr>
+        <tr>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
+</script>
+
+        </tr>
         <tr class="supertest">
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[2]</sup></a></span></td>
 
@@ -2945,13 +2944,6 @@ test(function(){try{return eval("(function(){var PRLS$0 = (function(o){return o[
 </script>
 
         </tr>
-        <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[3]</sup></a></span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
-</script>
-
-        </tr>
         <tr class="supertest">
           <td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
 
@@ -2979,14 +2971,14 @@ test(function(){try{return eval("(function(){\nvar o = {};\no.__proto__ = Array.
 <script data-source="(function(){
 var desc = Object.getOwnPropertyDescriptor(Object.prototype,&quot;__proto__&quot;);
 var A = function(){};
-    
+
 return (desc
   && &quot;get&quot; in desc
   && &quot;set&quot; in desc
   && desc.configurable
   && !desc.enumerable);
       })">
-test(function(){try{return eval("(function(){\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n    \nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3023,9 +3015,6 @@ test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.co
       </p>
       <p id="proto-in-object-literals-note">
         <sup>[2]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
-      </p>
-      <p id="hoisted-block-level-function-note">
-        <sup>[3]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>

@@ -21,19 +21,19 @@ $('#body tbody tr').each(function () {
         result = result || expression
       }
     , __createIterableObject = function(a, b, c) {
-      try {
-        return eval("(function*() { yield a; yield b; yield c; }())");
-      }
-      catch (e) {
-        var arr = [a, b, c, ,];
-        var iterable = {
-          next: function() {
-            return { value: arr.shift(), done: arr.length <= 0 }; 
-          },
-        };
+      if (typeof Symbol === "function" && Symbol.iterator) {
+        var arr = [a, b, c, ,]
+          , iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 }
+            }
+          }
         iterable[Symbol.iterator] = function(){ return iterable; }
+        return iterable;
       }
-      return iterable;
+      else {
+        return eval("(function*() { yield a; yield b; yield c; }())")
+      }
     }
 
   // can be multiple scripts

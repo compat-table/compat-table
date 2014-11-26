@@ -3116,6 +3116,22 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return (funct
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="default_function_parameters">
+          <td><span>separate scope</span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  return (function() {
+    var a = arguments[0] !== (void 0) ? arguments[0] : function() {
+      return typeof b === 'undefined';
+    };
+    var b = 1;
+    return a();
+  }());
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  return (function() {\n    var a = arguments[0] !== (void 0) ? arguments[0] : function() {\n      return typeof b === 'undefined';\n    };\n    var b = 1;\n    return a();\n  }());\n});\n")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr>
           <td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
@@ -3672,53 +3688,31 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator 
 <script data-source="&quot;use strict&quot;;
 (function() {
   var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {
-    var $__1,
-        $__2;
+    var $__0,
+        $__1;
     return $traceurRuntime.createGeneratorInstance(function($ctx) {
       while (true)
         switch ($ctx.state) {
           case 0:
-            $__1 = ($traceurRuntime.initGeneratorFunction(function $__0() {
-              return $traceurRuntime.createGeneratorInstance(function($ctx) {
-                while (true)
-                  switch ($ctx.state) {
-                    case 0:
-                      $ctx.state = 2;
-                      return 5;
-                    case 2:
-                      $ctx.maybeThrow();
-                      $ctx.state = 4;
-                      break;
-                    case 4:
-                      $ctx.state = 6;
-                      return 6;
-                    case 6:
-                      $ctx.maybeThrow();
-                      $ctx.state = -2;
-                      break;
-                    default:
-                      return $ctx.end();
-                  }
-              }, $__0, this);
-            })())[Symbol.iterator]();
+            $__0 = __createIterableObject(5, 6, 7)[Symbol.iterator]();
             $ctx.sent = void 0;
             $ctx.action = 'next';
             $ctx.state = 12;
             break;
           case 12:
-            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);
+            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);
             $ctx.state = 9;
             break;
           case 9:
-            $ctx.state = ($__2.done) ? 3 : 2;
+            $ctx.state = ($__1.done) ? 3 : 2;
             break;
           case 3:
-            $ctx.sent = $__2.value;
+            $ctx.sent = $__1.value;
             $ctx.state = -2;
             break;
           case 2:
             $ctx.state = 12;
-            return $__2.value;
+            return $__1.value;
           default:
             return $ctx.end();
         }
@@ -3729,11 +3723,13 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator 
   item = iterator.next();
   passed &= item.value === 6 && item.done === false;
   item = iterator.next();
+  passed &= item.value === 7 && item.done === false;
+  item = iterator.next();
   passed &= item.value === undefined && item.done === true;
   return passed;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__1,\n        $__2;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__1 = ($traceurRuntime.initGeneratorFunction(function $__0() {\n              return $traceurRuntime.createGeneratorInstance(function($ctx) {\n                while (true)\n                  switch ($ctx.state) {\n                    case 0:\n                      $ctx.state = 2;\n                      return 5;\n                    case 2:\n                      $ctx.maybeThrow();\n                      $ctx.state = 4;\n                      break;\n                    case 4:\n                      $ctx.state = 6;\n                      return 6;\n                    case 6:\n                      $ctx.maybeThrow();\n                      $ctx.state = -2;\n                      break;\n                    default:\n                      return $ctx.end();\n                  }\n              }, $__0, this);\n            })())[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__2.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__2.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__2.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__0,\n        $__1;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__0 = __createIterableObject(5, 6, 7)[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__1.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__1.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__1.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 7 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -3741,53 +3737,31 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator 
 <script data-source="&quot;use strict&quot;;
 (function() {
   var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {
-    var $__1,
-        $__2;
+    var $__0,
+        $__1;
     return $traceurRuntime.createGeneratorInstance(function($ctx) {
       while (true)
         switch ($ctx.state) {
           case 0:
-            $__1 = Object.create($traceurRuntime.initGeneratorFunction(function $__0() {
-              return $traceurRuntime.createGeneratorInstance(function($ctx) {
-                while (true)
-                  switch ($ctx.state) {
-                    case 0:
-                      $ctx.state = 2;
-                      return 5;
-                    case 2:
-                      $ctx.maybeThrow();
-                      $ctx.state = 4;
-                      break;
-                    case 4:
-                      $ctx.state = 6;
-                      return 6;
-                    case 6:
-                      $ctx.maybeThrow();
-                      $ctx.state = -2;
-                      break;
-                    default:
-                      return $ctx.end();
-                  }
-              }, $__0, this);
-            })())[Symbol.iterator]();
+            $__0 = Object.create(__createIterableObject(5, 6, 7))[Symbol.iterator]();
             $ctx.sent = void 0;
             $ctx.action = 'next';
             $ctx.state = 12;
             break;
           case 12:
-            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);
+            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);
             $ctx.state = 9;
             break;
           case 9:
-            $ctx.state = ($__2.done) ? 3 : 2;
+            $ctx.state = ($__1.done) ? 3 : 2;
             break;
           case 3:
-            $ctx.sent = $__2.value;
+            $ctx.sent = $__1.value;
             $ctx.state = -2;
             break;
           case 2:
             $ctx.state = 12;
-            return $__2.value;
+            return $__1.value;
           default:
             return $ctx.end();
         }
@@ -3798,11 +3772,13 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator 
   item = iterator.next();
   passed &= item.value === 6 && item.done === false;
   item = iterator.next();
+  passed &= item.value === 7 && item.done === false;
+  item = iterator.next();
   passed &= item.value === undefined && item.done === true;
   return passed;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__1,\n        $__2;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__1 = Object.create($traceurRuntime.initGeneratorFunction(function $__0() {\n              return $traceurRuntime.createGeneratorInstance(function($ctx) {\n                while (true)\n                  switch ($ctx.state) {\n                    case 0:\n                      $ctx.state = 2;\n                      return 5;\n                    case 2:\n                      $ctx.maybeThrow();\n                      $ctx.state = 4;\n                      break;\n                    case 4:\n                      $ctx.state = 6;\n                      return 6;\n                    case 6:\n                      $ctx.maybeThrow();\n                      $ctx.state = -2;\n                      break;\n                    default:\n                      return $ctx.end();\n                  }\n              }, $__0, this);\n            })())[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__2 = $__1[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__2.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__2.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__2.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var iterator = ($traceurRuntime.initGeneratorFunction(function generator() {\n    var $__0,\n        $__1;\n    return $traceurRuntime.createGeneratorInstance(function($ctx) {\n      while (true)\n        switch ($ctx.state) {\n          case 0:\n            $__0 = Object.create(__createIterableObject(5, 6, 7))[Symbol.iterator]();\n            $ctx.sent = void 0;\n            $ctx.action = 'next';\n            $ctx.state = 12;\n            break;\n          case 12:\n            $__1 = $__0[$ctx.action]($ctx.sentIgnoreThrow);\n            $ctx.state = 9;\n            break;\n          case 9:\n            $ctx.state = ($__1.done) ? 3 : 2;\n            break;\n          case 3:\n            $ctx.sent = $__1.value;\n            $ctx.state = -2;\n            break;\n          case 2:\n            $ctx.state = 12;\n            return $__1.value;\n          default:\n            return $ctx.end();\n        }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 7 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -4883,11 +4859,15 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var proxied =
   var passed = false;
   Object.defineProperty(new Proxy(proxied, {defineProperty: function(t, k, d) {
       passed = t === proxied && k === &quot;foo&quot; && d.value === 5;
-    }}), &quot;foo&quot;, {value: 5});
+      return true;
+    }}), &quot;foo&quot;, {
+    value: 5,
+    configurable: true
+  });
   return passed;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var proxied = {};\n  var passed = false;\n  Object.defineProperty(new Proxy(proxied, {defineProperty: function(t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n    }}), \"foo\", {value: 5});\n  return passed;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var proxied = {};\n  var passed = false;\n  Object.defineProperty(new Proxy(proxied, {defineProperty: function(t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n      return true;\n    }}), \"foo\", {\n    value: 5,\n    configurable: true\n  });\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -5539,16 +5519,25 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var foo = fun
     bar: function baz() {}
   };
   o.qux = function() {};
-  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;qux&quot;;
+  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;&quot;;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {\n    foo: function() {},\n    bar: function baz() {}\n  };\n  o.qux = function() {};\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"qux\";\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {\n    foo: function() {},\n    bar: function baz() {}\n  };\n  o.qux = function() {};\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
           <td><span>accessor properties</span></td>
-<script data-source="/* Error during compilation: undefined*/">
-test(function(){try{return Function("/* Error during compilation: undefined*/")()}catch(e){return false;}}());
+<script data-source="&quot;use strict&quot;;
+(function() {
+  var o = {
+    get foo() {},
+    set foo(x) {}
+  };
+  var descriptor = Object.getOwnPropertyDescriptor(o, &quot;foo&quot;);
+  return descriptor.get.name === &quot;get foo&quot; && descriptor.set.name === &quot;set foo&quot;;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {\n    get foo() {},\n    set foo(x) {}\n  };\n  var descriptor = Object.getOwnPropertyDescriptor(o, \"foo\");\n  return descriptor.get.name === \"get foo\" && descriptor.set.name === \"set foo\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -5566,15 +5555,24 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {foo:
           <td><span>symbol-keyed methods</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
-  var o = {};
-  var sym = Symbol(&quot;foo&quot;);
+  var $__0;
+  var sym1 = Symbol(&quot;foo&quot;);
   var sym2 = Symbol();
-  o[sym] = function() {};
-  o[sym2] = function() {};
+  var o = ($__0 = {}, Object.defineProperty($__0, sym1, {
+    value: function() {},
+    configurable: true,
+    enumerable: true,
+    writable: true
+  }), Object.defineProperty($__0, sym2, {
+    value: function() {},
+    configurable: true,
+    enumerable: true,
+    writable: true
+  }), $__0);
   return o[sym].name === &quot;[foo]&quot; && o[sym2].name === &quot;&quot;;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {};\n  var sym = Symbol(\"foo\");\n  var sym2 = Symbol();\n  o[sym] = function() {};\n  o[sym2] = function() {};\n  return o[sym].name === \"[foo]\" && o[sym2].name === \"\";\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var $__0;\n  var sym1 = Symbol(\"foo\");\n  var sym2 = Symbol();\n  var o = ($__0 = {}, Object.defineProperty($__0, sym1, {\n    value: function() {},\n    configurable: true,\n    enumerable: true,\n    writable: true\n  }), Object.defineProperty($__0, sym2, {\n    value: function() {},\n    configurable: true,\n    enumerable: true,\n    writable: true\n  }), $__0);\n  return o[sym].name === \"[foo]\" && o[sym2].name === \"\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -5637,10 +5635,10 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var foo = (($
     }())
   };
   o.qux = (($traceurRuntime.createClass)(function() {}, {}, {}));
-  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;qux&quot;;
+  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;&quot;;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {\n    foo: (($traceurRuntime.createClass)(function() {}, {}, {})),\n    bar: (function() {\n      var baz = function baz() {};\n      return ($traceurRuntime.createClass)(baz, {}, {});\n    }())\n  };\n  o.qux = (($traceurRuntime.createClass)(function() {}, {}, {}));\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"qux\";\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var o = {\n    foo: (($traceurRuntime.createClass)(function() {}, {}, {})),\n    bar: (function() {\n      var baz = function baz() {};\n      return ($traceurRuntime.createClass)(baz, {}, {});\n    }())\n  };\n  o.qux = (($traceurRuntime.createClass)(function() {}, {}, {}));\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"\";\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -5673,11 +5671,11 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var C = funct
           <td><span>isn't writable, is configurable</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
-  var descriptor = Object.getOwnPropertyDescriptor(function() {}, &quot;name&quot;);
+  var descriptor = Object.getOwnPropertyDescriptor(function f() {}, &quot;name&quot;);
   return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var descriptor = Object.getOwnPropertyDescriptor(function() {}, \"name\");\n  return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var descriptor = Object.getOwnPropertyDescriptor(function f() {}, \"name\");\n  return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -5932,15 +5930,15 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var symbol = 
   var passed = false;
   var obj = {foo: true};
   var C = function() {};
-  C[Symbol.hasInstance] = function(inst) {
-    passed = inst.foo;
-    return false;
-  };
+  Object.defineProperty(C, Symbol.hasInstance, {value: function(inst) {
+      passed = inst.foo;
+      return false;
+    }});
   obj instanceof C;
   return passed;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var passed = false;\n  var obj = {foo: true};\n  var C = function() {};\n  C[Symbol.hasInstance] = function(inst) {\n    passed = inst.foo;\n    return false;\n  };\n  obj instanceof C;\n  return passed;\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var passed = false;\n  var obj = {foo: true};\n  var C = function() {};\n  Object.defineProperty(C, Symbol.hasInstance, {value: function(inst) {\n      passed = inst.foo;\n      return false;\n    }});\n  obj instanceof C;\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
@@ -6453,6 +6451,38 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof
         <tr>
           <th colspan="3" class="separator"></th>
         </tr>
+        <tr>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
+<script data-source="&quot;use strict&quot;;
+(function() {
+  {
+    var f = function() {
+      return 1;
+    };
+  }
+  function g() {
+    return 1;
+  }
+  {
+    var g$__0 = function() {
+      return 2;
+    };
+  }
+  {
+    var h$__1 = function() {
+      return 1;
+    };
+  }
+  function h() {
+    return 2;
+  }
+  return f() === 1 && g() === 2 && h() === 1;
+});
+">
+test(function(){try{return eval("\"use strict\";\n(function() {\n  {\n    var f = function() {\n      return 1;\n    };\n  }\n  function g() {\n    return 1;\n  }\n  {\n    var g$__0 = function() {\n      return 2;\n    };\n  }\n  {\n    var h$__1 = function() {\n      return 1;\n    };\n  }\n  function h() {\n    return 2;\n  }\n  return f() === 1 && g() === 2 && h() === 1;\n});\n")()}catch(e){return false;}}());
+</script>
+
+        </tr>
         <tr class="supertest">
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[2]</sup></a></span></td>
 
@@ -6517,36 +6547,6 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  if (!({__prot
 });
 ">
 test(function(){try{return eval("\"use strict\";\n(function() {\n  if (!({__proto__: []} instanceof Array)) {\n    return false;\n  }\n  return !({__proto__: function() {}} instanceof Function);\n});\n")()}catch(e){return false;}}());
-</script>
-
-        </tr>
-        <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[3]</sup></a></span></td>
-<script data-source="&quot;use strict&quot;;
-(function() {
-  var passed = f() === 2 && g() === 4;
-  if (true) {
-    var f = function() {
-      return 1;
-    };
-  } else {
-    var f$__0 = function() {
-      return 2;
-    };
-  }
-  if (false) {
-    var g = function() {
-      return 3;
-    };
-  } else {
-    var g$__1 = function() {
-      return 4;
-    };
-  }
-  return passed;
-});
-">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var passed = f() === 2 && g() === 4;\n  if (true) {\n    var f = function() {\n      return 1;\n    };\n  } else {\n    var f$__0 = function() {\n      return 2;\n    };\n  }\n  if (false) {\n    var g = function() {\n      return 3;\n    };\n  } else {\n    var g$__1 = function() {\n      return 4;\n    };\n  }\n  return passed;\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -6626,9 +6626,6 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return typeof
       </p>
       <p id="proto-in-object-literals-note">
         <sup>[2]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
-      </p>
-      <p id="hoisted-block-level-function-note">
-        <sup>[3]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>

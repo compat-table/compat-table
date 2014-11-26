@@ -562,20 +562,46 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (fu
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="default_function_parameters">
+          <td><span>separate scope</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  return (function (a) {
+    if (a === undefined) a = function () {
+      return typeof b === &quot;undefined&quot;;
+    };
+    return (function () {
+      var b = 1;
+      return a();
+    })();
+  }());
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (a) {\n    if (a === undefined) a = function () {\n      return typeof b === \"undefined\";\n    };\n    return (function () {\n      var b = 1;\n      return a();\n    })();\n  }());\n});")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr>
           <td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
 <script data-source="&quot;use strict&quot;;
 
-var _slice = Array.prototype.slice;
+var _argumentsToArray = function (args) {
+  var target = new Array(args.length);
+  for (var i = 0; i < args.length; i++) {
+    target[i] = args[i];
+  }
+
+  return target;
+};
+
 (function () {
   return (function () {
-    var args = _slice.call(arguments);
+    var args = _argumentsToArray(arguments);
 
     return typeof args !== &quot;undefined&quot;;
   }());
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _slice = Array.prototype.slice;\n(function () {\n  return (function () {\n    var args = _slice.call(arguments);\n\n    return typeof args !== \"undefined\";\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _argumentsToArray = function (args) {\n  var target = new Array(args.length);\n  for (var i = 0; i < args.length; i++) {\n    target[i] = args[i];\n  }\n\n  return target;\n};\n\n(function () {\n  return (function () {\n    var args = _argumentsToArray(arguments);\n\n    return typeof args !== \"undefined\";\n  }());\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -597,73 +623,97 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return Mat
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return [1, 2, 3][2] === 3;
+  return [1, 2, 3].concat()[2] === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return [1, 2, 3][2] === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return [1, 2, 3].concat()[2] === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with strings, in function calls</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
-  return Math.max.apply(Math, Array.from(&quot;1234&quot;)) === 4;
+  return Math.max.apply(Math, _toArray(&quot;1234&quot;)) === 4;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return Math.max.apply(Math, Array.from(\"1234\")) === 4;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  return Math.max.apply(Math, _toArray(\"1234\")) === 4;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with strings, in array literals</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
-  return [&quot;a&quot;].concat(Array.from(&quot;bcd&quot;), [&quot;e&quot;])[3] === &quot;d&quot;;
+  return [&quot;a&quot;].concat(_toArray(&quot;bcd&quot;), [&quot;e&quot;])[3] === &quot;d&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return [\"a\"].concat(Array.from(\"bcd\"), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  return [\"a\"].concat(_toArray(\"bcd\"), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in calls</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var iterable = __createIterableObject(1, 2, 3);
-  return Math.max.apply(Math, Array.from(iterable)) === 3;
+  return Math.max.apply(Math, _toArray(iterable)) === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  return Math.max.apply(Math, Array.from(iterable)) === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  return Math.max.apply(Math, _toArray(iterable)) === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with generic iterables, in arrays</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var iterable = __createIterableObject(&quot;b&quot;, &quot;c&quot;, &quot;d&quot;);
-  return [&quot;a&quot;].concat(Array.from(iterable), [&quot;e&quot;])[3] === &quot;d&quot;;
+  return [&quot;a&quot;].concat(_toArray(iterable), [&quot;e&quot;])[3] === &quot;d&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable = __createIterableObject(\"b\", \"c\", \"d\");\n  return [\"a\"].concat(Array.from(iterable), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var iterable = __createIterableObject(\"b\", \"c\", \"d\");\n  return [\"a\"].concat(_toArray(iterable), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with instances of iterables, in calls</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var iterable = __createIterableObject(1, 2, 3);
-  return Math.max.apply(Math, Array.from(Object.create(iterable))) === 3;
+  return Math.max.apply(Math, _toArray(Object.create(iterable))) === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  return Math.max.apply(Math, Array.from(Object.create(iterable))) === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  return Math.max.apply(Math, _toArray(Object.create(iterable))) === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="spread_(...)_operator">
           <td><span>with instances of iterables, in arrays</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var iterable = __createIterableObject(&quot;b&quot;, &quot;c&quot;, &quot;d&quot;);
-  return [&quot;a&quot;].concat(Array.from(Object.create(iterable)), [&quot;e&quot;])[3] === &quot;d&quot;;
+  return [&quot;a&quot;].concat(_toArray(Object.create(iterable)), [&quot;e&quot;])[3] === &quot;d&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable = __createIterableObject(\"b\", \"c\", \"d\");\n  return [\"a\"].concat(Array.from(Object.create(iterable)), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var iterable = __createIterableObject(\"b\", \"c\", \"d\");\n  return [\"a\"].concat(_toArray(Object.create(iterable)), [\"e\"])[3] === \"d\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1124,14 +1174,14 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var result
 
 (function () {
   var generator = regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (true) switch (context$2$0.prev = context$2$0.next) {
-        case 0: context$2$0.next = 2;
+    return regeneratorRuntime.wrap(function generator$(_context) {
+      while (true) switch (_context.prev = _context.next) {
+        case 0: _context.next = 2;
           return 5;
-        case 2: context$2$0.next = 4;
+        case 2: _context.next = 4;
           return 6;
         case 4:
-        case &quot;end&quot;: return context$2$0.stop();
+        case &quot;end&quot;: return _context.stop();
       }
     }, generator, this);
   });
@@ -1146,7 +1196,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var result
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var generator = regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: context$2$0.next = 2;\n          return 5;\n        case 2: context$2$0.next = 4;\n          return 6;\n        case 4:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  });\n\n  ;\n  var iterator = generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var generator = regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context) {\n      while (true) switch (_context.prev = _context.next) {\n        case 0: _context.next = 2;\n          return 5;\n        case 2: _context.next = 4;\n          return 6;\n        case 4:\n        case \"end\": return _context.stop();\n      }\n    }, generator, this);\n  });\n\n  ;\n  var iterator = generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1155,11 +1205,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var genera
 
 (function () {
   var iterator = (regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (true) switch (context$2$0.prev = context$2$0.next) {
-        case 0: return context$2$0.delegateYield([5, 6], &quot;t0&quot;, 1);
+    return regeneratorRuntime.wrap(function generator$(_context) {
+      while (true) switch (_context.prev = _context.next) {
+        case 0: return _context.delegateYield([5, 6], &quot;t0&quot;, 1);
         case 1:
-        case &quot;end&quot;: return context$2$0.stop();
+        case &quot;end&quot;: return _context.stop();
       }
     }, generator, this);
   })());
@@ -1171,7 +1221,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var genera
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield([5, 6], \"t0\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context) {\n      while (true) switch (_context.prev = _context.next) {\n        case 0: return _context.delegateYield([5, 6], \"t0\", 1);\n        case 1:\n        case \"end\": return _context.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1180,11 +1230,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
 
 (function () {
   var iterator = (regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (true) switch (context$2$0.prev = context$2$0.next) {
-        case 0: return context$2$0.delegateYield(&quot;56&quot;, &quot;t1&quot;, 1);
+    return regeneratorRuntime.wrap(function generator$(_context) {
+      while (true) switch (_context.prev = _context.next) {
+        case 0: return _context.delegateYield(&quot;56&quot;, &quot;t1&quot;, 1);
         case 1:
-        case &quot;end&quot;: return context$2$0.stop();
+        case &quot;end&quot;: return _context.stop();
       }
     }, generator, this);
   })());
@@ -1196,7 +1246,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield(\"56\", \"t1\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === \"5\" && item.done === false;\n  item = iterator.next();\n  passed &= item.value === \"6\" && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context) {\n      while (true) switch (_context.prev = _context.next) {\n        case 0: return _context.delegateYield(\"56\", \"t1\", 1);\n        case 1:\n        case \"end\": return _context.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === \"5\" && item.done === false;\n  item = iterator.next();\n  passed &= item.value === \"6\" && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1205,22 +1255,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
 
 (function () {
   var iterator = (regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (true) switch (context$2$0.prev = context$2$0.next) {
-        case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {
-            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
-              while (true) switch (context$3$0.prev = context$3$0.next) {
-                case 0: context$3$0.next = 2;
-                  return 5;
-                case 2: context$3$0.next = 4;
-                  return 6;
-                case 4:
-                case &quot;end&quot;: return context$3$0.stop();
-              }
-            }, callee$2$0, this);
-          })()), &quot;t2&quot;, 1);
+    return regeneratorRuntime.wrap(function generator$(_context) {
+      while (true) switch (_context.prev = _context.next) {
+        case 0: return _context.delegateYield(__createIterableObject(5, 6, 7), &quot;t2&quot;, 1);
         case 1:
-        case &quot;end&quot;: return context$2$0.stop();
+        case &quot;end&quot;: return _context.stop();
       }
     }, generator, this);
   })());
@@ -1229,10 +1268,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   item = iterator.next();
   passed &= item.value === 6 && item.done === false;
   item = iterator.next();
+  passed &= item.value === 7 && item.done === false;
+  item = iterator.next();
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield((regeneratorRuntime.mark(function callee$2$0() {\n            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n              while (true) switch (context$3$0.prev = context$3$0.next) {\n                case 0: context$3$0.next = 2;\n                  return 5;\n                case 2: context$3$0.next = 4;\n                  return 6;\n                case 4:\n                case \"end\": return context$3$0.stop();\n              }\n            }, callee$2$0, this);\n          })()), \"t2\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context) {\n      while (true) switch (_context.prev = _context.next) {\n        case 0: return _context.delegateYield(__createIterableObject(5, 6, 7), \"t2\", 1);\n        case 1:\n        case \"end\": return _context.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 7 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1241,22 +1282,11 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
 
 (function () {
   var iterator = (regeneratorRuntime.mark(function generator() {
-    return regeneratorRuntime.wrap(function generator$(context$2$0) {
-      while (true) switch (context$2$0.prev = context$2$0.next) {
-        case 0: return context$2$0.delegateYield(Object.create(regeneratorRuntime.mark(function callee$2$0() {
-            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
-              while (true) switch (context$3$0.prev = context$3$0.next) {
-                case 0: context$3$0.next = 2;
-                  return 5;
-                case 2: context$3$0.next = 4;
-                  return 6;
-                case 4:
-                case &quot;end&quot;: return context$3$0.stop();
-              }
-            }, callee$2$0, this);
-          })()), &quot;t3&quot;, 1);
+    return regeneratorRuntime.wrap(function generator$(_context) {
+      while (true) switch (_context.prev = _context.next) {
+        case 0: return _context.delegateYield(Object.create(__createIterableObject(5, 6, 7)), &quot;t3&quot;, 1);
         case 1:
-        case &quot;end&quot;: return context$2$0.stop();
+        case &quot;end&quot;: return _context.stop();
       }
     }, generator, this);
   })());
@@ -1265,10 +1295,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   item = iterator.next();
   passed &= item.value === 6 && item.done === false;
   item = iterator.next();
+  passed &= item.value === 7 && item.done === false;
+  item = iterator.next();
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(context$2$0) {\n      while (true) switch (context$2$0.prev = context$2$0.next) {\n        case 0: return context$2$0.delegateYield(Object.create(regeneratorRuntime.mark(function callee$2$0() {\n            return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {\n              while (true) switch (context$3$0.prev = context$3$0.next) {\n                case 0: context$3$0.next = 2;\n                  return 5;\n                case 2: context$3$0.next = 4;\n                  return 6;\n                case 4:\n                case \"end\": return context$3$0.stop();\n              }\n            }, callee$2$0, this);\n          })()), \"t3\", 1);\n        case 1:\n        case \"end\": return context$2$0.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterator = (regeneratorRuntime.mark(function generator() {\n    return regeneratorRuntime.wrap(function generator$(_context) {\n      while (true) switch (_context.prev = _context.next) {\n        case 0: return _context.delegateYield(Object.create(__createIterableObject(5, 6, 7)), \"t3\", 1);\n        case 1:\n        case \"end\": return _context.stop();\n      }\n    }, generator, this);\n  })());\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 7 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="generators">
@@ -1277,17 +1309,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
 
 (function () {
   var o = {
-    generator: regeneratorRuntime.mark(function callee$1$0() {
-      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-        while (true) switch (context$2$0.prev = context$2$0.next) {
-          case 0: context$2$0.next = 2;
+    generator: regeneratorRuntime.mark(function _callee() {
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (true) switch (_context.prev = _context.next) {
+          case 0: _context.next = 2;
             return 5;
-          case 2: context$2$0.next = 4;
+          case 2: _context.next = 4;
             return 6;
           case 4:
-          case &quot;end&quot;: return context$2$0.stop();
+          case &quot;end&quot;: return _context.stop();
         }
-      }, callee$1$0, this);
+      }, _callee, this);
     }) };
   var iterator = o.generator();
   var item = iterator.next();
@@ -1298,7 +1330,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterat
   passed &= item.value === undefined && item.done === true;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {\n    generator: regeneratorRuntime.mark(function callee$1$0() {\n      return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {\n        while (true) switch (context$2$0.prev = context$2$0.next) {\n          case 0: context$2$0.next = 2;\n            return 5;\n          case 2: context$2$0.next = 4;\n            return 6;\n          case 4:\n          case \"end\": return context$2$0.stop();\n        }\n      }, callee$1$0, this);\n    }) };\n  var iterator = o.generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {\n    generator: regeneratorRuntime.mark(function _callee() {\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (true) switch (_context.prev = _context.next) {\n          case 0: _context.next = 2;\n            return 5;\n          case 2: _context.next = 4;\n            return 6;\n          case 4:\n          case \"end\": return _context.stop();\n        }\n      }, _callee, this);\n    }) };\n  var iterator = o.generator();\n  var item = iterator.next();\n  var passed = item.value === 5 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === 6 && item.done === false;\n  item = iterator.next();\n  passed &= item.value === undefined && item.done === true;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2359,11 +2391,12 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var proxie
   Object.defineProperty(new Proxy(proxied, {
     defineProperty: function (t, k, d) {
       passed = t === proxied && k === &quot;foo&quot; && d.value === 5;
+      return true;
     }
-  }), &quot;foo&quot;, { value: 5 });
+  }), &quot;foo&quot;, { value: 5, configurable: true });
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var proxied = {};\n  var passed = false;\n  Object.defineProperty(new Proxy(proxied, {\n    defineProperty: function (t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n    }\n  }), \"foo\", { value: 5 });\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var proxied = {};\n  var passed = false;\n  Object.defineProperty(new Proxy(proxied, {\n    defineProperty: function (t, k, d) {\n      passed = t === proxied && k === \"foo\" && d.value === 5;\n      return true;\n    }\n  }), \"foo\", { value: 5, configurable: true });\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="Proxy">
@@ -2725,70 +2758,86 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  \"use stri
           <td><span>with arrays</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var _ref = [5, null, [6]];
 
-  var _ref2 = Array.from(_ref);
+  var _ref2 = _toArray(_ref);
 
   var a = _ref2[0];
-  var _ref3 = Array.from(_ref2[2]);
+  var _ref3 = _toArray(_ref2[2]);
 
   var b = _ref3[0];
   var c = _ref2[3];
   return a === 5 && b === 6 && c === undefined;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [5, null, [6]];\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var _ref3 = Array.from(_ref2[2]);\n\n  var b = _ref3[0];\n  var c = _ref2[3];\n  return a === 5 && b === 6 && c === undefined;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var _ref = [5, null, [6]];\n\n  var _ref2 = _toArray(_ref);\n\n  var a = _ref2[0];\n  var _ref3 = _toArray(_ref2[2]);\n\n  var b = _ref3[0];\n  var c = _ref2[3];\n  return a === 5 && b === 6 && c === undefined;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>with strings</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var _ref = &quot;bar&quot;;
 
-  var _ref2 = Array.from(_ref);
+  var _ref2 = _toArray(_ref);
 
   var a = _ref2[0];
   var b = _ref2[1];
   var c = _ref2[2];
   return a === &quot;b&quot; && b === &quot;a&quot; && c === &quot;r&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = \"bar\";\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var b = _ref2[1];\n  var c = _ref2[2];\n  return a === \"b\" && b === \"a\" && c === \"r\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var _ref = \"bar\";\n\n  var _ref2 = _toArray(_ref);\n\n  var a = _ref2[0];\n  var b = _ref2[1];\n  var c = _ref2[2];\n  return a === \"b\" && b === \"a\" && c === \"r\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>with generic iterables</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var iterable = __createIterableObject(1, 2, 3);
-  var _ref = Array.from(iterable);
+  var _ref = _toArray(iterable);
 
   var a = _ref[0];
   var b = _ref[1];
   var c = _ref[2];
   return a === 1 && b === 2 && c === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  var _ref = Array.from(iterable);\n\n  var a = _ref[0];\n  var b = _ref[1];\n  var c = _ref[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  var _ref = _toArray(iterable);\n\n  var a = _ref[0];\n  var b = _ref[1];\n  var c = _ref[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>with instances of generic iterables</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var iterable = __createIterableObject(1, 2, 3);
   var _ref = Object.create(iterable);
 
-  var _ref2 = Array.from(_ref);
+  var _ref2 = _toArray(_ref);
 
   var a = _ref2[0];
   var b = _ref2[1];
   var c = _ref2[2];
   return a === 1 && b === 2 && c === 3;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  var _ref = Object.create(iterable);\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var b = _ref2[1];\n  var c = _ref2[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var iterable = __createIterableObject(1, 2, 3);\n  var _ref = Object.create(iterable);\n\n  var _ref2 = _toArray(_ref);\n\n  var a = _ref2[0];\n  var b = _ref2[1];\n  var c = _ref2[2];\n  return a === 1 && b === 2 && c === 3;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2809,60 +2858,72 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref =
           <td><span>nested</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var _ref = [9, { x: 10 }];
 
-  var _ref2 = Array.from(_ref);
+  var _ref2 = _toArray(_ref);
 
   var e = _ref2[0];
   var f = _ref2[1].x;
   var g = _ref2[1].g;
   return e === 9 && f === 10 && g === undefined;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [9, { x: 10 }];\n\n  var _ref2 = Array.from(_ref);\n\n  var e = _ref2[0];\n  var f = _ref2[1].x;\n  var g = _ref2[1].g;\n  return e === 9 && f === 10 && g === undefined;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var _ref = [9, { x: 10 }];\n\n  var _ref2 = _toArray(_ref);\n\n  var e = _ref2[0];\n  var f = _ref2[1].x;\n  var g = _ref2[1].g;\n  return e === 9 && f === 10 && g === undefined;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>parameters</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   return (function (_ref, _ref2) {
     var a = _ref.a;
     var b = _ref.x;
     var e = _ref.y;
-    var _ref3 = Array.from(_ref2);
+    var _ref3 = _toArray(_ref2);
 
     var c = _ref3[0];
     var d = _ref3[1];
     return a === 1 && b === 2 && c === 3 && d === 4 && e === undefined;
   }({ a: 1, x: 2 }, [3, 4]));
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (function (_ref, _ref2) {\n    var a = _ref.a;\n    var b = _ref.x;\n    var e = _ref.y;\n    var _ref3 = Array.from(_ref2);\n\n    var c = _ref3[0];\n    var d = _ref3[1];\n    return a === 1 && b === 2 && c === 3 && d === 4 && e === undefined;\n  }({ a: 1, x: 2 }, [3, 4]));\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  return (function (_ref, _ref2) {\n    var a = _ref.a;\n    var b = _ref.x;\n    var e = _ref.y;\n    var _ref3 = _toArray(_ref2);\n\n    var c = _ref3[0];\n    var d = _ref3[1];\n    return a === 1 && b === 2 && c === 3 && d === 4 && e === undefined;\n  }({ a: 1, x: 2 }, [3, 4]));\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
           <td><span>rest</span></td>
 <script data-source="&quot;use strict&quot;;
 
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
 (function () {
   var _ref = [3, 4, 5];
 
-  var _ref2 = Array.from(_ref);
+  var _ref2 = _toArray(_ref);
 
   var a = _ref2[0];
-  var b = Array.from(_ref2).slice(1);
+  var b = _toArray(_ref2).slice(1);
 
   var _ref3 = [6];
 
-  var _ref4 = Array.from(_ref3);
+  var _ref4 = _toArray(_ref3);
 
   var c = _ref4[0];
-  var d = Array.from(_ref4).slice(1);
+  var d = _toArray(_ref4).slice(1);
 
   return a === 3 && b instanceof Array && (b + &quot;&quot;) === &quot;4,5&quot; && c === 6 && d instanceof Array && d.length === 0;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var _ref = [3, 4, 5];\n\n  var _ref2 = Array.from(_ref);\n\n  var a = _ref2[0];\n  var b = Array.from(_ref2).slice(1);\n\n  var _ref3 = [6];\n\n  var _ref4 = Array.from(_ref3);\n\n  var c = _ref4[0];\n  var d = Array.from(_ref4).slice(1);\n\n  return a === 3 && b instanceof Array && (b + \"\") === \"4,5\" && c === 6 && d instanceof Array && d.length === 0;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var _ref = [3, 4, 5];\n\n  var _ref2 = _toArray(_ref);\n\n  var a = _ref2[0];\n  var b = _toArray(_ref2).slice(1);\n\n  var _ref3 = [6];\n\n  var _ref4 = _toArray(_ref3);\n\n  var c = _ref4[0];\n  var d = _toArray(_ref4).slice(1);\n\n  return a === 3 && b instanceof Array && (b + \"\") === \"4,5\" && c === 6 && d instanceof Array && d.length === 0;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2882,10 +2943,10 @@ test(function(){try{return Function("/* Error during compilation: unknown: Unexp
   1  | (function(){
 > 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
      |                    ^
-  3  |   return a === 1 && b === 2 && c === 3 && d === 4 && 
+  3  |   return a === 1 && b === 2 && c === 3 && d === 4 &&
   4  |     e === 5 && f === undefined;
   5  | }({b:2, c:undefined, x:4}));*/">
-test(function(){try{return Function("/* Error during compilation: unknown: Unexpected token (2:20)\n  1  | (function(){\n> 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n     |                    ^\n  3  |   return a === 1 && b === 2 && c === 3 && d === 4 && \n  4  |     e === 5 && f === undefined;\n  5  | }({b:2, c:undefined, x:4}));*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: unknown: Unexpected token (2:20)\n  1  | (function(){\n> 2  | return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n     |                    ^\n  3  |   return a === 1 && b === 2 && c === 3 && d === 4 &&\n  4  |     e === 5 && f === undefined;\n  5  | }({b:2, c:undefined, x:4}));*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3012,9 +3073,9 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var foo = 
 (function () {
   var o = { foo: function () {}, bar: function baz() {} };
   o.qux = function () {};
-  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;qux&quot;;
+  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = { foo: function () {}, bar: function baz() {} };\n  o.qux = function () {};\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"qux\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = { foo: function () {}, bar: function baz() {} };\n  o.qux = function () {};\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3026,16 +3087,16 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = { 
     Object.defineProperties(_o, {
       foo: {
         get: function () {},
-        set: function () {}
+        set: function (x) {}
       }
     });
 
     return _o;
   })({});
   var descriptor = Object.getOwnPropertyDescriptor(o, &quot;foo&quot;);
-  return descriptor.get.name === &quot;get foo&quot; && descriptor.get.name === &quot;set foo&quot;;
+  return descriptor.get.name === &quot;get foo&quot; && descriptor.set.name === &quot;set foo&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = (function (_o) {\n    Object.defineProperties(_o, {\n      foo: {\n        get: function () {},\n        set: function () {}\n      }\n    });\n\n    return _o;\n  })({});\n  var descriptor = Object.getOwnPropertyDescriptor(o, \"foo\");\n  return descriptor.get.name === \"get foo\" && descriptor.get.name === \"set foo\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = (function (_o) {\n    Object.defineProperties(_o, {\n      foo: {\n        get: function () {},\n        set: function (x) {}\n      }\n    });\n\n    return _o;\n  })({});\n  var descriptor = Object.getOwnPropertyDescriptor(o, \"foo\");\n  return descriptor.get.name === \"get foo\" && descriptor.set.name === \"set foo\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3054,16 +3115,17 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = { 
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  var o = {};
-  var sym = Symbol(&quot;foo&quot;);
+  var sym1 = Symbol(&quot;foo&quot;);
   var sym2 = Symbol();
-
-  o[sym] = function () {};
-  o[sym2] = function () {};
+  var o = (function (_o) {
+    _o[sym1] = function () {};
+    _o[sym2] = function () {};
+    return _o;
+  })({});
 
   return o[sym].name === &quot;[foo]&quot; && o[sym2].name === &quot;&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = {};\n  var sym = Symbol(\"foo\");\n  var sym2 = Symbol();\n\n  o[sym] = function () {};\n  o[sym2] = function () {};\n\n  return o[sym].name === \"[foo]\" && o[sym2].name === \"\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var sym1 = Symbol(\"foo\");\n  var sym2 = Symbol();\n  var o = (function (_o) {\n    _o[sym1] = function () {};\n    _o[sym2] = function () {};\n    return _o;\n  })({});\n\n  return o[sym].name === \"[foo]\" && o[sym2].name === \"\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3160,9 +3222,9 @@ test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (
 (function () {
   var o = { foo: function () {}, bar: function baz() {} };
   o.qux = function () {};
-  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;qux&quot;;
+  return o.foo.name === &quot;foo&quot; && o.bar.name === &quot;baz&quot; && o.qux.name === &quot;&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = { foo: function () {}, bar: function baz() {} };\n  o.qux = function () {};\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"qux\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var o = { foo: function () {}, bar: function baz() {} };\n  o.qux = function () {};\n  return o.foo.name === \"foo\" && o.bar.name === \"baz\" && o.qux.name === \"\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="function_name_property">
@@ -3228,10 +3290,10 @@ test(function(){try{return eval("\"use strict\";\n\nvar _classProps = function (
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  var descriptor = Object.getOwnPropertyDescriptor(function () {}, &quot;name&quot;);
+  var descriptor = Object.getOwnPropertyDescriptor(function f() {}, &quot;name&quot;);
   return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var descriptor = Object.getOwnPropertyDescriptor(function () {}, \"name\");\n  return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var descriptor = Object.getOwnPropertyDescriptor(function f() {}, \"name\");\n  return descriptor.enumerable === false && descriptor.writable === false && descriptor.configurable === true;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3496,13 +3558,15 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var symbol
   var passed = false;
   var obj = { foo: true };
   var C = function () {};
-  C[Symbol.hasInstance] = function (inst) {
-    passed = inst.foo;return false;
-  };
+  Object.defineProperty(C, Symbol.hasInstance, {
+    value: function (inst) {
+      passed = inst.foo;return false;
+    }
+  });
   obj instanceof C;
   return passed;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var passed = false;\n  var obj = { foo: true };\n  var C = function () {};\n  C[Symbol.hasInstance] = function (inst) {\n    passed = inst.foo;return false;\n  };\n  obj instanceof C;\n  return passed;\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var passed = false;\n  var obj = { foo: true };\n  var C = function () {};\n  Object.defineProperty(C, Symbol.hasInstance, {\n    value: function (inst) {\n      passed = inst.foo;return false;\n    }\n  });\n  obj instanceof C;\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
@@ -4017,6 +4081,40 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
         <tr>
           <th colspan="3" class="separator"></th>
         </tr>
+        <tr>
+          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  // Note: only available outside of strict mode.
+  {
+    function f() {
+      return 1;
+    }
+  }
+  function g() {
+    return 1;
+  }
+  {
+    function g() {
+      return 2;
+    }
+  }
+  {
+    function h() {
+      return 1;
+    }
+  }
+  function h() {
+    return 2;
+  }
+
+  return f() === 1 && g() === 2 && h() === 1;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  // Note: only available outside of strict mode.\n  {\n    function f() {\n      return 1;\n    }\n  }\n  function g() {\n    return 1;\n  }\n  {\n    function g() {\n      return 2;\n    }\n  }\n  {\n    function h() {\n      return 1;\n    }\n  }\n  function h() {\n    return 2;\n  }\n\n  return f() === 1 && g() === 2 && h() === 1;\n});")()}catch(e){return false;}}());
+</script>
+
+        </tr>
         <tr class="supertest">
           <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[2]</sup></a></span></td>
 
@@ -4078,37 +4176,6 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  if (!({ __
   return !({ __proto__: function () {} } instanceof Function);
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  if (!({ __proto__: [] } instanceof Array)) {\n    return false;\n  }\n  return !({ __proto__: function () {} } instanceof Function);\n});")()}catch(e){return false;}}());
-</script>
-
-        </tr>
-        <tr>
-          <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a><a href="#hoisted-block-level-function-note"><sup>[3]</sup></a></span></td>
-<script data-source="&quot;use strict&quot;;
-
-(function () {
-  // Note: only available outside of strict mode.
-  var passed = f() === 2 && g() === 4;
-  if (true) {
-    function f() {
-      return 1;
-    }
-  } else {
-    function f() {
-      return 2;
-    }
-  }
-  if (false) {
-    function g() {
-      return 3;
-    }
-  } else {
-    function g() {
-      return 4;
-    }
-  }
-  return passed;
-});">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  // Note: only available outside of strict mode.\n  var passed = f() === 2 && g() === 4;\n  if (true) {\n    function f() {\n      return 1;\n    }\n  } else {\n    function f() {\n      return 2;\n    }\n  }\n  if (false) {\n    function g() {\n      return 3;\n    }\n  } else {\n    function g() {\n      return 4;\n    }\n  }\n  return passed;\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -4188,9 +4255,6 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
       </p>
       <p id="proto-in-object-literals-note">
         <sup>[2]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
-      </p>
-      <p id="hoisted-block-level-function-note">
-        <sup>[3]</sup> Note that the specified semantics is identical to that used by Internet Explorer prior to IE 11.
       </p>
     </div>
   </div>
