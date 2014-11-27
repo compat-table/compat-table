@@ -55,16 +55,8 @@
       <tbody>
         <tr>
           <td id="proper_tail_calls_(tail_call_optimisation)"><span><a class="anchor" href="#proper_tail_calls_(tail_call_optimisation)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls">proper tail calls (tail call optimisation)</a></span></td>
-<script data-source="(function(){
-&quot;use strict&quot;;
-return (function f(n){
-  if (n <= 0) {
-    return  &quot;foo&quot;;
-  }
-  return f(n - 1);
-}(1e6)) === &quot;foo&quot;;
-  })">
-test(function(){try{return eval("(function(){\n\"use strict\";\nreturn (function f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return f(n - 1);\n}(1e6)) === \"foo\";\n  })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -171,7 +163,7 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
-          <td><span>redefining a const is a syntax error</span></td>
+          <td><span>redefining a const is an error</span></td>
 <script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
@@ -188,18 +180,14 @@ test(function(){try{return eval("(function(){\nvar passed = (function(){ try { q
 
         <tr class="subtest" data-parent="const">
           <td><span>basic support (strict mode)</span></td>
-<script data-source="(function(){
-&quot;use strict&quot;;
-var foo = 123;
-return (foo === 123);
-      })">
-test(function(){try{return eval("(function(){\n\"use strict\";\nvar foo = 123;\nreturn (foo === 123);\n      })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped (strict mode)</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -210,13 +198,8 @@ test(function(){try{return Function("/* Error during compilation: This test's co
 
         <tr class="subtest" data-parent="const">
           <td><span>temporal dead zone (strict mode)</span></td>
-<script data-source="(function(){
-'use strict';
-var passed = (function(){ try { qux; } catch(e) { return true; }}());
-var qux = 456;
-return passed;
-      })">
-test(function(){try{return eval("(function(){\n'use strict';\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nvar qux = 456;\nreturn passed;\n      })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -262,41 +245,32 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
 
         <tr class="subtest" data-parent="let">
           <td><span>basic support (strict mode)</span></td>
-<script data-source="(function(){
-'use strict';
-var foo = 123;
-return (foo === 123);
-      })">
-test(function(){try{return eval("(function(){\n'use strict';\nvar foo = 123;\nreturn (foo === 123);\n      })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>is block-scoped (strict mode)</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope (strict mode)</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>temporal dead zone (strict mode)</span></td>
-<script data-source="(function(){
-'use strict';
-var passed = (function(){ try {  qux; } catch(e) { return true; }}());
-var qux = 456;
-return passed;
-      })">
-test(function(){try{return eval("(function(){\n'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nvar qux = 456;\nreturn passed;\n      })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>for-loop iteration scope (strict mode)</span></td>
-<script data-source="">
-test(function(){try{return eval("")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -791,10 +765,8 @@ test(function(){try{return eval("(function(){\nvar re = new RegExp('\\\\w');\nva
 
         <tr class="subtest" data-parent="RegExp_y_and_u_flags">
           <td><span>"u" flag</span></td>
-<script data-source="(RegExp[&quot;__polyfill__&quot;]||function(obj1, obj2){var arr=RegExp[&quot;__polyfill__&quot;];if(!arr)arr=RegExp[&quot;__polyfill__&quot;]=[];arr.push([obj1,obj2])})({&quot;.&quot;:&quot;(?:[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|.)&quot;}, {});(function(){
-return &quot;𠮷&quot;.match((new RegExp(&quot;.&quot;, &quot;u&quot;)))[0].length === 2;
-      })">
-test(function(){try{return eval("(RegExp[\"__polyfill__\"]||function(obj1, obj2){var arr=RegExp[\"__polyfill__\"];if(!arr)arr=RegExp[\"__polyfill__\"]=[];arr.push([obj1,obj2])})({\".\":\"(?:[\\\\uD800-\\\\uDBFF][\\\\uDC00-\\\\uDFFF]|.)\"}, {});(function(){\nreturn \"𠮷\".match((new RegExp(\".\", \"u\")))[0].length === 2;\n      })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1625,14 +1597,6 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 test(function(){try{return eval("(function(){\nreturn typeof WeakMap.prototype.delete === \"function\";\n      })")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="WeakMap">
-          <td><span>WeakMap.prototype.clear</span></td>
-<script data-source="(function(){
-return typeof WeakMap.prototype.clear === &quot;function&quot;;
-      })">
-test(function(){try{return eval("(function(){\nreturn typeof WeakMap.prototype.clear === \"function\";\n      })")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -1678,14 +1642,6 @@ test(function(){try{return eval("(function(){\nvar weakset = new WeakSet();\nvar
 return typeof WeakSet.prototype.delete === &quot;function&quot;;
       })">
 test(function(){try{return eval("(function(){\nreturn typeof WeakSet.prototype.delete === \"function\";\n      })")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="WeakSet">
-          <td><span>WeakSet.prototype.clear</span></td>
-<script data-source="(function(){
-return typeof WeakSet.prototype.clear === &quot;function&quot;;
-      })">
-test(function(){try{return eval("(function(){\nreturn typeof WeakSet.prototype.clear === \"function\";\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -1950,6 +1906,22 @@ return passed;
 test(function(){try{return eval("(function(){\nvar obj = Proxy.revocable({}, { get: function() { return 5; } });\nvar passed = (obj.proxy.foo === 5);\nobj.revoke();\ntry {\n  obj.proxy.foo;\n} catch(e) {\n  passed &= e instanceof TypeError;\n}\nreturn passed;\n      })")()}catch(e){return false;}}());
 </script>
 
+        <tr class="subtest" data-parent="Proxy">
+          <td><span>Array.isArray support</span></td>
+<script data-source="(function(){
+return Array.isArray(new Proxy([], {}));
+      })">
+test(function(){try{return eval("(function(){\nreturn Array.isArray(new Proxy([], {}));\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Proxy">
+          <td><span>JSON.stringify support</span></td>
+<script data-source="(function(){
+return JSON.stringify(new Proxy(['foo'], {})) === '[&quot;foo&quot;]';
+      })">
+test(function(){try{return eval("(function(){\nreturn JSON.stringify(new Proxy(['foo'], {})) === '[\"foo\"]';\n      })")()}catch(e){return false;}}());
+</script>
+
         </tr>
         <tr class="supertest">
           <td id="Reflect"><span><a class="anchor" href="#Reflect">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
@@ -2041,14 +2013,8 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
         </tr>
         <tr>
           <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[1]</sup></a></span></td>
-<script data-source="(function(){
-'use strict';
-{
-  function f(){}
-}
-return typeof f === &quot;undefined&quot;;
-  })">
-test(function(){try{return eval("(function(){\n'use strict';\n{\n  function f(){}\n}\nreturn typeof f === \"undefined\";\n  })")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: undefined is not a function*/">
+test(function(){try{return Function("/* Error during compilation: undefined is not a function*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2104,7 +2070,7 @@ test(function(){try{return eval("(function(){\nvar e = (g = [9, {x:10}])[0], f =
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>parameters</span></td>
+          <td><span>in parameters</span></td>
 <script data-source="(function(){
 return (function(e, d) {var a = e.a, b = e.x, e = e.y;var c = d[0], d = d[1];
   return a === 1 && b === 2 && c === 3 &&
@@ -2123,6 +2089,12 @@ return a === 3 && b instanceof Array && (b + &quot;&quot;) === &quot;4,5&quot; &
    c === 6 && d instanceof Array && d.length === 0;
       })">
 test(function(){try{return eval("(function(){var SLICE$0 = Array.prototype.slice;\nvar a = (b = [3, 4, 5])[0], b = SLICE$0.call(b, 1);\nvar c = (d = [6])[0], d = SLICE$0.call(d, 1);\nreturn a === 3 && b instanceof Array && (b + \"\") === \"4,5\" &&\n   c === 6 && d instanceof Array && d.length === 0;\n      })")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>nested rest</span></td>
+<script data-source="/* Error during compilation: false == true*/">
+test(function(){try{return Function("/* Error during compilation: false == true*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2434,12 +2406,12 @@ test(function(){try{return eval("(function(){\nreturn typeof String.prototype.en
 </script>
 
         <tr class="subtest" data-parent="String.prototype_methods">
-          <td><span>String.prototype.contains</span></td>
+          <td><span>String.prototype.includes</span></td>
 <script data-source="(function(){
-return typeof String.prototype.contains === 'function'
-  && &quot;foobar&quot;.contains(&quot;oba&quot;);
+return typeof String.prototype.includes === 'function'
+  && &quot;foobar&quot;.includes(&quot;oba&quot;);
       })">
-test(function(){try{return eval("(function(){\nreturn typeof String.prototype.contains === 'function'\n  && \"foobar\".contains(\"oba\");\n      })")()}catch(e){return false;}}());
+test(function(){try{return eval("(function(){\nreturn typeof String.prototype.includes === 'function'\n  && \"foobar\".includes(\"oba\");\n      })")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2527,13 +2499,13 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
-          <td><span>Symbol.isRegExp</span></td>
+          <td><span>Symbol.iterator</span></td>
 <script data-source="">
 test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
-          <td><span>Symbol.iterator</span></td>
+          <td><span>Symbol.species</span></td>
 <script data-source="">
 test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
@@ -2561,35 +2533,27 @@ test(function(){try{return eval("")()}catch(e){return false;}}());
           <td id="RegExp.prototype_methods"><span><a class="anchor" href="#RegExp.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype methods</a></span></td>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.match</span></td>
-<script data-source="(function(){
-return typeof RegExp.prototype.match === 'function';
-      })">
-test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.match === 'function';\n      })")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.match]</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.replace</span></td>
-<script data-source="(function(){
-return typeof RegExp.prototype.replace === 'function';
-      })">
-test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.replace === 'function';\n      })")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.replace]</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.split</span></td>
-<script data-source="(function(){
-return typeof RegExp.prototype.split === 'function';
-      })">
-test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.split === 'function';\n      })")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.split]</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.search</span></td>
-<script data-source="(function(){
-return typeof RegExp.prototype.search === 'function';
-      })">
-test(function(){try{return eval("(function(){\nreturn typeof RegExp.prototype.search === 'function';\n      })")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.search]</span></td>
+<script data-source="">
+test(function(){try{return eval("")()}catch(e){return false;}}());
 </script>
 
         </tr>

@@ -234,7 +234,7 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  {\n    var
 </script>
 
         <tr class="subtest" data-parent="const">
-          <td><span>redefining a const is a syntax error</span></td>
+          <td><span>redefining a const is an error</span></td>
 <script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
@@ -587,23 +587,15 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return (fu
           <td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
 <script data-source="&quot;use strict&quot;;
 
-var _argumentsToArray = function (args) {
-  var target = new Array(args.length);
-  for (var i = 0; i < args.length; i++) {
-    target[i] = args[i];
-  }
-
-  return target;
-};
-
+var _slice = Array.prototype.slice;
 (function () {
   return (function () {
-    var args = _argumentsToArray(arguments);
+    var args = _slice.call(arguments);
 
     return typeof args !== &quot;undefined&quot;;
   }());
 });">
-test(function(){try{return eval("\"use strict\";\n\nvar _argumentsToArray = function (args) {\n  var target = new Array(args.length);\n  for (var i = 0; i < args.length; i++) {\n    target[i] = args[i];\n  }\n\n  return target;\n};\n\n(function () {\n  return (function () {\n    var args = _argumentsToArray(arguments);\n\n    return typeof args !== \"undefined\";\n  }());\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\nvar _slice = Array.prototype.slice;\n(function () {\n  return (function () {\n    var args = _slice.call(arguments);\n\n    return typeof args !== \"undefined\";\n  }());\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2219,16 +2211,6 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var weakma
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakMap.prototype[\"delete\"] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="WeakMap">
-          <td><span>WeakMap.prototype.clear</span></td>
-<script data-source="&quot;use strict&quot;;
-
-(function () {
-  return typeof WeakMap.prototype.clear === &quot;function&quot;;
-});">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakMap.prototype.clear === \"function\";\n});")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -2282,16 +2264,6 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var weakse
   return typeof WeakSet.prototype[&quot;delete&quot;] === &quot;function&quot;;
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakSet.prototype[\"delete\"] === \"function\";\n});")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="WeakSet">
-          <td><span>WeakSet.prototype.clear</span></td>
-<script data-source="&quot;use strict&quot;;
-
-(function () {
-  return typeof WeakSet.prototype.clear === &quot;function&quot;;
-});">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof WeakSet.prototype.clear === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2567,6 +2539,26 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var proxie
   return passed;
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var obj = Proxy.revocable({}, { get: function () {\n      return 5;\n    } });\n  var passed = (obj.proxy.foo === 5);\n  obj.revoke();\n  try {\n    obj.proxy.foo;\n  } catch (e) {\n    passed &= e instanceof TypeError;\n  }\n  return passed;\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Proxy">
+          <td><span>Array.isArray support</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  return Array.isArray(new Proxy([], {}));
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return Array.isArray(new Proxy([], {}));\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Proxy">
+          <td><span>JSON.stringify support</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  return JSON.stringify(new Proxy([&quot;foo&quot;], {})) === &quot;[\&quot;foo\&quot;]&quot;;
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return JSON.stringify(new Proxy([\"foo\"], {})) === \"[\\\"foo\\\"]\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2878,7 +2870,7 @@ test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>parameters</span></td>
+          <td><span>in parameters</span></td>
 <script data-source="&quot;use strict&quot;;
 
 var _toArray = function (arr) {
@@ -2926,6 +2918,29 @@ var _toArray = function (arr) {
   return a === 3 && b instanceof Array && (b + &quot;&quot;) === &quot;4,5&quot; && c === 6 && d instanceof Array && d.length === 0;
 });">
 test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var _ref = [3, 4, 5];\n\n  var _ref2 = _toArray(_ref);\n\n  var a = _ref2[0];\n  var b = _toArray(_ref2).slice(1);\n\n  var _ref3 = [6];\n\n  var _ref4 = _toArray(_ref3);\n\n  var c = _ref4[0];\n  var d = _toArray(_ref4).slice(1);\n\n  return a === 3 && b instanceof Array && (b + \"\") === \"4,5\" && c === 6 && d instanceof Array && d.length === 0;\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>nested rest</span></td>
+<script data-source="&quot;use strict&quot;;
+
+var _toArray = function (arr) {
+  return Array.isArray(arr) ? arr : Array.from(arr);
+};
+
+(function () {
+  var a = [1, 2, 3], first, last;
+  var _ref = a;
+  var _ref2 = _toArray(_ref);
+
+  first = _ref2[0];
+  var _ref3 = _toArray(_toArray(_ref2).slice(1));
+
+  a[2] = _ref3[0];
+  last = _ref3[1];
+  return first === 1 && last === 3 && (a + &quot;&quot;) === &quot;1,2,2&quot;;
+});">
+test(function(){try{return eval("\"use strict\";\n\nvar _toArray = function (arr) {\n  return Array.isArray(arr) ? arr : Array.from(arr);\n};\n\n(function () {\n  var a = [1, 2, 3], first, last;\n  var _ref = a;\n  var _ref2 = _toArray(_ref);\n\n  first = _ref2[0];\n  var _ref3 = _toArray(_toArray(_ref2).slice(1));\n\n  a[2] = _ref3[0];\n  last = _ref3[1];\n  return first === 1 && last === 3 && (a + \"\") === \"1,2,2\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -3388,13 +3403,13 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typ
 </script>
 
         <tr class="subtest" data-parent="String.prototype_methods">
-          <td><span>String.prototype.contains</span></td>
+          <td><span>String.prototype.includes</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof String.prototype.contains === &quot;function&quot; && &quot;foobar&quot;.contains(&quot;oba&quot;);
+  return typeof String.prototype.includes === &quot;function&quot; && &quot;foobar&quot;.includes(&quot;oba&quot;);
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof String.prototype.contains === \"function\" && \"foobar\".contains(\"oba\");\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof String.prototype.includes === \"function\" && \"foobar\".includes(\"oba\");\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -3585,16 +3600,6 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = []
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
-          <td><span>Symbol.isRegExp</span></td>
-<script data-source="&quot;use strict&quot;;
-
-(function () {
-  return RegExp.prototype[Symbol.isRegExp] === true;
-});">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return RegExp.prototype[Symbol.isRegExp] === true;\n});")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="well-known_symbols">
           <td><span>Symbol.iterator</span></td>
 <script data-source="&quot;use strict&quot;;
 
@@ -3618,6 +3623,16 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return Reg
   return c === &quot;foo&quot;;
 });">
 test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = 0, b = {};\n  b[Symbol.iterator] = function () {\n    return {\n      next: function () {\n        return {\n          done: a++ === 1,\n          value: \"foo\"\n        };\n      }\n    };\n  };\n  var c;\n  for (var _iterator = b[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) {\n    c = _step.value;\n  }\n\n  return c === \"foo\";\n});")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="well-known_symbols">
+          <td><span>Symbol.species</span></td>
+<script data-source="&quot;use strict&quot;;
+
+(function () {
+  return RegExp[Symbol.species] === RegExp && Array[Symbol.species] === Array && !(Symbol.species in Object);
+});">
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return RegExp[Symbol.species] === RegExp && Array[Symbol.species] === Array && !(Symbol.species in Object);\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
@@ -3676,43 +3691,43 @@ test(function(){try{return eval("\"use strict\";\n\n(function () {\n  var a = { 
           <td id="RegExp.prototype_methods"><span><a class="anchor" href="#RegExp.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype methods</a></span></td>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.match</span></td>
+          <td><span>RegExp.prototype[Symbol.match]</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof RegExp.prototype.match === &quot;function&quot;;
+  return typeof RegExp.prototype[Symbol.match] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.match === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype[Symbol.match] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.replace</span></td>
+          <td><span>RegExp.prototype[Symbol.replace]</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof RegExp.prototype.replace === &quot;function&quot;;
+  return typeof RegExp.prototype[Symbol.replace] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.replace === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype[Symbol.replace] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.split</span></td>
+          <td><span>RegExp.prototype[Symbol.split]</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof RegExp.prototype.split === &quot;function&quot;;
+  return typeof RegExp.prototype[Symbol.split] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.split === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype[Symbol.split] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.search</span></td>
+          <td><span>RegExp.prototype[Symbol.search]</span></td>
 <script data-source="&quot;use strict&quot;;
 
 (function () {
-  return typeof RegExp.prototype.search === &quot;function&quot;;
+  return typeof RegExp.prototype[Symbol.search] === &quot;function&quot;;
 });">
-test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype.search === \"function\";\n});")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n\n(function () {\n  return typeof RegExp.prototype[Symbol.search] === \"function\";\n});")()}catch(e){return false;}}());
 </script>
 
         </tr>
