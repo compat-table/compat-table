@@ -188,7 +188,7 @@ test(function(){try{return Function("/* Error during compilation: \n(2,3): error
 </script>
 
         <tr class="subtest" data-parent="const">
-          <td><span>redefining a const is a syntax error</span></td>
+          <td><span>redefining a const is an error</span></td>
 <script data-source="/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/">
 test(function(){try{return Function("/* Error during compilation: This test's code invokes eval() and cannot be compiled.*/")()}catch(e){return false;}}());
 </script>
@@ -1711,15 +1711,6 @@ test(function(){try{return eval("(function () {\n    var weakmap = new WeakMap()
 test(function(){try{return eval("(function () {\n    return typeof WeakMap.prototype.delete === \"function\";\n});\n")()}catch(e){return false;}}());
 </script>
 
-        <tr class="subtest" data-parent="WeakMap">
-          <td><span>WeakMap.prototype.clear</span></td>
-<script data-source="(function () {
-    return typeof WeakMap.prototype.clear === &quot;function&quot;;
-});
-">
-test(function(){try{return eval("(function () {\n    return typeof WeakMap.prototype.clear === \"function\";\n});\n")()}catch(e){return false;}}());
-</script>
-
         </tr>
         <tr class="supertest">
           <td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
@@ -1750,14 +1741,6 @@ test(function(){try{return Function("/* Error during compilation: \n(2,19): erro
 
         <tr class="subtest" data-parent="WeakSet">
           <td><span>WeakSet.prototype.delete</span></td>
-<script data-source="/* Error during compilation: 
-(2,15): error TS2304: Cannot find name 'WeakSet'.
-*/">
-test(function(){try{return Function("/* Error during compilation: \n(2,15): error TS2304: Cannot find name 'WeakSet'.\n*/")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="WeakSet">
-          <td><span>WeakSet.prototype.clear</span></td>
 <script data-source="/* Error during compilation: 
 (2,15): error TS2304: Cannot find name 'WeakSet'.
 */">
@@ -1889,6 +1872,22 @@ test(function(){try{return Function("/* Error during compilation: \n(4,9): error
 (8,3): error TS2447: The '&=' operator is not allowed for boolean types. Consider using '&&' instead.
 */">
 test(function(){try{return Function("/* Error during compilation: \n(2,11): error TS2304: Cannot find name 'Proxy'.\n(8,3): error TS2447: The '&=' operator is not allowed for boolean types. Consider using '&&' instead.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Proxy">
+          <td><span>Array.isArray support</span></td>
+<script data-source="/* Error during compilation: 
+(2,26): error TS2304: Cannot find name 'Proxy'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,26): error TS2304: Cannot find name 'Proxy'.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="Proxy">
+          <td><span>JSON.stringify support</span></td>
+<script data-source="/* Error during compilation: 
+(2,27): error TS2304: Cannot find name 'Proxy'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,27): error TS2304: Cannot find name 'Proxy'.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2084,7 +2083,7 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
 </script>
 
         <tr class="subtest" data-parent="destructuring">
-          <td><span>parameters</span></td>
+          <td><span>in parameters</span></td>
 <script data-source="/* Error during compilation: 
 (2,18): error TS1005: ')' expected.
 (2,23): error TS1005: ';' expected.
@@ -2104,6 +2103,14 @@ test(function(){try{return Function("/* Error during compilation: \n(2,18): erro
 (3,9): error TS1137: Expression or comma expected.
 */">
 test(function(){try{return Function("/* Error during compilation: \n(2,5): error TS1134: Variable declaration expected.\n(2,9): error TS1137: Expression or comma expected.\n(3,5): error TS1134: Variable declaration expected.\n(3,9): error TS1137: Expression or comma expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="destructuring">
+          <td><span>nested rest</span></td>
+<script data-source="/* Error during compilation: 
+(3,9): error TS1137: Expression or comma expected.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,9): error TS1137: Expression or comma expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="destructuring">
@@ -2449,12 +2456,12 @@ test(function(){try{return Function("/* Error during compilation: \n(2,32): erro
 </script>
 
         <tr class="subtest" data-parent="String.prototype_methods">
-          <td><span>String.prototype.contains</span></td>
+          <td><span>String.prototype.includes</span></td>
 <script data-source="/* Error during compilation: 
-(2,32): error TS2339: Property 'contains' does not exist on type 'String'.
-(3,15): error TS2339: Property 'contains' does not exist on type 'string'.
+(2,32): error TS2339: Property 'includes' does not exist on type 'String'.
+(3,15): error TS2339: Property 'includes' does not exist on type 'string'.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,32): error TS2339: Property 'contains' does not exist on type 'String'.\n(3,15): error TS2339: Property 'contains' does not exist on type 'string'.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,32): error TS2339: Property 'includes' does not exist on type 'String'.\n(3,15): error TS2339: Property 'includes' does not exist on type 'string'.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
@@ -2569,20 +2576,23 @@ test(function(){try{return Function("/* Error during compilation: \n(3,3): error
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
-          <td><span>Symbol.isRegExp</span></td>
-<script data-source="/* Error during compilation: 
-(2,25): error TS2304: Cannot find name 'Symbol'.
-*/">
-test(function(){try{return Function("/* Error during compilation: \n(2,25): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
-</script>
-
-        <tr class="subtest" data-parent="well-known_symbols">
           <td><span>Symbol.iterator</span></td>
 <script data-source="/* Error during compilation: 
 (14,8): error TS1005: ';' expected.
 (14,11): error TS1005: ';' expected.
 */">
 test(function(){try{return Function("/* Error during compilation: \n(14,8): error TS1005: ';' expected.\n(14,11): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+</script>
+
+        <tr class="subtest" data-parent="well-known_symbols">
+          <td><span>Symbol.species</span></td>
+<script data-source="/* Error during compilation: 
+(2,15): error TS2304: Cannot find name 'Symbol'.
+(3,12): error TS2304: Cannot find name 'Symbol'.
+(4,8): error TS2304: Cannot find name 'Symbol'.
+(4,8): error TS2360: The left-hand side of an 'in' expression must be of types 'any', 'string' or 'number'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,15): error TS2304: Cannot find name 'Symbol'.\n(3,12): error TS2304: Cannot find name 'Symbol'.\n(4,8): error TS2304: Cannot find name 'Symbol'.\n(4,8): error TS2360: The left-hand side of an 'in' expression must be of types 'any', 'string' or 'number'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="well-known_symbols">
@@ -2621,39 +2631,35 @@ test(function(){try{return Function("/* Error during compilation: \n(3,3): error
           <td id="RegExp.prototype_methods"><span><a class="anchor" href="#RegExp.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype methods</a></span></td>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.match</span></td>
-<script data-source="(function () {
-    return typeof RegExp.prototype.match === 'function';
-});
-">
-test(function(){try{return eval("(function () {\n    return typeof RegExp.prototype.match === 'function';\n});\n")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.match]</span></td>
+<script data-source="/* Error during compilation: 
+(2,32): error TS2304: Cannot find name 'Symbol'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,32): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.replace</span></td>
-<script data-source="(function () {
-    return typeof RegExp.prototype.replace === 'function';
-});
-">
-test(function(){try{return eval("(function () {\n    return typeof RegExp.prototype.replace === 'function';\n});\n")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.replace]</span></td>
+<script data-source="/* Error during compilation: 
+(2,32): error TS2304: Cannot find name 'Symbol'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,32): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.split</span></td>
-<script data-source="(function () {
-    return typeof RegExp.prototype.split === 'function';
-});
-">
-test(function(){try{return eval("(function () {\n    return typeof RegExp.prototype.split === 'function';\n});\n")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.split]</span></td>
+<script data-source="/* Error during compilation: 
+(2,32): error TS2304: Cannot find name 'Symbol'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,32): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="RegExp.prototype_methods">
-          <td><span>RegExp.prototype.search</span></td>
-<script data-source="(function () {
-    return typeof RegExp.prototype.search === 'function';
-});
-">
-test(function(){try{return eval("(function () {\n    return typeof RegExp.prototype.search === 'function';\n});\n")()}catch(e){return false;}}());
+          <td><span>RegExp.prototype[Symbol.search]</span></td>
+<script data-source="/* Error during compilation: 
+(2,32): error TS2304: Cannot find name 'Symbol'.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(2,32): error TS2304: Cannot find name 'Symbol'.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>

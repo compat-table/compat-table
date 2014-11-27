@@ -503,7 +503,7 @@ exports.tests = [
         ie11:        true,
       }
     },
-    'redefining a const is a syntax error': {
+    'redefining a const is an error': {
       exec: function() {/*
         const baz = 1;
         try {
@@ -2402,21 +2402,6 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'WeakMap.prototype.clear': {
-      exec: function () {/*
-        return typeof WeakMap.prototype.clear === "function";
-      */},
-      res: {
-        ejs:         true,
-        ie11:        true,
-        firefox23:   true,
-        chrome21dev: true,
-        safari71_8:  true,
-        ios8:        true,
-        webkit:      true,
-        nodeharmony: true,
-      },
-    },
   },
 },
 {
@@ -2468,18 +2453,6 @@ exports.tests = [
     'WeakSet.prototype.delete': {
       exec: function () {/*
         return typeof WeakSet.prototype.delete === "function";
-      */},
-      res: {
-        ejs:         true,
-        ie11tp:      true,
-        firefox34:   true,
-        chrome30:    true,
-        nodeharmony: true,
-      },
-    },
-    'WeakSet.prototype.clear': {
-      exec: function () {/*
-        return typeof WeakSet.prototype.clear === "function";
       */},
       res: {
         ejs:         true,
@@ -2794,6 +2767,23 @@ exports.tests = [
         firefox34:   true,
       },
     },
+    'Array.isArray support': {
+      exec: function () {/*
+        return Array.isArray(new Proxy([], {}));
+      */},
+      res: {
+        firefox18: true,
+      },
+    },
+    'JSON.stringify support': {
+      exec: function () {/*
+        return JSON.stringify(new Proxy(['foo'], {})) === '["foo"]';
+      */},
+      res: {
+        firefox18: true,  // a bug in FF18
+        firefox23: false,
+      },
+    },
   },
 },
 {
@@ -3083,7 +3073,7 @@ exports.tests = [
       */},
       res: temp.destructuringResults,
     },
-    'parameters': {
+    'in parameters': {
       exec: function(){/*
         return (function({a, x:b, y:e}, [c, d]) {
           return a === 1 && b === 2 && c === 3 &&
@@ -3113,6 +3103,15 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         firefox34:   true,
+      },
+    },
+    'nested rest': {
+      exec: function(){/*
+        var a = [1, 2, 3], first, last;
+        [first, ...[a[2], last]] = a;
+        return first === 1 && last === 3 && (a + "") === "1,2,2";
+      */},
+      res: {
       },
     },
     'defaults': {
@@ -3637,19 +3636,23 @@ exports.tests = [
         nodeharmony: true,
       },
     },
-    'String.prototype.contains': {
+    'String.prototype.includes': {
       exec: function () {/*
-        return typeof String.prototype.contains === 'function'
-          && "foobar".contains("oba");
+        return typeof String.prototype.includes === 'function'
+          && "foobar".includes("oba");
       */},
       res: {
-        tr:          true,
-        _6to5:       true,
-        ejs:         true,
-        firefox18:   true,
-        chrome30:    true,
-        webkit:      true,
-        nodeharmony: true,
+        tr:          {
+          val: false,
+          note_id: 'string-contains',
+          note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
+        },
+        _6to5:       { val: false, note_id: 'string-contains' },
+        ejs:         { val: false, note_id: 'string-contains' },
+        firefox18:   { val: false, note_id: 'string-contains' },
+        chrome30:    { val: false, note_id: 'string-contains' },
+        webkit:      { val: false, note_id: 'string-contains' },
+        nodeharmony: { val: false, note_id: 'string-contains' },
       },
     },
   },
@@ -3998,13 +4001,6 @@ exports.tests = [
        ejs:         true,
       },
     },
-    'Symbol.isRegExp': {
-      exec: function() {/*
-        return RegExp.prototype[Symbol.isRegExp] === true;
-      */},
-      res: {
-      },
-    },
     'Symbol.iterator': {
       exec: function() {/*
         var a = 0, b = {};
@@ -4027,6 +4023,15 @@ exports.tests = [
         ie11tp:      true,
         chrome37:    true,
         ejs:         true,
+      },
+    },
+    'Symbol.species': {
+      exec: function() {/*
+        return RegExp[Symbol.species] === RegExp
+          && Array[Symbol.species] === Array
+          && !(Symbol.species in Object);
+      */},
+      res: {
       },
     },
     'Symbol.toPrimitive': {
@@ -4074,27 +4079,27 @@ exports.tests = [
   name: 'RegExp.prototype methods',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
-    'RegExp.prototype.match': {
+    'RegExp.prototype[Symbol.match]': {
       exec: function () {/*
-        return typeof RegExp.prototype.match === 'function';
+        return typeof RegExp.prototype[Symbol.match] === 'function';
       */},
       res: {},
     },
-    'RegExp.prototype.replace': {
+    'RegExp.prototype[Symbol.replace]': {
       exec: function () {/*
-        return typeof RegExp.prototype.replace === 'function';
+        return typeof RegExp.prototype[Symbol.replace] === 'function';
       */},
       res: {},
     },
-    'RegExp.prototype.split': {
+    'RegExp.prototype[Symbol.split]': {
       exec: function () {/*
-        return typeof RegExp.prototype.split === 'function';
+        return typeof RegExp.prototype[Symbol.split] === 'function';
       */},
       res: {},
     },
-    'RegExp.prototype.search': {
+    'RegExp.prototype[Symbol.search]': {
       exec: function () {/*
-        return typeof RegExp.prototype.search === 'function';
+        return typeof RegExp.prototype[Symbol.search] === 'function';
       */},
       res: {},
     },
