@@ -2790,19 +2790,14 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var foo = 123
           <td><span>is block-scoped</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
+  var bar = 123;
   {
-    var bar = 456;
+    var bar$__0 = 456;
   }
-  return (function() {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
+  return bar === 123;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  {\n    var bar = 456;\n  }\n  return (function() {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var bar = 123;\n  {\n    var bar$__0 = 456;\n  }\n  return bar === 123;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -2846,19 +2841,14 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  \"use strict\
 <script data-source="&quot;use strict&quot;;
 (function() {
   'use strict';
+  var bar = 123;
   {
-    var bar = 456;
+    var bar$__0 = 456;
   }
-  return (function() {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
+  return bar === 123;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  {\n    var bar = 456;\n  }\n  return (function() {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  var bar = 123;\n  {\n    var bar$__0 = 456;\n  }\n  return bar === 123;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -2905,36 +2895,26 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var foo = 123
           <td><span>is block-scoped</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
+  var bar = 123;
   {
-    var bar = 456;
+    var bar$__0 = 456;
   }
-  return (function() {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
+  return bar === 123;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  {\n    var bar = 456;\n  }\n  return (function() {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var bar = 123;\n  {\n    var bar$__0 = 456;\n  }\n  return bar === 123;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
 <script data-source="&quot;use strict&quot;;
 (function() {
-  for (var baz = 0; false; false) {}
-  return (function() {
-    try {
-      baz;
-    } catch (e) {
-      return true;
-    }
-  }());
+  var baz = 1;
+  for (var baz$__0 = 0; false; false) {}
+  return baz === 1;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  for (var baz = 0; false; false) {}\n  return (function() {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var baz = 1;\n  for (var baz$__0 = 0; false; false) {}\n  return baz === 1;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -3005,19 +2985,14 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';
 <script data-source="&quot;use strict&quot;;
 (function() {
   'use strict';
+  var bar = 123;
   {
-    var bar = 456;
+    var bar$__0 = 456;
   }
-  return (function() {
-    try {
-      bar;
-    } catch (e) {
-      return true;
-    }
-  }());
+  return bar === 123;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  {\n    var bar = 456;\n  }\n  return (function() {\n    try {\n      bar;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  var bar = 123;\n  {\n    var bar$__0 = 456;\n  }\n  return bar === 123;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -3025,17 +3000,12 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';
 <script data-source="&quot;use strict&quot;;
 (function() {
   'use strict';
-  for (var baz = 0; false; false) {}
-  return (function() {
-    try {
-      baz;
-    } catch (e) {
-      return true;
-    }
-  }());
+  var baz = 1;
+  for (var baz$__0 = 0; false; false) {}
+  return baz === 1;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  for (var baz = 0; false; false) {}\n  return (function() {\n    try {\n      baz;\n    } catch (e) {\n      return true;\n    }\n  }());\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  var baz = 1;\n  for (var baz$__0 = 0; false; false) {}\n  return baz === 1;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -3288,14 +3258,16 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  var C = funct
 (function() {
   var C = function C() {};
   ($traceurRuntime.createClass)(C, {}, {});
+  var c1 = C;
   {
-    var D = function D() {};
-    ($traceurRuntime.createClass)(D, {}, {});
+    var C = function C() {};
+    ($traceurRuntime.createClass)(C, {}, {});
+    var c2 = C;
   }
-  return typeof C === &quot;function&quot; && typeof D === &quot;undefined&quot;;
+  return C === c1;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  var C = function C() {};\n  ($traceurRuntime.createClass)(C, {}, {});\n  {\n    var D = function D() {};\n    ($traceurRuntime.createClass)(D, {}, {});\n  }\n  return typeof C === \"function\" && typeof D === \"undefined\";\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  var C = function C() {};\n  ($traceurRuntime.createClass)(C, {}, {});\n  var c1 = C;\n  {\n    var C = function C() {};\n    ($traceurRuntime.createClass)(C, {}, {});\n    var c2 = C;\n  }\n  return C === c1;\n});\n")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -5228,13 +5200,18 @@ test(function(){try{return eval("\"use strict\";\n(function() {\n  return Reflec
 <script data-source="&quot;use strict&quot;;
 (function() {
   'use strict';
-  {
-    var f = function() {};
+  function f() {
+    return 1;
   }
-  return typeof f === &quot;undefined&quot;;
+  {
+    var f$__0 = function() {
+      return 2;
+    };
+  }
+  return f() === 1;
 });
 ">
-test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  {\n    var f = function() {};\n  }\n  return typeof f === \"undefined\";\n});\n")()}catch(e){return false;}}());
+test(function(){try{return eval("\"use strict\";\n(function() {\n  'use strict';\n  function f() {\n    return 1;\n  }\n  {\n    var f$__0 = function() {\n      return 2;\n    };\n  }\n  return f() === 1;\n});\n")()}catch(e){return false;}}());
 </script>
 
         </tr>

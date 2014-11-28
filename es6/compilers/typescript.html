@@ -182,9 +182,10 @@ test(function(){try{return Function("/* Error during compilation: \n(2,1): error
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped</span></td>
 <script data-source="/* Error during compilation: 
-(2,3): error TS1129: Statement expected.
+(2,1): error TS1129: Statement expected.
+(3,3): error TS1129: Statement expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,3): error TS1129: Statement expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,1): error TS1129: Statement expected.\n(3,3): error TS1129: Statement expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -212,9 +213,10 @@ test(function(){try{return Function("/* Error during compilation: \n(3,1): error
         <tr class="subtest" data-parent="const">
           <td><span>is block-scoped (strict mode)</span></td>
 <script data-source="/* Error during compilation: 
-(3,3): error TS1129: Statement expected.
+(3,1): error TS1129: Statement expected.
+(4,3): error TS1129: Statement expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(3,3): error TS1129: Statement expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(3,1): error TS1129: Statement expected.\n(4,3): error TS1129: Statement expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="const">
@@ -246,19 +248,21 @@ test(function(){try{return Function("/* Error during compilation: \n(2,5): error
         <tr class="subtest" data-parent="let">
           <td><span>is block-scoped</span></td>
 <script data-source="/* Error during compilation: 
-(2,7): error TS1005: ';' expected.
+(2,5): error TS1005: ';' expected.
+(3,7): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,7): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,5): error TS1005: ';' expected.\n(3,7): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope</span></td>
 <script data-source="/* Error during compilation: 
-(2,9): error TS1005: ';' expected.
-(2,23): error TS1005: ')' expected.
-(2,30): error TS1005: ';' expected.
+(2,5): error TS1005: ';' expected.
+(3,9): error TS1005: ';' expected.
+(3,23): error TS1005: ')' expected.
+(3,30): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,9): error TS1005: ';' expected.\n(2,23): error TS1005: ')' expected.\n(2,30): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,5): error TS1005: ';' expected.\n(3,9): error TS1005: ';' expected.\n(3,23): error TS1005: ')' expected.\n(3,30): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -294,18 +298,20 @@ test(function(){try{return Function("/* Error during compilation: \n(3,1): error
         <tr class="subtest" data-parent="let">
           <td><span>is block-scoped (strict mode)</span></td>
 <script data-source="/* Error during compilation: 
-(3,3): error TS1129: Statement expected.
+(3,1): error TS1129: Statement expected.
+(4,3): error TS1129: Statement expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(3,3): error TS1129: Statement expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(3,1): error TS1129: Statement expected.\n(4,3): error TS1129: Statement expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
           <td><span>for-loop statement scope (strict mode)</span></td>
 <script data-source="/* Error during compilation: 
-(3,5): error TS1109: Expression expected.
-(3,30): error TS1005: ';' expected.
+(3,1): error TS1129: Statement expected.
+(4,5): error TS1109: Expression expected.
+(4,30): error TS1005: ';' expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(3,5): error TS1109: Expression expected.\n(3,30): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(3,1): error TS1129: Statement expected.\n(4,5): error TS1109: Expression expected.\n(4,30): error TS1005: ';' expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="let">
@@ -495,13 +501,13 @@ test(function(){try{return Function("/* Error during compilation: \n(2,1): error
           <td><span>is block-scoped</span></td>
 <script data-source="/* Error during compilation: 
 (2,1): error TS1129: Statement expected.
-(4,3): error TS1129: Statement expected.
-(5,1): error TS1128: Declaration or statement expected.
-(6,1): error TS1108: A 'return' statement can only be used within a function body.
-(7,7): error TS1128: Declaration or statement expected.
-(7,8): error TS1128: Declaration or statement expected.
+(5,3): error TS1129: Statement expected.
+(7,1): error TS1128: Declaration or statement expected.
+(8,1): error TS1108: A 'return' statement can only be used within a function body.
+(9,7): error TS1128: Declaration or statement expected.
+(9,8): error TS1128: Declaration or statement expected.
 */">
-test(function(){try{return Function("/* Error during compilation: \n(2,1): error TS1129: Statement expected.\n(4,3): error TS1129: Statement expected.\n(5,1): error TS1128: Declaration or statement expected.\n(6,1): error TS1108: A 'return' statement can only be used within a function body.\n(7,7): error TS1128: Declaration or statement expected.\n(7,8): error TS1128: Declaration or statement expected.\n*/")()}catch(e){return false;}}());
+test(function(){try{return Function("/* Error during compilation: \n(2,1): error TS1129: Statement expected.\n(5,3): error TS1129: Statement expected.\n(7,1): error TS1128: Declaration or statement expected.\n(8,1): error TS1108: A 'return' statement can only be used within a function body.\n(9,7): error TS1128: Declaration or statement expected.\n(9,8): error TS1128: Declaration or statement expected.\n*/")()}catch(e){return false;}}());
 </script>
 
         <tr class="subtest" data-parent="class">
@@ -2014,16 +2020,11 @@ test(function(){try{return Function("/* Error during compilation: \n(2,8): error
         </tr>
         <tr>
           <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[1]</sup></a></span></td>
-<script data-source="(function () {
-    'use strict';
-    {
-        function f() {
-        }
-    }
-    return typeof f === &quot;undefined&quot;;
-});
-">
-test(function(){try{return eval("(function () {\n    'use strict';\n    {\n        function f() {\n        }\n    }\n    return typeof f === \"undefined\";\n});\n")()}catch(e){return false;}}());
+<script data-source="/* Error during compilation: 
+(3,10): error TS2393: Duplicate function implementation.
+(5,12): error TS2393: Duplicate function implementation.
+*/">
+test(function(){try{return Function("/* Error during compilation: \n(3,10): error TS2393: Duplicate function implementation.\n(5,12): error TS2393: Duplicate function implementation.\n*/")()}catch(e){return false;}}());
 </script>
 
         </tr>
