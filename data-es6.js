@@ -649,6 +649,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        _6to5:       true,
         closure:     true,
         ie11:        true,
         firefox11:   { val: false, note_id: 'fx-let', },
@@ -852,6 +853,7 @@ exports.tests = [
         }());
       */},
       res: {
+        _6to5:       true,
       },
     }
   }
@@ -1044,6 +1046,7 @@ exports.tests = [
         return C === c1;
       */},
       res: {
+        _6to5:       true,
         ie11tp:      true,
       },
     },
@@ -1488,7 +1491,6 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
         firefox27:   true,
         chrome38:    true,
       },
@@ -1659,6 +1661,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        _6to5:       true,
         closure:     true,
         firefox34:   true,
       },
@@ -2191,6 +2194,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ie11tp:      true,
         firefox33:   true,
         chrome38:    true,
@@ -3058,6 +3062,7 @@ exports.tests = [
       */},
       res: {
         firefox34:    true,
+        _6to5:        true,
       },
     },
     'with instances of generic iterables': {
@@ -3067,6 +3072,7 @@ exports.tests = [
         return a === 1 && b === 2 && c === 3;
       */},
       res: {
+        _6to5:        true,
       },
     },
     'with objects': {
@@ -3122,6 +3128,8 @@ exports.tests = [
         return first === 1 && last === 3 && (a + "") === "1,2,2";
       */},
       res: {
+        tr:           true,
+        _6to5:        true,
       },
     },
     'defaults': {
@@ -3215,6 +3223,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        _6to5:       true,
         firefox34:   true,
       },
     },
@@ -3227,6 +3236,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        _6to5:       true,
         ie11tp:      true,
         firefox23:   true,
         chrome19dev: true,
@@ -3256,6 +3266,11 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        _6to5: {
+          value: true,
+          note_id: 'setprototypeof-polyfill',
+          note_html: 'Requires native support for <code>Object.prototype.__proto__</code>',
+        },
         ie11:        true,
         firefox31:   true,
         chrome34:    true,
@@ -3652,12 +3667,12 @@ exports.tests = [
           && "foobar".includes("oba");
       */},
       res: {
-        tr:          {
+        tr:          true,
+        _6to5:       {
           val: false,
           note_id: 'string-contains',
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
-        _6to5:       { val: false, note_id: 'string-contains' },
         ejs:         { val: false, note_id: 'string-contains' },
         firefox18:   { val: false, note_id: 'string-contains' },
         chrome30:    { val: false, note_id: 'string-contains' },
@@ -4030,6 +4045,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ie11tp:      true,
         chrome37:    true,
         ejs:         true,
