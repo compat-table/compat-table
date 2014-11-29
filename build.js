@@ -33,6 +33,8 @@ var esnext     = require('esnext');
 var es6tr      = require('es6-transpiler');
 var traceur    = require('traceur');
 
+var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
+
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   handle(require('./data-es5'));
@@ -42,6 +44,12 @@ process.nextTick(function () {
   handle(require('./data-non-standard'));
   
   // ES6 compilers
+  if (!useCompilers) {
+    return;
+  }
+  if (!fs.existsSync('es6/compilers')) {
+    fs.mkdirSync('es6/compilers');
+  }
   [
     {
       name: 'Traceur',
