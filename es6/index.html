@@ -1323,7 +1323,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
           <td id="let"><span><a class="anchor" href="#let">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let</a></span></td>
 
           <td class="tally tr" data-tally="0.8">8/10</td>
-          <td class="tally _6to5" data-tally="0.6">6/10</td>
+          <td class="tally _6to5" data-tally="0.7">7/10</td>
           <td class="tally ejs" data-tally="1">10/10</td>
           <td class="tally closure" data-tally="0.8">8/10</td>
           <td class="tally ie10" data-tally="0">0/10</td>
@@ -1499,7 +1499,7 @@ test(function(){try{return Function("\nlet baz = 1;\nfor(let baz = 0; false; fal
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no ie10">No</td>
@@ -1987,7 +1987,7 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
           <td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
 
           <td class="tally tr" data-tally="0.6">3/5</td>
-          <td class="tally _6to5" data-tally="0.6">3/5</td>
+          <td class="tally _6to5" data-tally="0.8">4/5</td>
           <td class="tally ejs" data-tally="0.6">3/5</td>
           <td class="tally closure" data-tally="0.6">3/5</td>
           <td class="tally ie10" data-tally="0">0/5</td>
@@ -2287,7 +2287,7 @@ test(function(){try{return Function("\nreturn (function(a=function(){\n  return 
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -2911,7 +2911,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(\"b
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
 
           <td class="tally tr" data-tally="0.875">7/8</td>
-          <td class="tally _6to5" data-tally="0.875">7/8</td>
+          <td class="tally _6to5" data-tally="1">8/8</td>
           <td class="tally ejs" data-tally="0.75">6/8</td>
           <td class="tally closure" data-tally="0.75">6/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
@@ -3032,7 +3032,7 @@ test(function(){try{return Function("\nclass C {}\nvar c1 = C;\n{\n  class C {}\
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -4212,7 +4212,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td id="generators"><span><a class="anchor" href="#generators">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions">generators</a></span></td>
 
           <td class="tally tr" data-tally="1">6/6</td>
-          <td class="tally _6to5" data-tally="1">6/6</td>
+          <td class="tally _6to5" data-tally="0.8333333333333334">5/6</td>
           <td class="tally ejs" data-tally="0">0/6</td>
           <td class="tally closure" data-tally="0.5">3/6</td>
           <td class="tally ie10" data-tally="0">0/6</td>
@@ -4411,7 +4411,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="yes _6to5">Yes</td>
+          <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -4950,7 +4950,7 @@ test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}c
           <td id="template_strings"><span><a class="anchor" href="#template_strings">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">template strings</a></span></td>
 
           <td class="tally tr" data-tally="1">2/2</td>
-          <td class="tally _6to5" data-tally="0.5">1/2</td>
+          <td class="tally _6to5" data-tally="1">2/2</td>
           <td class="tally ejs" data-tally="1">2/2</td>
           <td class="tally closure" data-tally="1">2/2</td>
           <td class="tally ie10" data-tally="0">0/2</td>
@@ -5077,7 +5077,7 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no ie10">No</td>
@@ -8562,7 +8562,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
           <td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
 
           <td class="tally tr" data-tally="0.9090909090909091">10/11</td>
-          <td class="tally _6to5" data-tally="0.9090909090909091">10/11</td>
+          <td class="tally _6to5" data-tally="1">11/11</td>
           <td class="tally ejs" data-tally="0.8181818181818182">9/11</td>
           <td class="tally closure" data-tally="0">0/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
@@ -8744,7 +8744,7 @@ test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) =
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -11950,8 +11950,8 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
         <tr class="supertest">
           <td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 
-          <td class="tally tr" data-tally="0.7272727272727273">8/11</td>
-          <td class="tally _6to5" data-tally="0.5454545454545454">6/11</td>
+          <td class="tally tr" data-tally="0.8181818181818182">9/11</td>
+          <td class="tally _6to5" data-tally="0.8181818181818182">9/11</td>
           <td class="tally ejs" data-tally="0.45454545454545453">5/11</td>
           <td class="tally closure" data-tally="0.7272727272727273">8/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
@@ -12126,7 +12126,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(1, 
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -12185,7 +12185,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(1, 
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -12479,8 +12479,8 @@ return first === 1 && last === 3 && (a + &quot;&quot;) === &quot;1,2,2&quot;;
 test(function(){try{return Function("\nvar a = [1, 2, 3], first, last;\n[first, ...[a[2], last]] = a;\nreturn first === 1 && last === 3 && (a + \"\") === \"1,2,2\";\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes tr">Yes</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -12710,7 +12710,7 @@ test(function(){try{return Function("\nreturn typeof Promise !== 'undefined' &&\
           <td id="Object_static_methods"><span><a class="anchor" href="#Object_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 
           <td class="tally tr" data-tally="0.75">3/4</td>
-          <td class="tally _6to5" data-tally="0">0/4</td>
+          <td class="tally _6to5" data-tally="0.5">2/4</td>
           <td class="tally ejs" data-tally="1">4/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
@@ -12768,7 +12768,7 @@ test(function(){try{return Function("\nvar o = Object.assign({a:true}, {b:true},
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -12827,7 +12827,7 @@ test(function(){try{return Function("\nreturn typeof Object.is === 'function' &&
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -12944,7 +12944,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="no _6to5">No<a href="#setprototypeof-polyfill-note"><sup>[13]</sup></a></td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -14227,7 +14227,7 @@ test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'f
         <tr class="supertest">
           <td id="String.prototype_methods"><span><a class="anchor" href="#String.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object">String.prototype methods</a></span></td>
 
-          <td class="tally tr" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally tr" data-tally="0.8333333333333334">5/6</td>
           <td class="tally _6to5" data-tally="0.6666666666666666">4/6</td>
           <td class="tally ejs" data-tally="0.6666666666666666">4/6</td>
           <td class="tally closure" data-tally="0">0/6</td>
@@ -14575,9 +14575,9 @@ return typeof String.prototype.includes === 'function'
 test(function(){try{return Function("\nreturn typeof String.prototype.includes === 'function'\n  && \"foobar\".includes(\"oba\");\n      ")()}catch(e){return false;}}());
 </script>
 
-          <td class="no tr">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no _6to5">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no ejs">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="yes tr">Yes</td>
+          <td class="no _6to5">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no ejs">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -14586,42 +14586,42 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox31">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox32 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox33">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox34">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox35">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox31">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox32 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox33">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox34">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox35">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome31 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome33 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome34 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome35 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome36 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome37 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome38">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome39">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no chrome30 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome31 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome33 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome34 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome35 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome36 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome37 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome38">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome39">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
           <td class="no safari71_8">No</td>
-          <td class="no webkit">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no webkit">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no nodeharmony">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
@@ -15304,7 +15304,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">well-known symbols</a></span></td>
 
           <td class="tally tr" data-tally="0.14285714285714285">1/7</td>
-          <td class="tally _6to5" data-tally="0">0/7</td>
+          <td class="tally _6to5" data-tally="0.14285714285714285">1/7</td>
           <td class="tally ejs" data-tally="0.5714285714285714">4/7</td>
           <td class="tally closure" data-tally="0">0/7</td>
           <td class="tally ie10" data-tally="0">0/7</td>
@@ -15498,7 +15498,7 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no ie10">No</td>
@@ -16596,20 +16596,20 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.values === 
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox32 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox32 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -16620,8 +16620,8 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.values === 
           <td class="yes chrome35 obsolete">Yes</td>
           <td class="yes chrome36 obsolete">Yes</td>
           <td class="yes chrome37 obsolete">Yes</td>
-          <td class="no chrome38">No<a href="#array-prototype-iterator-note"><sup>[16]</sup></a></td>
-          <td class="no chrome39">No<a href="#array-prototype-iterator-note"><sup>[16]</sup></a></td>
+          <td class="no chrome38">No<a href="#array-prototype-iterator-note"><sup>[17]</sup></a></td>
+          <td class="no chrome39">No<a href="#array-prototype-iterator-note"><sup>[17]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -17353,7 +17353,7 @@ test(function(){try{return Function("\nreturn typeof Math.imul === \"function\";
           <td class="yes firefox35">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[17]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[18]</sup></a></td>
           <td class="yes chrome30 obsolete">Yes</td>
           <td class="yes chrome31 obsolete">Yes</td>
           <td class="yes chrome33 obsolete">Yes</td>
@@ -18140,7 +18140,7 @@ test(function(){try{return Function("\nreturn typeof Math.fround === \"function\
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24 obsolete">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[18]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[19]</sup></a></td>
           <td class="yes firefox28 obsolete">Yes</td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
@@ -18301,7 +18301,7 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td class="no ios8">No</td>
         </tr>
         <tr class="supertest">
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[19]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[20]</sup></a></span></td>
 
           <td title="This feature is optional on non-browser platforms." class="tally tr not-applicable " data-tally="0">0/5</td>
           <td title="This feature is optional on non-browser platforms." class="tally _6to5 not-applicable " data-tally="0">0/5</td>
@@ -19051,26 +19051,29 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile ==
       <p id="fx-destructuring-note">
         <sup>[12]</sup> Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>
       </p>
+      <p id="setprototypeof-polyfill-note">
+        <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code>
+      </p>
       <p id="string-contains-note">
-        <sup>[13]</sup> Available as the draft standard <code>String.prototype.contains</code>
+        <sup>[14]</sup> Available as the draft standard <code>String.prototype.contains</code>
       </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[14]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[15]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[15]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[16]</sup> Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="array-prototype-iterator-note">
-        <sup>[16]</sup> Available as <code>Array.prototype[Symbol.iterator]</code>
+        <sup>[17]</sup> Available as <code>Array.prototype[Symbol.iterator]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[17]</sup> Available since Chrome 28
+        <sup>[18]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[18]</sup> Available since Firefox 26
+        <sup>[19]</sup> Available since Firefox 26
       </p>
       <p id="proto-in-object-literals-note">
-        <sup>[19]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[20]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
     </div>
   </div>
