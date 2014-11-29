@@ -83,7 +83,7 @@
       <thead>
         <tr>
           <th colspan="3"  class="platformtype"></th>
-          <th colspan="4"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
+          <th colspan="5"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
           <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
           <th colspan="4"  class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
           <th colspan="2"  class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
@@ -96,6 +96,7 @@
           <th class="platform _6to5 compiler"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br>polyfill</abbr></th>
           <th class="platform ejs compiler"><a href="#ejs" class="browser-name"><abbr title="Echo JS">EJS</abbr></th>
           <th class="platform closure compiler"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141023">Closure<br>Compiler</abbr></th>
+          <th class="platform typescript compiler"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.3">TypeScript</abbr></th>
           <th class="platform ie10 desktop"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></th>
           <th class="platform ie11 desktop"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></th>
           <th class="platform ie11tp desktop"><a href="#ie11tp" class="browser-name"><abbr title="Internet Explorer">IE<br>Technical<br>Preview</abbr><a href="#ie-experimental-flag-note"><sup>[1]</sup></a></th>
@@ -162,6 +163,7 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -215,6 +217,7 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="tally _6to5" data-tally="0.7777777777777778">7/9</td>
           <td class="tally ejs" data-tally="0.7777777777777778">7/9</td>
           <td class="tally closure" data-tally="0.6666666666666666">6/9</td>
+          <td class="tally typescript" data-tally="0.6666666666666666">6/9</td>
           <td class="tally ie10" data-tally="0">0/9</td>
           <td class="tally ie11" data-tally="0">0/9</td>
           <td class="tally ie11tp" data-tally="0.8888888888888888">8/9</td>
@@ -272,6 +275,7 @@ test(function(){try{return Function("\nreturn (() => 5)() === 5;\n      ")()}cat
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -330,6 +334,7 @@ test(function(){try{return Function("\nvar b = x => x + \"foo\";\nreturn (b(\"fe
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -388,6 +393,7 @@ test(function(){try{return Function("\nvar c = (v, w, x, y, z) => \"\" + v + w +
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -447,6 +453,7 @@ test(function(){try{return Function("\nvar d = { x : \"bar\", y : function() { r
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -506,6 +513,7 @@ test(function(){try{return Function("\nvar d = { x : \"foo\", y : function() { r
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -565,6 +573,7 @@ test(function(){try{return Function("\nvar d = { x : \"bar\", y : function() { r
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -623,6 +632,7 @@ test(function(){try{return Function("\nvar f = (function() { return z => argumen
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -682,6 +692,7 @@ test(function(){try{return Function("\nreturn (() => {\n  try { Function(\"x\\n 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -740,6 +751,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -793,6 +805,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td class="tally _6to5" data-tally="0.5">4/8</td>
           <td class="tally ejs" data-tally="1">8/8</td>
           <td class="tally closure" data-tally="0.75">6/8</td>
+          <td class="tally typescript" data-tally="0">0/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
           <td class="tally ie11" data-tally="1">8/8</td>
           <td class="tally ie11tp" data-tally="1">8/8</td>
@@ -851,6 +864,7 @@ test(function(){try{return Function("\nconst foo = 123;\nreturn (foo === 123);\n
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -910,6 +924,7 @@ test(function(){try{return Function("\nconst bar = 123;\n{ const bar = 456; }\nr
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -972,6 +987,7 @@ test(function(){try{return Function("\nconst baz = 1;\ntry {\n  Function(\"const
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1031,6 +1047,7 @@ test(function(){try{return Function("\nvar passed = (function(){ try { qux; } ca
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1090,6 +1107,7 @@ test(function(){try{return Function("\n\"use strict\";\nconst foo = 123;\nreturn
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1150,6 +1168,7 @@ test(function(){try{return Function("\n'use strict';\nconst bar = 123;\n{ const 
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1213,6 +1232,7 @@ test(function(){try{return Function("\n'use strict';\nconst baz = 1;\ntry {\n  F
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1273,6 +1293,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1326,6 +1347,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
           <td class="tally _6to5" data-tally="0.7">7/10</td>
           <td class="tally ejs" data-tally="1">10/10</td>
           <td class="tally closure" data-tally="0.8">8/10</td>
+          <td class="tally typescript" data-tally="0">0/10</td>
           <td class="tally ie10" data-tally="0">0/10</td>
           <td class="tally ie11" data-tally="0.8">8/10</td>
           <td class="tally ie11tp" data-tally="0.8">8/10</td>
@@ -1384,6 +1406,7 @@ test(function(){try{return Function("\nlet foo = 123;\nreturn (foo === 123);\n  
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1443,6 +1466,7 @@ test(function(){try{return Function("\nlet bar = 123;\n{ let bar = 456; }\nretur
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1502,6 +1526,7 @@ test(function(){try{return Function("\nlet baz = 1;\nfor(let baz = 0; false; fal
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1561,6 +1586,7 @@ test(function(){try{return Function("\nvar passed = (function(){ try {  qux; } c
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1629,6 +1655,7 @@ test(function(){try{return Function("\nlet scopes = [];\nfor(let i = 0; i < 2; i
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -1688,6 +1715,7 @@ test(function(){try{return Function("\n'use strict';\nlet foo = 123;\nreturn (fo
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1748,6 +1776,7 @@ test(function(){try{return Function("\n'use strict';\nlet bar = 123;\n{ let bar 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1808,6 +1837,7 @@ test(function(){try{return Function("\n'use strict';\nlet baz = 1;\nfor(let baz 
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1868,6 +1898,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -1937,6 +1968,7 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -1990,6 +2022,7 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
           <td class="tally _6to5" data-tally="0.8">4/5</td>
           <td class="tally ejs" data-tally="0.6">3/5</td>
           <td class="tally closure" data-tally="0.6">3/5</td>
+          <td class="tally typescript" data-tally="0.6">3/5</td>
           <td class="tally ie10" data-tally="0">0/5</td>
           <td class="tally ie11" data-tally="0">0/5</td>
           <td class="tally ie11tp" data-tally="0">0/5</td>
@@ -2047,6 +2080,7 @@ test(function(){try{return Function("\nreturn (function (a = 1, b = 2) { return 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2104,6 +2138,7 @@ test(function(){try{return Function("\nreturn (function (a = 1, b = 2) { return 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2161,6 +2196,7 @@ test(function(){try{return Function("\nreturn (function (a, b = a) { return b ==
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2228,6 +2264,7 @@ test(function(){try{return Function("\nreturn (function(x = 1) {\n  try {\n    e
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2290,6 +2327,7 @@ test(function(){try{return Function("\nreturn (function(a=function(){\n  return 
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2348,6 +2386,7 @@ test(function(){try{return Function("\nreturn (function (...args) { return typeo
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -2401,6 +2440,7 @@ test(function(){try{return Function("\nreturn (function (...args) { return typeo
           <td class="tally _6to5" data-tally="1">8/8</td>
           <td class="tally ejs" data-tally="0.75">6/8</td>
           <td class="tally closure" data-tally="0.25">2/8</td>
+          <td class="tally typescript" data-tally="0">0/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
           <td class="tally ie11" data-tally="0">0/8</td>
           <td class="tally ie11tp" data-tally="0.5">4/8</td>
@@ -2458,6 +2498,7 @@ test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n    
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -2515,6 +2556,7 @@ test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n      ")
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -2572,6 +2614,7 @@ test(function(){try{return Function("\nreturn Math.max(...\"1234\") === 4;\n    
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -2629,6 +2672,7 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -2687,6 +2731,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(1, 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2745,6 +2790,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(\"b
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2803,6 +2849,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(1, 
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2861,6 +2908,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(\"b
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -2914,6 +2962,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(\"b
           <td class="tally _6to5" data-tally="1">8/8</td>
           <td class="tally ejs" data-tally="0.75">6/8</td>
           <td class="tally closure" data-tally="0.75">6/8</td>
+          <td class="tally typescript" data-tally="0">0/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
           <td class="tally ie11" data-tally="0">0/8</td>
           <td class="tally ie11tp" data-tally="1">8/8</td>
@@ -2972,6 +3021,7 @@ test(function(){try{return Function("\nclass C {}\nreturn typeof C === \"functio
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3035,6 +3085,7 @@ test(function(){try{return Function("\nclass C {}\nvar c1 = C;\n{\n  class C {}\
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3092,6 +3143,7 @@ test(function(){try{return Function("\nreturn typeof class C {} === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3153,6 +3205,7 @@ test(function(){try{return Function("\nclass C {\n  constructor() { this.x = 1; 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3215,6 +3268,7 @@ test(function(){try{return Function("\nclass C {\n  constructor() {}\n  method()
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3277,6 +3331,7 @@ test(function(){try{return Function("\nclass C {\n  constructor() {}\n  static m
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3338,6 +3393,7 @@ test(function(){try{return Function("\nvar c = class C {\n  static method() { re
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3397,6 +3453,7 @@ test(function(){try{return Function("\nclass C extends Array {}\nreturn Array.is
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3450,6 +3507,7 @@ test(function(){try{return Function("\nclass C extends Array {}\nreturn Array.is
           <td class="tally _6to5" data-tally="1">3/3</td>
           <td class="tally ejs" data-tally="1">3/3</td>
           <td class="tally closure" data-tally="0">0/3</td>
+          <td class="tally typescript" data-tally="0">0/3</td>
           <td class="tally ie10" data-tally="0">0/3</td>
           <td class="tally ie11" data-tally="0">0/3</td>
           <td class="tally ie11tp" data-tally="1">3/3</td>
@@ -3512,6 +3570,7 @@ test(function(){try{return Function("\nclass B extends class {\n  constructor(a)
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3574,6 +3633,7 @@ test(function(){try{return Function("\nclass B extends class {\n  qux(a) { retur
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3640,6 +3700,7 @@ test(function(){try{return Function("\nclass B extends class {\n  qux() { return
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3693,6 +3754,7 @@ test(function(){try{return Function("\nclass B extends class {\n  qux() { return
           <td class="tally _6to5" data-tally="1">3/3</td>
           <td class="tally ejs" data-tally="1">3/3</td>
           <td class="tally closure" data-tally="1">3/3</td>
+          <td class="tally typescript" data-tally="0.3333333333333333">1/3</td>
           <td class="tally ie10" data-tally="0">0/3</td>
           <td class="tally ie11" data-tally="0">0/3</td>
           <td class="tally ie11tp" data-tally="1">3/3</td>
@@ -3751,6 +3813,7 @@ test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3809,6 +3872,7 @@ test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3866,6 +3930,7 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -3919,6 +3984,7 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
           <td class="tally _6to5" data-tally="1">4/4</td>
           <td class="tally ejs" data-tally="0.75">3/4</td>
           <td class="tally closure" data-tally="0.75">3/4</td>
+          <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0">0/4</td>
           <td class="tally ie11tp" data-tally="1">4/4</td>
@@ -3978,6 +4044,7 @@ test(function(){try{return Function("\nvar arr = [5];\nfor (var item of arr)\n  
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -4038,6 +4105,7 @@ test(function(){try{return Function("\nvar str = \"\";\nfor (var item of \"foo\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -4100,6 +4168,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -4162,6 +4231,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -4215,6 +4285,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td class="tally _6to5" data-tally="0.8333333333333334">5/6</td>
           <td class="tally ejs" data-tally="0">0/6</td>
           <td class="tally closure" data-tally="0.5">3/6</td>
+          <td class="tally typescript" data-tally="0">0/6</td>
           <td class="tally ie10" data-tally="0">0/6</td>
           <td class="tally ie11" data-tally="0">0/6</td>
           <td class="tally ie11tp" data-tally="0">0/6</td>
@@ -4282,6 +4353,7 @@ test(function(){try{return Function("\nfunction * generator(){\n  yield 5; yield
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4348,6 +4420,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4414,6 +4487,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4482,6 +4556,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4550,6 +4625,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4619,6 +4695,7 @@ test(function(){try{return Function("\nvar o = {\n  * generator() {\n    yield 5
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4672,6 +4749,7 @@ test(function(){try{return Function("\nvar o = {\n  * generator() {\n    yield 5
           <td class="tally _6to5" data-tally="0.5">2/4</td>
           <td class="tally ejs" data-tally="1">4/4</td>
           <td class="tally closure" data-tally="1">4/4</td>
+          <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0">0/4</td>
           <td class="tally ie11tp" data-tally="0.5">2/4</td>
@@ -4729,6 +4807,7 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n      "
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -4786,6 +4865,7 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n      "
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -4843,6 +4923,7 @@ test(function(){try{return Function("\nreturn Number('0o1') === 1;\n      ")()}c
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4900,6 +4981,7 @@ test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}c
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -4953,6 +5035,7 @@ test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}c
           <td class="tally _6to5" data-tally="1">2/2</td>
           <td class="tally ejs" data-tally="1">2/2</td>
           <td class="tally closure" data-tally="1">2/2</td>
+          <td class="tally typescript" data-tally="0">0/2</td>
           <td class="tally ie10" data-tally="0">0/2</td>
           <td class="tally ie11" data-tally="0">0/2</td>
           <td class="tally ie11tp" data-tally="0.5">1/2</td>
@@ -5012,6 +5095,7 @@ test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -5080,6 +5164,7 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -5133,6 +5218,7 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
           <td class="tally _6to5" data-tally="0.5">1/2</td>
           <td class="tally ejs" data-tally="0">0/2</td>
           <td class="tally closure" data-tally="0">0/2</td>
+          <td class="tally typescript" data-tally="0">0/2</td>
           <td class="tally ie10" data-tally="0">0/2</td>
           <td class="tally ie11" data-tally="0">0/2</td>
           <td class="tally ie11tp" data-tally="0.5">1/2</td>
@@ -5194,6 +5280,7 @@ test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -5251,6 +5338,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -5304,6 +5392,7 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
           <td class="tally _6to5" data-tally="0">0/40</td>
           <td class="tally ejs" data-tally="0.45">18/40</td>
           <td class="tally closure" data-tally="0">0/40</td>
+          <td class="tally typescript" data-tally="0">0/40</td>
           <td class="tally ie10" data-tally="0.4">16/40</td>
           <td class="tally ie11" data-tally="0.4">16/40</td>
           <td class="tally ie11tp" data-tally="1">40/40</td>
@@ -5363,6 +5452,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5422,6 +5512,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5481,6 +5572,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -5540,6 +5632,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5599,6 +5692,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5658,6 +5752,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5717,6 +5812,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5776,6 +5872,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5835,6 +5932,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5895,6 +5993,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -5955,6 +6054,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6015,6 +6115,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6075,6 +6176,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6135,6 +6237,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6195,6 +6298,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6255,6 +6359,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6315,6 +6420,7 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -6380,6 +6486,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.from === \"functi
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6445,6 +6552,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.of === \"function
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6510,6 +6618,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6575,6 +6684,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.join ==
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6640,6 +6750,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.indexOf
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6705,6 +6816,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.lastInd
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6770,6 +6882,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.slice =
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6835,6 +6948,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.every =
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6900,6 +7014,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.filter 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -6965,6 +7080,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.forEach
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7030,6 +7146,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.map ===
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7095,6 +7212,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.reduce 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7160,6 +7278,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.reduceR
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7225,6 +7344,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.reverse
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7290,6 +7410,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.some ==
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7355,6 +7476,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.sort ==
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7420,6 +7542,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.copyWit
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7485,6 +7608,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.find ==
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7550,6 +7674,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.findInd
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7615,6 +7740,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.fill ==
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7680,6 +7806,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.keys ==
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7745,6 +7872,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.values 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7810,6 +7938,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -7863,6 +7992,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
           <td class="tally _6to5" data-tally="1">11/11</td>
           <td class="tally ejs" data-tally="0.8181818181818182">9/11</td>
           <td class="tally closure" data-tally="0">0/11</td>
+          <td class="tally typescript" data-tally="0">0/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
           <td class="tally ie11" data-tally="0.45454545454545453">5/11</td>
           <td class="tally ie11tp" data-tally="1">11/11</td>
@@ -7925,6 +8055,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -7987,6 +8118,7 @@ test(function(){try{return Function("\nvar key1 = {};\nvar key2 = {};\nvar map =
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8045,6 +8177,7 @@ test(function(){try{return Function("\nvar map = new Map();\nreturn map.set(0, 0
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8108,6 +8241,7 @@ test(function(){try{return Function("\nvar map = new Map();\nmap.set(-0, \"foo\"
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8170,6 +8304,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8227,6 +8362,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.delete === \"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8284,6 +8420,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.clear === \"f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8341,6 +8478,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.forEach === \
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8398,6 +8536,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.keys === \"fu
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8455,6 +8594,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.values === \"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8512,6 +8652,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8565,6 +8706,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
           <td class="tally _6to5" data-tally="1">11/11</td>
           <td class="tally ejs" data-tally="0.8181818181818182">9/11</td>
           <td class="tally closure" data-tally="0">0/11</td>
+          <td class="tally typescript" data-tally="0">0/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
           <td class="tally ie11" data-tally="0.45454545454545453">5/11</td>
           <td class="tally ie11tp" data-tally="1">11/11</td>
@@ -8628,6 +8770,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8689,6 +8832,7 @@ test(function(){try{return Function("\nvar obj1 = {};\nvar obj2 = {};\nvar set =
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8747,6 +8891,7 @@ test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) =
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8810,6 +8955,7 @@ test(function(){try{return Function("\nvar set = new Set();\nset.add(-0);\nvar k
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -8874,6 +9020,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8931,6 +9078,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.delete === \"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -8988,6 +9136,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.clear === \"f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -9045,6 +9194,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.forEach === \
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -9102,6 +9252,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.keys === \"fu
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9159,6 +9310,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.values === \"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9216,6 +9368,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9269,6 +9422,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
           <td class="tally _6to5" data-tally="0">0/4</td>
           <td class="tally ejs" data-tally="0.25">1/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
+          <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0.5">2/4</td>
           <td class="tally ie11tp" data-tally="1">4/4</td>
@@ -9331,6 +9485,7 @@ test(function(){try{return Function("\nvar key = {};\nvar weakmap = new WeakMap(
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -9393,6 +9548,7 @@ test(function(){try{return Function("\nvar key1 = {};\nvar key2 = {};\nvar weakm
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9452,6 +9608,7 @@ test(function(){try{return Function("\nvar weakmap = new WeakMap();\nvar key = {
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9509,6 +9666,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete ==
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -9562,6 +9720,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete ==
           <td class="tally _6to5" data-tally="0">0/4</td>
           <td class="tally ejs" data-tally="0.25">1/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
+          <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0">0/4</td>
           <td class="tally ie11tp" data-tally="1">4/4</td>
@@ -9625,6 +9784,7 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9685,6 +9845,7 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9744,6 +9905,7 @@ test(function(){try{return Function("\nvar weakset = new WeakSet();\nvar obj = {
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9801,6 +9963,7 @@ test(function(){try{return Function("\nreturn typeof WeakSet.prototype.delete ==
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9854,6 +10017,7 @@ test(function(){try{return Function("\nreturn typeof WeakSet.prototype.delete ==
           <td class="tally _6to5" data-tally="0">0/17</td>
           <td class="tally ejs" data-tally="0.47058823529411764">8/17</td>
           <td class="tally closure" data-tally="0">0/17</td>
+          <td class="tally typescript" data-tally="0">0/17</td>
           <td class="tally ie10" data-tally="0">0/17</td>
           <td class="tally ie11" data-tally="0">0/17</td>
           <td class="tally ie11tp" data-tally="0.8235294117647058">14/17</td>
@@ -9917,6 +10081,7 @@ test(function(){try{return Function("\nvar proxied = { };\nvar proxy = new Proxy
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -9982,6 +10147,7 @@ test(function(){try{return Function("\nvar proxied = { };\nvar passed = false;\n
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10046,6 +10212,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\n\
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10110,6 +10277,7 @@ test(function(){try{return Function("\nvar proxied = {};\n  var passed = false;\
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10180,6 +10348,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar fakeDesc = { value
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10249,6 +10418,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10313,6 +10483,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar fakeProto = {};\nv
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10382,6 +10553,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar newProto = {};\nva
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10448,6 +10620,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10515,6 +10688,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10584,6 +10758,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nf
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10650,6 +10825,7 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -10717,6 +10893,7 @@ test(function(){try{return Function("\nvar proxied = function(){};\nvar passed =
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10782,6 +10959,7 @@ test(function(){try{return Function("\nvar proxied = function(){};\nvar passed =
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10847,6 +11025,7 @@ test(function(){try{return Function("\nvar obj = Proxy.revocable({}, { get: func
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -10904,6 +11083,7 @@ test(function(){try{return Function("\nreturn Array.isArray(new Proxy([], {}));\
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -10961,6 +11141,7 @@ test(function(){try{return Function("\nreturn JSON.stringify(new Proxy(['foo'], 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -11014,6 +11195,7 @@ test(function(){try{return Function("\nreturn JSON.stringify(new Proxy(['foo'], 
           <td class="tally _6to5" data-tally="0">0/14</td>
           <td class="tally ejs" data-tally="1">14/14</td>
           <td class="tally closure" data-tally="0">0/14</td>
+          <td class="tally typescript" data-tally="0">0/14</td>
           <td class="tally ie10" data-tally="0">0/14</td>
           <td class="tally ie11" data-tally="0">0/14</td>
           <td class="tally ie11tp" data-tally="0.9285714285714286">13/14</td>
@@ -11071,6 +11253,7 @@ test(function(){try{return Function("\nreturn Reflect.get({ qux: 987 }, \"qux\")
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11130,6 +11313,7 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.set(obj, \"quux\",
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11187,6 +11371,7 @@ test(function(){try{return Function("\nreturn Reflect.has({ qux: 987 }, \"qux\")
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11246,6 +11431,7 @@ test(function(){try{return Function("\nvar obj = { bar: 456 };\nReflect.deletePr
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11306,6 +11492,7 @@ test(function(){try{return Function("\nvar obj = { baz: 789 };\nvar desc = Refle
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11365,6 +11552,7 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.defineProperty(obj
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11422,6 +11610,7 @@ test(function(){try{return Function("\nreturn Reflect.getPrototypeOf([]) === Arr
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11481,6 +11670,7 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.setPrototypeOf(obj
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11539,6 +11729,7 @@ test(function(){try{return Function("\nreturn Reflect.isExtensible({}) &&\n  !Re
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11598,6 +11789,7 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.preventExtensions(
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11664,6 +11856,7 @@ test(function(){try{return Function("\nvar obj = { foo: 1, bar: 2 };\nvar iterat
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11722,6 +11915,7 @@ test(function(){try{return Function("\nvar obj = { foo: 1, bar: 2 };\nreturn Ref
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -11779,6 +11973,7 @@ test(function(){try{return Function("\nreturn Reflect.apply(Array.prototype.push
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11838,6 +12033,7 @@ test(function(){try{return Function("\nreturn Reflect.construct(function(a, b, c
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -11901,6 +12097,7 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -11954,6 +12151,7 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
           <td class="tally _6to5" data-tally="0.8181818181818182">9/11</td>
           <td class="tally ejs" data-tally="0.45454545454545453">5/11</td>
           <td class="tally closure" data-tally="0.7272727272727273">8/11</td>
+          <td class="tally typescript" data-tally="0">0/11</td>
           <td class="tally ie10" data-tally="0">0/11</td>
           <td class="tally ie11" data-tally="0">0/11</td>
           <td class="tally ie11tp" data-tally="0">0/11</td>
@@ -12012,6 +12210,7 @@ test(function(){try{return Function("\nvar [a, , [b], c] = [5, null, [6]];\nretu
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12070,6 +12269,7 @@ test(function(){try{return Function("\nvar [a, b, c] = \"bar\";\nreturn a === \"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12129,6 +12329,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(1, 
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12188,6 +12389,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(1, 
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12246,6 +12448,7 @@ test(function(){try{return Function("\nvar {c, x:d, e} = {c:7, x:8};\nreturn c =
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12304,6 +12507,7 @@ test(function(){try{return Function("\nvar [e, {x:f, g}] = [9, {x:10}];\nreturn 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12364,6 +12568,7 @@ test(function(){try{return Function("\nreturn (function({a, x:b, y:e}, [c, d]) {
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12424,6 +12629,7 @@ test(function(){try{return Function("\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d]
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12483,6 +12689,7 @@ test(function(){try{return Function("\nvar a = [1, 2, 3], first, last;\n[first, 
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12541,6 +12748,7 @@ test(function(){try{return Function("\nvar {a = 1, b = 0, c = 3} = {b:2, c:undef
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12601,6 +12809,7 @@ test(function(){try{return Function("\nreturn (function({a = 1, b = 0, c = 3, x:
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12660,6 +12869,7 @@ test(function(){try{return Function("\nreturn typeof Promise !== 'undefined' &&\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -12713,6 +12923,7 @@ test(function(){try{return Function("\nreturn typeof Promise !== 'undefined' &&\
           <td class="tally _6to5" data-tally="0.5">2/4</td>
           <td class="tally ejs" data-tally="1">4/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
+          <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0.25">1/4</td>
           <td class="tally ie11tp" data-tally="0.75">3/4</td>
@@ -12771,6 +12982,7 @@ test(function(){try{return Function("\nvar o = Object.assign({a:true}, {b:true},
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -12830,6 +13042,7 @@ test(function(){try{return Function("\nreturn typeof Object.is === 'function' &&
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -12890,6 +13103,7 @@ test(function(){try{return Function("\nvar o = {};\nvar sym = Symbol();\no[sym] 
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -12947,6 +13161,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
           <td class="no _6to5">No<a href="#setprototypeof-polyfill-note"><sup>[13]</sup></a></td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -13000,6 +13215,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
           <td class="tally _6to5" data-tally="0">0/16</td>
           <td class="tally ejs" data-tally="0">0/16</td>
           <td class="tally closure" data-tally="0">0/16</td>
+          <td class="tally typescript" data-tally="0">0/16</td>
           <td class="tally ie10" data-tally="0">0/16</td>
           <td class="tally ie11" data-tally="0">0/16</td>
           <td class="tally ie11tp" data-tally="0">0/16</td>
@@ -13059,6 +13275,7 @@ test(function(){try{return Function("\nfunction foo(){};\nreturn foo.name === 'f
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13117,6 +13334,7 @@ test(function(){try{return Function("\nreturn (function foo(){}).name === 'foo' 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13174,6 +13392,7 @@ test(function(){try{return Function("\nreturn (new Function).name === \"anonymou
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13233,6 +13452,7 @@ test(function(){try{return Function("\nfunction foo() {};\nreturn foo.bind({}).n
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13292,6 +13512,7 @@ test(function(){try{return Function("\nvar foo = function() {};\nvar bar = funct
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13353,6 +13574,7 @@ test(function(){try{return Function("\nvar o = { foo: function(){}, bar: functio
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13413,6 +13635,7 @@ test(function(){try{return Function("\nvar o = { get foo(){}, set foo(x){} };\nv
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13471,6 +13694,7 @@ test(function(){try{return Function("\nvar o = { foo(){} };\nreturn o.foo.name =
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13536,6 +13760,7 @@ test(function(){try{return Function("\nvar sym1 = Symbol(\"foo\");\nvar sym2 = S
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13596,6 +13821,7 @@ test(function(){try{return Function("\nclass foo {};\nclass bar { static name() 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13654,6 +13880,7 @@ test(function(){try{return Function("\nreturn class foo {}.name === \"foo\" &&\n
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13716,6 +13943,7 @@ test(function(){try{return Function("\nvar foo = class {};\nvar bar = class baz 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13777,6 +14005,7 @@ test(function(){try{return Function("\nvar o = { foo: class {}, bar: class baz {
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13835,6 +14064,7 @@ test(function(){try{return Function("\nclass C { foo(){} };\nreturn (new C).foo.
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13893,6 +14123,7 @@ test(function(){try{return Function("\nclass C { static foo(){} };\nreturn C.foo
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -13953,6 +14184,7 @@ test(function(){try{return Function("\nvar descriptor = Object.getOwnPropertyDes
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -14011,6 +14243,7 @@ test(function(){try{return Function("\nreturn typeof Function.prototype.toMethod
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -14064,6 +14297,7 @@ test(function(){try{return Function("\nreturn typeof Function.prototype.toMethod
           <td class="tally _6to5" data-tally="1">2/2</td>
           <td class="tally ejs" data-tally="1">2/2</td>
           <td class="tally closure" data-tally="0">0/2</td>
+          <td class="tally typescript" data-tally="0">0/2</td>
           <td class="tally ie10" data-tally="0">0/2</td>
           <td class="tally ie11" data-tally="0">0/2</td>
           <td class="tally ie11tp" data-tally="1">2/2</td>
@@ -14121,6 +14355,7 @@ test(function(){try{return Function("\nreturn typeof String.raw === 'function';\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14178,6 +14413,7 @@ test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14231,6 +14467,7 @@ test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'f
           <td class="tally _6to5" data-tally="0.6666666666666666">4/6</td>
           <td class="tally ejs" data-tally="0.6666666666666666">4/6</td>
           <td class="tally closure" data-tally="0">0/6</td>
+          <td class="tally typescript" data-tally="0">0/6</td>
           <td class="tally ie10" data-tally="0">0/6</td>
           <td class="tally ie11" data-tally="0">0/6</td>
           <td class="tally ie11tp" data-tally="0.8333333333333334">5/6</td>
@@ -14288,6 +14525,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.codePointA
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14347,6 +14585,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.normalize 
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14405,6 +14644,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.repeat ===
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14463,6 +14703,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.startsWith
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14521,6 +14762,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.endsWith =
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14579,6 +14821,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
           <td class="no _6to5">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no ejs">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -14637,6 +14880,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14690,6 +14934,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
           <td class="tally _6to5" data-tally="0.5">4/8</td>
           <td class="tally ejs" data-tally="0.625">5/8</td>
           <td class="tally closure" data-tally="0">0/8</td>
+          <td class="tally typescript" data-tally="0">0/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
           <td class="tally ie11" data-tally="0">0/8</td>
           <td class="tally ie11tp" data-tally="0.875">7/8</td>
@@ -14751,6 +14996,7 @@ test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14808,6 +15054,7 @@ test(function(){try{return Function("\nreturn typeof Symbol() === \"symbol\";\n 
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14877,6 +15124,7 @@ test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -14943,6 +15191,7 @@ test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15013,6 +15262,7 @@ test(function(){try{return Function("\nvar symbol = Symbol();\n\ntry {\n  symbol
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15070,6 +15320,7 @@ test(function(){try{return Function("\nreturn String(Symbol(\"foo\")) === \"Symb
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15132,6 +15383,7 @@ test(function(){try{return Function("\nvar symbol = Symbol();\ntry {\n  new Symb
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15194,6 +15446,7 @@ test(function(){try{return Function("\nvar symbol = Symbol();\nvar symbolObject 
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15254,6 +15507,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15307,6 +15561,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td class="tally _6to5" data-tally="0.14285714285714285">1/7</td>
           <td class="tally ejs" data-tally="0.5714285714285714">4/7</td>
           <td class="tally closure" data-tally="0">0/7</td>
+          <td class="tally typescript" data-tally="0">0/7</td>
           <td class="tally ie10" data-tally="0">0/7</td>
           <td class="tally ie11" data-tally="0">0/7</td>
           <td class="tally ie11tp" data-tally="0.2857142857142857">2/7</td>
@@ -15371,6 +15626,7 @@ test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: tru
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15431,6 +15687,7 @@ test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpr
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15501,6 +15758,7 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15560,6 +15818,7 @@ test(function(){try{return Function("\nreturn RegExp[Symbol.species] === RegExp\
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15626,6 +15885,7 @@ test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed =
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15685,6 +15945,7 @@ test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"fo
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15746,6 +16007,7 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -15799,6 +16061,7 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
           <td class="tally _6to5" data-tally="0">0/4</td>
           <td class="tally ejs" data-tally="0">0/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
+          <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
           <td class="tally ie11" data-tally="0">0/4</td>
           <td class="tally ie11tp" data-tally="0">0/4</td>
@@ -15856,6 +16119,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.mat
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15913,6 +16177,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.rep
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -15970,6 +16235,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.spl
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -16027,6 +16293,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.sea
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -16080,6 +16347,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.sea
           <td class="tally _6to5" data-tally="1">2/2</td>
           <td class="tally ejs" data-tally="1">2/2</td>
           <td class="tally closure" data-tally="0">0/2</td>
+          <td class="tally typescript" data-tally="0">0/2</td>
           <td class="tally ie10" data-tally="0">0/2</td>
           <td class="tally ie11" data-tally="0">0/2</td>
           <td class="tally ie11tp" data-tally="1">2/2</td>
@@ -16137,6 +16405,7 @@ test(function(){try{return Function("\nreturn typeof Array.from === 'function';\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16195,6 +16464,7 @@ test(function(){try{return Function("\nreturn typeof Array.of === 'function' &&\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16248,6 +16518,7 @@ test(function(){try{return Function("\nreturn typeof Array.of === 'function' &&\
           <td class="tally _6to5" data-tally="0.875">7/8</td>
           <td class="tally ejs" data-tally="0.875">7/8</td>
           <td class="tally closure" data-tally="0">0/8</td>
+          <td class="tally typescript" data-tally="0">0/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
           <td class="tally ie11" data-tally="0">0/8</td>
           <td class="tally ie11tp" data-tally="1">8/8</td>
@@ -16305,6 +16576,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.copyWithin 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16362,6 +16634,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.find === 'f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16419,6 +16692,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.findIndex =
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16476,6 +16750,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.fill === 'f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16533,6 +16808,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.keys === 'f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16590,6 +16866,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.values === 
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16647,6 +16924,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.entries ===
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16712,6 +16990,7 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
           <td class="no _6to5">No</td>
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16765,6 +17044,7 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
           <td class="tally _6to5" data-tally="1">7/7</td>
           <td class="tally ejs" data-tally="1">7/7</td>
           <td class="tally closure" data-tally="0">0/7</td>
+          <td class="tally typescript" data-tally="0">0/7</td>
           <td class="tally ie10" data-tally="0">0/7</td>
           <td class="tally ie11" data-tally="0">0/7</td>
           <td class="tally ie11tp" data-tally="1">7/7</td>
@@ -16822,6 +17102,7 @@ test(function(){try{return Function("\nreturn typeof Number.isFinite === 'functi
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16879,6 +17160,7 @@ test(function(){try{return Function("\nreturn typeof Number.isInteger === 'funct
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16936,6 +17218,7 @@ test(function(){try{return Function("\nreturn typeof Number.isSafeInteger === 'f
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -16993,6 +17276,7 @@ test(function(){try{return Function("\nreturn typeof Number.isNaN === 'function'
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17050,6 +17334,7 @@ test(function(){try{return Function("\nreturn typeof Number.EPSILON === 'number'
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17107,6 +17392,7 @@ test(function(){try{return Function("\nreturn typeof Number.MIN_SAFE_INTEGER ===
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17164,6 +17450,7 @@ test(function(){try{return Function("\nreturn typeof Number.MAX_SAFE_INTEGER ===
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17217,6 +17504,7 @@ test(function(){try{return Function("\nreturn typeof Number.MAX_SAFE_INTEGER ===
           <td class="tally _6to5" data-tally="1">17/17</td>
           <td class="tally ejs" data-tally="1">17/17</td>
           <td class="tally closure" data-tally="0">0/17</td>
+          <td class="tally typescript" data-tally="0">0/17</td>
           <td class="tally ie10" data-tally="0">0/17</td>
           <td class="tally ie11" data-tally="0">0/17</td>
           <td class="tally ie11tp" data-tally="1">17/17</td>
@@ -17274,6 +17562,7 @@ test(function(){try{return Function("\nreturn typeof Math.clz32 === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17331,6 +17620,7 @@ test(function(){try{return Function("\nreturn typeof Math.imul === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17388,6 +17678,7 @@ test(function(){try{return Function("\nreturn typeof Math.sign === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17445,6 +17736,7 @@ test(function(){try{return Function("\nreturn typeof Math.log10 === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17502,6 +17794,7 @@ test(function(){try{return Function("\nreturn typeof Math.log2 === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17559,6 +17852,7 @@ test(function(){try{return Function("\nreturn typeof Math.log1p === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17616,6 +17910,7 @@ test(function(){try{return Function("\nreturn typeof Math.expm1 === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17673,6 +17968,7 @@ test(function(){try{return Function("\nreturn typeof Math.cosh === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17730,6 +18026,7 @@ test(function(){try{return Function("\nreturn typeof Math.sinh === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17787,6 +18084,7 @@ test(function(){try{return Function("\nreturn typeof Math.tanh === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17844,6 +18142,7 @@ test(function(){try{return Function("\nreturn typeof Math.acosh === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17901,6 +18200,7 @@ test(function(){try{return Function("\nreturn typeof Math.asinh === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -17958,6 +18258,7 @@ test(function(){try{return Function("\nreturn typeof Math.atanh === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -18015,6 +18316,7 @@ test(function(){try{return Function("\nreturn typeof Math.hypot === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -18072,6 +18374,7 @@ test(function(){try{return Function("\nreturn typeof Math.trunc === \"function\"
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -18129,6 +18432,7 @@ test(function(){try{return Function("\nreturn typeof Math.fround === \"function\
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -18186,6 +18490,7 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
+          <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="yes ie11tp">Yes</td>
@@ -18233,7 +18538,7 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
           <td class="yes ios8">Yes</td>
         </tr>
         <tr>
-          <th colspan="52" class="separator"></th>
+          <th colspan="53" class="separator"></th>
         </tr>
         <tr>
           <td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span></td>
@@ -18254,6 +18559,7 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -18307,6 +18613,7 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td title="This feature is optional on non-browser platforms." class="tally _6to5 not-applicable " data-tally="0">0/5</td>
           <td title="This feature is optional on non-browser platforms." class="tally ejs not-applicable " data-tally="0">0/5</td>
           <td title="This feature is optional on non-browser platforms." class="tally closure not-applicable " data-tally="0">0/5</td>
+          <td title="This feature is optional on non-browser platforms." class="tally typescript not-applicable " data-tally="0">0/5</td>
           <td class="tally ie10" data-tally="0">0/5</td>
           <td class="tally ie11" data-tally="0.2">1/5</td>
           <td class="tally ie11tp" data-tally="0.2">1/5</td>
@@ -18365,6 +18672,7 @@ test(function(){try{return Function("\nreturn { __proto__ : [] } instanceof Arra
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -18427,6 +18735,7 @@ test(function(){try{return Function("\ntry {\n  eval(\"({ __proto__ : [], __prot
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -18488,6 +18797,7 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -18549,6 +18859,7 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -18609,6 +18920,7 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
           <td class="no ie11tp">No</td>
@@ -18662,6 +18974,7 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
           <td title="This feature is optional on non-browser platforms." class="tally _6to5 not-applicable " data-tally="0">0/3</td>
           <td title="This feature is optional on non-browser platforms." class="tally ejs not-applicable " data-tally="0">0/3</td>
           <td title="This feature is optional on non-browser platforms." class="tally closure not-applicable " data-tally="0">0/3</td>
+          <td title="This feature is optional on non-browser platforms." class="tally typescript not-applicable " data-tally="0">0/3</td>
           <td class="tally ie10" data-tally="0">0/3</td>
           <td class="tally ie11" data-tally="1">3/3</td>
           <td class="tally ie11tp" data-tally="1">3/3</td>
@@ -18720,6 +19033,7 @@ test(function(){try{return Function("\nvar A = function(){};\nreturn (new A())._
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -18779,6 +19093,7 @@ test(function(){try{return Function("\nvar o = {};\no.__proto__ = Array.prototyp
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -18843,6 +19158,7 @@ test(function(){try{return Function("\nvar desc = Object.getOwnPropertyDescripto
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="no ie10">No</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -18908,6 +19224,7 @@ test(function(){try{return Function("\nvar i, names = [\"anchor\", \"big\", \"bo
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
@@ -18966,6 +19283,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile ==
           <td title="This feature is optional on non-browser platforms." class="no _6to5 not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no ejs not-applicable ">No</td>
           <td title="This feature is optional on non-browser platforms." class="no closure not-applicable ">No</td>
+          <td title="This feature is optional on non-browser platforms." class="no typescript not-applicable ">No</td>
           <td class="yes ie10">Yes</td>
           <td class="yes ie11">Yes</td>
           <td class="yes ie11tp">Yes</td>
