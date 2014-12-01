@@ -4723,7 +4723,92 @@ exports.tests = [
     };
     return obj;
   }()),
-  separator: 'after'
+},
+{
+  name: 'miscellaneous',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
+  subtests: {
+    'duplicate property names in strict mode': {
+      exec: function(){/*
+        'use strict';
+        return this === undefined && ({ a:1, a:1 }).a === 1;
+      */},
+      res: {
+      },
+    },
+    'no semicolon needed after do-while': {
+      exec: function(){/*
+        do {} while (false) return true;
+      */},
+      res: {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      },
+    },
+    'no assignments allowed in for-in head': {
+      exec: function(){/*
+        try {
+          eval('for (var i = 0 in {}) {}');
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: {
+      },
+    },
+    'Object static methods accept primitives': {
+      exec: function(){/*
+        var methods = ['freeze', 'seal', 'preventExtensions', 'getOwnPropertyDescriptors',
+          'getPrototypeOf', 'isExtensible', 'isSealed', 'isFrozen', 'keys'];
+        for (var i = 0; i < methods.length; i++) {
+          Object[methods[i]](2);
+          Object[methods[i]]("foo");
+          Object[methods[i]](false);
+        }
+        return true;
+      */},
+      res: {
+      },
+    },
+    'Invalid Date': {
+      exec: function(){/*
+        return new Date(NaN) + "" === "Invalid Date";
+      */},
+      res: {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        phantom:     true,
+        node:        true,
+        nodeharmony: true,
+        ios7:        true,
+      },
+    },
+    'RegExp constructor can alter flags': {
+      exec: function(){/*
+        return new RegExp(/./im, "g").global === true;
+      */},
+      res: {
+      },
+    },
+  },
+  separator: "after",
 },
 ];
 
