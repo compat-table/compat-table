@@ -18545,9 +18545,9 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
           <td class="tally ejs" data-tally="0">0/6</td>
           <td class="tally closure" data-tally="0">0/6</td>
           <td class="tally typescript" data-tally="0">0/6</td>
-          <td class="tally ie10" data-tally="0">0/6</td>
-          <td class="tally ie11" data-tally="0">0/6</td>
-          <td class="tally ie11tp" data-tally="0">0/6</td>
+          <td class="tally ie10" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally ie11" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally ie11tp" data-tally="0.3333333333333333">2/6</td>
           <td class="tally firefox11 obsolete" data-tally="0.3333333333333333">2/6</td>
           <td class="tally firefox13 obsolete" data-tally="0.3333333333333333">2/6</td>
           <td class="tally firefox16 obsolete" data-tally="0.3333333333333333">2/6</td>
@@ -18583,13 +18583,13 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
           <td class="tally safari71_8" data-tally="0.3333333333333333">2/6</td>
           <td class="tally webkit" data-tally="0.3333333333333333">2/6</td>
           <td class="tally opera" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally konq49" data-tally="0">0/6</td>
-          <td class="tally rhino17" data-tally="0">0/6</td>
-          <td class="tally phantom" data-tally="0">0/6</td>
+          <td class="tally konq49" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally rhino17" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally phantom" data-tally="0.3333333333333333">2/6</td>
           <td class="tally node" data-tally="0.3333333333333333">2/6</td>
           <td class="tally nodeharmony" data-tally="0.3333333333333333">2/6</td>
-          <td class="tally ios7" data-tally="0">0/6</td>
-          <td class="tally ios8" data-tally="0">0/6</td>
+          <td class="tally ios7" data-tally="0.3333333333333333">2/6</td>
+          <td class="tally ios8" data-tally="0.3333333333333333">2/6</td>
         <tr class="subtest" data-parent="miscellaneous">
           <td><span>duplicate property names in strict mode</span></td>
 <script data-source="
@@ -18662,9 +18662,9 @@ test(function(){try{return Function("\ndo {} while (false) return true;\n      "
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no typescript">No</td>
-          <td class="no ie10">No</td>
-          <td class="no ie11">No</td>
-          <td class="no ie11tp">No</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes ie11tp">Yes</td>
           <td class="yes firefox11 obsolete">Yes</td>
           <td class="yes firefox13 obsolete">Yes</td>
           <td class="yes firefox16 obsolete">Yes</td>
@@ -18700,13 +18700,13 @@ test(function(){try{return Function("\ndo {} while (false) return true;\n      "
           <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
+          <td class="yes konq49">Yes</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="yes phantom">Yes</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
-          <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="miscellaneous">
           <td><span>no assignments allowed in for-in head</span></td>
 <script data-source="
@@ -18848,9 +18848,9 @@ test(function(){try{return Function("\nreturn new Date(NaN) + \"\" === \"Invalid
           <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no typescript">No</td>
-          <td class="no ie10">No</td>
-          <td class="no ie11">No</td>
-          <td class="no ie11tp">No</td>
+          <td class="yes ie10">Yes</td>
+          <td class="yes ie11">Yes</td>
+          <td class="yes ie11tp">Yes</td>
           <td class="yes firefox11 obsolete">Yes</td>
           <td class="yes firefox13 obsolete">Yes</td>
           <td class="yes firefox16 obsolete">Yes</td>
@@ -18886,13 +18886,13 @@ test(function(){try{return Function("\nreturn new Date(NaN) + \"\" === \"Invalid
           <td class="yes safari71_8">Yes</td>
           <td class="yes webkit">Yes</td>
           <td class="yes opera">Yes</td>
-          <td class="no konq49">No</td>
-          <td class="no rhino17">No</td>
-          <td class="no phantom">No</td>
+          <td class="yes konq49">Yes</td>
+          <td class="yes rhino17">Yes</td>
+          <td class="yes phantom">Yes</td>
           <td class="yes node">Yes</td>
           <td class="yes nodeharmony">Yes</td>
-          <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios7">Yes</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="miscellaneous">
           <td><span>RegExp constructor can alter flags</span></td>
 <script data-source="
