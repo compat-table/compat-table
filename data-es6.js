@@ -1499,6 +1499,47 @@ exports.tests = [
         nodeharmony: true,
       },
     },
+    'sending': {
+      exec: function() {/*
+        var sent;
+        function * generator(){
+          sent = [yield 5, yield 6];
+        };
+        var iterator = generator();
+        iterator.next();
+        iterator.next("foo");
+        iterator.next("bar");
+        return sent[0] === "foo" && sent[1] === "bar";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
+    'yield operator precedence': {
+      exec: function() {/*
+        var passed;
+        function * generator(){
+          passed = yield 0 ? true : false;
+        };
+        var iterator = generator();
+        iterator.next();
+        iterator.next(true);
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
     'yield *, arrays': {
       exec: function () {/*
         var iterator = (function * generator() {
@@ -4120,9 +4161,15 @@ exports.tests = [
   },
 },
 {
-  name: 'RegExp.prototype methods',
+  name: 'RegExp.prototype properties',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
+    'RegExp.prototype.flags': {
+      exec: function () {/*
+        return /./igm.flags === "gim" && /./.flags === "";
+      */},
+      res: {},
+    },
     'RegExp.prototype[Symbol.match]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.match] === 'function';
