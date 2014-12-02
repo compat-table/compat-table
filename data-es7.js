@@ -11,6 +11,14 @@ exports.browsers = {
     obsolete: false, // always up-to-date version
     platformtype: 'compiler',
   },
+  _6to5: {
+    full: '6to5',
+    short: '6to5 +<br>polyfill',
+    obsolete: false,
+    platformtype: 'compiler',
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via --experimental flag'
+  },
   ejs: {
     full: 'Echo JS',
     short: 'EJS',
@@ -131,6 +139,7 @@ exports.tests = [
   */},
   res: {
     tr: true,
+    _6to5: true,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -163,6 +172,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
+    _6to5:       true,
     ejs:         false,
     ie11:        false,
     firefox31:   true,
@@ -194,6 +204,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
+    _6to5:       true,
     ejs:         false,
     ie11:        false,
     firefox31:   true,
@@ -225,6 +236,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
+    _6to5: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -257,6 +269,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
+    _6to5: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -289,6 +302,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
+    _6to5: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -322,6 +336,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
+    _6to5: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -371,6 +386,7 @@ exports.tests = [
   */},
   res: {
     tr:          false,
+    _6to5:       false,
     ejs:         false,
     ie11:        false,
     firefox31:   false,
