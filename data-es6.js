@@ -201,12 +201,18 @@ exports.browsers = {
   chrome38: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;38,<br>OP&nbsp;25',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome39: {
     full: 'Chrome, Opera',
     short: 'CH 39,<br>OP&nbsp;26',
+    obsolete: false,
+    note_id: 'experimental-flag',
+  },
+  chrome40: {
+    full: 'Chrome, Opera',
+    short: 'CH 40,<br>OP&nbsp;27',
     obsolete: false,
     note_id: 'experimental-flag',
   },
@@ -749,6 +755,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -1049,6 +1056,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        chrome40:    true,
       },
     },
     'is block-scoped': {
@@ -1076,6 +1084,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        chrome40:    true,
       },
     },
     'constructor': {
@@ -1092,6 +1101,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        chrome40:    true,
       },
     },
     'prototype methods': {
@@ -1154,6 +1164,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        chrome40:    true,
       },
     },
   },
@@ -1176,6 +1187,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         ie11tp:      true,
+        chrome40:    true,
       },
     },
     'in methods': {
@@ -1249,6 +1261,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         firefox33:   true,
+        chrome40:    true,
       },
     },
     'shorthand methods': {
@@ -1921,7 +1934,7 @@ exports.tests = [
     '.prototype.slice':       { ie11tp: true, },
     '.prototype.every':       { ie11tp: true, },
     '.prototype.filter':      { ie11tp: true, },
-    '.prototype.forEach':     { ie11tp: true, },
+    '.prototype.forEach':     { ie11tp: true, chrome40: true },
     '.prototype.map':         { ie11tp: true, },
     '.prototype.reduce':      { ie11tp: true, },
     '.prototype.reduceRight': { ie11tp: true, },
@@ -4101,6 +4114,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        chrome40:    true,
       },
     },
     'Symbol.unscopables': {
