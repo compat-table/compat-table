@@ -242,7 +242,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r173886',
+    full: 'WebKit r176637',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -3725,7 +3725,7 @@ exports.tests = [
         ejs:         { val: false, note_id: 'string-contains' },
         firefox18:   { val: false, note_id: 'string-contains' },
         chrome30:    { val: false, note_id: 'string-contains' },
-        webkit:      { val: false, note_id: 'string-contains' },
+        webkit:      { val: true },
         nodeharmony: { val: false, note_id: 'string-contains' },
       },
     },
