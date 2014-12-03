@@ -128,7 +128,8 @@ exports.browsers = {
   },
   firefox33: {
     full: 'Firefox',
-    short: 'FF 33'
+    short: 'FF 33',
+    obsolete: true
   },
   firefox34: {
     full: 'Firefox',
@@ -137,6 +138,10 @@ exports.browsers = {
   firefox35: {
     full: 'Firefox',
     short: 'FF 35'
+  },
+  firefox36: {
+    full: 'Firefox',
+    short: 'FF 36'
   },
   chrome: {
     full: 'Chrome',
@@ -520,6 +525,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox36:   true,
       }
     },
     'redefining a const is an error': {
@@ -537,6 +543,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
+        firefox36:   true,
       }
     },
     'temporal dead zone': {
@@ -548,6 +555,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11:        true,
+        firefox36:   true,
       },
     },
    'basic support (strict mode)': {
@@ -581,6 +589,7 @@ exports.tests = [
         closure:     true,
         chrome19dev: true,
         ie11:        true,
+        firefox36:   true,
         nodeharmony: true,
       }
     },
@@ -615,6 +624,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11:        true,
+        firefox36:   true,
         chrome19dev: true,
         nodeharmony: true,
       },
@@ -1027,6 +1037,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        firefox36:   true,
       },
     },
     'with instances of iterables, in arrays': {
@@ -1037,6 +1048,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        firefox36:   true,
       },
     },
   }
@@ -1454,6 +1466,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ie11tp:      true,
+        firefox36:   true,
         chrome35:    true,
       },
     },
@@ -1567,6 +1580,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        firefox36:   true,
         chrome35:    true,
       },
     },
@@ -1637,6 +1651,7 @@ exports.tests = [
       res: {
         ejs:         true,
         closure:     true,
+        firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
       },
@@ -1648,6 +1663,7 @@ exports.tests = [
       res: {
         ejs:         true,
         closure:     true,
+        firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
       },
@@ -2411,6 +2427,7 @@ exports.tests = [
       */},
       res: {
         ie11tp:      true,
+        firefox36:   true,
         chrome38:    true,
       },
     },
@@ -3103,6 +3120,7 @@ exports.tests = [
       */},
       res: {
         _6to5:        true,
+        firefox36:   true,
       },
     },
     'with objects': {
@@ -3286,6 +3304,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         ie11tp:      true,
+        firefox36:   true,
         chrome34:    true,
         nodeharmony: true,
       },
@@ -3843,6 +3862,7 @@ exports.tests = [
         ejs:         true,
         _6to5:       true,
         ie11tp:      true,
+        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -3854,6 +3874,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
+        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -3878,6 +3899,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         ie11tp:      true,
+        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -3900,6 +3922,7 @@ exports.tests = [
         ejs:         true,
         _6to5:       true,
         ie11tp:      true,
+        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -3924,6 +3947,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
+        firefox36:   true,
         chrome38:    true,
         nodeharmony: true,
       },
@@ -3934,6 +3958,7 @@ exports.tests = [
       */},
       res: {
         chrome39:    true,
+        firefox36:   true,
       },
     },
     'new Symbol() throws': {
@@ -3949,6 +3974,7 @@ exports.tests = [
         tr:         true,
         _6to5:      true,
         ie11tp:     true,
+        firefox36:  true,
         chrome35:   true,
         nodeharmony:true,
       },
@@ -3965,66 +3991,26 @@ exports.tests = [
       res: {
         _6to5:      true,
         ie11tp:     true,
+        firefox36:  true,
         chrome30:   true,
         chrome35:   false,
       },
     },
-  },
-},
-{
-  name: 'global symbol registry',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
-  exec: function() {/*
-    var symbol = Symbol.for('foo');
-    return Symbol.for('foo') === symbol &&
+    'global symbol registry': {
+      exec: function() {/*
+        var symbol = Symbol.for('foo');
+        return Symbol.for('foo') === symbol &&
            Symbol.keyFor(symbol) === 'foo';
-  */},
-  res: {
-    tr:          false,
-    ejs:         true,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    ie11tp:      true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    true,
-    chrome37:    true,
-    chrome39:    true,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: true,
-    ios7:        false,
-    ios8:        false
-  }
+      */},
+      res: {
+        ejs:         true,
+        ie11tp:      true,
+        firefox36:  true,
+        chrome35:    true,
+        nodeharmony: true,
+      },
+    },
+  },
 },
 {
   name: 'well-known symbols',
@@ -4042,7 +4028,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-       ejs:         true,
+        ejs:         true,
       },
     },
     'Symbol.isConcatSpreadable': {
@@ -4077,6 +4063,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ie11tp:      true,
+        firefox36:   true,
         chrome37:    true,
         ejs:         true,
       },
@@ -4748,6 +4735,7 @@ exports.tests = [
         return this === undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
+        firefox35:   true,
       },
     },
     'no semicolon needed after do-while': {
