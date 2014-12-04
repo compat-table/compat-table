@@ -29,12 +29,9 @@
       }
       // For async tests, this returned function is used to set results
       // instead of returning true/false.
-      var __asyncPassedFn = function(id) {
+      var __asyncPassedFn = function(rowNum) {
       return function() {
-          // Uses nextSibling for IE < 9 compatibility
-          // rather than document.querySelector("#" + id + " ~ td")
-          var elem = document.getElementById(id)
-            .nextSibling.nextSibling.nextSibling;
+          var elem = $("#table-wrapper tr:nth-child(" + (+rowNum + 1) + ") .current")[0];
           elem.className = "yes";
           elem.textContent = "Yes";
         }
