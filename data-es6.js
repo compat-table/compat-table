@@ -478,7 +478,6 @@ exports.tests = [
         return !a.hasOwnProperty("prototype");
       */},
       res: {
-        tr:          true,
         ejs:         true,
         ie11tp:      true,
         firefox23:   true,
@@ -2581,12 +2580,27 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
+        firefox18:   true,
+      },
+    },
+    '"get" handler, instances of proxies': {
+      exec: function () {/*
+        var proxied = { };
+        var proxy = Object.create(new Proxy(proxied, {
+          get: function (t, k, r) {
+            return t === proxied && k === "foo" && r === proxy && 5;
+          }
+        }));
+        return proxy.foo === 5;
+      */},
+      res: {
+        ejs:         true,
+        ie11tp:      true,
         firefox18:   {
-          val: true,
+          val: false,
           note_id: 'fx-proxy-get',
-          note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "get" handler via the prototype chain, unless the proxied object actually does possess the named property.'
+          note_html: 'Firefox doesn\'t allow a proxy\'s "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy\'s "has" handler reports it as present).'
         },
-        firefox23:   { val: true, note_id: 'fx-proxy-get' },
       },
     },
     '"set" handler': {
@@ -2604,12 +2618,24 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
-        firefox18:   {
-          val: true,
-          note_id: 'fx-proxy-set',
-          note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "set" handler via the prototype chain.'
-        },
-        firefox23:   { val: true, note_id: 'fx-proxy-set' },
+        firefox18:   true,
+      },
+    },
+    '"set" handler, instances of proxies': {
+      exec: function () {/*
+        var proxied = { };
+        var passed = false;
+        var proxy = Object.create(new Proxy(proxied, {
+          set: function (t, k, v, r) {
+            passed = t === proxied && k + v === "foobar" && r === proxy;
+          }
+        }));
+        proxy.foo = "bar";
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11tp:      true,
       },
     },
     '"has" handler': {
@@ -2621,6 +2647,23 @@ exports.tests = [
             passed = t === proxied && k === "foo";
           }
         });
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        ie11tp:      true,
+        firefox18:   true,
+      },
+    },
+    '"has" handler, instances of proxies': {
+      exec: function () {/*
+        var proxied = {};
+        var passed = false;
+        "foo" in Object.create(new Proxy(proxied, {
+          has: function (t, k) {
+            passed = t === proxied && k === "foo";
+          }
+        }));
         return passed;
       */},
       res: {
@@ -4382,14 +4425,15 @@ exports.tests = [
         firefox27:   {
           val: false,
           note_id: 'fx-array-prototype-values-2',
-          note_html: 'Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>'
+          note_html: 'Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code>'
         },
-        chrome30:    true,
-        chrome38:    {
+        firefox36:   {
           val: false,
           note_id: 'array-prototype-iterator',
           note_html: 'Available as <code>Array.prototype[Symbol.iterator]</code>'
         },
+        chrome30:    true,
+        chrome38:    { val: false, note_id: 'array-prototype-iterator' },
         nodeharmony: true,
       },
     },
@@ -4816,18 +4860,30 @@ exports.tests = [
       res: {
       },
     },
+    'accessors aren\'t constructors': {
+      exec: function(){/*
+        try {
+          new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+      },
+    },
     'Object static methods accept primitives': {
       exec: function(){/*
-        var methods = ['freeze', 'seal', 'preventExtensions', 'getOwnPropertyDescriptors',
-          'getPrototypeOf', 'isExtensible', 'isSealed', 'isFrozen', 'keys'];
+        var methods = ['freeze', 'seal', 'preventExtensions', 'getOwnPropertyDescriptor',
+          'getPrototypeOf', 'isExtensible', 'isSealed', 'isFrozen', 'keys', 'getOwnPropertyNames'];
         for (var i = 0; i < methods.length; i++) {
-          Object[methods[i]](2);
-          Object[methods[i]]("foo");
-          Object[methods[i]](false);
+          Object[methods[i]](20000, "foo");
+          Object[methods[i]]("foo", "foo");
+          Object[methods[i]](false, "foo");
         }
         return true;
       */},
       res: {
+        firefox35:   true,
       },
     },
     'Invalid Date': {
