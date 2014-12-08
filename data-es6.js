@@ -3158,6 +3158,9 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
       },
     },
     'in for-of loop heads': {
@@ -3171,6 +3174,9 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         firefox13:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
       },
     },
     'rest': {

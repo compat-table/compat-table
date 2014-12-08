@@ -12385,8 +12385,8 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
           <td class="tally safari51 obsolete" data-tally="0">0/14</td>
           <td class="tally safari6" data-tally="0">0/14</td>
           <td class="tally safari7" data-tally="0">0/14</td>
-          <td class="tally safari71_8" data-tally="0.35714285714285715">5/14</td>
-          <td class="tally webkit" data-tally="0.42857142857142855">6/14</td>
+          <td class="tally safari71_8" data-tally="0.5">7/14</td>
+          <td class="tally webkit" data-tally="0.5714285714285714">8/14</td>
           <td class="tally opera" data-tally="0">0/14</td>
           <td class="tally konq49" data-tally="0">0/14</td>
           <td class="tally rhino17" data-tally="0">0/14</td>
@@ -12394,7 +12394,7 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
           <td class="tally node" data-tally="0">0/14</td>
           <td class="tally nodeharmony" data-tally="0">0/14</td>
           <td class="tally ios7" data-tally="0">0/14</td>
-          <td class="tally ios8" data-tally="0.35714285714285715">5/14</td>
+          <td class="tally ios8" data-tally="0.5">7/14</td>
         <tr class="subtest" data-parent="destructuring">
           <td><span>with arrays</span></td>
 <script data-source="
@@ -12930,8 +12930,8 @@ test(function(){try{return Function("\nfor(var [i, j, k] in { qux: 1 }) {\n  ret
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
-          <td class="no webkit">No</td>
+          <td class="yes safari71_8">Yes</td>
+          <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
@@ -12939,7 +12939,7 @@ test(function(){try{return Function("\nfor(var [i, j, k] in { qux: 1 }) {\n  ret
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="destructuring">
           <td><span>in for-of loop heads</span></td>
 <script data-source="
@@ -12991,8 +12991,8 @@ test(function(){try{return Function("\nfor(var [i, j, k] of [[1,2,3]]) {\n  retu
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
-          <td class="no safari71_8">No</td>
-          <td class="no webkit">No</td>
+          <td class="yes safari71_8">Yes</td>
+          <td class="yes webkit">Yes</td>
           <td class="no opera">No</td>
           <td class="no konq49">No</td>
           <td class="no rhino17">No</td>
@@ -13000,7 +13000,7 @@ test(function(){try{return Function("\nfor(var [i, j, k] of [[1,2,3]]) {\n  retu
           <td class="no node">No</td>
           <td class="no nodeharmony">No</td>
           <td class="no ios7">No</td>
-          <td class="no ios8">No</td>
+          <td class="yes ios8">Yes</td>
         <tr class="subtest" data-parent="destructuring">
           <td><span>rest</span></td>
 <script data-source="
