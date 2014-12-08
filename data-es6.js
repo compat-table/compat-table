@@ -128,8 +128,7 @@ exports.browsers = {
   },
   firefox33: {
     full: 'Firefox',
-    short: 'FF 33',
-    obsolete: true
+    short: 'FF 33'
   },
   firefox34: {
     full: 'Firefox',
@@ -138,10 +137,6 @@ exports.browsers = {
   firefox35: {
     full: 'Firefox',
     short: 'FF 35'
-  },
-  firefox36: {
-    full: 'Firefox',
-    short: 'FF 36'
   },
   chrome: {
     full: 'Chrome',
@@ -242,7 +237,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r176637',
+    full: 'WebKit r173886',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -478,6 +473,7 @@ exports.tests = [
         return !a.hasOwnProperty("prototype");
       */},
       res: {
+        tr:          true,
         ejs:         true,
         ie11tp:      true,
         firefox23:   true,
@@ -524,7 +520,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox36:   true,
       }
     },
     'redefining a const is an error': {
@@ -542,7 +537,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox36:   true,
       }
     },
     'temporal dead zone': {
@@ -554,7 +548,6 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11:        true,
-        firefox36:   true,
       },
     },
    'basic support (strict mode)': {
@@ -588,7 +581,6 @@ exports.tests = [
         closure:     true,
         chrome19dev: true,
         ie11:        true,
-        firefox36:   true,
         nodeharmony: true,
       }
     },
@@ -623,7 +615,6 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11:        true,
-        firefox36:   true,
         chrome19dev: true,
         nodeharmony: true,
       },
@@ -1036,7 +1027,6 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        firefox36:   true,
       },
     },
     'with instances of iterables, in arrays': {
@@ -1047,7 +1037,6 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        firefox36:   true,
       },
     },
   }
@@ -1465,7 +1454,6 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ie11tp:      true,
-        firefox36:   true,
         chrome35:    true,
       },
     },
@@ -1487,47 +1475,6 @@ exports.tests = [
         passed    &= item.value === 6 && item.done === false;
         item = iterator.next();
         passed    &= item.value === undefined && item.done === true;
-        return passed;
-      */},
-      res: {
-        tr:          true,
-        _6to5:       true,
-        closure:     true,
-        firefox27:   true,
-        chrome21dev: true,
-        nodeharmony: true,
-      },
-    },
-    'sending': {
-      exec: function() {/*
-        var sent;
-        function * generator(){
-          sent = [yield 5, yield 6];
-        };
-        var iterator = generator();
-        iterator.next();
-        iterator.next("foo");
-        iterator.next("bar");
-        return sent[0] === "foo" && sent[1] === "bar";
-      */},
-      res: {
-        tr:          true,
-        _6to5:       true,
-        closure:     true,
-        firefox27:   true,
-        chrome21dev: true,
-        nodeharmony: true,
-      },
-    },
-    'yield operator precedence': {
-      exec: function() {/*
-        var passed;
-        function * generator(){
-          passed = yield 0 ? true : false;
-        };
-        var iterator = generator();
-        iterator.next();
-        iterator.next(true);
         return passed;
       */},
       res: {
@@ -1620,7 +1567,6 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        firefox36:   true,
         chrome35:    true,
       },
     },
@@ -1691,7 +1637,6 @@ exports.tests = [
       res: {
         ejs:         true,
         closure:     true,
-        firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
       },
@@ -1703,7 +1648,6 @@ exports.tests = [
       res: {
         ejs:         true,
         closure:     true,
-        firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
       },
@@ -2467,7 +2411,6 @@ exports.tests = [
       */},
       res: {
         ie11tp:      true,
-        firefox36:   true,
         chrome38:    true,
       },
     },
@@ -2580,27 +2523,12 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
-        firefox18:   true,
-      },
-    },
-    '"get" handler, instances of proxies': {
-      exec: function () {/*
-        var proxied = { };
-        var proxy = Object.create(new Proxy(proxied, {
-          get: function (t, k, r) {
-            return t === proxied && k === "foo" && r === proxy && 5;
-          }
-        }));
-        return proxy.foo === 5;
-      */},
-      res: {
-        ejs:         true,
-        ie11tp:      true,
         firefox18:   {
-          val: false,
+          val: true,
           note_id: 'fx-proxy-get',
-          note_html: 'Firefox doesn\'t allow a proxy\'s "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy\'s "has" handler reports it as present).'
+          note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "get" handler via the prototype chain, unless the proxied object actually does possess the named property.'
         },
+        firefox23:   { val: true, note_id: 'fx-proxy-get' },
       },
     },
     '"set" handler': {
@@ -2618,24 +2546,12 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
-        firefox18:   true,
-      },
-    },
-    '"set" handler, instances of proxies': {
-      exec: function () {/*
-        var proxied = { };
-        var passed = false;
-        var proxy = Object.create(new Proxy(proxied, {
-          set: function (t, k, v, r) {
-            passed = t === proxied && k + v === "foobar" && r === proxy;
-          }
-        }));
-        proxy.foo = "bar";
-        return passed;
-      */},
-      res: {
-        ejs:         true,
-        ie11tp:      true,
+        firefox18:   {
+          val: true,
+          note_id: 'fx-proxy-set',
+          note_html: 'Firefox doesn\'t allow inheritors of a proxy (such as objects created by <code>Object.create(proxy)</code>) to trigger the proxy\'s "set" handler via the prototype chain.'
+        },
+        firefox23:   { val: true, note_id: 'fx-proxy-set' },
       },
     },
     '"has" handler': {
@@ -2647,23 +2563,6 @@ exports.tests = [
             passed = t === proxied && k === "foo";
           }
         });
-        return passed;
-      */},
-      res: {
-        ejs:         true,
-        ie11tp:      true,
-        firefox18:   true,
-      },
-    },
-    '"has" handler, instances of proxies': {
-      exec: function () {/*
-        var proxied = {};
-        var passed = false;
-        "foo" in Object.create(new Proxy(proxied, {
-          has: function (t, k) {
-            passed = t === proxied && k === "foo";
-          }
-        }));
         return passed;
       */},
       res: {
@@ -3160,13 +3059,9 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox11:   true,
-        safari71_8:  {
-          val: true,
-          note_id: 'fx-destructuring',
-          note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
-        },
+        safari71_8:  true,
         webkit:      true,
-        ios8:        { val: true, note_id: 'fx-destructuring' },
+        ios8:        true,
       }),
     },
     'with strings': {
@@ -3180,9 +3075,9 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox11:   true,
-        safari71_8:  { val: true, note_id: 'fx-destructuring' },
+        safari71_8:  true,
         webkit:      true,
-        ios8:        { val: true, note_id: 'fx-destructuring' },
+        ios8:        true,
       }),
     },
     'with generic iterables': {
@@ -3204,7 +3099,6 @@ exports.tests = [
       */},
       res: {
         _6to5:        true,
-        firefox36:   true,
       },
     },
     'with objects': {
@@ -3213,6 +3107,20 @@ exports.tests = [
         return c === 7 && d === 8 && e === undefined;
       */},
       res: temp.destructuringResults,
+    },
+    'multiples in a single var statement': {
+      exec: function() {/*
+        var [a,b] = [5,6], {c,d} = {c:7,d:8};
+        return a === 5 && b === 6 && c === 7 && d === 8;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        webkit:      true,
+      },
     },
     'nested': {
       exec: function(){/*
@@ -3234,6 +3142,38 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'in for-in loop heads': {
+      exec: function(){/*
+        for(var [i, j, k] in { qux: 1 }) {
+          return i === "q" && j === "u" && k === "x";
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'in for-of loop heads': {
+      exec: function(){/*
+        for(var [i, j, k] of [[1,2,3]]) {
+          return i === 1 && j === 2 && k === 3;
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox13:   true,
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
@@ -3388,7 +3328,6 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         ie11tp:      true,
-        firefox36:   true,
         chrome34:    true,
         nodeharmony: true,
       },
@@ -3809,7 +3748,7 @@ exports.tests = [
         ejs:         { val: false, note_id: 'string-contains' },
         firefox18:   { val: false, note_id: 'string-contains' },
         chrome30:    { val: false, note_id: 'string-contains' },
-        webkit:      { val: true },
+        webkit:      { val: false, note_id: 'string-contains' },
         nodeharmony: { val: false, note_id: 'string-contains' },
       },
     },
@@ -3946,7 +3885,6 @@ exports.tests = [
         ejs:         true,
         _6to5:       true,
         ie11tp:      true,
-        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -3958,7 +3896,6 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
-        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -3983,7 +3920,6 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         ie11tp:      true,
-        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -4006,7 +3942,6 @@ exports.tests = [
         ejs:         true,
         _6to5:       true,
         ie11tp:      true,
-        firefox36:   true,
         chrome30:    true, // Actually Chrome 29
         nodeharmony: true,
       },
@@ -4031,7 +3966,6 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
-        firefox36:   true,
         chrome38:    true,
         nodeharmony: true,
       },
@@ -4042,7 +3976,6 @@ exports.tests = [
       */},
       res: {
         chrome39:    true,
-        firefox36:   true,
       },
     },
     'new Symbol() throws': {
@@ -4058,7 +3991,6 @@ exports.tests = [
         tr:         true,
         _6to5:      true,
         ie11tp:     true,
-        firefox36:  true,
         chrome35:   true,
         nodeharmony:true,
       },
@@ -4075,26 +4007,66 @@ exports.tests = [
       res: {
         _6to5:      true,
         ie11tp:     true,
-        firefox36:  true,
         chrome30:   true,
         chrome35:   false,
       },
     },
-    'global symbol registry': {
-      exec: function() {/*
-        var symbol = Symbol.for('foo');
-        return Symbol.for('foo') === symbol &&
-           Symbol.keyFor(symbol) === 'foo';
-      */},
-      res: {
-        ejs:         true,
-        ie11tp:      true,
-        firefox36:  true,
-        chrome35:    true,
-        nodeharmony: true,
-      },
-    },
   },
+},
+{
+  name: 'global symbol registry',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.for',
+  exec: function() {/*
+    var symbol = Symbol.for('foo');
+    return Symbol.for('foo') === symbol &&
+           Symbol.keyFor(symbol) === 'foo';
+  */},
+  res: {
+    tr:          false,
+    ejs:         true,
+    closure:     false,
+    ie10:        false,
+    ie11:        false,
+    ie11tp:      true,
+    firefox11:   false,
+    firefox13:   false,
+    firefox16:   false,
+    firefox17:   false,
+    firefox18:   false,
+    firefox23:   false,
+    firefox24:   false,
+    firefox25:   false,
+    firefox27:   false,
+    firefox28:   false,
+    firefox29:   false,
+    firefox30:   false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    chrome:      false,
+    chrome19dev: false,
+    chrome21dev: false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    true,
+    chrome37:    true,
+    chrome39:    true,
+    safari51:    false,
+    safari6:     false,
+    safari7:     false,
+    safari71_8:  false,
+    webkit:      false,
+    opera:       false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: true,
+    ios7:        false,
+    ios8:        false
+  }
 },
 {
   name: 'well-known symbols',
@@ -4112,7 +4084,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        ejs:         true,
+       ejs:         true,
       },
     },
     'Symbol.isConcatSpreadable': {
@@ -4147,7 +4119,6 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ie11tp:      true,
-        firefox36:   true,
         chrome37:    true,
         ejs:         true,
       },
@@ -4204,15 +4175,9 @@ exports.tests = [
   },
 },
 {
-  name: 'RegExp.prototype properties',
+  name: 'RegExp.prototype methods',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
-    'RegExp.prototype.flags': {
-      exec: function () {/*
-        return /./igm.flags === "gim" && /./.flags === "";
-      */},
-      res: {},
-    },
     'RegExp.prototype[Symbol.match]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.match] === 'function';
@@ -4425,15 +4390,14 @@ exports.tests = [
         firefox27:   {
           val: false,
           note_id: 'fx-array-prototype-values-2',
-          note_html: 'Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code>'
+          note_html: 'Available since Firefox 27 as the non-standard <code>Array.prototype["@@iterator"]</code>'
         },
-        firefox36:   {
+        chrome30:    true,
+        chrome38:    {
           val: false,
           note_id: 'array-prototype-iterator',
           note_html: 'Available as <code>Array.prototype[Symbol.iterator]</code>'
         },
-        chrome30:    true,
-        chrome38:    { val: false, note_id: 'array-prototype-iterator' },
         nodeharmony: true,
       },
     },
@@ -4826,7 +4790,6 @@ exports.tests = [
         return this === undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
-        firefox35:   true,
       },
     },
     'no semicolon needed after do-while': {
@@ -4860,30 +4823,18 @@ exports.tests = [
       res: {
       },
     },
-    'accessors aren\'t constructors': {
-      exec: function(){/*
-        try {
-          new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
-        } catch(e) {
-          return true;
-        }
-      */},
-      res: {
-      },
-    },
     'Object static methods accept primitives': {
       exec: function(){/*
-        var methods = ['freeze', 'seal', 'preventExtensions', 'getOwnPropertyDescriptor',
-          'getPrototypeOf', 'isExtensible', 'isSealed', 'isFrozen', 'keys', 'getOwnPropertyNames'];
+        var methods = ['freeze', 'seal', 'preventExtensions', 'getOwnPropertyDescriptors',
+          'getPrototypeOf', 'isExtensible', 'isSealed', 'isFrozen', 'keys'];
         for (var i = 0; i < methods.length; i++) {
-          Object[methods[i]](20000, "foo");
-          Object[methods[i]]("foo", "foo");
-          Object[methods[i]](false, "foo");
+          Object[methods[i]](2);
+          Object[methods[i]]("foo");
+          Object[methods[i]](false);
         }
         return true;
       */},
       res: {
-        firefox35:   true,
       },
     },
     'Invalid Date': {
