@@ -3160,13 +3160,9 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox11:   true,
-        safari71_8:  {
-          val: true,
-          note_id: 'fx-destructuring',
-          note_html: 'Safari 7.1, Safari 8 and iOS 8 fail to support multiple destructurings in a single <code>var</code> or <code>let</code> statement - for example, <code>var [a,b] = [5,6], {c,d} = {c:7,d:8};</code>'
-        },
+        safari71_8:  true,
         webkit:      true,
-        ios8:        { val: true, note_id: 'fx-destructuring' },
+        ios8:        true,
       }),
     },
     'with strings': {
@@ -3180,9 +3176,9 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox11:   true,
-        safari71_8:  { val: true, note_id: 'fx-destructuring' },
+        safari71_8:  true,
         webkit:      true,
-        ios8:        { val: true, note_id: 'fx-destructuring' },
+        ios8:        true,
       }),
     },
     'with generic iterables': {
@@ -3214,6 +3210,20 @@ exports.tests = [
       */},
       res: temp.destructuringResults,
     },
+    'multiples in a single var statement': {
+      exec: function() {/*
+        var [a,b] = [5,6], {c,d} = {c:7,d:8};
+        return a === 5 && b === 6 && c === 7 && d === 8;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        webkit:      true,
+      },
+    },
     'nested': {
       exec: function(){/*
         var [e, {x:f, g}] = [9, {x:10}];
@@ -3234,6 +3244,38 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'in for-in loop heads': {
+      exec: function(){/*
+        for(var [i, j, k] in { qux: 1 }) {
+          return i === "q" && j === "u" && k === "x";
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'in for-of loop heads': {
+      exec: function(){/*
+        for(var [i, j, k] of [[1,2,3]]) {
+          return i === 1 && j === 2 && k === 3;
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox13:   true,
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
