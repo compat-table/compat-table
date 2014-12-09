@@ -1519,6 +1519,46 @@ exports.tests = [
         nodeharmony: true,
       },
     },
+    '%GeneratorPrototype%.throw': {
+      exec: function() {/*
+        var passed = false;
+        function * generator(){
+          try {
+            yield 5; yield 6;
+          } catch(e) {
+            passed = (e === "foo");
+          }
+        };
+        var iterator = generator();
+        iterator.next();
+        iterator.throw("foo");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
+    '%GeneratorPrototype%.return': {
+      exec: function() {/*
+        function * generator(){
+          yield 5; yield 6;
+        };
+        var iterator = generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.return("quxquux");
+        passed    &= item.value === "quxquux" && item.done === true;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+      },
+    },
     'yield operator precedence': {
       exec: function() {/*
         var passed;
@@ -4882,7 +4922,6 @@ exports.tests = [
         safari51:    true,
         webkit:      true,
         opera:       true,
-        konq49:      true,
         rhino17:     true,
         phantom:     true,
         node:        true,
