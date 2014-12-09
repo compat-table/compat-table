@@ -105,7 +105,7 @@ process.nextTick(function () {
         var fpath = os.tmpDir() + path.sep + 'temp.ts';
         var file = fs.writeFileSync(fpath, code);
         try {
-          child_process.execSync('node_modules/typescript/bin/tsc ' + fpath);
+          child_process.execSync('node_modules/typescript/bin/tsc -t ES5 ' + fpath);
         } catch(e) {
           throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
         }
