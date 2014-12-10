@@ -1498,6 +1498,29 @@ exports.tests = [
         nodeharmony: true,
       },
     },
+    'correct \"this\" binding': {
+      exec: function() {/*
+        function * generator(){
+          yield this.x; yield this.y;
+        };
+        var iterator = { g: generator, x: 5, y: 6 }.g();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
     'sending': {
       exec: function() {/*
         var sent;
@@ -1517,6 +1540,17 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: true,
         nodeharmony: true,
+      },
+    },
+    '%GeneratorPrototype%': {
+      exec: function() {/*
+        var prototype1 = Object.getPrototypeOf(function*(){}());
+        var prototype2 = Object.getPrototypeOf(function*(){}());
+        return prototype1 === prototype2 &&
+          prototype1 === function*(){}.prototype &&
+          prototype1.hasOwnProperty('next');
+      */},
+      res: {
       },
     },
     '%GeneratorPrototype%.throw': {
