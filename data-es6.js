@@ -1544,13 +1544,22 @@ exports.tests = [
     },
     '%GeneratorPrototype%': {
       exec: function() {/*
-        var prototype1 = Object.getPrototypeOf(function*(){}());
-        var prototype2 = Object.getPrototypeOf(function*(){}());
-        return prototype1 === prototype2 &&
-          prototype1 === function*(){}.prototype &&
-          prototype1.hasOwnProperty('next');
+        function * generatorFn(){}
+        var ownProto = Object.getPrototypeOf(generatorFn());
+        var passed = ownProto === generatorFn.prototype;
+        
+        var sharedProto = Object.getPrototypeOf(ownProto);
+        passed &= sharedProto !== Object.prototype &&
+          sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&
+          sharedProto.hasOwnProperty('next');
+        
+        return passed;
       */},
       res: {
+        tr:          true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
       },
     },
     '%GeneratorPrototype%.throw': {
