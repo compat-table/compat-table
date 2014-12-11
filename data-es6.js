@@ -3369,6 +3369,14 @@ exports.tests = [
       */},
       res: temp.destructuringResults,
     },
+    'computed properties': {
+      exec: function(){/*
+        var qux = "corge";
+        var { [qux]: grault } = { corge: "garply" };
+        return grault === "garply";
+      */},
+      res: {},
+    },
     'multiples in a single var statement': {
       exec: function() {/*
         var [a,b] = [5,6], {c,d} = {c:7,d:8};
