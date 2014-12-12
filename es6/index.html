@@ -83,7 +83,7 @@
       <thead>
         <tr>
           <th colspan="3"  class="platformtype"></th>
-          <th colspan="5"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
+          <th colspan="6"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
           <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
           <th colspan="4"  class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
           <th colspan="2"  class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
@@ -95,7 +95,7 @@
           <th class="platform tr compiler"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></th>
           <th class="platform _6to5 compiler"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br>polyfill</abbr></th>
           <th class="platform ejs compiler"><a href="#ejs" class="browser-name"><abbr title="Echo JS">EJS</abbr></th>
-          <th class="platform closure compiler"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141023">Closure<br>Compiler</abbr></th>
+          <th class="platform closure compiler"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure<br>Compiler</abbr></th>
           <th class="platform jsx compiler"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[1]</sup></a></th>
           <th class="platform typescript compiler"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.3">TypeScript</abbr></th>
           <th class="platform ie10 desktop"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></th>
@@ -222,7 +222,7 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
           <td class="tally tr" data-tally="0.6666666666666666">6/9</td>
           <td class="tally _6to5" data-tally="0.7777777777777778">7/9</td>
           <td class="tally ejs" data-tally="0.7777777777777778">7/9</td>
-          <td class="tally closure" data-tally="0.6666666666666666">6/9</td>
+          <td class="tally closure" data-tally="0.7777777777777778">7/9</td>
           <td class="tally jsx" data-tally="0.6666666666666666">6/9</td>
           <td class="tally typescript" data-tally="0.6666666666666666">6/9</td>
           <td class="tally ie10" data-tally="0">0/9</td>
@@ -533,7 +533,7 @@ test(function(){try{return Function("\nvar d = { x : \"foo\", y : function() { r
           <td class="yes tr">Yes</td>
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
-          <td class="no closure">No</td>
+          <td class="yes closure">Yes</td>
           <td class="yes jsx">Yes</td>
           <td class="yes typescript">Yes</td>
           <td class="no ie10">No</td>
@@ -2117,7 +2117,7 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
           <td class="tally tr" data-tally="0.6">3/5</td>
           <td class="tally _6to5" data-tally="0.8">4/5</td>
           <td class="tally ejs" data-tally="0.6">3/5</td>
-          <td class="tally closure" data-tally="0.6">3/5</td>
+          <td class="tally closure" data-tally="0.8">4/5</td>
           <td class="tally jsx" data-tally="0">0/5</td>
           <td class="tally typescript" data-tally="0.6">3/5</td>
           <td class="tally ie10" data-tally="0">0/5</td>
@@ -2437,7 +2437,7 @@ test(function(){try{return Function("\nreturn (function(a=function(){\n  return 
           <td class="no tr">No</td>
           <td class="yes _6to5">Yes</td>
           <td class="no ejs">No</td>
-          <td class="no closure">No</td>
+          <td class="yes closure">Yes</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
           <td class="no ie10">No</td>
@@ -3105,7 +3105,7 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(\"b
           <td class="tally tr" data-tally="0.875">7/8</td>
           <td class="tally _6to5" data-tally="1">8/8</td>
           <td class="tally ejs" data-tally="0.75">6/8</td>
-          <td class="tally closure" data-tally="0.75">6/8</td>
+          <td class="tally closure" data-tally="0.625">5/8</td>
           <td class="tally jsx" data-tally="0.75">6/8</td>
           <td class="tally typescript" data-tally="0">0/8</td>
           <td class="tally ie10" data-tally="0">0/8</td>
@@ -3620,8 +3620,8 @@ test(function(){try{return Function("\nclass C extends Array {}\nreturn Array.is
           <td class="yes tr">Yes</td>
           <td class="yes _6to5">Yes</td>
           <td class="yes ejs">Yes</td>
-          <td class="yes closure">Yes</td>
-          <td class="no jsx">No</td>
+          <td class="no closure">No<a href="#compiled-extends-note"><sup>[8]</sup></a></td>
+          <td class="no jsx">No<a href="#compiled-extends-note"><sup>[8]</sup></a></td>
           <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -5400,7 +5400,7 @@ test(function(){try{return Function("\nvar o = {\n  * generator() {\n    yield 5
           <td class="tally tr" data-tally="0.5">2/4</td>
           <td class="tally _6to5" data-tally="0.5">2/4</td>
           <td class="tally ejs" data-tally="1">4/4</td>
-          <td class="tally closure" data-tally="1">4/4</td>
+          <td class="tally closure" data-tally="0.5">2/4</td>
           <td class="tally jsx" data-tally="0">0/4</td>
           <td class="tally typescript" data-tally="0">0/4</td>
           <td class="tally ie10" data-tally="0">0/4</td>
@@ -5583,7 +5583,7 @@ test(function(){try{return Function("\nreturn Number('0o1') === 1;\n      ")()}c
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
-          <td class="yes closure">Yes</td>
+          <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
           <td class="no ie10">No</td>
@@ -5644,7 +5644,7 @@ test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}c
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
           <td class="yes ejs">Yes</td>
-          <td class="yes closure">Yes</td>
+          <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
           <td class="no ie10">No</td>
@@ -11070,20 +11070,20 @@ test(function(){try{return Function("\nvar proxied = { };\nvar proxy = Object.cr
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox32 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox33 obsolete">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox34">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox35">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
-          <td class="no firefox36">No<a href="#fx-proxy-get-note"><sup>[8]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox32 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox33 obsolete">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox34">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox35">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
+          <td class="no firefox36">No<a href="#fx-proxy-get-note"><sup>[9]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -11486,13 +11486,13 @@ test(function(){try{return Function("\nvar proxied = {};\nvar fakeDesc = { value
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-proxy-getown-note"><sup>[9]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-proxy-getown-note"><sup>[10]</sup></a></td>
           <td class="yes firefox30 obsolete">Yes</td>
           <td class="yes firefox31">Yes</td>
           <td class="yes firefox32 obsolete">Yes</td>
@@ -11984,16 +11984,16 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
-          <td class="no firefox32 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[10]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
+          <td class="no firefox32 obsolete">No<a href="#fx-proxy-ownkeys-note"><sup>[11]</sup></a></td>
           <td class="yes firefox33 obsolete">Yes</td>
           <td class="yes firefox34">Yes</td>
           <td class="yes firefox35">Yes</td>
@@ -13294,7 +13294,7 @@ test(function(){try{return Function("\nreturn Reflect.construct(function(a, b, c
           <td class="no ios8">No</td>
         </tr>
         <tr>
-          <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[11]</sup></a></span></td>
+          <td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[12]</sup></a></span></td>
 <script data-source="
 'use strict';
 function f() { return 1; }
@@ -14613,7 +14613,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No<a href="#setprototypeof-polyfill-note"><sup>[12]</sup></a></td>
+          <td class="no _6to5">No<a href="#setprototypeof-polyfill-note"><sup>[13]</sup></a></td>
           <td class="yes ejs">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
@@ -16357,8 +16357,8 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no ejs">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no _6to5">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no ejs">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -16369,33 +16369,33 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
           <td class="no firefox17 obsolete">No</td>
-          <td class="no firefox18 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox31">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox32 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox33 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox34">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox35">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no firefox36">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox31">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox32 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox33 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox34">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox35">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no firefox36">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
-          <td class="no chrome30 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome31 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome33 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome34 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome35 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome36 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome37 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome38 obsolete">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome39">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
-          <td class="no chrome40">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no chrome30 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome31 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome33 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome34 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome35 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome36 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome37 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome38 obsolete">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome39">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="no chrome40">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -16406,7 +16406,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
           <td class="no rhino17">No</td>
           <td class="no phantom">No</td>
           <td class="no node">No</td>
-          <td class="no nodeharmony">No<a href="#string-contains-note"><sup>[13]</sup></a></td>
+          <td class="no nodeharmony">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
@@ -18575,21 +18575,21 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.values === 
           <td class="no firefox11 obsolete">No</td>
           <td class="no firefox13 obsolete">No</td>
           <td class="no firefox16 obsolete">No</td>
-          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox24 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[14]</sup></a></td>
-          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox28 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox32 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox33 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[15]</sup></a></td>
-          <td class="no firefox36">No<a href="#array-prototype-iterator-note"><sup>[16]</sup></a></td>
+          <td class="no firefox17 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox18 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox23 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox24 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox25 obsolete">No<a href="#fx-array-prototype-values-note"><sup>[15]</sup></a></td>
+          <td class="no firefox27 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox28 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox29 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox30 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox32 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox33 obsolete">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[16]</sup></a></td>
+          <td class="no firefox36">No<a href="#array-prototype-iterator-note"><sup>[17]</sup></a></td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -18600,9 +18600,9 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.values === 
           <td class="yes chrome35 obsolete">Yes</td>
           <td class="yes chrome36 obsolete">Yes</td>
           <td class="yes chrome37 obsolete">Yes</td>
-          <td class="no chrome38 obsolete">No<a href="#array-prototype-iterator-note"><sup>[16]</sup></a></td>
-          <td class="no chrome39">No<a href="#array-prototype-iterator-note"><sup>[16]</sup></a></td>
-          <td class="no chrome40">No<a href="#array-prototype-iterator-note"><sup>[16]</sup></a></td>
+          <td class="no chrome38 obsolete">No<a href="#array-prototype-iterator-note"><sup>[17]</sup></a></td>
+          <td class="no chrome39">No<a href="#array-prototype-iterator-note"><sup>[17]</sup></a></td>
+          <td class="no chrome40">No<a href="#array-prototype-iterator-note"><sup>[17]</sup></a></td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -19385,7 +19385,7 @@ test(function(){try{return Function("\nreturn typeof Math.imul === \"function\";
           <td class="yes firefox36">Yes</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
-          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[17]</sup></a></td>
+          <td class="yes chrome21dev obsolete">Yes<a href="#chromu-imul-note"><sup>[18]</sup></a></td>
           <td class="yes chrome30 obsolete">Yes</td>
           <td class="yes chrome31 obsolete">Yes</td>
           <td class="yes chrome33 obsolete">Yes</td>
@@ -20227,7 +20227,7 @@ test(function(){try{return Function("\nreturn typeof Math.fround === \"function\
           <td class="no firefox23 obsolete">No</td>
           <td class="no firefox24 obsolete">No</td>
           <td class="no firefox25 obsolete">No</td>
-          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[18]</sup></a></td>
+          <td class="yes firefox27 obsolete">Yes<a href="#fx-fround-note"><sup>[19]</sup></a></td>
           <td class="yes firefox28 obsolete">Yes</td>
           <td class="yes firefox29 obsolete">Yes</td>
           <td class="yes firefox30 obsolete">Yes</td>
@@ -20899,7 +20899,7 @@ test(function(){try{return Function("\n// Note: only available outside of strict
           <td class="no ios8">No</td>
         </tr>
         <tr class="supertest">
-          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[19]</sup></a></span></td>
+          <td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[20]</sup></a></span></td>
 
           <td title="This feature is optional on non-browser platforms." class="tally tr not-applicable " data-tally="0">0/5</td>
           <td title="This feature is optional on non-browser platforms." class="tally _6to5 not-applicable " data-tally="0">0/5</td>
@@ -21686,41 +21686,44 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile ==
       <p id="fx-let-tdz-note">
         <sup>[7]</sup> Available from Firefox 35 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.
       </p>
+      <p id="compiled-extends-note">
+        <sup>[8]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.
+      </p>
       <p id="fx-proxy-get-note">
-        <sup>[8]</sup> Firefox doesn't allow a proxy's "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy's "has" handler reports it as present).
+        <sup>[9]</sup> Firefox doesn't allow a proxy's "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy's "has" handler reports it as present).
       </p>
       <p id="fx-proxy-getown-note">
-        <sup>[9]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible
+        <sup>[10]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible
       </p>
       <p id="fx-proxy-ownkeys-note">
-        <sup>[10]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler
+        <sup>[11]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler
       </p>
       <p id="block-level-function-note">
-        <sup>[11]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
+        <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.
       </p>
       <p id="setprototypeof-polyfill-note">
-        <sup>[12]</sup> Requires native support for <code>Object.prototype.__proto__</code>
+        <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code>
       </p>
       <p id="string-contains-note">
-        <sup>[13]</sup> Available as the draft standard <code>String.prototype.contains</code>
+        <sup>[14]</sup> Available as the draft standard <code>String.prototype.contains</code>
       </p>
       <p id="fx-array-prototype-values-note">
-        <sup>[14]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
+        <sup>[15]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code>
       </p>
       <p id="fx-array-prototype-values-2-note">
-        <sup>[15]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code>
+        <sup>[16]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code>
       </p>
       <p id="array-prototype-iterator-note">
-        <sup>[16]</sup> Available as <code>Array.prototype[Symbol.iterator]</code>
+        <sup>[17]</sup> Available as <code>Array.prototype[Symbol.iterator]</code>
       </p>
       <p id="chromu-imul-note">
-        <sup>[17]</sup> Available since Chrome 28
+        <sup>[18]</sup> Available since Chrome 28
       </p>
       <p id="fx-fround-note">
-        <sup>[18]</sup> Available since Firefox 26
+        <sup>[19]</sup> Available since Firefox 26
       </p>
       <p id="proto-in-object-literals-note">
-        <sup>[19]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
+        <sup>[20]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.
       </p>
     </div>
   </div>
