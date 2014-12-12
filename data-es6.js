@@ -1189,7 +1189,9 @@ exports.tests = [
     'extends': {
       exec: function () {/*
         class C extends Array {}
-        return Array.isPrototypeOf(C)
+        var c = new C();
+        return c instanceof Array
+          && Array.isPrototypeOf(C)
           && Array.prototype.isPrototypeOf(C.prototype);
       */},
       res: {
@@ -1204,6 +1206,20 @@ exports.tests = [
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         chrome40:    true,
+      },
+    },
+    'extends null': {
+      exec: function () {/*
+        class C extends null {}
+        var c = new C();
+        return !(c instanceof Object)
+          && Function.prototype.isPrototypeOf(C)
+          && Object.getPrototypeOf(C.prototype) === null;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        ie11tp:      true,
       },
     },
   },
