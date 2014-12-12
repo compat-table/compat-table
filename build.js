@@ -32,6 +32,7 @@ var to5        = require('6to5');
 var esnext     = require('esnext');
 var es6tr      = require('es6-transpiler');
 var traceur    = require('traceur');
+var reacttools = require('react-tools');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
@@ -94,6 +95,16 @@ process.nextTick(function () {
       polyfills: [],
       compiler: function(code) {
         return es6tr.run({src:code}).src;
+      },
+    },
+    {
+      name: 'JSX',
+      url: 'https://github.com/facebook/react',
+      target_file: 'es6/compilers/jsx.html',
+      polyfills: [],
+      compiler: function(code) {
+        var ret = reacttools.transform(code, { harmony:true });
+        return ret.code || ret;
       },
     },
     {
