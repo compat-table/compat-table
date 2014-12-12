@@ -28,7 +28,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20141023',
+    full: 'Closure Compiler v20141120',
     short: 'Closure<br>Compiler',
     obsolete: false,
     platformtype: 'compiler',
