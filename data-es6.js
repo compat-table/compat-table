@@ -33,6 +33,14 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
+  jsx: {
+    full: 'JSX',
+    short: 'JSX',
+    obsolete: false,
+    platformtype: 'compiler',
+    note_id: 'jsx-flag',
+    note_html: 'Have to be enabled via <code>harmony</code> option'
+  },
   typescript: {
     full: 'TypeScript 1.3',
     short: 'TypeScript',
@@ -363,6 +371,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -379,6 +388,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -395,6 +405,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -412,6 +423,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -428,6 +440,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         ie11tp:      true,
@@ -443,6 +456,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -900,6 +914,7 @@ exports.tests = [
     _6to5:       true,
     ejs:         true,
     closure:     true,
+    jsx:         true,
     typescript:  true,
     ie10:        false,
     ie11:        false,
@@ -1065,6 +1080,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
+        jsx:         true,
         closure:     true,
         ie11tp:      true,
         chrome40:    true,
@@ -1092,6 +1108,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1109,6 +1126,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1127,6 +1145,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1144,6 +1163,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1160,6 +1180,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ie11tp:      true,
       },
     },
@@ -1268,6 +1289,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1282,6 +1304,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         typescript:  true,
@@ -1806,6 +1829,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1831,6 +1855,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         _6to5:       true,
+        jsx:         true,
         closure:     true,
         firefox34:   true,
       },
@@ -3240,6 +3265,7 @@ exports.tests = [
       res: (temp.destructuringResults = {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -3253,16 +3279,17 @@ exports.tests = [
         var [a, b, c] = "bar";
         return a === "b" && b === "a" && c === "r";
       */},
-      res: (temp.destructuringResults = {
+      res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
-      }),
+      },
     },
     'with generic iterables': {
       exec: function(){/*
@@ -3301,6 +3328,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -3324,6 +3352,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -3374,6 +3403,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         closure:     true,
         firefox34:   true,
       },
@@ -3693,7 +3723,7 @@ exports.tests = [
           [sym2]: function(){}
         };
 
-        return o[sym].name === "[foo]" &&
+        return o[sym1].name === "[foo]" &&
                o[sym2].name === "";
       */},
       res: {},
