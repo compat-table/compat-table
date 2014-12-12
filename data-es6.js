@@ -439,6 +439,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        closure:     true,
         _6to5:       true,
         jsx:         true,
         typescript:  true,
@@ -899,6 +900,7 @@ exports.tests = [
       */},
       res: {
         _6to5:       true,
+        closure:     true,
       },
     }
   }
@@ -1194,7 +1196,12 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
-        closure:     true,
+        closure:     {
+          val: false,
+          note_id: 'compiled-extends',
+          note_html: 'This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.'
+        },
+        jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         chrome40:    true,
       },
@@ -1796,7 +1803,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        closure:     true,
         firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -1808,7 +1814,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        closure:     true,
         firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
