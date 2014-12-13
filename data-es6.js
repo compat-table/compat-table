@@ -908,58 +908,55 @@ exports.tests = [
 {
   name: 'rest parameters',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
-  exec: function() {/*
-    return (function (...args) { return typeof args !== "undefined"; }())
-  */},
-  res: {
-    tr:          true,
-    _6to5:       true,
-    ejs:         true,
-    closure:     true,
-    jsx:         true,
-    typescript:  true,
-    ie10:        false,
-    ie11:        false,
-    ie11tp:      true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'basic functionality': {
+      exec: function() {/*
+        return (function (foo, ...args) {
+          return args instanceof Array && args + "" === "bar,baz";
+        }("foo", "bar", "baz"));
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        closure:     true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+        firefox16:   true,
+      },
+    },
+    'function \'length\' property': {
+      exec: function() {/*
+        return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+        firefox16:   true,
+      },
+    },
+    'arguments object interaction': {
+      exec: function() {/*
+        return (function (foo, ...args) {
+          foo = "qux";
+          // The arguments object is not mapped to the
+          // parameters, even outside of strict mode.
+          return arguments.length === 3
+            && arguments[0] === "foo"
+            && arguments[1] === "bar"
+            && arguments[2] === "baz";
+        }("foo", "bar", "baz"));
+      */},
+      res: {
+        ie11tp:      true,
+      },
+    },
+  },
 },
 {
   name: 'spread (...) operator',
