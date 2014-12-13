@@ -1138,7 +1138,6 @@ exports.tests = [
     'prototype methods': {
       exec: function () {/*
         class C {
-          constructor() {}
           method() { return 2; }
         }
         return typeof C.prototype.method === "function"
@@ -1156,7 +1155,6 @@ exports.tests = [
     'static methods': {
       exec: function () {/*
         class C {
-          constructor() {}
           static method() { return 3; }
         }
         return typeof C.method === "function"
@@ -1168,6 +1166,40 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
+      },
+    },
+    'accessor properties': {
+      exec: function () {/*
+        var baz = false;
+        class C {
+          get foo() { return "foo"; }
+          set bar(x) { baz = x; }
+        }
+        new C().bar = true;
+        return new C().foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        ie11tp:      true,
+      },
+    },
+    'static accessor properties': {
+      exec: function () {/*
+        var baz = false;
+        class C {
+          static get foo() { return "foo"; }
+          static set bar(x) { baz = x; }
+        }
+        C.bar = true;
+        return C.foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
       },
     },
@@ -1219,6 +1251,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        jsx:         true,
         ie11tp:      true,
       },
     },
@@ -2620,7 +2653,6 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
-        ejs:         true,
         ie11:        true,
         firefox11:   true,
         chrome21dev: true,
@@ -2683,7 +2715,6 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
-        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
