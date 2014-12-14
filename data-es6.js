@@ -3375,7 +3375,9 @@ exports.tests = [
         var { [qux]: grault } = { corge: "garply" };
         return grault === "garply";
       */},
-      res: {},
+      res: {
+        firefox35:   true,
+      },
     },
     'multiples in a single var statement': {
       exec: function() {/*
