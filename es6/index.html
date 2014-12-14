@@ -2488,12 +2488,70 @@ test(function(){try{return Function("\nreturn (function(a=function(){\n  return 
           <td class="no ios7">No</td>
           <td class="no ios8">No</td>
         </tr>
-        <tr>
+        <tr class="supertest">
           <td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
+
+          <td class="tally tr" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally _6to5" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally ejs" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally closure" data-tally="0.3333333333333333">1/3</td>
+          <td class="tally jsx" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally typescript" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally ie10" data-tally="0">0/3</td>
+          <td class="tally ie11" data-tally="0">0/3</td>
+          <td class="tally ie11tp" data-tally="1">3/3</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/3</td>
+          <td class="tally firefox16 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox17 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox18 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox23 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox24 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox25 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox27 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox28 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox29 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox30 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox31" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox32 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox33 obsolete" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox34" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox35" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally firefox36" data-tally="0.6666666666666666">2/3</td>
+          <td class="tally chrome obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome31 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome35 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome36 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome37 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome38 obsolete" data-tally="0">0/3</td>
+          <td class="tally chrome39" data-tally="0">0/3</td>
+          <td class="tally chrome40" data-tally="0">0/3</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/3</td>
+          <td class="tally safari6" data-tally="0">0/3</td>
+          <td class="tally safari7" data-tally="0">0/3</td>
+          <td class="tally safari71_8" data-tally="0">0/3</td>
+          <td class="tally webkit" data-tally="0">0/3</td>
+          <td class="tally opera" data-tally="0">0/3</td>
+          <td class="tally konq49" data-tally="0">0/3</td>
+          <td class="tally rhino17" data-tally="0">0/3</td>
+          <td class="tally phantom" data-tally="0">0/3</td>
+          <td class="tally node" data-tally="0">0/3</td>
+          <td class="tally nodeharmony" data-tally="0">0/3</td>
+          <td class="tally ios7" data-tally="0">0/3</td>
+          <td class="tally ios8" data-tally="0">0/3</td>
+        <tr class="subtest" data-parent="rest_parameters">
+          <td><span>basic functionality</span></td>
 <script data-source="
-return (function (...args) { return typeof args !== &quot;undefined&quot;; }())
-  ">
-test(function(){try{return Function("\nreturn (function (...args) { return typeof args !== \"undefined\"; }())\n  ")()}catch(e){return false;}}());
+return (function (foo, ...args) {
+  return args instanceof Array && args + &quot;&quot; === &quot;bar,baz&quot;;
+}(&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;));
+      ">
+test(function(){try{return Function("\nreturn (function (foo, ...args) {\n  return args instanceof Array && args + \"\" === \"bar,baz\";\n}(\"foo\", \"bar\", \"baz\"));\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -2523,6 +2581,136 @@ test(function(){try{return Function("\nreturn (function (...args) { return typeo
           <td class="yes firefox34">Yes</td>
           <td class="yes firefox35">Yes</td>
           <td class="yes firefox36">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38 obsolete">No</td>
+          <td class="no chrome39">No</td>
+          <td class="no chrome40">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        <tr class="subtest" data-parent="rest_parameters">
+          <td><span>function 'length' property</span></td>
+<script data-source="
+return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
+      ">
+test(function(){try{return Function("\nreturn function(a, ...b){}.length === 1 && function(...c){}.length === 0;\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes _6to5">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no closure">No</td>
+          <td class="yes jsx">Yes</td>
+          <td class="yes typescript">Yes</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes ie11tp">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="yes firefox16 obsolete">Yes</td>
+          <td class="yes firefox17 obsolete">Yes</td>
+          <td class="yes firefox18 obsolete">Yes</td>
+          <td class="yes firefox23 obsolete">Yes</td>
+          <td class="yes firefox24 obsolete">Yes</td>
+          <td class="yes firefox25 obsolete">Yes</td>
+          <td class="yes firefox27 obsolete">Yes</td>
+          <td class="yes firefox28 obsolete">Yes</td>
+          <td class="yes firefox29 obsolete">Yes</td>
+          <td class="yes firefox30 obsolete">Yes</td>
+          <td class="yes firefox31">Yes</td>
+          <td class="yes firefox32 obsolete">Yes</td>
+          <td class="yes firefox33 obsolete">Yes</td>
+          <td class="yes firefox34">Yes</td>
+          <td class="yes firefox35">Yes</td>
+          <td class="yes firefox36">Yes</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38 obsolete">No</td>
+          <td class="no chrome39">No</td>
+          <td class="no chrome40">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        <tr class="subtest" data-parent="rest_parameters">
+          <td><span>arguments object interaction</span></td>
+<script data-source="
+return (function (foo, ...args) {
+  foo = &quot;qux&quot;;
+  // The arguments object is not mapped to the
+  // parameters, even outside of strict mode.
+  return arguments.length === 3
+    && arguments[0] === &quot;foo&quot;
+    && arguments[1] === &quot;bar&quot;
+    && arguments[2] === &quot;baz&quot;;
+}(&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;));
+      ">
+test(function(){try{return Function("\nreturn (function (foo, ...args) {\n  foo = \"qux\";\n  // The arguments object is not mapped to the\n  // parameters, even outside of strict mode.\n  return arguments.length === 3\n    && arguments[0] === \"foo\"\n    && arguments[1] === \"bar\"\n    && arguments[2] === \"baz\";\n}(\"foo\", \"bar\", \"baz\"));\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="no tr">No</td>
+          <td class="no _6to5">No</td>
+          <td class="no ejs">No</td>
+          <td class="no closure">No</td>
+          <td class="no jsx">No</td>
+          <td class="no typescript">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes ie11tp">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24 obsolete">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox28 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32 obsolete">No</td>
+          <td class="no firefox33 obsolete">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
+          <td class="no firefox36">No</td>
           <td class="no chrome obsolete">No</td>
           <td class="no chrome19dev obsolete">No</td>
           <td class="no chrome21dev obsolete">No</td>
@@ -3102,59 +3290,59 @@ test(function(){try{return Function("\nvar iterable = __createIterableObject(\"b
         <tr class="supertest">
           <td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
 
-          <td class="tally tr" data-tally="0.875">7/8</td>
-          <td class="tally _6to5" data-tally="1">8/8</td>
-          <td class="tally ejs" data-tally="0.75">6/8</td>
-          <td class="tally closure" data-tally="0.625">5/8</td>
-          <td class="tally jsx" data-tally="0.75">6/8</td>
-          <td class="tally typescript" data-tally="0">0/8</td>
-          <td class="tally ie10" data-tally="0">0/8</td>
-          <td class="tally ie11" data-tally="0">0/8</td>
-          <td class="tally ie11tp" data-tally="1">8/8</td>
-          <td class="tally firefox11 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox13 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox16 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox17 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox18 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox23 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox24 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox25 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox27 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox28 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox29 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox30 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox31" data-tally="0">0/8</td>
-          <td class="tally firefox32 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox33 obsolete" data-tally="0">0/8</td>
-          <td class="tally firefox34" data-tally="0">0/8</td>
-          <td class="tally firefox35" data-tally="0">0/8</td>
-          <td class="tally firefox36" data-tally="0">0/8</td>
-          <td class="tally chrome obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome19dev obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome21dev obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome30 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome31 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome33 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome34 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome35 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome36 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome37 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome38 obsolete" data-tally="0">0/8</td>
-          <td class="tally chrome39" data-tally="0">0/8</td>
-          <td class="tally chrome40" data-tally="0.5">4/8</td>
-          <td class="tally safari51 obsolete" data-tally="0">0/8</td>
-          <td class="tally safari6" data-tally="0">0/8</td>
-          <td class="tally safari7" data-tally="0">0/8</td>
-          <td class="tally safari71_8" data-tally="0">0/8</td>
-          <td class="tally webkit" data-tally="0">0/8</td>
-          <td class="tally opera" data-tally="0">0/8</td>
-          <td class="tally konq49" data-tally="0">0/8</td>
-          <td class="tally rhino17" data-tally="0">0/8</td>
-          <td class="tally phantom" data-tally="0">0/8</td>
-          <td class="tally node" data-tally="0">0/8</td>
-          <td class="tally nodeharmony" data-tally="0">0/8</td>
-          <td class="tally ios7" data-tally="0">0/8</td>
-          <td class="tally ios8" data-tally="0">0/8</td>
+          <td class="tally tr" data-tally="0.9090909090909091">10/11</td>
+          <td class="tally _6to5" data-tally="0.9090909090909091">10/11</td>
+          <td class="tally ejs" data-tally="0.8181818181818182">9/11</td>
+          <td class="tally closure" data-tally="0.45454545454545453">5/11</td>
+          <td class="tally jsx" data-tally="0.6363636363636364">7/11</td>
+          <td class="tally typescript" data-tally="0">0/11</td>
+          <td class="tally ie10" data-tally="0">0/11</td>
+          <td class="tally ie11" data-tally="0">0/11</td>
+          <td class="tally ie11tp" data-tally="1">11/11</td>
+          <td class="tally firefox11 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox13 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox16 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox17 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox18 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox23 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox24 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox25 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox27 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox28 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox29 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox30 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox31" data-tally="0">0/11</td>
+          <td class="tally firefox32 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox33 obsolete" data-tally="0">0/11</td>
+          <td class="tally firefox34" data-tally="0">0/11</td>
+          <td class="tally firefox35" data-tally="0">0/11</td>
+          <td class="tally firefox36" data-tally="0">0/11</td>
+          <td class="tally chrome obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome19dev obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome21dev obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome30 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome31 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome33 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome34 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome35 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome36 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome37 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome38 obsolete" data-tally="0">0/11</td>
+          <td class="tally chrome39" data-tally="0">0/11</td>
+          <td class="tally chrome40" data-tally="0.36363636363636365">4/11</td>
+          <td class="tally safari51 obsolete" data-tally="0">0/11</td>
+          <td class="tally safari6" data-tally="0">0/11</td>
+          <td class="tally safari7" data-tally="0">0/11</td>
+          <td class="tally safari71_8" data-tally="0">0/11</td>
+          <td class="tally webkit" data-tally="0">0/11</td>
+          <td class="tally opera" data-tally="0">0/11</td>
+          <td class="tally konq49" data-tally="0">0/11</td>
+          <td class="tally rhino17" data-tally="0">0/11</td>
+          <td class="tally phantom" data-tally="0">0/11</td>
+          <td class="tally node" data-tally="0">0/11</td>
+          <td class="tally nodeharmony" data-tally="0">0/11</td>
+          <td class="tally ios7" data-tally="0">0/11</td>
+          <td class="tally ios8" data-tally="0">0/11</td>
         <tr class="subtest" data-parent="class">
           <td><span>class statement</span></td>
 <script data-source="
@@ -3414,13 +3602,12 @@ test(function(){try{return Function("\nclass C {\n  constructor() { this.x = 1; 
           <td><span>prototype methods</span></td>
 <script data-source="
 class C {
-  constructor() {}
   method() { return 2; }
 }
 return typeof C.prototype.method === &quot;function&quot;
   && new C().method() === 2;
       ">
-test(function(){try{return Function("\nclass C {\n  constructor() {}\n  method() { return 2; }\n}\nreturn typeof C.prototype.method === \"function\"\n  && new C().method() === 2;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nclass C {\n  method() { return 2; }\n}\nreturn typeof C.prototype.method === \"function\"\n  && new C().method() === 2;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3480,13 +3667,12 @@ test(function(){try{return Function("\nclass C {\n  constructor() {}\n  method()
           <td><span>static methods</span></td>
 <script data-source="
 class C {
-  constructor() {}
   static method() { return 3; }
 }
 return typeof C.method === &quot;function&quot;
   && C.method() === 3;
       ">
-test(function(){try{return Function("\nclass C {\n  constructor() {}\n  static method() { return 3; }\n}\nreturn typeof C.method === \"function\"\n  && C.method() === 3;\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nclass C {\n  static method() { return 3; }\n}\nreturn typeof C.method === \"function\"\n  && C.method() === 3;\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3494,6 +3680,140 @@ test(function(){try{return Function("\nclass C {\n  constructor() {}\n  static m
           <td class="yes ejs">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="yes jsx">Yes</td>
+          <td class="no typescript">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes ie11tp">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24 obsolete">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox28 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32 obsolete">No</td>
+          <td class="no firefox33 obsolete">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
+          <td class="no firefox36">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38 obsolete">No</td>
+          <td class="no chrome39">No</td>
+          <td class="no chrome40">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        <tr class="subtest" data-parent="class">
+          <td><span>accessor properties</span></td>
+<script data-source="
+var baz = false;
+class C {
+  get foo() { return &quot;foo&quot;; }
+  set bar(x) { baz = x; }
+}
+new C().bar = true;
+return new C().foo === &quot;foo&quot; && baz;
+      ">
+test(function(){try{return Function("\nvar baz = false;\nclass C {\n  get foo() { return \"foo\"; }\n  set bar(x) { baz = x; }\n}\nnew C().bar = true;\nreturn new C().foo === \"foo\" && baz;\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes _6to5">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no closure">No</td>
+          <td class="no jsx">No</td>
+          <td class="no typescript">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes ie11tp">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24 obsolete">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox28 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32 obsolete">No</td>
+          <td class="no firefox33 obsolete">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
+          <td class="no firefox36">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38 obsolete">No</td>
+          <td class="no chrome39">No</td>
+          <td class="no chrome40">No</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        <tr class="subtest" data-parent="class">
+          <td><span>static accessor properties</span></td>
+<script data-source="
+var baz = false;
+class C {
+  static get foo() { return &quot;foo&quot;; }
+  static set bar(x) { baz = x; }
+}
+C.bar = true;
+return C.foo === &quot;foo&quot; && baz;
+      ">
+test(function(){try{return Function("\nvar baz = false;\nclass C {\n  static get foo() { return \"foo\"; }\n  static set bar(x) { baz = x; }\n}\nC.bar = true;\nreturn C.foo === \"foo\" && baz;\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="yes _6to5">Yes</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no closure">No</td>
+          <td class="no jsx">No</td>
           <td class="no typescript">No</td>
           <td class="no ie10">No</td>
           <td class="no ie11">No</td>
@@ -3611,10 +3931,12 @@ test(function(){try{return Function("\nvar c = class C {\n  static method() { re
           <td><span>extends</span></td>
 <script data-source="
 class C extends Array {}
-return Array.isPrototypeOf(C)
+var c = new C();
+return c instanceof Array
+  && Array.isPrototypeOf(C)
   && Array.prototype.isPrototypeOf(C.prototype);
       ">
-test(function(){try{return Function("\nclass C extends Array {}\nreturn Array.isPrototypeOf(C)\n  && Array.prototype.isPrototypeOf(C.prototype);\n      ")()}catch(e){return false;}}());
+test(function(){try{return Function("\nclass C extends Array {}\nvar c = new C();\nreturn c instanceof Array\n  && Array.isPrototypeOf(C)\n  && Array.prototype.isPrototypeOf(C.prototype);\n      ")()}catch(e){return false;}}());
 </script>
 
           <td class="yes tr">Yes</td>
@@ -3657,6 +3979,71 @@ test(function(){try{return Function("\nclass C extends Array {}\nreturn Array.is
           <td class="no chrome38 obsolete">No</td>
           <td class="no chrome39">No</td>
           <td class="yes chrome40">Yes</td>
+          <td class="no safari51 obsolete">No</td>
+          <td class="no safari6">No</td>
+          <td class="no safari7">No</td>
+          <td class="no safari71_8">No</td>
+          <td class="no webkit">No</td>
+          <td class="no opera">No</td>
+          <td class="no konq49">No</td>
+          <td class="no rhino17">No</td>
+          <td class="no phantom">No</td>
+          <td class="no node">No</td>
+          <td class="no nodeharmony">No</td>
+          <td class="no ios7">No</td>
+          <td class="no ios8">No</td>
+        <tr class="subtest" data-parent="class">
+          <td><span>extends null</span></td>
+<script data-source="
+class C extends null {}
+var c = new C();
+return !(c instanceof Object)
+  && Function.prototype.isPrototypeOf(C)
+  && Object.getPrototypeOf(C.prototype) === null;
+      ">
+test(function(){try{return Function("\nclass C extends null {}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")()}catch(e){return false;}}());
+</script>
+
+          <td class="yes tr">Yes</td>
+          <td class="no _6to5">No</td>
+          <td class="yes ejs">Yes</td>
+          <td class="no closure">No</td>
+          <td class="yes jsx">Yes</td>
+          <td class="no typescript">No</td>
+          <td class="no ie10">No</td>
+          <td class="no ie11">No</td>
+          <td class="yes ie11tp">Yes</td>
+          <td class="no firefox11 obsolete">No</td>
+          <td class="no firefox13 obsolete">No</td>
+          <td class="no firefox16 obsolete">No</td>
+          <td class="no firefox17 obsolete">No</td>
+          <td class="no firefox18 obsolete">No</td>
+          <td class="no firefox23 obsolete">No</td>
+          <td class="no firefox24 obsolete">No</td>
+          <td class="no firefox25 obsolete">No</td>
+          <td class="no firefox27 obsolete">No</td>
+          <td class="no firefox28 obsolete">No</td>
+          <td class="no firefox29 obsolete">No</td>
+          <td class="no firefox30 obsolete">No</td>
+          <td class="no firefox31">No</td>
+          <td class="no firefox32 obsolete">No</td>
+          <td class="no firefox33 obsolete">No</td>
+          <td class="no firefox34">No</td>
+          <td class="no firefox35">No</td>
+          <td class="no firefox36">No</td>
+          <td class="no chrome obsolete">No</td>
+          <td class="no chrome19dev obsolete">No</td>
+          <td class="no chrome21dev obsolete">No</td>
+          <td class="no chrome30 obsolete">No</td>
+          <td class="no chrome31 obsolete">No</td>
+          <td class="no chrome33 obsolete">No</td>
+          <td class="no chrome34 obsolete">No</td>
+          <td class="no chrome35 obsolete">No</td>
+          <td class="no chrome36 obsolete">No</td>
+          <td class="no chrome37 obsolete">No</td>
+          <td class="no chrome38 obsolete">No</td>
+          <td class="no chrome39">No</td>
+          <td class="no chrome40">No</td>
           <td class="no safari51 obsolete">No</td>
           <td class="no safari6">No</td>
           <td class="no safari7">No</td>
@@ -10300,7 +10687,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
 
           <td class="tally tr" data-tally="0">0/4</td>
           <td class="tally _6to5" data-tally="0">0/4</td>
-          <td class="tally ejs" data-tally="0.25">1/4</td>
+          <td class="tally ejs" data-tally="0">0/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
           <td class="tally jsx" data-tally="0">0/4</td>
           <td class="tally typescript" data-tally="0">0/4</td>
@@ -10556,7 +10943,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete ==
 
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
-          <td class="yes ejs">Yes</td>
+          <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -10613,7 +11000,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete ==
 
           <td class="tally tr" data-tally="0">0/4</td>
           <td class="tally _6to5" data-tally="0">0/4</td>
-          <td class="tally ejs" data-tally="0.25">1/4</td>
+          <td class="tally ejs" data-tally="0">0/4</td>
           <td class="tally closure" data-tally="0">0/4</td>
           <td class="tally jsx" data-tally="0">0/4</td>
           <td class="tally typescript" data-tally="0">0/4</td>
@@ -10868,7 +11255,7 @@ test(function(){try{return Function("\nreturn typeof WeakSet.prototype.delete ==
 
           <td class="no tr">No</td>
           <td class="no _6to5">No</td>
-          <td class="yes ejs">Yes</td>
+          <td class="no ejs">No</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>

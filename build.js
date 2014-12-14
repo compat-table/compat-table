@@ -72,7 +72,7 @@ process.nextTick(function () {
         try {
           output = ""+child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
             fpath +
-            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT3 --transpile_only'
+            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5 --transpile_only'
           );
         } catch(e) {
           throw new Error('\n' + e.stdout.toString().split(fpath).join(''));

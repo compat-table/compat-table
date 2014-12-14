@@ -908,58 +908,55 @@ exports.tests = [
 {
   name: 'rest parameters',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
-  exec: function() {/*
-    return (function (...args) { return typeof args !== "undefined"; }())
-  */},
-  res: {
-    tr:          true,
-    _6to5:       true,
-    ejs:         true,
-    closure:     true,
-    jsx:         true,
-    typescript:  true,
-    ie10:        false,
-    ie11:        false,
-    ie11tp:      true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'basic functionality': {
+      exec: function() {/*
+        return (function (foo, ...args) {
+          return args instanceof Array && args + "" === "bar,baz";
+        }("foo", "bar", "baz"));
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        closure:     true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+        firefox16:   true,
+      },
+    },
+    'function \'length\' property': {
+      exec: function() {/*
+        return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+        firefox16:   true,
+      },
+    },
+    'arguments object interaction': {
+      exec: function() {/*
+        return (function (foo, ...args) {
+          foo = "qux";
+          // The arguments object is not mapped to the
+          // parameters, even outside of strict mode.
+          return arguments.length === 3
+            && arguments[0] === "foo"
+            && arguments[1] === "bar"
+            && arguments[2] === "baz";
+        }("foo", "bar", "baz"));
+      */},
+      res: {
+        ie11tp:      true,
+      },
+    },
+  },
 },
 {
   name: 'spread (...) operator',
@@ -1138,7 +1135,6 @@ exports.tests = [
     'prototype methods': {
       exec: function () {/*
         class C {
-          constructor() {}
           method() { return 2; }
         }
         return typeof C.prototype.method === "function"
@@ -1156,7 +1152,6 @@ exports.tests = [
     'static methods': {
       exec: function () {/*
         class C {
-          constructor() {}
           static method() { return 3; }
         }
         return typeof C.method === "function"
@@ -1168,6 +1163,40 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
+      },
+    },
+    'accessor properties': {
+      exec: function () {/*
+        var baz = false;
+        class C {
+          get foo() { return "foo"; }
+          set bar(x) { baz = x; }
+        }
+        new C().bar = true;
+        return new C().foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        ie11tp:      true,
+      },
+    },
+    'static accessor properties': {
+      exec: function () {/*
+        var baz = false;
+        class C {
+          static get foo() { return "foo"; }
+          static set bar(x) { baz = x; }
+        }
+        C.bar = true;
+        return C.foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
       },
     },
@@ -1189,7 +1218,9 @@ exports.tests = [
     'extends': {
       exec: function () {/*
         class C extends Array {}
-        return Array.isPrototypeOf(C)
+        var c = new C();
+        return c instanceof Array
+          && Array.isPrototypeOf(C)
           && Array.prototype.isPrototypeOf(C.prototype);
       */},
       res: {
@@ -1204,6 +1235,21 @@ exports.tests = [
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         chrome40:    true,
+      },
+    },
+    'extends null': {
+      exec: function () {/*
+        class C extends null {}
+        var c = new C();
+        return !(c instanceof Object)
+          && Function.prototype.isPrototypeOf(C)
+          && Object.getPrototypeOf(C.prototype) === null;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        jsx:         true,
+        ie11tp:      true,
       },
     },
   },
@@ -2604,7 +2650,6 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
-        ejs:         true,
         ie11:        true,
         firefox11:   true,
         chrome21dev: true,
@@ -2667,7 +2712,6 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
-        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
