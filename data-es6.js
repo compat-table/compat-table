@@ -21,12 +21,6 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
-  ejs: {
-    full: 'Echo JS',
-    short: 'EJS',
-    obsolete: false,
-    platformtype: 'compiler',
-  },
   closure: {
     full: 'Closure Compiler v20141120',
     short: 'Closure<br>Compiler',
@@ -288,6 +282,12 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
+  },
+  ejs: {
+    full: 'Echo JS',
+    short: 'Echo JS',
+    obsolete: false,
+    platformtype: 'engine',
   },
   ios7: {
     full: 'iOS Safari',

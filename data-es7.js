@@ -19,12 +19,6 @@ exports.browsers = {
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via --experimental flag'
   },
-  ejs: {
-    full: 'Echo JS',
-    short: 'EJS',
-    obsolete: false, // always up-to-date version
-    platformtype: 'compiler',
-  },
   ie11: {
     full: 'Internet Explorer',
     short: 'IE 11',
@@ -117,6 +111,12 @@ exports.browsers = {
     obsolete: false, // current version
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
+  },
+  ejs: {
+    full: 'Echo JS',
+    short: 'Echo JS',
+    obsolete: false, // always up-to-date version
+    platformtype: 'engine',
   },
   ios7: {
     full: 'iOS Safari 7',
