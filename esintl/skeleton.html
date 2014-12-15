@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ECMAScript 6 compatibility table</title>
+    <title>ECMAScript Internationalisation compatibility table</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -34,39 +34,36 @@
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
     </script>
 </head>
-<body class="es6">
+<body class="esintl">
   <div id="header">
 
     ECMAScript
     <span class="versions">
       <a href="../es5">5</a><!--
-      --><a href="../es6" class="current">6</a><!--
+      --><a href="../es6">6</a><!--
       --><a href="../es7">7</a><!--
-      --><a href="../esintl">intl</a><!--
+      --><a href="../esintl" class="current">intl</a><!--
       --><a href="../non-standard">non-standard</a>
     </span>
     compatibility table
 
     <span style="font-size:0.8em;float:right;font-weight:normal;">
 
-      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es6/"></a>
+      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.io/compat-table/esintl/"></a>
 
       <script async src="https://www.google-analytics.com/ga.js"></script>
       <span class="by">
         by
         <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
-        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
+        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="http://grtp.co/v1.js"></script>
         &amp;
         <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
       </span>
-
-      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
-        frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
     </span>
   </div>
   <div id="body">
@@ -76,25 +73,8 @@
     <label for="sort">Sort by number of features?</label>
     <input id="sort" type="checkbox">
 
-    <label for="show-obsolete">Show obsolete platforms?</label>
+    <label for="show-obsolete">Show obsolete browsers?</label>
     <input id="show-obsolete" type="checkbox">
-    
-    <label for="show-unstable">Show unstable platforms?</label>
-    <input id="show-unstable" type="checkbox">
-
-    <div class="legend">
-      <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
-      <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
-      <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
-      <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
-      <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
-      <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
-      <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
-      <br>
-      <span><span style="opacity:0.2;font-size:5px;">⬤</span> Useful feature</span>
-      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Significant feature</span>
-      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Landmark feature</span>
-    </div>
 
     <table id="table-wrapper">
       <colgroup>
@@ -104,9 +84,8 @@
       <thead>
         <tr>
           <th colspan="3"  class="platformtype"></th>
-          <th colspan="6"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
-          <th colspan="8"  class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
-          <th colspan="3"  class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
+          <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+          <th colspan="5"  class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
           <th colspan="2"  class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
         </tr>
         <tr>
@@ -121,10 +100,6 @@
       </tbody>
     </table>
     <div id="footnotes">
-      <div id="create-iterable-object">
-        <code>__createIterableObject()</code>, used in the numerous "generic iterables" tests, is defined as:
-        <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
-      </div>
       <!-- FOOTNOTES -->
     </div>
   </div>

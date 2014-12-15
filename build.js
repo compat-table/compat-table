@@ -39,6 +39,7 @@ process.nextTick(function () {
   handle(es6);
   var es7 = require('./data-es7');
   handle(es7);
+  handle(require('./data-esintl'));
   handle(require('./data-non-standard'));
 
   // ES6 compilers
