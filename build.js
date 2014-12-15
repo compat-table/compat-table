@@ -283,12 +283,18 @@ function dataToHtml(browsers, tests, compiler) {
       if (outOf) {
         result = (result|0) + "/" + outOf;
       }
-      if (typeof result === "boolean" || result === undefined) {
-        result = result ? 'Yes' : 'No';
-      }
+      
       // Prepare the CSS class and title
       var title = "";
       var CSSclass = browserCSSclass(browserId);
+      
+      if (result === "flagged") {
+        result = "No";
+        CSSclass += " flagged";
+      }
+      else if (typeof result === "boolean" || result === undefined) {
+        result = result ? 'Yes' : 'No';
+      }
       
       // These change if the result is not applicable.
       if (browsers[browserId].platformtype &&
@@ -305,7 +311,7 @@ function dataToHtml(browsers, tests, compiler) {
           '\t<td ' + (title ? ('title="' + title + '" ') : '') +
           'class="' + (outOf ? 'tally' : result.toLowerCase()) + ' ' + CSSclass + '"' +
           (outOf ? ' data-tally="' + eval(result) + '"' : '') + '>' +
-          result +
+          (CSSclass.indexOf("flagged") >- 1 ? "flag" : result) +
           footnote +
           '</td>'
         );

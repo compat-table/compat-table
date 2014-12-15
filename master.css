@@ -134,6 +134,17 @@ tr:hover td[data-tally="1"].obsolete,
 td.hover[data-tally="1"].obsolete {
     background: #73cc73;
 }
+/* yes, but flagged */
+.flagged::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-top: 1.2em solid #44ab44;
+	border-left: 1.2em solid transparent;
+	width: 0em;
+	height: 0em;
+}
 
 /* no */
 .no,
