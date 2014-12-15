@@ -134,6 +134,7 @@ tr:hover td[data-tally="1"].obsolete,
 td.hover[data-tally="1"].obsolete {
     background: #73cc73;
 }
+
 /* yes, but flagged */
 .flagged::after {
 	content: "";
@@ -144,6 +145,17 @@ td.hover[data-tally="1"].obsolete {
 	border-left: 1.2em solid transparent;
 	width: 0em;
 	height: 0em;
+}
+.flagged:hover::after,
+.flagged.hover::after {
+	border-top-color: #269326;
+}
+.flagged.obsolete::after {
+	border-top-color: #9fe09f;
+}
+.flagged.obsolete:hover::after,
+.flagged.obsolete.hover::after {
+	border-top-color: #73cc73;
 }
 
 /* no */

@@ -311,7 +311,7 @@ function dataToHtml(browsers, tests, compiler) {
           '\t<td ' + (title ? ('title="' + title + '" ') : '') +
           'class="' + (outOf ? 'tally' : result.toLowerCase()) + ' ' + CSSclass + '"' +
           (outOf ? ' data-tally="' + eval(result) + '"' : '') + '>' +
-          (CSSclass.indexOf("flagged") >- 1 ? "flag" : result) +
+          (CSSclass.indexOf("flagged") >- 1 ? "Flag" : result) +
           footnote +
           '</td>'
         );
