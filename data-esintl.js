@@ -265,4 +265,63 @@ exports.browsers = {
 };
 
 exports.tests = [
+{
+  name: 'Intl object',
+  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-8',
+  subtests: {
+    'exists on global': {
+      exec: function(){/*
+        return typeof Intl === 'object';
+      */},
+      res: {
+      },
+    },
+    'has prototype of Object': {
+      exec: function(){/*
+        return Intl.constructor === Object;
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Collator',
+  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10',
+  subtests: {
+    'exists on intl object': {
+      exec: function(){/*
+        return typeof Intl.Collator === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'NumberFormat',
+  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-11',
+  subtests: {
+    'exists on intl object': {
+      exec: function(){/*
+        return typeof Intl.NumberFormat === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'DateTimeFormat',
+  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-12',
+  subtests: {
+    'exists on intl object': {
+      exec: function(){/*
+        return typeof Intl.DateTimeFormat === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
 ];
