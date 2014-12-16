@@ -567,7 +567,6 @@ exports.tests = [
         return passed;
       */},
       res: {
-        ejs:         true,
         ie11:        true,
         firefox36:   true,
       },
@@ -636,7 +635,6 @@ exports.tests = [
         return passed;
       */},
       res: {
-        ejs:         true,
         ie11:        true,
         firefox36:   true,
         chrome19dev: true,
@@ -2238,6 +2236,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
         firefox33:   true,
         chrome38:    true,
@@ -2440,6 +2439,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
         firefox33:   true,
         chrome38:    true,
@@ -2606,6 +2606,7 @@ exports.tests = [
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
       res: {
+        ejs:         true,
         ie11:        true,
         firefox11:   true,
         chrome21dev: true,
@@ -2625,6 +2626,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox36:   true,
         chrome38:    true,
@@ -2637,6 +2639,7 @@ exports.tests = [
         return weakmap.set(key, 0) === weakmap;
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         chrome38:    true,
         firefox33:   true,
@@ -2650,6 +2653,7 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
+        ejs:         true,
         ie11:        true,
         firefox11:   true,
         chrome21dev: true,
@@ -2676,6 +2680,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
@@ -2690,6 +2695,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome38:    true,
@@ -2702,6 +2708,7 @@ exports.tests = [
         return weakset.add(obj) === weakset;
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         chrome38:    true,
         firefox34:   true,
@@ -2712,6 +2719,7 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
@@ -3694,6 +3702,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
+        ejs:         true,
         firefox11:   true,
         chrome:      true,
         safari51:    true,
@@ -3734,7 +3743,9 @@ exports.tests = [
         return foo.bind({}).name === "bound foo" &&
           (function(){}).bind({}).name === "bound ";
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'variables (function)': {
       exec: function() {/*
@@ -4020,7 +4031,7 @@ exports.tests = [
           note_id: 'string-contains',
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
-        ejs:         { val: false, note_id: 'string-contains' },
+        ejs:         { val: true },
         firefox18:   { val: false, note_id: 'string-contains' },
         chrome30:    { val: false, note_id: 'string-contains' },
         webkit:      { val: true },
@@ -4255,6 +4266,7 @@ exports.tests = [
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
       res: {
+        ejs:         true,
         chrome39:    true,
         firefox36:   true,
       },
@@ -4269,6 +4281,7 @@ exports.tests = [
         }
       */},
       res: {
+        ejs:         true,
         tr:         true,
         _6to5:      true,
         ie11tp:     true,
@@ -4373,6 +4386,7 @@ exports.tests = [
           && !(Symbol.species in Object);
       */},
       res: {
+        ejs:         true,
       },
     },
     'Symbol.toPrimitive': {
@@ -4389,6 +4403,7 @@ exports.tests = [
         return passed === 3;
       */},
       res: {
+        ejs:         true,
       },
     },
     'Symbol.toStringTag': {
@@ -4413,6 +4428,11 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        ejs: {
+          val: false,
+          note_id: 'ejs-no-with',
+          note_html: '<code>with</code> is not supported in ejs'
+        },
       },
     },
   },
@@ -4425,31 +4445,41 @@ exports.tests = [
       exec: function () {/*
         return /./igm.flags === "gim" && /./.flags === "";
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.match]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.match] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.replace]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.replace] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.split]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.split] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.search]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.search] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
   }
 },
@@ -5104,6 +5134,7 @@ exports.tests = [
         return new Date(NaN) + "" === "Invalid Date";
       */},
       res: {
+        ejs:         true,
         ie10:        true,
         firefox11:   true,
         chrome:      true,
