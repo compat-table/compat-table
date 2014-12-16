@@ -1480,14 +1480,22 @@ function () { return typeof Object.prototype.eval == 'function' }())</script>
           <tr>
             <td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error "stack"</a></span></td>
 <script data-source="function () {
-return 'stack' in new Error;
+try {
+  throw new Error;
+} catch (err) {
+  return 'stack' in err;
+}
   }">test(
 function () {
-return 'stack' in new Error;
+try {
+  throw new Error;
+} catch (err) {
+  return 'stack' in err;
+}
   }())</script>
 
             <td class="no ie7">No</td>
-            <td class="no ie11">No</td>
+            <td class="yes ie11">Yes</td>
             <td class="yes firefox3 obsolete">Yes</td>
             <td class="yes firefox3_5 obsolete">Yes</td>
             <td class="yes firefox4 obsolete">Yes</td>
