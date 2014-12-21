@@ -324,4 +324,95 @@ exports.tests = [
     },
   },
 },
+{
+  name: 'String.prototype.localeCompare',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-String.prototype.localeCompare',
+  subtests: {
+    'exists on String prototype': {
+      exec: function(){/*
+        return typeof String.prototype.localeCompare === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Number.prototype.toLocaleString',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
+  subtests: {
+    'exists on Number prototype': {
+      exec: function(){/*
+        return typeof Number.prototype.toLocaleString === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Array.prototype.toLocaleString',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
+  subtests: {
+    'exists on Array prototype': {
+      exec: function(){/*
+        return typeof Array.prototype.toLocaleString === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Object.prototype.toLocaleString',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
+  subtests: {
+    'exists on Object prototype': {
+      exec: function(){/*
+        return typeof Object.prototype.toLocaleString === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Date.prototype.toLocaleString',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
+  subtests: {
+    'exists on Date prototype': {
+      exec: function(){/*
+        return typeof Date.prototype.toLocaleString === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Date.prototype.toLocaleDateString',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
+  subtests: {
+    'exists on Date prototype': {
+      exec: function(){/*
+        return typeof Date.prototype.toLocaleDateString === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Date.prototype.toLocaleTimeString',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
+  subtests: {
+    'exists on Date prototype': {
+      exec: function(){/*
+        return typeof Date.prototype.toLocaleTimeString === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
 ];
