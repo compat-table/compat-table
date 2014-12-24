@@ -108,9 +108,7 @@ $(function() {
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
-    var classList = ($(elem).attr('class') || '')
-        .split(' ');
-    return classList[1] || classList[0];
+    return $(elem).attr('data-browser') || '';
   }
 
   // Since you can't add a :hover effect for columns,
@@ -119,7 +117,7 @@ $(function() {
     return function() {
       var c = platformOf(this);
       if (c) {
-        $("." + c)[name]('hover');
+        $("[data-browser='" + c + "']")[name]('hover');
       }
     };
   }
@@ -156,7 +154,7 @@ $(function() {
       else if (elem.is('.browser-name')) {
         // This assumes that all <td>s in the column have a class that matches
         // the browser-name's ID.
-        highlightSelected(table.find('td' + currentBrowserSelector + ', td.' + elem.attr('href').slice(1)));
+        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + elem.attr('href').slice(1) + '"]'));
       }
     }
   };
@@ -207,9 +205,11 @@ $(function() {
   $('.browser-name, th.current').each(function(i) {
     var elem = $(this);
     var name;
+    var id = 'current';
 
     if (elem.is('.browser-name')) {
-      name = elem.attr('href').replace("#", '.');
+      id = elem.attr('href').slice(1);
+      name = elem.attr('href').replace("#", '[data-browser="')+'"]';
       elem = elem.parent();
     }
     else {
@@ -219,13 +219,13 @@ $(function() {
     var yesResults = results.filter('.yes').length;
     results = results.length;
     
-    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).filter(function() {
+    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
       yesResults += +$(this).attr('data-tally') || 0;
       results += 1;
     });
     var featuresCount = yesResults / results;
-
-    var colour = getBrowserColour(platformOf(elem));
+    
+    var colour = getBrowserColour(id);
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)

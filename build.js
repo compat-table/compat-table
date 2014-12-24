@@ -25,6 +25,7 @@ var assign     = require('object-assign');
 var fs         = require('fs');
 var path       = require('path');
 var os         = require('os');
+var cheerio    = require('cheerio');
 // requires Node v0.11.12
 var child_process = require('child_process');
 
@@ -155,12 +156,9 @@ process.nextTick(function () {
 
 function handle(options, compiler) {
   var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
-  var html = dataToHtml(options.browsers, options.tests, options.compiler);
+  var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler);
 
-  var result = replaceAndIndent(skeleton, [
-    ["<!-- TABLE HEADERS -->", html.tableHeaders],
-    ["<!-- TABLE BODY -->", html.tableBody],
-    ["<!-- FOOTNOTES -->", html.footnotes],
+  var result = replaceAndIndent(html, [
     ["<!-- NAME -->", [options.name]],
     ["<!-- URL -->", [options.name.link(options.url)]],
     ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
@@ -181,18 +179,11 @@ function handle(options, compiler) {
   }
 }
 
-function dataToHtml(browsers, tests, compiler) {
-  var footnoter = new Footnoter();
-  var headers = [];
-  var body = [];
-  
-  function browserCSSclass(browserId) {
-    var b = browsers[browserId];
-    if (!b) {
-      throw new Error('No browser with ID ' + browserId);
-    }
-    return browserId + (b.obsolete ? ' obsolete' : '');
-  }
+function dataToHtml(skeleton, browsers, tests, compiler) {
+  var $ = cheerio.load(skeleton);
+  var head = $('table thead tr:last-child');
+  var body = $('table tbody');
+  var footnoteIndex = {};
   
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid, j;
@@ -215,6 +206,34 @@ function dataToHtml(browsers, tests, compiler) {
     }
   }
   
+  function footnoteHTML(obj) {
+    if (obj && obj.note_id) {
+      if (!footnoteIndex[obj.note_id]) {
+        footnoteIndex[obj.note_id] = obj.note_html;
+      }
+      var num = Object.keys(footnoteIndex).indexOf(obj.note_id) + 1;
+      return '<a href="#' + obj.note_id + '-note"><sup>[' + num + ']</sup></a>';
+    }
+    return '';
+  }
+  
+  function allFootnotes() {
+    var ret = $('<p>');
+    Object.keys(footnoteIndex).forEach(function(e,id) {
+      ret.append('<p id="' + e + '-note">' +
+      '\t<sup>[' + (id + 1) + ']</sup> ' + footnoteIndex[e] +
+      '</p>');
+    });
+    return ret;
+  }
+  
+  function testValue(result) {
+    if (result && typeof result === "object" && "val" in result) {
+      return result.val;
+    }
+    return result;
+  }
+  
   // Write the browser headers
   
   Object.keys(browsers).forEach(function(browserId) {
@@ -222,194 +241,150 @@ function dataToHtml(browsers, tests, compiler) {
     if (!b) {
       throw new Error('No browser with ID ' + browserId);
     }
-    headers.push(
-      '<th class="platform ' + browserCSSclass(browserId) + ' ' + (b.platformtype || 'desktop') + '">' +
-      ('<a href="#' + browserId + '" class="browser-name">') +
-      (b.short ? '<abbr title="' + b.full + '">' + b.short + '</abbr>' : b.full) +
-      (b.link ? '</a>' : '') +
-      footnoter.get(b) +
-      '</th>'
+    head.append($('<th></th>')
+      .addClass("platform " + browserId + ' ' + (b.platformtype || 'desktop'))
+      .addClass(b.obsolete ? "obsolete" : "")
+      .append(
+        $('<a href="#' + browserId + '" class="browser-name"></a>')
+          .append('<abbr title="' + b.full + '">' + b.short + '</abbr>')
+          .append(footnoteHTML(b))
+      )
     );
   });
   
   // Now print the results.
   tests.forEach(function(t) {
-    var subtests;
-    // Calculate the result totals for tests which consist solely of subtests.
     if ("subtests" in t) {
-      t.res = t.res || {};
-      
-      subtests = t.subtests;
-      Object.keys(t.subtests).forEach(function(st) {
-        var subtest = subtests[st];
-        // For each of the subtest's results, add 1 to the main test's
-        // results tally for the given browser.
-        if (!subtest.res) {
-          return;
-        }
-        interpolateResults(subtest.res);
-        Object.keys(subtest.res).forEach(function(browserId) {
-          var res = subtest.res[browserId];
-          // If the result is an object representing a footnote, use the raw val
-          if (res.val) {
-            res = res.val;
-          }
-          t.res[browserId] = (t.res[browserId] || 0) + +(res === true);
-        });
+      Object.keys(t.subtests).forEach(function(e) {
+        interpolateResults(t.subtests[e].res);
       });
     }
-    else {
-      interpolateResults(t.res);
-    }
+    else interpolateResults(t.res);
     
     var id = t.name.replace(/^[\s<>&"]+|[\s<>&"]+$/g, '').replace(/[\s<>&"]+/g, '_');
     var name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
     
-    body.push(
-      '<tr' + (subtests ? ' class="supertest"' : '') + '>',
-      '\t<td id="' + id + '"><span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoter.get(t) + '</span></td>\n' +
-      testScript(t.exec, compiler)
-    );
+    var testRow = $('<tr></tr>')
+      .addClass("subtests" in t ? 'supertest' : '')
+      .append($('<td></td>')
+        .attr('id',id)
+        .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
+        .append(testScript(t.exec, compiler))
+      );
+    body.append(testRow);
     
     // Function to print out a single <td> result cell.
-    function printResultCell(browserId, result, outOf, footnote) {
+    function resultCell(browserId, result, footnote) {
       if (!browsers[browserId]) {
         return;
       }
-      // Prepare the result text
-      if (result && typeof result === 'object') {
-        result = result.val;
-      }
-      if (outOf) {
-        result = (result|0) + "/" + outOf;
-      }
+      result = testValue(result);
       
-      // Prepare the CSS class and title
-      var title = "";
-      var CSSclass = browserCSSclass(browserId);
-      
-      if (result === "flagged") {
-        result = "No";
-        CSSclass += " flagged";
+      // Create the cell, and add classes and attributes
+      var cell = $('<td></td>');
+      cell.addClass(result === true ? "yes" : result !== null ? "no" : "");
+      if(result === "flagged") {
+        cell.addClass("flagged");
       }
-      else if (typeof result === "boolean" || result === undefined) {
-        result = result ? 'Yes' : 'No';
-      }
+      cell.attr('data-browser', browserId).addClass(browsers[browserId].obsolete ? "obsolete" : "");
       
-      // These change if the result is not applicable.
+      // Add extra signifiers if the result is not applicable.
       if (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
           t.annex_b) {
-        title="This feature is optional on non-browser platforms.";
-        CSSclass +=" not-applicable ";
+        cell.attr('title', "This feature is optional on non-browser platforms.");
+        cell.addClass("not-applicable");
       }
       
-      if (result == null) {
-        body.push('\t<td class="' + CSSclass + '"></td>');
-      } else {
-        body.push(
-          '\t<td ' + (title ? ('title="' + title + '" ') : '') +
-          'class="' + (outOf ? 'tally' : result.toLowerCase()) + ' ' + CSSclass + '"' +
-          (outOf ? ' data-tally="' + eval(result) + '"' : '') + '>' +
-          (CSSclass.indexOf("flagged") >- 1 ? "Flag" : result) +
-          footnote +
-          '</td>'
-        );
+      if (result !== null) {
+        cell.text(result === "flagged" ? "Flag" : result === true ? "Yes" : "No");
       }
+      if (footnote) {
+        cell.append(footnote);
+      }
+      return cell;
     }
-    
-    // Print all the results for the main test
-    Object.keys(browsers).forEach(function(browserId) {
-      var result = t.res[browserId];
-      printResultCell(
-        browserId,
-        result,
-        t.subtests ? Object.keys(t.subtests).length : null,
-        footnoter.get(result)
-      );
-    });
     
     // Print all the results for the subtests
     if ("subtests" in t) {
       Object.keys(t.subtests).forEach(function(subtestName) {
         var subtest = t.subtests[subtestName];
-        body.push(
-          '<tr class="subtest" data-parent="' + id + '">',
-          '\t<td><span>' + subtestName + '</span></td>\n' +
-          testScript(subtest.exec, compiler)
-        );
+        
+        subtestRow = $('<tr class="subtest"></tr>')
+          .attr('data-parent', id)
+          .append(
+            $('<td></td>')
+              .append('<span>' + subtestName + '</span>')
+              .append(testScript(subtest.exec, compiler))
+          );
+        body.append(subtestRow);
+        
+        // Add all the result cells
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
-          printResultCell(
+          
+          subtestRow.append(resultCell(
             browserId,
             result,
-            null,
-            footnoter.get(result)
-          );
+            footnoteHTML(result)
+          ));
         });
       });
     }
     
+    // Print all the results for the main test
+    Object.keys(browsers).forEach(function(browserId) {
+      // For supertests, calculate the tally and total
+      if ("subtests" in t) {
+      
+          var tally = 0, outOf = 0, flaggedTally = 0;
+          
+          Object.keys(t.subtests).forEach(function(e) {
+            var result = t.subtests[e].res[browserId];
+            
+            tally += testValue(result) === true;
+            flaggedTally += testValue(result) === 'flagged';
+            outOf += 1;
+          });
+          
+          var cell = resultCell(browserId, null)
+            .text((tally|0) + "/" + outOf)
+            .addClass('tally')
+            .attr('data-tally', tally / outOf);
+          
+          if (flaggedTally) {
+            cell.attr('data-flagged-tally',  (tally + flaggedTally) / outOf);
+          }
+          testRow.append(cell);
+      }
+      // For single tests:
+      else {
+        var result = t.res[browserId];
+        
+        testRow.append(resultCell(
+          browserId,
+          result,
+          footnoteHTML(result)
+        ));
+      }
+    });
+    
     // Finish the <tr>
-    body.push('</tr>');
     if (t.separator === 'after') {
-      body.push(
-        '<tr>',
-        '\t<th colspan="' + (Object.keys(browsers).length + 3) + '" class="separator"></th>',
-        '</tr>'
+      body.append(
+        '<tr><th colspan="' + (Object.keys(browsers).length + 3) + '" class="separator"></th></tr>'
       );
     }
   });
-
-  return {
-    tableHeaders: headers,
-    tableBody: body,
-    footnotes: footnoter.getAll()
-  };
+    
+  $('#footnotes').append(allFootnotes());
+  
+  return $.root().html().replace(/(<\/t\w>)/g, "$1\n");
 }
 
-// Footnoter
-function Footnoter() {
-  this.indexById = Object.create(null);
-  this.notes = [];
+function capitalise(s) {
+  return String.fromCharCode(s.charCodeAt(0) - 32) + s.slice(1);
 }
-
-Footnoter.prototype.get = function (val) {
-  var id;
-  if (val && typeof val === 'object' && val.note_id) {
-    id = val.note_id;
-    // save if it's new
-    if (this.indexById[id] == null) {
-      this.indexById[id] = this.notes.length;
-      this.notes.push(val.note_html);
-    }
-    // save html if such exists (may replace existing)
-    else if (val.note_html) {
-      this.notes[ this.indexById[id] ] = val.note_html;
-    }
-
-    // return the index + 1
-    return '<a href="#' + id + '-note"><sup>[' +
-      (this.indexById[id] + 1) +
-      ']</sup></a>';
-  }
-  return '';
-};
-
-Footnoter.prototype.getAll = function() {
-  var id, index,
-    html = [];
-
-  for (id in this.indexById) {
-    index = this.indexById[id];
-    html.push(
-      '<p id="' + id + '-note">',
-      '\t<sup>[' + (index + 1) + ']</sup> ' + this.notes[index],
-      '</p>'
-    );
-  }
-  return html;
-};
 
 function replaceAndIndent(str, replacements) {
   var i, replacement, indent;
