@@ -162,7 +162,7 @@ exports.browsers = {
     short: 'CH 19',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Marked results have to be enabled via "Experimental Javascript features" flag'
+    note_html: 'Flagged features have to be enabled via "Experimental Javascript features" flag'
   },
   chrome21dev: {
     full: 'Chrome',
@@ -277,18 +277,11 @@ exports.browsers = {
     platformtype: 'engine',
   },
   node: {
-    full: 'Node 0.10',
+    full: 'Node 0.11.14',
     short: 'Node',
-    obsolete: false, // current version
-    platformtype: 'engine',
-  },
-  nodeharmony: {
-    full: 'Node 0.11.14 harmony',
-    short: 'Node<br>harmony',
-    obsolete: false, // current version
     platformtype: 'engine',
     note_id: 'harmony-flag',
-    note_html: 'Have to be enabled via --harmony flag'
+    note_html: 'Flagged features have to be enabled via <code>--harmony</code> flag'
   },
   ejs: {
     full: 'Echo JS',
@@ -362,7 +355,6 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
-    nodeharmony: false,
     ios7:        false,
     ios8:        false
   }
@@ -539,7 +531,6 @@ exports.tests = [
         konq49:      true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       }
     },
@@ -606,7 +597,7 @@ exports.tests = [
         firefox11:   true,
         chrome:      flag,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
       }
     },
     'is block-scoped (strict mode)': {
@@ -625,7 +616,7 @@ exports.tests = [
         chrome19dev: flag,
         ie11:        true,
         firefox36:   true,
-        nodeharmony: true,
+        node:        flag,
       }
     },
     'redefining a const (strict mode)': {
@@ -647,7 +638,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         chrome21dev: flag,
-        nodeharmony: true,
+        node:        flag,
       }
     },
     'temporal dead zone (strict mode)': {
@@ -661,7 +652,7 @@ exports.tests = [
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   }
@@ -773,7 +764,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         chrome19dev: flag,
-        nodeharmony: true,
+        node:        flag,
         firefox11:   { val: false, note_id: 'fx-let' },
       },
     },
@@ -793,7 +784,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'for-loop statement scope (strict mode)': {
@@ -827,7 +818,7 @@ exports.tests = [
         ie11:        true,
         firefox35:   { val: false, note_id: 'fx-let-tdz', },
         chrome19dev: flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'for-loop iteration scope (strict mode)': {
@@ -1475,7 +1466,6 @@ exports.tests = [
         rhino17:     true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       },
     },
@@ -1592,7 +1582,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'with instances of generic iterables': {
@@ -1641,7 +1631,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'correct \"this\" binding': {
@@ -1665,7 +1655,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'sending': {
@@ -1687,7 +1677,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     '%GeneratorPrototype%': {
@@ -1708,7 +1698,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     '%GeneratorPrototype%.throw': {
@@ -1732,7 +1722,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     '%GeneratorPrototype%.return': {
@@ -1771,7 +1761,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'yield *, arrays': {
@@ -1838,7 +1828,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'yield *, instances of iterables': {
@@ -1907,7 +1897,7 @@ exports.tests = [
         ie11tp:      true,
         firefox25:   true,
         chrome30:    flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'binary literals': {
@@ -1923,7 +1913,7 @@ exports.tests = [
         ie11tp:      true,
         firefox25:   true,
         chrome30:    flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'octal supported by Number()': {
@@ -1934,7 +1924,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'binary supported by Number()': {
@@ -1945,7 +1935,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   },
@@ -2048,7 +2038,6 @@ exports.tests = [
         konq49:      true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       }),
     },
@@ -2075,7 +2064,6 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       },
     },
@@ -2144,7 +2132,6 @@ exports.tests = [
         opera:       true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       }),
     },
@@ -2225,7 +2212,6 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
     },
     '.prototype.join':        { ie11tp: true, },
@@ -2294,7 +2280,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -2348,7 +2334,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Map.prototype.size': {
@@ -2371,7 +2357,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Map.prototype.delete': {
@@ -2389,7 +2375,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Map.prototype.clear': {
@@ -2407,7 +2393,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Map.prototype.forEach': {
@@ -2425,7 +2411,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Map.prototype.keys': {
@@ -2506,7 +2492,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -2559,7 +2545,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome39:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Set.prototype.size': {
@@ -2584,7 +2570,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -2603,7 +2589,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Set.prototype.clear': {
@@ -2621,7 +2607,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Set.prototype.forEach': {
@@ -2639,7 +2625,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Set.prototype.keys': {
@@ -2715,7 +2701,7 @@ exports.tests = [
         chrome36:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -2764,7 +2750,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   },
@@ -2789,7 +2775,7 @@ exports.tests = [
         firefox34:   true,
         chrome30:    flag,
         chrome36:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'constructor arguments': {
@@ -2829,7 +2815,7 @@ exports.tests = [
         firefox34:   true,
         chrome30:    flag,
         chrome36:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   },
@@ -3678,7 +3664,6 @@ exports.tests = [
         chrome19dev: true,
         konq49:      true,
         node:        true,
-        nodeharmony: true,
       },
     },
     'Object.getOwnPropertySymbols': {
@@ -3695,7 +3680,7 @@ exports.tests = [
         firefox36:   true,
         chrome34:    flag,
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Object.setPrototypeOf': {
@@ -3708,7 +3693,7 @@ exports.tests = [
         ie11:        true,
         firefox31:   true,
         chrome34:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   },
@@ -3733,7 +3718,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       }),
     },
@@ -3764,7 +3748,7 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         rhino17:     true,
-        nodeharmony: true,
+        node:        flag,
         ios7:        true,
       },
     },
@@ -3791,7 +3775,6 @@ exports.tests = [
         rhino17:     true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       }),
     },
@@ -4063,7 +4046,7 @@ exports.tests = [
         ie11tp:      true,
         firefox24:   true,
         chrome30:    flag,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'String.prototype.startsWith': {
@@ -4079,7 +4062,7 @@ exports.tests = [
         firefox17:   true,
         chrome30:    flag,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'String.prototype.endsWith': {
@@ -4095,7 +4078,7 @@ exports.tests = [
         firefox17:   true,
         chrome30:    flag,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'String.prototype.includes': {
@@ -4226,7 +4209,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'typeof support': {
@@ -4239,7 +4222,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'symbol keys are hidden to pre-ES6 code': {
@@ -4265,7 +4248,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Object.defineProperty support': {
@@ -4289,7 +4272,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'cannot coerce to string or number': {
@@ -4314,7 +4297,7 @@ exports.tests = [
         ie11tp:      true,
         firefox36:   true,
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'can convert with String()': {
@@ -4377,7 +4360,7 @@ exports.tests = [
         firefox36:   true,
         chrome35:    flag,
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   },
@@ -4630,7 +4613,7 @@ exports.tests = [
         chrome30:    flag,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -4647,7 +4630,7 @@ exports.tests = [
         chrome30:    flag,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -4664,7 +4647,7 @@ exports.tests = [
         chrome36:    flag,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -4682,7 +4665,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -4712,7 +4695,7 @@ exports.tests = [
         },
         chrome30:    flag,
         chrome38:    { val: false, note_id: 'array-prototype-iterator' },
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Array.prototype.entries': {
@@ -4729,7 +4712,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     },
@@ -4770,7 +4753,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node:        true,
-        nodeharmony: true,
       },
     },
     'Number.isInteger': {
@@ -4786,7 +4768,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Number.isSafeInteger': {
@@ -4802,7 +4784,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Number.isNaN': {
@@ -4819,7 +4801,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node:        true,
-        nodeharmony: true,
       },
     },
     'Number.EPSILON': {
@@ -4834,7 +4815,7 @@ exports.tests = [
         firefox25:   true,
         chrome34:    true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Number.MIN_SAFE_INTEGER': {
@@ -4850,7 +4831,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
     'Number.MAX_SAFE_INTEGER': {
@@ -4866,7 +4847,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
       },
     },
   },
@@ -4883,7 +4864,7 @@ exports.tests = [
         firefox31:   true,
         chrome35:    flag,
         chrome38:    true,
-        nodeharmony: true,
+        node:        flag,
       },
       'imul': {
         ejs:         true,
@@ -4900,7 +4881,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         ios7:        true,
-        nodeharmony: true,
+        node:        flag,
       },
       'sign': {
         ejs:         true,
@@ -4911,7 +4892,7 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
       },
       'log10': {
         ejs:         true,
@@ -4923,7 +4904,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'log2': {
@@ -4936,7 +4917,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'log1p': {
@@ -4949,7 +4930,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'expm1': {
@@ -4961,7 +4942,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'cosh': {
@@ -4974,7 +4955,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'sinh': {
@@ -4987,7 +4968,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'tanh': {
@@ -5000,7 +4981,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'acosh': {
@@ -5013,7 +4994,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'asinh': {
@@ -5025,7 +5006,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'atanh': {
@@ -5038,7 +5019,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'hypot': {
@@ -5051,7 +5032,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'trunc': {
@@ -5064,7 +5045,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'fround': {
@@ -5082,7 +5063,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
       'cbrt': {
@@ -5095,7 +5076,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        nodeharmony: true,
+        node:        flag,
         ios8:        true,
       },
     };
@@ -5140,7 +5121,6 @@ exports.tests = [
         rhino17:     true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       },
     },
@@ -5199,7 +5179,6 @@ exports.tests = [
         rhino17:     true,
         phantom:     true,
         node:        true,
-        nodeharmony: true,
         ios7:        true,
       },
     },

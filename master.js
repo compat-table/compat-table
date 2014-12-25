@@ -162,7 +162,7 @@ $(function() {
   
   // browser engine color stripes
   function getBrowserColour(name) {
-    /* Trident */
+    /* Chakra */
     if (/^ie/.exec(name)) { 
       return "hsla(217, 85%, 54%, .5)";
     }
@@ -217,13 +217,24 @@ $(function() {
     }
     var results = table.find('tr:not([class*=test]) td:not(.not-applicable)' + name);
     var yesResults = results.filter('.yes').length;
+    var flaggedResults = yesResults;
     results = results.length;
     
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
-      yesResults += +$(this).attr('data-tally') || 0;
+      var yes = +$(this).attr('data-tally') || 0
+      yesResults += yes;
+      flaggedResults += yes + (+$(this).attr('data-flagged-tally') || 0);
       results += 1;
     });
     var featuresCount = yesResults / results;
+    var flaggedFeaturesCount = flaggedResults / results;
+    
+    function gradient(colour, percent) {
+      return 'linear-gradient(to top, ' +
+        colour + ' 0%, ' + colour + ' ' +
+        (percent * 100|0) + '%, transparent ' + (percent * 100|0) +
+        '%,transparent 100%)';
+    }
     
     var colour = getBrowserColour(id);
     elem
@@ -235,10 +246,10 @@ $(function() {
         (Math.round(featuresCount*100)) +
         '</b>%</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
-      .css({'background-image':'linear-gradient(to top, ' +
-        colour + ' 0%, ' + colour + ' ' +
-        (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
-        '%,transparent 100%)'});
+      .css({'background-image': gradient(colour, featuresCount) +
+        (flaggedFeaturesCount > featuresCount
+          ? ',' + gradient(colour.replace(".5",".2"), flaggedFeaturesCount)
+          : '')});
   });
 
   // Cached array of sort orderings

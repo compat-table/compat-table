@@ -88,7 +88,7 @@
 
           <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
 
-          <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
+          <th colspan="4" class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
 
           <th colspan="2" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
 
@@ -151,8 +151,7 @@
 <th class="platform konq49 desktop"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ 4.14</abbr><a href="#khtml-note"><sup>[4]</sup></a></a></th>
 <th class="platform rhino17 engine"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
 <th class="platform phantom engine"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></a></th>
-<th class="platform node engine"><a href="#node" class="browser-name"><abbr title="Node 0.10">Node</abbr></a></th>
-<th class="platform nodeharmony engine"><a href="#nodeharmony" class="browser-name"><abbr title="Node 0.11.14 harmony">Node<br>harmony</abbr><a href="#harmony-flag-note"><sup>[5]</sup></a></a></th>
+<th class="platform node engine"><a href="#node" class="browser-name"><abbr title="Node 0.11.14">Node</abbr><a href="#harmony-flag-note"><sup>[5]</sup></a></a></th>
 <th class="platform ejs engine"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
 <th class="platform ios7 mobile"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
@@ -220,7 +219,6 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -276,7 +274,6 @@ test(function(){try{return Function("\n\"use strict\";\nreturn (function f(n){\n
 <td data-browser="rhino17" class="tally" data-tally="0">0/9</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/9</td>
 <td data-browser="node" class="tally" data-tally="0">0/9</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/9</td>
 <td data-browser="ejs" class="tally" data-tally="0.7777777777777778">7/9</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/9</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/9</td>
@@ -336,7 +333,6 @@ test(function(){try{return Function("\nreturn (() => 5)() === 5;\n      ")()}cat
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -397,7 +393,6 @@ test(function(){try{return Function("\nvar b = x => x + \"foo\";\nreturn (b(\"fe
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -458,7 +453,6 @@ test(function(){try{return Function("\nvar c = (v, w, x, y, z) => \"\" + v + w +
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -520,7 +514,6 @@ test(function(){try{return Function("\nvar d = { x : \"bar\", y : function() { r
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -582,7 +575,6 @@ test(function(){try{return Function("\nvar d = { x : \"foo\", y : function() { r
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -644,7 +636,6 @@ test(function(){try{return Function("\nvar d = { x : \"bar\", y : function() { r
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -705,7 +696,6 @@ test(function(){try{return Function("\nvar f = (function() { return z => argumen
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -767,7 +757,6 @@ test(function(){try{return Function("\nreturn (() => {\n  try { Function(\"x\\n 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -828,7 +817,6 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -883,8 +871,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
 <td data-browser="konq49" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0.125">1/8</td>
-<td data-browser="node" class="tally" data-tally="0.125">1/8</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.625">5/8</td>
+<td data-browser="node" class="tally" data-tally="0.125" data-flagged-tally="0.625">1/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">6/8</td>
 <td data-browser="ios7" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.125">1/8</td>
@@ -946,7 +933,6 @@ test(function(){try{return Function("\nconst foo = 123;\nreturn (foo === 123);\n
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -1009,7 +995,6 @@ test(function(){try{return Function("\nconst bar = 123;\n{ const bar = 456; }\nr
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1075,7 +1060,6 @@ test(function(){try{return Function("\nconst baz = 1;\ntry {\n  Function(\"const
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1138,7 +1122,6 @@ test(function(){try{return Function("\nvar passed = (function(){ try { qux; } ca
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1200,8 +1183,7 @@ test(function(){try{return Function("\n\"use strict\";\nconst foo = 123;\nreturn
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1264,8 +1246,7 @@ test(function(){try{return Function("\n'use strict';\nconst bar = 123;\n{ const 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1331,8 +1312,7 @@ test(function(){try{return Function("\n'use strict';\nconst baz = 1;\ntry {\n  F
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1395,8 +1375,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1451,8 +1430,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
 <td data-browser="konq49" class="tally" data-tally="0">0/10</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/10</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/10</td>
-<td data-browser="node" class="tally" data-tally="0">0/10</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.4">4/10</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.3">0/10</td>
 <td data-browser="ejs" class="tally" data-tally="1">10/10</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/10</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/10</td>
@@ -1514,7 +1492,6 @@ test(function(){try{return Function("\nlet foo = 123;\nreturn (foo === 123);\n  
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1577,7 +1554,6 @@ test(function(){try{return Function("\nlet bar = 123;\n{ let bar = 456; }\nretur
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1640,7 +1616,6 @@ test(function(){try{return Function("\nlet baz = 1;\nfor(let baz = 0; false; fal
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1703,7 +1678,6 @@ test(function(){try{return Function("\nvar passed = (function(){ try {  qux; } c
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1773,7 +1747,6 @@ test(function(){try{return Function("\nlet scopes = [];\nfor(let i = 0; i < 2; i
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1835,8 +1808,7 @@ test(function(){try{return Function("\n'use strict';\nlet foo = 123;\nreturn (fo
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1899,8 +1871,7 @@ test(function(){try{return Function("\n'use strict';\nlet bar = 123;\n{ let bar 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1964,7 +1935,6 @@ test(function(){try{return Function("\n'use strict';\nlet baz = 1;\nfor(let baz 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2027,8 +1997,7 @@ test(function(){try{return Function("\n'use strict';\nvar passed = (function(){ 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2098,7 +2067,6 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2154,7 +2122,6 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
 <td data-browser="rhino17" class="tally" data-tally="0">0/5</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/5</td>
 <td data-browser="node" class="tally" data-tally="0">0/5</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/5</td>
 <td data-browser="ejs" class="tally" data-tally="0.6">3/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
@@ -2215,7 +2182,6 @@ test(function(){try{return Function("\nreturn (function (a = 1, b = 2) { return 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2276,7 +2242,6 @@ test(function(){try{return Function("\nreturn (function (a = 1, b = 2) { return 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2337,7 +2302,6 @@ test(function(){try{return Function("\nreturn (function (a, b = a) { return b ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2408,7 +2372,6 @@ test(function(){try{return Function("\nreturn (function(x = 1) {\n  try {\n    e
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2474,7 +2437,6 @@ test(function(){try{return Function("\nreturn (function(a=function(){\n  return 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2530,7 +2492,6 @@ test(function(){try{return Function("\nreturn (function(a=function(){\n  return 
 <td data-browser="rhino17" class="tally" data-tally="0">0/3</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/3</td>
 <td data-browser="ejs" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/3</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/3</td>
@@ -2593,7 +2554,6 @@ test(function(){try{return Function("\nreturn (function (foo, ...args) {\n  retu
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2654,7 +2614,6 @@ test(function(){try{return Function("\nreturn function(a, ...b){}.length === 1 &
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2723,7 +2682,6 @@ test(function(){try{return Function("\nreturn (function (foo, ...args) {\n  foo 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2779,7 +2737,6 @@ test(function(){try{return Function("\nreturn (function (foo, ...args) {\n  foo 
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/8</td>
 <td data-browser="node" class="tally" data-tally="0">0/8</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">6/8</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.25">2/8</td>
@@ -2840,7 +2797,6 @@ test(function(){try{return Function("\nreturn Math.max(...[1, 2, 3]) === 3\n    
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -2901,7 +2857,6 @@ test(function(){try{return Function("\nreturn [...[1, 2, 3]][2] === 3;\n      ")
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -2962,7 +2917,6 @@ test(function(){try{return Function("\nreturn Math.max(...\"1234\") === 4;\n    
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3023,7 +2977,6 @@ test(function(){try{return Function("\nreturn [\"a\", ...\"bcd\", \"e\"][3] === 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3085,7 +3038,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3147,7 +3099,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3209,7 +3160,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3271,7 +3221,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3327,7 +3276,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td data-browser="rhino17" class="tally" data-tally="0">0/11</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/11</td>
 <td data-browser="node" class="tally" data-tally="0">0/11</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/11</td>
 <td data-browser="ejs" class="tally" data-tally="0.8181818181818182">9/11</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/11</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/11</td>
@@ -3389,7 +3337,6 @@ test(function(){try{return Function("\nclass C {}\nreturn typeof C === \"functio
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3456,7 +3403,6 @@ test(function(){try{return Function("\nclass C {}\nvar c1 = C;\n{\n  class C {}\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3517,7 +3463,6 @@ test(function(){try{return Function("\nreturn typeof class C {} === \"function\"
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3582,7 +3527,6 @@ test(function(){try{return Function("\nclass C {\n  constructor() { this.x = 1; 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3647,7 +3591,6 @@ test(function(){try{return Function("\nclass C {\n  method() { return 2; }\n}\nr
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3712,7 +3655,6 @@ test(function(){try{return Function("\nclass C {\n  static method() { return 3; 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3779,7 +3721,6 @@ test(function(){try{return Function("\nvar baz = false;\nclass C {\n  get foo() 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3846,7 +3787,6 @@ test(function(){try{return Function("\nvar baz = false;\nclass C {\n  static get
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3911,7 +3851,6 @@ test(function(){try{return Function("\nvar c = class C {\n  static method() { re
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3976,7 +3915,6 @@ test(function(){try{return Function("\nclass C extends Array {}\nvar c = new C()
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4041,7 +3979,6 @@ test(function(){try{return Function("\nclass C extends null {}\nvar c = new C();
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4097,7 +4034,6 @@ test(function(){try{return Function("\nclass C extends null {}\nvar c = new C();
 <td data-browser="rhino17" class="tally" data-tally="0">0/3</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/3</td>
 <td data-browser="ejs" class="tally" data-tally="1">3/3</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/3</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/3</td>
@@ -4163,7 +4099,6 @@ test(function(){try{return Function("\nclass B extends class {\n  constructor(a)
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4229,7 +4164,6 @@ test(function(){try{return Function("\nclass B extends class {\n  qux(a) { retur
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4299,7 +4233,6 @@ test(function(){try{return Function("\nclass B extends class {\n  qux() { return
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4355,7 +4288,6 @@ test(function(){try{return Function("\nclass B extends class {\n  qux() { return
 <td data-browser="rhino17" class="tally" data-tally="0">0/3</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/3</td>
 <td data-browser="ejs" class="tally" data-tally="1">3/3</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/3</td>
 <td data-browser="ios8" class="tally" data-tally="0.3333333333333333">1/3</td>
@@ -4417,7 +4349,6 @@ test(function(){try{return Function("\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -4479,7 +4410,6 @@ test(function(){try{return Function("\nvar a = 7, b = 8, c = {a,b};\nreturn c.a 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4540,7 +4470,6 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4595,8 +4524,7 @@ test(function(){try{return Function("\nreturn ({ y() { return 2; } }).y() === 2;
 <td data-browser="konq49" class="tally" data-tally="0">0/4</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
-<td data-browser="node" class="tally" data-tally="0">0/4</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.25">1/4</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.25">0/4</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">3/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0.25">1/4</td>
@@ -4659,7 +4587,6 @@ test(function(){try{return Function("\nvar arr = [5];\nfor (var item of arr)\n  
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -4723,7 +4650,6 @@ test(function(){try{return Function("\nvar str = \"\";\nfor (var item of \"foo\"
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4788,8 +4714,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = window
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4855,7 +4780,6 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = window
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4910,8 +4834,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = window
 <td data-browser="konq49" class="tally" data-tally="0">0/12</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/12</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/12</td>
-<td data-browser="node" class="tally" data-tally="0">0/12</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.5833333333333334">7/12</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5833333333333334">0/12</td>
 <td data-browser="ejs" class="tally" data-tally="0">0/12</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/12</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/12</td>
@@ -4981,8 +4904,7 @@ test(function(){try{return Function("\nfunction * generator(){\n  yield 5; yield
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5052,8 +4974,7 @@ test(function(){try{return Function("\nfunction * generator(){\n  yield this.x; 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5121,8 +5042,7 @@ test(function(){try{return Function("\nvar sent;\nfunction * generator(){\n  sen
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5191,8 +5111,7 @@ test(function(){try{return Function("\nfunction * generatorFn(){}\nvar ownProto 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5263,8 +5182,7 @@ test(function(){try{return Function("\nvar passed = false;\nfunction * generator
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5335,7 +5253,6 @@ test(function(){try{return Function("\nfunction * generator(){\n  yield 5; yield
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5402,8 +5319,7 @@ test(function(){try{return Function("\nvar passed;\nfunction * generator(){\n  p
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5473,7 +5389,6 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5543,7 +5458,6 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5614,8 +5528,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5687,7 +5600,6 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5760,7 +5672,6 @@ test(function(){try{return Function("\nvar o = {\n  * generator() {\n    yield 5
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5815,8 +5726,7 @@ test(function(){try{return Function("\nvar o = {\n  * generator() {\n    yield 5
 <td data-browser="konq49" class="tally" data-tally="0">0/4</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
-<td data-browser="node" class="tally" data-tally="0">0/4</td>
-<td data-browser="nodeharmony" class="tally" data-tally="1">4/4</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="1">0/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
@@ -5876,8 +5786,7 @@ test(function(){try{return Function("\nreturn 0o10 === 8 && 0O10 === 8;\n      "
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5937,8 +5846,7 @@ test(function(){try{return Function("\nreturn 0b10 === 2 && 0B10 === 2;\n      "
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5998,8 +5906,7 @@ test(function(){try{return Function("\nreturn Number('0o1') === 1;\n      ")()}c
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6059,8 +5966,7 @@ test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}c
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6116,7 +6022,6 @@ test(function(){try{return Function("\nreturn Number('0b1') === 1;\n      ")()}c
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -6179,7 +6084,6 @@ test(function(){try{return Function("\nvar a = \"ba\", b = \"QUX\";\nreturn `foo
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6251,7 +6155,6 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6307,7 +6210,6 @@ test(function(){try{return Function("\nvar called = false;\nfunction fn(parts, a
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -6372,7 +6274,6 @@ test(function(){try{return Function("\nvar re = new RegExp('\\\\w');\nvar re2 = 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6433,7 +6334,6 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6489,7 +6389,6 @@ test(function(){try{return Function("\nreturn \"𠮷\".match(/./u)[0].length ===
 <td data-browser="rhino17" class="tally" data-tally="0">0/40</td>
 <td data-browser="phantom" class="tally" data-tally="0.4">16/40</td>
 <td data-browser="node" class="tally" data-tally="0.45">18/40</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="ejs" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="ios7" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="ios8" class="tally" data-tally="0.45">18/40</td>
@@ -6552,7 +6451,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6615,7 +6513,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6678,7 +6575,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6741,7 +6637,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6804,7 +6699,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6867,7 +6761,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6930,7 +6823,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6993,7 +6885,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7056,7 +6947,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7120,7 +7010,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7184,7 +7073,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7248,7 +7136,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7312,7 +7199,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7376,7 +7262,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7440,7 +7325,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7504,7 +7388,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7568,7 +7451,6 @@ test(function(){try{return Function("\nvar buffer = new ArrayBuffer(64);\nvar vi
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7637,7 +7519,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.from === \"functi
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7706,7 +7587,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.of === \"function
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7775,7 +7655,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.subarra
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7844,7 +7723,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.join ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7913,7 +7791,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.indexOf
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7982,7 +7859,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.lastInd
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8051,7 +7927,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.slice =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8120,7 +7995,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.every =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8189,7 +8063,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.filter 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8258,7 +8131,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.forEach
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8327,7 +8199,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.map ===
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8396,7 +8267,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.reduce 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8465,7 +8335,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.reduceR
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8534,7 +8403,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.reverse
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8603,7 +8471,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.some ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8672,7 +8539,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.sort ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8741,7 +8607,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.copyWit
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8810,7 +8675,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.find ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8879,7 +8743,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.findInd
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8948,7 +8811,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.fill ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9017,7 +8879,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.keys ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9086,7 +8947,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.values 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9155,7 +9015,6 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9210,8 +9069,7 @@ test(function(){try{return Function("\nreturn typeof Int8Array.prototype.entries
 <td data-browser="konq49" class="tally" data-tally="0">0/11</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/11</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/11</td>
-<td data-browser="node" class="tally" data-tally="0">0/11</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.5454545454545454">6/11</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5454545454545454">0/11</td>
 <td data-browser="ejs" class="tally" data-tally="0.9090909090909091">10/11</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/11</td>
 <td data-browser="ios8" class="tally" data-tally="0.8181818181818182">9/11</td>
@@ -9276,8 +9134,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9343,7 +9200,6 @@ test(function(){try{return Function("\nvar key1 = {};\nvar key2 = {};\nvar map =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9405,7 +9261,6 @@ test(function(){try{return Function("\nvar map = new Map();\nreturn map.set(0, 0
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9471,8 +9326,7 @@ test(function(){try{return Function("\nvar map = new Map();\nmap.set(-0, \"foo\"
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9537,8 +9391,7 @@ test(function(){try{return Function("\nvar key = {};\nvar map = new Map();\n\nma
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9598,8 +9451,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.delete === \"
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9659,8 +9511,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.clear === \"f
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9720,8 +9571,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.forEach === \
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9782,7 +9632,6 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.keys === \"fu
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9843,7 +9692,6 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.values === \"
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9904,7 +9752,6 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9959,8 +9806,7 @@ test(function(){try{return Function("\nreturn typeof Map.prototype.entries === \
 <td data-browser="konq49" class="tally" data-tally="0">0/11</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/11</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/11</td>
-<td data-browser="node" class="tally" data-tally="0">0/11</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.5454545454545454">6/11</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5454545454545454">0/11</td>
 <td data-browser="ejs" class="tally" data-tally="0.9090909090909091">10/11</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/11</td>
 <td data-browser="ios8" class="tally" data-tally="0.8181818181818182">9/11</td>
@@ -10026,8 +9872,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10092,7 +9937,6 @@ test(function(){try{return Function("\nvar obj1 = {};\nvar obj2 = {};\nvar set =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10154,7 +9998,6 @@ test(function(){try{return Function("\nvar set = new Set();\nreturn set.add(0) =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10220,8 +10063,7 @@ test(function(){try{return Function("\nvar set = new Set();\nset.add(-0);\nvar k
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10288,8 +10130,7 @@ test(function(){try{return Function("\nvar obj = {};\nvar set = new Set();\n\nse
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10349,8 +10190,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.delete === \"
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10410,8 +10250,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.clear === \"f
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10471,8 +10310,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.forEach === \
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10533,7 +10371,6 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.keys === \"fu
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10594,7 +10431,6 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.values === \"
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10655,7 +10491,6 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10710,8 +10545,7 @@ test(function(){try{return Function("\nreturn typeof Set.prototype.entries === \
 <td data-browser="konq49" class="tally" data-tally="0">0/4</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
-<td data-browser="node" class="tally" data-tally="0">0/4</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.5">2/4</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0.75">3/4</td>
@@ -10776,8 +10610,7 @@ test(function(){try{return Function("\nvar key = {};\nvar weakmap = new WeakMap(
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10843,7 +10676,6 @@ test(function(){try{return Function("\nvar key1 = {};\nvar key2 = {};\nvar weakm
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10906,7 +10738,6 @@ test(function(){try{return Function("\nvar weakmap = new WeakMap();\nvar key = {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10966,8 +10797,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete ==
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -11022,8 +10852,7 @@ test(function(){try{return Function("\nreturn typeof WeakMap.prototype.delete ==
 <td data-browser="konq49" class="tally" data-tally="0">0/4</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
-<td data-browser="node" class="tally" data-tally="0">0/4</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.5">2/4</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
@@ -11089,8 +10918,7 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11154,7 +10982,6 @@ test(function(){try{return Function("\nvar obj1 = {}, obj2 = {};\nvar weakset = 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11217,7 +11044,6 @@ test(function(){try{return Function("\nvar weakset = new WeakSet();\nvar obj = {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11277,8 +11103,7 @@ test(function(){try{return Function("\nreturn typeof WeakSet.prototype.delete ==
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11334,7 +11159,6 @@ test(function(){try{return Function("\nreturn typeof WeakSet.prototype.delete ==
 <td data-browser="rhino17" class="tally" data-tally="0">0/20</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/20</td>
 <td data-browser="node" class="tally" data-tally="0">0/20</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/20</td>
 <td data-browser="ejs" class="tally" data-tally="0.55">11/20</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/20</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/20</td>
@@ -11401,7 +11225,6 @@ test(function(){try{return Function("\nvar proxied = { };\nvar proxy = new Proxy
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11468,7 +11291,6 @@ test(function(){try{return Function("\nvar proxied = { };\nvar proxy = Object.cr
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11537,7 +11359,6 @@ test(function(){try{return Function("\nvar proxied = { };\nvar passed = false;\n
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11606,7 +11427,6 @@ test(function(){try{return Function("\nvar proxied = { };\nvar passed = false;\n
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11674,7 +11494,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\n\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11742,7 +11561,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\n\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11810,7 +11628,6 @@ test(function(){try{return Function("\nvar proxied = {};\n  var passed = false;\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11884,7 +11701,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar fakeDesc = { value
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11957,7 +11773,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12025,7 +11840,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar fakeProto = {};\nv
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12098,7 +11912,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar newProto = {};\nva
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12168,7 +11981,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12239,7 +12051,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12312,7 +12123,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nf
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12382,7 +12192,6 @@ test(function(){try{return Function("\nvar proxied = {};\nvar passed = false;\nO
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12453,7 +12262,6 @@ test(function(){try{return Function("\nvar proxied = function(){};\nvar passed =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12522,7 +12330,6 @@ test(function(){try{return Function("\nvar proxied = function(){};\nvar passed =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12591,7 +12398,6 @@ test(function(){try{return Function("\nvar obj = Proxy.revocable({}, { get: func
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12652,7 +12458,6 @@ test(function(){try{return Function("\nreturn Array.isArray(new Proxy([], {}));\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12713,7 +12518,6 @@ test(function(){try{return Function("\nreturn JSON.stringify(new Proxy(['foo'], 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12769,7 +12573,6 @@ test(function(){try{return Function("\nreturn JSON.stringify(new Proxy(['foo'], 
 <td data-browser="rhino17" class="tally" data-tally="0">0/14</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/14</td>
 <td data-browser="node" class="tally" data-tally="0">0/14</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/14</td>
 <td data-browser="ejs" class="tally" data-tally="1">14/14</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/14</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/14</td>
@@ -12830,7 +12633,6 @@ test(function(){try{return Function("\nreturn Reflect.get({ qux: 987 }, \"qux\")
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12893,7 +12695,6 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.set(obj, \"quux\",
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12954,7 +12755,6 @@ test(function(){try{return Function("\nreturn Reflect.has({ qux: 987 }, \"qux\")
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13017,7 +12817,6 @@ test(function(){try{return Function("\nvar obj = { bar: 456 };\nReflect.deletePr
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13081,7 +12880,6 @@ test(function(){try{return Function("\nvar obj = { baz: 789 };\nvar desc = Refle
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13144,7 +12942,6 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.defineProperty(obj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13205,7 +13002,6 @@ test(function(){try{return Function("\nreturn Reflect.getPrototypeOf([]) === Arr
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13268,7 +13064,6 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.setPrototypeOf(obj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13330,7 +13125,6 @@ test(function(){try{return Function("\nreturn Reflect.isExtensible({}) &&\n  !Re
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13393,7 +13187,6 @@ test(function(){try{return Function("\nvar obj = {};\nReflect.preventExtensions(
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13463,7 +13256,6 @@ test(function(){try{return Function("\nvar obj = { foo: 1, bar: 2 };\nvar iterat
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13525,7 +13317,6 @@ test(function(){try{return Function("\nvar obj = { foo: 1, bar: 2 };\nreturn Ref
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13586,7 +13377,6 @@ test(function(){try{return Function("\nreturn Reflect.apply(Array.prototype.push
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13649,7 +13439,6 @@ test(function(){try{return Function("\nreturn Reflect.construct(function(a, b, c
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13715,7 +13504,6 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13771,7 +13559,6 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
 <td data-browser="rhino17" class="tally" data-tally="0">0/15</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/15</td>
 <td data-browser="node" class="tally" data-tally="0">0/15</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/15</td>
 <td data-browser="ejs" class="tally" data-tally="0.4">6/15</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/15</td>
 <td data-browser="ios8" class="tally" data-tally="0.4666666666666667">7/15</td>
@@ -13833,7 +13620,6 @@ test(function(){try{return Function("\nvar [a, , [b], c] = [5, null, [6]];\nretu
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -13895,7 +13681,6 @@ test(function(){try{return Function("\nvar [a, b, c] = \"bar\";\nreturn a === \"
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -13958,7 +13743,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14021,7 +13805,6 @@ test(function(){try{return Function("\nvar iterable = window.__createIterableObj
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14083,7 +13866,6 @@ test(function(){try{return Function("\nvar {c, x:d, e} = {c:7, x:8};\nreturn c =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14146,7 +13928,6 @@ test(function(){try{return Function("\nvar qux = \"corge\";\nvar { [qux]: grault
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14208,7 +13989,6 @@ test(function(){try{return Function("\nvar [a,b] = [5,6], {c,d} = {c:7,d:8};\nre
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14270,7 +14050,6 @@ test(function(){try{return Function("\nvar [e, {x:f, g}] = [9, {x:10}];\nreturn 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14334,7 +14113,6 @@ test(function(){try{return Function("\nreturn (function({a, x:b, y:e}, [c, d]) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14397,7 +14175,6 @@ test(function(){try{return Function("\nfor(var [i, j, k] in { qux: 1 }) {\n  ret
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14460,7 +14237,6 @@ test(function(){try{return Function("\nfor(var [i, j, k] of [[1,2,3]]) {\n  retu
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14524,7 +14300,6 @@ test(function(){try{return Function("\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d]
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14587,7 +14362,6 @@ test(function(){try{return Function("\nvar a = [1, 2, 3], first, last;\n[first, 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14649,7 +14423,6 @@ test(function(){try{return Function("\nvar {a = 1, b = 0, c = 3} = {b:2, c:undef
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14713,7 +14486,6 @@ test(function(){try{return Function("\nreturn (function({a = 1, b = 0, c = 3, x:
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14775,7 +14547,6 @@ test(function(){try{return Function("\nreturn typeof Promise !== 'undefined' &&\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14830,8 +14601,7 @@ test(function(){try{return Function("\nreturn typeof Promise !== 'undefined' &&\
 <td data-browser="konq49" class="tally" data-tally="0.25">1/4</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
-<td data-browser="node" class="tally" data-tally="0.25">1/4</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.75">3/4</td>
+<td data-browser="node" class="tally" data-tally="0.25" data-flagged-tally="0.75">1/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
@@ -14893,7 +14663,6 @@ test(function(){try{return Function("\nvar o = Object.assign({a:true}, {b:true},
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14956,7 +14725,6 @@ test(function(){try{return Function("\nreturn typeof Object.is === 'function' &&
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15019,8 +14787,7 @@ test(function(){try{return Function("\nvar o = {};\nvar sym = Symbol();\no[sym] 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15080,8 +14847,7 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15137,7 +14903,6 @@ test(function(){try{return Function("\nreturn Object.setPrototypeOf({}, Array.pr
 <td data-browser="rhino17" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="phantom" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="node" class="tally" data-tally="0.125">2/16</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.125">2/16</td>
 <td data-browser="ejs" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ios7" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ios8" class="tally" data-tally="0.1875">3/16</td>
@@ -15200,7 +14965,6 @@ test(function(){try{return Function("\nfunction foo(){};\nreturn foo.name === 'f
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -15262,7 +15026,6 @@ test(function(){try{return Function("\nreturn (function foo(){}).name === 'foo' 
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -15323,7 +15086,6 @@ test(function(){try{return Function("\nreturn (new Function).name === \"anonymou
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -15386,7 +15148,6 @@ test(function(){try{return Function("\nfunction foo() {};\nreturn foo.bind({}).n
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15449,7 +15210,6 @@ test(function(){try{return Function("\nvar foo = function() {};\nvar bar = funct
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15514,7 +15274,6 @@ test(function(){try{return Function("\nvar o = { foo: function(){}, bar: functio
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15578,7 +15337,6 @@ test(function(){try{return Function("\nvar o = { get foo(){}, set foo(x){} };\nv
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15640,7 +15398,6 @@ test(function(){try{return Function("\nvar o = { foo(){} };\nreturn o.foo.name =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15709,7 +15466,6 @@ test(function(){try{return Function("\nvar sym1 = Symbol(\"foo\");\nvar sym2 = S
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15773,7 +15529,6 @@ test(function(){try{return Function("\nclass foo {};\nclass bar { static name() 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15835,7 +15590,6 @@ test(function(){try{return Function("\nreturn class foo {}.name === \"foo\" &&\n
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15901,7 +15655,6 @@ test(function(){try{return Function("\nvar foo = class {};\nvar bar = class baz 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15966,7 +15719,6 @@ test(function(){try{return Function("\nvar o = { foo: class {}, bar: class baz {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16028,7 +15780,6 @@ test(function(){try{return Function("\nclass C { foo(){} };\nreturn (new C).foo.
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16090,7 +15841,6 @@ test(function(){try{return Function("\nclass C { static foo(){} };\nreturn C.foo
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16154,7 +15904,6 @@ test(function(){try{return Function("\nvar descriptor = Object.getOwnPropertyDes
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16215,7 +15964,6 @@ test(function(){try{return Function("\nreturn typeof Function.prototype.toMethod
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16271,7 +16019,6 @@ test(function(){try{return Function("\nreturn typeof Function.prototype.toMethod
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -16332,7 +16079,6 @@ test(function(){try{return Function("\nreturn typeof String.raw === 'function';\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16393,7 +16139,6 @@ test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'f
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16448,8 +16193,7 @@ test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'f
 <td data-browser="konq49" class="tally" data-tally="0">0/6</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/6</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/6</td>
-<td data-browser="node" class="tally" data-tally="0">0/6</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.5">3/6</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/6</td>
 <td data-browser="ejs" class="tally" data-tally="0.8333333333333334">5/6</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/6</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/6</td>
@@ -16510,7 +16254,6 @@ test(function(){try{return Function("\nreturn typeof String.prototype.codePointA
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16573,7 +16316,6 @@ test(function(){try{return Function("\nreturn typeof String.prototype.normalize 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16634,8 +16376,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.repeat ===
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16696,8 +16437,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.startsWith
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16758,8 +16498,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.endsWith =
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16821,7 +16560,6 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No<a href="#string-contains-note"><sup>[15]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16882,7 +16620,6 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16937,8 +16674,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
 <td data-browser="konq49" class="tally" data-tally="0">0/9</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/9</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/9</td>
-<td data-browser="node" class="tally" data-tally="0">0/9</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.7777777777777778">7/9</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.6666666666666666">0/9</td>
 <td data-browser="ejs" class="tally" data-tally="0.8888888888888888">8/9</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/9</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/9</td>
@@ -17002,8 +16738,7 @@ test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17063,8 +16798,7 @@ test(function(){try{return Function("\nreturn typeof Symbol() === \"symbol\";\n 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17136,8 +16870,7 @@ test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17206,8 +16939,7 @@ test(function(){try{return Function("\nvar object = {};\nvar symbol = Symbol();\
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17280,8 +17012,7 @@ test(function(){try{return Function("\nvar symbol = Symbol();\n\ntry {\n  symbol
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17342,7 +17073,6 @@ test(function(){try{return Function("\nreturn String(Symbol(\"foo\")) === \"Symb
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17408,7 +17138,6 @@ test(function(){try{return Function("\nvar symbol = Symbol();\ntry {\n  new Symb
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17474,7 +17203,6 @@ test(function(){try{return Function("\nvar symbol = Symbol();\nvar symbolObject 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17536,8 +17264,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17593,7 +17320,6 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
 <td data-browser="rhino17" class="tally" data-tally="0">0/7</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/7</td>
 <td data-browser="node" class="tally" data-tally="0">0/7</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/7</td>
 <td data-browser="ejs" class="tally" data-tally="0.8571428571428571">6/7</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/7</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/7</td>
@@ -17661,7 +17387,6 @@ test(function(){try{return Function("\nvar passed = false;\nvar obj = { foo: tru
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17725,7 +17450,6 @@ test(function(){try{return Function("\nvar a = [], b = [];\nb[Symbol.isConcatSpr
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17799,7 +17523,6 @@ test(function(){try{return Function("\nvar a = 0, b = {};\nb[Symbol.iterator] = 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17862,7 +17585,6 @@ test(function(){try{return Function("\nreturn RegExp[Symbol.species] === RegExp\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17925,7 +17647,6 @@ test(function(){try{return Function("\nvar a = {}, b = {}, c = {};\nvar passed =
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17988,7 +17709,6 @@ test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"fo
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18053,7 +17773,6 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[16]</sup></a></td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18109,7 +17828,6 @@ test(function(){try{return Function("\nvar a = { foo: 1, bar: 2 };\na[Symbol.uns
 <td data-browser="rhino17" class="tally" data-tally="0">0/5</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/5</td>
 <td data-browser="node" class="tally" data-tally="0">0/5</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/5</td>
 <td data-browser="ejs" class="tally" data-tally="1">5/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
@@ -18170,7 +17888,6 @@ test(function(){try{return Function("\nreturn /./igm.flags === \"gim\" && /./.fl
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18231,7 +17948,6 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.mat
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18292,7 +18008,6 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.rep
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18353,7 +18068,6 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.spl
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18414,7 +18128,6 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.sea
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18470,7 +18183,6 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype[Symbol.sea
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -18531,7 +18243,6 @@ test(function(){try{return Function("\nreturn typeof Array.from === 'function';\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18593,7 +18304,6 @@ test(function(){try{return Function("\nreturn typeof Array.of === 'function' &&\
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18648,8 +18358,7 @@ test(function(){try{return Function("\nreturn typeof Array.of === 'function' &&\
 <td data-browser="konq49" class="tally" data-tally="0">0/8</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/8</td>
-<td data-browser="node" class="tally" data-tally="0">0/8</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.75">6/8</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.75">0/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.875">7/8</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.625">5/8</td>
@@ -18710,7 +18419,6 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.copyWithin 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18770,8 +18478,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.find === 'f
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -18831,8 +18538,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.findIndex =
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -18892,8 +18598,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.fill === 'f
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -18953,8 +18658,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.keys === 'f
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19014,8 +18718,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.values === 
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19075,8 +18778,7 @@ test(function(){try{return Function("\nreturn typeof Array.prototype.entries ===
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19139,7 +18841,6 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19194,8 +18895,7 @@ test(function(){try{return Function("\nvar unscopables = Array.prototype[Symbol.
 <td data-browser="konq49" class="tally" data-tally="0.8571428571428571">6/7</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/7</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/7</td>
-<td data-browser="node" class="tally" data-tally="0.2857142857142857">2/7</td>
-<td data-browser="nodeharmony" class="tally" data-tally="1">7/7</td>
+<td data-browser="node" class="tally" data-tally="0.2857142857142857" data-flagged-tally="1">2/7</td>
 <td data-browser="ejs" class="tally" data-tally="1">7/7</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/7</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/7</td>
@@ -19256,7 +18956,6 @@ test(function(){try{return Function("\nreturn typeof Number.isFinite === 'functi
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19316,8 +19015,7 @@ test(function(){try{return Function("\nreturn typeof Number.isInteger === 'funct
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19377,8 +19075,7 @@ test(function(){try{return Function("\nreturn typeof Number.isSafeInteger === 'f
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19439,7 +19136,6 @@ test(function(){try{return Function("\nreturn typeof Number.isNaN === 'function'
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19499,8 +19195,7 @@ test(function(){try{return Function("\nreturn typeof Number.EPSILON === 'number'
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19560,8 +19255,7 @@ test(function(){try{return Function("\nreturn typeof Number.MIN_SAFE_INTEGER ===
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19621,8 +19315,7 @@ test(function(){try{return Function("\nreturn typeof Number.MAX_SAFE_INTEGER ===
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19677,8 +19370,7 @@ test(function(){try{return Function("\nreturn typeof Number.MAX_SAFE_INTEGER ===
 <td data-browser="konq49" class="tally" data-tally="0.8235294117647058">14/17</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/17</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/17</td>
-<td data-browser="node" class="tally" data-tally="0">0/17</td>
-<td data-browser="nodeharmony" class="tally" data-tally="1">17/17</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="1">0/17</td>
 <td data-browser="ejs" class="tally" data-tally="1">17/17</td>
 <td data-browser="ios7" class="tally" data-tally="0.058823529411764705">1/17</td>
 <td data-browser="ios8" class="tally" data-tally="0.8823529411764706">15/17</td>
@@ -19738,8 +19430,7 @@ test(function(){try{return Function("\nreturn typeof Math.clz32 === \"function\"
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19799,8 +19490,7 @@ test(function(){try{return Function("\nreturn typeof Math.imul === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19860,8 +19550,7 @@ test(function(){try{return Function("\nreturn typeof Math.sign === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19921,8 +19610,7 @@ test(function(){try{return Function("\nreturn typeof Math.log10 === \"function\"
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19982,8 +19670,7 @@ test(function(){try{return Function("\nreturn typeof Math.log2 === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20043,8 +19730,7 @@ test(function(){try{return Function("\nreturn typeof Math.log1p === \"function\"
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20104,8 +19790,7 @@ test(function(){try{return Function("\nreturn typeof Math.expm1 === \"function\"
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20165,8 +19850,7 @@ test(function(){try{return Function("\nreturn typeof Math.cosh === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20226,8 +19910,7 @@ test(function(){try{return Function("\nreturn typeof Math.sinh === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20287,8 +19970,7 @@ test(function(){try{return Function("\nreturn typeof Math.tanh === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20348,8 +20030,7 @@ test(function(){try{return Function("\nreturn typeof Math.acosh === \"function\"
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20409,8 +20090,7 @@ test(function(){try{return Function("\nreturn typeof Math.asinh === \"function\"
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20470,8 +20150,7 @@ test(function(){try{return Function("\nreturn typeof Math.atanh === \"function\"
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20531,8 +20210,7 @@ test(function(){try{return Function("\nreturn typeof Math.hypot === \"function\"
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20592,8 +20270,7 @@ test(function(){try{return Function("\nreturn typeof Math.trunc === \"function\"
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20653,8 +20330,7 @@ test(function(){try{return Function("\nreturn typeof Math.fround === \"function\
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20714,8 +20390,7 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
+<td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20771,7 +20446,6 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
 <td data-browser="rhino17" class="tally" data-tally="0.2857142857142857">2/7</td>
 <td data-browser="phantom" class="tally" data-tally="0.2857142857142857">2/7</td>
 <td data-browser="node" class="tally" data-tally="0.2857142857142857">2/7</td>
-<td data-browser="nodeharmony" class="tally" data-tally="0.2857142857142857">2/7</td>
 <td data-browser="ejs" class="tally" data-tally="0.14285714285714285">1/7</td>
 <td data-browser="ios7" class="tally" data-tally="0.2857142857142857">2/7</td>
 <td data-browser="ios8" class="tally" data-tally="0.2857142857142857">2/7</td>
@@ -20833,7 +20507,6 @@ test(function(){try{return Function("\n'use strict';\nreturn this === undefined 
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -20894,7 +20567,6 @@ test(function(){try{return Function("\ndo {} while (false) return true;\n      "
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20960,7 +20632,6 @@ test(function(){try{return Function("\ntry {\n  eval('for (var i = 0 in {}) {}')
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21025,7 +20696,6 @@ test(function(){try{return Function("\ntry {\n  new (Object.getOwnPropertyDescri
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21090,7 +20760,6 @@ test(function(){try{return Function("\nvar methods = ['freeze', 'seal', 'prevent
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21151,7 +20820,6 @@ test(function(){try{return Function("\nreturn new Date(NaN) + \"\" === \"Invalid
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="nodeharmony">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21212,12 +20880,11 @@ test(function(){try{return Function("\nreturn new RegExp(/./im, \"g\").global ==
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="nodeharmony">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr><th colspan="57" class="separator"></th>
+<tr><th colspan="56" class="separator"></th>
 </tr>
 <tr><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
 // Note: only available outside of strict mode.
@@ -21282,7 +20949,6 @@ test(function(){try{return Function("\n// Note: only available outside of strict
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21338,7 +21004,6 @@ test(function(){try{return Function("\n// Note: only available outside of strict
 <td data-browser="rhino17" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="phantom" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
-<td data-browser="nodeharmony" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="ejs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="ios7" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="ios8" class="tally" data-tally="0.4">2/5</td>
@@ -21400,7 +21065,6 @@ test(function(){try{return Function("\nreturn { __proto__ : [] } instanceof Arra
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21466,7 +21130,6 @@ test(function(){try{return Function("\ntry {\n  eval(\"({ __proto__ : [], __prot
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21531,7 +21194,6 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21596,7 +21258,6 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21660,7 +21321,6 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21715,8 +21375,7 @@ test(function(){try{return Function("\nif (!({ __proto__ : [] } instanceof Array
 <td data-browser="konq49" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="rhino17" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
 <td data-browser="phantom" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
-<td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.6666666666666666">2/3</td>
-<td data-browser="nodeharmony" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
+<td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.6666666666666666" data-flagged-tally="1">2/3</td>
 <td data-browser="ejs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="ios7" class="tally" data-tally="1">3/3</td>
 <td data-browser="ios8" class="tally" data-tally="1">3/3</td>
@@ -21778,7 +21437,6 @@ test(function(){try{return Function("\nvar A = function(){};\nreturn (new A())._
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21841,7 +21499,6 @@ test(function(){try{return Function("\nvar o = {};\no.__proto__ = Array.prototyp
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21908,8 +21565,7 @@ test(function(){try{return Function("\nvar desc = Object.getOwnPropertyDescripto
 <td class="no" data-browser="konq49">No</td>
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="yes not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="no flagged not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Flag</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21974,7 +21630,6 @@ test(function(){try{return Function("\nvar i, names = [\"anchor\", \"big\", \"bo
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -22035,7 +21690,6 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile ==
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="nodeharmony" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -22048,7 +21702,7 @@ test(function(){try{return Function("\nreturn typeof RegExp.prototype.compile ==
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="jsx-flag-note">  <sup>[1]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[2]</sup> Have to be enabled via "Experimental Web Platform Features" flag</p><p id="experimental-flag-note">  <sup>[3]</sup> Marked results have to be enabled via "Experimental Javascript features" flag</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Have to be enabled via --harmony flag</p><p id="fx-let-note">  <sup>[6]</sup> Available from Firefox 2 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.</p><p id="fx-let-tdz-note">  <sup>[7]</sup> Available from Firefox 35 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.</p><p id="compiler-proto-note">  <sup>[9]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[10]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="fx-proxy-get-note">  <sup>[11]</sup> Firefox doesn't allow a proxy's "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy's "has" handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[12]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[13]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="string-contains-note">  <sup>[15]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="ejs-no-with-note">  <sup>[16]</sup> <code>with</code> is not supported in ejs</p><p id="fx-array-prototype-values-note">  <sup>[17]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[18]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code></p><p id="array-prototype-iterator-note">  <sup>[19]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[20]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[21]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[22]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="jsx-flag-note">  <sup>[1]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[2]</sup> Have to be enabled via "Experimental Web Platform Features" flag</p><p id="experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via "Experimental Javascript features" flag</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="fx-let-note">  <sup>[6]</sup> Available from Firefox 2 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.</p><p id="fx-let-tdz-note">  <sup>[7]</sup> Available from Firefox 35 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.</p><p id="compiler-proto-note">  <sup>[9]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[10]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="fx-proxy-get-note">  <sup>[11]</sup> Firefox doesn't allow a proxy's "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy's "has" handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[12]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[13]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="string-contains-note">  <sup>[15]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="ejs-no-with-note">  <sup>[16]</sup> <code>with</code> is not supported in ejs</p><p id="fx-array-prototype-values-note">  <sup>[17]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[18]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code></p><p id="array-prototype-iterator-note">  <sup>[19]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[20]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[21]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[22]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
