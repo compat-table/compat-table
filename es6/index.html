@@ -838,7 +838,7 @@ test(function(){try{return Function("\nvar a = () => 5;\nreturn !a.hasOwnPropert
           <td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">const</a></span></td>
 
           <td class="tally tr" data-tally="0.75">6/8</td>
-          <td class="tally _6to5" data-tally="0.5">4/8</td>
+          <td class="tally _6to5" data-tally="0.75">6/8</td>
           <td class="tally closure" data-tally="0.75">6/8</td>
           <td class="tally jsx" data-tally="0">0/8</td>
           <td class="tally typescript" data-tally="0">0/8</td>
@@ -963,7 +963,7 @@ test(function(){try{return Function("\nconst bar = 123;\n{ const bar = 456; }\nr
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -1219,7 +1219,7 @@ test(function(){try{return Function("\n'use strict';\nconst bar = 123;\n{ const 
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -2115,7 +2115,7 @@ test(function(){try{return Function("\n'use strict';\nlet scopes = [];\nfor(let 
           <td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
 
           <td class="tally tr" data-tally="0.6">3/5</td>
-          <td class="tally _6to5" data-tally="0.8">4/5</td>
+          <td class="tally _6to5" data-tally="1">5/5</td>
           <td class="tally closure" data-tally="0.8">4/5</td>
           <td class="tally jsx" data-tally="0">0/5</td>
           <td class="tally typescript" data-tally="0.6">3/5</td>
@@ -2369,7 +2369,7 @@ test(function(){try{return Function("\nreturn (function(x = 1) {\n  try {\n    e
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -4879,7 +4879,7 @@ test(function(){try{return Function("\nvar result = \"\";\nvar iterable = __crea
           <td id="generators"><span><a class="anchor" href="#generators">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions">generators</a></span></td>
 
           <td class="tally tr" data-tally="0.9166666666666666">11/12</td>
-          <td class="tally _6to5" data-tally="0.75">9/12</td>
+          <td class="tally _6to5" data-tally="0.9166666666666666">11/12</td>
           <td class="tally closure" data-tally="0.5">6/12</td>
           <td class="tally jsx" data-tally="0">0/12</td>
           <td class="tally typescript" data-tally="0">0/12</td>
@@ -5303,7 +5303,7 @@ test(function(){try{return Function("\nfunction * generator(){\n  yield 5; yield
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -5511,7 +5511,7 @@ test(function(){try{return Function("\nvar iterator = (function * generator() {\
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -13694,7 +13694,7 @@ test(function(){try{return Function("\n'use strict';\nfunction f() { return 1; }
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="yes closure">Yes</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -16435,7 +16435,7 @@ test(function(){try{return Function("\nreturn typeof String.fromCodePoint === 'f
           <td id="String.prototype_methods"><span><a class="anchor" href="#String.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object">String.prototype methods</a></span></td>
 
           <td class="tally tr" data-tally="0.8333333333333334">5/6</td>
-          <td class="tally _6to5" data-tally="0.6666666666666666">4/6</td>
+          <td class="tally _6to5" data-tally="0.8333333333333334">5/6</td>
           <td class="tally closure" data-tally="0">0/6</td>
           <td class="tally jsx" data-tally="0">0/6</td>
           <td class="tally typescript" data-tally="0">0/6</td>
@@ -16807,7 +16807,7 @@ test(function(){try{return Function("\nreturn typeof String.prototype.includes =
 </script>
 
           <td class="yes tr">Yes</td>
-          <td class="no _6to5">No<a href="#string-contains-note"><sup>[14]</sup></a></td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -16926,7 +16926,7 @@ test(function(){try{return Function("\nreturn '\\u{1d306}' == '\\ud834\\udf06';\
           <td id="Symbol"><span><a class="anchor" href="#Symbol">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
 
           <td class="tally tr" data-tally="0.4444444444444444">4/9</td>
-          <td class="tally _6to5" data-tally="0.4444444444444444">4/9</td>
+          <td class="tally _6to5" data-tally="0.5555555555555556">5/9</td>
           <td class="tally closure" data-tally="0">0/9</td>
           <td class="tally jsx" data-tally="0">0/9</td>
           <td class="tally typescript" data-tally="0">0/9</td>
@@ -17525,7 +17525,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -17582,7 +17582,7 @@ test(function(){try{return Function("\nvar symbol = Symbol.for('foo');\nreturn S
           <td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">well-known symbols</a></span></td>
 
           <td class="tally tr" data-tally="0.14285714285714285">1/7</td>
-          <td class="tally _6to5" data-tally="0.14285714285714285">1/7</td>
+          <td class="tally _6to5" data-tally="0.2857142857142857">2/7</td>
           <td class="tally closure" data-tally="0">0/7</td>
           <td class="tally jsx" data-tally="0">0/7</td>
           <td class="tally typescript" data-tally="0">0/7</td>
@@ -17984,7 +17984,7 @@ test(function(){try{return Function("\nvar a = {};\na[Symbol.toStringTag] = \"fo
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -20779,7 +20779,7 @@ test(function(){try{return Function("\nreturn typeof Math.cbrt === \"function\";
           <td id="miscellaneous"><span><a class="anchor" href="#miscellaneous">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 
           <td class="tally tr" data-tally="0">0/7</td>
-          <td class="tally _6to5" data-tally="0">0/7</td>
+          <td class="tally _6to5" data-tally="0.42857142857142855">3/7</td>
           <td class="tally closure" data-tally="0">0/7</td>
           <td class="tally jsx" data-tally="0">0/7</td>
           <td class="tally typescript" data-tally="0">0/7</td>
@@ -20841,7 +20841,7 @@ test(function(){try{return Function("\n'use strict';\nreturn this === undefined 
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -20902,7 +20902,7 @@ test(function(){try{return Function("\ndo {} while (false) return true;\n      "
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>
@@ -20968,7 +20968,7 @@ test(function(){try{return Function("\ntry {\n  eval('for (var i = 0 in {}) {}')
 </script>
 
           <td class="no tr">No</td>
-          <td class="no _6to5">No</td>
+          <td class="yes _6to5">Yes</td>
           <td class="no closure">No</td>
           <td class="no jsx">No</td>
           <td class="no typescript">No</td>

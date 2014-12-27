@@ -535,6 +535,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
+        _6to5:       true,
         tr:          true,
         ejs:         true,
         closure:     true,
@@ -597,6 +598,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
+        _6to5:       true,
         tr:          true,
         ejs:         true,
         closure:     true,
@@ -885,6 +887,7 @@ exports.tests = [
         }());
       */},
       res: {
+        _6to5:       true,
       },
     },
     'separate scope': {
@@ -1674,6 +1677,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5: true
       },
     },
     'yield operator precedence': {
@@ -1730,6 +1734,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         tr:          true,
         firefox27:   true,
         chrome38:    true,
@@ -3265,6 +3270,7 @@ exports.tests = [
     return f() === 1;
   */},
   res: {
+    _6to5:       true,
     tr:          true,
     ejs:         false,
     closure:     true,
@@ -4026,13 +4032,13 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       {
+        _6to5:       true,
+        ejs:         { val: true },
+        firefox18:   {
           val: false,
           note_id: 'string-contains',
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
-        ejs:         { val: true },
-        firefox18:   { val: false, note_id: 'string-contains' },
         chrome30:    { val: false, note_id: 'string-contains' },
         webkit:      { val: true },
         nodeharmony: { val: false, note_id: 'string-contains' },
@@ -4314,6 +4320,7 @@ exports.tests = [
            Symbol.keyFor(symbol) === 'foo';
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:  true,
@@ -4413,6 +4420,7 @@ exports.tests = [
         return (a + "") === "[object foo]";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         chrome40:    true,
       },
@@ -5071,6 +5079,7 @@ exports.tests = [
       */},
       res: {
         firefox35:   true,
+        _6to5:       true
       },
     },
     'no semicolon needed after do-while': {
@@ -5078,6 +5087,7 @@ exports.tests = [
         do {} while (false) return true;
       */},
       res: {
+        _6to5:       true,
         ie10:        true,
         firefox11:   true,
         chrome:      true,
@@ -5101,6 +5111,7 @@ exports.tests = [
         }
       */},
       res: {
+        _6to5: true
       },
     },
     'accessors aren\'t constructors': {
