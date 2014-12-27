@@ -1409,11 +1409,15 @@ exports.tests = [
   name: 'error "stack"',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack',
   exec: function () {
-    return 'stack' in new Error;
+    try {
+      throw new Error;
+    } catch (err) {
+      return 'stack' in err;
+    }
   },
   res: {
     ie7: false,
-    ie11: false,
+    ie11: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,

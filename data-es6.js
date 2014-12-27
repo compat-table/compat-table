@@ -21,17 +21,19 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
-  ejs: {
-    full: 'Echo JS',
-    short: 'EJS',
-    obsolete: false,
-    platformtype: 'compiler',
-  },
   closure: {
-    full: 'Closure Compiler v20141023',
+    full: 'Closure Compiler v20141120',
     short: 'Closure<br>Compiler',
     obsolete: false,
     platformtype: 'compiler',
+  },
+  jsx: {
+    full: 'JSX',
+    short: 'JSX',
+    obsolete: false,
+    platformtype: 'compiler',
+    note_id: 'jsx-flag',
+    note_html: 'Have to be enabled via <code>harmony</code> option'
   },
   typescript: {
     full: 'TypeScript 1.3',
@@ -281,6 +283,12 @@ exports.browsers = {
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
   },
+  ejs: {
+    full: 'Echo JS',
+    short: 'Echo JS',
+    obsolete: false,
+    platformtype: 'engine',
+  },
   ios7: {
     full: 'iOS Safari',
     short: 'iOS7',
@@ -363,6 +371,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -379,6 +388,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -395,6 +405,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -412,6 +423,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -427,7 +439,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        closure:     true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         ie11tp:      true,
@@ -443,6 +457,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         typescript:  true,
         ejs:         true,
         closure:     true,
@@ -553,7 +568,6 @@ exports.tests = [
         return passed;
       */},
       res: {
-        ejs:         true,
         ie11:        true,
         firefox36:   true,
       },
@@ -623,7 +637,6 @@ exports.tests = [
         return passed;
       */},
       res: {
-        ejs:         true,
         ie11:        true,
         firefox36:   true,
         chrome19dev: true,
@@ -888,6 +901,7 @@ exports.tests = [
       */},
       res: {
         _6to5:       true,
+        closure:     true,
       },
     }
   }
@@ -895,57 +909,55 @@ exports.tests = [
 {
   name: 'rest parameters',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
-  exec: function() {/*
-    return (function (...args) { return typeof args !== "undefined"; }())
-  */},
-  res: {
-    tr:          true,
-    _6to5:       true,
-    ejs:         true,
-    closure:     true,
-    typescript:  true,
-    ie10:        false,
-    ie11:        false,
-    ie11tp:      true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   true,
-    firefox17:   true,
-    firefox18:   true,
-    firefox23:   true,
-    firefox24:   true,
-    firefox25:   true,
-    firefox27:   true,
-    firefox28:   true,
-    firefox29:   true,
-    firefox30:   true,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
-  }
+  subtests: {
+    'basic functionality': {
+      exec: function() {/*
+        return (function (foo, ...args) {
+          return args instanceof Array && args + "" === "bar,baz";
+        }("foo", "bar", "baz"));
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        closure:     true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+        firefox16:   true,
+      },
+    },
+    'function \'length\' property': {
+      exec: function() {/*
+        return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+        firefox16:   true,
+      },
+    },
+    'arguments object interaction': {
+      exec: function() {/*
+        return (function (foo, ...args) {
+          foo = "qux";
+          // The arguments object is not mapped to the
+          // parameters, even outside of strict mode.
+          return arguments.length === 3
+            && arguments[0] === "foo"
+            && arguments[1] === "bar"
+            && arguments[2] === "baz";
+        }("foo", "bar", "baz"));
+      */},
+      res: {
+        ie11tp:      true,
+      },
+    },
+  },
 },
 {
   name: 'spread (...) operator',
@@ -1068,6 +1080,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
+        jsx:         true,
         closure:     true,
         ie11tp:      true,
         chrome40:    true,
@@ -1095,6 +1108,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1112,6 +1126,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1121,7 +1136,6 @@ exports.tests = [
     'prototype methods': {
       exec: function () {/*
         class C {
-          constructor() {}
           method() { return 2; }
         }
         return typeof C.prototype.method === "function"
@@ -1130,6 +1144,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1138,7 +1153,6 @@ exports.tests = [
     'static methods': {
       exec: function () {/*
         class C {
-          constructor() {}
           static method() { return 3; }
         }
         return typeof C.method === "function"
@@ -1147,8 +1161,43 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
+        ie11tp:      true,
+      },
+    },
+    'accessor properties': {
+      exec: function () {/*
+        var baz = false;
+        class C {
+          get foo() { return "foo"; }
+          set bar(x) { baz = x; }
+        }
+        new C().bar = true;
+        return new C().foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        ie11tp:      true,
+      },
+    },
+    'static accessor properties': {
+      exec: function () {/*
+        var baz = false;
+        class C {
+          static get foo() { return "foo"; }
+          static set bar(x) { baz = x; }
+        }
+        C.bar = true;
+        return C.foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
       },
     },
@@ -1163,22 +1212,45 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ie11tp:      true,
       },
     },
     'extends': {
       exec: function () {/*
         class C extends Array {}
-        return Array.isPrototypeOf(C)
+        var c = new C();
+        return c instanceof Array
+          && Array.isPrototypeOf(C)
           && Array.prototype.isPrototypeOf(C.prototype);
       */},
       res: {
         tr:          true,
         _6to5:       true,
         ejs:         true,
-        closure:     true,
+        closure:     {
+          val: false,
+          note_id: 'compiled-extends',
+          note_html: 'This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.'
+        },
+        jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         chrome40:    true,
+      },
+    },
+    'extends null': {
+      exec: function () {/*
+        class C extends null {}
+        var c = new C();
+        return !(c instanceof Object)
+          && Function.prototype.isPrototypeOf(C)
+          && Object.getPrototypeOf(C.prototype) === null;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        jsx:         true,
+        ie11tp:      true,
       },
     },
   },
@@ -1271,6 +1343,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1285,6 +1358,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         typescript:  true,
@@ -1501,6 +1575,29 @@ exports.tests = [
         nodeharmony: true,
       },
     },
+    'correct \"this\" binding': {
+      exec: function() {/*
+        function * generator(){
+          yield this.x; yield this.y;
+        };
+        var iterator = { g: generator, x: 5, y: 6 }.g();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
     'sending': {
       exec: function() {/*
         var sent;
@@ -1517,6 +1614,26 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         closure:     true,
+        firefox27:   true,
+        chrome21dev: true,
+        nodeharmony: true,
+      },
+    },
+    '%GeneratorPrototype%': {
+      exec: function() {/*
+        function * generatorFn(){}
+        var ownProto = Object.getPrototypeOf(generatorFn());
+        var passed = ownProto === generatorFn.prototype;
+        
+        var sharedProto = Object.getPrototypeOf(ownProto);
+        passed &= sharedProto !== Object.prototype &&
+          sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&
+          sharedProto.hasOwnProperty('next');
+        
+        return passed;
+      */},
+      res: {
+        tr:          true,
         firefox27:   true,
         chrome21dev: true,
         nodeharmony: true,
@@ -1735,7 +1852,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        closure:     true,
         firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -1747,7 +1863,6 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        closure:     true,
         firefox36:   true,
         chrome30:    true,
         nodeharmony: true,
@@ -1768,6 +1883,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1793,6 +1909,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         _6to5:       true,
+        jsx:         true,
         closure:     true,
         firefox34:   true,
       },
@@ -2124,6 +2241,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
         firefox33:   true,
         chrome38:    true,
@@ -2326,6 +2444,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        ejs:         true,
         ie11tp:      true,
         firefox33:   true,
         chrome38:    true,
@@ -2492,6 +2611,7 @@ exports.tests = [
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
       res: {
+        ejs:         true,
         ie11:        true,
         firefox11:   true,
         chrome21dev: true,
@@ -2511,6 +2631,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox36:   true,
         chrome38:    true,
@@ -2523,6 +2644,7 @@ exports.tests = [
         return weakmap.set(key, 0) === weakmap;
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         chrome38:    true,
         firefox33:   true,
@@ -2563,6 +2685,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome30:    true,
@@ -2577,6 +2700,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         firefox34:   true,
         chrome38:    true,
@@ -2589,6 +2713,7 @@ exports.tests = [
         return weakset.add(obj) === weakset;
       */},
       res: {
+        ejs:         true,
         ie11tp:      true,
         chrome38:    true,
         firefox34:   true,
@@ -3203,6 +3328,7 @@ exports.tests = [
       res: (temp.destructuringResults = {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -3216,16 +3342,17 @@ exports.tests = [
         var [a, b, c] = "bar";
         return a === "b" && b === "a" && c === "r";
       */},
-      res: (temp.destructuringResults = {
+      res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
-      }),
+      },
     },
     'with generic iterables': {
       exec: function(){/*
@@ -3256,6 +3383,16 @@ exports.tests = [
       */},
       res: temp.destructuringResults,
     },
+    'computed properties': {
+      exec: function(){/*
+        var qux = "corge";
+        var { [qux]: grault } = { corge: "garply" };
+        return grault === "garply";
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
     'multiples in a single var statement': {
       exec: function() {/*
         var [a,b] = [5,6], {c,d} = {c:7,d:8};
@@ -3264,6 +3401,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -3287,6 +3425,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         ejs:         true,
         closure:     true,
         firefox11:   true,
@@ -3337,6 +3476,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        jsx:         true,
         closure:     true,
         firefox34:   true,
       },
@@ -3568,6 +3708,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
+        ejs:         true,
         firefox11:   true,
         chrome:      true,
         safari51:    true,
@@ -3608,7 +3749,9 @@ exports.tests = [
         return foo.bind({}).name === "bound foo" &&
           (function(){}).bind({}).name === "bound ";
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'variables (function)': {
       exec: function() {/*
@@ -3656,7 +3799,7 @@ exports.tests = [
           [sym2]: function(){}
         };
 
-        return o[sym].name === "[foo]" &&
+        return o[sym1].name === "[foo]" &&
                o[sym2].name === "";
       */},
       res: {},
@@ -3890,12 +4033,12 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        ejs:         {
+        ejs:         { val: true },
+        firefox18:   {
           val: false,
           note_id: 'string-contains',
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
-        firefox18:   { val: false, note_id: 'string-contains' },
         chrome30:    { val: false, note_id: 'string-contains' },
         webkit:      { val: true },
         nodeharmony: { val: false, note_id: 'string-contains' },
@@ -4129,6 +4272,7 @@ exports.tests = [
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
       res: {
+        ejs:         true,
         chrome39:    true,
         firefox36:   true,
       },
@@ -4143,6 +4287,7 @@ exports.tests = [
         }
       */},
       res: {
+        ejs:         true,
         tr:         true,
         _6to5:      true,
         ie11tp:     true,
@@ -4248,6 +4393,7 @@ exports.tests = [
           && !(Symbol.species in Object);
       */},
       res: {
+        ejs:         true,
       },
     },
     'Symbol.toPrimitive': {
@@ -4264,6 +4410,7 @@ exports.tests = [
         return passed === 3;
       */},
       res: {
+        ejs:         true,
       },
     },
     'Symbol.toStringTag': {
@@ -4289,6 +4436,11 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        ejs: {
+          val: false,
+          note_id: 'ejs-no-with',
+          note_html: '<code>with</code> is not supported in ejs'
+        },
       },
     },
   },
@@ -4301,31 +4453,41 @@ exports.tests = [
       exec: function () {/*
         return /./igm.flags === "gim" && /./.flags === "";
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.match]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.match] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.replace]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.replace] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.split]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.split] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
     'RegExp.prototype[Symbol.search]': {
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.search] === 'function';
       */},
-      res: {},
+      res: {
+        ejs:         true,
+      },
     },
   }
 },
@@ -4983,6 +5145,7 @@ exports.tests = [
         return new Date(NaN) + "" === "Invalid Date";
       */},
       res: {
+        ejs:         true,
         ie10:        true,
         firefox11:   true,
         chrome:      true,

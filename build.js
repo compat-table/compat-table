@@ -28,11 +28,6 @@ var os         = require('os');
 // requires Node v0.11.12
 var child_process = require('child_process');
 
-var to5        = require('6to5');
-var esnext     = require('esnext');
-var es6tr      = require('es6-transpiler');
-var traceur    = require('traceur');
-
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
 // let prototypes declared below in this file be initialized
@@ -50,6 +45,12 @@ process.nextTick(function () {
   if (!fs.existsSync('es6/compilers')) {
     fs.mkdirSync('es6/compilers');
   }
+  var closure    = require('closurecompiler');
+  var to5        = require('6to5');
+  var esnext     = require('esnext');
+  var es6tr      = require('es6-transpiler');
+  var traceur    = require('traceur');
+  var reacttools = require('react-tools');
   [
     {
       name: 'Traceur',
@@ -58,6 +59,25 @@ process.nextTick(function () {
       polyfills: ['node_modules/traceur/bin/traceur-runtime.js'],
       compiler: function(code) {
         return traceur.compile(code);
+      },
+    },
+    {
+      name: 'Closure Compiler',
+      url: 'https://developers.google.com/closure/compiler/',
+      target_file: 'es6/compilers/closure.html',
+      polyfills: [],
+      compiler: function(code) {
+        var fpath = os.tmpDir() + path.sep + 'temp.js';
+        var file = fs.writeFileSync(fpath, code);
+        try {
+          output = ""+child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
+            fpath +
+            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5 --transpile_only'
+          );
+        } catch(e) {
+          throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
+        }
+        return output;
       },
     },
     {
@@ -94,6 +114,16 @@ process.nextTick(function () {
       polyfills: [],
       compiler: function(code) {
         return es6tr.run({src:code}).src;
+      },
+    },
+    {
+      name: 'JSX',
+      url: 'https://github.com/facebook/react',
+      target_file: 'es6/compilers/jsx.html',
+      polyfills: [],
+      compiler: function(code) {
+        var ret = reacttools.transform(code, { harmony:true });
+        return ret.code || ret;
       },
     },
     {
