@@ -108,9 +108,7 @@ $(function() {
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
-    var classList = ($(elem).attr('class') || '')
-        .split(' ');
-    return classList[1] || classList[0];
+    return $(elem).attr('data-browser') || '';
   }
 
   // Since you can't add a :hover effect for columns,
@@ -119,7 +117,7 @@ $(function() {
     return function() {
       var c = platformOf(this);
       if (c) {
-        $("." + c)[name]('hover');
+        $("[data-browser='" + c + "']")[name]('hover');
       }
     };
   }
@@ -156,7 +154,7 @@ $(function() {
       else if (elem.is('.browser-name')) {
         // This assumes that all <td>s in the column have a class that matches
         // the browser-name's ID.
-        highlightSelected(table.find('td' + currentBrowserSelector + ', td.' + elem.attr('href').slice(1)));
+        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + elem.attr('href').slice(1) + '"]'));
       }
     }
   };
@@ -164,7 +162,7 @@ $(function() {
   
   // browser engine color stripes
   function getBrowserColour(name) {
-    /* Trident */
+    /* Chakra */
     if (/^ie/.exec(name)) { 
       return "hsla(217, 85%, 54%, .5)";
     }
@@ -207,9 +205,11 @@ $(function() {
   $('.browser-name, th.current').each(function(i) {
     var elem = $(this);
     var name;
+    var id = 'current';
 
     if (elem.is('.browser-name')) {
-      name = elem.attr('href').replace("#", '.');
+      id = elem.attr('href').slice(1);
+      name = elem.attr('href').replace("#", '[data-browser="')+'"]';
       elem = elem.parent();
     }
     else {
@@ -217,15 +217,26 @@ $(function() {
     }
     var results = table.find('tr:not([class*=test]) td:not(.not-applicable)' + name);
     var yesResults = results.filter('.yes').length;
+    var flaggedResults = yesResults;
     results = results.length;
     
-    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).filter(function() {
-      yesResults += +$(this).attr('data-tally') || 0;
+    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
+      var yes = +$(this).attr('data-tally') || 0
+      yesResults += yes;
+      flaggedResults += yes + (+$(this).attr('data-flagged-tally') || 0);
       results += 1;
     });
     var featuresCount = yesResults / results;
-
-    var colour = getBrowserColour(platformOf(elem));
+    var flaggedFeaturesCount = flaggedResults / results;
+    
+    function gradient(colour, percent) {
+      return 'linear-gradient(to top, ' +
+        colour + ' 0%, ' + colour + ' ' +
+        (percent * 100|0) + '%, transparent ' + (percent * 100|0) +
+        '%,transparent 100%)';
+    }
+    
+    var colour = getBrowserColour(id);
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
@@ -235,10 +246,10 @@ $(function() {
         (Math.round(featuresCount*100)) +
         '</b>%</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
-      .css({'background-image':'linear-gradient(to top, ' +
-        colour + ' 0%, ' + colour + ' ' +
-        (featuresCount * 100|0) + '%, transparent ' + (featuresCount * 100|0) +
-        '%,transparent 100%)'});
+      .css({'background-image': gradient(colour, featuresCount) +
+        (flaggedFeaturesCount > featuresCount
+          ? ',' + gradient(colour.replace(".5",".2"), flaggedFeaturesCount)
+          : '')});
   });
 
   // Cached array of sort orderings

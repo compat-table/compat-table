@@ -135,6 +135,49 @@ td.hover[data-tally="1"].obsolete {
     background: #73cc73;
 }
 
+/* yes, but flagged */
+.flagged::after,
+[data-flagged-tally]::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-top: 1.2em solid #44ab44;
+	border-left: 1.2em solid transparent;
+	width: 0em;
+	height: 0em;
+}
+[data-flagged-tally]:not([data-flagged-tally="1"])::after {
+	border-top-color: #acc20a;
+}
+tr:hover [data-flagged-tally]::after,
+td.hover[data-flagged-tally]::after {
+	border-top-color: #8da000;
+}
+[data-flagged-tally].obsolete::after {
+	border-top-color: #cedd5c;
+}
+tr:hover [data-flagged-tally].obsolete::after,
+td.hover[data-flagged-tally].obsolete::after {
+	border-top-color: #b0c037;
+}
+tr:hover .flagged::after,
+td.hover.flagged::after,
+tr:hover [data-flagged-tally="1"]::after,
+td.hover[data-flagged-tally="1"]::after {
+	border-top-color: #269326;
+}
+.flagged.obsolete::after,
+[data-flagged-tally="1"].obsolete::after {
+	border-top-color: #9fe09f;
+}
+tr:hover .flagged.obsolete::after,
+td.hover.flagged.obsolete::after,
+tr:hover [data-flagged-tally="1"].obsolete::after,
+td.hover[data-flagged-tally="1"].obsolete::after {
+	border-top-color: #73cc73;
+}
+
 /* no */
 .no,
 [data-tally="0"] {
