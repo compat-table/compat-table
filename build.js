@@ -432,7 +432,7 @@ function testScript(fn, transformFn) {
       else {
         expr = deindentFunc(fn);
       }
-      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">test(\n' + expr + '())</script>\n';
+      return cheerio.load()('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
     }
     else {      
       expr = deindentFunc(expr[1]);
@@ -447,11 +447,11 @@ function testScript(fn, transformFn) {
           expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
-      return '<script data-source="' + expr.replace(/"/g,'&quot;') + '">\n' +
+      return cheerio.load()('<script>' +
       'test(function(){try{return ' +
       (transformed ? 'eval(' : 'Function(') +
       JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}()' + 
-      ');\n</script>\n';
+      ');\n</script>').attr('data-source', expr);
     }
   } else {
     // it's an array of objects like the following:
@@ -460,11 +460,11 @@ function testScript(fn, transformFn) {
       var expr = deindentFunc(
           (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
         );
-      return text
-        + '<script' + (script.type ? ' type="' + script.type + '"' : '')
-        + ' data-source="' + expr.replace(/"/g,'&quot;') + '">'
-        + expr
-        + '</script>\n';
+      return text +
+        cheerio.load()('<script' + (script.type ? ' type="' + script.type + '"' : '') + '">' +
+          expr +
+          '</script>'
+        ).attr('data-source', expr).html();
     },'');
   }
 }

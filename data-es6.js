@@ -1875,7 +1875,7 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         chrome39:    flag,
-        firefox35:   true,
+        firefox34:   true,
       },
     },
   },
@@ -5102,7 +5102,7 @@ exports.tests = [
         return this === undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
-        firefox35:   true,
+        firefox34:   true,
         _6to5:       true
       },
     },
