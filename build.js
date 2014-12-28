@@ -48,6 +48,7 @@ process.nextTick(function () {
   var closure    = require('closurecompiler');
   var to5        = require('6to5');
   var esnext     = require('esnext');
+  // Known bug: running require('es6-transpiler') causes 6to5 to break.
   var es6tr      = require('es6-transpiler');
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
@@ -59,25 +60,6 @@ process.nextTick(function () {
       polyfills: ['node_modules/traceur/bin/traceur-runtime.js'],
       compiler: function(code) {
         return traceur.compile(code);
-      },
-    },
-    {
-      name: 'Closure Compiler',
-      url: 'https://developers.google.com/closure/compiler/',
-      target_file: 'es6/compilers/closure.html',
-      polyfills: [],
-      compiler: function(code) {
-        var fpath = os.tmpDir() + path.sep + 'temp.js';
-        var file = fs.writeFileSync(fpath, code);
-        try {
-          output = ""+child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
-            fpath +
-            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5 --transpile_only'
-          );
-        } catch(e) {
-          throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
-        }
-        return output;
       },
     },
     {
@@ -124,6 +106,25 @@ process.nextTick(function () {
       compiler: function(code) {
         var ret = reacttools.transform(code, { harmony:true });
         return ret.code || ret;
+      },
+    },
+    {
+      name: 'Closure Compiler',
+      url: 'https://developers.google.com/closure/compiler/',
+      target_file: 'es6/compilers/closure.html',
+      polyfills: [],
+      compiler: function(code) {
+        var fpath = os.tmpDir() + path.sep + 'temp.js';
+        var file = fs.writeFileSync(fpath, code);
+        try {
+          output = ""+child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
+            fpath +
+            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5 --transpile_only'
+          );
+        } catch(e) {
+          throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
+        }
+        return output;
       },
     },
     {
