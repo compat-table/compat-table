@@ -10,15 +10,15 @@ exports.target_file = 'es6/index.html';
 exports.skeleton_file = 'es6/skeleton.html';
 
 exports.browsers = {
-  tr: {
-    full: 'Traceur',
-    short: 'Traceur',
-    obsolete: false,
-    platformtype: 'compiler',
-  },
   _6to5: {
     full: '6to5',
     short: '6to5 +<br>polyfill',
+    obsolete: false,
+    platformtype: 'compiler',
+  },
+  tr: {
+    full: 'Traceur',
+    short: 'Traceur',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -1685,12 +1685,12 @@ exports.tests = [
         function * generatorFn(){}
         var ownProto = Object.getPrototypeOf(generatorFn());
         var passed = ownProto === generatorFn.prototype;
-        
+
         var sharedProto = Object.getPrototypeOf(ownProto);
         passed &= sharedProto !== Object.prototype &&
           sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&
           sharedProto.hasOwnProperty('next');
-        
+
         return passed;
       */},
       res: {

@@ -5,12 +5,6 @@ exports.target_file = 'es7/index.html';
 exports.skeleton_file = 'es7/skeleton.html';
 
 exports.browsers = {
-  tr: {
-    full: 'Traceur compiler',
-    short: 'Traceur',
-    obsolete: false, // always up-to-date version
-    platformtype: 'compiler',
-  },
   _6to5: {
     full: '6to5',
     short: '6to5 +<br>polyfill',
@@ -18,6 +12,12 @@ exports.browsers = {
     platformtype: 'compiler',
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via --experimental flag'
+  },
+  tr: {
+    full: 'Traceur compiler',
+    short: 'Traceur',
+    obsolete: false, // always up-to-date version
+    platformtype: 'compiler',
   },
   ie11: {
     full: 'Internet Explorer',
