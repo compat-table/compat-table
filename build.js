@@ -184,6 +184,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
   var head = $('table thead tr:last-child');
   var body = $('table tbody');
   var footnoteIndex = {};
+  var rowNum = 0;
   
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid, j;
@@ -253,7 +254,9 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
   });
   
   // Now print the results.
-  tests.forEach(function(t) {
+  tests.forEach(function(t, testNum) {
+    var subtests;
+    // Calculate the result totals for tests which consist solely of subtests.
     if ("subtests" in t) {
       Object.keys(t.subtests).forEach(function(e) {
         interpolateResults(t.subtests[e].res);
@@ -269,7 +272,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       .append($('<td></td>')
         .attr('id',id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
-        .append(testScript(t.exec, compiler))
+        .append(testScript(t.exec, compiler, rowNum++))
       );
     body.append(testRow);
     
@@ -307,7 +310,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     
     // Print all the results for the subtests
     if ("subtests" in t) {
-      Object.keys(t.subtests).forEach(function(subtestName) {
+      Object.keys(t.subtests).forEach(function(subtestName, subtestNum) {
         var subtest = t.subtests[subtestName];
         
         subtestRow = $('<tr class="subtest"></tr>')
@@ -315,7 +318,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
           .append(
             $('<td></td>')
               .append('<span>' + subtestName + '</span>')
-              .append(testScript(subtest.exec, compiler))
+              .append(testScript(subtest.exec, compiler, rowNum++))
           );
         body.append(subtestRow);
         
@@ -401,7 +404,7 @@ function replaceAndIndent(str, replacements) {
   return str;
 }
 
-function testScript(fn, transformFn) {
+function testScript(fn, transformFn, rowNum) {
   
   function deindentFunc(fn) {
     fn = (fn+'');
@@ -447,10 +450,16 @@ function testScript(fn, transformFn) {
           expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
+      var async = !!/asyncTestPassed/.exec(fn);
+      var codeString = JSON.stringify(expr).replace(/\\r/g,'');
+      var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + rowNum + '")';
+      var funcString =
+        transformed ? '' + asyncFn + ' && eval(' + codeString + ')'
+        : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
+      
       return cheerio.load()('<script>' +
-      'test(function(){try{return ' +
-      (transformed ? 'eval(' : 'Function(') +
-      JSON.stringify(expr).replace(/\\r/g,'') + ')()}catch(e){return false;}}()' + 
+        'test(function(){try{var asyncTestPassed=' + asyncFn + ';return ' +
+        funcString + '}catch(e){return false;}}()' + 
       ');\n</script>').attr('data-source', expr);
     }
   } else {

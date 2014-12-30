@@ -7,19 +7,23 @@ var fs = require('fs')
 
   , page = fs.readFileSync(path.join(__dirname, 'es6', 'index.html')).toString().replace(/data-source="[^"]*"/g,'')
   , $ = cheerio.load(page)
+  , results = {}
+  , desc = {}
+  , done = false
 
 global.__script_executed = {};
 
-$('#body tbody tr').each(function () {
+$('#body tbody tr').each(function (index) {
   if (this.find('.separator')[0])
     return
-  var desc = this.find('td>span:first-child').text()
-    , scripts = this.find('script')
-    , result = null
+  var scripts = this.find('script')
     , i = 0, scr
     , test = function test (expression) {
-        result = result || expression
-      }
+      results[index] = results[index] || expression
+    }
+	, asyncPassed = function asyncPassed () {
+	  results[index] = true
+    }
     , __createIterableObject = function(a, b, c) {
       if (typeof Symbol === "function" && Symbol.iterator) {
         var arr = [a, b, c, ,]
@@ -35,16 +39,28 @@ $('#body tbody tr').each(function () {
         return eval("(function*() { yield a; yield b; yield c; }())")
       }
     }
+  
+  results[index] = null
+  
+  desc[index] = this.find('td>span:first-child').text()
 
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {
     scr = scripts[i].children[0].data.trim()
+      .replace(/global\.__asyncPassedFn && __asyncPassedFn\(".*?"\)/g, "asyncPassed")
     eval(scr)
   }
-  if (result === null) {
-    console.log('\u25BC\t' + desc.replace('§',''))
-  }
-  else {
-    console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (desc[0]!== '§' ? '\t' + desc : desc.slice(1)) + '\t'))
-  }
 })
+
+setTimeout(function(){
+  Object.keys(results).forEach(function(test) {
+    var result = results[test]
+    var name = desc[test]
+    if (result === null) {
+      console.log('\u25BC\t' + name.replace('§',''))
+    }
+    else {
+      console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (name[0]!== '§' ? '\t' + name : name.slice(1)) + '\t'))
+    }
+  })
+},500)
