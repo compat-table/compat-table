@@ -27,15 +27,6 @@
           return eval("(function*() { yield a; yield b; yield c; }())");
         }
       }
-      // For async tests, this returned function is used to set results
-      // instead of returning true/false.
-      var __asyncPassedFn = function(rowNum) {
-      return function() {
-          var elem = $("#table-wrapper tr:nth-child(" + (+rowNum + 1) + ") .current")[0];
-          elem.className = "yes";
-          elem.textContent = "Yes";
-        }
-      }
     </script>
     <script>
       (function() {

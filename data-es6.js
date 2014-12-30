@@ -3675,6 +3675,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
+        ie11tp:      true,
         firefox29:   true,
         chrome33:    true,
         webkit:      true,
@@ -3702,6 +3703,7 @@ exports.tests = [
       res: {
       tr:          true,
       ejs:         true,
+      ie11tp:      true,
       firefox29:   true,
       chrome33:    true,
       webkit:      true,
@@ -3825,7 +3827,7 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         rhino17:     true,
-        node:        flag,
+        node:        true,
         ios7:        true,
       },
     },

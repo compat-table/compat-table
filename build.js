@@ -184,6 +184,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
   var head = $('table thead tr:last-child');
   var body = $('table tbody');
   var footnoteIndex = {};
+  var rowNum = 0;
   
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid, j;

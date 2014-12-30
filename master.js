@@ -22,6 +22,20 @@ window.test = function(expression) {
 
 document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
+// For async tests, this returned function is used to set results
+// instead of returning true/false.
+var __asyncPassedFn = function(rowNum) {
+  return function() {
+    var elem = $("#table-wrapper tr:nth-child(" + (+rowNum + 1) + ") .current")[0];
+    elem.className = "yes";
+    elem.textContent = "Yes";
+    if (global.__updateHeaderTotal) {
+      $(elem).parent().prevAll('.supertest').first().each(__updateSupertest);
+      $('th.current').each(__updateHeaderTotal);
+    }
+  }
+}
+
 $(function() {
   'use strict';
   var table = $('#table-wrapper');
@@ -41,6 +55,20 @@ $(function() {
 
   var mouseoverTimeout;
 
+  window.__updateSupertest = function(){
+    var tr = $(this);
+    var subtests = tr.nextUntil('tr:not(.subtest)');
+    if (subtests.length === 0) {
+      return;
+    }
+    var tally = subtests.find(".yes" + currentBrowserSelector).length;
+    tr.find('td:first-child')
+      .find('.tally.current').remove().end()
+      .after(
+      '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
+      tally + '/' + subtests.length + '</td><td></td>'
+    );
+  }
   
   $('tr.supertest').each(function() {
     var tr = $(this);
@@ -60,11 +88,7 @@ $(function() {
     });
     
     // Also, work out tallies for the current browser's tally features
-    var tally = subtests.find(".yes" + currentBrowserSelector).length;
-    tr.find('td:first-child').after(
-      '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
-      tally + '/' + subtests.length + '</td><td></td>'
-    );
+    tr.each(__updateSupertest);
   });
   
   // Set up the tooltip HTML
@@ -202,7 +226,7 @@ $(function() {
   // The reason this is done at runtime instead of build time is because
   // the current browser's totals must be done at runtime, and to save on
   // duplicated code, we may as well do the predefined results too.
-  $('.browser-name, th.current').each(function(i) {
+  window.__updateHeaderTotal = function(i) {
     var elem = $(this);
     var name;
     var id = 'current';
@@ -235,11 +259,11 @@ $(function() {
         (percent * 100|0) + '%, transparent ' + (percent * 100|0) +
         '%,transparent 100%)';
     }
-    
     var colour = getBrowserColour(id);
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
+      .find('.num-features').remove().end()
       .append('<sup class="num-features" title="Number of implemented features">' +
         // Don't bother with a HSL fallback for IE 8.
         '<b style="color:hsl(' + (featuresCount * 120|0) + ',100%,25%)">' +
@@ -250,7 +274,8 @@ $(function() {
         (flaggedFeaturesCount > featuresCount
           ? ',' + gradient(colour.replace(".5",".2"), flaggedFeaturesCount)
           : '')});
-  });
+  };
+  $('.browser-name, th.current').each(__updateHeaderTotal);
 
   // Cached array of sort orderings
   var ordering = [];
