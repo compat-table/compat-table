@@ -14099,7 +14099,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
 </tr>
 <tr class="supertest"><td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">3/3</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/3</td>
+<td data-browser="_6to5" class="tally" data-tally="1">3/3</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/3</td>
 <td data-browser="closure" class="tally" data-tally="0">0/3</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/3</td>
@@ -14178,7 +14178,7 @@ function check() {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("228");return Function("asyncTestPassed","\nvar p1 = new Promise(function(resolve, reject) { resolve(\"foo\"); });\nvar p2 = new Promise(function(resolve, reject) { reject(\"quux\"); });\nvar score = 0;\n    \nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n    \np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n    \np1.then(function() {\n  // Promise.prototype.then() should return a new Promise\n  score += p1.then() !== p1;\n  check();\n});\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14250,7 +14250,7 @@ function check() {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("229");return Function("asyncTestPassed","\nvar fulfills = Promise.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = Promise.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n    \nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14322,7 +14322,7 @@ function check() {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("230");return Function("asyncTestPassed","\nvar fulfills = Promise.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = Promise.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n    \nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>

@@ -9,6 +9,9 @@
     <script src="../../master.js"></script>
     <!-- POLYFILLS -->
     <script>
+      if (typeof global === "undefined") {
+        window.global = this;
+      }
       function __createIterableObject(a, b, c) {
         try {
           return eval("(function*() { yield a; yield b; yield c; }())");

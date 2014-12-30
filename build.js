@@ -454,7 +454,7 @@ function testScript(fn, transformFn, rowNum) {
       var codeString = JSON.stringify(expr).replace(/\\r/g,'');
       var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + rowNum + '")';
       var funcString =
-        transformed ? '' + asyncFn + ' && eval(' + codeString + ')'
+        transformed ? '' + asyncFn + ' && eval(' + codeString + ')()'
         : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
       
       return cheerio.load()('<script>' +

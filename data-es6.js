@@ -3644,6 +3644,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox29:   true,
@@ -3674,6 +3675,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox29:   true,
@@ -3702,6 +3704,7 @@ exports.tests = [
       */},
       res: {
       tr:          true,
+      _6to5:       true,
       ejs:         true,
       ie11tp:      true,
       firefox29:   true,
