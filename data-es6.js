@@ -5271,6 +5271,28 @@ exports.tests = [
       res: {
       },
     },
+    'built-in prototypes are not instances': {
+      exec: function(){/*
+        try { 
+          Boolean.prototype.valueOf(); return false;
+        } catch(e) {}
+        try {
+          Number.prototype.valueOf(); return false;
+        } catch(e) {}
+        try {
+          String.prototype.toString(); return false;
+        } catch(e) {}
+        try {
+          RegExp.prototype.source; return false;
+        } catch(e) {}
+        try {
+          Date.prototype.valueOf(); return false;
+        } catch(e) {}
+        return Array.prototype.length === undefined;
+      */},
+      res: {
+      },
+    },
   },
   separator: "after",
 },
