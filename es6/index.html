@@ -84,7 +84,7 @@
         <tr>
           <th colspan="3" class="platformtype"></th>
 
-          <th colspan="6" class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
+          <th colspan="7" class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers</th>
 
           <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
 
@@ -108,6 +108,7 @@
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure<br>Compiler</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.3">TypeScript</abbr></a></th>
+<th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
 <th class="platform ie11tp desktop" data-browser="ie11tp"><a href="#ie11tp" class="browser-name"><abbr title="Internet Explorer">IE<br>Technical<br>Preview</abbr><a href="#ie-experimental-flag-note"><sup>[2]</sup></a></a></th>
@@ -176,6 +177,7 @@ return (function f(n){
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -231,6 +233,7 @@ return (function f(n){
 <td data-browser="closure" class="tally" data-tally="0.7777777777777778">7/9</td>
 <td data-browser="jsx" class="tally" data-tally="0.6666666666666666">6/9</td>
 <td data-browser="typescript" class="tally" data-tally="0.6666666666666666">6/9</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.8888888888888888">8/9</td>
@@ -289,6 +292,7 @@ return (() =&gt; 5)() === 5;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -348,6 +352,7 @@ return (b(&quot;fee fie foe &quot;) === &quot;fee fie foe foo&quot;);
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -407,6 +412,7 @@ return (c(6, 5, 4, 3, 2) === &quot;65432&quot;);
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -467,6 +473,7 @@ return d(&quot;ley&quot;) === &quot;barley&quot; &amp;&amp; e.y(&quot;ley&quot;)
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -527,6 +534,7 @@ return d.y().call(e) === &quot;foo&quot; &amp;&amp; d.y().apply(e) === &quot;foo
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -587,6 +595,7 @@ return d.y().bind(e, &quot;ley&quot;)() === &quot;barley&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -646,6 +655,7 @@ return f(6) === 5;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -706,6 +716,7 @@ return (() =&gt; {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -765,6 +776,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -820,6 +832,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td data-browser="closure" class="tally" data-tally="0.75">6/8</td>
 <td data-browser="jsx" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/8</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11" class="tally" data-tally="1">8/8</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">8/8</td>
@@ -879,6 +892,7 @@ return (foo === 123);
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -939,6 +953,7 @@ return bar === 123;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1002,6 +1017,7 @@ try {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1062,6 +1078,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1122,6 +1139,7 @@ return (foo === 123);
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1183,6 +1201,7 @@ return bar === 123;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1247,6 +1266,7 @@ try {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1308,6 +1328,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1363,6 +1384,7 @@ return passed;
 <td data-browser="closure" class="tally" data-tally="0.8">8/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/10</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0.8">8/10</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.8">8/10</td>
@@ -1422,6 +1444,7 @@ return (foo === 123);
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1482,6 +1505,7 @@ return bar === 123;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1542,6 +1566,7 @@ return baz === 1;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1602,6 +1627,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1671,6 +1697,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -1731,6 +1758,7 @@ return (foo === 123);
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1792,6 +1820,7 @@ return bar === 123;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1853,6 +1882,7 @@ return baz === 1;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1914,6 +1944,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -1984,6 +2015,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2039,6 +2071,7 @@ return passed;
 <td data-browser="closure" class="tally" data-tally="0.8">4/5</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/5</td>
 <td data-browser="typescript" class="tally" data-tally="0.6">3/5</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11tp" class="tally" data-tally="0">0/5</td>
@@ -2097,6 +2130,7 @@ return (function (a = 1, b = 2) { return a === 3 &amp;&amp; b === 2; }(3));
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2155,6 +2189,7 @@ return (function (a = 1, b = 2) { return a === 1 &amp;&amp; b === 3; }(undefined
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2213,6 +2248,7 @@ return (function (a, b = a) { return b === 5; }(5));
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2281,6 +2317,7 @@ return (function(x = 1) {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2344,6 +2381,7 @@ return (function(a=function(){
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2399,6 +2437,7 @@ return (function(a=function(){
 <td data-browser="closure" class="tally" data-tally="0.3333333333333333">1/3</td>
 <td data-browser="jsx" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="typescript" class="tally" data-tally="0.6666666666666666">2/3</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.6666666666666666">2/3</td>
@@ -2459,6 +2498,7 @@ return (function (foo, ...args) {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -2517,6 +2557,7 @@ return function(a, ...b){}.length === 1 &amp;&amp; function(...c){}.length === 0
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -2583,6 +2624,7 @@ return (function (foo, ...args) {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2638,6 +2680,7 @@ return (function (foo, ...args) {
 <td data-browser="closure" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/8</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/8</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.5">4/8</td>
@@ -2696,6 +2739,7 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -2754,6 +2798,7 @@ return [...[1, 2, 3]][2] === 3;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -2812,6 +2857,7 @@ return Math.max(...&quot;1234&quot;) === 4;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -2870,6 +2916,7 @@ return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -2929,6 +2976,7 @@ return Math.max(...iterable) === 3;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -2988,6 +3036,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -3047,6 +3096,7 @@ return Math.max(...Object.create(iterable)) === 3;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -3106,6 +3156,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -3161,6 +3212,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="closure" class="tally" data-tally="0.45454545454545453">5/11</td>
 <td data-browser="jsx" class="tally" data-tally="0.7272727272727273">8/11</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/11</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">11/11</td>
@@ -3220,6 +3272,7 @@ return typeof C === &quot;function&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3284,6 +3337,7 @@ return C === c1;
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3342,6 +3396,7 @@ return typeof class C {} === &quot;function&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3404,6 +3459,7 @@ return C.prototype.constructor === C
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3466,6 +3522,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3528,6 +3585,7 @@ return typeof C.method === &quot;function&quot;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3592,6 +3650,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3656,6 +3715,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3718,6 +3778,7 @@ return c();
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3780,6 +3841,7 @@ return c instanceof Array
 <td class="no" data-browser="closure">No<a href="#compiled-extends-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="jsx">No<a href="#compiled-extends-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3842,6 +3904,7 @@ return !(c instanceof Object)
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -3897,6 +3960,7 @@ return !(c instanceof Object)
 <td data-browser="closure" class="tally" data-tally="0">0/3</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/3</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/3</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">3/3</td>
@@ -3960,6 +4024,7 @@ return new B(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4023,6 +4088,7 @@ return new B().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4090,6 +4156,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4145,6 +4212,7 @@ return obj.qux() === &quot;barley&quot;;
 <td data-browser="closure" class="tally" data-tally="1">3/3</td>
 <td data-browser="jsx" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="typescript" class="tally" data-tally="0.3333333333333333">1/3</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">3/3</td>
@@ -4204,6 +4272,7 @@ return ({ [x]: 1 }).y === 1;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4263,6 +4332,7 @@ return c.a === 7 &amp;&amp; c.b === 8;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4321,6 +4391,7 @@ return ({ y() { return 2; } }).y() === 2;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4376,6 +4447,7 @@ return ({ y() { return 2; } }).y() === 2;
 <td data-browser="closure" class="tally" data-tally="0.75">3/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/4</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">4/4</td>
@@ -4436,6 +4508,7 @@ for (var item of arr)
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4497,6 +4570,7 @@ return str === &quot;foo&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4560,6 +4634,7 @@ return result === &quot;123&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4623,6 +4698,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -4678,6 +4754,7 @@ return result === &quot;123&quot;;
 <td data-browser="closure" class="tally" data-tally="0.5">6/12</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/12</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/12</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/12</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/12</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/12</td>
 <td data-browser="ie11tp" class="tally" data-tally="0">0/12</td>
@@ -4746,6 +4823,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -4814,6 +4892,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -4880,6 +4959,7 @@ return sent[0] === &quot;foo&quot; &amp;&amp; sent[1] === &quot;bar&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -4947,6 +5027,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5016,6 +5097,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5084,6 +5166,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5149,6 +5232,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5216,6 +5300,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5283,6 +5368,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5352,6 +5438,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5421,6 +5508,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5491,6 +5579,7 @@ return passed;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5546,6 +5635,7 @@ return passed;
 <td data-browser="closure" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/4</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.5">2/4</td>
@@ -5604,6 +5694,7 @@ return 0o10 === 8 &amp;&amp; 0O10 === 8;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -5662,6 +5753,7 @@ return 0b10 === 2 &amp;&amp; 0B10 === 2;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -5720,6 +5812,7 @@ return Number(&apos;0o1&apos;) === 1;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5778,6 +5871,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -5833,6 +5927,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="closure" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="1">2/2</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/2</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.5">1/2</td>
@@ -5893,6 +5988,7 @@ ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -5962,6 +6058,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -6017,6 +6114,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td data-browser="closure" class="tally" data-tally="0">0/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/2</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.5">1/2</td>
@@ -6079,6 +6177,7 @@ return (re.exec(&apos;xy&apos;)[0] === &apos;x&apos; &amp;&amp; re2.exec(&apos;x
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -6137,6 +6236,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6192,6 +6292,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td data-browser="closure" class="tally" data-tally="0">0/40</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/40</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/40</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/40</td>
 <td data-browser="ie10" class="tally" data-tally="0.4">16/40</td>
 <td data-browser="ie11" class="tally" data-tally="0.4">16/40</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">40/40</td>
@@ -6252,6 +6353,7 @@ return view[0] === -0x80;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6312,6 +6414,7 @@ return view[0] === 0;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6372,6 +6475,7 @@ return view[0] === 0xFF;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6432,6 +6536,7 @@ return view[0] === -0x8000;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6492,6 +6597,7 @@ return view[0] === 0;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6552,6 +6658,7 @@ return view[0] === -0x80000000;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6612,6 +6719,7 @@ return view[0] === 0;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6672,6 +6780,7 @@ return view[0] === 0.10000000149011612;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6732,6 +6841,7 @@ return view[0] === 0.1;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6793,6 +6903,7 @@ return view.getInt8(0) === -0x80;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6854,6 +6965,7 @@ return view.getUint8(0) === 0;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6915,6 +7027,7 @@ return view.getInt16(0) === -0x8000;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -6976,6 +7089,7 @@ return view.getUint16(0) === 0;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7037,6 +7151,7 @@ return view.getInt32(0) === -0x80000000;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7098,6 +7213,7 @@ return view.getUint32(0) === 0;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7159,6 +7275,7 @@ return view.getFloat32(0) === 0.10000000149011612;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7220,6 +7337,7 @@ return view.getFloat64(0) === 0.1;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7286,6 +7404,7 @@ return typeof Int8Array.from === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7352,6 +7471,7 @@ return typeof Int8Array.of === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7418,6 +7538,7 @@ return typeof Int8Array.prototype.subarray === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7484,6 +7605,7 @@ return typeof Int8Array.prototype.join === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7550,6 +7672,7 @@ return typeof Int8Array.prototype.indexOf === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7616,6 +7739,7 @@ return typeof Int8Array.prototype.lastIndexOf === &quot;function&quot; &amp;&amp
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7682,6 +7806,7 @@ return typeof Int8Array.prototype.slice === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7748,6 +7873,7 @@ return typeof Int8Array.prototype.every === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7814,6 +7940,7 @@ return typeof Int8Array.prototype.filter === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7880,6 +8007,7 @@ return typeof Int8Array.prototype.forEach === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -7946,6 +8074,7 @@ return typeof Int8Array.prototype.map === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8012,6 +8141,7 @@ return typeof Int8Array.prototype.reduce === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8078,6 +8208,7 @@ return typeof Int8Array.prototype.reduceRight === &quot;function&quot; &amp;&amp
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8144,6 +8275,7 @@ return typeof Int8Array.prototype.reverse === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8210,6 +8342,7 @@ return typeof Int8Array.prototype.some === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8276,6 +8409,7 @@ return typeof Int8Array.prototype.sort === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8342,6 +8476,7 @@ return typeof Int8Array.prototype.copyWithin === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8408,6 +8543,7 @@ return typeof Int8Array.prototype.find === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8474,6 +8610,7 @@ return typeof Int8Array.prototype.findIndex === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8540,6 +8677,7 @@ return typeof Int8Array.prototype.fill === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8606,6 +8744,7 @@ return typeof Int8Array.prototype.keys === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8672,6 +8811,7 @@ return typeof Int8Array.prototype.values === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8738,6 +8878,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8793,6 +8934,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td data-browser="closure" class="tally" data-tally="0">0/11</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/11</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/11</td>
+<td data-browser="es6shim" class="tally" data-tally="1">11/11</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11" class="tally" data-tally="0.45454545454545453">5/11</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">11/11</td>
@@ -8856,6 +8998,7 @@ return map.has(key) &amp;&amp; map.get(key) === 123;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8919,6 +9062,7 @@ return map.has(key1) &amp;&amp; map.get(key1) === 123 &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -8978,6 +9122,7 @@ return map.set(0, 0) === map;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9042,6 +9187,7 @@ return k === Infinity &amp;&amp; map.get(+0) == &quot;foo&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9105,6 +9251,7 @@ return map.size === 1;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9163,6 +9310,7 @@ return typeof Map.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9221,6 +9369,7 @@ return typeof Map.prototype.clear === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9279,6 +9428,7 @@ return typeof Map.prototype.forEach === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9337,6 +9487,7 @@ return typeof Map.prototype.keys === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9395,6 +9546,7 @@ return typeof Map.prototype.values === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9453,6 +9605,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9508,6 +9661,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td data-browser="closure" class="tally" data-tally="0">0/11</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/11</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/11</td>
+<td data-browser="es6shim" class="tally" data-tally="1">11/11</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11" class="tally" data-tally="0.45454545454545453">5/11</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">11/11</td>
@@ -9572,6 +9726,7 @@ return set.has(123);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9634,6 +9789,7 @@ return set.has(obj1) &amp;&amp; set.has(obj2);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9693,6 +9849,7 @@ return set.add(0) === set;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9757,6 +9914,7 @@ return k === Infinity &amp;&amp; set.has(+0);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9822,6 +9980,7 @@ return set.size === 2;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9880,6 +10039,7 @@ return typeof Set.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9938,6 +10098,7 @@ return typeof Set.prototype.clear === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -9996,6 +10157,7 @@ return typeof Set.prototype.forEach === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10054,6 +10216,7 @@ return typeof Set.prototype.keys === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10112,6 +10275,7 @@ return typeof Set.prototype.values === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10170,6 +10334,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10225,6 +10390,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/4</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">4/4</td>
@@ -10288,6 +10454,7 @@ return weakmap.has(key) &amp;&amp; weakmap.get(key) === 123;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10351,6 +10518,7 @@ return weakmap.has(key1) &amp;&amp; weakmap.get(key1) === 123 &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10411,6 +10579,7 @@ return weakmap.set(key, 0) === weakmap;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10469,6 +10638,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10524,6 +10694,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/4</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">4/4</td>
@@ -10588,6 +10759,7 @@ return weakset.has(obj1);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10649,6 +10821,7 @@ return weakset.has(obj1) &amp;&amp; weakset.has(obj2);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10709,6 +10882,7 @@ return weakset.add(obj) === weakset;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10767,6 +10941,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10822,6 +10997,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td data-browser="closure" class="tally" data-tally="0">0/20</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/20</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/20</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/20</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/20</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/20</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.85">17/20</td>
@@ -10886,6 +11062,7 @@ return proxy.foo === 5;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -10950,6 +11127,7 @@ return proxy.foo === 5;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11016,6 +11194,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11082,6 +11261,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11147,6 +11327,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11212,6 +11393,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11277,6 +11459,7 @@ var proxied = {};
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11348,6 +11531,7 @@ return (returnedDesc.value     === fakeDesc.value
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11418,6 +11602,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11483,6 +11668,7 @@ return Object.getPrototypeOf(proxy) === fakeProto;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11553,6 +11739,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11620,6 +11807,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11688,6 +11876,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11758,6 +11947,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11825,6 +12015,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -11893,6 +12084,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -11959,6 +12151,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12025,6 +12218,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12083,6 +12277,7 @@ return Array.isArray(new Proxy([], {}));
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -12141,6 +12336,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -12196,6 +12392,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="closure" class="tally" data-tally="0">0/14</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/14</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/14</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/14</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/14</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/14</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.9285714285714286">13/14</td>
@@ -12254,6 +12451,7 @@ return Reflect.get({ qux: 987 }, &quot;qux&quot;) === 987;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12314,6 +12512,7 @@ return obj.quux === 654;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12372,6 +12571,7 @@ return Reflect.has({ qux: 987 }, &quot;qux&quot;);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12432,6 +12632,7 @@ return !(&quot;bar&quot; in obj);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12493,6 +12694,7 @@ return desc.value === 789 &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12553,6 +12755,7 @@ return obj.foo === 123;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12611,6 +12814,7 @@ return Reflect.getPrototypeOf([]) === Array.prototype;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12671,6 +12875,7 @@ return obj instanceof Array;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12730,6 +12935,7 @@ return Reflect.isExtensible({}) &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12790,6 +12996,7 @@ return !Object.isExtensible(obj);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12857,6 +13064,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -12916,6 +13124,7 @@ return Reflect.ownKeys(obj) + &quot;&quot; === &quot;foo,bar&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -12974,6 +13183,7 @@ return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -13034,6 +13244,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -13097,6 +13308,7 @@ return f() === 1;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -13152,6 +13364,7 @@ return f() === 1;
 <td data-browser="closure" class="tally" data-tally="0.7333333333333333">11/15</td>
 <td data-browser="jsx" class="tally" data-tally="0.4666666666666667">7/15</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/15</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11tp" class="tally" data-tally="0">0/15</td>
@@ -13211,6 +13424,7 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13270,6 +13484,7 @@ return a === &quot;b&quot; &amp;&amp; b === &quot;a&quot; &amp;&amp; c === &quot
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13330,6 +13545,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13390,6 +13606,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13449,6 +13666,7 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13509,6 +13727,7 @@ return grault === &quot;garply&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13568,6 +13787,7 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === 7 &amp;&amp; d === 8;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13627,6 +13847,7 @@ return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13688,6 +13909,7 @@ return (function({a, x:b, y:e}, [c, d]) {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13748,6 +13970,7 @@ for(var [i, j, k] in { qux: 1 }) {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13808,6 +14031,7 @@ for(var [i, j, k] of [[1,2,3]]) {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13869,6 +14093,7 @@ return a === 3 &amp;&amp; b instanceof Array &amp;&amp; (b + &quot;&quot;) === &
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13929,6 +14154,7 @@ return first === 1 &amp;&amp; last === 3 &amp;&amp; (a + &quot;&quot;) === &quot
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -13988,6 +14214,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14049,6 +14276,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14104,6 +14332,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
 <td data-browser="closure" class="tally" data-tally="0">0/3</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/3</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/3</td>
+<td data-browser="es6shim" class="tally" data-tally="1">3/3</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">3/3</td>
@@ -14183,6 +14412,7 @@ function check() {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -14255,6 +14485,7 @@ function check() {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -14327,6 +14558,7 @@ function check() {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -14382,6 +14614,7 @@ function check() {
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/4</td>
+<td data-browser="es6shim" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0.25">1/4</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.75">3/4</td>
@@ -14441,6 +14674,7 @@ return &quot;a&quot; in o &amp;&amp; &quot;b&quot; in o &amp;&amp; &quot;c&quot;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14501,6 +14735,7 @@ return typeof Object.is === &apos;function&apos; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -14562,6 +14797,7 @@ return Object.getOwnPropertySymbols(o)[0] === sym;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -14620,6 +14856,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No<a href="#compiler-proto-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -14675,6 +14912,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="closure" class="tally" data-tally="0">0/16</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/16</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/16</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/16</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/16</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/16</td>
 <td data-browser="ie11tp" class="tally" data-tally="0">0/16</td>
@@ -14735,6 +14973,7 @@ return foo.name === &apos;foo&apos; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14794,6 +15033,7 @@ return (function foo(){}).name === &apos;foo&apos; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14852,6 +15092,7 @@ return (new Function).name === &quot;anonymous&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14912,6 +15153,7 @@ return foo.bind({}).name === &quot;bound foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -14972,6 +15214,7 @@ return foo.name === &quot;foo&quot; &amp;&amp; bar.name === &quot;baz&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15034,6 +15277,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15095,6 +15339,7 @@ return descriptor.get.name === &quot;get foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15154,6 +15399,7 @@ return o.foo.name === &quot;foo&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15220,6 +15466,7 @@ return o[sym1].name === &quot;[foo]&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15281,6 +15528,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15340,6 +15588,7 @@ return class foo {}.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15403,6 +15652,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15465,6 +15715,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15524,6 +15775,7 @@ return (new C).foo.name === &quot;foo&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15583,6 +15835,7 @@ return C.foo.name === &quot;foo&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15644,6 +15897,7 @@ return descriptor.enumerable   === false &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15702,6 +15956,7 @@ return typeof Function.prototype.toMethod === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -15757,6 +16012,7 @@ return typeof Function.prototype.toMethod === &quot;function&quot;;
 <td data-browser="closure" class="tally" data-tally="0">0/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/2</td>
+<td data-browser="es6shim" class="tally" data-tally="1">2/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">2/2</td>
@@ -15815,6 +16071,7 @@ return typeof String.raw === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -15873,6 +16130,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -15928,6 +16186,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/6</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/6</td>
+<td data-browser="es6shim" class="tally" data-tally="0.8333333333333334">5/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.8333333333333334">5/6</td>
@@ -15986,6 +16245,7 @@ return typeof String.prototype.codePointAt === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16046,6 +16306,7 @@ return typeof String.prototype.normalize === &quot;function&quot;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16105,6 +16366,7 @@ return typeof String.prototype.repeat === &apos;function&apos;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16164,6 +16426,7 @@ return typeof String.prototype.startsWith === &apos;function&apos;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16223,6 +16486,7 @@ return typeof String.prototype.endsWith === &apos;function&apos;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16282,6 +16546,7 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -16340,6 +16605,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16395,6 +16661,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/9</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/9</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.8888888888888888">8/9</td>
@@ -16457,6 +16724,7 @@ return object[symbol] === value;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16515,6 +16783,7 @@ return typeof Symbol() === &quot;symbol&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16585,6 +16854,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16652,6 +16922,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16723,6 +16994,7 @@ return true;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16781,6 +17053,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -16844,6 +17117,7 @@ try {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16907,6 +17181,7 @@ return typeof symbolObject === &quot;object&quot; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16967,6 +17242,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -17022,6 +17298,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td data-browser="closure" class="tally" data-tally="0">0/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/7</td>
+<td data-browser="es6shim" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.2857142857142857">2/7</td>
@@ -17087,6 +17364,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17148,6 +17426,7 @@ return a[0] === b;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17219,6 +17498,7 @@ return c === &quot;foo&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -17279,6 +17559,7 @@ return RegExp[Symbol.species] === RegExp
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17346,6 +17627,7 @@ return passed === 3;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17406,6 +17688,7 @@ return (a + &quot;&quot;) === &quot;[object foo]&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17468,6 +17751,7 @@ with (a) {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -17523,6 +17807,7 @@ with (a) {
 <td data-browser="closure" class="tally" data-tally="0">0/5</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/5</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/5</td>
+<td data-browser="es6shim" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11tp" class="tally" data-tally="0">0/5</td>
@@ -17581,6 +17866,7 @@ return /./igm.flags === &quot;gim&quot; &amp;&amp; /./.flags === &quot;&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17639,6 +17925,7 @@ return typeof RegExp.prototype[Symbol.match] === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17697,6 +17984,7 @@ return typeof RegExp.prototype[Symbol.replace] === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17755,6 +18043,7 @@ return typeof RegExp.prototype[Symbol.split] === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17813,6 +18102,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -17868,6 +18158,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/6</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/6</td>
+<td data-browser="es6shim" class="tally" data-tally="0.5">3/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.6666666666666666">4/6</td>
@@ -17926,6 +18217,7 @@ return Array.from({ 0: &quot;foo&quot;, 1: &quot;bar&quot;, length: 2 }) + &apos
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -17985,6 +18277,7 @@ return Array.from(iterable) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -18044,6 +18337,7 @@ return Array.from(Object.create(iterable)) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -18103,6 +18397,7 @@ return C.from({ length: 0 }) instanceof C;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18162,6 +18457,7 @@ return typeof Array.of === &apos;function&apos; &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18221,6 +18517,7 @@ return C.of(0) instanceof C;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18276,6 +18573,7 @@ return C.of(0) instanceof C;
 <td data-browser="closure" class="tally" data-tally="0">0/8</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/8</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/8</td>
+<td data-browser="es6shim" class="tally" data-tally="0.875">7/8</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">8/8</td>
@@ -18334,6 +18632,7 @@ return typeof Array.prototype.copyWithin === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18392,6 +18691,7 @@ return typeof Array.prototype.find === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18450,6 +18750,7 @@ return typeof Array.prototype.findIndex === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18508,6 +18809,7 @@ return typeof Array.prototype.fill === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18566,6 +18868,7 @@ return typeof Array.prototype.keys === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18624,6 +18927,7 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18682,6 +18986,7 @@ return typeof Array.prototype.entries === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18748,6 +19053,7 @@ return true;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18803,6 +19109,7 @@ return true;
 <td data-browser="closure" class="tally" data-tally="0">0/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/7</td>
+<td data-browser="es6shim" class="tally" data-tally="1">7/7</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">7/7</td>
@@ -18861,6 +19168,7 @@ return typeof Number.isFinite === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18919,6 +19227,7 @@ return typeof Number.isInteger === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -18977,6 +19286,7 @@ return typeof Number.isSafeInteger === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19035,6 +19345,7 @@ return typeof Number.isNaN === &apos;function&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19093,6 +19404,7 @@ return typeof Number.EPSILON === &apos;number&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19151,6 +19463,7 @@ return typeof Number.MIN_SAFE_INTEGER === &apos;number&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19209,6 +19522,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19264,6 +19578,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/17</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/17</td>
+<td data-browser="es6shim" class="tally" data-tally="1">17/17</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">17/17</td>
@@ -19322,6 +19637,7 @@ return typeof Math.clz32 === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19380,6 +19696,7 @@ return typeof Math.imul === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19438,6 +19755,7 @@ return typeof Math.sign === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19496,6 +19814,7 @@ return typeof Math.log10 === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19554,6 +19873,7 @@ return typeof Math.log2 === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19612,6 +19932,7 @@ return typeof Math.log1p === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19670,6 +19991,7 @@ return typeof Math.expm1 === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19728,6 +20050,7 @@ return typeof Math.cosh === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19786,6 +20109,7 @@ return typeof Math.sinh === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19844,6 +20168,7 @@ return typeof Math.tanh === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19902,6 +20227,7 @@ return typeof Math.acosh === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19960,6 +20286,7 @@ return typeof Math.asinh === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20018,6 +20345,7 @@ return typeof Math.atanh === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20076,6 +20404,7 @@ return typeof Math.hypot === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20134,6 +20463,7 @@ return typeof Math.trunc === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20192,6 +20522,7 @@ return typeof Math.fround === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20250,6 +20581,7 @@ return typeof Math.cbrt === &quot;function&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20305,6 +20637,7 @@ return typeof Math.cbrt === &quot;function&quot;;
 <td data-browser="closure" class="tally" data-tally="0">0/8</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/8</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/8</td>
+<td data-browser="es6shim" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="ie10" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="ie11" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.25">2/8</td>
@@ -20364,6 +20697,7 @@ return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -20422,6 +20756,7 @@ do {} while (false) return true;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20485,6 +20820,7 @@ catch(e) {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -20547,6 +20883,7 @@ try {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -20612,6 +20949,7 @@ return true;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -20670,6 +21008,7 @@ return new Date(NaN) + &quot;&quot; === &quot;Invalid Date&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20728,6 +21067,7 @@ return new RegExp(/./im, &quot;g&quot;).global === true;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -20801,6 +21141,7 @@ return Array.prototype.length === undefined;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -20849,7 +21190,7 @@ return Array.prototype.length === undefined;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr><th colspan="56" class="separator"></th>
+<tr><th colspan="57" class="separator"></th>
 </tr>
 <tr><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
 // Note: only available outside of strict mode.
@@ -20868,6 +21209,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -20923,6 +21265,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td data-browser="closure" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="jsx" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="typescript" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
+<td data-browser="es6shim" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.2">1/5</td>
@@ -20982,6 +21325,7 @@ return { __proto__ : [] } instanceof Array
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -21045,6 +21389,7 @@ catch(e) {
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -21107,6 +21452,7 @@ return !({ [a] : [] } instanceof Array);
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -21169,6 +21515,7 @@ return !({ __proto__ } instanceof Array);
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -21230,6 +21577,7 @@ return !({ __proto__(){} } instanceof Function);
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -21285,6 +21633,7 @@ return !({ __proto__(){} } instanceof Function);
 <td data-browser="closure" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="jsx" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="typescript" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
+<td data-browser="es6shim" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11" class="tally" data-tally="1">3/3</td>
 <td data-browser="ie11tp" class="tally" data-tally="1">3/3</td>
@@ -21344,6 +21693,7 @@ return (new A()).__proto__ === A.prototype;
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -21404,6 +21754,7 @@ return o instanceof Array;
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -21469,6 +21820,7 @@ return (desc
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -21534,6 +21886,7 @@ return true;
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -21592,6 +21945,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
