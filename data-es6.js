@@ -4659,10 +4659,8 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
-        //ejs:         null,
-        //ie11tp:      null,
-        //firefox32:   null,
-        firefox34:   true,
+        ejs:         true,
+        firefox32:   true,
       }
     },
     'Array.from, instances of generic iterables': {
@@ -4671,8 +4669,6 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
-        //ejs:         null,
-        //ie11tp:      null,
       }
     },
     'Array subclass .from': {
@@ -4683,8 +4679,7 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         _6to5:       { val: false, note_id: 'compiler-proto' },
-        //ejs:         null,
-        //ie11tp:      null,
+        ie11tp:      true,
       }
     },
     'Array.of': {
@@ -4709,8 +4704,7 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         _6to5:       { val: false, note_id: 'compiler-proto' },
-        //ejs:         null,
-        //ie11tp:      null,
+        ie11tp:      true,
       }
     },
   },
