@@ -4639,9 +4639,9 @@ exports.tests = [
   name: 'Array static methods',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor',
   subtests: {
-    'Array.from': {
+    'Array.from, array-like objects': {
       exec: function () {/*
-        return typeof Array.from === 'function';
+        return Array.from({ 0: "foo", 1: "bar", length: 2 }) + '' === "foo,bar";
       */},
       res: {
         tr:          true,
@@ -4649,6 +4649,37 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox32:   true,
+      }
+    },
+    'Array.from, generic iterables': {
+      exec: function () {/*
+        var iterable = window.__createIterableObject(1, 2, 3);
+        return Array.from(iterable) + '' === "1,2,3";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        firefox32:   true,
+      }
+    },
+    'Array.from, instances of generic iterables': {
+      exec: function () {/*
+        var iterable = window.__createIterableObject(1, 2, 3);
+        return Array.from(Object.create(iterable)) + '' === "1,2,3";
+      */},
+      res: {
+      }
+    },
+    'Array subclass .from': {
+      exec: function () {/*
+        class C extends Array {}
+        return C.from({ length: 0 }) instanceof C;
+      */},
+      res: {
+        tr:          { val: false, note_id: 'compiler-proto' },
+        _6to5:       { val: false, note_id: 'compiler-proto' },
+        ie11tp:      true,
       }
     },
     'Array.of': {
@@ -4664,6 +4695,17 @@ exports.tests = [
         firefox25:   true,
         chrome39:    flag,
       },
+    },
+    'Array subclass .of': {
+      exec: function () {/*
+        class C extends Array {}
+        return C.of(0) instanceof C;
+      */},
+      res: {
+        tr:          { val: false, note_id: 'compiler-proto' },
+        _6to5:       { val: false, note_id: 'compiler-proto' },
+        ie11tp:      true,
+      }
     },
   },
 },
