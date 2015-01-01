@@ -245,6 +245,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     head.append($('<th></th>')
       .addClass("platform " + browserId + ' ' + (b.platformtype || 'desktop'))
       .addClass(b.obsolete ? "obsolete" : "")
+      .attr("data-browser",browserId)
       .append(
         $('<a href="#' + browserId + '" class="browser-name"></a>')
           .append('<abbr title="' + b.full + '">' + b.short + '</abbr>')
@@ -435,7 +436,7 @@ function testScript(fn, transformFn, rowNum) {
       else {
         expr = deindentFunc(fn);
       }
-      return cheerio.load()('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
+      return cheerio.load('')('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
     }
     else {      
       expr = deindentFunc(expr[1]);
@@ -457,7 +458,7 @@ function testScript(fn, transformFn, rowNum) {
         transformed ? '' + asyncFn + ' && eval(' + codeString + ')()'
         : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
       
-      return cheerio.load()('<script>' +
+      return cheerio.load('')('<script>' +
         'test(function(){try{var asyncTestPassed=' + asyncFn + ';return ' +
         funcString + '}catch(e){return false;}}()' + 
       ');\n</script>').attr('data-source', expr);
@@ -470,7 +471,7 @@ function testScript(fn, transformFn, rowNum) {
           (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
         );
       return text +
-        cheerio.load()('<script' + (script.type ? ' type="' + script.type + '"' : '') + '">' +
+        cheerio.load('')('<script' + (script.type ? ' type="' + script.type + '"' : '') + '">' +
           expr +
           '</script>'
         ).attr('data-source', expr).html();
