@@ -3829,12 +3829,13 @@ return c instanceof Array
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class"><td><span>extends null</span><script data-source="
-class C extends null {}
+var foo = null;
+class C extends foo {}
 var c = new C();
 return !(c instanceof Object)
   &amp;&amp; Function.prototype.isPrototypeOf(C)
   &amp;&amp; Object.getPrototypeOf(C.prototype) === null;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nclass C extends null {}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nvar foo = null;\nclass C extends foo {}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="_6to5">No</td>

@@ -1287,7 +1287,8 @@ exports.tests = [
     },
     'extends null': {
       exec: function () {/*
-        class C extends null {}
+        var foo = null;
+        class C extends foo {}
         var c = new C();
         return !(c instanceof Object)
           && Function.prototype.isPrototypeOf(C)
