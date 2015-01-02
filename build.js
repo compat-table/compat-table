@@ -38,7 +38,7 @@ process.nextTick(function () {
   handle(es6);
   handle(require('./data-es7'));
   handle(require('./data-non-standard'));
-  
+
   // ES6 compilers
   if (!useCompilers) {
     return;
@@ -185,7 +185,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
   var body = $('table tbody');
   var footnoteIndex = {};
   var rowNum = 0;
-  
+
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid, j;
     // For each browser, check if the previous browser has the same
@@ -195,7 +195,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       if (prevBrowser &&
           prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'')) {
         // For each test, check if the previous browser has a result
-        // that this browser lacks. 
+        // that this browser lacks.
         result     = res[bid];
         prevResult = res[prevBid];
         if (prevResult !== undefined && result === undefined) {
@@ -206,7 +206,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       prevBid = bid;
     }
   }
-  
+
   function footnoteHTML(obj) {
     if (obj && obj.note_id) {
       if (!footnoteIndex[obj.note_id]) {
@@ -217,7 +217,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     }
     return '';
   }
-  
+
   function allFootnotes() {
     var ret = $('<p>');
     Object.keys(footnoteIndex).forEach(function(e,id) {
@@ -227,16 +227,16 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     });
     return ret;
   }
-  
+
   function testValue(result) {
     if (result && typeof result === "object" && "val" in result) {
       return result.val;
     }
     return result;
   }
-  
+
   // Write the browser headers
-  
+
   Object.keys(browsers).forEach(function(browserId) {
     var b = browsers[browserId];
     if (!b) {
@@ -253,7 +253,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       )
     );
   });
-  
+
   // Now print the results.
   tests.forEach(function(t, testNum) {
     var subtests;
@@ -264,10 +264,10 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       });
     }
     else interpolateResults(t.res);
-    
+
     var id = t.name.replace(/^[\s<>&"]+|[\s<>&"]+$/g, '').replace(/[\s<>&"]+/g, '_');
     var name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
-    
+
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')
       .append($('<td></td>')
@@ -276,14 +276,14 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         .append(testScript(t.exec, compiler, rowNum++))
       );
     body.append(testRow);
-    
+
     // Function to print out a single <td> result cell.
     function resultCell(browserId, result, footnote) {
       if (!browsers[browserId]) {
         return;
       }
       result = testValue(result);
-      
+
       // Create the cell, and add classes and attributes
       var cell = $('<td></td>');
       cell.addClass(result === true ? "yes" : result !== null ? "no" : "");
@@ -291,7 +291,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         cell.addClass("flagged");
       }
       cell.attr('data-browser', browserId).addClass(browsers[browserId].obsolete ? "obsolete" : "");
-      
+
       // Add extra signifiers if the result is not applicable.
       if (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
@@ -299,7 +299,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         cell.attr('title', "This feature is optional on non-browser platforms.");
         cell.addClass("not-applicable");
       }
-      
+
       if (result !== null) {
         cell.text(result === "flagged" ? "Flag" : result === true ? "Yes" : "No");
       }
@@ -308,12 +308,12 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       }
       return cell;
     }
-    
+
     // Print all the results for the subtests
     if ("subtests" in t) {
       Object.keys(t.subtests).forEach(function(subtestName, subtestNum) {
         var subtest = t.subtests[subtestName];
-        
+
         subtestRow = $('<tr class="subtest"></tr>')
           .attr('data-parent', id)
           .append(
@@ -322,11 +322,11 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
               .append(testScript(subtest.exec, compiler, rowNum++))
           );
         body.append(subtestRow);
-        
+
         // Add all the result cells
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
-          
+
           subtestRow.append(resultCell(
             browserId,
             result,
@@ -335,27 +335,27 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         });
       });
     }
-    
+
     // Print all the results for the main test
     Object.keys(browsers).forEach(function(browserId) {
       // For supertests, calculate the tally and total
       if ("subtests" in t) {
-      
+
           var tally = 0, outOf = 0, flaggedTally = 0;
-          
+
           Object.keys(t.subtests).forEach(function(e) {
             var result = t.subtests[e].res[browserId];
-            
+
             tally += testValue(result) === true;
             flaggedTally += testValue(result) === 'flagged';
             outOf += 1;
           });
-          
+
           var cell = resultCell(browserId, null)
             .text((tally|0) + "/" + outOf)
             .addClass('tally')
             .attr('data-tally', tally / outOf);
-          
+
           if (flaggedTally) {
             cell.attr('data-flagged-tally',  (tally + flaggedTally) / outOf);
           }
@@ -364,7 +364,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       // For single tests:
       else {
         var result = t.res[browserId];
-        
+
         testRow.append(resultCell(
           browserId,
           result,
@@ -372,7 +372,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         ));
       }
     });
-    
+
     // Finish the <tr>
     if (t.separator === 'after') {
       body.append(
@@ -380,9 +380,9 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       );
     }
   });
-    
+
   $('#footnotes').append(allFootnotes());
-  
+
   return $.root().html().replace(/(<\/t\w>)/g, "$1\n");
 }
 
@@ -406,7 +406,7 @@ function replaceAndIndent(str, replacements) {
 }
 
 function testScript(fn, transformFn, rowNum) {
-  
+
   function deindentFunc(fn) {
     fn = (fn+'');
     var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
@@ -415,7 +415,7 @@ function testScript(fn, transformFn, rowNum) {
     }
     return fn;
   }
-  
+
   if (!fn) {
     return '';
   }
@@ -438,7 +438,7 @@ function testScript(fn, transformFn, rowNum) {
       }
       return cheerio.load('')('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
     }
-    else {      
+    else {
       expr = deindentFunc(expr[1]);
       if (transformFn) {
         try {
@@ -457,10 +457,10 @@ function testScript(fn, transformFn, rowNum) {
       var funcString =
         transformed ? '' + asyncFn + ' && eval(' + codeString + ')()'
         : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
-      
+
       return cheerio.load('')('<script>' +
         'test(function(){try{var asyncTestPassed=' + asyncFn + ';return ' +
-        funcString + '}catch(e){return false;}}()' + 
+        funcString + '}catch(e){return false;}}()' +
       ');\n</script>').attr('data-source', expr);
     }
   } else {
