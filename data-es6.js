@@ -1285,22 +1285,6 @@ exports.tests = [
         chrome40:    flag,
       },
     },
-    'extends null': {
-      exec: function () {/*
-        class C extends null {}
-        var c = new C();
-        return !(c instanceof Object)
-          && Function.prototype.isPrototypeOf(C)
-          && Object.getPrototypeOf(C.prototype) === null;
-      */},
-      res: {
-        tr:          { val: false, note_id: 'compiler-proto' },
-        ejs:         true,
-        es6tr:       true,
-        jsx:         true,
-        ie11tp:      true,
-      },
-    },
   },
 },
 {
