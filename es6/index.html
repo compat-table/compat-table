@@ -2394,7 +2394,7 @@ return (function(a=function(){
 </tr>
 <tr class="supertest"><td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">3/3</td>
-<td data-browser="_6to5" class="tally" data-tally="0.6666666666666666">2/3</td>
+<td data-browser="_6to5" class="tally" data-tally="1">3/3</td>
 <td data-browser="es6tr" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="closure" class="tally" data-tally="0.3333333333333333">1/3</td>
 <td data-browser="jsx" class="tally" data-tally="0.6666666666666666">2/3</td>
@@ -2578,7 +2578,7 @@ return (function (foo, ...args) {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");return Function("asyncTestPassed","\nreturn (function (foo, ...args) {\n  foo = \"qux\";\n  // The arguments object is not mapped to the\n  // parameters, even outside of strict mode.\n  return arguments.length === 3\n    && arguments[0] === \"foo\"\n    && arguments[1] === \"bar\"\n    && arguments[2] === \"baz\";\n}(\"foo\", \"bar\", \"baz\"));\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -3156,7 +3156,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 </tr>
 <tr class="supertest"><td id="class"><span><a class="anchor" href="#class">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.7272727272727273">8/11</td>
-<td data-browser="_6to5" class="tally" data-tally="0.8181818181818182">9/11</td>
+<td data-browser="_6to5" class="tally" data-tally="0.9090909090909091">10/11</td>
 <td data-browser="es6tr" class="tally" data-tally="0.8181818181818182">9/11</td>
 <td data-browser="closure" class="tally" data-tally="0.45454545454545453">5/11</td>
 <td data-browser="jsx" class="tally" data-tally="0.7272727272727273">8/11</td>
@@ -3837,7 +3837,7 @@ return !(c instanceof Object)
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nclass C extends null {}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[9]</sup></a></td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
@@ -10220,7 +10220,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 </tr>
 <tr class="supertest"><td id="WeakMap"><span><a class="anchor" href="#WeakMap">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/4</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/4</td>
+<td data-browser="_6to5" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/4</td>
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
@@ -10283,7 +10283,7 @@ return weakmap.has(key) &amp;&amp; weakmap.get(key) === 123;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("165");return Function("asyncTestPassed","\nvar key = {};\nvar weakmap = new WeakMap();\n\nweakmap.set(key, 123);\n\nreturn weakmap.has(key) && weakmap.get(key) === 123;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10346,7 +10346,7 @@ return weakmap.has(key1) &amp;&amp; weakmap.get(key1) === 123 &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("166");return Function("asyncTestPassed","\nvar key1 = {};\nvar key2 = {};\nvar weakmap = new WeakMap([[key1, 123], [key2, 456]]);\n\nreturn weakmap.has(key1) && weakmap.get(key1) === 123 &&\n       weakmap.has(key2) && weakmap.get(key2) === 456;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10406,7 +10406,7 @@ return weakmap.set(key, 0) === weakmap;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("167");return Function("asyncTestPassed","\nvar weakmap = new WeakMap();\nvar key = {};\nreturn weakmap.set(key, 0) === weakmap;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10464,7 +10464,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("168");return Function("asyncTestPassed","\nreturn typeof WeakMap.prototype.delete === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10519,7 +10519,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 </tr>
 <tr class="supertest"><td id="WeakSet"><span><a class="anchor" href="#WeakSet">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/4</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/4</td>
+<td data-browser="_6to5" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/4</td>
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
@@ -10583,7 +10583,7 @@ return weakset.has(obj1);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("170");return Function("asyncTestPassed","\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj1);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10644,7 +10644,7 @@ return weakset.has(obj1) &amp;&amp; weakset.has(obj2);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("171");return Function("asyncTestPassed","\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet([obj1, obj2]);\n\nreturn weakset.has(obj1) && weakset.has(obj2);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10704,7 +10704,7 @@ return weakset.add(obj) === weakset;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("172");return Function("asyncTestPassed","\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === weakset;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -10762,7 +10762,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("173");return Function("asyncTestPassed","\nreturn typeof WeakSet.prototype.delete === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -12191,7 +12191,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 </tr>
 <tr class="supertest"><td id="Reflect"><span><a class="anchor" href="#Reflect">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/14</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/14</td>
+<td data-browser="_6to5" class="tally" data-tally="0.07142857142857142">1/14</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/14</td>
 <td data-browser="closure" class="tally" data-tally="0">0/14</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/14</td>
@@ -12911,7 +12911,7 @@ return Reflect.ownKeys(obj) + &quot;&quot; === &quot;foo,bar&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("207");return Function("asyncTestPassed","\nvar obj = { foo: 1, bar: 2 };\nreturn Reflect.ownKeys(obj) + \"\" === \"foo,bar\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -13147,7 +13147,7 @@ return f() === 1;
 </tr>
 <tr class="supertest"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8666666666666667">13/15</td>
-<td data-browser="_6to5" class="tally" data-tally="0.8">12/15</td>
+<td data-browser="_6to5" class="tally" data-tally="0.8666666666666667">13/15</td>
 <td data-browser="es6tr" class="tally" data-tally="0.7333333333333333">11/15</td>
 <td data-browser="closure" class="tally" data-tally="0.7333333333333333">11/15</td>
 <td data-browser="jsx" class="tally" data-tally="0.4666666666666667">7/15</td>
@@ -13504,7 +13504,7 @@ return grault === &quot;garply&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("217");return Function("asyncTestPassed","\nvar qux = \"corge\";\nvar { [qux]: grault } = { corge: \"garply\" };\nreturn grault === \"garply\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -16390,7 +16390,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 </tr>
 <tr class="supertest"><td id="Symbol"><span><a class="anchor" href="#Symbol">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.4444444444444444">4/9</td>
-<td data-browser="_6to5" class="tally" data-tally="0.5555555555555556">5/9</td>
+<td data-browser="_6to5" class="tally" data-tally="0.8888888888888888">8/9</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/9</td>
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/9</td>
@@ -16580,7 +16580,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("268");return Function("asyncTestPassed","\nvar object = {};\nvar symbol = Symbol();\nobject[symbol] = 1;\n\nfor (var x in object){}\nvar passed = (x !== symbol);\n\nif (Object.keys && Object.getOwnPropertyNames) {\n  passed &= Object.keys(object).length === 0\n    && Object.getOwnPropertyNames(object).length === 0;\n}\n\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -16718,7 +16718,7 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("270");return Function("asyncTestPassed","\nvar symbol = Symbol();\n\ntry {\n  symbol + \"\";\n  return false;\n}\ncatch(e) {}\n\ntry {\n  symbol + 0;\n  return false;\n} catch(e) {}\n\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -16776,7 +16776,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("271");return Function("asyncTestPassed","\nreturn String(Symbol(\"foo\")) === \"Symbol(foo)\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -17518,7 +17518,7 @@ with (a) {
 </tr>
 <tr class="supertest"><td id="RegExp.prototype_properties"><span><a class="anchor" href="#RegExp.prototype_properties">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype properties</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/5</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/5</td>
+<td data-browser="_6to5" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/5</td>
 <td data-browser="closure" class="tally" data-tally="0">0/5</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/5</td>
@@ -17576,7 +17576,7 @@ return /./igm.flags === &quot;gim&quot; &amp;&amp; /./.flags === &quot;&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("284");return Function("asyncTestPassed","\nreturn /./igm.flags === \"gim\" && /./.flags === \"\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>

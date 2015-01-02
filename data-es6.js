@@ -977,6 +977,7 @@ exports.tests = [
         }("foo", "bar", "baz"));
       */},
       res: {
+        _6to5:       true,
         tr:          true,
       },
     },
@@ -1294,6 +1295,7 @@ exports.tests = [
           && Object.getPrototypeOf(C.prototype) === null;
       */},
       res: {
+        _6to5:       true,
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         es6tr:       true,
@@ -2694,6 +2696,7 @@ exports.tests = [
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -2715,6 +2718,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -2728,6 +2732,7 @@ exports.tests = [
         return weakmap.set(key, 0) === weakmap;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         chrome38:    true,
@@ -2742,6 +2747,7 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -2770,6 +2776,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -2786,6 +2793,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -2799,6 +2807,7 @@ exports.tests = [
         return weakset.add(obj) === weakset;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         chrome38:    true,
@@ -2810,6 +2819,7 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3318,6 +3328,7 @@ exports.tests = [
         return Reflect.ownKeys(obj) + "" === "foo,bar";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
       },
     },
@@ -3479,6 +3490,7 @@ exports.tests = [
         return grault === "garply";
       */},
       res: {
+        _6to5:       true,
         tr:          true,
         es6tr:       true,
         firefox35:   true,
@@ -4324,6 +4336,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         tr:          true,
         ejs:         true,
         ie11tp:      true,
@@ -4375,6 +4388,7 @@ exports.tests = [
         return true;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -4387,6 +4401,7 @@ exports.tests = [
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         chrome39:    true,
         firefox36:   true,
@@ -4572,6 +4587,7 @@ exports.tests = [
         return /./igm.flags === "gim" && /./.flags === "";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
       },
     },
