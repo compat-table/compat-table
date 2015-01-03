@@ -1374,8 +1374,7 @@ exports.tests = [
     'computed properties': {
       exec: function() {/*
         var x = 'y';
-        return ({ [x]: 1 }).y === 1 &&
-               ({ get [x]() { return 1 } }).y === 1;
+        return ({ [x]: 1 }).y === 1;
       */},
       res: {
         tr:          true,

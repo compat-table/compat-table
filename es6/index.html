@@ -4195,9 +4195,8 @@ return obj.qux() === &quot;barley&quot;;
 </tr>
 <tr class="subtest" data-parent="object_literal_extensions"><td><span>computed properties</span><script data-source="
 var x = &apos;y&apos;;
-return ({ [x]: 1 }).y === 1 &amp;&amp;
-       ({ get [x]() { return 1 } }).y === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");return Function("asyncTestPassed","\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1 &&\n       ({ get [x]() { return 1 } }).y === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return ({ [x]: 1 }).y === 1;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");return Function("asyncTestPassed","\nvar x = 'y';\nreturn ({ [x]: 1 }).y === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
