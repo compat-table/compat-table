@@ -383,7 +383,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
   $('#footnotes').append(allFootnotes());
 
-  return $.root().html().replace(/(<\/t\w>)/g, "$1\n");
+  return $.root().html();
 }
 
 function capitalise(s) {
