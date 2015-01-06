@@ -1429,27 +1429,29 @@ exports.tests = [
         return ({ [x](){ return 1 } }).y() === 1;
       */},
       res: {
+        ie11tp:      true,
         tr:          true,
         _6to5:       true,
         es6tr:       true,
-        firefox34:   true
+        firefox34:   true,
       }
     },
     'computed accessors': {
       exec: function() {/*
         var x = 'y',
             valueSet,
-            obj = ({
+            obj = {
               get [x] () { return 1 },
               set [x] (value) { valueSet = value }
-            });
+            };
         obj.y = 'foo';
         return obj.y === 1 && valueSet === 'foo';
       */},
       res: {
-        tr: true,
-        es6tr: true,
-        firefox32: true
+        ie11tp:      true,
+        tr:          true,
+        es6tr:       true,
+        firefox34:   true,
       }
     }
   }
@@ -1906,6 +1908,30 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         chrome39:    flag,
+        firefox34:   true,
+      },
+    },
+    'computed shorthand generators': {
+      exec: function() {/*
+        var garply = "generator";
+        var o = {
+          * [garply] () {
+            yield 5; yield 6;
+          },
+        };
+        var iterator = o.generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
         firefox34:   true,
       },
     },
