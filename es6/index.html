@@ -17,7 +17,7 @@
           var arr = [a, b, c, ,];
           var iterable = {
             next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
+              return { value: arr.shift(), done: arr.length <= 0 };
             },
           };
           iterable[Symbol.iterator] = function(){ return iterable; }
@@ -88,7 +88,7 @@
 
           <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
 
-          <th colspan="4" class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
+          <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
 
           <th colspan="2" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
 
@@ -153,6 +153,7 @@
 <th class="platform rhino17 engine" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node 0.11.14">Node</abbr><a href="#harmony-flag-note"><sup>[5]</sup></a></a></th>
+<th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 1.0.0">io.js</abbr></a></th>
 <th class="platform ejs engine" data-browser="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
 <th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
@@ -222,6 +223,7 @@ return (function f(n){
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -278,6 +280,7 @@ return (function f(n){
 <td data-browser="rhino17" class="tally" data-tally="0">0/9</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/9</td>
 <td data-browser="node" class="tally" data-tally="0">0/9</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/9</td>
 <td data-browser="ejs" class="tally" data-tally="0.7777777777777778">7/9</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/9</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/9</td>
@@ -337,6 +340,7 @@ return (() =&gt; 5)() === 5;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -397,6 +401,7 @@ return (b(&quot;fee fie foe &quot;) === &quot;fee fie foe foo&quot;);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -457,6 +462,7 @@ return (c(6, 5, 4, 3, 2) === &quot;65432&quot;);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -518,6 +524,7 @@ return d(&quot;ley&quot;) === &quot;barley&quot; &amp;&amp; e.y(&quot;ley&quot;)
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -579,6 +586,7 @@ return d.y().call(e) === &quot;foo&quot; &amp;&amp; d.y().apply(e) === &quot;foo
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -640,6 +648,7 @@ return d.y().bind(e, &quot;ley&quot;)() === &quot;barley&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -700,6 +709,7 @@ return f(6) === 5;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -761,6 +771,7 @@ return (() =&gt; {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -821,6 +832,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -877,6 +889,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="node" class="tally" data-tally="0.125" data-flagged-tally="0.625">1/8</td>
+<td data-browser="iojs" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">6/8</td>
 <td data-browser="ios7" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.125">1/8</td>
@@ -937,6 +950,7 @@ return (foo === 123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -998,6 +1012,7 @@ return bar === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1062,6 +1077,7 @@ try {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1123,6 +1139,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1184,6 +1201,7 @@ return (foo === 123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1246,6 +1264,7 @@ return bar === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1311,6 +1330,7 @@ try {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1373,6 +1393,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1429,6 +1450,7 @@ return passed;
 <td data-browser="rhino17" class="tally" data-tally="0">0/10</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/10</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.3">0/10</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/10</td>
 <td data-browser="ejs" class="tally" data-tally="1">10/10</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/10</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/10</td>
@@ -1489,6 +1511,7 @@ return (foo === 123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1550,6 +1573,7 @@ return bar === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1611,6 +1635,7 @@ return baz === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1672,6 +1697,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1742,6 +1768,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1803,6 +1830,7 @@ return (foo === 123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1865,6 +1893,7 @@ return bar === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1927,6 +1956,7 @@ return baz === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1989,6 +2019,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2060,6 +2091,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2116,6 +2148,7 @@ return passed;
 <td data-browser="rhino17" class="tally" data-tally="0">0/5</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/5</td>
 <td data-browser="node" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/5</td>
 <td data-browser="ejs" class="tally" data-tally="0.6">3/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
@@ -2175,6 +2208,7 @@ return (function (a = 1, b = 2) { return a === 3 &amp;&amp; b === 2; }(3));
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2234,6 +2268,7 @@ return (function (a = 1, b = 2) { return a === 1 &amp;&amp; b === 3; }(undefined
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2293,6 +2328,7 @@ return (function (a, b = a) { return b === 5; }(5));
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2362,6 +2398,7 @@ return (function(x = 1) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2426,6 +2463,7 @@ return (function(a=function(){
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2482,6 +2520,7 @@ return (function(a=function(){
 <td data-browser="rhino17" class="tally" data-tally="0">0/3</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/3</td>
 <td data-browser="ejs" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/3</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/3</td>
@@ -2543,6 +2582,7 @@ return (function (foo, ...args) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2602,6 +2642,7 @@ return function(a, ...b){}.length === 1 &amp;&amp; function(...c){}.length === 0
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2669,6 +2710,7 @@ return (function (foo, ...args) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2725,6 +2767,7 @@ return (function (foo, ...args) {
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/8</td>
 <td data-browser="node" class="tally" data-tally="0">0/8</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">6/8</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.25">2/8</td>
@@ -2784,6 +2827,7 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -2843,6 +2887,7 @@ return [...[1, 2, 3]][2] === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -2902,6 +2947,7 @@ return Math.max(...&quot;1234&quot;) === 4;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2961,6 +3007,7 @@ return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3021,6 +3068,7 @@ return Math.max(...iterable) === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3081,6 +3129,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3141,6 +3190,7 @@ return Math.max(...Object.create(iterable)) === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3201,6 +3251,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3257,6 +3308,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="rhino17" class="tally" data-tally="0">0/11</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/11</td>
 <td data-browser="node" class="tally" data-tally="0">0/11</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/11</td>
 <td data-browser="ejs" class="tally" data-tally="0.8181818181818182">9/11</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/11</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/11</td>
@@ -3317,6 +3369,7 @@ return typeof C === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3382,6 +3435,7 @@ return C === c1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3441,6 +3495,7 @@ return typeof class C {} === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3504,6 +3559,7 @@ return C.prototype.constructor === C
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3567,6 +3623,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3630,6 +3687,7 @@ return typeof C.method === &quot;function&quot;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3695,6 +3753,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3760,6 +3819,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3823,6 +3883,7 @@ return c();
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3886,6 +3947,7 @@ return c instanceof Array
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -3949,6 +4011,7 @@ return !(c instanceof Object)
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4005,6 +4068,7 @@ return !(c instanceof Object)
 <td data-browser="rhino17" class="tally" data-tally="0">0/3</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/3</td>
 <td data-browser="ejs" class="tally" data-tally="1">3/3</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/3</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/3</td>
@@ -4069,6 +4133,7 @@ return new B(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4133,6 +4198,7 @@ return new B().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4201,6 +4267,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4257,6 +4324,7 @@ return obj.qux() === &quot;barley&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/5</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/5</td>
 <td data-browser="node" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/5</td>
 <td data-browser="ejs" class="tally" data-tally="0.6">3/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0.2">1/5</td>
@@ -4317,6 +4385,7 @@ return ({ [x]: 1 }).y === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -4377,6 +4446,7 @@ return c.a === 7 &amp;&amp; c.b === 8;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4436,6 +4506,7 @@ return ({ y() { return 2; } }).y() === 2;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4496,6 +4567,7 @@ return ({ [x](){ return 1 } }).y() === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4562,6 +4634,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4618,6 +4691,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.25">0/4</td>
+<td data-browser="iojs" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">3/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0.25">1/4</td>
@@ -4679,6 +4753,7 @@ for (var item of arr)
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -4741,6 +4816,7 @@ return str === &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4805,6 +4881,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4869,6 +4946,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -4925,6 +5003,7 @@ return result === &quot;123&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/13</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/13</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5384615384615384">0/13</td>
+<td data-browser="iojs" class="tally" data-tally="0.6153846153846154">8/13</td>
 <td data-browser="ejs" class="tally" data-tally="0">0/13</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/13</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/13</td>
@@ -4994,6 +5073,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5063,6 +5143,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5130,6 +5211,7 @@ return sent[0] === &quot;foo&quot; &amp;&amp; sent[1] === &quot;bar&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5198,6 +5280,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5268,6 +5351,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5337,6 +5421,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5403,6 +5488,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5471,6 +5557,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5539,6 +5626,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5609,6 +5697,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5679,6 +5768,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5750,6 +5840,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5822,6 +5913,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5878,6 +5970,7 @@ return passed;
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="1">0/4</td>
+<td data-browser="iojs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
@@ -5937,6 +6030,7 @@ return 0o10 === 8 &amp;&amp; 0O10 === 8;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5996,6 +6090,7 @@ return 0b10 === 2 &amp;&amp; 0B10 === 2;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6055,6 +6150,7 @@ return Number(&apos;0o1&apos;) === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6114,6 +6210,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6170,6 +6267,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -6231,6 +6329,7 @@ ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6301,6 +6400,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6357,6 +6457,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -6420,6 +6521,7 @@ return (re.exec(&apos;xy&apos;)[0] === &apos;x&apos; &amp;&amp; re2.exec(&apos;x
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6479,6 +6581,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6535,6 +6638,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td data-browser="rhino17" class="tally" data-tally="0">0/40</td>
 <td data-browser="phantom" class="tally" data-tally="0.4">16/40</td>
 <td data-browser="node" class="tally" data-tally="0.45">18/40</td>
+<td data-browser="iojs" class="tally" data-tally="0.525">21/40</td>
 <td data-browser="ejs" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="ios7" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="ios8" class="tally" data-tally="0.45">18/40</td>
@@ -6596,6 +6700,7 @@ return view[0] === -0x80;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6657,6 +6762,7 @@ return view[0] === 0;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6718,6 +6824,7 @@ return view[0] === 0xFF;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6779,6 +6886,7 @@ return view[0] === -0x8000;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6840,6 +6948,7 @@ return view[0] === 0;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6901,6 +7010,7 @@ return view[0] === -0x80000000;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -6962,6 +7072,7 @@ return view[0] === 0;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7023,6 +7134,7 @@ return view[0] === 0.10000000149011612;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7084,6 +7196,7 @@ return view[0] === 0.1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7146,6 +7259,7 @@ return view.getInt8(0) === -0x80;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7208,6 +7322,7 @@ return view.getUint8(0) === 0;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7270,6 +7385,7 @@ return view.getInt16(0) === -0x8000;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7332,6 +7448,7 @@ return view.getUint16(0) === 0;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7394,6 +7511,7 @@ return view.getInt32(0) === -0x80000000;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7456,6 +7574,7 @@ return view.getUint32(0) === 0;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7518,6 +7637,7 @@ return view.getFloat32(0) === 0.10000000149011612;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7580,6 +7700,7 @@ return view.getFloat64(0) === 0.1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7647,6 +7768,7 @@ return typeof Int8Array.from === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7714,6 +7836,7 @@ return typeof Int8Array.of === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7781,6 +7904,7 @@ return typeof Int8Array.prototype.subarray === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -7848,6 +7972,7 @@ return typeof Int8Array.prototype.join === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7915,6 +8040,7 @@ return typeof Int8Array.prototype.indexOf === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7982,6 +8108,7 @@ return typeof Int8Array.prototype.lastIndexOf === &quot;function&quot; &amp;&amp
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8049,6 +8176,7 @@ return typeof Int8Array.prototype.slice === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8116,6 +8244,7 @@ return typeof Int8Array.prototype.every === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8183,6 +8312,7 @@ return typeof Int8Array.prototype.filter === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8250,6 +8380,7 @@ return typeof Int8Array.prototype.forEach === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8317,6 +8448,7 @@ return typeof Int8Array.prototype.map === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8384,6 +8516,7 @@ return typeof Int8Array.prototype.reduce === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8451,6 +8584,7 @@ return typeof Int8Array.prototype.reduceRight === &quot;function&quot; &amp;&amp
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8518,6 +8652,7 @@ return typeof Int8Array.prototype.reverse === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8585,6 +8720,7 @@ return typeof Int8Array.prototype.some === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8652,6 +8788,7 @@ return typeof Int8Array.prototype.sort === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8719,6 +8856,7 @@ return typeof Int8Array.prototype.copyWithin === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8786,6 +8924,7 @@ return typeof Int8Array.prototype.find === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8853,6 +8992,7 @@ return typeof Int8Array.prototype.findIndex === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8920,6 +9060,7 @@ return typeof Int8Array.prototype.fill === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -8987,6 +9128,7 @@ return typeof Int8Array.prototype.keys === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9054,6 +9196,7 @@ return typeof Int8Array.prototype.values === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9121,6 +9264,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9177,6 +9321,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td data-browser="rhino17" class="tally" data-tally="0">0/11</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/11</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5454545454545454">0/11</td>
+<td data-browser="iojs" class="tally" data-tally="1">11/11</td>
 <td data-browser="ejs" class="tally" data-tally="0.9090909090909091">10/11</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/11</td>
 <td data-browser="ios8" class="tally" data-tally="0.8181818181818182">9/11</td>
@@ -9241,6 +9386,7 @@ return map.has(key) &amp;&amp; map.get(key) === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9305,6 +9451,7 @@ return map.has(key1) &amp;&amp; map.get(key1) === 123 &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9365,6 +9512,7 @@ return map.set(0, 0) === map;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9430,6 +9578,7 @@ return k === Infinity &amp;&amp; map.get(+0) == &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9494,6 +9643,7 @@ return map.size === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9553,6 +9703,7 @@ return typeof Map.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9612,6 +9763,7 @@ return typeof Map.prototype.clear === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9671,6 +9823,7 @@ return typeof Map.prototype.forEach === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9730,6 +9883,7 @@ return typeof Map.prototype.keys === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9789,6 +9943,7 @@ return typeof Map.prototype.values === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9848,6 +10003,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -9904,6 +10060,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/11</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/11</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5454545454545454">0/11</td>
+<td data-browser="iojs" class="tally" data-tally="1">11/11</td>
 <td data-browser="ejs" class="tally" data-tally="0.9090909090909091">10/11</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/11</td>
 <td data-browser="ios8" class="tally" data-tally="0.8181818181818182">9/11</td>
@@ -9969,6 +10126,7 @@ return set.has(123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10032,6 +10190,7 @@ return set.has(obj1) &amp;&amp; set.has(obj2);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10092,6 +10251,7 @@ return set.add(0) === set;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10157,6 +10317,7 @@ return k === Infinity &amp;&amp; set.has(+0);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10223,6 +10384,7 @@ return set.size === 2;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10282,6 +10444,7 @@ return typeof Set.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10341,6 +10504,7 @@ return typeof Set.prototype.clear === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10400,6 +10564,7 @@ return typeof Set.prototype.forEach === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10459,6 +10624,7 @@ return typeof Set.prototype.keys === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10518,6 +10684,7 @@ return typeof Set.prototype.values === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10577,6 +10744,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10633,6 +10801,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/4</td>
+<td data-browser="iojs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0.75">3/4</td>
@@ -10697,6 +10866,7 @@ return weakmap.has(key) &amp;&amp; weakmap.get(key) === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10761,6 +10931,7 @@ return weakmap.has(key1) &amp;&amp; weakmap.get(key1) === 123 &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10822,6 +10993,7 @@ return weakmap.set(key, 0) === weakmap;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10881,6 +11053,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -10937,6 +11110,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/4</td>
+<td data-browser="iojs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
@@ -11002,6 +11176,7 @@ return weakset.has(obj1);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11064,6 +11239,7 @@ return weakset.has(obj1) &amp;&amp; weakset.has(obj2);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11125,6 +11301,7 @@ return weakset.add(obj) === weakset;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11184,6 +11361,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11240,6 +11418,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/20</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/20</td>
 <td data-browser="node" class="tally" data-tally="0">0/20</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/20</td>
 <td data-browser="ejs" class="tally" data-tally="0.55">11/20</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/20</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/20</td>
@@ -11305,6 +11484,7 @@ return proxy.foo === 5;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11370,6 +11550,7 @@ return proxy.foo === 5;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11437,6 +11618,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11504,6 +11686,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11570,6 +11753,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11636,6 +11820,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11702,6 +11887,7 @@ var proxied = {};
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11774,6 +11960,7 @@ return (returnedDesc.value     === fakeDesc.value
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11845,6 +12032,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11911,6 +12099,7 @@ return Object.getPrototypeOf(proxy) === fakeProto;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11982,6 +12171,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12050,6 +12240,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12119,6 +12310,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12190,6 +12382,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12258,6 +12451,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12327,6 +12521,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12394,6 +12589,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12461,6 +12657,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12520,6 +12717,7 @@ return Array.isArray(new Proxy([], {}));
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12579,6 +12777,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12635,6 +12834,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="rhino17" class="tally" data-tally="0">0/14</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/14</td>
 <td data-browser="node" class="tally" data-tally="0">0/14</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/14</td>
 <td data-browser="ejs" class="tally" data-tally="1">14/14</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/14</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/14</td>
@@ -12694,6 +12894,7 @@ return Reflect.get({ qux: 987 }, &quot;qux&quot;) === 987;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12755,6 +12956,7 @@ return obj.quux === 654;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12814,6 +13016,7 @@ return Reflect.has({ qux: 987 }, &quot;qux&quot;);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12875,6 +13078,7 @@ return !(&quot;bar&quot; in obj);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12937,6 +13141,7 @@ return desc.value === 789 &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12998,6 +13203,7 @@ return obj.foo === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13057,6 +13263,7 @@ return Reflect.getPrototypeOf([]) === Array.prototype;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13118,6 +13325,7 @@ return obj instanceof Array;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13178,6 +13386,7 @@ return Reflect.isExtensible({}) &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13239,6 +13448,7 @@ return !Object.isExtensible(obj);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13307,6 +13517,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13367,6 +13578,7 @@ return Reflect.ownKeys(obj) + &quot;&quot; === &quot;foo,bar&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13426,6 +13638,7 @@ return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13487,6 +13700,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13551,6 +13765,7 @@ return f() === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13607,6 +13822,7 @@ return f() === 1;
 <td data-browser="rhino17" class="tally" data-tally="0">0/15</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/15</td>
 <td data-browser="node" class="tally" data-tally="0">0/15</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/15</td>
 <td data-browser="ejs" class="tally" data-tally="0.4">6/15</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/15</td>
 <td data-browser="ios8" class="tally" data-tally="0.4666666666666667">7/15</td>
@@ -13667,6 +13883,7 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -13727,6 +13944,7 @@ return a === &quot;b&quot; &amp;&amp; b === &quot;a&quot; &amp;&amp; c === &quot
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -13788,6 +14006,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13849,6 +14068,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13909,6 +14129,7 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -13970,6 +14191,7 @@ return grault === &quot;garply&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14030,6 +14252,7 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === 7 &amp;&amp; d === 8;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14090,6 +14313,7 @@ return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14152,6 +14376,7 @@ return (function({a, x:b, y:e}, [c, d]) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14213,6 +14438,7 @@ for(var [i, j, k] in { qux: 1 }) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14274,6 +14500,7 @@ for(var [i, j, k] of [[1,2,3]]) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14336,6 +14563,7 @@ return a === 3 &amp;&amp; b instanceof Array &amp;&amp; (b + &quot;&quot;) === &
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14397,6 +14625,7 @@ return first === 1 &amp;&amp; last === 3 &amp;&amp; (a + &quot;&quot;) === &quot
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14457,6 +14686,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14519,6 +14749,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14575,6 +14806,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
 <td data-browser="rhino17" class="tally" data-tally="0">0/3</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
+<td data-browser="iojs" class="tally" data-tally="1">3/3</td>
 <td data-browser="ejs" class="tally" data-tally="1">3/3</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/3</td>
 <td data-browser="ios8" class="tally" data-tally="0.3333333333333333">1/3</td>
@@ -14655,6 +14887,7 @@ function check() {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -14728,6 +14961,7 @@ function check() {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14801,6 +15035,7 @@ function check() {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14857,6 +15092,7 @@ function check() {
 <td data-browser="rhino17" class="tally" data-tally="0">0/4</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/4</td>
 <td data-browser="node" class="tally" data-tally="0.25" data-flagged-tally="0.75">1/4</td>
+<td data-browser="iojs" class="tally" data-tally="0.75">3/4</td>
 <td data-browser="ejs" class="tally" data-tally="1">4/4</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/4</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
@@ -14917,6 +15153,7 @@ return &quot;a&quot; in o &amp;&amp; &quot;b&quot; in o &amp;&amp; &quot;c&quot;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14978,6 +15215,7 @@ return typeof Object.is === &apos;function&apos; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15040,6 +15278,7 @@ return Object.getOwnPropertySymbols(o)[0] === sym;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15099,6 +15338,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15155,6 +15395,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="rhino17" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="phantom" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="node" class="tally" data-tally="0.125">2/16</td>
+<td data-browser="iojs" class="tally" data-tally="0.125">2/16</td>
 <td data-browser="ejs" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ios7" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ios8" class="tally" data-tally="0.1875">3/16</td>
@@ -15216,6 +15457,7 @@ return foo.name === &apos;foo&apos; &amp;&amp;
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -15276,6 +15518,7 @@ return (function foo(){}).name === &apos;foo&apos; &amp;&amp;
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -15335,6 +15578,7 @@ return (new Function).name === &quot;anonymous&quot;;
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -15396,6 +15640,7 @@ return foo.bind({}).name === &quot;bound foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15457,6 +15702,7 @@ return foo.name === &quot;foo&quot; &amp;&amp; bar.name === &quot;baz&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15520,6 +15766,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15582,6 +15829,7 @@ return descriptor.get.name === &quot;get foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15642,6 +15890,7 @@ return o.foo.name === &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15709,6 +15958,7 @@ return o[sym1].name === &quot;[foo]&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15771,6 +16021,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15831,6 +16082,7 @@ return class foo {}.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15895,6 +16147,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -15958,6 +16211,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16018,6 +16272,7 @@ return (new C).foo.name === &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16078,6 +16333,7 @@ return C.foo.name === &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16140,6 +16396,7 @@ return descriptor.enumerable   === false &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16199,6 +16456,7 @@ return typeof Function.prototype.toMethod === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16255,6 +16513,7 @@ return typeof Function.prototype.toMethod === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -16314,6 +16573,7 @@ return typeof String.raw === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16373,6 +16633,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16429,6 +16690,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/6</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/6</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/6</td>
+<td data-browser="iojs" class="tally" data-tally="0.16666666666666666">1/6</td>
 <td data-browser="ejs" class="tally" data-tally="0.8333333333333334">5/6</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/6</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/6</td>
@@ -16488,6 +16750,7 @@ return typeof String.prototype.codePointAt === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16549,6 +16812,7 @@ return typeof String.prototype.normalize === &quot;function&quot;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16609,6 +16873,7 @@ return typeof String.prototype.repeat === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16669,6 +16934,7 @@ return typeof String.prototype.startsWith === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16729,6 +16995,7 @@ return typeof String.prototype.endsWith === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16789,6 +17056,7 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16848,6 +17116,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16904,6 +17173,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/9</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/9</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.6666666666666666">0/9</td>
+<td data-browser="iojs" class="tally" data-tally="0.8888888888888888">8/9</td>
 <td data-browser="ejs" class="tally" data-tally="0.8888888888888888">8/9</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/9</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/9</td>
@@ -16967,6 +17237,7 @@ return object[symbol] === value;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17026,6 +17297,7 @@ return typeof Symbol() === &quot;symbol&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17097,6 +17369,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17165,6 +17438,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17237,6 +17511,7 @@ return true;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17296,6 +17571,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17360,6 +17636,7 @@ try {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17424,6 +17701,7 @@ return typeof symbolObject === &quot;object&quot; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17485,6 +17763,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17541,6 +17820,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td data-browser="rhino17" class="tally" data-tally="0">0/7</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/7</td>
 <td data-browser="node" class="tally" data-tally="0">0/7</td>
+<td data-browser="iojs" class="tally" data-tally="0.2857142857142857">2/7</td>
 <td data-browser="ejs" class="tally" data-tally="0.8571428571428571">6/7</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/7</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/7</td>
@@ -17607,6 +17887,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17669,6 +17950,7 @@ return a[0] === b;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17741,6 +18023,7 @@ return c === &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17802,6 +18085,7 @@ return RegExp[Symbol.species] === RegExp
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17870,6 +18154,7 @@ return passed === 3;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17931,6 +18216,7 @@ return (a + &quot;&quot;) === &quot;[object foo]&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17994,6 +18280,7 @@ with (a) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[16]</sup></a></td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18050,6 +18337,7 @@ with (a) {
 <td data-browser="rhino17" class="tally" data-tally="0">0/5</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/5</td>
 <td data-browser="node" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/5</td>
 <td data-browser="ejs" class="tally" data-tally="1">5/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
@@ -18109,6 +18397,7 @@ return /./igm.flags === &quot;gim&quot; &amp;&amp; /./.flags === &quot;&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18168,6 +18457,7 @@ return typeof RegExp.prototype[Symbol.match] === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18227,6 +18517,7 @@ return typeof RegExp.prototype[Symbol.replace] === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18286,6 +18577,7 @@ return typeof RegExp.prototype[Symbol.split] === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18345,6 +18637,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18401,6 +18694,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/6</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/6</td>
 <td data-browser="node" class="tally" data-tally="0">0/6</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/6</td>
 <td data-browser="ejs" class="tally" data-tally="0.5">3/6</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/6</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/6</td>
@@ -18460,6 +18754,7 @@ return Array.from({ 0: &quot;foo&quot;, 1: &quot;bar&quot;, length: 2 }) + &apos
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18520,6 +18815,7 @@ return Array.from(iterable) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18580,6 +18876,7 @@ return Array.from(Object.create(iterable)) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18640,6 +18937,7 @@ return C.from({ length: 0 }) instanceof C;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18700,6 +18998,7 @@ return typeof Array.of === &apos;function&apos; &amp;&amp;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18760,6 +19059,7 @@ return C.of(0) instanceof C;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18816,6 +19116,7 @@ return C.of(0) instanceof C;
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/8</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.75">0/8</td>
+<td data-browser="iojs" class="tally" data-tally="0.375">3/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.875">7/8</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.625">5/8</td>
@@ -18875,6 +19176,7 @@ return typeof Array.prototype.copyWithin === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -18934,6 +19236,7 @@ return typeof Array.prototype.find === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -18993,6 +19296,7 @@ return typeof Array.prototype.findIndex === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19052,6 +19356,7 @@ return typeof Array.prototype.fill === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19111,6 +19416,7 @@ return typeof Array.prototype.keys === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19170,6 +19476,7 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19229,6 +19536,7 @@ return typeof Array.prototype.entries === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19296,6 +19604,7 @@ return true;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19352,6 +19661,7 @@ return true;
 <td data-browser="rhino17" class="tally" data-tally="0">0/7</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/7</td>
 <td data-browser="node" class="tally" data-tally="0.2857142857142857" data-flagged-tally="1">2/7</td>
+<td data-browser="iojs" class="tally" data-tally="1">7/7</td>
 <td data-browser="ejs" class="tally" data-tally="1">7/7</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/7</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/7</td>
@@ -19411,6 +19721,7 @@ return typeof Number.isFinite === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19470,6 +19781,7 @@ return typeof Number.isInteger === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19529,6 +19841,7 @@ return typeof Number.isSafeInteger === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19588,6 +19901,7 @@ return typeof Number.isNaN === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19647,6 +19961,7 @@ return typeof Number.EPSILON === &apos;number&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19706,6 +20021,7 @@ return typeof Number.MIN_SAFE_INTEGER === &apos;number&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19765,6 +20081,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19821,6 +20138,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/17</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/17</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="1">0/17</td>
+<td data-browser="iojs" class="tally" data-tally="1">17/17</td>
 <td data-browser="ejs" class="tally" data-tally="1">17/17</td>
 <td data-browser="ios7" class="tally" data-tally="0.058823529411764705">1/17</td>
 <td data-browser="ios8" class="tally" data-tally="0.8823529411764706">15/17</td>
@@ -19880,6 +20198,7 @@ return typeof Math.clz32 === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19939,6 +20258,7 @@ return typeof Math.imul === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -19998,6 +20318,7 @@ return typeof Math.sign === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -20057,6 +20378,7 @@ return typeof Math.log10 === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20116,6 +20438,7 @@ return typeof Math.log2 === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20175,6 +20498,7 @@ return typeof Math.log1p === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20234,6 +20558,7 @@ return typeof Math.expm1 === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20293,6 +20618,7 @@ return typeof Math.cosh === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20352,6 +20678,7 @@ return typeof Math.sinh === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20411,6 +20738,7 @@ return typeof Math.tanh === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20470,6 +20798,7 @@ return typeof Math.acosh === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20529,6 +20858,7 @@ return typeof Math.asinh === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20588,6 +20918,7 @@ return typeof Math.atanh === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20647,6 +20978,7 @@ return typeof Math.hypot === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20706,6 +21038,7 @@ return typeof Math.trunc === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20765,6 +21098,7 @@ return typeof Math.fround === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20824,6 +21158,7 @@ return typeof Math.cbrt === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -20880,6 +21215,7 @@ return typeof Math.cbrt === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="phantom" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="node" class="tally" data-tally="0.25">2/8</td>
+<td data-browser="iojs" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="ios7" class="tally" data-tally="0.25">2/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.25">2/8</td>
@@ -20940,6 +21276,7 @@ return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -20999,6 +21336,7 @@ do {} while (false) return true;
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21063,6 +21401,7 @@ catch(e) {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21126,6 +21465,7 @@ try {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21192,6 +21532,7 @@ return true;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21251,6 +21592,7 @@ return new Date(NaN) + &quot;&quot; === &quot;Invalid Date&quot;;
 <td class="yes" data-browser="rhino17">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21310,6 +21652,7 @@ return new RegExp(/./im, &quot;g&quot;).global === true;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21384,11 +21727,12 @@ return Array.prototype.length === undefined;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr><th colspan="57" class="separator"></th>
+<tr><th colspan="58" class="separator"></th>
 </tr>
 <tr><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
 // Note: only available outside of strict mode.
@@ -21452,6 +21796,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21508,6 +21853,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td data-browser="rhino17" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="phantom" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
+<td data-browser="iojs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="ejs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="ios7" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="ios8" class="tally" data-tally="0.4">2/5</td>
@@ -21568,6 +21914,7 @@ return { __proto__ : [] } instanceof Array
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21632,6 +21979,7 @@ catch(e) {
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21695,6 +22043,7 @@ return !({ [a] : [] } instanceof Array);
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21758,6 +22107,7 @@ return !({ __proto__ } instanceof Array);
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21820,6 +22170,7 @@ return !({ __proto__(){} } instanceof Function);
 <td class="no not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21876,6 +22227,7 @@ return !({ __proto__(){} } instanceof Function);
 <td data-browser="rhino17" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
 <td data-browser="phantom" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
+<td data-browser="iojs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
 <td data-browser="ejs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="ios7" class="tally" data-tally="1">3/3</td>
 <td data-browser="ios8" class="tally" data-tally="1">3/3</td>
@@ -21936,6 +22288,7 @@ return (new A()).__proto__ === A.prototype;
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -21997,6 +22350,7 @@ return o instanceof Array;
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -22063,6 +22417,7 @@ return (desc
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -22129,6 +22484,7 @@ return true;
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -22188,6 +22544,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
 <td class="yes not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>

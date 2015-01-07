@@ -258,7 +258,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     head.append($('<th></th>')
       .addClass("platform " + browserId + ' ' + (b.platformtype || 'desktop'))
       .addClass(b.obsolete ? "obsolete" : "")
-      .attr("data-browser",browserId)
+      .attr("data-browser", browserId)
       .append(
         $('<a href="#' + browserId + '" class="browser-name"></a>')
           .append('<abbr title="' + b.full + '">' + b.short + '</abbr>')

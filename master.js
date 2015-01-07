@@ -70,7 +70,7 @@ $(function() {
       tally + '/' + subtests.length + '</td><td></td>'
     );
   }
-  
+
   $('tr.supertest').each(function() {
     var tr = $(this);
     var subtests = tr.nextUntil('tr:not(.subtest)');
@@ -80,18 +80,18 @@ $(function() {
     // Attach dropdown indicator and onclick to those tests with subtests
     $('<span class="folddown">&#9658;</span>')
       .appendTo(tr.children()[0]);
-    
+
     tr.on('click', function(event) {
       if (!$(event.target).is('a')) {
         subtests.toggle();
         tr.find(".folddown").css('transform', 'rotate(' + (subtests.is(':visible') ? '90deg' : '0deg') + ')');
       }
     });
-    
+
     // Also, work out tallies for the current browser's tally features
     tr.each(__updateSupertest);
   });
-  
+
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
@@ -184,11 +184,11 @@ $(function() {
     }
   };
   window.onhashchange();
-  
+
   // browser engine color stripes
   function getBrowserColour(name) {
     /* Chakra */
-    if (/^ie/.exec(name)) { 
+    if (/^ie/.exec(name)) {
       return "hsla(217, 85%, 54%, .5)";
     }
     /* SpiderMonkey */
@@ -200,7 +200,7 @@ $(function() {
       return "hsla(220, 25%, 70%, .5)";
     }
     /* V8 */
-    if (/^(chrome|node)/.exec(name)) {
+    if (/^(chrome|node|iojs)/.exec(name)) {
       return "hsla(79, 100%, 37%, .5)";
     }
     /* Carakan */
@@ -220,7 +220,7 @@ $(function() {
       return "hsla(0, 0%, 75%, .5)";
     }
     /* Compilers */
-    return "hsla(52, 85%, 63%, .5)";    
+    return "hsla(52, 85%, 63%, .5)";
   }
 
   // Store number of features for each column/browser and numeric index.
@@ -244,7 +244,7 @@ $(function() {
     var yesResults = results.filter('.yes').length;
     var flaggedResults = yesResults;
     results = results.length;
-    
+
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
       var yes = +$(this).attr('data-tally') || 0
       yesResults += yes;
@@ -253,7 +253,7 @@ $(function() {
     });
     var featuresCount = yesResults / results;
     var flaggedFeaturesCount = flaggedResults / results;
-    
+
     function gradient(colour, percent) {
       return 'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +
