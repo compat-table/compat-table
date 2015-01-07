@@ -15,6 +15,11 @@ exports.browsers = {
     short: 'IE 11',
     obsolete: false
   },
+  iojs: {
+    full: 'io.js 1.0.0',
+    short: 'io.js',
+    platformtype: 'engine',
+  },
   firefox3: {
     full: 'Firefox 3',
     short: 'FF 3',
@@ -215,6 +220,7 @@ exports.tests = [
   res: {
     ie7: true,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -284,6 +290,7 @@ exports.tests = [
   res: {
     ie7: true,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -456,6 +463,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -489,6 +497,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -529,6 +538,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -1031,6 +1041,7 @@ exports.tests = [
   res: {
     ie7: true,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -1066,6 +1077,7 @@ exports.tests = [
   res: {
     ie7: true,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
@@ -1162,6 +1174,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: false,
+    iojs: true,
     firefox3: false,
     firefox3_5: true,
     firefox4: true,
@@ -1193,6 +1206,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: false,
+    iojs: true,
     firefox3: false,
     firefox3_5: true,
     firefox4: true,
@@ -1418,6 +1432,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: true,
+    iojs: true,
     firefox3: true,
     firefox3_5: true,
     firefox4: true,
