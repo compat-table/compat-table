@@ -1423,7 +1423,38 @@ exports.tests = [
         chrome39:    flag,
       },
     },
-  },
+    'computed shorthand methods': {
+      exec: function() {/*
+        var x = 'y';
+        return ({ [x](){ return 1 } }).y() === 1;
+      */},
+      res: {
+        ie11tp:      true,
+        tr:          true,
+        _6to5:       true,
+        es6tr:       true,
+        firefox34:   true,
+      }
+    },
+    'computed accessors': {
+      exec: function() {/*
+        var x = 'y',
+            valueSet,
+            obj = {
+              get [x] () { return 1 },
+              set [x] (value) { valueSet = value }
+            };
+        obj.y = 'foo';
+        return obj.y === 1 && valueSet === 'foo';
+      */},
+      res: {
+        ie11tp:      true,
+        tr:          true,
+        es6tr:       true,
+        firefox34:   true,
+      }
+    }
+  }
 },
 {
   name: 'hoisted block-level function declaration',
@@ -1687,12 +1718,12 @@ exports.tests = [
         function * generatorFn(){}
         var ownProto = Object.getPrototypeOf(generatorFn());
         var passed = ownProto === generatorFn.prototype;
-        
+
         var sharedProto = Object.getPrototypeOf(ownProto);
         passed &= sharedProto !== Object.prototype &&
           sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&
           sharedProto.hasOwnProperty('next');
-        
+
         return passed;
       */},
       res: {
@@ -1877,6 +1908,30 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         chrome39:    flag,
+        firefox34:   true,
+      },
+    },
+    'computed shorthand generators': {
+      exec: function() {/*
+        var garply = "generator";
+        var o = {
+          * [garply] () {
+            yield 5; yield 6;
+          },
+        };
+        var iterator = o.generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
         firefox34:   true,
       },
     },
@@ -3634,22 +3689,22 @@ exports.tests = [
         var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
         var p2 = new Promise(function(resolve, reject) { reject("quux"); });
         var score = 0;
-    
+
         function thenFn(result)  { score += (result === "foo");  check(); }
         function catchFn(result) { score += (result === "quux"); check(); }
         function shouldNotRun(result)  { score = -Infinity;   }
-    
+
         p1.then(thenFn, shouldNotRun);
         p2.then(shouldNotRun, catchFn);
         p1.catch(shouldNotRun);
         p2.catch(catchFn);
-    
+
         p1.then(function() {
           // Promise.prototype.then() should return a new Promise
           score += p1.then() !== p1;
           check();
         });
-        
+
         function check() {
           if (score === 4) asyncTestPassed();
         }
@@ -3680,7 +3735,7 @@ exports.tests = [
         var score = 0;
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
         rejects.catch(function(result) { score += (result === "qux"); check(); });
-    
+
         function check() {
           if (score === 2) asyncTestPassed();
         }
@@ -3709,7 +3764,7 @@ exports.tests = [
         var score = 0;
         fulfills.then(function(result) { score += (result === "foo"); check(); });
         rejects.catch(function(result) { score += (result === "baz"); check(); });
-    
+
         function check() {
           if (score === 2) asyncTestPassed();
         }
@@ -5331,7 +5386,7 @@ exports.tests = [
     },
     'built-in prototypes are not instances': {
       exec: function(){/*
-        try { 
+        try {
           Boolean.prototype.valueOf(); return false;
         } catch(e) {}
         try {
