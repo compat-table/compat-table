@@ -49,11 +49,18 @@ process.nextTick(function () {
   var closure    = require('closurecompiler');
   var to5        = require('6to5');
   var esnext     = require('esnext');
-  // Known bug: running require('es6-transpiler') causes 6to5 to break.
-  var es6tr      = require('es6-transpiler');
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
   [
+    {
+      name: 'es6-shim',
+      url: 'https://github.com/paulmillr/es6-shim/',
+      target_file: 'es6/compilers/es6-shim.html',
+      polyfills: ['node_modules/es6-shim/es6-shim.js'],
+      compiler: function(code) {
+        return code;
+      },
+    },
     {
       name: 'Traceur',
       url: 'https://github.com/google/traceur-compiler/',
@@ -95,9 +102,15 @@ process.nextTick(function () {
       url: 'https://github.com/termi/es6-transpiler',
       target_file: 'es6/compilers/es6-transpiler.html',
       polyfills: [],
-      compiler: function(code) {
-        return es6tr.run({src:code}).src;
-      },
+      compiler: (function() {
+        var es6tr;
+        return function(code) {
+          // Known bug: running require('es6-transpiler') causes 6to5 to break.
+          // So, it's run here, as late as possible.
+          es6tr = es6tr || require('es6-transpiler');
+          return es6tr.run({src:code}).src;
+        };
+      }()),
     },
     {
       name: 'JSX',
