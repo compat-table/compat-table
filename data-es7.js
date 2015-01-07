@@ -112,6 +112,12 @@ exports.browsers = {
     note_id: 'harmony-flag',
     note_html: 'Have to be enabled via --harmony flag'
   },
+  iojs: {
+    full: 'io.js 1.0.0',
+    short: 'io.js',
+    obsolete: false, // current version
+    platformtype: 'engine',
+  },
   ejs: {
     full: 'Echo JS',
     short: 'Echo JS',
@@ -290,6 +296,7 @@ exports.tests = [
     phantom: false,
     node: false,
     nodeharmony: true,
+    iojs: true,
     ios7: false,
     ios8: false
   }
