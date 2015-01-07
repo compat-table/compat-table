@@ -62,8 +62,9 @@ $(function() {
       return;
     }
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
-    tr.find('td:first-child')
-      .find('.tally.current').remove().end()
+    tr
+      .find('.tally.current, .tally.current + td:empty').remove().end()
+      .find('td:first-child')
       .after(
       '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
