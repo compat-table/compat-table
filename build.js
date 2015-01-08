@@ -483,11 +483,13 @@ function testScript(fn, transformFn, rowNum) {
       var expr = deindentFunc(
           (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
         );
-      return text +
-        cheerio.load('')('<script' + (script.type ? ' type="' + script.type + '"' : '') + '">' +
+      var $ = cheerio.load
+        ('<script' + (script.type ? ' type="' + script.type + '"' : '') + '>' +
           expr +
           '</script>'
-        ).attr('data-source', expr).html();
+        );
+      $('script').attr('data-source', expr);
+      return text + $.html();
     },'');
   }
 }
