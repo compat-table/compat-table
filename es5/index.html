@@ -10,6 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
     <script>
+      if (typeof global === 'undefined') {
+        var global = this;
+      }
       (function() {
         var s = document.createElement('script'),
             t = document.getElementsByTagName('script')[0];
