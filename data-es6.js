@@ -4861,6 +4861,7 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
+        firefox36:    true,
       }
     },
     'Array subclass .from': {
