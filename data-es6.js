@@ -3943,6 +3943,100 @@ exports.tests = [
   },
 },
 {
+  name: 'Object static methods accept primitives',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
+  subtests: {
+    'Object.getPrototypeOf': {
+      exec: function () {/*
+        return Object.getPrototypeOf('a').constructor === String;
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.getOwnPropertyDescriptor': {
+      exec: function () {/*
+        return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.getOwnPropertyNames': {
+      exec: function () {/*
+        var s = Object.getOwnPropertyNames('a');
+        return s.length === 2 &&
+          ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
+      */},
+      res: {
+        firefox33:   true,
+        chrome40:    true,
+        iojs:        true,
+      },
+    },
+    'Object.seal': {
+      exec: function () {/*
+        return Object.seal('a') === 'a';
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.freeze': {
+      exec: function () {/*
+        return Object.freeze('a') === 'a';
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.preventExtensions': {
+      exec: function () {/*
+        return Object.preventExtensions('a') === 'a';
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.isSealed': {
+      exec: function () {/*
+        return Object.isSealed('a') === true;
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.isFrozen': {
+      exec: function () {/*
+        return Object.isFrozen('a') === true;
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.isExtensible': {
+      exec: function () {/*
+        return Object.isExtensible('a') === false;
+      */},
+      res: {
+        firefox35:   true,
+      },
+    },
+    'Object.keys': {
+      exec: function () {/*
+        var s = Object.keys('a');
+        return s.length === 1 && s[0] === '0';
+      */},
+      res: {
+        es6shim:     true,
+        firefox35:   true,
+        chrome40:    true,
+        iojs:        true,
+      },
+    },
+  },
+},
+{
   name: 'Object.prototype.__proto__',
   annex_b: true,
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
@@ -5523,21 +5617,6 @@ exports.tests = [
         }
       */},
       res: {
-      },
-    },
-    'Object static methods accept primitives': {
-      exec: function(){/*
-        var methods = ['freeze', 'seal', 'preventExtensions', 'getOwnPropertyDescriptor',
-          'getPrototypeOf', 'isExtensible', 'isSealed', 'isFrozen', 'keys', 'getOwnPropertyNames'];
-        for (var i = 0; i < methods.length; i++) {
-          Object[methods[i]](20000, "foo");
-          Object[methods[i]]("foo", "foo");
-          Object[methods[i]](false, "foo");
-        }
-        return true;
-      */},
-      res: {
-        firefox35:   true,
       },
     },
     'Invalid Date': {
