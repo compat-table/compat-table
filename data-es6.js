@@ -3969,7 +3969,7 @@ exports.tests = [
           ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
       */},
       res: {
-        firefox34:   true,
+        firefox33:   true,
         chrome40:    true,
         iojs:        true,
       },
