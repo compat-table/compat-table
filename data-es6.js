@@ -257,7 +257,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r176637',
+    full: 'WebKit r178314',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -4409,6 +4409,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox24:   true,
+        webkit:      true,
         chrome30:    flag,
         node:        flag,
         iojs:        true,

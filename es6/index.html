@@ -147,7 +147,7 @@
 <th class="platform safari6 desktop" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7.0</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
-<th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r176637">WK</abbr></a></th>
+<th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r178314">WK</abbr></a></th>
 <th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ 4.14</abbr><a href="#khtml-note"><sup>[4]</sup></a></a></th>
 <th class="platform rhino17 engine" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
@@ -889,7 +889,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td data-browser="rhino17" class="tally" data-tally="0">0/8</td>
 <td data-browser="phantom" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="node" class="tally" data-tally="0.125" data-flagged-tally="0.625">1/8</td>
-<td data-browser="iojs" class="tally" data-tally="0.125">1/8</td>
+<td data-browser="iojs" class="tally" data-tally="0.625">5/8</td>
 <td data-browser="ejs" class="tally" data-tally="0.75">6/8</td>
 <td data-browser="ios7" class="tally" data-tally="0.125">1/8</td>
 <td data-browser="ios8" class="tally" data-tally="0.125">1/8</td>
@@ -1201,7 +1201,7 @@ return (foo === 123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1264,7 +1264,7 @@ return bar === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1330,7 +1330,7 @@ try {
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1393,7 +1393,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1450,7 +1450,7 @@ return passed;
 <td data-browser="rhino17" class="tally" data-tally="0">0/10</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/10</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.3">0/10</td>
-<td data-browser="iojs" class="tally" data-tally="0">0/10</td>
+<td data-browser="iojs" class="tally" data-tally="0.5">5/10</td>
 <td data-browser="ejs" class="tally" data-tally="1">10/10</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/10</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/10</td>
@@ -1830,7 +1830,7 @@ return (foo === 123);
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1893,7 +1893,7 @@ return bar === 123;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1956,7 +1956,7 @@ return baz === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2019,7 +2019,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2091,7 +2091,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -5003,7 +5003,7 @@ return result === &quot;123&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/13</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/13</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5384615384615384">0/13</td>
-<td data-browser="iojs" class="tally" data-tally="0.6153846153846154">8/13</td>
+<td data-browser="iojs" class="tally" data-tally="0.6923076923076923">9/13</td>
 <td data-browser="ejs" class="tally" data-tally="0">0/13</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/13</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/13</td>
@@ -5840,7 +5840,7 @@ return passed;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6267,7 +6267,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -6329,7 +6329,7 @@ ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6400,7 +6400,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13765,7 +13765,7 @@ return f() === 1;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -16055,7 +16055,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <td data-browser="rhino17" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="phantom" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="node" class="tally" data-tally="0.125">2/16</td>
-<td data-browser="iojs" class="tally" data-tally="0.125">2/16</td>
+<td data-browser="iojs" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ejs" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ios7" class="tally" data-tally="0.1875">3/16</td>
 <td data-browser="ios8" class="tally" data-tally="0.1875">3/16</td>
@@ -16550,7 +16550,7 @@ return o.foo.name === &quot;foo&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17116,7 +17116,7 @@ return typeof Function.prototype.toMethod === &quot;function&quot;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17173,7 +17173,7 @@ return typeof Function.prototype.toMethod === &quot;function&quot;;
 <td data-browser="rhino17" class="tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ejs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -17233,7 +17233,7 @@ return typeof String.raw === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17293,7 +17293,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17344,13 +17344,13 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="safari6" class="tally" data-tally="0">0/6</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/6</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/6</td>
-<td data-browser="webkit" class="tally" data-tally="0.5">3/6</td>
+<td data-browser="webkit" class="tally" data-tally="0.6666666666666666">4/6</td>
 <td data-browser="opera" class="tally" data-tally="0">0/6</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/6</td>
 <td data-browser="rhino17" class="tally" data-tally="0">0/6</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/6</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5">0/6</td>
-<td data-browser="iojs" class="tally" data-tally="0.16666666666666666">1/6</td>
+<td data-browser="iojs" class="tally" data-tally="1">6/6</td>
 <td data-browser="ejs" class="tally" data-tally="0.8333333333333334">5/6</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/6</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/6</td>
@@ -17410,7 +17410,7 @@ return typeof String.prototype.codePointAt === &apos;function&apos;;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17527,13 +17527,13 @@ return typeof String.prototype.repeat === &apos;function&apos;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17594,7 +17594,7 @@ return typeof String.prototype.startsWith === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17655,7 +17655,7 @@ return typeof String.prototype.endsWith === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -17716,7 +17716,7 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
