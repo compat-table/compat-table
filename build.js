@@ -291,7 +291,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     body.append(testRow);
     // If this row has a different category to the last, add a title <tr> before it.
     if (t.category && (!testNum || t.category !== tests[testNum-1].category)) {
-      testRow.before('<tr class="category"><td colspan="' + (Object.keys(browsers).length+3) + '">' + t.category + '</td></tr>');
+      testRow.before('<tr class="category"><td colspan="' + (Object.keys(browsers).length+2) + '">' + capitalise(t.category) + '</td></tr>');
     }
 
     // Function to print out a single <td> result cell.
