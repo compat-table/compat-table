@@ -610,6 +610,7 @@ exports.tests = [
         chrome:      flag,
         konq49:      true,
         node:        flag,
+        iojs:        true,
       }
     },
     'is block-scoped (strict mode)': {
@@ -629,6 +630,7 @@ exports.tests = [
         ie11:        true,
         firefox36:   true,
         node:        flag,
+        iojs:        true,
       }
     },
     'redefining a const (strict mode)': {
@@ -651,6 +653,7 @@ exports.tests = [
         firefox11:   true,
         chrome21dev: flag,
         node:        flag,
+        iojs:        true,
       }
     },
     'temporal dead zone (strict mode)': {
@@ -665,6 +668,7 @@ exports.tests = [
         firefox36:   true,
         chrome19dev: flag,
         node:        flag,
+        iojs:        true,
       },
     },
   }
@@ -777,6 +781,7 @@ exports.tests = [
         ie11:        true,
         chrome19dev: flag,
         node:        flag,
+        iojs:        true,
         firefox11:   { val: false, note_id: 'fx-let' },
       },
     },
@@ -797,6 +802,7 @@ exports.tests = [
         firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: flag,
         node:        flag,
+        iojs:        true,
       },
     },
     'for-loop statement scope (strict mode)': {
@@ -816,6 +822,7 @@ exports.tests = [
         firefox11:   { val: false, note_id: 'fx-let', },
         chrome19dev: flag,
         nodeharmony: true,
+        iojs:        true,
       },
     },
     'temporal dead zone (strict mode)': {
@@ -831,6 +838,7 @@ exports.tests = [
         firefox35:   { val: false, note_id: 'fx-let-tdz', },
         chrome19dev: flag,
         node:        flag,
+        iojs:        true,
       },
     },
     'for-loop iteration scope (strict mode)': {
@@ -855,6 +863,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         chrome37:    flag,
+        iojs:        true,
       },
     },
   },
@@ -1932,6 +1941,7 @@ exports.tests = [
         closure:     true,
         chrome39:    flag,
         firefox34:   true,
+        iojs:        true,
       },
     },
     'computed shorthand generators': {
@@ -2043,6 +2053,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         firefox34:   true,
+        iojs:        true,
       },
     },
     'tagged template strings': {
@@ -2068,6 +2079,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         firefox34:   true,
+        iojs:        true,
       },
     },
   },
@@ -3547,6 +3559,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
+    iojs:        true,
     nodeharmony: true,
     ios7:        false,
     ios8:        false
@@ -4185,6 +4198,7 @@ exports.tests = [
       res: {
         firefox34:    true,
         chrome39:     flag,
+        iojs:         true,
       },
     },
     'symbol-keyed methods': {
@@ -4310,6 +4324,7 @@ exports.tests = [
     rhino17:     false,
     phantom:     false,
     node:        false,
+    iojs:        true,
     nodeharmony: false,
     ios7:        false,
     ios8:        false
@@ -4330,6 +4345,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox34:   true,
+        iojs:        true,
       },
     },
     'String.fromCodePoint': {
@@ -4344,6 +4360,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome38:    flag,
+        iojs:        true,
       },
     },
   },
@@ -4364,6 +4381,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome38:    flag,
+        iojs:        true,
       },
     },
     'String.prototype.normalize': {
@@ -4393,6 +4411,7 @@ exports.tests = [
         firefox24:   true,
         chrome30:    flag,
         node:        flag,
+        iojs:        true,
       },
     },
     'String.prototype.startsWith': {
@@ -4410,6 +4429,7 @@ exports.tests = [
         chrome30:    flag,
         webkit:      true,
         node:        flag,
+        iojs:        true,
       },
     },
     'String.prototype.endsWith': {
@@ -4427,6 +4447,7 @@ exports.tests = [
         chrome30:    flag,
         webkit:      true,
         node:        flag,
+        iojs:        true,
       },
     },
     'String.prototype.includes': {
@@ -4447,6 +4468,7 @@ exports.tests = [
         chrome30:    { val: false, note_id: 'string-contains' },
         webkit:      true,
         nodeharmony: { val: false, note_id: 'string-contains' },
+        iojs:        true,
       },
     },
   },
