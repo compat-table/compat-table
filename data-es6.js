@@ -5045,6 +5045,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         es6shim:     true,
         firefox32:   true,
       }
@@ -5056,6 +5057,7 @@ exports.tests = [
       */},
       res: {
         _6to5:        true,
+        ie11tp:      true,
         firefox36:    true,
       }
     },
