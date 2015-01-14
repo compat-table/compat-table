@@ -289,6 +289,10 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         .append(testScript(t.exec, compiler, rowNum++))
       );
     body.append(testRow);
+    // If this row has a different category to the last, add a title <tr> before it.
+    if (t.category && (!testNum || t.category !== tests[testNum-1].category)) {
+      testRow.before('<tr class="category"><td colspan="' + (Object.keys(browsers).length+2) + '">' + capitalise(t.category) + '</td></tr>');
+    }
 
     // Function to print out a single <td> result cell.
     function resultCell(browserId, result, footnote) {
@@ -308,7 +312,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       // Add extra signifiers if the result is not applicable.
       if (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
-          t.annex_b) {
+          t.category==="annex b") {
         cell.attr('title', "This feature is optional on non-browser platforms.");
         cell.addClass("not-applicable");
       }

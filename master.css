@@ -21,7 +21,7 @@ th:nth-child(3) {
     min-width: 10px;
 }
 td {
-    background: #eee; position:relative; padding-left: 5px; margin-left: -10px; font-size: 14px;
+    background: #eee; position:relative; padding-left: 10px; margin-left: -10px; font-size: 14px;
 }
 td:hover .anchor,
 td .anchor:focus {
@@ -43,6 +43,13 @@ code {
 
 tr:hover, tr.hover td {
     background: #ddd;
+}
+
+tr.category td {
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
 }
 
 /* selected cell opacity */

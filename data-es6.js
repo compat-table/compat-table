@@ -315,6 +315,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'proper tail calls (tail call optimisation)',
+  category: 'optimisation',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
   exec: function() {/*
     "use strict";
@@ -372,6 +373,7 @@ exports.tests = [
 },
 {
   name: 'arrow functions',
+  category: 'functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
   subtests: {
     '0 parameters': {
@@ -520,6 +522,7 @@ exports.tests = [
 },
 {
   name: 'const',
+  category: 'bindings',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
@@ -675,6 +678,7 @@ exports.tests = [
 },
 {
   name: 'let',
+  category: 'bindings',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
@@ -870,6 +874,7 @@ exports.tests = [
 },
 {
   name: 'default function parameters',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   subtests: {
     'basic functionality': {
@@ -950,6 +955,7 @@ exports.tests = [
 },
 {
   name: 'rest parameters',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
   subtests: {
     'basic functionality': {
@@ -1006,6 +1012,7 @@ exports.tests = [
 },
 {
   name: 'spread (...) operator',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   subtests: {
     'with arrays, in function calls': {
@@ -1124,6 +1131,7 @@ exports.tests = [
 },
 {
   name: 'class',
+  category: 'functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
   subtests: {
     'class statement': {
@@ -1328,6 +1336,7 @@ exports.tests = [
 },
 {
   name: 'super',
+  category: 'functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
   subtests: {
     'in constructors': {
@@ -1390,6 +1399,7 @@ exports.tests = [
 },
 {
   name: 'object literal extensions',
+  category: 'syntax',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
   subtests: {
     'computed properties': {
@@ -1479,7 +1489,7 @@ exports.tests = [
 },
 {
   name: 'hoisted block-level function declaration',
-  annex_b: true,
+  category: 'annex b',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
   exec: function () {/*
     // Note: only available outside of strict mode.
@@ -1499,7 +1509,7 @@ exports.tests = [
 },
 {
   name: '__proto__ in object literals',
-  annex_b: true,
+  category: 'annex b',
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
@@ -1579,6 +1589,7 @@ exports.tests = [
 },
 {
   name: 'for..of loops',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements',
   subtests: {
     'with arrays': {
@@ -1665,6 +1676,7 @@ exports.tests = [
 },
 {
   name: 'generators',
+  category: 'functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
   subtests: {
     'basic functionality': {
@@ -1972,6 +1984,7 @@ exports.tests = [
 },
 {
   name: 'octal and binary literals',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
   subtests: {
     'octal literals': {
@@ -2036,6 +2049,7 @@ exports.tests = [
 },
 {
   name: 'template strings',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
   subtests: {
     'basic functionality': {
@@ -2086,6 +2100,7 @@ exports.tests = [
 },
 {
   name: 'RegExp "y" and "u" flags',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
   subtests: {
     '"y" flag': {
@@ -2115,6 +2130,7 @@ exports.tests = [
 },
 {
   name: 'typed arrays',
+  category: 'built-ins',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
   subtests: Object.assign({
     'Int8Array': {
@@ -2359,6 +2375,7 @@ exports.tests = [
 },
 {
   name: 'Map',
+  category: 'built-ins',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   subtests: {
     'basic functionality': {
@@ -2591,6 +2608,7 @@ exports.tests = [
 },
 {
   name: 'Set',
+  category: 'built-ins',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
   subtests: {
     'basic functionality': {
@@ -2826,6 +2844,7 @@ exports.tests = [
 },
 {
   name: 'WeakMap',
+  category: 'built-ins',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
   subtests: {
     'basic functionality': {
@@ -2909,6 +2928,7 @@ exports.tests = [
 },
 {
   name: 'WeakSet',
+  category: 'built-ins',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
   subtests: {
     'basic functionality': {
@@ -2982,6 +3002,7 @@ exports.tests = [
 },
 {
   name: 'Proxy',
+  category: 'built-ins',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     '"get" handler': {
@@ -3348,6 +3369,7 @@ exports.tests = [
 },
 {
   name: 'Reflect',
+  category: 'built-ins',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
   subtests: {
     'Reflect.get': {
@@ -3506,6 +3528,7 @@ exports.tests = [
 },
 {
   name: 'block-level function declaration',
+  category: 'bindings',
   note_id: 'block-level-function',
   note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
@@ -3567,6 +3590,7 @@ exports.tests = [
 },
 {
   name: 'destructuring',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   subtests: {
     'with arrays': {
@@ -3778,6 +3802,7 @@ exports.tests = [
 },
 {
   name: 'Promise',
+  category: 'built-ins',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
   subtests: {
     'basic functionality': {
@@ -3886,6 +3911,7 @@ exports.tests = [
 },
 {
   name: 'Object static methods',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.assign': {
@@ -3957,6 +3983,7 @@ exports.tests = [
 },
 {
   name: 'Object static methods accept primitives',
+  category: 'misc',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.getPrototypeOf': {
@@ -4051,7 +4078,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.__proto__',
-  annex_b: true,
+  category: 'annex b',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
   subtests: {
     'get prototype': {
@@ -4109,6 +4136,7 @@ exports.tests = [
 },
 {
   name: 'function "name" property',
+  category: 'built-in extensions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
   subtests: {
     'function statements': {
@@ -4279,6 +4307,7 @@ exports.tests = [
 },
 {
   name: 'Function.prototype.toMethod',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod',
   exec: function () {/*
     return typeof Function.prototype.toMethod === "function";
@@ -4332,6 +4361,7 @@ exports.tests = [
 },
 {
   name: 'String static methods',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor',
   subtests: {
     'String.raw': {
@@ -4367,6 +4397,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype methods',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object',
   subtests: {
     'String.prototype.codePointAt': {
@@ -4476,7 +4507,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype HTML methods',
-  annex_b: true,
+  category: 'annex b',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
   exec: function () {/*
     var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
@@ -4509,6 +4540,7 @@ exports.tests = [
 },
 {
   name: 'Unicode code point escapes',
+  category: 'syntax',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
   exec: function () {/*
     return '\u{1d306}' == '\ud834\udf06';
@@ -4564,6 +4596,7 @@ exports.tests = [
 },
 {
   name: 'Symbol',
+  category: 'built-ins',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
   subtests: {
     'basic functionality': {
@@ -4751,6 +4784,7 @@ exports.tests = [
 },
 {
   name: 'well-known symbols',
+  category: 'built-ins',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   subtests: {
     'Symbol.hasInstance': {
@@ -4869,6 +4903,7 @@ exports.tests = [
 },
 {
   name: 'RegExp.prototype properties',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
     'RegExp.prototype.flags': {
@@ -4918,7 +4953,7 @@ exports.tests = [
 // As this one is Annex B, it is separate from the above.
 {
   name: 'RegExp.prototype.compile',
-  annex_b: true,
+  category: 'annex b',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
   exec: function () {/*
     return typeof RegExp.prototype.compile === 'function';
@@ -4944,6 +4979,7 @@ exports.tests = [
 },
 {
   name: 'Array static methods',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor',
   subtests: {
     'Array.from, array-like objects': {
@@ -5022,6 +5058,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype methods',
+  category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object',
   subtests: {
     'Array.prototype.copyWithin': {
@@ -5182,6 +5219,7 @@ exports.tests = [
 },
 {
   name: 'Number properties',
+  category: 'built-in extensions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
   subtests: {
     'Number.isFinite': {
@@ -5313,6 +5351,7 @@ exports.tests = [
 },
 {
   name: 'Math methods',
+  category: 'built-in extensions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math',
   subtests: (function(){
     var methods = {
@@ -5587,6 +5626,7 @@ exports.tests = [
 },
 {
   name: 'miscellaneous',
+  category: 'misc',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
     'duplicate property names in strict mode': {
@@ -5693,10 +5733,18 @@ exports.tests = [
       },
     },
   },
-  separator: "after",
 },
 ];
 
 //Shift annex B features to the bottom
-exports.tests = exports.tests.filter(function(e) { return !e.annex_b })
-        .concat(exports.tests.filter(function(e) { return  e.annex_b }));
+exports.tests = exports.tests.reduce(function(a,e) {
+  var index = ['optimisation','syntax','bindings','functions',
+    'built-ins','built-in extensions','misc','annex b'].indexOf(e.category);
+  if (index === -1) {
+    console.log('"' + a.category + '" is not an ES6 category!');
+  }
+  (a[index] = a[index] || []).push(e);
+  return a;
+},[]).reduce(function(a,e) {
+  return a.concat(e);
+},[]);
