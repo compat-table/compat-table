@@ -1417,7 +1417,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="tr" class="tally" data-tally="1">5/5</td>
 <td data-browser="_6to5" class="tally" data-tally="1">5/5</td>
 <td data-browser="es6tr" class="tally" data-tally="1">5/5</td>
-<td data-browser="closure" class="tally" data-tally="0.6">3/5</td>
+<td data-browser="closure" class="tally" data-tally="0.8">4/5</td>
 <td data-browser="jsx" class="tally" data-tally="0.4">2/5</td>
 <td data-browser="typescript" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/5</td>
@@ -1664,7 +1664,7 @@ return ({ [x](){ return 1 } }).y() === 1;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
@@ -2783,7 +2783,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0.8666666666666667">13/15</td>
+<td data-browser="tr" class="tally" data-tally="1">15/15</td>
 <td data-browser="_6to5" class="tally" data-tally="1">15/15</td>
 <td data-browser="es6tr" class="tally" data-tally="0.7333333333333333">11/15</td>
 <td data-browser="closure" class="tally" data-tally="0.7333333333333333">11/15</td>
@@ -2970,7 +2970,7 @@ var [a, b, c] = iterable;
 return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");return Function("asyncTestPassed","\nvar iterable = window.__createIterableObject(1, 2, 3);\nvar [a, b, c] = iterable;\nreturn a === 1 && b === 2 && c === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -3033,7 +3033,7 @@ var [a, b, c] = Object.create(iterable);
 return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");return Function("asyncTestPassed","\nvar iterable = window.__createIterableObject(1, 2, 3);\nvar [a, b, c] = Object.create(iterable);\nreturn a === 1 && b === 2 && c === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -18948,7 +18948,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest"><td id="Array_static_methods"><span><a class="anchor" href="#Array_static_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor">Array static methods</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0.5">3/6</td>
+<td data-browser="tr" class="tally" data-tally="0.6666666666666666">4/6</td>
 <td data-browser="_6to5" class="tally" data-tally="0.6666666666666666">4/6</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/6</td>
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
@@ -19133,7 +19133,7 @@ var iterable = window.__createIterableObject(1, 2, 3);
 return Array.from(Object.create(iterable)) + &apos;&apos; === &quot;1,2,3&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("295");return Function("asyncTestPassed","\nvar iterable = window.__createIterableObject(1, 2, 3);\nreturn Array.from(Object.create(iterable)) + '' === \"1,2,3\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20416,7 +20416,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest"><td id="Math_methods"><span><a class="anchor" href="#Math_methods">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math">Math methods</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0">0/17</td>
+<td data-browser="tr" class="tally" data-tally="1">17/17</td>
 <td data-browser="_6to5" class="tally" data-tally="1">17/17</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/17</td>
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
@@ -20477,7 +20477,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 return typeof Math.clz32 === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("317");return Function("asyncTestPassed","\nreturn typeof Math.clz32 === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20538,7 +20538,7 @@ return typeof Math.clz32 === &quot;function&quot;;
 return typeof Math.imul === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("318");return Function("asyncTestPassed","\nreturn typeof Math.imul === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20599,7 +20599,7 @@ return typeof Math.imul === &quot;function&quot;;
 return typeof Math.sign === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("319");return Function("asyncTestPassed","\nreturn typeof Math.sign === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20660,7 +20660,7 @@ return typeof Math.sign === &quot;function&quot;;
 return typeof Math.log10 === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("320");return Function("asyncTestPassed","\nreturn typeof Math.log10 === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20721,7 +20721,7 @@ return typeof Math.log10 === &quot;function&quot;;
 return typeof Math.log2 === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("321");return Function("asyncTestPassed","\nreturn typeof Math.log2 === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20782,7 +20782,7 @@ return typeof Math.log2 === &quot;function&quot;;
 return typeof Math.log1p === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("322");return Function("asyncTestPassed","\nreturn typeof Math.log1p === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20843,7 +20843,7 @@ return typeof Math.log1p === &quot;function&quot;;
 return typeof Math.expm1 === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("323");return Function("asyncTestPassed","\nreturn typeof Math.expm1 === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20904,7 +20904,7 @@ return typeof Math.expm1 === &quot;function&quot;;
 return typeof Math.cosh === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("324");return Function("asyncTestPassed","\nreturn typeof Math.cosh === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -20965,7 +20965,7 @@ return typeof Math.cosh === &quot;function&quot;;
 return typeof Math.sinh === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("325");return Function("asyncTestPassed","\nreturn typeof Math.sinh === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21026,7 +21026,7 @@ return typeof Math.sinh === &quot;function&quot;;
 return typeof Math.tanh === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("326");return Function("asyncTestPassed","\nreturn typeof Math.tanh === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21087,7 +21087,7 @@ return typeof Math.tanh === &quot;function&quot;;
 return typeof Math.acosh === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("327");return Function("asyncTestPassed","\nreturn typeof Math.acosh === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21148,7 +21148,7 @@ return typeof Math.acosh === &quot;function&quot;;
 return typeof Math.asinh === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("328");return Function("asyncTestPassed","\nreturn typeof Math.asinh === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21209,7 +21209,7 @@ return typeof Math.asinh === &quot;function&quot;;
 return typeof Math.atanh === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("329");return Function("asyncTestPassed","\nreturn typeof Math.atanh === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21270,7 +21270,7 @@ return typeof Math.atanh === &quot;function&quot;;
 return typeof Math.hypot === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("330");return Function("asyncTestPassed","\nreturn typeof Math.hypot === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21331,7 +21331,7 @@ return typeof Math.hypot === &quot;function&quot;;
 return typeof Math.trunc === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("331");return Function("asyncTestPassed","\nreturn typeof Math.trunc === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21392,7 +21392,7 @@ return typeof Math.trunc === &quot;function&quot;;
 return typeof Math.fround === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("332");return Function("asyncTestPassed","\nreturn typeof Math.fround === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -21453,7 +21453,7 @@ return typeof Math.fround === &quot;function&quot;;
 return typeof Math.cbrt === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("333");return Function("asyncTestPassed","\nreturn typeof Math.cbrt === \"function\";\n")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>

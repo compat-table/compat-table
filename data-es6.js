@@ -1467,6 +1467,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         tr:          true,
+        closure:     true,
         _6to5:       true,
         es6tr:       true,
         firefox34:   true,
@@ -3657,6 +3658,7 @@ exports.tests = [
         return a === 1 && b === 2 && c === 3;
       */},
       res: {
+        tr:           true,
         firefox34:    true,
         _6to5:        true,
       },
@@ -3668,8 +3670,9 @@ exports.tests = [
         return a === 1 && b === 2 && c === 3;
       */},
       res: {
+        tr:           true,
         _6to5:        true,
-        firefox36:   true,
+        firefox36:    true,
       },
     },
     'with objects': {
@@ -5057,7 +5060,8 @@ exports.tests = [
       */},
       res: {
         _6to5:        true,
-        ie11tp:      true,
+        tr:           true,
+        ie11tp:       true,
         firefox36:    true,
       }
     },
@@ -5402,6 +5406,7 @@ exports.tests = [
     var methods = {
       'clz32': {
         ejs:         true,
+        tr:          true,
         _6to5:       true,
         es6shim:     true,
         ie11tp:      true,
@@ -5414,6 +5419,7 @@ exports.tests = [
       'imul': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox23:   true,
@@ -5433,6 +5439,7 @@ exports.tests = [
       'sign': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5446,6 +5453,7 @@ exports.tests = [
       'log10': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5461,6 +5469,7 @@ exports.tests = [
       'log2': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5476,6 +5485,7 @@ exports.tests = [
       'log1p': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5491,6 +5501,7 @@ exports.tests = [
       'expm1': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5505,6 +5516,7 @@ exports.tests = [
       'cosh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5520,6 +5532,7 @@ exports.tests = [
       'sinh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5535,6 +5548,7 @@ exports.tests = [
       'tanh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5550,6 +5564,7 @@ exports.tests = [
       'acosh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5565,6 +5580,7 @@ exports.tests = [
       'asinh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5579,6 +5595,7 @@ exports.tests = [
       'atanh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5594,6 +5611,7 @@ exports.tests = [
       'hypot': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox27:   true,
@@ -5609,6 +5627,7 @@ exports.tests = [
       'trunc': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5624,6 +5643,7 @@ exports.tests = [
       'fround': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox27:   {
@@ -5644,6 +5664,7 @@ exports.tests = [
       'cbrt': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
