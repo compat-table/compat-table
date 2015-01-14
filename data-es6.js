@@ -18,7 +18,7 @@ exports.browsers = {
   },
   _6to5: {
     full: '6to5',
-    short: '6to5 +<br>polyfill',
+    short: '6to5 +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -933,9 +933,7 @@ exports.tests = [
           return true;
         }());
       */},
-      res: {
-        _6to5:       true,
-      },
+      res: {},
     },
     'separate scope': {
       exec: function(){/*
@@ -1479,6 +1477,7 @@ exports.tests = [
         return obj.y === 1 && valueSet === 'foo';
       */},
       res: {
+        _6to5:       true,
         ie11tp:      true,
         tr:          true,
         es6tr:       true,
@@ -3377,6 +3376,7 @@ exports.tests = [
         return Reflect.get({ qux: 987 }, "qux") === 987;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3388,6 +3388,7 @@ exports.tests = [
         return obj.quux === 654;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3397,6 +3398,7 @@ exports.tests = [
         return Reflect.has({ qux: 987 }, "qux");
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3408,6 +3410,7 @@ exports.tests = [
         return !("bar" in obj);
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3420,6 +3423,7 @@ exports.tests = [
           desc.configurable && desc.writable && desc.enumerable;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3431,6 +3435,7 @@ exports.tests = [
         return obj.foo === 123;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3440,6 +3445,7 @@ exports.tests = [
         return Reflect.getPrototypeOf([]) === Array.prototype;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3451,6 +3457,7 @@ exports.tests = [
         return obj instanceof Array;
       */},
       res: {
+        _6to5:       { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         ie11tp:      true,
       },
@@ -3461,6 +3468,7 @@ exports.tests = [
           !Reflect.isExtensible(Object.preventExtensions({}));
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3472,6 +3480,7 @@ exports.tests = [
         return !Object.isExtensible(obj);
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3490,6 +3499,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3509,6 +3519,7 @@ exports.tests = [
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3520,6 +3531,7 @@ exports.tests = [
         }, ["foo", "bar", "baz"]).qux === "foobarbaz";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3781,6 +3793,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         es6tr:       true,
         closure:     true,
       },
@@ -3794,6 +3807,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         es6tr:       true,
         closure:     true,
       },
@@ -3991,6 +4005,7 @@ exports.tests = [
         return Object.getPrototypeOf('a').constructor === String;
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -3999,6 +4014,7 @@ exports.tests = [
         return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4009,6 +4025,7 @@ exports.tests = [
           ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
       */},
       res: {
+        _6to5:       true,
         firefox33:   true,
         chrome40:    true,
         iojs:        true,
@@ -4019,6 +4036,7 @@ exports.tests = [
         return Object.seal('a') === 'a';
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4027,6 +4045,7 @@ exports.tests = [
         return Object.freeze('a') === 'a';
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4035,6 +4054,7 @@ exports.tests = [
         return Object.preventExtensions('a') === 'a';
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4043,6 +4063,7 @@ exports.tests = [
         return Object.isSealed('a') === true;
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4051,6 +4072,7 @@ exports.tests = [
         return Object.isFrozen('a') === true;
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4059,6 +4081,7 @@ exports.tests = [
         return Object.isExtensible('a') === false;
       */},
       res: {
+        _6to5:       true,
         firefox35:   true,
       },
     },
@@ -4068,6 +4091,7 @@ exports.tests = [
         return s.length === 1 && s[0] === '0';
       */},
       res: {
+        _6to5:       true,
         es6shim:     true,
         firefox35:   true,
         chrome40:    true,
@@ -4146,6 +4170,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
+        _6to5:       true,
         ejs:         true,
         firefox11:   true,
         chrome:      true,
@@ -4224,6 +4249,7 @@ exports.tests = [
         return o.foo.name === "foo";
       */},
       res: {
+        _6to5:        true,
         firefox34:    true,
         chrome39:     flag,
         iojs:         true,
@@ -4704,7 +4730,6 @@ exports.tests = [
         return true;
       */},
       res: {
-        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -4718,7 +4743,6 @@ exports.tests = [
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
       res: {
-        _6to5:       true,
         ejs:         true,
         chrome39:    true,
         firefox36:   true,
@@ -5014,6 +5038,7 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
+        _6to5:        true,
         firefox36:    true,
       }
     },
@@ -5210,6 +5235,7 @@ exports.tests = [
         return true;
       */},
       res: {
+        _6to5:       true,
         ie11tp:      true,
         chrome38:    true,
         iojs:        true,
@@ -5707,6 +5733,7 @@ exports.tests = [
         return new RegExp(/./im, "g").global === true;
       */},
       res: {
+        _6to5:       true,
         es6shim:     true,
       },
     },
