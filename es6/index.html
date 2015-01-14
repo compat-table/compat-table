@@ -103,7 +103,7 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform _6to5 compiler" data-browser="_6to5"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br>polyfill</abbr></a></th>
+<th class="platform _6to5 compiler" data-browser="_6to5"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es6tr compiler" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Transpiler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure<br>Compiler</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[1]</sup></a></a></th>
@@ -1415,7 +1415,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 </tr>
 <tr class="supertest"><td id="object_literal_extensions"><span><a class="anchor" href="#object_literal_extensions">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">object literal extensions</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">5/5</td>
-<td data-browser="_6to5" class="tally" data-tally="0.8">4/5</td>
+<td data-browser="_6to5" class="tally" data-tally="1">5/5</td>
 <td data-browser="es6tr" class="tally" data-tally="1">5/5</td>
 <td data-browser="closure" class="tally" data-tally="0.6">3/5</td>
 <td data-browser="jsx" class="tally" data-tally="0.4">2/5</td>
@@ -1730,7 +1730,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");return Function("asyncTestPassed","\nvar x = 'y',\n    valueSet,\n    obj = {\n      get [x] () { return 1 },\n      set [x] (value) { valueSet = value }\n    };\nobj.y = 'foo';\nreturn obj.y === 1 && valueSet === 'foo';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -2784,7 +2784,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 </tr>
 <tr class="supertest"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8666666666666667">13/15</td>
-<td data-browser="_6to5" class="tally" data-tally="0.8666666666666667">13/15</td>
+<td data-browser="_6to5" class="tally" data-tally="1">15/15</td>
 <td data-browser="es6tr" class="tally" data-tally="0.7333333333333333">11/15</td>
 <td data-browser="closure" class="tally" data-tally="0.7333333333333333">11/15</td>
 <td data-browser="jsx" class="tally" data-tally="0.4666666666666667">7/15</td>
@@ -3662,7 +3662,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nvar {a = 1, b = 0, c = 3} = {b:2, c:undefined};\nreturn a === 1 && b === 2 && c === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
@@ -3726,7 +3726,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");return Function("asyncTestPassed","\nreturn (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n  return a === 1 && b === 2 && c === 3 && d === 4 &&\n    e === 5 && f === undefined;\n}({b:2, c:undefined, x:4}));\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14120,7 +14120,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 </tr>
 <tr class="supertest"><td id="Reflect"><span><a class="anchor" href="#Reflect">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/14</td>
-<td data-browser="_6to5" class="tally" data-tally="0.07142857142857142">1/14</td>
+<td data-browser="_6to5" class="tally" data-tally="0.9285714285714286">13/14</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/14</td>
 <td data-browser="closure" class="tally" data-tally="0">0/14</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/14</td>
@@ -14181,7 +14181,7 @@ return Reflect.get({ qux: 987 }, &quot;qux&quot;) === 987;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("217");return Function("asyncTestPassed","\nreturn Reflect.get({ qux: 987 }, \"qux\") === 987;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14244,7 +14244,7 @@ return obj.quux === 654;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("218");return Function("asyncTestPassed","\nvar obj = {};\nReflect.set(obj, \"quux\", 654);\nreturn obj.quux === 654;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14305,7 +14305,7 @@ return Reflect.has({ qux: 987 }, &quot;qux&quot;);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("219");return Function("asyncTestPassed","\nreturn Reflect.has({ qux: 987 }, \"qux\");\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14368,7 +14368,7 @@ return !(&quot;bar&quot; in obj);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("220");return Function("asyncTestPassed","\nvar obj = { bar: 456 };\nReflect.deleteProperty(obj, \"bar\");\nreturn !(\"bar\" in obj);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14432,7 +14432,7 @@ return desc.value === 789 &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("221");return Function("asyncTestPassed","\nvar obj = { baz: 789 };\nvar desc = Reflect.getOwnPropertyDescriptor(obj, \"baz\");\nreturn desc.value === 789 &&\n  desc.configurable && desc.writable && desc.enumerable;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14495,7 +14495,7 @@ return obj.foo === 123;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("222");return Function("asyncTestPassed","\nvar obj = {};\nReflect.defineProperty(obj, \"foo\", { value: 123 });\nreturn obj.foo === 123;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14556,7 +14556,7 @@ return Reflect.getPrototypeOf([]) === Array.prototype;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("223");return Function("asyncTestPassed","\nreturn Reflect.getPrototypeOf([]) === Array.prototype;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14619,7 +14619,7 @@ return obj instanceof Array;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("224");return Function("asyncTestPassed","\nvar obj = {};\nReflect.setPrototypeOf(obj, Array.prototype);\nreturn obj instanceof Array;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14681,7 +14681,7 @@ return Reflect.isExtensible({}) &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("225");return Function("asyncTestPassed","\nreturn Reflect.isExtensible({}) &&\n  !Reflect.isExtensible(Object.preventExtensions({}));\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14744,7 +14744,7 @@ return !Object.isExtensible(obj);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("226");return Function("asyncTestPassed","\nvar obj = {};\nReflect.preventExtensions(obj);\nreturn !Object.isExtensible(obj);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14814,7 +14814,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("227");return Function("asyncTestPassed","\nvar obj = { foo: 1, bar: 2 };\nvar iterator = Reflect.enumerate(obj);\n\nvar item = iterator.next();\nvar passed = item.value === \"foo\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"bar\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -14937,7 +14937,7 @@ return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("229");return Function("asyncTestPassed","\nreturn Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -15000,7 +15000,7 @@ return Reflect.construct(function(a, b, c) {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("230");return Function("asyncTestPassed","\nreturn Reflect.construct(function(a, b, c) {\n  this.qux = a + b + c;\n}, [\"foo\", \"bar\", \"baz\"]).qux === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -15348,7 +15348,7 @@ function check() {
 </tr>
 <tr class="supertest"><td id="Symbol"><span><a class="anchor" href="#Symbol">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.4444444444444444">4/9</td>
-<td data-browser="_6to5" class="tally" data-tally="0.8888888888888888">8/9</td>
+<td data-browser="_6to5" class="tally" data-tally="0.7777777777777778">7/9</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/9</td>
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/9</td>
@@ -15474,7 +15474,7 @@ return typeof Symbol() === &quot;symbol&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("237");return Function("asyncTestPassed","\nreturn typeof Symbol() === \"symbol\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -15691,7 +15691,7 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("240");return Function("asyncTestPassed","\nvar symbol = Symbol();\n\ntry {\n  symbol + \"\";\n  return false;\n}\ncatch(e) {}\n\ntry {\n  symbol + 0;\n  return false;\n} catch(e) {}\n\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="_6to5">No</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -15752,7 +15752,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("241");return Function("asyncTestPassed","\nreturn String(Symbol(\"foo\")) === \"Symbol(foo)\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="_6to5">No</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -16840,7 +16840,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 </tr>
 <tr class="supertest"><td id="function_name_property"><span><a class="anchor" href="#function_name_property">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function &quot;name&quot; property</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/16</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/16</td>
+<td data-browser="_6to5" class="tally" data-tally="0.375">6/16</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/16</td>
 <td data-browser="closure" class="tally" data-tally="0">0/16</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/16</td>
@@ -16903,7 +16903,7 @@ return foo.name === &apos;foo&apos; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("259");return Function("asyncTestPassed","\nfunction foo(){};\nreturn foo.name === 'foo' &&\n  (function(){}).name === '';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -16965,7 +16965,7 @@ return (function foo(){}).name === &apos;foo&apos; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("260");return Function("asyncTestPassed","\nreturn (function foo(){}).name === 'foo' &&\n  (function(){}).name === '';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -17343,7 +17343,7 @@ return o.foo.name === &quot;foo&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("266");return Function("asyncTestPassed","\nvar o = { foo(){} };\nreturn o.foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -17669,7 +17669,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("271");return Function("asyncTestPassed","\nvar o = { foo: class {}, bar: class baz {}};\no.qux = class {};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -17731,7 +17731,7 @@ return (new C).foo.name === &quot;foo&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("272");return Function("asyncTestPassed","\nclass C { foo(){} };\nreturn (new C).foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -17793,7 +17793,7 @@ return C.foo.name === &quot;foo&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");return Function("asyncTestPassed","\nclass C { static foo(){} };\nreturn C.foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -18949,7 +18949,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 </tr>
 <tr class="supertest"><td id="Array_static_methods"><span><a class="anchor" href="#Array_static_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor">Array static methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5">3/6</td>
-<td data-browser="_6to5" class="tally" data-tally="0.5">3/6</td>
+<td data-browser="_6to5" class="tally" data-tally="0.6666666666666666">4/6</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/6</td>
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/6</td>
@@ -19134,7 +19134,7 @@ return Array.from(Object.create(iterable)) + &apos;&apos; === &quot;1,2,3&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("295");return Function("asyncTestPassed","\nvar iterable = window.__createIterableObject(1, 2, 3);\nreturn Array.from(Object.create(iterable)) + '' === \"1,2,3\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -19378,7 +19378,7 @@ return C.of(0) instanceof C;
 </tr>
 <tr class="supertest"><td id="Array.prototype_methods"><span><a class="anchor" href="#Array.prototype_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object">Array.prototype methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.75">6/8</td>
-<td data-browser="_6to5" class="tally" data-tally="0.875">7/8</td>
+<td data-browser="_6to5" class="tally" data-tally="1">8/8</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/8</td>
 <td data-browser="closure" class="tally" data-tally="0">0/8</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/8</td>
@@ -19874,7 +19874,7 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("307");return Function("asyncTestPassed","\nvar unscopables = Array.prototype[Symbol.unscopables];\nif (!unscopables) {\n  return false;\n}\nvar ns = \"find,findIndex,fill,copyWithin,entries,keys,values\".split(\",\");\nfor (var i = 0; i < ns.length; i++) {\n  if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;\n}\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21514,7 +21514,7 @@ return typeof Math.cbrt === &quot;function&quot;;
 </tr>
 <tr class="supertest"><td id="Object_static_methods_accept_primitives"><span><a class="anchor" href="#Object_static_methods_accept_primitives">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods accept primitives</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/10</td>
-<td data-browser="_6to5" class="tally" data-tally="0">0/10</td>
+<td data-browser="_6to5" class="tally" data-tally="1">10/10</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/10</td>
 <td data-browser="closure" class="tally" data-tally="0">0/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
@@ -21575,7 +21575,7 @@ return Object.getPrototypeOf(&apos;a&apos;).constructor === String;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("335");return Function("asyncTestPassed","\nreturn Object.getPrototypeOf('a').constructor === String;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21636,7 +21636,7 @@ return Object.getOwnPropertyDescriptor(&apos;a&apos;, &apos;foo&apos;) === undef
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("336");return Function("asyncTestPassed","\nreturn Object.getOwnPropertyDescriptor('a', 'foo') === undefined;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21699,7 +21699,7 @@ return s.length === 2 &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("337");return Function("asyncTestPassed","\nvar s = Object.getOwnPropertyNames('a');\nreturn s.length === 2 &&\n  ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21760,7 +21760,7 @@ return Object.seal(&apos;a&apos;) === &apos;a&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("338");return Function("asyncTestPassed","\nreturn Object.seal('a') === 'a';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21821,7 +21821,7 @@ return Object.freeze(&apos;a&apos;) === &apos;a&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("339");return Function("asyncTestPassed","\nreturn Object.freeze('a') === 'a';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21882,7 +21882,7 @@ return Object.preventExtensions(&apos;a&apos;) === &apos;a&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("340");return Function("asyncTestPassed","\nreturn Object.preventExtensions('a') === 'a';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -21943,7 +21943,7 @@ return Object.isSealed(&apos;a&apos;) === true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("341");return Function("asyncTestPassed","\nreturn Object.isSealed('a') === true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -22004,7 +22004,7 @@ return Object.isFrozen(&apos;a&apos;) === true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("342");return Function("asyncTestPassed","\nreturn Object.isFrozen('a') === true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -22065,7 +22065,7 @@ return Object.isExtensible(&apos;a&apos;) === false;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("343");return Function("asyncTestPassed","\nreturn Object.isExtensible('a') === false;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -22127,7 +22127,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("344");return Function("asyncTestPassed","\nvar s = Object.keys('a');\nreturn s.length === 1 && s[0] === '0';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -22185,7 +22185,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 </tr>
 <tr class="supertest"><td id="miscellaneous"><span><a class="anchor" href="#miscellaneous">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/7</td>
-<td data-browser="_6to5" class="tally" data-tally="0.42857142857142855">3/7</td>
+<td data-browser="_6to5" class="tally" data-tally="0.5714285714285714">4/7</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/7</td>
 <td data-browser="closure" class="tally" data-tally="0">0/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
@@ -22561,7 +22561,7 @@ return new RegExp(/./im, &quot;g&quot;).global === true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("351");return Function("asyncTestPassed","\nreturn new RegExp(/./im, \"g\").global === true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
