@@ -933,7 +933,9 @@ exports.tests = [
           return true;
         }());
       */},
-      res: {},
+      res: {
+        _6to5:       true,
+      },
     },
     'separate scope': {
       exec: function(){/*
@@ -4304,21 +4306,27 @@ exports.tests = [
                o.bar.name === "baz" &&
                o.qux.name === "";
       */},
-      res: {},
+      res: {
+        _6to5:        true,
+      },
     },
     'class prototype methods': {
       exec: function() {/*
         class C { foo(){} };
         return (new C).foo.name === "foo";
       */},
-      res: {},
+      res: {
+        _6to5:        true,
+      },
     },
     'class static methods': {
       exec: function() {/*
         class C { static foo(){} };
         return C.foo.name === "foo";
       */},
-      res: {},
+      res: {
+        _6to5:        true,
+      },
     },
     'isn\'t writable, is configurable': {
       exec: function () {/*
@@ -4650,6 +4658,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,

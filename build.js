@@ -76,7 +76,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/6to5.html',
       polyfills: [],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true }).code;
+        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
       },
     },
     {
@@ -85,7 +85,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/6to5-polyfill.html',
       polyfills: ['node_modules/6to5/browser-polyfill.js'],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true }).code;
+        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
       },
     },
     {
