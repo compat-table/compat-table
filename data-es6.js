@@ -148,7 +148,8 @@ exports.browsers = {
   },
   firefox34: {
     full: 'Firefox',
-    short: 'FF 34'
+    short: 'FF 34',
+    obsolete: true
   },
   firefox35: {
     full: 'Firefox',
@@ -157,6 +158,10 @@ exports.browsers = {
   firefox36: {
     full: 'Firefox',
     short: 'FF 36'
+  },
+  firefox37: {
+    full: 'Firefox',
+    short: 'FF 37'
   },
   chrome: {
     full: 'Chrome',
@@ -2330,26 +2335,26 @@ exports.tests = [
         iojs:        true,
         ios7:        true,
     },
-    '.prototype.join':        { ie11tp: true, },
-    '.prototype.indexOf':     { ie11tp: true, },
-    '.prototype.lastIndexOf': { ie11tp: true, },
+    '.prototype.join':        { ie11tp: true, firefox37: true },
+    '.prototype.indexOf':     { ie11tp: true, firefox37: true },
+    '.prototype.lastIndexOf': { ie11tp: true, firefox37: true },
     '.prototype.slice':       { ie11tp: true, },
-    '.prototype.every':       { ie11tp: true, },
+    '.prototype.every':       { ie11tp: true, firefox37: true },
     '.prototype.filter':      { ie11tp: true, },
     '.prototype.forEach':     { ie11tp: true, chrome40: true },
     '.prototype.map':         { ie11tp: true, },
-    '.prototype.reduce':      { ie11tp: true, },
-    '.prototype.reduceRight': { ie11tp: true, },
-    '.prototype.reverse':     { ie11tp: true, },
-    '.prototype.some':        { ie11tp: true, },
+    '.prototype.reduce':      { ie11tp: true, firefox37: true },
+    '.prototype.reduceRight': { ie11tp: true, firefox37: true },
+    '.prototype.reverse':     { ie11tp: true, firefox37: true },
+    '.prototype.some':        { ie11tp: true, firefox37: true },
     '.prototype.sort':        { ie11tp: true, },
     '.prototype.copyWithin':  { ie11tp: true, firefox34: true },
-    '.prototype.find':        { ie11tp: true, },
-    '.prototype.findIndex':   { ie11tp: true, },
-    '.prototype.fill':        { ie11tp: true, },
-    '.prototype.keys':        { ie11tp: true, chrome38: true, iojs: true },
-    '.prototype.values':      { ie11tp: true, chrome38: true, iojs: true },
-    '.prototype.entries':     { ie11tp: true, chrome38: true, iojs: true },
+    '.prototype.find':        { ie11tp: true, firefox37: true },
+    '.prototype.findIndex':   { ie11tp: true, firefox37: true },
+    '.prototype.fill':        { ie11tp: true, firefox37: true },
+    '.prototype.keys':        { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
+    '.prototype.values':      { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
+    '.prototype.entries':     { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -3074,6 +3079,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
+        firefox37:   true,
       },
     },
     '"has" handler': {
@@ -3270,6 +3276,7 @@ exports.tests = [
       */},
       res: {
         ie11tp:      true,
+        firefox37:   true,
       },
     },
     '"ownKeys" handler': {
@@ -4914,6 +4921,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         es6shim:     true,
+        firefox37:   true,
       },
     },
     'RegExp.prototype[Symbol.match]': {

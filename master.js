@@ -26,7 +26,8 @@ document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 // instead of returning true/false.
 var __asyncPassedFn = function(rowNum) {
   return function() {
-    var elem = $("#table-wrapper tr:nth-child(" + (+rowNum + 1) + ") .current")[0];
+    var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
+    console.log($("#table-wrapper tbody tr:not(.category)"));
     elem.className = "yes";
     elem.textContent = "Yes";
     if (global.__updateHeaderTotal) {
