@@ -66,7 +66,7 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur compiler">Traceur</abbr></a></th>
-<th class="platform _6to5 compiler" data-browser="_6to5"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br>polyfill</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform _6to5 compiler" data-browser="_6to5"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br><nobr>core-js</nobr></abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
 <th class="platform firefox31 desktop" data-browser="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></a></th>
 <th class="platform firefox32 desktop" data-browser="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></a></th>
@@ -261,17 +261,17 @@ return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr><td id="Array.prototype.contains"><span><a class="anchor" href="#Array.prototype.contains">&#xA7;</a><a href="https://github.com/domenic/Array.prototype.contains/blob/master/spec.md">Array.prototype.contains</a></span><script data-source="
-return typeof Array.prototype.contains === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");return Function("asyncTestPassed","\nreturn typeof Array.prototype.contains === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+<tr><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
+return typeof Array.prototype.includes === &apos;function&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");return Function("asyncTestPassed","\nreturn typeof Array.prototype.includes === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
-<td class="yes" data-browser="firefox35">Yes<a href="#contains-nightly-note"><sup>[3]</sup></a></td>
+<td class="yes" data-browser="firefox35">Yes<a href="#includes-nightly-note"><sup>[3]</sup></a></td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -334,7 +334,7 @@ return true;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via --experimental flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Have to be enabled via --harmony flag</p><p id="contains-nightly-note">  <sup>[3]</sup> Only enabled in Nightly builds</p></p></div>
+    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via --experimental flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Have to be enabled via --harmony flag</p><p id="includes-nightly-note">  <sup>[3]</sup> Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code></p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

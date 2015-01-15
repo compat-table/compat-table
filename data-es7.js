@@ -13,7 +13,7 @@ exports.browsers = {
   },
   _6to5: {
     full: '6to5',
-    short: '6to5 +<br>polyfill',
+    short: '6to5 +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -336,14 +336,14 @@ exports.tests = [
 },
 
 {
-  name: 'Array.prototype.contains',
-  link: 'https://github.com/domenic/Array.prototype.contains/blob/master/spec.md',
+  name: 'Array.prototype.includes',
+  link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
   exec: function () {/*
-    return typeof Array.prototype.contains === 'function';
+    return typeof Array.prototype.includes === 'function';
   */},
   res: {
     tr: false,
-    _6to5: false,
+    _6to5: true,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -352,8 +352,8 @@ exports.tests = [
     firefox34: false,
     firefox35:   {
       val: true,
-      note_id: 'contains-nightly',
-      note_html: 'Only enabled in Nightly builds'
+      note_id: 'includes-nightly',
+      note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
     },
     chrome30: false,
     chrome33: false,
