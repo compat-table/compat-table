@@ -107,7 +107,7 @@
 <th class="platform es6tr compiler" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Transpiler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure<br>Compiler</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[1]</sup></a></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.3">TypeScript</abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.4">TypeScript</abbr></a></th>
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
@@ -1419,7 +1419,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="es6tr" class="tally" data-tally="1">5/5</td>
 <td data-browser="closure" class="tally" data-tally="0.8">4/5</td>
 <td data-browser="jsx" class="tally" data-tally="0.4">2/5</td>
-<td data-browser="typescript" class="tally" data-tally="0.2">1/5</td>
+<td data-browser="typescript" class="tally" data-tally="0.4">2/5</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/5</td>
@@ -1543,7 +1543,7 @@ return c.a === 7 &amp;&amp; c.b === 8;
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2109,7 +2109,7 @@ return result === &quot;123&quot;;
 <td data-browser="es6tr" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="closure" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/4</td>
+<td data-browser="typescript" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
@@ -2170,7 +2170,7 @@ return 0o10 === 8 &amp;&amp; 0O10 === 8;
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2231,7 +2231,7 @@ return 0b10 === 2 &amp;&amp; 0B10 === 2;
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2411,7 +2411,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="es6tr" class="tally" data-tally="1">2/2</td>
 <td data-browser="closure" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="1">2/2</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/2</td>
+<td data-browser="typescript" class="tally" data-tally="0.5">1/2</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
@@ -2474,7 +2474,7 @@ ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
