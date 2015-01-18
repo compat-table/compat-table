@@ -746,6 +746,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox35: {
@@ -844,6 +845,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: false, note_id: 'fx-let-tdz', },
