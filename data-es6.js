@@ -4676,7 +4676,11 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        _6to5:       true,
+        _6to5: {
+          val: true,
+          note_id: '6to5-optional',
+          note_html: 'Optional transformer required'
+        },
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
