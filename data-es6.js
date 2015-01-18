@@ -597,6 +597,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ie11:        true,
         firefox36:   true,
       },
@@ -672,6 +673,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
