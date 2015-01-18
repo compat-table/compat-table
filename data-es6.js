@@ -597,6 +597,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ie11:        true,
         firefox36:   true,
       },
@@ -672,6 +673,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -744,6 +746,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox35: {
@@ -842,6 +845,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: false, note_id: 'fx-let-tdz', },
@@ -4672,7 +4676,11 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        _6to5:       true,
+        _6to5: {
+          val: true,
+          note_id: '6to5-optional',
+          note_html: 'Optional transformer required'
+        },
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
