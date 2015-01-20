@@ -14,9 +14,9 @@ var fs = require('fs')
 global.__script_executed = {};
 
 $('#body tbody tr').each(function (index) {
-  if (this.find('.separator')[0])
+  if ($(this).find('.separator')[0])
     return
-  var scripts = this.find('script')
+  var scripts = $(this).find('script')
     , i = 0, scr
     , test = function test (expression) {
       results[index] = results[index] || expression
@@ -42,7 +42,7 @@ $('#body tbody tr').each(function (index) {
   
   results[index] = null
   
-  desc[index] = this.find('td>span:first-child').text()
+  desc[index] = $(this).find('td>span:first-child').text()
 
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {
