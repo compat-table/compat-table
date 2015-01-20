@@ -4761,6 +4761,7 @@ exports.tests = [
         return true;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -4774,6 +4775,7 @@ exports.tests = [
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         chrome39:    true,
         firefox36:   true,

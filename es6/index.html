@@ -15348,7 +15348,7 @@ function check() {
 </tr>
 <tr class="supertest"><td id="Symbol"><span><a class="anchor" href="#Symbol">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.4444444444444444">4/9</td>
-<td data-browser="_6to5" class="tally" data-tally="0.7777777777777778">7/9</td>
+<td data-browser="_6to5" class="tally" data-tally="1">9/9</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/9</td>
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/9</td>
@@ -15691,7 +15691,7 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("240");return Function("asyncTestPassed","\nvar symbol = Symbol();\n\ntry {\n  symbol + \"\";\n  return false;\n}\ncatch(e) {}\n\ntry {\n  symbol + 0;\n  return false;\n} catch(e) {}\n\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -15752,7 +15752,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("241");return Function("asyncTestPassed","\nreturn String(Symbol(\"foo\")) === \"Symbol(foo)\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
