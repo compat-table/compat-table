@@ -21,6 +21,8 @@ exports.browsers = {
     short: '6to5 +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
+    note_id: '6to5-optional',
+    note_html: 'Flagged features require an optional transformer setting.',
   },
   es6tr: {
     full: 'ES6 Transpiler',
@@ -597,7 +599,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        _6to5:       flag,
         ie11:        true,
         firefox36:   true,
       },
@@ -673,7 +675,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        _6to5:       flag,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -746,7 +748,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        _6to5:       flag,
         ejs:         true,
         ie11:        true,
         firefox35: {
@@ -845,7 +847,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        _6to5:       flag,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: false, note_id: 'fx-let-tdz', },
@@ -4296,14 +4298,18 @@ exports.tests = [
         return foo.name === "foo" &&
           typeof bar.name === "function";
       */},
-      res: {},
+      res: {
+        _6to5:         true,
+      },
     },
     'class expressions': {
       exec: function() {/*
         return class foo {}.name === "foo" &&
           typeof class bar { static name() {} }.name === "function";
       */},
-      res: {},
+      res: {
+        _6to5:         true,
+      },
     },
     'variables (class)': {
       exec: function() {/*
@@ -4314,7 +4320,9 @@ exports.tests = [
                bar.name === "baz" &&
                typeof qux.name === "function";
       */},
-      res: {},
+      res: {
+        _6to5:         true,
+      },
     },
     'object methods (class)': {
       exec: function() {/*
@@ -4676,11 +4684,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        _6to5: {
-          val: true,
-          note_id: '6to5-optional',
-          note_html: 'Optional transformer required'
-        },
+        _6to5:       flag,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -4813,7 +4817,7 @@ exports.tests = [
           symbolObject.valueOf() === symbol;
       */},
       res: {
-        _6to5:      true,
+        _6to5:      false,
         ie11tp:     true,
         firefox36:  true,
         chrome30:   flag,
