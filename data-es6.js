@@ -703,9 +703,9 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox11:   {
-          val: false,
+          val: flag,
           note_id: 'fx-let',
-          note_html: 'Available from Firefox 2 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
+          note_html: 'Available for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
         },
       },
     },
@@ -722,7 +722,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
       },
     },
     'for-loop statement scope': {
@@ -738,7 +738,7 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
       },
     },
     'temporal dead zone': {
@@ -751,11 +751,7 @@ exports.tests = [
         _6to5:       flag,
         ejs:         true,
         ie11:        true,
-        firefox35: {
-          val: false,
-          note_id: 'fx-let-tdz',
-          note_html: 'Available from Firefox 35 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
-        },
+        firefox35:   { val: flag, note_id: 'fx-let', },
       },
     },
     'for-loop iteration scope': {
@@ -796,7 +792,7 @@ exports.tests = [
         chrome19dev: flag,
         node:        flag,
         iojs:        true,
-        firefox11:   { val: false, note_id: 'fx-let' },
+        firefox11:   { val: flag, note_id: 'fx-let' },
       },
     },
     'is block-scoped (strict mode)': {
@@ -813,7 +809,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         node:        flag,
         iojs:        true,
@@ -833,7 +829,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         nodeharmony: true,
         iojs:        true,
@@ -850,7 +846,7 @@ exports.tests = [
         _6to5:       flag,
         ejs:         true,
         ie11:        true,
-        firefox35:   { val: false, note_id: 'fx-let-tdz', },
+        firefox35:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         node:        flag,
         iojs:        true,
