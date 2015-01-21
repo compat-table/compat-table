@@ -300,12 +300,13 @@ exports.browsers = {
     short: 'Node',
     platformtype: 'engine',
     note_id: 'harmony-flag',
-    note_html: 'Flagged features have to be enabled via <code>--harmony</code> flag'
+    note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag'
   },
   iojs: {
-    full: 'io.js 1.0.0',
+    full: 'io.js 1.0.3',
     short: 'io.js',
     platformtype: 'engine',
+    note_id: 'harmony-flag',
   },
   ejs: {
     full: 'Echo JS',
@@ -1101,7 +1102,7 @@ exports.tests = [
     },
     'with generic iterables, in calls': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Math.max(...iterable) === 3;
       */},
       res: {
@@ -1118,7 +1119,7 @@ exports.tests = [
     },
     'with generic iterables, in arrays': {
       exec: function () {/*
-        var iterable = window.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject("b", "c", "d");
         return ["a", ...iterable, "e"][3] === "d";
       */},
       res: {
@@ -1131,7 +1132,7 @@ exports.tests = [
     },
     'with instances of iterables, in calls': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Math.max(...Object.create(iterable)) === 3;
       */},
       res: {
@@ -1143,7 +1144,7 @@ exports.tests = [
     },
     'with instances of iterables, in arrays': {
       exec: function () {/*
-        var iterable = window.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject("b", "c", "d");
         return ["a", ...Object.create(iterable), "e"][3] === "d";
       */},
       res: {
@@ -1173,6 +1174,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
       },
     },
     'is block-scoped': {
@@ -1189,6 +1191,7 @@ exports.tests = [
         _6to5:       true,
         jsx:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'class expression': {
@@ -1203,6 +1206,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'constructor': {
@@ -1221,6 +1225,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'prototype methods': {
@@ -1239,6 +1244,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'static methods': {
@@ -1257,6 +1263,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'accessor properties': {
@@ -1275,6 +1282,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'static accessor properties': {
@@ -1293,6 +1301,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'implicit strict mode': {
@@ -1309,6 +1318,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'extends': {
@@ -1335,6 +1345,7 @@ exports.tests = [
         },
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'extends null': {
@@ -1352,6 +1363,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
   },
@@ -1361,7 +1373,27 @@ exports.tests = [
   category: 'functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
   subtests: {
-    'in constructors': {
+    'statement in constructors': {
+      exec: function() {/*
+        var passed = false;
+        class B extends class {
+          constructor(a) { passed = (a === "barbaz"); }
+        } {
+          constructor(a) { super("bar" + a); }
+        }
+        new B("baz");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        es6tr:       true,
+        ejs:         true,
+        ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
+      },
+    },
+    'expression in constructors': {
       exec: function() {/*
         class B extends class {
           constructor(a) { return ["foo" + a]; }
@@ -1393,6 +1425,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'is statically bound': {
@@ -1414,6 +1447,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
   },
@@ -1458,6 +1492,7 @@ exports.tests = [
         firefox33:   true,
         chrome40:    flag,
         chrome41:    true,
+        iojs:        flag,
       },
     },
     'shorthand methods': {
@@ -1476,6 +1511,7 @@ exports.tests = [
         firefox34:   true,
         chrome39:    flag,
         chrome41:    true,
+        iojs:        flag,
       },
     },
     'computed shorthand methods': {
@@ -1660,7 +1696,7 @@ exports.tests = [
     'with generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         for (var item of iterable) {
           result += item;
         }
@@ -1677,12 +1713,13 @@ exports.tests = [
         chrome21dev: flag,
         chrome38:    true,
         node:        flag,
+        iojs:        true,
       },
     },
     'with instances of generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         for (var item of Object.create(iterable)) {
           result += item;
         }
@@ -1696,6 +1733,8 @@ exports.tests = [
         firefox36:   true,
         chrome35:    flag,
         chrome38:    true,
+        node:        flag,
+        iojs:        true,
       },
     },
   },
@@ -1912,7 +1951,7 @@ exports.tests = [
     'yield *, generic iterables': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * window.__createIterableObject(5, 6, 7);
+          yield * global.__createIterableObject(5, 6, 7);
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
@@ -1980,7 +2019,7 @@ exports.tests = [
         chrome39:    flag,
         chrome41:    true,
         firefox34:   true,
-        iojs:        true,
+        iojs:        flag,
       },
     },
     'computed shorthand generators': {
@@ -3646,7 +3685,7 @@ exports.tests = [
     },
     'with generic iterables': {
       exec: function(){/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         var [a, b, c] = iterable;
         return a === 1 && b === 2 && c === 3;
       */},
@@ -3658,7 +3697,7 @@ exports.tests = [
     },
     'with instances of generic iterables': {
       exec: function(){/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         var [a, b, c] = Object.create(iterable);
         return a === 1 && b === 2 && c === 3;
       */},
@@ -4889,6 +4928,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         chrome40:    flag,
+        iojs:        flag,
       },
     },
     'Symbol.unscopables': {
@@ -5009,7 +5049,7 @@ exports.tests = [
     },
     'Array.from, generic iterables': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Array.from(iterable) + '' === "1,2,3";
       */},
       res: {
@@ -5023,7 +5063,7 @@ exports.tests = [
     },
     'Array.from, instances of generic iterables': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {

@@ -24,21 +24,21 @@ $('#body tbody tr').each(function (index) {
 	, asyncPassed = function asyncPassed () {
 	  results[index] = true
     }
-    , __createIterableObject = function(a, b, c) {
-      if (typeof Symbol === "function" && Symbol.iterator) {
-        var arr = [a, b, c, ,]
-          , iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }
-            }
+  global.__createIterableObject = function(a, b, c) {
+    if (typeof Symbol === "function" && Symbol.iterator) {
+      var arr = [a, b, c, ,]
+        , iterable = {
+          next: function() {
+            return { value: arr.shift(), done: arr.length <= 0 }
           }
-        iterable[Symbol.iterator] = function(){ return iterable; }
-        return iterable;
-      }
-      else {
-        return eval("(function*() { yield a; yield b; yield c; }())")
-      }
+        }
+      iterable[Symbol.iterator] = function(){ return iterable; }
+      return iterable;
     }
+    else {
+      return eval("(function*() { yield a; yield b; yield c; }())")
+    }
+  }
   
   results[index] = null
   
