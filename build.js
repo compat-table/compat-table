@@ -51,6 +51,7 @@ process.nextTick(function () {
   var esnext     = require('esnext');
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
+  var tss        = require('typescript-simple');
   [
     {
       name: 'es6-shim',
@@ -147,15 +148,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/typescript.html',
       polyfills: [],
       compiler: function(code) {
-        var fpath = os.tmpDir() + path.sep + 'temp.ts';
-        var file = fs.writeFileSync(fpath, code);
-        try {
-          child_process.execSync('node_modules/typescript/bin/tsc -t ES5 ' + fpath);
-        } catch(e) {
-          throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
-        }
-        var output = fs.readFileSync(fpath.slice(0, -2) + 'js', 'utf-8');
-        return output;
+        return tss(code);
       },
     },
   ].forEach(function(e){
