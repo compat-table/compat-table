@@ -14,9 +14,9 @@ var fs = require('fs')
 global.__script_executed = {};
 
 $('#body tbody tr').each(function (index) {
-  if (this.find('.separator')[0])
+  if ($(this).find('.separator')[0])
     return
-  var scripts = this.find('script')
+  var scripts = $(this).find('script')
     , i = 0, scr
     , test = function test (expression) {
       results[index] = results[index] || expression
@@ -24,25 +24,25 @@ $('#body tbody tr').each(function (index) {
 	, asyncPassed = function asyncPassed () {
 	  results[index] = true
     }
-    , __createIterableObject = function(a, b, c) {
-      if (typeof Symbol === "function" && Symbol.iterator) {
-        var arr = [a, b, c, ,]
-          , iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }
-            }
+  global.__createIterableObject = function(a, b, c) {
+    if (typeof Symbol === "function" && Symbol.iterator) {
+      var arr = [a, b, c, ,]
+        , iterable = {
+          next: function() {
+            return { value: arr.shift(), done: arr.length <= 0 }
           }
-        iterable[Symbol.iterator] = function(){ return iterable; }
-        return iterable;
-      }
-      else {
-        return eval("(function*() { yield a; yield b; yield c; }())")
-      }
+        }
+      iterable[Symbol.iterator] = function(){ return iterable; }
+      return iterable;
     }
+    else {
+      return eval("(function*() { yield a; yield b; yield c; }())")
+    }
+  }
   
   results[index] = null
   
-  desc[index] = this.find('td>span:first-child').text()
+  desc[index] = $(this).find('td>span:first-child').text()
 
   // can be multiple scripts
   for (; scripts[i] && scripts[i].children && scripts[i].children.length; i++) {

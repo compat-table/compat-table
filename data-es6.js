@@ -21,6 +21,8 @@ exports.browsers = {
     short: '6to5 +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
+    note_id: '6to5-optional',
+    note_html: 'Flagged features require an optional transformer setting.',
   },
   es6tr: {
     full: 'ES6 Transpiler',
@@ -43,7 +45,7 @@ exports.browsers = {
     note_html: 'Have to be enabled via <code>harmony</code> option'
   },
   typescript: {
-    full: 'TypeScript 1.3',
+    full: 'TypeScript 1.4',
     short: 'TypeScript',
     obsolete: false,
     platformtype: 'compiler',
@@ -148,7 +150,8 @@ exports.browsers = {
   },
   firefox34: {
     full: 'Firefox',
-    short: 'FF 34'
+    short: 'FF 34',
+    obsolete: true
   },
   firefox35: {
     full: 'Firefox',
@@ -157,6 +160,10 @@ exports.browsers = {
   firefox36: {
     full: 'Firefox',
     short: 'FF 36'
+  },
+  firefox37: {
+    full: 'Firefox',
+    short: 'FF 37'
   },
   chrome: {
     full: 'Chrome',
@@ -236,6 +243,12 @@ exports.browsers = {
     obsolete: false,
     note_id: 'experimental-flag',
   },
+  chrome41: {
+    full: 'Chrome, Opera',
+    short: 'CH 41,<br>OP&nbsp;28',
+    obsolete: false,
+    note_id: 'experimental-flag',
+  },
   safari51: {
     full: 'Safari',
     short: 'SF 5.1',
@@ -287,12 +300,13 @@ exports.browsers = {
     short: 'Node',
     platformtype: 'engine',
     note_id: 'harmony-flag',
-    note_html: 'Flagged features have to be enabled via <code>--harmony</code> flag'
+    note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag'
   },
   iojs: {
-    full: 'io.js 1.0.0',
+    full: 'io.js 1.0.3',
     short: 'io.js',
     platformtype: 'engine',
+    note_id: 'harmony-flag',
   },
   ejs: {
     full: 'Echo JS',
@@ -391,6 +405,7 @@ exports.tests = [
         ie11tp:      true,
         firefox23:   true,
         chrome38:    flag,
+        chrome40:    false,
       },
     },
     '1 parameter, no brackets': {
@@ -409,6 +424,7 @@ exports.tests = [
         ie11tp:      true,
         firefox23:   true,
         chrome38:    flag,
+        chrome40:    false,
       },
     },
     'multiple parameters': {
@@ -427,6 +443,7 @@ exports.tests = [
         ie11tp:      true,
         firefox23:   true,
         chrome38:    flag,
+        chrome40:    false,
       },
     },
     'lexical "this" binding': {
@@ -516,6 +533,7 @@ exports.tests = [
         ie11tp:      true,
         firefox23:   true,
         chrome39:    flag,
+        chrome40:    false,
       },
     },
   },
@@ -592,6 +610,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       flag,
         ie11:        true,
         firefox36:   true,
       },
@@ -611,6 +630,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         chrome:      flag,
+        chrome41:    true,
         konq49:      true,
         node:        flag,
         iojs:        true,
@@ -630,6 +650,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         chrome19dev: flag,
+        chrome41:    true,
         ie11:        true,
         firefox36:   true,
         node:        flag,
@@ -655,6 +676,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         chrome21dev: flag,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       }
@@ -667,9 +689,11 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       flag,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -694,9 +718,9 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox11:   {
-          val: false,
+          val: flag,
           note_id: 'fx-let',
-          note_html: 'Available from Firefox 2 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
+          note_html: 'Available for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
         },
       },
     },
@@ -713,7 +737,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
       },
     },
     'for-loop statement scope': {
@@ -729,7 +753,7 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
       },
     },
     'temporal dead zone': {
@@ -739,13 +763,10 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       flag,
         ejs:         true,
         ie11:        true,
-        firefox35: {
-          val: false,
-          note_id: 'fx-let-tdz',
-          note_html: 'Available from Firefox 35 for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
-        },
+        firefox35:   { val: flag, note_id: 'fx-let', },
       },
     },
     'for-loop iteration scope': {
@@ -784,9 +805,10 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         chrome19dev: flag,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
-        firefox11:   { val: false, note_id: 'fx-let' },
+        firefox11:   { val: flag, note_id: 'fx-let' },
       },
     },
     'is block-scoped (strict mode)': {
@@ -803,8 +825,9 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -823,8 +846,9 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: false, note_id: 'fx-let', },
+        firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
+        chrome41:    true,
         nodeharmony: true,
         iojs:        true,
       },
@@ -837,10 +861,12 @@ exports.tests = [
         return passed;
       */},
       res: {
+        _6to5:       flag,
         ejs:         true,
         ie11:        true,
-        firefox35:   { val: false, note_id: 'fx-let-tdz', },
+        firefox35:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -867,6 +893,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         chrome37:    flag,
+        chrome41:    true,
         iojs:        true,
       },
     },
@@ -1075,7 +1102,7 @@ exports.tests = [
     },
     'with generic iterables, in calls': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Math.max(...iterable) === 3;
       */},
       res: {
@@ -1092,7 +1119,7 @@ exports.tests = [
     },
     'with generic iterables, in arrays': {
       exec: function () {/*
-        var iterable = window.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject("b", "c", "d");
         return ["a", ...iterable, "e"][3] === "d";
       */},
       res: {
@@ -1105,7 +1132,7 @@ exports.tests = [
     },
     'with instances of iterables, in calls': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Math.max(...Object.create(iterable)) === 3;
       */},
       res: {
@@ -1117,7 +1144,7 @@ exports.tests = [
     },
     'with instances of iterables, in arrays': {
       exec: function () {/*
-        var iterable = window.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject("b", "c", "d");
         return ["a", ...Object.create(iterable), "e"][3] === "d";
       */},
       res: {
@@ -1147,7 +1174,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         ie11tp:      true,
-        chrome40:    flag,
+        iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
       },
     },
     'is block-scoped': {
@@ -1164,6 +1191,7 @@ exports.tests = [
         _6to5:       true,
         jsx:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'class expression': {
@@ -1178,7 +1206,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
-        chrome40:    flag,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'constructor': {
@@ -1197,7 +1225,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
-        chrome40:    flag,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'prototype methods': {
@@ -1216,6 +1244,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'static methods': {
@@ -1234,6 +1263,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'accessor properties': {
@@ -1252,6 +1282,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'static accessor properties': {
@@ -1270,6 +1301,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'implicit strict mode': {
@@ -1286,6 +1318,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'extends': {
@@ -1312,7 +1345,7 @@ exports.tests = [
         },
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
-        chrome40:    flag,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'extends null': {
@@ -1330,6 +1363,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
   },
@@ -1339,7 +1373,27 @@ exports.tests = [
   category: 'functions',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
   subtests: {
-    'in constructors': {
+    'statement in constructors': {
+      exec: function() {/*
+        var passed = false;
+        class B extends class {
+          constructor(a) { passed = (a === "barbaz"); }
+        } {
+          constructor(a) { super("bar" + a); }
+        }
+        new B("baz");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        es6tr:       true,
+        ejs:         true,
+        ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
+      },
+    },
+    'expression in constructors': {
       exec: function() {/*
         class B extends class {
           constructor(a) { return ["foo" + a]; }
@@ -1354,7 +1408,6 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
-        chrome40:    flag,
       },
     },
     'in methods': {
@@ -1372,6 +1425,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'is statically bound': {
@@ -1393,6 +1447,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
   },
@@ -1432,9 +1487,12 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         ie11tp:      true,
         firefox33:   true,
         chrome40:    flag,
+        chrome41:    true,
+        iojs:        flag,
       },
     },
     'shorthand methods': {
@@ -1452,6 +1510,8 @@ exports.tests = [
         ie11tp:      true,
         firefox34:   true,
         chrome39:    flag,
+        chrome41:    true,
+        iojs:        flag,
       },
     },
     'computed shorthand methods': {
@@ -1462,6 +1522,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         tr:          true,
+        closure:     true,
         _6to5:       true,
         es6tr:       true,
         firefox34:   true,
@@ -1635,7 +1696,7 @@ exports.tests = [
     'with generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         for (var item of iterable) {
           result += item;
         }
@@ -1652,12 +1713,13 @@ exports.tests = [
         chrome21dev: flag,
         chrome38:    true,
         node:        flag,
+        iojs:        true,
       },
     },
     'with instances of generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         for (var item of Object.create(iterable)) {
           result += item;
         }
@@ -1671,6 +1733,8 @@ exports.tests = [
         firefox36:   true,
         chrome35:    flag,
         chrome38:    true,
+        node:        flag,
+        iojs:        true,
       },
     },
   },
@@ -1887,7 +1951,7 @@ exports.tests = [
     'yield *, generic iterables': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * window.__createIterableObject(5, 6, 7);
+          yield * global.__createIterableObject(5, 6, 7);
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
@@ -1953,8 +2017,9 @@ exports.tests = [
         _6to5:       true,
         closure:     true,
         chrome39:    flag,
+        chrome41:    true,
         firefox34:   true,
-        iojs:        true,
+        iojs:        flag,
       },
     },
     'computed shorthand generators': {
@@ -1998,9 +2063,11 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         ie11tp:      true,
         firefox25:   true,
         chrome30:    flag,
+        chrome40:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2015,9 +2082,11 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         ie11tp:      true,
         firefox25:   true,
         chrome30:    flag,
+        chrome40:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2030,6 +2099,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
+        chrome40:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2042,6 +2112,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
+        chrome40:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2066,8 +2137,10 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         ie11tp:      true,
         firefox34:   true,
+        chrome41:    flag,
         iojs:        true,
       },
     },
@@ -2094,6 +2167,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         firefox34:   true,
+        chrome41:    flag,
         iojs:        true,
       },
     },
@@ -2115,6 +2189,7 @@ exports.tests = [
       res: {
         firefox11:   true,
         chrome39:    flag,
+        chrome40:    false,
       },
     },
     '"u" flag': {
@@ -2331,26 +2406,26 @@ exports.tests = [
         iojs:        true,
         ios7:        true,
     },
-    '.prototype.join':        { ie11tp: true, },
-    '.prototype.indexOf':     { ie11tp: true, },
-    '.prototype.lastIndexOf': { ie11tp: true, },
+    '.prototype.join':        { ie11tp: true, firefox37: true },
+    '.prototype.indexOf':     { ie11tp: true, firefox37: true },
+    '.prototype.lastIndexOf': { ie11tp: true, firefox37: true },
     '.prototype.slice':       { ie11tp: true, },
-    '.prototype.every':       { ie11tp: true, },
+    '.prototype.every':       { ie11tp: true, firefox37: true },
     '.prototype.filter':      { ie11tp: true, },
-    '.prototype.forEach':     { ie11tp: true, chrome40: true },
+    '.prototype.forEach':     { ie11tp: true, },
     '.prototype.map':         { ie11tp: true, },
-    '.prototype.reduce':      { ie11tp: true, },
-    '.prototype.reduceRight': { ie11tp: true, },
-    '.prototype.reverse':     { ie11tp: true, },
-    '.prototype.some':        { ie11tp: true, },
+    '.prototype.reduce':      { ie11tp: true, firefox37: true },
+    '.prototype.reduceRight': { ie11tp: true, firefox37: true },
+    '.prototype.reverse':     { ie11tp: true, firefox37: true },
+    '.prototype.some':        { ie11tp: true, firefox37: true },
     '.prototype.sort':        { ie11tp: true, },
     '.prototype.copyWithin':  { ie11tp: true, firefox34: true },
-    '.prototype.find':        { ie11tp: true, },
-    '.prototype.findIndex':   { ie11tp: true, },
-    '.prototype.fill':        { ie11tp: true, },
-    '.prototype.keys':        { ie11tp: true, chrome38: true, iojs: true },
-    '.prototype.values':      { ie11tp: true, chrome38: true, iojs: true },
-    '.prototype.entries':     { ie11tp: true, chrome38: true, iojs: true },
+    '.prototype.find':        { ie11tp: true, firefox37: true },
+    '.prototype.findIndex':   { ie11tp: true, firefox37: true },
+    '.prototype.fill':        { ie11tp: true, firefox37: true },
+    '.prototype.keys':        { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
+    '.prototype.values':      { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
+    '.prototype.entries':     { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -3075,6 +3150,7 @@ exports.tests = [
       res: {
         ejs:         true,
         ie11tp:      true,
+        firefox37:   true,
       },
     },
     '"has" handler': {
@@ -3271,6 +3347,7 @@ exports.tests = [
       */},
       res: {
         ie11tp:      true,
+        firefox37:   true,
       },
     },
     '"ownKeys" handler': {
@@ -3557,49 +3634,12 @@ exports.tests = [
   res: {
     _6to5:       true,
     tr:          true,
-    ejs:         false,
     closure:     true,
-    ie10:        false,
     ie11:        true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
     chrome21dev: flag,
-    chrome30:    flag,
-    chrome33:    flag,
-    chrome34:    flag,
-    chrome35:    flag,
-    chrome37:    flag,
-    chrome39:    flag,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
+    chrome41:    true,
     iojs:        true,
     nodeharmony: true,
-    ios7:        false,
-    ios8:        false
   }
 },
 {
@@ -3645,24 +3685,26 @@ exports.tests = [
     },
     'with generic iterables': {
       exec: function(){/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         var [a, b, c] = iterable;
         return a === 1 && b === 2 && c === 3;
       */},
       res: {
+        tr:           true,
         firefox34:    true,
         _6to5:        true,
       },
     },
     'with instances of generic iterables': {
       exec: function(){/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         var [a, b, c] = Object.create(iterable);
         return a === 1 && b === 2 && c === 3;
       */},
       res: {
+        tr:           true,
         _6to5:        true,
-        firefox36:   true,
+        firefox36:    true,
       },
     },
     'with objects': {
@@ -4254,6 +4296,7 @@ exports.tests = [
         _6to5:        true,
         firefox34:    true,
         chrome39:     flag,
+        chrome41:     true,
         iojs:         true,
       },
     },
@@ -4278,14 +4321,18 @@ exports.tests = [
         return foo.name === "foo" &&
           typeof bar.name === "function";
       */},
-      res: {},
+      res: {
+        _6to5:         true,
+      },
     },
     'class expressions': {
       exec: function() {/*
         return class foo {}.name === "foo" &&
           typeof class bar { static name() {} }.name === "function";
       */},
-      res: {},
+      res: {
+        _6to5:         true,
+      },
     },
     'variables (class)': {
       exec: function() {/*
@@ -4296,7 +4343,9 @@ exports.tests = [
                bar.name === "baz" &&
                typeof qux.name === "function";
       */},
-      res: {},
+      res: {
+        _6to5:         true,
+      },
     },
     'object methods (class)': {
       exec: function() {/*
@@ -4347,50 +4396,10 @@ exports.tests = [
     return typeof Function.prototype.toMethod === "function";
   */},
   res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
     chrome39:    flag,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
+    chrome40:    false,
+    chrome41:    true,
     iojs:        true,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
   }
 },
 {
@@ -4409,6 +4418,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox34:   true,
+        chrome41:    flag,
         iojs:        true,
       },
     },
@@ -4424,6 +4434,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome38:    flag,
+        chrome41:    true,
         iojs:        true,
       },
     },
@@ -4446,6 +4457,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome38:    flag,
+        chrome41:    true,
         iojs:        true,
       },
     },
@@ -4459,6 +4471,7 @@ exports.tests = [
         ie11tp:      true,
         firefox31:   true,
         chrome34:    true,
+        chrome41:    true,
         iojs:        true,
       },
     },
@@ -4476,6 +4489,7 @@ exports.tests = [
         firefox24:   true,
         webkit:      true,
         chrome30:    flag,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -4493,6 +4507,7 @@ exports.tests = [
         ie11tp:      true,
         firefox17:   true,
         chrome30:    flag,
+        chrome41:    true,
         webkit:      true,
         node:        flag,
         iojs:        true,
@@ -4511,6 +4526,7 @@ exports.tests = [
         ie11tp:      true,
         firefox17:   true,
         chrome30:    flag,
+        chrome41:    true,
         webkit:      true,
         node:        flag,
         iojs:        true,
@@ -4532,6 +4548,7 @@ exports.tests = [
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
         chrome30:    { val: false, note_id: 'string-contains' },
+        chrome41:    true,
         webkit:      true,
         nodeharmony: { val: false, note_id: 'string-contains' },
         iojs:        true,
@@ -4658,7 +4675,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        _6to5:       true,
+        _6to5:       flag,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -4789,7 +4806,7 @@ exports.tests = [
           symbolObject.valueOf() === symbol;
       */},
       res: {
-        _6to5:      true,
+        _6to5:      false,
         ie11tp:     true,
         firefox36:  true,
         chrome30:   flag,
@@ -4911,6 +4928,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         chrome40:    flag,
+        iojs:        flag,
       },
     },
     'Symbol.unscopables': {
@@ -4947,6 +4965,7 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         es6shim:     true,
+        firefox37:   true,
       },
     },
     'RegExp.prototype[Symbol.match]': {
@@ -5030,24 +5049,27 @@ exports.tests = [
     },
     'Array.from, generic iterables': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Array.from(iterable) + '' === "1,2,3";
       */},
       res: {
         tr:          true,
         _6to5:       true,
         ejs:         true,
+        ie11tp:      true,
         es6shim:     true,
         firefox32:   true,
       }
     },
     'Array.from, instances of generic iterables': {
       exec: function () {/*
-        var iterable = window.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject(1, 2, 3);
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
         _6to5:        true,
+        tr:           true,
+        ie11tp:       true,
         firefox36:    true,
       }
     },
@@ -5075,6 +5097,7 @@ exports.tests = [
         ie11tp:      true,
         firefox25:   true,
         chrome39:    flag,
+        chrome40:    false,
       },
     },
     'Array subclass .of': {
@@ -5392,6 +5415,7 @@ exports.tests = [
     var methods = {
       'clz32': {
         ejs:         true,
+        tr:          true,
         _6to5:       true,
         es6shim:     true,
         ie11tp:      true,
@@ -5404,6 +5428,7 @@ exports.tests = [
       'imul': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox23:   true,
@@ -5423,6 +5448,7 @@ exports.tests = [
       'sign': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5436,6 +5462,7 @@ exports.tests = [
       'log10': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5451,6 +5478,7 @@ exports.tests = [
       'log2': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5466,6 +5494,7 @@ exports.tests = [
       'log1p': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5481,6 +5510,7 @@ exports.tests = [
       'expm1': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5495,6 +5525,7 @@ exports.tests = [
       'cosh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5510,6 +5541,7 @@ exports.tests = [
       'sinh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5525,6 +5557,7 @@ exports.tests = [
       'tanh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5540,6 +5573,7 @@ exports.tests = [
       'acosh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5555,6 +5589,7 @@ exports.tests = [
       'asinh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5569,6 +5604,7 @@ exports.tests = [
       'atanh': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5584,6 +5620,7 @@ exports.tests = [
       'hypot': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox27:   true,
@@ -5599,6 +5636,7 @@ exports.tests = [
       'trunc': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
@@ -5614,6 +5652,7 @@ exports.tests = [
       'fround': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox27:   {
@@ -5634,6 +5673,7 @@ exports.tests = [
       'cbrt': {
         ejs:         true,
         _6to5:       true,
+        tr:          true,
         es6shim:     true,
         ie11tp:      true,
         firefox25:   true,
