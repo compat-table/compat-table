@@ -235,6 +235,30 @@ exports.tests = [
   }
 },
 {
+  name: 'Async functions',
+  link: 'https://github.com/lukehoban/ecmascript-asyncawait',
+  exec: function () {/*
+    return (async function(){
+      return 42 + await Promise.resolve(42)
+    })() instanceof Promise
+  */},
+  res: {
+    tr:          true,
+    _6to5:       true,
+  }
+},
+{
+  name: 'Arrow async functions',
+  link: 'https://github.com/lukehoban/ecmascript-asyncawait',
+  exec: function () {/*
+    return (async () => 42 + await Promise.resolve(42))() instanceof Promise
+  */},
+  res: {
+    tr:          true,
+    _6to5:       true,
+  }
+},
+{
   name: 'Typed objects',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
   exec: function () {/*
