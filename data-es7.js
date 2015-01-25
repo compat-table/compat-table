@@ -93,6 +93,7 @@ exports.browsers = {
     full: 'Rhino 1.7',
     short: 'RH',
     platformtype: 'engine',
+    obsolete: true,
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',

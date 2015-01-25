@@ -26,13 +26,13 @@ exports.browsers = {
   },
   es6tr: {
     full: 'ES6 Transpiler',
-    short: 'ES6<br>Transpiler',
+    short: 'ES6<br>Trans-<br>piler',
     obsolete: false,
     platformtype: 'compiler',
   },
   closure: {
     full: 'Closure Compiler v20141120',
-    short: 'Closure<br>Compiler',
+    short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -46,7 +46,7 @@ exports.browsers = {
   },
   typescript: {
     full: 'TypeScript 1.4',
-    short: 'TypeScript',
+    short: 'Type-<br>Script',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -257,11 +257,11 @@ exports.browsers = {
   safari6: {
     full: 'Safari',
     short: 'SF 6',
-    obsolete: false // EOLs together with OS X 10.8
+    obsolete: true
   },
   safari7: {
     full: 'Safari',
-    short: 'SF 7.0',
+    short: 'SF 6.1,<br>SF 7',
     obsolete: false
   },
   safari71_8: {
@@ -289,6 +289,7 @@ exports.browsers = {
     full: 'Rhino 1.7',
     short: 'RH',
     platformtype: 'engine',
+    obsolete: true,
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
