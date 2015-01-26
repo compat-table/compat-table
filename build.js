@@ -124,6 +124,15 @@ process.nextTick(function () {
       },
     },
     {
+      name: 'TypeScript',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es6/compilers/typescript.html',
+      polyfills: [],
+      compiler: function(code) {
+        return tss(code);
+      },
+    },
+    {
       name: 'Closure Compiler',
       url: 'https://developers.google.com/closure/compiler/',
       target_file: 'es6/compilers/closure.html',
@@ -140,15 +149,6 @@ process.nextTick(function () {
           throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
         }
         return output;
-      },
-    },
-    {
-      name: 'TypeScript',
-      url: 'https://www.typescriptlang.org/',
-      target_file: 'es6/compilers/typescript.html',
-      polyfills: [],
-      compiler: function(code) {
-        return tss(code);
       },
     },
   ].forEach(function(e){

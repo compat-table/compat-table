@@ -3708,10 +3708,72 @@ exports.tests = [
         firefox36:    true,
       },
     },
+    'iterable destructuring expression': {
+      exec: function() {/*
+        var a, b, iterable = [1,2];
+        return ([a, b] = iterable) === iterable;
+      */},
+      res: {
+        tr:           true,
+        _6to5:        true,
+        es6tr:        true,
+        firefox11:    true,
+      },
+    },
+    'chained iterable destructuring': {
+      exec: function() {/*
+        var a,b,c,d;
+        [a,b] = [c,d] = [1,2];
+        return a === 1 && b === 2 && c === 1 && d === 2;
+      */},
+      res: {
+        tr:           true,
+        es6tr:        true,
+        firefox11:    true,
+      },
+    },
     'with objects': {
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
         return c === 7 && d === 8 && e === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
+    'object destructuring expression': {
+      exec: function() {/*
+        var a, b, obj = { a:1, b:2 };
+        return ({a,b} = obj) === obj;
+      */},
+      res: {
+        tr:           true,
+        _6to5:        true,
+        firefox16:    true,
+      },
+    },
+    'chained object destructuring': {
+      exec: function() {/*
+        var a,b,c,d;
+        ({a,b}) = {c,d} = {a:1,b:2,c:3,d:4};
+        return a === 1 && b === 2 && c === 3 && d === 4;
+      */},
+      res: {
+        firefox16:    true,
+        es6tr:        true,
+      },
+    },
+    'throws on null and undefined': {
+      exec: function(){/*
+        var n = null;
+        var u = undefined;
+        try {
+          var {a} = n;
+          return false;
+        } catch(e) {}
+        try {
+          var {a} = u;
+          return false;
+        } catch(e) {}
+        return true;
       */},
       res: temp.destructuringResults,
     },

@@ -27,7 +27,6 @@ document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 var __asyncPassedFn = function(rowNum) {
   return function() {
     var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
-    console.log($("#table-wrapper tbody tr:not(.category)"));
     elem.className = "yes";
     elem.textContent = "Yes";
     if (global.__updateHeaderTotal) {
