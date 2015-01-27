@@ -2826,10 +2826,10 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0.95">19/20</td>
-<td data-browser="_6to5" class="tally" data-tally="0.9">18/20</td>
-<td data-browser="es6tr" class="tally" data-tally="0.75">15/20</td>
-<td data-browser="closure" class="tally" data-tally="0.6">12/20</td>
+<td data-browser="tr" class="tally" data-tally="1">20/20</td>
+<td data-browser="_6to5" class="tally" data-tally="0.95">19/20</td>
+<td data-browser="es6tr" class="tally" data-tally="0.8">16/20</td>
+<td data-browser="closure" class="tally" data-tally="0.65">13/20</td>
 <td data-browser="jsx" class="tally" data-tally="0.4">8/20</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/20</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/20</td>
@@ -2872,8 +2872,8 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/20</td>
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/20</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/20</td>
-<td data-browser="safari71_8" class="tally" data-tally="0.4">8/20</td>
-<td data-browser="webkit" class="tally" data-tally="0.45">9/20</td>
+<td data-browser="safari71_8" class="tally" data-tally="0.6">12/20</td>
+<td data-browser="webkit" class="tally" data-tally="0.65">13/20</td>
 <td data-browser="opera" class="tally" data-tally="0">0/20</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/20</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/20</td>
@@ -2882,12 +2882,15 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td data-browser="iojs" class="tally" data-tally="0">0/20</td>
 <td data-browser="ejs" class="tally" data-tally="0.35">7/20</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/20</td>
-<td data-browser="ios8" class="tally" data-tally="0.4">8/20</td>
+<td data-browser="ios8" class="tally" data-tally="0.6">12/20</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>with arrays</span><script data-source="
 var [a, , [b], c] = [5, null, [6]];
-return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");return Function("asyncTestPassed","\nvar [a, , [b], c] = [5, null, [6]];\nreturn a === 5 && b === 6 && c === undefined;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var d, e;
+[d,e] = [7,8];
+return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined
+  &amp;&amp; d === 7 &amp;&amp; e === 8;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");return Function("asyncTestPassed","\nvar [a, , [b], c] = [5, null, [6]];\nvar d, e;\n[d,e] = [7,8];\nreturn a === 5 && b === 6 && c === undefined\n  && d === 7 && e === 8;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -2948,9 +2951,12 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined;
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>with strings</span><script data-source="
-var [a, b, c] = &quot;bar&quot;;
-return a === &quot;b&quot; &amp;&amp; b === &quot;a&quot; &amp;&amp; c === &quot;r&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");return Function("asyncTestPassed","\nvar [a, b, c] = \"bar\";\nreturn a === \"b\" && b === \"a\" && c === \"r\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var [a, b, c] = &quot;ab&quot;;
+var d, e;
+[d,e] = &quot;de&quot;;
+return a === &quot;a&quot; &amp;&amp; b === &quot;b&quot; &amp;&amp; c === undefined
+  &amp;&amp; d === &quot;d&quot; &amp;&amp; e === &quot;e&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");return Function("asyncTestPassed","\nvar [a, b, c] = \"ab\";\nvar d, e;\n[d,e] = \"de\";\nreturn a === \"a\" && b === \"b\" && c === undefined\n  && d === \"d\" && e === \"e\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -3011,10 +3017,12 @@ return a === &quot;b&quot; &amp;&amp; b === &quot;a&quot; &amp;&amp; c === &quot
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>with generic iterables</span><script data-source="
-var iterable = global.__createIterableObject(1, 2, 3);
-var [a, b, c] = iterable;
-return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");return Function("asyncTestPassed","\nvar iterable = global.__createIterableObject(1, 2, 3);\nvar [a, b, c] = iterable;\nreturn a === 1 && b === 2 && c === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var [a, b, c] = global.__createIterableObject(1, 2);
+var d, e;
+[d, e] = global.__createIterableObject(3, 4);
+return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
+  &amp;&amp; d === 3 &amp;&amp; e === 4;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");return Function("asyncTestPassed","\nvar [a, b, c] = global.__createIterableObject(1, 2);\nvar d, e;\n[d, e] = global.__createIterableObject(3, 4);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -3075,10 +3083,12 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>with instances of generic iterables</span><script data-source="
-var iterable = global.__createIterableObject(1, 2, 3);
-var [a, b, c] = Object.create(iterable);
-return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");return Function("asyncTestPassed","\nvar iterable = global.__createIterableObject(1, 2, 3);\nvar [a, b, c] = Object.create(iterable);\nreturn a === 1 && b === 2 && c === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var [a, b, c] = Object.create(global.__createIterableObject(1, 2))
+var d, e;
+[d, e] = Object.create(global.__createIterableObject(3, 4));
+return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
+  &amp;&amp; d === 3 &amp;&amp; e === 4;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");return Function("asyncTestPassed","\nvar [a, b, c] = Object.create(global.__createIterableObject(1, 2))\nvar d, e;\n[d, e] = Object.create(global.__createIterableObject(3, 4));\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -3189,8 +3199,8 @@ return ([a, b] = iterable) === iterable;
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
-<td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -3199,7 +3209,7 @@ return ([a, b] = iterable) === iterable;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
-<td class="no" data-browser="ios8">No</td>
+<td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>chained iterable destructuring</span><script data-source="
 var a,b,c,d;
@@ -3253,8 +3263,8 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 1 &amp;&amp; d === 2;
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
-<td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -3263,12 +3273,15 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 1 &amp;&amp; d === 2;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
-<td class="no" data-browser="ios8">No</td>
+<td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>with objects</span><script data-source="
 var {c, x:d, e} = {c:7, x:8};
-return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nvar {c, x:d, e} = {c:7, x:8};\nreturn c === 7 && d === 8 && e === undefined;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var f, g;
+({f,g} = {f:9,g:10});
+return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined
+  &amp;&amp; f === 9 &amp;&amp; g === 10;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nvar {c, x:d, e} = {c:7, x:8};\nvar f, g;\n({f,g} = {f:9,g:10});\nreturn c === 7 && d === 8 && e === undefined\n  && f === 9 && g === 10;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -3316,8 +3329,8 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined;
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
-<td class="yes" data-browser="safari71_8">Yes</td>
-<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes<a href="#webkit-object-destructuring-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="webkit">Yes<a href="#webkit_object_destructuring-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -3326,7 +3339,7 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined;
 <td class="no" data-browser="iojs">No</td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
-<td class="yes" data-browser="ios8">Yes</td>
+<td class="yes" data-browser="ios8">Yes<a href="#webkit-object-destructuring-note"><sup>[8]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>object destructuring expression</span><script data-source="
 var a, b, obj = { a:1, b:2 };
@@ -3335,70 +3348,6 @@ return ({a,b} = obj) === obj;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
-<td class="no" data-browser="es6tr">No</td>
-<td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
-<td class="no" data-browser="ie10">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="ie11tp">No</td>
-<td class="no obsolete" data-browser="firefox11">No</td>
-<td class="no obsolete" data-browser="firefox13">No</td>
-<td class="yes obsolete" data-browser="firefox16">Yes</td>
-<td class="yes obsolete" data-browser="firefox17">Yes</td>
-<td class="yes obsolete" data-browser="firefox18">Yes</td>
-<td class="yes obsolete" data-browser="firefox23">Yes</td>
-<td class="yes obsolete" data-browser="firefox24">Yes</td>
-<td class="yes obsolete" data-browser="firefox25">Yes</td>
-<td class="yes obsolete" data-browser="firefox27">Yes</td>
-<td class="yes obsolete" data-browser="firefox28">Yes</td>
-<td class="yes obsolete" data-browser="firefox29">Yes</td>
-<td class="yes obsolete" data-browser="firefox30">Yes</td>
-<td class="yes" data-browser="firefox31">Yes</td>
-<td class="yes obsolete" data-browser="firefox32">Yes</td>
-<td class="yes obsolete" data-browser="firefox33">Yes</td>
-<td class="yes obsolete" data-browser="firefox34">Yes</td>
-<td class="yes" data-browser="firefox35">Yes</td>
-<td class="yes" data-browser="firefox36">Yes</td>
-<td class="yes" data-browser="firefox37">Yes</td>
-<td class="no obsolete" data-browser="chrome">No</td>
-<td class="no obsolete" data-browser="chrome19dev">No</td>
-<td class="no obsolete" data-browser="chrome21dev">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome31">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome36">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no" data-browser="chrome39">No</td>
-<td class="no" data-browser="chrome40">No</td>
-<td class="no" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="safari51">No</td>
-<td class="no obsolete" data-browser="safari6">No</td>
-<td class="no" data-browser="safari7">No</td>
-<td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
-<td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="konq49">No</td>
-<td class="no obsolete" data-browser="rhino17">No</td>
-<td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
-<td class="no" data-browser="ejs">No</td>
-<td class="no" data-browser="ios7">No</td>
-<td class="no" data-browser="ios8">No</td>
-</tr>
-<tr class="subtest" data-parent="destructuring"><td><span>chained object destructuring</span><script data-source="
-var a,b,c,d;
-({a,b}) = {c,d} = {a:1,b:2,c:3,d:4};
-return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");return Function("asyncTestPassed","\nvar a,b,c,d;\n({a,b}) = {c,d} = {a:1,b:2,c:3,d:4};\nreturn a === 1 && b === 2 && c === 3 && d === 4;\n      ")(asyncTestPassed);}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -3443,8 +3392,8 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
-<td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -3453,7 +3402,71 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
-<td class="no" data-browser="ios8">No</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="subtest" data-parent="destructuring"><td><span>chained object destructuring</span><script data-source="
+var a,b,c,d;
+({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
+return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");return Function("asyncTestPassed","\nvar a,b,c,d;\n({a,b} = {c,d} = {a:1,b:2,c:3,d:4});\nreturn a === 1 && b === 2 && c === 3 && d === 4;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="tr">Yes</td>
+<td class="yes" data-browser="_6to5">Yes</td>
+<td class="yes" data-browser="es6tr">Yes</td>
+<td class="no" data-browser="closure">No</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="es6shim">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="ie11tp">No</td>
+<td class="no obsolete" data-browser="firefox11">No</td>
+<td class="no obsolete" data-browser="firefox13">No</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox17">Yes</td>
+<td class="yes obsolete" data-browser="firefox18">Yes</td>
+<td class="yes obsolete" data-browser="firefox23">Yes</td>
+<td class="yes obsolete" data-browser="firefox24">Yes</td>
+<td class="yes obsolete" data-browser="firefox25">Yes</td>
+<td class="yes obsolete" data-browser="firefox27">Yes</td>
+<td class="yes obsolete" data-browser="firefox28">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes obsolete" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes" data-browser="firefox37">Yes</td>
+<td class="no obsolete" data-browser="chrome">No</td>
+<td class="no obsolete" data-browser="chrome19dev">No</td>
+<td class="no obsolete" data-browser="chrome21dev">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome31">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome36">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no" data-browser="chrome39">No</td>
+<td class="no" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no obsolete" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="konq49">No</td>
+<td class="no obsolete" data-browser="rhino17">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="no" data-browser="ejs">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>throws on null and undefined</span><script data-source="
 var n = null;
@@ -3463,11 +3476,11 @@ try {
   return false;
 } catch(e) {}
 try {
-  var {a} = u;
+  var {b} = u;
   return false;
 } catch(e) {}
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nvar n = null;\nvar u = undefined;\ntry {\n  var {a} = n;\n  return false;\n} catch(e) {}\ntry {\n  var {a} = u;\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nvar n = null;\nvar u = undefined;\ntry {\n  var {a} = n;\n  return false;\n} catch(e) {}\ntry {\n  var {b} = u;\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -3536,7 +3549,7 @@ return grault === &quot;garply&quot;;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
@@ -3656,8 +3669,10 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === 7 &amp;&amp; d === 8;
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>nested</span><script data-source="
 var [e, {x:f, g}] = [9, {x:10}];
-return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");return Function("asyncTestPassed","\nvar [e, {x:f, g}] = [9, {x:10}];\nreturn e === 9 && f === 10 && g === undefined;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var {h, x:[i]} = {h:11, x:[12]};
+return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined
+  &amp;&amp; h === 11 &amp;&amp; i === 12;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");return Function("asyncTestPassed","\nvar [e, {x:f, g}] = [9, {x:10}];\nvar {h, x:[i]} = {h:11, x:[12]};\nreturn e === 9 && f === 10 && g === undefined\n  && h === 11 && i === 12;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -4884,25 +4899,25 @@ return (foo === 123);
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -4948,25 +4963,25 @@ return bar === 123;
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -5012,25 +5027,25 @@ return baz === 1;
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -5092,9 +5107,9 @@ return passed;
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -5213,25 +5228,25 @@ return (foo === 123);
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -5278,25 +5293,25 @@ return bar === 123;
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -5343,25 +5358,25 @@ return baz === 1;
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -5424,9 +5439,9 @@ return passed;
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -5530,7 +5545,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr><td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[9]</sup></a></span><script data-source="
+<tr><td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[11]</sup></a></span><script data-source="
 &apos;use strict&apos;;
 function f() { return 1; }
 {
@@ -6345,7 +6360,7 @@ return typeof C === &quot;function&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6413,7 +6428,7 @@ return C === c1;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6475,7 +6490,7 @@ return typeof class C {} === &quot;function&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6541,7 +6556,7 @@ return C.prototype.constructor === C
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6607,7 +6622,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6673,7 +6688,7 @@ return typeof C.method === &quot;function&quot;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6741,7 +6756,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6809,7 +6824,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6875,7 +6890,7 @@ return c();
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6888,11 +6903,11 @@ return c instanceof Array
   &amp;&amp; Array.prototype.isPrototypeOf(C.prototype);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("105");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nreturn c instanceof Array\n  && Array.isPrototypeOf(C)\n  && Array.prototype.isPrototypeOf(C.prototype);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="es6tr">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="closure">No<a href="#compiled-extends-note"><sup>[12]</sup></a></td>
-<td class="no" data-browser="jsx">No<a href="#compiled-extends-note"><sup>[12]</sup></a></td>
+<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="es6tr">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="closure">No<a href="#compiled-extends-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="jsx">No<a href="#compiled-extends-note"><sup>[14]</sup></a></td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -6941,7 +6956,7 @@ return c instanceof Array
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6954,7 +6969,7 @@ return !(c instanceof Object)
   &amp;&amp; Object.getPrototypeOf(C.prototype) === null;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("106");return Function("asyncTestPassed","\nclass C extends null {}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
@@ -7007,7 +7022,7 @@ return !(c instanceof Object)
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7135,7 +7150,7 @@ return passed;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7269,7 +7284,7 @@ return new B().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -7340,7 +7355,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="iojs">Flag<a href="#strict-required-note"><sup>[12]</sup></a></td>
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -13423,21 +13438,21 @@ return proxy.foo === 5;
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="no obsolete" data-browser="firefox17">No</td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no" data-browser="firefox31">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox33">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no obsolete" data-browser="firefox34">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no" data-browser="firefox35">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no" data-browser="firefox36">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
-<td class="no" data-browser="firefox37">No<a href="#fx-proxy-get-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no" data-browser="firefox31">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox33">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox34">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no" data-browser="firefox35">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no" data-browser="firefox36">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
+<td class="no" data-browser="firefox37">No<a href="#fx-proxy-get-note"><sup>[15]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -13845,13 +13860,13 @@ return (returnedDesc.value     === fakeDesc.value
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="no obsolete" data-browser="firefox17">No</td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#fx-proxy-getown-note"><sup>[14]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#fx-proxy-getown-note"><sup>[16]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
 <td class="yes" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
@@ -14350,16 +14365,16 @@ return passed;
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="no obsolete" data-browser="firefox17">No</td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox31">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#fx-proxy-ownkeys-note"><sup>[15]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no" data-browser="firefox31">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#fx-proxy-ownkeys-note"><sup>[17]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
 <td class="yes obsolete" data-browser="firefox34">Yes</td>
 <td class="yes" data-browser="firefox35">Yes</td>
@@ -15239,7 +15254,7 @@ return obj instanceof Array;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("230");return Function("asyncTestPassed","\nvar obj = {};\nReflect.setPrototypeOf(obj, Array.prototype);\nreturn obj instanceof Array;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -17173,7 +17188,7 @@ with (a) {
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[18]</sup></a></td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -17435,12 +17450,12 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("263");return Function("asyncTestPassed","\nreturn Object.setPrototypeOf({}, Array.prototype) instanceof Array;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="es6shim">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -19222,34 +19237,34 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="no obsolete" data-browser="firefox17">No</td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no" data-browser="firefox31">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox33">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="firefox34">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no" data-browser="firefox35">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no" data-browser="firefox36">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no" data-browser="firefox37">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="firefox31">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox33">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="firefox34">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="firefox35">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="firefox36">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="firefox37">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
-<td class="no obsolete" data-browser="chrome30">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome31">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome33">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome34">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome35">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome36">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome37">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no obsolete" data-browser="chrome38">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no" data-browser="chrome39">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
-<td class="no" data-browser="chrome40">No<a href="#string-contains-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="chrome30">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome31">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome33">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome34">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome35">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome36">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome37">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="chrome38">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="chrome39">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="chrome40">No<a href="#string-contains-note"><sup>[19]</sup></a></td>
 <td class="yes" data-browser="chrome41">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
@@ -19887,8 +19902,8 @@ class C extends Array {}
 return C.from({ length: 0 }) instanceof C;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("302");return Function("asyncTestPassed","\nclass C extends Array {}\nreturn C.from({ length: 0 }) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -20013,8 +20028,8 @@ class C extends Array {}
 return C.of(0) instanceof C;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("304");return Function("asyncTestPassed","\nclass C extends Array {}\nreturn C.of(0) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -20457,22 +20472,22 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
-<td class="no obsolete" data-browser="firefox17">No<a href="#fx-array-prototype-values-note"><sup>[18]</sup></a></td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#fx-array-prototype-values-note"><sup>[18]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#fx-array-prototype-values-note"><sup>[18]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#fx-array-prototype-values-note"><sup>[18]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#fx-array-prototype-values-note"><sup>[18]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no" data-browser="firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[19]</sup></a></td>
-<td class="no" data-browser="firefox36">No<a href="#array-prototype-iterator-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="firefox37">No<a href="#array-prototype-iterator-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox17">No<a href="#fx-array-prototype-values-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#fx-array-prototype-values-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#fx-array-prototype-values-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#fx-array-prototype-values-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#fx-array-prototype-values-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="firefox36">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no" data-browser="firefox37">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -20483,10 +20498,10 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="chrome35">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome36">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome37">Flag</td>
-<td class="no obsolete" data-browser="chrome38">No<a href="#array-prototype-iterator-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="chrome39">No<a href="#array-prototype-iterator-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="chrome40">No<a href="#array-prototype-iterator-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="chrome41">No<a href="#array-prototype-iterator-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="chrome38">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no" data-browser="chrome39">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no" data-browser="chrome40">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no" data-browser="chrome41">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -21283,7 +21298,7 @@ return typeof Math.imul === &quot;function&quot;;
 <td class="yes" data-browser="firefox37">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
-<td class="yes obsolete" data-browser="chrome21dev">Yes<a href="#chromu-imul-note"><sup>[21]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome21dev">Yes<a href="#chromu-imul-note"><sup>[23]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome31">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
@@ -22138,7 +22153,7 @@ return typeof Math.fround === &quot;function&quot;;
 <td class="no obsolete" data-browser="firefox23">No</td>
 <td class="no obsolete" data-browser="firefox24">No</td>
 <td class="no obsolete" data-browser="firefox25">No</td>
-<td class="yes obsolete" data-browser="firefox27">Yes<a href="#fx-fround-note"><sup>[22]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox27">Yes<a href="#fx-fround-note"><sup>[24]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -23513,7 +23528,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[23]</sup></a></span></td>
+<tr class="supertest"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[25]</sup></a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="_6to5" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="es6tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
@@ -24293,7 +24308,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="6to5-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="compiler-iterable-note">  <sup>[7]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="fx-let-note">  <sup>[8]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[9]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="strict-required-note">  <sup>[10]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[11]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[12]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="fx-proxy-get-note">  <sup>[13]</sup> Firefox doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[14]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[15]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[16]</sup> <code>with</code> is not supported in ejs</p><p id="string-contains-note">  <sup>[17]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[18]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[19]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[20]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[21]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[22]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[23]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="6to5-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="compiler-iterable-note">  <sup>[7]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="webkit-object-destructuring-note">  <sup>[8]</sup> undefined</p><p id="webkit_object_destructuring-note">  <sup>[9]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[10]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[11]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="strict-required-note">  <sup>[12]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[14]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="fx-proxy-get-note">  <sup>[15]</sup> Firefox doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[16]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[17]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[18]</sup> <code>with</code> is not supported in ejs</p><p id="string-contains-note">  <sup>[19]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[20]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[21]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[22]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[23]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[24]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[25]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

@@ -109,7 +109,11 @@ process.nextTick(function () {
           // Known bug: running require('es6-transpiler') causes 6to5 to break.
           // So, it's run here, as late as possible.
           es6tr = es6tr || require('es6-transpiler');
-          return es6tr.run({src:code}).src;
+          var result = es6tr.run({src:code});
+          if (result.src) {
+            return result.src;
+          }
+          throw new Error('\n' + result.errors.join('\n'));
         };
       }()),
     },
