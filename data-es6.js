@@ -3799,14 +3799,12 @@ exports.tests = [
     },
     'throws on null and undefined': {
       exec: function(){/*
-        var n = null;
-        var u = undefined;
         try {
-          var {a} = n;
+          var {a} = null;
           return false;
         } catch(e) {}
         try {
-          var {b} = u;
+          var {b} = undefined;
           return false;
         } catch(e) {}
         return true;

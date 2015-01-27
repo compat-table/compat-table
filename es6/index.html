@@ -3469,18 +3469,16 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="destructuring"><td><span>throws on null and undefined</span><script data-source="
-var n = null;
-var u = undefined;
 try {
-  var {a} = n;
+  var {a} = null;
   return false;
 } catch(e) {}
 try {
-  var {b} = u;
+  var {b} = undefined;
   return false;
 } catch(e) {}
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nvar n = null;\nvar u = undefined;\ntry {\n  var {a} = n;\n  return false;\n} catch(e) {}\ntry {\n  var {b} = u;\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\ntry {\n  var {a} = null;\n  return false;\n} catch(e) {}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
