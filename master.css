@@ -13,18 +13,6 @@ body {
 }
 table {
     margin-bottom: 2em; width: 100%;
-    border-spacing: 0;
-}
-thead {
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    top: 15px;
-    z-index: 2;
-}
-.es6 thead {
-    top: 0;
 }
 th {
     font-weight: normal; text-align: center; padding: 1em 0.45em; position: relative; min-width: 40px; font-size: 13px; background: #eee; vertical-align: middle;
@@ -47,9 +35,6 @@ td .anchor {
 }
 td:first-child {
     min-width: 320px;
-}
-td, th {
-    border: 1px solid #fff;
 }
 a[href^='#'] {
     text-decoration: none;
@@ -365,18 +350,7 @@ label[for="sort"] {
     width: 260px;
 }
 .num-features {
-    position: absolute;
-    top: -15px;
-    right: 0px;
-    font-size: 11px;
-    left: 0px;
-    background-color: #eee;
-    border-bottom: 1px solid #fff;
-    text-align: right;
-}
-.es6 .num-features {
-    left: auto;
-    background-color: transparent;
+    position: absolute; top: -15px; right: 0px; font-size: 11px;
 }
 .num-features b {
     font-weight: bold;
