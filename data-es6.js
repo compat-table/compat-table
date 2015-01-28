@@ -26,13 +26,13 @@ exports.browsers = {
   },
   es6tr: {
     full: 'ES6 Transpiler',
-    short: 'ES6<br>Transpiler',
+    short: 'ES6<br>Trans-<br>piler',
     obsolete: false,
     platformtype: 'compiler',
   },
   closure: {
     full: 'Closure Compiler v20141120',
-    short: 'Closure<br>Compiler',
+    short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -46,7 +46,7 @@ exports.browsers = {
   },
   typescript: {
     full: 'TypeScript 1.4',
-    short: 'TypeScript',
+    short: 'Type-<br>Script',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -257,11 +257,11 @@ exports.browsers = {
   safari6: {
     full: 'Safari',
     short: 'SF 6',
-    obsolete: false // EOLs together with OS X 10.8
+    obsolete: true
   },
   safari7: {
     full: 'Safari',
-    short: 'SF 7.0',
+    short: 'SF 6.1,<br>SF 7',
     obsolete: false
   },
   safari71_8: {
@@ -289,6 +289,7 @@ exports.browsers = {
     full: 'Rhino 1.7',
     short: 'RH',
     platformtype: 'engine',
+    obsolete: true,
   },
   phantom: {
     full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
@@ -2067,7 +2068,7 @@ exports.tests = [
         ie11tp:      true,
         firefox25:   true,
         chrome30:    flag,
-        chrome40:    true,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2086,7 +2087,7 @@ exports.tests = [
         ie11tp:      true,
         firefox25:   true,
         chrome30:    flag,
-        chrome40:    true,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2099,7 +2100,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
-        chrome40:    true,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -2112,7 +2113,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
-        chrome40:    true,
+        chrome41:    true,
         node:        flag,
         iojs:        true,
       },
@@ -3650,7 +3651,10 @@ exports.tests = [
     'with arrays': {
       exec: function(){/*
         var [a, , [b], c] = [5, null, [6]];
-        return a === 5 && b === 6 && c === undefined;
+        var d, e;
+        [d,e] = [7,8];
+        return a === 5 && b === 6 && c === undefined
+          && d === 7 && e === 8;
       */},
       res: (temp.destructuringResults = {
         tr:          true,
@@ -3667,8 +3671,11 @@ exports.tests = [
     },
     'with strings': {
       exec: function(){/*
-        var [a, b, c] = "bar";
-        return a === "b" && b === "a" && c === "r";
+        var [a, b, c] = "ab";
+        var d, e;
+        [d,e] = "de";
+        return a === "a" && b === "b" && c === undefined
+          && d === "d" && e === "e";
       */},
       res: {
         tr:          true,
@@ -3685,9 +3692,11 @@ exports.tests = [
     },
     'with generic iterables': {
       exec: function(){/*
-        var iterable = global.__createIterableObject(1, 2, 3);
-        var [a, b, c] = iterable;
-        return a === 1 && b === 2 && c === 3;
+        var [a, b, c] = global.__createIterableObject(1, 2);
+        var d, e;
+        [d, e] = global.__createIterableObject(3, 4);
+        return a === 1 && b === 2 && c === undefined
+          && d === 3 && e === 4;
       */},
       res: {
         tr:           true,
@@ -3697,9 +3706,11 @@ exports.tests = [
     },
     'with instances of generic iterables': {
       exec: function(){/*
-        var iterable = global.__createIterableObject(1, 2, 3);
-        var [a, b, c] = Object.create(iterable);
-        return a === 1 && b === 2 && c === 3;
+        var [a, b, c] = Object.create(global.__createIterableObject(1, 2))
+        var d, e;
+        [d, e] = Object.create(global.__createIterableObject(3, 4));
+        return a === 1 && b === 2 && c === undefined
+          && d === 3 && e === 4;
       */},
       res: {
         tr:           true,
@@ -3707,10 +3718,96 @@ exports.tests = [
         firefox36:    true,
       },
     },
+    'iterable destructuring expression': {
+      exec: function() {/*
+        var a, b, iterable = [1,2];
+        return ([a, b] = iterable) === iterable;
+      */},
+      res: {
+        tr:           true,
+        _6to5:        true,
+        es6tr:        true,
+        firefox11:    true,
+        safari71_8:   true,
+        webkit:       true,
+        ios8:         true,
+      },
+    },
+    'chained iterable destructuring': {
+      exec: function() {/*
+        var a,b,c,d;
+        [a,b] = [c,d] = [1,2];
+        return a === 1 && b === 2 && c === 1 && d === 2;
+      */},
+      res: {
+        tr:           true,
+        es6tr:        true,
+        firefox11:    true,
+        safari71_8:   true,
+        webkit:       true,
+        ios8:         true,
+      },
+    },
     'with objects': {
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
-        return c === 7 && d === 8 && e === undefined;
+        var f, g;
+        ({f,g} = {f:9,g:10});
+        return c === 7 && d === 8 && e === undefined
+          && f === 9 && g === 10;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        webkit: {
+          val: true,
+          note_id: "webkit_object_destructuring",
+          note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
+        },
+        safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
+        ios8:         { val: true, note_id: "webkit-object-destructuring", },
+      }),
+    },
+    'object destructuring expression': {
+      exec: function() {/*
+        var a, b, obj = { a:1, b:2 };
+        return ({a,b} = obj) === obj;
+      */},
+      res: {
+        tr:           true,
+        _6to5:        true,
+        es6tr:        true,
+        firefox16:    true,
+        safari71_8:   true,
+        webkit:       true,
+        ios8:         true,
+      },
+    },
+    'chained object destructuring': {
+      exec: function() {/*
+        var a,b,c,d;
+        ({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
+        return a === 1 && b === 2 && c === 3 && d === 4;
+      */},
+      res: {
+        tr:           true,
+        firefox16:    true,
+        _6to5:        true,
+        es6tr:        true,
+        webkit:       true,
+        safari71_8:   true,
+        ios8:         true,
+      },
+    },
+    'throws on null and undefined': {
+      exec: function(){/*
+        try {
+          var {a} = null;
+          return false;
+        } catch(e) {}
+        try {
+          var {b} = undefined;
+          return false;
+        } catch(e) {}
+        return true;
       */},
       res: temp.destructuringResults,
     },
@@ -3722,6 +3819,7 @@ exports.tests = [
       */},
       res: {
         _6to5:       true,
+        closure:     true,
         tr:          true,
         es6tr:       true,
         firefox35:   true,
@@ -3746,7 +3844,9 @@ exports.tests = [
     'nested': {
       exec: function(){/*
         var [e, {x:f, g}] = [9, {x:10}];
-        return e === 9 && f === 10 && g === undefined;
+        var {h, x:[i]} = {h:11, x:[12]};
+        return e === 9 && f === 10 && g === undefined
+          && h === 11 && i === 12;
       */},
       res: temp.destructuringResults,
     },

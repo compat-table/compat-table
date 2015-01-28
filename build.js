@@ -109,7 +109,11 @@ process.nextTick(function () {
           // Known bug: running require('es6-transpiler') causes 6to5 to break.
           // So, it's run here, as late as possible.
           es6tr = es6tr || require('es6-transpiler');
-          return es6tr.run({src:code}).src;
+          var result = es6tr.run({src:code});
+          if (result.src) {
+            return result.src;
+          }
+          throw new Error('\n' + result.errors.join('\n'));
         };
       }()),
     },
@@ -121,6 +125,15 @@ process.nextTick(function () {
       compiler: function(code) {
         var ret = reacttools.transform(code, { harmony:true });
         return ret.code || ret;
+      },
+    },
+    {
+      name: 'TypeScript',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es6/compilers/typescript.html',
+      polyfills: [],
+      compiler: function(code) {
+        return tss(code);
       },
     },
     {
@@ -140,15 +153,6 @@ process.nextTick(function () {
           throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
         }
         return output;
-      },
-    },
-    {
-      name: 'TypeScript',
-      url: 'https://www.typescriptlang.org/',
-      target_file: 'es6/compilers/typescript.html',
-      polyfills: [],
-      compiler: function(code) {
-        return tss(code);
       },
     },
   ].forEach(function(e){
