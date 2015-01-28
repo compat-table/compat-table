@@ -1844,7 +1844,7 @@ exports.tests = [
     firefox21: {
       val: true
       note_id: 'strict-mode-ff21',
-      note_html: 'Strict getters on primitive wrapper prototypes receive wrapped |this| values - https://bugzilla.mozilla.org/show_bug.cgi?id=603201'
+      note_html: 'Strict getters on primitive wrapper prototypes receive wrapped |this| values - <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">https://bugzilla.mozilla.org/show_bug.cgi?id=603201</a>'
     },
 
     safari3: false,
