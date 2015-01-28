@@ -2445,8 +2445,8 @@ exports.tests = [
             'Float64Array'
           ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/}'),
         res: methods[m]
-      }
-    };
+      };
+    }
     return obj;
   }())),
 },
@@ -2711,8 +2711,7 @@ exports.tests = [
         ios8:        true,
         webkit:      true,
         node:        flag,
-        iojs:        true,
-        ios8:        true,
+        iojs:        true
       },
     },
     'constructor arguments': {
@@ -2797,8 +2796,7 @@ exports.tests = [
         ios8:        true,
         webkit:      true,
         node:        flag,
-        iojs:        true,
-        ios8:        true,
+        iojs:        true
       },
     },
     'Set.prototype.delete': {
@@ -5795,8 +5793,8 @@ exports.tests = [
         exec: eval('0,function(){/*\n  return typeof Math.' +
           m + eqFn + ';\n*/}'),
         res: methods[m]
-      }
-    };
+      };
+    }
     return obj;
   }()),
 },
