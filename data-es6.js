@@ -3590,8 +3590,10 @@ exports.tests = [
       exec: function() {/*
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
-        var passed = 1
-        if(typeof Symbol != undefined && 'iterator' in Symbol)passed &= Symbol.iterator in iterator;
+        var passed = 1;
+        if (typeof Symbol != undefined && 'iterator' in Symbol) {
+          passed &= Symbol.iterator in iterator;
+        }
         var item = iterator.next();
         passed    &= item.value === "foo" && item.done === false;
         item = iterator.next();
@@ -5803,7 +5805,9 @@ exports.tests = [
     };
     obj['Math.hypot'] = {
       exec: function(){/*
-        return Math.hypot(1) === 1 && Math.hypot(9, 12, 20) === 25
+        return Math.hypot() === 0 && 
+          Math.hypot(1) === 1 &&
+          Math.hypot(9, 12, 20) === 25;
       */},
       res: {
         ejs:         true,
