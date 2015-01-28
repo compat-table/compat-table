@@ -1492,7 +1492,7 @@ return !this;
 <td class="no obsolete" data-browser="firefox3">No</td>
 <td class="no obsolete" data-browser="firefox3_5">No</td>
 <td class="yes obsolete" data-browser="firefox4">Yes</td>
-<td class="yes" data-browser="firefox21">Yes</td>
+<td class="yes" data-browser="firefox21">Yes<a href="#strict-mode-ff21-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
 <td class="no obsolete" data-browser="safari5">No</td>
@@ -1523,6 +1523,6 @@ return !this;
     </div>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="zero-width-char-note">  <sup>[4]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[5]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p></p></div>
+    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="zero-width-char-note">  <sup>[4]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[5]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p><p id="strict-mode-ff21-note">  <sup>[6]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
   </body>
 </html>

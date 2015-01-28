@@ -3741,6 +3741,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
+        _6to5:        true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,

@@ -2827,7 +2827,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 </tr>
 <tr class="supertest"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">20/20</td>
-<td data-browser="_6to5" class="tally" data-tally="0.95">19/20</td>
+<td data-browser="_6to5" class="tally" data-tally="1">20/20</td>
 <td data-browser="es6tr" class="tally" data-tally="0.8">16/20</td>
 <td data-browser="closure" class="tally" data-tally="0.65">13/20</td>
 <td data-browser="jsx" class="tally" data-tally="0.4">8/20</td>
@@ -3218,7 +3218,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 1 &amp;&amp; d === 2;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");return Function("asyncTestPassed","\nvar a,b,c,d;\n[a,b] = [c,d] = [1,2];\nreturn a === 1 && b === 2 && c === 1 && d === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
