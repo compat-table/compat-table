@@ -1,4 +1,4 @@
 language: node_js
 node_js:
   - "0.10"
-script: 'jshint data-es5.js data-es6.js data-es7.js'
+script: 'npm run-script lint'

@@ -22,5 +22,11 @@
     "typescript":     "*",
     "react-tools":    "*",
     "es6-shim": "*"
+  },
+  "devDependencies": {
+    "jshint": "2.6.x"
+  },
+  "scripts": {
+    "lint": "jshint data-es5.js data-es6.js data-es7.js"
   }
 }
