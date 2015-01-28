@@ -3590,8 +3590,8 @@ exports.tests = [
       exec: function() {/*
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
-
-        var passed = Symbol.iterator in item;
+        var passed = 1
+        if(typeof Symbol != undefined && 'iterator' in Symbol)passed &= Symbol.iterator in iterator;
         var item = iterator.next();
         passed    &= item.value === "foo" && item.done === false;
         item = iterator.next();

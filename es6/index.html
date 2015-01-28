@@ -15504,8 +15504,8 @@ return !Object.isExtensible(obj);
 <tr class="subtest" data-parent="Reflect"><td><span>Reflect.enumerate</span><script data-source="
 var obj = { foo: 1, bar: 2 };
 var iterator = Reflect.enumerate(obj);
-
-var passed = Symbol.iterator in item;
+var passed = 1
+if(typeof Symbol != undefined &amp;&amp; &apos;iterator&apos; in Symbol)passed &amp;= Symbol.iterator in iterator;
 var item = iterator.next();
 passed    &amp;= item.value === &quot;foo&quot; &amp;&amp; item.done === false;
 item = iterator.next();
@@ -15513,7 +15513,7 @@ passed    &amp;= item.value === &quot;bar&quot; &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("234");return Function("asyncTestPassed","\nvar obj = { foo: 1, bar: 2 };\nvar iterator = Reflect.enumerate(obj);\n\nvar passed = Symbol.iterator in item;\nvar item = iterator.next();\npassed    &= item.value === \"foo\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"bar\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("234");return Function("asyncTestPassed","\nvar obj = { foo: 1, bar: 2 };\nvar iterator = Reflect.enumerate(obj);\nvar passed = 1\nif(typeof Symbol != undefined && 'iterator' in Symbol)passed &= Symbol.iterator in iterator;\nvar item = iterator.next();\npassed    &= item.value === \"foo\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"bar\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="_6to5">Yes</td>
