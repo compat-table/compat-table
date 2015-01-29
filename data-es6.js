@@ -3869,6 +3869,23 @@ exports.tests = [
         ios8:        true,
       },
     },
+    'in parameters, function \'length\' property': {
+      exec: function(){/*
+        return function({a, b}, [c, d]){}.length === 2;
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
     'in for-in loop heads': {
       exec: function(){/*
         for(var [i, j, k] in { qux: 1 }) {
@@ -3953,6 +3970,34 @@ exports.tests = [
         _6to5:       true,
         es6tr:       true,
         closure:     true,
+      },
+    },
+    'defaults, temporal dead zone': {
+      exec: function(){/*
+        var {a, b = 2} = {a:1};
+        try {
+          eval("var {c = c} = {c:1};");
+          return false;
+        } catch(e){}
+        try {
+          eval("var {c = d, d} = {d:1};");
+          return false;
+        } catch(e){}
+        return a === 1 && b === 2;
+      */},
+      res: {
+      },
+    },
+    'defaults in parameters, separate scope': {
+      exec: function(){/*
+        return (function({a=function(){
+          return typeof b === 'undefined';
+        }}){
+          var b = 1;
+          return a();
+        }({}));
+      */},
+      res: {
       },
     },
   },
