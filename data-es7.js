@@ -19,6 +19,12 @@ exports.browsers = {
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via --experimental flag'
   },
+  es7shim: {
+    full: 'es7-shim',
+    short: 'es7-shim',
+    platformtype: 'compiler',
+    obsolete: false // always up-to-date version
+  },
   ie11: {
     full: 'Internet Explorer',
     short: 'IE 11',
@@ -147,6 +153,7 @@ exports.tests = [
   res: {
     tr: true,
     _6to5: true,
+    es7shim: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -180,6 +187,7 @@ exports.tests = [
   res: {
     tr:          true,
     _6to5:       true,
+    es7shim:     false,
     ejs:         false,
     ie11:        false,
     firefox31:   true,
@@ -212,6 +220,7 @@ exports.tests = [
   res: {
     tr:          true,
     _6to5:       true,
+    es7shim:     false,
     ejs:         false,
     ie11:        false,
     firefox31:   true,
@@ -246,6 +255,7 @@ exports.tests = [
   res: {
     tr:          true,
     _6to5:       true,
+    es7shim:     false,
   }
 },
 {
@@ -257,6 +267,7 @@ exports.tests = [
   res: {
     tr:          true,
     _6to5:       true,
+    es7shim:     false,
   }
 },
 {
@@ -268,6 +279,7 @@ exports.tests = [
   res: {
     tr: false,
     _6to5: false,
+    es7shim: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -301,6 +313,7 @@ exports.tests = [
   res: {
     tr: false,
     _6to5: false,
+    es7shim: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -335,6 +348,7 @@ exports.tests = [
   res: {
     tr: false,
     _6to5: false,
+    es7shim: false,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -369,6 +383,7 @@ exports.tests = [
   res: {
     tr: false,
     _6to5: true,
+    es7shim: true,
     ejs: false,
     ie11: false,
     firefox31: false,
@@ -419,6 +434,7 @@ exports.tests = [
   res: {
     tr:          false,
     _6to5:       false,
+    es7shim:     false,
     ejs:         false,
     ie11:        false,
     firefox31:   false,
