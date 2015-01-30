@@ -2999,6 +2999,27 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Support frozen objects as keys': {
+      exec: function () {/*
+        var f = Object.freeze({});
+        var m = new WeakMap;
+        m.set(f, 42);
+        return m.get(f) === 42;
+      */},
+      res: {
+        _6to5:       true,
+        ejs:         true,
+        ie11tp:      true,
+        firefox11:   true,
+        chrome21dev: flag,
+        chrome36:    true,
+        safari71_8:  true,
+        ios8:        true,
+        webkit:      true,
+        node:        flag,
+        iojs:        true,
+      },
+    },
   },
 },
 {
@@ -3567,9 +3588,12 @@ exports.tests = [
       exec: function() {/*
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
-
+        var passed = 1;
+        if (typeof Symbol != undefined && 'iterator' in Symbol) {
+          passed &= Symbol.iterator in iterator;
+        }
         var item = iterator.next();
-        var passed = item.value === "foo" && item.done === false;
+        passed    &= item.value === "foo" && item.done === false;
         item = iterator.next();
         passed    &= item.value === "bar" && item.done === false;
         item = iterator.next();
@@ -3579,7 +3603,6 @@ exports.tests = [
       res: {
         _6to5:       true,
         ejs:         true,
-        ie11tp:      true,
       },
     },
     'Reflect.ownKeys': {
@@ -5761,22 +5784,6 @@ exports.tests = [
         iojs:        true,
         ios8:        true,
       },
-      'hypot': {
-        ejs:         true,
-        _6to5:       true,
-        tr:          true,
-        es6shim:     true,
-        ie11tp:      true,
-        firefox27:   true,
-        chrome34:    flag,
-        chrome38:    true,
-        safari71_8:  true,
-        webkit:      true,
-        konq49:      true,
-        node:        flag,
-        iojs:        true,
-        ios8:        true,
-      },
       'trunc': {
         ejs:         true,
         _6to5:       true,
@@ -5839,6 +5846,29 @@ exports.tests = [
           m + eqFn + ';\n*/}'),
         res: methods[m]
       };
+    }
+    obj['Math.hypot'] = {
+      exec: function(){/*
+        return Math.hypot() === 0 && 
+          Math.hypot(1) === 1 &&
+          Math.hypot(9, 12, 20) === 25 &&
+          Math.hypot(27, 36, 60, 100) === 125;
+      */},
+      res: {
+        ejs:         true,
+        _6to5:       true,
+        tr:          true,
+        es6shim:     true,
+        firefox27:   true,
+        chrome34:    flag,
+        chrome38:    true,
+        safari71_8:  true,
+        webkit:      true,
+        konq49:      true,
+        node:        flag,
+        iojs:        true,
+        ios8:        true,
+      }
     }
     return obj;
   }()),
