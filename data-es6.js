@@ -5869,7 +5869,7 @@ exports.tests = [
         iojs:        true,
         ios8:        true,
       }
-    }
+    };
     return obj;
   }()),
 },
