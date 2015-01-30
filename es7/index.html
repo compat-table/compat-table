@@ -67,6 +67,7 @@
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur compiler">Traceur</abbr></a></th>
 <th class="platform _6to5 compiler" data-browser="_6to5"><a href="#_6to5" class="browser-name"><abbr title="6to5">6to5 +<br><nobr>core-js</nobr></abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
 <th class="platform firefox31 desktop" data-browser="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></a></th>
 <th class="platform firefox32 desktop" data-browser="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></a></th>
@@ -99,6 +100,7 @@ return 2 ** 3 === 8;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -127,6 +129,7 @@ return [for (a of [1, 2, 3]) a * a][0] === 1
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="firefox31">Yes</td>
 <td class="yes" data-browser="firefox32">Yes</td>
@@ -155,6 +158,7 @@ return [for (a of [1, 2, 3]) a * a][0] === 1
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="firefox31">Yes</td>
 <td class="yes" data-browser="firefox32">Yes</td>
@@ -185,6 +189,7 @@ return (async function(){
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -213,6 +218,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -241,6 +247,7 @@ return typeof StructType !== &apos;undefined&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="_6to5">No</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -269,6 +276,7 @@ return typeof Object.observe === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="_6to5">No</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -297,6 +305,7 @@ return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="_6to5">No</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -325,6 +334,7 @@ return typeof Array.prototype.includes === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="_6to5">Yes</td>
+<td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>
@@ -366,6 +376,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="_6to5">No</td>
+<td class="no" data-browser="es7shim">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
 <td class="no" data-browser="firefox32">No</td>

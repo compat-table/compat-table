@@ -36,7 +36,8 @@ process.nextTick(function () {
   handle(require('./data-es5'));
   var es6 = require('./data-es6');
   handle(es6);
-  handle(require('./data-es7'));
+  var es7 = require('./data-es7');
+  handle(es7);
   handle(require('./data-non-standard'));
 
   // ES6 compilers
@@ -45,6 +46,9 @@ process.nextTick(function () {
   }
   if (!fs.existsSync('es6/compilers')) {
     fs.mkdirSync('es6/compilers');
+  }
+  if (!fs.existsSync('es7/compilers')) {
+    fs.mkdirSync('es7/compilers');
   }
   var closure    = require('closurecompiler');
   var to5        = require('6to5');
@@ -160,6 +164,22 @@ process.nextTick(function () {
     es6.browsers = {};
     es6.skeleton_file = 'es6/compiler-skeleton.html';
     handle(es6);
+  });
+  [
+    {
+      name: 'es7-shim',
+      url: 'https://github.com/es-shims/es7-shim/',
+      target_file: 'es7/compilers/es7-shim.html',
+      polyfills: ['node_modules/es7-shim/dist/es7-shim.js'],
+      compiler: function(code) {
+        return code;
+      },
+    }
+  ].forEach(function(e){
+    assign(es7, e);
+    es7.browsers = {};
+    es7.skeleton_file = 'es7/compiler-skeleton.html';
+    handle(es7);
   });
 });
 
