@@ -1305,6 +1305,18 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
+    'methods aren\'t enumerable': {
+      exec: function () {/*
+        class C {
+          foo() {}
+          static bar() {}
+        }
+        return !C.prototype.propertyIsEnumerable("foo") && !C.propertyIsEnumerable("bar");
+      */},
+      res: {
+        _6to5:       true,
+      },
+    },
     'implicit strict mode': {
       exec: function () {/*
         var c = class C {
@@ -1325,8 +1337,7 @@ exports.tests = [
     'extends': {
       exec: function () {/*
         class C extends Array {}
-        var c = new C();
-        return c instanceof Array
+        return new C() instanceof Array
           && Array.isPrototypeOf(C)
           && Array.prototype.isPrototypeOf(C.prototype);
       */},
@@ -1344,6 +1355,24 @@ exports.tests = [
           note_id: 'compiled-extends',
           note_html: 'This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.'
         },
+        jsx:         { val: false, note_id: 'compiled-extends' },
+        ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
+      },
+    },
+    'extends expressions': {
+      exec: function () {/*
+        var B;
+        class C extends (B = class {}) {}
+        return new C() instanceof B
+          && B.isPrototypeOf(C)
+          && B.prototype.isPrototypeOf(C.prototype);
+      */},
+      res: {
+        es6tr:       { val: false, note_id: 'compiler-proto' },
+        _6to5:       { val: false, note_id: 'compiler-proto' },
+        tr:          { val: false, note_id: 'compiler-proto' },
+        ejs:         true,
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1377,17 +1406,19 @@ exports.tests = [
     'statement in constructors': {
       exec: function() {/*
         var passed = false;
-        class B extends class {
+        class B {
           constructor(a) { passed = (a === "barbaz"); }
-        } {
+        }
+        class C extends B {
           constructor(a) { super("bar" + a); }
         }
-        new B("baz");
+        new C("baz");
         return passed;
       */},
       res: {
         tr:          true,
         _6to5:       true,
+        closure:     true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1396,16 +1427,18 @@ exports.tests = [
     },
     'expression in constructors': {
       exec: function() {/*
-        class B extends class {
+        class B {
           constructor(a) { return ["foo" + a]; }
-        } {
+        } 
+        class C extends B {
           constructor(a) { return super("bar" + a); }
         }
-        return new B("baz")[0] === "foobarbaz";
+        return new C("baz")[0] === "foobarbaz";
       */},
       res: {
         tr:          true,
         _6to5:       true,
+        closure:     true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1413,16 +1446,18 @@ exports.tests = [
     },
     'in methods': {
       exec: function() {/*
-        class B extends class {
+        class B {
           qux(a) { return "foo" + a; }
-        } {
+        }
+        class C extends B {
           qux(a) { return super.qux("bar" + a); }
         }
-        return new B().qux("baz") === "foobarbaz";
+        return new C().qux("baz") === "foobarbaz";
       */},
       res: {
         tr:          true,
         _6to5:       true,
+        closure:     true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1431,13 +1466,14 @@ exports.tests = [
     },
     'is statically bound': {
       exec: function() {/*
-        class B extends class {
+        class B {
           qux() { return "bar"; }
-        } {
+        }
+        class C extends B {
           qux() { return super.qux() + this.corge; }
         }
         var obj = {
-          qux: B.prototype.qux,
+          qux: C.prototype.qux,
           corge: "ley"
         };
         return obj.qux() === "barley";
@@ -1858,6 +1894,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        closure:     true,
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
@@ -1921,6 +1958,7 @@ exports.tests = [
       res: {
         tr:          true,
         _6to5:       true,
+        closure:     true,
         firefox27:   true,
         chrome38:    flag,
         chrome39:    true,
@@ -1942,6 +1980,7 @@ exports.tests = [
       */},
       res: {
         _6to5:       true,
+        closure:     true,
         tr:          true,
         firefox27:   true,
         chrome38:    flag,
@@ -3995,15 +4034,15 @@ exports.tests = [
         closure:     true,
       },
     },
-    'defaults, temporal dead zone': {
+    'defaults, let temporal dead zone': {
       exec: function(){/*
         var {a, b = 2} = {a:1};
         try {
-          eval("var {c = c} = {c:1};");
+          eval("let {c = c} = {};");
           return false;
         } catch(e){}
         try {
-          eval("var {c = d, d} = {d:1};");
+          eval("let {c = d, d} = {d:1};");
           return false;
         } catch(e){}
         return a === 1 && b === 2;
