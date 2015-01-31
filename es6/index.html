@@ -16394,7 +16394,7 @@ function check() {
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest"><td id="Symbol"><span><a class="anchor" href="#Symbol">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0.4444444444444444">4/9</td>
+<td data-browser="tr" class="tally" data-tally="0.3333333333333333">3/9</td>
 <td data-browser="_6to5" class="tally" data-tally="0.5555555555555556" data-flagged-tally="0.6666666666666666">5/9</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/9</td>
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
@@ -16586,7 +16586,7 @@ var symbol = Symbol();
 object[symbol] = 1;
 
 for (var x in object){}
-var passed = (x !== symbol);
+var passed = !x;
 
 if (Object.keys &amp;&amp; Object.getOwnPropertyNames) {
   passed &amp;= Object.keys(object).length === 0
@@ -16594,9 +16594,9 @@ if (Object.keys &amp;&amp; Object.getOwnPropertyNames) {
 }
 
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("250");return Function("asyncTestPassed","\nvar object = {};\nvar symbol = Symbol();\nobject[symbol] = 1;\n\nfor (var x in object){}\nvar passed = (x !== symbol);\n\nif (Object.keys && Object.getOwnPropertyNames) {\n  passed &= Object.keys(object).length === 0\n    && Object.getOwnPropertyNames(object).length === 0;\n}\n\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("250");return Function("asyncTestPassed","\nvar object = {};\nvar symbol = Symbol();\nobject[symbol] = 1;\n\nfor (var x in object){}\nvar passed = !x;\n\nif (Object.keys && Object.getOwnPropertyNames) {\n  passed &= Object.keys(object).length === 0\n    && Object.getOwnPropertyNames(object).length === 0;\n}\n\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="yes" data-browser="tr">Yes</td>
+<td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>

@@ -4898,7 +4898,7 @@ exports.tests = [
         object[symbol] = 1;
 
         for (var x in object){}
-        var passed = (x !== symbol);
+        var passed = !x;
 
         if (Object.keys && Object.getOwnPropertyNames) {
           passed &= Object.keys(object).length === 0
@@ -4909,7 +4909,6 @@ exports.tests = [
       */},
       res: {
         _6to5:       true,
-        tr:          true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
