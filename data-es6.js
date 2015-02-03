@@ -234,7 +234,7 @@ exports.browsers = {
   chrome39: {
     full: 'Chrome, Opera',
     short: 'CH 39,<br>OP&nbsp;26',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome40: {
