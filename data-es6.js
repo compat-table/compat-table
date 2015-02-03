@@ -1334,6 +1334,19 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
+    'constructor requires new': {
+      exec: function () {/*
+        class C {}
+        try {
+          C();
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: {
+      },
+    },
     'extends': {
       exec: function () {/*
         class C extends Array {}
@@ -4595,20 +4608,6 @@ exports.tests = [
   },
 },
 {
-  name: 'Function.prototype.toMethod',
-  category: 'built-in extensions',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-function.prototype.tomethod',
-  exec: function () {/*
-    return typeof Function.prototype.toMethod === "function";
-  */},
-  res: {
-    chrome39:    flag,
-    chrome40:    false,
-    chrome41:    true,
-    iojs:        true,
-  }
-},
-{
   name: 'String static methods',
   category: 'built-in extensions',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor',
@@ -4874,6 +4873,7 @@ exports.tests = [
         chrome38:    true,
         node:        flag,
         iojs:        true,
+        webkit:      true,
       },
     },
     'typeof support': {
@@ -4889,6 +4889,7 @@ exports.tests = [
         chrome38:    true,
         node:        flag,
         iojs:        true,
+        webkit:      true,
       },
     },
     'symbol keys are hidden to pre-ES6 code': {
@@ -4916,6 +4917,7 @@ exports.tests = [
         chrome38:    true,
         node:        flag,
         iojs:        true,
+        webkit:      true,
       },
     },
     'Object.defineProperty support': {
@@ -4941,6 +4943,7 @@ exports.tests = [
         chrome38:    true,
         node:        flag,
         iojs:        true,
+        webkit:      true,
       },
     },
     'cannot coerce to string or number': {
@@ -4967,6 +4970,7 @@ exports.tests = [
         chrome38:    true,
         node:        flag,
         iojs:        true,
+        webkit:      true,
       },
     },
     'can convert with String()': {
@@ -4978,6 +4982,7 @@ exports.tests = [
         chrome39:    true,
         firefox36:   true,
         iojs:        true,
+        webkit:      true,
       },
     },
     'new Symbol() throws': {
@@ -4999,6 +5004,7 @@ exports.tests = [
         chrome38:   true,
         nodeharmony:true,
         iojs:       true,
+        webkit:      true,
       },
     },
     'Object(symbol)': {
@@ -5016,6 +5022,7 @@ exports.tests = [
         firefox36:  true,
         chrome30:   flag,
         chrome35:   false,
+        webkit:      true,
       },
     },
     'global symbol registry': {
@@ -5303,6 +5310,7 @@ exports.tests = [
         firefox25:   true,
         chrome39:    flag,
         chrome40:    false,
+        webkit:      true,
       },
     },
     'Array subclass .of': {
