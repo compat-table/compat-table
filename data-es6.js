@@ -522,6 +522,7 @@ exports.tests = [
         })();
       */},
       res: {
+        tr: true
       },
     },
     'no "prototype" property': {
