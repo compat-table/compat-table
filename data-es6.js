@@ -1410,6 +1410,20 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
+    'new.target': {
+      exec: function () {/*
+        var passed = false;
+        class A {
+          constructor() {
+            passed = new.target === B;
+          }
+        }
+        class B extends A {}
+        new B();
+        return passed;
+      */},
+      res: {},
+    },
   },
 },
 {
