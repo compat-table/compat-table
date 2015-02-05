@@ -178,12 +178,21 @@ function handle(options, compiler) {
   var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
   var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler);
 
+  var createIterableObject = [];
+  try {
+    var compiled = options.compiler(
+      'global.__createIterableObject = function(a, b, c) { return function*() { yield a; yield b; yield c; }(); };'
+    );
+    createIterableObject = ['<script>' + compiled + '</script>'];
+  } catch (ignore) {}
+
   var result = replaceAndIndent(html, [
     ["<!-- NAME -->", [options.name]],
     ["<!-- URL -->", [options.name.link(options.url)]],
     ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
       return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8') + '</script>\n';
     })],
+    ["<!-- CREATE_ITERABLE_OBJECT -->", createIterableObject],
   ]).replace(/\t/g, '  ');
 
   var target_file = __dirname + path.sep + options.target_file;

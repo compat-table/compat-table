@@ -12,7 +12,7 @@
       if (typeof global === "undefined") {
         window.global = this;
       }
-      function __createIterableObject(a, b, c) {
+      global.__createIterableObject = function(a, b, c) {
         try {
           return eval("(function*() { yield a; yield b; yield c; }())");
         }
@@ -28,6 +28,7 @@
         }
       }
     </script>
+    <!-- CREATE_ITERABLE_OBJECT -->
 </head>
 <body class="es6">
   <div id="header">
