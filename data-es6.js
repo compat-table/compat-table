@@ -1352,6 +1352,7 @@ exports.tests = [
         }
       */},
       res: {
+        _6to5: true
       },
     },
     'extends': {

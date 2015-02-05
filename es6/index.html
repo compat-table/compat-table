@@ -6542,7 +6542,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 </tr>
 <tr class="supertest"><td id="class"><span><a class="anchor" href="#class">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5333333333333333">8/15</td>
-<td data-browser="_6to5" class="tally" data-tally="0.7333333333333333">11/15</td>
+<td data-browser="_6to5" class="tally" data-tally="0.8">12/15</td>
 <td data-browser="es6tr" class="tally" data-tally="0.6">9/15</td>
 <td data-browser="closure" class="tally" data-tally="0.3333333333333333">5/15</td>
 <td data-browser="jsx" class="tally" data-tally="0.5333333333333333">8/15</td>
@@ -7280,7 +7280,7 @@ catch(e) {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");return Function("asyncTestPassed","\nclass C {}\ntry {\n  C();\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
