@@ -1108,6 +1108,30 @@ exports.tests = [
         firefox17:   true,
       },
     },
+    'with astral plane strings, in function calls': {
+      exec: function() {/*
+       return Array(..."𠮷")[0] === "𠮷";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        ie11tp:      true,
+        firefox27:   true,
+      },
+    },
+    'with astral plane strings, in array literals': {
+      exec: function() {/*
+       return [..."𠮷"][0] === "𠮷";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        ie11tp:      true,
+        firefox17:   true,
+      },
+    },
     'with generic iterables, in calls': {
       exec: function () {/*
         var iterable = global.__createIterableObject(1, 2, 3);
@@ -1764,6 +1788,24 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'with astral plane strings': {
+      exec: function () {/*
+        var str = "";
+        for (var item of "𠮷")
+          str += item;
+        return str === "𠮷";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
+        closure:     true,
+        ie11tp:      true,
+        firefox17:   true,
+        chrome38:    true,
+        iojs:        true,
+      },
+    },
     'with generic iterables': {
       exec: function () {/*
         var result = "";
@@ -2015,6 +2057,26 @@ exports.tests = [
       res: {
         _6to5:       true,
         closure:     true,
+        tr:          true,
+        firefox27:   true,
+        chrome38:    flag,
+        chrome39:    true,
+        iojs:        true,
+      },
+    },
+    'yield *, astral plane strings': {
+      exec: function () {/*
+        var iterator = (function * generator() {
+          yield * "𠮷";
+        }());
+        var item = iterator.next();
+        var passed = item.value === "𠮷" && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        _6to5:       true,
         tr:          true,
         firefox27:   true,
         chrome38:    flag,
@@ -3777,6 +3839,22 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
+      },
+    },
+    'with astral plane strings': {
+      exec: function(){/*
+        var c;
+        [c] = "𠮷";
+        return c === "𠮷";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        ejs:         true,
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,

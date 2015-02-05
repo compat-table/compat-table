@@ -52,7 +52,6 @@ process.nextTick(function () {
   }
   var closure    = require('closurecompiler');
   var to5        = require('6to5');
-  var esnext     = require('esnext');
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
   var tss        = require('typescript-simple');
@@ -91,15 +90,6 @@ process.nextTick(function () {
       polyfills: ['node_modules/6to5/browser-polyfill.js'],
       compiler: function(code) {
         return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
-      },
-    },
-    {
-      name: 'ESNext',
-      url: 'https://github.com/esnext/esnext',
-      target_file: 'es6/compilers/esnext.html',
-      polyfills: [],
-      compiler: function(code) {
-        return esnext.compile(code).code;
       },
     },
     {
