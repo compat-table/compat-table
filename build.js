@@ -319,6 +319,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       // Add extra signifiers if the result is not applicable.
       if (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
+          !browsers[browserId].needs_annex_b &&
           t.category==="annex b") {
         cell.attr('title', "This feature is optional on non-browser platforms.");
         cell.addClass("not-applicable");

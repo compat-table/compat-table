@@ -154,7 +154,7 @@
 <th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ 4.14</abbr><a href="#khtml-note"><sup>[5]</sup></a></a></th>
 <th class="platform rhino17 engine obsolete" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
-<th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">PH</abbr></a></th>
+<th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node 0.11.14">Node</abbr><a href="#harmony-flag-note"><sup>[6]</sup></a></a></th>
 <th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 1.0.3">io.js</abbr><a href="#harmony-flag-note"><sup>[6]</sup></a></a></th>
 <th class="platform ejs engine" data-browser="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
@@ -9342,7 +9342,7 @@ return passed;
 <td data-browser="opera" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="konq49" class="tally" data-tally="0.2">8/40</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/40</td>
-<td data-browser="phantom" class="tally" data-tally="0.4">16/40</td>
+<td data-browser="phantom" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="node" class="tally" data-tally="0.45">18/40</td>
 <td data-browser="iojs" class="tally" data-tally="0.525">21/40</td>
 <td data-browser="ejs" class="tally" data-tally="0.45">18/40</td>
@@ -9537,7 +9537,7 @@ return view[0] === 0xFF;
 <td class="yes" data-browser="opera">Yes</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
-<td class="no" data-browser="phantom">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
@@ -10668,7 +10668,7 @@ return typeof Int8Array.prototype.subarray === &quot;function&quot; &amp;&amp;
 <td class="yes" data-browser="opera">Yes</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
-<td class="no" data-browser="phantom">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
@@ -22329,7 +22329,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td data-browser="opera" class="tally" data-tally="0">0/17</td>
 <td data-browser="konq49" class="tally" data-tally="0.8235294117647058">14/17</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/17</td>
-<td data-browser="phantom" class="tally" data-tally="0">0/17</td>
+<td data-browser="phantom" class="tally" data-tally="0.058823529411764705">1/17</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="1">0/17</td>
 <td data-browser="iojs" class="tally" data-tally="1">17/17</td>
 <td data-browser="ejs" class="tally" data-tally="1">17/17</td>
@@ -22455,7 +22455,7 @@ return typeof Math.imul === &quot;function&quot;;
 <td class="no" data-browser="opera">No</td>
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
-<td class="no" data-browser="phantom">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="ejs">Yes</td>
@@ -24696,7 +24696,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no" data-browser="phantom">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -24756,7 +24756,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td data-browser="opera" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="konq49" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="rhino17" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms." data-tally="0.2">1/5</td>
-<td data-browser="phantom" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
+<td data-browser="phantom" class="tally" data-tally="0.2">1/5</td>
 <td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="iojs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0.2">1/5</td>
 <td data-browser="ejs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
@@ -24820,7 +24820,7 @@ return { __proto__ : [] } instanceof Array
 <td class="yes" data-browser="opera">Yes</td>
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -24888,7 +24888,7 @@ catch(e) {
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no" data-browser="phantom">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -24955,7 +24955,7 @@ return !({ [a] : [] } instanceof Array);
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no" data-browser="phantom">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25022,7 +25022,7 @@ return !({ __proto__ } instanceof Array);
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no" data-browser="phantom">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25088,7 +25088,7 @@ return !({ __proto__(){} } instanceof Function);
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no" data-browser="phantom">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25148,7 +25148,7 @@ return !({ __proto__(){} } instanceof Function);
 <td data-browser="opera" class="tally" data-tally="1">3/3</td>
 <td data-browser="konq49" class="tally" data-tally="0.6666666666666666">2/3</td>
 <td data-browser="rhino17" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms." data-tally="1">3/3</td>
-<td data-browser="phantom" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
+<td data-browser="phantom" class="tally" data-tally="1">3/3</td>
 <td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
 <td data-browser="iojs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">3/3</td>
 <td data-browser="ejs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
@@ -25212,7 +25212,7 @@ return (new A()).__proto__ === A.prototype;
 <td class="yes" data-browser="opera">Yes</td>
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25277,7 +25277,7 @@ return o instanceof Array;
 <td class="yes" data-browser="opera">Yes</td>
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25347,7 +25347,7 @@ return (desc
 <td class="yes" data-browser="opera">Yes</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25417,7 +25417,7 @@ return true;
 <td class="yes" data-browser="opera">Yes</td>
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>
@@ -25480,7 +25480,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
 <td class="yes" data-browser="opera">Yes</td>
 <td class="yes" data-browser="konq49">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="phantom" title="This feature is optional on non-browser platforms.">Yes</td>
+<td class="yes" data-browser="phantom">Yes</td>
 <td class="yes not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">Yes</td>
 <td class="no not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms.">No</td>

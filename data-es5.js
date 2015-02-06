@@ -162,8 +162,8 @@ exports.browsers = {
   },
 
   phantom: {
-    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'Phantom',
+    full: 'PhantomJS 2.0',
+    short: 'PhantomJS 2.0',
     obsolete: false,
     platformtype: 'engine',
   },
@@ -1020,7 +1020,7 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: false,
+    phantom: true,
     ejs: true,
     ios78: true
   }
@@ -1721,7 +1721,7 @@ exports.tests = [
 
     besen: true,
     rhino: true,
-    phantom: false,
+    phantom: true,
     ejs: true,
     ios78: true
   }
@@ -1767,7 +1767,7 @@ exports.tests = [
 
     besen: true,
     rhino: false,
-    phantom: false,
+    phantom: true,
     ejs: true,
     ios78: true
   }
