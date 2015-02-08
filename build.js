@@ -290,6 +290,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')
+      .addClass(t.category === "annex b" ? 'annex_b' : '')
       .append($('<td></td>')
         .attr('id',id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')

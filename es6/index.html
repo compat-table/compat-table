@@ -75,6 +75,15 @@
     <label for="show-obsolete">Show obsolete browsers?</label>
     <input id="show-obsolete" type="checkbox">
 
+    <div class="legend">
+    <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
+    <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
+    <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
+    <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
+    <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
+    <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
+    <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
+    </div>
     <table id="table-wrapper">
       <colgroup>
         <col>
@@ -24633,7 +24642,7 @@ return Array.prototype.length === undefined;
 </tr>
 <tr class="category"><td colspan="60">Annex b</td>
 </tr>
-<tr><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
+<tr class="annex_b"><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
 // Note: only available outside of strict mode.
 { function f() { return 1; } }
   function g() { return 1; }
@@ -24703,7 +24712,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[25]</sup></a></span></td>
+<tr class="supertest annex_b"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[25]</sup></a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="_6to5" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="es6tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
@@ -25095,7 +25104,7 @@ return !({ __proto__(){} } instanceof Function);
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest"><td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
+<tr class="supertest annex_b"><td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="_6to5" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="es6tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
@@ -25354,7 +25363,7 @@ return (desc
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr><td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span><script data-source="
+<tr class="annex_b"><td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span><script data-source="
 var i, names = [&quot;anchor&quot;, &quot;big&quot;, &quot;bold&quot;, &quot;fixed&quot;, &quot;fontcolor&quot;, &quot;fontsize&quot;,
   &quot;italics&quot;, &quot;link&quot;, &quot;small&quot;, &quot;strike&quot;, &quot;sub&quot;, &quot;sup&quot;];
 for (i = 0; i &lt; names.length; i++) {
@@ -25424,7 +25433,7 @@ return true;
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr><td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span><script data-source="
+<tr class="annex_b"><td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span><script data-source="
 return typeof RegExp.prototype.compile === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("383");return Function("asyncTestPassed","\nreturn typeof RegExp.prototype.compile === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
