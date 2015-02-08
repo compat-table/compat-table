@@ -4766,7 +4766,7 @@ exports.tests = [
         firefox29:   true,
         chrome38:    flag,
         chrome41:    true,
-        node:        true,
+        node:        flag,
         iojs:        true,
       },
     },
