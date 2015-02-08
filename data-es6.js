@@ -550,6 +550,41 @@ exports.tests = [
         chrome40:    false,
       },
     },
+    'lexical "super" binding': {
+      exec: function(){/*
+        class B {
+          qux() {
+            return "quux";
+          }
+        }
+        class C extends B {
+          baz() {
+            return x => super.qux();
+          }
+        }
+        var arrow = new C().baz();
+        return arrow() === "quux";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        es6tr:       true,
+        jsx:         true,
+        typescript:  true,
+        ie11tp:      true,
+      },
+    },
+    'lexical "new.target" binding': {
+      exec: function(){/*
+        function C() {
+          return x => new.target;
+        }
+        return new C()() === C && C()() === undefined;
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -1456,6 +1491,9 @@ exports.tests = [
         }
         class B extends A {}
         new B();
+        (function() {
+          passed &= new.target === undefined;
+        }());
         return passed;
       */},
       res: {},
@@ -3797,6 +3835,17 @@ exports.tests = [
         _6to5:       true,
         ejs:         true,
         ie11tp:      true,
+      },
+    },
+    'Reflect.construct, new.target': {
+      exec: function() {/*
+        return Reflect.construct(function(a, b, c) {
+          if (new.target === Object) {
+            this.qux = a + b + c;
+          }
+        }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
+      */},
+      res: {
       },
     },
   },
