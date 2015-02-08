@@ -351,6 +351,7 @@ exports.tests = [
   */},
   res: {
     tr:          false,
+    _6to5:       true,
     ejs:         false,
     closure:     false,
     ie10:        false,
@@ -529,6 +530,7 @@ exports.tests = [
         })();
       */},
       res: {
+        _6to5: true,
         tr: true
       },
     },
@@ -4157,6 +4159,7 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
+        _6to5: flag
       },
     },
     'defaults in parameters, separate scope': {
@@ -4169,6 +4172,7 @@ exports.tests = [
         }({}));
       */},
       res: {
+        _6to5: true
       },
     },
   },
