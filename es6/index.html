@@ -178,7 +178,7 @@ return (function f(n){
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");return Function("asyncTestPassed","\n\"use strict\";\nreturn (function f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return f(n - 1);\n}(1e6)) === \"foo\";\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -3062,7 +3062,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 </tr>
 <tr class="supertest"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.9166666666666666">22/24</td>
-<td data-browser="_6to5" class="tally" data-tally="0.9166666666666666">22/24</td>
+<td data-browser="_6to5" class="tally" data-tally="0.9583333333333334" data-flagged-tally="1">23/24</td>
 <td data-browser="es6tr" class="tally" data-tally="0.7083333333333334">17/24</td>
 <td data-browser="closure" class="tally" data-tally="0.5833333333333334">14/24</td>
 <td data-browser="jsx" class="tally" data-tally="0.375">9/24</td>
@@ -4578,7 +4578,7 @@ return a === 1 &amp;&amp; b === 2;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");return Function("asyncTestPassed","\nvar {a, b = 2} = {a:1};\ntry {\n  eval(\"let {c = c} = {};\");\n  return false;\n} catch(e){}\ntry {\n  eval(\"let {c = d, d} = {d:1};\");\n  return false;\n} catch(e){}\nreturn a === 1 && b === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="no flagged" data-browser="_6to5">Flag</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -4646,7 +4646,7 @@ return (function({a=function(){
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("69");return Function("asyncTestPassed","\nreturn (function({a=function(){\n  return typeof b === 'undefined';\n}}){\n  var b = 1;\n  return a();\n}({}));\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -6160,7 +6160,7 @@ return f() === 1;
 </tr>
 <tr class="supertest"><td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions">arrow functions</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8888888888888888">8/9</td>
-<td data-browser="_6to5" class="tally" data-tally="0.7777777777777778">7/9</td>
+<td data-browser="_6to5" class="tally" data-tally="0.8888888888888888">8/9</td>
 <td data-browser="es6tr" class="tally" data-tally="0.6666666666666666">6/9</td>
 <td data-browser="closure" class="tally" data-tally="0.7777777777777778">7/9</td>
 <td data-browser="jsx" class="tally" data-tally="0.6666666666666666">6/9</td>
@@ -6675,7 +6675,7 @@ return (() =&gt; {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");return Function("asyncTestPassed","\nreturn (() => {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n})();\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="_6to5">No</td>
+<td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
