@@ -571,7 +571,7 @@ exports.tests = [
         closure:     true,
         es6tr:       true,
         jsx:         true,
-        typescript:  true,
+        typescript:  { val: flag, note_id: 'typescript-class' },
         ie11tp:      true,
       },
     },
@@ -1247,6 +1247,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
+        typescript:  { val: flag, note_id: 'typescript-class', note_html: 'TypeScript only supports class statements at script or module top-level.' },
       },
     },
     'is block-scoped': {
@@ -1298,6 +1299,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'prototype methods': {
@@ -1317,6 +1319,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'static methods': {
@@ -1336,6 +1339,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'accessor properties': {
@@ -1355,6 +1359,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'static accessor properties': {
@@ -1374,6 +1379,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'methods aren\'t enumerable': {
@@ -1390,11 +1396,10 @@ exports.tests = [
     },
     'implicit strict mode': {
       exec: function () {/*
-        var c = class C {
+        class C {
           static method() { return this === undefined; }
-        }.method;
-
-        return c();
+        }
+        return C.method();
       */},
       res: {
         tr:          true,
@@ -1419,14 +1424,15 @@ exports.tests = [
         _6to5: true
       },
     },
-    'extends': {
+    'extends (author-defined classes)': {
       exec: function () {/*
-        class C extends Array {}
-        return new C() instanceof Array
-          && Array.isPrototypeOf(C)
-          && Array.prototype.isPrototypeOf(C.prototype);
+        class B {}
+        class C extends B {}
+        return new C() instanceof B
+          && B.isPrototypeOf(C)
+          && B.prototype.isPrototypeOf(C.prototype);
       */},
-      res: {
+      res: (temp.extendsRes = {
         es6tr:       {
           val: false,
           note_id: 'compiler-proto',
@@ -1443,7 +1449,22 @@ exports.tests = [
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
-      },
+        typescript:  {
+          val: false,
+          note_id: 'typescript-extends',
+          note_html: 'TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).'},
+      }),
+    },
+    'extends (built-in constructors)': {
+      exec: function () {/*
+        class C extends Array {}
+        return new C() instanceof Array
+          && Array.isPrototypeOf(C)
+          && Array.prototype.isPrototypeOf(C.prototype);
+      */},
+      res: Object.assign({}, temp.extendsRes, {
+        typescript:  false,
+      }),
     },
     'extends expressions': {
       exec: function () {/*
@@ -1525,6 +1546,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'expression in constructors': {
@@ -1544,6 +1566,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'in methods': {
@@ -1564,6 +1587,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'is statically bound': {
@@ -1587,6 +1611,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
   },
