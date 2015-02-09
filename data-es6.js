@@ -340,58 +340,41 @@ exports.tests = [
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
-  exec: function() {/*
-    "use strict";
-    return (function f(n){
-      if (n <= 0) {
-        return  "foo";
-      }
-      return f(n - 1);
-    }(1e6)) === "foo";
-  */},
-  res: {
-    tr:          false,
-    _6to5:       true,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    node:        false,
-    ios7:        false,
-    ios8:        false
+  subtests: {
+    'direct recursion': {
+      exec: function() {/*
+        "use strict";
+        return (function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return f(n - 1);
+        }(1e6)) === "foo";
+      */},
+      res: {
+        _6to5:       true,
+      },
+    },
+    'mutual recursion': {
+      exec: function() {/*
+        "use strict";
+        function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return g(n - 1);
+        }
+        function g(n){
+          if (n <= 0) {
+            return  "bar";
+          }
+          return f(n - 1);
+        }
+        return f(1e6) === "foo" && f(1e6+1) === "bar";
+      */},
+      res: {
+      },
+    }
   }
 },
 {
