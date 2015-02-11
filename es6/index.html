@@ -23702,13 +23702,16 @@ return Math.hypot() === 0 &amp;&amp;
 <tr class="subtest" data-parent="Array_is_subclassable"><td><span>basic functionality</span><script data-source="
 class C extends Array {}
 var c = new C();
-c.push(2,4,6);
-return c.length === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("356");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.length === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var len1 = c.length;
+c[2] = &apos;foo&apos;;
+var len2 = c.length;
+c.length = 1;
+return len1 === 0 &amp;&amp; len2 === 3 &amp;&amp; c.length === 1 &amp;&amp; !(2 in c);
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("356");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nvar len1 = c.length;\nc[2] = 'foo';\nvar len2 = c.length;\nc.length = 1;\nreturn len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="_6to5">No<a href="#compiler-proto-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="es6tr">No<a href="#compiler-proto-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="_6to5">No</td>
+<td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>

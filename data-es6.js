@@ -6047,14 +6047,14 @@ exports.tests = [
       exec: function () {/*
         class C extends Array {}
         var c = new C();
-        c.push(2,4,6);
-        return c.length === 3;
+        var len1 = c.length;
+        c[2] = 'foo';
+        var len2 = c.length;
+        c.length = 1;
+        return len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);
       */},
       res: {
         iojs:        flag,
-        es6tr:       { val: false, note_id: 'compiler-proto' },
-        tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
       },
     },
     'Array.prototype.slice': {
