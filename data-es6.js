@@ -1407,7 +1407,7 @@ exports.tests = [
         _6to5: true
       },
     },
-    'extends (author-defined classes)': {
+    'extends': {
       exec: function () {/*
         class B {}
         class C extends B {}
@@ -1436,17 +1436,6 @@ exports.tests = [
           val: false,
           note_id: 'typescript-extends',
           note_html: 'TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).'},
-      }),
-    },
-    'extends (built-in constructors)': {
-      exec: function () {/*
-        class C extends Array {}
-        return new C() instanceof Array
-          && Array.isPrototypeOf(C)
-          && Array.prototype.isPrototypeOf(C.prototype);
-      */},
-      res: Object.assign({}, temp.extendsRes, {
-        typescript:  false,
       }),
     },
     'extends expressions': {
@@ -5435,17 +5424,6 @@ exports.tests = [
         firefox36:    true,
       }
     },
-    'Array subclass .from': {
-      exec: function () {/*
-        class C extends Array {}
-        return C.from({ length: 0 }) instanceof C;
-      */},
-      res: {
-        tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
-        ie11tp:      true,
-      }
-    },
     'Array.of': {
       exec: function () {/*
         return typeof Array.of === 'function' &&
@@ -5462,17 +5440,6 @@ exports.tests = [
         chrome40:    false,
         webkit:      true,
       },
-    },
-    'Array subclass .of': {
-      exec: function () {/*
-        class C extends Array {}
-        return C.of(0) instanceof C;
-      */},
-      res: {
-        tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
-        ie11tp:      true,
-      }
     },
   },
 },
@@ -6072,6 +6039,271 @@ exports.tests = [
   }()),
 },
 {
+  name: 'Array is subclassable',
+  category: 'subclassing',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c.push(2,4,6);
+        return c.length === 3;
+      */},
+      res: {
+        iojs:        flag,
+        es6tr:       { val: false, note_id: 'compiler-proto' },
+        tr:          { val: false, note_id: 'compiler-proto' },
+        _6to5:       { val: false, note_id: 'compiler-proto' },
+      },
+    },
+    'Array.prototype.slice': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c.push(2,4,6);
+        return C.slice(1,2) instanceof C;
+      */},
+      res: {
+      }
+    },
+    'Array.from': {
+      exec: function () {/*
+        class C extends Array {}
+        return C.from({ length: 0 }) instanceof C;
+      */},
+      res: {
+        tr:          { val: false, note_id: 'compiler-proto' },
+        _6to5:       { val: false, note_id: 'compiler-proto' },
+        ie11tp:      true,
+      }
+    },
+    'Array.of': {
+      exec: function () {/*
+        class C extends Array {}
+        return C.of(0) instanceof C;
+      */},
+      res: {
+        tr:          { val: false, note_id: 'compiler-proto' },
+        _6to5:       { val: false, note_id: 'compiler-proto' },
+        ie11tp:      true,
+      }
+    },
+  },
+},
+{
+  name: 'RegExp is subclassable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor',
+  category: 'subclassing',
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz","g");
+        return r.global && r.source === "baz";
+      */},
+      res: {
+      },
+    },
+    'RegExp.prototype.exec': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz","g");
+        return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
+      */},
+      res: {
+      },
+    },
+    'RegExp.prototype.test': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz");
+        return r.test("foobarbaz");
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Function is subclassable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  category: 'subclassing',
+  subtests: {
+    'can be called': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("return 'foo';");
+        return c() === 'foo';
+      */},
+      res: {
+      },
+    },
+    'can be used with "new"': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("this.bar = 2;");
+        c.prototype.baz = 3;
+        return new c().bar === 2 && new c().baz === 3;
+      */},
+      res: {
+      },
+    },
+    'Function.prototype.call': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("x", "return this.bar + x;");
+        return c.call({bar:1}, 2) === 3;
+      */},
+      res: {
+      },
+    },
+    'Function.prototype.apply': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("x", "return this.bar + x;");
+        return c.apply({bar:1}, [2]) === 3;
+      */},
+      res: {
+      },
+    },
+    'Function.prototype.bind': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("x", "return this.bar + x;").bind({bar:1}, 2);
+        return c() === 3;
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Promise is subclassable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  category: 'subclassing',
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        class P extends Promise {}
+        var p1 = new P(function(resolve, reject) { resolve("foo"); });
+        var p2 = new P(function(resolve, reject) { reject("quux"); });
+        var score = +(p1 instanceof P);
+
+        function thenFn(result)  { score += (result === "foo");  check(); }
+        function catchFn(result) { score += (result === "quux"); check(); }
+        function shouldNotRun(result)  { score = -Infinity;   }
+
+        p1.then(thenFn, shouldNotRun);
+        p2.then(shouldNotRun, catchFn);
+        p1.catch(shouldNotRun);
+        p2.catch(catchFn);
+
+        p1.then(function() {
+          // P.prototype.then() should return a new P
+          score += p1.then() instanceof P && p1.then() !== p1;
+          check();
+        });
+
+        function check() {
+          if (score === 5) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+      },
+    },
+    'Promise.all': {
+      exec: function () {/*
+        class P extends Promise {}
+        var fulfills = P.all([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+        ]);
+        var rejects = P.all([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+        ]);
+        var score = +(fulfills instanceof P);
+        fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
+        rejects.catch(function(result) { score += (result === "qux"); check(); });
+
+        function check() {
+          if (score === 3) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+      },
+    },
+    'Promise.race': {
+      exec: function () {/*
+        class P extends Promise {}
+        var fulfills = P.race([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+        ]);
+        var rejects = P.race([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+        ]);
+        var score = +(fulfills instanceof P);
+        fulfills.then(function(result) { score += (result === "foo"); check(); });
+        rejects.catch(function(result) { score += (result === "baz"); check(); });
+
+        function check() {
+          if (score === 3) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+      },
+    },
+  },
+},
+{
+  name: 'miscellaneous subclassables',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor',
+  category: 'subclassing',
+  subtests: {
+    'Boolean is subclassable': {
+      exec: function () {/*
+        class C extends Boolean {}
+        var c = new C(true);
+        return c instanceof Boolean
+          && c == true;
+      */},
+      res: {
+      },
+    },
+    'Number is subclassable': {
+      exec: function () {/*
+        class C extends Number {}
+        var c = new C(6);
+        return c instanceof Number
+          && +c === 6;
+      */},
+      res: {
+      },
+    },
+    'String is subclassable': {
+      exec: function () {/*
+        class C extends String {}
+        var c = new C("golly");
+        return c instanceof String
+          && c + '' === "golly"
+          && c[0] === "g"
+          && c.length === 5;
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
   name: 'miscellaneous',
   category: 'misc',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
@@ -6188,7 +6420,7 @@ exports.tests = [
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
   var index = ['optimisation','syntax','bindings','functions',
-    'built-ins','built-in extensions','misc','annex b'].indexOf(e.category);
+    'built-ins','built-in extensions','subclassing','misc','annex b'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES6 category!');
   }
