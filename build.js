@@ -299,6 +299,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')
+      .addClass(t.category === "annex b" ? 'annex_b' : '')
       .append($('<td></td>')
         .attr('id',id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
@@ -328,6 +329,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       // Add extra signifiers if the result is not applicable.
       if (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
+          !browsers[browserId].needs_annex_b &&
           t.category==="annex b") {
         cell.attr('title', "This feature is optional on non-browser platforms.");
         cell.addClass("not-applicable");

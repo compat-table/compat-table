@@ -240,20 +240,28 @@ $(function() {
     else {
       name = currentBrowserSelector;
     }
-    var results = table.find('tr:not([class*=test]) td:not(.not-applicable)' + name);
+    var results = table.find('tr:not([class*=test]):not(.annex_b) td:not(.not-applicable)' + name);
     var yesResults = results.filter('.yes').length;
+    var totalResults = results.length;
+    /*
+        Add annex b results, weighted to 1/5
+    */
+    results = table.find('tr:not([class*=test]).annex_b td:not(.not-applicable)' + name);
+    yesResults += results.filter('.yes').length/5;
+    totalResults += results.length/5;
+
     var flaggedResults = yesResults;
-    results = results.length;
-
+    
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
-      var yes = +$(this).attr('data-tally') || 0
+      var weight = $(this).parent().is('.annex_b') ? 0.2 : 1;
+      var yes = (+$(this).attr('data-tally') || 0) * weight;
       yesResults += yes;
-      flaggedResults += yes + (+$(this).attr('data-flagged-tally') || 0);
-      results += 1;
+      flaggedResults += yes + (+$(this).attr('data-flagged-tally') || 0) * weight;
+      totalResults += weight;
     });
-    var featuresCount = yesResults / results;
-    var flaggedFeaturesCount = flaggedResults / results;
-
+    var featuresCount = yesResults / totalResults;
+    var flaggedFeaturesCount = flaggedResults / totalResults;
+    
     function gradient(colour, percent) {
       return 'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +

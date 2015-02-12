@@ -298,12 +298,14 @@ exports.browsers = {
     obsolete: true,
   },
   phantom: {
-    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'PH',
+    full: 'PhantomJS 2.0',
+    short: 'PJS',
     platformtype: 'engine',
+    // As PJS is a "headless browser" that emulates a real browser, it technically should support annex B.
+    needs_annex_b: true,
   },
   node: {
-    full: 'Node 0.11.14',
+    full: 'Node 0.12.0',
     short: 'Node',
     platformtype: 'engine',
     note_id: 'harmony-flag',
@@ -338,58 +340,41 @@ exports.tests = [
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
-  exec: function() {/*
-    "use strict";
-    return (function f(n){
-      if (n <= 0) {
-        return  "foo";
-      }
-      return f(n - 1);
-    }(1e6)) === "foo";
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        false,
-    ie11:        false,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    ios7:        false,
-    ios8:        false
+  subtests: {
+    'direct recursion': {
+      exec: function() {/*
+        "use strict";
+        return (function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return f(n - 1);
+        }(1e6)) === "foo";
+      */},
+      res: {
+        _6to5:       true,
+      },
+    },
+    'mutual recursion': {
+      exec: function() {/*
+        "use strict";
+        function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return g(n - 1);
+        }
+        function g(n){
+          if (n <= 0) {
+            return  "bar";
+          }
+          return f(n - 1);
+        }
+        return f(1e6) === "foo" && f(1e6+1) === "bar";
+      */},
+      res: {
+      },
+    }
   }
 },
 {
@@ -413,6 +398,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        node:        flag,
       },
     },
     '1 parameter, no brackets': {
@@ -432,6 +418,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        node:        flag,
       },
     },
     'multiple parameters': {
@@ -451,6 +438,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        node:        flag,
       },
     },
     'lexical "this" binding': {
@@ -528,6 +516,7 @@ exports.tests = [
         })();
       */},
       res: {
+        _6to5: true,
         tr: true
       },
     },
@@ -542,6 +531,41 @@ exports.tests = [
         firefox23:   true,
         chrome39:    flag,
         chrome40:    false,
+      },
+    },
+    'lexical "super" binding': {
+      exec: function(){/*
+        class B {
+          qux() {
+            return "quux";
+          }
+        }
+        class C extends B {
+          baz() {
+            return x => super.qux();
+          }
+        }
+        var arrow = new C().baz();
+        return arrow() === "quux";
+      */},
+      res: {
+        tr:          true,
+        _6to5:       true,
+        closure:     true,
+        es6tr:       true,
+        jsx:         true,
+        typescript:  { val: flag, note_id: 'typescript-class' },
+        ie11tp:      true,
+      },
+    },
+    'lexical "new.target" binding': {
+      exec: function(){/*
+        function C() {
+          return x => new.target;
+        }
+        return new C()() === C && C()() === undefined;
+      */},
+      res: {
       },
     },
   },
@@ -566,10 +590,10 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         konq49:      true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
@@ -857,7 +881,7 @@ exports.tests = [
         firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         chrome41:    true,
-        nodeharmony: true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -902,6 +926,7 @@ exports.tests = [
         closure:     true,
         chrome37:    flag,
         chrome41:    true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -1116,7 +1141,6 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
-        ie11tp:      true,
         firefox27:   true,
       },
     },
@@ -1128,8 +1152,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
-        ie11tp:      true,
-        firefox17:   true,
+        firefox27:   true,
       },
     },
     'with generic iterables, in calls': {
@@ -1207,6 +1230,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
+        typescript:  { val: flag, note_id: 'typescript-class', note_html: 'TypeScript only supports class statements at script or module top-level.' },
       },
     },
     'is block-scoped': {
@@ -1258,6 +1282,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'prototype methods': {
@@ -1277,6 +1302,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'static methods': {
@@ -1296,6 +1322,7 @@ exports.tests = [
         closure:     true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'accessor properties': {
@@ -1315,6 +1342,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'static accessor properties': {
@@ -1334,6 +1362,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'methods aren\'t enumerable': {
@@ -1350,11 +1379,10 @@ exports.tests = [
     },
     'implicit strict mode': {
       exec: function () {/*
-        var c = class C {
+        class C {
           static method() { return this === undefined; }
-        }.method;
-
-        return c();
+        }
+        return C.method();
       */},
       res: {
         tr:          true,
@@ -1379,14 +1407,15 @@ exports.tests = [
         _6to5: true
       },
     },
-    'extends': {
+    'extends (author-defined classes)': {
       exec: function () {/*
-        class C extends Array {}
-        return new C() instanceof Array
-          && Array.isPrototypeOf(C)
-          && Array.prototype.isPrototypeOf(C.prototype);
+        class B {}
+        class C extends B {}
+        return new C() instanceof B
+          && B.isPrototypeOf(C)
+          && B.prototype.isPrototypeOf(C.prototype);
       */},
-      res: {
+      res: (temp.extendsRes = {
         es6tr:       {
           val: false,
           note_id: 'compiler-proto',
@@ -1403,7 +1432,22 @@ exports.tests = [
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
-      },
+        typescript:  {
+          val: false,
+          note_id: 'typescript-extends',
+          note_html: 'TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).'},
+      }),
+    },
+    'extends (built-in constructors)': {
+      exec: function () {/*
+        class C extends Array {}
+        return new C() instanceof Array
+          && Array.isPrototypeOf(C)
+          && Array.prototype.isPrototypeOf(C.prototype);
+      */},
+      res: Object.assign({}, temp.extendsRes, {
+        typescript:  false,
+      }),
     },
     'extends expressions': {
       exec: function () {/*
@@ -1451,6 +1495,9 @@ exports.tests = [
         }
         class B extends A {}
         new B();
+        (function() {
+          passed &= new.target === undefined;
+        }());
         return passed;
       */},
       res: {},
@@ -1482,13 +1529,14 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'expression in constructors': {
       exec: function() {/*
         class B {
           constructor(a) { return ["foo" + a]; }
-        } 
+        }
         class C extends B {
           constructor(a) { return super("bar" + a); }
         }
@@ -1501,6 +1549,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'in methods': {
@@ -1521,6 +1570,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'is statically bound': {
@@ -1544,6 +1594,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
+        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
   },
@@ -1680,11 +1731,11 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         konq49:      true,
         rhino17:     true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
@@ -1767,6 +1818,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -1785,6 +1837,7 @@ exports.tests = [
         ie11tp:      true,
         firefox17:   true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -1803,6 +1856,7 @@ exports.tests = [
         ie11tp:      true,
         firefox17:   true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -1825,7 +1879,7 @@ exports.tests = [
         firefox27:   true,
         chrome21dev: flag,
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -1847,7 +1901,7 @@ exports.tests = [
         firefox36:   true,
         chrome35:    flag,
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2039,6 +2093,7 @@ exports.tests = [
         firefox27:   true,
         chrome38:    flag,
         chrome39:    true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -2062,6 +2117,7 @@ exports.tests = [
         firefox27:   true,
         chrome38:    flag,
         chrome39:    true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -2082,6 +2138,7 @@ exports.tests = [
         firefox27:   true,
         chrome38:    flag,
         chrome39:    true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -2132,6 +2189,7 @@ exports.tests = [
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
+        node:        flag,
       },
     },
     'shorthand generator methods': {
@@ -2358,10 +2416,10 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         konq49:      true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
@@ -2387,6 +2445,7 @@ exports.tests = [
         ie11tp:      true,
         chrome:      true,
         safari6:     true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         node:        true,
@@ -2455,9 +2514,9 @@ exports.tests = [
         firefox16:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
@@ -2537,6 +2596,7 @@ exports.tests = [
         firefox16:   true,
         chrome:      true,
         safari6:     true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         node:        true,
@@ -2560,9 +2620,9 @@ exports.tests = [
     '.prototype.find':        { ie11tp: true, firefox37: true },
     '.prototype.findIndex':   { ie11tp: true, firefox37: true },
     '.prototype.fill':        { ie11tp: true, firefox37: true },
-    '.prototype.keys':        { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
-    '.prototype.values':      { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
-    '.prototype.entries':     { ie11tp: true, chrome38: true, iojs: true, firefox37: true },
+    '.prototype.keys':        { ie11tp: true, chrome38: true, node: true, iojs: true, firefox37: true },
+    '.prototype.values':      { ie11tp: true, chrome38: true, node: true, iojs: true, firefox37: true },
+    '.prototype.entries':     { ie11tp: true, chrome38: true, node: true, iojs: true, firefox37: true },
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -2611,7 +2671,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -2633,6 +2693,7 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2650,6 +2711,7 @@ exports.tests = [
         firefox33:   true,
         chrome38:    true,
         safari71_8:  true,
+        node:        true,
         ios8:        true,
         webkit:      true,
         iojs:        true,
@@ -2696,7 +2758,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2716,7 +2778,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2736,7 +2798,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2756,7 +2818,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2776,6 +2838,7 @@ exports.tests = [
         webkit:      true,
         chrome37:    flag,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2795,6 +2858,7 @@ exports.tests = [
         webkit:      true,
         chrome36:    flag,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2814,6 +2878,7 @@ exports.tests = [
         webkit:      true,
         chrome36:    flag,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2846,7 +2911,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true
       },
     },
@@ -2866,6 +2931,7 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2885,6 +2951,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2931,7 +2998,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true
       },
     },
@@ -2951,7 +3018,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2971,7 +3038,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -2991,7 +3058,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3010,6 +3077,7 @@ exports.tests = [
         ios8:        true,
         webkit:      true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3029,6 +3097,7 @@ exports.tests = [
         webkit:      true,
         chrome37:    flag,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3048,6 +3117,7 @@ exports.tests = [
         webkit:      true,
         chrome37:    flag,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3076,7 +3146,7 @@ exports.tests = [
         chrome36:    true,
         safari71_8:  true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -3096,6 +3166,7 @@ exports.tests = [
         ie11tp:      true,
         firefox36:   true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3114,6 +3185,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3131,7 +3203,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3152,7 +3224,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3180,7 +3252,7 @@ exports.tests = [
         firefox34:   true,
         chrome30:    flag,
         chrome36:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3197,6 +3269,7 @@ exports.tests = [
         ie11tp:      true,
         firefox34:   true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3212,6 +3285,7 @@ exports.tests = [
         ie11tp:      true,
         chrome38:    true,
         firefox34:   true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3226,7 +3300,7 @@ exports.tests = [
         firefox34:   true,
         chrome30:    flag,
         chrome36:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -3773,6 +3847,17 @@ exports.tests = [
         ie11tp:      true,
       },
     },
+    'Reflect.construct, new.target': {
+      exec: function() {/*
+        return Reflect.construct(function(a, b, c) {
+          if (new.target === Object) {
+            this.qux = a + b + c;
+          }
+        }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -3796,8 +3881,8 @@ exports.tests = [
     ie11:        true,
     chrome21dev: flag,
     chrome41:    true,
+    node:        flag,
     iojs:        true,
-    nodeharmony: true,
   }
 },
 {
@@ -3857,10 +3942,7 @@ exports.tests = [
         tr:          true,
         _6to5:       true,
         ejs:         true,
-        firefox11:   true,
-        safari71_8:  true,
-        webkit:      true,
-        ios8:        true,
+        firefox34:   true,
       },
     },
     'with generic iterables': {
@@ -4163,6 +4245,7 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
+        _6to5: flag
       },
     },
     'defaults in parameters, separate scope': {
@@ -4175,7 +4258,8 @@ exports.tests = [
         }({}));
       */},
       res: {
-        closure:     true,
+        _6to5: true,
+        closure: true
       },
     },
   },
@@ -4220,7 +4304,7 @@ exports.tests = [
         chrome33:    true,
         safari71_8:  true,
         webkit:      true,
-        nodeharmony: true,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -4254,7 +4338,7 @@ exports.tests = [
         safari71_8:  true,
         ios8:        true,
         webkit:      true,
-        nodeharmony: true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -4287,7 +4371,7 @@ exports.tests = [
         webkit:      true,
         safari71_8:  true,
         ios8:        true,
-        nodeharmony: true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -4344,7 +4428,7 @@ exports.tests = [
         firefox36:   true,
         chrome34:    flag,
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -4359,7 +4443,7 @@ exports.tests = [
         ie11:        true,
         firefox31:   true,
         chrome34:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -4485,6 +4569,7 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         konq49:      true,
@@ -4518,6 +4603,7 @@ exports.tests = [
         firefox17:   true,
         chrome30:    true,
         safari6:     true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         rhino17:     true,
@@ -4545,11 +4631,11 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         konq49:      true,
         rhino17:     true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
@@ -4569,10 +4655,10 @@ exports.tests = [
       res: {
         firefox11:   true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         konq49:      true,
         rhino17:     true,
-        phantom:     true,
         ios7:        true,
       },
     },
@@ -4746,6 +4832,7 @@ exports.tests = [
         firefox29:   true,
         chrome38:    flag,
         chrome41:    true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -4769,6 +4856,7 @@ exports.tests = [
         firefox29:   true,
         chrome38:    flag,
         chrome41:    true,
+        node:        flag,
         iojs:        true,
       },
     },
@@ -4783,6 +4871,7 @@ exports.tests = [
         firefox31:   true,
         chrome34:    true,
         chrome41:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -4861,7 +4950,7 @@ exports.tests = [
         chrome30:    { val: false, note_id: 'string-contains' },
         chrome41:    true,
         webkit:      true,
-        nodeharmony: { val: false, note_id: 'string-contains' },
+        node:        { val: flag, note_id: 'string-contains' },
         iojs:        true,
       },
     },
@@ -4889,14 +4978,13 @@ exports.tests = [
     firefox11:   true,
     chrome:      true,
     safari51:    true,
+    phantom:     true,
     webkit:      true,
     opera:       true,
     konq49:      true,
     rhino17:     true,
-    phantom:     true,
     node:        true,
     iojs:        true,
-    nodeharmony: true,
     ios7:        true,
   }
 },
@@ -4913,47 +5001,7 @@ exports.tests = [
     es6tr:       true,
     ejs:         true,
     closure:     true,
-    ie10:        false,
-    ie11:        false,
     ie11tp:      true,
-    firefox11:   false,
-    firefox13:   false,
-    firefox16:   false,
-    firefox17:   false,
-    firefox18:   false,
-    firefox23:   false,
-    firefox24:   false,
-    firefox25:   false,
-    firefox27:   false,
-    firefox28:   false,
-    firefox29:   false,
-    firefox30:   false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    chrome:      false,
-    chrome19dev: false,
-    chrome21dev: false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    chrome39:    false,
-    safari51:    false,
-    safari6:     false,
-    safari7:     false,
-    safari71_8:  false,
-    webkit:      false,
-    opera:       false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
   }
 },
 {
@@ -4977,7 +5025,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         webkit:      true,
       },
@@ -4993,7 +5041,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         webkit:      true,
       },
@@ -5021,7 +5069,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         webkit:      true,
       },
@@ -5047,7 +5095,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         webkit:      true,
       },
@@ -5074,7 +5122,7 @@ exports.tests = [
         ie11tp:      true,
         firefox36:   true,
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         webkit:      true,
       },
@@ -5101,16 +5149,16 @@ exports.tests = [
         }
       */},
       res: {
-        ejs:         true,
+        ejs:        true,
         tr:         true,
         _6to5:      true,
         ie11tp:     true,
         firefox36:  true,
         chrome35:   flag,
         chrome38:   true,
-        nodeharmony:true,
+        node:       true,
         iojs:       true,
-        webkit:      true,
+        webkit:     true,
       },
     },
     'Object(symbol)': {
@@ -5144,7 +5192,7 @@ exports.tests = [
         firefox36:   true,
         chrome35:    flag,
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5206,6 +5254,7 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         ejs:         true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5265,6 +5314,7 @@ exports.tests = [
           note_id: 'ejs-no-with',
           note_html: '<code>with</code> is not supported in ejs'
         },
+        node:        true,
         iojs:        true,
       },
     },
@@ -5336,14 +5386,13 @@ exports.tests = [
     firefox11:   true,
     chrome:      true,
     safari51:    true,
+    phantom:     true,
     webkit:      true,
     opera:       true,
     konq49:      true,
     rhino17:     true,
-    phantom:     true,
     node:        true,
     iojs:        true,
-    nodeharmony: true,
     ios7:        true,
   }
 },
@@ -5518,7 +5567,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5550,7 +5599,7 @@ exports.tests = [
         },
         chrome30:    flag,
         chrome38:    { val: false, note_id: 'array-prototype-iterator' },
-        node:        flag,
+        node:        true,
       },
     },
     'Array.prototype.entries': {
@@ -5568,7 +5617,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5589,6 +5638,7 @@ exports.tests = [
         _6to5:       true,
         ie11tp:      true,
         chrome38:    true,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5631,7 +5681,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5649,7 +5699,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5684,7 +5734,7 @@ exports.tests = [
         firefox25:   true,
         chrome34:    true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5702,7 +5752,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5720,7 +5770,7 @@ exports.tests = [
         chrome34:    true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
     },
@@ -5741,7 +5791,7 @@ exports.tests = [
         firefox31:   true,
         chrome35:    flag,
         chrome38:    true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
       'imul': {
@@ -5758,10 +5808,11 @@ exports.tests = [
         },
         chrome30:    true,
         safari7:     true,
+        phantom:     true,
         webkit:      true,
         konq49:      true,
         ios7:        true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
       'sign': {
@@ -5775,7 +5826,7 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
       },
       'log10': {
@@ -5790,7 +5841,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5806,7 +5857,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5822,7 +5873,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5837,7 +5888,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5853,7 +5904,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5869,7 +5920,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5885,7 +5936,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5901,7 +5952,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5916,7 +5967,7 @@ exports.tests = [
         chrome38:    true,
         safari71_8:  true,
         webkit:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5932,7 +5983,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5948,7 +5999,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5969,7 +6020,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -5985,7 +6036,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       },
@@ -6001,7 +6052,7 @@ exports.tests = [
     }
     obj['Math.hypot'] = {
       exec: function(){/*
-        return Math.hypot() === 0 && 
+        return Math.hypot() === 0 &&
           Math.hypot(1) === 1 &&
           Math.hypot(9, 12, 20) === 25 &&
           Math.hypot(27, 36, 60, 100) === 125;
@@ -6017,7 +6068,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         konq49:      true,
-        node:        flag,
+        node:        true,
         iojs:        true,
         ios8:        true,
       }
@@ -6051,10 +6102,10 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         rhino17:     true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
@@ -6094,11 +6145,11 @@ exports.tests = [
         firefox11:   true,
         chrome:      true,
         safari51:    true,
+        phantom:     true,
         webkit:      true,
         opera:       true,
         konq49:      true,
         rhino17:     true,
-        phantom:     true,
         node:        true,
         iojs:        true,
         ios7:        true,
