@@ -286,12 +286,110 @@ exports.tests = [
   },
 },
 {
-  name: 'Collator',
+  name: 'Intl.Collator',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10',
   subtests: {
     'exists on intl object': {
       exec: function(){/*
         return typeof Intl.Collator === 'function';
+      */},
+      res: {
+      },
+    },
+    'exists on intl object': {
+      exec: function(){/*
+        return typeof Intl.Collator === 'function';
+      */},
+      res: {
+      },
+    },
+    'creates new Collator instances': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
+      exec: function(){/*
+        return new Intl.Collator() instanceof Intl.Collator;
+      */},
+      res: {
+      },
+    },
+    'constructor called without new creates instances': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
+      exec: function(){/*
+        return Intl.Collator() instanceof Intl.Collator;
+      */},
+      res: {
+      },
+    },
+    'calling Collator with Collator instance throws error': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+      exec: function(){/*
+        try {
+          Intl.Collator.call(Intl.Collator());
+          return false;
+        } catch(e) {
+          return e instanceof TypeError;
+        }
+      */},
+      res: {
+      },
+    },
+    'accepts valid language tags': {
+      exec: function(){/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            "de", // ISO 639 language code
+            "de-DE", // + ISO 3166-1 country code
+            "DE-de", // tags are case-insensitive
+            "cmn", // ISO 639 language code
+            "cmn-Hans", // + script code
+            "CMN-hANS", // tags are case-insensitive
+            "cmn-hans-cn", // + ISO 3166-1 country code
+            "es-419", // + UN M.49 region code
+            "es-419-u-nu-latn-cu-bob", // + Unicode locale extension sequence
+            "i-klingon", // grandfathered tag
+            "cmn-hans-cn-t-ca-u-ca-x-t-u", // singleton subtags can also be used as private use subtags
+            "enochian-enochian", // language and variant subtags may be the same
+            "de-gregory-u-ca-gregory", // variant and extension subtags may be the same
+            "aa-a-foo-x-a-foo-bar", // variant subtags can also be used as private use subtags
+            "x-en-US-12345", // anything goes in private use tags
+            "x-12345-12345-en-US",
+            "x-en-US-12345-12345",
+            "x-en-u-foo",
+            "x-en-u-foo-u-bar"
+          ];
+          for (var i in validLanguageTags) {
+            Intl.Collator(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Intl.Collator.prototype.compare',
+  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
+  subtests: {
+    'exists on Collator prototype': {
+      exec: function(){/*
+        return typeof Intl.Collator().compare === 'function';
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Intl.Collator.prototype.resolvedOptions',
+  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
+  subtests: {
+    'exists on Collator prototype': {
+      exec: function(){/*
+        return typeof Intl.Collator().resolvedOptions === 'function';
       */},
       res: {
       },
@@ -309,6 +407,78 @@ exports.tests = [
       res: {
       },
     },
+    'exists on intl object': {
+      exec: function(){/*
+        return typeof Intl.NumberFormat === 'function';
+      */},
+      res: {
+      },
+    },
+    'creates new NumberFormat instances': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
+      exec: function(){/*
+        return new Intl.NumberFormat() instanceof Intl.NumberFormat;
+      */},
+      res: {
+      },
+    },
+    'constructor called without new creates instances': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
+      exec: function(){/*
+        return Intl.NumberFormat() instanceof Intl.NumberFormat;
+      */},
+      res: {
+      },
+    },
+    'calling NumberFormat with NumberFormat instance throws error': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+      exec: function(){/*
+        try {
+          Intl.NumberFormat.call(Intl.NumberFormat());
+          return false;
+        } catch(e) {
+          return e instanceof TypeError;
+        }
+      */},
+      res: {
+      },
+    },
+    'accepts valid language tags': {
+      exec: function(){/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            "de", // ISO 639 language code
+            "de-DE", // + ISO 3166-1 country code
+            "DE-de", // tags are case-insensitive
+            "cmn", // ISO 639 language code
+            "cmn-Hans", // + script code
+            "CMN-hANS", // tags are case-insensitive
+            "cmn-hans-cn", // + ISO 3166-1 country code
+            "es-419", // + UN M.49 region code
+            "es-419-u-nu-latn-cu-bob", // + Unicode locale extension sequence
+            "i-klingon", // grandfathered tag
+            "cmn-hans-cn-t-ca-u-ca-x-t-u", // singleton subtags can also be used as private use subtags
+            "enochian-enochian", // language and variant subtags may be the same
+            "de-gregory-u-ca-gregory", // variant and extension subtags may be the same
+            "aa-a-foo-x-a-foo-bar", // variant subtags can also be used as private use subtags
+            "x-en-US-12345", // anything goes in private use tags
+            "x-12345-12345-en-US",
+            "x-en-US-12345-12345",
+            "x-en-u-foo",
+            "x-en-u-foo-u-bar"
+          ];
+          for (var i in validLanguageTags) {
+            Intl.NumberFormat(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -318,6 +488,78 @@ exports.tests = [
     'exists on intl object': {
       exec: function(){/*
         return typeof Intl.DateTimeFormat === 'function';
+      */},
+      res: {
+      },
+    },
+    'exists on intl object': {
+      exec: function(){/*
+        return typeof Intl.DateTimeFormat === 'function';
+      */},
+      res: {
+      },
+    },
+    'creates new DateTimeFormat instances': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
+      exec: function(){/*
+        return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      */},
+      res: {
+      },
+    },
+    'constructor called without new creates instances': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
+      exec: function(){/*
+        return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      */},
+      res: {
+      },
+    },
+    'calling DateTimeFormat with DateTimeFormat instance throws error': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+      exec: function(){/*
+        try {
+          Intl.DateTimeFormat.call(Intl.DateTimeFormat());
+          return false;
+        } catch(e) {
+          return e instanceof TypeError;
+        }
+      */},
+      res: {
+      },
+    },
+    'accepts valid language tags': {
+      exec: function(){/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            "de", // ISO 639 language code
+            "de-DE", // + ISO 3166-1 country code
+            "DE-de", // tags are case-insensitive
+            "cmn", // ISO 639 language code
+            "cmn-Hans", // + script code
+            "CMN-hANS", // tags are case-insensitive
+            "cmn-hans-cn", // + ISO 3166-1 country code
+            "es-419", // + UN M.49 region code
+            "es-419-u-nu-latn-cu-bob", // + Unicode locale extension sequence
+            "i-klingon", // grandfathered tag
+            "cmn-hans-cn-t-ca-u-ca-x-t-u", // singleton subtags can also be used as private use subtags
+            "enochian-enochian", // language and variant subtags may be the same
+            "de-gregory-u-ca-gregory", // variant and extension subtags may be the same
+            "aa-a-foo-x-a-foo-bar", // variant subtags can also be used as private use subtags
+            "x-en-US-12345", // anything goes in private use tags
+            "x-12345-12345-en-US",
+            "x-en-US-12345-12345",
+            "x-en-u-foo",
+            "x-en-u-foo-u-bar"
+          ];
+          for (var i in validLanguageTags) {
+            Intl.DateTimeFormat(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
       */},
       res: {
       },
