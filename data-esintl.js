@@ -113,16 +113,6 @@ exports.browsers = {
     short: 'OP 12',
     obsolete: false // still supported
   },
-  rhino17: {
-    full: 'Rhino 1.7',
-    short: 'RH',
-    platformtype: 'engine',
-  },
-  phantom: {
-    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'PH',
-    platformtype: 'engine',
-  },
   node10: {
     full: 'Node 0.10',
     short: 'Node .10',
@@ -145,12 +135,6 @@ exports.browsers = {
     full: 'io.js 1.1.0',
     short: 'io 1.1',
     obsolete: false, // current version
-    platformtype: 'engine',
-  },
-  ejs: {
-    full: 'Echo JS',
-    short: 'Echo JS',
-    obsolete: false,
     platformtype: 'engine',
   },
   ios7: {
