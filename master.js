@@ -253,7 +253,7 @@ $(function() {
     var flaggedResults = yesResults;
     
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
-      var weight = $(this).parent().is('.annex_b') ? 0.2 : 1;
+      var weight = +$(this).parent().attr('significance') || 1;
       var yes = (+$(this).attr('data-tally') || 0) * weight;
       yesResults += yes;
       flaggedResults += yes + (+$(this).attr('data-flagged-tally') || 0) * weight;
