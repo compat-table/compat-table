@@ -177,7 +177,7 @@
       <tr class="category"><td colspan="60">Optimisation</td>
 </tr>
 <tr class="supertest"><td id="proper_tail_calls_(tail_call_optimisation)"><span><a class="anchor" href="#proper_tail_calls_(tail_call_optimisation)">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls">proper tail calls (tail call optimisation)</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0">0/2</td>
+<td data-browser="tr" class="tally" data-tally="1">2/2</td>
 <td data-browser="_6to5" class="tally" data-tally="0.5">1/2</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/2</td>
 <td data-browser="closure" class="tally" data-tally="0">0/2</td>
@@ -246,7 +246,7 @@ return (function f(n){
 }(1e6)) === &quot;foo&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\n\"use strict\";\nreturn (function f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return f(n - 1);\n}(1e6)) === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -322,7 +322,7 @@ function g(n){
 return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\n\"use strict\";\nfunction f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return g(n - 1);\n}\nfunction g(n){\n  if (n <= 0) {\n    return  \"bar\";\n  }\n  return f(n - 1);\n}\nreturn f(1e6) === \"foo\" && f(1e6+1) === \"bar\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="no" data-browser="_6to5">No</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -8497,7 +8497,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest"><td id="generators"><span><a class="anchor" href="#generators">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions">generators</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0.9285714285714286">13/14</td>
+<td data-browser="tr" class="tally" data-tally="1">14/14</td>
 <td data-browser="_6to5" class="tally" data-tally="0.9285714285714286">13/14</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/14</td>
 <td data-browser="closure" class="tally" data-tally="0.7142857142857143">10/14</td>
@@ -8933,7 +8933,7 @@ passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("133");return Function("asyncTestPassed","\nfunction * generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.return(\"quxquux\");\npassed    &= item.value === \"quxquux\" && item.done === true;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>

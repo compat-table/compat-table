@@ -352,7 +352,8 @@ exports.tests = [
         }(1e6)) === "foo";
       */},
       res: {
-        _6to5:       true,
+        tr:          true,
+        _6to5:       true
       },
     },
     'mutual recursion': {
@@ -373,6 +374,7 @@ exports.tests = [
         return f(1e6) === "foo" && f(1e6+1) === "bar";
       */},
       res: {
+        tr:          true
       },
     }
   }
@@ -2036,6 +2038,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        tr:    true,
         _6to5: true
       },
     },
