@@ -80,16 +80,16 @@ process.nextTick(function () {
       target_file: 'es6/compilers/6to5.html',
       polyfills: [],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return to5.transform(code, { experimental: true }).code;
       },
     },
     {
-      name: '6to5 + polyfill',
+      name: '6to5 + core-js',
       url: 'https://6to5.github.io/',
-      target_file: 'es6/compilers/6to5-polyfill.html',
+      target_file: 'es6/compilers/6to5-core-js.html',
       polyfills: ['node_modules/6to5/browser-polyfill.js'],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return to5.transform(code, { experimental: true }).code;
       },
     },
     {
