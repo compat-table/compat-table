@@ -24,8 +24,24 @@ th:nth-child(3) {
     min-width: 10px;
 }
 td {
-    background: #eee; position:relative; padding-left: 10px; margin-left: -10px; font-size: 14px;
+    background: #eee; position:relative; margin-left: -10px; font-size: 14px;
 }
+[significance] td:first-child:before {
+    content: "⬤";
+    opacity:0.2;
+    width:1.5rem;
+    text-align:center;
+    display:inline-block;
+}
+[significance="0.25"] td:first-child:before {
+    content: "⬤";
+    font-size:5px;
+}
+[significance="0.5"] td:first-child:before {
+    content: "⬤";
+    font-size:9px;
+}
+
 td:hover .anchor,
 td .anchor:focus {
     color: #00c;
@@ -39,7 +55,6 @@ td:first-child {
 a[href^='#'] {
     text-decoration: none;
 }
-
 code {
     font-family: "Courier New", Courier, monospace;
 }

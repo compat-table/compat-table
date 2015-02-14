@@ -339,6 +339,7 @@ exports.tests = [
 {
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
   subtests: {
     'direct recursion': {
@@ -386,6 +387,7 @@ exports.tests = [
 {
   name: 'arrow functions',
   category: 'functions',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
   subtests: {
     '0 parameters': {
@@ -579,6 +581,7 @@ exports.tests = [
 {
   name: 'const',
   category: 'bindings',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
@@ -741,6 +744,7 @@ exports.tests = [
 {
   name: 'let',
   category: 'bindings',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
@@ -941,6 +945,7 @@ exports.tests = [
 {
   name: 'default function parameters',
   category: 'syntax',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   subtests: {
     'basic functionality': {
@@ -1022,6 +1027,7 @@ exports.tests = [
 {
   name: 'rest parameters',
   category: 'syntax',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
   subtests: {
     'basic functionality': {
@@ -1079,6 +1085,7 @@ exports.tests = [
 {
   name: 'spread (...) operator',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   subtests: {
     'with arrays, in function calls': {
@@ -1220,6 +1227,7 @@ exports.tests = [
 {
   name: 'class',
   category: 'functions',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
   subtests: {
     'class statement': {
@@ -1504,6 +1512,7 @@ exports.tests = [
 {
   name: 'super',
   category: 'functions',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
   subtests: {
     'statement in constructors': {
@@ -1599,6 +1608,7 @@ exports.tests = [
 {
   name: 'object literal extensions',
   category: 'syntax',
+  significance: 'large',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
   subtests: {
     'computed properties': {
@@ -1694,6 +1704,7 @@ exports.tests = [
 {
   name: 'hoisted block-level function declaration',
   category: 'annex b',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
   exec: function () {/*
     // Note: only available outside of strict mode.
@@ -1714,6 +1725,7 @@ exports.tests = [
 {
   name: '__proto__ in object literals',
   category: 'annex b',
+  significance: 'small',
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
@@ -1795,6 +1807,7 @@ exports.tests = [
 {
   name: 'for..of loops',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements',
   subtests: {
     'with arrays': {
@@ -1906,6 +1919,7 @@ exports.tests = [
 {
   name: 'generators',
   category: 'functions',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
   subtests: {
     'basic functionality': {
@@ -2242,6 +2256,7 @@ exports.tests = [
 {
   name: 'octal and binary literals',
   category: 'syntax',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
   subtests: {
     'octal literals': {
@@ -2313,6 +2328,7 @@ exports.tests = [
 {
   name: 'template strings',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
   subtests: {
     'basic functionality': {
@@ -2367,6 +2383,7 @@ exports.tests = [
 {
   name: 'RegExp "y" and "u" flags',
   category: 'syntax',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
   subtests: {
     '"y" flag': {
@@ -2398,6 +2415,7 @@ exports.tests = [
 {
   name: 'typed arrays',
   category: 'built-ins',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
   subtests: Object.assign({
     'Int8Array': {
@@ -2645,6 +2663,7 @@ exports.tests = [
 {
   name: 'Map',
   category: 'built-ins',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   subtests: {
     'basic functionality': {
@@ -2883,6 +2902,7 @@ exports.tests = [
 {
   name: 'Set',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
   subtests: {
     'basic functionality': {
@@ -3122,6 +3142,7 @@ exports.tests = [
 {
   name: 'WeakMap',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
   subtests: {
     'basic functionality': {
@@ -3229,6 +3250,7 @@ exports.tests = [
 {
   name: 'WeakSet',
   category: 'built-ins',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
   subtests: {
     'basic functionality': {
@@ -3305,6 +3327,7 @@ exports.tests = [
 {
   name: 'Proxy',
   category: 'built-ins',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     '"get" handler': {
@@ -3674,6 +3697,7 @@ exports.tests = [
 {
   name: 'Reflect',
   category: 'built-ins',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
   subtests: {
     'Reflect.get': {
@@ -3859,6 +3883,7 @@ exports.tests = [
 {
   name: 'block-level function declaration',
   category: 'bindings',
+  significance: 'small',
   note_id: 'block-level-function',
   note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
@@ -3884,6 +3909,7 @@ exports.tests = [
 {
   name: 'destructuring',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   subtests: {
     'with arrays': {
@@ -4260,6 +4286,7 @@ exports.tests = [
 {
   name: 'Promise',
   category: 'built-ins',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
   subtests: {
     'basic functionality': {
@@ -4373,6 +4400,7 @@ exports.tests = [
 {
   name: 'Object static methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.assign': {
@@ -4445,6 +4473,7 @@ exports.tests = [
 {
   name: 'Object static methods accept primitives',
   category: 'misc',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.getPrototypeOf': {
@@ -4550,6 +4579,7 @@ exports.tests = [
 {
   name: 'Object.prototype.__proto__',
   category: 'annex b',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
   subtests: {
     'get prototype': {
@@ -4610,6 +4640,7 @@ exports.tests = [
 {
   name: 'function "name" property',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
   subtests: {
     'function statements': {
@@ -4795,6 +4826,7 @@ exports.tests = [
 {
   name: 'String static methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor',
   subtests: {
     'String.raw': {
@@ -4834,6 +4866,7 @@ exports.tests = [
 {
   name: 'String.prototype methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object',
   subtests: {
     'String.prototype.codePointAt': {
@@ -4952,6 +4985,7 @@ exports.tests = [
 {
   name: 'String.prototype HTML methods',
   category: 'annex b',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
   exec: function () {/*
     var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
@@ -4984,6 +5018,7 @@ exports.tests = [
 {
   name: 'Unicode code point escapes',
   category: 'syntax',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
   exec: function () {/*
     return '\u{1d306}' == '\ud834\udf06';
@@ -5000,6 +5035,7 @@ exports.tests = [
 {
   name: 'Symbol',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
   subtests: {
     'basic functionality': {
@@ -5194,6 +5230,7 @@ exports.tests = [
 {
   name: 'well-known symbols',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   subtests: {
     'Symbol.hasInstance': {
@@ -5316,6 +5353,7 @@ exports.tests = [
 {
   name: 'RegExp.prototype properties',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
     'RegExp.prototype.flags': {
@@ -5367,6 +5405,7 @@ exports.tests = [
 {
   name: 'RegExp.prototype.compile',
   category: 'annex b',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
   exec: function () {/*
     return typeof RegExp.prototype.compile === 'function';
@@ -5392,6 +5431,7 @@ exports.tests = [
 {
   name: 'Array static methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor',
   subtests: {
     'Array.from, array-like objects': {
@@ -5455,6 +5495,7 @@ exports.tests = [
 {
   name: 'Array.prototype methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object',
   subtests: {
     'Array.prototype.copyWithin': {
@@ -5618,6 +5659,7 @@ exports.tests = [
 {
   name: 'Number properties',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
   subtests: {
     'Number.isFinite': {
@@ -5750,6 +5792,7 @@ exports.tests = [
 {
   name: 'Math methods',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math',
   subtests: (function(){
     var methods = {
@@ -6050,6 +6093,7 @@ exports.tests = [
 {
   name: 'Array is subclassable',
   category: 'subclassing',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
   subtests: {
     'basic functionality': {
@@ -6104,6 +6148,7 @@ exports.tests = [
   name: 'RegExp is subclassable',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor',
   category: 'subclassing',
+  significance: 'small',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -6138,6 +6183,7 @@ exports.tests = [
   name: 'Function is subclassable',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
   category: 'subclassing',
+  significance: 'small',
   subtests: {
     'can be called': {
       exec: function () {/*
@@ -6191,6 +6237,7 @@ exports.tests = [
   name: 'Promise is subclassable',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
   category: 'subclassing',
+  significance: 'small',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -6277,6 +6324,7 @@ exports.tests = [
   name: 'miscellaneous subclassables',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor',
   category: 'subclassing',
+  significance: 'small',
   subtests: {
     'Boolean is subclassable': {
       exec: function () {/*
@@ -6315,6 +6363,7 @@ exports.tests = [
 {
   name: 'miscellaneous',
   category: 'misc',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
     'duplicate property names in strict mode': {
