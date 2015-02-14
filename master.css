@@ -54,7 +54,11 @@ tr.category td {
     padding-bottom: 2px;
     padding-left: 5px;
 }
-/* ES6 platform colour legend */
+
+/* platforms colour legend */
+.legend {
+    margin-bottom: 1em;
+}
 .legend > * {
     background-color: ghostwhite;
     display: inline-block;
@@ -315,7 +319,7 @@ td.hover.not-applicable {
     background: #eee;
 }
 .warning {
-    background: #ffc; display: inline-block; margin: 0 0 2em 0; padding: 0.25em;
+    background: #ffc; display: inline-block; margin: 0 0 1em 0; padding: 0.25em;
 }
 label[for="show-obsolete"] {
     background: #eef; padding: 5px; margin-left: 10px; margin-right: -30px; padding-right: 30px;
