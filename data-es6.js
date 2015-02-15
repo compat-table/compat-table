@@ -2287,6 +2287,7 @@ exports.tests = [
         return Number('0o1') === 1;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
@@ -2300,6 +2301,7 @@ exports.tests = [
         return Number('0b1') === 1;
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
         firefox36:   true,
         chrome30:    flag,
@@ -4416,6 +4418,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        _6to5:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5258,6 +5261,7 @@ exports.tests = [
           && !(Symbol.species in Object);
       */},
       res: {
+        _6to5:       true,
         ejs:         true,
       },
     },
