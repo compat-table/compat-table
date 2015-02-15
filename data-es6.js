@@ -1384,7 +1384,7 @@ exports.tests = [
         class C {
           static method() { return this === undefined; }
         }
-        return C.method();
+        return (0,C.method)();
       */},
       res: {
         tr:          true,
@@ -1460,7 +1460,9 @@ exports.tests = [
     },
     'extends null': {
       exec: function () {/*
-        class C extends null {}
+        class C extends null {
+          constructor() {}
+        }
         var c = new C();
         return !(c instanceof Object)
           && Function.prototype.isPrototypeOf(C)
@@ -6065,7 +6067,7 @@ exports.tests = [
         class C extends Array {}
         var c = new C();
         c.push(2,4,6);
-        return C.slice(1,2) instanceof C;
+        return c.slice(1,2) instanceof C;
       */},
       res: {
       }

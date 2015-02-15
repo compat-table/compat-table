@@ -7751,8 +7751,8 @@ return !C.prototype.propertyIsEnumerable(&quot;foo&quot;) &amp;&amp; !C.property
 class C {
   static method() { return this === undefined; }
 }
-return C.method();
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");return Function("asyncTestPassed","\nclass C {\n  static method() { return this === undefined; }\n}\nreturn C.method();\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return (0,C.method)();
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");return Function("asyncTestPassed","\nclass C {\n  static method() { return this === undefined; }\n}\nreturn (0,C.method)();\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -8017,12 +8017,14 @@ return new C() instanceof B
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class"><td><span>extends null</span><script data-source="
-class C extends null {}
+class C extends null {
+  constructor() {}
+}
 var c = new C();
 return !(c instanceof Object)
   &amp;&amp; Function.prototype.isPrototypeOf(C)
   &amp;&amp; Object.getPrototypeOf(C.prototype) === null;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");return Function("asyncTestPassed","\nclass C extends null {}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");return Function("asyncTestPassed","\nclass C extends null {\n  constructor() {}\n}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="_6to5">Yes</td>
@@ -23775,8 +23777,8 @@ return len1 === 0 &amp;&amp; len2 === 3 &amp;&amp; c.length === 1 &amp;&amp; !(2
 class C extends Array {}
 var c = new C();
 c.push(2,4,6);
-return C.slice(1,2) instanceof C;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("357");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn C.slice(1,2) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return c.slice(1,2) instanceof C;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("357");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.slice(1,2) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="_6to5">No</td>
