@@ -352,7 +352,11 @@ exports.tests = [
         }(1e6)) === "foo";
       */},
       res: {
-        tr:          true,
+        tr:          {
+          val: flag,
+          note_id: 'tr-tco',
+          note_html: 'Requires the <code>properTailCalls</code> compile option.'
+        },
         _6to5:       true
       },
     },
@@ -374,7 +378,7 @@ exports.tests = [
         return f(1e6) === "foo" && f(1e6+1) === "bar";
       */},
       res: {
-        tr:          true
+        tr:          { val: flag, note_id: 'tr-tco' },
       },
     }
   }
@@ -4007,7 +4011,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         webkit: {
           val: true,
-          note_id: "webkit_object_destructuring",
+          note_id: "webkit-object-destructuring",
           note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
         },
         safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
