@@ -75,19 +75,19 @@ process.nextTick(function () {
       },
     },
     {
-      name: '6to5',
-      url: 'https://6to5.github.io/',
-      target_file: 'es6/compilers/6to5.html',
+      name: 'babel',
+      url: 'https://babeljs.io/',
+      target_file: 'es6/compilers/babel.html',
       polyfills: [],
       compiler: function(code) {
         return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
       },
     },
     {
-      name: '6to5 + polyfill',
-      url: 'https://6to5.github.io/',
-      target_file: 'es6/compilers/6to5-polyfill.html',
-      polyfills: ['node_modules/6to5/browser-polyfill.js'],
+      name: 'babel + polyfill',
+      url: 'https://babeljs.io/',
+      target_file: 'es6/compilers/babel-polyfill.html',
+      polyfills: ['node_modules/babel/browser-polyfill.js'],
       compiler: function(code) {
         return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
       },
@@ -100,7 +100,7 @@ process.nextTick(function () {
       compiler: (function() {
         var es6tr;
         return function(code) {
-          // Known bug: running require('es6-transpiler') causes 6to5 to break.
+          // Known bug: running require('es6-transpiler') causes babel to break.
           // So, it's run here, as late as possible.
           es6tr = es6tr || require('es6-transpiler');
           var result = es6tr.run({src:code});
