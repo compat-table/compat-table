@@ -51,7 +51,7 @@ process.nextTick(function () {
     fs.mkdirSync('es7/compilers');
   }
   var closure    = require('closurecompiler');
-  var to5        = require('6to5');
+  var babel      = require('babel');
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
   var tss        = require('typescript-simple');
@@ -80,7 +80,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/babel.html',
       polyfills: [],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return babel.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
       },
     },
     {
@@ -89,7 +89,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/babel-polyfill.html',
       polyfills: ['node_modules/babel/browser-polyfill.js'],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return babel.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
       },
     },
     {
