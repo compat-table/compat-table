@@ -3708,6 +3708,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.set': {
@@ -3720,6 +3721,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.has': {
@@ -3730,6 +3732,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.deleteProperty': {
@@ -3742,6 +3745,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.getOwnPropertyDescriptor': {
@@ -3755,6 +3759,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.defineProperty': {
@@ -3767,6 +3772,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.getPrototypeOf': {
@@ -3777,6 +3783,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.setPrototypeOf': {
@@ -3789,6 +3796,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         ie11tp:      true,
+        es6shim:     { val: false, note_id: 'compiler-proto' },
       },
     },
     'Reflect.isExtensible': {
@@ -3800,6 +3808,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.preventExtensions': {
@@ -3812,6 +3821,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.enumerate': {
@@ -3833,6 +3843,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
+        es6shim:     true,
       },
     },
     'Reflect.ownKeys': {
@@ -3843,6 +3854,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
+        es6shim:     true,
       },
     },
     'Reflect.apply': {
@@ -3853,6 +3865,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.construct': {
@@ -3865,6 +3878,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.construct, new.target': {
