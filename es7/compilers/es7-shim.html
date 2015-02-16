@@ -682,54 +682,54 @@ module.exports = require('./es7-shim').shim();
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr><td id="Exponentiation_operator"><span><a class="anchor" href="#Exponentiation_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">Exponentiation operator</a></span><script data-source="(function(){
+      <tr significance="1"><td id="Exponentiation_operator"><span><a class="anchor" href="#Exponentiation_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">Exponentiation operator</a></span><script data-source="(function(){
 return 2 ** 3 === 8;
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");return global.__asyncPassedFn && __asyncPassedFn("0") && eval("(function(){\nreturn 2 ** 3 === 8;\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span><script data-source="(function(){
+<tr significance="1"><td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span><script data-source="(function(){
 return [for (a of [1, 2, 3]) a * a][0] === 1
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return global.__asyncPassedFn && __asyncPassedFn("1") && eval("(function(){\nreturn [for (a of [1, 2, 3]) a * a][0] === 1\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span><script data-source="(function(){
+<tr significance="1"><td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span><script data-source="(function(){
 (for (a of [1, 2, 3]) a * a)
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return global.__asyncPassedFn && __asyncPassedFn("2") && eval("(function(){\n(for (a of [1, 2, 3]) a * a)\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Async_functions"><span><a class="anchor" href="#Async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Async functions</a></span><script data-source="(function(){
+<tr significance="1"><td id="Async_functions"><span><a class="anchor" href="#Async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Async functions</a></span><script data-source="(function(){
 return (async function(){
   return 42 + await Promise.resolve(42)
 })() instanceof Promise
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");return global.__asyncPassedFn && __asyncPassedFn("3") && eval("(function(){\nreturn (async function(){\n  return 42 + await Promise.resolve(42)\n})() instanceof Promise\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Arrow_async_functions"><span><a class="anchor" href="#Arrow_async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Arrow async functions</a></span><script data-source="(function(){
+<tr significance="1"><td id="Arrow_async_functions"><span><a class="anchor" href="#Arrow_async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Arrow async functions</a></span><script data-source="(function(){
 return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");return global.__asyncPassedFn && __asyncPassedFn("4") && eval("(function(){\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&#xA7;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span><script data-source="(function(){
+<tr significance="1"><td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&#xA7;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span><script data-source="(function(){
 return typeof StructType !== &apos;undefined&apos;;
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");return global.__asyncPassedFn && __asyncPassedFn("5") && eval("(function(){\nreturn typeof StructType !== 'undefined';\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="(function(){
+<tr significance="1"><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="(function(){
 return typeof Object.observe === &apos;function&apos;;
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");return global.__asyncPassedFn && __asyncPassedFn("6") && eval("(function(){\nreturn typeof Object.observe === 'function';\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="(function(){
+<tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="(function(){
 return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");return global.__asyncPassedFn && __asyncPassedFn("7") && eval("(function(){\nreturn typeof Object.getOwnPropertyDescriptors === 'function';\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="(function(){
+<tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="(function(){
 return typeof Array.prototype.includes === &apos;function&apos;;
   })">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");return global.__asyncPassedFn && __asyncPassedFn("8") && eval("(function(){\nreturn typeof Array.prototype.includes === 'function';\n  })")()}catch(e){return false;}}());
 </script></td>
 </tr>
-<tr><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="(function(){
+<tr significance="1"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="(function(){
 var i, names =
   [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;,
   &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;];

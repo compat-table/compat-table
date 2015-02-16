@@ -16143,7 +16143,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="closure" class="tally" data-tally="0">0/15</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/15</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/15</td>
-<td data-browser="es6shim" class="tally" data-tally="0">0/15</td>
+<td data-browser="es6shim" class="tally" data-tally="0.8666666666666667">13/15</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11tp" class="tally" data-tally="0.8">12/15</td>
@@ -16206,7 +16206,7 @@ return Reflect.get({ qux: 987 }, &quot;qux&quot;) === 987;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16271,7 +16271,7 @@ return obj.quux === 654;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16334,7 +16334,7 @@ return Reflect.has({ qux: 987 }, &quot;qux&quot;);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16399,7 +16399,7 @@ return !(&quot;bar&quot; in obj);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16465,7 +16465,7 @@ return desc.value === 789 &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16530,7 +16530,7 @@ return obj.foo === 123;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16593,7 +16593,7 @@ return Reflect.getPrototypeOf([]) === Array.prototype;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16658,7 +16658,7 @@ return obj instanceof Array;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="no" data-browser="es6shim">No<a href="#compiler-proto-note"><sup>[14]</sup></a></td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16722,7 +16722,7 @@ return Reflect.isExtensible({}) &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16787,7 +16787,7 @@ return !Object.isExtensible(obj);
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -16844,17 +16844,17 @@ return !Object.isExtensible(obj);
 var obj = { foo: 1, bar: 2 };
 var iterator = Reflect.enumerate(obj);
 var passed = 1;
-if (typeof Symbol != undefined &amp;&amp; &apos;iterator&apos; in Symbol) {
+if (typeof Symbol === &apos;function&apos; &amp;&amp; &apos;iterator&apos; in Symbol) {
   passed &amp;= Symbol.iterator in iterator;
 }
 var item = iterator.next();
-passed    &amp;= item.value === &quot;foo&quot; &amp;&amp; item.done === false;
+passed &amp;= item.value === &quot;foo&quot; &amp;&amp; item.done === false;
 item = iterator.next();
-passed    &amp;= item.value === &quot;bar&quot; &amp;&amp; item.done === false;
+passed &amp;= item.value === &quot;bar&quot; &amp;&amp; item.done === false;
 item = iterator.next();
-passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
-return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("250");return Function("asyncTestPassed","\nvar obj = { foo: 1, bar: 2 };\nvar iterator = Reflect.enumerate(obj);\nvar passed = 1;\nif (typeof Symbol != undefined && 'iterator' in Symbol) {\n  passed &= Symbol.iterator in iterator;\n}\nvar item = iterator.next();\npassed    &= item.value === \"foo\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"bar\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+passed &amp;= item.value === undefined &amp;&amp; item.done === true;
+return passed === 1;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("250");return Function("asyncTestPassed","\nvar obj = { foo: 1, bar: 2 };\nvar iterator = Reflect.enumerate(obj);\nvar passed = 1;\nif (typeof Symbol === 'function' && 'iterator' in Symbol) {\n  passed &= Symbol.iterator in iterator;\n}\nvar item = iterator.next();\npassed &= item.value === \"foo\" && item.done === false;\nitem = iterator.next();\npassed &= item.value === \"bar\" && item.done === false;\nitem = iterator.next();\npassed &= item.value === undefined && item.done === true;\nreturn passed === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -16862,7 +16862,7 @@ return passed;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -16926,7 +16926,7 @@ return Reflect.ownKeys(obj) + &quot;&quot; === &quot;foo,bar&quot;;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
@@ -16989,7 +16989,7 @@ return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -17054,7 +17054,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="ie11tp">Yes</td>
@@ -25182,7 +25182,7 @@ return c instanceof String
 <td data-browser="closure" class="tally" data-tally="0">0/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/10</td>
-<td data-browser="es6shim" class="tally" data-tally="0.1">1/10</td>
+<td data-browser="es6shim" class="tally" data-tally="0.2">2/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11tp" class="tally" data-tally="0">0/10</td>
@@ -25373,7 +25373,7 @@ return s.length === 2 &amp;&amp;
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="ie11tp">No</td>
