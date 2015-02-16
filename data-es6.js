@@ -524,8 +524,9 @@ exports.tests = [
         })();
       */},
       res: {
-        babel: true,
-        tr: true
+        babel:       true,
+        tr:          true,
+        ie11tp:      true,
       },
     },
     'no "prototype" property': {
@@ -4668,6 +4669,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         firefox11:   true,
+        ie11tp:      true,
         chrome:      true,
         safari51:    true,
         phantom:     true,
@@ -4693,6 +4695,7 @@ exports.tests = [
       */},
       res: {
         firefox11:   true,
+        ie11tp:      true,
         safari51:    true,
         phantom:     true,
         webkit:      true,
@@ -4709,6 +4712,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'variables (function)': {
@@ -4717,7 +4721,9 @@ exports.tests = [
         var bar = function baz() {};
         return foo.name === "foo" && bar.name === "baz";
       */},
-      res: {},
+      res: {
+        ie11tp:      true,
+      },
     },
     'object methods (function)': {
       exec: function() {/*
@@ -4736,7 +4742,9 @@ exports.tests = [
         return descriptor.get.name === "get foo" &&
                descriptor.set.name === "set foo";
       */},
-      res: {},
+      res: {
+        ie11tp:       true,
+      },
     },
     'shorthand methods': {
       exec: function() {/*
@@ -4746,6 +4754,7 @@ exports.tests = [
       res: {
         babel:        true,
         firefox34:    true,
+        ie11tp:       true,
         chrome39:     flag,
         iojs:         true,
       },
@@ -4816,6 +4825,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
+        ie11tp:       true,
       },
     },
     'class static methods': {
@@ -4825,6 +4835,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
+        ie11tp:       true,
       },
     },
     'isn\'t writable, is configurable': {
@@ -4834,7 +4845,9 @@ exports.tests = [
                descriptor.writable     === false &&
                descriptor.configurable === true;
       */},
-      res: {},
+      res: {
+        ie11tp:       true,
+      },
     },
   },
 },
@@ -6092,6 +6105,7 @@ exports.tests = [
         tr:          true,
         es6shim:     true,
         firefox27:   true,
+        ie11tp:      true,
         chrome34:    flag,
         chrome38:    true,
         safari71_8:  true,
