@@ -26,18 +26,21 @@ th:nth-child(3) {
 td {
     background: #eee; position:relative; margin-left: -10px; font-size: 14px;
 }
-[significance] td:first-child:before {
+body:not(.es6) td {
+    padding-left:0.5rem;
+}
+.es6 [significance] td:first-child:before {
     content: "⬤";
     opacity:0.2;
     width:1.5rem;
     text-align:center;
     display:inline-block;
 }
-[significance="0.25"] td:first-child:before {
+.es6 [significance="0.25"] td:first-child:before {
     content: "⬤";
     font-size:5px;
 }
-[significance="0.5"] td:first-child:before {
+.es6 [significance="0.5"] td:first-child:before {
     content: "⬤";
     font-size:9px;
 }
