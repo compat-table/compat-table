@@ -3819,16 +3819,16 @@ exports.tests = [
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
         var passed = 1;
-        if (typeof Symbol != undefined && 'iterator' in Symbol) {
+        if (typeof Symbol === 'function' && 'iterator' in Symbol) {
           passed &= Symbol.iterator in iterator;
         }
         var item = iterator.next();
-        passed    &= item.value === "foo" && item.done === false;
+        passed &= item.value === "foo" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === "bar" && item.done === false;
+        passed &= item.value === "bar" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
-        return passed;
+        passed &= item.value === undefined && item.done === true;
+        return passed === 1;
       */},
       res: {
         babel:       true,
