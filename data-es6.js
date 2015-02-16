@@ -4505,6 +4505,7 @@ exports.tests = [
         firefox33:   true,
         chrome40:    true,
         iojs:        true,
+        es6shim:     true,
       },
     },
     'Object.seal': {
