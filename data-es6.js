@@ -16,12 +16,12 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
-  _6to5: {
-    full: '6to5',
-    short: '6to5 +<br><nobr>core-js</nobr>',
+  babel: {
+    full: 'babel',
+    short: 'babel +<br><nobr>core-js</nobr><br><nobr>ex-6to5</nobr>',
     obsolete: false,
     platformtype: 'compiler',
-    note_id: '6to5-optional',
+    note_id: 'babel-optional',
     note_html: 'Flagged features require an optional transformer setting.',
   },
   es6tr: {
@@ -358,7 +358,7 @@ exports.tests = [
           note_id: 'tr-tco',
           note_html: 'Requires the <code>properTailCalls</code> compile option.'
         },
-        _6to5:       true
+        babel:       true
       },
     },
     'mutual recursion': {
@@ -396,7 +396,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -416,7 +416,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -436,7 +436,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -457,7 +457,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -476,7 +476,7 @@ exports.tests = [
       res: {
         tr:          true,
         closure:     true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -493,7 +493,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -510,7 +510,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         ie11tp:      true,
         firefox23:   true,
@@ -524,7 +524,7 @@ exports.tests = [
         })();
       */},
       res: {
-        _6to5: true,
+        babel: true,
         tr: true
       },
     },
@@ -558,7 +558,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         jsx:         true,
@@ -591,7 +591,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -615,7 +615,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         tr:          true,
         jsx:         true,
@@ -636,7 +636,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -651,7 +651,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ie11:        true,
         firefox36:   true,
       },
@@ -664,7 +664,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -685,7 +685,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         tr:          true,
         ejs:         true,
@@ -710,7 +710,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -730,7 +730,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -754,7 +754,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -774,7 +774,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -792,7 +792,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         es6tr:       true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
@@ -805,7 +805,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -828,7 +828,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
       },
@@ -841,7 +841,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -862,7 +862,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -883,7 +883,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -903,7 +903,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -931,7 +931,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
         chrome37:    flag,
@@ -954,7 +954,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -968,7 +968,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -982,7 +982,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1005,7 +1005,7 @@ exports.tests = [
         }());
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
       },
     },
     'separate scope': {
@@ -1018,7 +1018,7 @@ exports.tests = [
         }());
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         closure:     true,
       },
     }
@@ -1038,7 +1038,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1054,7 +1054,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         jsx:         true,
@@ -1076,7 +1076,7 @@ exports.tests = [
         }("foo", "bar", "baz"));
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         tr:          true,
       },
     },
@@ -1094,7 +1094,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1111,7 +1111,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1128,7 +1128,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox27:   true,
@@ -1140,7 +1140,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox17:   true,
@@ -1152,7 +1152,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox27:   true,
       },
@@ -1163,7 +1163,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox27:   true,
       },
@@ -1175,7 +1175,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       {
           val: true,
           note_id: 'compiler-iterable',
@@ -1192,7 +1192,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         firefox27:   true,
@@ -1205,7 +1205,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
       },
@@ -1217,7 +1217,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
       },
@@ -1237,7 +1237,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         jsx:         true,
@@ -1258,7 +1258,7 @@ exports.tests = [
         return C === c1;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         jsx:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1270,7 +1270,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1289,7 +1289,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1309,7 +1309,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1329,7 +1329,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1351,7 +1351,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1371,7 +1371,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1388,7 +1388,7 @@ exports.tests = [
         return !C.prototype.propertyIsEnumerable("foo") && !C.propertyIsEnumerable("bar");
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
       },
     },
     'implicit strict mode': {
@@ -1400,7 +1400,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ie11tp:      true,
@@ -1418,7 +1418,7 @@ exports.tests = [
         }
       */},
       res: {
-        _6to5: true
+        babel: true
       },
     },
     'extends': {
@@ -1435,7 +1435,7 @@ exports.tests = [
           note_id: 'compiler-proto',
           note_html: 'Requires native support for <code>Object.prototype.__proto__</code>',
         },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         closure:     {
@@ -1462,7 +1462,7 @@ exports.tests = [
       */},
       res: {
         es6tr:       { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         jsx:         { val: false, note_id: 'compiled-extends' },
@@ -1481,7 +1481,7 @@ exports.tests = [
           && Object.getPrototypeOf(C.prototype) === null;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         es6tr:       true,
@@ -1529,7 +1529,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1550,7 +1550,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1570,7 +1570,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1595,7 +1595,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1618,7 +1618,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1636,7 +1636,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1654,7 +1654,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1675,7 +1675,7 @@ exports.tests = [
         ie11tp:      true,
         tr:          true,
         closure:     true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         firefox34:   true,
       }
@@ -1692,7 +1692,7 @@ exports.tests = [
         return obj.y === 1 && valueSet === 'foo';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         tr:          true,
         es6tr:       true,
@@ -1818,7 +1818,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1841,7 +1841,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1860,7 +1860,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1881,7 +1881,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         closure:     true,
@@ -1904,7 +1904,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ie11tp:      true,
         firefox36:   true,
@@ -1938,7 +1938,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -1963,7 +1963,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -1986,7 +1986,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2034,7 +2034,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2059,7 +2059,7 @@ exports.tests = [
       */},
       res: {
         tr:    true,
-        _6to5: true
+        babel: true
       },
     },
     'yield operator precedence': {
@@ -2075,7 +2075,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2099,7 +2099,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome38:    flag,
@@ -2122,7 +2122,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         tr:          true,
         firefox27:   true,
@@ -2144,7 +2144,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         firefox27:   true,
         chrome38:    flag,
@@ -2170,7 +2170,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2195,7 +2195,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
@@ -2220,7 +2220,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         chrome39:    flag,
         firefox34:   true,
@@ -2246,7 +2246,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox34:   true,
       },
@@ -2265,7 +2265,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -2284,7 +2284,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -2339,7 +2339,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -2369,7 +2369,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         closure:     true,
@@ -2406,7 +2406,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
       },
     },
@@ -2677,7 +2677,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2702,7 +2702,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2719,7 +2719,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2743,7 +2743,7 @@ exports.tests = [
         return k === Infinity && map.get(+0) == "foo";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox29:   true,
@@ -2763,7 +2763,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2783,7 +2783,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2803,7 +2803,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2823,7 +2823,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2843,7 +2843,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2863,7 +2863,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2883,7 +2883,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2917,7 +2917,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2941,7 +2941,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2958,7 +2958,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2982,7 +2982,7 @@ exports.tests = [
         return k === Infinity && set.has(+0);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox29:   true,
@@ -3004,7 +3004,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3024,7 +3024,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3044,7 +3044,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3064,7 +3064,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3084,7 +3084,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -3103,7 +3103,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -3123,7 +3123,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -3155,7 +3155,7 @@ exports.tests = [
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -3178,7 +3178,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -3194,7 +3194,7 @@ exports.tests = [
         return weakmap.set(key, 0) === weakmap;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         chrome38:    true,
@@ -3211,7 +3211,7 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -3232,7 +3232,7 @@ exports.tests = [
         return m.get(f) === 42;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox11:   true,
@@ -3264,7 +3264,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3282,7 +3282,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3298,7 +3298,7 @@ exports.tests = [
         return weakset.add(obj) === weakset;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         chrome38:    true,
@@ -3312,7 +3312,7 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3705,7 +3705,7 @@ exports.tests = [
         return Reflect.get({ qux: 987 }, "qux") === 987;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3717,7 +3717,7 @@ exports.tests = [
         return obj.quux === 654;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3727,7 +3727,7 @@ exports.tests = [
         return Reflect.has({ qux: 987 }, "qux");
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3739,7 +3739,7 @@ exports.tests = [
         return !("bar" in obj);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3752,7 +3752,7 @@ exports.tests = [
           desc.configurable && desc.writable && desc.enumerable;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3764,7 +3764,7 @@ exports.tests = [
         return obj.foo === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3774,7 +3774,7 @@ exports.tests = [
         return Reflect.getPrototypeOf([]) === Array.prototype;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3786,7 +3786,7 @@ exports.tests = [
         return obj instanceof Array;
       */},
       res: {
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         ie11tp:      true,
       },
@@ -3797,7 +3797,7 @@ exports.tests = [
           !Reflect.isExtensible(Object.preventExtensions({}));
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3809,7 +3809,7 @@ exports.tests = [
         return !Object.isExtensible(obj);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3831,7 +3831,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
       },
     },
@@ -3841,7 +3841,7 @@ exports.tests = [
         return Reflect.ownKeys(obj) + "" === "foo,bar";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
       },
     },
@@ -3850,7 +3850,7 @@ exports.tests = [
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3862,7 +3862,7 @@ exports.tests = [
         }, ["foo", "bar", "baz"]).qux === "foobarbaz";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
       },
@@ -3896,7 +3896,7 @@ exports.tests = [
     return f() === 1;
   */},
   res: {
-    _6to5:       true,
+    babel:       true,
     tr:          true,
     closure:     true,
     ie11:        true,
@@ -3922,7 +3922,7 @@ exports.tests = [
       */},
       res: (temp.destructuringResults = {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -3943,7 +3943,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -3962,7 +3962,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox34:   true,
       },
@@ -3978,7 +3978,7 @@ exports.tests = [
       res: {
         tr:           true,
         firefox34:    true,
-        _6to5:        true,
+        babel:        true,
       },
     },
     'with instances of generic iterables': {
@@ -3991,7 +3991,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         firefox36:    true,
       },
     },
@@ -4002,7 +4002,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,
@@ -4018,7 +4018,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,
@@ -4051,7 +4051,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         firefox16:    true,
         safari71_8:   true,
@@ -4068,7 +4068,7 @@ exports.tests = [
       res: {
         tr:           true,
         firefox16:    true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         webkit:       true,
         safari71_8:   true,
@@ -4096,7 +4096,7 @@ exports.tests = [
         return grault === "garply";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         tr:          true,
         es6tr:       true,
@@ -4110,7 +4110,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4137,7 +4137,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4154,7 +4154,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4173,7 +4173,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
@@ -4189,7 +4189,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         closure:     true,
         firefox13:   true,
@@ -4207,7 +4207,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         closure:     true,
@@ -4222,7 +4222,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
       },
     },
     'defaults': {
@@ -4232,7 +4232,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         closure:     true,
       },
@@ -4246,7 +4246,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         closure:     true,
       },
@@ -4265,7 +4265,7 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
-        _6to5: flag
+        babel: flag
       },
     },
     'defaults in parameters, separate scope': {
@@ -4278,7 +4278,7 @@ exports.tests = [
         }({}));
       */},
       res: {
-        _6to5: true
+        babel: true
       },
     },
   },
@@ -4316,7 +4316,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4349,7 +4349,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4382,7 +4382,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4411,7 +4411,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         firefox34:   true,
       },
@@ -4426,7 +4426,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         es6shim:     true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox23:   true,
         chrome19dev: true,
@@ -4459,7 +4459,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         es6shim:     { val: false, note_id: 'compiler-proto' },
         ie11:        true,
         firefox31:   true,
@@ -4481,7 +4481,7 @@ exports.tests = [
         return Object.getPrototypeOf('a').constructor === String;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4490,7 +4490,7 @@ exports.tests = [
         return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4501,7 +4501,7 @@ exports.tests = [
           ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox33:   true,
         chrome40:    true,
         iojs:        true,
@@ -4512,7 +4512,7 @@ exports.tests = [
         return Object.seal('a') === 'a';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4521,7 +4521,7 @@ exports.tests = [
         return Object.freeze('a') === 'a';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4530,7 +4530,7 @@ exports.tests = [
         return Object.preventExtensions('a') === 'a';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4539,7 +4539,7 @@ exports.tests = [
         return Object.isSealed('a') === true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4548,7 +4548,7 @@ exports.tests = [
         return Object.isFrozen('a') === true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4557,7 +4557,7 @@ exports.tests = [
         return Object.isExtensible('a') === false;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4567,7 +4567,7 @@ exports.tests = [
         return s.length === 1 && s[0] === '0';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         firefox35:   true,
         chrome40:    true,
@@ -4650,7 +4650,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox11:   true,
         chrome:      true,
@@ -4729,7 +4729,7 @@ exports.tests = [
         return o.foo.name === "foo";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
         firefox34:    true,
         chrome39:     flag,
         iojs:         true,
@@ -4757,7 +4757,7 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        _6to5:         true,
+        babel:         true,
       },
     },
     'class expressions': {
@@ -4766,7 +4766,7 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        _6to5:         true,
+        babel:         true,
       },
     },
     'variables (class)': {
@@ -4779,7 +4779,7 @@ exports.tests = [
                typeof qux.name === "function";
       */},
       res: {
-        _6to5:         true,
+        babel:         true,
       },
     },
     'object methods (class)': {
@@ -4791,7 +4791,7 @@ exports.tests = [
                o.qux.name === "";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
       },
     },
     'class prototype methods': {
@@ -4800,7 +4800,7 @@ exports.tests = [
         return (new C).foo.name === "foo";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
       },
     },
     'class static methods': {
@@ -4809,7 +4809,7 @@ exports.tests = [
         return C.foo.name === "foo";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
       },
     },
     'isn\'t writable, is configurable': {
@@ -4835,7 +4835,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4850,7 +4850,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4875,7 +4875,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4908,7 +4908,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4927,7 +4927,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4946,7 +4946,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4965,7 +4965,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         firefox18:   {
@@ -5025,7 +5025,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    _6to5:       true,
+    babel:       true,
     es6tr:       true,
     ejs:         true,
     closure:     true,
@@ -5049,7 +5049,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
@@ -5064,7 +5064,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5092,7 +5092,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5119,7 +5119,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
@@ -5180,7 +5180,7 @@ exports.tests = [
       res: {
         ejs:        true,
         tr:         true,
-        _6to5:      true,
+        babel:      true,
         ie11tp:     true,
         firefox36:  true,
         chrome35:   flag,
@@ -5200,7 +5200,7 @@ exports.tests = [
           symbolObject.valueOf() === symbol;
       */},
       res: {
-        _6to5:      false,
+        babel:      false,
         ie11tp:     true,
         firefox36:  true,
         chrome30:   flag,
@@ -5215,7 +5215,7 @@ exports.tests = [
            Symbol.keyFor(symbol) === 'foo';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5278,7 +5278,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox36:   true,
         chrome37:    flag,
@@ -5322,7 +5322,7 @@ exports.tests = [
         return (a + "") === "[object foo]";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         chrome40:    flag,
         iojs:        flag,
@@ -5361,7 +5361,7 @@ exports.tests = [
         return /./igm.flags === "gim" && /./.flags === "";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         firefox37:   true,
@@ -5440,7 +5440,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ejs:         true,
         ie11tp:      true,
@@ -5454,7 +5454,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         es6shim:     true,
@@ -5467,7 +5467,7 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
         tr:           true,
         ie11tp:       true,
         firefox36:    true,
@@ -5480,7 +5480,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5504,7 +5504,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox32:   true,
@@ -5516,7 +5516,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5534,7 +5534,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5552,7 +5552,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5570,7 +5570,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5590,7 +5590,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5620,7 +5620,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5647,7 +5647,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         chrome38:    true,
         node:        true,
@@ -5668,7 +5668,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5686,7 +5686,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5704,7 +5704,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5722,7 +5722,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5740,7 +5740,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5757,7 +5757,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5775,7 +5775,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5799,7 +5799,7 @@ exports.tests = [
       'clz32': {
         ejs:         true,
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox31:   true,
@@ -5810,7 +5810,7 @@ exports.tests = [
       },
       'imul': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5831,7 +5831,7 @@ exports.tests = [
       },
       'sign': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5845,7 +5845,7 @@ exports.tests = [
       },
       'log10': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5861,7 +5861,7 @@ exports.tests = [
       },
       'log2': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5877,7 +5877,7 @@ exports.tests = [
       },
       'log1p': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5893,7 +5893,7 @@ exports.tests = [
       },
       'expm1': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5908,7 +5908,7 @@ exports.tests = [
       },
       'cosh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5924,7 +5924,7 @@ exports.tests = [
       },
       'sinh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5940,7 +5940,7 @@ exports.tests = [
       },
       'tanh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5956,7 +5956,7 @@ exports.tests = [
       },
       'acosh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5972,7 +5972,7 @@ exports.tests = [
       },
       'asinh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5987,7 +5987,7 @@ exports.tests = [
       },
       'atanh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6003,7 +6003,7 @@ exports.tests = [
       },
       'trunc': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6019,7 +6019,7 @@ exports.tests = [
       },
       'fround': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6040,7 +6040,7 @@ exports.tests = [
       },
       'cbrt': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6073,7 +6073,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         firefox27:   true,
@@ -6127,7 +6127,7 @@ exports.tests = [
       */},
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         ie11tp:      true,
       }
     },
@@ -6138,7 +6138,7 @@ exports.tests = [
       */},
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         ie11tp:      true,
       }
     },
@@ -6267,7 +6267,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
       },
     },
     'Promise.all': {
@@ -6291,7 +6291,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
       },
     },
     'Promise.race': {
@@ -6315,7 +6315,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
       },
     },
   },
@@ -6373,7 +6373,7 @@ exports.tests = [
       */},
       res: {
         firefox34:   true,
-        _6to5:       true,
+        babel:       true,
         chrome42:    true,
       },
     },
@@ -6382,7 +6382,7 @@ exports.tests = [
         do {} while (false) return true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ie10:        true,
         firefox11:   true,
         chrome:      true,
@@ -6406,7 +6406,7 @@ exports.tests = [
         }
       */},
       res: {
-        _6to5: true
+        babel: true
       },
     },
     'accessors aren\'t constructors': {
@@ -6445,7 +6445,7 @@ exports.tests = [
         return new RegExp(/./im, "g").global === true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
       },
     },
