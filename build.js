@@ -33,7 +33,8 @@ var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
-  handle(require('./data-es5'));
+  var es5 = require('./data-es5');
+  handle(es5);
   var es6 = require('./data-es6');
   handle(es6);
   var es7 = require('./data-es7');
@@ -43,6 +44,9 @@ process.nextTick(function () {
   // ES6 compilers
   if (!useCompilers) {
     return;
+  }
+  if (!fs.existsSync('es5/compilers')) {
+    fs.mkdirSync('es5/compilers');
   }
   if (!fs.existsSync('es6/compilers')) {
     fs.mkdirSync('es6/compilers');
@@ -55,15 +59,28 @@ process.nextTick(function () {
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
   var tss        = require('typescript-simple');
+  var identity   = function (x) { return x; };
+  [
+    {
+      name: 'es5-shim',
+      url: 'https://github.com/es-shims/es5-shim',
+      target_file: 'es5/compilers/es5-shim.html',
+      polyfills: ['node_modules/es5-shim/es5-shim.js'],
+      compiler: identity,
+    },
+  ].forEach(function(e){
+    assign(es5, e);
+    es5.browsers = {};
+    es5.skeleton_file = 'es5/compiler-skeleton.html';
+    handle(es5);
+  });
   [
     {
       name: 'es6-shim',
       url: 'https://github.com/paulmillr/es6-shim/',
       target_file: 'es6/compilers/es6-shim.html',
       polyfills: ['node_modules/es6-shim/es6-shim.js'],
-      compiler: function(code) {
-        return code;
-      },
+      compiler: identity,
     },
     {
       name: 'Traceur',
@@ -126,9 +143,7 @@ process.nextTick(function () {
       url: 'https://www.typescriptlang.org/',
       target_file: 'es6/compilers/typescript.html',
       polyfills: [],
-      compiler: function(code) {
-        return tss(code);
-      },
+      compiler: tss,
     },
     {
       name: 'Closure Compiler',
@@ -161,9 +176,7 @@ process.nextTick(function () {
       url: 'https://github.com/es-shims/es7-shim/',
       target_file: 'es7/compilers/es7-shim.html',
       polyfills: ['node_modules/es7-shim/dist/es7-shim.js'],
-      compiler: function(code) {
-        return code;
-      },
+      compiler: identity,
     }
   ].forEach(function(e){
     assign(es7, e);

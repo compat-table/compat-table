@@ -1,94 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>ECMAScript 5 compatibility table</title>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
-
     <link rel="stylesheet" href="../master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
     <script>
+      var __script_executed = {};
       if (typeof global === 'undefined') {
         var global = this;
       }
+    </script>
+    <script>
       (function() {
         var s = document.createElement('script'),
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
     </script>
-  </head>
-  <body>
-    <div id="header">
+</head>
+<body class="es5">
+  <div id="header">
 
-      ECMAScript
-      <span class="versions">
-        <a href="../es5" class="current">5</a><!--
-        --><a href="../es6">6</a><!--
-        --><a href="../es7">7</a><!--
-        --><a href="../non-standard">non-standard</a>
+    ECMAScript
+    <span class="versions">
+      <a href="../es5" class="current">5</a><!--
+      --><a href="../es6">6</a><!--
+      --><a href="../es7">7</a><!--
+      --><a href="../non-standard">non-standard</a>
+    </span>
+    compatibility table
+
+    <span style="font-size:0.8em;float:right;font-weight:normal;">
+
+      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
+
+      <script async src="https://www.google-analytics.com/ga.js"></script>
+      <span class="by">
+        by
+        <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
+        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
+        &amp;
+        <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
       </span>
-      compatibility table
 
-      <span style="font-size:0.8em;float:right;font-weight:normal;">
-        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.io/compat-table/es5/"></a>
+      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
+        frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
+    </span>
+  </div>
+  <div id="body">
+    <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
+      not functionality or full conformance.</p>
 
-        <script async src="https://www.google-analytics.com/ga.js"></script>
-        <span class="by">
-          by
-          <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
-          <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
-          &amp;
-          <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
-        </span>
+    <label for="sort">Sort by number of features?</label>
+    <input id="sort" type="checkbox">
 
-        <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
-          frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
-      </span>
+    <label for="show-obsolete">Show obsolete browsers?</label>
+    <input id="show-obsolete" type="checkbox">
+
+    <div class="legend">
+      <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
+      <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
+      <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
+      <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
+      <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
+      <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
+      <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
+      <br>
+      <span><span style="opacity:0.2;font-size:5px;">⬤</span> Useful feature</span>
+      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Significant feature</span>
+      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Landmark feature</span>
     </div>
-    <div id="body">
-      <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
-        not functionality or full conformance.</p>
 
-      <label for="show-obsolete">Show obsolete browsers?</label>
-      <input id="show-obsolete" type="checkbox">
-
-      <div class="legend">
-        <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
-        <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
-        <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
-        <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
-        <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
-        <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
-        <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
-      </div>
-
-      <table id="table-wrapper">
-        <colgroup>
-          <col>
-          <col class="this-browser-col">
-        </colgroup>
-        <thead>
-          <tr>
-            <th class="test-name"></th>
-
-            <th class="current">Current browser</th><th></th>
-
-            <!-- TABLE HEADERS -->
-          </tr>
-        </thead>
-        <tbody>
-          <!-- TABLE BODY -->
-        </tbody>
-      </table>
-    </div>
+    <table id="table-wrapper">
+      <colgroup>
+        <col>
+        <col class="this-browser-col">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="3"  class="platformtype"></th>
+          <th colspan="1"  class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
+          <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+        </tr>
+        <tr>
+          <th class="test-name">Feature name</th>
+          <th class="current">Current browser</th>
+          <th></th>
+          <!-- TABLE HEADERS -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- TABLE BODY -->
+      </tbody>
+    </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
     </div>
-  </body>
+  </div>
+  <pre class="info-tooltip" style="display:none"></pre>
+</body>
 </html>
