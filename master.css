@@ -24,8 +24,27 @@ th:nth-child(3) {
     min-width: 10px;
 }
 td {
-    background: #eee; position:relative; padding-left: 10px; margin-left: -10px; font-size: 14px;
+    background: #eee; position:relative; margin-left: -10px; font-size: 14px;
 }
+body:not(.es6) td {
+    padding-left:0.5rem;
+}
+.es6 [significance] td:first-child:before {
+    content: "⬤";
+    opacity:0.2;
+    width:1.5rem;
+    text-align:center;
+    display:inline-block;
+}
+.es6 [significance="0.25"] td:first-child:before {
+    content: "⬤";
+    font-size:5px;
+}
+.es6 [significance="0.5"] td:first-child:before {
+    content: "⬤";
+    font-size:9px;
+}
+
 td:hover .anchor,
 td .anchor:focus {
     color: #00c;
@@ -39,7 +58,6 @@ td:first-child {
 a[href^='#'] {
     text-decoration: none;
 }
-
 code {
     font-family: "Courier New", Courier, monospace;
 }
@@ -54,7 +72,12 @@ tr.category td {
     padding-bottom: 2px;
     padding-left: 5px;
 }
-/* ES6 platform colour legend */
+
+/* platforms colour legend */
+.legend {
+    margin-bottom: 1em;
+    font-size: 0.8em;
+}
 .legend > * {
     background-color: ghostwhite;
     display: inline-block;
@@ -273,11 +296,11 @@ td.hover.not-applicable {
 .obsolete {
     display: none;
 }
-#show-obsolete:checked + #table-wrapper .obsolete {
+#show-obsolete:checked ~ table .obsolete {
     display: table-cell;
 }
 /* for IE compatibility, this must be a separate rule. */
-#show-obsolete[value='on'] + #table-wrapper .obsolete {
+#show-obsolete[value='on'] ~ table .obsolete {
     display: table-cell;
 }
 
@@ -315,7 +338,7 @@ td.hover.not-applicable {
     background: #eee;
 }
 .warning {
-    background: #ffc; display: inline-block; margin: 0 0 2em 0; padding: 0.25em;
+    background: #ffc; display: inline-block; margin: 0 0 1em 0; padding: 0.25em;
 }
 label[for="show-obsolete"] {
     background: #eef; padding: 5px; margin-left: 10px; margin-right: -30px; padding-right: 30px;

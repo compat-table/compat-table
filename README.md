@@ -10,7 +10,9 @@ Editing the tests
 
 Edit the `data-es5.js`, `data-es6.js`, `data-es7.js`, or `data-non-standard.js` files to adjust the tests and their recorded browser results. Run `node build.js` to build the HTML files from these JavaScript sources.
 
-The tests themselves should be written in pure ES3, *except* for the sole ES6 feature being tested (as well as any ES5 features strictly required to use the ES6 feature). The test code is placed in multi-line comments (as in [this hack](http://tomasz.janczuk.org/2013/05/multi-line-strings-in-javascript-and.html)), so that node can parse the data scripts without throwing syntax errors. The `build.js` script will wrap the code in an `eval` call inside a `try`, so the tests themselves do not need to catch errors that non-supporting platforms may throw.
+The ES6 tests themselves should be written in pure ES3, *except* for the sole ES6 feature being tested (as well as any ES5 features strictly required to use the ES6 feature). The test code is placed in multi-line comments (as in [this hack](http://tomasz.janczuk.org/2013/05/multi-line-strings-in-javascript-and.html)), so that Node/io.js can parse the data scripts without throwing syntax errors when encountering features it does not support. The `build.js` script will wrap the code in an `eval` call inside a `try`, so the tests themselves do not need to catch errors that non-supporting platforms may throw.
+
+The ES6 tests have a `significance` rating, which affects how a platform's total support percentage is calculated. A test rated `"large"` (representing a landmark, transformative feature) is worth 1, one rated `"medium"` (representing a significant feature that's less universally useful, or is primarily connected to another feature) is worth 0.5, and one rated `"small"` (representing a useful but subtle improvement from ES5) is worth 0.25.
 
 In order to test compilers
 -----------------

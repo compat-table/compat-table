@@ -33,7 +33,8 @@ var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
-  handle(require('./data-es5'));
+  var es5 = require('./data-es5');
+  handle(es5);
   var es6 = require('./data-es6');
   handle(es6);
   var es7 = require('./data-es7');
@@ -44,6 +45,9 @@ process.nextTick(function () {
   if (!useCompilers) {
     return;
   }
+  if (!fs.existsSync('es5/compilers')) {
+    fs.mkdirSync('es5/compilers');
+  }
   if (!fs.existsSync('es6/compilers')) {
     fs.mkdirSync('es6/compilers');
   }
@@ -51,19 +55,32 @@ process.nextTick(function () {
     fs.mkdirSync('es7/compilers');
   }
   var closure    = require('closurecompiler');
-  var to5        = require('6to5');
+  var babel      = require('babel');
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
   var tss        = require('typescript-simple');
+  var identity   = function (x) { return x; };
+  [
+    {
+      name: 'es5-shim',
+      url: 'https://github.com/es-shims/es5-shim',
+      target_file: 'es5/compilers/es5-shim.html',
+      polyfills: ['node_modules/es5-shim/es5-shim.js'],
+      compiler: identity,
+    },
+  ].forEach(function(e){
+    assign(es5, e);
+    es5.browsers = {};
+    es5.skeleton_file = 'es5/compiler-skeleton.html';
+    handle(es5);
+  });
   [
     {
       name: 'es6-shim',
       url: 'https://github.com/paulmillr/es6-shim/',
       target_file: 'es6/compilers/es6-shim.html',
       polyfills: ['node_modules/es6-shim/es6-shim.js'],
-      compiler: function(code) {
-        return code;
-      },
+      compiler: identity,
     },
     {
       name: 'Traceur',
@@ -75,21 +92,21 @@ process.nextTick(function () {
       },
     },
     {
-      name: '6to5',
-      url: 'https://6to5.github.io/',
-      target_file: 'es6/compilers/6to5.html',
+      name: 'babel',
+      url: 'https://babeljs.io/',
+      target_file: 'es6/compilers/babel.html',
       polyfills: [],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return babel.transform(code).code;
       },
     },
     {
-      name: '6to5 + polyfill',
-      url: 'https://6to5.github.io/',
-      target_file: 'es6/compilers/6to5-polyfill.html',
-      polyfills: ['node_modules/6to5/browser-polyfill.js'],
+      name: 'babel + polyfill',
+      url: 'https://babeljs.io/',
+      target_file: 'es6/compilers/babel-polyfill.html',
+      polyfills: ['node_modules/babel/browser-polyfill.js'],
       compiler: function(code) {
-        return to5.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return babel.transform(code).code;
       },
     },
     {
@@ -100,7 +117,7 @@ process.nextTick(function () {
       compiler: (function() {
         var es6tr;
         return function(code) {
-          // Known bug: running require('es6-transpiler') causes 6to5 to break.
+          // Known bug: running require('es6-transpiler') causes babel to break.
           // So, it's run here, as late as possible.
           es6tr = es6tr || require('es6-transpiler');
           var result = es6tr.run({src:code});
@@ -126,9 +143,7 @@ process.nextTick(function () {
       url: 'https://www.typescriptlang.org/',
       target_file: 'es6/compilers/typescript.html',
       polyfills: [],
-      compiler: function(code) {
-        return tss(code);
-      },
+      compiler: tss,
     },
     {
       name: 'Closure Compiler',
@@ -161,9 +176,7 @@ process.nextTick(function () {
       url: 'https://github.com/es-shims/es7-shim/',
       target_file: 'es7/compilers/es7-shim.html',
       polyfills: ['node_modules/es7-shim/dist/es7-shim.js'],
-      compiler: function(code) {
-        return code;
-      },
+      compiler: identity,
     }
   ].forEach(function(e){
     assign(es7, e);
@@ -299,6 +312,9 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')
+      .attr("significance",
+        t.significance === "small" ? 0.25 :
+        t.significance === "medium" ? 0.5 : 1)
       .addClass(t.category === "annex b" ? 'annex_b' : '')
       .append($('<td></td>')
         .attr('id',id)

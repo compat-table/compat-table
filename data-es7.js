@@ -11,9 +11,9 @@ exports.browsers = {
     obsolete: false, // always up-to-date version
     platformtype: 'compiler',
   },
-  _6to5: {
-    full: '6to5',
-    short: '6to5 +<br><nobr>core-js</nobr>',
+  babel: {
+    full: 'babel',
+    short: 'babel +<br><nobr>core-js</nobr><br><nobr>ex-6to5</nobr>',
     obsolete: false,
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -152,7 +152,7 @@ exports.tests = [
   */},
   res: {
     tr: true,
-    _6to5: true,
+    babel: true,
     es7shim: false,
     ejs: false,
     ie11: false,
@@ -186,7 +186,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    _6to5:       true,
+    babel:       true,
     es7shim:     false,
     ejs:         false,
     ie11:        false,
@@ -219,7 +219,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    _6to5:       true,
+    babel:       true,
     es7shim:     false,
     ejs:         false,
     ie11:        false,
@@ -254,7 +254,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    _6to5:       true,
+    babel:       true,
     es7shim:     false,
   }
 },
@@ -266,7 +266,7 @@ exports.tests = [
   */},
   res: {
     tr:          true,
-    _6to5:       true,
+    babel:       true,
     es7shim:     false,
   }
 },
@@ -278,7 +278,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
-    _6to5: false,
+    babel: false,
     es7shim: false,
     ejs: false,
     ie11: false,
@@ -312,7 +312,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
-    _6to5: false,
+    babel: false,
     es7shim: false,
     ejs: false,
     ie11: false,
@@ -347,7 +347,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
-    _6to5: false,
+    babel: false,
     es7shim: false,
     ejs: false,
     ie11: false,
@@ -382,7 +382,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
-    _6to5: true,
+    babel: true,
     es7shim: true,
     ejs: false,
     ie11: false,
@@ -433,7 +433,7 @@ exports.tests = [
   */},
   res: {
     tr:          false,
-    _6to5:       false,
+    babel:       false,
     es7shim:     false,
     ejs:         false,
     ie11:        false,

@@ -16,12 +16,12 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
-  _6to5: {
-    full: '6to5',
-    short: '6to5 +<br><nobr>core-js</nobr>',
+  babel: {
+    full: 'babel',
+    short: 'babel +<br><nobr>core-js</nobr><br><nobr>ex-6to5</nobr>',
     obsolete: false,
     platformtype: 'compiler',
-    note_id: '6to5-optional',
+    note_id: 'babel-optional',
     note_html: 'Flagged features require an optional transformer setting.',
   },
   es6tr: {
@@ -339,6 +339,7 @@ exports.tests = [
 {
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
   subtests: {
     'direct recursion': {
@@ -352,7 +353,12 @@ exports.tests = [
         }(1e6)) === "foo";
       */},
       res: {
-        _6to5:       true,
+        tr:          {
+          val: flag,
+          note_id: 'tr-tco',
+          note_html: 'Requires the <code>properTailCalls</code> compile option.'
+        },
+        babel:       true
       },
     },
     'mutual recursion': {
@@ -373,6 +379,7 @@ exports.tests = [
         return f(1e6) === "foo" && f(1e6+1) === "bar";
       */},
       res: {
+        tr:          { val: flag, note_id: 'tr-tco' },
       },
     }
   }
@@ -380,6 +387,7 @@ exports.tests = [
 {
   name: 'arrow functions',
   category: 'functions',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
   subtests: {
     '0 parameters': {
@@ -388,7 +396,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -408,7 +416,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -428,7 +436,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -449,7 +457,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -468,7 +476,7 @@ exports.tests = [
       res: {
         tr:          true,
         closure:     true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -485,7 +493,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -502,7 +510,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         ie11tp:      true,
         firefox23:   true,
@@ -516,8 +524,9 @@ exports.tests = [
         })();
       */},
       res: {
-        _6to5: true,
-        tr: true
+        babel:       true,
+        tr:          true,
+        ie11tp:      true,
       },
     },
     'no "prototype" property': {
@@ -550,7 +559,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         jsx:         true,
@@ -573,6 +582,7 @@ exports.tests = [
 {
   name: 'const',
   category: 'bindings',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
@@ -582,7 +592,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -606,7 +616,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         tr:          true,
         jsx:         true,
@@ -627,7 +637,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -642,7 +652,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ie11:        true,
         firefox36:   true,
       },
@@ -655,7 +665,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -676,7 +686,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         tr:          true,
         ejs:         true,
@@ -701,7 +711,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -721,7 +731,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -735,6 +745,7 @@ exports.tests = [
 {
   name: 'let',
   category: 'bindings',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
@@ -744,7 +755,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -764,7 +775,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -782,7 +793,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         es6tr:       true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
@@ -795,7 +806,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -818,7 +829,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
       },
@@ -831,7 +842,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -852,7 +863,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -873,7 +884,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -893,7 +904,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -921,7 +932,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
         chrome37:    flag,
@@ -935,6 +946,7 @@ exports.tests = [
 {
   name: 'default function parameters',
   category: 'syntax',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
   subtests: {
     'basic functionality': {
@@ -943,7 +955,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -957,7 +969,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -971,7 +983,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -994,7 +1006,7 @@ exports.tests = [
         }());
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
       },
     },
     'separate scope': {
@@ -1007,7 +1019,7 @@ exports.tests = [
         }());
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         closure:     true,
       },
     }
@@ -1016,6 +1028,7 @@ exports.tests = [
 {
   name: 'rest parameters',
   category: 'syntax',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
   subtests: {
     'basic functionality': {
@@ -1026,7 +1039,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1042,7 +1055,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         jsx:         true,
@@ -1064,7 +1077,7 @@ exports.tests = [
         }("foo", "bar", "baz"));
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         tr:          true,
       },
     },
@@ -1073,6 +1086,7 @@ exports.tests = [
 {
   name: 'spread (...) operator',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   subtests: {
     'with arrays, in function calls': {
@@ -1081,7 +1095,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1098,7 +1112,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1115,7 +1129,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox27:   true,
@@ -1127,7 +1141,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox17:   true,
@@ -1139,7 +1153,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox27:   true,
       },
@@ -1150,7 +1164,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox27:   true,
       },
@@ -1162,7 +1176,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       {
           val: true,
           note_id: 'compiler-iterable',
@@ -1179,7 +1193,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         firefox27:   true,
@@ -1192,7 +1206,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
       },
@@ -1204,7 +1218,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
       },
@@ -1214,6 +1228,7 @@ exports.tests = [
 {
   name: 'class',
   category: 'functions',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
   subtests: {
     'class statement': {
@@ -1223,7 +1238,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         jsx:         true,
@@ -1244,7 +1259,7 @@ exports.tests = [
         return C === c1;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         jsx:         true,
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1256,7 +1271,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1275,7 +1290,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1295,7 +1310,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1315,7 +1330,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1337,7 +1352,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1357,7 +1372,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1374,7 +1389,7 @@ exports.tests = [
         return !C.prototype.propertyIsEnumerable("foo") && !C.propertyIsEnumerable("bar");
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
       },
     },
     'implicit strict mode': {
@@ -1382,11 +1397,11 @@ exports.tests = [
         class C {
           static method() { return this === undefined; }
         }
-        return C.method();
+        return (0,C.method)();
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ie11tp:      true,
@@ -1404,10 +1419,10 @@ exports.tests = [
         }
       */},
       res: {
-        _6to5: true
+        babel: true
       },
     },
-    'extends (author-defined classes)': {
+    'extends': {
       exec: function () {/*
         class B {}
         class C extends B {}
@@ -1421,7 +1436,7 @@ exports.tests = [
           note_id: 'compiler-proto',
           note_html: 'Requires native support for <code>Object.prototype.__proto__</code>',
         },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         closure:     {
@@ -1438,17 +1453,6 @@ exports.tests = [
           note_html: 'TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).'},
       }),
     },
-    'extends (built-in constructors)': {
-      exec: function () {/*
-        class C extends Array {}
-        return new C() instanceof Array
-          && Array.isPrototypeOf(C)
-          && Array.prototype.isPrototypeOf(C.prototype);
-      */},
-      res: Object.assign({}, temp.extendsRes, {
-        typescript:  false,
-      }),
-    },
     'extends expressions': {
       exec: function () {/*
         var B;
@@ -1459,7 +1463,7 @@ exports.tests = [
       */},
       res: {
         es6tr:       { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         jsx:         { val: false, note_id: 'compiled-extends' },
@@ -1469,14 +1473,16 @@ exports.tests = [
     },
     'extends null': {
       exec: function () {/*
-        class C extends null {}
+        class C extends null {
+          constructor() {}
+        }
         var c = new C();
         return !(c instanceof Object)
           && Function.prototype.isPrototypeOf(C)
           && Object.getPrototypeOf(C.prototype) === null;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         tr:          { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         es6tr:       true,
@@ -1507,6 +1513,7 @@ exports.tests = [
 {
   name: 'super',
   category: 'functions',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
   subtests: {
     'statement in constructors': {
@@ -1523,7 +1530,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1544,7 +1551,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1564,7 +1571,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1589,7 +1596,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1602,6 +1609,7 @@ exports.tests = [
 {
   name: 'object literal extensions',
   category: 'syntax',
+  significance: 'large',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
   subtests: {
     'computed properties': {
@@ -1611,7 +1619,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1629,7 +1637,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1647,7 +1655,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1668,7 +1676,7 @@ exports.tests = [
         ie11tp:      true,
         tr:          true,
         closure:     true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         firefox34:   true,
       }
@@ -1685,7 +1693,7 @@ exports.tests = [
         return obj.y === 1 && valueSet === 'foo';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         tr:          true,
         es6tr:       true,
@@ -1697,6 +1705,7 @@ exports.tests = [
 {
   name: 'hoisted block-level function declaration',
   category: 'annex b',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
   exec: function () {/*
     // Note: only available outside of strict mode.
@@ -1717,6 +1726,7 @@ exports.tests = [
 {
   name: '__proto__ in object literals',
   category: 'annex b',
+  significance: 'small',
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
@@ -1798,6 +1808,7 @@ exports.tests = [
 {
   name: 'for..of loops',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements',
   subtests: {
     'with arrays': {
@@ -1808,7 +1819,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1831,7 +1842,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1850,7 +1861,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -1871,7 +1882,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         closure:     true,
@@ -1894,7 +1905,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         closure:     true,
         ie11tp:      true,
@@ -1910,6 +1921,7 @@ exports.tests = [
 {
   name: 'generators',
   category: 'functions',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
   subtests: {
     'basic functionality': {
@@ -1928,7 +1940,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -1953,7 +1965,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -1976,7 +1988,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2024,7 +2036,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2048,7 +2060,8 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5: true
+        tr:    true,
+        babel: true
       },
     },
     'yield operator precedence': {
@@ -2064,7 +2077,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2088,7 +2101,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome38:    flag,
@@ -2111,7 +2124,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         tr:          true,
         firefox27:   true,
@@ -2133,7 +2146,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         firefox27:   true,
         chrome38:    flag,
@@ -2159,7 +2172,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2184,7 +2197,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox36:   true,
         chrome35:    flag,
@@ -2210,7 +2223,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         chrome39:    flag,
         firefox34:   true,
@@ -2236,7 +2249,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox34:   true,
       },
@@ -2246,6 +2259,7 @@ exports.tests = [
 {
   name: 'octal and binary literals',
   category: 'syntax',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
   subtests: {
     'octal literals': {
@@ -2254,7 +2268,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -2273,7 +2287,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -2292,6 +2306,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        babel:       true,
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
@@ -2305,6 +2320,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        babel:       true,
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
@@ -2317,6 +2333,7 @@ exports.tests = [
 {
   name: 'template strings',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
   subtests: {
     'basic functionality': {
@@ -2327,7 +2344,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -2357,7 +2374,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         closure:     true,
@@ -2371,6 +2388,7 @@ exports.tests = [
 {
   name: 'RegExp "y" and "u" flags',
   category: 'syntax',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
   subtests: {
     '"y" flag': {
@@ -2393,7 +2411,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
       },
     },
@@ -2402,6 +2420,7 @@ exports.tests = [
 {
   name: 'typed arrays',
   category: 'built-ins',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
   subtests: Object.assign({
     'Int8Array': {
@@ -2649,6 +2668,7 @@ exports.tests = [
 {
   name: 'Map',
   category: 'built-ins',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   subtests: {
     'basic functionality': {
@@ -2662,7 +2682,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2687,7 +2707,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2704,7 +2724,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2728,7 +2748,7 @@ exports.tests = [
         return k === Infinity && map.get(+0) == "foo";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox29:   true,
@@ -2748,7 +2768,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2768,7 +2788,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2788,7 +2808,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2808,7 +2828,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2828,7 +2848,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2848,7 +2868,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2868,7 +2888,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2887,6 +2907,7 @@ exports.tests = [
 {
   name: 'Set',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
   subtests: {
     'basic functionality': {
@@ -2901,7 +2922,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -2925,7 +2946,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2942,7 +2963,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -2966,7 +2987,7 @@ exports.tests = [
         return k === Infinity && set.has(+0);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox29:   true,
@@ -2988,7 +3009,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3008,7 +3029,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3028,7 +3049,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3048,7 +3069,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3068,7 +3089,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -3087,7 +3108,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -3107,7 +3128,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -3126,6 +3147,7 @@ exports.tests = [
 {
   name: 'WeakMap',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
   subtests: {
     'basic functionality': {
@@ -3138,7 +3160,7 @@ exports.tests = [
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -3161,7 +3183,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -3177,7 +3199,7 @@ exports.tests = [
         return weakmap.set(key, 0) === weakmap;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         chrome38:    true,
@@ -3194,7 +3216,7 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11:        true,
         firefox11:   true,
@@ -3215,7 +3237,7 @@ exports.tests = [
         return m.get(f) === 42;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox11:   true,
@@ -3233,6 +3255,7 @@ exports.tests = [
 {
   name: 'WeakSet',
   category: 'built-ins',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
   subtests: {
     'basic functionality': {
@@ -3246,7 +3269,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3264,7 +3287,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3280,7 +3303,7 @@ exports.tests = [
         return weakset.add(obj) === weakset;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         chrome38:    true,
@@ -3294,7 +3317,7 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox34:   true,
@@ -3309,6 +3332,7 @@ exports.tests = [
 {
   name: 'Proxy',
   category: 'built-ins',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     '"get" handler': {
@@ -3678,6 +3702,7 @@ exports.tests = [
 {
   name: 'Reflect',
   category: 'built-ins',
+  significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
   subtests: {
     'Reflect.get': {
@@ -3685,9 +3710,10 @@ exports.tests = [
         return Reflect.get({ qux: 987 }, "qux") === 987;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.set': {
@@ -3697,9 +3723,10 @@ exports.tests = [
         return obj.quux === 654;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.has': {
@@ -3707,9 +3734,10 @@ exports.tests = [
         return Reflect.has({ qux: 987 }, "qux");
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.deleteProperty': {
@@ -3719,9 +3747,10 @@ exports.tests = [
         return !("bar" in obj);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.getOwnPropertyDescriptor': {
@@ -3732,9 +3761,10 @@ exports.tests = [
           desc.configurable && desc.writable && desc.enumerable;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.defineProperty': {
@@ -3744,9 +3774,10 @@ exports.tests = [
         return obj.foo === 123;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.getPrototypeOf': {
@@ -3754,9 +3785,10 @@ exports.tests = [
         return Reflect.getPrototypeOf([]) === Array.prototype;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.setPrototypeOf': {
@@ -3766,9 +3798,10 @@ exports.tests = [
         return obj instanceof Array;
       */},
       res: {
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         ie11tp:      true,
+        es6shim:     { val: false, note_id: 'compiler-proto' },
       },
     },
     'Reflect.isExtensible': {
@@ -3777,9 +3810,10 @@ exports.tests = [
           !Reflect.isExtensible(Object.preventExtensions({}));
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.preventExtensions': {
@@ -3789,9 +3823,10 @@ exports.tests = [
         return !Object.isExtensible(obj);
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.enumerate': {
@@ -3799,20 +3834,21 @@ exports.tests = [
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
         var passed = 1;
-        if (typeof Symbol != undefined && 'iterator' in Symbol) {
+        if (typeof Symbol === 'function' && 'iterator' in Symbol) {
           passed &= Symbol.iterator in iterator;
         }
         var item = iterator.next();
-        passed    &= item.value === "foo" && item.done === false;
+        passed &= item.value === "foo" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === "bar" && item.done === false;
+        passed &= item.value === "bar" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
-        return passed;
+        passed &= item.value === undefined && item.done === true;
+        return passed === 1;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
+        es6shim:     true,
       },
     },
     'Reflect.ownKeys': {
@@ -3821,8 +3857,9 @@ exports.tests = [
         return Reflect.ownKeys(obj) + "" === "foo,bar";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
+        es6shim:     true,
       },
     },
     'Reflect.apply': {
@@ -3830,9 +3867,10 @@ exports.tests = [
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.construct': {
@@ -3842,9 +3880,10 @@ exports.tests = [
         }, ["foo", "bar", "baz"]).qux === "foobarbaz";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
+        es6shim:     true,
       },
     },
     'Reflect.construct, new.target': {
@@ -3863,6 +3902,7 @@ exports.tests = [
 {
   name: 'block-level function declaration',
   category: 'bindings',
+  significance: 'small',
   note_id: 'block-level-function',
   note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
@@ -3875,7 +3915,7 @@ exports.tests = [
     return f() === 1;
   */},
   res: {
-    _6to5:       true,
+    babel:       true,
     tr:          true,
     closure:     true,
     ie11:        true,
@@ -3888,6 +3928,7 @@ exports.tests = [
 {
   name: 'destructuring',
   category: 'syntax',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
   subtests: {
     'with arrays': {
@@ -3900,7 +3941,7 @@ exports.tests = [
       */},
       res: (temp.destructuringResults = {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -3921,7 +3962,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -3940,7 +3981,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox34:   true,
       },
@@ -3956,7 +3997,7 @@ exports.tests = [
       res: {
         tr:           true,
         firefox34:    true,
-        _6to5:        true,
+        babel:        true,
       },
     },
     'with instances of generic iterables': {
@@ -3969,7 +4010,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         firefox36:    true,
       },
     },
@@ -3980,7 +4021,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,
@@ -3996,7 +4037,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,
@@ -4015,7 +4056,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         webkit: {
           val: true,
-          note_id: "webkit_object_destructuring",
+          note_id: "webkit-object-destructuring",
           note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
         },
         safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
@@ -4029,7 +4070,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         firefox16:    true,
         safari71_8:   true,
@@ -4046,7 +4087,7 @@ exports.tests = [
       res: {
         tr:           true,
         firefox16:    true,
-        _6to5:        true,
+        babel:        true,
         es6tr:        true,
         webkit:       true,
         safari71_8:   true,
@@ -4076,7 +4117,7 @@ exports.tests = [
         return grault === "garply";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         tr:          true,
         es6tr:       true,
@@ -4090,7 +4131,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4117,7 +4158,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4134,7 +4175,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4153,7 +4194,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
@@ -4169,7 +4210,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         closure:     true,
         firefox13:   true,
@@ -4187,7 +4228,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         jsx:         true,
         closure:     true,
@@ -4202,7 +4243,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        _6to5:        true,
+        babel:        true,
       },
     },
     'defaults': {
@@ -4212,7 +4253,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         closure:     true,
       },
@@ -4226,7 +4267,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6tr:       true,
         closure:     true,
       },
@@ -4245,7 +4286,7 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
-        _6to5: flag
+        babel: flag
       },
     },
     'defaults in parameters, separate scope': {
@@ -4258,7 +4299,7 @@ exports.tests = [
         }({}));
       */},
       res: {
-        _6to5: true,
+        babel: true,
         closure: true
       },
     },
@@ -4267,6 +4308,7 @@ exports.tests = [
 {
   name: 'Promise',
   category: 'built-ins',
+  significance: 'large',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
   subtests: {
     'basic functionality': {
@@ -4296,7 +4338,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4329,7 +4371,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4362,7 +4404,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4380,6 +4422,7 @@ exports.tests = [
 {
   name: 'Object static methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.assign': {
@@ -4390,7 +4433,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         firefox34:   true,
       },
@@ -4405,7 +4448,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         es6shim:     true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox23:   true,
         chrome19dev: true,
@@ -4422,6 +4465,7 @@ exports.tests = [
         return Object.getOwnPropertySymbols(o)[0] === sym;
       */},
       res: {
+        babel:       true,
         tr:          true,
         ejs:         true,
         ie11tp:      true,
@@ -4438,7 +4482,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        _6to5:       { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
         es6shim:     { val: false, note_id: 'compiler-proto' },
         ie11:        true,
         firefox31:   true,
@@ -4452,6 +4496,7 @@ exports.tests = [
 {
   name: 'Object static methods accept primitives',
   category: 'misc',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.getPrototypeOf': {
@@ -4459,7 +4504,7 @@ exports.tests = [
         return Object.getPrototypeOf('a').constructor === String;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4468,7 +4513,7 @@ exports.tests = [
         return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4479,10 +4524,11 @@ exports.tests = [
           ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox33:   true,
         chrome40:    true,
         iojs:        true,
+        es6shim:     true,
       },
     },
     'Object.seal': {
@@ -4490,7 +4536,7 @@ exports.tests = [
         return Object.seal('a') === 'a';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4499,7 +4545,7 @@ exports.tests = [
         return Object.freeze('a') === 'a';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4508,7 +4554,7 @@ exports.tests = [
         return Object.preventExtensions('a') === 'a';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4517,7 +4563,7 @@ exports.tests = [
         return Object.isSealed('a') === true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4526,7 +4572,7 @@ exports.tests = [
         return Object.isFrozen('a') === true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4535,7 +4581,7 @@ exports.tests = [
         return Object.isExtensible('a') === false;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         firefox35:   true,
       },
     },
@@ -4545,7 +4591,7 @@ exports.tests = [
         return s.length === 1 && s[0] === '0';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         firefox35:   true,
         chrome40:    true,
@@ -4557,6 +4603,7 @@ exports.tests = [
 {
   name: 'Object.prototype.__proto__',
   category: 'annex b',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
   subtests: {
     'get prototype': {
@@ -4617,6 +4664,7 @@ exports.tests = [
 {
   name: 'function "name" property',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
   subtests: {
     'function statements': {
@@ -4626,9 +4674,10 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         firefox11:   true,
+        ie11tp:      true,
         chrome:      true,
         safari51:    true,
         phantom:     true,
@@ -4653,7 +4702,9 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
+        babel:       true,
         firefox11:   true,
+        ie11tp:      true,
         safari51:    true,
         phantom:     true,
         webkit:      true,
@@ -4670,6 +4721,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
       },
     },
     'variables (function)': {
@@ -4678,7 +4730,9 @@ exports.tests = [
         var bar = function baz() {};
         return foo.name === "foo" && bar.name === "baz";
       */},
-      res: {},
+      res: {
+        ie11tp:      true,
+      },
     },
     'object methods (function)': {
       exec: function() {/*
@@ -4697,7 +4751,9 @@ exports.tests = [
         return descriptor.get.name === "get foo" &&
                descriptor.set.name === "set foo";
       */},
-      res: {},
+      res: {
+        ie11tp:       true,
+      },
     },
     'shorthand methods': {
       exec: function() {/*
@@ -4705,8 +4761,9 @@ exports.tests = [
         return o.foo.name === "foo";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
         firefox34:    true,
+        ie11tp:       true,
         chrome39:     flag,
         iojs:         true,
       },
@@ -4733,7 +4790,7 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        _6to5:         true,
+        babel:         true,
       },
     },
     'class expressions': {
@@ -4742,7 +4799,7 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        _6to5:         true,
+        babel:         true,
       },
     },
     'variables (class)': {
@@ -4755,7 +4812,7 @@ exports.tests = [
                typeof qux.name === "function";
       */},
       res: {
-        _6to5:         true,
+        babel:         true,
       },
     },
     'object methods (class)': {
@@ -4767,7 +4824,7 @@ exports.tests = [
                o.qux.name === "";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
       },
     },
     'class prototype methods': {
@@ -4776,7 +4833,8 @@ exports.tests = [
         return (new C).foo.name === "foo";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
+        ie11tp:       true,
       },
     },
     'class static methods': {
@@ -4785,7 +4843,8 @@ exports.tests = [
         return C.foo.name === "foo";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
+        ie11tp:       true,
       },
     },
     'isn\'t writable, is configurable': {
@@ -4795,13 +4854,16 @@ exports.tests = [
                descriptor.writable     === false &&
                descriptor.configurable === true;
       */},
-      res: {},
+      res: {
+        ie11tp:       true,
+      },
     },
   },
 },
 {
   name: 'String static methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor',
   subtests: {
     'String.raw': {
@@ -4810,7 +4872,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4825,7 +4887,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4841,6 +4903,7 @@ exports.tests = [
 {
   name: 'String.prototype methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object',
   subtests: {
     'String.prototype.codePointAt': {
@@ -4849,7 +4912,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4882,7 +4945,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4901,7 +4964,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4920,7 +4983,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -4939,7 +5002,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         firefox18:   {
@@ -4959,6 +5022,7 @@ exports.tests = [
 {
   name: 'String.prototype HTML methods',
   category: 'annex b',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
   exec: function () {/*
     var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
@@ -4991,13 +5055,14 @@ exports.tests = [
 {
   name: 'Unicode code point escapes',
   category: 'syntax',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
   exec: function () {/*
     return '\u{1d306}' == '\ud834\udf06';
   */},
   res: {
     tr:          true,
-    _6to5:       true,
+    babel:       true,
     es6tr:       true,
     ejs:         true,
     closure:     true,
@@ -5007,6 +5072,7 @@ exports.tests = [
 {
   name: 'Symbol',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
   subtests: {
     'basic functionality': {
@@ -5020,7 +5086,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
@@ -5035,7 +5101,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        _6to5:       flag,
+        babel:       flag,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5063,7 +5129,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5090,7 +5156,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox36:   true,
         chrome30:    flag, // Actually Chrome 29
@@ -5151,7 +5217,7 @@ exports.tests = [
       res: {
         ejs:        true,
         tr:         true,
-        _6to5:      true,
+        babel:      true,
         ie11tp:     true,
         firefox36:  true,
         chrome35:   flag,
@@ -5168,15 +5234,15 @@ exports.tests = [
 
         return typeof symbolObject === "object" &&
           symbolObject == symbol &&
+          symbolObject !=== symbol &&
           symbolObject.valueOf() === symbol;
       */},
       res: {
-        _6to5:      false,
         ie11tp:     true,
         firefox36:  true,
         chrome30:   flag,
         chrome35:   false,
-        webkit:      true,
+        webkit:     true,
       },
     },
     'global symbol registry': {
@@ -5186,7 +5252,7 @@ exports.tests = [
            Symbol.keyFor(symbol) === 'foo';
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
@@ -5201,6 +5267,7 @@ exports.tests = [
 {
   name: 'well-known symbols',
   category: 'built-ins',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
   subtests: {
     'Symbol.hasInstance': {
@@ -5248,7 +5315,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         firefox36:   true,
         chrome37:    flag,
@@ -5266,6 +5333,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        babel:       true,
       },
     },
     'Symbol.toPrimitive': {
@@ -5292,7 +5360,7 @@ exports.tests = [
         return (a + "") === "[object foo]";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         chrome40:    flag,
         iojs:        flag,
@@ -5323,6 +5391,7 @@ exports.tests = [
 {
   name: 'RegExp.prototype properties',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
   subtests: {
     'RegExp.prototype.flags': {
@@ -5330,7 +5399,7 @@ exports.tests = [
         return /./igm.flags === "gim" && /./.flags === "";
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         firefox37:   true,
@@ -5374,6 +5443,7 @@ exports.tests = [
 {
   name: 'RegExp.prototype.compile',
   category: 'annex b',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
   exec: function () {/*
     return typeof RegExp.prototype.compile === 'function';
@@ -5399,6 +5469,7 @@ exports.tests = [
 {
   name: 'Array static methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor',
   subtests: {
     'Array.from, array-like objects': {
@@ -5407,7 +5478,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ejs:         true,
         ie11tp:      true,
@@ -5421,7 +5492,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         ie11tp:      true,
         es6shim:     true,
@@ -5434,21 +5505,10 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
-        _6to5:        true,
+        babel:        true,
         tr:           true,
         ie11tp:       true,
         firefox36:    true,
-      }
-    },
-    'Array subclass .from': {
-      exec: function () {/*
-        class C extends Array {}
-        return C.from({ length: 0 }) instanceof C;
-      */},
-      res: {
-        tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
-        ie11tp:      true,
       }
     },
     'Array.of': {
@@ -5458,7 +5518,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5468,22 +5528,12 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Array subclass .of': {
-      exec: function () {/*
-        class C extends Array {}
-        return C.of(0) instanceof C;
-      */},
-      res: {
-        tr:          { val: false, note_id: 'compiler-proto' },
-        _6to5:       { val: false, note_id: 'compiler-proto' },
-        ie11tp:      true,
-      }
-    },
   },
 },
 {
   name: 'Array.prototype methods',
   category: 'built-in extensions',
+  significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object',
   subtests: {
     'Array.prototype.copyWithin': {
@@ -5492,7 +5542,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox32:   true,
@@ -5504,7 +5554,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5522,7 +5572,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5540,7 +5590,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5558,7 +5608,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5578,7 +5628,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5608,7 +5658,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5635,7 +5685,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ie11tp:      true,
         chrome38:    true,
         node:        true,
@@ -5647,6 +5697,7 @@ exports.tests = [
 {
   name: 'Number properties',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
   subtests: {
     'Number.isFinite': {
@@ -5655,7 +5706,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5673,7 +5724,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5691,7 +5742,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5709,7 +5760,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5727,7 +5778,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5744,7 +5795,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5762,7 +5813,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
@@ -5779,13 +5830,14 @@ exports.tests = [
 {
   name: 'Math methods',
   category: 'built-in extensions',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math',
   subtests: (function(){
     var methods = {
       'clz32': {
         ejs:         true,
         tr:          true,
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
         ie11tp:      true,
         firefox31:   true,
@@ -5796,7 +5848,7 @@ exports.tests = [
       },
       'imul': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5817,7 +5869,7 @@ exports.tests = [
       },
       'sign': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5831,7 +5883,7 @@ exports.tests = [
       },
       'log10': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5847,7 +5899,7 @@ exports.tests = [
       },
       'log2': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5863,7 +5915,7 @@ exports.tests = [
       },
       'log1p': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5879,7 +5931,7 @@ exports.tests = [
       },
       'expm1': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5894,7 +5946,7 @@ exports.tests = [
       },
       'cosh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5910,7 +5962,7 @@ exports.tests = [
       },
       'sinh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5926,7 +5978,7 @@ exports.tests = [
       },
       'tanh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5942,7 +5994,7 @@ exports.tests = [
       },
       'acosh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5958,7 +6010,7 @@ exports.tests = [
       },
       'asinh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5973,7 +6025,7 @@ exports.tests = [
       },
       'atanh': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -5989,7 +6041,7 @@ exports.tests = [
       },
       'trunc': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6005,7 +6057,7 @@ exports.tests = [
       },
       'fround': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6026,7 +6078,7 @@ exports.tests = [
       },
       'cbrt': {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         ie11tp:      true,
@@ -6059,10 +6111,11 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        _6to5:       true,
+        babel:       true,
         tr:          true,
         es6shim:     true,
         firefox27:   true,
+        ie11tp:      true,
         chrome34:    flag,
         chrome38:    true,
         safari71_8:  true,
@@ -6077,8 +6130,279 @@ exports.tests = [
   }()),
 },
 {
+  name: 'Array is subclassable',
+  category: 'subclassing',
+  significance: 'medium',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        var len1 = c.length;
+        c[2] = 'foo';
+        var len2 = c.length;
+        c.length = 1;
+        return len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);
+      */},
+      res: {
+        iojs:        flag,
+      },
+    },
+    'Array.prototype.slice': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c.push(2,4,6);
+        return c.slice(1,2) instanceof C;
+      */},
+      res: {
+      }
+    },
+    'Array.from': {
+      exec: function () {/*
+        class C extends Array {}
+        return C.from({ length: 0 }) instanceof C;
+      */},
+      res: {
+        tr:          { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
+        ie11tp:      true,
+      }
+    },
+    'Array.of': {
+      exec: function () {/*
+        class C extends Array {}
+        return C.of(0) instanceof C;
+      */},
+      res: {
+        tr:          { val: false, note_id: 'compiler-proto' },
+        babel:       { val: false, note_id: 'compiler-proto' },
+        ie11tp:      true,
+      }
+    },
+  },
+},
+{
+  name: 'RegExp is subclassable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor',
+  category: 'subclassing',
+  significance: 'small',
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz","g");
+        return r.global && r.source === "baz";
+      */},
+      res: {
+      },
+    },
+    'RegExp.prototype.exec': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz","g");
+        return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
+      */},
+      res: {
+      },
+    },
+    'RegExp.prototype.test': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz");
+        return r.test("foobarbaz");
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Function is subclassable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  category: 'subclassing',
+  significance: 'small',
+  subtests: {
+    'can be called': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("return 'foo';");
+        return c() === 'foo';
+      */},
+      res: {
+      },
+    },
+    'can be used with "new"': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("this.bar = 2;");
+        c.prototype.baz = 3;
+        return new c().bar === 2 && new c().baz === 3;
+      */},
+      res: {
+      },
+    },
+    'Function.prototype.call': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("x", "return this.bar + x;");
+        return c.call({bar:1}, 2) === 3;
+      */},
+      res: {
+      },
+    },
+    'Function.prototype.apply': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("x", "return this.bar + x;");
+        return c.apply({bar:1}, [2]) === 3;
+      */},
+      res: {
+      },
+    },
+    'Function.prototype.bind': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("x", "return this.bar + x;").bind({bar:1}, 2);
+        return c() === 3;
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
+  name: 'Promise is subclassable',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  category: 'subclassing',
+  significance: 'small',
+  subtests: {
+    'basic functionality': {
+      exec: function () {/*
+        class P extends Promise {}
+        var p1 = new P(function(resolve, reject) { resolve("foo"); });
+        var p2 = new P(function(resolve, reject) { reject("quux"); });
+        var score = +(p1 instanceof P);
+
+        function thenFn(result)  { score += (result === "foo");  check(); }
+        function catchFn(result) { score += (result === "quux"); check(); }
+        function shouldNotRun(result)  { score = -Infinity;   }
+
+        p1.then(thenFn, shouldNotRun);
+        p2.then(shouldNotRun, catchFn);
+        p1.catch(shouldNotRun);
+        p2.catch(catchFn);
+
+        p1.then(function() {
+          // P.prototype.then() should return a new P
+          score += p1.then() instanceof P && p1.then() !== p1;
+          check();
+        });
+
+        function check() {
+          if (score === 5) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'Promise.all': {
+      exec: function () {/*
+        class P extends Promise {}
+        var fulfills = P.all([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+        ]);
+        var rejects = P.all([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+        ]);
+        var score = +(fulfills instanceof P);
+        fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
+        rejects.catch(function(result) { score += (result === "qux"); check(); });
+
+        function check() {
+          if (score === 3) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'Promise.race': {
+      exec: function () {/*
+        class P extends Promise {}
+        var fulfills = P.race([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+        ]);
+        var rejects = P.race([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+        ]);
+        var score = +(fulfills instanceof P);
+        fulfills.then(function(result) { score += (result === "foo"); check(); });
+        rejects.catch(function(result) { score += (result === "baz"); check(); });
+
+        function check() {
+          if (score === 3) asyncTestPassed();
+        }
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+  },
+},
+{
+  name: 'miscellaneous subclassables',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor',
+  category: 'subclassing',
+  significance: 'small',
+  subtests: {
+    'Boolean is subclassable': {
+      exec: function () {/*
+        class C extends Boolean {}
+        var c = new C(true);
+        return c instanceof Boolean
+          && c == true;
+      */},
+      res: {
+      },
+    },
+    'Number is subclassable': {
+      exec: function () {/*
+        class C extends Number {}
+        var c = new C(6);
+        return c instanceof Number
+          && +c === 6;
+      */},
+      res: {
+      },
+    },
+    'String is subclassable': {
+      exec: function () {/*
+        class C extends String {}
+        var c = new C("golly");
+        return c instanceof String
+          && c + '' === "golly"
+          && c[0] === "g"
+          && c.length === 5;
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
   name: 'miscellaneous',
   category: 'misc',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
     'duplicate property names in strict mode': {
@@ -6088,7 +6412,6 @@ exports.tests = [
       */},
       res: {
         firefox34:   true,
-        _6to5:       true,
         chrome42:    true,
       },
     },
@@ -6097,7 +6420,7 @@ exports.tests = [
         do {} while (false) return true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         ie10:        true,
         firefox11:   true,
         chrome:      true,
@@ -6121,7 +6444,7 @@ exports.tests = [
         }
       */},
       res: {
-        _6to5: true
+        babel: true
       },
     },
     'accessors aren\'t constructors': {
@@ -6160,7 +6483,7 @@ exports.tests = [
         return new RegExp(/./im, "g").global === true;
       */},
       res: {
-        _6to5:       true,
+        babel:       true,
         es6shim:     true,
       },
     },
@@ -6193,7 +6516,7 @@ exports.tests = [
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
   var index = ['optimisation','syntax','bindings','functions',
-    'built-ins','built-in extensions','misc','annex b'].indexOf(e.category);
+    'built-ins','built-in extensions','subclassing','misc','annex b'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES6 category!');
   }
