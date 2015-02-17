@@ -1,5 +1,7 @@
 // exports browsers and tests
 
+var assign = require('object-assign');
+
 exports.name = 'ES5';
 exports.target_file = 'es5/index.html';
 exports.skeleton_file = 'es5/skeleton.html';
@@ -187,6 +189,11 @@ exports.browsers = {
   }
 };
 
+var sparseNote = {
+  note_id: 'sparse_arrays',
+  note_html: 'Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays.'
+};
+
 exports.tests = [
 {
   name: 'Object.create',
@@ -194,6 +201,8 @@ exports.tests = [
     return typeof Object.create == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -240,6 +249,8 @@ exports.tests = [
     return typeof Object.defineProperty == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: {
       val: true,
@@ -295,6 +306,8 @@ exports.tests = [
     return typeof Object.defineProperties == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -341,6 +354,8 @@ exports.tests = [
     return typeof Object.getPrototypeOf == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -387,6 +402,8 @@ exports.tests = [
     return typeof Object.keys == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -433,6 +450,8 @@ exports.tests = [
     return typeof Object.seal == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -479,6 +498,8 @@ exports.tests = [
     return typeof Object.freeze == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -525,6 +546,8 @@ exports.tests = [
     return typeof Object.preventExtensions == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -571,6 +594,8 @@ exports.tests = [
     return typeof Object.isSealed == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -617,6 +642,8 @@ exports.tests = [
     return typeof Object.isFrozen == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -663,6 +690,8 @@ exports.tests = [
     return typeof Object.isExtensible == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -709,6 +738,8 @@ exports.tests = [
     return typeof Object.getOwnPropertyDescriptor == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: {
       val: true,
@@ -760,6 +791,8 @@ exports.tests = [
     return typeof Object.getOwnPropertyNames == 'function';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -807,6 +840,8 @@ exports.tests = [
     return typeof Date.prototype.toISOString == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -853,6 +888,8 @@ exports.tests = [
     return typeof Date.now == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -899,6 +936,8 @@ exports.tests = [
     return typeof Array.isArray == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -945,6 +984,8 @@ exports.tests = [
     return typeof JSON == 'object';
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: true,
     ie9: true,
@@ -991,6 +1032,8 @@ exports.tests = [
     return typeof Function.prototype.bind == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1037,6 +1080,8 @@ exports.tests = [
     return typeof String.prototype.trim == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1084,6 +1129,8 @@ exports.tests = [
     return typeof Array.prototype.indexOf == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1130,6 +1177,8 @@ exports.tests = [
     return typeof Array.prototype.lastIndexOf == 'function';
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1176,6 +1225,8 @@ exports.tests = [
     return typeof Array.prototype.every == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1222,6 +1273,8 @@ exports.tests = [
     return typeof Array.prototype.some == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1268,6 +1321,8 @@ exports.tests = [
     return typeof Array.prototype.forEach == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1314,6 +1369,8 @@ exports.tests = [
     return typeof Array.prototype.map == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1360,6 +1417,8 @@ exports.tests = [
     return typeof Array.prototype.filter == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1406,6 +1465,8 @@ exports.tests = [
     return typeof Array.prototype.reduce == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1452,6 +1513,8 @@ exports.tests = [
     return typeof Array.prototype.reduceRight == 'function';
   },
   res: {
+    es5shim: assign({ val: true }, sparseNote),
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1738,6 +1801,8 @@ exports.tests = [
     return parseInt('010') === 10;
   },
   res: {
+    es5shim: true,
+
     ie7: false,
     ie8: false,
     ie9: true,
