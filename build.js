@@ -80,7 +80,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/babel.html',
       polyfills: [],
       compiler: function(code) {
-        return babel.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return babel.transform(code).code;
       },
     },
     {
@@ -89,7 +89,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/babel-polyfill.html',
       polyfills: ['node_modules/babel/browser-polyfill.js'],
       compiler: function(code) {
-        return babel.transform(code, { experimental: true, optional: ['typeofSymbol'] }).code;
+        return babel.transform(code).code;
       },
     },
     {

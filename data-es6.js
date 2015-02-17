@@ -2304,6 +2304,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        babel:       true,
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
@@ -2317,6 +2318,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        babel:       true,
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
@@ -4458,6 +4460,7 @@ exports.tests = [
         return Object.getOwnPropertySymbols(o)[0] === sym;
       */},
       res: {
+        babel:       true,
         tr:          true,
         ejs:         true,
         ie11tp:      true,
@@ -4694,6 +4697,7 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
+        babel:       true,
         firefox11:   true,
         ie11tp:      true,
         safari51:    true,
@@ -5225,15 +5229,15 @@ exports.tests = [
 
         return typeof symbolObject === "object" &&
           symbolObject == symbol &&
+          symbolObject !=== symbol &&
           symbolObject.valueOf() === symbol;
       */},
       res: {
-        babel:      false,
         ie11tp:     true,
         firefox36:  true,
         chrome30:   flag,
         chrome35:   false,
-        webkit:      true,
+        webkit:     true,
       },
     },
     'global symbol registry': {
@@ -5324,6 +5328,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        babel:       true,
       },
     },
     'Symbol.toPrimitive': {
@@ -6402,7 +6407,6 @@ exports.tests = [
       */},
       res: {
         firefox34:   true,
-        babel:       true,
         chrome42:    true,
       },
     },

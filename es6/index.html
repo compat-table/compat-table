@@ -2513,7 +2513,7 @@ return result === &quot;123&quot;;
 </tr>
 <tr class="supertest" significance="0.25"><td id="octal_and_binary_literals"><span><a class="anchor" href="#octal_and_binary_literals">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals">octal and binary literals</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5">2/4</td>
-<td data-browser="babel" class="tally" data-tally="0.5">2/4</td>
+<td data-browser="babel" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="closure" class="tally" data-tally="0.5">2/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
@@ -2702,7 +2702,7 @@ return Number(&apos;0o1&apos;) === 1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");return Function("asyncTestPassed","\nreturn Number('0o1') === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -2765,7 +2765,7 @@ return Number(&apos;0b1&apos;) === 1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");return Function("asyncTestPassed","\nreturn Number('0b1') === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -18022,8 +18022,9 @@ var symbolObject = Object(symbol);
 
 return typeof symbolObject === &quot;object&quot; &amp;&amp;
   symbolObject == symbol &amp;&amp;
+  symbolObject !=== symbol &amp;&amp;
   symbolObject.valueOf() === symbol;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("267");return Function("asyncTestPassed","\nvar symbol = Symbol();\nvar symbolObject = Object(symbol);\n\nreturn typeof symbolObject === \"object\" &&\n  symbolObject == symbol &&\n  symbolObject.valueOf() === symbol;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("267");return Function("asyncTestPassed","\nvar symbol = Symbol();\nvar symbolObject = Object(symbol);\n\nreturn typeof symbolObject === \"object\" &&\n  symbolObject == symbol &&\n  symbolObject !=== symbol &&\n  symbolObject.valueOf() === symbol;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -18151,7 +18152,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 </tr>
 <tr class="supertest" significance="0.5"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">well-known symbols</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.14285714285714285">1/7</td>
-<td data-browser="babel" class="tally" data-tally="0.2857142857142857">2/7</td>
+<td data-browser="babel" class="tally" data-tally="0.42857142857142855">3/7</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/7</td>
 <td data-browser="closure" class="tally" data-tally="0">0/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
@@ -18428,7 +18429,7 @@ return RegExp[Symbol.species] === RegExp
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");return Function("asyncTestPassed","\nreturn RegExp[Symbol.species] === RegExp\n  && Array[Symbol.species] === Array\n  && !(Symbol.species in Object);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -18694,7 +18695,7 @@ with (a) {
 </tr>
 <tr class="supertest" significance="0.5"><td id="Object_static_methods"><span><a class="anchor" href="#Object_static_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.75">3/4</td>
-<td data-browser="babel" class="tally" data-tally="0.5">2/4</td>
+<td data-browser="babel" class="tally" data-tally="0.75">3/4</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/4</td>
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
@@ -18889,7 +18890,7 @@ return Object.getOwnPropertySymbols(o)[0] === sym;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("280");return Function("asyncTestPassed","\nvar o = {};\nvar sym = Symbol();\no[sym] = \"foo\";\nreturn Object.getOwnPropertySymbols(o)[0] === sym;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -19012,7 +19013,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 </tr>
 <tr class="supertest" significance="0.25"><td id="function_name_property"><span><a class="anchor" href="#function_name_property">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function &quot;name&quot; property</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/16</td>
-<td data-browser="babel" class="tally" data-tally="0.5625">9/16</td>
+<td data-browser="babel" class="tally" data-tally="0.625">10/16</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/16</td>
 <td data-browser="closure" class="tally" data-tally="0">0/16</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/16</td>
@@ -19204,7 +19205,7 @@ return (new Function).name === &quot;anonymous&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("285");return Function("asyncTestPassed","\nreturn (new Function).name === \"anonymous\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -25870,7 +25871,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 </tr>
 <tr class="supertest" significance="0.25"><td id="miscellaneous"><span><a class="anchor" href="#miscellaneous">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/7</td>
-<td data-browser="babel" class="tally" data-tally="0.5714285714285714">4/7</td>
+<td data-browser="babel" class="tally" data-tally="0.42857142857142855">3/7</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/7</td>
 <td data-browser="closure" class="tally" data-tally="0">0/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
@@ -25934,7 +25935,7 @@ return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("390");return Function("asyncTestPassed","\n'use strict';\nreturn this === undefined && ({ a:1, a:1 }).a === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
