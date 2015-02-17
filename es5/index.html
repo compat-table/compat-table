@@ -1,88 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>ECMAScript 5 compatibility table</title>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
-
     <link rel="stylesheet" href="../master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
     <script>
+      var __script_executed = {};
       if (typeof global === 'undefined') {
         var global = this;
       }
+    </script>
+    <script>
       (function() {
         var s = document.createElement('script'),
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
     </script>
-  </head>
-  <body>
-    <div id="header">
+</head>
+<body class="es5">
+  <div id="header">
 
-      ECMAScript
-      <span class="versions">
-        <a href="../es5" class="current">5</a><!--
-        --><a href="../es6">6</a><!--
-        --><a href="../es7">7</a><!--
-        --><a href="../non-standard">non-standard</a>
+    ECMAScript
+    <span class="versions">
+      <a href="../es5" class="current">5</a><!--
+      --><a href="../es6">6</a><!--
+      --><a href="../es7">7</a><!--
+      --><a href="../non-standard">non-standard</a>
+    </span>
+    compatibility table
+
+    <span style="font-size:0.8em;float:right;font-weight:normal;">
+
+      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
+
+      <script async src="https://www.google-analytics.com/ga.js"></script>
+      <span class="by">
+        by
+        <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
+        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
+        &amp;
+        <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
       </span>
-      compatibility table
 
-      <span style="font-size:0.8em;float:right;font-weight:normal;">
-        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.io/compat-table/es5/"></a>
+      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&amp;repo=compat-table&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
+    </span>
+  </div>
+  <div id="body">
+    <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
+      not functionality or full conformance.</p>
 
-        <script async src="https://www.google-analytics.com/ga.js"></script>
-        <span class="by">
-          by
-          <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
-          <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
-          &amp;
-          <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
-        </span>
+    <label for="sort">Sort by number of features?</label>
+    <input id="sort" type="checkbox">
 
-        <iframe src="https://ghbtns.com/github-btn.html?user=kangax&amp;repo=compat-table&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
-      </span>
+    <label for="show-obsolete">Show obsolete browsers?</label>
+    <input id="show-obsolete" type="checkbox">
+
+    <div class="legend">
+      <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
+      <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
+      <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
+      <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
+      <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
+      <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
+      <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
+      <br>
+      <span><span style="opacity:0.2;font-size:5px;">&#x2B24;</span> Useful feature</span>
+      <span><span style="opacity:0.2;font-size:9px;">&#x2B24;</span> Significant feature</span>
+      <span><span style="opacity:0.2;font-size:14px;">&#x2B24;</span> Landmark feature</span>
     </div>
-    <div id="body">
-      <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
-        not functionality or full conformance.</p>
 
-      <label for="show-obsolete">Show obsolete browsers?</label>
-      <input id="show-obsolete" type="checkbox">
+    <table id="table-wrapper">
+      <colgroup>
+        <col>
+        <col class="this-browser-col">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="3" class="platformtype"></th>
 
-      <div class="legend">
-        <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
-        <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
-        <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
-        <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
-        <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
-        <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
-        <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
-      </div>
+          <th colspan="1" class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
 
-      <table id="table-wrapper">
-        <colgroup>
-          <col>
-          <col class="this-browser-col">
-        </colgroup>
-        <thead>
-          <tr>
-            <th class="test-name"></th>
+          <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
 
+        </tr>
 
-            <th class="current">Current browser</th>
-<th></th>
+        <tr>
+          <th class="test-name">Feature name</th>
 
+          <th class="current">Current browser</th>
 
-            <!-- TABLE HEADERS -->
-          <th class="platform ie7 desktop obsolete" data-browser="ie7"><a href="#ie7" class="browser-name"><abbr title="Internet Explorer 7">IE 7</abbr></a></th>
+          <th></th>
+
+          <!-- TABLE HEADERS -->
+        <th class="platform es5shim compiler" data-browser="es5shim"><a href="#es5shim" class="browser-name"><abbr title="es5-shim">es5-shim</abbr></a></th>
+<th class="platform ie7 desktop obsolete" data-browser="ie7"><a href="#ie7" class="browser-name"><abbr title="Internet Explorer 7">IE 7</abbr></a></th>
 <th class="platform ie8 desktop obsolete" data-browser="ie8"><a href="#ie8" class="browser-name"><abbr title="Internet Explorer 8">IE 8</abbr></a></th>
 <th class="platform ie9 desktop" data-browser="ie9"><a href="#ie9" class="browser-name"><abbr title="Internet Explorer 9">IE 9</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer 10, 11">IE 10+</abbr></a></th>
@@ -116,15 +134,16 @@
 <th class="platform ios78 mobile" data-browser="ios78"><a href="#ios78" class="browser-name"><abbr title="iOS Safari 7/8">iOS7/8</abbr></a></th>
 </tr>
 
-        </thead>
-        <tbody>
-          <!-- TABLE BODY -->
-        <tr significance="1"><td id="Object.create"><span><a class="anchor" href="#Object.create">&#xA7;</a>Object.create</span><script data-source="function () {
+      </thead>
+      <tbody>
+        <!-- TABLE BODY -->
+      <tr significance="1"><td id="Object.create"><span><a class="anchor" href="#Object.create">&#xA7;</a>Object.create</span><script data-source="function () {
 return typeof Object.create == &apos;function&apos;;
   }">test(
 function () {
 return typeof Object.create == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -164,6 +183,7 @@ return typeof Object.defineProperty == &apos;function&apos;;
 function () {
 return typeof Object.defineProperty == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="yes obsolete" data-browser="ie8">Yes<a href="#define-property-ie-note"><sup>[1]</sup></a></td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -203,6 +223,7 @@ return typeof Object.defineProperties == &apos;function&apos;;
 function () {
 return typeof Object.defineProperties == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -242,6 +263,7 @@ return typeof Object.getPrototypeOf == &apos;function&apos;;
 function () {
 return typeof Object.getPrototypeOf == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -281,6 +303,7 @@ return typeof Object.keys == &apos;function&apos;;
 function () {
 return typeof Object.keys == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -320,6 +343,7 @@ return typeof Object.seal == &apos;function&apos;;
 function () {
 return typeof Object.seal == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -359,6 +383,7 @@ return typeof Object.freeze == &apos;function&apos;;
 function () {
 return typeof Object.freeze == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -398,6 +423,7 @@ return typeof Object.preventExtensions == &apos;function&apos;;
 function () {
 return typeof Object.preventExtensions == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -437,6 +463,7 @@ return typeof Object.isSealed == &apos;function&apos;;
 function () {
 return typeof Object.isSealed == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -476,6 +503,7 @@ return typeof Object.isFrozen == &apos;function&apos;;
 function () {
 return typeof Object.isFrozen == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -515,6 +543,7 @@ return typeof Object.isExtensible == &apos;function&apos;;
 function () {
 return typeof Object.isExtensible == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -554,6 +583,7 @@ return typeof Object.getOwnPropertyDescriptor == &apos;function&apos;;
 function () {
 return typeof Object.getOwnPropertyDescriptor == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="yes obsolete" data-browser="ie8">Yes<a href="#get-own-property-descriptor-ie-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -593,6 +623,7 @@ return typeof Object.getOwnPropertyNames == &apos;function&apos;;
 function () {
 return typeof Object.getOwnPropertyNames == 'function';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -626,7 +657,7 @@ return typeof Object.getOwnPropertyNames == 'function';
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr><th colspan="35" class="separator"></th>
+<tr><th colspan="36" class="separator"></th>
 </tr>
 <tr significance="1"><td id="Date.prototype.toISOString"><span><a class="anchor" href="#Date.prototype.toISOString">&#xA7;</a>Date.prototype.toISOString</span><script data-source="function () {
 return typeof Date.prototype.toISOString == &apos;function&apos;;
@@ -634,6 +665,7 @@ return typeof Date.prototype.toISOString == &apos;function&apos;;
 function () {
 return typeof Date.prototype.toISOString == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -673,6 +705,7 @@ return typeof Date.now == &apos;function&apos;;
 function () {
 return typeof Date.now == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -712,6 +745,7 @@ return typeof Array.isArray == &apos;function&apos;;
 function () {
 return typeof Array.isArray == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -751,6 +785,7 @@ return typeof JSON == &apos;object&apos;;
 function () {
 return typeof JSON == 'object';
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -790,6 +825,7 @@ return typeof Function.prototype.bind == &apos;function&apos;;
 function () {
 return typeof Function.prototype.bind == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -829,6 +865,7 @@ return typeof String.prototype.trim == &apos;function&apos;;
 function () {
 return typeof String.prototype.trim == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -862,7 +899,7 @@ return typeof String.prototype.trim == 'function';
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr><th colspan="35" class="separator"></th>
+<tr><th colspan="36" class="separator"></th>
 </tr>
 <tr significance="1"><td id="Array.prototype.indexOf"><span><a class="anchor" href="#Array.prototype.indexOf">&#xA7;</a>Array.prototype.indexOf</span><script data-source="function () {
 return typeof Array.prototype.indexOf == &apos;function&apos;;
@@ -870,6 +907,7 @@ return typeof Array.prototype.indexOf == &apos;function&apos;;
 function () {
 return typeof Array.prototype.indexOf == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -909,6 +947,7 @@ return typeof Array.prototype.lastIndexOf == &apos;function&apos;;
 function () {
 return typeof Array.prototype.lastIndexOf == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -948,6 +987,7 @@ return typeof Array.prototype.every == &apos;function&apos;;
 function () {
 return typeof Array.prototype.every == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -987,6 +1027,7 @@ return typeof Array.prototype.some == &apos;function&apos;;
 function () {
 return typeof Array.prototype.some == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1026,6 +1067,7 @@ return typeof Array.prototype.forEach == &apos;function&apos;;
 function () {
 return typeof Array.prototype.forEach == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1065,6 +1107,7 @@ return typeof Array.prototype.map == &apos;function&apos;;
 function () {
 return typeof Array.prototype.map == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1104,6 +1147,7 @@ return typeof Array.prototype.filter == &apos;function&apos;;
 function () {
 return typeof Array.prototype.filter == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1143,6 +1187,7 @@ return typeof Array.prototype.reduce == &apos;function&apos;;
 function () {
 return typeof Array.prototype.reduce == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1182,6 +1227,7 @@ return typeof Array.prototype.reduceRight == &apos;function&apos;;
 function () {
 return typeof Array.prototype.reduceRight == 'function';
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1215,12 +1261,13 @@ return typeof Array.prototype.reduceRight == 'function';
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr><th colspan="35" class="separator"></th>
+<tr><th colspan="36" class="separator"></th>
 </tr>
 <tr significance="1"><td id="Getter_in_property_initializer"><span><a class="anchor" href="#Getter_in_property_initializer">&#xA7;</a>Getter in property initializer</span><script data-source="
 return ({ get x(){ return 1 } }).x === 1;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");return Function("asyncTestPassed","\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1260,6 +1307,7 @@ var value = 0;
 return value === 1;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");return Function("asyncTestPassed","\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1293,7 +1341,7 @@ return value === 1;
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr><th colspan="35" class="separator"></th>
+<tr><th colspan="36" class="separator"></th>
 </tr>
 <tr significance="1"><td id="Property_access_on_strings"><span><a class="anchor" href="#Property_access_on_strings">&#xA7;</a>Property access on strings</span><script data-source="function () {
 return &quot;foobar&quot;[3] === &quot;b&quot;;
@@ -1301,6 +1349,7 @@ return &quot;foobar&quot;[3] === &quot;b&quot;;
 function () {
 return "foobar"[3] === "b";
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1338,6 +1387,7 @@ return "foobar"[3] === "b";
 return ({ if: 1 }).if === 1;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");return Function("asyncTestPassed","\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1371,20 +1421,21 @@ return ({ if: 1 }).if === 1;
 <td class="yes" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr><th colspan="35" class="separator"></th>
+<tr><th colspan="36" class="separator"></th>
 </tr>
 <tr significance="1"><td id="Zero-width_chars_in_identifiers"><span><a class="anchor" href="#Zero-width_chars_in_identifiers">&#xA7;</a>Zero-width chars in identifiers</span><script data-source="
 var _\u200c\u200d = true;
 return _\u200c\u200d;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");return Function("asyncTestPassed","\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="no obsolete" data-browser="firefox3">No</td>
 <td class="no obsolete" data-browser="firefox3_5">No</td>
-<td class="yes obsolete" data-browser="firefox4">Yes<a href="#zero-width-char-note"><sup>[4]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox4">Yes<a href="#zero-width-char-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="firefox21">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1417,6 +1468,7 @@ return parseInt(&apos;010&apos;) === 10;
 function () {
 return parseInt('010') === 10;
   }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1457,6 +1509,7 @@ undefined = void 0;
 return result;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");return Function("asyncTestPassed","\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1498,14 +1551,15 @@ function () {
 "use strict";
 return !this;
   }())</script></td>
+<td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no" data-browser="ie9">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#strict-mode-ie10-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#strict-mode-ie10-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="firefox3">No</td>
 <td class="no obsolete" data-browser="firefox3_5">No</td>
 <td class="yes obsolete" data-browser="firefox4">Yes</td>
-<td class="yes" data-browser="firefox21">Yes<a href="#strict-mode-ff21-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="firefox21">Yes<a href="#strict-mode-ff21-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
 <td class="no obsolete" data-browser="safari5">No</td>
@@ -1532,10 +1586,11 @@ return !this;
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
 </tbody>
-      </table>
-    </div>
+    </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="zero-width-char-note">  <sup>[4]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[5]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p><p id="strict-mode-ff21-note">  <sup>[6]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
-  </body>
+    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="sparse_arrays-note">  <sup>[4]</sup> Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays.</p><p id="zero-width-char-note">  <sup>[5]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[6]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p><p id="strict-mode-ff21-note">  <sup>[7]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
+  </div>
+  <pre class="info-tooltip" style="display:none"></pre>
+</body>
 </html>
