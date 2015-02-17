@@ -296,11 +296,11 @@ td.hover.not-applicable {
 .obsolete {
     display: none;
 }
-#show-obsolete:checked + #table-wrapper .obsolete {
+#show-obsolete:checked ~ table .obsolete {
     display: table-cell;
 }
 /* for IE compatibility, this must be a separate rule. */
-#show-obsolete[value='on'] + #table-wrapper .obsolete {
+#show-obsolete[value='on'] ~ table .obsolete {
     display: table-cell;
 }
 
