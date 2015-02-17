@@ -348,7 +348,7 @@ exports.tests = [
   res: {
     tr: false,
     babel: false,
-    es7shim: false,
+    es7shim: true,
     ejs: false,
     ie11: false,
     firefox31: false,
