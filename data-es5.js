@@ -5,6 +5,12 @@ exports.target_file = 'es5/index.html';
 exports.skeleton_file = 'es5/skeleton.html';
 
 exports.browsers = {
+  es5shim: {
+    full: 'es5-shim',
+    short: 'es5-shim',
+    obsolete: false,
+    platformtype: 'compiler'
+  },
   ie7: {
     full: 'Internet Explorer 7',
     short: 'IE 7',
