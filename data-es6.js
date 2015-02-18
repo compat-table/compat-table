@@ -5019,34 +5019,87 @@ exports.tests = [
   category: 'annex b',
   significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
-  exec: function () {/*
-    var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
-      "italics", "link", "small", "strike", "sub", "sup"];
-    for (i = 0; i < names.length; i++) {
-      if (typeof String.prototype[names[i]] !== 'function') {
-        return false;
-      }
-    }
-    return true;
-  */},
-  res: {
-    es6shim:     true,
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        true,
-    firefox11:   true,
-    chrome:      true,
-    safari51:    true,
-    phantom:     true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     true,
-    node:        true,
-    iojs:        true,
-    ios7:        true,
-  }
+  subtests: {
+    existence: {
+      exec: function () {/*
+        var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
+          "italics", "link", "small", "strike", "sub", "sup"];
+        for (i = 0; i < names.length; i++) {
+          if (typeof String.prototype[names[i]] !== 'function') {
+            return false;
+          }
+        }
+        return true;
+      */},
+      res: {
+        es6shim:     true,
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        phantom:     true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+        ios7:        true,
+      },
+    },
+    'tags\' names are lowercase': {
+      exec: function () {/*
+        var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
+          "italics", "link", "small", "strike", "sub", "sup"];
+        for (i = 0; i < names.length; i++) {
+          if (""[names[i]]().toLowerCase() !== ""[names[i]]()) {
+            return false;
+          }
+        }
+        return true;
+      */},
+      res: {
+        es6shim:     true,
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari6:     true,
+        phantom:     true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+        ios7:        true,
+      },
+    },
+    'quotes in arguments are escaped': {
+      exec: function () {/*
+        var i, names = ["anchor", "fontcolor", "fontsize", "link"];
+        for (i = 0; i < names.length; i++) {
+          if (""[names[i]]('"') !== ""[names[i]]('&' + 'quot;')) {
+            return false;
+          }
+        }
+        return true;
+      */},
+      res: {
+        es6shim:     true,
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari6:     true,
+        phantom:     true,
+        webkit:      true,
+        konq49:      true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+        ios7:        true,
+      },
+    },
+  },
 },
 {
   name: 'Unicode code point escapes',
