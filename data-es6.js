@@ -5030,6 +5030,7 @@ exports.tests = [
     return true;
   */},
   res: {
+    es6shim:     true,
     tr:          false,
     ejs:         false,
     closure:     false,
@@ -6458,6 +6459,7 @@ exports.tests = [
         return new Date(NaN) + "" === "Invalid Date";
       */},
       res: {
+        es6shim:     true,
         ejs:         true,
         ie10:        true,
         firefox11:   true,
