@@ -5060,7 +5060,7 @@ exports.tests = [
       */},
       res: {
         es6shim:     true,
-        ie10:        true,
+        ie11tp:      true,
         firefox11:   true,
         chrome:      true,
         safari6:     true,
@@ -5086,8 +5086,8 @@ exports.tests = [
       */},
       res: {
         es6shim:     true,
-        ie10:        true,
-        firefox11:   true,
+        ie11tp:      true,
+        firefox17:   true,
         chrome:      true,
         safari6:     true,
         phantom:     true,
@@ -5283,7 +5283,7 @@ exports.tests = [
 
         return typeof symbolObject === "object" &&
           symbolObject == symbol &&
-          symbolObject !=== symbol &&
+          symbolObject !== symbol &&
           symbolObject.valueOf() === symbol;
       */},
       res: {
