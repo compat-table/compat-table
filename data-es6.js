@@ -6554,7 +6554,7 @@ exports.tests = [
         try {
           Date.prototype.valueOf(); return false;
         } catch(e) {}
-        return Array.prototype.length === undefined;
+        return true;
       */},
       res: {
       },

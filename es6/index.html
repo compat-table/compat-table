@@ -26333,8 +26333,8 @@ try {
 try {
   Date.prototype.valueOf(); return false;
 } catch(e) {}
-return Array.prototype.length === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("396");return Function("asyncTestPassed","\ntry {\n  Boolean.prototype.valueOf(); return false;\n} catch(e) {}\ntry {\n  Number.prototype.valueOf(); return false;\n} catch(e) {}\ntry {\n  String.prototype.toString(); return false;\n} catch(e) {}\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\nreturn Array.prototype.length === undefined;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return true;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("396");return Function("asyncTestPassed","\ntry {\n  Boolean.prototype.valueOf(); return false;\n} catch(e) {}\ntry {\n  Number.prototype.valueOf(); return false;\n} catch(e) {}\ntry {\n  String.prototype.toString(); return false;\n} catch(e) {}\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
