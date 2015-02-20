@@ -6446,6 +6446,37 @@ exports.tests = [
       res: {
       },
     },
+    'Map is subclassable': {
+      exec: function () {/*
+        var key = {};
+        class M extends Map {}
+        var map = new M();
+
+        map.set(key, 123);
+
+        return map.has(key) && map.get(key) === 123;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'Set is subclassable': {
+      exec: function () {/*
+        var obj = {};
+        class S extends Set {}
+        var set = new S();
+
+        set.add(123);
+        set.add(123);
+
+        return set.has(123);
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
   },
 },
 {
