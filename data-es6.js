@@ -31,7 +31,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20141120',
+    full: 'Closure Compiler v20150126',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -1907,6 +1907,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
+        closure:     true,
         ie11tp:      true,
         firefox36:   true,
         chrome35:    flag,
@@ -2197,6 +2198,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
@@ -4104,7 +4106,9 @@ exports.tests = [
         } catch(e) {}
         return true;
       */},
-      res: temp.destructuringResults,
+      res: Object.assign({}, temp.destructuringResults, {
+        closure:     false,
+      }),
     },
     'computed properties': {
       exec: function(){/*
@@ -4295,7 +4299,8 @@ exports.tests = [
         }({}));
       */},
       res: {
-        babel: true
+        babel: true,
+        closure: true
       },
     },
   },
