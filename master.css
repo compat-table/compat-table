@@ -148,38 +148,28 @@ table.one-selected td.selected {
 [data-tally] {
     background: #acc20a;
 }
-tr:hover td[data-tally],
-td.hover[data-tally] {
-    background: #8da000;
+tr:hover td,
+td.hover {
+    filter:saturate(0.8) brightness(0.8);
+    -webkit-filter:saturate(0.8) brightness(0.8);
 }
-[data-tally].obsolete {
-    background: #cedd5c;
+.obsolete {
+    filter:opacity(0.75) brightness(1.2);
+    -webkit-filter:opacity(0.75) brightness(1.2);
 }
-tr:hover td[data-tally].obsolete,
-td.hover[data-tally].obsolete {
-    background: #b0c037;
+tr:hover td.obsolete,
+td.hover.obsolete {
+    filter:opacity(0.75) saturate(0.8);
+    -webkit-filter:opacity(0.75) saturate(0.8);
+}
+td:first-child, td:not([class]) {
+    filter:none !important;
 }
 
 /* yes */
 .yes,
 [data-tally="1"] {
     background: #44ab44;
-}
-tr:hover td.yes,
-td.hover.yes,
-tr:hover td[data-tally="1"],
-td.hover[data-tally="1"] {
-    background: #269326;
-}
-.yes.obsolete,
-[data-tally="1"].obsolete {
-    background: #9fe09f;
-}
-tr:hover td.yes.obsolete,
-td.hover.yes.obsolete,
-tr:hover td[data-tally="1"].obsolete,
-td.hover[data-tally="1"].obsolete {
-    background: #73cc73;
 }
 
 /* yes, but flagged */
@@ -197,80 +187,21 @@ td.hover[data-tally="1"].obsolete {
 [data-flagged-tally]:not([data-flagged-tally="1"])::after {
 	border-top-color: #acc20a;
 }
-tr:hover [data-flagged-tally]::after,
-td.hover[data-flagged-tally]::after {
-	border-top-color: #8da000;
-}
-[data-flagged-tally].obsolete::after {
-	border-top-color: #cedd5c;
-}
-tr:hover [data-flagged-tally].obsolete::after,
-td.hover[data-flagged-tally].obsolete::after {
-	border-top-color: #b0c037;
-}
-tr:hover .flagged::after,
-td.hover.flagged::after,
-tr:hover [data-flagged-tally="1"]::after,
-td.hover[data-flagged-tally="1"]::after {
-	border-top-color: #269326;
-}
-.flagged.obsolete::after,
-[data-flagged-tally="1"].obsolete::after {
-	border-top-color: #9fe09f;
-}
-tr:hover .flagged.obsolete::after,
-td.hover.flagged.obsolete::after,
-tr:hover [data-flagged-tally="1"].obsolete::after,
-td.hover[data-flagged-tally="1"].obsolete::after {
-	border-top-color: #73cc73;
-}
 
 /* no */
 .no,
 [data-tally="0"] {
     background: #e11;
 }
-tr:hover td.no,
-td.hover.no,
-tr:hover td[data-tally="0"],
-td.hover[data-tally="0"] {
-    background: #bb0606;
-}
-.no.obsolete,
-[data-tally="0"].obsolete {
-    background: #ff6e6e;
-}
-tr:hover td.no.obsolete,
-td.hover.no.obsolete,
-tr:hover td[data-tally="0"].obsolete,
-td.hover[data-tally="0"].obsolete {
-    background: #e24545;
-}
 
 /* not applicable */
 .not-applicable {
     background: hsl(120,  14%,  67%); background: #9fb79f; cursor: help;
 }
-tr:hover td.not-applicable,
-td.hover.not-applicable {
-    background: hsl(120,  14%,  47%); background: #678967;
-}
 
 /* non-standard no */
 .non-standard .no {
     background: #4444ac;
-}
-.non-standard tr:hover td.no,
-.non-standard td.hover.no {
-    background: #111178;
-}
-
-.non-standard .no.obsolete {
-    background: #8080b8;
-}
-.non-standard tr:hover td.no.obsolete,
-.non-standard td.hover.no.obsolete {
-    background: #474775;
 }
 
 /* tooltip button/box */
