@@ -62,11 +62,14 @@ $(function() {
       return;
     }
     var tally = subtests.find(".yes" + currentBrowserSelector).length;
+    var grade = tally/subtests.length;
     tr
       .find('.tally.current, .tally.current + td:empty').remove().end()
       .find('td:first-child')
       .after(
-      '<td class="tally current" data-tally="' + tally/subtests.length + '">' +
+      '<td class="tally current" data-tally="' + tally/subtests.length
+      + '" style="background-color:hsl(' + (120*grade|0) + ',' +((86 - (grade*44))|0)  +'%,50%)'
+      + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
     );
   }

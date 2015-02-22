@@ -392,11 +392,15 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
             flaggedTally += testValue(result) === 'flagged';
             outOf += 1;
           });
-
+          var grade = (tally / outOf);
           var cell = resultCell(browserId, null)
             .text((tally|0) + "/" + outOf)
             .addClass('tally')
-            .attr('data-tally', tally / outOf);
+            .attr('data-tally', grade);
+          if (grade > 0 && grade < 1 && !cell.hasClass('not-applicable')) {
+            cell.attr('style','background-color:hsl(' + (120*grade|0) + ','
+              +((86 - (grade*44))|0)  +'%,50%)');
+          }
 
           if (flaggedTally) {
             cell.attr('data-flagged-tally',  (tally + flaggedTally) / outOf);
