@@ -255,6 +255,12 @@ exports.browsers = {
     obsolete: false,
     note_id: 'experimental-flag',
   },
+  chrome43: {
+    full: 'Chrome, Opera',
+    short: 'CH 43,<br>OP&nbsp;30',
+    obsolete: false,
+    note_id: 'experimental-flag',
+  },
   safari51: {
     full: 'Safari',
     short: 'SF 5.1',
@@ -276,7 +282,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r178314',
+    full: 'WebKit r180483',
     short: 'WK',
     obsolete: false // always up-to-date
   },
@@ -1645,7 +1651,8 @@ exports.tests = [
         typescript:  true,
         ie11tp:      true,
         firefox33:   true,
-        chrome40:    flag,
+        chrome41:    flag,
+        chrome43:    true,
         iojs:        flag,
       },
     },
@@ -1663,7 +1670,8 @@ exports.tests = [
         typescript:  true,
         ie11tp:      true,
         firefox34:   true,
-        chrome39:    flag,
+        chrome41:    flag,
+        chrome43:    true,
         iojs:        flag,
       },
     },
@@ -1790,6 +1798,7 @@ exports.tests = [
       */},
       res: {
         firefox35:    true,
+        chrome43:     true,
       },
     },
     'not a shorthand method': {
@@ -1801,6 +1810,7 @@ exports.tests = [
       */},
       res: {
         firefox35:    true,
+        chrome43:     true,
       },
     },
   },
@@ -2223,7 +2233,8 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        chrome39:    flag,
+        chrome41:    flag,
+        chrome43:    true,
         firefox34:   true,
         iojs:        flag,
       },
@@ -4759,7 +4770,8 @@ exports.tests = [
         babel:        true,
         firefox34:    true,
         ie11tp:       true,
-        chrome39:     flag,
+        chrome41:     flag,
+        chrome43:     true,
         iojs:         true,
       },
     },
@@ -5532,6 +5544,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox32:   true,
+        webkit:      true,
       }
     },
     'Array.from, generic iterables': {
@@ -6536,6 +6549,7 @@ exports.tests = [
         }
       */},
       res: {
+        chrome43:    true,
       },
     },
     'Invalid Date': {
