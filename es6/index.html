@@ -119,7 +119,7 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="babel">babel +<br><nobr>core-js</nobr><br><nobr>ex-6to5</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
+<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel">Babel +<br><nobr>core-js</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
 <th class="platform es6tr compiler" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Trans-<br>piler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
@@ -7197,11 +7197,11 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="class"><span><a class="anchor" href="#class">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0.5333333333333333" style="background-color:hsl(64,62%,50%)">8/15</td>
+<td data-browser="tr" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
 <td data-browser="babel" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">12/15</td>
 <td data-browser="es6tr" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
 <td data-browser="closure" class="tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">5/15</td>
-<td data-browser="jsx" class="tally" data-tally="0.5333333333333333" style="background-color:hsl(64,62%,50%)">8/15</td>
+<td data-browser="jsx" class="tally" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
 <td data-browser="typescript" class="tally" data-tally="0" data-flagged-tally="0.4">0/15</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/15</td>
@@ -7674,7 +7674,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -7744,7 +7744,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -7812,7 +7812,7 @@ return !C.prototype.propertyIsEnumerable(&quot;foo&quot;) &amp;&amp; !C.property
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -8151,7 +8151,7 @@ return !(c instanceof Object)
   &amp;&amp; Object.getPrototypeOf(C.prototype) === null;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");return Function("asyncTestPassed","\nclass C extends null {\n  constructor() {}\n}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
@@ -8291,7 +8291,7 @@ return passed;
 <td data-browser="babel" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="tally" data-tally="1">4/4</td>
 <td data-browser="closure" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
-<td data-browser="jsx" class="tally" data-tally="0">0/4</td>
+<td data-browser="jsx" class="tally" data-tally="1">4/4</td>
 <td data-browser="typescript" class="tally" data-tally="0" data-flagged-tally="1">0/4</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
@@ -8363,7 +8363,7 @@ return passed;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -8433,7 +8433,7 @@ return new C(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -8503,7 +8503,7 @@ return new C().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -8577,7 +8577,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -19296,7 +19296,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 </tr>
 <tr class="supertest" significance="0.25"><td id="function_name_property"><span><a class="anchor" href="#function_name_property">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function &quot;name&quot; property</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/16</td>
-<td data-browser="babel" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
+<td data-browser="babel" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
 <td data-browser="es6tr" class="tally" data-tally="0">0/16</td>
 <td data-browser="closure" class="tally" data-tally="0">0/16</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/16</td>
@@ -19623,7 +19623,7 @@ return foo.name === &quot;foo&quot; &amp;&amp; bar.name === &quot;baz&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("287");return Function("asyncTestPassed","\nvar foo = function() {};\nvar bar = function baz() {};\nreturn foo.name === \"foo\" && bar.name === \"baz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -19691,7 +19691,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("288");return Function("asyncTestPassed","\nvar o = { foo: function(){}, bar: function baz(){}};\no.qux = function(){};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>

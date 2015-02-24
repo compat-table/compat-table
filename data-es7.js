@@ -12,8 +12,8 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'babel',
-    short: 'babel +<br><nobr>core-js</nobr><br><nobr>ex-6to5</nobr>',
+    full: 'Babel',
+    short: 'Babel +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
     note_id: 'experimental-flag',

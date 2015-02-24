@@ -17,8 +17,8 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'babel',
-    short: 'babel +<br><nobr>core-js</nobr><br><nobr>ex-6to5</nobr>',
+    full: 'Babel',
+    short: 'Babel +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
     note_id: 'babel-optional',
@@ -1359,6 +1359,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        jsx:         true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1379,6 +1380,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        jsx:         true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1396,6 +1398,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        jsx:         true,
       },
     },
     'implicit strict mode': {
@@ -1489,7 +1492,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        tr:          { val: false, note_id: 'compiler-proto' },
+        tr:          true,
         ejs:         true,
         es6tr:       true,
         jsx:         true,
@@ -1537,6 +1540,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        jsx:         true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1558,6 +1562,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        jsx:         true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1578,6 +1583,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        jsx:         true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1603,6 +1609,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        jsx:         true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -4738,6 +4745,7 @@ exports.tests = [
       */},
       res: {
         ie11tp:      true,
+        babel:       true,
       },
     },
     'object methods (function)': {
@@ -4748,7 +4756,9 @@ exports.tests = [
                o.bar.name === "baz" &&
                o.qux.name === "";
       */},
-      res: {},
+      res: {
+        babel:       true,
+      },
     },
     'accessor properties': {
       exec: function() {/*
