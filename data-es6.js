@@ -4518,6 +4518,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4527,6 +4528,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4550,6 +4552,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4559,6 +4562,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4568,6 +4572,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4577,6 +4582,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4586,6 +4592,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
@@ -4595,6 +4602,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox35:   true,
       },
     },
