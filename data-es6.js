@@ -5583,6 +5583,52 @@ exports.tests = [
         firefox36:    true,
       }
     },
+    'Array.from map function, array-like objects': {
+      exec: function () {/*
+        return Array.from({ 0: "foo", 1: "bar", length: 2 }, function(e, i) {
+          return e + this.baz + i;
+        }, { baz: "d" }) + '' === "food0,bard1";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6shim:     true,
+        ejs:         true,
+        ie11tp:      true,
+        firefox32:   true,
+        webkit:      true,
+      }
+    },
+    'Array.from map function, generic iterables': {
+      exec: function () {/*
+        var iterable = global.__createIterableObject("foo", "bar", "bal");
+        return Array.from(iterable, function(e, i) {
+          return e + this.baz + i;
+        }, { baz: "d" }) + '' === "food0,bard1,bald2";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        ie11tp:      true,
+        es6shim:     true,
+        firefox32:   true,
+      }
+    },
+    'Array.from map function, instances of iterables': {
+      exec: function () {/*
+        var iterable = global.__createIterableObject("foo", "bar", "bal");
+        return Array.from(Object.create(iterable), function(e, i) {
+          return e + this.baz + i;
+        }, { baz: "d" }) + '' === "food0,bard1,bald2";
+      */},
+      res: {
+        babel:        true,
+        tr:           true,
+        ie11tp:       true,
+        firefox36:    true,
+      }
+    },
     'Array.of': {
       exec: function () {/*
         return typeof Array.of === 'function' &&
