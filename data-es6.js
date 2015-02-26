@@ -166,6 +166,14 @@ exports.browsers = {
     full: 'Firefox',
     short: 'FF 37'
   },
+  firefox38: {
+    full: 'Firefox',
+    short: 'FF 38'
+  },
+  firefox39: {
+    full: 'Firefox',
+    short: 'FF 39'
+  },
   chrome: {
     full: 'Chrome',
     short: 'CH &lt;19',
@@ -2077,8 +2085,9 @@ exports.tests = [
         return passed;
       */},
       res: {
-        tr:    true,
-        babel: true
+        tr:        true,
+        babel:     true,
+        firefox38: true,
       },
     },
     'yield operator precedence': {
@@ -2624,8 +2633,8 @@ exports.tests = [
   },
   (function(){
     var methods = {
-    '.from':                  { ie11tp: true, },
-    '.of':                    { ie11tp: true, },
+    '.from':                  { ie11tp: true, firefox38: true, },
+    '.of':                    { ie11tp: true, firefox38: true, },
     '.prototype.subarray':    {
         ejs:         true,
         ie11tp:      true,
@@ -2642,11 +2651,11 @@ exports.tests = [
     '.prototype.join':        { ie11tp: true, firefox37: true },
     '.prototype.indexOf':     { ie11tp: true, firefox37: true },
     '.prototype.lastIndexOf': { ie11tp: true, firefox37: true },
-    '.prototype.slice':       { ie11tp: true, },
+    '.prototype.slice':       { ie11tp: true, firefox39: true },
     '.prototype.every':       { ie11tp: true, firefox37: true },
-    '.prototype.filter':      { ie11tp: true, },
-    '.prototype.forEach':     { ie11tp: true, },
-    '.prototype.map':         { ie11tp: true, },
+    '.prototype.filter':      { ie11tp: true, firefox39: true },
+    '.prototype.forEach':     { ie11tp: true, firefox38: true },
+    '.prototype.map':         { ie11tp: true, firefox39: true },
     '.prototype.reduce':      { ie11tp: true, firefox37: true },
     '.prototype.reduceRight': { ie11tp: true, firefox37: true },
     '.prototype.reverse':     { ie11tp: true, firefox37: true },
@@ -3384,8 +3393,9 @@ exports.tests = [
         firefox18:   {
           val: false,
           note_id: 'fx-proxy-get',
-          note_html: 'Firefox doesn\'t allow a proxy\'s "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy\'s "has" handler reports it as present).'
+          note_html: 'Firefox 18 up to 37 doesn\'t allow a proxy\'s "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy\'s "has" handler reports it as present).'
         },
+        firefox38:   true,
       },
     },
     '"set" handler': {
@@ -4794,6 +4804,20 @@ exports.tests = [
         iojs:         true,
       },
     },
+    'shorthand methods (no lexical binding)': {
+      exec: function() {/*
+        var f = "foo";
+        return ({f() { return f; }}).f() === "foo";
+      */},
+      res: {
+        babel:        true,
+        firefox34:    true,
+        ie11tp:       true,
+        chrome41:     flag,
+        chrome43:     true,
+        iojs:         true,
+      },
+    },
     'symbol-keyed methods': {
       exec: function() {/*
         var sym1 = Symbol("foo");
@@ -4882,6 +4906,7 @@ exports.tests = [
       */},
       res: {
         ie11tp:       true,
+        firefox38:    true,
       },
     },
   },
