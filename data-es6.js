@@ -1096,6 +1096,24 @@ exports.tests = [
         tr:          true,
       },
     },
+    'can\'t be used in setters': {
+      exec: function() {/*
+        return (function (...args) {
+          try {
+            eval("({set e(...args){}})");
+          } catch(e) {
+            return true;
+          }
+        }());
+      */},
+      res: {
+        tr:          true,
+        closure:     true,
+        jsx:         true,
+        typescript:  true,
+        firefox38:   true,
+      },
+    },
   },
 },
 {
