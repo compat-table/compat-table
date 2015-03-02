@@ -1111,6 +1111,7 @@ exports.tests = [
         closure:     true,
         jsx:         true,
         typescript:  true,
+        ie11tp:      true,
         firefox38:   true,
       },
     },
@@ -2222,6 +2223,7 @@ exports.tests = [
         chrome21dev: flag,
         chrome39:    true,
         node:        flag,
+        iojs:        true,
       },
     },
     'yield *, instances of iterables': {
@@ -2246,6 +2248,7 @@ exports.tests = [
         chrome35:    flag,
         chrome39:    true,
         node:        flag,
+        iojs:        true,
       },
     },
     'shorthand generator methods': {
@@ -4819,7 +4822,7 @@ exports.tests = [
         ie11tp:       true,
         chrome41:     flag,
         chrome43:     true,
-        iojs:         true,
+        iojs:         flag,
       },
     },
     'shorthand methods (no lexical binding)': {
@@ -4833,7 +4836,7 @@ exports.tests = [
         ie11tp:       true,
         chrome41:     flag,
         chrome43:     true,
-        iojs:         true,
+        iojs:         flag,
       },
     },
     'symbol-keyed methods': {
@@ -5003,8 +5006,6 @@ exports.tests = [
         firefox31:   true,
         chrome34:    true,
         chrome41:    true,
-        node:        true,
-        iojs:        true,
       },
     },
     'String.prototype.repeat': {

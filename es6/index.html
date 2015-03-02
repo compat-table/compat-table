@@ -820,7 +820,7 @@ return (function(a=function(){
 <td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
-<td data-browser="ie11tp" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td data-browser="ie11tp" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td data-browser="firefox11" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="firefox13" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -1100,7 +1100,7 @@ return (function (...args) {
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="ie11tp">No</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -9019,7 +9019,7 @@ return obj.qux() === &quot;barley&quot;;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/14</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/14</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.7857142857142857">0/14</td>
-<td data-browser="iojs" class="tally" data-tally="0.6428571428571429" style="background-color:hsl(77,57%,50%)" data-flagged-tally="0.7142857142857143">9/14</td>
+<td data-browser="iojs" class="tally" data-tally="0.7857142857142857" style="background-color:hsl(94,51%,50%)" data-flagged-tally="0.8571428571428571">11/14</td>
 <td data-browser="ejs" class="tally" data-tally="0">0/14</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/14</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/14</td>
@@ -9846,7 +9846,7 @@ return passed;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9923,7 +9923,7 @@ return passed;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -19990,7 +19990,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="phantom" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="node" class="tally" data-tally="0.11764705882352941" style="background-color:hsl(14,80%,50%)">2/17</td>
-<td data-browser="iojs" class="tally" data-tally="0.23529411764705882" style="background-color:hsl(28,75%,50%)">4/17</td>
+<td data-browser="iojs" class="tally" data-tally="0.11764705882352941" style="background-color:hsl(14,80%,50%)" data-flagged-tally="0.23529411764705882">2/17</td>
 <td data-browser="ejs" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="ios7" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="ios8" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
@@ -20533,7 +20533,7 @@ return o.foo.name === &quot;foo&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="iojs">Yes</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -20600,7 +20600,7 @@ return ({f() { return f; }}).f() === &quot;foo&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="yes" data-browser="iojs">Yes</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -21411,8 +21411,8 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="konq49" class="tally" data-tally="0">0/6</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/6</td>
-<td data-browser="node" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)" data-flagged-tally="1">1/6</td>
-<td data-browser="iojs" class="tally" data-tally="1">6/6</td>
+<td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.8333333333333334">0/6</td>
+<td data-browser="iojs" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="ejs" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/6</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/6</td>
@@ -21545,8 +21545,8 @@ return typeof String.prototype.normalize === &quot;function&quot;
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="yes" data-browser="node">Yes</td>
-<td class="yes" data-browser="iojs">Yes</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
