@@ -92,18 +92,18 @@ tr.category td {
     margin-right: 0.25em;
 }
 
-/* selected cell opacity */
+/* selected cell visibility */
 table.one-selected td {
-    opacity: 0.3; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    margin: 0;
 }
-table.one-selected td:first-child {
-    opacity: 1;
+table.one-selected th.platformtype,
+table.one-selected td[data-browser],
+table.one-selected th[data-browser] {
+    display: none;
 }
-table.one-selected tr.selected td {
-    padding-top: 30px; padding-bottom: 30px; opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
-table.one-selected td.selected {
-    padding-left: 30px; padding-right: 30px; opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+table.one-selected td.selected,
+table.one-selected th.selected {
+    display: block;
 }
 
 /* subtests */

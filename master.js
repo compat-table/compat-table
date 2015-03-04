@@ -182,7 +182,8 @@ $(function() {
       else if (elem.is('.browser-name')) {
         // This assumes that all <td>s in the column have a class that matches
         // the browser-name's ID.
-        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + elem.attr('href').slice(1) + '"]'));
+        var browser = elem.attr('href').slice(1);
+        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + browser + '"], th[data-browser="' + browser + '"]'));
       }
     }
   };
@@ -254,7 +255,7 @@ $(function() {
     totalResults += results.length/5;
 
     var flaggedResults = yesResults;
-    
+
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
       var weight = +$(this).parent().attr('significance') || 1;
       var yes = (+$(this).attr('data-tally') || 0) * weight;
@@ -264,7 +265,7 @@ $(function() {
     });
     var featuresCount = yesResults / totalResults;
     var flaggedFeaturesCount = flaggedResults / totalResults;
-    
+
     function gradient(colour, percent) {
       return 'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +
