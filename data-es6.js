@@ -1037,7 +1037,16 @@ exports.tests = [
         babel:       true,
         closure:     true,
       },
-    }
+    },
+    'new Function() support': {
+      exec: function() {/*
+        return new Function("a = 1", "b = 2",
+          "return a === 3 && b === 2;"
+        )(3);
+      */},
+      res: {
+      },
+    },
   }
 },
 {
@@ -1113,6 +1122,17 @@ exports.tests = [
         typescript:  true,
         ie11tp:      true,
         firefox38:   true,
+      },
+    },
+    'new Function() support': {
+      exec: function() {/*
+        return new Function("a", "...b",
+          "return b instanceof Array && a+b === 'foobar,baz';"
+        )('foo','bar','baz');
+      */},
+      res: {
+        ie11tp:      true,
+        firefox16:   true,
       },
     },
   },
@@ -4215,6 +4235,16 @@ exports.tests = [
         ios8:        true,
       },
     },
+    'in parameters, new Function() support': {
+      exec: function(){/*
+        return new Function("{a, x:b, y:e}","[c, d]",
+          "return a === 1 && b === 2 && c === 3 && "
+          + "d === 4 && e === undefined;"
+        )({a:1, x:2}, [3, 4]);
+      */},
+      res: {
+      },
+    },
     'in parameters, function \'length\' property': {
       exec: function(){/*
         return function({a, b}, [c, d]){}.length === 2;
@@ -4346,6 +4376,16 @@ exports.tests = [
       */},
       res: {
         babel: true
+      },
+    },
+    'defaults in parameters, new Function() support': {
+      exec: function(){/*
+        return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}",
+          "return a === 1 && b === 2 && c === 3 && d === 4 && "
+          + "e === 5 && f === undefined;"
+        )({b:2, c:undefined, x:4});
+      */},
+      res: {
       },
     },
   },
@@ -5217,7 +5257,6 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
-        webkit:      true,
       },
     },
     'typeof support': {
@@ -5233,7 +5272,6 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
-        webkit:      true,
       },
     },
     'symbol keys are hidden to pre-ES6 code': {
@@ -5261,7 +5299,6 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
-        webkit:      true,
       },
     },
     'Object.defineProperty support': {
@@ -5287,7 +5324,6 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
-        webkit:      true,
       },
     },
     'cannot coerce to string or number': {
@@ -5314,7 +5350,6 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
-        webkit:      true,
       },
     },
     'can convert with String()': {
@@ -5326,7 +5361,6 @@ exports.tests = [
         chrome39:    true,
         firefox36:   true,
         iojs:        true,
-        webkit:      true,
       },
     },
     'new Symbol() throws': {
@@ -5348,7 +5382,6 @@ exports.tests = [
         chrome38:   true,
         node:       true,
         iojs:       true,
-        webkit:     true,
       },
     },
     'Object(symbol)': {
@@ -5366,7 +5399,6 @@ exports.tests = [
         firefox36:  true,
         chrome30:   flag,
         chrome35:   false,
-        webkit:     true,
       },
     },
     'global symbol registry': {
