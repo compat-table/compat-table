@@ -42,7 +42,9 @@ $(function() {
   var currentBrowserSelector = ":nth-of-type(2)";
 
   // Set up the Show Obsolete checkbox
-  $('#show-obsolete').on('click', function() {
+  $('#show-obsolete').on('click', function(event) {
+      removeHighlighting(event);
+
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
@@ -161,12 +163,14 @@ $(function() {
     table.addClass('one-selected');
   }
 
-  $(document).on('click', function removeHighlighting(event) {
+  function removeHighlighting(event) {
     // Don't remove all dimming if another link was clicked in this event.
     if ($(event.target).is('[href],[href] *, .supertest *'))
       return;
     table.removeClass('one-selected');
-  });
+  }
+
+  $(document).on('click', removeHighlighting);
 
   window.onhashchange = function() {
     if (location.hash) {

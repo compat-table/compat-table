@@ -92,19 +92,6 @@ tr.category td {
     margin-right: 0.25em;
 }
 
-/* selected cell visibility */
-table.one-selected td {
-    margin: 0;
-}
-table.one-selected th.platformtype,
-table.one-selected td[data-browser],
-table.one-selected th[data-browser] {
-    display: none;
-}
-table.one-selected td.selected,
-table.one-selected th.selected {
-    display: block;
-}
 
 /* subtests */
 .supertest td:first-child {
@@ -233,6 +220,20 @@ td:first-child, td:not([class]) {
 /* for IE compatibility, this must be a separate rule. */
 #show-obsolete[value='on'] ~ table .obsolete {
     display: table-cell;
+}
+
+/* selected cell visibility */
+#body table.one-selected td {
+    margin: 0;
+}
+#body table.one-selected th.platformtype,
+#body table.one-selected td[data-browser],
+#body table.one-selected th[data-browser] {
+    display: none;
+}
+#body table.one-selected td.selected,
+#body table.one-selected th.selected {
+    display: block;
 }
 
 /* page header */
