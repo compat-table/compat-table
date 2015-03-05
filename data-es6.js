@@ -1603,7 +1603,7 @@ exports.tests = [
     'extends null': {
       exec: function () {/*
         class C extends null {
-          constructor() {}
+          constructor() { return Object.create(null); }
         }
         var c = new C();
         return !(c instanceof Object)
@@ -5309,8 +5309,8 @@ exports.tests = [
     },
     'in identifiers': {
       exec: function(){/*
-        var \u{1d306} = { \u{1d306} : 2 };
-        return \u{1d306}.\u{1d306} === 2;
+        var \u{102C0} = { \u{102C0} : 2 };
+        return \u{102C0}.\u{102C0} === 2;
       */},
       res: {
         ie11tp:      true,
@@ -6727,7 +6727,7 @@ exports.tests = [
     'no reserved words as identifiers': {
       exec: function() {/*
         try {
-          var v\u0061r;
+          eval('var v\u0061r');
         } catch(e) {
           return true;
         }

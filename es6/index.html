@@ -5551,9 +5551,9 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Unicode_code_point_escapes"><td><span>in identifiers</span><script data-source="
-var \u{1d306} = { \u{1d306} : 2 };
-return \u{1d306}.\u{1d306} === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");return Function("asyncTestPassed","\nvar \\u{1d306} = { \\u{1d306} : 2 };\nreturn \\u{1d306}.\\u{1d306} === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var \u{102C0} = { \u{102C0} : 2 };
+return \u{102C0}.\u{102C0} === 2;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");return Function("asyncTestPassed","\nvar \\u{102C0} = { \\u{102C0} : 2 };\nreturn \\u{102C0}.\\u{102C0} === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -9147,13 +9147,13 @@ return new C() instanceof B
 </tr>
 <tr class="subtest" data-parent="class"><td><span>extends null</span><script data-source="
 class C extends null {
-  constructor() {}
+  constructor() { return Object.create(null); }
 }
 var c = new C();
 return !(c instanceof Object)
   &amp;&amp; Function.prototype.isPrototypeOf(C)
   &amp;&amp; Object.getPrototypeOf(C.prototype) === null;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");return Function("asyncTestPassed","\nclass C extends null {\n  constructor() {}\n}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");return Function("asyncTestPassed","\nclass C extends null {\n  constructor() { return Object.create(null); }\n}\nvar c = new C();\nreturn !(c instanceof Object)\n  && Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -28284,11 +28284,11 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 </tr>
 <tr class="subtest" data-parent="miscellaneous"><td><span>no reserved words as identifiers</span><script data-source="
 try {
-  var v\u0061r;
+  eval(&apos;var v\u0061r&apos;);
 } catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("407");return Function("asyncTestPassed","\ntry {\n  var v\\u0061r;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("407");return Function("asyncTestPassed","\ntry {\n  eval('var v\\u0061r');\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
