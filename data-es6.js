@@ -1374,6 +1374,24 @@ exports.tests = [
         typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
+    'computed prototype methods': {
+      exec: function () {/*
+        var foo = "method";
+        class C {
+          [foo]() { return 2; }
+        }
+        return typeof C.prototype.method === "function"
+          && new C().method() === 2;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ejs:         true,
+        closure:     true,
+        ie11tp:      true,
+      },
+    },
     'static methods': {
       exec: function () {/*
         class C {
@@ -1392,6 +1410,24 @@ exports.tests = [
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         typescript:  { val: flag, note_id: 'typescript-class' },
+      },
+    },
+    'computed static methods': {
+      exec: function () {/*
+        var foo = "method";
+        class C {
+          static [foo]() { return 3; }
+        }
+        return typeof C.method === "function"
+          && C.method() === 3;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ejs:         true,
+        closure:     true,
+        ie11tp:      true,
       },
     },
     'accessor properties': {
@@ -1415,6 +1451,24 @@ exports.tests = [
         typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
+    'computed accessor properties': {
+      exec: function () {/*
+        var garply = "foo", grault = "bar", baz = false;
+        class C {
+          get [garply]() { return "foo"; }
+          set [grault](x) { baz = x; }
+        }
+        new C().bar = true;
+        return new C().foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ejs:         true,
+        ie11tp:      true,
+      },
+    },
     'static accessor properties': {
       exec: function () {/*
         var baz = false;
@@ -1434,6 +1488,24 @@ exports.tests = [
         ie11tp:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         typescript:  { val: flag, note_id: 'typescript-class' },
+      },
+    },
+    'computed static accessor properties': {
+      exec: function () {/*
+        var garply = "foo", grault = "bar", baz = false;
+        class C {
+          static get [garply]() { return "foo"; }
+          static set [grault](x) { baz = x; }
+        }
+        C.bar = true;
+        return C.foo === "foo" && baz;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ejs:         true,
+        ie11tp:      true,
       },
     },
     'methods aren\'t enumerable': {
@@ -5221,16 +5293,29 @@ exports.tests = [
   category: 'syntax',
   significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
-  exec: function () {/*
-    return '\u{1d306}' == '\ud834\udf06';
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    es6tr:       true,
-    ejs:         true,
-    closure:     true,
-    ie11tp:      true,
+  subtests: {
+    'in strings': {
+      exec: function () {/*
+        return '\u{1d306}' == '\ud834\udf06';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ejs:         true,
+        closure:     true,
+        ie11tp:      true,
+      }
+    },
+    'in identifiers': {
+      exec: function(){/*
+        var \u{1d306} = { \u{1d306} : 2 };
+        return \u{1d306}.\u{1d306} === 2;
+      */},
+      res: {
+        ie11tp:      true,
+      }
+    },
   }
 },
 {
@@ -6639,6 +6724,23 @@ exports.tests = [
   significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
+    'no reserved words as identifiers': {
+      exec: function() {/*
+        try {
+          var v\u0061r;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+        tr:          true,
+        jsx:         true,
+        es6tr:       true,
+        typescript:  true,
+        closure:     true,
+      },
+    },
     'duplicate property names in strict mode': {
       exec: function(){/*
         'use strict';
