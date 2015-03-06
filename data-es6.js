@@ -249,7 +249,7 @@ exports.browsers = {
   chrome40: {
     full: 'Chrome, Opera',
     short: 'CH 40,<br>OP&nbsp;27',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome41: {
@@ -4315,6 +4315,9 @@ exports.tests = [
         )({a:1, x:2}, [3, 4]);
       */},
       res: {
+        safari71_8:  true,
+        webkit:      true,
+        ios8:        true,
       },
     },
     'in parameters, function \'length\' property': {
@@ -6724,10 +6727,11 @@ exports.tests = [
   significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
-    'no reserved words as identifiers': {
+    'no escaped reserved words as identifiers': {
       exec: function() {/*
+        var \u0061;
         try {
-          eval('var v\u0061r');
+          eval('var v\\u0061r');
         } catch(e) {
           return true;
         }
@@ -6739,6 +6743,8 @@ exports.tests = [
         es6tr:       true,
         typescript:  true,
         closure:     true,
+        ie10:        true,
+        firefox11:   true,
       },
     },
     'duplicate property names in strict mode': {
