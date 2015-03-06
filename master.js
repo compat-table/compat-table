@@ -42,7 +42,9 @@ $(function() {
   var currentBrowserSelector = ":nth-of-type(2)";
 
   // Set up the Show Obsolete checkbox
-  $('#show-obsolete').on('click', function() {
+  $('#show-obsolete').on('click', function(event) {
+      removeHighlighting(event);
+
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
@@ -161,12 +163,14 @@ $(function() {
     table.addClass('one-selected');
   }
 
-  $(document).on('click', function removeHighlighting(event) {
+  function removeHighlighting(event) {
     // Don't remove all dimming if another link was clicked in this event.
     if ($(event.target).is('[href],[href] *, .supertest *'))
       return;
     table.removeClass('one-selected');
-  });
+  }
+
+  $(document).on('click', removeHighlighting);
 
   window.onhashchange = function() {
     if (location.hash) {
@@ -182,7 +186,8 @@ $(function() {
       else if (elem.is('.browser-name')) {
         // This assumes that all <td>s in the column have a class that matches
         // the browser-name's ID.
-        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + elem.attr('href').slice(1) + '"]'));
+        var browser = elem.attr('href').slice(1);
+        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + browser + '"], th[data-browser="' + browser + '"]'));
       }
     }
   };
@@ -254,7 +259,7 @@ $(function() {
     totalResults += results.length/5;
 
     var flaggedResults = yesResults;
-    
+
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
       var weight = +$(this).parent().attr('significance') || 1;
       var yes = (+$(this).attr('data-tally') || 0) * weight;
@@ -264,7 +269,7 @@ $(function() {
     });
     var featuresCount = yesResults / totalResults;
     var flaggedFeaturesCount = flaggedResults / totalResults;
-    
+
     function gradient(colour, percent) {
       return 'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +
