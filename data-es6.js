@@ -27,7 +27,7 @@ exports.browsers = {
   es6tr: {
     full: 'ES6 Transpiler',
     short: 'ES6<br>Trans-<br>piler',
-    obsolete: false,
+    obsolete: true,
     platformtype: 'compiler',
   },
   closure: {
@@ -69,7 +69,7 @@ exports.browsers = {
   ie11tp: {
     full: 'Internet Explorer',
     short: 'IE<br>Technical<br>Preview',
-    obsolete: false,
+    unstable: true,
     note_id: 'ie-experimental-flag',
     note_html: 'Have to be enabled via "Experimental Web Platform Features" flag'
   },
@@ -164,15 +164,18 @@ exports.browsers = {
   },
   firefox37: {
     full: 'Firefox',
-    short: 'FF 37'
+    short: 'FF 37',
+    unstable: true,
   },
   firefox38: {
     full: 'Firefox',
-    short: 'FF 38'
+    short: 'FF 38',
+    unstable: true,
   },
   firefox39: {
     full: 'Firefox',
-    short: 'FF 39'
+    short: 'FF 39',
+    unstable: true,
   },
   chrome: {
     full: 'Chrome',
@@ -261,13 +264,13 @@ exports.browsers = {
   chrome42: {
     full: 'Chrome, Opera',
     short: 'CH 42,<br>OP&nbsp;29',
-    obsolete: false,
+    unstable: true,
     note_id: 'experimental-flag',
   },
   chrome43: {
     full: 'Chrome, Opera',
     short: 'CH 43,<br>OP&nbsp;30',
-    obsolete: false,
+    unstable: true,
     note_id: 'experimental-flag',
   },
   safari51: {
@@ -293,16 +296,16 @@ exports.browsers = {
   webkit: {
     full: 'WebKit r180483',
     short: 'WK',
-    obsolete: false // always up-to-date
+    unstable: true,
   },
   opera: {
     full: 'Opera 12.16',
     short: 'OP 12',
-    obsolete: false // still supported
+    obsolete: true
   },
   konq49: {
     full: 'Konqueror 4.14',
-    short: 'KQ 4.14',
+    short: 'KQ<br>4.14',
     note_id: 'khtml',
     note_html: 'Results are only applicable for the KHTML rendering engine.'
   },
@@ -335,7 +338,7 @@ exports.browsers = {
   ejs: {
     full: 'Echo JS',
     short: 'Echo JS',
-    obsolete: false,
+    unstable: true,
     platformtype: 'engine',
   },
   ios7: {

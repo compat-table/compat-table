@@ -277,7 +277,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     }
     head.append($('<th></th>')
       .addClass("platform " + browserId + ' ' + (b.platformtype || 'desktop'))
-      .addClass(b.obsolete ? "obsolete" : "")
+      .addClass(b.obsolete ? "obsolete" : b.unstable ? "unstable" : "")
       .attr("data-browser", browserId)
       .append(
         $('<a href="#' + browserId + '" class="browser-name"></a>')
@@ -331,7 +331,10 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       if(result === "flagged") {
         cell.addClass("flagged");
       }
-      cell.attr('data-browser', browserId).addClass(browsers[browserId].obsolete ? "obsolete" : "");
+      cell.attr('data-browser', browserId).addClass(
+        browsers[browserId].obsolete ? "obsolete" :
+        browsers[browserId].unstable ? "unstable" :
+        "");
 
       // Add extra signifiers if the result is not applicable.
       if (browsers[browserId].platformtype &&

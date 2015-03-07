@@ -42,7 +42,7 @@ $(function() {
   var currentBrowserSelector = ":nth-of-type(2)";
 
   // Set up the Show Obsolete checkbox
-  $('#show-obsolete').on('click', function() {
+  $('#show-obsolete, #show-unstable').on('click', function() {
       var elem = $(this);
       elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
 
@@ -51,8 +51,9 @@ $(function() {
       $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible'  ).length);
       $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible'  ).length);
     })
-    .attr('value', $('#show-obsolete').checked);
-
+  $('#show-obsolete').attr('value', $('#show-obsolete').checked);
+  $('#show-unstable').attr('value', $('#show-unstable').checked);
+  
   var mouseoverTimeout;
 
   window.__updateSupertest = function(){

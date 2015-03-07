@@ -153,12 +153,14 @@ td.hover {
     filter:saturate(0.8) brightness(0.8);
     -webkit-filter:saturate(0.8) brightness(0.8);
 }
-.obsolete {
-    filter:opacity(0.75) brightness(1.2);
-    -webkit-filter:opacity(0.75) brightness(1.2);
+.obsolete, .unstable {
+    filter:opacity(0.75) brightness(1.1);
+    -webkit-filter:opacity(0.75) brightness(1.1);
 }
 tr:hover td.obsolete,
-td.hover.obsolete {
+td.hover.obsolete,
+tr:hover td.unstable,
+td.hover.unstable {
     filter:opacity(0.75) saturate(0.8);
     -webkit-filter:opacity(0.75) saturate(0.8);
 }
@@ -224,14 +226,16 @@ td:first-child, td:not([class]) {
 }
 
 /* 'show obsolete' toggle */
-.obsolete {
+.obsolete, .unstable {
     display: none;
 }
-#show-obsolete:checked ~ table .obsolete {
+#show-obsolete:checked ~ table .obsolete,
+#show-unstable:checked ~ table .unstable {
     display: table-cell;
 }
 /* for IE compatibility, this must be a separate rule. */
-#show-obsolete[value='on'] ~ table .obsolete {
+#show-obsolete[value='on'] ~ table .obsolete,
+#show-unstable[value='on'] ~ table .unstable, {
     display: table-cell;
 }
 
@@ -271,7 +275,7 @@ td:first-child, td:not([class]) {
 .warning {
     background: #ffc; display: inline-block; margin: 0 0 1em 0; padding: 0.25em;
 }
-label[for="show-obsolete"] {
+label[for="show-obsolete"],label[for="show-unstable"] {
     background: #eef; padding: 5px; margin-left: 10px; margin-right: -30px; padding-right: 30px;
 }
 label[for="sort"] {
