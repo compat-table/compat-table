@@ -1202,11 +1202,12 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox17:   true,
+        webkit:      true,
       },
     },
     'with astral plane strings, in function calls': {
       exec: function() {/*
-       return Array(..."𠮷")[0] === "𠮷";
+       return Array(..."𠮷𠮶")[0] === "𠮷";
       */},
       res: {
         tr:          true,
@@ -1217,13 +1218,14 @@ exports.tests = [
     },
     'with astral plane strings, in array literals': {
       exec: function() {/*
-       return [..."𠮷"][0] === "𠮷";
+       return [..."𠮷𠮶"][0] === "𠮷";
       */},
       res: {
         tr:          true,
         babel:       true,
         ejs:         true,
         firefox27:   true,
+        webkit:      true,
       },
     },
     'with generic iterables, in calls': {
@@ -1325,6 +1327,21 @@ exports.tests = [
     'class expression': {
       exec: function () {/*
         return typeof class C {} === "function";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
+      },
+    },
+    'anonymous class': {
+      exec: function () {/*
+        return typeof class {} === "function";
       */},
       res: {
         tr:          true,
@@ -1509,6 +1526,23 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
+      },
+    },
+    'class name is lexically scoped': {
+      exec: function () {/*
+        class C {
+          method() { return typeof C === "function"; }
+        }
+        var M = C.prototype.method;
+        C = undefined;
+        return C === undefined && M();
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ie11tp:      true,
+        iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
     'methods aren\'t enumerable': {
@@ -1784,6 +1818,7 @@ exports.tests = [
         chrome41:    flag,
         chrome43:    true,
         iojs:        flag,
+        webkit:      true,
       },
     },
     'shorthand methods': {
@@ -1803,6 +1838,7 @@ exports.tests = [
         chrome41:    flag,
         chrome43:    true,
         iojs:        flag,
+        webkit:      true,
       },
     },
     'computed shorthand methods': {
@@ -1817,6 +1853,7 @@ exports.tests = [
         babel:       true,
         es6tr:       true,
         firefox34:   true,
+        webkit:      true,
       }
     },
     'computed accessors': {
@@ -1900,6 +1937,7 @@ exports.tests = [
       */},
       res: {
         firefox35:    true,
+        webkit:       true,
         chrome42:     true,
       },
     },
@@ -1928,6 +1966,7 @@ exports.tests = [
       */},
       res: {
         firefox35:    true,
+        webkit:       true,
         chrome43:     true,
       },
     },
@@ -1940,6 +1979,7 @@ exports.tests = [
       */},
       res: {
         firefox35:    true,
+        webkit:       true,
         chrome43:     true,
       },
     },
@@ -1988,6 +2028,7 @@ exports.tests = [
         ie11tp:      true,
         firefox17:   true,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -1995,9 +2036,9 @@ exports.tests = [
     'with astral plane strings': {
       exec: function () {/*
         var str = "";
-        for (var item of "𠮷")
-          str += item;
-        return str === "𠮷";
+        for (var item of "𠮷𠮶")
+          str += item + " ";
+        return str === "𠮷 𠮶 ";
       */},
       res: {
         tr:          true,
@@ -2007,6 +2048,7 @@ exports.tests = [
         ie11tp:      true,
         firefox17:   true,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -2277,10 +2319,12 @@ exports.tests = [
     'yield *, astral plane strings': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * "𠮷";
+          yield * "𠮷𠮶";
         }());
         var item = iterator.next();
         var passed = item.value === "𠮷" && item.done === false;
+        item = iterator.next();
+        var passed = item.value === "𠮶" && item.done === false;
         item = iterator.next();
         passed    &= item.value === undefined && item.done === true;
         return passed;
@@ -4119,7 +4163,7 @@ exports.tests = [
     'with astral plane strings': {
       exec: function(){/*
         var c;
-        [c] = "𠮷";
+        [c] = "𠮷𠮶";
         return c === "𠮷";
       */},
       res: {
@@ -4188,6 +4232,20 @@ exports.tests = [
         ios8:         true,
       },
     },
+    'trailing commas in iterable patterns': {
+      exec: function(){/*
+        var [a,] = [1];
+        return a === 1;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        webkit:       false,
+        safari71_8:   false,
+        ios8:         false,
+        babel:        false,
+        tr:           false,
+        closure:      false,
+      }),
+    },
     'with objects': {
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
@@ -4197,6 +4255,12 @@ exports.tests = [
           && f === 9 && g === 10;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        firefox11:    {
+          val: true,
+          note_id: "ff11-object-destructuring",
+          note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
+        },
+        firefox16:    true,
         webkit: {
           val: true,
           note_id: "webkit-object-destructuring",
@@ -4204,6 +4268,39 @@ exports.tests = [
         },
         safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
         ios8:         { val: true, note_id: "webkit-object-destructuring", },
+      }),
+    },
+    'object destructuring with primitives': {
+      exec: function(){/*
+        var {toFixed} = 2;
+        var {slice} = '';
+        var toString, match;
+        ({toString} = 2);
+        ({match} = '');
+        return toFixed === Number.prototype.toFixed
+          && toString === Number.prototype.toString
+          && slice === String.prototype.slice
+          && match === String.prototype.match;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        webkit: {
+          val: true,
+          note_id: "webkit-object-destructuring",
+          note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
+        },
+        safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
+        ios8:         { val: true, note_id: "webkit-object-destructuring", },
+      }),
+    },
+    'trailing commas in object patterns': {
+      exec: function(){/*
+        var {a,} = {a:1};
+        return a === 1;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        webkit:       false,
+        safari71_8:   false,
+        ios8:         false,
       }),
     },
     'object destructuring expression': {
@@ -4940,6 +5037,7 @@ exports.tests = [
         ie11tp:       true,
         chrome41:     flag,
         chrome43:     true,
+        webkit:       true,
         iojs:         flag,
       },
     },
@@ -5316,7 +5414,7 @@ exports.tests = [
     'in identifiers': {
       exec: function(){/*
         var \u{102C0} = { \u{102C0} : 2 };
-        return \u{102C0}.\u{102C0} === 2;
+        return \u{102C0}['\ud800\udec0'] === 2;
       */},
       res: {
         ie11tp:      true,
