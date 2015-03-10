@@ -5416,7 +5416,7 @@ exports.tests = [
         ie11tp:      true,
         firefox11:   true,
         chrome:      true,
-        safari6:     true,
+        safari51:    true,
         phantom:     true,
         webkit:      true,
         opera:       true,
@@ -6908,6 +6908,7 @@ exports.tests = [
         closure:     true,
         ie10:        true,
         firefox11:   true,
+        opera:       true,
       },
     },
     'duplicate property names in strict mode': {
