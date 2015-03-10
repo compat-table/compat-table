@@ -1545,6 +1545,20 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
       },
     },
+    'computed names, temporal dead zone': {
+      exec: function () {/*
+        try {
+          var B = class C {
+            [C](){}
+          }
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        ie11tp:      true,
+      },
+    },
     'methods aren\'t enumerable': {
       exec: function () {/*
         class C {
@@ -2438,6 +2452,53 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox34:   true,
+      },
+    },
+    'shorthand generator methods, classes': {
+      exec: function() {/*
+        class C {
+          * generator() {
+            yield 5; yield 6;
+          }
+        };
+        var iterator = new C().generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        firefox39:   true,
+      },
+    },
+    'computed shorthand generators, classes': {
+      exec: function() {/*
+        var garply = "generator";
+        class C {
+          * [garply] () {
+            yield 5; yield 6;
+          }
+        }
+        var iterator = new C().generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        firefox39:   true,
       },
     },
   },
@@ -5144,6 +5205,7 @@ exports.tests = [
       res: {
         ie11tp:       true,
         firefox38:    true,
+        chrome43:     true,
       },
     },
   },
