@@ -47,6 +47,7 @@
       <a href="../es5">5</a><!--
       --><a href="../es6" class="current">6</a><!--
       --><a href="../es7">7</a><!--
+      --><a href="../esintl">intl</a><!--
       --><a href="../non-standard">non-standard</a>
     </span>
     compatibility table
@@ -64,7 +65,7 @@
         <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
       </span>
 
-      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&amp;repo=compat-table&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
     </span>
   </div>
   <div id="body">
@@ -89,9 +90,9 @@
       <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
       <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
       <br>
-      <span><span style="opacity:0.2;font-size:5px;">&#x2B24;</span> Useful feature</span>
-      <span><span style="opacity:0.2;font-size:9px;">&#x2B24;</span> Significant feature</span>
-      <span><span style="opacity:0.2;font-size:14px;">&#x2B24;</span> Landmark feature</span>
+      <span><span style="opacity:0.2;font-size:5px;">⬤</span> Useful feature</span>
+      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Significant feature</span>
+      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Landmark feature</span>
     </div>
 
     <table id="table-wrapper">
@@ -155,19 +156,19 @@
 <th class="platform chrome desktop obsolete" data-browser="chrome"><a href="#chrome" class="browser-name"><abbr title="Chrome">CH &lt;19</abbr></a></th>
 <th class="platform chrome19dev desktop obsolete" data-browser="chrome19dev"><a href="#chrome19dev" class="browser-name"><abbr title="Chrome">CH 19</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
 <th class="platform chrome21dev desktop obsolete" data-browser="chrome21dev"><a href="#chrome21dev" class="browser-name"><abbr title="Chrome">CH 21-29</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome30 desktop obsolete" data-browser="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;30,<br>OP&#xA0;17</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome31 desktop obsolete" data-browser="chrome31"><a href="#chrome31" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;31,<br>OP&#xA0;18</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome33 desktop obsolete" data-browser="chrome33"><a href="#chrome33" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;32-33,<br>OP&#xA0;19-20</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome34 desktop obsolete" data-browser="chrome34"><a href="#chrome34" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;34,<br>OP&#xA0;21</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome35 desktop obsolete" data-browser="chrome35"><a href="#chrome35" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;35,<br>OP&#xA0;22</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome36 desktop obsolete" data-browser="chrome36"><a href="#chrome36" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;36,<br>OP&#xA0;23</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome37 desktop obsolete" data-browser="chrome37"><a href="#chrome37" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;37,<br>OP&#xA0;24</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome38 desktop obsolete" data-browser="chrome38"><a href="#chrome38" class="browser-name"><abbr title="Chrome, Opera">CH&#xA0;38,<br>OP&#xA0;25</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome39 desktop obsolete" data-browser="chrome39"><a href="#chrome39" class="browser-name"><abbr title="Chrome, Opera">CH 39,<br>OP&#xA0;26</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome40 desktop obsolete" data-browser="chrome40"><a href="#chrome40" class="browser-name"><abbr title="Chrome, Opera">CH 40,<br>OP&#xA0;27</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome41 desktop" data-browser="chrome41"><a href="#chrome41" class="browser-name"><abbr title="Chrome, Opera">CH 41,<br>OP&#xA0;28</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome42 desktop unstable" data-browser="chrome42"><a href="#chrome42" class="browser-name"><abbr title="Chrome, Opera">CH 42,<br>OP&#xA0;29</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
-<th class="platform chrome43 desktop unstable" data-browser="chrome43"><a href="#chrome43" class="browser-name"><abbr title="Chrome, Opera">CH 43,<br>OP&#xA0;30</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome30 desktop obsolete" data-browser="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;30,<br>OP&nbsp;17</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome31 desktop obsolete" data-browser="chrome31"><a href="#chrome31" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;31,<br>OP&nbsp;18</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome33 desktop obsolete" data-browser="chrome33"><a href="#chrome33" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;32-33,<br>OP&nbsp;19-20</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome34 desktop obsolete" data-browser="chrome34"><a href="#chrome34" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;34,<br>OP&nbsp;21</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome35 desktop obsolete" data-browser="chrome35"><a href="#chrome35" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;35,<br>OP&nbsp;22</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome36 desktop obsolete" data-browser="chrome36"><a href="#chrome36" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;36,<br>OP&nbsp;23</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome37 desktop obsolete" data-browser="chrome37"><a href="#chrome37" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;37,<br>OP&nbsp;24</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome38 desktop obsolete" data-browser="chrome38"><a href="#chrome38" class="browser-name"><abbr title="Chrome, Opera">CH&nbsp;38,<br>OP&nbsp;25</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome39 desktop obsolete" data-browser="chrome39"><a href="#chrome39" class="browser-name"><abbr title="Chrome, Opera">CH 39,<br>OP&nbsp;26</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome40 desktop obsolete" data-browser="chrome40"><a href="#chrome40" class="browser-name"><abbr title="Chrome, Opera">CH 40,<br>OP&nbsp;27</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome41 desktop" data-browser="chrome41"><a href="#chrome41" class="browser-name"><abbr title="Chrome, Opera">CH 41,<br>OP&nbsp;28</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome42 desktop unstable" data-browser="chrome42"><a href="#chrome42" class="browser-name"><abbr title="Chrome, Opera">CH 42,<br>OP&nbsp;29</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
+<th class="platform chrome43 desktop unstable" data-browser="chrome43"><a href="#chrome43" class="browser-name"><abbr title="Chrome, Opera">CH 43,<br>OP&nbsp;30</abbr><a href="#experimental-flag-note"><sup>[4]</sup></a></a></th>
 <th class="platform safari51 desktop obsolete" data-browser="safari51"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></a></th>
 <th class="platform safari6 desktop obsolete" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
@@ -189,7 +190,7 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="63">Optimisation</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="proper_tail_calls_(tail_call_optimisation)"><span><a class="anchor" href="#proper_tail_calls_(tail_call_optimisation)">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls">proper tail calls (tail call optimisation)</a></span></td>
+<tr class="supertest" significance="0.5"><td id="proper_tail_calls_(tail_call_optimisation)"><span><a class="anchor" href="#proper_tail_calls_(tail_call_optimisation)">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls">proper tail calls (tail call optimisation)</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0" data-flagged-tally="1">0/2</td>
 <td data-browser="babel" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/2</td>
@@ -405,7 +406,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 </tr>
 <tr class="category"><td colspan="63">Syntax</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
+<tr class="supertest" significance="0.5"><td id="default_function_parameters"><span><a class="anchor" href="#default_function_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">default function parameters</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
 <td data-browser="babel" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
@@ -881,7 +882,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
+<tr class="supertest" significance="0.5"><td id="rest_parameters"><span><a class="anchor" href="#rest_parameters">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions">rest parameters</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="babel" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
@@ -1012,7 +1013,7 @@ return (function (foo, ...args) {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="rest_parameters"><td><span>function &apos;length&apos; property</span><script data-source="
+<tr class="subtest" data-parent="rest_parameters"><td><span>function 'length' property</span><script data-source="
 return function(a, ...b){}.length === 1 &amp;&amp; function(...c){}.length === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");return Function("asyncTestPassed","\nreturn function(a, ...b){}.length === 1 && function(...c){}.length === 0;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1152,7 +1153,7 @@ return (function (foo, ...args) {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="rest_parameters"><td><span>can&apos;t be used in setters</span><script data-source="
+<tr class="subtest" data-parent="rest_parameters"><td><span>can't be used in setters</span><script data-source="
 return (function (...args) {
   try {
     eval(&quot;({set e(...args){}})&quot;);
@@ -1292,7 +1293,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="spread_(...)_operator"><span><a class="anchor" href="#spread_(...)_operator">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation">spread (...) operator</a></span></td>
+<tr class="supertest" significance="1"><td id="spread_(...)_operator"><span><a class="anchor" href="#spread_(...)_operator">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation">spread (...) operator</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">10/10</td>
 <td data-browser="babel" class="tally" data-tally="1">10/10</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
@@ -2019,7 +2020,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="object_literal_extensions"><span><a class="anchor" href="#object_literal_extensions">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">object literal extensions</a></span></td>
+<tr class="supertest" significance="1"><td id="object_literal_extensions"><span><a class="anchor" href="#object_literal_extensions">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser">object literal extensions</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">5/5</td>
 <td data-browser="babel" class="tally" data-tally="1">5/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">5/5</td>
@@ -2422,7 +2423,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="for..of_loops"><span><a class="anchor" href="#for..of_loops">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements">for..of loops</a></span></td>
+<tr class="supertest" significance="1"><td id="for..of_loops"><span><a class="anchor" href="#for..of_loops">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements">for..of loops</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">5/5</td>
 <td data-browser="babel" class="tally" data-tally="1">5/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
@@ -2833,7 +2834,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="octal_and_binary_literals"><span><a class="anchor" href="#octal_and_binary_literals">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals">octal and binary literals</a></span></td>
+<tr class="supertest" significance="0.25"><td id="octal_and_binary_literals"><span><a class="anchor" href="#octal_and_binary_literals">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals">octal and binary literals</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td data-browser="babel" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -3160,7 +3161,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="template_strings"><span><a class="anchor" href="#template_strings">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">template strings</a></span></td>
+<tr class="supertest" significance="1"><td id="template_strings"><span><a class="anchor" href="#template_strings">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals">template strings</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">2/2</td>
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">2/2</td>
@@ -3368,7 +3369,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="RegExp_y_and_u_flags"><span><a class="anchor" href="#RegExp_y_and_u_flags">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky">RegExp &quot;y&quot; and &quot;u&quot; flags</a></span></td>
+<tr class="supertest" significance="0.5"><td id="RegExp_y_and_u_flags"><span><a class="anchor" href="#RegExp_y_and_u_flags">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky">RegExp "y" and "u" flags</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="babel" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/2</td>
@@ -3431,7 +3432,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
 </tr>
-<tr class="subtest" data-parent="RegExp_y_and_u_flags"><td><span>&quot;y&quot; flag</span><script data-source="
+<tr class="subtest" data-parent="RegExp_y_and_u_flags"><td><span>"y" flag</span><script data-source="
 var re = new RegExp(&apos;\\w&apos;);
 var re2 = new RegExp(&apos;\\w&apos;, &apos;y&apos;);
 re.exec(&apos;xy&apos;);
@@ -3501,7 +3502,7 @@ return (re.exec(&apos;xy&apos;)[0] === &apos;x&apos; &amp;&amp; re2.exec(&apos;x
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="RegExp_y_and_u_flags"><td><span>&quot;u&quot; flag</span><script data-source="
+<tr class="subtest" data-parent="RegExp_y_and_u_flags"><td><span>"u" flag</span><script data-source="
 return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nreturn \"𠮷\".match(/./u)[0].length === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -3567,7 +3568,7 @@ return &quot;&#x20BB7;&quot;.match(/./u)[0].length === 2;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="destructuring"><span><a class="anchor" href="#destructuring">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
+<tr class="supertest" significance="1"><td id="destructuring"><span><a class="anchor" href="#destructuring">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment">destructuring</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8275862068965517" style="background-color:hsl(99,49%,50%)">24/29</td>
 <td data-browser="babel" class="tally" data-tally="0.8620689655172413" style="background-color:hsl(103,48%,50%)" data-flagged-tally="0.896551724137931">25/29</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6896551724137931" style="background-color:hsl(82,55%,50%)">20/29</td>
@@ -4942,7 +4943,7 @@ return new Function(&quot;{a, x:b, y:e}&quot;,&quot;[c, d]&quot;,
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="subtest" data-parent="destructuring"><td><span>in parameters, function &apos;length&apos; property</span><script data-source="
+<tr class="subtest" data-parent="destructuring"><td><span>in parameters, function 'length' property</span><script data-source="
 return function({a, b}, [c, d]){}.length === 2;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");return Function("asyncTestPassed","\nreturn function({a, b}, [c, d]){}.length === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -5632,7 +5633,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="Unicode_code_point_escapes"><span><a class="anchor" href="#Unicode_code_point_escapes">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals">Unicode code point escapes</a></span></td>
+<tr class="supertest" significance="0.25"><td id="Unicode_code_point_escapes"><span><a class="anchor" href="#Unicode_code_point_escapes">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals">Unicode code point escapes</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="babel" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
@@ -5830,7 +5831,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 </tr>
 <tr class="category"><td colspan="63">Bindings</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="const"><span><a class="anchor" href="#const">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">const</a></span></td>
+<tr class="supertest" significance="0.5"><td id="const"><span><a class="anchor" href="#const">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">const</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
 <td data-browser="babel" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)" data-flagged-tally="1">6/8</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
@@ -6445,7 +6446,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="let"><span><a class="anchor" href="#let">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let</a></span></td>
+<tr class="supertest" significance="0.5"><td id="let"><span><a class="anchor" href="#let">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations">let</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td data-browser="babel" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)" data-flagged-tally="1">8/10</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
@@ -7209,7 +7210,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="0.25"><td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[12]</sup></a></span><script data-source="
+<tr significance="0.25"><td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[12]</sup></a></span><script data-source="
 &apos;use strict&apos;;
 function f() { return 1; }
 {
@@ -7282,7 +7283,7 @@ return f() === 1;
 </tr>
 <tr class="category"><td colspan="63">Functions</td>
 </tr>
-<tr class="supertest" significance="1"><td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions">arrow functions</a></span></td>
+<tr class="supertest" significance="1"><td id="arrow_functions"><span><a class="anchor" href="#arrow_functions">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions">arrow functions</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
 <td data-browser="babel" class="tally" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
@@ -7545,7 +7546,7 @@ return (c(6, 5, 4, 3, 2) === &quot;65432&quot;);
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>lexical &quot;this&quot; binding</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>lexical "this" binding</span><script data-source="
 var d = { x : &quot;bar&quot;, y : function() { return z =&gt; this.x + z; }}.y();
 var e = { x : &quot;baz&quot;, y : d };
 return d(&quot;ley&quot;) === &quot;barley&quot; &amp;&amp; e.y(&quot;ley&quot;) === &quot;barley&quot;;
@@ -7613,7 +7614,7 @@ return d(&quot;ley&quot;) === &quot;barley&quot; &amp;&amp; e.y(&quot;ley&quot;)
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>&quot;this&quot; unchanged by call or apply</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>"this" unchanged by call or apply</span><script data-source="
 var d = { x : &quot;foo&quot;, y : function() { return () =&gt; this.x; }};
 var e = { x : &quot;bar&quot; };
 return d.y().call(e) === &quot;foo&quot; &amp;&amp; d.y().apply(e) === &quot;foo&quot;;
@@ -7681,7 +7682,7 @@ return d.y().call(e) === &quot;foo&quot; &amp;&amp; d.y().apply(e) === &quot;foo
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>can&apos;t be bound, can be curried</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>can't be bound, can be curried</span><script data-source="
 var d = { x : &quot;bar&quot;, y : function() { return z =&gt; this.x + z; }};
 var e = { x : &quot;baz&quot; };
 return d.y().bind(e, &quot;ley&quot;)() === &quot;barley&quot;;
@@ -7749,7 +7750,7 @@ return d.y().bind(e, &quot;ley&quot;)() === &quot;barley&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>lexical &quot;arguments&quot; binding</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>lexical "arguments" binding</span><script data-source="
 var f = (function() { return z =&gt; arguments[0]; }(5));
 return f(6) === 5;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");return Function("asyncTestPassed","\nvar f = (function() { return z => arguments[0]; }(5));\nreturn f(6) === 5;\n      ")(asyncTestPassed);}catch(e){return false;}}());
@@ -7816,7 +7817,7 @@ return f(6) === 5;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>no line break between params and <code>=&gt;</code></span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>no line break between params and <code>=></code></span><script data-source="
 return (() =&gt; {
   try { Function(&quot;x\n =&gt; 2&quot;)(); } catch(e) { return true; }
 })();
@@ -7884,7 +7885,7 @@ return (() =&gt; {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>no &quot;prototype&quot; property</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>no "prototype" property</span><script data-source="
 var a = () =&gt; 5;
 return !a.hasOwnProperty(&quot;prototype&quot;);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");return Function("asyncTestPassed","\nvar a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\");\n      ")(asyncTestPassed);}catch(e){return false;}}());
@@ -7951,7 +7952,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>lexical &quot;super&quot; binding</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>lexical "super" binding</span><script data-source="
 class B {
   qux() {
     return &quot;quux&quot;;
@@ -8028,7 +8029,7 @@ return arrow() === &quot;quux&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="arrow_functions"><td><span>lexical &quot;new.target&quot; binding</span><script data-source="
+<tr class="subtest" data-parent="arrow_functions"><td><span>lexical "new.target" binding</span><script data-source="
 function C() {
   return x =&gt; new.target;
 }
@@ -8097,7 +8098,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="class"><span><a class="anchor" href="#class">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
+<tr class="supertest" significance="1"><td id="class"><span><a class="anchor" href="#class">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions">class</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.6818181818181818" style="background-color:hsl(81,56%,50%)">15/22</td>
 <td data-browser="babel" class="tally" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">18/22</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6818181818181818" style="background-color:hsl(81,56%,50%)">15/22</td>
@@ -9214,7 +9215,7 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="class"><td><span>methods aren&apos;t enumerable</span><script data-source="
+<tr class="subtest" data-parent="class"><td><span>methods aren't enumerable</span><script data-source="
 class C {
   foo() {}
   static bar() {}
@@ -9714,7 +9715,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="super"><span><a class="anchor" href="#super">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword">super</a></span></td>
+<tr class="supertest" significance="0.5"><td id="super"><span><a class="anchor" href="#super">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword">super</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">4/4</td>
 <td data-browser="babel" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">4/4</td>
@@ -10071,7 +10072,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="generators"><span><a class="anchor" href="#generators">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions">generators</a></span></td>
+<tr class="supertest" significance="1"><td id="generators"><span><a class="anchor" href="#generators">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions">generators</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">16/16</td>
 <td data-browser="babel" class="tally" data-tally="0.9375" style="background-color:hsl(112,44%,50%)">15/16</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/16</td>
@@ -10210,7 +10211,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="generators"><td><span>correct &quot;this&quot; binding</span><script data-source="
+<tr class="subtest" data-parent="generators"><td><span>correct "this" binding</span><script data-source="
 function * generator(){
   yield this.x; yield this.y;
 };
@@ -11356,7 +11357,7 @@ return passed;
 </tr>
 <tr class="category"><td colspan="63">Built-ins</td>
 </tr>
-<tr class="supertest" significance="1"><td id="typed_arrays"><span><a class="anchor" href="#typed_arrays">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects">typed arrays</a></span></td>
+<tr class="supertest" significance="1"><td id="typed_arrays"><span><a class="anchor" href="#typed_arrays">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects">typed arrays</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/40</td>
 <td data-browser="babel" class="tally" data-tally="0">0/40</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/40</td>
@@ -14285,7 +14286,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Map"><span><a class="anchor" href="#Map">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects">Map</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Map"><span><a class="anchor" href="#Map">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects">Map</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.9090909090909091" style="background-color:hsl(109,46%,50%)">10/11</td>
 <td data-browser="babel" class="tally" data-tally="1">11/11</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/11</td>
@@ -15096,7 +15097,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Set"><span><a class="anchor" href="#Set">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Set"><span><a class="anchor" href="#Set">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects">Set</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.9090909090909091" style="background-color:hsl(109,46%,50%)">10/11</td>
 <td data-browser="babel" class="tally" data-tally="1">11/11</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/11</td>
@@ -15909,7 +15910,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="WeakMap"><span><a class="anchor" href="#WeakMap">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
+<tr class="supertest" significance="0.5"><td id="WeakMap"><span><a class="anchor" href="#WeakMap">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects">WeakMap</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/5</td>
 <td data-browser="babel" class="tally" data-tally="1">5/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/5</td>
@@ -16317,7 +16318,7 @@ return m.get(f) === 42;
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="WeakSet"><span><a class="anchor" href="#WeakSet">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
+<tr class="supertest" significance="0.5"><td id="WeakSet"><span><a class="anchor" href="#WeakSet">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects">WeakSet</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/4</td>
 <td data-browser="babel" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/4</td>
@@ -16655,7 +16656,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="Proxy"><span><a class="anchor" href="#Proxy">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots">Proxy</a></span></td>
+<tr class="supertest" significance="1"><td id="Proxy"><span><a class="anchor" href="#Proxy">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots">Proxy</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/20</td>
 <td data-browser="babel" class="tally" data-tally="0">0/20</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/20</td>
@@ -16718,7 +16719,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td data-browser="ios7" class="tally" data-tally="0">0/20</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/20</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;get&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"get" handler</span><script data-source="
 var proxied = { };
 var proxy = new Proxy(proxied, {
   get: function (t, k, r) {
@@ -16790,7 +16791,7 @@ return proxy.foo === 5;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;get&quot; handler, instances of proxies</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"get" handler, instances of proxies</span><script data-source="
 var proxied = { };
 var proxy = Object.create(new Proxy(proxied, {
   get: function (t, k, r) {
@@ -16862,7 +16863,7 @@ return proxy.foo === 5;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;set&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"set" handler</span><script data-source="
 var proxied = { };
 var passed = false;
 var proxy = new Proxy(proxied, {
@@ -16936,7 +16937,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;set&quot; handler, instances of proxies</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"set" handler, instances of proxies</span><script data-source="
 var proxied = { };
 var passed = false;
 var proxy = Object.create(new Proxy(proxied, {
@@ -17010,7 +17011,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;has&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"has" handler</span><script data-source="
 var proxied = {};
 var passed = false;
 &quot;foo&quot; in new Proxy(proxied, {
@@ -17083,7 +17084,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;has&quot; handler, instances of proxies</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"has" handler, instances of proxies</span><script data-source="
 var proxied = {};
 var passed = false;
 &quot;foo&quot; in Object.create(new Proxy(proxied, {
@@ -17156,7 +17157,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;deleteProperty&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"deleteProperty" handler</span><script data-source="
 var proxied = {};
   var passed = false;
   delete new Proxy(proxied, {
@@ -17229,7 +17230,7 @@ var proxied = {};
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;getOwnPropertyDescriptor&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"getOwnPropertyDescriptor" handler</span><script data-source="
 var proxied = {};
 var fakeDesc = { value: &quot;foo&quot;, configurable: true };
 var returnedDesc = Object.getOwnPropertyDescriptor(
@@ -17308,7 +17309,7 @@ return (returnedDesc.value     === fakeDesc.value
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;defineProperty&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"defineProperty" handler</span><script data-source="
 var proxied = {};
 var passed = false;
 Object.defineProperty(
@@ -17386,7 +17387,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;getPrototypeOf&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"getPrototypeOf" handler</span><script data-source="
 var proxied = {};
 var fakeProto = {};
 var proxy = new Proxy(proxied, {
@@ -17459,7 +17460,7 @@ return Object.getPrototypeOf(proxy) === fakeProto;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;setPrototypeOf&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"setPrototypeOf" handler</span><script data-source="
 var proxied = {};
 var newProto = {};
 var passed = false;
@@ -17537,7 +17538,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;isExtensible&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"isExtensible" handler</span><script data-source="
 var proxied = {};
 var passed = false;
 Object.isExtensible(
@@ -17612,7 +17613,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;preventExtensions&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"preventExtensions" handler</span><script data-source="
 var proxied = {};
 var passed = false;
 Object.preventExtensions(
@@ -17688,7 +17689,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;enumerate&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"enumerate" handler</span><script data-source="
 var proxied = {};
 var passed = false;
 for (var i in
@@ -17766,7 +17767,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;ownKeys&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"ownKeys" handler</span><script data-source="
 var proxied = {};
 var passed = false;
 Object.keys(
@@ -17841,7 +17842,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;apply&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"apply" handler</span><script data-source="
 var proxied = function(){};
 var passed = false;
 var host = {
@@ -17917,7 +17918,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Proxy"><td><span>&quot;construct&quot; handler</span><script data-source="
+<tr class="subtest" data-parent="Proxy"><td><span>"construct" handler</span><script data-source="
 var proxied = function(){};
 var passed = false;
 new new Proxy(proxied, {
@@ -18197,7 +18198,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Reflect"><span><a class="anchor" href="#Reflect">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Reflect"><span><a class="anchor" href="#Reflect">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection">Reflect</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/15</td>
 <td data-browser="babel" class="tally" data-tally="0.8666666666666667" style="background-color:hsl(104,47%,50%)">13/15</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/15</td>
@@ -19283,7 +19284,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="Promise"><span><a class="anchor" href="#Promise">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
+<tr class="supertest" significance="1"><td id="Promise"><span><a class="anchor" href="#Promise">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects">Promise</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">3/3</td>
 <td data-browser="babel" class="tally" data-tally="1">3/3</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/3</td>
@@ -19593,7 +19594,7 @@ function check() {
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Symbol"><span><a class="anchor" href="#Symbol">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Symbol"><span><a class="anchor" href="#Symbol">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor">Symbol</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">3/9</td>
 <td data-browser="babel" class="tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)" data-flagged-tally="0.6666666666666666">5/9</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/9</td>
@@ -20301,7 +20302,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">well-known symbols</a></span></td>
+<tr class="supertest" significance="0.5"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols">well-known symbols</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 <td data-browser="babel" class="tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/7</td>
@@ -20868,7 +20869,7 @@ with (a) {
 </tr>
 <tr class="category"><td colspan="63">Built-in extensions</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Object_static_methods"><span><a class="anchor" href="#Object_static_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Object_static_methods"><span><a class="anchor" href="#Object_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td data-browser="babel" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/4</td>
@@ -21201,7 +21202,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="function_name_property"><span><a class="anchor" href="#function_name_property">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function &quot;name&quot; property</a></span></td>
+<tr class="supertest" significance="0.25"><td id="function_name_property"><span><a class="anchor" href="#function_name_property">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function "name" property</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/17</td>
 <td data-browser="babel" class="tally" data-tally="0.7647058823529411" style="background-color:hsl(91,52%,50%)">13/17</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/17</td>
@@ -22359,7 +22360,7 @@ return C.foo.name === &quot;foo&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="function_name_property"><td><span>isn&apos;t writable, is configurable</span><script data-source="
+<tr class="subtest" data-parent="function_name_property"><td><span>isn't writable, is configurable</span><script data-source="
 var descriptor = Object.getOwnPropertyDescriptor(function f(){},&quot;name&quot;);
 return descriptor.enumerable   === false &amp;&amp;
        descriptor.writable     === false &amp;&amp;
@@ -22428,7 +22429,7 @@ return descriptor.enumerable   === false &amp;&amp;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="String_static_methods"><span><a class="anchor" href="#String_static_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor">String static methods</a></span></td>
+<tr class="supertest" significance="0.5"><td id="String_static_methods"><span><a class="anchor" href="#String_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor">String static methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">2/2</td>
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/2</td>
@@ -22623,7 +22624,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="String.prototype_methods"><span><a class="anchor" href="#String.prototype_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object">String.prototype methods</a></span></td>
+<tr class="supertest" significance="0.5"><td id="String.prototype_methods"><span><a class="anchor" href="#String.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object">String.prototype methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="babel" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/6</td>
@@ -23088,7 +23089,7 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="RegExp.prototype_properties"><span><a class="anchor" href="#RegExp.prototype_properties">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype properties</a></span></td>
+<tr class="supertest" significance="0.25"><td id="RegExp.prototype_properties"><span><a class="anchor" href="#RegExp.prototype_properties">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype">RegExp.prototype properties</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/5</td>
 <td data-browser="babel" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">1/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/5</td>
@@ -23481,7 +23482,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Array_static_methods"><span><a class="anchor" href="#Array_static_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor">Array static methods</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Array_static_methods"><span><a class="anchor" href="#Array_static_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor">Array static methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">7/7</td>
 <td data-browser="babel" class="tally" data-tally="1">7/7</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/7</td>
@@ -24017,7 +24018,7 @@ return typeof Array.of === &apos;function&apos; &amp;&amp;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Array.prototype_methods"><span><a class="anchor" href="#Array.prototype_methods">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object">Array.prototype methods</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Array.prototype_methods"><span><a class="anchor" href="#Array.prototype_methods">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object">Array.prototype methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
 <td data-browser="babel" class="tally" data-tally="1">8/8</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/8</td>
@@ -24616,7 +24617,7 @@ return true;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="Number_properties"><span><a class="anchor" href="#Number_properties">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number properties</a></span></td>
+<tr class="supertest" significance="0.25"><td id="Number_properties"><span><a class="anchor" href="#Number_properties">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number">Number properties</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">7/7</td>
 <td data-browser="babel" class="tally" data-tally="1">7/7</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/7</td>
@@ -25141,7 +25142,7 @@ return typeof Number.MAX_SAFE_INTEGER === &apos;number&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="Math_methods"><span><a class="anchor" href="#Math_methods">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math">Math methods</a></span></td>
+<tr class="supertest" significance="0.25"><td id="Math_methods"><span><a class="anchor" href="#Math_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math">Math methods</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">17/17</td>
 <td data-browser="babel" class="tally" data-tally="1">17/17</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/17</td>
@@ -26331,7 +26332,7 @@ return Math.hypot() === 0 &amp;&amp;
 </tr>
 <tr class="category"><td colspan="63">Subclassing</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="Array_is_subclassable"><span><a class="anchor" href="#Array_is_subclassable">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor">Array is subclassable</a></span></td>
+<tr class="supertest" significance="0.5"><td id="Array_is_subclassable"><span><a class="anchor" href="#Array_is_subclassable">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor">Array is subclassable</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/4</td>
 <td data-browser="babel" class="tally" data-tally="0">0/4</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/4</td>
@@ -26669,7 +26670,7 @@ return C.of(0) instanceof C;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="RegExp_is_subclassable"><span><a class="anchor" href="#RegExp_is_subclassable">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor">RegExp is subclassable</a></span></td>
+<tr class="supertest" significance="0.25"><td id="RegExp_is_subclassable"><span><a class="anchor" href="#RegExp_is_subclassable">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor">RegExp is subclassable</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/3</td>
 <td data-browser="babel" class="tally" data-tally="0">0/3</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/3</td>
@@ -26936,7 +26937,7 @@ return r.test(&quot;foobarbaz&quot;);
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="Function_is_subclassable"><span><a class="anchor" href="#Function_is_subclassable">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor">Function is subclassable</a></span></td>
+<tr class="supertest" significance="0.25"><td id="Function_is_subclassable"><span><a class="anchor" href="#Function_is_subclassable">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor">Function is subclassable</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/5</td>
 <td data-browser="babel" class="tally" data-tally="0">0/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/5</td>
@@ -27067,7 +27068,7 @@ return c() === &apos;foo&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Function_is_subclassable"><td><span>can be used with &quot;new&quot;</span><script data-source="
+<tr class="subtest" data-parent="Function_is_subclassable"><td><span>can be used with "new"</span><script data-source="
 class C extends Function {}
 var c = new C(&quot;this.bar = 2;&quot;);
 c.prototype.baz = 3;
@@ -27340,7 +27341,7 @@ return c(6) === 9 &amp;&amp; c instanceof C;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="Promise_is_subclassable"><span><a class="anchor" href="#Promise_is_subclassable">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor">Promise is subclassable</a></span></td>
+<tr class="supertest" significance="0.25"><td id="Promise_is_subclassable"><span><a class="anchor" href="#Promise_is_subclassable">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor">Promise is subclassable</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">3/3</td>
 <td data-browser="babel" class="tally" data-tally="1">3/3</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/3</td>
@@ -27653,7 +27654,7 @@ function check() {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="miscellaneous_subclassables"><span><a class="anchor" href="#miscellaneous_subclassables">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor">miscellaneous subclassables</a></span></td>
+<tr class="supertest" significance="0.25"><td id="miscellaneous_subclassables"><span><a class="anchor" href="#miscellaneous_subclassables">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor">miscellaneous subclassables</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td data-browser="babel" class="tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/5</td>
@@ -28072,7 +28073,7 @@ return set.has(123);
 </tr>
 <tr class="category"><td colspan="63">Misc</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="Object_static_methods_accept_primitives"><span><a class="anchor" href="#Object_static_methods_accept_primitives">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods accept primitives</a></span></td>
+<tr class="supertest" significance="0.25"><td id="Object_static_methods_accept_primitives"><span><a class="anchor" href="#Object_static_methods_accept_primitives">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor">Object static methods accept primitives</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/10</td>
 <td data-browser="babel" class="tally" data-tally="1">10/10</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/10</td>
@@ -28798,7 +28799,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="miscellaneous"><span><a class="anchor" href="#miscellaneous">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
+<tr class="supertest" significance="0.25"><td id="miscellaneous"><span><a class="anchor" href="#miscellaneous">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td data-browser="babel" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
@@ -29136,7 +29137,7 @@ catch(e) {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="miscellaneous"><td><span>accessors aren&apos;t constructors</span><script data-source="
+<tr class="subtest" data-parent="miscellaneous"><td><span>accessors aren't constructors</span><script data-source="
 try {
   new (Object.getOwnPropertyDescriptor({get a(){}}, &apos;a&apos;)).get;
 } catch(e) {
@@ -29421,7 +29422,7 @@ return true;
 </tr>
 <tr class="category"><td colspan="63">Annex b</td>
 </tr>
-<tr significance="0.25" class="annex_b"><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
+<tr significance="0.25" class="annex_b"><td id="hoisted_block-level_function_declaration"><span><a class="anchor" href="#hoisted_block-level_function_declaration">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics">hoisted block-level function declaration</a></span><script data-source="
 // Note: only available outside of strict mode.
 { function f() { return 1; } }
   function g() { return 1; }
@@ -29494,7 +29495,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest annex_b" significance="0.25"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[28]</sup></a></span></td>
+<tr class="supertest annex_b" significance="0.25"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[28]</sup></a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="babel" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="es6tr" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms." data-tally="0">0/5</td>
@@ -29904,7 +29905,7 @@ return !({ __proto__(){} } instanceof Function);
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest annex_b" significance="0.25"><td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
+<tr class="supertest annex_b" significance="0.25"><td id="Object.prototype.__proto__"><span><a class="anchor" href="#Object.prototype.__proto__">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__">Object.prototype.__proto__</a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="babel" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="es6tr" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms." data-tally="0">0/3</td>
@@ -30175,7 +30176,7 @@ return (desc
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="supertest annex_b" significance="0.25"><td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
+<tr class="supertest annex_b" significance="0.25"><td id="String.prototype_HTML_methods"><span><a class="anchor" href="#String.prototype_HTML_methods">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="babel" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="es6tr" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms." data-tally="0">0/3</td>
@@ -30311,7 +30312,7 @@ return true;
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="subtest" data-parent="String.prototype_HTML_methods"><td><span>tags&apos; names are lowercase</span><script data-source="
+<tr class="subtest" data-parent="String.prototype_HTML_methods"><td><span>tags' names are lowercase</span><script data-source="
 var i, names = [&quot;anchor&quot;, &quot;big&quot;, &quot;bold&quot;, &quot;fixed&quot;, &quot;fontcolor&quot;, &quot;fontsize&quot;,
   &quot;italics&quot;, &quot;link&quot;, &quot;small&quot;, &quot;strike&quot;, &quot;sub&quot;, &quot;sup&quot;];
 for (i = 0; i &lt; names.length; i++) {
@@ -30456,7 +30457,7 @@ return true;
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr significance="0.25" class="annex_b"><td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span><script data-source="
+<tr significance="0.25" class="annex_b"><td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&sect;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span><script data-source="
 return typeof RegExp.prototype.compile === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("438");return Function("asyncTestPassed","\nreturn typeof RegExp.prototype.compile === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -30526,11 +30527,11 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
     </table>
     <div id="footnotes">
       <div id="create-iterable-object">
-        <code>__createIterableObject()</code>, used in the numerous &quot;generic iterables&quot; tests, is defined as:
+        <code>__createIterableObject()</code>, used in the numerous "generic iterables" tests, is defined as:
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff11-object-destructuring-note">  <sup>[9]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[10]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[11]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="typescript-class-note">  <sup>[13]</sup> TypeScript only supports class statements at script or module top-level.</p><p id="strict-required-note">  <sup>[14]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[15]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[16]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[17]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[18]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[19]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[20]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[21]</sup> <code>with</code> is not supported in ejs</p><p id="string-contains-note">  <sup>[22]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[23]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[24]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[25]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[26]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[27]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[28]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via "Experimental Web Platform Features" flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via "Experimental Javascript features" flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.</p><p id="ff11-object-destructuring-note">  <sup>[9]</sup> Firefox <16 incorrectly="" treats=""><code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</16></p><p id="webkit-object-destructuring-note">  <sup>[10]</sup> WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[11]</sup> Available for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="typescript-class-note">  <sup>[13]</sup> TypeScript only supports class statements at script or module top-level.</p><p id="strict-required-note">  <sup>[14]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[15]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[16]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[17]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[18]</sup> Firefox 18 up to 37 doesn't allow a proxy's "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy's "has" handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[19]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[20]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[21]</sup> <code>with</code> is not supported in ejs</p><p id="string-contains-note">  <sup>[22]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[23]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[24]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype["@@iterator"]</code></p><p id="array-prototype-iterator-note">  <sup>[25]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[26]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[27]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[28]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

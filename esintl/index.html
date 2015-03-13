@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECMAScript Internationalisation compatibility table</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
+    <link rel="stylesheet" href="../master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../master.js"></script>
+    <script>
+      var __script_executed = {};
+      if (typeof global === 'undefined') {
+        var global = this;
+      }
+      function __createIterableObject(a, b, c) {
+        if (typeof Symbol === "function" && Symbol.iterator) {
+          var arr = [a, b, c, ,];
+          var iterable = {
+            next: function() {
+              return { value: arr.shift(), done: arr.length <= 0 };
+            },
+          };
+          iterable[Symbol.iterator] = function(){ return iterable; }
+          return iterable;
+        }
+        else {
+          return eval("(function*() { yield a; yield b; yield c; }())");
+        }
+      }
+    </script>
+    <script>
+      (function() {
+        var s = document.createElement('script'),
+            t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        t.parentNode.insertBefore(s, t);
+      })();
+    </script>
+</head>
+<body class="esintl">
+  <div id="header">
+
+    ECMAScript
+    <span class="versions">
+      <a href="../es5">5</a><!--
+      --><a href="../es6">6</a><!--
+      --><a href="../es7">7</a><!--
+      --><a href="../esintl" class="current">intl</a><!--
+      --><a href="../non-standard">non-standard</a>
+    </span>
+    compatibility table
+
+    <span style="font-size:0.8em;float:right;font-weight:normal;">
+
+      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://kangax.github.io/compat-table/esintl/"></a>
+
+      <script async src="https://www.google-analytics.com/ga.js"></script>
+      <span class="by">
+        by
+        <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
+        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="http://grtp.co/v1.js"></script>
+        &amp;
+        <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
+      </span>
+    </span>
+  </div>
+  <div id="body">
+    <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
+      not functionality or full conformance.</p>
+
+    <label for="sort">Sort by number of features?</label>
+    <input id="sort" type="checkbox">
+
+    <label for="show-obsolete">Show obsolete browsers?</label>
+    <input id="show-obsolete" type="checkbox">
+
+    <table id="table-wrapper">
+      <colgroup>
+        <col>
+        <col class="this-browser-col">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="3" class="platformtype"></th>
+
+          <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+
+          <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
+
+          <th colspan="2" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
+
+        </tr>
+
+        <tr>
+          <th class="test-name">Feature name</th>
+
+          <th class="current">Current browser</th>
+
+          <th></th>
+
+          <!-- TABLE HEADERS -->
+        <th class="platform ie9 desktop" data-browser="ie9"><a href="#ie9" class="browser-name"><abbr title="Internet Explorer">IE 9</abbr></a></th>
+<th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
+<th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
+<th class="platform ie11tp desktop" data-browser="ie11tp"><a href="#ie11tp" class="browser-name"><abbr title="Internet Explorer">IE<br>Technical<br>Preview</abbr><a href="#ie-experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform firefox16 desktop obsolete" data-browser="firefox16"><a href="#firefox16" class="browser-name"><abbr title="Firefox">FF 16-28</abbr></a></th>
+<th class="platform firefox29 desktop obsolete" data-browser="firefox29"><a href="#firefox29" class="browser-name"><abbr title="Firefox">FF 29</abbr></a></th>
+<th class="platform firefox30 desktop obsolete" data-browser="firefox30"><a href="#firefox30" class="browser-name"><abbr title="Firefox">FF 30</abbr></a></th>
+<th class="platform firefox31 desktop" data-browser="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></a></th>
+<th class="platform firefox32 desktop obsolete" data-browser="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></a></th>
+<th class="platform firefox33 desktop obsolete" data-browser="firefox33"><a href="#firefox33" class="browser-name"><abbr title="Firefox">FF 33</abbr></a></th>
+<th class="platform firefox34 desktop" data-browser="firefox34"><a href="#firefox34" class="browser-name"><abbr title="Firefox">FF 34</abbr></a></th>
+<th class="platform firefox35 desktop" data-browser="firefox35"><a href="#firefox35" class="browser-name"><abbr title="Firefox">FF 35</abbr></a></th>
+<th class="platform firefox36 desktop" data-browser="firefox36"><a href="#firefox36" class="browser-name"><abbr title="Firefox">FF 36</abbr></a></th>
+<th class="platform chrome22 desktop obsolete" data-browser="chrome22"><a href="#chrome22" class="browser-name"><abbr title="Chrome 22">CH 22</abbr></a></th>
+<th class="platform chrome24 desktop" data-browser="chrome24"><a href="#chrome24" class="browser-name"><abbr title="Chrome 24-29, Opera 16+">CH 24-29,<br>OP 15+</abbr></a></th>
+<th class="platform chrome29 desktop" data-browser="chrome29"><a href="#chrome29" class="browser-name"><abbr title="Chrome 29+, Opera 16+">CH 29+,<br>OP 16+</abbr></a></th>
+<th class="platform safari51 desktop obsolete" data-browser="safari51"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></a></th>
+<th class="platform safari6 desktop" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
+<th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7.0</abbr></a></th>
+<th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
+<th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r179984">WK</abbr></a></th>
+<th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
+<th class="platform node10 engine" data-browser="node10"><a href="#node10" class="browser-name"><abbr title="Node 0.10">Node .10</abbr></a></th>
+<th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr></a></th>
+<th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr></a></th>
+<th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr></a></th>
+<th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
+<th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
+</tr>
+
+      </thead>
+      <tbody>
+        <!-- TABLE BODY -->
+      <tr class="supertest" significance="1"><td id="Intl_object"><span><a class="anchor" href="#Intl_object">&sect;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-8">Intl object</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="0">0/2</td>
+<td data-browser="ie10" class="tally" data-tally="0">0/2</td>
+<td data-browser="ie11" class="tally" data-tally="1">2/2</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">2/2</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">2/2</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">2/2</td>
+<td data-browser="firefox31" class="tally" data-tally="1">2/2</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">2/2</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">2/2</td>
+<td data-browser="firefox34" class="tally" data-tally="1">2/2</td>
+<td data-browser="firefox35" class="tally" data-tally="1">2/2</td>
+<td data-browser="firefox36" class="tally" data-tally="1">2/2</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome24" class="tally" data-tally="1">2/2</td>
+<td data-browser="chrome29" class="tally" data-tally="1">2/2</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="safari6" class="tally" data-tally="0">0/2</td>
+<td data-browser="safari7" class="tally" data-tally="0">0/2</td>
+<td data-browser="safari71_8" class="tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="tally" data-tally="0">0/2</td>
+<td data-browser="opera" class="tally" data-tally="0">0/2</td>
+<td data-browser="node10" class="tally" data-tally="0">0/2</td>
+<td data-browser="node12" class="tally" data-tally="1">2/2</td>
+<td data-browser="iojs1_0" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs1_1" class="tally" data-tally="0">0/2</td>
+<td data-browser="ios7" class="tally" data-tally="0">0/2</td>
+<td data-browser="ios8" class="tally" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="Intl_object"><td><span>exists on global</span><script data-source="
+return typeof Intl === &apos;object&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nreturn typeof Intl === 'object';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="Intl_object"><td><span>has prototype of Object</span><script data-source="
+return Intl.constructor === Object;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\nreturn Intl.constructor === Object;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Intl.Collator"><span><a class="anchor" href="#Intl.Collator">&sect;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10">Intl.Collator</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="0">0/5</td>
+<td data-browser="ie10" class="tally" data-tally="0">0/5</td>
+<td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="ie11tp" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox31" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox34" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox35" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox36" class="tally" data-tally="1">5/5</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="chrome24" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="chrome29" class="tally" data-tally="1">5/5</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="safari6" class="tally" data-tally="0">0/5</td>
+<td data-browser="safari7" class="tally" data-tally="0">0/5</td>
+<td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
+<td data-browser="webkit" class="tally" data-tally="0">0/5</td>
+<td data-browser="opera" class="tally" data-tally="0">0/5</td>
+<td data-browser="node10" class="tally" data-tally="0">0/5</td>
+<td data-browser="node12" class="tally" data-tally="1">5/5</td>
+<td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="ios7" class="tally" data-tally="0">0/5</td>
+<td data-browser="ios8" class="tally" data-tally="0">0/5</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator"><td><span>exists on intl object</span><script data-source="
+return typeof Intl.Collator === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");return Function("asyncTestPassed","\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator"><td><span>creates new Collator instances</span><script data-source="
+return new Intl.Collator() instanceof Intl.Collator;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");return Function("asyncTestPassed","\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator"><td><span>constructor called without new creates instances</span><script data-source="
+return Intl.Collator() instanceof Intl.Collator;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");return Function("asyncTestPassed","\nreturn Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator"><td><span>calling Collator with Collator instance throws error</span><script data-source="
+try {
+  Intl.Collator.call(Intl.Collator());
+  return false;
+} catch(e) {
+  return e instanceof TypeError;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");return Function("asyncTestPassed","\ntry {\n  Intl.Collator.call(Intl.Collator());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator"><td><span>accepts valid language tags</span><script data-source="
+try {
+  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+  var validLanguageTags = [
+    &quot;de&quot;, // ISO 639 language code
+    &quot;de-DE&quot;, // + ISO 3166-1 country code
+    &quot;DE-de&quot;, // tags are case-insensitive
+    &quot;cmn&quot;, // ISO 639 language code
+    &quot;cmn-Hans&quot;, // + script code
+    &quot;CMN-hANS&quot;, // tags are case-insensitive
+    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+    &quot;es-419&quot;, // + UN M.49 region code
+    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+    &quot;i-klingon&quot;, // grandfathered tag
+    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+    &quot;enochian-enochian&quot;, // language and variant subtags may be the same
+    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+    &quot;x-en-US-12345&quot;, // anything goes in private use tags
+    &quot;x-12345-12345-en-US&quot;,
+    &quot;x-en-US-12345-12345&quot;,
+    &quot;x-en-u-foo&quot;,
+    &quot;x-en-u-foo-u-bar&quot;
+  ];
+  for (var i in validLanguageTags) {
+    Intl.Collator(validLanguageTags[i]);
+  }
+  return true;
+} catch(e) {
+  return false;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"enochian-enochian\", // language and variant subtags may be the same\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="ie11tp">No</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="no" data-browser="chrome24">No</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Intl.Collator.prototype.compare"><span><a class="anchor" href="#Intl.Collator.prototype.compare">&sect;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2">Intl.Collator.prototype.compare</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="0">0/1</td>
+<td data-browser="ie10" class="tally" data-tally="0">0/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="safari6" class="tally" data-tally="0">0/1</td>
+<td data-browser="safari7" class="tally" data-tally="0">0/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="0">0/1</td>
+<td data-browser="webkit" class="tally" data-tally="0">0/1</td>
+<td data-browser="opera" class="tally" data-tally="0">0/1</td>
+<td data-browser="node10" class="tally" data-tally="0">0/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="0">0/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="0">0/1</td>
+<td data-browser="ios7" class="tally" data-tally="0">0/1</td>
+<td data-browser="ios8" class="tally" data-tally="0">0/1</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator.prototype.compare"><td><span>exists on Collator prototype</span><script data-source="
+return typeof Intl.Collator().compare === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");return Function("asyncTestPassed","\nreturn typeof Intl.Collator().compare === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Intl.Collator.prototype.resolvedOptions"><span><a class="anchor" href="#Intl.Collator.prototype.resolvedOptions">&sect;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3">Intl.Collator.prototype.resolvedOptions</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="0">0/1</td>
+<td data-browser="ie10" class="tally" data-tally="0">0/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="safari6" class="tally" data-tally="0">0/1</td>
+<td data-browser="safari7" class="tally" data-tally="0">0/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="0">0/1</td>
+<td data-browser="webkit" class="tally" data-tally="0">0/1</td>
+<td data-browser="opera" class="tally" data-tally="0">0/1</td>
+<td data-browser="node10" class="tally" data-tally="0">0/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="0">0/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="0">0/1</td>
+<td data-browser="ios7" class="tally" data-tally="0">0/1</td>
+<td data-browser="ios8" class="tally" data-tally="0">0/1</td>
+</tr>
+<tr class="subtest" data-parent="Intl.Collator.prototype.resolvedOptions"><td><span>exists on Collator prototype</span><script data-source="
+return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");return Function("asyncTestPassed","\nreturn typeof Intl.Collator().resolvedOptions === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="supertest" significance="1"><td id="NumberFormat"><span><a class="anchor" href="#NumberFormat">&sect;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-11">NumberFormat</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="0">0/5</td>
+<td data-browser="ie10" class="tally" data-tally="0">0/5</td>
+<td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="ie11tp" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox31" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox34" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox35" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox36" class="tally" data-tally="1">5/5</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="chrome24" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="chrome29" class="tally" data-tally="1">5/5</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="safari6" class="tally" data-tally="0">0/5</td>
+<td data-browser="safari7" class="tally" data-tally="0">0/5</td>
+<td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
+<td data-browser="webkit" class="tally" data-tally="0">0/5</td>
+<td data-browser="opera" class="tally" data-tally="0">0/5</td>
+<td data-browser="node10" class="tally" data-tally="0">0/5</td>
+<td data-browser="node12" class="tally" data-tally="1">5/5</td>
+<td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="ios7" class="tally" data-tally="0">0/5</td>
+<td data-browser="ios8" class="tally" data-tally="0">0/5</td>
+</tr>
+<tr class="subtest" data-parent="NumberFormat"><td><span>exists on intl object</span><script data-source="
+return typeof Intl.NumberFormat === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");return Function("asyncTestPassed","\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="NumberFormat"><td><span>creates new NumberFormat instances</span><script data-source="
+return new Intl.NumberFormat() instanceof Intl.NumberFormat;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");return Function("asyncTestPassed","\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="NumberFormat"><td><span>constructor called without new creates instances</span><script data-source="
+return Intl.NumberFormat() instanceof Intl.NumberFormat;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");return Function("asyncTestPassed","\nreturn Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="NumberFormat"><td><span>calling NumberFormat with NumberFormat instance throws error</span><script data-source="
+try {
+  Intl.NumberFormat.call(Intl.NumberFormat());
+  return false;
+} catch(e) {
+  return e instanceof TypeError;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");return Function("asyncTestPassed","\ntry {\n  Intl.NumberFormat.call(Intl.NumberFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="NumberFormat"><td><span>accepts valid language tags</span><script data-source="
+try {
+  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+  var validLanguageTags = [
+    &quot;de&quot;, // ISO 639 language code
+    &quot;de-DE&quot;, // + ISO 3166-1 country code
+    &quot;DE-de&quot;, // tags are case-insensitive
+    &quot;cmn&quot;, // ISO 639 language code
+    &quot;cmn-Hans&quot;, // + script code
+    &quot;CMN-hANS&quot;, // tags are case-insensitive
+    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+    &quot;es-419&quot;, // + UN M.49 region code
+    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+    &quot;i-klingon&quot;, // grandfathered tag
+    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+    &quot;enochian-enochian&quot;, // language and variant subtags may be the same
+    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+    &quot;x-en-US-12345&quot;, // anything goes in private use tags
+    &quot;x-12345-12345-en-US&quot;,
+    &quot;x-en-US-12345-12345&quot;,
+    &quot;x-en-u-foo&quot;,
+    &quot;x-en-u-foo-u-bar&quot;
+  ];
+  for (var i in validLanguageTags) {
+    Intl.NumberFormat(validLanguageTags[i]);
+  }
+  return true;
+} catch(e) {
+  return false;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"enochian-enochian\", // language and variant subtags may be the same\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="ie11tp">No</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="no" data-browser="chrome24">No</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="supertest" significance="1"><td id="DateTimeFormat"><span><a class="anchor" href="#DateTimeFormat">&sect;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-12">DateTimeFormat</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="0">0/5</td>
+<td data-browser="ie10" class="tally" data-tally="0">0/5</td>
+<td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="ie11tp" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox31" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">5/5</td>
+<td data-browser="firefox34" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox35" class="tally" data-tally="1">5/5</td>
+<td data-browser="firefox36" class="tally" data-tally="1">5/5</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="chrome24" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="chrome29" class="tally" data-tally="1">5/5</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="safari6" class="tally" data-tally="0">0/5</td>
+<td data-browser="safari7" class="tally" data-tally="0">0/5</td>
+<td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
+<td data-browser="webkit" class="tally" data-tally="0">0/5</td>
+<td data-browser="opera" class="tally" data-tally="0">0/5</td>
+<td data-browser="node10" class="tally" data-tally="0">0/5</td>
+<td data-browser="node12" class="tally" data-tally="1">5/5</td>
+<td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="ios7" class="tally" data-tally="0">0/5</td>
+<td data-browser="ios8" class="tally" data-tally="0">0/5</td>
+</tr>
+<tr class="subtest" data-parent="DateTimeFormat"><td><span>exists on intl object</span><script data-source="
+return typeof Intl.DateTimeFormat === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");return Function("asyncTestPassed","\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="DateTimeFormat"><td><span>creates new DateTimeFormat instances</span><script data-source="
+return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");return Function("asyncTestPassed","\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="DateTimeFormat"><td><span>constructor called without new creates instances</span><script data-source="
+return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");return Function("asyncTestPassed","\nreturn Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="DateTimeFormat"><td><span>calling DateTimeFormat with DateTimeFormat instance throws error</span><script data-source="
+try {
+  Intl.DateTimeFormat.call(Intl.DateTimeFormat());
+  return false;
+} catch(e) {
+  return e instanceof TypeError;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");return Function("asyncTestPassed","\ntry {\n  Intl.DateTimeFormat.call(Intl.DateTimeFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="DateTimeFormat"><td><span>accepts valid language tags</span><script data-source="
+try {
+  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+  var validLanguageTags = [
+    &quot;de&quot;, // ISO 639 language code
+    &quot;de-DE&quot;, // + ISO 3166-1 country code
+    &quot;DE-de&quot;, // tags are case-insensitive
+    &quot;cmn&quot;, // ISO 639 language code
+    &quot;cmn-Hans&quot;, // + script code
+    &quot;CMN-hANS&quot;, // tags are case-insensitive
+    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+    &quot;es-419&quot;, // + UN M.49 region code
+    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+    &quot;i-klingon&quot;, // grandfathered tag
+    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+    &quot;enochian-enochian&quot;, // language and variant subtags may be the same
+    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+    &quot;x-en-US-12345&quot;, // anything goes in private use tags
+    &quot;x-12345-12345-en-US&quot;,
+    &quot;x-en-US-12345-12345&quot;,
+    &quot;x-en-u-foo&quot;,
+    &quot;x-en-u-foo-u-bar&quot;
+  ];
+  for (var i in validLanguageTags) {
+    Intl.DateTimeFormat(validLanguageTags[i]);
+  }
+  return true;
+} catch(e) {
+  return false;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"enochian-enochian\", // language and variant subtags may be the same\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="ie9">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="ie11tp">No</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="no obsolete" data-browser="chrome22">No</td>
+<td class="no" data-browser="chrome24">No</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="opera">No</td>
+<td class="no" data-browser="node10">No</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="no" data-browser="iojs1_0">No</td>
+<td class="no" data-browser="iojs1_1">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="supertest" significance="1"><td id="String.prototype.localeCompare"><span><a class="anchor" href="#String.prototype.localeCompare">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-String.prototype.localeCompare">String.prototype.localeCompare</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="String.prototype.localeCompare"><td><span>exists on String prototype</span><script data-source="
+return typeof String.prototype.localeCompare === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");return Function("asyncTestPassed","\nreturn typeof String.prototype.localeCompare === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Number.prototype.toLocaleString"><span><a class="anchor" href="#Number.prototype.toLocaleString">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring">Number.prototype.toLocaleString</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="Number.prototype.toLocaleString"><td><span>exists on Number prototype</span><script data-source="
+return typeof Number.prototype.toLocaleString === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");return Function("asyncTestPassed","\nreturn typeof Number.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Array.prototype.toLocaleString"><span><a class="anchor" href="#Array.prototype.toLocaleString">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring">Array.prototype.toLocaleString</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="Array.prototype.toLocaleString"><td><span>exists on Array prototype</span><script data-source="
+return typeof Array.prototype.toLocaleString === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");return Function("asyncTestPassed","\nreturn typeof Array.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Object.prototype.toLocaleString"><span><a class="anchor" href="#Object.prototype.toLocaleString">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring">Object.prototype.toLocaleString</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="Object.prototype.toLocaleString"><td><span>exists on Object prototype</span><script data-source="
+return typeof Object.prototype.toLocaleString === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");return Function("asyncTestPassed","\nreturn typeof Object.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Date.prototype.toLocaleString"><span><a class="anchor" href="#Date.prototype.toLocaleString">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring">Date.prototype.toLocaleString</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="Date.prototype.toLocaleString"><td><span>exists on Date prototype</span><script data-source="
+return typeof Date.prototype.toLocaleString === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Date.prototype.toLocaleDateString"><span><a class="anchor" href="#Date.prototype.toLocaleDateString">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring">Date.prototype.toLocaleDateString</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="Date.prototype.toLocaleDateString"><td><span>exists on Date prototype</span><script data-source="
+return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleDateString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="supertest" significance="1"><td id="Date.prototype.toLocaleTimeString"><span><a class="anchor" href="#Date.prototype.toLocaleTimeString">&sect;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring">Date.prototype.toLocaleTimeString</a></span></td>
+<td data-browser="ie9" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie10" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11" class="tally" data-tally="1">1/1</td>
+<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox31" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="firefox34" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox35" class="tally" data-tally="1">1/1</td>
+<td data-browser="firefox36" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome22" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="chrome24" class="tally" data-tally="1">1/1</td>
+<td data-browser="chrome29" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="safari6" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari7" class="tally" data-tally="1">1/1</td>
+<td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
+<td data-browser="opera" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node12" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios7" class="tally" data-tally="1">1/1</td>
+<td data-browser="ios8" class="tally" data-tally="1">1/1</td>
+</tr>
+<tr class="subtest" data-parent="Date.prototype.toLocaleTimeString"><td><span>exists on Date prototype</span><script data-source="
+return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleTimeString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes obsolete" data-browser="firefox16">Yes</td>
+<td class="yes obsolete" data-browser="firefox29">Yes</td>
+<td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes" data-browser="firefox31">Yes</td>
+<td class="yes obsolete" data-browser="firefox32">Yes</td>
+<td class="yes obsolete" data-browser="firefox33">Yes</td>
+<td class="yes" data-browser="firefox34">Yes</td>
+<td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox36">Yes</td>
+<td class="yes obsolete" data-browser="chrome22">Yes</td>
+<td class="yes" data-browser="chrome24">Yes</td>
+<td class="yes" data-browser="chrome29">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="opera">Yes</td>
+<td class="yes" data-browser="node10">Yes</td>
+<td class="yes" data-browser="node12">Yes</td>
+<td class="yes" data-browser="iojs1_0">Yes</td>
+<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="ios7">Yes</td>
+<td class="yes" data-browser="ios8">Yes</td>
+</tr>
+</tbody>
+    </table>
+    <div id="footnotes">
+      <!-- FOOTNOTES -->
+    <p><p id="ie-experimental-flag-note">  <sup>[1]</sup> Have to be enabled via "Experimental Web Platform Features" flag</p></p></div>
+  </div>
+  <pre class="info-tooltip" style="display:none"></pre>
+</body>
+</html>
