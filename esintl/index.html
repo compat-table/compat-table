@@ -124,9 +124,9 @@
 <th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r179984">WK</abbr></a></th>
 <th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform node10 engine" data-browser="node10"><a href="#node10" class="browser-name"><abbr title="Node 0.10">Node .10</abbr></a></th>
-<th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr></a></th>
-<th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr></a></th>
-<th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr></a></th>
+<th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr><a href="#only-english-note"><sup>[2]</sup></a></a></th>
+<th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr><a href="#build-with-intl-note"><sup>[3]</sup></a></a></th>
+<th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr><a href="#build-with-intl-note"><sup>[3]</sup></a></a></th>
 <th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
 </tr>
@@ -1488,7 +1488,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="ie-experimental-flag-note">  <sup>[1]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p></p></div>
+    <p><p id="ie-experimental-flag-note">  <sup>[1]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="only-english-note">  <sup>[2]</sup> Intl support only English by default, it needs to build with full ICU data if needs all locales supported</p><p id="build-with-intl-note">  <sup>[3]</sup> Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
