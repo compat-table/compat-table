@@ -46,6 +46,10 @@ exports.browsers = {
     full: 'Firefox',
     short: 'FF35'
   },
+  firefox39: {
+    full: 'Firefox',
+    short: 'FF39'
+  },
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
@@ -442,6 +446,41 @@ exports.tests = [
     firefox33:   false,
     firefox34:   false,
     firefox35:   false,
+    firefox39:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'SIMD',
+  link: 'https://github.com/johnmccutchan/ecmascript_simd',
+  exec: function () {/*
+    return typeof SIMD !== 'undefined';
+  */},
+  res: {
+    tr:          false,
+    babel:       false,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    firefox39:   true,
     chrome30:    false,
     chrome33:    false,
     chrome34:    false,

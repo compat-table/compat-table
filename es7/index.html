@@ -43,7 +43,7 @@
         <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
       </span>
 
-      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&amp;repo=compat-table&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
     </span>
   </div>
   <div id="body">
@@ -87,6 +87,7 @@
 <th class="platform firefox32 desktop" data-browser="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></a></th>
 <th class="platform firefox34 desktop" data-browser="firefox34"><a href="#firefox34" class="browser-name"><abbr title="Firefox">FF34</abbr></a></th>
 <th class="platform firefox35 desktop" data-browser="firefox35"><a href="#firefox35" class="browser-name"><abbr title="Firefox">FF35</abbr></a></th>
+<th class="platform firefox39 desktop" data-browser="firefox39"><a href="#firefox39" class="browser-name"><abbr title="Firefox">FF39</abbr></a></th>
 <th class="platform chrome30 desktop" data-browser="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome">CH 30</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome33 desktop" data-browser="chrome33"><a href="#chrome33" class="browser-name"><abbr title="Chrome">CH 33</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome34 desktop" data-browser="chrome34"><a href="#chrome34" class="browser-name"><abbr title="Chrome">CH 34</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
@@ -108,7 +109,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr significance="1"><td id="Exponentiation_operator"><span><a class="anchor" href="#Exponentiation_operator">&sect;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">Exponentiation operator</a></span><script data-source="
+      <tr significance="1"><td id="Exponentiation_operator"><span><a class="anchor" href="#Exponentiation_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">Exponentiation operator</a></span><script data-source="
 return 2 ** 3 === 8;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");return Function("asyncTestPassed","\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -120,6 +121,7 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="firefox32">No</td>
 <td class="yes" data-browser="firefox34">Yes</td>
 <td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox39">Yes</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -137,7 +139,7 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span><script data-source="
+<tr significance="1"><td id="Array_comprehensions"><span><a class="anchor" href="#Array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Array comprehensions</a></span><script data-source="
 return [for (a of [1, 2, 3]) a * a][0] === 1
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a][0] === 1\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -149,6 +151,7 @@ return [for (a of [1, 2, 3]) a * a][0] === 1
 <td class="yes" data-browser="firefox32">Yes</td>
 <td class="yes" data-browser="firefox34">Yes</td>
 <td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox39">Yes</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -166,7 +169,7 @@ return [for (a of [1, 2, 3]) a * a][0] === 1
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span><script data-source="
+<tr significance="1"><td id="Generator_comprehensions"><span><a class="anchor" href="#Generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">Generator comprehensions</a></span><script data-source="
 (for (a of [1, 2, 3]) a * a)
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\n(for (a of [1, 2, 3]) a * a)\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -178,6 +181,7 @@ return [for (a of [1, 2, 3]) a * a][0] === 1
 <td class="yes" data-browser="firefox32">Yes</td>
 <td class="yes" data-browser="firefox34">Yes</td>
 <td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox39">Yes</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -195,7 +199,7 @@ return [for (a of [1, 2, 3]) a * a][0] === 1
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Async_functions"><span><a class="anchor" href="#Async_functions">&sect;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Async functions</a></span><script data-source="
+<tr significance="1"><td id="Async_functions"><span><a class="anchor" href="#Async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Async functions</a></span><script data-source="
 return (async function(){
   return 42 + await Promise.resolve(42)
 })() instanceof Promise
@@ -209,6 +213,7 @@ return (async function(){
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
 <td class="no" data-browser="firefox35">No</td>
+<td class="no" data-browser="firefox39">No</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -226,7 +231,7 @@ return (async function(){
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Arrow_async_functions"><span><a class="anchor" href="#Arrow_async_functions">&sect;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Arrow async functions</a></span><script data-source="
+<tr significance="1"><td id="Arrow_async_functions"><span><a class="anchor" href="#Arrow_async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">Arrow async functions</a></span><script data-source="
 return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");return Function("asyncTestPassed","\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -238,6 +243,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
 <td class="no" data-browser="firefox35">No</td>
+<td class="no" data-browser="firefox39">No</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -255,7 +261,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&sect;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span><script data-source="
+<tr significance="1"><td id="Typed_objects"><span><a class="anchor" href="#Typed_objects">&#xA7;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed objects</a></span><script data-source="
 return typeof StructType !== &apos;undefined&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");return Function("asyncTestPassed","\nreturn typeof StructType !== 'undefined';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -267,6 +273,7 @@ return typeof StructType !== &apos;undefined&apos;;
 <td class="no" data-browser="firefox32">No</td>
 <td class="yes" data-browser="firefox34">Yes</td>
 <td class="yes" data-browser="firefox35">Yes</td>
+<td class="yes" data-browser="firefox39">Yes</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -284,7 +291,7 @@ return typeof StructType !== &apos;undefined&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&sect;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="
+<tr significance="1"><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="
 return typeof Object.observe === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");return Function("asyncTestPassed","\nreturn typeof Object.observe === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -296,6 +303,7 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
 <td class="no" data-browser="firefox35">No</td>
+<td class="no" data-browser="firefox39">No</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="yes" data-browser="chrome33">Yes</td>
 <td class="yes" data-browser="chrome34">Yes</td>
@@ -313,7 +321,7 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&sect;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
+<tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
 return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");return Function("asyncTestPassed","\nreturn typeof Object.getOwnPropertyDescriptors === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -325,6 +333,7 @@ return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
 <td class="no" data-browser="firefox35">No</td>
+<td class="no" data-browser="firefox39">No</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -342,7 +351,7 @@ return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&sect;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
+<tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
 return typeof Array.prototype.includes === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");return Function("asyncTestPassed","\nreturn typeof Array.prototype.includes === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -354,6 +363,7 @@ return typeof Array.prototype.includes === &apos;function&apos;;
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
 <td class="yes" data-browser="firefox35">Yes<a href="#includes-nightly-note"><sup>[3]</sup></a></td>
+<td class="yes" data-browser="firefox39">Yes<a href="#includes-nightly-note"><sup>[3]</sup></a></td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>
@@ -371,7 +381,7 @@ return typeof Array.prototype.includes === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="1"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&sect;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
+<tr significance="1"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
   [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;,
   &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;];
@@ -396,6 +406,37 @@ return true;
 <td class="no" data-browser="firefox32">No</td>
 <td class="no" data-browser="firefox34">No</td>
 <td class="no" data-browser="firefox35">No</td>
+<td class="no" data-browser="firefox39">No</td>
+<td class="no" data-browser="chrome30">No</td>
+<td class="no" data-browser="chrome33">No</td>
+<td class="no" data-browser="chrome34">No</td>
+<td class="no" data-browser="chrome35">No</td>
+<td class="no" data-browser="chrome37">No</td>
+<td class="no" data-browser="safari78">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="konq49">No</td>
+<td class="no obsolete" data-browser="rhino17">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="nodeharmony">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="no" data-browser="ejs">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr significance="1"><td id="SIMD"><span><a class="anchor" href="#SIMD">&#xA7;</a><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD</a></span><script data-source="
+return typeof SIMD !== &apos;undefined&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");return Function("asyncTestPassed","\nreturn typeof SIMD !== 'undefined';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="firefox31">No</td>
+<td class="no" data-browser="firefox32">No</td>
+<td class="no" data-browser="firefox34">No</td>
+<td class="no" data-browser="firefox35">No</td>
+<td class="yes" data-browser="firefox39">Yes</td>
 <td class="no" data-browser="chrome30">No</td>
 <td class="no" data-browser="chrome33">No</td>
 <td class="no" data-browser="chrome34">No</td>

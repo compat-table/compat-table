@@ -47,7 +47,7 @@
           <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
         </span>
 
-        <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=kangax&amp;repo=compat-table&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
       </span>
     </div>
     <div id="body">
@@ -107,7 +107,7 @@
 <th class="platform opera10_50 desktop obsolete" data-browser="opera10_50"><a href="#opera10_50" class="browser-name"><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)">OP 10.50-11.10</abbr></a></th>
 <th class="platform konq44 desktop obsolete" data-browser="konq44"><a href="#konq44" class="browser-name"><abbr title="Konqueror 4.4">Konq 4.4</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">Konq 4.9</abbr></a></th>
-<th class="platform besen engine" data-browser="besen"><a href="#besen" class="browser-name"><abbr title="Bero's EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
+<th class="platform besen engine" data-browser="besen"><a href="#besen" class="browser-name"><abbr title="Bero&apos;s EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
 <th class="platform rhino engine" data-browser="rhino"><a href="#rhino" class="browser-name"><abbr title="Rhino 1.7 release 3 PRERELEASE 2010 01 14">Rhino 1.7</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 1.9.7 AppleWebKit/534.34">Phantom</abbr></a></th>
 </tr>
@@ -115,7 +115,7 @@
         </thead>
         <tbody>
           <!-- TABLE BODY -->
-        <tr significance="1"><td id="uneval"><span><a class="anchor" href="#uneval">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval">uneval</a></span><script data-source="function () {
+        <tr significance="1"><td id="uneval"><span><a class="anchor" href="#uneval">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval">uneval</a></span><script data-source="function () {
 return typeof uneval == &apos;function&apos;;
   }">test(
 function () {
@@ -150,7 +150,7 @@ return typeof uneval == 'function';
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="toSource_method"><span><a class="anchor" href="#toSource_method">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource">"toSource" method</a></span><script data-source="function () {
+<tr significance="1"><td id="toSource_method"><span><a class="anchor" href="#toSource_method">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource">&quot;toSource&quot; method</a></span><script data-source="function () {
 return &apos;toSource&apos; in Object.prototype
     &amp;&amp; Number   .prototype.hasOwnProperty(&apos;toSource&apos;)
     &amp;&amp; Boolean  .prototype.hasOwnProperty(&apos;toSource&apos;)
@@ -203,7 +203,7 @@ return 'toSource' in Object.prototype
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&sect;</a>function "caller" property</span><script data-source="function () {
+<tr significance="1"><td id="function_caller_property"><span><a class="anchor" href="#function_caller_property">&#xA7;</a>function &quot;caller&quot; property</span><script data-source="function () {
 return &apos;caller&apos; in (function(){});
   }">test(
 function () {
@@ -238,7 +238,7 @@ return 'caller' in (function(){});
 <td class="no" data-browser="rhino">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="function_arity_property"><span><a class="anchor" href="#function_arity_property">&sect;</a>function "arity" property</span><script data-source="function () {
+<tr significance="1"><td id="function_arity_property"><span><a class="anchor" href="#function_arity_property">&#xA7;</a>function &quot;arity&quot; property</span><script data-source="function () {
 return (function (){}).arity === 0 &amp;&amp;
   (function (x){}).arity === 1 &amp;&amp;
   (function (x, y){}).arity === 2;
@@ -277,7 +277,7 @@ return (function (){}).arity === 0 &&
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="function_arguments_property"><span><a class="anchor" href="#function_arguments_property">&sect;</a>function "arguments" property</span><script data-source="function () {
+<tr significance="1"><td id="function_arguments_property"><span><a class="anchor" href="#function_arguments_property">&#xA7;</a>function &quot;arguments&quot; property</span><script data-source="function () {
 function f(a, b) {
   return f.arguments &amp;&amp; f.arguments[0] === 1 &amp;&amp; f.arguments[1] === &apos;boo&apos;;
 }
@@ -318,7 +318,7 @@ return f(1, 'boo');
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="Function.prototype.isGenerator"><span><a class="anchor" href="#Function.prototype.isGenerator">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a></span><script data-source="function () {
+<tr significance="1"><td id="Function.prototype.isGenerator"><span><a class="anchor" href="#Function.prototype.isGenerator">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator">Function.prototype.isGenerator</a></span><script data-source="function () {
 return typeof Function.prototype.isGenerator == &apos;function&apos;;
   }">test(
 function () {
@@ -355,7 +355,7 @@ return typeof Function.prototype.isGenerator == 'function';
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="__count__"><span><a class="anchor" href="#__count__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span><script data-source="function () {
+<tr significance="1"><td id="__count__"><span><a class="anchor" href="#__count__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span><script data-source="function () {
 return typeof ({}).__count__ === &apos;number&apos; &amp;&amp;
   ({ x: 1, y: 2 }).__count__ === 2;
 }">test(
@@ -392,7 +392,7 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="__parent__"><span><a class="anchor" href="#__parent__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a></span><script data-source="function () {
+<tr significance="1"><td id="__parent__"><span><a class="anchor" href="#__parent__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent">__parent__</a></span><script data-source="function () {
 return typeof ({}).__parent__ !== &apos;undefined&apos;;
   }">test(
 function () {
@@ -427,7 +427,7 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="__noSuchMethod__"><span><a class="anchor" href="#__noSuchMethod__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a></span><script data-source="function () {
+<tr significance="1"><td id="__noSuchMethod__"><span><a class="anchor" href="#__noSuchMethod__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a></span><script data-source="function () {
 var o = { }, executed = false;
 o.__noSuchMethod__ = function () { executed = true; }
 try {
@@ -472,7 +472,7 @@ return executed;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="__defineGetter__"><span><a class="anchor" href="#__defineGetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a></span><script data-source="function () {
+<tr significance="1"><td id="__defineGetter__"><span><a class="anchor" href="#__defineGetter__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineGetter">__defineGetter__</a></span><script data-source="function () {
 return &apos;__defineGetter__&apos; in {};
   }">test(
 function () {
@@ -507,7 +507,7 @@ return '__defineGetter__' in {};
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="__defineSetter__"><span><a class="anchor" href="#__defineSetter__">&sect;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a></span><script data-source="function () {
+<tr significance="1"><td id="__defineSetter__"><span><a class="anchor" href="#__defineSetter__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/defineSetter">__defineSetter__</a></span><script data-source="function () {
 return &apos;__defineSetter__&apos; in {};
   }">test(
 function () {
@@ -542,7 +542,7 @@ return '__defineSetter__' in {};
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="__lookupGetter__"><span><a class="anchor" href="#__lookupGetter__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__">__lookupGetter__</a></span><script data-source="
+<tr significance="1"><td id="__lookupGetter__"><span><a class="anchor" href="#__lookupGetter__">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__">__lookupGetter__</a></span><script data-source="
 try {
   var obj = eval(&apos;{ get foo() { return &quot;bar&quot;; } }&apos;);
 }
@@ -584,7 +584,7 @@ return typeof func === &quot;function&quot; &amp;&amp; func() === &quot;bar&quot
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="Array_generics"><span><a class="anchor" href="#Array_generics">&sect;</a>Array generics</span><script data-source="function () {
+<tr significance="1"><td id="Array_generics"><span><a class="anchor" href="#Array_generics">&#xA7;</a>Array generics</span><script data-source="function () {
 return typeof Array.slice === &apos;function&apos; &amp;&amp; Array.slice(&apos;abc&apos;).length === 3;
   }">test(
 function () {
@@ -619,7 +619,7 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="String_generics"><span><a class="anchor" href="#String_generics">&sect;</a>String generics</span><script data-source="function () {
+<tr significance="1"><td id="String_generics"><span><a class="anchor" href="#String_generics">&#xA7;</a>String generics</span><script data-source="function () {
 return typeof String.slice === &apos;function&apos; &amp;&amp; String.slice(123, 1) === &quot;23&quot;;
   }">test(
 function () {
@@ -656,7 +656,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="Array_comprehensions_(right-to-left)"><span><a class="anchor" href="#Array_comprehensions_(right-to-left)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (right-to-left)</a></span><script data-source="
+<tr significance="1"><td id="Array_comprehensions_(right-to-left)"><span><a class="anchor" href="#Array_comprehensions_(right-to-left)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (right-to-left)</a></span><script data-source="
 var obj = { 2: true, &quot;foo&quot;: true, 4: true };
 var a = [i * 2 for (i in obj) if (i !== &quot;foo&quot;)];
 return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
@@ -691,7 +691,7 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="Expression_closures"><span><a class="anchor" href="#Expression_closures">&sect;</a>Expression closures</span><script data-source="
+<tr significance="1"><td id="Expression_closures"><span><a class="anchor" href="#Expression_closures">&#xA7;</a>Expression closures</span><script data-source="
 return (function(x)x)(1) === 1;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");return Function("asyncTestPassed","\nreturn (function(x)x)(1) === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -724,7 +724,7 @@ return (function(x)x)(1) === 1;
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="ECMAScript_for_XML_(E4X)"><span><a class="anchor" href="#ECMAScript_for_XML_(E4X)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Archive/Web/E4X">ECMAScript for XML (E4X)</a></span><script data-source="
+<tr significance="1"><td id="ECMAScript_for_XML_(E4X)"><span><a class="anchor" href="#ECMAScript_for_XML_(E4X)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Archive/Web/E4X">ECMAScript for XML (E4X)</a></span><script data-source="
 return typeof &lt;foo/&gt; === &quot;xml&quot;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");return Function("asyncTestPassed","\nreturn typeof <foo/> === \"xml\";\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -757,7 +757,7 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="for_each..in_loops"><span><a class="anchor" href="#for_each..in_loops">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">"for each..in" loops</a></span><script data-source="
+<tr significance="1"><td id="for_each..in_loops"><span><a class="anchor" href="#for_each..in_loops">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">&quot;for each..in&quot; loops</a></span><script data-source="
 var str = &apos;&apos;;
 for each (var item in {a: &quot;foo&quot;, b: &quot;bar&quot;, c: &quot;baz&quot;}) {
   str += item;
@@ -794,7 +794,7 @@ return str === &quot;foobarbaz&quot;;
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&sect;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span><script data-source="
+<tr significance="1"><td id="Sharp_variables"><span><a class="anchor" href="#Sharp_variables">&#xA7;</a><a href="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">Sharp variables</a></span><script data-source="
 var arr = #1=[1, #1#, 3];
 return arr[1] === arr;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");return Function("asyncTestPassed","\nvar arr = #1=[1, #1#, 3];\nreturn arr[1] === arr;\n  ")(asyncTestPassed);}catch(e){return false;}}());
@@ -830,7 +830,7 @@ return arr[1] === arr;
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="Iterator"><span><a class="anchor" href="#Iterator">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span><script data-source="function () {
+<tr significance="1"><td id="Iterator"><span><a class="anchor" href="#Iterator">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span><script data-source="function () {
 try {
   var it = Iterator({ foo: 1, bar: 2 });
   var keys = &quot;&quot;;
@@ -889,7 +889,7 @@ catch(e) {
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="__iterator__"><span><a class="anchor" href="#__iterator__">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">__iterator__</a></span><script data-source="function () {
+<tr significance="1"><td id="__iterator__"><span><a class="anchor" href="#__iterator__">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">__iterator__</a></span><script data-source="function () {
 try {
   var x = 5;
   var iter = {
@@ -956,7 +956,7 @@ catch(e) {
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="Generators_(JS_1.8)"><span><a class="anchor" href="#Generators_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span><script type="application/javascript;version=1.8" data-source="test(function () {
+<tr significance="1"><td id="Generators_(JS_1.8)"><span><a class="anchor" href="#Generators_(JS_1.8)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span><script type="application/javascript;version=1.8" data-source="test(function () {
 try {
   var g = eval(&apos;(function() { var a = yield &quot;foo&quot;; yield a + &quot;baz&quot;;})&apos;)();
   var passed = g.next() === &quot;foo&quot;;
@@ -1028,7 +1028,7 @@ test(function () {
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="Generator_comprehensions_(JS_1.8)"><span><a class="anchor" href="#Generator_comprehensions_(JS_1.8)">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions">Generator comprehensions (JS 1.8)</a></span><script data-source="
+<tr significance="1"><td id="Generator_comprehensions_(JS_1.8)"><span><a class="anchor" href="#Generator_comprehensions_(JS_1.8)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions">Generator comprehensions (JS 1.8)</a></span><script data-source="
 var obj = { 2: true, &quot;foo&quot;: true, 4: true };
 var g = (i * 2 for (i in obj) if (i !== &quot;foo&quot;));
 return g.next() === 4 &amp;&amp; g.next() === 8;
@@ -1065,7 +1065,7 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&sect;</a>RegExp "x" flag</span><script data-source="function () {
+<tr significance="1"><td id="RegExp_x_flag"><span><a class="anchor" href="#RegExp_x_flag">&#xA7;</a>RegExp &quot;x&quot; flag</span><script data-source="function () {
 try {
   var re = RegExp(&apos;^ ( \\d+ ) \
                      ( \\w+ ) \
@@ -1114,7 +1114,7 @@ try {
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="RegExp_lastMatch"><span><a class="anchor" href="#RegExp_lastMatch">&sect;</a>RegExp "lastMatch"</span><script data-source="function () {
+<tr significance="1"><td id="RegExp_lastMatch"><span><a class="anchor" href="#RegExp_lastMatch">&#xA7;</a>RegExp &quot;lastMatch&quot;</span><script data-source="function () {
 var re = /\w/;
 re.exec(&apos;x&apos;);
 return RegExp.lastMatch === &apos;x&apos;;
@@ -1153,7 +1153,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="RegExp.$1-$9"><span><a class="anchor" href="#RegExp.$1-$9">&sect;</a>RegExp.$1-$9</span><script data-source="function () {
+<tr significance="1"><td id="RegExp.$1-$9"><span><a class="anchor" href="#RegExp.$1-$9">&#xA7;</a>RegExp.$1-$9</span><script data-source="function () {
 for (var i = 1; i &lt; 10; i++) {
   if (!((&apos;$&apos; + i) in RegExp)) return false;
 }
@@ -1194,7 +1194,7 @@ return true;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="Callable_RegExp"><span><a class="anchor" href="#Callable_RegExp">&sect;</a>Callable RegExp</span><script data-source="
+<tr significance="1"><td id="Callable_RegExp"><span><a class="anchor" href="#Callable_RegExp">&#xA7;</a>Callable RegExp</span><script data-source="
 return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");return Function("asyncTestPassed","\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1227,7 +1227,7 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="RegExp_named_groups"><span><a class="anchor" href="#RegExp_named_groups">&sect;</a>RegExp named groups</span><script data-source="
+<tr significance="1"><td id="RegExp_named_groups"><span><a class="anchor" href="#RegExp_named_groups">&#xA7;</a>RegExp named groups</span><script data-source="
 return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;);
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");return Function("asyncTestPassed","\nreturn /(?P<name>a)(?P=name)/.test(\"aa\");\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1262,7 +1262,7 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;);
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span><script data-source="function () { return typeof String.prototype.trimLeft === &apos;function&apos; }">test(
+<tr significance="1"><td id="String.prototype.trimLeft"><span><a class="anchor" href="#String.prototype.trimLeft">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span><script data-source="function () { return typeof String.prototype.trimLeft === &apos;function&apos; }">test(
 function () { return typeof String.prototype.trimLeft === 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1293,7 +1293,7 @@ function () { return typeof String.prototype.trimLeft === 'function' }())</scrip
 <td class="no" data-browser="rhino">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="String.prototype.trimRight"><span><a class="anchor" href="#String.prototype.trimRight">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight">String.prototype.trimRight</a></span><script data-source="function () { return typeof String.prototype.trimRight === &apos;function&apos; }">test(
+<tr significance="1"><td id="String.prototype.trimRight"><span><a class="anchor" href="#String.prototype.trimRight">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight">String.prototype.trimRight</a></span><script data-source="function () { return typeof String.prototype.trimRight === &apos;function&apos; }">test(
 function () { return typeof String.prototype.trimRight === 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1324,7 +1324,7 @@ function () { return typeof String.prototype.trimRight === 'function' }())</scri
 <td class="no" data-browser="rhino">No</td>
 <td class="yes" data-browser="phantom">Yes</td>
 </tr>
-<tr significance="1"><td id="String.prototype.quote"><span><a class="anchor" href="#String.prototype.quote">&sect;</a>String.prototype.quote</span><script data-source="function () { return typeof String.prototype.quote === &apos;function&apos; }">test(
+<tr significance="1"><td id="String.prototype.quote"><span><a class="anchor" href="#String.prototype.quote">&#xA7;</a>String.prototype.quote</span><script data-source="function () { return typeof String.prototype.quote === &apos;function&apos; }">test(
 function () { return typeof String.prototype.quote === 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1355,7 +1355,7 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="String.prototype.replace_flags"><span><a class="anchor" href="#String.prototype.replace_flags">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace flags</a></span><script data-source="function () { return &apos;foofoo&apos;.replace(&apos;foo&apos;, &apos;bar&apos;, &apos;g&apos;) === &apos;barbar&apos; }">test(
+<tr significance="1"><td id="String.prototype.replace_flags"><span><a class="anchor" href="#String.prototype.replace_flags">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace flags</a></span><script data-source="function () { return &apos;foofoo&apos;.replace(&apos;foo&apos;, &apos;bar&apos;, &apos;g&apos;) === &apos;barbar&apos; }">test(
 function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1388,7 +1388,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span><script data-source="function () { return typeof Date.prototype.toLocaleFormat === &apos;function&apos; }">test(
+<tr significance="1"><td id="Date.prototype.toLocaleFormat"><span><a class="anchor" href="#Date.prototype.toLocaleFormat">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span><script data-source="function () { return typeof Date.prototype.toLocaleFormat === &apos;function&apos; }">test(
 function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1421,7 +1421,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span><script data-source="function () { return typeof Object.prototype.watch == &apos;function&apos; }">test(
+<tr significance="1"><td id="Object.prototype.watch"><span><a class="anchor" href="#Object.prototype.watch">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span><script data-source="function () { return typeof Object.prototype.watch == &apos;function&apos; }">test(
 function () { return typeof Object.prototype.watch == 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1452,7 +1452,7 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="Object.prototype.unwatch"><span><a class="anchor" href="#Object.prototype.unwatch">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch">Object.prototype.unwatch</a></span><script data-source="function () { return typeof Object.prototype.unwatch == &apos;function&apos; }">test(
+<tr significance="1"><td id="Object.prototype.unwatch"><span><a class="anchor" href="#Object.prototype.unwatch">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch">Object.prototype.unwatch</a></span><script data-source="function () { return typeof Object.prototype.unwatch == &apos;function&apos; }">test(
 function () { return typeof Object.prototype.unwatch == 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1483,7 +1483,7 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="Object.prototype.eval"><span><a class="anchor" href="#Object.prototype.eval">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval">Object.prototype.eval</a></span><script data-source="function () { return typeof Object.prototype.eval == &apos;function&apos; }">test(
+<tr significance="1"><td id="Object.prototype.eval"><span><a class="anchor" href="#Object.prototype.eval">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval">Object.prototype.eval</a></span><script data-source="function () { return typeof Object.prototype.eval == &apos;function&apos; }">test(
 function () { return typeof Object.prototype.eval == 'function' }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1516,7 +1516,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 </tr>
 <tr><th colspan="31" class="separator"></th>
 </tr>
-<tr significance="1"><td id="error_stack"><span><a class="anchor" href="#error_stack">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error "stack"</a></span><script data-source="function () {
+<tr significance="1"><td id="error_stack"><span><a class="anchor" href="#error_stack">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error &quot;stack&quot;</a></span><script data-source="function () {
 try {
   throw new Error;
 } catch (err) {
@@ -1559,7 +1559,7 @@ try {
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber">error "lineNumber"</a></span><script data-source="function () {
+<tr significance="1"><td id="error_lineNumber"><span><a class="anchor" href="#error_lineNumber">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber">error &quot;lineNumber&quot;</a></span><script data-source="function () {
 return &apos;lineNumber&apos; in new Error;
   }">test(
 function () {
@@ -1594,7 +1594,7 @@ return 'lineNumber' in new Error;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="error_columnNumber"><span><a class="anchor" href="#error_columnNumber">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber">error "columnNumber"</a></span><script data-source="function () {
+<tr significance="1"><td id="error_columnNumber"><span><a class="anchor" href="#error_columnNumber">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber">error &quot;columnNumber&quot;</a></span><script data-source="function () {
 return &apos;columnNumber&apos; in new Error;
   }">test(
 function () {
@@ -1629,7 +1629,7 @@ return 'columnNumber' in new Error;
 <td class="no" data-browser="rhino">No</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="error_fileName"><span><a class="anchor" href="#error_fileName">&sect;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName">error "fileName"</a></span><script data-source="function () {
+<tr significance="1"><td id="error_fileName"><span><a class="anchor" href="#error_fileName">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName">error &quot;fileName&quot;</a></span><script data-source="function () {
 return &apos;fileName&apos; in new Error;
   }">test(
 function () {
@@ -1664,7 +1664,7 @@ return 'fileName' in new Error;
 <td class="yes" data-browser="rhino">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 </tr>
-<tr significance="1"><td id="error_description"><span><a class="anchor" href="#error_description">&sect;</a><a href="http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx">error "description"</a></span><script data-source="function () {
+<tr significance="1"><td id="error_description"><span><a class="anchor" href="#error_description">&#xA7;</a><a href="http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx">error &quot;description&quot;</a></span><script data-source="function () {
 return &apos;description&apos; in new Error;
   }">test(
 function () {
