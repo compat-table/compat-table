@@ -53,7 +53,7 @@ $(function() {
     })
   $('#show-obsolete').attr('value', $('#show-obsolete').checked);
   $('#show-unstable').attr('value', $('#show-unstable').checked);
-  
+
   var mouseoverTimeout;
 
   window.__updateSupertest = function(){
@@ -159,6 +159,12 @@ $(function() {
     table.find('.selected').removeClass('selected');
 
     elem.addClass('selected');
+
+    if (!elem.is('.parent') && elem.is(':hidden')) {
+      var parent = elem.prevUntil('.supertest').prev();
+      parent.click();
+    }
+
     table.addClass('one-selected');
   }
 
@@ -255,7 +261,7 @@ $(function() {
     totalResults += results.length/5;
 
     var flaggedResults = yesResults;
-    
+
     table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
       var weight = +$(this).parent().attr('significance') || 1;
       var yes = (+$(this).attr('data-tally') || 0) * weight;
@@ -265,7 +271,7 @@ $(function() {
     });
     var featuresCount = yesResults / totalResults;
     var flaggedFeaturesCount = flaggedResults / totalResults;
-    
+
     function gradient(colour, percent) {
       return 'linear-gradient(to top, ' +
         colour + ' 0%, ' + colour + ' ' +

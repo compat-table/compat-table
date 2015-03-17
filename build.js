@@ -269,6 +269,10 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     return result;
   }
 
+  function escapeTestName(name) {
+    return name.replace(/^[\s<>&"',]+|[\s<>&"',]+$/g, '').replace(/[\s<>&"]+/g, '_');
+  }
+
   // Write the browser headers
 
   Object.keys(browsers).forEach(function(browserId) {
@@ -299,7 +303,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     }
     else interpolateResults(t.res);
 
-    var id = t.name.replace(/^[\s<>&"]+|[\s<>&"]+$/g, '').replace(/[\s<>&"]+/g, '_');
+    var id = escapeTestName(t.name);
     var name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
 
     var testRow = $('<tr></tr>')
@@ -360,11 +364,15 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       Object.keys(t.subtests).forEach(function(subtestName, subtestNum) {
         var subtest = t.subtests[subtestName];
 
+        var subtestId = id + '_' + escapeTestName(subtestName);
+
         subtestRow = $('<tr class="subtest"></tr>')
           .attr('data-parent', id)
+          .attr('id', subtestId)
+
           .append(
             $('<td></td>')
-              .append('<span>' + subtestName + '</span>')
+              .append('<span><a class="anchor" href="#' + subtestId + '">&sect;</a>' + subtestName + '</span>')
               .append(testScript(subtest.exec, compiler, rowNum++))
           );
         body.append(subtestRow);

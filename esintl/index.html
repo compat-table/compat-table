@@ -164,7 +164,7 @@
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
 </tr>
-<tr class="subtest" data-parent="Intl_object"><td><span>exists on global</span><script data-source="
+<tr class="subtest" data-parent="Intl_object" id="Intl_object_exists_on_global"><td><span><a class="anchor" href="#Intl_object_exists_on_global">&#xA7;</a>exists on global</span><script data-source="
 return typeof Intl === &apos;object&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nreturn typeof Intl === 'object';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -197,7 +197,7 @@ return typeof Intl === &apos;object&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl_object"><td><span>has prototype of Object</span><script data-source="
+<tr class="subtest" data-parent="Intl_object" id="Intl_object_has_prototype_of_Object"><td><span><a class="anchor" href="#Intl_object_has_prototype_of_Object">&#xA7;</a>has prototype of Object</span><script data-source="
 return Intl.constructor === Object;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\nreturn Intl.constructor === Object;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -260,7 +260,7 @@ return Intl.constructor === Object;
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator"><td><span>exists on intl object</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_exists_on_intl_object"><td><span><a class="anchor" href="#Intl.Collator_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.Collator === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");return Function("asyncTestPassed","\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -293,7 +293,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator"><td><span>creates new Collator instances</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_creates_new_Collator_instances"><td><span><a class="anchor" href="#Intl.Collator_creates_new_Collator_instances">&#xA7;</a>creates new Collator instances</span><script data-source="
 return new Intl.Collator() instanceof Intl.Collator;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");return Function("asyncTestPassed","\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -326,7 +326,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator"><td><span>constructor called without new creates instances</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_constructor_called_without_new_creates_instances"><td><span><a class="anchor" href="#Intl.Collator_constructor_called_without_new_creates_instances">&#xA7;</a>constructor called without new creates instances</span><script data-source="
 return Intl.Collator() instanceof Intl.Collator;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");return Function("asyncTestPassed","\nreturn Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -359,7 +359,7 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator"><td><span>calling Collator with Collator instance throws error</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_calling_Collator_with_Collator_instance_throws_error"><td><span><a class="anchor" href="#Intl.Collator_calling_Collator_with_Collator_instance_throws_error">&#xA7;</a>calling Collator with Collator instance throws error</span><script data-source="
 try {
   Intl.Collator.call(Intl.Collator());
   return false;
@@ -397,7 +397,7 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator"><td><span>accepts valid language tags</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_accepts_valid_language_tags"><td><span><a class="anchor" href="#Intl.Collator_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
 try {
   // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
   var validLanguageTags = [
@@ -489,7 +489,7 @@ try {
 <td data-browser="ios7" class="tally" data-tally="0">0/1</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/1</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator.prototype.compare"><td><span>exists on Collator prototype</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator.prototype.compare" id="Intl.Collator.prototype.compare_exists_on_Collator_prototype"><td><span><a class="anchor" href="#Intl.Collator.prototype.compare_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="
 return typeof Intl.Collator().compare === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");return Function("asyncTestPassed","\nreturn typeof Intl.Collator().compare === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -552,7 +552,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="0">0/1</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/1</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator.prototype.resolvedOptions"><td><span>exists on Collator prototype</span><script data-source="
+<tr class="subtest" data-parent="Intl.Collator.prototype.resolvedOptions" id="Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype"><td><span><a class="anchor" href="#Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="
 return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");return Function("asyncTestPassed","\nreturn typeof Intl.Collator().resolvedOptions === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -615,7 +615,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat"><td><span>exists on intl object</span><script data-source="
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.NumberFormat === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");return Function("asyncTestPassed","\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -648,7 +648,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat"><td><span>creates new NumberFormat instances</span><script data-source="
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_creates_new_NumberFormat_instances"><td><span><a class="anchor" href="#NumberFormat_creates_new_NumberFormat_instances">&#xA7;</a>creates new NumberFormat instances</span><script data-source="
 return new Intl.NumberFormat() instanceof Intl.NumberFormat;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");return Function("asyncTestPassed","\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -681,7 +681,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat"><td><span>constructor called without new creates instances</span><script data-source="
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_constructor_called_without_new_creates_instances"><td><span><a class="anchor" href="#NumberFormat_constructor_called_without_new_creates_instances">&#xA7;</a>constructor called without new creates instances</span><script data-source="
 return Intl.NumberFormat() instanceof Intl.NumberFormat;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");return Function("asyncTestPassed","\nreturn Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -714,7 +714,7 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat"><td><span>calling NumberFormat with NumberFormat instance throws error</span><script data-source="
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_calling_NumberFormat_with_NumberFormat_instance_throws_error"><td><span><a class="anchor" href="#NumberFormat_calling_NumberFormat_with_NumberFormat_instance_throws_error">&#xA7;</a>calling NumberFormat with NumberFormat instance throws error</span><script data-source="
 try {
   Intl.NumberFormat.call(Intl.NumberFormat());
   return false;
@@ -752,7 +752,7 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat"><td><span>accepts valid language tags</span><script data-source="
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#NumberFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
 try {
   // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
   var validLanguageTags = [
@@ -844,7 +844,7 @@ try {
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat"><td><span>exists on intl object</span><script data-source="
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_exists_on_intl_object"><td><span><a class="anchor" href="#DateTimeFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.DateTimeFormat === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");return Function("asyncTestPassed","\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -877,7 +877,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat"><td><span>creates new DateTimeFormat instances</span><script data-source="
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_creates_new_DateTimeFormat_instances"><td><span><a class="anchor" href="#DateTimeFormat_creates_new_DateTimeFormat_instances">&#xA7;</a>creates new DateTimeFormat instances</span><script data-source="
 return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");return Function("asyncTestPassed","\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -910,7 +910,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat"><td><span>constructor called without new creates instances</span><script data-source="
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_constructor_called_without_new_creates_instances"><td><span><a class="anchor" href="#DateTimeFormat_constructor_called_without_new_creates_instances">&#xA7;</a>constructor called without new creates instances</span><script data-source="
 return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");return Function("asyncTestPassed","\nreturn Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -943,7 +943,7 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat"><td><span>calling DateTimeFormat with DateTimeFormat instance throws error</span><script data-source="
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_calling_DateTimeFormat_with_DateTimeFormat_instance_throws_error"><td><span><a class="anchor" href="#DateTimeFormat_calling_DateTimeFormat_with_DateTimeFormat_instance_throws_error">&#xA7;</a>calling DateTimeFormat with DateTimeFormat instance throws error</span><script data-source="
 try {
   Intl.DateTimeFormat.call(Intl.DateTimeFormat());
   return false;
@@ -981,7 +981,7 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat"><td><span>accepts valid language tags</span><script data-source="
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#DateTimeFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
 try {
   // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
   var validLanguageTags = [
@@ -1073,7 +1073,7 @@ try {
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="String.prototype.localeCompare"><td><span>exists on String prototype</span><script data-source="
+<tr class="subtest" data-parent="String.prototype.localeCompare" id="String.prototype.localeCompare_exists_on_String_prototype"><td><span><a class="anchor" href="#String.prototype.localeCompare_exists_on_String_prototype">&#xA7;</a>exists on String prototype</span><script data-source="
 return typeof String.prototype.localeCompare === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");return Function("asyncTestPassed","\nreturn typeof String.prototype.localeCompare === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1136,7 +1136,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Number.prototype.toLocaleString"><td><span>exists on Number prototype</span><script data-source="
+<tr class="subtest" data-parent="Number.prototype.toLocaleString" id="Number.prototype.toLocaleString_exists_on_Number_prototype"><td><span><a class="anchor" href="#Number.prototype.toLocaleString_exists_on_Number_prototype">&#xA7;</a>exists on Number prototype</span><script data-source="
 return typeof Number.prototype.toLocaleString === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");return Function("asyncTestPassed","\nreturn typeof Number.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1199,7 +1199,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Array.prototype.toLocaleString"><td><span>exists on Array prototype</span><script data-source="
+<tr class="subtest" data-parent="Array.prototype.toLocaleString" id="Array.prototype.toLocaleString_exists_on_Array_prototype"><td><span><a class="anchor" href="#Array.prototype.toLocaleString_exists_on_Array_prototype">&#xA7;</a>exists on Array prototype</span><script data-source="
 return typeof Array.prototype.toLocaleString === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");return Function("asyncTestPassed","\nreturn typeof Array.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1262,7 +1262,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Object.prototype.toLocaleString"><td><span>exists on Object prototype</span><script data-source="
+<tr class="subtest" data-parent="Object.prototype.toLocaleString" id="Object.prototype.toLocaleString_exists_on_Object_prototype"><td><span><a class="anchor" href="#Object.prototype.toLocaleString_exists_on_Object_prototype">&#xA7;</a>exists on Object prototype</span><script data-source="
 return typeof Object.prototype.toLocaleString === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");return Function("asyncTestPassed","\nreturn typeof Object.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1325,7 +1325,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Date.prototype.toLocaleString"><td><span>exists on Date prototype</span><script data-source="
+<tr class="subtest" data-parent="Date.prototype.toLocaleString" id="Date.prototype.toLocaleString_exists_on_Date_prototype"><td><span><a class="anchor" href="#Date.prototype.toLocaleString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
 return typeof Date.prototype.toLocaleString === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1388,7 +1388,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Date.prototype.toLocaleDateString"><td><span>exists on Date prototype</span><script data-source="
+<tr class="subtest" data-parent="Date.prototype.toLocaleDateString" id="Date.prototype.toLocaleDateString_exists_on_Date_prototype"><td><span><a class="anchor" href="#Date.prototype.toLocaleDateString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
 return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleDateString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1451,7 +1451,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Date.prototype.toLocaleTimeString"><td><span>exists on Date prototype</span><script data-source="
+<tr class="subtest" data-parent="Date.prototype.toLocaleTimeString" id="Date.prototype.toLocaleTimeString_exists_on_Date_prototype"><td><span><a class="anchor" href="#Date.prototype.toLocaleTimeString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
 return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleTimeString === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
