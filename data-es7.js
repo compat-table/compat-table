@@ -249,6 +249,75 @@ exports.tests = [
   }
 },
 {
+  name: 'Object rest properties',
+  link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
+  exec: function () {/*
+    var {a, ...rest} = {a: 1, b: 2, c: 3};
+    return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
+  */},
+  res: {
+    tr:          false,
+    babel:       true,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Object spread properties',
+  link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
+  exec: function () {/*
+    var spread = {b: 2, c: 3};
+    var O = {a: 1, ...spread};
+    return O.a + O.b + O.c === 6;
+  */},
+  res: {
+    tr:          false,
+    babel:       true,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
   name: 'Async functions',
   link: 'https://github.com/lukehoban/ecmascript-asyncawait',
   exec: function () {/*
