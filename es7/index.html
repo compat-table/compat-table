@@ -326,7 +326,7 @@ return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");return Function("asyncTestPassed","\nreturn typeof Object.getOwnPropertyDescriptors === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox31">No</td>
@@ -381,6 +381,36 @@ return typeof Array.prototype.includes === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
+<tr significance="1"><td id="String.prototype.at"><span><a class="anchor" href="#String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
+return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="firefox31">No</td>
+<td class="no" data-browser="firefox32">No</td>
+<td class="no" data-browser="firefox34">No</td>
+<td class="no" data-browser="firefox35">No</td>
+<td class="no" data-browser="firefox39">No</td>
+<td class="no" data-browser="chrome30">No</td>
+<td class="no" data-browser="chrome33">No</td>
+<td class="no" data-browser="chrome34">No</td>
+<td class="no" data-browser="chrome35">No</td>
+<td class="no" data-browser="chrome37">No</td>
+<td class="no" data-browser="safari78">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no" data-browser="konq49">No</td>
+<td class="no obsolete" data-browser="rhino17">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="nodeharmony">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="no" data-browser="ejs">No</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
 <tr significance="1"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
   [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;,
@@ -396,7 +426,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -426,7 +456,7 @@ return true;
 </tr>
 <tr significance="1"><td id="SIMD"><span><a class="anchor" href="#SIMD">&#xA7;</a><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD</a></span><script data-source="
 return typeof SIMD !== &apos;undefined&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");return Function("asyncTestPassed","\nreturn typeof SIMD !== 'undefined';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");return Function("asyncTestPassed","\nreturn typeof SIMD !== 'undefined';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

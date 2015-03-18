@@ -351,7 +351,7 @@ exports.tests = [
   */},
   res: {
     tr: false,
-    babel: false,
+    babel: true,
     es7shim: true,
     ejs: false,
     ie11: false,
@@ -399,6 +399,41 @@ exports.tests = [
       note_id: 'includes-nightly',
       note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
     },
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+
+{
+  name: 'String.prototype.at',
+  link: 'https://github.com/mathiasbynens/String.prototype.at',
+  exec: function () {/*
+    return 'a𠮷b'.at(1) === '𠮷';
+  */},
+  res: {
+    tr: false,
+    babel: true,
+    es7shim: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
     chrome30: false,
     chrome33: false,
     chrome34: false,
