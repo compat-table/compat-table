@@ -637,7 +637,6 @@ exports.tests = [
         babel:       true,
         es6tr:       true,
         tr:          true,
-        jsx:         true,
         ejs:         true,
         closure:     true,
         ie11:        true,
@@ -1400,6 +1399,25 @@ exports.tests = [
         typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
+    'string-keyed methods': {
+      exec: function () {/*
+        class C {
+          "foo bar"() { return 2; }
+        }
+        return typeof C.prototype["foo bar"] === "function"
+          && new C()["foo bar"]() === 2;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        ie11tp:      true,
+        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        { val: flag, note_id: 'strict-required' },
+      },
+    },
     'computed prototype methods': {
       exec: function () {/*
         var foo = "method";
@@ -1859,7 +1877,7 @@ exports.tests = [
       exec: function() {/*
         return ({ y() { return 2; } }).y() === 2;
       */},
-      res: {
+      res: (temp.shorthandMethodsResults = {
         tr:          true,
         babel:       true,
         es6tr:       true,
@@ -1873,7 +1891,13 @@ exports.tests = [
         chrome43:    true,
         iojs:        flag,
         webkit:      true,
-      },
+      }),
+    },
+    'string-keyed shorthand methods': {
+      exec: function() {/*
+        return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
+      */},
+      res: temp.shorthandMethodsResults,
     },
     'computed shorthand methods': {
       exec: function() {/*
@@ -1971,7 +1995,6 @@ exports.tests = [
       */},
       res: {
         firefox35:    true,
-        webkit:       true,
         chrome42:     true,
       },
     },
@@ -2427,11 +2450,11 @@ exports.tests = [
     'shorthand generator methods': {
       exec: function() {/*
         var o = {
-          * generator() {
+          * "foo bar"() {
             yield 5; yield 6;
           },
         };
-        var iterator = o.generator();
+        var iterator = o["foo bar"]();
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
@@ -2546,6 +2569,7 @@ exports.tests = [
         firefox25:   true,
         chrome30:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -2565,6 +2589,7 @@ exports.tests = [
         firefox25:   true,
         chrome30:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -2579,6 +2604,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -2593,6 +2619,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -2982,6 +3009,7 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -3022,6 +3050,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome39:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -3221,6 +3250,7 @@ exports.tests = [
         ie11tp:      true,
         firefox16:   true,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -3261,6 +3291,7 @@ exports.tests = [
         ie11tp:      true,
         firefox29:   true,
         chrome39:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -3457,6 +3488,7 @@ exports.tests = [
         ie11tp:      true,
         firefox36:   true,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -4292,6 +4324,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        jsx:          true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,
@@ -4308,6 +4341,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        jsx:          true,
         es6tr:        true,
         firefox11:    true,
         safari71_8:   true,
@@ -4394,6 +4428,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        jsx:          true,
         es6tr:        true,
         firefox16:    true,
         safari71_8:   true,
