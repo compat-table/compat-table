@@ -249,6 +249,39 @@ exports.tests = [
   }
 },
 {
+  name: 'Destructuring in comprehensions',
+  link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
+  exec: function () {/*
+    return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
+  */},
+  res: {
+    tr:          true,
+    babel:       true,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
   name: 'Object rest properties',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
