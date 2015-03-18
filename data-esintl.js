@@ -124,18 +124,24 @@ exports.browsers = {
     short: 'Node .12',
     obsolete: false, // current version
     platformtype: 'engine',
+    note_id: 'only-english',
+    note_html: 'Intl support only English by default, it needs to build with full ICU data if needs all locales supported'
   },
   iojs1_0: {
     full: 'io.js 1.0.0',
     short: 'io 1.0',
     obsolete: false, // current version
     platformtype: 'engine',
+    note_id: 'build-with-intl',
+    note_html: 'Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed'
   },
   iojs1_1: {
     full: 'io.js 1.1.0',
     short: 'io 1.1',
     obsolete: false, // current version
     platformtype: 'engine',
+    note_id: 'build-with-intl',
+    note_html: 'Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed'
   },
   ios7: {
     full: 'iOS Safari',
