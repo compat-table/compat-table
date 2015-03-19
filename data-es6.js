@@ -647,7 +647,7 @@ exports.tests = [
       exec: function() {/*
         const baz = 1;
         try {
-          Function("const foo = 1; foo = 2;")();
+          Function("const foo = 1;", "foo = 2;")();
         } catch(e) {
           return true;
         }
