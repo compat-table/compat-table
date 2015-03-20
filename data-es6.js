@@ -2710,11 +2710,16 @@ exports.tests = [
     },
     '"u" flag': {
       exec: function() {/*
-        return "𠮷".match(/./u)[0].length === 2;
+        return "𠮷".match(/^.$/u)[0].length === 2;
       */},
       res: {
         tr:          true,
         babel:       true,
+        ie11tp: {
+          val: true,
+          note_id: "ie-regexp-u",
+          note_html: "RegExps such as <code>/./u</code> will still select halves of surrogate pairs.",
+        },
       },
     },
   },
@@ -5037,6 +5042,34 @@ exports.tests = [
       */},
       res: temp.basicProtoResults,
     },
+    'absent from Object.create(null)': {
+      exec: function () {/*
+        var o = Object.create(null), p = {};
+        o.__proto__ = p;
+        return Object.getPrototypeOf(o) !== p;
+      */},
+      res: (temp.advancedProtoResults = {
+        ie11:        true,
+        firefox11:   true,
+        chrome30:    true,
+        safari6:     true,
+        phantom:     true,
+        webkit:      true,
+        opera:       true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+        ios7:        true,
+      }),
+    },
+    'present in hasOwnProperty()': {
+      exec: function () {/*
+        return Object.prototype.hasOwnProperty('__proto__');
+      */},
+      res: Object.assign({}, temp.advancedProtoResults, {
+        konq49:      true,
+      }),
+    },
     'correct property descriptor': {
       exec: function () {/*
         var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
@@ -5048,19 +5081,20 @@ exports.tests = [
           && desc.configurable
           && !desc.enumerable);
       */},
-      res: {
-        ie11:        true,
-        firefox17:   true,
-        chrome30:    true,
-        safari6:     true,
-        phantom:     true,
-        webkit:      true,
-        opera:       true,
-        rhino17:     true,
-        node:        true,
-        iojs:        true,
-        ios7:        true,
-      },
+      res: Object.assign({}, temp.advancedProtoResults, {
+        firefox11: false,
+        rhino17:   false,
+        firefox17: true,
+      }),
+    },
+    'present in Object.getOwnPropertyNames()': {
+      exec: function () {/*
+        return Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;
+      */},
+      res: Object.assign({}, temp.advancedProtoResults, {
+        firefox11: false,
+        rhino17:   false,
+      }),
     },
   },
 },
