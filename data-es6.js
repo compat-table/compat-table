@@ -5068,6 +5068,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
         konq49:      true,
+        safari51:    true,
       }),
     },
     'correct property descriptor': {
