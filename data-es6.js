@@ -1254,6 +1254,7 @@ exports.tests = [
         babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
+        ie11tp:      true,
         firefox27:   true,
       },
     },
@@ -1278,6 +1279,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
+        ie11tp:      true,
         firefox36:   true,
       },
     },
@@ -1994,6 +1996,7 @@ exports.tests = [
         }
       */},
       res: {
+        ie11tp:       true,
         firefox35:    true,
         chrome42:     true,
       },
@@ -2007,6 +2010,7 @@ exports.tests = [
         return !({ [a] : [] } instanceof Array);
       */},
       res: {
+        ie11tp:       true,
         firefox34:    true,
         safari71_8:   true,
         webkit:       true,
@@ -2601,6 +2605,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        ie11tp:      true,
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
@@ -2616,6 +2621,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        ie11tp:      true,
         firefox36:   true,
         chrome30:    flag,
         chrome41:    true,
@@ -2674,6 +2680,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         closure:     true,
+        ie11tp:      true,
         firefox34:   true,
         chrome41:    true,
         iojs:        true,
@@ -2708,7 +2715,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        ie11tp:      true,
       },
     },
   },
@@ -4813,6 +4819,7 @@ exports.tests = [
         ejs:         true,
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox34:   true,
       },
     },
@@ -4884,6 +4891,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4894,6 +4902,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4905,6 +4914,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ie11tp:      true,
         firefox33:   true,
         chrome40:    true,
         iojs:        true,
@@ -4918,6 +4928,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4928,6 +4939,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4938,6 +4950,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4948,6 +4961,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4958,6 +4972,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4968,6 +4983,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
       },
     },
@@ -4979,6 +4995,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
         firefox35:   true,
         chrome40:    true,
         iojs:        true,
@@ -5185,7 +5202,9 @@ exports.tests = [
         return o[sym1].name === "[foo]" &&
                o[sym2].name === "";
       */},
-      res: {},
+      res: {
+        ie11tp:      true,
+      },
     },
     'class statements': {
       exec: function() {/*
@@ -5195,7 +5214,8 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        babel:         true,
+        babel:       true,
+        ie11tp:      true,
       },
     },
     'class expressions': {
@@ -5204,7 +5224,8 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        babel:         true,
+        babel:       true,
+        ie11tp:      true,
       },
     },
     'variables (class)': {
@@ -5217,7 +5238,8 @@ exports.tests = [
                typeof qux.name === "function";
       */},
       res: {
-        babel:         true,
+        babel:       true,
+        ie11tp:      true,
       },
     },
     'object methods (class)': {
@@ -5666,6 +5688,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
+        ie11tp:      true,
         chrome39:    true,
         firefox36:   true,
         iojs:        true,
@@ -6982,6 +7005,7 @@ exports.tests = [
         return this === undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
+        ie11tp:      true,
         firefox34:   true,
         chrome42:    true,
       },
@@ -7027,6 +7051,7 @@ exports.tests = [
         }
       */},
       res: {
+        ie11tp:      true,
         chrome43:    true,
       },
     },
@@ -7058,6 +7083,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        ie11tp:      true,
       },
     },
     'built-in prototypes are not instances': {
