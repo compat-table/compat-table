@@ -921,7 +921,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.localeCompare',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-String.prototype.localeCompare',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.localecompare',
   subtests: {
     'exists on String prototype': {
       exec: function(){/*
