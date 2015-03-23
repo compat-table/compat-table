@@ -2227,7 +2227,7 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'correct \"this\" binding': {
+    'correct "this" binding': {
       exec: function() {/*
         function * generator(){
           yield this.x; yield this.y;
@@ -2250,6 +2250,21 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+      },
+    },
+    'can\'t use "this" with new': {
+      exec: function() {/*
+        function * generator(){
+          yield this.x; yield this.y;
+        };
+        try {
+          new generator();
+        }
+        catch (e) {
+          return true;
+        }
+      */},
+      res: {
       },
     },
     'sending': {
