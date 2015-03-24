@@ -2903,10 +2903,10 @@ return result === &quot;123&quot;;
 <tr class="subtest" data-parent="for..of_loops" id="for..of_loops_iterator_closing,_break"><td><span><a class="anchor" href="#for..of_loops_iterator_closing,_break">&#xA7;</a>iterator closing, break</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function(){ closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 for (var it of iter) break;
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true }\nfor (var it of iter) break;\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\nfor (var it of iter) break;\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -2973,12 +2973,12 @@ return closed;
 <tr class="subtest" data-parent="for..of_loops" id="for..of_loops_iterator_closing,_throw"><td><span><a class="anchor" href="#for..of_loops_iterator_closing,_throw">&#xA7;</a>iterator closing, throw</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function() { closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 try {
   for (var it of iter) throw 0;
 } catch(e){}
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function() { closed = true }\ntry {\n  for (var it of iter) throw 0;\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\ntry {\n  for (var it of iter) throw 0;\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4190,10 +4190,10 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <tr class="subtest" data-parent="destructuring" id="destructuring_iterator_closing"><td><span><a class="anchor" href="#destructuring_iterator_closing">&#xA7;</a>iterator closing</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function() { closed = true; }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 var [a, b] = iter;
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function() { closed = true; }\nvar [a, b] = iter;\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\nvar [a, b] = iter;\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -10640,12 +10640,12 @@ function * generator(){
   yield this.x; yield this.y;
 };
 try {
-  new generator();
+  (new generator()).next();
 }
 catch (e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("152");return Function("asyncTestPassed","\nfunction * generator(){\n  yield this.x; yield this.y;\n};\ntry {\n  new generator();\n}\ncatch (e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("152");return Function("asyncTestPassed","\nfunction * generator(){\n  yield this.x; yield this.y;\n};\ntry {\n  (new generator()).next();\n}\ncatch (e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -15077,12 +15077,12 @@ return map.has(key1) &amp;&amp; map.get(key1) === 123 &amp;&amp;
 <tr class="subtest" data-parent="Map" id="Map_iterator_closing"><td><span><a class="anchor" href="#Map_iterator_closing">&#xA7;</a>iterator closing</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function(){ closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 try {
   new Map(iter);
 } catch(e){}
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("213");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true }\ntry {\n  new Map(iter);\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("213");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\ntry {\n  new Map(iter);\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -15960,7 +15960,7 @@ return set.has(obj1) &amp;&amp; set.has(obj2);
 <tr class="subtest" data-parent="Set" id="Set_iterator_closing"><td><span><a class="anchor" href="#Set_iterator_closing">&#xA7;</a>iterator closing</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function(){ closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 var add = Set.prototype.add;
 Set.prototype.add = function(){ throw 0 };
 try {
@@ -15968,7 +15968,7 @@ try {
 } catch(e){}
 Set.prototype.add = add;
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("226");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true }\nvar add = Set.prototype.add;\nSet.prototype.add = function(){ throw 0 };\ntry {\n  new Set(iter);\n} catch(e){}\nSet.prototype.add = add;\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("226");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\nvar add = Set.prototype.add;\nSet.prototype.add = function(){ throw 0 };\ntry {\n  new Set(iter);\n} catch(e){}\nSet.prototype.add = add;\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -16848,12 +16848,12 @@ return weakmap.has(key1) &amp;&amp; weakmap.get(key1) === 123 &amp;&amp;
 <tr class="subtest" data-parent="WeakMap" id="WeakMap_iterator_closing"><td><span><a class="anchor" href="#WeakMap_iterator_closing">&#xA7;</a>iterator closing</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function(){ closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 try {
   new WeakMap(iter);
 } catch(e){}
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("239");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true }\ntry {\n  new WeakMap(iter);\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("239");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\ntry {\n  new WeakMap(iter);\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -17327,12 +17327,12 @@ return weakset.has(obj1) &amp;&amp; weakset.has(obj2);
 <tr class="subtest" data-parent="WeakSet" id="WeakSet_iterator_closing"><td><span><a class="anchor" href="#WeakSet_iterator_closing">&#xA7;</a>iterator closing</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function(){ closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 try {
   new WeakSet(iter);
 } catch(e){}
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true }\ntry {\n  new WeakSet(iter);\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\ntry {\n  new WeakSet(iter);\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -24828,12 +24828,12 @@ return Array.from(Object.create(iterable), function(e, i) {
 <tr class="subtest" data-parent="Array_static_methods" id="Array_static_methods_Array.from,_iterator_closing"><td><span><a class="anchor" href="#Array_static_methods_Array.from,_iterator_closing">&#xA7;</a>Array.from, iterator closing</span><script data-source="
 var closed = false;
 var iter = __createIterableObject(1, 2, 3);
-iter[&apos;return&apos;] = function(){ closed = true }
+iter[&apos;return&apos;] = function(){ closed = true; return {}; }
 try {
   Array.from(iter, function() { throw 42 });
 } catch(e){}
 return closed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("354");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true }\ntry {\n  Array.from(iter, function() { throw 42 });\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("354");return Function("asyncTestPassed","\nvar closed = false;\nvar iter = __createIterableObject(1, 2, 3);\niter['return'] = function(){ closed = true; return {}; }\ntry {\n  Array.from(iter, function() { throw 42 });\n} catch(e){}\nreturn closed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>

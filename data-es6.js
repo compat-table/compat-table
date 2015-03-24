@@ -2198,7 +2198,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         for (var it of iter) break;
         return closed;
       */},
@@ -2211,7 +2211,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function() { closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         try {
           for (var it of iter) throw 0;
         } catch(e){}
@@ -2286,7 +2286,7 @@ exports.tests = [
           yield this.x; yield this.y;
         };
         try {
-          new generator();
+          (new generator()).next();
         }
         catch (e) {
           return true;
@@ -3153,7 +3153,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         try {
           new Map(iter);
         } catch(e){}
@@ -3408,7 +3408,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         var add = Set.prototype.add;
         Set.prototype.add = function(){ throw 0 };
         try {
@@ -3663,7 +3663,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         try {
           new WeakMap(iter);
         } catch(e){}
@@ -3781,7 +3781,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         try {
           new WeakSet(iter);
         } catch(e){}
@@ -4514,7 +4514,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function() { closed = true; }
+        iter['return'] = function(){ closed = true; return {}; }
         var [a, b] = iter;
         return closed;
       */},
@@ -6282,7 +6282,7 @@ exports.tests = [
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true }
+        iter['return'] = function(){ closed = true; return {}; }
         try {
           Array.from(iter, function() { throw 42 });
         } catch(e){}
