@@ -4935,6 +4935,172 @@ exports.tests = [
   },
 },
 {
+  name: 'Implicit iterator closing',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-iteratorclose',
+  subtests: {
+    'for-of, break': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        for(var it of iter)break;
+        return closed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'for-of, throw': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        try {
+          for(var it of iter)throw 42;
+        } catch(e){}
+        return closed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'partial destructuring': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        var [a, b] = iter;
+        return closed;
+      */},
+      res: {
+      },
+    },
+    'delegated yield, simple': {
+      exec: function () {/*
+        var closed = '';
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){
+          closed += 'a';
+          return {done: true};
+        }
+        var gen = (function*(){
+          try {
+            yield *iter;
+          } finally {
+            closed += 'b';
+          }
+        })();
+        gen.next();
+        gen['return']();
+        return closed === 'ab';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'delegated yield, throw -> return': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['throw'] = undefined;
+        iter['return'] = function(){
+          closed = true;
+          return {done: true};
+        }
+        var gen = (function*(){
+          try {
+            yield *iter;
+          } catch(e){}
+        })();
+        gen.next();
+        gen['throw']();
+        return closed;
+      */},
+      res: {
+      },
+    },
+    'Array.from': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        try {
+          Array.from(iter, function(){ throw 42 });
+        } catch(e){}
+        return closed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'Map': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        try {
+          new Map(iter);
+        } catch(e){}
+        return closed;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
+    'Set': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        var add = Set.prototype.add;
+        Set.prototype.add = function(){ throw 42 };
+        try {
+          new Set(iter);
+        } catch(e){}
+        Set.prototype.add = add;
+        return closed;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
+    'WeakMap': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        try {
+          new WeakMap(iter);
+        } catch(e){}
+        return closed;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
+    'WeakSet': {
+      exec: function () {/*
+        var closed = false;
+        var iter = __createIterableObject(null, null, null);
+        iter['return'] = function(){ closed = true }
+        try {
+          new WeakSet(iter);
+        } catch(e){}
+        return closed;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
+  }
+},
+{
   name: 'Object static methods accept primitives',
   category: 'misc',
   significance: 'small',
