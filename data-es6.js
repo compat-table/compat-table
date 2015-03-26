@@ -1341,7 +1341,6 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ejs:         true,
-        closure:     true,
         ie11tp:      true,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1359,7 +1358,6 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ejs:         true,
-        closure:     true,
         ie11tp:      true,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1935,7 +1933,9 @@ exports.tests = [
       exec: function() {/*
         return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
       */},
-      res: temp.shorthandMethodsResults,
+      res: Object.assign({}, temp.shorthandMethodsResults, {
+        closure:     false,
+      }),
     },
     'computed shorthand methods': {
       exec: function() {/*
@@ -2141,7 +2141,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        closure:     true,
         ie11tp:      true,
         firefox17:   true,
         chrome38:    true,
@@ -2164,7 +2163,6 @@ exports.tests = [
         babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
-        closure:     true,
         ie11tp:      true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2244,7 +2242,7 @@ exports.tests = [
         passed    &= item.value === undefined && item.done === true;
         return passed;
       */},
-      res: {
+      res: (temp.basicGenerators = {
         tr:          true,
         babel:       true,
         closure:     true,
@@ -2253,7 +2251,23 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
-      },
+      }),
+    },
+    'generator function expressions': {
+      exec: function() {/*
+        var generator = function * (){
+          yield 5; yield 6;
+        };
+        var iterator = generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: temp.basicGenerators,
     },
     'correct "this" binding': {
       exec: function() {/*
@@ -2269,16 +2283,7 @@ exports.tests = [
         passed    &= item.value === undefined && item.done === true;
         return passed;
       */},
-      res: {
-        tr:          true,
-        babel:       true,
-        closure:     true,
-        firefox27:   true,
-        chrome21dev: flag,
-        chrome39:    true,
-        node:        flag,
-        iojs:        true,
-      },
+      res: temp.basicGenerators,
     },
     'can\'t use "this" with new': {
       exec: function() {/*
@@ -2578,6 +2583,32 @@ exports.tests = [
     'shorthand generator methods': {
       exec: function() {/*
         var o = {
+          * generator() {
+            yield 5; yield 6;
+          },
+        };
+        var iterator = o.generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        chrome41:    flag,
+        chrome43:    true,
+        firefox34:   true,
+        iojs:        flag,
+      },
+    },
+    'string-keyed shorthand generator methods': {
+      exec: function() {/*
+        var o = {
           * "foo bar"() {
             yield 5; yield 6;
           },
@@ -2594,7 +2625,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        closure:     true,
         chrome41:    flag,
         chrome43:    true,
         firefox34:   true,
