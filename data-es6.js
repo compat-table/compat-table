@@ -45,8 +45,8 @@ exports.browsers = {
     note_html: 'Have to be enabled via <code>harmony</code> option'
   },
   typescript: {
-    full: 'TypeScript 1.4',
-    short: 'Type-<br>Script',
+    full: 'TypeScript 1.5-alpha',
+    short: 'Type-<br />Script',
     obsolete: false,
     platformtype: 'compiler',
   },
@@ -2834,6 +2834,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         closure:     true,
+        typescript:  true,
         ie11tp:      true,
         firefox34:   true,
         chrome41:    true,
