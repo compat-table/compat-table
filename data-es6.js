@@ -4,6 +4,7 @@ Object.assign = require('object-assign');
 
 var temp = {};
 var flag = "flagged";
+var notApplicable = "NA";
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
@@ -4473,6 +4474,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
@@ -4494,6 +4496,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
+        typescript:  true,
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
@@ -4509,6 +4512,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         ejs:         true,
         firefox34:   true,
       },
@@ -4523,6 +4527,11 @@ exports.tests = [
       */},
       res: {
         tr:           true,
+        typescript:   {
+            val: notApplicable,
+            note_id: "typescript-es6",
+            note_html: "TypeScript recognizes the existence of runtime entities for ES6 under the <code>--target ES6</code> flag, but does not supply a runtime polyfill."
+        },
         firefox34:    true,
         babel:        true,
       },
@@ -4538,6 +4547,10 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        typescript:   {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         firefox36:    true,
       },
     },
@@ -4550,6 +4563,10 @@ exports.tests = [
         return closed;
       */},
       res: {
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
       },
     },
     'iterable destructuring expression': {
@@ -4560,6 +4577,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        typescript:   true,
         jsx:          true,
         es6tr:        true,
         firefox11:    true,
@@ -4577,6 +4595,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        typescript:   true,
         jsx:          true,
         es6tr:        true,
         firefox11:    true,
@@ -4664,6 +4683,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        typescript:   true,
         jsx:          true,
         es6tr:        true,
         firefox16:    true,
@@ -4682,6 +4702,7 @@ exports.tests = [
         tr:           true,
         firefox16:    true,
         babel:        true,
+        typescript:   true,
         es6tr:        true,
         webkit:       true,
         safari71_8:   true,
@@ -4724,6 +4745,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4751,6 +4773,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4772,6 +4795,10 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
+        typescript:   {
+            val: false,
+            note_id: "typescript-es6",
+        },
       },
     },
     'in parameters, function \'length\' property': {
@@ -4781,6 +4808,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -4816,6 +4844,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         closure:     true,
         firefox13:   true,
@@ -4834,6 +4863,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         closure:     true,
@@ -4859,6 +4889,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         closure:     true,
       },
@@ -4873,6 +4904,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         closure:     true,
       },
@@ -4891,7 +4923,11 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
-        babel: flag
+        babel: flag,
+        typescript:   {
+            val: false,
+            note_id: "typescript-es6",
+        },
       },
     },
     'defaults in parameters, separate scope': {
@@ -4915,6 +4951,10 @@ exports.tests = [
         )({b:2, c:undefined, x:4});
       */},
       res: {
+        typescript:   {
+            val: false,
+            note_id: "typescript-es6",
+        },
       },
     },
   },
