@@ -1879,6 +1879,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1948,6 +1949,7 @@ exports.tests = [
         tr:          true,
         closure:     true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         firefox34:   true,
         webkit:      true,
@@ -1966,6 +1968,10 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  {
+            val: false,
+            note_id: "typescript-es6",
+        },
         ie11tp:      true,
         tr:          true,
         es6tr:       true,
