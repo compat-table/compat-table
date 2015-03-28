@@ -17338,14 +17338,14 @@ return m.get(f) === 42;
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
 <tr class="subtest" data-parent="WeakSet" id="WeakSet_basic_functionality"><td><span><a class="anchor" href="#WeakSet_basic_functionality">&#xA7;</a>basic functionality</span><script data-source="
-var obj1 = {}, obj2 = {};
+var obj1 = {};
 var weakset = new WeakSet();
 
 weakset.add(obj1);
 weakset.add(obj1);
 
 return weakset.has(obj1);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");return Function("asyncTestPassed","\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj1);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");return Function("asyncTestPassed","\nvar obj1 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj1);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
