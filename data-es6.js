@@ -613,6 +613,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -637,6 +638,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         tr:          true,
         ejs:         true,
@@ -657,6 +659,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: false,
+            note_id: "typescript-es6",
+        },
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -672,6 +678,10 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         ie11:        true,
         firefox36:   true,
       },
@@ -685,6 +695,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -706,6 +717,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         tr:          true,
         ejs:         true,
@@ -731,6 +743,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -751,6 +767,10 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -775,6 +795,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -795,6 +816,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -813,6 +835,7 @@ exports.tests = [
         ejs:         true,
         es6tr:       true,
         babel:       true,
+        typescript:  true,
         closure:     true,
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
@@ -826,6 +849,10 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -849,6 +876,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         ejs:         true,
         closure:     true,
       },
@@ -862,6 +893,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -883,6 +915,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -904,6 +937,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -924,6 +958,10 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
+        typescript:  {
+            val: false,
+            note_id: "typescript-es6",
+        },
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -952,6 +990,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: false,
+            note_id: "typescript-es6",
+        },
         ejs:         true,
         closure:     true,
         chrome37:    flag,
