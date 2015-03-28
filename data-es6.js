@@ -2098,6 +2098,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -2121,6 +2122,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         ejs:         true,
         closure:     true,
         ie11tp:      true,
@@ -2141,6 +2143,11 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:   {
+            val: false,
+            note_id: "typescript-es6",
+            note_html: "TypeScript recognizes the existence of these runtime entities and constructs for ES6 and emits them under the <code>--target ES6</code> flag, but does not supply a runtime polyfill."
+        },
         ejs:         true,
         ie11tp:      true,
         firefox17:   true,
@@ -2162,6 +2169,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         ie11tp:      true,
@@ -2184,6 +2195,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ie11tp:      true,
         firefox36:   true,
@@ -2204,6 +2219,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
       },
     },
     'iterator closing, throw': {
@@ -2219,6 +2238,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  {
+            val: notApplicable,
+            note_id: "typescript-es6",
+        },
       },
     },
   },
@@ -4530,7 +4553,6 @@ exports.tests = [
         typescript:   {
             val: notApplicable,
             note_id: "typescript-es6",
-            note_html: "TypeScript recognizes the existence of runtime entities for ES6 under the <code>--target ES6</code> flag, but does not supply a runtime polyfill."
         },
         firefox34:    true,
         babel:        true,

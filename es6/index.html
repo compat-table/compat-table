@@ -2495,7 +2495,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="closure" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/7</td>
+<td data-browser="typescript" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/7</td>
@@ -2563,7 +2563,7 @@ for (var item of arr)
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2632,7 +2632,7 @@ return str === &quot;foo&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2701,7 +2701,7 @@ return str === &quot;&#x20BB7; &#x20BB6; &quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2772,7 +2772,7 @@ return result === &quot;123&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2843,7 +2843,7 @@ return result === &quot;123&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2913,7 +2913,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2985,7 +2985,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3723,7 +3723,7 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie-regexp-u-note"><sup>[9]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie-regexp-u-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -4060,7 +4060,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4130,7 +4130,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4200,7 +4200,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5164,7 +5164,7 @@ return new Function(&quot;{a, x:b, y:e}&quot;,&quot;[c, d]&quot;,
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5714,7 +5714,7 @@ return a === 1 &amp;&amp; b === 2;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5854,7 +5854,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#typescript-es6-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -31831,7 +31831,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[9]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="typescript-es6-note">  <sup>[10]</sup> TypeScript recognizes the existence of runtime entities for ES6 under the <code>--target ES6</code> flag, but does not supply a runtime polyfill.</p><p id="ff11-object-destructuring-note">  <sup>[11]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[12]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="typescript-class-note">  <sup>[15]</sup> TypeScript only supports class statements at script or module top-level.</p><p id="constructor-required-note">  <sup>[16]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[17]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[18]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[19]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[20]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[21]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[22]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[23]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[24]</sup> <code>with</code> is not supported in ejs</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[31]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="typescript-es6-note">  <sup>[9]</sup> TypeScript recognizes the existence of these runtime entities and constructs for ES6 and emits them under the <code>--target ES6</code> flag, but does not supply a runtime polyfill.</p><p id="ie-regexp-u-note">  <sup>[10]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[11]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[12]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="typescript-class-note">  <sup>[15]</sup> TypeScript only supports class statements at script or module top-level.</p><p id="constructor-required-note">  <sup>[16]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[17]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[18]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[19]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[20]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[21]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[22]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[23]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[24]</sup> <code>with</code> is not supported in ejs</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[31]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
