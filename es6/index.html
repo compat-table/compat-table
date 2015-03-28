@@ -17342,10 +17342,10 @@ var obj1 = {}, obj2 = {};
 var weakset = new WeakSet();
 
 weakset.add(obj1);
-weakset.add(obj1);
+weakset.add(obj2);
 
 return weakset.has(obj1);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");return Function("asyncTestPassed","\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj1);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");return Function("asyncTestPassed","\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj2);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

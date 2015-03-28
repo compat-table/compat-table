@@ -3775,7 +3775,7 @@ exports.tests = [
         var weakset = new WeakSet();
 
         weakset.add(obj1);
-        weakset.add(obj1);
+        weakset.add(obj2);
 
         return weakset.has(obj1);
       */},
