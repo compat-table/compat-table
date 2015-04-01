@@ -4,7 +4,6 @@ Object.assign = require('object-assign');
 
 var temp = {};
 var flag = "flagged";
-var notApplicable = "NA";
 var needsPolyfill = "needs-polyfill-or-native"
 
 exports.name = 'ES6';
@@ -1842,6 +1841,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         jsx:         true,
+        typescript:  true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1849,7 +1849,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'expression in constructors': {
@@ -1866,13 +1865,13 @@ exports.tests = [
         tr:          true,
         babel:       true,
         jsx:         true,
+        typescript:  true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
         webkit:      true,
         chrome43:    { val: flag, note_id: 'strict-required' },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'in methods': {
@@ -1889,6 +1888,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         jsx:         true,
+        typescript:  true,
         closure:     true,
         es6tr:       true,
         ejs:         true,
@@ -1896,7 +1896,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'is statically bound': {
@@ -1917,13 +1916,13 @@ exports.tests = [
         tr:          true,
         babel:       true,
         jsx:         true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
   },
