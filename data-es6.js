@@ -1098,6 +1098,10 @@ exports.tests = [
         )(3);
       */},
       res: {
+        typescript: {
+            val: needsPolyfill,
+            note_id: "typescript-es6",
+        },
       },
     },
   }
@@ -2851,6 +2855,10 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        typescript: {
+            val: needsPolyfill,
+            note_id: "typescript-es6",
+        },
         ie11tp:      true,
         firefox36:   true,
         chrome30:    flag,
@@ -2867,6 +2875,10 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        typescript: {
+            val: needsPolyfill,
+            note_id: "typescript-es6",
+        },
         ie11tp:      true,
         firefox36:   true,
         chrome30:    flag,
