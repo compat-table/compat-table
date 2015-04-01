@@ -551,6 +551,7 @@ exports.tests = [
       res: {
         babel:       true,
         tr:          true,
+        typescript:  true,
         ie11tp:      true,
         firefox39:   true,
       },
@@ -589,7 +590,7 @@ exports.tests = [
         closure:     true,
         es6tr:       true,
         jsx:         true,
-        typescript:  { val: flag, note_id: 'typescript-class' },
+        typescript:  true,
         ie11tp:      true,
       },
     },
