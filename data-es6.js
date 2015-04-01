@@ -3852,7 +3852,7 @@ exports.tests = [
   subtests: {
     'basic functionality': {
       exec: function () {/*
-        var obj1 = {}, obj2 = {};
+        var obj1 = {};
         var weakset = new WeakSet();
 
         weakset.add(obj1);
