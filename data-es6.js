@@ -5,6 +5,7 @@ Object.assign = require('object-assign');
 var temp = {};
 var flag = "flagged";
 var notApplicable = "NA";
+var needsPolyfill = "needs-polyfill-or-native"
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
@@ -377,7 +378,12 @@ exports.tests = [
           note_id: 'tr-tco',
           note_html: 'Requires the <code>properTailCalls</code> compile option.'
         },
-        babel:       true
+        babel:       true,
+        typescript:  {
+            val: needsPolyfill,
+            note_id: "typescript-es6",
+            note_html: "TypeScript recognizes the existence of these runtime entities and constructs for ES6 and emits them under the <code>--target ES6</code> flag, but does not supply a runtime polyfill."
+        }
       },
     },
     'mutual recursion': {
@@ -399,6 +405,7 @@ exports.tests = [
       */},
       res: {
         tr:          { val: flag, note_id: 'tr-tco' },
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" }
       },
     }
   }
@@ -660,7 +667,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: false,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         es6tr:       true,
@@ -679,7 +686,7 @@ exports.tests = [
       res: {
         babel:       flag,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ie11:        true,
@@ -744,7 +751,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         es6tr:       true,
@@ -768,7 +775,7 @@ exports.tests = [
       res: {
         babel:       flag,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ie11:        true,
@@ -850,7 +857,7 @@ exports.tests = [
       res: {
         babel:       flag,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ejs:         true,
@@ -877,7 +884,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ejs:         true,
@@ -959,7 +966,7 @@ exports.tests = [
       res: {
         babel:       flag,
         typescript:  {
-            val: false,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ejs:         true,
@@ -991,7 +998,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: false,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ejs:         true,
@@ -2013,7 +2020,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  {
-            val: false,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         ie11tp:      true,
@@ -2193,10 +2200,9 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:   {
-            val: false,
+        typescript:  {
+            val: needsPolyfill,
             note_id: "typescript-es6",
-            note_html: "TypeScript recognizes the existence of these runtime entities and constructs for ES6 and emits them under the <code>--target ES6</code> flag, but does not supply a runtime polyfill."
         },
         ejs:         true,
         ie11tp:      true,
@@ -2220,7 +2226,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         es6tr:       { val: true, note_id: 'compiler-iterable' },
@@ -2246,7 +2252,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         es6tr:       { val: true, note_id: 'compiler-iterable' },
@@ -2270,7 +2276,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
       },
@@ -2289,7 +2295,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
       },
@@ -4601,7 +4607,7 @@ exports.tests = [
       res: {
         tr:           true,
         typescript:   {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         firefox34:    true,
@@ -4620,7 +4626,7 @@ exports.tests = [
         tr:           true,
         babel:        true,
         typescript:   {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
         firefox36:    true,
@@ -4636,7 +4642,7 @@ exports.tests = [
       */},
       res: {
         typescript:  {
-            val: notApplicable,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
       },
@@ -4867,8 +4873,8 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
-        typescript:   {
-            val: false,
+        typescript:  {
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
       },
@@ -4995,9 +5001,9 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
-        babel: flag,
+        babel:        flag,
         typescript:   {
-            val: false,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
       },
@@ -5024,7 +5030,7 @@ exports.tests = [
       */},
       res: {
         typescript:   {
-            val: false,
+            val: needsPolyfill,
             note_id: "typescript-es6",
         },
       },

@@ -333,8 +333,12 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       // Create the cell, and add classes and attributes
       var cell = $('<td></td>');
       cell.addClass(result === true ? "yes" : result !== null ? "no" : "");
-      if(result === "flagged") {
+      if (result === "flagged") {
         cell.addClass("flagged");
+      }
+      else if (result === "needs-polyfill-or-native") {
+        cell.attr('title', "Requires native support or a polyfill.");
+        cell.addClass("needs-polyfill-or-native");
       }
       cell.attr('data-browser', browserId).addClass(
         browsers[browserId].obsolete ? "obsolete" :
@@ -353,6 +357,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       if (result !== null) {
         cell.text(result === "flagged" ? "Flag" : result === true ? "Yes" : "No");
       }
+
       if (footnote) {
         cell.append(footnote);
       }
