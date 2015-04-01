@@ -1361,7 +1361,7 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', note_html: 'Requires the <code>constructor</code> function to always be explicitly defined.' },
-        typescript:  { val: flag, note_id: 'typescript-class', note_html: 'TypeScript only supports class statements at script or module top-level.' },
+        typescript:  true,
       },
     },
     'is block-scoped': {
@@ -1390,6 +1390,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1428,6 +1429,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1437,7 +1439,6 @@ exports.tests = [
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'prototype methods': {
@@ -1451,6 +1452,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1460,7 +1462,6 @@ exports.tests = [
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'string-keyed methods': {
@@ -1474,6 +1475,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1495,6 +1497,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1513,6 +1516,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -1522,7 +1526,6 @@ exports.tests = [
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'computed static methods': {
@@ -1537,6 +1540,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -1557,6 +1561,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         jsx:         true,
         es6tr:       true,
         ejs:         true,
@@ -1565,7 +1570,6 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'computed accessor properties': {
@@ -1581,6 +1585,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1600,6 +1605,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         jsx:         true,
         es6tr:       true,
         ejs:         true,
@@ -1607,7 +1613,6 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
-        typescript:  { val: flag, note_id: 'typescript-class' },
       },
     },
     'computed static accessor properties': {
@@ -1623,6 +1628,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         ie11tp:      true,
@@ -1641,6 +1647,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ie11tp:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1708,6 +1715,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         webkit:      true,
         chrome43:    { val: flag, note_id: 'strict-required' },
       },
@@ -1728,6 +1736,10 @@ exports.tests = [
         },
         babel:       { val: false, note_id: 'compiler-proto' },
         tr:          { val: false, note_id: 'compiler-proto' },
+        typescript:  {
+          val: false,
+          note_id: 'typescript-extends',
+          note_html: 'TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).'},
         ejs:         true,
         closure:     {
           val: false,
@@ -1740,10 +1752,6 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
-        typescript:  {
-          val: false,
-          note_id: 'typescript-extends',
-          note_html: 'TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).'},
       }),
     },
     'extends expressions': {
@@ -1758,6 +1766,10 @@ exports.tests = [
         es6tr:       { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         tr:          { val: false, note_id: 'compiler-proto' },
+        typescript:  {
+          val: false,
+          note_id: 'typescript-extends',
+        },
         ejs:         true,
         jsx:         { val: false, note_id: 'compiled-extends' },
         ie11tp:      true,
