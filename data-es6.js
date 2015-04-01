@@ -7473,6 +7473,7 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome43:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" }
       },
     },
     'Array.prototype.slice': {
@@ -7483,6 +7484,7 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
+          typescript:  { val: needsPolyfill, note_id: "typescript-es6" }
       }
     },
     'Array.from': {
@@ -7493,6 +7495,7 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         ie11tp:      true,
       }
     },
@@ -7504,6 +7507,7 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         ie11tp:      true,
       }
     },
@@ -7522,6 +7526,7 @@ exports.tests = [
         return r.global && r.source === "baz";
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
@@ -7533,6 +7538,7 @@ exports.tests = [
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
@@ -7544,6 +7550,7 @@ exports.tests = [
         return r.test("foobarbaz");
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
@@ -7563,6 +7570,7 @@ exports.tests = [
         return c() === 'foo';
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7574,6 +7582,7 @@ exports.tests = [
         return new c().bar === 2 && new c().baz === 3;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7584,6 +7593,7 @@ exports.tests = [
         return c.call({bar:1}, 2) === 3;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7594,6 +7604,7 @@ exports.tests = [
         return c.apply({bar:1}, [2]) === 3;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         chrome43:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7604,6 +7615,7 @@ exports.tests = [
         return c(6) === 9 && c instanceof C;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
       },
     },
   },
@@ -7643,6 +7655,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
       },
     },
     'Promise.all': {
@@ -7667,6 +7680,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
       },
     },
     'Promise.race': {
@@ -7691,6 +7705,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
       },
     },
   },
@@ -7709,6 +7724,7 @@ exports.tests = [
           && c == true;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         webkit:      true,
       },
     },
@@ -7720,6 +7736,7 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         webkit:      true,
       },
     },
@@ -7733,6 +7750,7 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         webkit:      true,
       },
     },
@@ -7749,6 +7767,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         webkit:      true,
       },
     },
@@ -7766,6 +7785,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  { val: needsPolyfill, note_id: "typescript-es6" },
         webkit:      true,
       },
     },
