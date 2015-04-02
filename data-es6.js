@@ -5888,6 +5888,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
+        typescript:   true,
         firefox34:    true,
         ie11tp:       true,
         chrome41:     flag,
