@@ -378,6 +378,7 @@ exports.tests = [
 },
 {
   name: 'Typed objects',
+  category: 'built-ins'
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
   exec: function () {/*
     return typeof StructType !== 'undefined';
@@ -411,197 +412,215 @@ exports.tests = [
   }
 },
 {
-  name: 'Object.observe',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
-  exec: function () {/*
-    return typeof Object.observe === 'function';
-  */},
-  res: {
-    tr: false,
-    babel: false,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
-    chrome33: true,
-    chrome34: true,
-    chrome35: true,
-    chrome37: true,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: true,
-    iojs: true,
-    ios7: false,
-    ios8: false
-  }
-},
-{
-  name: 'Object.getOwnPropertyDescriptors',
-  link: 'https://gist.github.com/WebReflection/9353781',
-  exec: function () {/*
-    return typeof Object.getOwnPropertyDescriptors === 'function';
-  */},
-  res: {
-    tr: false,
-    babel: true,
-    es7shim: true,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-
-{
-  name: 'Array.prototype.includes',
-  link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
-  exec: function () {/*
-    return typeof Array.prototype.includes === 'function';
-  */},
-  res: {
-    tr: false,
-    babel: true,
-    es7shim: true,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35:   {
-      val: true,
-      note_id: 'includes-nightly',
-      note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
+  name: 'Object static methods',
+  category: 'built-in extensions',
+  subtests: {
+    'Object.observe' : {
+      link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
+      exec: function () {/*
+        return typeof Object.observe === 'function';
+      */},
+      res: {
+        tr: false,
+        babel: false,
+        es7shim: false,
+        ejs: false,
+        ie11: false,
+        firefox31: false,
+        firefox32: false,
+        firefox33: false,
+        firefox34: false,
+        firefox35: false,
+        chrome30: false,
+        chrome33: true,
+        chrome34: true,
+        chrome35: true,
+        chrome37: true,
+        safari78: false,
+        webkit: false,
+        opera15: false,
+        konq49: false,
+        rhino17: false,
+        phantom: false,
+        node: false,
+        nodeharmony: true,
+        iojs: true,
+        ios7: false,
+        ios8: false
+      }
     },
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-
-{
-  name: 'String.prototype.at',
-  link: 'https://github.com/mathiasbynens/String.prototype.at',
-  exec: function () {/*
-    return 'a𠮷b'.at(1) === '𠮷';
-  */},
-  res: {
-    tr: false,
-    babel: true,
-    es7shim: true,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-{
-  name: 'Reflect.Realm',
-  link: 'https://gist.github.com/dherman/7568885',
-  exec: function () {/*
-    var i, names =
-      ["eval", "global", "intrinsics", "stdlib", "directEval",
-      "indirectEval", "initGlobal", "nonEval"];
-
-    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
-        || typeof Reflect.Realm.prototype !== "object") {
-      return false;
-    }
-    for (i = 0; i < names.length; i++) {
-      if (!(names[i] in Reflect.Realm.prototype)) {
-        return false;
+    'Object.getOwnPropertyDescriptors' : {
+      link: 'https://gist.github.com/WebReflection/9353781',
+      exec: function () {/*
+        return typeof Object.getOwnPropertyDescriptors === 'function';
+      */},
+      res: {
+        tr: false,
+        babel: true,
+        es7shim: true,
+        ejs: false,
+        ie11: false,
+        firefox31: false,
+        firefox32: false,
+        firefox33: false,
+        firefox34: false,
+        firefox35: false,
+        chrome30: false,
+        chrome33: false,
+        chrome34: false,
+        chrome35: false,
+        chrome37: false,
+        safari78: false,
+        webkit: false,
+        opera15: false,
+        konq49: false,
+        rhino17: false,
+        phantom: false,
+        node: false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
       }
     }
-    return true;
-  */},
-  res: {
-    tr:          false,
-    babel:       false,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    firefox39:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
+  }
+},
+{
+  name: 'Array.prototype methods',
+  category: 'built-in extensions',
+  subtests: {
+    'Array.prototype.includes' : {
+      link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
+      exec: function () {/*
+        return typeof Array.prototype.includes === 'function';
+      */},
+      res: {
+        tr: false,
+        babel: true,
+        es7shim: true,
+        ejs: false,
+        ie11: false,
+        firefox31: false,
+        firefox32: false,
+        firefox33: false,
+        firefox34: false,
+        firefox35:   {
+          val: true,
+          note_id: 'includes-nightly',
+          note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
+        },
+        chrome30: false,
+        chrome33: false,
+        chrome34: false,
+        chrome35: false,
+        chrome37: false,
+        safari78: false,
+        webkit: false,
+        opera15: false,
+        konq49: false,
+        rhino17: false,
+        phantom: false,
+        node: false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    }
+  }
+},
+{
+  name: 'Reflect static methods',
+  category: 'built-in extensions',
+  subtests: {
+    'Reflect.Realm' : {
+      link: 'https://gist.github.com/dherman/7568885',
+      exec: function () {/*
+        var i, names =
+          ["eval", "global", "intrinsics", "stdlib", "directEval",
+          "indirectEval", "initGlobal", "nonEval"];
+
+        if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+            || typeof Reflect.Realm.prototype !== "object") {
+          return false;
+        }
+        for (i = 0; i < names.length; i++) {
+          if (!(names[i] in Reflect.Realm.prototype)) {
+            return false;
+          }
+        }
+        return true;
+      */},
+      res: {
+        tr:          false,
+        babel:       false,
+        es7shim:     false,
+        ejs:         false,
+        ie11:        false,
+        firefox31:   false,
+        firefox32:   false,
+        firefox33:   false,
+        firefox34:   false,
+        firefox35:   false,
+        firefox39:   false,
+        chrome30:    false,
+        chrome33:    false,
+        chrome34:    false,
+        chrome35:    false,
+        chrome37:    false,
+        safari78:    false,
+        webkit:      false,
+        konq49:      false,
+        rhino17:     false,
+        phantom:     false,
+        node:        false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    }
+  }
+},
+{
+  name: 'String.prototype methods',
+  category: 'built-in extensions',
+  subtests: {
+    'String.prototype.at' : {
+      link: 'https://github.com/mathiasbynens/String.prototype.at',
+      exec: function () {/*
+        return 'a𠮷b'.at(1) === '𠮷';
+      */},
+      res: {
+        tr: false,
+        babel: true,
+        es7shim: true,
+        ejs: false,
+        ie11: false,
+        firefox31: false,
+        firefox32: false,
+        firefox33: false,
+        firefox34: false,
+        firefox35: false,
+        chrome30: false,
+        chrome33: false,
+        chrome34: false,
+        chrome35: false,
+        chrome37: false,
+        safari78: false,
+        webkit: false,
+        opera15: false,
+        konq49: false,
+        rhino17: false,
+        phantom: false,
+        node: false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    },
   }
 },
 {
   name: 'SIMD',
+  category: 'misc',
   link: 'https://github.com/johnmccutchan/ecmascript_simd',
   exec: function () {/*
     return typeof SIMD !== 'undefined';
