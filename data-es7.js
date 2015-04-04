@@ -149,40 +149,6 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'Exponentiation operator',
-  link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
-  exec: function () {/*
-    return 2 ** 3 === 8;
-  */},
-  res: {
-    tr: true,
-    babel: true,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: true,
-    firefox34: true,
-    firefox35: true,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-{
   name: 'Array comprehensions',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
@@ -282,8 +248,797 @@ exports.tests = [
   }
 },
 {
+  name: 'Exponentiation operator',
+  category: 'draft',
+  link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
+  exec: function () {/*
+    return 2 ** 3 === 8;
+  */},
+  res: {
+    tr: true,
+    babel: true,
+    es7shim: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: true,
+    firefox34: true,
+    firefox35: true,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Object.observe',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
+  category: 'draft',
+  exec: function () {/*
+    return typeof Object.observe === 'function';
+  */},
+  res: {
+    tr: false,
+    babel: false,
+    es7shim: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
+    chrome30: false,
+    chrome33: true,
+    chrome34: true,
+    chrome35: true,
+    chrome37: true,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: true,
+    iojs: true,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Array.prototype.includes',
+  link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
+  category: 'draft',
+  exec: function () {/*
+    return typeof Array.prototype.includes === 'function';
+  */},
+  res: {
+    tr: false,
+    babel: true,
+    es7shim: true,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35:   {
+      val: true,
+      note_id: 'includes-nightly',
+      note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
+    },
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Trailing commas in function call expressions',
+  link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
+  category: 'proposal',
+  exec: function(){/*
+    function clownsEverywhere(
+      param1,
+      param2,
+    ) { 
+      return true;
+    }
+    
+    return clownsEverywhere(
+      'foo',
+      'bar', 
+    ) === true;
+  */}
+},
+{
+  name: 'Async functions',
+  category: 'proposal',
+  link: 'https://github.com/lukehoban/ecmascript-asyncawait',
+  subtests: {
+    'Basic support' : {
+      exec: function () {/*
+        return (async function(){
+          return 42 + await Promise.resolve(42)
+        })() instanceof Promise
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es7shim:     false,
+      }
+    },
+    'Arrow async functions' : {
+      exec: function () {/*
+        return (async () => 42 + await Promise.resolve(42))() instanceof Promise
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es7shim:     false,
+      }
+    }
+  }
+},
+{
+  name: 'Typed objects',
+  category: 'proposal',
+  link: 'https://github.com/dslomov-chromium/typed-objects-es7',
+  exec: function () {/*
+    return typeof StructType !== 'undefined';
+  */},
+  res: {
+    tr: false,
+    babel: false,
+    es7shim: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: true,
+    firefox34: true,
+    firefox35: true,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Object.getOwnPropertyDescriptors',
+  link: 'https://gist.github.com/WebReflection/9353781',
+  category: 'strawman',
+  exec: function () {/*
+    return typeof Object.getOwnPropertyDescriptors === 'function';
+  */},
+  res: {
+    tr: false,
+    babel: true,
+    es7shim: true,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'ArrayBuffer.transfer',
+  link: 'https://gist.github.com/lukewagner/2735af7eea411e18cf20',
+  category: 'proposal',
+  exec: function(){/*
+    return typeof ArrayBuffer.transfer === 'function';
+  */},
+  res : {
+    firefox39: true
+  }
+},
+{
+  name: 'Parallel JavaScript',
+  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism',
+  category: 'proposal',
+  subtests: {
+    'Array.prototype.mapPar' : {
+      exec: function(){/*
+        return typeof Array.prototype.mapPar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'Array.prototype.filterPar' : {
+      exec: function(){/*
+        return typeof Array.prototype.filterPar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'Array.fromPar' : {
+      exec: function(){/*
+        return typeof Array.fromPar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'TypedObject.fromPar' : {
+      exec: function(){/*
+        return typeof TypedObject.fromPar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'Array.prototype.get' : {
+      exec: function(){/*
+        return typeof Array.prototype.get === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'Array.prototype.reducePar' : {
+      exec: function(){/*
+        return typeof Array.prototype.reducePar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'Array.prototype.scanPar' : {
+      exec: function(){/*
+        return typeof Array.prototype.scanPar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+    'Array.prototype.scatterPar' : {
+      exec: function(){/*
+        return typeof Array.prototype.scatterPar === 'function';
+      */},
+      res: {
+        firefox39: false
+      }
+    },
+
+  }
+},
+{
+  name: 'SIMD',
+  category: 'proposal',
+  link: 'https://github.com/johnmccutchan/ecmascript_simd',
+  subtests: {
+    'basic support' : {
+      exec: function () {/*
+        return typeof SIMD !== 'undefined';
+      */},
+      res: {
+        tr:          false,
+        babel:       false,
+        es7shim:     false,
+        ejs:         false,
+        ie11:        false,
+        firefox31:   false,
+        firefox32:   false,
+        firefox33:   false,
+        firefox34:   false,
+        firefox35:   false,
+        firefox39:   true,
+        chrome30:    false,
+        chrome33:    false,
+        chrome34:    false,
+        chrome35:    false,
+        chrome37:    false,
+        safari78:    false,
+        webkit:      false,
+        konq49:      false,
+        rhino17:     false,
+        phantom:     false,
+        node:        false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    },
+    'float32x4' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4 === 'function';
+      */},
+      res: {
+        tr:          false,
+        babel:       false,
+        es7shim:     false,
+        ejs:         false,
+        ie11:        false,
+        firefox31:   false,
+        firefox32:   false,
+        firefox33:   false,
+        firefox34:   false,
+        firefox35:   false,
+        firefox39:   true,
+        chrome30:    false,
+        chrome33:    false,
+        chrome34:    false,
+        chrome35:    false,
+        chrome37:    false,
+        safari78:    false,
+        webkit:      false,
+        konq49:      false,
+        rhino17:     false,
+        phantom:     false,
+        node:        false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    },
+    'float64x2' : {
+      exec: function(){/*
+        return typeof SIMD.float64x2 === 'function';
+      */},
+      res: {
+        tr:          false,
+        babel:       false,
+        es7shim:     false,
+        ejs:         false,
+        ie11:        false,
+        firefox31:   false,
+        firefox32:   false,
+        firefox33:   false,
+        firefox34:   false,
+        firefox35:   false,
+        firefox39:   true,
+        chrome30:    false,
+        chrome33:    false,
+        chrome34:    false,
+        chrome35:    false,
+        chrome37:    false,
+        safari78:    false,
+        webkit:      false,
+        konq49:      false,
+        rhino17:     false,
+        phantom:     false,
+        node:        false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    },
+    'int32x4' : {
+      exec: function(){/*
+        return typeof SIMD.int32x4 === 'function';
+      */},
+      res: {
+        tr:          false,
+        babel:       false,
+        es7shim:     false,
+        ejs:         false,
+        ie11:        false,
+        firefox31:   false,
+        firefox32:   false,
+        firefox33:   false,
+        firefox34:   false,
+        firefox35:   false,
+        firefox39:   true,
+        chrome30:    false,
+        chrome33:    false,
+        chrome34:    false,
+        chrome35:    false,
+        chrome37:    false,
+        safari78:    false,
+        webkit:      false,
+        konq49:      false,
+        rhino17:     false,
+        phantom:     false,
+        node:        false,
+        nodeharmony: false,
+        ios7: false,
+        ios8: false
+      }
+    },
+    'SIMD.%type%.abs' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.abs === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.add' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.add === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.and' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.and === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.bitselect' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.bitselect === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.bool' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.bool === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.check' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.check === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.equal' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.equal === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.equivalent' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.equivalent === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.greaterThan' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.greaterThan === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.greaterThanOrEqual' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.greaterThanOrEqual === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.lessThan' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.lessThan === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.lessThanOrEqual' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.lessThanOrEqual === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.mul' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.mul === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.neg' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.neg === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.not' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.not === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.notEqual' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.notEqual === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.or' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.or === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.select' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.select === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.shuffle' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.shuffle === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.sub' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.sub === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.swizzle' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.swizzle === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    },
+    'SIMD.%type%.xor' : {
+      exec: function(){/*
+        return typeof SIMD.float32x4.xor === 'function';
+      */},
+      res: {
+        firefox39: true
+      }
+    }
+  }
+},
+{
+  name: 'Class and Property Decorators',
+  category: 'proposal',
+  link: 'https://github.com/wycats/javascript-decorators',
+  exec: function(){/*
+    class Person {
+      constructor(){
+        this.children = ['Tom', 'Dick', 'Harry'];
+      }
+      @nonenumerable
+      get kidCount() { return this.children.length; }
+    }
+
+    function nonenumerable(target, name, descriptor) {
+      descriptor.enumerable = false;
+      return descriptor;
+    }
+
+    var guardian = new Person();
+
+    return Object.getOwnPropertyDescriptor(guardian, 'kidCount').enumerable == false;
+  */},
+  res: {
+    ios8: false
+  }
+},
+{
+  name: 'Async Generators',
+  link: 'https://github.com/jhusain/asyncgenerator',
+  category: 'proposal',
+  exec: function(){/*
+    async function* nums() {
+      yield 1;
+      yield 2;
+      yield 3;
+    }
+
+    // data consumer
+    async function printData() {
+      for(var x on nums()) {
+        console.log(x);
+      }
+    }
+
+    return true;
+  */},
+  res: {
+    babel: false
+  }
+},
+{
+  name: 'Map.prototype.toJSON',
+  category: 'strawman',
+  link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
+  exec: function(){/*
+    return typeof Map.prototype.toJSON === 'function';
+  */},
+  res: {
+    tr: false,
+    babel: false,
+    es7shim: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Reflect.Realm',
+  link: 'https://gist.github.com/dherman/7568885',
+  exec: function () {/*
+    var i, names =
+      ["eval", "global", "intrinsics", "stdlib", "directEval",
+      "indirectEval", "initGlobal", "nonEval"];
+
+    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
+        || typeof Reflect.Realm.prototype !== "object") {
+      return false;
+    }
+    for (i = 0; i < names.length; i++) {
+      if (!(names[i] in Reflect.Realm.prototype)) {
+        return false;
+      }
+    }
+    return true;
+  */},
+  res: {
+    tr:          false,
+    babel:       false,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    firefox39:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Set.prototype.toJSON',
+  category: 'strawman',
+  link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON'
+  exec: function(){/*
+    return typeof Map.prototype.toJSON === 'function';
+  */},
+  res: {
+    tr: false,
+    babel: false,
+    es7shim: false,
+    ejs: false,
+    ie11: false,
+    firefox31: false,
+    firefox32: false,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
+    chrome30: false,
+    chrome33: false,
+    chrome34: false,
+    chrome35: false,
+    chrome37: false,
+    safari78: false,
+    webkit: false,
+    opera15: false,
+    konq49: false,
+    rhino17: false,
+    phantom: false,
+    node: false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
   name: 'Object rest properties',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
+  category: 'strawman',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -317,6 +1072,7 @@ exports.tests = [
 },
 {
   name: 'Object spread properties',
+  category: 'strawman',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
     var spread = {b: 2, c: 3};
@@ -351,49 +1107,23 @@ exports.tests = [
   }
 },
 {
-  name: 'Async functions',
-  link: 'https://github.com/lukehoban/ecmascript-asyncawait',
+  name: 'String.prototype.at',
+  link: 'https://github.com/mathiasbynens/String.prototype.at',
+  category: 'strawman',
   exec: function () {/*
-    return (async function(){
-      return 42 + await Promise.resolve(42)
-    })() instanceof Promise
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    es7shim:     false,
-  }
-},
-{
-  name: 'Arrow async functions',
-  link: 'https://github.com/lukehoban/ecmascript-asyncawait',
-  exec: function () {/*
-    return (async () => 42 + await Promise.resolve(42))() instanceof Promise
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    es7shim:     false,
-  }
-},
-{
-  name: 'Typed objects',
-  category: 'built-ins'
-  link: 'https://github.com/dslomov-chromium/typed-objects-es7',
-  exec: function () {/*
-    return typeof StructType !== 'undefined';
+    return 'a𠮷b'.at(1) === '𠮷';
   */},
   res: {
     tr: false,
-    babel: false,
-    es7shim: false,
+    babel: true,
+    es7shim: true,
     ejs: false,
     ie11: false,
     firefox31: false,
     firefox32: false,
-    firefox33: true,
-    firefox34: true,
-    firefox35: true,
+    firefox33: false,
+    firefox34: false,
+    firefox35: false,
     chrome30: false,
     chrome33: false,
     chrome34: false,
@@ -412,245 +1142,39 @@ exports.tests = [
   }
 },
 {
-  name: 'Object static methods',
-  category: 'built-in extensions',
+  name: 'String padding',
+  category: 'strawman',
+  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:string_padding',
   subtests: {
-    'Object.observe' : {
-      link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
-      exec: function () {/*
-        return typeof Object.observe === 'function';
+    'String.prototype.lpad' : {
+      exec: function(){/*
+        return typeof String.prototype.lpad === 'function';
       */},
       res: {
-        tr: false,
-        babel: false,
-        es7shim: false,
-        ejs: false,
-        ie11: false,
-        firefox31: false,
-        firefox32: false,
-        firefox33: false,
-        firefox34: false,
-        firefox35: false,
-        chrome30: false,
-        chrome33: true,
-        chrome34: true,
-        chrome35: true,
-        chrome37: true,
-        safari78: false,
-        webkit: false,
-        opera15: false,
-        konq49: false,
-        rhino17: false,
-        phantom: false,
-        node: false,
-        nodeharmony: true,
-        iojs: true,
-        ios7: false,
-        ios8: false
+        firefox39: false
       }
     },
-    'Object.getOwnPropertyDescriptors' : {
-      link: 'https://gist.github.com/WebReflection/9353781',
-      exec: function () {/*
-        return typeof Object.getOwnPropertyDescriptors === 'function';
+    'String.prototype.rpad' : {
+      exec: function(){/*
+        return typeof String.prototype.rpad === 'function';
       */},
       res: {
-        tr: false,
-        babel: true,
-        es7shim: true,
-        ejs: false,
-        ie11: false,
-        firefox31: false,
-        firefox32: false,
-        firefox33: false,
-        firefox34: false,
-        firefox35: false,
-        chrome30: false,
-        chrome33: false,
-        chrome34: false,
-        chrome35: false,
-        chrome37: false,
-        safari78: false,
-        webkit: false,
-        opera15: false,
-        konq49: false,
-        rhino17: false,
-        phantom: false,
-        node: false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
+        firefox39: false
       }
     }
-  }
-},
-{
-  name: 'Array.prototype methods',
-  category: 'built-in extensions',
-  subtests: {
-    'Array.prototype.includes' : {
-      link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
-      exec: function () {/*
-        return typeof Array.prototype.includes === 'function';
-      */},
-      res: {
-        tr: false,
-        babel: true,
-        es7shim: true,
-        ejs: false,
-        ie11: false,
-        firefox31: false,
-        firefox32: false,
-        firefox33: false,
-        firefox34: false,
-        firefox35:   {
-          val: true,
-          note_id: 'includes-nightly',
-          note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
-        },
-        chrome30: false,
-        chrome33: false,
-        chrome34: false,
-        chrome35: false,
-        chrome37: false,
-        safari78: false,
-        webkit: false,
-        opera15: false,
-        konq49: false,
-        rhino17: false,
-        phantom: false,
-        node: false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
-      }
-    }
-  }
-},
-{
-  name: 'Reflect static methods',
-  category: 'built-in extensions',
-  subtests: {
-    'Reflect.Realm' : {
-      link: 'https://gist.github.com/dherman/7568885',
-      exec: function () {/*
-        var i, names =
-          ["eval", "global", "intrinsics", "stdlib", "directEval",
-          "indirectEval", "initGlobal", "nonEval"];
-
-        if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
-            || typeof Reflect.Realm.prototype !== "object") {
-          return false;
-        }
-        for (i = 0; i < names.length; i++) {
-          if (!(names[i] in Reflect.Realm.prototype)) {
-            return false;
-          }
-        }
-        return true;
-      */},
-      res: {
-        tr:          false,
-        babel:       false,
-        es7shim:     false,
-        ejs:         false,
-        ie11:        false,
-        firefox31:   false,
-        firefox32:   false,
-        firefox33:   false,
-        firefox34:   false,
-        firefox35:   false,
-        firefox39:   false,
-        chrome30:    false,
-        chrome33:    false,
-        chrome34:    false,
-        chrome35:    false,
-        chrome37:    false,
-        safari78:    false,
-        webkit:      false,
-        konq49:      false,
-        rhino17:     false,
-        phantom:     false,
-        node:        false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
-      }
-    }
-  }
-},
-{
-  name: 'String.prototype methods',
-  category: 'built-in extensions',
-  subtests: {
-    'String.prototype.at' : {
-      link: 'https://github.com/mathiasbynens/String.prototype.at',
-      exec: function () {/*
-        return 'a𠮷b'.at(1) === '𠮷';
-      */},
-      res: {
-        tr: false,
-        babel: true,
-        es7shim: true,
-        ejs: false,
-        ie11: false,
-        firefox31: false,
-        firefox32: false,
-        firefox33: false,
-        firefox34: false,
-        firefox35: false,
-        chrome30: false,
-        chrome33: false,
-        chrome34: false,
-        chrome35: false,
-        chrome37: false,
-        safari78: false,
-        webkit: false,
-        opera15: false,
-        konq49: false,
-        rhino17: false,
-        phantom: false,
-        node: false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
-      }
-    },
-  }
-},
-{
-  name: 'SIMD',
-  category: 'misc',
-  link: 'https://github.com/johnmccutchan/ecmascript_simd',
-  exec: function () {/*
-    return typeof SIMD !== 'undefined';
-  */},
-  res: {
-    tr:          false,
-    babel:       false,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    firefox39:   true,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 }
 ];
+
+//Shift annex B features to the bottom
+exports.tests = exports.tests.reduce(function(a,e) {
+  var index = ['parallel','syntax','bindings','functions','classes',
+    'built-ins','built-in extensions','misc'].indexOf(e.category);
+  if (index === -1) {
+    console.log('"' + a.category + '" is not an ES7 category!');
+  }
+  (a[index] = a[index] || []).push(e);
+  return a;
+},[]).reduce(function(a,e) {
+  return a.concat(e);
+},[]);
