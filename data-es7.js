@@ -6,7 +6,7 @@ exports.skeleton_file = 'es7/skeleton.html';
 
 exports.browsers = {
   tr: {
-    full: 'Traceur compiler',
+    full: 'Traceur',
     short: 'Traceur',
     obsolete: false, // always up-to-date version
     platformtype: 'compiler',
@@ -25,10 +25,22 @@ exports.browsers = {
     platformtype: 'compiler',
     obsolete: false // always up-to-date version
   },
+  ie10: {
+    full: 'Internet Explorer',
+    short: 'IE 10',
+    obsolete: false // no EOL any time soon
+  },
   ie11: {
     full: 'Internet Explorer',
     short: 'IE 11',
     obsolete: false
+  },
+  ie11tp: {
+    full: 'Internet Explorer',
+    short: 'IE<br>Technical<br>Preview',
+    unstable: true,
+    note_id: 'ie-experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Web Platform Features" flag'
   },
   firefox31: {
     full: 'Firefox',
@@ -82,6 +94,48 @@ exports.browsers = {
     full: 'Chrome',
     short: 'CH 37',
     obsolete: false,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome38: {
+    full: 'Chrome',
+    short: 'CH 38',
+    obsolete: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome39: {
+    full: 'Chrome',
+    short: 'CH 39',
+    obsolete: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome40: {
+    full: 'Chrome',
+    short: 'CH 40',
+    obsolete: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome41: {
+    full: 'Chrome',
+    short: 'CH 41',
+    obsolete: false,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome42: {
+    full: 'Chrome',
+    short: 'CH 42',
+    unstable: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome43: {
+    full: 'Chrome',
+    short: 'CH 43',
+    unstable: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
@@ -149,105 +203,6 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'Array comprehensions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
-  exec: function () {/*
-    return [for (a of [1, 2, 3]) a * a][0] === 1
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    firefox35:   true,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-{
-  name: 'Generator comprehensions',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
-  exec: function () {/*
-    (for (a of [1, 2, 3]) a * a)
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    firefox35:   true,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-{
-  name: 'Destructuring in comprehensions',
-  link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
-  exec: function () {/*
-    return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
-  }
-},
-{
   name: 'Exponentiation operator',
   category: 'draft',
   link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
@@ -270,6 +225,7 @@ exports.tests = [
     chrome34: false,
     chrome35: false,
     chrome37: false,
+    chrome40: false,
     safari78: false,
     webkit: false,
     opera15: false,
@@ -345,6 +301,7 @@ exports.tests = [
     chrome34: false,
     chrome35: false,
     chrome37: false,
+    chrome41: false,
     safari78: false,
     webkit: false,
     opera15: false,
@@ -373,7 +330,12 @@ exports.tests = [
       'foo',
       'bar', 
     ) === true;
-  */}
+  */},
+  res: {
+    tr:       false,
+    babel:    false,
+    chrome41: false,
+  }
 },
 {
   name: 'Async functions',
@@ -390,6 +352,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         es7shim:     false,
+        chrome41:    false
       }
     },
     'Arrow async functions' : {
@@ -400,6 +363,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         es7shim:     false,
+        chrome41:    false
       }
     }
   }
@@ -482,7 +446,8 @@ exports.tests = [
     return typeof ArrayBuffer.transfer === 'function';
   */},
   res : {
-    firefox39: true
+    firefox39: true,
+    chrome41:  true
   }
 },
 {
@@ -495,7 +460,8 @@ exports.tests = [
         return typeof Array.prototype.mapPar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'Array.prototype.filterPar' : {
@@ -503,7 +469,8 @@ exports.tests = [
         return typeof Array.prototype.filterPar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'Array.fromPar' : {
@@ -511,7 +478,8 @@ exports.tests = [
         return typeof Array.fromPar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'TypedObject.fromPar' : {
@@ -519,7 +487,8 @@ exports.tests = [
         return typeof TypedObject.fromPar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'Array.prototype.get' : {
@@ -527,7 +496,8 @@ exports.tests = [
         return typeof Array.prototype.get === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'Array.prototype.reducePar' : {
@@ -535,7 +505,8 @@ exports.tests = [
         return typeof Array.prototype.reducePar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'Array.prototype.scanPar' : {
@@ -543,7 +514,8 @@ exports.tests = [
         return typeof Array.prototype.scanPar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'Array.prototype.scatterPar' : {
@@ -551,10 +523,10 @@ exports.tests = [
         return typeof Array.prototype.scatterPar === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
-    },
-
+    }
   }
 },
 {
@@ -695,7 +667,8 @@ exports.tests = [
         return typeof SIMD.float32x4.abs === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.add' : {
@@ -703,7 +676,8 @@ exports.tests = [
         return typeof SIMD.float32x4.add === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.and' : {
@@ -711,7 +685,8 @@ exports.tests = [
         return typeof SIMD.float32x4.and === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.bitselect' : {
@@ -719,7 +694,8 @@ exports.tests = [
         return typeof SIMD.float32x4.bitselect === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.bool' : {
@@ -727,7 +703,8 @@ exports.tests = [
         return typeof SIMD.float32x4.bool === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.check' : {
@@ -735,7 +712,8 @@ exports.tests = [
         return typeof SIMD.float32x4.check === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.equal' : {
@@ -743,7 +721,8 @@ exports.tests = [
         return typeof SIMD.float32x4.equal === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.equivalent' : {
@@ -751,7 +730,8 @@ exports.tests = [
         return typeof SIMD.float32x4.equivalent === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.greaterThan' : {
@@ -759,7 +739,8 @@ exports.tests = [
         return typeof SIMD.float32x4.greaterThan === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.greaterThanOrEqual' : {
@@ -767,7 +748,8 @@ exports.tests = [
         return typeof SIMD.float32x4.greaterThanOrEqual === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.lessThan' : {
@@ -775,7 +757,8 @@ exports.tests = [
         return typeof SIMD.float32x4.lessThan === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.lessThanOrEqual' : {
@@ -783,7 +766,8 @@ exports.tests = [
         return typeof SIMD.float32x4.lessThanOrEqual === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.mul' : {
@@ -791,7 +775,8 @@ exports.tests = [
         return typeof SIMD.float32x4.mul === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.neg' : {
@@ -799,7 +784,8 @@ exports.tests = [
         return typeof SIMD.float32x4.neg === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.not' : {
@@ -807,7 +793,8 @@ exports.tests = [
         return typeof SIMD.float32x4.not === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.notEqual' : {
@@ -815,7 +802,8 @@ exports.tests = [
         return typeof SIMD.float32x4.notEqual === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.or' : {
@@ -823,7 +811,8 @@ exports.tests = [
         return typeof SIMD.float32x4.or === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.select' : {
@@ -831,7 +820,8 @@ exports.tests = [
         return typeof SIMD.float32x4.select === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.shuffle' : {
@@ -839,7 +829,8 @@ exports.tests = [
         return typeof SIMD.float32x4.shuffle === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.sub' : {
@@ -847,7 +838,8 @@ exports.tests = [
         return typeof SIMD.float32x4.sub === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.swizzle' : {
@@ -855,7 +847,8 @@ exports.tests = [
         return typeof SIMD.float32x4.swizzle === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     },
     'SIMD.%type%.xor' : {
@@ -863,7 +856,8 @@ exports.tests = [
         return typeof SIMD.float32x4.xor === 'function';
       */},
       res: {
-        firefox39: true
+        firefox39: true,
+        chrome41:  false
       }
     }
   }
@@ -891,6 +885,8 @@ exports.tests = [
     return Object.getOwnPropertyDescriptor(guardian, 'kidCount').enumerable == false;
   */},
   res: {
+    babel: true,
+    chrome41: false,
     ios8: false
   }
 },
@@ -915,7 +911,110 @@ exports.tests = [
     return true;
   */},
   res: {
-    babel: false
+    babel: false,
+    chrome41:  false
+  }
+},
+{
+  name: 'Array comprehensions',
+  category: 'strawman',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  exec: function () {/*
+    return [for (a of [1, 2, 3]) a * a][0] === 1
+  */},
+  res: {
+    tr:          true,
+    babel:       true,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    firefox35:   true,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Generator comprehensions',
+  category: 'strawman',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  exec: function () {/*
+    (for (a of [1, 2, 3]) a * a)
+  */},
+  res: {
+    tr:          true,
+    babel:       true,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   true,
+    firefox32:   true,
+    firefox33:   true,
+    firefox34:   true,
+    firefox35:   true,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
+  }
+},
+{
+  name: 'Destructuring in comprehensions',
+  category: 'strawman',
+  link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
+  exec: function () {/*
+    return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
+  */},
+  res: {
+    tr:          true,
+    babel:       true,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
+    nodeharmony: false,
+    ios7: false,
+    ios8: false
   }
 },
 {
@@ -955,6 +1054,7 @@ exports.tests = [
 },
 {
   name: 'Reflect.Realm',
+  category: 'strawman',
   link: 'https://gist.github.com/dherman/7568885',
   exec: function () {/*
     var i, names =
@@ -1008,31 +1108,31 @@ exports.tests = [
     return typeof Map.prototype.toJSON === 'function';
   */},
   res: {
-    tr: false,
-    babel: false,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
+    tr:          false,
+    babel:       false,
+    es7shim:     false,
+    ejs:         false,
+    ie11:        false,
+    firefox31:   false,
+    firefox32:   false,
+    firefox33:   false,
+    firefox34:   false,
+    firefox35:   false,
+    chrome30:    false,
+    chrome33:    false,
+    chrome34:    false,
+    chrome35:    false,
+    chrome37:    false,
+    safari78:    false,
+    webkit:      false,
+    opera15:     false,
+    konq49:      false,
+    rhino17:     false,
+    phantom:     false,
+    node:        false,
     nodeharmony: false,
-    ios7: false,
-    ios8: false
+    ios7:        false,
+    ios8:        false
   }
 },
 {
@@ -1151,7 +1251,8 @@ exports.tests = [
         return typeof String.prototype.lpad === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     },
     'String.prototype.rpad' : {
@@ -1159,7 +1260,8 @@ exports.tests = [
         return typeof String.prototype.rpad === 'function';
       */},
       res: {
-        firefox39: false
+        firefox39: false,
+        chrome41:  false
       }
     }
   }
