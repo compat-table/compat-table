@@ -1270,8 +1270,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['parallel','syntax','bindings','functions','classes',
-    'built-ins','built-in extensions','misc'].indexOf(e.category);
+  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES7 category!');
   }
