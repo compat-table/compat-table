@@ -867,22 +867,22 @@ exports.tests = [
   category: 'proposal',
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
-    class Person {
-      constructor(){
-        this.children = ['Tom', 'Dick', 'Harry'];
-      }
-      @nonenumerable
-      get kidCount() { return this.children.length; }
+    class A {
+      @C
+      B = 10;
     }
-
-    function nonenumerable(target, name, descriptor) {
-      descriptor.enumerable = false;
+    function C(target, name, descriptor) {
+      descriptor.writable = false;
       return descriptor;
     }
-
-    var guardian = new Person();
-
-    return Object.getOwnPropertyDescriptor(guardian, 'kidCount').enumerable == false;
+    var D = new A();
+    try{
+      D.B = 0;
+      return false;
+    }catch(e){
+      return true;
+    }
+    
   */},
   res: {
     babel: true,
