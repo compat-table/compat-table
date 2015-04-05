@@ -203,7 +203,7 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'Exponentiation operator',
+  name: 'exponentiation operator',
   category: 'draft',
   link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
   exec: function () {/*
@@ -315,7 +315,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Trailing commas in function call expressions',
+  name: 'trailing commas in function call expressions',
   link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
   category: 'proposal',
   exec: function(){/*
@@ -338,11 +338,11 @@ exports.tests = [
   }
 },
 {
-  name: 'Async functions',
+  name: 'async functions',
   category: 'proposal',
   link: 'https://github.com/lukehoban/ecmascript-asyncawait',
   subtests: {
-    'Basic support' : {
+    'basic support' : {
       exec: function () {/*
         return (async function(){
           return 42 + await Promise.resolve(42)
@@ -355,7 +355,7 @@ exports.tests = [
         chrome41:    false
       }
     },
-    'Arrow async functions' : {
+    'arrow async functions' : {
       exec: function () {/*
         return (async () => 42 + await Promise.resolve(42))() instanceof Promise
       */},
@@ -369,7 +369,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Typed objects',
+  name: 'typed objects',
   category: 'proposal',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
   exec: function () {/*
@@ -451,7 +451,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Parallel JavaScript',
+  name: 'parallel JavaScript',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism',
   category: 'proposal',
   subtests: {
@@ -863,7 +863,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Class and Property Decorators',
+  name: 'class and property decorators',
   category: 'proposal',
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
@@ -891,7 +891,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Async Generators',
+  name: 'async generators',
   link: 'https://github.com/jhusain/asyncgenerator',
   category: 'proposal',
   exec: function(){/*
@@ -916,7 +916,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Array comprehensions',
+  name: 'array comprehensions',
   category: 'strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
@@ -950,7 +950,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Generator comprehensions',
+  name: 'generator comprehensions',
   category: 'strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
@@ -984,7 +984,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Destructuring in comprehensions',
+  name: 'destructuring in comprehensions',
   category: 'strawman',
   link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
   exec: function () {/*
@@ -1136,7 +1136,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Object rest properties',
+  name: 'object rest properties',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   category: 'strawman',
   exec: function () {/*
@@ -1171,7 +1171,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Object spread properties',
+  name: 'object spread properties',
   category: 'strawman',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
@@ -1242,7 +1242,7 @@ exports.tests = [
   }
 },
 {
-  name: 'String padding',
+  name: 'string padding',
   category: 'strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:string_padding',
   subtests: {
