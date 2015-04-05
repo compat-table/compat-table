@@ -4,7 +4,7 @@ Object.assign = require('object-assign');
 
 var temp = {};
 var flag = "flagged";
-var needsPolyfill = "needs-polyfill-or-native"
+var needsPolyfill = "needs-polyfill-or-native";
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
