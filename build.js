@@ -105,7 +105,7 @@ process.nextTick(function () {
       name: 'babel + polyfill',
       url: 'https://babeljs.io/',
       target_file: 'es6/compilers/babel-polyfill.html',
-      polyfills: ['node_modules/babel/browser-polyfill.js'],
+      polyfills: ['node_modules/babel/node_modules/babel-core/browser-polyfill.js'],
       compiler: function(code) {
         return babel.transform(code).code;
       },
@@ -196,7 +196,7 @@ function handle(options, compiler) {
     ["<!-- NAME -->", [options.name]],
     ["<!-- URL -->", [options.name.link(options.url)]],
     ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
-      return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8') + '</script>\n';
+      return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8').replace(/<(?=\/script>)/g,'\\u003c') + '</script>\n';
     })],
   ]).replace(/\t/g, '  ');
 

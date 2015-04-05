@@ -160,12 +160,12 @@ exports.browsers = {
   },
   firefox36: {
     full: 'Firefox',
-    short: 'FF 36'
+    short: 'FF 36',
+    obsolete: true
   },
   firefox37: {
     full: 'Firefox',
-    short: 'FF 37',
-    unstable: true,
+    short: 'FF 37'
   },
   firefox38: {
     full: 'Firefox',
@@ -5473,7 +5473,7 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        babel:       true,
+        babel:       { val: false, note_id: "name-configurable", },
         ie11tp:      true,
       },
     },
@@ -5483,7 +5483,11 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        babel:       true,
+        babel:       {
+          val: false,
+          note_id: "name-configurable",
+          note_html: 'Requires function "name" properties to be natively configurable',
+        },
         ie11tp:      true,
       },
     },
