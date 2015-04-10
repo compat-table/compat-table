@@ -17,6 +17,12 @@ exports.browsers = {
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via --experimental flag'
   },
+  jsx: {
+    full: 'JSX',
+    short: 'JSX',
+    obsolete: false,
+    platformtype: 'compiler',
+  },
   es7shim: {
     full: 'es7-shim',
     short: 'es7-shim',
@@ -146,9 +152,6 @@ exports.tests = [
   res: {
     tr: true,
     babel: true,
-    firefox33: true,
-    firefox34: true,
-    firefox35: true,
   }
 },
 {
@@ -177,32 +180,26 @@ exports.tests = [
   res: {
     babel: true,
     es7shim: true,
-    firefox35:   {
-      val: true,
-      note_id: 'includes-nightly',
-      note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
-    },
   }
 },
 {
-  name: 'trailing commas in function call expressions',
+  name: 'trailing commas in function syntax',
   link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
   category: 'proposal',
-  exec: function(){/*
-    function clownsEverywhere(
-      param1,
-      param2,
-    ) { 
-      return true;
-    }
-    
-    return clownsEverywhere(
-      'foo',
-      'bar', 
-    ) === true;
-  */},
-  res: {
-  }
+  subtests: {
+    'in parameter lists': {
+      exec: function(){/*
+        return typeof function f( a, b, ){} === 'function';
+      */},
+      res: {},
+    },
+    'in argument lists': {
+      exec: function(){/*
+        return Math.min(1,2,3,) === 1;
+      */},
+      res: {},
+    },
+  },
 },
 {
   name: 'async functions',
@@ -236,12 +233,9 @@ exports.tests = [
   category: 'proposal',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
   exec: function () {/*
-    return typeof StructType !== 'undefined';
+    return typeof StructType === "function";
   */},
   res: {
-    firefox33: true,
-    firefox34: true,
-    firefox35: true,
   }
 },
 {
@@ -332,7 +326,7 @@ exports.tests = [
   }
 },
 {
-  name: 'SIMD',
+  name: 'SIMD (Single Instruction, Multiple Data)',
   category: 'proposal',
   link: 'https://github.com/johnmccutchan/ecmascript_simd',
   subtests: {
@@ -547,26 +541,19 @@ exports.tests = [
   }
 },
 {
-  name: 'class and property decorators',
+  name: 'class decorators',
   category: 'proposal',
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
     class A {
       @C
-      B = 10;
+      get B() {}
     }
     function C(target, name, descriptor) {
-      descriptor.writable = false;
+      descriptor.enumerable = false;
       return descriptor;
     }
-    var D = new A();
-    try{
-      D.B = 0;
-      return false;
-    }catch(e){
-      return true;
-    }
-    
+    return Object.getOwnPropertyDescriptor(A.prototype, "B").enumerable === false;
   */},
   res: {
     babel: true,
@@ -577,20 +564,19 @@ exports.tests = [
   link: 'https://github.com/jhusain/asyncgenerator',
   category: 'proposal',
   exec: function(){/*
-    async function* nums() {
+    async function * nums() {
       yield 1;
       yield 2;
       yield 3;
     }
-
+    var result = '';
     // data consumer
     async function printData() {
       for(var x on nums()) {
-        console.log(x);
+        result += x;
       }
     }
-
-    return true;
+    return result === "123";
   */},
   res: {
   }
@@ -600,7 +586,7 @@ exports.tests = [
   category: 'strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
-    return [for (a of [1, 2, 3]) a * a][0] === 1
+    return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
   */},
   res: {
     tr:          true,
@@ -617,7 +603,14 @@ exports.tests = [
   category: 'strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
-    (for (a of [1, 2, 3]) a * a)
+    var iterator = (for (a of [1,2]) a + 4);
+    var item = iterator.next();
+    var passed = item.value === 5 && item.done === false;
+    item = iterator.next();
+    passed    &= item.value === 6 && item.done === false;
+    item = iterator.next();
+    passed    &= item.value === undefined && item.done === true;
+    return passed;
   */},
   res: {
     tr:          true,
@@ -694,6 +687,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    jsx:         true,
   }
 },
 {
@@ -707,6 +701,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    jsx:         true,
   }
 },
 {

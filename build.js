@@ -60,14 +60,13 @@ process.nextTick(function () {
   var traceur    = require('traceur');
   var reacttools = require('react-tools');
   var tss        = require('typescript-simple');
-  var identity   = function (x) { return x; };
   [
     {
       name: 'es5-shim',
       url: 'https://github.com/es-shims/es5-shim',
       target_file: 'es5/compilers/es5-shim.html',
       polyfills: ['node_modules/es5-shim/es5-shim.js'],
-      compiler: identity,
+      compiler: String,
     },
   ].forEach(function(e){
     assign(es5, e);
@@ -81,7 +80,7 @@ process.nextTick(function () {
       url: 'https://github.com/paulmillr/es6-shim/',
       target_file: 'es6/compilers/es6-shim.html',
       polyfills: ['node_modules/es6-shim/es6-shim.js'],
-      compiler: identity,
+      compiler: String,
     },
     {
       name: 'Traceur',
@@ -177,8 +176,18 @@ process.nextTick(function () {
       url: 'https://github.com/es-shims/es7-shim/',
       target_file: 'es7/compilers/es7-shim.html',
       polyfills: ['node_modules/es7-shim/dist/es7-shim.js'],
-      compiler: identity,
-    }
+      compiler: String,
+    },
+    {
+      name: 'JSX',
+      url: 'https://github.com/facebook/react',
+      target_file: 'es7/compilers/jsx.html',
+      polyfills: [],
+      compiler: function(code) {
+        var ret = reacttools.transform(code, { harmony:true });
+        return ret.code || ret;
+      },
+    },
   ].forEach(function(e){
     assign(es7, e);
     es7.browsers = {};

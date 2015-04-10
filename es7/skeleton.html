@@ -16,6 +16,9 @@
         s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
+      if (typeof global === 'undefined') {
+        var global = this;
+      }
     </script>
 </head>
 <body class="es7">
