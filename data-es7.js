@@ -1,5 +1,5 @@
 // exports browsers and tests
-// 
+// new browsers should only be added once they have at least a single 'true' result.
 exports.name = 'ES7';
 exports.target_file = 'es7/index.html';
 exports.skeleton_file = 'es7/skeleton.html';
@@ -21,13 +21,6 @@ exports.browsers = {
     full: 'es7-shim',
     short: 'es7-shim',
     platformtype: 'compiler',
-  },
-  ie11tp: {
-    full: 'Internet Explorer',
-    short: 'IE<br>Technical<br>Preview',
-    unstable: true,
-    note_id: 'ie-experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Web Platform Features" flag'
   },
   firefox31: {
     full: 'Firefox',
@@ -51,7 +44,8 @@ exports.browsers = {
   },
   firefox39: {
     full: 'Firefox',
-    short: 'FF39'
+    short: 'FF39',
+    unstable: true,
   },
   chrome30: {
     full: 'Chrome',
