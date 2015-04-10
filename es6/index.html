@@ -127,7 +127,7 @@
 <th class="platform es6tr compiler obsolete" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Trans-<br>piler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.4">Type-<br>Script</abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.5-alpha">Type-<br>Script</abbr></a></th>
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
@@ -268,7 +268,7 @@ return (function f(n){
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -347,7 +347,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -825,7 +825,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1299,7 +1299,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="closure" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/10</td>
+<td data-browser="typescript" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/10</td>
@@ -1365,7 +1365,7 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1431,7 +1431,7 @@ return [...[1, 2, 3]][2] === 3;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1759,7 +1759,7 @@ return Math.max(...iterable) === 3;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
@@ -1826,7 +1826,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
@@ -1893,7 +1893,7 @@ return Math.max(...Object.create(iterable)) === 3;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
@@ -1960,7 +1960,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
@@ -2026,7 +2026,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">6/6</td>
 <td data-browser="closure" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
 <td data-browser="jsx" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
-<td data-browser="typescript" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
+<td data-browser="typescript" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/6</td>
@@ -2093,7 +2093,7 @@ return ({ [x]: 1 }).y === 1;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2359,7 +2359,7 @@ return ({ [x](){ return 1 } }).y() === 1;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2432,7 +2432,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2495,7 +2495,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="closure" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/7</td>
+<td data-browser="typescript" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/7</td>
@@ -2563,7 +2563,7 @@ for (var item of arr)
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2632,7 +2632,7 @@ return str === &quot;foo&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2701,7 +2701,7 @@ return str === &quot;&#x20BB7; &#x20BB6; &quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2769,10 +2769,10 @@ return result === &quot;123&quot;;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2840,10 +2840,10 @@ return result === &quot;123&quot;;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2913,7 +2913,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2985,7 +2985,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3246,7 +3246,7 @@ return Number(&apos;0o1&apos;) === 1;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3312,7 +3312,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3375,7 +3375,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="closure" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="1">2/2</td>
-<td data-browser="typescript" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
+<td data-browser="typescript" class="tally" data-tally="1">2/2</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
@@ -3520,7 +3520,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3723,7 +3723,7 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie-regexp-u-note"><sup>[9]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie-regexp-u-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -3782,7 +3782,7 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">20/30</td>
 <td data-browser="closure" class="tally" data-tally="0.5333333333333333" style="background-color:hsl(64,62%,50%)">16/30</td>
 <td data-browser="jsx" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">15/30</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/30</td>
+<td data-browser="typescript" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">20/30</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/30</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/30</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/30</td>
@@ -3852,7 +3852,7 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3922,7 +3922,7 @@ return a === &quot;a&quot; &amp;&amp; b === &quot;b&quot; &amp;&amp; c === undef
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3990,7 +3990,7 @@ return c === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4060,7 +4060,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4130,7 +4130,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4200,7 +4200,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4267,7 +4267,7 @@ return ([a, b] = iterable) === iterable;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4335,7 +4335,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 1 &amp;&amp; d === 2;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4402,7 +4402,7 @@ return a === 1;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4472,13 +4472,13 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="ie11tp">No</td>
-<td class="yes obsolete" data-browser="firefox11">Yes<a href="#ff11-object-destructuring-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="firefox13">Yes<a href="#ff11-object-destructuring-note"><sup>[10]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox11">Yes<a href="#ff11-object-destructuring-note"><sup>[11]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox13">Yes<a href="#ff11-object-destructuring-note"><sup>[11]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox17">Yes</td>
 <td class="yes obsolete" data-browser="firefox18">Yes</td>
@@ -4517,8 +4517,8 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
-<td class="yes" data-browser="safari71_8">Yes<a href="#webkit-object-destructuring-note"><sup>[11]</sup></a></td>
-<td class="yes unstable" data-browser="webkit">Yes<a href="#webkit-object-destructuring-note"><sup>[11]</sup></a></td>
+<td class="yes" data-browser="safari71_8">Yes<a href="#webkit-object-destructuring-note"><sup>[12]</sup></a></td>
+<td class="yes unstable" data-browser="webkit">Yes<a href="#webkit-object-destructuring-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -4527,7 +4527,7 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined
 <td class="no" data-browser="iojs">No</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
-<td class="yes" data-browser="ios8">Yes<a href="#webkit-object-destructuring-note"><sup>[11]</sup></a></td>
+<td class="yes" data-browser="ios8">Yes<a href="#webkit-object-destructuring-note"><sup>[12]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_object_destructuring_with_primitives"><td><span><a class="anchor" href="#destructuring_object_destructuring_with_primitives">&#xA7;</a>object destructuring with primitives</span><script data-source="
 var {toFixed} = 2;
@@ -4546,7 +4546,7 @@ return toFixed === Number.prototype.toFixed
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4591,8 +4591,8 @@ return toFixed === Number.prototype.toFixed
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
-<td class="yes" data-browser="safari71_8">Yes<a href="#webkit-object-destructuring-note"><sup>[11]</sup></a></td>
-<td class="yes unstable" data-browser="webkit">Yes<a href="#webkit-object-destructuring-note"><sup>[11]</sup></a></td>
+<td class="yes" data-browser="safari71_8">Yes<a href="#webkit-object-destructuring-note"><sup>[12]</sup></a></td>
+<td class="yes unstable" data-browser="webkit">Yes<a href="#webkit-object-destructuring-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -4601,7 +4601,7 @@ return toFixed === Number.prototype.toFixed
 <td class="no" data-browser="iojs">No</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
-<td class="yes" data-browser="ios8">Yes<a href="#webkit-object-destructuring-note"><sup>[11]</sup></a></td>
+<td class="yes" data-browser="ios8">Yes<a href="#webkit-object-destructuring-note"><sup>[12]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_trailing_commas_in_object_patterns"><td><span><a class="anchor" href="#destructuring_trailing_commas_in_object_patterns">&#xA7;</a>trailing commas in object patterns</span><script data-source="
 var {a,} = {a:1};
@@ -4613,7 +4613,7 @@ return a === 1;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4680,7 +4680,7 @@ return ({a,b} = obj) === obj;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4748,7 +4748,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4822,7 +4822,7 @@ return true;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4957,7 +4957,7 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === 7 &amp;&amp; d === 8;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5026,7 +5026,7 @@ return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5095,7 +5095,7 @@ return (function({a, x:b, y:e}, [c, d]) {
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5164,7 +5164,7 @@ return new Function(&quot;{a, x:b, y:e}&quot;,&quot;[c, d]&quot;,
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5230,7 +5230,7 @@ return function({a, b}, [c, d]){}.length === 2;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5366,7 +5366,7 @@ for(var [i, j, k] of [[1,2,3]]) {
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5435,7 +5435,7 @@ return a === 3 &amp;&amp; b instanceof Array &amp;&amp; (b + &quot;&quot;) === &
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5570,7 +5570,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5639,7 +5639,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5714,7 +5714,7 @@ return a === 1 &amp;&amp; b === 2;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5854,7 +5854,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5917,7 +5917,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="closure" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/2</td>
+<td data-browser="typescript" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
@@ -5983,7 +5983,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -6115,7 +6115,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
 <td data-browser="closure" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/8</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/8</td>
+<td data-browser="typescript" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11" class="tally" data-tally="1">8/8</td>
@@ -6182,7 +6182,7 @@ return (foo === 123);
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6250,7 +6250,7 @@ return bar === 123;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6321,7 +6321,7 @@ try {
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6389,7 +6389,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6457,7 +6457,7 @@ return (foo === 123);
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6526,7 +6526,7 @@ return bar === 123;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6598,7 +6598,7 @@ try {
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6667,7 +6667,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -6730,7 +6730,7 @@ return passed;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="closure" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/10</td>
+<td data-browser="typescript" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
@@ -6797,32 +6797,32 @@ return (foo === 123);
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes unstable" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -6865,32 +6865,32 @@ return bar === 123;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes unstable" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -6933,32 +6933,32 @@ return baz === 1;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes unstable" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -7001,7 +7001,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -7022,11 +7022,11 @@ return passed;
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -7078,7 +7078,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -7146,32 +7146,32 @@ return (foo === 123);
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes unstable" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -7215,32 +7215,32 @@ return bar === 123;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes unstable" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -7284,32 +7284,32 @@ return baz === 1;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes unstable" data-browser="ie11tp">Yes</td>
-<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox11">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox13">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox16">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox17">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox18">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox23">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox24">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox25">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox27">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox28">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox29">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox30">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox31">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox32">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox33">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox34">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -7353,7 +7353,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -7374,11 +7374,11 @@ return passed;
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox35">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox36">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox37">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox38">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox39">Flag<a href="#fx-let-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no flagged obsolete" data-browser="chrome19dev">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome21dev">Flag</td>
@@ -7431,7 +7431,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -7488,7 +7488,7 @@ return passed;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr significance="0.25"><td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[13]</sup></a></span><script data-source="
+<tr significance="0.25"><td id="block-level_function_declaration"><span><a class="anchor" href="#block-level_function_declaration">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[14]</sup></a></span><script data-source="
 &apos;use strict&apos;;
 function f() { return 1; }
 {
@@ -7567,7 +7567,7 @@ return f() === 1;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
 <td data-browser="closure" class="tally" data-tally="0.7272727272727273" style="background-color:hsl(87,54%,50%)">8/11</td>
 <td data-browser="jsx" class="tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
-<td data-browser="typescript" class="tally" data-tally="0.5454545454545454" style="background-color:hsl(65,62%,50%)" data-flagged-tally="0.6363636363636364">6/11</td>
+<td data-browser="typescript" class="tally" data-tally="0.7272727272727273" style="background-color:hsl(87,54%,50%)">8/11</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/11</td>
@@ -8106,7 +8106,7 @@ return (() =&gt; {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8250,7 +8250,7 @@ return arrow() === &quot;quux&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8382,7 +8382,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
 <td data-browser="closure" class="tally" data-tally="0.2608695652173913" style="background-color:hsl(31,74%,50%)">6/23</td>
 <td data-browser="jsx" class="tally" data-tally="0.5652173913043478" style="background-color:hsl(67,61%,50%)">13/23</td>
-<td data-browser="typescript" class="tally" data-tally="0" data-flagged-tally="0.2608695652173913">0/23</td>
+<td data-browser="typescript" class="tally" data-tally="0.6086956521739131" style="background-color:hsl(73,59%,50%)">14/23</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/23</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/23</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/23</td>
@@ -8449,7 +8449,7 @@ return typeof C === &quot;function&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8587,7 +8587,7 @@ return typeof class C {} === &quot;function&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8723,7 +8723,7 @@ return C.prototype.constructor === C
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8793,7 +8793,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8863,7 +8863,7 @@ return typeof C.prototype[&quot;foo bar&quot;] === &quot;function&quot;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8934,7 +8934,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9004,7 +9004,7 @@ return typeof C.method === &quot;function&quot;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9075,7 +9075,7 @@ return typeof C.method === &quot;function&quot;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9147,7 +9147,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9219,7 +9219,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9291,7 +9291,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9363,7 +9363,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9434,7 +9434,7 @@ return C === undefined &amp;&amp; M();
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9717,7 +9717,7 @@ catch(e) {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -9857,7 +9857,7 @@ return new C() instanceof B
 <td class="no obsolete" data-browser="es6tr">No<a href="#compiler-proto-note"><sup>[17]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No<a href="#compiled-extends-note"><sup>[18]</sup></a></td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="typescript">No<a href="#typescript-extends-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -10069,7 +10069,7 @@ return passed;
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">4/4</td>
 <td data-browser="closure" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td data-browser="jsx" class="tally" data-tally="1">4/4</td>
-<td data-browser="typescript" class="tally" data-tally="0" data-flagged-tally="1">0/4</td>
+<td data-browser="typescript" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
@@ -10143,7 +10143,7 @@ return passed;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -10215,7 +10215,7 @@ return new C(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -10287,7 +10287,7 @@ return new C().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -10363,7 +10363,7 @@ return obj.qux() === &quot;barley&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
-<td class="no flagged" data-browser="typescript">Flag<a href="#typescript-class-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -12168,7 +12168,7 @@ return view[0] === -0x80;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12236,7 +12236,7 @@ return view[0] === 0;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12304,7 +12304,7 @@ return view[0] === 0xFF;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -12372,7 +12372,7 @@ return view[0] === -0x8000;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12440,7 +12440,7 @@ return view[0] === 0;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12508,7 +12508,7 @@ return view[0] === -0x80000000;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12576,7 +12576,7 @@ return view[0] === 0;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12644,7 +12644,7 @@ return view[0] === 0.10000000149011612;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12712,7 +12712,7 @@ return view[0] === 0.1;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12781,7 +12781,7 @@ return view.getInt8(0) === -0x80;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12850,7 +12850,7 @@ return view.getUint8(0) === 0;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12919,7 +12919,7 @@ return view.getInt16(0) === -0x8000;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12988,7 +12988,7 @@ return view.getUint16(0) === 0;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -13057,7 +13057,7 @@ return view.getInt32(0) === -0x80000000;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -13126,7 +13126,7 @@ return view.getUint32(0) === 0;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -13195,7 +13195,7 @@ return view.getFloat32(0) === 0.10000000149011612;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -13264,7 +13264,7 @@ return view.getFloat64(0) === 0.1;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -13338,7 +13338,7 @@ return typeof Int8Array.from === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13412,7 +13412,7 @@ return typeof Int8Array.of === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13486,7 +13486,7 @@ return typeof Int8Array.prototype.subarray === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13560,7 +13560,7 @@ return typeof Int8Array.prototype.join === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13634,7 +13634,7 @@ return typeof Int8Array.prototype.indexOf === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13708,7 +13708,7 @@ return typeof Int8Array.prototype.lastIndexOf === &quot;function&quot; &amp;&amp
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13782,7 +13782,7 @@ return typeof Int8Array.prototype.slice === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13856,7 +13856,7 @@ return typeof Int8Array.prototype.every === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13930,7 +13930,7 @@ return typeof Int8Array.prototype.filter === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14004,7 +14004,7 @@ return typeof Int8Array.prototype.forEach === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14078,7 +14078,7 @@ return typeof Int8Array.prototype.map === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14152,7 +14152,7 @@ return typeof Int8Array.prototype.reduce === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14226,7 +14226,7 @@ return typeof Int8Array.prototype.reduceRight === &quot;function&quot; &amp;&amp
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14300,7 +14300,7 @@ return typeof Int8Array.prototype.reverse === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14374,7 +14374,7 @@ return typeof Int8Array.prototype.some === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14448,7 +14448,7 @@ return typeof Int8Array.prototype.sort === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14522,7 +14522,7 @@ return typeof Int8Array.prototype.copyWithin === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14596,7 +14596,7 @@ return typeof Int8Array.prototype.find === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14670,7 +14670,7 @@ return typeof Int8Array.prototype.findIndex === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14744,7 +14744,7 @@ return typeof Int8Array.prototype.fill === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14818,7 +14818,7 @@ return typeof Int8Array.prototype.keys === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14892,7 +14892,7 @@ return typeof Int8Array.prototype.values === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -14966,7 +14966,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15100,7 +15100,7 @@ return map.has(key) &amp;&amp; map.get(key) === 123;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -15171,7 +15171,7 @@ return map.has(key1) &amp;&amp; map.get(key1) === 123 &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15243,7 +15243,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15310,7 +15310,7 @@ return map.set(0, 0) === map;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15382,7 +15382,7 @@ return k === Infinity &amp;&amp; map.get(+0) == &quot;foo&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15453,7 +15453,7 @@ return map.size === 1;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -15519,7 +15519,7 @@ return typeof Map.prototype.delete === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -15585,7 +15585,7 @@ return typeof Map.prototype.clear === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -15651,7 +15651,7 @@ return typeof Map.prototype.forEach === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -15717,7 +15717,7 @@ return typeof Map.prototype.keys === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15783,7 +15783,7 @@ return typeof Map.prototype.values === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15849,7 +15849,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15984,7 +15984,7 @@ return set.has(123);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -16054,7 +16054,7 @@ return set.has(obj1) &amp;&amp; set.has(obj2);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16129,7 +16129,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16196,7 +16196,7 @@ return set.add(0) === set;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16268,7 +16268,7 @@ return k === Infinity &amp;&amp; set.has(+0);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16341,7 +16341,7 @@ return set.size === 2;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -16407,7 +16407,7 @@ return typeof Set.prototype.delete === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -16473,7 +16473,7 @@ return typeof Set.prototype.clear === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -16539,7 +16539,7 @@ return typeof Set.prototype.forEach === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -16605,7 +16605,7 @@ return typeof Set.prototype.keys === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16671,7 +16671,7 @@ return typeof Set.prototype.values === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16737,7 +16737,7 @@ return typeof Set.prototype.entries === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -16871,7 +16871,7 @@ return weakmap.has(key) &amp;&amp; weakmap.get(key) === 123;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -16942,7 +16942,7 @@ return weakmap.has(key1) &amp;&amp; weakmap.get(key1) === 123 &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17014,7 +17014,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17082,7 +17082,7 @@ return weakmap.set(key, 0) === weakmap;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17148,7 +17148,7 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -17217,7 +17217,7 @@ return m.get(f) === 42;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17352,7 +17352,7 @@ return weakset.has(obj1);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17421,7 +17421,7 @@ return weakset.has(obj1) &amp;&amp; weakset.has(obj2);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17493,7 +17493,7 @@ return closed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17561,7 +17561,7 @@ return weakset.add(obj) === weakset;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17627,7 +17627,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17762,7 +17762,7 @@ return proxy.foo === 5;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17834,7 +17834,7 @@ return proxy.foo === 5;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17908,7 +17908,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17982,7 +17982,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18055,7 +18055,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18128,7 +18128,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18201,7 +18201,7 @@ var proxied = {};
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18280,7 +18280,7 @@ return (returnedDesc.value     === fakeDesc.value
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18358,7 +18358,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18431,7 +18431,7 @@ return Object.getPrototypeOf(proxy) === fakeProto;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18509,7 +18509,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18584,7 +18584,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18660,7 +18660,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18738,7 +18738,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18813,7 +18813,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18889,7 +18889,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18963,7 +18963,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19037,7 +19037,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19103,7 +19103,7 @@ return Array.isArray(new Proxy([], {}));
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19169,7 +19169,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19298,7 +19298,7 @@ return Reflect.get({ qux: 987 }, &quot;qux&quot;) === 987;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19366,7 +19366,7 @@ return obj.quux === 654;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19432,7 +19432,7 @@ return Reflect.has({ qux: 987 }, &quot;qux&quot;);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19500,7 +19500,7 @@ return !(&quot;bar&quot; in obj);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19569,7 +19569,7 @@ return desc.value === 789 &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19637,7 +19637,7 @@ return obj.foo === 123;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19703,7 +19703,7 @@ return Reflect.getPrototypeOf([]) === Array.prototype;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19771,7 +19771,7 @@ return obj instanceof Array;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No<a href="#compiler-proto-note"><sup>[17]</sup></a></td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19838,7 +19838,7 @@ return Reflect.isExtensible({}) &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19906,7 +19906,7 @@ return !Object.isExtensible(obj);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19984,7 +19984,7 @@ return passed === 1;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20051,7 +20051,7 @@ return Reflect.ownKeys(obj) + &quot;&quot; === &quot;foo,bar&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20117,7 +20117,7 @@ return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20185,7 +20185,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20255,7 +20255,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20405,7 +20405,7 @@ function check() {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20485,7 +20485,7 @@ function check() {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20565,7 +20565,7 @@ function check() {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20628,7 +20628,7 @@ function check() {
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/9</td>
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/9</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/9</td>
+<td data-browser="typescript" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/9</td>
@@ -20698,7 +20698,7 @@ return object[symbol] === value;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20764,7 +20764,7 @@ return typeof Symbol() === &quot;symbol&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20842,7 +20842,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20917,7 +20917,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20996,7 +20996,7 @@ return true;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21062,7 +21062,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21133,7 +21133,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21205,7 +21205,7 @@ return typeof symbolObject === &quot;object&quot; &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21273,7 +21273,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21409,7 +21409,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21478,7 +21478,7 @@ return a[0] === b;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21557,7 +21557,7 @@ return c === &quot;foo&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21625,7 +21625,7 @@ return RegExp[Symbol.species] === RegExp
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21700,7 +21700,7 @@ return passed === 3;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21768,7 +21768,7 @@ return (a + &quot;&quot;) === &quot;[object foo]&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21838,7 +21838,7 @@ with (a) {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -22236,7 +22236,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/17</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/17</td>
+<td data-browser="typescript" class="tally" data-tally="0.058823529411764705" style="background-color:hsl(7,83%,50%)">1/17</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/17</td>
@@ -22846,7 +22846,7 @@ return ({f() { return f; }}).f() === &quot;foo&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -24189,7 +24189,7 @@ return /./igm.flags === &quot;gim&quot; &amp;&amp; /./.flags === &quot;&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -24255,7 +24255,7 @@ return typeof RegExp.prototype[Symbol.match] === &apos;function&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -24321,7 +24321,7 @@ return typeof RegExp.prototype[Symbol.replace] === &apos;function&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -24387,7 +24387,7 @@ return typeof RegExp.prototype[Symbol.split] === &apos;function&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -24453,7 +24453,7 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27510,7 +27510,7 @@ return len1 === 0 &amp;&amp; len2 === 3 &amp;&amp; c.length === 1 &amp;&amp; !(2
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27579,7 +27579,7 @@ return c.slice(1,2) instanceof C;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27646,7 +27646,7 @@ return C.from({ length: 0 }) instanceof C;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27713,7 +27713,7 @@ return C.of(0) instanceof C;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27844,7 +27844,7 @@ return r.global &amp;&amp; r.source === &quot;baz&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27912,7 +27912,7 @@ return r.exec(&quot;foobarbaz&quot;)[0] === &quot;baz&quot; &amp;&amp; r.lastInd
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27980,7 +27980,7 @@ return r.test(&quot;foobarbaz&quot;);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28111,7 +28111,7 @@ return c() === &apos;foo&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28180,7 +28180,7 @@ return new c().bar === 2 &amp;&amp; new c().baz === 3;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28248,7 +28248,7 @@ return c.call({bar:1}, 2) === 3;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28316,7 +28316,7 @@ return c.apply({bar:1}, [2]) === 3;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28384,7 +28384,7 @@ return c(6) === 9 &amp;&amp; c instanceof C;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28535,7 +28535,7 @@ function check() {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28616,7 +28616,7 @@ function check() {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28697,7 +28697,7 @@ function check() {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28829,7 +28829,7 @@ return c instanceof Boolean
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28898,7 +28898,7 @@ return c instanceof Number
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28969,7 +28969,7 @@ return c instanceof String
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29041,7 +29041,7 @@ return map.has(key) &amp;&amp; map.get(key) === 123;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29114,7 +29114,7 @@ return set.has(123);
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29905,7 +29905,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td data-browser="closure" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td data-browser="jsx" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
-<td data-browser="typescript" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="typescript" class="tally" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
 <td data-browser="es6shim" class="tally" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
 <td data-browser="ie10" class="tally" data-tally="0.375" style="background-color:hsl(45,69%,50%)">3/8</td>
 <td data-browser="ie11" class="tally" data-tally="0.375" style="background-color:hsl(45,69%,50%)">3/8</td>
@@ -30109,7 +30109,7 @@ do {} while (false) return true;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -31831,7 +31831,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[9]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[10]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[11]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[12]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[13]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="typescript-class-note">  <sup>[14]</sup> TypeScript only supports class statements at script or module top-level.</p><p id="constructor-required-note">  <sup>[15]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[16]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[17]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[18]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[19]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[20]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[21]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[22]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[23]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[24]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[31]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[8]</sup> TypeScript recognizes the existence of these runtime entities and constructs for ES6 and emits them under the <code>--target ES6</code> flag, but does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[9]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[10]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[11]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[12]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="constructor-required-note">  <sup>[15]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[16]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[17]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[18]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[19]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[20]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[21]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[22]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="ejs-no-with-note">  <sup>[23]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[24]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[31]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

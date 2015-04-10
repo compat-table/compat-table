@@ -201,6 +201,11 @@ td:first-child, td:not([class]) {
     background: hsl(120,  14%,  67%); background: #9fb79f; cursor: help;
 }
 
+/*needs a polyfill or native support*/
+.needs-polyfill-or-native {
+    background: hsl(24,77%,50%); background:#E16B1D; cursor: help;
+}
+
 /* non-standard no */
 .non-standard .no {
     background: #4444ac;
