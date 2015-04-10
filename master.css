@@ -203,7 +203,7 @@ td:first-child, td:not([class]) {
 
 /*needs a polyfill or native support*/
 .needs-polyfill-or-native {
-    background: hsl(24,77%,50%); background:#E16B1D; cursor: help;
+    cursor: help;
 }
 
 /* non-standard no */
