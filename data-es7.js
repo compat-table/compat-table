@@ -1,5 +1,5 @@
 // exports browsers and tests
-
+// 
 exports.name = 'ES7';
 exports.target_file = 'es7/index.html';
 exports.skeleton_file = 'es7/skeleton.html';
@@ -8,13 +8,11 @@ exports.browsers = {
   tr: {
     full: 'Traceur',
     short: 'Traceur',
-    obsolete: false, // always up-to-date version
     platformtype: 'compiler',
   },
   babel: {
     full: 'Babel',
     short: 'Babel +<br><nobr>core-js</nobr>',
-    obsolete: false,
     platformtype: 'compiler',
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via --experimental flag'
@@ -23,17 +21,6 @@ exports.browsers = {
     full: 'es7-shim',
     short: 'es7-shim',
     platformtype: 'compiler',
-    obsolete: false // always up-to-date version
-  },
-  ie10: {
-    full: 'Internet Explorer',
-    short: 'IE 10',
-    obsolete: false // no EOL any time soon
-  },
-  ie11: {
-    full: 'Internet Explorer',
-    short: 'IE 11',
-    obsolete: false
   },
   ie11tp: {
     full: 'Internet Explorer',
@@ -44,19 +31,23 @@ exports.browsers = {
   },
   firefox31: {
     full: 'Firefox',
-    short: 'FF 31'
+    short: 'FF 31',
+    obsolete: true,
   },
   firefox32: {
     full: 'Firefox',
-    short: 'FF 32'
+    short: 'FF 32',
+    obsolete: true,
   },
   firefox34: {
     full: 'Firefox',
-    short: 'FF34'
+    short: 'FF34',
+    obsolete: true,
   },
   firefox35: {
     full: 'Firefox',
-    short: 'FF35'
+    short: 'FF35',
+    obsolete: true,
   },
   firefox39: {
     full: 'Firefox',
@@ -65,35 +56,35 @@ exports.browsers = {
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome33: {
     full: 'Chrome',
     short: 'CH 33',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome34: {
     full: 'Chrome',
     short: 'CH 34',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome35: {
     full: 'Chrome',
     short: 'CH 35',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome37: {
     full: 'Chrome',
     short: 'CH 37',
-    obsolete: false,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
@@ -121,7 +112,6 @@ exports.browsers = {
   chrome41: {
     full: 'Chrome',
     short: 'CH 41',
-    obsolete: false,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
@@ -139,66 +129,16 @@ exports.browsers = {
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
-  safari78: {
-    full: 'Safari 7.0, Safari 7.1, Safari 8',
-    short: 'SF 7, SF 8',
-    obsolete: false
-  },
-  webkit: {
-    full: 'WebKit r168571',
-    short: 'WK',
-    obsolete: false // always up-to-date
-  },
-  konq49: {
-    full: 'Konqueror 4.13',
-    short: 'KQ 4.13'
-  },
-  rhino17: {
-    full: 'Rhino 1.7',
-    short: 'RH',
-    platformtype: 'engine',
-    obsolete: true,
-  },
-  phantom: {
-    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'PH',
-    platformtype: 'engine',
-  },
   node: {
-    full: 'Node 0.10',
+    full: 'Node 0.12',
     short: 'Node',
-    obsolete: false, // current version
     platformtype: 'engine',
-  },
-  nodeharmony: {
-    full: 'Node 0.11.11 harmony',
-    short: 'Node harmony',
-    obsolete: false, // current version
-    note_id: 'harmony-flag',
-    note_html: 'Have to be enabled via --harmony flag'
   },
   iojs: {
     full: 'io.js 1.0.0',
     short: 'io.js',
-    obsolete: false, // current version
     platformtype: 'engine',
   },
-  ejs: {
-    full: 'Echo JS',
-    short: 'Echo JS',
-    obsolete: false, // always up-to-date version
-    platformtype: 'engine',
-  },
-  ios7: {
-    full: 'iOS Safari 7',
-    short: 'iOS7',
-    platformtype: 'mobile',
-  },
-  ios8: {
-    full: 'iOS Safari 8',
-    short: 'iOS8',
-    platformtype: 'mobile',
-  }
 };
 
 exports.tests = [
@@ -212,30 +152,9 @@ exports.tests = [
   res: {
     tr: true,
     babel: true,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
     firefox33: true,
     firefox34: true,
     firefox35: true,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    chrome40: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -246,32 +165,12 @@ exports.tests = [
     return typeof Object.observe === 'function';
   */},
   res: {
-    tr: false,
-    babel: false,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
     chrome33: true,
     chrome34: true,
     chrome35: true,
     chrome37: true,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: true,
+    node: true,
     iojs: true,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -282,36 +181,13 @@ exports.tests = [
     return typeof Array.prototype.includes === 'function';
   */},
   res: {
-    tr: false,
     babel: true,
     es7shim: true,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
     firefox35:   {
       val: true,
       note_id: 'includes-nightly',
       note_html: 'Only enabled in Nightly builds, before 2014-11-22 as <code>Array.prototype.contains</code>'
     },
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    chrome41: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -332,9 +208,6 @@ exports.tests = [
     ) === true;
   */},
   res: {
-    tr:       false,
-    babel:    false,
-    chrome41: false,
   }
 },
 {
@@ -351,8 +224,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        es7shim:     false,
-        chrome41:    false
       }
     },
     'arrow async functions' : {
@@ -362,8 +233,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        es7shim:     false,
-        chrome41:    false
       }
     }
   }
@@ -376,31 +245,9 @@ exports.tests = [
     return typeof StructType !== 'undefined';
   */},
   res: {
-    tr: false,
-    babel: false,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
     firefox33: true,
     firefox34: true,
     firefox35: true,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -411,31 +258,8 @@ exports.tests = [
     return typeof Object.getOwnPropertyDescriptors === 'function';
   */},
   res: {
-    tr: false,
     babel: true,
     es7shim: true,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -460,8 +284,6 @@ exports.tests = [
         return typeof Array.prototype.mapPar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'Array.prototype.filterPar' : {
@@ -469,8 +291,6 @@ exports.tests = [
         return typeof Array.prototype.filterPar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'Array.fromPar' : {
@@ -478,8 +298,6 @@ exports.tests = [
         return typeof Array.fromPar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'TypedObject.fromPar' : {
@@ -487,8 +305,6 @@ exports.tests = [
         return typeof TypedObject.fromPar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'Array.prototype.get' : {
@@ -496,8 +312,6 @@ exports.tests = [
         return typeof Array.prototype.get === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'Array.prototype.reducePar' : {
@@ -505,8 +319,6 @@ exports.tests = [
         return typeof Array.prototype.reducePar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'Array.prototype.scanPar' : {
@@ -514,8 +326,6 @@ exports.tests = [
         return typeof Array.prototype.scanPar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'Array.prototype.scatterPar' : {
@@ -523,8 +333,6 @@ exports.tests = [
         return typeof Array.prototype.scatterPar === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     }
   }
@@ -539,31 +347,7 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        tr:          false,
-        babel:       false,
-        es7shim:     false,
-        ejs:         false,
-        ie11:        false,
-        firefox31:   false,
-        firefox32:   false,
-        firefox33:   false,
-        firefox34:   false,
-        firefox35:   false,
         firefox39:   true,
-        chrome30:    false,
-        chrome33:    false,
-        chrome34:    false,
-        chrome35:    false,
-        chrome37:    false,
-        safari78:    false,
-        webkit:      false,
-        konq49:      false,
-        rhino17:     false,
-        phantom:     false,
-        node:        false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
       }
     },
     'float32x4' : {
@@ -571,31 +355,7 @@ exports.tests = [
         return typeof SIMD.float32x4 === 'function';
       */},
       res: {
-        tr:          false,
-        babel:       false,
-        es7shim:     false,
-        ejs:         false,
-        ie11:        false,
-        firefox31:   false,
-        firefox32:   false,
-        firefox33:   false,
-        firefox34:   false,
-        firefox35:   false,
         firefox39:   true,
-        chrome30:    false,
-        chrome33:    false,
-        chrome34:    false,
-        chrome35:    false,
-        chrome37:    false,
-        safari78:    false,
-        webkit:      false,
-        konq49:      false,
-        rhino17:     false,
-        phantom:     false,
-        node:        false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
       }
     },
     'float64x2' : {
@@ -603,31 +363,7 @@ exports.tests = [
         return typeof SIMD.float64x2 === 'function';
       */},
       res: {
-        tr:          false,
-        babel:       false,
-        es7shim:     false,
-        ejs:         false,
-        ie11:        false,
-        firefox31:   false,
-        firefox32:   false,
-        firefox33:   false,
-        firefox34:   false,
-        firefox35:   false,
         firefox39:   true,
-        chrome30:    false,
-        chrome33:    false,
-        chrome34:    false,
-        chrome35:    false,
-        chrome37:    false,
-        safari78:    false,
-        webkit:      false,
-        konq49:      false,
-        rhino17:     false,
-        phantom:     false,
-        node:        false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
       }
     },
     'int32x4' : {
@@ -635,31 +371,7 @@ exports.tests = [
         return typeof SIMD.int32x4 === 'function';
       */},
       res: {
-        tr:          false,
-        babel:       false,
-        es7shim:     false,
-        ejs:         false,
-        ie11:        false,
-        firefox31:   false,
-        firefox32:   false,
-        firefox33:   false,
-        firefox34:   false,
-        firefox35:   false,
         firefox39:   true,
-        chrome30:    false,
-        chrome33:    false,
-        chrome34:    false,
-        chrome35:    false,
-        chrome37:    false,
-        safari78:    false,
-        webkit:      false,
-        konq49:      false,
-        rhino17:     false,
-        phantom:     false,
-        node:        false,
-        nodeharmony: false,
-        ios7: false,
-        ios8: false
       }
     },
     'SIMD.%type%.abs' : {
@@ -668,7 +380,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.add' : {
@@ -677,7 +388,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.and' : {
@@ -686,7 +396,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.bitselect' : {
@@ -695,7 +404,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.bool' : {
@@ -704,7 +412,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.check' : {
@@ -713,7 +420,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.equal' : {
@@ -722,7 +428,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.equivalent' : {
@@ -731,7 +436,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.greaterThan' : {
@@ -740,7 +444,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.greaterThanOrEqual' : {
@@ -749,7 +452,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.lessThan' : {
@@ -758,7 +460,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.lessThanOrEqual' : {
@@ -767,7 +468,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.mul' : {
@@ -776,7 +476,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.neg' : {
@@ -785,7 +484,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.not' : {
@@ -794,7 +492,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.notEqual' : {
@@ -803,7 +500,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.or' : {
@@ -812,7 +508,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.select' : {
@@ -821,7 +516,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.shuffle' : {
@@ -830,7 +524,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.sub' : {
@@ -839,7 +532,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.swizzle' : {
@@ -848,7 +540,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     },
     'SIMD.%type%.xor' : {
@@ -857,7 +548,6 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
-        chrome41:  false
       }
     }
   }
@@ -886,8 +576,6 @@ exports.tests = [
   */},
   res: {
     babel: true,
-    chrome41: false,
-    ios8: false
   }
 },
 {
@@ -911,8 +599,6 @@ exports.tests = [
     return true;
   */},
   res: {
-    babel: false,
-    chrome41:  false
   }
 },
 {
@@ -925,28 +611,11 @@ exports.tests = [
   res: {
     tr:          true,
     babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
     firefox31:   true,
     firefox32:   true,
     firefox33:   true,
     firefox34:   true,
     firefox35:   true,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -959,28 +628,11 @@ exports.tests = [
   res: {
     tr:          true,
     babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
     firefox31:   true,
     firefox32:   true,
     firefox33:   true,
     firefox34:   true,
     firefox35:   true,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -993,28 +645,6 @@ exports.tests = [
   res: {
     tr:          true,
     babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -1025,31 +655,6 @@ exports.tests = [
     return typeof Map.prototype.toJSON === 'function';
   */},
   res: {
-    tr: false,
-    babel: false,
-    es7shim: false,
-    ejs: false,
-    ie11: false,
-    firefox31: false,
-    firefox32: false,
-    firefox33: false,
-    firefox34: false,
-    firefox35: false,
-    chrome30: false,
-    chrome33: false,
-    chrome34: false,
-    chrome35: false,
-    chrome37: false,
-    safari78: false,
-    webkit: false,
-    opera15: false,
-    konq49: false,
-    rhino17: false,
-    phantom: false,
-    node: false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -1073,31 +678,6 @@ exports.tests = [
     return true;
   */},
   res: {
-    tr:          false,
-    babel:       false,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    firefox39:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -1108,31 +688,6 @@ exports.tests = [
     return typeof Map.prototype.toJSON === 'function';
   */},
   res: {
-    tr:          false,
-    babel:       false,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    opera15:     false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7:        false,
-    ios8:        false
   }
 },
 {
@@ -1144,30 +699,7 @@ exports.tests = [
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
   */},
   res: {
-    tr:          false,
     babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -1180,30 +712,7 @@ exports.tests = [
     return O.a + O.b + O.c === 6;
   */},
   res: {
-    tr:          false,
     babel:       true,
-    es7shim:     false,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -1214,31 +723,8 @@ exports.tests = [
     return 'a𠮷b'.at(1) === '𠮷';
   */},
   res: {
-    tr:          false,
     babel:       true,
     es7shim:     true,
-    ejs:         false,
-    ie11:        false,
-    firefox31:   false,
-    firefox32:   false,
-    firefox33:   false,
-    firefox34:   false,
-    firefox35:   false,
-    chrome30:    false,
-    chrome33:    false,
-    chrome34:    false,
-    chrome35:    false,
-    chrome37:    false,
-    safari78:    false,
-    webkit:      false,
-    opera15:     false,
-    konq49:      false,
-    rhino17:     false,
-    phantom:     false,
-    node:        false,
-    nodeharmony: false,
-    ios7: false,
-    ios8: false
   }
 },
 {
@@ -1251,8 +737,6 @@ exports.tests = [
         return typeof String.prototype.lpad === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     },
     'String.prototype.rpad' : {
@@ -1260,8 +744,6 @@ exports.tests = [
         return typeof String.prototype.rpad === 'function';
       */},
       res: {
-        firefox39: false,
-        chrome41:  false
       }
     }
   }
