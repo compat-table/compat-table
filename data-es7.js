@@ -546,14 +546,14 @@ exports.tests = [
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
     class A {
-      @C
+      @nonconf
       get B() {}
     }
-    function C(target, name, descriptor) {
-      descriptor.enumerable = false;
+    function nonconf(target, name, descriptor) {
+      descriptor.configurable = false;
       return descriptor;
     }
-    return Object.getOwnPropertyDescriptor(A.prototype, "B").enumerable === false;
+    return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
   */},
   res: {
     babel: true,
