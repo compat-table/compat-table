@@ -85,7 +85,7 @@
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
 <th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel">Babel +<br><nobr>core-js</nobr></abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
-<th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
+<th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr></a></th>
 <th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
 <th class="platform firefox31 desktop obsolete" data-browser="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></a></th>
 <th class="platform firefox32 desktop obsolete" data-browser="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></a></th>
@@ -1375,15 +1375,15 @@ return typeof SIMD.float32x4.xor === &apos;function&apos;;
 </tr>
 <tr significance="1"><td id="class_decorators"><span><a class="anchor" href="#class_decorators">&#xA7;</a><a href="https://github.com/wycats/javascript-decorators">class decorators</a></span><script data-source="
 class A {
-  @C
+  @nonconf
   get B() {}
 }
-function C(target, name, descriptor) {
-  descriptor.enumerable = false;
+function nonconf(target, name, descriptor) {
+  descriptor.configurable = false;
   return descriptor;
 }
-return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).enumerable === false;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");return Function("asyncTestPassed","\nclass A {\n  @C\n  get B() {}\n}\nfunction C(target, name, descriptor) {\n  descriptor.enumerable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").enumerable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable === false;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1824,7 +1824,7 @@ return typeof String.prototype.rpad === &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via --experimental flag</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p></p></div>
+    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via --experimental flag</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
