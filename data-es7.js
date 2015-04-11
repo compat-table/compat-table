@@ -635,6 +635,22 @@ exports.tests = [
   }
 },
 {
+  name: 'class properties',
+  category: 'strawman',
+  link: 'https://gist.github.com/jeffmo/054df782c05639da2adb',
+  exec: function () {/*
+    class C {
+      x = 'x';
+      static y = 'y';
+    }
+    return new C().x + C.y === 'xy';
+  */},
+  res: {
+    babel:       true,
+    tr:          true,
+  }
+},
+{
   name: 'Map.prototype.toJSON',
   category: 'strawman',
   link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
