@@ -688,7 +688,7 @@ exports.tests = [
   category: 'strawman',
   link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return typeof Map.prototype.toJSON === 'function';
+    return typeof Set.prototype.toJSON === 'function';
   */},
   res: {
   }
