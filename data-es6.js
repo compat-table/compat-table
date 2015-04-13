@@ -1286,6 +1286,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox27:   true,
+        webkit:      true,
       },
     },
     'with instances of iterables, in calls': {
@@ -1311,6 +1312,8 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ie11tp:      true,
         firefox36:   true,
+        firefox27:   true,
+        webkit:      true,
       },
     },
   }
@@ -1590,6 +1593,7 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
+        webkit:      true,
       },
     },
     'computed static accessor properties': {
@@ -1776,6 +1780,7 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
+        webkit:      true,
       },
     },
     'new.target': {
@@ -2213,6 +2218,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox27:   true,
+        webkit:      true,
         chrome21dev: flag,
         chrome38:    true,
         node:        true,
@@ -2235,6 +2241,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome35:    flag,
         chrome38:    true,
         node:        true,
@@ -2253,6 +2260,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
     'iterator closing, throw': {
@@ -2269,6 +2277,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
   },
@@ -3253,6 +3262,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
     'Map.prototype.set returns this': {
@@ -3523,6 +3533,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
     'Set.prototype.add returns this': {
@@ -3787,6 +3798,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
     'WeakMap.prototype.set returns this': {
@@ -5236,6 +5248,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome34:    flag,
         chrome38:    true,
         node:        true,
@@ -5274,6 +5287,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.getOwnPropertyDescriptor': {
@@ -5285,6 +5299,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.getOwnPropertyNames': {
@@ -5300,6 +5315,7 @@ exports.tests = [
         chrome40:    true,
         iojs:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Object.seal': {
@@ -5311,6 +5327,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.freeze': {
@@ -5322,6 +5339,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.preventExtensions': {
@@ -5333,6 +5351,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.isSealed': {
@@ -5344,6 +5363,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.isFrozen': {
@@ -5355,6 +5375,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.isExtensible': {
@@ -5366,6 +5387,7 @@ exports.tests = [
         es6shim:     true,
         ie11tp:      true,
         firefox35:   true,
+        webkit:      true,
       },
     },
     'Object.keys': {
@@ -5379,6 +5401,7 @@ exports.tests = [
         ie11tp:      true,
         firefox35:   true,
         chrome40:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -6005,6 +6028,7 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node:        true,
@@ -6021,6 +6045,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node:        true,
@@ -6049,6 +6074,7 @@ exports.tests = [
         ejs:         true,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node:        true,
@@ -6075,6 +6101,7 @@ exports.tests = [
         babel:       true,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node:        true,
@@ -6103,6 +6130,7 @@ exports.tests = [
         typescript:  true,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome38:    true,
         node:        true,
         iojs:        true,
@@ -6118,6 +6146,7 @@ exports.tests = [
         ie11tp:      true,
         chrome39:    true,
         firefox36:   true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -6137,6 +6166,7 @@ exports.tests = [
         typescript: true,
         ie11tp:     true,
         firefox36:  true,
+        webkit:     true,
         chrome35:   flag,
         chrome38:   true,
         node:       true,
@@ -6159,6 +6189,7 @@ exports.tests = [
         firefox36:  true,
         chrome30:   flag,
         chrome35:   false,
+        webkit:     true,
       },
     },
     'global symbol registry': {
@@ -6238,6 +6269,7 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         ie11tp:      true,
         firefox36:   true,
+        webkit:      true,
         chrome37:    flag,
         chrome38:    true,
         ejs:         true,
@@ -6300,6 +6332,7 @@ exports.tests = [
       res: {
         ie11tp:      true,
         chrome38:    true,
+        webkit:      true,
         ejs: {
           val: false,
           note_id: 'ejs-no-with',
@@ -6623,6 +6656,7 @@ exports.tests = [
         ejs:         true,
         es6shim:     true,
         ie11tp:      true,
+        webkit:      true,
         firefox17:   {
           val: false,
           note_id: 'fx-array-prototype-values',
@@ -6679,6 +6713,7 @@ exports.tests = [
         babel:       true,
         ie11tp:      true,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
