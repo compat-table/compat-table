@@ -7362,7 +7362,6 @@ exports.tests = [
         }
       */},
       res: {
-        tr:          true,
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
@@ -7387,7 +7386,6 @@ exports.tests = [
         }
       */},
       res: {
-        tr:          true,
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
@@ -7412,7 +7410,6 @@ exports.tests = [
         }
       */},
       res: {
-        tr:          true,
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
@@ -7477,7 +7474,6 @@ exports.tests = [
         return map.has(key) && map.get(key) === 123;
       */},
       res: {
-        tr:          true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
@@ -7495,7 +7491,6 @@ exports.tests = [
         return set.has(123);
       */},
       res: {
-        tr:          true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
