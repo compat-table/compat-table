@@ -6039,6 +6039,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
+        tr:          flag,
         babel:       flag,
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
