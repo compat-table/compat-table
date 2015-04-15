@@ -691,6 +691,7 @@ exports.tests = [
     return typeof Set.prototype.toJSON === 'function';
   */},
   res: {
+    babel:       true,
   }
 },
 {
