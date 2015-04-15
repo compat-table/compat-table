@@ -197,7 +197,7 @@ return typeof Array.prototype.includes === &apos;function&apos;;
 </tr>
 <tr class="supertest" significance="1"><td id="trailing_commas_in_function_syntax"><span><a class="anchor" href="#trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf">trailing commas in function syntax</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
-<td data-browser="babel" class="tally" data-tally="0">0/2</td>
+<td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
@@ -224,7 +224,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");return Function("asyncTestPassed","\nreturn typeof function f( a, b, ){} === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
@@ -251,7 +251,7 @@ return Math.min(1,2,3,) === 1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");return Function("asyncTestPassed","\nreturn Math.min(1,2,3,) === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
@@ -1663,11 +1663,11 @@ return true;
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr significance="1"><td id="Set.prototype.toJSON"><span><a class="anchor" href="#Set.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Set.prototype.toJSON</a></span><script data-source="
-return typeof Map.prototype.toJSON === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nreturn typeof Map.prototype.toJSON === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+return typeof Set.prototype.toJSON === &apos;function&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nreturn typeof Set.prototype.toJSON === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
