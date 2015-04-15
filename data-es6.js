@@ -1145,6 +1145,7 @@ exports.tests = [
         }());
       */},
       res: {
+        babel:       true,
         tr:          true,
         closure:     true,
         jsx:         true,
@@ -2397,6 +2398,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        babel:       true,
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
@@ -2637,6 +2639,7 @@ exports.tests = [
         return closed;
       */},
       res: {
+        babel:       true,
       },
     },
     'shorthand generator methods': {
@@ -4694,6 +4697,7 @@ exports.tests = [
         return closed;
       */},
       res: {
+        babel:       true,
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -4741,7 +4745,7 @@ exports.tests = [
         webkit:       false,
         safari71_8:   false,
         ios8:         false,
-        babel:        false,
+        babel:        true,
         tr:           false,
         closure:      false,
       }),
