@@ -156,7 +156,7 @@ $(function() {
 
   // Cell highlighting function
   function highlightSelected(elem) {
-    table.find('.selected').removeClass('selected');
+    table.detach().find('.selected').removeClass('selected');
 
     elem.addClass('selected');
 
@@ -165,7 +165,7 @@ $(function() {
       parent.click();
     }
 
-    table.addClass('one-selected');
+    table.addClass('one-selected').insertBefore('#footnotes');
   }
 
   $(document).on('click', function removeHighlighting(event) {
