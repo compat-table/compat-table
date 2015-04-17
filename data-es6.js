@@ -4515,15 +4515,54 @@ exports.tests = [
     },
     'Reflect.ownKeys': {
       exec: function() {/*
-        var obj = { foo: 1, bar: 2 };
-        return Reflect.ownKeys(obj) + "" === "foo,bar";
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          E:    true,
+          B:    true,
+          D:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj.D;
+        obj.D = true;
+        delete obj[2];
+        obj[2] = true;
+        
+        return Reflect.ownKeys(obj).join('') === "012349 EB-1ACD";
       */},
-      res: {
-        babel:       true,
+      res: (temp.reflectOwnKeys = {
+        babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
-        es6shim:     true,
-      },
+        es6shim:     { val: false, note_id: "forin-order" },
+      }),
+    },
+    'Reflect.ownKeys, symbol order': {
+      exec: function() {/*
+        var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
+        var obj = {
+          1:    true,
+          A:    true,
+        };
+        obj.B = true;
+        obj[sym1] = true;
+        obj[2] = true;
+        obj[sym2] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
+        Object.defineProperty(obj, 'D', { value: true, enumerable: true });
+        
+        var result = Reflect.ownKeys(obj);
+        return result[12] === sym1 && result[13] === sym2 && result[14] === sym3;
+      */},
+      res: temp.reflectOwnKeys,
     },
     'Reflect.apply': {
       exec: function() {/*
@@ -5237,9 +5276,14 @@ exports.tests = [
     'Object.getOwnPropertySymbols': {
       exec: function () {/*
         var o = {};
-        var sym = Symbol();
-        o[sym] = "foo";
-        return Object.getOwnPropertySymbols(o)[0] === sym;
+        var sym = Symbol(), sym2 = Symbol(), sym3 = Symbol();
+        o[sym]  = true;
+        o[sym2] = true;
+        o[sym3] = true;
+        var result = Object.getOwnPropertySymbols(o);
+        return result[0] === sym
+          && result[1] === sym2
+          && result[2] === sym3;
       */},
       res: {
         babel:       true,
@@ -7488,6 +7532,219 @@ exports.tests = [
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
+      },
+    },
+  },
+},
+{
+  name: 'own property order',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
+  category: 'misc',
+  significance: 'small',
+  subtests: {
+    'for..in': {
+      exec: function () {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          E:    true,
+          B:    true,
+          D:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj.D;
+        obj.D = true;
+        delete obj[2];
+        obj[2] = true;
+        
+        var result = '';
+        for(var i in obj) {
+          result += i;
+        }
+        return result === "012349 EB-1ACD";
+      */},
+      res: {
+        ie10:          true,
+        chrome:        true,
+        node:          true,
+        iojs:          true,
+        opera:         true,
+        safari51:      true,
+        ios7:          true,
+        webkit:        true,
+      },
+    },
+    'Object.keys': {
+      exec: function () {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          E:    true,
+          B:    true,
+          D:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj.D;
+        obj.D = true;
+        delete obj[2];
+        obj[2] = true;
+        
+        return Object.keys(obj).join('') === "012349 EB-1ACD";
+      */},
+      res: {
+        ie10:          true,
+        chrome:        true,
+        node:          true,
+        iojs:          true,
+        opera:         true,
+        safari51:      true,
+        ios7:          true,
+        webkit:        true,
+      },
+    },
+    'Object.getOwnPropertyNames': {
+      exec: function () {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          E:    true,
+          B:    true,
+          D:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj.D;
+        obj.D = true;
+        delete obj[2];
+        obj[2] = true;
+        
+        return Object.getOwnPropertyNames(obj).join('') === "012349 EB-1ACD";
+      */},
+      res: {
+        ie10:          true,
+        chrome37:      true,
+        iojs:          true,
+        opera:         true,
+        safari71_8:    true,
+        ios8:          true,
+        webkit:        true,
+      },
+    },
+    'Object.assign': {
+      exec: function () {/*
+        function f(key) {
+          return {
+            get: function() { result += key; return true; },
+            set: Object,
+            enumerable: true
+          };
+        };
+        var result = '';
+        var obj = Object.defineProperties({}, {
+          2:    f(2),
+          0:    f(0),
+          1:    f(1),
+          ' ':  f(' '),
+          9:    f(9),
+          E:    f('E'),
+          B:    f('B'),
+          D:    f('D'),
+          '-1': f('-1'),
+        });
+        Object.defineProperty(obj,'A',f('A')); 
+        Object.defineProperty(obj,'3',f('3'));
+        Object.defineProperty(obj,'C',f('C')); 
+        Object.defineProperty(obj,'4',f('4'));
+        delete obj.D;
+        obj.D = true;
+        delete obj[2];
+        obj[2] = true;
+        
+        Object.assign({}, obj);
+        
+        return result === "012349 EB-1ACD";
+      */},
+      res: {
+      },
+    },
+    'JSON.stringify': {
+      exec: function () {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          E:    true,
+          D:    true,
+          B:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj.D;
+        obj.D = true;
+        delete obj[2];
+        obj[2] = true;
+        
+        return JSON.stringify(obj) ===
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"E":true,"B":true,"-1":true,"A":true,"C":true,"D":true}';
+      */},
+      res: {
+        ie10:          true,
+        chrome:        true,
+        node:          true,
+        iojs:          true,
+        opera:         true,
+        safari51:      true,
+        ios7:          true,
+        webkit:        true,
+      },
+    },
+    'JSON.parse': {
+      exec: function () {/*
+        var result = '';
+        JSON.parse(
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"E":true,"B":true,"-1":true,"A":true,"C":true,"D":true}',
+          function reviver(k,v) {
+            result += k;
+            return v;
+          }
+        );
+        return result === "012349 EB-1ACD";
+      */},
+      res: {
+        ie10:          true,
+        firefox21:     true,
+        chrome:        true,
+        node:          true,
+        iojs:          true,
+        opera:         true,
+        safari51:      true,
+        ios7:          true,
+        webkit:        true,
       },
     },
   },
