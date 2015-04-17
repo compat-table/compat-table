@@ -20142,8 +20142,9 @@ Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
 Object.defineProperty(obj, &apos;D&apos;, { value: true, enumerable: true });
 
 var result = Reflect.ownKeys(obj);
-return result[12] === sym1 &amp;&amp; result[13] === sym2 &amp;&amp; result[14] === sym3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("285");return Function("asyncTestPassed","\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nreturn result[12] === sym1 && result[13] === sym2 && result[14] === sym3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var l = result.length;
+return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-1] === sym3;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("285");return Function("asyncTestPassed","\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[23]</sup></a></td>

@@ -4560,7 +4560,8 @@ exports.tests = [
         Object.defineProperty(obj, 'D', { value: true, enumerable: true });
         
         var result = Reflect.ownKeys(obj);
-        return result[12] === sym1 && result[13] === sym2 && result[14] === sym3;
+        var l = result.length;
+        return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
       */},
       res: temp.reflectOwnKeys,
     },
