@@ -7686,6 +7686,7 @@ exports.tests = [
         return result === "012349 EB-1ACD";
       */},
       res: {
+        ie11tp:     true,
       },
     },
     'JSON.stringify': {
@@ -7743,9 +7744,10 @@ exports.tests = [
         node:          true,
         iojs:          true,
         opera:         true,
-        safari7:       true,
+        safari51:      true,
         ios7:          true,
         webkit:        true,
+        phantom:       true,
       },
     },
   },
