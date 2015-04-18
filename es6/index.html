@@ -20048,22 +20048,19 @@ var obj = {
   1:    true,
   &apos; &apos;:  true,
   9:    true,
-  E:    true,
-  B:    true,
   D:    true,
+  B:    true,
   &apos;-1&apos;: true,
 };
 obj.A = true;
 obj[3] = true;
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
-delete obj.D;
-obj.D = true;
 delete obj[2];
 obj[2] = true;
 
-return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 EB-1ACD&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("284");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  E:    true,\n  B:    true,\n  D:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj.D;\nobj.D = true;\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 EB-1ACD\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("284");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[23]</sup></a></td>
@@ -30074,17 +30071,14 @@ var obj = {
   1:    true,
   &apos; &apos;:  true,
   9:    true,
-  E:    true,
-  B:    true,
   D:    true,
+  B:    true,
   &apos;-1&apos;: true,
 };
 obj.A = true;
 obj[3] = true;
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
-delete obj.D;
-obj.D = true;
 delete obj[2];
 obj[2] = true;
 
@@ -30092,8 +30086,8 @@ var result = &apos;&apos;;
 for(var i in obj) {
   result += i;
 }
-return result === &quot;012349 EB-1ACD&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("431");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  E:    true,\n  B:    true,\n  D:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj.D;\nobj.D = true;\ndelete obj[2];\nobj[2] = true;\n\nvar result = '';\nfor(var i in obj) {\n  result += i;\n}\nreturn result === \"012349 EB-1ACD\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return result === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("431");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nvar result = '';\nfor(var i in obj) {\n  result += i;\n}\nreturn result === \"012349 DB-1AC\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -30102,9 +30096,9 @@ return result === &quot;012349 EB-1ACD&quot;;
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes unstable" data-browser="ie11tp">Yes</td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -30164,22 +30158,19 @@ var obj = {
   1:    true,
   &apos; &apos;:  true,
   9:    true,
-  E:    true,
-  B:    true,
   D:    true,
+  B:    true,
   &apos;-1&apos;: true,
 };
 obj.A = true;
 obj[3] = true;
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
-delete obj.D;
-obj.D = true;
 delete obj[2];
 obj[2] = true;
 
-return Object.keys(obj).join(&apos;&apos;) === &quot;012349 EB-1ACD&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("432");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  E:    true,\n  B:    true,\n  D:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj.D;\nobj.D = true;\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.keys(obj).join('') === \"012349 EB-1ACD\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return Object.keys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("432");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.keys(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -30188,9 +30179,9 @@ return Object.keys(obj).join(&apos;&apos;) === &quot;012349 EB-1ACD&quot;;
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes unstable" data-browser="ie11tp">Yes</td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -30250,22 +30241,19 @@ var obj = {
   1:    true,
   &apos; &apos;:  true,
   9:    true,
-  E:    true,
-  B:    true,
   D:    true,
+  B:    true,
   &apos;-1&apos;: true,
 };
 obj.A = true;
 obj[3] = true;
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
-delete obj.D;
-obj.D = true;
 delete obj[2];
 obj[2] = true;
 
-return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 EB-1ACD&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("433");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  E:    true,\n  B:    true,\n  D:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj.D;\nobj.D = true;\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 EB-1ACD\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("433");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -30274,9 +30262,9 @@ return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 EB-1A
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes unstable" data-browser="ie11tp">Yes</td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -30344,24 +30332,21 @@ var obj = Object.defineProperties({}, {
   1:    f(1),
   &apos; &apos;:  f(&apos; &apos;),
   9:    f(9),
-  E:    f(&apos;E&apos;),
-  B:    f(&apos;B&apos;),
   D:    f(&apos;D&apos;),
+  B:    f(&apos;B&apos;),
   &apos;-1&apos;: f(&apos;-1&apos;),
 });
 Object.defineProperty(obj,&apos;A&apos;,f(&apos;A&apos;)); 
 Object.defineProperty(obj,&apos;3&apos;,f(&apos;3&apos;));
 Object.defineProperty(obj,&apos;C&apos;,f(&apos;C&apos;)); 
 Object.defineProperty(obj,&apos;4&apos;,f(&apos;4&apos;));
-delete obj.D;
-obj.D = true;
 delete obj[2];
 obj[2] = true;
 
 Object.assign({}, obj);
 
-return result === &quot;012349 EB-1ACD&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("434");return Function("asyncTestPassed","\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  E:    f('E'),\n  B:    f('B'),\n  D:    f('D'),\n  '-1': f('-1'),\n});\nObject.defineProperty(obj,'A',f('A')); \nObject.defineProperty(obj,'3',f('3'));\nObject.defineProperty(obj,'C',f('C')); \nObject.defineProperty(obj,'4',f('4'));\ndelete obj.D;\nobj.D = true;\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nreturn result === \"012349 EB-1ACD\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return result === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("434");return Function("asyncTestPassed","\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1'),\n});\nObject.defineProperty(obj,'A',f('A')); \nObject.defineProperty(obj,'3',f('3'));\nObject.defineProperty(obj,'C',f('C')); \nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nreturn result === \"012349 DB-1AC\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -30372,7 +30357,7 @@ return result === &quot;012349 EB-1ACD&quot;;
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes unstable" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -30432,7 +30417,6 @@ var obj = {
   1:    true,
   &apos; &apos;:  true,
   9:    true,
-  E:    true,
   D:    true,
   B:    true,
   &apos;-1&apos;: true,
@@ -30441,14 +30425,12 @@ obj.A = true;
 obj[3] = true;
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
-delete obj.D;
-obj.D = true;
 delete obj[2];
 obj[2] = true;
 
 return JSON.stringify(obj) ===
-  &apos;{&quot;0&quot;:true,&quot;1&quot;:true,&quot;2&quot;:true,&quot;3&quot;:true,&quot;4&quot;:true,&quot;9&quot;:true,&quot; &quot;:true,&quot;E&quot;:true,&quot;B&quot;:true,&quot;-1&quot;:true,&quot;A&quot;:true,&quot;C&quot;:true,&quot;D&quot;:true}&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("435");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  E:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj.D;\nobj.D = true;\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"E\":true,\"B\":true,\"-1\":true,\"A\":true,\"C\":true,\"D\":true}';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+  &apos;{&quot;0&quot;:true,&quot;1&quot;:true,&quot;2&quot;:true,&quot;3&quot;:true,&quot;4&quot;:true,&quot;9&quot;:true,&quot; &quot;:true,&quot;D&quot;:true,&quot;B&quot;:true,&quot;-1&quot;:true,&quot;A&quot;:true,&quot;C&quot;:true}&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("435");return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"C\":true}';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -30457,9 +30439,9 @@ return JSON.stringify(obj) ===
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes unstable" data-browser="ie11tp">Yes</td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -30515,14 +30497,14 @@ return JSON.stringify(obj) ===
 <tr class="subtest" data-parent="own_property_order" id="own_property_order_JSON.parse"><td><span><a class="anchor" href="#own_property_order_JSON.parse">&#xA7;</a>JSON.parse</span><script data-source="
 var result = &apos;&apos;;
 JSON.parse(
-  &apos;{&quot;0&quot;:true,&quot;1&quot;:true,&quot;2&quot;:true,&quot;3&quot;:true,&quot;4&quot;:true,&quot;9&quot;:true,&quot; &quot;:true,&quot;E&quot;:true,&quot;B&quot;:true,&quot;-1&quot;:true,&quot;A&quot;:true,&quot;C&quot;:true,&quot;D&quot;:true}&apos;,
+  &apos;{&quot;0&quot;:true,&quot;1&quot;:true,&quot;2&quot;:true,&quot;3&quot;:true,&quot;4&quot;:true,&quot;9&quot;:true,&quot; &quot;:true,&quot;D&quot;:true,&quot;B&quot;:true,&quot;-1&quot;:true,&quot;A&quot;:true,&quot;C&quot;:true}&apos;,
   function reviver(k,v) {
     result += k;
     return v;
   }
 );
-return result === &quot;012349 EB-1ACD&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("436");return Function("asyncTestPassed","\nvar result = '';\nJSON.parse(\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"E\":true,\"B\":true,\"-1\":true,\"A\":true,\"C\":true,\"D\":true}',\n  function reviver(k,v) {\n    result += k;\n    return v;\n  }\n);\nreturn result === \"012349 EB-1ACD\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return result === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("436");return Function("asyncTestPassed","\nvar result = '';\nJSON.parse(\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"C\":true}',\n  function reviver(k,v) {\n    result += k;\n    return v;\n  }\n);\nreturn result === \"012349 DB-1AC\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -30531,9 +30513,9 @@ return result === &quot;012349 EB-1ACD&quot;;
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes unstable" data-browser="ie11tp">Yes</td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes unstable" data-browser="ie11tp">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -31282,7 +31264,7 @@ return f() === 1 &amp;&amp; g() === 2 &amp;&amp; h() === 1;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest annex_b" significance="0.25"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[32]</sup></a></span></td>
+<tr class="supertest annex_b" significance="0.25"><td id="__proto___in_object_literals"><span><a class="anchor" href="#__proto___in_object_literals">&#xA7;</a><a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[33]</sup></a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="babel" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/5</td>
 <td data-browser="es6tr" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms." data-tally="0">0/5</td>
@@ -32518,7 +32500,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[8]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[9]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[10]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[11]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[12]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="constructor-required-note">  <sup>[15]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[16]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[17]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[18]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[19]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[20]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[21]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[22]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="forin-order-note">  <sup>[23]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="ejs-no-with-note">  <sup>[24]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[25]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[26]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[27]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[28]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[29]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[30]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[31]</sup> Available since Firefox 26</p><p id="proto-in-object-literals-note">  <sup>[32]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[8]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[9]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[10]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[11]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[12]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="constructor-required-note">  <sup>[15]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[16]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[17]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[18]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[19]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[20]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[21]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[22]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="forin-order-note">  <sup>[23]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="ejs-no-with-note">  <sup>[24]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[25]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[26]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[27]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[28]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[29]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[30]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[31]</sup> Available since Firefox 26</p><p id="ie_property_order-note">  <sup>[32]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="proto-in-object-literals-note">  <sup>[33]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

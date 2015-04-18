@@ -4521,21 +4521,18 @@ exports.tests = [
           1:    true,
           ' ':  true,
           9:    true,
-          E:    true,
-          B:    true,
           D:    true,
+          B:    true,
           '-1': true,
         };
         obj.A = true;
         obj[3] = true;
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj.D;
-        obj.D = true;
         delete obj[2];
         obj[2] = true;
         
-        return Reflect.ownKeys(obj).join('') === "012349 EB-1ACD";
+        return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
       */},
       res: (temp.reflectOwnKeys = {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
@@ -7551,17 +7548,14 @@ exports.tests = [
           1:    true,
           ' ':  true,
           9:    true,
-          E:    true,
-          B:    true,
           D:    true,
+          B:    true,
           '-1': true,
         };
         obj.A = true;
         obj[3] = true;
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj.D;
-        obj.D = true;
         delete obj[2];
         obj[2] = true;
         
@@ -7569,10 +7563,10 @@ exports.tests = [
         for(var i in obj) {
           result += i;
         }
-        return result === "012349 EB-1ACD";
+        return result === "012349 DB-1AC";
       */},
       res: {
-        ie10:          true,
+        ie10:          { val: true, note_id: 'ie_property_order' },
         chrome:        true,
         node:          true,
         iojs:          true,
@@ -7590,24 +7584,21 @@ exports.tests = [
           1:    true,
           ' ':  true,
           9:    true,
-          E:    true,
-          B:    true,
           D:    true,
+          B:    true,
           '-1': true,
         };
         obj.A = true;
         obj[3] = true;
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj.D;
-        obj.D = true;
         delete obj[2];
         obj[2] = true;
         
-        return Object.keys(obj).join('') === "012349 EB-1ACD";
+        return Object.keys(obj).join('') === "012349 DB-1AC";
       */},
       res: {
-        ie10:          true,
+        ie10:          { val: true, note_id: 'ie_property_order' },
         chrome:        true,
         node:          true,
         iojs:          true,
@@ -7625,24 +7616,21 @@ exports.tests = [
           1:    true,
           ' ':  true,
           9:    true,
-          E:    true,
-          B:    true,
           D:    true,
+          B:    true,
           '-1': true,
         };
         obj.A = true;
         obj[3] = true;
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj.D;
-        obj.D = true;
         delete obj[2];
         obj[2] = true;
         
-        return Object.getOwnPropertyNames(obj).join('') === "012349 EB-1ACD";
+        return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AC";
       */},
       res: {
-        ie10:          true,
+        ie10:          { val: true, note_id: 'ie_property_order' },
         chrome37:      true,
         iojs:          true,
         opera:         true,
@@ -7667,26 +7655,23 @@ exports.tests = [
           1:    f(1),
           ' ':  f(' '),
           9:    f(9),
-          E:    f('E'),
-          B:    f('B'),
           D:    f('D'),
+          B:    f('B'),
           '-1': f('-1'),
         });
         Object.defineProperty(obj,'A',f('A')); 
         Object.defineProperty(obj,'3',f('3'));
         Object.defineProperty(obj,'C',f('C')); 
         Object.defineProperty(obj,'4',f('4'));
-        delete obj.D;
-        obj.D = true;
         delete obj[2];
         obj[2] = true;
         
         Object.assign({}, obj);
         
-        return result === "012349 EB-1ACD";
+        return result === "012349 DB-1AC";
       */},
       res: {
-        ie11tp:     true,
+        ie11tp:     { val: true, note_id: 'ie_property_order' },
       },
     },
     'JSON.stringify': {
@@ -7697,7 +7682,6 @@ exports.tests = [
           1:    true,
           ' ':  true,
           9:    true,
-          E:    true,
           D:    true,
           B:    true,
           '-1': true,
@@ -7706,16 +7690,14 @@ exports.tests = [
         obj[3] = true;
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj.D;
-        obj.D = true;
         delete obj[2];
         obj[2] = true;
         
         return JSON.stringify(obj) ===
-          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"E":true,"B":true,"-1":true,"A":true,"C":true,"D":true}';
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}';
       */},
       res: {
-        ie10:          true,
+        ie10:          { val: true, note_id: 'ie_property_order' },
         chrome:        true,
         node:          true,
         iojs:          true,
@@ -7729,16 +7711,20 @@ exports.tests = [
       exec: function () {/*
         var result = '';
         JSON.parse(
-          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"E":true,"B":true,"-1":true,"A":true,"C":true,"D":true}',
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}',
           function reviver(k,v) {
             result += k;
             return v;
           }
         );
-        return result === "012349 EB-1ACD";
+        return result === "012349 DB-1AC";
       */},
       res: {
-        ie10:          true,
+        ie10:          {
+          val:       true,
+          note_id:   'ie_property_order',
+          note_html: 'Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.'
+        },
         firefox21:     true,
         chrome:        true,
         node:          true,
