@@ -7725,7 +7725,7 @@ exports.tests = [
           note_id:   'ie_property_order',
           note_html: 'Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.'
         },
-        firefox21:     true,
+        firefox23:     true, // Actually Firefox 21
         chrome:        true,
         node:          true,
         iojs:          true,
