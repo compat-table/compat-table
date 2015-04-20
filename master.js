@@ -198,7 +198,7 @@ $(function() {
   // browser engine color stripes
   function getBrowserColour(name) {
     /* Chakra */
-    if (/^ie/.exec(name)) {
+    if (/^(ie|spartan)/.exec(name)) {
       return "hsla(217, 85%, 54%, .5)";
     }
     /* SpiderMonkey */
