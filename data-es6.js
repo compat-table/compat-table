@@ -2308,6 +2308,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+	ejs:         true,
       }),
     },
     'generator function expressions': {
@@ -2378,6 +2379,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+	ejs:         true,
       },
     },
     '%GeneratorPrototype%': {
@@ -2426,6 +2428,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+	ejs:         true,
       },
     },
     '%GeneratorPrototype%.return': {
@@ -2468,6 +2471,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+	ejs:         true,
       },
     },
     'yield *, arrays': {
@@ -2492,6 +2496,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+	ejs:         true,
       },
     },
     'yield *, strings': {
@@ -2516,6 +2521,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+	ejs:         true,
       },
     },
     'yield *, astral plane strings': {
@@ -2661,6 +2667,7 @@ exports.tests = [
         chrome42:    true,
         firefox34:   true,
         iojs:        flag,
+	ejs:         true,
       },
     },
     'string-keyed shorthand generator methods': {
@@ -2686,6 +2693,7 @@ exports.tests = [
         chrome42:    true,
         firefox34:   true,
         iojs:        flag,
+	ejs:         true,
       },
     },
     'computed shorthand generators': {
@@ -2710,6 +2718,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox34:   true,
+	ejs:         true,
       },
     },
     'shorthand generator methods, classes': {
@@ -2920,6 +2929,7 @@ exports.tests = [
         firefox11:   true,
         chrome39:    flag,
         chrome40:    false,
+	ejs:         true,
       },
     },
     '"u" flag': {
@@ -3146,25 +3156,25 @@ exports.tests = [
         iojs:        true,
         ios7:        true,
     },
-    '.prototype.join':        { spartan: true, firefox37: true },
-    '.prototype.indexOf':     { spartan: true, firefox37: true },
-    '.prototype.lastIndexOf': { spartan: true, firefox37: true },
-    '.prototype.slice':       { spartan: true, firefox39: true },
-    '.prototype.every':       { spartan: true, firefox37: true },
+    '.prototype.join':        { spartan: true, firefox37: true, ejs: true },
+    '.prototype.indexOf':     { spartan: true, firefox37: true, ejs: true },
+    '.prototype.lastIndexOf': { spartan: true, firefox37: true, ejs: true },
+    '.prototype.slice':       { spartan: true, firefox39: true, ejs: true },
+    '.prototype.every':       { spartan: true, firefox37: true, ejs: true },
     '.prototype.filter':      { spartan: true, firefox39: true },
-    '.prototype.forEach':     { spartan: true, firefox38: true },
+    '.prototype.forEach':     { spartan: true, firefox38: true, ejs: true },
     '.prototype.map':         { spartan: true, firefox39: true },
-    '.prototype.reduce':      { spartan: true, firefox37: true },
-    '.prototype.reduceRight': { spartan: true, firefox37: true },
+    '.prototype.reduce':      { spartan: true, firefox37: true, ejs: true },
+    '.prototype.reduceRight': { spartan: true, firefox37: true, ejs: true },
     '.prototype.reverse':     { spartan: true, firefox37: true },
-    '.prototype.some':        { spartan: true, firefox37: true },
+    '.prototype.some':        { spartan: true, firefox37: true, ejs: true },
     '.prototype.sort':        { spartan: true, },
     '.prototype.copyWithin':  { spartan: true, firefox34: true },
-    '.prototype.find':        { spartan: true, firefox37: true },
-    '.prototype.findIndex':   { spartan: true, firefox37: true },
-    '.prototype.fill':        { spartan: true, firefox37: true },
-    '.prototype.keys':        { spartan: true, chrome38: true, node: true, iojs: true, firefox37: true },
-    '.prototype.values':      { spartan: true, chrome38: true, node: true, iojs: true, firefox37: true },
+    '.prototype.find':        { spartan: true, firefox37: true, ejs: true },
+    '.prototype.findIndex':   { spartan: true, firefox37: true, ejs: true },
+    '.prototype.fill':        { spartan: true, firefox37: true, ejs: true },
+    '.prototype.keys':        { spartan: true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
+    '.prototype.values':      { spartan: true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
     '.prototype.entries':     { spartan: true, chrome38: true, node: true, iojs: true, firefox37: true },
     };
     var eqFn = ' === "function"';
@@ -3303,6 +3313,7 @@ exports.tests = [
         webkit:      true,
         node:        flag,
         iojs:        true,
+        ejs:         true,
       },
     },
     'Map.prototype.size': {
@@ -3574,6 +3585,7 @@ exports.tests = [
         webkit:      true,
         node:        flag,
         iojs:        true,
+        ejs:         true,
       },
     },
     'Set.prototype.size': {
@@ -4200,6 +4212,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ejs:         true,
         typescript:  temp.typescriptFallthrough,
         firefox31:   true,
         spartan:      true,
@@ -4220,6 +4233,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ejs:         true,
         typescript:  temp.typescriptFallthrough,
         firefox23:   true,
         spartan:      true,
