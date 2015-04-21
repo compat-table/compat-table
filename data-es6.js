@@ -68,7 +68,7 @@ exports.browsers = {
     obsolete: false
   },
   spartan: {
-    full: 'Internet Explorer / Project Spartan',
+    full: 'Internet Explorer, Project Spartan',
     short: 'Spartan',
     unstable: true
   },

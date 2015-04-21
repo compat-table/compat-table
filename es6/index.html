@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -131,7 +131,7 @@
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
-<th class="platform spartan desktop unstable" data-browser="spartan"><a href="#spartan" class="browser-name"><abbr title="Internet Explorer">Project<br>Spartan</abbr></a></th>
+<th class="platform spartan desktop unstable" data-browser="spartan"><a href="#spartan" class="browser-name"><abbr title="Internet Explorer, Project Spartan">Spartan</abbr></a></th>
 <th class="platform firefox11 desktop obsolete" data-browser="firefox11"><a href="#firefox11" class="browser-name"><abbr title="Firefox">FF 11-12</abbr></a></th>
 <th class="platform firefox13 desktop obsolete" data-browser="firefox13"><a href="#firefox13" class="browser-name"><abbr title="Firefox">FF 13</abbr></a></th>
 <th class="platform firefox16 desktop obsolete" data-browser="firefox16"><a href="#firefox16" class="browser-name"><abbr title="Firefox">FF 16</abbr></a></th>
@@ -2553,10 +2553,10 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="ios8" class="tally" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 </tr>
 <tr class="subtest" data-parent="for..of_loops" id="for..of_loops_with_arrays"><td><span><a class="anchor" href="#for..of_loops_with_arrays">&#xA7;</a>with arrays</span><script data-source="
-var arr = [4];
+var arr = [5];
 for (var item of arr)
   return item === 5;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");return Function("asyncTestPassed","\nvar arr = [4];\nfor (var item of arr)\n  return item === 5;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");return Function("asyncTestPassed","\nvar arr = [5];\nfor (var item of arr)\n  return item === 5;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3636,7 +3636,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
 </tr>
@@ -3706,7 +3706,7 @@ return (re.exec(&apos;xy&apos;)[0] === &apos;x&apos; &amp;&amp; re2.exec(&apos;x
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -3840,12 +3840,12 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td data-browser="ios8" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">15/30</td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_with_arrays"><td><span><a class="anchor" href="#destructuring_with_arrays">&#xA7;</a>with arrays</span><script data-source="
-var [a, , [b], c] = [5, null, [5]];
+var [a, , [b], c] = [5, null, [6]];
 var d, e;
 [d,e] = [7,8];
 return a === 5 &amp;&amp; b === 6 &amp;&amp; c === undefined
   &amp;&amp; d === 7 &amp;&amp; e === 8;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nvar [a, , [b], c] = [5, null, [5]];\nvar d, e;\n[d,e] = [7,8];\nreturn a === 5 && b === 6 && c === undefined\n  && d === 7 && e === 8;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nvar [a, , [b], c] = [5, null, [6]];\nvar d, e;\n[d,e] = [7,8];\nreturn a === 5 && b === 6 && c === undefined\n  && d === 7 && e === 8;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -5016,10 +5016,10 @@ return a === 5 &amp;&amp; b === 6 &amp;&amp; c === 7 &amp;&amp; d === 8;
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_nested"><td><span><a class="anchor" href="#destructuring_nested">&#xA7;</a>nested</span><script data-source="
 var [e, {x:f, g}] = [9, {x:10}];
-var {h, x:[i]} = {h:11, x:[11]};
+var {h, x:[i]} = {h:11, x:[12]};
 return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined
   &amp;&amp; h === 11 &amp;&amp; i === 12;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");return Function("asyncTestPassed","\nvar [e, {x:f, g}] = [9, {x:10}];\nvar {h, x:[i]} = {h:11, x:[11]};\nreturn e === 9 && f === 10 && g === undefined\n  && h === 11 && i === 12;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");return Function("asyncTestPassed","\nvar [e, {x:f, g}] = [9, {x:10}];\nvar {h, x:[i]} = {h:11, x:[12]};\nreturn e === 9 && f === 10 && g === undefined\n  && h === 11 && i === 12;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -5425,10 +5425,10 @@ for(var [i, j, k] of [[1,2,3]]) {
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_rest"><td><span><a class="anchor" href="#destructuring_rest">&#xA7;</a>rest</span><script data-source="
 var [a, ...b] = [3, 4, 5];
-var [c, ...d] = [5];
+var [c, ...d] = [6];
 return a === 3 &amp;&amp; b instanceof Array &amp;&amp; (b + &quot;&quot;) === &quot;4,5&quot; &amp;&amp;
    c === 6 &amp;&amp; d instanceof Array &amp;&amp; d.length === 0;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");return Function("asyncTestPassed","\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d] = [5];\nreturn a === 3 && b instanceof Array && (b + \"\") === \"4,5\" &&\n   c === 6 && d instanceof Array && d.length === 0;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");return Function("asyncTestPassed","\nvar [a, ...b] = [3, 4, 5];\nvar [c, ...d] = [6];\nreturn a === 3 && b instanceof Array && (b + \"\") === \"4,5\" &&\n   c === 6 && d instanceof Array && d.length === 0;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10479,7 +10479,7 @@ return obj.qux() === &quot;barley&quot;;
 <td data-browser="phantom" class="tally" data-tally="0">0/21</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5714285714285714">0/21</td>
 <td data-browser="iojs" class="tally" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="0.7142857142857143">12/21</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/21</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5238095238095238" style="background-color:hsl(62,62%,50%)">11/21</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/21</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/21</td>
 </tr>
@@ -10555,7 +10555,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -10631,7 +10631,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -10707,7 +10707,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -10855,7 +10855,7 @@ return sent[0] === &quot;foo&quot; &amp;&amp; sent[1] === &quot;bar&quot;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11007,7 +11007,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11156,7 +11156,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11231,7 +11231,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11306,7 +11306,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11774,7 +11774,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no flagged" data-browser="iojs">Flag</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11852,7 +11852,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no flagged" data-browser="iojs">Flag</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -11931,7 +11931,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -12153,7 +12153,7 @@ return passed;
 <td data-browser="phantom" class="tally" data-tally="0.45" style="background-color:hsl(54,66%,50%)">18/40</td>
 <td data-browser="node" class="tally" data-tally="0.525" style="background-color:hsl(63,62%,50%)">21/40</td>
 <td data-browser="iojs" class="tally" data-tally="0.525" style="background-color:hsl(63,62%,50%)">21/40</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.45" style="background-color:hsl(54,66%,50%)">18/40</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">32/40</td>
 <td data-browser="ios7" class="tally" data-tally="0.45" style="background-color:hsl(54,66%,50%)">18/40</td>
 <td data-browser="ios8" class="tally" data-tally="0.45" style="background-color:hsl(54,66%,50%)">18/40</td>
 </tr>
@@ -13613,7 +13613,7 @@ return typeof Int8Array.prototype.join === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -13687,7 +13687,7 @@ return typeof Int8Array.prototype.indexOf === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -13761,7 +13761,7 @@ return typeof Int8Array.prototype.lastIndexOf === &quot;function&quot; &amp;&amp
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -13835,7 +13835,7 @@ return typeof Int8Array.prototype.slice === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -13909,7 +13909,7 @@ return typeof Int8Array.prototype.every === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14057,7 +14057,7 @@ return typeof Int8Array.prototype.forEach === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14205,7 +14205,7 @@ return typeof Int8Array.prototype.reduce === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14279,7 +14279,7 @@ return typeof Int8Array.prototype.reduceRight === &quot;function&quot; &amp;&amp
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14427,7 +14427,7 @@ return typeof Int8Array.prototype.some === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14649,7 +14649,7 @@ return typeof Int8Array.prototype.find === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14723,7 +14723,7 @@ return typeof Int8Array.prototype.findIndex === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14797,7 +14797,7 @@ return typeof Int8Array.prototype.fill === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14871,7 +14871,7 @@ return typeof Int8Array.prototype.keys === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -14945,7 +14945,7 @@ return typeof Int8Array.prototype.values === &quot;function&quot; &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -15082,7 +15082,7 @@ return typeof Int8Array.prototype.entries === &quot;function&quot; &amp;&amp;
 <td data-browser="phantom" class="tally" data-tally="0">0/12</td>
 <td data-browser="node" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)" data-flagged-tally="0.9166666666666666">10/12</td>
 <td data-browser="iojs" class="tally" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/12</td>
 <td data-browser="ios8" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">9/12</td>
 </tr>
@@ -15435,7 +15435,7 @@ return k === Infinity &amp;&amp; map.get(+0) == &quot;foo&quot;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -15965,7 +15965,7 @@ return typeof Map.prototype.entries === &quot;function&quot;;
 <td data-browser="phantom" class="tally" data-tally="0">0/12</td>
 <td data-browser="node" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)" data-flagged-tally="0.9166666666666666">10/12</td>
 <td data-browser="iojs" class="tally" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/12</td>
 <td data-browser="ios8" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">9/12</td>
 </tr>
@@ -16321,7 +16321,7 @@ return k === Infinity &amp;&amp; set.has(+0);
 <td class="no" data-browser="phantom">No</td>
 <td class="no flagged" data-browser="node">Flag</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -17743,7 +17743,7 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td data-browser="phantom" class="tally" data-tally="0">0/20</td>
 <td data-browser="node" class="tally" data-tally="0">0/20</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/20</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.55" style="background-color:hsl(66,61%,50%)">11/20</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.65" style="background-color:hsl(78,57%,50%)">13/20</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/20</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/20</td>
 </tr>
@@ -18637,7 +18637,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -18713,7 +18713,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -32500,7 +32500,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="ie-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[6]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[9]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[10]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[11]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[12]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[13]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="constructor-required-note">  <sup>[14]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[15]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[16]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[17]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[18]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[19]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[20]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[21]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="forin-order-note">  <sup>[22]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="ejs-no-with-note">  <sup>[23]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[24]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="ie_property_order-note">  <sup>[31]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="proto-in-object-literals-note">  <sup>[32]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[6]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ie-regexp-u-note">  <sup>[9]</sup> RegExps such as <code>/./u</code> will still select halves of surrogate pairs.</p><p id="ff11-object-destructuring-note">  <sup>[10]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="webkit-object-destructuring-note">  <sup>[11]</sup> WebKit doesn&apos;t support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>).</p><p id="fx-let-note">  <sup>[12]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[13]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="constructor-required-note">  <sup>[14]</sup> Requires the <code>constructor</code> function to always be explicitly defined.</p><p id="strict-required-note">  <sup>[15]</sup> Support for this feature incorrectly requires strict mode.</p><p id="compiler-proto-note">  <sup>[16]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[17]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[18]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[19]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[20]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[21]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="forin-order-note">  <sup>[22]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="ejs-no-with-note">  <sup>[23]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[24]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="ie_property_order-note">  <sup>[31]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="proto-in-object-literals-note">  <sup>[32]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
