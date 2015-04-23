@@ -662,6 +662,7 @@ exports.tests = [
     return typeof Map.prototype.toJSON === 'function';
   */},
   res: {
+    es7shim: true
   }
 },
 {
@@ -696,6 +697,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    es7shim:     true,
   }
 },
 {
