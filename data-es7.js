@@ -191,13 +191,17 @@ exports.tests = [
       exec: function(){/*
         return typeof function f( a, b, ){} === 'function';
       */},
-      res: {},
+      res: {
+        babel:       true,
+      }
     },
     'in argument lists': {
       exec: function(){/*
         return Math.min(1,2,3,) === 1;
       */},
-      res: {},
+      res: {
+        babel:       true,
+      }
     },
   },
 },
@@ -691,6 +695,7 @@ exports.tests = [
     return typeof Set.prototype.toJSON === 'function';
   */},
   res: {
+    babel:       true,
   }
 },
 {
