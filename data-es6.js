@@ -1784,16 +1784,17 @@ exports.tests = [
     'new.target': {
       exec: function () {/*
         var passed = false;
+        new (function f() {
+          passed = new.target === f;
+        }());
+        
         class A {
           constructor() {
-            passed = new.target === B;
+            passed &= new.target === B;
           }
         }
         class B extends A {}
         new B();
-        (function() {
-          passed &= new.target === undefined;
-        }());
         return passed;
       */},
       res: {},
@@ -1931,6 +1932,21 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+      },
+    },
+    'constructor calls use correct "new.target" binding': {
+      exec: function() {/*
+        var passed;
+        class B {
+          constructor() { passed = (new.target === C); }
+        }
+        class C extends B {
+          constructor() { super(); }
+        }
+        new C();
+        return passed;
+      */},
+      res: {
       },
     },
     'is statically bound': {
@@ -6120,6 +6136,46 @@ exports.tests = [
       */},
       res: {
         spartan:     true,
+      }
+    },
+  }
+},
+{
+  name: 'new.target',
+  category: 'syntax',
+  significance: 'small',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-built-in-function-objects',
+  subtests: {
+    'in constructors': {
+      exec: function () {/*
+        var passed = false;
+        new (function f() {
+          passed = (new.target === f);
+        }());
+        (function() {
+          passed &= (new.target === undefined);
+        }());
+        return passed;
+      */},
+      res: {
+      }
+    },
+    'can\'t be assigned to': {
+      exec: function(){/*
+        var passed = false;
+        new (function f() {
+          passed = (new.target === f);
+        }());
+        
+        try {
+          (function() {
+            new.target = function(){};
+          }());
+        } catch(e) {
+          return passed;
+        }
+      */},
+      res: {
       }
     },
   }
