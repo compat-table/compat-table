@@ -292,7 +292,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r183062',
+    full: 'WebKit r183383',
     short: 'WK',
     unstable: true,
   },
