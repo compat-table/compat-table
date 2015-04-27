@@ -1661,6 +1661,7 @@ exports.tests = [
         babel:       true,
         jsx:         true,
         chrome42:    { val: flag, note_id: 'strict-required' },
+        webkit:      true,
       },
     },
     'implicit strict mode': {
@@ -2950,6 +2951,7 @@ exports.tests = [
         spartan:     true,
         firefox34:   true,
         chrome41:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -5341,6 +5343,7 @@ exports.tests = [
         es6shim:     true,
         spartan:     true,
         firefox34:   true,
+        webkit:      true,
       },
     },
     'Object.is': {
@@ -5899,6 +5902,7 @@ exports.tests = [
         firefox29:   true,
         chrome38:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -5924,6 +5928,7 @@ exports.tests = [
         firefox29:   true,
         chrome38:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -6635,6 +6640,7 @@ exports.tests = [
         spartan:     true,
         es6shim:     true,
         firefox32:   true,
+        webkit:      true,
       }
     },
     'Array.from, instances of generic iterables': {
@@ -6647,6 +6653,7 @@ exports.tests = [
         tr:           true,
         spartan:       true,
         firefox36:    true,
+        webkit:      true,
       }
     },
     'Array.from map function, array-like objects': {
@@ -6679,6 +6686,7 @@ exports.tests = [
         spartan:     true,
         es6shim:     true,
         firefox32:   true,
+        webkit:      true,
       }
     },
     'Array.from map function, instances of iterables': {
@@ -6693,6 +6701,7 @@ exports.tests = [
         tr:           true,
         spartan:       true,
         firefox36:    true,
+        webkit:      true,
       }
     },
     'Array.from, iterator closing': {
@@ -6708,6 +6717,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        webkit:      true,
       },
     },
     'Array.of': {
@@ -7044,6 +7054,7 @@ exports.tests = [
         firefox31:   true,
         chrome35:    flag,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -7812,6 +7823,7 @@ exports.tests = [
       */},
       res: {
         spartan:     { val: true, note_id: 'ie_property_order' },
+        webkit:      true,
       },
     },
     'JSON.stringify': {
