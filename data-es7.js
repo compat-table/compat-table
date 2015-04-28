@@ -15,7 +15,7 @@ exports.browsers = {
     short: 'Babel +<br><nobr>core-js</nobr>',
     platformtype: 'compiler',
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via --experimental flag'
+    note_html: 'Have to be enabled via --stage 0 flag'
   },
   jsx: {
     full: 'JSX',
