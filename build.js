@@ -55,11 +55,11 @@ process.nextTick(function () {
   if (!fs.existsSync('es7/compilers')) {
     fs.mkdirSync('es7/compilers');
   }
-  var closure    = require('closurecompiler');
-  var babel      = require('babel');
-  var traceur    = require('traceur');
-  var reacttools = require('react-tools');
-  var tss        = require('typescript-simple');
+  var closure     = require('closurecompiler');
+  var babel       = require('babel');
+  var traceur     = require('traceur');
+  var jstransform = require('jstransform/simple');
+  var tss         = require('typescript-simple');
   [
     {
       name: 'es5-shim',
@@ -134,7 +134,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/jsx.html',
       polyfills: [],
       compiler: function(code) {
-        var ret = reacttools.transform(code, { harmony:true });
+        var ret = jstransform.transform(code, { harmony:true });
         return ret.code || ret;
       },
     },
@@ -184,7 +184,7 @@ process.nextTick(function () {
       target_file: 'es7/compilers/jsx.html',
       polyfills: [],
       compiler: function(code) {
-        var ret = reacttools.transform(code, { harmony:true });
+        var ret = jstransform.transform(code, { harmony:true });
         return ret.code || ret;
       },
     },
