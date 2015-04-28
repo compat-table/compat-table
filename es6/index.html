@@ -1298,7 +1298,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="babel" class="tally" data-tally="1">10/10</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="closure" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
-<td data-browser="jsx" class="tally" data-tally="0">0/10</td>
+<td data-browser="jsx" class="tally" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td data-browser="typescript" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
@@ -1364,7 +1364,7 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -2025,7 +2025,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="babel" class="tally" data-tally="1">6/6</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="1">6/6</td>
 <td data-browser="closure" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="jsx" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
+<td data-browser="jsx" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="typescript" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
@@ -2092,7 +2092,7 @@ return ({ [x]: 1 }).y === 1;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -2358,7 +2358,7 @@ return ({ [x](){ return 1 } }).y() === 1;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -2494,7 +2494,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="babel" class="tally" data-tally="1">7/7</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="closure" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
-<td data-browser="jsx" class="tally" data-tally="0">0/7</td>
+<td data-browser="jsx" class="tally" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 <td data-browser="typescript" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/7</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/7</td>
@@ -2562,7 +2562,7 @@ for (var item of arr)
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -3781,7 +3781,7 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td data-browser="babel" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)" data-flagged-tally="0.9333333333333333">27/30</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">20/30</td>
 <td data-browser="closure" class="tally" data-tally="0.5333333333333333" style="background-color:hsl(64,62%,50%)">16/30</td>
-<td data-browser="jsx" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">15/30</td>
+<td data-browser="jsx" class="tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">12/30</td>
 <td data-browser="typescript" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">20/30</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/30</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/30</td>
@@ -4266,7 +4266,7 @@ return ([a, b] = iterable) === iterable;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="jsx">Yes</td>
+<td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -4334,7 +4334,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 1 &amp;&amp; d === 2;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="jsx">Yes</td>
+<td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -4679,7 +4679,7 @@ return ({a,b} = obj) === obj;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="jsx">Yes</td>
+<td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -8594,7 +8594,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td data-browser="babel" class="tally" data-tally="0.8260869565217391" style="background-color:hsl(99,49%,50%)">19/23</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
 <td data-browser="closure" class="tally" data-tally="0.2608695652173913" style="background-color:hsl(31,74%,50%)">6/23</td>
-<td data-browser="jsx" class="tally" data-tally="0.5652173913043478" style="background-color:hsl(67,61%,50%)">13/23</td>
+<td data-browser="jsx" class="tally" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
 <td data-browser="typescript" class="tally" data-tally="0.6086956521739131" style="background-color:hsl(73,59%,50%)">14/23</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/23</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/23</td>
@@ -9146,7 +9146,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -9287,7 +9287,7 @@ return typeof C.method === &quot;function&quot;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
