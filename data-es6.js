@@ -271,8 +271,8 @@ exports.browsers = {
     note_id: 'experimental-flag',
   },
   chrome44: {
-    full: 'Chrome',
-    short: 'CH 44',
+    full: 'Chrome, Opera',
+    short: 'CH 44,<br>OP&nbsp;31',
     unstable: true,
     note_id: 'experimental-flag',
   },
@@ -1103,7 +1103,7 @@ exports.tests = [
         typescript:  true,
         spartan:     true,
         firefox16:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'function \'length\' property': {
@@ -1119,7 +1119,7 @@ exports.tests = [
         typescript:  true,
         spartan:     true,
         firefox16:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'arguments object interaction': {
@@ -1137,7 +1137,7 @@ exports.tests = [
       res: {
         babel:       true,
         tr:          true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'can\'t be used in setters': {
@@ -1169,7 +1169,7 @@ exports.tests = [
       res: {
         spartan:     true,
         firefox16:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
   },
@@ -1197,7 +1197,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'with arrays, in array literals': {
@@ -1228,7 +1228,7 @@ exports.tests = [
         ejs:         true,
         spartan:     true,
         firefox27:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'with strings, in array literals': {
@@ -1253,7 +1253,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         firefox27:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'with astral plane strings, in array literals': {
@@ -1283,7 +1283,7 @@ exports.tests = [
         },
         ejs:         true,
         firefox27:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'with generic iterables, in arrays': {
@@ -1311,7 +1311,7 @@ exports.tests = [
         babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
-        chrome44:    true
+        chrome44:    flag,
       },
     },
     'with instances of iterables, in arrays': {
@@ -1802,9 +1802,9 @@ exports.tests = [
     'new.target': {
       exec: function () {/*
         var passed = false;
-        new (function f() {
+        new function f() {
           passed = new.target === f;
-        }());
+        }();
 
         class A {
           constructor() {
@@ -6164,7 +6164,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         spartan:     true,
-        chrome44:    true
+        chrome44:    flag,
       }
     },
     'in identifiers': {
@@ -6174,7 +6174,7 @@ exports.tests = [
       */},
       res: {
         spartan:     true,
-        chrome44:    true
+        chrome44:    flag,
       }
     },
   }
@@ -6188,9 +6188,9 @@ exports.tests = [
     'in constructors': {
       exec: function () {/*
         var passed = false;
-        new (function f() {
+        new function f() {
           passed = (new.target === f);
-        }());
+        }();
         (function() {
           passed &= (new.target === undefined);
         }());
@@ -6202,9 +6202,9 @@ exports.tests = [
     'can\'t be assigned to': {
       exec: function(){/*
         var passed = false;
-        new (function f() {
+        new function f() {
           passed = (new.target === f);
-        }());
+        }();
 
         try {
           (function() {
@@ -6532,6 +6532,7 @@ exports.tests = [
         ejs:         true,
         typescript:  temp.typescriptFallthrough,
         chrome40:    flag,
+        chrome44:    true,
         iojs:        flag,
       },
     },

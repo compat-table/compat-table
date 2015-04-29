@@ -169,7 +169,7 @@
 <th class="platform chrome41 desktop obsolete" data-browser="chrome41"><a href="#chrome41" class="browser-name"><abbr title="Chrome, Opera">CH 41,<br>OP&#xA0;28</abbr><a href="#experimental-flag-note"><sup>[3]</sup></a></a></th>
 <th class="platform chrome42 desktop" data-browser="chrome42"><a href="#chrome42" class="browser-name"><abbr title="Chrome, Opera">CH 42,<br>OP&#xA0;29</abbr><a href="#experimental-flag-note"><sup>[3]</sup></a></a></th>
 <th class="platform chrome43 desktop" data-browser="chrome43"><a href="#chrome43" class="browser-name"><abbr title="Chrome, Opera">CH 43,<br>OP&#xA0;30</abbr><a href="#experimental-flag-note"><sup>[3]</sup></a></a></th>
-<th class="platform chrome44 desktop unstable" data-browser="chrome44"><a href="#chrome44" class="browser-name"><abbr title="Chrome">CH 44</abbr><a href="#experimental-flag-note"><sup>[3]</sup></a></a></th>
+<th class="platform chrome44 desktop unstable" data-browser="chrome44"><a href="#chrome44" class="browser-name"><abbr title="Chrome, Opera">CH 44,<br>OP&#xA0;31</abbr><a href="#experimental-flag-note"><sup>[3]</sup></a></a></th>
 <th class="platform safari51 desktop obsolete" data-browser="safari51"><a href="#safari51" class="browser-name"><abbr title="Safari">SF 5.1</abbr></a></th>
 <th class="platform safari6 desktop obsolete" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
@@ -941,7 +941,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td data-browser="chrome41" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="chrome42" class="tally" data-tally="0">0/5</td>
 <td data-browser="chrome43" class="tally" data-tally="0">0/5</td>
-<td data-browser="chrome44" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="chrome44" class="unstable tally" data-tally="0" data-flagged-tally="0.8">0/5</td>
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/5</td>
@@ -1010,7 +1010,7 @@ return (function (foo, ...args) {
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1077,7 +1077,7 @@ return function(a, ...b){}.length === 1 &amp;&amp; function(...c){}.length === 0
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1152,7 +1152,7 @@ return (function (foo, ...args) {
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1294,7 +1294,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1358,7 +1358,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="chrome41" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="chrome42" class="tally" data-tally="0">0/10</td>
 <td data-browser="chrome43" class="tally" data-tally="0">0/10</td>
-<td data-browser="chrome44" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
+<td data-browser="chrome44" class="unstable tally" data-tally="0" data-flagged-tally="0.5">0/10</td>
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/10</td>
@@ -1425,7 +1425,7 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1559,7 +1559,7 @@ return Math.max(...&quot;1234&quot;) === 4;
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1693,7 +1693,7 @@ return Array(...&quot;&#x20BB7;&#x20BB6;&quot;)[0] === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1828,7 +1828,7 @@ return Math.max(...iterable) === 3;
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1964,7 +1964,7 @@ return Math.max(...Object.create(iterable)) === 3;
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -6044,7 +6044,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
 <td data-browser="chrome41" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="chrome42" class="tally" data-tally="0">0/2</td>
 <td data-browser="chrome43" class="tally" data-tally="0">0/2</td>
-<td data-browser="chrome44" class="unstable tally" data-tally="1">2/2</td>
+<td data-browser="chrome44" class="unstable tally" data-tally="0" data-flagged-tally="1">0/2</td>
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/2</td>
@@ -6111,7 +6111,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -6179,7 +6179,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 <td class="no obsolete" data-browser="chrome41">No</td>
 <td class="no" data-browser="chrome42">No</td>
 <td class="no" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="chrome44">Yes</td>
+<td class="no flagged unstable" data-browser="chrome44">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -6261,14 +6261,14 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 </tr>
 <tr class="subtest" data-parent="new.target" id="new.target_in_constructors"><td><span><a class="anchor" href="#new.target_in_constructors">&#xA7;</a>in constructors</span><script data-source="
 var passed = false;
-new (function f() {
+new function f() {
   passed = (new.target === f);
-}());
+}();
 (function() {
   passed &amp;= (new.target === undefined);
 }());
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");return Function("asyncTestPassed","\nvar passed = false;\nnew (function f() {\n  passed = (new.target === f);\n}());\n(function() {\n  passed &= (new.target === undefined);\n}());\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");return Function("asyncTestPassed","\nvar passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n(function() {\n  passed &= (new.target === undefined);\n}());\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6335,9 +6335,9 @@ return passed;
 </tr>
 <tr class="subtest" data-parent="new.target" id="new.target_can&apos;t_be_assigned_to"><td><span><a class="anchor" href="#new.target_can&apos;t_be_assigned_to">&#xA7;</a>can&apos;t be assigned to</span><script data-source="
 var passed = false;
-new (function f() {
+new function f() {
   passed = (new.target === f);
-}());
+}();
 
 try {
   (function() {
@@ -6346,7 +6346,7 @@ try {
 } catch(e) {
   return passed;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");return Function("asyncTestPassed","\nvar passed = false;\nnew (function f() {\n  passed = (new.target === f);\n}());\n\ntry {\n  (function() {\n    new.target = function(){};\n  }());\n} catch(e) {\n  return passed;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");return Function("asyncTestPassed","\nvar passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n\ntry {\n  (function() {\n    new.target = function(){};\n  }());\n} catch(e) {\n  return passed;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -10348,9 +10348,9 @@ return !(c instanceof Object)
 </tr>
 <tr class="subtest" data-parent="class" id="class_new.target"><td><span><a class="anchor" href="#class_new.target">&#xA7;</a>new.target</span><script data-source="
 var passed = false;
-new (function f() {
+new function f() {
   passed = new.target === f;
-}());
+}();
 
 class A {
   constructor() {
@@ -10360,7 +10360,7 @@ class A {
 class B extends A {}
 new B();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");return Function("asyncTestPassed","\nvar passed = false;\nnew (function f() {\n  passed = new.target === f;\n}());\n\nclass A {\n  constructor() {\n    passed &= new.target === B;\n  }\n}\nclass B extends A {}\nnew B();\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");return Function("asyncTestPassed","\nvar passed = false;\nnew function f() {\n  passed = new.target === f;\n}();\n\nclass A {\n  constructor() {\n    passed &= new.target === B;\n  }\n}\nclass B extends A {}\nnew B();\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -22220,7 +22220,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td data-browser="chrome41" class="obsolete tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)" data-flagged-tally="0.42857142857142855">2/7</td>
 <td data-browser="chrome42" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)" data-flagged-tally="0.42857142857142855">2/7</td>
 <td data-browser="chrome43" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)" data-flagged-tally="0.42857142857142855">2/7</td>
-<td data-browser="chrome44" class="unstable tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)" data-flagged-tally="0.42857142857142855">2/7</td>
+<td data-browser="chrome44" class="unstable tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/7</td>
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/7</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/7</td>
@@ -22658,7 +22658,7 @@ return (a + &quot;&quot;) === &quot;[object foo]&quot;;
 <td class="no flagged obsolete" data-browser="chrome41">Flag</td>
 <td class="no flagged" data-browser="chrome42">Flag</td>
 <td class="no flagged" data-browser="chrome43">Flag</td>
-<td class="no flagged unstable" data-browser="chrome44">Flag</td>
+<td class="yes unstable" data-browser="chrome44">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>

@@ -160,9 +160,8 @@ $(function() {
 
     elem.addClass('selected');
 
-    if (!elem.is('.parent') && elem.is(':hidden')) {
-      var parent = elem.prevUntil('.supertest').prev();
-      parent.click();
+    if (!elem.is('.parent') && elem.is('.subtest:hidden')) {
+      elem.prevUntil('.supertest').prev().click();
     }
 
     table.addClass('one-selected').insertBefore('#footnotes');
