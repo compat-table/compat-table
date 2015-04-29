@@ -268,6 +268,11 @@ exports.browsers = {
   chrome43: {
     full: 'Chrome, Opera',
     short: 'CH 43,<br>OP&nbsp;30',
+    note_id: 'experimental-flag',
+  },
+  chrome44: {
+    full: 'Chrome',
+    short: 'CH 44',
     unstable: true,
     note_id: 'experimental-flag',
   },
@@ -1098,6 +1103,7 @@ exports.tests = [
         typescript:  true,
         spartan:     true,
         firefox16:   true,
+        chrome44:    true
       },
     },
     'function \'length\' property': {
@@ -1113,6 +1119,7 @@ exports.tests = [
         typescript:  true,
         spartan:     true,
         firefox16:   true,
+        chrome44:    true
       },
     },
     'arguments object interaction': {
@@ -1130,6 +1137,7 @@ exports.tests = [
       res: {
         babel:       true,
         tr:          true,
+        chrome44:    true
       },
     },
     'can\'t be used in setters': {
@@ -1161,6 +1169,7 @@ exports.tests = [
       res: {
         spartan:     true,
         firefox16:   true,
+        chrome44:    true
       },
     },
   },
@@ -1187,7 +1196,8 @@ exports.tests = [
         firefox27:   true,
         safari71_8:  true,
         webkit:      true,
-        ios8:        true
+        ios8:        true,
+        chrome44:    true
       },
     },
     'with arrays, in array literals': {
@@ -1218,6 +1228,7 @@ exports.tests = [
         ejs:         true,
         spartan:     true,
         firefox27:   true,
+        chrome44:    true
       },
     },
     'with strings, in array literals': {
@@ -1242,6 +1253,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         firefox27:   true,
+        chrome44:    true
       },
     },
     'with astral plane strings, in array literals': {
@@ -1271,6 +1283,7 @@ exports.tests = [
         },
         ejs:         true,
         firefox27:   true,
+        chrome44:    true
       },
     },
     'with generic iterables, in arrays': {
@@ -1298,6 +1311,7 @@ exports.tests = [
         babel:       true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
+        chrome44:    true
       },
     },
     'with instances of iterables, in arrays': {
@@ -1700,7 +1714,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         webkit:      true,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
     'extends': {
@@ -1791,7 +1805,7 @@ exports.tests = [
         new (function f() {
           passed = new.target === f;
         }());
-        
+
         class A {
           constructor() {
             passed &= new.target === B;
@@ -1857,7 +1871,7 @@ exports.tests = [
         ejs:         true,
         spartan:     true,
         webkit:      true,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
     'in methods, property access': {
@@ -2006,6 +2020,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         ios8:        true,
+        chrome44:    true
       },
     },
     'shorthand properties': {
@@ -2024,7 +2039,7 @@ exports.tests = [
         spartan:     true,
         firefox33:   true,
         chrome41:    flag,
-        chrome42:    true,
+        chrome44:    true,
         iojs:        flag,
         webkit:      true,
       },
@@ -2044,7 +2059,7 @@ exports.tests = [
         spartan:     true,
         firefox34:   true,
         chrome41:    flag,
-        chrome42:    true,
+        chrome44:    true,
         iojs:        flag,
         webkit:      true,
       }),
@@ -2072,6 +2087,7 @@ exports.tests = [
         es6tr:       true,
         firefox34:   true,
         webkit:      true,
+        chrome44:    true
       }
     },
     'computed accessors': {
@@ -2092,6 +2108,7 @@ exports.tests = [
         tr:          true,
         es6tr:       true,
         firefox34:   true,
+        chrome44:    true
       }
     }
   }
@@ -2169,11 +2186,12 @@ exports.tests = [
         return !({ [a] : [] } instanceof Array);
       */},
       res: {
-        spartan:       true,
+        spartan:      true,
         firefox34:    true,
         safari71_8:   true,
         webkit:       true,
         ios8:         true,
+        chrome44:     true
       },
     },
     'not a shorthand property': {
@@ -2799,6 +2817,7 @@ exports.tests = [
         closure:     true,
         firefox34:   true,
         ejs:         true,
+        chrome44:    true
       },
     },
     'shorthand generator methods, classes': {
@@ -4629,7 +4648,7 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
-        
+
         return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
       */},
       res: (temp.reflectOwnKeys = {
@@ -4653,7 +4672,7 @@ exports.tests = [
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
         Object.defineProperty(obj, 'D', { value: true, enumerable: true });
-        
+
         var result = Reflect.ownKeys(obj);
         var l = result.length;
         return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
@@ -5427,6 +5446,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.getOwnPropertyDescriptor': {
@@ -5439,6 +5459,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.getOwnPropertyNames': {
@@ -5455,6 +5476,7 @@ exports.tests = [
         iojs:        true,
         es6shim:     true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.seal': {
@@ -5467,6 +5489,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.freeze': {
@@ -5479,6 +5502,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.preventExtensions': {
@@ -5491,6 +5515,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.isSealed': {
@@ -5503,6 +5528,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.isFrozen': {
@@ -5515,6 +5541,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.isExtensible': {
@@ -5527,6 +5554,7 @@ exports.tests = [
         spartan:     true,
         firefox35:   true,
         webkit:      true,
+        chrome44:    true
       },
     },
     'Object.keys': {
@@ -5542,6 +5570,7 @@ exports.tests = [
         chrome40:    true,
         webkit:      true,
         iojs:        true,
+        chrome44:    true
       },
     },
   },
@@ -5866,7 +5895,7 @@ exports.tests = [
       res: {
         spartan:       true,
         firefox38:    true,
-        chrome43:     true,
+        chrome44:     true,
       },
     },
   },
@@ -6135,6 +6164,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         spartan:     true,
+        chrome44:    true
       }
     },
     'in identifiers': {
@@ -6144,6 +6174,7 @@ exports.tests = [
       */},
       res: {
         spartan:     true,
+        chrome44:    true
       }
     },
   }
@@ -6174,7 +6205,7 @@ exports.tests = [
         new (function f() {
           passed = (new.target === f);
         }());
-        
+
         try {
           (function() {
             new.target = function(){};
@@ -7363,7 +7394,7 @@ exports.tests = [
       res: {
         babel:       true,
         iojs:        { val: flag, note_id: 'strict-required' },
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
         typescript:  temp.typescriptFallthrough
       },
@@ -7420,7 +7451,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
     },
@@ -7433,7 +7464,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
     },
@@ -7446,7 +7477,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
     },
@@ -7467,7 +7498,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
     'can be used with "new"': {
@@ -7480,7 +7511,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
     'Function.prototype.call': {
@@ -7492,7 +7523,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
     'Function.prototype.apply': {
@@ -7504,7 +7535,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
-        chrome43:    { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
     'Function.prototype.bind': {
@@ -7712,7 +7743,7 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
-        
+
         var result = '';
         for(var i in obj) {
           result += i;
@@ -7748,7 +7779,7 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
-        
+
         return Object.keys(obj).join('') === "012349 DB-1AC";
       */},
       res: {
@@ -7780,7 +7811,7 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
-        
+
         return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AC";
       */},
       res: {
@@ -7813,15 +7844,15 @@ exports.tests = [
           B:    f('B'),
           '-1': f('-1'),
         });
-        Object.defineProperty(obj,'A',f('A')); 
+        Object.defineProperty(obj,'A',f('A'));
         Object.defineProperty(obj,'3',f('3'));
-        Object.defineProperty(obj,'C',f('C')); 
+        Object.defineProperty(obj,'C',f('C'));
         Object.defineProperty(obj,'4',f('4'));
         delete obj[2];
         obj[2] = true;
-        
+
         Object.assign({}, obj);
-        
+
         return result === "012349 DB-1AC";
       */},
       res: {
@@ -7847,7 +7878,7 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
-        
+
         return JSON.stringify(obj) ===
           '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}';
       */},
