@@ -248,6 +248,14 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       prevBrowser = browser;
       prevBid = bid;
     }
+    // For browsers that are essentially equal to other browsers,
+    // copy over the results.
+    for (var bid in browsers) {
+      browser = browsers[bid];
+      if (browser.equals) {
+        res[bid] = res[browser.equals];
+      }
+    }
   }
 
   function footnoteHTML(obj) {
