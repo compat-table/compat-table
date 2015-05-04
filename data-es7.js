@@ -662,7 +662,8 @@ exports.tests = [
     return typeof Map.prototype.toJSON === 'function';
   */},
   res: {
-    es7shim: true
+    babel:       true,
+    es7shim:     true,
   }
 },
 {
@@ -749,6 +750,7 @@ exports.tests = [
         return typeof String.prototype.lpad === 'function';
       */},
       res: {
+        babel:       true,
       }
     },
     'String.prototype.rpad' : {
@@ -756,6 +758,7 @@ exports.tests = [
         return typeof String.prototype.rpad === 'function';
       */},
       res: {
+        babel:       true,
       }
     }
   }
