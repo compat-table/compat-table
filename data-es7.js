@@ -659,7 +659,7 @@ exports.tests = [
   category: 'strawman',
   link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return typeof Map.prototype.toJSON === 'function';
+    return JSON.stringify(new Map([['a', 'b'], ['c', 'd']])) === '[["a","b"],["c","d"]]';
   */},
   res: {
     babel:       true,
@@ -694,7 +694,7 @@ exports.tests = [
   category: 'strawman',
   link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return typeof Set.prototype.toJSON === 'function';
+    return JSON.stringify(new Set([1, 2, 3, 2, 1])) === '[1,2,3]';
   */},
   res: {
     babel:       true,

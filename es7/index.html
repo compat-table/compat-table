@@ -1596,8 +1596,8 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr significance="1"><td id="Map.prototype.toJSON"><span><a class="anchor" href="#Map.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Map.prototype.toJSON</a></span><script data-source="
-return typeof Map.prototype.toJSON === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nreturn typeof Map.prototype.toJSON === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+return JSON.stringify(new Map([[&apos;a&apos;, &apos;b&apos;], [&apos;c&apos;, &apos;d&apos;]])) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quot;,&quot;d&quot;]]&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nreturn JSON.stringify(new Map([['a', 'b'], ['c', 'd']])) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1663,8 +1663,8 @@ return true;
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr significance="1"><td id="Set.prototype.toJSON"><span><a class="anchor" href="#Set.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Set.prototype.toJSON</a></span><script data-source="
-return typeof Set.prototype.toJSON === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nreturn typeof Set.prototype.toJSON === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+return JSON.stringify(new Set([1, 2, 3, 2, 1])) === &apos;[1,2,3]&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nreturn JSON.stringify(new Set([1, 2, 3, 2, 1])) === '[1,2,3]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
