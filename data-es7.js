@@ -747,7 +747,8 @@ exports.tests = [
   subtests: {
     'String.prototype.lpad' : {
       exec: function(){/*
-        return typeof String.prototype.lpad === 'function';
+        return 'hello'.lpad(10) === '     hello'
+          && 'hello'.lpad(10, '1234') === '41234hello';
       */},
       res: {
         babel:       true,
@@ -755,7 +756,8 @@ exports.tests = [
     },
     'String.prototype.rpad' : {
       exec: function(){/*
-        return typeof String.prototype.rpad === 'function';
+        return 'hello'.rpad(10) === 'hello     '
+          && 'hello'.rpad(10, '1234') === 'hello12341';
       */},
       res: {
         babel:       true,

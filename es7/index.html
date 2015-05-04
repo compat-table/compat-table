@@ -1798,8 +1798,9 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.lpad"><td><span><a class="anchor" href="#string_padding_String.prototype.lpad">&#xA7;</a>String.prototype.lpad</span><script data-source="
-return typeof String.prototype.lpad === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nreturn typeof String.prototype.lpad === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
+  &amp;&amp; &apos;hello&apos;.lpad(10, &apos;1234&apos;) === &apos;41234hello&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1825,8 +1826,9 @@ return typeof String.prototype.lpad === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.rpad"><td><span><a class="anchor" href="#string_padding_String.prototype.rpad">&#xA7;</a>String.prototype.rpad</span><script data-source="
-return typeof String.prototype.rpad === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nreturn typeof String.prototype.rpad === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
+  &amp;&amp; &apos;hello&apos;.rpad(10, &apos;1234&apos;) === &apos;hello12341&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
