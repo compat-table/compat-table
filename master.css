@@ -14,6 +14,11 @@ body {
 table {
     margin-bottom: 2em; width: 100%;
 }
+thead > tr:nth-child(2) {
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+}
 th {
     font-weight: normal; text-align: center; padding: 1em 0.45em; position: relative; min-width: 40px; font-size: 13px; background: #eee; vertical-align: middle;
 }
