@@ -1450,8 +1450,14 @@ return result === &quot;123&quot;;
 <tr class="category"><td colspan="24">Strawman</td>
 </tr>
 <tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
-return typeof Object.getOwnPropertyDescriptors === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nreturn typeof Object.getOwnPropertyDescriptors === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+var B = Symbol(&apos;b&apos;);
+var O = Object.defineProperty({a: 1, [B]: 2}, &apos;c&apos;, {value: 3});
+var D = Object.getOwnPropertyDescriptors(O);
+
+return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configurable === true &amp;&amp; D.a.writable === true
+  &amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
+  &amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nvar B = Symbol('b');\nvar O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

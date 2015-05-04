@@ -247,7 +247,13 @@ exports.tests = [
   link: 'https://gist.github.com/WebReflection/9353781',
   category: 'strawman',
   exec: function () {/*
-    return typeof Object.getOwnPropertyDescriptors === 'function';
+    var B = Symbol('b');
+    var O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});
+    var D = Object.getOwnPropertyDescriptors(O);
+
+    return D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true
+      && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true
+      && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
   */},
   res: {
     babel: true,
