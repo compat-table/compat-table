@@ -2038,7 +2038,7 @@ exports.tests = [
         firefox33:   true,
         chrome41:    flag,
         chrome44:    true,
-        iojs:        flag,
+        iojs:        true,
         webkit:      true,
       },
     },
@@ -2058,7 +2058,7 @@ exports.tests = [
         firefox34:   true,
         chrome41:    flag,
         chrome44:    true,
-        iojs:        flag,
+        iojs:        true,
         webkit:      true,
       }),
     },
@@ -2168,9 +2168,10 @@ exports.tests = [
         }
       */},
       res: {
-        edge:          true,
+        edge:         true,
         firefox35:    true,
         chrome42:     true,
+        iojs:         true,
       },
     },
     'not a computed property': {
@@ -2186,7 +2187,7 @@ exports.tests = [
         firefox34:    true,
         safari71_8:   true,
         webkit:       true,
-        chrome44:     true
+        chrome44:     true,
       },
     },
     'not a shorthand property': {
@@ -2201,6 +2202,7 @@ exports.tests = [
         firefox35:    true,
         webkit:       true,
         chrome42:     true,
+        iojs:         true,
       },
     },
     'not a shorthand method': {
@@ -2214,6 +2216,7 @@ exports.tests = [
         firefox35:    true,
         webkit:       true,
         chrome42:     true,
+        iojs:         true,
       },
     },
   },
@@ -2758,7 +2761,7 @@ exports.tests = [
         chrome41:    flag,
         chrome42:    true,
         firefox34:   true,
-        iojs:        flag,
+        iojs:        true,
         ejs:         true,
       },
     },
@@ -2784,7 +2787,7 @@ exports.tests = [
         chrome41:    flag,
         chrome42:    true,
         firefox34:   true,
-        iojs:        flag,
+        iojs:        true,
         ejs:         true,
       },
     },
@@ -5709,11 +5712,11 @@ exports.tests = [
       res: {
         babel:        true,
         firefox34:    true,
-        edge:          true,
+        edge:         true,
         chrome41:     flag,
         chrome42:     true,
         webkit:       true,
-        iojs:         flag,
+        iojs:         true,
       },
     },
     'shorthand methods (no lexical binding)': {
@@ -5725,10 +5728,10 @@ exports.tests = [
         babel:        true,
         typescript:   true,
         firefox34:    true,
-        edge:          true,
+        edge:         true,
         chrome41:     flag,
         chrome42:     true,
-        iojs:         flag,
+        iojs:         true,
       },
     },
     'symbol-keyed methods': {
@@ -7864,6 +7867,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome42:    true,
+        iojs:        true,
       },
     },
     'no semicolon needed after do-while': {
@@ -7908,6 +7912,7 @@ exports.tests = [
       res: {
         edge:        true,
         chrome42:    true,
+        iojs:        true,
       },
     },
     'Invalid Date': {
