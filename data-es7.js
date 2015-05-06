@@ -159,7 +159,14 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
   category: 'draft',
   exec: function () {/*
-    return typeof Object.observe === 'function';
+    var O = {x: 1};
+    Object.observe(O, function(changes){
+      var data = changes[0];
+      if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){
+        asyncTestPassed();
+      }
+    });
+    O.x = 2;
   */},
   res: {
     chrome33: true,

@@ -140,8 +140,15 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr significance="1"><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="
-return typeof Object.observe === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nreturn typeof Object.observe === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+var O = {x: 1};
+Object.observe(O, function(changes){
+  var data = changes[0];
+  if(data.name === &apos;x&apos; &amp;&amp; data.type === &apos;update&apos; &amp;&amp; data.oldValue === 1 &amp;&amp; data.object.x === 2){
+    asyncTestPassed();
+  }
+});
+O.x = 2;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nvar O = {x: 1};\nObject.observe(O, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nO.x = 2;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
