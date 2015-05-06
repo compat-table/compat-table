@@ -159,7 +159,14 @@ exports.tests = [
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
   category: 'draft',
   exec: function () {/*
-    return typeof Object.observe === 'function';
+    var obj = {x: 1};
+    Object.observe(obj, function(changes){
+      var data = changes[0];
+      if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){
+        asyncTestPassed();
+      }
+    });
+    obj.x = 2;
   */},
   res: {
     chrome33: true,
@@ -175,7 +182,11 @@ exports.tests = [
   link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
   category: 'draft',
   exec: function () {/*
-    return typeof Array.prototype.includes === 'function';
+    return [1, 2, 3].includes(1)
+      && ![1, 2, 3].includes(4)
+      && ![1, 2, 3].includes(1, 1)
+      && [NaN].includes(NaN)
+      && Array(1).includes();
   */},
   res: {
     babel: true,

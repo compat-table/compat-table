@@ -140,8 +140,15 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr significance="1"><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="
-return typeof Object.observe === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nreturn typeof Object.observe === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+var obj = {x: 1};
+Object.observe(obj, function(changes){
+  var data = changes[0];
+  if(data.name === &apos;x&apos; &amp;&amp; data.type === &apos;update&apos; &amp;&amp; data.oldValue === 1 &amp;&amp; data.object.x === 2){
+    asyncTestPassed();
+  }
+});
+obj.x = 2;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");return Function("asyncTestPassed","\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -167,8 +174,12 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="yes" data-browser="iojs">Yes</td>
 </tr>
 <tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
-return typeof Array.prototype.includes === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\nreturn typeof Array.prototype.includes === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+return [1, 2, 3].includes(1)
+  &amp;&amp; ![1, 2, 3].includes(4)
+  &amp;&amp; ![1, 2, 3].includes(1, 1)
+  &amp;&amp; [NaN].includes(NaN)
+  &amp;&amp; Array(1).includes();
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
