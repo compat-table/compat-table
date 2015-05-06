@@ -167,8 +167,12 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="yes" data-browser="iojs">Yes</td>
 </tr>
 <tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
-return typeof Array.prototype.includes === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\nreturn typeof Array.prototype.includes === 'function';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+return [1, 2, 3].includes(1)
+  &amp;&amp; ![1, 2, 3].includes(4)
+  &amp;&amp; ![1, 2, 3].includes(1, 1)
+  &amp;&amp; [NaN].includes(NaN)
+  &amp;&amp; Array(1).includes();
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

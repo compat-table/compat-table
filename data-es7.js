@@ -175,7 +175,11 @@ exports.tests = [
   link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
   category: 'draft',
   exec: function () {/*
-    return typeof Array.prototype.includes === 'function';
+    return [1, 2, 3].includes(1)
+      && ![1, 2, 3].includes(4)
+      && ![1, 2, 3].includes(1, 1)
+      && [NaN].includes(NaN)
+      && Array(1).includes();
   */},
   res: {
     babel: true,
