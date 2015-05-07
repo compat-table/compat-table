@@ -32,7 +32,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20141120',
+    full: 'Closure Compiler v20150505',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -1555,6 +1555,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  true,
         jsx:         true,
         es6tr:       true,
@@ -2303,6 +2304,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  temp.typescriptFallthrough,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
@@ -2327,6 +2329,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  temp.typescriptFallthrough,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge:        true,
@@ -2685,6 +2688,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
@@ -4958,7 +4962,9 @@ exports.tests = [
         } catch(e) {}
         return true;
       */},
-      res: temp.destructuringResults,
+      res: Object.assign({}, temp.destructuringResults, {
+        closure:      false,
+      }),
     },
     'computed properties': {
       exec: function(){/*
@@ -5166,7 +5172,8 @@ exports.tests = [
         }({}));
       */},
       res: {
-        babel: true
+        babel:       true,
+        closure:     true,
       },
     },
     'defaults in parameters, new Function() support': {
@@ -6415,6 +6422,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  temp.typescriptFallthrough,
         edge:        true,
         firefox36:   true,

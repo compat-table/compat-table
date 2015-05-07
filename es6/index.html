@@ -125,7 +125,7 @@
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
 <th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel">Babel +<br><nobr>core-js</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
 <th class="platform es6tr compiler obsolete" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Trans-<br>piler</abbr></a></th>
-<th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20141120">Closure</abbr></a></th>
+<th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20150505">Closure</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
 <th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.5-alpha">Type-<br>Script</abbr></a></th>
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
@@ -2528,7 +2528,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="tr" class="tally" data-tally="1">7/7</td>
 <td data-browser="babel" class="tally" data-tally="1">7/7</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
-<td data-browser="closure" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
+<td data-browser="closure" class="tally" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
 <td data-browser="jsx" class="tally" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 <td data-browser="typescript" class="tally" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/7</td>
@@ -2809,7 +2809,7 @@ return result === &quot;123&quot;;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
@@ -2881,7 +2881,7 @@ return result === &quot;123&quot;;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[8]</sup></a></td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
@@ -4889,7 +4889,7 @@ return true;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
-<td class="yes" data-browser="closure">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
@@ -5866,7 +5866,7 @@ return (function({a=function(){
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
@@ -8717,7 +8717,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td data-browser="tr" class="tally" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
 <td data-browser="babel" class="tally" data-tally="0.8260869565217391" style="background-color:hsl(99,49%,50%)">19/23</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
-<td data-browser="closure" class="tally" data-tally="0.2608695652173913" style="background-color:hsl(31,74%,50%)">6/23</td>
+<td data-browser="closure" class="tally" data-tally="0.30434782608695654" style="background-color:hsl(36,72%,50%)">7/23</td>
 <td data-browser="jsx" class="tally" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
 <td data-browser="typescript" class="tally" data-tally="0.6086956521739131" style="background-color:hsl(73,59%,50%)">14/23</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/23</td>
@@ -9493,7 +9493,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
@@ -11015,7 +11015,7 @@ return obj.qux() === &quot;barley&quot;;
 <td data-browser="tr" class="tally" data-tally="0.9047619047619048" style="background-color:hsl(108,46%,50%)">19/21</td>
 <td data-browser="babel" class="tally" data-tally="0.9523809523809523" style="background-color:hsl(114,44%,50%)">20/21</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/21</td>
-<td data-browser="closure" class="tally" data-tally="0.6190476190476191" style="background-color:hsl(74,58%,50%)">13/21</td>
+<td data-browser="closure" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">14/21</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/21</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/21</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/21</td>
@@ -12085,7 +12085,7 @@ return passed;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
@@ -22176,7 +22176,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td data-browser="tr" class="tally" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 <td data-browser="babel" class="tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/7</td>
-<td data-browser="closure" class="tally" data-tally="0">0/7</td>
+<td data-browser="closure" class="tally" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/7</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/7</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/7</td>
@@ -22400,7 +22400,7 @@ return c === &quot;foo&quot;;
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
-<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
