@@ -1721,8 +1721,7 @@ exports.tests = [
         class B {}
         class C extends B {}
         return new C() instanceof B
-          && B.isPrototypeOf(C)
-          && B.prototype.isPrototypeOf(C.prototype);
+          && B.isPrototypeOf(C);
       */},
       res: (temp.extendsRes = {
         es6tr:       {
@@ -1755,8 +1754,7 @@ exports.tests = [
         var B;
         class C extends (B = class {}) {}
         return new C() instanceof B
-          && B.isPrototypeOf(C)
-          && B.prototype.isPrototypeOf(C.prototype);
+          && B.isPrototypeOf(C);
       */},
       res: {
         es6tr:       { val: false, note_id: 'compiler-proto' },
@@ -1780,9 +1778,7 @@ exports.tests = [
         class C extends null {
           constructor() { return Object.create(null); }
         }
-        var c = new C();
-        return !(c instanceof Object)
-          && Function.prototype.isPrototypeOf(C)
+        return Function.prototype.isPrototypeOf(C)
           && Object.getPrototypeOf(C.prototype) === null;
       */},
       res: {
@@ -7312,6 +7308,19 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough
       },
     },
+    'correct prototype chain': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        return c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;
+      */},
+      res: {
+        babel:       { val: false, note_id: 'compiler-proto' },
+        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
+        typescript:  temp.typescriptFallthrough
+      },
+    },
     'Array.prototype.slice': {
       exec: function () {/*
         class C extends Array {}
@@ -7368,6 +7377,19 @@ exports.tests = [
         webkit:      true,
       },
     },
+    'correct prototype chain': {
+      exec: function () {/*
+        class R extends RegExp {}
+        var r = new R("baz","g");
+        return r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;
+      */},
+      res: {
+        babel:       { val: false, note_id: 'compiler-proto' },
+        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
+        typescript:  temp.typescriptFallthrough
+      },
+    },
     'RegExp.prototype.exec': {
       exec: function () {/*
         class R extends RegExp {}
@@ -7412,6 +7434,17 @@ exports.tests = [
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
+      },
+    },
+    'correct prototype chain': {
+      exec: function () {/*
+        class C extends Function {}
+        var c = new C("return 'foo';");
+        return c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;
+      */},
+      res: {
+        babel:       { val: false, note_id: 'compiler-proto' },
+        typescript:  temp.typescriptFallthrough
       },
     },
     'can be used with "new"': {
@@ -7498,6 +7531,17 @@ exports.tests = [
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
+      },
+    },
+    'correct prototype chain': {
+      exec: function () {/*
+        class C extends Promise {}
+        var c = new C(function(resolve, reject) { resolve("foo"); });
+        return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
+      */},
+      res: {
+        babel:       { val: false, note_id: 'compiler-proto' },
+        typescript:  temp.typescriptFallthrough
       },
     },
     'Promise.all': {
