@@ -5,3 +5,4 @@ script: 'npm run-script lint'
 branches:
   only:
     - gh-pages
+sudo: false
