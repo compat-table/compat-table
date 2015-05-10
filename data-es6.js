@@ -6145,9 +6145,7 @@ exports.tests = [
         }();
 
         try {
-          (function() {
-            new.target = function(){};
-          }());
+          Function("new.target = function(){};");
         } catch(e) {
           return passed;
         }

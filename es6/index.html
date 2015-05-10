@@ -6340,13 +6340,11 @@ new function f() {
 }();
 
 try {
-  (function() {
-    new.target = function(){};
-  }());
+  Function(&quot;new.target = function(){};&quot;);
 } catch(e) {
   return passed;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");return Function("asyncTestPassed","\nvar passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n\ntry {\n  (function() {\n    new.target = function(){};\n  }());\n} catch(e) {\n  return passed;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");return Function("asyncTestPassed","\nvar passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n\ntry {\n  Function(\"new.target = function(){};\");\n} catch(e) {\n  return passed;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
