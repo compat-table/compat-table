@@ -174,13 +174,13 @@
 <th class="platform safari6 desktop obsolete" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
-<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r183383">WK</abbr></a></th>
+<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r184046">WK</abbr></a></th>
 <th class="platform opera desktop obsolete" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ<br>4.14</abbr><a href="#khtml-note"><sup>[4]</sup></a></a></th>
 <th class="platform rhino17 engine obsolete" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node 0.12.0">Node</abbr><a href="#harmony-flag-note"><sup>[5]</sup></a></a></th>
-<th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 1.0.3">io.js</abbr><a href="#harmony-flag-note"><sup>[5]</sup></a></a></th>
+<th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 2.0.0">io.js</abbr><a href="#harmony-flag-note"><sup>[5]</sup></a></a></th>
 <th class="platform ejs engine unstable" data-browser="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
 <th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
@@ -6049,7 +6049,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/2</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/2</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="unstable tally" data-tally="1">2/2</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/2</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/2</td>
@@ -6116,7 +6116,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -6184,7 +6184,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -8764,7 +8764,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/23</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/23</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/23</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.6086956521739131" style="background-color:hsl(73,59%,50%)">14/23</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/23</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/23</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/23</td>
@@ -9252,7 +9252,7 @@ return typeof C.prototype[&quot;foo bar&quot;] === &quot;function&quot;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>

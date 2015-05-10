@@ -103,6 +103,7 @@
 <th class="platform chrome41 desktop" data-browser="chrome41"><a href="#chrome41" class="browser-name"><abbr title="Chrome">CH 41</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome42 desktop unstable" data-browser="chrome42"><a href="#chrome42" class="browser-name"><abbr title="Chrome">CH 42</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome43 desktop unstable" data-browser="chrome43"><a href="#chrome43" class="browser-name"><abbr title="Chrome">CH 43</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r184046">WK</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node 0.12">Node</abbr></a></th>
 <th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 1.0.0">io.js</abbr></a></th>
 </tr>
@@ -110,7 +111,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="24">Draft</td>
+      <tr class="category"><td colspan="25">Draft</td>
 </tr>
 <tr significance="1"><td id="exponentiation_operator"><span><a class="anchor" href="#exponentiation_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">exponentiation operator</a></span><script data-source="
 return 2 ** 3 === 8;
@@ -136,6 +137,7 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -170,6 +172,7 @@ obj.x = 2;
 <td class="yes" data-browser="chrome41">Yes</td>
 <td class="yes unstable" data-browser="chrome42">Yes</td>
 <td class="yes unstable" data-browser="chrome43">Yes</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
 </tr>
@@ -201,10 +204,11 @@ return [1, 2, 3].includes(1)
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
-<tr class="category"><td colspan="24">Proposal</td>
+<tr class="category"><td colspan="25">Proposal</td>
 </tr>
 <tr class="supertest" significance="1"><td id="trailing_commas_in_function_syntax"><span><a class="anchor" href="#trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf">trailing commas in function syntax</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
@@ -227,6 +231,7 @@ return [1, 2, 3].includes(1)
 <td data-browser="chrome41" class="tally" data-tally="0">0/2</td>
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 </tr>
@@ -254,6 +259,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -281,6 +287,7 @@ return Math.min(1,2,3,) === 1;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -305,6 +312,7 @@ return Math.min(1,2,3,) === 1;
 <td data-browser="chrome41" class="tally" data-tally="0">0/2</td>
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 </tr>
@@ -334,6 +342,7 @@ return (async function(){
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -361,6 +370,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -388,6 +398,7 @@ return typeof StructType === &quot;function&quot;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -415,6 +426,7 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="yes" data-browser="chrome41">Yes</td>
 <td class="yes unstable" data-browser="chrome42">Yes</td>
 <td class="yes unstable" data-browser="chrome43">Yes</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -439,6 +451,7 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td data-browser="chrome41" class="tally" data-tally="0">0/8</td>
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/8</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/8</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/8</td>
 <td data-browser="node" class="tally" data-tally="0">0/8</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/8</td>
 </tr>
@@ -466,6 +479,7 @@ return typeof Array.prototype.mapPar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -493,6 +507,7 @@ return typeof Array.prototype.filterPar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -520,6 +535,7 @@ return typeof Array.fromPar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -547,6 +563,7 @@ return typeof TypedObject.fromPar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -574,6 +591,7 @@ return typeof Array.prototype.get === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -601,6 +619,7 @@ return typeof Array.prototype.reducePar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -628,6 +647,7 @@ return typeof Array.prototype.scanPar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -655,6 +675,7 @@ return typeof Array.prototype.scatterPar === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -679,6 +700,7 @@ return typeof Array.prototype.scatterPar === &apos;function&apos;;
 <td data-browser="chrome41" class="tally" data-tally="0">0/26</td>
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/26</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/26</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/26</td>
 <td data-browser="node" class="tally" data-tally="0">0/26</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/26</td>
 </tr>
@@ -706,6 +728,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -733,6 +756,7 @@ return typeof SIMD.float32x4 === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -760,6 +784,7 @@ return typeof SIMD.float64x2 === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -787,6 +812,7 @@ return typeof SIMD.int32x4 === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -814,6 +840,7 @@ return typeof SIMD.float32x4.abs === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -841,6 +868,7 @@ return typeof SIMD.float32x4.add === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -868,6 +896,7 @@ return typeof SIMD.float32x4.and === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -895,6 +924,7 @@ return typeof SIMD.float32x4.bitselect === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -922,6 +952,7 @@ return typeof SIMD.float32x4.bool === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -949,6 +980,7 @@ return typeof SIMD.float32x4.check === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -976,6 +1008,7 @@ return typeof SIMD.float32x4.equal === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1003,6 +1036,7 @@ return typeof SIMD.float32x4.equivalent === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1030,6 +1064,7 @@ return typeof SIMD.float32x4.greaterThan === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1057,6 +1092,7 @@ return typeof SIMD.float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1084,6 +1120,7 @@ return typeof SIMD.float32x4.lessThan === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1111,6 +1148,7 @@ return typeof SIMD.float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1138,6 +1176,7 @@ return typeof SIMD.float32x4.mul === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1165,6 +1204,7 @@ return typeof SIMD.float32x4.neg === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1192,6 +1232,7 @@ return typeof SIMD.float32x4.not === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1219,6 +1260,7 @@ return typeof SIMD.float32x4.notEqual === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1246,6 +1288,7 @@ return typeof SIMD.float32x4.or === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1273,6 +1316,7 @@ return typeof SIMD.float32x4.select === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1300,6 +1344,7 @@ return typeof SIMD.float32x4.shuffle === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1327,6 +1372,7 @@ return typeof SIMD.float32x4.sub === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1354,6 +1400,7 @@ return typeof SIMD.float32x4.swizzle === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1381,6 +1428,7 @@ return typeof SIMD.float32x4.xor === &apos;function&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1416,6 +1464,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1455,10 +1504,11 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
-<tr class="category"><td colspan="24">Strawman</td>
+<tr class="category"><td colspan="25">Strawman</td>
 </tr>
 <tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
 var B = Symbol(&apos;b&apos;);
@@ -1490,6 +1540,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1517,6 +1568,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1551,6 +1603,7 @@ return passed;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1578,6 +1631,7 @@ return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&ap
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1609,6 +1663,7 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1636,6 +1691,7 @@ return JSON.stringify(new Map([[&apos;a&apos;, &apos;b&apos;], [&apos;c&apos;, &
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1676,6 +1732,7 @@ return true;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1703,6 +1760,7 @@ return JSON.stringify(new Set([1, 2, 3, 2, 1])) === &apos;[1,2,3]&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1731,6 +1789,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1760,6 +1819,7 @@ return O.a + O.b + O.c === 6;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1787,6 +1847,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1811,6 +1872,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td data-browser="chrome41" class="tally" data-tally="0">0/2</td>
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 </tr>
@@ -1839,6 +1901,7 @@ return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>
@@ -1867,6 +1930,7 @@ return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
 <td class="no" data-browser="chrome41">No</td>
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no" data-browser="iojs">No</td>
 </tr>

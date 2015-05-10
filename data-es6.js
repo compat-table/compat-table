@@ -297,7 +297,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r183383',
+    full: 'WebKit r184046',
     short: 'WK',
     unstable: true,
   },
@@ -334,7 +334,7 @@ exports.browsers = {
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag'
   },
   iojs: {
-    full: 'io.js 1.0.3',
+    full: 'io.js 2.0.0',
     short: 'io.js',
     platformtype: 'engine',
     note_id: 'harmony-flag',
@@ -1472,6 +1472,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         edge:        true,
+        webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
@@ -6102,6 +6103,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        true,
+        webkit:      true,
         chrome44:    flag,
       }
     },
@@ -6113,6 +6115,7 @@ exports.tests = [
       res: {
         edge:        true,
         chrome44:    flag,
+        webkit:      true,
       }
     },
   }
