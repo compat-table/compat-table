@@ -70,7 +70,9 @@ exports.browsers = {
   edge: {
     full: 'Internet Explorer, Microsoft Edge',
     short: 'Edge',
-    unstable: true
+    unstable: true,
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
   firefox11: {
     full: 'Firefox',
@@ -596,7 +598,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         typescript:  true,
-        edge:        true,
+        edge:        flag,
       },
     },
     'lexical "new.target" binding': {
@@ -1008,6 +1010,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox16:   true,
+        edge:        flag,
       },
     },
     'explicit undefined defers to the default': {
@@ -1022,6 +1025,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox18:   true,
+        edge:        flag,
       },
     },
     'defaults can refer to previous params': {
@@ -1036,6 +1040,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox16:   true,
+        edge:        flag,
       },
     },
     'temporal dead zone': {
@@ -1054,6 +1059,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        edge:        flag,
       },
     },
     'separate scope': {
@@ -1068,6 +1074,7 @@ exports.tests = [
       res: {
         babel:       true,
         closure:     true,
+        edge:        flag,
       },
     },
     'new Function() support': {
@@ -1078,6 +1085,7 @@ exports.tests = [
       */},
       res: {
         typescript: temp.typescriptFallthrough,
+        edge:        flag,
       },
     },
   }
@@ -1139,6 +1147,7 @@ exports.tests = [
         babel:       true,
         tr:          true,
         chrome44:    flag,
+        edge:        true,
       },
     },
     'can\'t be used in setters': {
@@ -1253,6 +1262,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        edge:        true,
       },
     },
     'with astral plane strings, in array literals': {
@@ -1265,6 +1275,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         webkit:      true,
+        edge:        true,
       },
     },
     'with generic iterables, in calls': {
@@ -1283,6 +1294,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        edge:        true,
       },
     },
     'with generic iterables, in arrays': {
@@ -1311,6 +1323,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
         chrome44:    flag,
+        edge:        true
       },
     },
     'with instances of iterables, in arrays': {
@@ -1348,7 +1361,7 @@ exports.tests = [
         ejs:         true,
         jsx:         true,
         closure:     true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1369,7 +1382,7 @@ exports.tests = [
       res: {
         babel:       true,
         jsx:         true,
-        edge:        true,
+        edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
@@ -1386,7 +1399,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1403,7 +1416,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1426,7 +1439,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1449,7 +1462,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1471,7 +1484,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1495,7 +1508,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
-        edge:        true,
+        edge:        flag,
         firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
@@ -1515,7 +1528,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1539,7 +1552,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
-        edge:        true,
+        edge:        flag,
         firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
@@ -1561,7 +1574,7 @@ exports.tests = [
         jsx:         true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1584,7 +1597,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
@@ -1605,7 +1618,7 @@ exports.tests = [
         jsx:         true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
@@ -1628,7 +1641,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
@@ -1646,7 +1659,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         es6tr:       true,
-        edge:        true,
+        edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
@@ -1663,7 +1676,7 @@ exports.tests = [
         }
       */},
       res: {
-        edge:        true,
+        edge:        flag,
         firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
@@ -1694,7 +1707,7 @@ exports.tests = [
         babel:       true,
         es6tr:       true,
         jsx:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
@@ -1744,7 +1757,7 @@ exports.tests = [
           note_html: 'This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.'
         },
         jsx:         { val: false, note_id: 'compiled-extends' },
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1768,7 +1781,7 @@ exports.tests = [
         },
         ejs:         true,
         jsx:         { val: false, note_id: 'compiled-extends' },
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1789,7 +1802,7 @@ exports.tests = [
         ejs:         true,
         es6tr:       true,
         jsx:         true,
-        edge:        true,
+        edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
         firefox39:   { val: true, note_id: 'constructor-required', },
@@ -1842,7 +1855,7 @@ exports.tests = [
         closure:     true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1866,7 +1879,7 @@ exports.tests = [
         closure:     true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -1893,7 +1906,7 @@ exports.tests = [
         },
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1917,7 +1930,7 @@ exports.tests = [
         closure:     true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1943,7 +1956,7 @@ exports.tests = [
         closure:     true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -1985,7 +1998,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
@@ -2402,6 +2415,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       }),
     },
     'generator function expressions': {
@@ -2473,6 +2487,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     '%GeneratorPrototype%': {
@@ -2496,6 +2511,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+        edge:        flag,
       },
     },
     '%GeneratorPrototype%.throw': {
@@ -2523,6 +2539,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     '%GeneratorPrototype%.return': {
@@ -2543,6 +2560,7 @@ exports.tests = [
         tr:        true,
         babel:     true,
         firefox38: true,
+        edge:      flag,
       },
     },
     'yield operator precedence': {
@@ -2566,6 +2584,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     'yield *, arrays': {
@@ -2591,6 +2610,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     'yield *, strings': {
@@ -2616,6 +2636,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     'yield *, astral plane strings': {
@@ -2639,6 +2660,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+        edge:        flag,
       },
     },
     'yield *, generic iterables': {
@@ -2665,6 +2687,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+        edge:        flag,
       },
     },
     'yield *, instances of iterables': {
@@ -2691,6 +2714,7 @@ exports.tests = [
         chrome39:    true,
         node:        flag,
         iojs:        true,
+        edge:        flag,
       },
     },
     'yield *, iterator closing': {
@@ -2715,6 +2739,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge:        flag,
       },
     },
     'yield *, iterator closing via throw()': {
@@ -2764,6 +2789,7 @@ exports.tests = [
         firefox34:   true,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     'string-keyed shorthand generator methods': {
@@ -2790,6 +2816,7 @@ exports.tests = [
         firefox34:   true,
         iojs:        true,
         ejs:         true,
+        edge:        flag,
       },
     },
     'computed shorthand generators': {
@@ -2815,7 +2842,8 @@ exports.tests = [
         closure:     true,
         firefox34:   true,
         ejs:         true,
-        chrome44:    true
+        chrome44:    true,
+        edge:        flag,
       },
     },
     'shorthand generator methods, classes': {
@@ -2841,6 +2869,7 @@ exports.tests = [
         firefox39:   { val: true, note_id: 'constructor-required', },
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        edge:        flag,
       },
     },
     'computed shorthand generators, classes': {
@@ -2865,6 +2894,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox39:   { val: true, note_id: 'constructor-required', },
+        edge:        flag,
       },
     },
   },
@@ -3028,6 +3058,7 @@ exports.tests = [
         chrome39:    flag,
         chrome40:    false,
         ejs:         true,
+        edge:        flag,
       },
     },
     '"u" flag': {
@@ -4356,6 +4387,7 @@ exports.tests = [
         },
         firefox23:   { val: false, note_id: 'fx-proxy-ownkeys' },
         firefox33:   true,
+        edge:        true,
       },
     },
     '"apply" handler': {
@@ -4421,6 +4453,7 @@ exports.tests = [
       res: {
         typescript:  temp.typescriptFallthrough,
         firefox18: true,
+        edge:        true,
       },
     },
     'JSON.stringify support': {
@@ -4431,6 +4464,7 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         firefox18: true,  // a bug in FF18
         firefox23: false,
+        edge:        true,
       },
     },
   },
@@ -4596,6 +4630,7 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
         es6shim:     true,
+        edge:        true,
       },
     },
     'Reflect.ownKeys': {
@@ -4619,12 +4654,13 @@ exports.tests = [
 
         return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
       */},
-      res: (temp.reflectOwnKeys = {
+      res: {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
-      }),
+        edge:        true,
+      },
     },
     'Reflect.ownKeys, symbol order': {
       exec: function() {/*
@@ -4645,7 +4681,12 @@ exports.tests = [
         var l = result.length;
         return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
       */},
-      res: temp.reflectOwnKeys,
+      res: {
+        babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
+        typescript:  temp.typescriptFallthrough,
+        ejs:         true,
+        es6shim:     { val: false, note_id: "forin-order" },
+      }
     },
     'Reflect.apply': {
       exec: function() {/*
@@ -5681,7 +5722,7 @@ exports.tests = [
         return foo.name === "foo" && bar.name === "baz";
       */},
       res: {
-        edge:        true,
+        edge:        flag,
         babel:       true,
       },
     },
@@ -5695,6 +5736,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        edge:        flag,
       },
     },
     'accessor properties': {
@@ -5716,7 +5758,7 @@ exports.tests = [
       res: {
         babel:        true,
         firefox34:    true,
-        edge:         true,
+        edge:         flag,
         chrome41:     flag,
         chrome42:     true,
         webkit:       true,
@@ -5763,7 +5805,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: "name-configurable", },
-        edge:        true,
+        edge:        flag,
       },
     },
     'class expressions': {
@@ -5777,7 +5819,7 @@ exports.tests = [
           note_id: "name-configurable",
           note_html: 'Requires function "name" properties to be natively configurable',
         },
-        edge:        true,
+        edge:        flag,
       },
     },
     'variables (class)': {
@@ -5791,7 +5833,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        edge:        true,
+        edge:        flag,
       },
     },
     'object methods (class)': {
@@ -5804,6 +5846,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
+        edge:         flag,
       },
     },
     'class prototype methods': {
@@ -5813,7 +5856,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
-        edge:          true,
+        edge:         flag,
         webkit:       true,
         firefox39:    { val: true, note_id: 'constructor-required', },
       },
@@ -5825,7 +5868,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
-        edge:          true,
+        edge:         flag,
         webkit:       true,
         firefox39:    { val: true, note_id: 'constructor-required', },
       },
@@ -5838,7 +5881,7 @@ exports.tests = [
                descriptor.configurable === true;
       */},
       res: {
-        edge:          true,
+        edge:         true,
         firefox38:    true,
         chrome44:     true,
       },
@@ -6000,6 +6043,7 @@ exports.tests = [
         webkit:      true,
         node:        { val: flag, note_id: 'string-contains' },
         iojs:        true,
+        edge:        true,
       },
     },
   },
@@ -7327,7 +7371,8 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
-        typescript:  temp.typescriptFallthrough
+        typescript:  temp.typescriptFallthrough,
+        edge:        flag,
       },
     },
     'Array.prototype.slice': {
@@ -7350,7 +7395,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
-        edge:        true,
+        edge:        flag,
       }
     },
     'Array.of': {
@@ -7362,7 +7407,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
-        edge:        true,
+        edge:        flag,
       }
     },
   },
@@ -7396,7 +7441,8 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
-        typescript:  temp.typescriptFallthrough
+        typescript:  temp.typescriptFallthrough,
+        edge:        flag,
       },
     },
     'RegExp.prototype.exec': {
@@ -7453,7 +7499,8 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough
+        typescript:  temp.typescriptFallthrough,
+        edge:        flag,
       },
     },
     'can be used with "new"': {
