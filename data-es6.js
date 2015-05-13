@@ -3068,11 +3068,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        edge:    {
-          val: true,
-          note_id: "ie-regexp-u",
-          note_html: "RegExps such as <code>/./u</code> will still select halves of surrogate pairs.",
-        },
+        edge:        true,
       },
     },
   },
