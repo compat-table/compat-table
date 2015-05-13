@@ -104,7 +104,7 @@
         <th class="platform ie9 desktop" data-browser="ie9"><a href="#ie9" class="browser-name"><abbr title="Internet Explorer">IE 9</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
-<th class="platform ie11tp desktop" data-browser="ie11tp"><a href="#ie11tp" class="browser-name"><abbr title="Internet Explorer">IE<br>Technical<br>Preview</abbr><a href="#ie-experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform edge desktop unstable" data-browser="edge"><a href="#edge" class="browser-name"><abbr title="Microsoft Edge">Edge</abbr></a></th>
 <th class="platform firefox16 desktop obsolete" data-browser="firefox16"><a href="#firefox16" class="browser-name"><abbr title="Firefox">FF 16-28</abbr></a></th>
 <th class="platform firefox29 desktop obsolete" data-browser="firefox29"><a href="#firefox29" class="browser-name"><abbr title="Firefox">FF 29</abbr></a></th>
 <th class="platform firefox30 desktop obsolete" data-browser="firefox30"><a href="#firefox30" class="browser-name"><abbr title="Firefox">FF 30</abbr></a></th>
@@ -124,9 +124,9 @@
 <th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r179984">WK</abbr></a></th>
 <th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform node10 engine" data-browser="node10"><a href="#node10" class="browser-name"><abbr title="Node 0.10">Node .10</abbr></a></th>
-<th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr><a href="#only-english-note"><sup>[2]</sup></a></a></th>
-<th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr><a href="#build-with-intl-note"><sup>[3]</sup></a></a></th>
-<th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr><a href="#build-with-intl-note"><sup>[3]</sup></a></a></th>
+<th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr><a href="#only-english-note"><sup>[1]</sup></a></a></th>
+<th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
+<th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
 <th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
 </tr>
@@ -138,7 +138,7 @@
 <td data-browser="ie9" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="1">2/2</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">2/2</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">2/2</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">2/2</td>
@@ -171,7 +171,7 @@ return typeof Intl === &apos;object&apos;;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -204,7 +204,7 @@ return Intl.constructor === Object;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -233,8 +233,8 @@ return Intl.constructor === Object;
 <tr class="supertest" significance="1"><td id="Intl.Collator"><span><a class="anchor" href="#Intl.Collator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10">Intl.Collator</a></span></td>
 <td data-browser="ie9" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
-<td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
-<td data-browser="ie11tp" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="ie11" class="tally" data-tally="1">5/5</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">5/5</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">5/5</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">5/5</td>
@@ -267,7 +267,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -300,7 +300,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -333,7 +333,7 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -371,7 +371,7 @@ try {
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -412,7 +412,6 @@ try {
     &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
     &quot;i-klingon&quot;, // grandfathered tag
     &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;enochian-enochian&quot;, // language and variant subtags may be the same
     &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
     &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
     &quot;x-en-US-12345&quot;, // anything goes in private use tags
@@ -428,12 +427,12 @@ try {
 } catch(e) {
   return false;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"enochian-enochian\", // language and variant subtags may be the same\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="ie11tp">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -463,7 +462,7 @@ try {
 <td data-browser="ie9" class="tally" data-tally="0">0/1</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -496,7 +495,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -526,7 +525,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="0">0/1</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -559,7 +558,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -588,8 +587,8 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <tr class="supertest" significance="1"><td id="NumberFormat"><span><a class="anchor" href="#NumberFormat">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-11">NumberFormat</a></span></td>
 <td data-browser="ie9" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
-<td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
-<td data-browser="ie11tp" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="ie11" class="tally" data-tally="1">5/5</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">5/5</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">5/5</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">5/5</td>
@@ -622,7 +621,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -655,7 +654,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -688,7 +687,7 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -726,7 +725,7 @@ try {
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -767,7 +766,6 @@ try {
     &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
     &quot;i-klingon&quot;, // grandfathered tag
     &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;enochian-enochian&quot;, // language and variant subtags may be the same
     &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
     &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
     &quot;x-en-US-12345&quot;, // anything goes in private use tags
@@ -783,12 +781,12 @@ try {
 } catch(e) {
   return false;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"enochian-enochian\", // language and variant subtags may be the same\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="ie11tp">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -817,8 +815,8 @@ try {
 <tr class="supertest" significance="1"><td id="DateTimeFormat"><span><a class="anchor" href="#DateTimeFormat">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-12">DateTimeFormat</a></span></td>
 <td data-browser="ie9" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
-<td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
-<td data-browser="ie11tp" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="ie11" class="tally" data-tally="1">5/5</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">5/5</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">5/5</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">5/5</td>
@@ -851,7 +849,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -884,7 +882,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -917,7 +915,7 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -955,7 +953,7 @@ try {
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -996,7 +994,6 @@ try {
     &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
     &quot;i-klingon&quot;, // grandfathered tag
     &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;enochian-enochian&quot;, // language and variant subtags may be the same
     &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
     &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
     &quot;x-en-US-12345&quot;, // anything goes in private use tags
@@ -1012,12 +1009,12 @@ try {
 } catch(e) {
   return false;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"enochian-enochian\", // language and variant subtags may be the same\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="ie11tp">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1047,7 +1044,7 @@ try {
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1080,7 +1077,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1110,7 +1107,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1143,7 +1140,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1173,7 +1170,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1206,7 +1203,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1236,7 +1233,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1269,7 +1266,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1299,7 +1296,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1332,7 +1329,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1362,7 +1359,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1395,7 +1392,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1425,7 +1422,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td data-browser="ie9" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie10" class="tally" data-tally="1">1/1</td>
 <td data-browser="ie11" class="tally" data-tally="1">1/1</td>
-<td data-browser="ie11tp" class="tally" data-tally="1">1/1</td>
+<td data-browser="edge" class="unstable tally" data-tally="1">1/1</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox29" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="firefox30" class="obsolete tally" data-tally="1">1/1</td>
@@ -1458,7 +1455,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes" data-browser="ie9">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes" data-browser="ie11tp">Yes</td>
+<td class="yes unstable" data-browser="edge">Yes</td>
 <td class="yes obsolete" data-browser="firefox16">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -1488,7 +1485,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="ie-experimental-flag-note">  <sup>[1]</sup> Have to be enabled via &quot;Experimental Web Platform Features&quot; flag</p><p id="only-english-note">  <sup>[2]</sup> Intl support only English by default, it needs to build with full ICU data if needs all locales supported</p><p id="build-with-intl-note">  <sup>[3]</sup> Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed</p></p></div>
+    <p><p id="only-english-note">  <sup>[1]</sup> Intl support only English by default, it needs to build with full ICU data if needs all locales supported</p><p id="build-with-intl-note">  <sup>[2]</sup> Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
