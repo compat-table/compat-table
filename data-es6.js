@@ -299,7 +299,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r184046',
+    full: 'WebKit r184364',
     short: 'WK',
     unstable: true,
   },
@@ -3034,6 +3034,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome41:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -5900,6 +5901,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome41:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -7961,6 +7963,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome42:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
