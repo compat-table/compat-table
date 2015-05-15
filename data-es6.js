@@ -4935,11 +4935,7 @@ exports.tests = [
           && match === String.prototype.match;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit: {
-          val: true,
-          note_id: "webkit-object-destructuring",
-          note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
-        },
+        webkit:       { val: true, note_id: "webkit-object-destructuring"  },
         safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
       }),
     },
@@ -5152,8 +5148,10 @@ exports.tests = [
     },
     'defaults': {
       exec: function(){/*
-        var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
-        return a === 1 && b === 2 && c === 3;
+        var {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};
+        var [d = 0, e = 5, f = 6] = [4,,undefined];
+        return a === 1 && b === 2 && c === 3
+          && d === 4 && e === 5 && f === 6;
       */},
       res: {
         tr:          true,
@@ -5165,10 +5163,11 @@ exports.tests = [
     },
     'defaults in parameters': {
       exec: function(){/*
-        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
+        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
+            [f = 6, g = 0, h = 8]) {
           return a === 1 && b === 2 && c === 3 && d === 4 &&
-            e === 5 && f === undefined;
-        }({b:2, c:undefined, x:4}));
+            e === 5 && f === 6 && g === 7 && h === 8;
+        }({b:2, c:undefined, x:4},[, 7, undefined]));
       */},
       res: {
         tr:          true,
@@ -5212,9 +5211,8 @@ exports.tests = [
     },
     'defaults in parameters, new Function() support': {
       exec: function(){/*
-        return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}",
-          "return a === 1 && b === 2 && c === 3 && d === 4 && "
-          + "e === 5 && f === undefined;"
+        return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}",
+          "return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;"
         )({b:2, c:undefined, x:4});
       */},
       res: {

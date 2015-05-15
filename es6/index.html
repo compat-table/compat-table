@@ -5641,9 +5641,11 @@ return first === 1 &amp;&amp; last === 3 &amp;&amp; (a + &quot;&quot;) === &quot
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_defaults"><td><span><a class="anchor" href="#destructuring_defaults">&#xA7;</a>defaults</span><script data-source="
-var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
-return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");return Function("asyncTestPassed","\nvar {a = 1, b = 0, c = 3} = {b:2, c:undefined};\nreturn a === 1 && b === 2 && c === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};
+var [d = 0, e = 5, f = 6] = [4,,undefined];
+return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3
+  &amp;&amp; d === 4 &amp;&amp; e === 5 &amp;&amp; f === 6;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");return Function("asyncTestPassed","\nvar {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};\nvar [d = 0, e = 5, f = 6] = [4,,undefined];\nreturn a === 1 && b === 2 && c === 3\n  && d === 4 && e === 5 && f === 6;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -5709,11 +5711,12 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_defaults_in_parameters"><td><span><a class="anchor" href="#destructuring_defaults_in_parameters">&#xA7;</a>defaults in parameters</span><script data-source="
-return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
+return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
+    [f = 6, g = 0, h = 8]) {
   return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4 &amp;&amp;
-    e === 5 &amp;&amp; f === undefined;
-}({b:2, c:undefined, x:4}));
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");return Function("asyncTestPassed","\nreturn (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {\n  return a === 1 && b === 2 && c === 3 && d === 4 &&\n    e === 5 && f === undefined;\n}({b:2, c:undefined, x:4}));\n      ")(asyncTestPassed);}catch(e){return false;}}());
+    e === 5 &amp;&amp; f === 6 &amp;&amp; g === 7 &amp;&amp; h === 8;
+}({b:2, c:undefined, x:4},[, 7, undefined]));
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");return Function("asyncTestPassed","\nreturn (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},\n    [f = 6, g = 0, h = 8]) {\n  return a === 1 && b === 2 && c === 3 && d === 4 &&\n    e === 5 && f === 6 && g === 7 && h === 8;\n}({b:2, c:undefined, x:4},[, 7, undefined]));\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -5927,11 +5930,10 @@ return (function({a=function(){
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_defaults_in_parameters,_new_Function()_support"><td><span><a class="anchor" href="#destructuring_defaults_in_parameters,_new_Function()_support">&#xA7;</a>defaults in parameters, new Function() support</span><script data-source="
-return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}&quot;,
-  &quot;return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4 &amp;&amp; &quot;
-  + &quot;e === 5 &amp;&amp; f === undefined;&quot;
+return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}&quot;,
+  &quot;return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4 &amp;&amp; e === 5;&quot;
 )({b:2, c:undefined, x:4});
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");return Function("asyncTestPassed","\nreturn new Function(\"{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}\",\n  \"return a === 1 && b === 2 && c === 3 && d === 4 && \"\n  + \"e === 5 && f === undefined;\"\n)({b:2, c:undefined, x:4});\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");return Function("asyncTestPassed","\nreturn new Function(\"{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}\",\n  \"return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;\"\n)({b:2, c:undefined, x:4});\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
