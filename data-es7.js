@@ -148,7 +148,7 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'exponentiation operator',
+  name: 'exponentiation (**) operator',
   category: 'draft',
   link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
   exec: function () {/*
@@ -158,6 +158,32 @@ exports.tests = [
     tr: true,
     babel: true,
   }
+},
+{
+  name: 'bind (::) operator',
+  link: 'https://github.com/zenparsing/es-function-bind',
+  category: 'strawman',
+  subtests: {
+    'binary form': {
+      exec: function () {/*
+        function foo() { this.garply += "foo"; return this; }
+        var obj = { garply: "bar" };
+        return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
+      */},
+      res: {
+        babel:       true,
+      }
+    },
+    'unary form': {
+      exec: function () {/*
+        var obj = { garply: "bar", foo: function() { this.garply += "foo"; return this; } };
+        return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
+      */},
+      res: {
+        babel:       true,
+      },
+    },
+  },
 },
 {
   name: 'Object.observe',

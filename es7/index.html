@@ -113,7 +113,7 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="25">Draft</td>
 </tr>
-<tr significance="1"><td id="exponentiation_operator"><span><a class="anchor" href="#exponentiation_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">exponentiation operator</a></span><script data-source="
+<tr significance="1"><td id="exponentiation_(**)_operator"><span><a class="anchor" href="#exponentiation_(**)_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">exponentiation (**) operator</a></span><script data-source="
 return 2 ** 3 === 8;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");return Function("asyncTestPassed","\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
@@ -1510,6 +1510,90 @@ return result === &quot;123&quot;;
 </tr>
 <tr class="category"><td colspan="25">Strawman</td>
 </tr>
+<tr class="supertest" significance="1"><td id="bind_(::)_operator"><span><a class="anchor" href="#bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
+<td data-browser="tr" class="tally" data-tally="0">0/2</td>
+<td data-browser="babel" class="tally" data-tally="1">2/2</td>
+<td data-browser="jsx" class="tally" data-tally="0">0/2</td>
+<td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
+<td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox35" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox39" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="chrome30" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome33" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome34" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome35" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome37" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome38" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome39" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome40" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome41" class="tally" data-tally="0">0/2</td>
+<td data-browser="chrome42" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="chrome43" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="node" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_binary_form"><td><span><a class="anchor" href="#bind_(::)_operator_binary_form">&#xA7;</a>binary form</span><script data-source="
+function foo() { this.garply += &quot;foo&quot;; return this; }
+var obj = { garply: &quot;bar&quot; };
+return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+</tr>
+<tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
+var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
+return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+</tr>
 <tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
 var B = Symbol(&apos;b&apos;);
 var O = Object.defineProperty({a: 1, [B]: 2}, &apos;c&apos;, {value: 3});
@@ -1518,7 +1602,7 @@ var D = Object.getOwnPropertyDescriptors(O);
 return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configurable === true &amp;&amp; D.a.writable === true
   &amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
   &amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nvar B = Symbol('b');\nvar O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nvar B = Symbol('b');\nvar O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1546,7 +1630,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 </tr>
 <tr significance="1"><td id="array_comprehensions"><span><a class="anchor" href="#array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">array comprehensions</a></span><script data-source="
 return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1581,7 +1665,7 @@ passed    &amp;= item.value === 6 &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");return Function("asyncTestPassed","\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1609,7 +1693,7 @@ return passed;
 </tr>
 <tr significance="1"><td id="destructuring_in_comprehensions"><span><a class="anchor" href="#destructuring_in_comprehensions">&#xA7;</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980828">destructuring in comprehensions</a></span><script data-source="
 return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");return Function("asyncTestPassed","\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1641,7 +1725,7 @@ class C {
   static y = &apos;y&apos;;
 }
 return new C().x + C.y === &apos;xy&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1669,7 +1753,7 @@ return new C().x + C.y === &apos;xy&apos;;
 </tr>
 <tr significance="1"><td id="Map.prototype.toJSON"><span><a class="anchor" href="#Map.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Map.prototype.toJSON</a></span><script data-source="
 return JSON.stringify(new Map([[&apos;a&apos;, &apos;b&apos;], [&apos;c&apos;, &apos;d&apos;]])) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quot;,&quot;d&quot;]]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nreturn JSON.stringify(new Map([['a', 'b'], ['c', 'd']])) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");return Function("asyncTestPassed","\nreturn JSON.stringify(new Map([['a', 'b'], ['c', 'd']])) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1710,7 +1794,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1738,7 +1822,7 @@ return true;
 </tr>
 <tr significance="1"><td id="Set.prototype.toJSON"><span><a class="anchor" href="#Set.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Set.prototype.toJSON</a></span><script data-source="
 return JSON.stringify(new Set([1, 2, 3, 2, 1])) === &apos;[1,2,3]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nreturn JSON.stringify(new Set([1, 2, 3, 2, 1])) === '[1,2,3]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");return Function("asyncTestPassed","\nreturn JSON.stringify(new Set([1, 2, 3, 2, 1])) === '[1,2,3]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1767,7 +1851,7 @@ return JSON.stringify(new Set([1, 2, 3, 2, 1])) === &apos;[1,2,3]&apos;;
 <tr significance="1"><td id="object_rest_properties"><span><a class="anchor" href="#object_rest_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object rest properties</a></span><script data-source="
 var {a, ...rest} = {a: 1, b: 2, c: 3};
 return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp; rest.c === 3;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");return Function("asyncTestPassed","\nvar {a, ...rest} = {a: 1, b: 2, c: 3};\nreturn a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");return Function("asyncTestPassed","\nvar {a, ...rest} = {a: 1, b: 2, c: 3};\nreturn a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1797,7 +1881,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 var spread = {b: 2, c: 3};
 var O = {a: 1, ...spread};
 return O.a + O.b + O.c === 6;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");return Function("asyncTestPassed","\nvar spread = {b: 2, c: 3};\nvar O = {a: 1, ...spread};\nreturn O.a + O.b + O.c === 6;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nvar spread = {b: 2, c: 3};\nvar O = {a: 1, ...spread};\nreturn O.a + O.b + O.c === 6;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1825,7 +1909,7 @@ return O.a + O.b + O.c === 6;
 </tr>
 <tr significance="1"><td id="String.prototype.at"><span><a class="anchor" href="#String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1879,7 +1963,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.lpad"><td><span><a class="anchor" href="#string_padding_String.prototype.lpad">&#xA7;</a>String.prototype.lpad</span><script data-source="
 return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
   &amp;&amp; &apos;hello&apos;.lpad(10, &apos;1234&apos;) === &apos;41234hello&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");return Function("asyncTestPassed","\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1908,7 +1992,7 @@ return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
 <tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.rpad"><td><span><a class="anchor" href="#string_padding_String.prototype.rpad">&#xA7;</a>String.prototype.rpad</span><script data-source="
 return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
   &amp;&amp; &apos;hello&apos;.rpad(10, &apos;1234&apos;) === &apos;hello12341&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");return Function("asyncTestPassed","\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
