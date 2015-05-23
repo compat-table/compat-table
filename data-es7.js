@@ -186,6 +186,36 @@ exports.tests = [
   },
 },
 {
+  name: 'Object.values',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
+  category: 'strawman',
+  exec: function () {/*
+    var obj = Object.create({ a: "qux", d: "qux" });
+    obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
+    var v = Object.values(obj);
+    return v instanceof Array && v + '' === "foo,bar,baz";
+  */},
+  res: {
+  }
+},
+{
+  name: 'Object.entries',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
+  category: 'strawman',
+  exec: function () {/*
+    var obj = Object.create({ a: "qux", d: "qux" });
+    obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
+    var e = Object.entries(obj);
+    return e instanceof Array
+      && e[0] + '' === "a,foo"
+      && e[1] + '' === "b,bar"
+      && e[2] + '' === "c,baz"
+      && e.length === 3;
+  */},
+  res: {
+  }
+},
+{
   name: 'Object.observe',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
   category: 'draft',
