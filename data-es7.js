@@ -320,7 +320,7 @@ exports.tests = [
   link: 'https://gist.github.com/WebReflection/9353781',
   category: 'strawman',
   exec: function () {/*
-    var B = Symbol('b');
+    var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
     var O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});
     var D = Object.getOwnPropertyDescriptors(O);
 
