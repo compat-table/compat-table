@@ -196,6 +196,7 @@ exports.tests = [
     return v instanceof Array && v + '' === "foo,bar,baz";
   */},
   res: {
+    babel:       true,
   }
 },
 {
@@ -213,6 +214,7 @@ exports.tests = [
       && e.length === 3;
   */},
   res: {
+    babel:       true,
   }
 },
 {
