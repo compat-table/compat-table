@@ -419,6 +419,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'float32x4' : {
@@ -427,6 +428,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'float64x2' : {
@@ -435,6 +437,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'int32x4' : {
@@ -443,6 +446,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.abs' : {
@@ -451,6 +455,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.add' : {
@@ -459,6 +464,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.and' : {
@@ -467,6 +473,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.bitselect' : {
@@ -491,6 +498,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.equal' : {
@@ -499,6 +507,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.equivalent' : {
@@ -515,6 +524,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.greaterThanOrEqual' : {
@@ -523,6 +533,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.lessThan' : {
@@ -531,6 +542,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.lessThanOrEqual' : {
@@ -539,6 +551,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.mul' : {
@@ -547,6 +560,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.neg' : {
@@ -555,6 +569,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.not' : {
@@ -563,6 +578,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.notEqual' : {
@@ -571,6 +587,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.or' : {
@@ -579,6 +596,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.select' : {
@@ -587,6 +605,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.shuffle' : {
@@ -595,6 +614,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.sub' : {
@@ -603,6 +623,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.swizzle' : {
@@ -611,6 +632,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.xor' : {
@@ -619,6 +641,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     }
   }
