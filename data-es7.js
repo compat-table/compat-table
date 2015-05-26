@@ -320,8 +320,10 @@ exports.tests = [
   link: 'https://gist.github.com/WebReflection/9353781',
   category: 'strawman',
   exec: function () {/*
-    var B = Symbol('b');
-    var O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});
+    var object = {a: 1};
+    var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
+    object[B] = 2;
+    var O = Object.defineProperty(object, 'c', {value: 3});
     var D = Object.getOwnPropertyDescriptors(O);
 
     return D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true
@@ -419,6 +421,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'float32x4' : {
@@ -427,6 +430,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'float64x2' : {
@@ -435,6 +439,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'int32x4' : {
@@ -443,6 +448,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.abs' : {
@@ -451,6 +457,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.add' : {
@@ -459,6 +466,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.and' : {
@@ -467,6 +475,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.bitselect' : {
@@ -491,6 +500,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.equal' : {
@@ -499,6 +509,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.equivalent' : {
@@ -515,6 +526,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.greaterThanOrEqual' : {
@@ -523,6 +535,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.lessThan' : {
@@ -531,6 +544,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.lessThanOrEqual' : {
@@ -539,6 +553,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.mul' : {
@@ -547,6 +562,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.neg' : {
@@ -555,6 +571,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.not' : {
@@ -563,6 +580,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.notEqual' : {
@@ -571,6 +589,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.or' : {
@@ -579,6 +598,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.select' : {
@@ -587,6 +607,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.shuffle' : {
@@ -595,6 +616,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.sub' : {
@@ -603,6 +625,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.swizzle' : {
@@ -611,6 +634,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.xor' : {
@@ -619,6 +643,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     }
   }
@@ -738,7 +763,10 @@ exports.tests = [
   category: 'strawman',
   link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return JSON.stringify(new Map([['a', 'b'], ['c', 'd']])) === '[["a","b"],["c","d"]]';
+    var map = new Map();
+    map.set('a', 'b');
+    map.set('c', 'd');
+    return JSON.stringify(map) === '[["a","b"],["c","d"]]';
   */},
   res: {
     babel:       true,
@@ -773,7 +801,9 @@ exports.tests = [
   category: 'strawman',
   link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return JSON.stringify(new Set([1, 2, 3, 2, 1])) === '[1,2,3]';
+    var set = new Set();
+    [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
+    return JSON.stringify(set) === '[1,2,3]';
   */},
   res: {
     babel:       true,
