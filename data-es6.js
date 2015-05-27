@@ -311,7 +311,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r184364',
+    full: 'WebKit r184902',
     short: 'WK',
     unstable: true,
   },
@@ -2194,6 +2194,7 @@ exports.tests = [
       res: {
         edge:         true,
         firefox35:    true,
+        webkit:       true,
         chrome42:     true,
         iojs:         true,
       },
@@ -5428,6 +5429,7 @@ exports.tests = [
         ie11:        true,
         firefox31:   true,
         chrome34:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -6786,6 +6788,7 @@ exports.tests = [
         es6shim:     true,
         edge:        true,
         firefox32:   true,
+        webkit:      true,
       },
     },
     'Array.prototype.find': {
