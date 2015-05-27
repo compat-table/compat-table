@@ -166,16 +166,21 @@ exports.browsers = {
   },
   firefox37: {
     full: 'Firefox',
-    short: 'FF 37'
+    short: 'FF 37',
+    obsolete: true,
   },
   firefox38: {
     full: 'Firefox',
-    short: 'FF 38',
-    unstable: true,
+    short: 'FF 38'
   },
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
+    unstable: true,
+  },
+  firefox40: {
+    full: 'Firefox',
+    short: 'FF 40',
     unstable: true,
   },
   chrome: {
@@ -265,6 +270,7 @@ exports.browsers = {
   chrome42: {
     full: 'Chrome, Opera',
     short: 'CH 42,<br>OP&nbsp;29',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome43: {
@@ -275,6 +281,12 @@ exports.browsers = {
   chrome44: {
     full: 'Chrome, Opera',
     short: 'CH 44,<br>OP&nbsp;31',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
+  chrome45: {
+    full: 'Chrome, Opera',
+    short: 'CH 45,<br>OP&nbsp;32',
     unstable: true,
     note_id: 'experimental-flag',
   },
@@ -1168,6 +1180,7 @@ exports.tests = [
         typescript:  true,
         edge:        true,
         firefox38:   true,
+        chrome45:    flag,
       },
     },
     'new Function() support': {
@@ -4449,7 +4462,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        firefox18: true,
+        firefox18:   true,
         edge:        true,
       },
     },
@@ -4459,8 +4472,9 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        firefox18: true,  // a bug in FF18
-        firefox23: false,
+        firefox18:   true,  // a bug in FF18
+        firefox23:   false,
+        firefox40:   true,
         edge:        true,
       },
     },
@@ -5355,6 +5369,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         webkit:      true,
+        chrome45:    flag,
       },
     },
     'Object.is': {
@@ -6034,6 +6049,7 @@ exports.tests = [
           note_id: 'string-contains',
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
+        firefox40:   true,
         chrome30:    { val: false, note_id: 'string-contains' },
         chrome41:    true,
         webkit:      true,
@@ -6145,6 +6161,8 @@ exports.tests = [
         edge:        true,
         webkit:      true,
         chrome44:    flag,
+        chrome45:    true,
+        firefox40:   true,
       }
     },
     'in identifiers': {
