@@ -162,7 +162,7 @@ exports.tests = [
 {
   name: 'bind (::) operator',
   link: 'https://github.com/zenparsing/es-function-bind',
-  category: 'strawman',
+  category: 'pre-strawman',
   subtests: {
     'binary form': {
       exec: function () {/*
@@ -188,7 +188,7 @@ exports.tests = [
 {
   name: 'Object.values',
   link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
-  category: 'strawman',
+  category: 'pre-strawman',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
@@ -202,7 +202,7 @@ exports.tests = [
 {
   name: 'Object.entries',
   link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
-  category: 'strawman',
+  category: 'pre-strawman',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
@@ -352,7 +352,7 @@ exports.tests = [
 {
   name: 'parallel JavaScript',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism',
-  category: 'proposal',
+  category: 'pre-strawman',
   subtests: {
     'Array.prototype.mapPar' : {
       exec: function(){/*
@@ -414,7 +414,7 @@ exports.tests = [
 },
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
-  category: 'proposal',
+  category: 'draft',
   link: 'https://github.com/johnmccutchan/ecmascript_simd',
   subtests: {
     'basic support' : {
@@ -693,7 +693,7 @@ exports.tests = [
 },
 {
   name: 'array comprehensions',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
     return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
@@ -710,7 +710,7 @@ exports.tests = [
 },
 {
   name: 'generator comprehensions',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
     var iterator = (for (a of [1,2]) a + 4);
@@ -734,7 +734,7 @@ exports.tests = [
 },
 {
   name: 'destructuring in comprehensions',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
   exec: function () {/*
     return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
@@ -777,7 +777,7 @@ exports.tests = [
 },
 {
   name: 'Reflect.Realm',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'https://gist.github.com/dherman/7568885',
   exec: function () {/*
     var i, names =
@@ -815,7 +815,7 @@ exports.tests = [
 {
   name: 'object rest properties',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: 'strawman',
+  category: 'proposal',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -827,7 +827,7 @@ exports.tests = [
 },
 {
   name: 'object spread properties',
-  category: 'strawman',
+  category: 'proposal',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
     var spread = {b: 2, c: 3};
@@ -880,7 +880,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman'].indexOf(e.category);
+  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES7 category!');
   }

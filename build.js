@@ -31,6 +31,10 @@ var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
+var isOptional = function isOptional(category) {
+  return category === 'annex b' || category === 'pre-strawman';
+};
+
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   var es5 = require('./data-es5');
@@ -328,7 +332,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       .attr("significance",
         t.significance === "small" ? 0.25 :
         t.significance === "medium" ? 0.5 : 1)
-      .addClass(t.category === "annex b" ? 'annex_b' : '')
+      .addClass(isOptional(t.category) ? 'optional-feature' : '')
       .append($('<td></td>')
         .attr('id',id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
@@ -366,7 +370,8 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       if (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
           !browsers[browserId].needs_annex_b &&
-          t.category==="annex b") {
+          isOptional(t.category)
+      ) {
         cell.attr('title', "This feature is optional on non-browser platforms.");
         cell.addClass("not-applicable");
       }
