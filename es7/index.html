@@ -1602,7 +1602,7 @@ return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn v instanceof Array && v + '' === \"foo,bar,baz\";\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
@@ -1637,7 +1637,7 @@ return e instanceof Array
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn e instanceof Array\n  && e[0] + '' === \"a,foo\"\n  && e[1] + '' === \"b,bar\"\n  && e[2] + '' === \"c,baz\"\n  && e.length === 3;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
