@@ -1563,10 +1563,10 @@ return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
 <tr class="category"><td colspan="25">Pre-strawman</td>
 </tr>
 <tr class="supertest optional-feature" significance="1"><td id="bind_(::)_operator"><span><a class="anchor" href="#bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
-<td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="babel" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="1">2/2</td>
-<td data-browser="jsx" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="es7shim" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/2</td>
+<td data-browser="tr" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/2</td>
+<td data-browser="babel" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="1">2/2</td>
+<td data-browser="jsx" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/2</td>
+<td data-browser="es7shim" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
@@ -1584,8 +1584,8 @@ return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
-<td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="iojs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/2</td>
+<td data-browser="node" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/2</td>
+<td data-browser="iojs" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_binary_form"><td><span><a class="anchor" href="#bind_(::)_operator_binary_form">&#xA7;</a>binary form</span><script data-source="
 function foo() { this.garply += &quot;foo&quot;; return this; }
@@ -1593,10 +1593,10 @@ var obj = { garply: &quot;bar&quot; };
 return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1614,18 +1614,18 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
 var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
 return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1643,8 +1643,8 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="Object.values"><span><a class="anchor" href="#Object.values">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1653,10 +1653,10 @@ var v = Object.values(obj);
 return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn v instanceof Array && v + '' === \"foo,bar,baz\";\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1674,8 +1674,8 @@ return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="Object.entries"><span><a class="anchor" href="#Object.entries">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.entries</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1688,10 +1688,10 @@ return e instanceof Array
   &amp;&amp; e.length === 3;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn e instanceof Array\n  && e[0] + '' === \"a,foo\"\n  && e[1] + '' === \"b,bar\"\n  && e[2] + '' === \"c,baz\"\n  && e.length === 3;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1709,14 +1709,14 @@ return e instanceof Array
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="supertest optional-feature" significance="1"><td id="parallel_JavaScript"><span><a class="anchor" href="#parallel_JavaScript">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism">parallel JavaScript</a></span></td>
-<td data-browser="tr" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/8</td>
-<td data-browser="babel" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/8</td>
-<td data-browser="jsx" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/8</td>
-<td data-browser="es7shim" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/8</td>
+<td data-browser="tr" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/8</td>
+<td data-browser="babel" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/8</td>
+<td data-browser="jsx" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/8</td>
+<td data-browser="es7shim" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/8</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/8</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/8</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/8</td>
@@ -1734,17 +1734,17 @@ return e instanceof Array
 <td data-browser="chrome42" class="unstable tally" data-tally="0">0/8</td>
 <td data-browser="chrome43" class="unstable tally" data-tally="0">0/8</td>
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/8</td>
-<td data-browser="node" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/8</td>
-<td data-browser="iojs" title="This feature is optional on non-browser platforms." class="not-applicable tally" data-tally="0">0/8</td>
+<td data-browser="node" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/8</td>
+<td data-browser="iojs" title="This feature is optional on all platforms." class="not-applicable tally" data-tally="0">0/8</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.mapPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.mapPar">&#xA7;</a>Array.prototype.mapPar</span><script data-source="
 return typeof Array.prototype.mapPar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");return Function("asyncTestPassed","\nreturn typeof Array.prototype.mapPar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1762,17 +1762,17 @@ return typeof Array.prototype.mapPar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.filterPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.filterPar">&#xA7;</a>Array.prototype.filterPar</span><script data-source="
 return typeof Array.prototype.filterPar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");return Function("asyncTestPassed","\nreturn typeof Array.prototype.filterPar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1790,17 +1790,17 @@ return typeof Array.prototype.filterPar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.fromPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.fromPar">&#xA7;</a>Array.fromPar</span><script data-source="
 return typeof Array.fromPar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");return Function("asyncTestPassed","\nreturn typeof Array.fromPar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1818,17 +1818,17 @@ return typeof Array.fromPar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_TypedObject.fromPar"><td><span><a class="anchor" href="#parallel_JavaScript_TypedObject.fromPar">&#xA7;</a>TypedObject.fromPar</span><script data-source="
 return typeof TypedObject.fromPar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");return Function("asyncTestPassed","\nreturn typeof TypedObject.fromPar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1846,17 +1846,17 @@ return typeof TypedObject.fromPar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.get"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.get">&#xA7;</a>Array.prototype.get</span><script data-source="
 return typeof Array.prototype.get === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");return Function("asyncTestPassed","\nreturn typeof Array.prototype.get === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1874,17 +1874,17 @@ return typeof Array.prototype.get === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.reducePar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.reducePar">&#xA7;</a>Array.prototype.reducePar</span><script data-source="
 return typeof Array.prototype.reducePar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");return Function("asyncTestPassed","\nreturn typeof Array.prototype.reducePar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1902,17 +1902,17 @@ return typeof Array.prototype.reducePar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.scanPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.scanPar">&#xA7;</a>Array.prototype.scanPar</span><script data-source="
 return typeof Array.prototype.scanPar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nreturn typeof Array.prototype.scanPar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1930,17 +1930,17 @@ return typeof Array.prototype.scanPar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.scatterPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.scatterPar">&#xA7;</a>Array.prototype.scatterPar</span><script data-source="
 return typeof Array.prototype.scatterPar === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("63");return Function("asyncTestPassed","\nreturn typeof Array.prototype.scatterPar === 'function';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1958,17 +1958,17 @@ return typeof Array.prototype.scatterPar === &apos;function&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="array_comprehensions"><span><a class="anchor" href="#array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">array comprehensions</a></span><script data-source="
 return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="yes not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="yes not-applicable" data-browser="tr" title="This feature is optional on all platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox34">Yes</td>
@@ -1986,8 +1986,8 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="generator_comprehensions"><span><a class="anchor" href="#generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">generator comprehensions</a></span><script data-source="
 var iterator = (for (a of [1,2]) a + 4);
@@ -2000,10 +2000,10 @@ passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");return Function("asyncTestPassed","\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="yes not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="yes not-applicable" data-browser="tr" title="This feature is optional on all platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox34">Yes</td>
@@ -2021,17 +2021,17 @@ return passed;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="destructuring_in_comprehensions"><span><a class="anchor" href="#destructuring_in_comprehensions">&#xA7;</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980828">destructuring in comprehensions</a></span><script data-source="
 return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");return Function("asyncTestPassed","\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="yes not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="yes not-applicable" data-browser="tr" title="This feature is optional on all platforms.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on all platforms.">Yes</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2049,8 +2049,8 @@ return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&ap
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
@@ -2069,10 +2069,10 @@ for (i = 0; i &lt; names.length; i++) {
 return true;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
-<td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="tr" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="babel" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="jsx" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="es7shim" title="This feature is optional on all platforms.">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2090,8 +2090,8 @@ return true;
 <td class="no unstable" data-browser="chrome42">No</td>
 <td class="no unstable" data-browser="chrome43">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
-<td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms.">No</td>
+<td class="no not-applicable" data-browser="node" title="This feature is optional on all platforms.">No</td>
+<td class="no not-applicable" data-browser="iojs" title="This feature is optional on all platforms.">No</td>
 </tr>
 </tbody>
     </table>

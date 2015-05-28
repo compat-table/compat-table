@@ -372,7 +372,10 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
           !browsers[browserId].needs_annex_b &&
           isOptional(t.category)
       ) {
-        cell.attr('title', "This feature is optional on non-browser platforms.");
+        var msg = t.category === 'annex b'
+          ? 'This feature is optional on non-browser platforms.'
+          : 'This feature is optional on all platforms.';
+        cell.attr('title', msg);
         cell.addClass("not-applicable");
       }
 
