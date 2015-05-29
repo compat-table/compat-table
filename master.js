@@ -249,13 +249,13 @@ $(function() {
     else {
       name = currentBrowserSelector;
     }
-    var results = table.find('tr:not([class*=test]):not(.annex_b) td:not(.not-applicable)' + name);
+    var results = table.find('tr:not([class*=test]):not(.optional-feature) td:not(.not-applicable)' + name);
     var yesResults = results.filter('.yes').length;
     var totalResults = results.length;
     /*
         Add annex b results, weighted to 1/5
     */
-    results = table.find('tr:not([class*=test]).annex_b td:not(.not-applicable)' + name);
+    results = table.find('tr:not([class*=test]).optional-feature td:not(.not-applicable)' + name);
     yesResults += results.filter('.yes').length/5;
     totalResults += results.length/5;
 
