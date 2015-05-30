@@ -197,6 +197,9 @@ td:first-child, td:not([class]) {
 }
 
 /* not applicable */
+.not-applicable.no, .not-applicable[data-tally="0"] {
+    background: hsl(  0,  14%,  67%); background: #b69f9f; cursor: help;
+}
 .not-applicable {
     background: hsl(120,  14%,  67%); background: #9fb79f; cursor: help;
 }

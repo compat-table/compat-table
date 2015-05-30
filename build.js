@@ -367,14 +367,15 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         "");
 
       // Add extra signifiers if the result is not applicable.
-      if (browsers[browserId].platformtype &&
+      if (isOptional(t.category) &&
+        // Annex B is only optional for non-browsers.
+        (t.category !== "annex b" || (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
-          !browsers[browserId].needs_annex_b &&
-          isOptional(t.category)
-      ) {
-        var msg = t.category === 'annex b'
-          ? 'This feature is optional on non-browser platforms.'
-          : 'This feature is optional on all platforms.';
+          !browsers[browserId].needs_annex_b))) {
+        var msg = {
+          'annex b': "This feature is optional on non-browser platforms",
+          'pre-strawman': "This proposal has not yet been accepted by ECMA Technical Committee 39",
+        }[t.category] + ", and doesn't contribute to the platform's support percentage.";
         cell.attr('title', msg);
         cell.addClass("not-applicable");
       }
