@@ -5663,6 +5663,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
         firefox11: false,
+        firefox39: true,
         rhino17:   false,
       }),
     },
