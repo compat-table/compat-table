@@ -3052,6 +3052,30 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'line break normalisation': {
+      /* For some reason, this .fromCharCode stuff is necessary instead of \r\n. */
+      exec: function () {/*
+        var cr   = eval("`x" + String.fromCharCode(13)    + "y`");
+        var lf   = eval("`x" + String.fromCharCode(10)    + "y`");
+        var crlf = eval("`x" + String.fromCharCode(13,10) + "y`");
+
+        return cr.length === 3 && lf.length === 3 && crlf.length === 3
+          && cr[1] === lf[1] && lf[1] === crlf[1] && crlf[1] === '\n';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        typescript:  true,
+        edge:        true,
+        firefox34:   true,
+        chrome41:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
   },
 },
 {
