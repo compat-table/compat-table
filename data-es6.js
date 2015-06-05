@@ -2915,12 +2915,16 @@ exports.tests = [
 },
 {
   name: 'prototype of bound functions',
-  category: 'functions',
+  category: 'misc',
   significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boundfunctioncreate',
   exec: function () {/*
     function getProtoBound(proto) {
-      var f = Object.setPrototypeOf(function() { }, proto)
+      var f = function () { }
+      if (Object.setPrototypeOf)
+        Object.setPrototypeOf(f, proto)
+      else
+        f.__proto__ = proto
       var boundF = Function.prototype.bind.call(f, null)
       return Object.getPrototypeOf(boundF)
     }
