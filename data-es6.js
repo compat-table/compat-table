@@ -2914,6 +2914,34 @@ exports.tests = [
   },
 },
 {
+  name: 'prototype of bound functions',
+  category: 'misc',
+  significance: 'small',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boundfunctioncreate',
+  exec: function () {/*
+    function getProtoBound(proto) {
+      var f = function () { }
+      if (Object.setPrototypeOf)
+        Object.setPrototypeOf(f, proto)
+      else
+        f.__proto__ = proto
+      var boundF = Function.prototype.bind.call(f, null)
+      return Object.getPrototypeOf(boundF)
+    }
+
+    return [ Function.prototype, function(){}, [], null ].every(function(proto) {
+      return getProtoBound(proto) === proto
+    })
+  */},
+  res: {
+    ie10:        false,
+    firefox11:   false,
+    chrome:      false,
+    safari51:    false,
+    webkit:      false,
+  }
+},
+{
   name: 'octal and binary literals',
   category: 'syntax',
   significance: 'small',
