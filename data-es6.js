@@ -2918,28 +2918,106 @@ exports.tests = [
   category: 'misc',
   significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boundfunctioncreate',
-  exec: function () {/*
-    function getProtoBound(proto) {
-      var f = function () { }
-      if (Object.setPrototypeOf)
-        Object.setPrototypeOf(f, proto)
-      else
-        f.__proto__ = proto
-      var boundF = Function.prototype.bind.call(f, null)
-      return Object.getPrototypeOf(boundF)
-    }
-
-    return [ Function.prototype, function(){}, [], null ].every(function(proto) {
-      return getProtoBound(proto) === proto
-    })
-  */},
-  res: {
-    ie10:        false,
-    firefox11:   false,
-    chrome:      false,
-    safari51:    false,
-    webkit:      false,
-  }
+  subtests: {
+    'basic functions': {
+      exec: function () {/*
+          function correctProtoBound(proto) {
+            var f = function(){};
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(f, proto);
+            }
+            else {
+              f.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(f, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'generator functions': {
+      exec: function() {/*
+          function correctProtoBound(proto) {
+            var f = function*(){};
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(f, proto);
+            }
+            else {
+              f.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(f, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'arrow functions': {
+      exec: function() {/*
+          function correctProtoBound(proto) {
+            var f = ()=>5;
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(f, proto);
+            }
+            else {
+              f.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(f, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'classes': {
+      exec: function() {/*
+          function correctProtoBound(proto) {
+            class C {}
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(C, proto);
+            }
+            else {
+              C.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(C, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'subclasses': {
+      exec: function() {/*
+          function correctProtoBound(superclass) {
+            class C extends superclass {
+              constructor() {
+                return Object.create(null);
+              }
+            }
+            var boundF = Function.prototype.bind.call(C, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(function(){})
+            && correctProtoBound(Array)
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+  },
 },
 {
   name: 'octal and binary literals',
