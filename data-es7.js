@@ -148,7 +148,7 @@ exports.browsers = {
 
 exports.tests = [
 {
-  name: 'exponentiation operator',
+  name: 'exponentiation (**) operator',
   category: 'draft',
   link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
   exec: function () {/*
@@ -157,6 +157,64 @@ exports.tests = [
   res: {
     tr: true,
     babel: true,
+  }
+},
+{
+  name: 'bind (::) operator',
+  link: 'https://github.com/zenparsing/es-function-bind',
+  category: 'pre-strawman',
+  subtests: {
+    'binary form': {
+      exec: function () {/*
+        function foo() { this.garply += "foo"; return this; }
+        var obj = { garply: "bar" };
+        return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
+      */},
+      res: {
+        babel:       true,
+      }
+    },
+    'unary form': {
+      exec: function () {/*
+        var obj = { garply: "bar", foo: function() { this.garply += "foo"; return this; } };
+        return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
+      */},
+      res: {
+        babel:       true,
+      },
+    },
+  },
+},
+{
+  name: 'Object.values',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
+  category: 'pre-strawman',
+  exec: function () {/*
+    var obj = Object.create({ a: "qux", d: "qux" });
+    obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
+    var v = Object.values(obj);
+    return v instanceof Array && v + '' === "foo,bar,baz";
+  */},
+  res: {
+    babel:       true,
+  }
+},
+{
+  name: 'Object.entries',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
+  category: 'pre-strawman',
+  exec: function () {/*
+    var obj = Object.create({ a: "qux", d: "qux" });
+    obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
+    var e = Object.entries(obj);
+    return e instanceof Array
+      && e[0] + '' === "a,foo"
+      && e[1] + '' === "b,bar"
+      && e[2] + '' === "c,baz"
+      && e.length === 3;
+  */},
+  res: {
+    babel:       true,
   }
 },
 {
@@ -264,8 +322,10 @@ exports.tests = [
   link: 'https://gist.github.com/WebReflection/9353781',
   category: 'strawman',
   exec: function () {/*
-    var B = Symbol('b');
-    var O = Object.defineProperty({a: 1, [B]: 2}, 'c', {value: 3});
+    var object = {a: 1};
+    var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
+    object[B] = 2;
+    var O = Object.defineProperty(object, 'c', {value: 3});
     var D = Object.getOwnPropertyDescriptors(O);
 
     return D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true
@@ -292,7 +352,7 @@ exports.tests = [
 {
   name: 'parallel JavaScript',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism',
-  category: 'proposal',
+  category: 'pre-strawman',
   subtests: {
     'Array.prototype.mapPar' : {
       exec: function(){/*
@@ -354,7 +414,7 @@ exports.tests = [
 },
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
-  category: 'proposal',
+  category: 'draft',
   link: 'https://github.com/johnmccutchan/ecmascript_simd',
   subtests: {
     'basic support' : {
@@ -363,6 +423,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'float32x4' : {
@@ -371,6 +432,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'float64x2' : {
@@ -379,6 +441,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'int32x4' : {
@@ -387,6 +450,7 @@ exports.tests = [
       */},
       res: {
         firefox39:   true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.abs' : {
@@ -395,6 +459,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.add' : {
@@ -403,6 +468,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.and' : {
@@ -411,6 +477,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.bitselect' : {
@@ -435,6 +502,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.equal' : {
@@ -443,6 +511,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.equivalent' : {
@@ -459,6 +528,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.greaterThanOrEqual' : {
@@ -467,6 +537,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.lessThan' : {
@@ -475,6 +546,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.lessThanOrEqual' : {
@@ -483,6 +555,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.mul' : {
@@ -491,6 +564,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.neg' : {
@@ -499,6 +573,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.not' : {
@@ -507,6 +582,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.notEqual' : {
@@ -515,6 +591,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.or' : {
@@ -523,6 +600,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.select' : {
@@ -531,6 +609,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.shuffle' : {
@@ -539,6 +618,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.sub' : {
@@ -547,6 +627,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.swizzle' : {
@@ -555,6 +636,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.xor' : {
@@ -563,6 +645,7 @@ exports.tests = [
       */},
       res: {
         firefox39: true,
+        es7shim: true,
       }
     }
   }
@@ -610,7 +693,7 @@ exports.tests = [
 },
 {
   name: 'array comprehensions',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
     return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
@@ -627,7 +710,7 @@ exports.tests = [
 },
 {
   name: 'generator comprehensions',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
     var iterator = (for (a of [1,2]) a + 4);
@@ -651,7 +734,7 @@ exports.tests = [
 },
 {
   name: 'destructuring in comprehensions',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
   exec: function () {/*
     return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
@@ -682,7 +765,10 @@ exports.tests = [
   category: 'strawman',
   link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return JSON.stringify(new Map([['a', 'b'], ['c', 'd']])) === '[["a","b"],["c","d"]]';
+    var map = new Map();
+    map.set('a', 'b');
+    map.set('c', 'd');
+    return JSON.stringify(map) === '[["a","b"],["c","d"]]';
   */},
   res: {
     babel:       true,
@@ -691,7 +777,7 @@ exports.tests = [
 },
 {
   name: 'Reflect.Realm',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'https://gist.github.com/dherman/7568885',
   exec: function () {/*
     var i, names =
@@ -717,7 +803,9 @@ exports.tests = [
   category: 'strawman',
   link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
-    return JSON.stringify(new Set([1, 2, 3, 2, 1])) === '[1,2,3]';
+    var set = new Set();
+    [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
+    return JSON.stringify(set) === '[1,2,3]';
   */},
   res: {
     babel:       true,
@@ -727,7 +815,7 @@ exports.tests = [
 {
   name: 'object rest properties',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: 'strawman',
+  category: 'proposal',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -739,7 +827,7 @@ exports.tests = [
 },
 {
   name: 'object spread properties',
-  category: 'strawman',
+  category: 'proposal',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
     var spread = {b: 2, c: 3};
@@ -792,7 +880,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman'].indexOf(e.category);
+  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES7 category!');
   }

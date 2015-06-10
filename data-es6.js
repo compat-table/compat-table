@@ -184,16 +184,21 @@ exports.browsers = {
   },
   firefox37: {
     full: 'Firefox',
-    short: 'FF 37'
+    short: 'FF 37',
+    obsolete: true,
   },
   firefox38: {
     full: 'Firefox',
-    short: 'FF 38',
-    unstable: true,
+    short: 'FF 38'
   },
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
+    unstable: true,
+  },
+  firefox40: {
+    full: 'Firefox',
+    short: 'FF 40',
     unstable: true,
   },
   chrome: {
@@ -283,6 +288,7 @@ exports.browsers = {
   chrome42: {
     full: 'Chrome, Opera',
     short: 'CH 42,<br>OP&nbsp;29',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome43: {
@@ -293,6 +299,12 @@ exports.browsers = {
   chrome44: {
     full: 'Chrome, Opera',
     short: 'CH 44,<br>OP&nbsp;31',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
+  chrome45: {
+    full: 'Chrome, Opera',
+    short: 'CH 45,<br>OP&nbsp;32',
     unstable: true,
     note_id: 'experimental-flag',
   },
@@ -317,7 +329,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r184046',
+    full: 'WebKit r184902',
     short: 'WK',
     unstable: true,
   },
@@ -1182,6 +1194,7 @@ exports.tests = [
         typescript:  true,
         edge:        true,
         firefox38:   true,
+        chrome45:    flag,
       },
     },
     'new Function() support': {
@@ -2196,6 +2209,7 @@ exports.tests = [
       res: {
         edge:         true,
         firefox35:    true,
+        webkit:       true,
         chrome42:     true,
         iojs:         true,
       },
@@ -2915,6 +2929,112 @@ exports.tests = [
   },
 },
 {
+  name: 'prototype of bound functions',
+  category: 'misc',
+  significance: 'small',
+  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boundfunctioncreate',
+  subtests: {
+    'basic functions': {
+      exec: function () {/*
+          function correctProtoBound(proto) {
+            var f = function(){};
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(f, proto);
+            }
+            else {
+              f.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(f, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'generator functions': {
+      exec: function() {/*
+          function correctProtoBound(proto) {
+            var f = function*(){};
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(f, proto);
+            }
+            else {
+              f.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(f, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'arrow functions': {
+      exec: function() {/*
+          function correctProtoBound(proto) {
+            var f = ()=>5;
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(f, proto);
+            }
+            else {
+              f.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(f, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'classes': {
+      exec: function() {/*
+          function correctProtoBound(proto) {
+            class C {}
+            if (Object.setPrototypeOf) {
+              Object.setPrototypeOf(C, proto);
+            }
+            else {
+              C.__proto__ = proto;
+            } 
+            var boundF = Function.prototype.bind.call(C, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(Function.prototype)
+            && correctProtoBound({})
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+    'subclasses': {
+      exec: function() {/*
+          function correctProtoBound(superclass) {
+            class C extends superclass {
+              constructor() {
+                return Object.create(null);
+              }
+            }
+            var boundF = Function.prototype.bind.call(C, null);
+            return proto.isPrototypeOf(boundF);
+          }
+          return correctProtoBound(function(){})
+            && correctProtoBound(Array)
+            && correctProtoBound(null);
+      */},
+      res: {
+      },
+    },
+  },
+},
+{
   name: 'octal and binary literals',
   category: 'syntax',
   significance: 'small',
@@ -3049,6 +3169,31 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome41:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'line break normalisation': {
+      /* For some reason, this .fromCharCode stuff is necessary instead of \r\n. */
+      exec: function () {/*
+        var cr   = eval("`x" + String.fromCharCode(13)    + "y`");
+        var lf   = eval("`x" + String.fromCharCode(10)    + "y`");
+        var crlf = eval("`x" + String.fromCharCode(13,10) + "y`");
+
+        return cr.length === 3 && lf.length === 3 && crlf.length === 3
+          && cr[1] === lf[1] && lf[1] === crlf[1] && crlf[1] === '\n';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        typescript:  true,
+        edge:        true,
+        firefox34:   true,
+        chrome41:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4463,7 +4608,7 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
-        firefox18: true,
+        firefox18:   true,
         edge:        true,
       },
     },
@@ -4473,8 +4618,9 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
-        firefox18: true,  // a bug in FF18
-        firefox23: false,
+        firefox18:   true,  // a bug in FF18
+        firefox23:   false,
+        firefox40:   true,
         edge:        true,
       },
     },
@@ -4950,11 +5096,7 @@ exports.tests = [
           && match === String.prototype.match;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit: {
-          val: true,
-          note_id: "webkit-object-destructuring",
-          note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
-        },
+        webkit:       { val: true, note_id: "webkit-object-destructuring"  },
         safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
       }),
     },
@@ -5167,8 +5309,10 @@ exports.tests = [
     },
     'defaults': {
       exec: function(){/*
-        var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
-        return a === 1 && b === 2 && c === 3;
+        var {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};
+        var [d = 0, e = 5, f = 6] = [4,,undefined];
+        return a === 1 && b === 2 && c === 3
+          && d === 4 && e === 5 && f === 6;
       */},
       res: {
         tr:          true,
@@ -5180,10 +5324,11 @@ exports.tests = [
     },
     'defaults in parameters': {
       exec: function(){/*
-        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}) {
+        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
+            [f = 6, g = 0, h = 8]) {
           return a === 1 && b === 2 && c === 3 && d === 4 &&
-            e === 5 && f === undefined;
-        }({b:2, c:undefined, x:4}));
+            e === 5 && f === 6 && g === 7 && h === 8;
+        }({b:2, c:undefined, x:4},[, 7, undefined]));
       */},
       res: {
         tr:          true,
@@ -5227,9 +5372,8 @@ exports.tests = [
     },
     'defaults in parameters, new Function() support': {
       exec: function(){/*
-        return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5, z:f}",
-          "return a === 1 && b === 2 && c === 3 && d === 4 && "
-          + "e === 5 && f === undefined;"
+        return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}",
+          "return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;"
         )({b:2, c:undefined, x:4});
       */},
       res: {
@@ -5372,6 +5516,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         webkit:      true,
+        chrome45:    flag,
       },
     },
     'Object.is': {
@@ -5433,6 +5578,7 @@ exports.tests = [
         ie11:        true,
         firefox31:   true,
         chrome34:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -5676,6 +5822,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
         firefox11: false,
+        firefox39: true,
         rhino17:   false,
       }),
     },
@@ -5935,6 +6082,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome41:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -6073,6 +6221,7 @@ exports.tests = [
           note_id: 'string-contains',
           note_html: 'Available as the draft standard <code>String.prototype.contains</code>'
         },
+        firefox40:   true,
         chrome30:    { val: false, note_id: 'string-contains' },
         chrome41:    true,
         webkit:      true,
@@ -6184,6 +6333,8 @@ exports.tests = [
         edge:        true,
         webkit:      true,
         chrome44:    flag,
+        chrome45:    true,
+        firefox40:   true,
       }
     },
     'in identifiers': {
@@ -6816,6 +6967,7 @@ exports.tests = [
         es6shim:     true,
         edge:        true,
         firefox32:   true,
+        webkit:      true,
       },
     },
     'Array.prototype.find': {
@@ -8042,6 +8194,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome42:    true,
+        webkit:      true,
         iojs:        true,
       },
     },

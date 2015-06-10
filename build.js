@@ -31,6 +31,10 @@ var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
+var isOptional = function isOptional(category) {
+  return category === 'annex b' || category === 'pre-strawman';
+};
+
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   var es5 = require('./data-es5');
@@ -335,7 +339,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       .attr("significance",
         t.significance === "small" ? 0.25 :
         t.significance === "medium" ? 0.5 : 1)
-      .addClass(t.category === "annex b" ? 'annex_b' : '')
+      .addClass(isOptional(t.category) ? 'optional-feature' : '')
       .append($('<td></td>')
         .attr('id',id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
@@ -370,11 +374,16 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         "");
 
       // Add extra signifiers if the result is not applicable.
-      if (browsers[browserId].platformtype &&
+      if (isOptional(t.category) &&
+        // Annex B is only optional for non-browsers.
+        (t.category !== "annex b" || (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
-          !browsers[browserId].needs_annex_b &&
-          t.category==="annex b") {
-        cell.attr('title', "This feature is optional on non-browser platforms.");
+          !browsers[browserId].needs_annex_b))) {
+        var msg = {
+          'annex b': "This feature is optional on non-browser platforms",
+          'pre-strawman': "This proposal has not yet been accepted by ECMA Technical Committee 39",
+        }[t.category] + ", and doesn't contribute to the platform's support percentage.";
+        cell.attr('title', msg);
         cell.addClass("not-applicable");
       }
 

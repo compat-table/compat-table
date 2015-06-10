@@ -28,6 +28,7 @@
     "jshint": "2.6.x"
   },
   "scripts": {
-    "lint": "jshint data-es5.js data-es6.js data-es7.js"
+    "lint": "jshint data-es5.js data-es6.js data-es7.js",
+    "build:compilers": "node build.js compilers"
   }
 }
