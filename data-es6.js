@@ -7,11 +7,6 @@ var flag = "flagged";
 var fallthrough = "needs-polyfill-or-native";
 
 var typescript = {
-    compiler: { 
-        val: true, 
-        note_id: "typescript-compiler-or-native", 
-        note_html: "This feature is supported through a compiler error, or when the <code>--target ES6</code> flag is set and a native ES6 host is used." 
-    },
     corejs: { 
         val: true, 
         note_id: "typescript-core-js", 
@@ -697,7 +692,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.compiler,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -713,7 +708,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  typescript.compiler,
+        typescript:  true,
         ie11:        true,
         firefox36:   true,
       },
@@ -775,7 +770,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.compiler,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -796,7 +791,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  typescript.compiler,
+        typescript:  true,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -875,7 +870,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  typescript.compiler,
+        typescript:  true,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -978,7 +973,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  typescript.compiler,
+        typescript:  true,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -5979,7 +5974,6 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: "name-configurable", },
-        typescript:  typescript.corejs,
         edge:        flag,
       },
     },
@@ -6509,7 +6503,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.compiler,
+        typescript:  true,
         edge:        true,
         firefox36:   true,
         webkit:      true,
@@ -8227,7 +8221,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
-        typescript: typescript.compiler
+        typescript: true
       },
     },
     'accessors aren\'t constructors': {
