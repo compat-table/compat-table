@@ -6,6 +6,24 @@ var temp = {};
 var flag = "flagged";
 var fallthrough = "needs-polyfill-or-native";
 
+var typescript = {
+    compiler: { 
+        val: true, 
+        note_id: "typescript-compiler-or-native", 
+        note_html: "This feature is supported through a compiler error, or when the <code>--target ES6</code> flag is set and a native ES6 host is used." 
+    },
+    corejs: { 
+        val: true, 
+        note_id: "typescript-core-js", 
+        note_html: "This feature is supported when using TypeScript with core-js, or when a native ES6 host is used."
+    },
+    fallthrough: {
+        val: fallthrough,
+        note_id: "typescript-es6",
+        note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+    }
+};
+
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
 exports.skeleton_file = 'es6/skeleton.html';
@@ -47,9 +65,9 @@ exports.browsers = {
   },
   typescript: {
     full: 'TypeScript 1.5-alpha',
-    short: 'Type-<br />Script',
+    short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
-    platformtype: 'compiler',
+    platformtype: 'compiler'
   },
   es6shim: {
     full: 'es6-shim',
@@ -385,11 +403,7 @@ exports.tests = [
           note_html: 'Requires the <code>properTailCalls</code> compile option.'
         },
         babel:       true,
-        typescript:  (temp.typescriptFallthrough = {
-            val: fallthrough,
-            note_id: "typescript-es6",
-            note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
-        }),
+        typescript:  typescript.fallthrough,
       },
     },
     'mutual recursion': {
@@ -411,7 +425,7 @@ exports.tests = [
       */},
       res: {
         tr:          { val: flag, note_id: 'tr-tco' },
-        typescript:  temp.typescriptFallthrough
+        typescript:  typescript.fallthrough
       },
     }
   }
@@ -671,7 +685,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.compiler,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -687,7 +701,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.compiler,
         ie11:        true,
         firefox36:   true,
       },
@@ -749,7 +763,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.compiler,
         es6tr:       true,
         ejs:         true,
         closure:     true,
@@ -770,7 +784,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.compiler,
         ie11:        true,
         firefox36:   true,
         chrome19dev: flag,
@@ -849,7 +863,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.compiler,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -873,7 +887,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         closure:     true,
       },
@@ -952,7 +966,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.compiler,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -981,7 +995,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         closure:     true,
         chrome37:    flag,
@@ -1084,7 +1098,7 @@ exports.tests = [
         )(3);
       */},
       res: {
-        typescript: temp.typescriptFallthrough,
+        typescript: typescript.fallthrough,
         edge:        flag,
       },
     },
@@ -1413,6 +1427,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -2112,7 +2127,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  true,
         edge:        true,
         tr:          true,
         es6tr:       true,
@@ -2292,7 +2307,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         edge:        true,
         firefox17:   true,
@@ -2315,7 +2330,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge:        true,
@@ -2340,7 +2355,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge:        true,
         firefox36:   true,
@@ -2362,7 +2377,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -2379,7 +2394,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -2952,7 +2967,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
-        typescript: temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox36:   true,
         chrome30:    flag,
@@ -2969,7 +2984,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
-        typescript: temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox36:   true,
         chrome30:    flag,
@@ -3096,7 +3111,7 @@ exports.tests = [
         konq49:      true,
         node:        true,
         iojs:        true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       }),
     },
     'Uint8Array': {
@@ -3123,7 +3138,7 @@ exports.tests = [
         opera:       true,
         node:        true,
         iojs:        true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'Int16Array': {
@@ -3191,7 +3206,7 @@ exports.tests = [
         opera:       true,
         node:        true,
         iojs:        true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       }),
     },
     'DataView (Uint8)': {
@@ -3297,7 +3312,7 @@ exports.tests = [
     var eqFn = ' === "function"';
     var obj = {};
     for (var m in methods) {
-      methods[m].typescript = temp.typescriptFallthrough,
+      methods[m].typescript = typescript.fallthrough,
 
       obj['%TypedArray%' + m] = {
         exec: eval('0,function(){/*\n  return typeof '
@@ -3336,7 +3351,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3361,7 +3376,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3384,7 +3399,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         webkit:      true,
       },
     },
@@ -3396,7 +3411,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3420,7 +3435,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         es6shim:     true,
         edge:        true,
         firefox29:   true,
@@ -3443,7 +3458,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3463,7 +3478,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3483,7 +3498,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3503,7 +3518,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3523,7 +3538,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3543,7 +3558,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3563,7 +3578,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3597,7 +3612,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3621,7 +3636,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3647,7 +3662,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         webkit:      true,
       },
     },
@@ -3659,7 +3674,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3684,7 +3699,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox29:   true,
         chrome39:    true,
@@ -3708,7 +3723,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3728,7 +3743,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3748,7 +3763,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3768,7 +3783,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         ie11:        true,
@@ -3788,7 +3803,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3807,7 +3822,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3827,7 +3842,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -3860,7 +3875,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ie11:        true,
         firefox11:   true,
         chrome21dev: flag,
@@ -3883,7 +3898,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox36:   true,
         chrome38:    true,
@@ -3904,7 +3919,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         webkit:      true,
       },
     },
@@ -3916,7 +3931,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         chrome38:    true,
@@ -3934,7 +3949,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ie11:        true,
         firefox11:   true,
         chrome21dev: flag,
@@ -3955,7 +3970,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox11:   true,
         chrome21dev: flag,
@@ -3986,7 +4001,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         firefox34:   true,
@@ -4006,7 +4021,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         firefox34:   true,
@@ -4029,7 +4044,7 @@ exports.tests = [
       res: {
         babel:       true,
         webkit:      true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
       },
     },
     'WeakSet.prototype.add returns this': {
@@ -4040,7 +4055,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         chrome38:    true,
@@ -4056,7 +4071,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         firefox34:   true,
@@ -4087,7 +4102,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4104,7 +4119,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   {
           val: false,
@@ -4128,7 +4143,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4147,7 +4162,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox37:   true,
       },
@@ -4165,7 +4180,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4183,7 +4198,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4201,7 +4216,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4225,7 +4240,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   {
           val: false,
@@ -4254,7 +4269,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4272,7 +4287,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
       },
     },
@@ -4294,7 +4309,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
       },
     },
@@ -4313,7 +4328,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         firefox31:   true,
         edge:        true,
       },
@@ -4334,7 +4349,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         firefox23:   true,
         edge:        true,
       },
@@ -4356,7 +4371,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox37:   true,
       },
@@ -4375,7 +4390,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         firefox18:   {
           val: false,
           note_id: 'fx-proxy-ownkeys',
@@ -4401,7 +4416,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4419,7 +4434,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox18:   true,
       },
@@ -4437,7 +4452,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox34:   true,
       },
@@ -4447,7 +4462,7 @@ exports.tests = [
         return Array.isArray(new Proxy([], {}));
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         firefox18: true,
         edge:        true,
       },
@@ -4457,7 +4472,7 @@ exports.tests = [
         return JSON.stringify(new Proxy(['foo'], {})) === '["foo"]';
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         firefox18: true,  // a bug in FF18
         firefox23: false,
         edge:        true,
@@ -4478,7 +4493,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4492,7 +4507,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4504,7 +4519,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4518,7 +4533,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4533,7 +4548,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4547,7 +4562,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4559,7 +4574,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4572,7 +4587,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  { val: false, note_id: 'compiler-proto' },
         ejs:         true,
         edge:        true,
         es6shim:     { val: false, note_id: 'compiler-proto' },
@@ -4586,7 +4601,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4600,7 +4615,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
       },
@@ -4623,7 +4638,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -4652,7 +4667,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  { val: false, note_id: "forin-order" },
         ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
         edge:        true,
@@ -4679,7 +4694,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  { val: false, note_id: "forin-order" },
         ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
       }
@@ -4690,7 +4705,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -4704,7 +4719,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -4719,7 +4734,7 @@ exports.tests = [
         }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
       */},
       res: {
-          typescript:  temp.typescriptFallthrough,
+          typescript:  typescript.fallthrough,
       },
     },
   },
@@ -4807,7 +4822,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  true,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         firefox34:   true,
       },
@@ -4822,7 +4837,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        typescript:   temp.typescriptFallthrough,
+        typescript:   typescript.fallthrough,
         firefox34:    true,
         babel:        true,
       },
@@ -4838,7 +4853,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
-        typescript:   temp.typescriptFallthrough,
+        typescript:   typescript.fallthrough,
         firefox36:    true,
       },
     },
@@ -4852,7 +4867,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'iterable destructuring expression': {
@@ -5070,7 +5085,7 @@ exports.tests = [
       res: {
         safari71_8:  true,
         webkit:      true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'in parameters, function \'length\' property': {
@@ -5193,7 +5208,7 @@ exports.tests = [
       */},
       res: {
         babel:        flag,
-        typescript:   temp.typescriptFallthrough,
+        typescript:   typescript.fallthrough,
       },
     },
     'defaults in parameters, separate scope': {
@@ -5218,7 +5233,7 @@ exports.tests = [
         )({b:2, c:undefined, x:4});
       */},
       res: {
-        typescript:   temp.typescriptFallthrough,
+        typescript:   typescript.fallthrough,
       },
     },
   },
@@ -5257,7 +5272,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5290,7 +5305,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5323,7 +5338,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5352,6 +5367,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         es6shim:     true,
         edge:        true,
         firefox34:   true,
@@ -5369,6 +5385,7 @@ exports.tests = [
         ejs:         true,
         es6shim:     true,
         babel:       true,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox23:   true,
         chrome19dev: true,
@@ -5392,6 +5409,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         ejs:         true,
         edge:        true,
@@ -5410,6 +5428,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       { val: false, note_id: 'compiler-proto' },
+        typescript:  { val: false, note_id: 'compiler-proto' },
         es6shim:     { val: false, note_id: 'compiler-proto' },
         ie11:        true,
         firefox31:   true,
@@ -5432,6 +5451,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5445,6 +5465,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5460,6 +5481,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         edge:        true,
         firefox33:   true,
         chrome40:    true,
@@ -5475,6 +5497,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5488,6 +5511,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5501,6 +5525,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5514,6 +5539,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5527,6 +5553,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5540,6 +5567,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5554,6 +5582,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox35:   true,
@@ -5666,6 +5695,7 @@ exports.tests = [
       */},
       res: (temp.legacyFunctionNameResults = {
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         firefox11:   true,
         edge:        true,
@@ -5692,6 +5722,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
         firefox11:   true,
         edge:        true,
         safari51:    true,
@@ -5801,6 +5832,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: "name-configurable", },
+        typescript:  typescript.corejs,
         edge:        flag,
       },
     },
@@ -5897,6 +5929,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5912,6 +5945,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5938,6 +5972,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5970,6 +6005,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -5989,6 +6025,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6008,6 +6045,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6027,6 +6065,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         firefox18:   {
@@ -6216,7 +6255,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox36:   true,
         webkit:      true,
@@ -6233,7 +6272,7 @@ exports.tests = [
       res: {
         tr:          flag,
         babel:       flag,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  flag,
         ejs:         true,
         edge:        true,
         firefox36:   true,
@@ -6262,7 +6301,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         firefox36:   true,
@@ -6288,7 +6327,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         babel:       true,
         edge:        true,
@@ -6319,7 +6358,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  true,
+        typescript:  typescript.compiler,
         edge:        true,
         firefox36:   true,
         webkit:      true,
@@ -6334,7 +6373,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         chrome39:    true,
         firefox36:   true,
@@ -6356,7 +6395,7 @@ exports.tests = [
         tr:         true,
         babel:      true,
         typescript: true,
-        edge:        true,
+        edge:       true,
         firefox36:  true,
         webkit:     true,
         chrome35:   flag,
@@ -6376,12 +6415,12 @@ exports.tests = [
           symbolObject.valueOf() === symbol;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
-        firefox36:  true,
-        chrome30:   flag,
-        chrome35:   false,
-        webkit:     true,
+        firefox36:   true,
+        chrome30:    flag,
+        chrome35:    false,
+        webkit:      true,
       },
     },
     'global symbol registry': {
@@ -6392,7 +6431,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         firefox36:   true,
@@ -6423,7 +6462,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         ejs:         true,
       },
     },
@@ -6435,8 +6474,8 @@ exports.tests = [
         return a[0] === b;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
-       ejs:         true,
+        typescript: typescript.fallthrough,
+        ejs:        true,
       },
     },
     'Symbol.iterator': {
@@ -6460,7 +6499,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        true,
         firefox36:   true,
         webkit:      true,
@@ -6480,7 +6519,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
       },
     },
     'Symbol.toPrimitive': {
@@ -6498,7 +6537,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'Symbol.toStringTag': {
@@ -6510,7 +6549,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         chrome40:    flag,
         chrome44:    true,
         iojs:        flag,
@@ -6533,7 +6572,7 @@ exports.tests = [
           note_id: 'ejs-no-with',
           note_html: '<code>with</code> is not supported in ejs'
         },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         node:        true,
         iojs:        true,
       },
@@ -6553,7 +6592,7 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.corejs,
         es6shim:     true,
         firefox37:   true,
       },
@@ -6564,7 +6603,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'RegExp.prototype[Symbol.replace]': {
@@ -6573,7 +6612,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'RegExp.prototype[Symbol.split]': {
@@ -6582,7 +6621,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'RegExp.prototype[Symbol.search]': {
@@ -6591,7 +6630,7 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
   }
@@ -6634,6 +6673,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         es6shim:     true,
         ejs:         true,
         edge:        true,
@@ -6649,6 +6689,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -6663,10 +6704,11 @@ exports.tests = [
       */},
       res: {
         babel:        true,
+        typescript:   typescript.corejs,
         tr:           true,
-        edge:          true,
+        edge:         true,
         firefox36:    true,
-        webkit:      true,
+        webkit:       true,
       }
     },
     'Array.from map function, array-like objects': {
@@ -6678,6 +6720,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         es6shim:     true,
         ejs:         true,
         edge:        true,
@@ -6695,6 +6738,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -6710,10 +6754,11 @@ exports.tests = [
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
       */},
       res: {
-        babel:        true,
-        tr:           true,
-        edge:          true,
-        firefox36:    true,
+        babel:       true,
+        typescript:  typescript.corejs,
+        tr:          true,
+        edge:        true,
+        firefox36:   true,
         webkit:      true,
       }
     },
@@ -6730,6 +6775,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         webkit:      true,
       },
     },
@@ -6741,6 +6787,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6765,6 +6812,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         es6shim:     true,
         edge:        true,
         firefox32:   true,
@@ -6777,6 +6825,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6794,6 +6843,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6811,6 +6861,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6828,6 +6879,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6847,6 +6899,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6878,6 +6931,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6904,6 +6958,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
         edge:        true,
         chrome38:    true,
         webkit:      true,
@@ -6926,6 +6981,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6944,6 +7000,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6962,6 +7019,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6980,6 +7038,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -6998,6 +7057,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -7015,6 +7075,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -7033,6 +7094,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         es6shim:     true,
         edge:        true,
@@ -7057,6 +7119,7 @@ exports.tests = [
         ejs:         true,
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         es6shim:     true,
         edge:        true,
         firefox31:   true,
@@ -7069,6 +7132,7 @@ exports.tests = [
       'imul': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7088,6 +7152,7 @@ exports.tests = [
       'sign': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7102,6 +7167,7 @@ exports.tests = [
       'log10': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7117,6 +7183,7 @@ exports.tests = [
       'log2': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7132,6 +7199,7 @@ exports.tests = [
       'log1p': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7147,6 +7215,7 @@ exports.tests = [
       'expm1': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7161,6 +7230,7 @@ exports.tests = [
       'cosh': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7176,6 +7246,7 @@ exports.tests = [
       'sinh': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7191,6 +7262,7 @@ exports.tests = [
       'tanh': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7206,6 +7278,7 @@ exports.tests = [
       'acosh': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7221,6 +7294,7 @@ exports.tests = [
       'asinh': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7235,6 +7309,7 @@ exports.tests = [
       'atanh': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7250,6 +7325,7 @@ exports.tests = [
       'trunc': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7265,6 +7341,7 @@ exports.tests = [
       'fround': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7285,6 +7362,7 @@ exports.tests = [
       'cbrt': {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         edge:        true,
@@ -7317,6 +7395,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        typescript:  typescript.corejs,
         tr:          true,
         es6shim:     true,
         firefox27:   true,
@@ -7354,7 +7433,7 @@ exports.tests = [
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
-        typescript:  temp.typescriptFallthrough
+        typescript:  typescript.fallthrough
       },
     },
     'correct prototype chain': {
@@ -7367,7 +7446,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        flag,
       },
     },
@@ -7379,7 +7458,7 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
-          typescript:  temp.typescriptFallthrough
+          typescript:  typescript.fallthrough
       }
     },
     'Array.from': {
@@ -7390,7 +7469,7 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        flag,
       }
     },
@@ -7402,7 +7481,7 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        flag,
       }
     },
@@ -7422,7 +7501,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
@@ -7437,7 +7516,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        flag,
       },
     },
@@ -7449,7 +7528,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
@@ -7462,7 +7541,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
@@ -7483,7 +7562,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7495,7 +7574,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         edge:        flag,
       },
     },
@@ -7508,7 +7587,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7520,7 +7599,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7532,7 +7611,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
     },
@@ -7543,7 +7622,7 @@ exports.tests = [
         return c(6) === 9 && c instanceof C;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
   },
@@ -7582,7 +7661,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'correct prototype chain': {
@@ -7593,7 +7672,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough
+        typescript:  typescript.fallthrough
       },
     },
     'Promise.all': {
@@ -7617,7 +7696,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
     'Promise.race': {
@@ -7641,7 +7720,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
       },
     },
   },
@@ -7661,7 +7740,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -7674,7 +7753,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -7689,7 +7768,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -7705,7 +7784,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -7722,7 +7801,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         webkit:      true,
       },
     },
@@ -7994,7 +8073,8 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true
+        babel: true,
+        typescript: typescript.compiler
       },
     },
     'accessors aren\'t constructors': {
@@ -8036,6 +8116,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         es6shim:     true,
         edge:        true,
         firefox39:   true,

@@ -59,7 +59,7 @@ process.nextTick(function () {
   var babel       = require('babel');
   var traceur     = require('traceur');
   var jstransform = require('jstransform/simple');
-  var tss         = require('typescript-simple');
+  var ts          = require('typescript');
   [
     {
       name: 'es5-shim',
@@ -143,7 +143,14 @@ process.nextTick(function () {
       url: 'https://www.typescriptlang.org/',
       target_file: 'es6/compilers/typescript.html',
       polyfills: [],
-      compiler: tss,
+      compiler: ts.transpile
+    },
+    {
+      name: 'TypeScript + polyfill',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es6/compilers/typescript-polyfill.html',
+      polyfills: ["node_modules/core-js/client/core.js"],
+      compiler: ts.transpile
     },
     {
       name: 'Closure Compiler',
