@@ -1291,6 +1291,34 @@ exports.tests = [
         edge:        true,
       },
     },
+    'with generator instances, in calls': {
+      exec: function () {/*
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        return Math.max(...iterable) === 3;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox27:   true,
+        chrome44:    flag,
+        edge:        flag,
+      },
+    },
+    'with generator instances, in arrays': {
+      exec: function () {/*
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        return Math.max(...iterable) === 3;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox27:   true,
+        chrome44:    flag,
+        edge:        flag,
+      },
+    },
     'with generic iterables, in calls': {
       exec: function () {/*
         var iterable = global.__createIterableObject(1, 2, 3);
@@ -1302,10 +1330,10 @@ exports.tests = [
         es6tr:       {
           val: true,
           note_id: 'compiler-iterable',
-          note_html: 'This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.'
+          note_html: 'This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.'
         },
         ejs:         true,
-        firefox27:   true,
+        firefox36:   true,
         chrome44:    flag,
         edge:        true,
       },
@@ -1321,7 +1349,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge:        true,
-        firefox27:   true,
+        firefox36:   true,
         webkit:      true,
       },
     },
@@ -1350,7 +1378,6 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge:        true,
         firefox36:   true,
-        firefox27:   true,
         webkit:      true,
       },
     },
@@ -2316,6 +2343,29 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'with generator instances': {
+      exec: function () {/*
+        var result = "";
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        for (var item of iterable) {
+          result += item;
+        }
+        return result === "123";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        typescript:  temp.typescriptFallthrough,
+        es6tr:       { val: true, note_id: 'compiler-iterable' },
+        ejs:         true,
+        firefox27:   true,
+        chrome21dev: flag,
+        chrome38:    true,
+        node:        true,
+        iojs:        true,
+      },
+    },
     'with generic iterables': {
       exec: function () {/*
         var result = "";
@@ -2333,7 +2383,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge:        true,
-        firefox27:   true,
+        firefox36:   true,
         webkit:      true,
         chrome21dev: flag,
         chrome38:    true,
@@ -2677,6 +2727,33 @@ exports.tests = [
         edge:        flag,
       },
     },
+    'yield *, generator instances': {
+      exec: function () {/*
+        var iterator = (function * generator() {
+          yield * (function*(){ yield 5; yield 6; yield 7; }());
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 7 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        firefox27:   true,
+        chrome21dev: flag,
+        chrome39:    true,
+        node:        flag,
+        iojs:        true,
+        edge:        flag,
+      },
+    },
     'yield *, generic iterables': {
       exec: function () {/*
         var iterator = (function * generator() {
@@ -2696,7 +2773,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        firefox27:   true,
+        firefox36:   true,
         chrome21dev: flag,
         chrome39:    true,
         node:        flag,
@@ -3175,7 +3252,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         typescript:  true,
-        edge:        true,
         firefox34:   true,
         chrome41:    true,
         webkit:      true,
@@ -4956,6 +5032,21 @@ exports.tests = [
         typescript:  true,
         ejs:         true,
         firefox34:   true,
+      },
+    },
+    'with generator instances': {
+      exec: function(){/*
+        var [a, b, c] = (function*(){ yield 1; yield 2; }());
+        var d, e;
+        [d, e] = (function*(){ yield 3; yield 4; }());
+        return a === 1 && b === 2 && c === undefined
+          && d === 3 && e === 4;
+      */},
+      res: {
+        tr:           true,
+        typescript:   temp.typescriptFallthrough,
+        firefox34:    true,
+        babel:        true,
       },
     },
     'with generic iterables': {
@@ -6793,6 +6884,20 @@ exports.tests = [
         webkit:      true,
       }
     },
+    'Array.from, generator instances': {
+      exec: function () {/*
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        return Array.from(iterable) + '' === "1,2,3";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        es6shim:     true,
+        firefox32:   true,
+      }
+    },
     'Array.from, generic iterables': {
       exec: function () {/*
         var iterable = global.__createIterableObject(1, 2, 3);
@@ -6835,6 +6940,22 @@ exports.tests = [
         edge:        true,
         firefox32:   true,
         webkit:      true,
+      }
+    },
+    'Array.from map function, generator instances': {
+      exec: function () {/*
+        var iterable = (function*(){ yield "foo"; yield "bar"; yield "bal"; }());
+        return Array.from(iterable, function(e, i) {
+          return e + this.baz + i;
+        }, { baz: "d" }) + '' === "food0,bard1,bald2";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        es6shim:     true,
+        firefox32:   true,
       }
     },
     'Array.from map function, generic iterables': {
