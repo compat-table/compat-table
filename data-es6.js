@@ -1307,8 +1307,8 @@ exports.tests = [
     },
     'with generator instances, in arrays': {
       exec: function () {/*
-        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
-        return Math.max(...iterable) === 3;
+        var iterable = (function*(){ yield "b"; yield "c"; yield "d"; }());
+        return ["a", ...iterable, "e"][3] === "d";
       */},
       res: {
         tr:          true,
@@ -2088,7 +2088,7 @@ exports.tests = [
         edge:        true,
         firefox33:   true,
         chrome41:    flag,
-        chrome44:    true,
+        chrome43:    true,
         iojs:        true,
         webkit:      true,
       },
@@ -2108,7 +2108,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome41:    flag,
-        chrome44:    true,
+        chrome43:    true,
         iojs:        true,
         webkit:      true,
       }),
@@ -2357,7 +2357,6 @@ exports.tests = [
         babel:       true,
         closure:     true,
         typescript:  temp.typescriptFallthrough,
-        es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         firefox27:   true,
         chrome21dev: flag,
@@ -3497,11 +3496,11 @@ exports.tests = [
     '.prototype.join':        { edge:    true, firefox37: true, ejs: true },
     '.prototype.indexOf':     { edge:    true, firefox37: true, ejs: true },
     '.prototype.lastIndexOf': { edge:    true, firefox37: true, ejs: true },
-    '.prototype.slice':       { edge:    true, firefox39: true, ejs: true },
+    '.prototype.slice':       { edge:    true, firefox38: true, ejs: true },
     '.prototype.every':       { edge:    true, firefox37: true, ejs: true },
-    '.prototype.filter':      { edge:    true, firefox39: true },
+    '.prototype.filter':      { edge:    true, firefox38: true },
     '.prototype.forEach':     { edge:    true, firefox38: true, ejs: true },
-    '.prototype.map':         { edge:    true, firefox39: true },
+    '.prototype.map':         { edge:    true, firefox38: true },
     '.prototype.reduce':      { edge:    true, firefox37: true, ejs: true },
     '.prototype.reduceRight': { edge:    true, firefox37: true, ejs: true },
     '.prototype.reverse':     { edge:    true, firefox37: true },
@@ -6985,9 +6984,9 @@ exports.tests = [
       res: {
         babel:        true,
         tr:           true,
-        edge:          true,
+        edge:         true,
         firefox36:    true,
-        webkit:      true,
+        webkit:       true,
       }
     },
     'Array.from, iterator closing': {

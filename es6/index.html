@@ -1890,9 +1890,9 @@ return Math.max(...iterable) === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="spread_(...)_operator" id="spread_(...)_operator_with_generator_instances,_in_arrays"><td><span><a class="anchor" href="#spread_(...)_operator_with_generator_instances,_in_arrays">&#xA7;</a>with generator instances, in arrays</span><script data-source="
-var iterable = (function*(){ yield 1; yield 2; yield 3; }());
-return Math.max(...iterable) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");return Function("asyncTestPassed","\nvar iterable = (function*(){ yield 1; yield 2; yield 3; }());\nreturn Math.max(...iterable) === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+var iterable = (function*(){ yield &quot;b&quot;; yield &quot;c&quot;; yield &quot;d&quot;; }());
+return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");return Function("asyncTestPassed","\nvar iterable = (function*(){ yield \"b\"; yield \"c\"; yield \"d\"; }());\nreturn [\"a\", ...iterable, \"e\"][3] === \"d\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -2287,7 +2287,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="chrome40" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="chrome41" class="obsolete tally" data-tally="0" data-flagged-tally="0.5">0/6</td>
 <td data-browser="chrome42" class="obsolete tally" data-tally="0" data-flagged-tally="0.5">0/6</td>
-<td data-browser="chrome43" class="tally" data-tally="0" data-flagged-tally="0.5">0/6</td>
+<td data-browser="chrome43" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
 <td data-browser="chrome44" class="unstable tally" data-tally="1">6/6</td>
 <td data-browser="chrome45" class="unstable tally" data-tally="1">6/6</td>
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/6</td>
@@ -2427,7 +2427,7 @@ return c.a === 7 &amp;&amp; c.b === 8;
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no flagged obsolete" data-browser="chrome41">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome42">Flag</td>
-<td class="no flagged" data-browser="chrome43">Flag</td>
+<td class="yes" data-browser="chrome43">Yes</td>
 <td class="yes unstable" data-browser="chrome44">Yes</td>
 <td class="yes unstable" data-browser="chrome45">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
@@ -2496,7 +2496,7 @@ return ({ y() { return 2; } }).y() === 2;
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no flagged obsolete" data-browser="chrome41">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome42">Flag</td>
-<td class="no flagged" data-browser="chrome43">Flag</td>
+<td class="yes" data-browser="chrome43">Yes</td>
 <td class="yes unstable" data-browser="chrome44">Yes</td>
 <td class="yes unstable" data-browser="chrome45">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
@@ -2565,7 +2565,7 @@ return ({ &quot;foo bar&quot;() { return 4; } })[&quot;foo bar&quot;]() === 4;
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no flagged obsolete" data-browser="chrome41">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome42">Flag</td>
-<td class="no flagged" data-browser="chrome43">Flag</td>
+<td class="yes" data-browser="chrome43">Yes</td>
 <td class="yes unstable" data-browser="chrome44">Yes</td>
 <td class="yes unstable" data-browser="chrome45">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
@@ -2732,7 +2732,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <tr class="supertest" significance="1"><td id="for..of_loops"><span><a class="anchor" href="#for..of_loops">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements">for..of loops</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">8/8</td>
 <td data-browser="babel" class="tally" data-tally="1">8/8</td>
-<td data-browser="es6tr" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="es6tr" class="obsolete tally" data-tally="0.375" style="background-color:hsl(45,69%,50%)">3/8</td>
 <td data-browser="closure" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 <td data-browser="jsx" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td data-browser="typescript" class="tally" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
@@ -3021,7 +3021,7 @@ return result === &quot;123&quot;;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="yes obsolete" data-browser="es6tr">Yes<a href="#compiler-iterable-note"><sup>[9]</sup></a></td>
+<td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
@@ -13525,7 +13525,7 @@ return passed;
 <td data-browser="firefox35" class="obsolete tally" data-tally="0.475" style="background-color:hsl(57,65%,50%)">19/40</td>
 <td data-browser="firefox36" class="obsolete tally" data-tally="0.475" style="background-color:hsl(57,65%,50%)">19/40</td>
 <td data-browser="firefox37" class="obsolete tally" data-tally="0.825" style="background-color:hsl(99,49%,50%)">33/40</td>
-<td data-browser="firefox38" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">36/40</td>
+<td data-browser="firefox38" class="tally" data-tally="0.975" style="background-color:hsl(117,43%,50%)">39/40</td>
 <td data-browser="firefox39" class="unstable tally" data-tally="0.975" style="background-color:hsl(117,43%,50%)">39/40</td>
 <td data-browser="firefox40" class="unstable tally" data-tally="0.975" style="background-color:hsl(117,43%,50%)">39/40</td>
 <td data-browser="chrome" class="obsolete tally" data-tally="0.45" style="background-color:hsl(54,66%,50%)">18/40</td>
@@ -15279,7 +15279,7 @@ return typeof Int8Array.prototype.slice === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="firefox35">No</td>
 <td class="no obsolete" data-browser="firefox36">No</td>
 <td class="no obsolete" data-browser="firefox37">No</td>
-<td class="no" data-browser="firefox38">No</td>
+<td class="yes" data-browser="firefox38">Yes</td>
 <td class="yes unstable" data-browser="firefox39">Yes</td>
 <td class="yes unstable" data-browser="firefox40">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
@@ -15433,7 +15433,7 @@ return typeof Int8Array.prototype.filter === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="firefox35">No</td>
 <td class="no obsolete" data-browser="firefox36">No</td>
 <td class="no obsolete" data-browser="firefox37">No</td>
-<td class="no" data-browser="firefox38">No</td>
+<td class="yes" data-browser="firefox38">Yes</td>
 <td class="yes unstable" data-browser="firefox39">Yes</td>
 <td class="yes unstable" data-browser="firefox40">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
@@ -15587,7 +15587,7 @@ return typeof Int8Array.prototype.map === &quot;function&quot; &amp;&amp;
 <td class="no obsolete" data-browser="firefox35">No</td>
 <td class="no obsolete" data-browser="firefox36">No</td>
 <td class="no obsolete" data-browser="firefox37">No</td>
-<td class="no" data-browser="firefox38">No</td>
+<td class="yes" data-browser="firefox38">Yes</td>
 <td class="yes unstable" data-browser="firefox39">Yes</td>
 <td class="yes unstable" data-browser="firefox40">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
