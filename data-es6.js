@@ -311,7 +311,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r184902',
+    full: 'WebKit r185450',
     short: 'WK',
     unstable: true,
   },
@@ -6707,6 +6707,7 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         es6shim:     true,
         firefox37:   true,
+        webkit:      true,
       },
     },
     'RegExp.prototype[Symbol.match]': {
@@ -8103,6 +8104,7 @@ exports.tests = [
         closure:     true,
         ie10:        true,
         firefox11:   true,
+        webkit:      true,
         opera:       true,
       },
     },
