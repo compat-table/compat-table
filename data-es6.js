@@ -1405,7 +1405,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', note_html: 'Requires the <code>constructor</code> function to always be explicitly defined.' },
         typescript:  true,
       },
     },
@@ -1425,7 +1424,6 @@ exports.tests = [
         edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'class expression': {
@@ -1443,7 +1441,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'anonymous class': {
@@ -1460,7 +1457,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'constructor': {
@@ -1483,7 +1479,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'prototype methods': {
@@ -1506,7 +1501,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'string-keyed methods': {
@@ -1528,7 +1522,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed prototype methods': {
@@ -1549,7 +1542,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'static methods': {
@@ -1572,7 +1564,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed static methods': {
@@ -1593,7 +1584,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'accessor properties': {
@@ -1618,7 +1608,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed accessor properties': {
@@ -1638,7 +1627,6 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'static accessor properties': {
@@ -1661,7 +1649,6 @@ exports.tests = [
         edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
         webkit:      true,
       },
     },
@@ -1682,7 +1669,6 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'class name is lexically scoped': {
@@ -1702,7 +1688,6 @@ exports.tests = [
         edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed names, temporal dead zone': {
@@ -1717,7 +1702,6 @@ exports.tests = [
       */},
       res: {
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'methods aren\'t enumerable': {
@@ -1731,7 +1715,6 @@ exports.tests = [
       res: {
         babel:       true,
         jsx:         true,
-        chrome42:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
     },
@@ -1751,7 +1734,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'constructor requires new': {
@@ -1801,7 +1783,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       }),
     },
     'extends expressions': {
@@ -1825,7 +1806,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'extends null': {
@@ -1845,7 +1825,6 @@ exports.tests = [
         edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
         webkit:      true,
       },
     },
@@ -2363,6 +2342,7 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
+        edge:        flag,
       },
     },
     'with generic iterables': {
@@ -2384,7 +2364,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
-        chrome21dev: flag,
+        chrome37:    flag,
         chrome38:    true,
         node:        true,
         iojs:        true,
@@ -2408,7 +2388,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
-        chrome35:    flag,
+        chrome37:    flag,
         chrome38:    true,
         node:        true,
         iojs:        true,
@@ -2773,7 +2753,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox36:   true,
-        chrome21dev: flag,
+        chrome38:    flag,
         chrome39:    true,
         node:        flag,
         iojs:        true,
@@ -2800,7 +2780,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox36:   true,
-        chrome35:    flag,
+        chrome38:    flag,
         chrome39:    true,
         node:        flag,
         iojs:        true,
@@ -2956,7 +2936,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        firefox39:   { val: true, note_id: 'constructor-required', },
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         edge:        flag,
@@ -2983,7 +2962,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        firefox39:   { val: true, note_id: 'constructor-required', },
         edge:        flag,
       },
     },
@@ -6091,7 +6069,6 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
-        firefox39:    { val: true, note_id: 'constructor-required', },
       },
     },
     'class static methods': {
@@ -6103,7 +6080,6 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
-        firefox39:    { val: true, note_id: 'constructor-required', },
       },
     },
     'isn\'t writable, is configurable': {
@@ -6892,7 +6868,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         es6shim:     true,
         firefox32:   true,
       }
@@ -6920,9 +6896,9 @@ exports.tests = [
       res: {
         babel:        true,
         tr:           true,
-        edge:          true,
+        edge:         true,
         firefox36:    true,
-        webkit:      true,
+        webkit:       true,
       }
     },
     'Array.from map function, array-like objects': {
@@ -6952,7 +6928,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        edge:        true,
+        edge:        flag,
         es6shim:     true,
         firefox32:   true,
       }
@@ -7612,18 +7588,31 @@ exports.tests = [
   significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
   subtests: {
-    'basic functionality': {
+    'length property (accessing)': {
       exec: function () {/*
         class C extends Array {}
         var c = new C();
         var len1 = c.length;
         c[2] = 'foo';
         var len2 = c.length;
-        c.length = 1;
-        return len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);
+        return len1 === 0 && len2 === 3;
       */},
       res: {
-        babel:       true,
+        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
+        webkit:      true,
+        typescript:  temp.typescriptFallthrough
+      },
+    },
+    'length property (setting)': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c[2] = 'foo';
+        c.length = 1;
+        return c.length === 1 && !(2 in c);
+      */},
+      res: {
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7643,6 +7632,15 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         edge:        flag,
       },
+    },
+    'Array.isArray support': {
+      exec: function () {/*
+        class C extends Array {}
+        return Array.isArray(new C());
+      */},
+      res: {
+        typescript:  temp.typescriptFallthrough,
+      }
     },
     'Array.prototype.slice': {
       exec: function () {/*

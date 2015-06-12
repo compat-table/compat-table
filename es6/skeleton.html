@@ -13,13 +13,16 @@
         var global = this;
       }
       function __createIterableObject(a, b, c) {
+        if (!global.Symbol && Symbol.iterator)
+          return {};
         var arr = [a, b, c, ,];
-        var iterable = {
+        var iterator = {
           next: function() {
             return { value: arr.shift(), done: arr.length <= 0 };
           },
         };
-        iterable[Symbol.iterator] = function(){ return iterable; }
+        var iterable = {};
+        iterable[Symbol.iterator] = function(){ return iterator; }
         return iterable;
       }
     </script>
