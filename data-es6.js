@@ -1321,7 +1321,7 @@ exports.tests = [
     },
     'with generic iterables, in calls': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Math.max(...iterable) === 3;
       */},
       res: {
@@ -1340,7 +1340,7 @@ exports.tests = [
     },
     'with generic iterables, in arrays': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject(["b", "c", "d"]);
         return ["a", ...iterable, "e"][3] === "d";
       */},
       res: {
@@ -1355,7 +1355,7 @@ exports.tests = [
     },
     'with instances of iterables, in calls': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Math.max(...Object.create(iterable)) === 3;
       */},
       res: {
@@ -1369,7 +1369,7 @@ exports.tests = [
     },
     'with instances of iterables, in arrays': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject(["b", "c", "d"]);
         return ["a", ...Object.create(iterable), "e"][3] === "d";
       */},
       res: {
@@ -1405,6 +1405,7 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', note_html: 'Requires the <code>constructor</code> function to always be explicitly defined.' },
         typescript:  true,
       },
     },
@@ -1424,6 +1425,7 @@ exports.tests = [
         edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'class expression': {
@@ -1441,6 +1443,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'anonymous class': {
@@ -1457,6 +1460,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'constructor': {
@@ -1479,6 +1483,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'prototype methods': {
@@ -1501,6 +1506,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'string-keyed methods': {
@@ -1522,6 +1528,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed prototype methods': {
@@ -1542,6 +1549,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'static methods': {
@@ -1564,6 +1572,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed static methods': {
@@ -1584,6 +1593,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'accessor properties': {
@@ -1608,6 +1618,7 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed accessor properties': {
@@ -1627,6 +1638,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'static accessor properties': {
@@ -1649,6 +1661,7 @@ exports.tests = [
         edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
         webkit:      true,
       },
     },
@@ -1669,6 +1682,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'class name is lexically scoped': {
@@ -1688,6 +1702,7 @@ exports.tests = [
         edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed names, temporal dead zone': {
@@ -1702,6 +1717,7 @@ exports.tests = [
       */},
       res: {
         edge:        flag,
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'methods aren\'t enumerable': {
@@ -1715,6 +1731,7 @@ exports.tests = [
       res: {
         babel:       true,
         jsx:         true,
+        chrome42:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
     },
@@ -1734,6 +1751,7 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'constructor requires new': {
@@ -1783,6 +1801,7 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       }),
     },
     'extends expressions': {
@@ -1806,6 +1825,7 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'extends null': {
@@ -1825,6 +1845,7 @@ exports.tests = [
         edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
+        firefox39:   { val: true, note_id: 'constructor-required', },
         webkit:      true,
       },
     },
@@ -2342,13 +2363,12 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
-        edge:        flag,
       },
     },
     'with generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         for (var item of iterable) {
           result += item;
         }
@@ -2364,7 +2384,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
-        chrome37:    flag,
+        chrome21dev: flag,
         chrome38:    true,
         node:        true,
         iojs:        true,
@@ -2373,7 +2393,7 @@ exports.tests = [
     'with instances of generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         for (var item of Object.create(iterable)) {
           result += item;
         }
@@ -2388,7 +2408,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
-        chrome37:    flag,
+        chrome35:    flag,
         chrome38:    true,
         node:        true,
         iojs:        true,
@@ -2397,8 +2417,9 @@ exports.tests = [
     'iterator closing, break': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         for (var it of iter) break;
         return closed;
       */},
@@ -2412,8 +2433,9 @@ exports.tests = [
     'iterator closing, throw': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           for (var it of iter) throw 0;
         } catch(e){}
@@ -2736,7 +2758,7 @@ exports.tests = [
     'yield *, generic iterables': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * global.__createIterableObject(5, 6, 7);
+          yield * global.__createIterableObject([5, 6, 7]);
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
@@ -2753,7 +2775,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox36:   true,
-        chrome38:    flag,
+        chrome21dev: flag,
         chrome39:    true,
         node:        flag,
         iojs:        true,
@@ -2763,7 +2785,7 @@ exports.tests = [
     'yield *, instances of iterables': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * Object.create(__createIterableObject(5, 6, 7));
+          yield * Object.create(__createIterableObject([5, 6, 7]));
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
@@ -2780,7 +2802,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         firefox36:   true,
-        chrome38:    flag,
+        chrome35:    flag,
         chrome39:    true,
         node:        flag,
         iojs:        true,
@@ -2790,11 +2812,12 @@ exports.tests = [
     'yield *, iterator closing': {
       exec: function () {/*
         var closed = '';
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){
-          closed += 'a';
-          return {done: true};
-        }
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){
+            closed += 'a';
+            return {done: true};
+          }
+        });
         var gen = (function* generator(){
           try {
             yield *iter;
@@ -2815,12 +2838,13 @@ exports.tests = [
     'yield *, iterator closing via throw()': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['throw'] = undefined;
-        iter['return'] = function(){
-          closed = true;
-          return {done: true};
-        }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'throw': undefined,
+          'return': function() {
+            closed = true;
+            return {done: true};
+          }
+        });
         var gen = (function*(){
           try {
             yield *iter;
@@ -2936,6 +2960,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
+        firefox39:   { val: true, note_id: 'constructor-required', },
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         edge:        flag,
@@ -2962,6 +2987,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
+        firefox39:   { val: true, note_id: 'constructor-required', },
         edge:        flag,
       },
     },
@@ -3573,8 +3599,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           new Map(iter);
         } catch(e){}
@@ -3833,8 +3860,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         var add = Set.prototype.add;
         Set.prototype.add = function(){ throw 0 };
         try {
@@ -4093,8 +4121,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           new WeakMap(iter);
         } catch(e){}
@@ -4217,8 +4246,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           new WeakSet(iter);
         } catch(e){}
@@ -4226,8 +4256,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        webkit:      true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
     'WeakSet.prototype.add returns this': {
@@ -5028,9 +5058,9 @@ exports.tests = [
     },
     'with generic iterables': {
       exec: function(){/*
-        var [a, b, c] = global.__createIterableObject(1, 2);
+        var [a, b, c] = global.__createIterableObject([1, 2]);
         var d, e;
-        [d, e] = global.__createIterableObject(3, 4);
+        [d, e] = global.__createIterableObject([3, 4]);
         return a === 1 && b === 2 && c === undefined
           && d === 3 && e === 4;
       */},
@@ -5043,9 +5073,9 @@ exports.tests = [
     },
     'with instances of generic iterables': {
       exec: function(){/*
-        var [a, b, c] = Object.create(global.__createIterableObject(1, 2))
+        var [a, b, c] = Object.create(global.__createIterableObject([1, 2]))
         var d, e;
-        [d, e] = Object.create(global.__createIterableObject(3, 4));
+        [d, e] = Object.create(global.__createIterableObject([3, 4]));
         return a === 1 && b === 2 && c === undefined
           && d === 3 && e === 4;
       */},
@@ -5059,8 +5089,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         var [a, b] = iter;
         return closed;
       */},
@@ -6069,6 +6100,7 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
+        firefox39:    { val: true, note_id: 'constructor-required', },
       },
     },
     'class static methods': {
@@ -6080,6 +6112,7 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
+        firefox39:    { val: true, note_id: 'constructor-required', },
       },
     },
     'isn\'t writable, is configurable': {
@@ -6359,8 +6392,7 @@ exports.tests = [
         closure:     true,
         edge:        true,
         webkit:      true,
-        chrome44:    flag,
-        chrome45:    true,
+        chrome44:    true,
         firefox40:   true,
       }
     },
@@ -6371,7 +6403,7 @@ exports.tests = [
       */},
       res: {
         edge:        true,
-        chrome44:    flag,
+        chrome44:    true,
         webkit:      true,
       }
     },
@@ -6868,14 +6900,14 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        edge:        flag,
+        edge:        true,
         es6shim:     true,
         firefox32:   true,
       }
     },
     'Array.from, generic iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Array.from(iterable) + '' === "1,2,3";
       */},
       res: {
@@ -6890,15 +6922,15 @@ exports.tests = [
     },
     'Array.from, instances of generic iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
         babel:        true,
         tr:           true,
-        edge:         true,
+        edge:          true,
         firefox36:    true,
-        webkit:       true,
+        webkit:      true,
       }
     },
     'Array.from map function, array-like objects': {
@@ -6928,14 +6960,14 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        edge:        flag,
+        edge:        true,
         es6shim:     true,
         firefox32:   true,
       }
     },
     'Array.from map function, generic iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("foo", "bar", "bal");
+        var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
         return Array.from(iterable, function(e, i) {
           return e + this.baz + i;
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
@@ -6952,7 +6984,7 @@ exports.tests = [
     },
     'Array.from map function, instances of iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("foo", "bar", "bal");
+        var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
         return Array.from(Object.create(iterable), function(e, i) {
           return e + this.baz + i;
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
@@ -6968,8 +7000,9 @@ exports.tests = [
     'Array.from, iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           Array.from(iter, function() { throw 42 });
         } catch(e){}
@@ -7588,31 +7621,18 @@ exports.tests = [
   significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
   subtests: {
-    'length property (accessing)': {
+    'basic functionality': {
       exec: function () {/*
         class C extends Array {}
         var c = new C();
         var len1 = c.length;
         c[2] = 'foo';
         var len2 = c.length;
-        return len1 === 0 && len2 === 3;
-      */},
-      res: {
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome44:    { val: flag, note_id: 'strict-required' },
-        webkit:      true,
-        typescript:  temp.typescriptFallthrough
-      },
-    },
-    'length property (setting)': {
-      exec: function () {/*
-        class C extends Array {}
-        var c = new C();
-        c[2] = 'foo';
         c.length = 1;
-        return c.length === 1 && !(2 in c);
+        return len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);
       */},
       res: {
+        babel:       true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7632,15 +7652,6 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
         edge:        flag,
       },
-    },
-    'Array.isArray support': {
-      exec: function () {/*
-        class C extends Array {}
-        return Array.isArray(new C());
-      */},
-      res: {
-        typescript:  temp.typescriptFallthrough,
-      }
     },
     'Array.prototype.slice': {
       exec: function () {/*
