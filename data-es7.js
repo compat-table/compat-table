@@ -311,10 +311,112 @@ exports.tests = [
   name: 'typed objects',
   category: 'proposal',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
-  exec: function () {/*
-    return typeof StructType === "function";
-  */},
-  res: {
+  subtests : {
+    "StructType" : {
+      exec: function () {/*
+        return typeof TypedObject.StructType === "function";
+      */},
+      res: {
+      }
+    },
+    "ArrayType" : {
+      exec: function () {/*
+        return typeof TypedObject.ArrayType === "function";
+      */},
+      res: {
+      }
+    },
+    "TypedObject.storage" : {
+      exec: function () {/*
+        return typeof TypedObject.storage === "function";
+      */},
+      res: {
+      }
+    },
+    "Any type" : {
+      exec: function () {/*
+        return typeof TypedObject.Any === "function";
+      */},
+      res: {
+      }
+    },
+    "Object type" : {
+      exec: function () {/*
+        return typeof TypedObject.Object === "function";
+      */},
+      res: {
+      }
+    },
+    "float32 type" : {
+      exec: function () {/*
+        return typeof TypedObject.float32 === "function";
+      */},
+      res: {
+      }
+    },
+    "float64 type" : {
+      exec: function () {/*
+        return typeof TypedObject.float64 === "function";
+      */},
+      res: {
+      }
+    },
+    "int8 type" : {
+      exec: function () {/*
+        return typeof TypedObject.int8 === "function";
+      */},
+      res: {
+      }
+    },
+    "int16 type" : {
+      exec: function () {/*
+        return typeof TypedObject.int16 === "function";
+      */},
+      res: {
+      }
+    },
+    "int32 type" : {
+      exec: function () {/*
+        return typeof TypedObject.int32 === "function";
+      */},
+      res: {
+      }
+    },
+    "uint8 type" : {
+      exec: function () {/*
+        return typeof TypedObject.uint8 === "function";
+      */},
+      res: {
+      }
+    },
+    "uint8Clamped type" : {
+      exec: function () {/*
+        return typeof TypedObject.uint8Clamped === "function";
+      */},
+      res: {
+      }
+    },
+    "uint16 type" : {
+      exec: function () {/*
+        return typeof TypedObject.uint16 === "function";
+      */},
+      res: {
+      }
+    },
+    "uint32 type" : {
+      exec: function () {/*
+        return typeof TypedObject.uint32 === "function";
+      */},
+      res: {
+      }
+    },
+    "string type" : {
+      exec: function () {/*
+        return typeof TypedObject.string === "function";
+      */},
+      res: {
+      }
+    },
   }
 },
 {
@@ -490,7 +592,7 @@ exports.tests = [
     },
     'SIMD.%type%.bool' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.bool === 'function';
+        return typeof SIMD.int32x4.bool === 'function';
       */},
       res: {
         firefox39: true,
