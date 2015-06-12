@@ -3545,7 +3545,7 @@ exports.tests = [
 {
   name: 'Map',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   subtests: {
     'basic functionality': {
@@ -3806,7 +3806,7 @@ exports.tests = [
 {
   name: 'Set',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
   subtests: {
     'basic functionality': {
@@ -4071,7 +4071,7 @@ exports.tests = [
 {
   name: 'WeakMap',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
   subtests: {
     'basic functionality': {
@@ -4198,7 +4198,7 @@ exports.tests = [
 {
   name: 'WeakSet',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
   subtests: {
     'basic functionality': {
@@ -6659,6 +6659,11 @@ exports.tests = [
   category: 'built-ins',
   significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
+  note_id: 'symbol-iterator-functionality',
+  note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
+    + 'the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, '
+    + '<a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, '
+    + 'and <a href="#Array_static_methods">Array.from</a>.',
   subtests: {
     'Symbol.hasInstance': {
       exec: function() {/*
@@ -6690,20 +6695,7 @@ exports.tests = [
     },
     'Symbol.iterator': {
       exec: function() {/*
-        var a = 0, b = {};
-        b[Symbol.iterator] = function() {
-          return {
-            next: function() {
-              return {
-                done: a++ === 1,
-                value: "foo"
-              };
-            }
-          };
-        };
-        var c;
-        for (c of b) {}
-        return c === "foo";
+        return "iterator" in Symbol;
       */},
       res: {
         tr:          true,
@@ -6718,6 +6710,21 @@ exports.tests = [
         ejs:         true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'Symbol.iterator, arguments object': {
+      exec: function() {/*
+        return (function() {
+          return typeof arguments[Symbol.iterator] === 'function'
+            && Object.hasOwnProperty.call(arguments, Symbol.iterator);
+        }());
+      */},
+      res: {
+        chrome37:    flag,
+        chrome38:    true,
+        node:        true,
+        iojs:        true,
+        edge:        true,
       },
     },
     'Symbol.species': {
@@ -6759,6 +6766,19 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
+        typescript:  temp.typescriptFallthrough,
+        chrome40:    flag,
+        chrome44:    true,
+        iojs:        flag,
+      },
+    },
+    'Symbol.toStringTag, misc. built-ins': {
+      exec: function() {/*
+        var s = Symbol.toStringTag;
+        return Math[s] === "Math"
+          && JSON[s] === "JSON";
+      */},
+      res: {
         typescript:  temp.typescriptFallthrough,
         chrome40:    flag,
         chrome44:    true,
@@ -7621,22 +7641,33 @@ exports.tests = [
   significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
   subtests: {
-    'basic functionality': {
+    'length property (accessing)': {
       exec: function () {/*
         class C extends Array {}
         var c = new C();
         var len1 = c.length;
         c[2] = 'foo';
         var len2 = c.length;
-        c.length = 1;
-        return len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);
+        return len1 === 0 && len2 === 3;
       */},
       res: {
-        babel:       true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
-        typescript:  temp.typescriptFallthrough
+      },
+    },
+    'length property (setting)': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c[2] = 'foo';
+        c.length = 1;
+        return c.length === 1 && !(2 in c);
+      */},
+      res: {
+        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
+        webkit:      true,
       },
     },
     'correct prototype chain': {
@@ -7649,9 +7680,16 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
-        typescript:  temp.typescriptFallthrough,
         edge:        flag,
       },
+    },
+    'Array.isArray support': {
+      exec: function () {/*
+        class C extends Array {}
+        return Array.isArray(new C());
+      */},
+      res: {
+      }
     },
     'Array.prototype.slice': {
       exec: function () {/*
@@ -7661,7 +7699,6 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
-          typescript:  temp.typescriptFallthrough
       }
     },
     'Array.from': {
@@ -7672,7 +7709,6 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
         edge:        flag,
       }
     },
@@ -7684,8 +7720,62 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  temp.typescriptFallthrough,
         edge:        flag,
+      }
+    },
+    'Symbol.species, Array.prototype.concat': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.concat.call(obj, []).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.filter': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.filter.call(obj, Boolean).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.map': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.map.call(obj, Boolean).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.slice': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.slice.call(obj, 0).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.splice': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.splice.call(obj, 0).foo === 1;
+      */},
+      res: {
       }
     },
   },
@@ -7748,6 +7838,21 @@ exports.tests = [
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
+    },
+    'Symbol.species, RegExp.prototype[Symbol.split]': {
+      exec: function () {/*
+        var passed = false;
+        var obj = { constructor: false };
+        obj[Symbol.split] = RegExp.prototype[Symbol.split];
+        obj[Symbol.species] = function() {
+          passed = true;
+          return /./;
+        };
+        "".split(obj);
+        return passed;
+      */},
+      res: {
+      }
     },
   },
 },
