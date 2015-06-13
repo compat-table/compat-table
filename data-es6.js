@@ -7949,7 +7949,6 @@ exports.tests = [
         return r.global && r.source === "baz";
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7976,7 +7975,6 @@ exports.tests = [
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7989,7 +7987,6 @@ exports.tests = [
         return r.test("foobarbaz");
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -8010,7 +8007,6 @@ exports.tests = [
         return c() === 'foo';
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8035,7 +8031,6 @@ exports.tests = [
         return new c().bar === 2 && new c().baz === 3;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8047,7 +8042,6 @@ exports.tests = [
         return c.call({bar:1}, 2) === 3;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8059,7 +8053,6 @@ exports.tests = [
         return c.apply({bar:1}, [2]) === 3;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8109,7 +8102,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -8120,7 +8112,6 @@ exports.tests = [
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough
       },
     },
@@ -8144,7 +8135,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -8168,7 +8158,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -8188,7 +8177,6 @@ exports.tests = [
           && c == true;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8201,7 +8189,6 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8216,7 +8203,6 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8232,7 +8218,6 @@ exports.tests = [
         return map.has(key) && map.get(key) === 123;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8249,7 +8234,6 @@ exports.tests = [
         return set.has(123);
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
