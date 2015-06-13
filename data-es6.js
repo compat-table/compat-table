@@ -3481,6 +3481,12 @@ exports.tests = [
       */},
       res: temp.basicDataViewResults,
     },
+    'ArrayBuffer[Symbol.species]': {
+      exec: function(){/*
+        return typeof ArrayBuffer[Symbol.species] === 'function';
+      */},
+      res: {},
+    },
   },
   (function(){
     var methods = {
@@ -3517,6 +3523,8 @@ exports.tests = [
     '.prototype.keys':        { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
     '.prototype.values':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
     '.prototype.entries':     { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true },
+    '.prototype[Symbol.iterator]':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
+    '[Symbol.species]':       {},
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -3801,6 +3809,30 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Map.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof Map.prototype[Symbol.iterator] === "function";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        edge:        true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'Map[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Map, Symbol.species);
+        return 'get' in prop && Map[Symbol.species] === Map;
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -4066,6 +4098,30 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Set.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof Set.prototype[Symbol.iterator] === "function";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        edge:        true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'Set[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Set, Symbol.species);
+        return 'get' in prop && Set[Symbol.species] === Set;
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -4113,6 +4169,27 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         chrome38:    true,
+        webkit:      true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'frozen objects as keys': {
+      exec: function () {/*
+        var f = Object.freeze({});
+        var m = new WeakMap;
+        m.set(f, 42);
+        return m.get(f) === 42;
+      */},
+      res: {
+        babel:       true,
+        ejs:         true,
+        typescript:  temp.typescriptFallthrough,
+        edge:        true,
+        firefox11:   true,
+        chrome21dev: flag,
+        chrome36:    true,
+        safari71_8:  true,
         webkit:      true,
         node:        true,
         iojs:        true,
@@ -4172,25 +4249,12 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'Support frozen objects as keys': {
+    'WeakMap[Symbol.species]': {
       exec: function () {/*
-        var f = Object.freeze({});
-        var m = new WeakMap;
-        m.set(f, 42);
-        return m.get(f) === 42;
+        var prop = Object.getOwnPropertyDescriptor(WeakMap, Symbol.species);
+        return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
       */},
       res: {
-        babel:       true,
-        ejs:         true,
-        typescript:  temp.typescriptFallthrough,
-        edge:        true,
-        firefox11:   true,
-        chrome21dev: flag,
-        chrome36:    true,
-        safari71_8:  true,
-        webkit:      true,
-        node:        true,
-        iojs:        true,
       },
     },
   },
@@ -4293,6 +4357,14 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'WeakSet[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(WeakSet, Symbol.species);
+        return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
+      */},
+      res: {
       },
     },
   },
@@ -5578,6 +5650,14 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Promise[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Promise, Symbol.species);
+        return 'get' in prop && Promise[Symbol.species] === Promise;
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -6125,7 +6205,7 @@ exports.tests = [
       res: {
         edge:         true,
         firefox38:    true,
-        chrome44:     true,
+        chrome43:     true,
       },
     },
   },
@@ -6288,6 +6368,22 @@ exports.tests = [
         node:        { val: flag, note_id: 'string-contains' },
         iojs:        true,
         edge:        true,
+      },
+    },
+    'String.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof String.prototype[Symbol.iterator] === 'function';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        node:        true,
+        iojs:        true,
       },
     },
   },
@@ -6693,7 +6789,7 @@ exports.tests = [
        ejs:         true,
       },
     },
-    'Symbol.iterator': {
+    'Symbol.iterator, existence': {
       exec: function() {/*
         return "iterator" in Symbol;
       */},
@@ -6727,17 +6823,85 @@ exports.tests = [
         edge:        true,
       },
     },
-    'Symbol.species': {
+    'Symbol.species, existence': {
       exec: function() {/*
-        return RegExp[Symbol.species] === RegExp
-          && Array[Symbol.species] === Array
-          && !(Symbol.species in Object);
+        return "species" in Symbol;
       */},
       res: {
         ejs:         true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
       },
+    },
+    'Symbol.species, Array.prototype.concat': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.concat.call(obj, []).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.filter': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.filter.call(obj, Boolean).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.map': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.map.call(obj, Boolean).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.slice': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.slice.call(obj, 0).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.splice': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.splice.call(obj, 0).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, RegExp.prototype[Symbol.split]': {
+      exec: function () {/*
+        var passed = false;
+        var obj = { constructor: false };
+        obj[Symbol.split] = RegExp.prototype[Symbol.split];
+        obj[Symbol.species] = function() {
+          passed = true;
+          return /./;
+        };
+        "".split(obj);
+        return passed;
+      */},
+      res: {
+      }
     },
     'Symbol.toPrimitive': {
       exec: function() {/*
@@ -6862,6 +7026,14 @@ exports.tests = [
       res: {
         ejs:         true,
         typescript:  temp.typescriptFallthrough,
+      },
+    },
+    'RegExp[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(RegExp, Symbol.species);
+        return 'get' in prop && RegExp[Symbol.species] === RegExp;
+      */},
+      res: {
       },
     },
   }
@@ -7051,6 +7223,14 @@ exports.tests = [
         webkit:      true,
       },
     },
+    'Array[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Array, Symbol.species);
+        return 'get' in prop && Array[Symbol.species] === Array;
+      */},
+      res: {
+      },
+    },
   },
 },
 {
@@ -7190,6 +7370,30 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'Array.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof Array.prototype[Symbol.iterator] === 'function';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        webkit:      true,
+        firefox17:   {
+          val: false,
+          note_id: 'fx-array-prototype-values',
+        },
+        firefox27:   {
+          val: false,
+          note_id: 'fx-array-prototype-values-2',
+        },
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        node:        true,
       },
     },
     'Array.prototype[Symbol.unscopables]': {
@@ -7723,61 +7927,6 @@ exports.tests = [
         edge:        flag,
       }
     },
-    'Symbol.species, Array.prototype.concat': {
-      exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
-        };
-        return Array.prototype.concat.call(obj, []).foo === 1;
-      */},
-      res: {
-      }
-    },
-    'Symbol.species, Array.prototype.filter': {
-      exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
-        };
-        return Array.prototype.filter.call(obj, Boolean).foo === 1;
-      */},
-      res: {
-      }
-    },
-    'Symbol.species, Array.prototype.map': {
-      exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
-        };
-        return Array.prototype.map.call(obj, Boolean).foo === 1;
-      */},
-      res: {
-      }
-    },
-    'Symbol.species, Array.prototype.slice': {
-      exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
-        };
-        return Array.prototype.slice.call(obj, 0).foo === 1;
-      */},
-      res: {
-      }
-    },
-    'Symbol.species, Array.prototype.splice': {
-      exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
-        };
-        return Array.prototype.splice.call(obj, 0).foo === 1;
-      */},
-      res: {
-      }
-    },
   },
 },
 {
@@ -7838,21 +7987,6 @@ exports.tests = [
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
       },
-    },
-    'Symbol.species, RegExp.prototype[Symbol.split]': {
-      exec: function () {/*
-        var passed = false;
-        var obj = { constructor: false };
-        obj[Symbol.split] = RegExp.prototype[Symbol.split];
-        obj[Symbol.species] = function() {
-          passed = true;
-          return /./;
-        };
-        "".split(obj);
-        return passed;
-      */},
-      res: {
-      }
     },
   },
 },
