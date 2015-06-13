@@ -3831,6 +3831,7 @@ exports.tests = [
         return 'get' in prop && Map[Symbol.species] === Map;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4120,6 +4121,7 @@ exports.tests = [
         return 'get' in prop && Set[Symbol.species] === Set;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4255,6 +4257,7 @@ exports.tests = [
         return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4365,6 +4368,7 @@ exports.tests = [
         return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4979,7 +4983,7 @@ exports.tests = [
         return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
       */},
       res: {
-        babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
+        babel:       true,
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
@@ -5656,6 +5660,7 @@ exports.tests = [
         return 'get' in prop && Promise[Symbol.species] === Promise;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -6017,7 +6022,6 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
-        babel:       true,
         firefox11:   true,
         edge:        true,
         safari51:    true,
@@ -6943,6 +6947,7 @@ exports.tests = [
           && JSON[s] === "JSON";
       */},
       res: {
+        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome40:    flag,
         chrome44:    true,
@@ -7034,6 +7039,7 @@ exports.tests = [
         return 'get' in prop && RegExp[Symbol.species] === RegExp;
       */},
       res: {
+        babel:       true,
       },
     },
   }
@@ -7229,6 +7235,7 @@ exports.tests = [
         return 'get' in prop && Array[Symbol.species] === Array;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -7942,7 +7949,6 @@ exports.tests = [
         return r.global && r.source === "baz";
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7969,7 +7975,6 @@ exports.tests = [
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7982,7 +7987,6 @@ exports.tests = [
         return r.test("foobarbaz");
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -8003,7 +8007,6 @@ exports.tests = [
         return c() === 'foo';
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8028,7 +8031,6 @@ exports.tests = [
         return new c().bar === 2 && new c().baz === 3;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8040,7 +8042,6 @@ exports.tests = [
         return c.call({bar:1}, 2) === 3;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8052,7 +8053,6 @@ exports.tests = [
         return c.apply({bar:1}, [2]) === 3;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -8102,7 +8102,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -8113,7 +8112,6 @@ exports.tests = [
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough
       },
     },
@@ -8137,7 +8135,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -8161,7 +8158,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  temp.typescriptFallthrough,
       },
     },
@@ -8181,7 +8177,6 @@ exports.tests = [
           && c == true;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8194,7 +8189,6 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8209,7 +8203,6 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8225,7 +8218,6 @@ exports.tests = [
         return map.has(key) && map.get(key) === 123;
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
@@ -8242,7 +8234,6 @@ exports.tests = [
         return set.has(123);
       */},
       res: {
-        babel:       true,
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
       },
