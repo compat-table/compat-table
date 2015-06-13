@@ -3831,6 +3831,7 @@ exports.tests = [
         return 'get' in prop && Map[Symbol.species] === Map;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4120,6 +4121,7 @@ exports.tests = [
         return 'get' in prop && Set[Symbol.species] === Set;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4255,6 +4257,7 @@ exports.tests = [
         return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -4365,6 +4368,7 @@ exports.tests = [
         return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -5656,6 +5660,7 @@ exports.tests = [
         return 'get' in prop && Promise[Symbol.species] === Promise;
       */},
       res: {
+        babel:       true,
       },
     },
   },
@@ -6943,6 +6948,7 @@ exports.tests = [
           && JSON[s] === "JSON";
       */},
       res: {
+        babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome40:    flag,
         chrome44:    true,
@@ -7034,6 +7040,7 @@ exports.tests = [
         return 'get' in prop && RegExp[Symbol.species] === RegExp;
       */},
       res: {
+        babel:       true,
       },
     },
   }
@@ -7229,6 +7236,7 @@ exports.tests = [
         return 'get' in prop && Array[Symbol.species] === Array;
       */},
       res: {
+        babel:       true,
       },
     },
   },
