@@ -25467,7 +25467,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 </tr>
 <tr class="supertest" significance="0.25"><td id="function_name_property"><span><a class="anchor" href="#function_name_property">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname">function &quot;name&quot; property</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/17</td>
-<td data-browser="babel" class="tally" data-tally="0.5294117647058824" style="background-color:hsl(63,62%,50%)">9/17</td>
+<td data-browser="babel" class="tally" data-tally="0.5882352941176471" style="background-color:hsl(70,60%,50%)">10/17</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/17</td>
@@ -25538,7 +25538,7 @@ return foo.name === &apos;foo&apos; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("347");return Function("asyncTestPassed","\nfunction foo(){};\nreturn foo.name === 'foo' &&\n  (function(){}).name === '';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -25608,7 +25608,7 @@ return (function foo(){}).name === &apos;foo&apos; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("348");return Function("asyncTestPassed","\nreturn (function foo(){}).name === 'foo' &&\n  (function(){}).name === '';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -25677,7 +25677,7 @@ return (new Function).name === &quot;anonymous&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("349");return Function("asyncTestPassed","\nreturn (new Function).name === \"anonymous\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="babel">No</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>

@@ -5996,6 +5996,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
+        babel:       true,
         ejs:         true,
         firefox11:   true,
         edge:        true,
@@ -6021,7 +6022,6 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
-        babel:       true,
         firefox11:   true,
         edge:        true,
         safari51:    true,
