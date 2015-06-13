@@ -4983,7 +4983,7 @@ exports.tests = [
         return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
       */},
       res: {
-        babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
+        babel:       true,
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
@@ -5996,7 +5996,6 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: (temp.legacyFunctionNameResults = {
-        babel:       true,
         ejs:         true,
         firefox11:   true,
         edge:        true,
