@@ -878,7 +878,7 @@ exports.tests = [
 },
 {
   name: 'RegExp.escape',
-  category: 'strawman',
+  category: 'pre-strawman',
   link: 'https://github.com/benjamingr/RexExp.escape',
   exec: function(){/*
     return RegExp.escape('Hello, /\\^$*+?.()|[]{}!') === 'Hello, \\/\\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!';
