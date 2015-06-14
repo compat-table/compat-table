@@ -3825,6 +3825,25 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Map iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = new Map()[Symbol.iterator]();
+        // %MapIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
     'Map[Symbol.species]': {
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Map, Symbol.species);
@@ -4113,6 +4132,25 @@ exports.tests = [
         edge:        true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'Set iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = new Set()[Symbol.iterator]();
+        // %SetIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
       },
     },
     'Set[Symbol.species]': {
@@ -6390,6 +6428,25 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'String iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = ''[Symbol.iterator]();
+        // %StringIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
   },
 },
 {
@@ -7401,6 +7458,25 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         node:        true,
+      },
+    },
+    'Array iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = [][Symbol.iterator]();
+        // %ArrayIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
       },
     },
     'Array.prototype[Symbol.unscopables]': {
