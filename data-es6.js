@@ -4986,7 +4986,7 @@ exports.tests = [
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
-        es6shim:     { val: false, note_id: "forin-order" },
+        es6shim:     true,
       }
     },
     'Reflect.apply': {
