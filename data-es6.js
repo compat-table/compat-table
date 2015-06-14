@@ -311,7 +311,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r185450',
+    full: 'WebKit r185544',
     short: 'WK',
     unstable: true,
   },
@@ -3820,6 +3820,7 @@ exports.tests = [
         firefox36:   true,
         chrome37:    flag,
         chrome38:    true,
+        webkit:      true,
         edge:        true,
         node:        true,
         iojs:        true,
@@ -4129,6 +4130,7 @@ exports.tests = [
         firefox36:   true,
         chrome37:    flag,
         chrome38:    true,
+        webkit:      true,
         edge:        true,
         node:        true,
         iojs:        true,
@@ -6424,6 +6426,7 @@ exports.tests = [
         firefox36:   true,
         chrome37:    flag,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
       },
@@ -6879,6 +6882,7 @@ exports.tests = [
       res: {
         chrome37:    flag,
         chrome38:    true,
+        webkit:      true,
         node:        true,
         iojs:        true,
         edge:        true,
@@ -7976,6 +7980,7 @@ exports.tests = [
         return Array.isArray(new C());
       */},
       res: {
+        webkit:      true,
       }
     },
     'Array.prototype.slice': {
