@@ -2366,7 +2366,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        typescript:  temp.typescriptFallthrough,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         firefox27:   true,
         chrome21dev: flag,
@@ -2378,7 +2378,7 @@ exports.tests = [
     'with generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = global.__createIterableObject([1, 2, 3]);
+        var iterable = global.__createIterableObject(1, 2, 3);
         for (var item of iterable) {
           result += item;
         }
@@ -3826,6 +3826,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         firefox36:   true,
         chrome37:    flag,
@@ -3853,6 +3854,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'Map[Symbol.species]': {
@@ -4136,6 +4138,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         firefox36:   true,
         chrome37:    flag,
@@ -4163,6 +4166,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'Set[Symbol.species]': {
@@ -4172,6 +4176,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
@@ -4420,6 +4425,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
@@ -5178,16 +5184,16 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        typescript:   temp.typescriptFallthrough,
+        typescript:   typescript.fallthrough,
         firefox34:    true,
         babel:        true,
       },
     },
     'with generic iterables': {
       exec: function(){/*
-        var [a, b, c] = global.__createIterableObject([1, 2]);
+        var [a, b, c] = global.__createIterableObject(1, 2);
         var d, e;
-        [d, e] = global.__createIterableObject([3, 4]);
+        [d, e] = global.__createIterableObject(3, 4);
         return a === 1 && b === 2 && c === undefined
           && d === 3 && e === 4;
       */},
@@ -5712,6 +5718,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
@@ -6454,6 +6461,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         firefox36:   true,
@@ -6481,6 +6489,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
@@ -7193,6 +7202,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+	typescript:  typescript.fallthrough,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -7207,7 +7217,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.corejs,
+	typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -7256,6 +7266,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -7288,12 +7299,12 @@ exports.tests = [
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        tr:          true,
-        edge:        true,
-        firefox36:   true,
-        webkit:      true,
+        babel:        true,
+        typescript:   typescript.corejs,
+        tr:           true,
+        edge:         true,
+        firefox36:    true,
+        webkit:       true,
       }
     },
     'Array.from, iterator closing': {
@@ -7339,6 +7350,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
@@ -7496,6 +7508,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         webkit:      true,
@@ -7530,6 +7543,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'Array.prototype[Symbol.unscopables]': {
@@ -8065,7 +8079,6 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
-          typescript:  temp.typescriptFallthrough
       }
     },
     'Array.from': {

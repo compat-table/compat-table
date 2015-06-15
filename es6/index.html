@@ -3031,7 +3031,7 @@ return result === &quot;123&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -3093,12 +3093,12 @@ return result === &quot;123&quot;;
 </tr>
 <tr class="subtest" data-parent="for..of_loops" id="for..of_loops_with_generic_iterables"><td><span><a class="anchor" href="#for..of_loops_with_generic_iterables">&#xA7;</a>with generic iterables</span><script data-source="
 var result = &quot;&quot;;
-var iterable = global.__createIterableObject([1, 2, 3]);
+var iterable = global.__createIterableObject(1, 2, 3);
 for (var item of iterable) {
   result += item;
 }
 return result === &quot;123&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");return Function("asyncTestPassed","\nvar result = \"\";\nvar iterable = global.__createIterableObject([1, 2, 3]);\nfor (var item of iterable) {\n  result += item;\n}\nreturn result === \"123\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");return Function("asyncTestPassed","\nvar result = \"\";\nvar iterable = global.__createIterableObject(1, 2, 3);\nfor (var item of iterable) {\n  result += item;\n}\nreturn result === \"123\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4526,7 +4526,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4587,12 +4587,12 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_with_generic_iterables"><td><span><a class="anchor" href="#destructuring_with_generic_iterables">&#xA7;</a>with generic iterables</span><script data-source="
-var [a, b, c] = global.__createIterableObject([1, 2]);
+var [a, b, c] = global.__createIterableObject(1, 2);
 var d, e;
-[d, e] = global.__createIterableObject([3, 4]);
+[d, e] = global.__createIterableObject(3, 4);
 return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
   &amp;&amp; d === 3 &amp;&amp; e === 4;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nvar [a, b, c] = global.__createIterableObject([1, 2]);\nvar d, e;\n[d, e] = global.__createIterableObject([3, 4]);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");return Function("asyncTestPassed","\nvar [a, b, c] = global.__createIterableObject(1, 2);\nvar d, e;\n[d, e] = global.__createIterableObject(3, 4);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -16788,7 +16788,7 @@ return typeof Int8Array[Symbol.species] === &quot;function&quot; &amp;&amp;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="closure" class="tally" data-tally="0">0/15</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/15</td>
-<td data-browser="typescript" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">12/15</td>
+<td data-browser="typescript" class="tally" data-tally="0.9333333333333333" style="background-color:hsl(112,44%,50%)">14/15</td>
 <td data-browser="es6shim" class="tally" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11" class="tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">5/15</td>
@@ -17714,7 +17714,7 @@ return typeof Map.prototype[Symbol.iterator] === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17793,7 +17793,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -17929,7 +17929,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="closure" class="tally" data-tally="0">0/15</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/15</td>
-<td data-browser="typescript" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">12/15</td>
+<td data-browser="typescript" class="tally" data-tally="1">15/15</td>
 <td data-browser="es6shim" class="tally" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11" class="tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">5/15</td>
@@ -18860,7 +18860,7 @@ return typeof Set.prototype[Symbol.iterator] === &quot;function&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18939,7 +18939,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19009,7 +19009,7 @@ return &apos;get&apos; in prop &amp;&amp; Set[Symbol.species] === Set;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19647,7 +19647,7 @@ return &apos;get&apos; in prop &amp;&amp; WeakMap[Symbol.species] === WeakMap;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/6</td>
-<td data-browser="typescript" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
+<td data-browser="typescript" class="tally" data-tally="1">6/6</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/6</td>
@@ -20080,7 +20080,7 @@ return &apos;get&apos; in prop &amp;&amp; WeakSet[Symbol.species] === WeakSet;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -22985,7 +22985,7 @@ return Reflect.construct(function(a, b, c) {
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="closure" class="tally" data-tally="0">0/4</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/4</td>
-<td data-browser="typescript" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
+<td data-browser="typescript" class="tally" data-tally="1">4/4</td>
 <td data-browser="es6shim" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
@@ -23311,7 +23311,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27114,7 +27114,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/8</td>
 <td data-browser="closure" class="tally" data-tally="0">0/8</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/8</td>
-<td data-browser="typescript" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="typescript" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td data-browser="es6shim" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/8</td>
@@ -27603,7 +27603,7 @@ return typeof String.prototype[Symbol.iterator] === &apos;function&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -27682,7 +27682,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28229,7 +28229,7 @@ return &apos;get&apos; in prop &amp;&amp; RegExp[Symbol.species] === RegExp;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/11</td>
 <td data-browser="closure" class="tally" data-tally="0">0/11</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/11</td>
-<td data-browser="typescript" class="tally" data-tally="0.7272727272727273" style="background-color:hsl(87,54%,50%)">8/11</td>
+<td data-browser="typescript" class="tally" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
 <td data-browser="es6shim" class="tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/11</td>
@@ -28368,7 +28368,7 @@ return Array.from(iterable) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -28651,7 +28651,7 @@ return Array.from(iterable, function(e, i) {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29011,7 +29011,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29077,7 +29077,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="closure" class="tally" data-tally="0">0/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
-<td data-browser="typescript" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td data-browser="typescript" class="tally" data-tally="1">10/10</td>
 <td data-browser="es6shim" class="tally" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/10</td>
@@ -29629,7 +29629,7 @@ return typeof Array.prototype[Symbol.iterator] === &apos;function&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29708,7 +29708,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
