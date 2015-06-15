@@ -324,7 +324,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r184902',
+    full: 'WebKit r185544',
     short: 'WK',
     unstable: true,
   },
@@ -1300,9 +1300,37 @@ exports.tests = [
         edge:        true,
       },
     },
+    'with generator instances, in calls': {
+      exec: function () {/*
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        return Math.max(...iterable) === 3;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox27:   true,
+        chrome44:    flag,
+        edge:        flag,
+      },
+    },
+    'with generator instances, in arrays': {
+      exec: function () {/*
+        var iterable = (function*(){ yield "b"; yield "c"; yield "d"; }());
+        return ["a", ...iterable, "e"][3] === "d";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox27:   true,
+        chrome44:    flag,
+        edge:        flag,
+      },
+    },
     'with generic iterables, in calls': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Math.max(...iterable) === 3;
       */},
       res: {
@@ -1311,17 +1339,17 @@ exports.tests = [
         es6tr:       {
           val: true,
           note_id: 'compiler-iterable',
-          note_html: 'This compiler requires generic iterables have a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.'
+          note_html: 'This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.'
         },
         ejs:         true,
-        firefox27:   true,
+        firefox36:   true,
         chrome44:    flag,
         edge:        true,
       },
     },
     'with generic iterables, in arrays': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject(["b", "c", "d"]);
         return ["a", ...iterable, "e"][3] === "d";
       */},
       res: {
@@ -1330,13 +1358,13 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge:        true,
-        firefox27:   true,
+        firefox36:   true,
         webkit:      true,
       },
     },
     'with instances of iterables, in calls': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Math.max(...Object.create(iterable)) === 3;
       */},
       res: {
@@ -1350,7 +1378,7 @@ exports.tests = [
     },
     'with instances of iterables, in arrays': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("b", "c", "d");
+        var iterable = global.__createIterableObject(["b", "c", "d"]);
         return ["a", ...Object.create(iterable), "e"][3] === "d";
       */},
       res: {
@@ -1359,7 +1387,6 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge:        true,
         firefox36:   true,
-        firefox27:   true,
         webkit:      true,
       },
     },
@@ -2071,7 +2098,7 @@ exports.tests = [
         edge:        true,
         firefox33:   true,
         chrome41:    flag,
-        chrome44:    true,
+        chrome43:    true,
         iojs:        true,
         webkit:      true,
       },
@@ -2091,7 +2118,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         chrome41:    flag,
-        chrome44:    true,
+        chrome43:    true,
         iojs:        true,
         webkit:      true,
       }),
@@ -2326,10 +2353,32 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'with generator instances': {
+      exec: function () {/*
+        var result = "";
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        for (var item of iterable) {
+          result += item;
+        }
+        return result === "123";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        typescript:  temp.typescriptFallthrough,
+        ejs:         true,
+        firefox27:   true,
+        chrome21dev: flag,
+        chrome38:    true,
+        node:        true,
+        iojs:        true,
+      },
+    },
     'with generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         for (var item of iterable) {
           result += item;
         }
@@ -2343,7 +2392,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge:        true,
-        firefox27:   true,
+        firefox36:   true,
         webkit:      true,
         chrome21dev: flag,
         chrome38:    true,
@@ -2354,7 +2403,7 @@ exports.tests = [
     'with instances of generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         for (var item of Object.create(iterable)) {
           result += item;
         }
@@ -2378,8 +2427,9 @@ exports.tests = [
     'iterator closing, break': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         for (var it of iter) break;
         return closed;
       */},
@@ -2393,8 +2443,9 @@ exports.tests = [
     'iterator closing, throw': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           for (var it of iter) throw 0;
         } catch(e){}
@@ -2687,10 +2738,10 @@ exports.tests = [
         edge:        flag,
       },
     },
-    'yield *, generic iterables': {
+    'yield *, generator instances': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * global.__createIterableObject(5, 6, 7);
+          yield * (function*(){ yield 5; yield 6; yield 7; }());
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
@@ -2714,10 +2765,37 @@ exports.tests = [
         edge:        flag,
       },
     },
+    'yield *, generic iterables': {
+      exec: function () {/*
+        var iterator = (function * generator() {
+          yield * global.__createIterableObject([5, 6, 7]);
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 7 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        closure:     true,
+        firefox36:   true,
+        chrome21dev: flag,
+        chrome39:    true,
+        node:        flag,
+        iojs:        true,
+        edge:        flag,
+      },
+    },
     'yield *, instances of iterables': {
       exec: function () {/*
         var iterator = (function * generator() {
-          yield * Object.create(__createIterableObject(5, 6, 7));
+          yield * Object.create(__createIterableObject([5, 6, 7]));
         }());
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
@@ -2744,11 +2822,12 @@ exports.tests = [
     'yield *, iterator closing': {
       exec: function () {/*
         var closed = '';
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){
-          closed += 'a';
-          return {done: true};
-        }
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){
+            closed += 'a';
+            return {done: true};
+          }
+        });
         var gen = (function* generator(){
           try {
             yield *iter;
@@ -2769,12 +2848,13 @@ exports.tests = [
     'yield *, iterator closing via throw()': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['throw'] = undefined;
-        iter['return'] = function(){
-          closed = true;
-          return {done: true};
-        }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'throw': undefined,
+          'return': function() {
+            closed = true;
+            return {done: true};
+          }
+        });
         var gen = (function*(){
           try {
             yield *iter;
@@ -3185,7 +3265,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         typescript:  true,
-        edge:        true,
         firefox34:   true,
         chrome41:    true,
         webkit:      true,
@@ -3412,6 +3491,12 @@ exports.tests = [
       */},
       res: temp.basicDataViewResults,
     },
+    'ArrayBuffer[Symbol.species]': {
+      exec: function(){/*
+        return typeof ArrayBuffer[Symbol.species] === 'function';
+      */},
+      res: {},
+    },
   },
   (function(){
     var methods = {
@@ -3431,11 +3516,11 @@ exports.tests = [
     '.prototype.join':        { edge:    true, firefox37: true, ejs: true },
     '.prototype.indexOf':     { edge:    true, firefox37: true, ejs: true },
     '.prototype.lastIndexOf': { edge:    true, firefox37: true, ejs: true },
-    '.prototype.slice':       { edge:    true, firefox39: true, ejs: true },
+    '.prototype.slice':       { edge:    true, firefox38: true, ejs: true },
     '.prototype.every':       { edge:    true, firefox37: true, ejs: true },
-    '.prototype.filter':      { edge:    true, firefox39: true },
+    '.prototype.filter':      { edge:    true, firefox38: true },
     '.prototype.forEach':     { edge:    true, firefox38: true, ejs: true },
-    '.prototype.map':         { edge:    true, firefox39: true },
+    '.prototype.map':         { edge:    true, firefox38: true },
     '.prototype.reduce':      { edge:    true, firefox37: true, ejs: true },
     '.prototype.reduceRight': { edge:    true, firefox37: true, ejs: true },
     '.prototype.reverse':     { edge:    true, firefox37: true },
@@ -3448,6 +3533,8 @@ exports.tests = [
     '.prototype.keys':        { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
     '.prototype.values':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
     '.prototype.entries':     { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true },
+    '.prototype[Symbol.iterator]':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
+    '[Symbol.species]':       {},
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -3476,7 +3563,7 @@ exports.tests = [
 {
   name: 'Map',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
   subtests: {
     'basic functionality': {
@@ -3530,8 +3617,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           new Map(iter);
         } catch(e){}
@@ -3731,12 +3819,57 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Map.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof Map.prototype[Symbol.iterator] === "function";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        webkit:      true,
+        edge:        true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'Map iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = new Map()[Symbol.iterator]();
+        // %MapIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'Map[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Map, Symbol.species);
+        return 'get' in prop && Map[Symbol.species] === Map;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
   },
 },
 {
   name: 'Set',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
   subtests: {
     'basic functionality': {
@@ -3790,8 +3923,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         var add = Set.prototype.add;
         Set.prototype.add = function(){ throw 0 };
         try {
@@ -3995,12 +4129,57 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Set.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof Set.prototype[Symbol.iterator] === "function";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        webkit:      true,
+        edge:        true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'Set iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = new Set()[Symbol.iterator]();
+        // %SetIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
+    'Set[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Set, Symbol.species);
+        return 'get' in prop && Set[Symbol.species] === Set;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
   },
 },
 {
   name: 'WeakMap',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
   subtests: {
     'basic functionality': {
@@ -4047,11 +4226,33 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'frozen objects as keys': {
+      exec: function () {/*
+        var f = Object.freeze({});
+        var m = new WeakMap;
+        m.set(f, 42);
+        return m.get(f) === 42;
+      */},
+      res: {
+        babel:       true,
+        ejs:         true,
+        typescript:  typescript.corejs,
+        edge:        true,
+        firefox11:   true,
+        chrome21dev: flag,
+        chrome36:    true,
+        safari71_8:  true,
+        webkit:      true,
+        node:        true,
+        iojs:        true,
+      },
+    },
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           new WeakMap(iter);
         } catch(e){}
@@ -4100,25 +4301,14 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'Support frozen objects as keys': {
+    'WeakMap[Symbol.species]': {
       exec: function () {/*
-        var f = Object.freeze({});
-        var m = new WeakMap;
-        m.set(f, 42);
-        return m.get(f) === 42;
+        var prop = Object.getOwnPropertyDescriptor(WeakMap, Symbol.species);
+        return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
       */},
       res: {
         babel:       true,
-        ejs:         true,
-        typescript:  typescript.corejs,
-        edge:        true,
-        firefox11:   true,
-        chrome21dev: flag,
-        chrome36:    true,
-        safari71_8:  true,
-        webkit:      true,
-        node:        true,
-        iojs:        true,
+	typescript:  typescript.corejs,
       },
     },
   },
@@ -4126,7 +4316,7 @@ exports.tests = [
 {
   name: 'WeakSet',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
   subtests: {
     'basic functionality': {
@@ -4174,8 +4364,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           new WeakSet(iter);
         } catch(e){}
@@ -4183,8 +4374,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        webkit:      true,
         typescript:  typescript.corejs,
+        webkit:      true,
       },
     },
     'WeakSet.prototype.add returns this': {
@@ -4220,6 +4411,15 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'WeakSet[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(WeakSet, Symbol.species);
+        return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
+      */},
+      res: {
+        babel:       true,
       },
     },
   },
@@ -4834,10 +5034,10 @@ exports.tests = [
         return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
       */},
       res: {
-        babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
-        typescript:  { val: false, note_id: "forin-order" },
+        babel:       true,
+        typescript:  typescript.corejs,
         ejs:         true,
-        es6shim:     { val: false, note_id: "forin-order" },
+        es6shim:     true,
       }
     },
     'Reflect.apply': {
@@ -4968,11 +5168,26 @@ exports.tests = [
         firefox34:   true,
       },
     },
+    'with generator instances': {
+      exec: function(){/*
+        var [a, b, c] = (function*(){ yield 1; yield 2; }());
+        var d, e;
+        [d, e] = (function*(){ yield 3; yield 4; }());
+        return a === 1 && b === 2 && c === undefined
+          && d === 3 && e === 4;
+      */},
+      res: {
+        tr:           true,
+        typescript:   temp.typescriptFallthrough,
+        firefox34:    true,
+        babel:        true,
+      },
+    },
     'with generic iterables': {
       exec: function(){/*
-        var [a, b, c] = global.__createIterableObject(1, 2);
+        var [a, b, c] = global.__createIterableObject([1, 2]);
         var d, e;
-        [d, e] = global.__createIterableObject(3, 4);
+        [d, e] = global.__createIterableObject([3, 4]);
         return a === 1 && b === 2 && c === undefined
           && d === 3 && e === 4;
       */},
@@ -4985,9 +5200,9 @@ exports.tests = [
     },
     'with instances of generic iterables': {
       exec: function(){/*
-        var [a, b, c] = Object.create(global.__createIterableObject(1, 2))
+        var [a, b, c] = Object.create(global.__createIterableObject([1, 2]))
         var d, e;
-        [d, e] = Object.create(global.__createIterableObject(3, 4));
+        [d, e] = Object.create(global.__createIterableObject([3, 4]));
         return a === 1 && b === 2 && c === undefined
           && d === 3 && e === 4;
       */},
@@ -5001,8 +5216,9 @@ exports.tests = [
     'iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         var [a, b] = iter;
         return closed;
       */},
@@ -5489,6 +5705,15 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Promise[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Promise, Symbol.species);
+        return 'get' in prop && Promise[Symbol.species] === Promise;
+      */},
+      res: {
+        babel:       true,
+      },
+    },
   },
 },
 {
@@ -5863,8 +6088,6 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
         firefox11:   true,
         edge:        true,
         safari51:    true,
@@ -6052,7 +6275,7 @@ exports.tests = [
       res: {
         edge:         true,
         firefox38:    true,
-        chrome44:     true,
+        chrome43:     true,
       },
     },
   },
@@ -6224,6 +6447,42 @@ exports.tests = [
         edge:        true,
       },
     },
+    'String.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof String.prototype[Symbol.iterator] === 'function';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        webkit:      true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'String iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = ''[Symbol.iterator]();
+        // %StringIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+      },
+    },
   },
 },
 {
@@ -6326,8 +6585,7 @@ exports.tests = [
         closure:     true,
         edge:        true,
         webkit:      true,
-        chrome44:    flag,
-        chrome45:    true,
+        chrome44:    true,
         firefox40:   true,
       }
     },
@@ -6338,7 +6596,7 @@ exports.tests = [
       */},
       res: {
         edge:        true,
-        chrome44:    flag,
+        chrome44:    true,
         webkit:      true,
       }
     },
@@ -6594,6 +6852,11 @@ exports.tests = [
   category: 'built-ins',
   significance: 'medium',
   link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
+  note_id: 'symbol-iterator-functionality',
+  note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
+    + 'the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, '
+    + '<a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, '
+    + 'and <a href="#Array_static_methods">Array.from</a>.',
   subtests: {
     'Symbol.hasInstance': {
       exec: function() {/*
@@ -6623,22 +6886,9 @@ exports.tests = [
         ejs:        true,
       },
     },
-    'Symbol.iterator': {
+    'Symbol.iterator, existence': {
       exec: function() {/*
-        var a = 0, b = {};
-        b[Symbol.iterator] = function() {
-          return {
-            next: function() {
-              return {
-                done: a++ === 1,
-                value: "foo"
-              };
-            }
-          };
-        };
-        var c;
-        for (c of b) {}
-        return c === "foo";
+        return "iterator" in Symbol;
       */},
       res: {
         tr:          true,
@@ -6655,17 +6905,101 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'Symbol.species': {
+    'Symbol.iterator, arguments object': {
       exec: function() {/*
-        return RegExp[Symbol.species] === RegExp
-          && Array[Symbol.species] === Array
-          && !(Symbol.species in Object);
+        return (function() {
+          return typeof arguments[Symbol.iterator] === 'function'
+            && Object.hasOwnProperty.call(arguments, Symbol.iterator);
+        }());
+      */},
+      res: {
+        chrome37:    flag,
+        chrome38:    true,
+        webkit:      true,
+        node:        true,
+        iojs:        true,
+        edge:        true,
+      },
+    },
+    'Symbol.species, existence': {
+      exec: function() {/*
+        return "species" in Symbol;
       */},
       res: {
         ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
       },
+    },
+    'Symbol.species, Array.prototype.concat': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.concat.call(obj, []).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.filter': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.filter.call(obj, Boolean).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.map': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.map.call(obj, Boolean).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.slice': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.slice.call(obj, 0).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, Array.prototype.splice': {
+      exec: function () {/*
+        var obj = { constructor: false };
+        obj[Symbol.species] = function() {
+          return { foo: 1 };
+        };
+        return Array.prototype.splice.call(obj, 0).foo === 1;
+      */},
+      res: {
+      }
+    },
+    'Symbol.species, RegExp.prototype[Symbol.split]': {
+      exec: function () {/*
+        var passed = false;
+        var obj = { constructor: false };
+        obj[Symbol.split] = RegExp.prototype[Symbol.split];
+        obj[Symbol.species] = function() {
+          passed = true;
+          return /./;
+        };
+        "".split(obj);
+        return passed;
+      */},
+      res: {
+      }
     },
     'Symbol.toPrimitive': {
       exec: function() {/*
@@ -6694,6 +7028,20 @@ exports.tests = [
       res: {
         babel:       true,
         ejs:         true,
+        typescript:  typescript.corejs,
+        chrome40:    flag,
+        chrome44:    true,
+        iojs:        flag,
+      },
+    },
+    'Symbol.toStringTag, misc. built-ins': {
+      exec: function() {/*
+        var s = Symbol.toStringTag;
+        return Math[s] === "Math"
+          && JSON[s] === "JSON";
+      */},
+      res: {
+        babel:       true,
         typescript:  typescript.corejs,
         chrome40:    flag,
         chrome44:    true,
@@ -6740,6 +7088,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es6shim:     true,
         firefox37:   true,
+        webkit:      true,
       },
     },
     'RegExp.prototype[Symbol.match]': {
@@ -6776,6 +7125,16 @@ exports.tests = [
       res: {
         ejs:         true,
         typescript:  typescript.fallthrough,
+      },
+    },
+    'RegExp[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(RegExp, Symbol.species);
+        return 'get' in prop && RegExp[Symbol.species] === RegExp;
+      */},
+      res: {
+        babel:       true,
+	typescript:  typescript.corejs,
       },
     },
   }
@@ -6826,9 +7185,23 @@ exports.tests = [
         webkit:      true,
       }
     },
+    'Array.from, generator instances': {
+      exec: function () {/*
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        return Array.from(iterable) + '' === "1,2,3";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        es6shim:     true,
+        firefox32:   true,
+      }
+    },
     'Array.from, generic iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Array.from(iterable) + '' === "1,2,3";
       */},
       res: {
@@ -6844,7 +7217,7 @@ exports.tests = [
     },
     'Array.from, instances of generic iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
@@ -6873,9 +7246,25 @@ exports.tests = [
         webkit:      true,
       }
     },
+    'Array.from map function, generator instances': {
+      exec: function () {/*
+        var iterable = (function*(){ yield "foo"; yield "bar"; yield "bal"; }());
+        return Array.from(iterable, function(e, i) {
+          return e + this.baz + i;
+        }, { baz: "d" }) + '' === "food0,bard1,bald2";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        es6shim:     true,
+        firefox32:   true,
+      }
+    },
     'Array.from map function, generic iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("foo", "bar", "bal");
+        var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
         return Array.from(iterable, function(e, i) {
           return e + this.baz + i;
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
@@ -6893,7 +7282,7 @@ exports.tests = [
     },
     'Array.from map function, instances of iterables': {
       exec: function () {/*
-        var iterable = global.__createIterableObject("foo", "bar", "bal");
+        var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
         return Array.from(Object.create(iterable), function(e, i) {
           return e + this.baz + i;
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
@@ -6910,8 +7299,9 @@ exports.tests = [
     'Array.from, iterator closing': {
       exec: function () {/*
         var closed = false;
-        var iter = __createIterableObject(1, 2, 3);
-        iter['return'] = function(){ closed = true; return {}; }
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
         try {
           Array.from(iter, function() { throw 42 });
         } catch(e){}
@@ -6940,6 +7330,15 @@ exports.tests = [
         chrome39:    flag,
         chrome40:    false,
         webkit:      true,
+      },
+    },
+    'Array[Symbol.species]': {
+      exec: function () {/*
+        var prop = Object.getOwnPropertyDescriptor(Array, Symbol.species);
+        return 'get' in prop && Array[Symbol.species] === Array;
+      */},
+      res: {
+        babel:       true,
       },
     },
   },
@@ -7088,6 +7487,49 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'Array.prototype[Symbol.iterator]': {
+      exec: function () {/*
+        return typeof Array.prototype[Symbol.iterator] === 'function';
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        edge:        true,
+        webkit:      true,
+        firefox17:   {
+          val: false,
+          note_id: 'fx-array-prototype-values',
+        },
+        firefox27:   {
+          val: false,
+          note_id: 'fx-array-prototype-values-2',
+        },
+        firefox36:   true,
+        chrome37:    flag,
+        chrome38:    true,
+        node:        true,
+      },
+    },
+    'Array iterator prototype chain': {
+      exec: function () {/*
+        // Iterator instance
+        var iterator = [][Symbol.iterator]();
+        // %ArrayIteratorPrototype%
+        var proto1 = Object.getPrototypeOf(iterator);
+        // %IteratorPrototype%
+        var proto2 = Object.getPrototypeOf(proto1);
+        
+        return proto2.hasOwnProperty(Symbol.iterator) &&
+          !proto1    .hasOwnProperty(Symbol.iterator) &&
+          !iterator  .hasOwnProperty(Symbol.iterator) &&
+          iterator[Symbol.iterator]() === iterator;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
       },
     },
     'Array.prototype[Symbol.unscopables]': {
@@ -7564,22 +8006,33 @@ exports.tests = [
   significance: 'medium',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
   subtests: {
-    'basic functionality': {
+    'length property (accessing)': {
       exec: function () {/*
         class C extends Array {}
         var c = new C();
         var len1 = c.length;
         c[2] = 'foo';
         var len2 = c.length;
-        c.length = 1;
-        return len1 === 0 && len2 === 3 && c.length === 1 && !(2 in c);
+        return len1 === 0 && len2 === 3;
       */},
       res: {
-        babel:       true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
-        typescript:  typescript.fallthrough
+      },
+    },
+    'length property (setting)': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c[2] = 'foo';
+        c.length = 1;
+        return c.length === 1 && !(2 in c);
+      */},
+      res: {
+        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome44:    { val: flag, note_id: 'strict-required' },
+        webkit:      true,
       },
     },
     'correct prototype chain': {
@@ -7592,9 +8045,17 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome44:    { val: flag, note_id: 'strict-required' },
-        typescript:  typescript.fallthrough,
         edge:        flag,
       },
+    },
+    'Array.isArray support': {
+      exec: function () {/*
+        class C extends Array {}
+        return Array.isArray(new C());
+      */},
+      res: {
+        webkit:      true,
+      }
     },
     'Array.prototype.slice': {
       exec: function () {/*
@@ -7604,7 +8065,7 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
-          typescript:  typescript.fallthrough
+          typescript:  temp.typescriptFallthrough
       }
     },
     'Array.from': {
@@ -7615,7 +8076,6 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  typescript.fallthrough,
         edge:        flag,
       }
     },
@@ -7627,7 +8087,6 @@ exports.tests = [
       res: {
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  typescript.fallthrough,
         edge:        flag,
       }
     },
@@ -7646,7 +8105,6 @@ exports.tests = [
         return r.global && r.source === "baz";
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7673,7 +8131,6 @@ exports.tests = [
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7686,7 +8143,6 @@ exports.tests = [
         return r.test("foobarbaz");
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
         webkit:      true,
@@ -7707,7 +8163,6 @@ exports.tests = [
         return c() === 'foo';
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -7732,7 +8187,6 @@ exports.tests = [
         return new c().bar === 2 && new c().baz === 3;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -7744,7 +8198,6 @@ exports.tests = [
         return c.call({bar:1}, 2) === 3;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -7756,7 +8209,6 @@ exports.tests = [
         return c.apply({bar:1}, [2]) === 3;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         chrome44:    { val: flag, note_id: 'strict-required' },
       },
@@ -7806,7 +8258,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  typescript.fallthrough,
       },
     },
@@ -7817,7 +8268,6 @@ exports.tests = [
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  typescript.fallthrough
       },
     },
@@ -7841,7 +8291,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  typescript.fallthrough,
       },
     },
@@ -7865,7 +8314,6 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  typescript.fallthrough,
       },
     },
@@ -7885,7 +8333,6 @@ exports.tests = [
           && c == true;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         webkit:      true,
       },
@@ -7898,7 +8345,6 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         webkit:      true,
       },
@@ -7913,7 +8359,6 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         webkit:      true,
       },
@@ -7929,7 +8374,6 @@ exports.tests = [
         return map.has(key) && map.get(key) === 123;
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         webkit:      true,
       },
@@ -7946,7 +8390,6 @@ exports.tests = [
         return set.has(123);
       */},
       res: {
-        babel:       true,
         typescript:  typescript.fallthrough,
         webkit:      true,
       },
@@ -8176,6 +8619,7 @@ exports.tests = [
         closure:     true,
         ie10:        true,
         firefox11:   true,
+        webkit:      true,
         opera:       true,
       },
     },

@@ -12,20 +12,22 @@
       if (typeof global === "undefined") {
         window.global = this;
       }
-      function __createIterableObject(a, b, c) {
-        try {
-          return eval("(function*() { yield a; yield b; yield c; }())");
+      function __createIterableObject(arr, methods) {
+        methods = methods || {};
+        if (typeof Symbol !== 'function' || !Symbol.iterator) {
+          return {};
         }
-        catch (e) {
-          var arr = [a, b, c, ,];
-          var iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
-            },
-          };
-          iterable[Symbol.iterator] = function(){ return iterable; }
-          return iterable;
-        }
+        arr.length++;
+        var iterator = {
+          next: function() {
+            return { value: arr.shift(), done: arr.length <= 0 };
+          },
+          'return': methods['return'],
+          'throw': methods['throw']
+        };
+        var iterable = {};
+        iterable[Symbol.iterator] = function(){ return iterator; }
+        return iterable;
       }
     </script>
 </head>
@@ -41,7 +43,7 @@
   </div>
   <div id="body">
     <p class="warning">Please note that <em>some</em> compiled output <strong>may be buggy</strong> or not representative of the compiler's true support.</p>
-      
+
     <table id="table-wrapper" style="width:50%;">
       <colgroup>
         <col>

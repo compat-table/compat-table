@@ -12,20 +12,22 @@
       if (typeof global === 'undefined') {
         var global = this;
       }
-      function __createIterableObject(a, b, c) {
-        if (typeof Symbol === "function" && Symbol.iterator) {
-          var arr = [a, b, c, ,];
-          var iterable = {
-            next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 };
-            },
-          };
-          iterable[Symbol.iterator] = function(){ return iterable; }
-          return iterable;
+      function __createIterableObject(arr, methods) {
+        methods = methods || {};
+        if (typeof Symbol !== 'function' || !Symbol.iterator) {
+          return {};
         }
-        else {
-          return eval("(function*() { yield a; yield b; yield c; }())");
-        }
+        arr.length++;
+        var iterator = {
+          next: function() {
+            return { value: arr.shift(), done: arr.length <= 0 };
+          },
+          'return': methods['return'],
+          'throw': methods['throw']
+        };
+        var iterable = {};
+        iterable[Symbol.iterator] = function(){ return iterator; }
+        return iterable;
       }
     </script>
     <script>
@@ -91,9 +93,9 @@
       <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
       <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
       <br>
-      <span><span style="opacity:0.2;font-size:5px;">⬤</span> Useful feature</span>
-      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Significant feature</span>
-      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Landmark feature</span>
+      <span><span style="opacity:0.2;font-size:5px;">⬤</span> Useful feature (1 point)</span>
+      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Significant feature (2 points)</span>
+      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Landmark feature (4 points)</span>
     </div>
 
     <table id="table-wrapper">
