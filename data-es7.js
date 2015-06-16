@@ -162,7 +162,7 @@ exports.tests = [
 {
   name: 'bind (::) operator',
   link: 'https://github.com/zenparsing/es-function-bind',
-  category: 'pre-strawman',
+  category: 'strawman',
   subtests: {
     'binary form': {
       exec: function () {/*
