@@ -1320,6 +1320,90 @@ return O.a + O.b + O.c === 6;
 </tr>
 <tr class="category"><td colspan="25">Strawman</td>
 </tr>
+<tr class="supertest" significance="1"><td id="bind_(::)_operator"><span><a class="anchor" href="#bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
+<td data-browser="tr" class="tally" data-tally="0">0/2</td>
+<td data-browser="babel" class="tally" data-tally="1">2/2</td>
+<td data-browser="jsx" class="tally" data-tally="0">0/2</td>
+<td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
+<td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox35" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="firefox39" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="chrome30" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome33" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome34" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome35" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome37" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome38" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome39" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome40" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="chrome41" class="tally" data-tally="0">0/2</td>
+<td data-browser="chrome42" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="chrome43" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="node" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_binary_form"><td><span><a class="anchor" href="#bind_(::)_operator_binary_form">&#xA7;</a>binary form</span><script data-source="
+function foo() { this.garply += &quot;foo&quot;; return this; }
+var obj = { garply: &quot;bar&quot; };
+return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+</tr>
+<tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
+var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
+return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+</tr>
 <tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
 var object = {a: 1};
 var B = typeof Symbol === &apos;function&apos; ? Symbol(&apos;b&apos;) : &apos;b&apos;;
@@ -1330,7 +1414,7 @@ var D = Object.getOwnPropertyDescriptors(O);
 return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configurable === true &amp;&amp; D.a.writable === true
   &amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
   &amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");return Function("asyncTestPassed","\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");return Function("asyncTestPassed","\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1362,7 +1446,7 @@ class C {
   static y = &apos;y&apos;;
 }
 return new C().x + C.y === &apos;xy&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1393,7 +1477,7 @@ var map = new Map();
 map.set(&apos;a&apos;, &apos;b&apos;);
 map.set(&apos;c&apos;, &apos;d&apos;);
 return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quot;,&quot;d&quot;]]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");return Function("asyncTestPassed","\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");return Function("asyncTestPassed","\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1423,7 +1507,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 var set = new Set();
 [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
 return JSON.stringify(set) === &apos;[1,2,3]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");return Function("asyncTestPassed","\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");return Function("asyncTestPassed","\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1451,7 +1535,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 </tr>
 <tr significance="1"><td id="String.prototype.at"><span><a class="anchor" href="#String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1505,7 +1589,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.lpad"><td><span><a class="anchor" href="#string_padding_String.prototype.lpad">&#xA7;</a>String.prototype.lpad</span><script data-source="
 return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
   &amp;&amp; &apos;hello&apos;.lpad(10, &apos;1234&apos;) === &apos;41234hello&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");return Function("asyncTestPassed","\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");return Function("asyncTestPassed","\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1534,7 +1618,7 @@ return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
 <tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.rpad"><td><span><a class="anchor" href="#string_padding_String.prototype.rpad">&#xA7;</a>String.prototype.rpad</span><script data-source="
 return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
   &amp;&amp; &apos;hello&apos;.rpad(10, &apos;1234&apos;) === &apos;hello12341&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");return Function("asyncTestPassed","\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1562,7 +1646,7 @@ return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
 </tr>
 <tr significance="1"><td id="RegExp.escape"><span><a class="anchor" href="#RegExp.escape">&#xA7;</a><a href="https://github.com/benjamingr/RexExp.escape">RegExp.escape</a></span><script data-source="
 return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");return Function("asyncTestPassed","\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");return Function("asyncTestPassed","\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1589,90 +1673,6 @@ return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\
 <td class="no" data-browser="iojs">No</td>
 </tr>
 <tr class="category"><td colspan="25">Pre-strawman</td>
-</tr>
-<tr class="supertest optional-feature" significance="1"><td id="bind_(::)_operator"><span><a class="anchor" href="#bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
-<td data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">2/2</td>
-<td data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="firefox31" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="firefox32" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="firefox34" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="firefox35" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="firefox39" class="unstable not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome30" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome33" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome34" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome35" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome37" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome38" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome39" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome40" class="obsolete not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="chrome42" class="unstable not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="chrome43" class="unstable not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="webkit" class="unstable not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/2</td>
-<td data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/2</td>
-</tr>
-<tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_binary_form"><td><span><a class="anchor" href="#bind_(::)_operator_binary_form">&#xA7;</a>binary form</span><script data-source="
-function foo() { this.garply += &quot;foo&quot;; return this; }
-var obj = { garply: &quot;bar&quot; };
-return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
-</script></td>
-<td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox35" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox39" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome35" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome37" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome38" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome39" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome42" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome43" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-</tr>
-<tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
-var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
-return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
-</script></td>
-<td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox35" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox39" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome35" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome37" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome38" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome39" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome42" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome43" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="Object.values"><span><a class="anchor" href="#Object.values">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
