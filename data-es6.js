@@ -378,7 +378,7 @@ exports.tests = [
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tail-position-calls',
   subtests: {
     'direct recursion': {
       exec: function() {/*
@@ -432,7 +432,7 @@ exports.tests = [
   name: 'arrow functions',
   category: 'functions',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-arrow-function-definitions',
   subtests: {
     '0 parameters': {
       exec: function(){/*
@@ -629,7 +629,7 @@ exports.tests = [
   name: 'const',
   category: 'bindings',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
       exec: function() {/*
@@ -797,7 +797,7 @@ exports.tests = [
   name: 'let',
   category: 'bindings',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
       exec: function(){/*
@@ -1008,7 +1008,7 @@ exports.tests = [
   name: 'default function parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   subtests: {
     'basic functionality': {
       exec: function(){/*
@@ -1106,7 +1106,7 @@ exports.tests = [
   name: 'rest parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions',
   subtests: {
     'basic functionality': {
       exec: function() {/*
@@ -1201,7 +1201,7 @@ exports.tests = [
   name: 'spread (...) operator',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   subtests: {
     'with arrays, in function calls': {
       exec: function () {/*
@@ -1387,7 +1387,7 @@ exports.tests = [
   name: 'class',
   category: 'functions',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions',
   subtests: {
     'class statement': {
       exec: function () {/*
@@ -1873,7 +1873,7 @@ exports.tests = [
   name: 'super',
   category: 'functions',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-super-keyword',
   subtests: {
     'statement in constructors': {
       exec: function() {/*
@@ -2166,7 +2166,7 @@ exports.tests = [
   name: 'hoisted block-level function declaration',
   category: 'annex b',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
   exec: function () {/*
     // Note: only available outside of strict mode.
     { function f() { return 1; } }
@@ -2277,7 +2277,7 @@ exports.tests = [
   name: 'for..of loops',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements',
   subtests: {
     'with arrays': {
       exec: function () {/*
@@ -2454,7 +2454,7 @@ exports.tests = [
   name: 'generators',
   category: 'functions',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions',
   subtests: {
     'basic functionality': {
       exec: function() {/*
@@ -2997,7 +2997,7 @@ exports.tests = [
   name: 'prototype of bound functions',
   category: 'misc',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boundfunctioncreate',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boundfunctioncreate',
   subtests: {
     'basic functions': {
       exec: function () {/*
@@ -3103,7 +3103,7 @@ exports.tests = [
   name: 'octal and binary literals',
   category: 'syntax',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-numeric-literals',
   subtests: {
     'octal literals': {
       exec: function () {/*
@@ -3185,7 +3185,7 @@ exports.tests = [
   name: 'template strings',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -3267,7 +3267,7 @@ exports.tests = [
   name: 'RegExp "y" and "u" flags',
   category: 'syntax',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.sticky',
   subtests: {
     '"y" flag': {
       exec: function () {/*
@@ -3301,7 +3301,7 @@ exports.tests = [
   name: 'typed arrays',
   category: 'built-ins',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects',
   subtests: Object.assign({
     'Int8Array': {
       exec: function(){/*
@@ -3554,7 +3554,7 @@ exports.tests = [
   name: 'Map',
   category: 'built-ins',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -4306,7 +4306,7 @@ exports.tests = [
   name: 'WeakSet',
   category: 'built-ins',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -4417,7 +4417,7 @@ exports.tests = [
   name: 'Proxy',
   category: 'built-ins',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     '"get" handler': {
       exec: function () {/*
@@ -4814,7 +4814,7 @@ exports.tests = [
   name: 'Reflect',
   category: 'built-ins',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
   subtests: {
     'Reflect.get': {
       exec: function() {/*
@@ -5075,7 +5075,7 @@ exports.tests = [
   significance: 'small',
   note_id: 'block-level-function',
   note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
     function f() { return 1; }
@@ -5099,7 +5099,7 @@ exports.tests = [
   name: 'destructuring',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: {
     'with arrays': {
       exec: function(){/*
@@ -5586,7 +5586,7 @@ exports.tests = [
   name: 'Promise',
   category: 'built-ins',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -6027,7 +6027,7 @@ exports.tests = [
   name: 'function "name" property',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname',
   subtests: {
     'function statements': {
       exec: function () {/*
@@ -6456,7 +6456,7 @@ exports.tests = [
   name: 'String.prototype HTML methods',
   category: 'annex b',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor',
   subtests: {
     existence: {
       exec: function () {/*
@@ -6537,7 +6537,7 @@ exports.tests = [
   name: 'Unicode code point escapes',
   category: 'syntax',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-string-literals',
   subtests: {
     'in strings': {
       exec: function () {/*
@@ -6573,7 +6573,7 @@ exports.tests = [
   name: 'new.target',
   category: 'syntax',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-built-in-function-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects',
   subtests: {
     'in constructors': {
       exec: function () {/*
@@ -7510,7 +7510,7 @@ exports.tests = [
   name: 'Number properties',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-isfinite-number',
   subtests: {
     'Number.isFinite': {
       exec: function () {/*
@@ -7643,7 +7643,7 @@ exports.tests = [
   name: 'Math methods',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-math',
   subtests: (function(){
     var methods = {
       'clz32': {
@@ -7930,7 +7930,7 @@ exports.tests = [
   name: 'Array is subclassable',
   category: 'subclassing',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-array-constructor',
   subtests: {
     'length property (accessing)': {
       exec: function () {/*
@@ -8019,7 +8019,7 @@ exports.tests = [
 },
 {
   name: 'RegExp is subclassable',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8077,7 +8077,7 @@ exports.tests = [
 },
 {
   name: 'Function is subclassable',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8152,7 +8152,7 @@ exports.tests = [
 },
 {
   name: 'Promise is subclassable',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8246,7 +8246,7 @@ exports.tests = [
 },
 {
   name: 'miscellaneous subclassables',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boolean-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8323,7 +8323,7 @@ exports.tests = [
 },
 {
   name: 'own property order',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
   category: 'misc',
   significance: 'small',
   subtests: {
@@ -8524,7 +8524,7 @@ exports.tests = [
   name: 'miscellaneous',
   category: 'misc',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
     'no escaped reserved words as identifiers': {
       exec: function() {/*
