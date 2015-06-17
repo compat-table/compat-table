@@ -885,6 +885,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    es7shim:     true,
   }
 }
 ];
