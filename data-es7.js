@@ -426,225 +426,395 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'float32x4' : {
+    'Float32x4' : {
       exec: function(){/*
-        return typeof SIMD.float32x4 === 'function';
+        return typeof SIMD.Float32x4 === 'function';
       */},
       res: {
-        firefox39:   true,
         es7shim: true,
       }
     },
-    'float64x2' : {
+    'Float64x2' : {
       exec: function(){/*
-        return typeof SIMD.float64x2 === 'function';
+        return typeof SIMD.Float64x2 === 'function';
       */},
       res: {
-        firefox39:   true,
         es7shim: true,
       }
     },
-    'int32x4' : {
+    'Int32x4' : {
       exec: function(){/*
-        return typeof SIMD.int32x4 === 'function';
+        return typeof SIMD.Int32x4 === 'function';
       */},
       res: {
-        firefox39:   true,
+        es7shim: true,
+      }
+    },
+    'Int16x8' : {
+      exec: function(){/*
+        return typeof SIMD.Int16x8 === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'Int8x16' : {
+      exec: function(){/*
+        return typeof SIMD.Int8x16 === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'Bool32x4' : {
+      exec: function(){/*
+        return typeof SIMD.Bool32x4 === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'Bool16x8' : {
+      exec: function(){/*
+        return typeof SIMD.Bool16x8 === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'Bool8x16' : {
+      exec: function(){/*
+        return typeof SIMD.Bool8x16 === 'function';
+      */},
+      res: {
         es7shim: true,
       }
     },
     'SIMD.%type%.abs' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.abs === 'function';
+        return typeof SIMD.Float32x4.abs === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.add' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.add === 'function';
+        return typeof SIMD.Float32x4.add === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
-    'SIMD.%type%.and' : {
+    'SIMD.%integerType%.addSaturate' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.and === 'function';
+        return typeof SIMD.Int16x8.addSaturate === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
-    'SIMD.%type%.bitselect' : {
+    'SIMD.%booleanType%.and' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.bitselect === 'function';
+        return typeof SIMD.Bool16x8.and === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
       }
     },
-    'SIMD.%type%.bool' : {
+    'SIMD.%booleanType%.anyTrue' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.bool === 'function';
+        return typeof SIMD.Bool32x4.anyTrue === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
+      }
+    },
+    'SIMD.%booleanType%.allTrue' : {
+      exec: function(){/*
+        return typeof SIMD.Bool32x4.allTrue === 'function';
+      */},
+      res: {
+        es7shim: true,
       }
     },
     'SIMD.%type%.check' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.check === 'function';
+        return typeof SIMD.Float32x4.check === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.equal' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.equal === 'function';
+        return typeof SIMD.Float32x4.equal === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
-    'SIMD.%type%.equivalent' : {
+    'SIMD.%type%.extractLane' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.equivalent === 'function';
+        return typeof SIMD.Float32x4.extractLane === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
       }
     },
     'SIMD.%type%.greaterThan' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.greaterThan === 'function';
+        return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.greaterThanOrEqual' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.greaterThanOrEqual === 'function';
+        return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.lessThan' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.lessThan === 'function';
+        return typeof SIMD.Float32x4.lessThan === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.lessThanOrEqual' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.lessThanOrEqual === 'function';
+        return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.mul' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.mul === 'function';
+        return typeof SIMD.Float32x4.mul === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.div' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.div === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.max' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.max === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.maxNum' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.maxNum === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.min' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.min === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.minNum' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.minNum === 'function';
+      */},
+      res: {
         es7shim: true,
       }
     },
     'SIMD.%type%.neg' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.neg === 'function';
+        return typeof SIMD.Float32x4.neg === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
-    'SIMD.%type%.not' : {
+    'SIMD.%booleanType%.not' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.not === 'function';
+        return typeof SIMD.Bool16x8.not === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
     'SIMD.%type%.notEqual' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.notEqual === 'function';
+        return typeof SIMD.Float32x4.notEqual === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
-    'SIMD.%type%.or' : {
+    'SIMD.%type%.reciprocalApproximation' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.or === 'function';
+        return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.reciprocalSqrtApproximation' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.replaceLane' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.replaceLane === 'function';
+      */},
+      res: {
         es7shim: true,
       }
     },
     'SIMD.%type%.select' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.select === 'function';
+        return typeof SIMD.Float32x4.select === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
+      }
+    },
+    'SIMD.%integerType%.selectBits' : {
+      exec: function(){/*
+        return typeof SIMD.Int16x8.selectBits === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%integerType%.shiftLeftByScalar' : {
+      exec: function(){/*
+        return typeof SIMD.Int32x4.shiftLeftByScalar === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%integerType%.shiftRightLogicalByScalar' : {
+      exec: function(){/*
+        return typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%integerType%.shiftRightArithmeticByScalar' : {
+      exec: function(){/*
+        return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';
+      */},
+      res: {
         es7shim: true,
       }
     },
     'SIMD.%type%.shuffle' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.shuffle === 'function';
+        return typeof SIMD.Float32x4.shuffle === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.splat' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.splat === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.sqrt' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.sqrt === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.store' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.store === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.store1' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.store1 === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.store2' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.store1 === 'function';
+      */},
+      res: {
+        es7shim: true,
+      }
+    },
+    'SIMD.%type%.store3' : {
+      exec: function(){/*
+        return typeof SIMD.Float32x4.store1 === 'function';
+      */},
+      res: {
         es7shim: true,
       }
     },
     'SIMD.%type%.sub' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.sub === 'function';
+        return typeof SIMD.Float32x4.sub === 'function';
       */},
       res: {
-        firefox39: true,
+        es7shim: true,
+      }
+    },
+    'SIMD.%integerType%.subSaturate' : {
+      exec: function(){/*
+        return typeof SIMD.Int16x8.subSaturate === 'function';
+      */},
+      res: {
         es7shim: true,
       }
     },
     'SIMD.%type%.swizzle' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.swizzle === 'function';
+        return typeof SIMD.Float32x4.swizzle === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     },
-    'SIMD.%type%.xor' : {
+    'SIMD.%booleanType%.xor' : {
       exec: function(){/*
-        return typeof SIMD.float32x4.xor === 'function';
+        return typeof SIMD.Bool16x8.xor === 'function';
       */},
       res: {
-        firefox39: true,
         es7shim: true,
       }
     }
