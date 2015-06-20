@@ -2106,7 +2106,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         edge:        true,
-        firefox34:   true,
+        firefox34:   { val: true, note_id: "ff-shorthand-methods", note_html: 'Firefox incorrectly produces an error in strict mode if the method is named "arguments", "eval", or "delete".' },
         chrome41:    flag,
         chrome43:    true,
         iojs:        true,
@@ -2119,6 +2119,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.shorthandMethodsResults, {
         closure:     false,
+        firefox34:   true,
       }),
     },
     'computed shorthand methods': {
