@@ -5276,12 +5276,8 @@ exports.tests = [
           note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
         },
         firefox16:    true,
-        webkit: {
-          val: true,
-          note_id: "webkit-object-destructuring",
-          note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
-        },
-        safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
+        webkit:       true,
+        safari71_8:   true,
       }),
     },
     'object destructuring with primitives': {
@@ -5297,8 +5293,8 @@ exports.tests = [
           && match === String.prototype.match;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit:       { val: true, note_id: "webkit-object-destructuring"  },
-        safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
+        webkit:       true,
+        safari71_8:   true,
       }),
     },
     'trailing commas in object patterns': {
@@ -5322,6 +5318,25 @@ exports.tests = [
         typescript:   true,
         es6tr:        true,
         firefox16:    true,
+        safari71_8:   true,
+        webkit:       true,
+      },
+    },
+    'parenthesised left-hand-side is a syntax error': {
+      exec: function() {/*
+        var a, b;
+        ({a,b} = {a:1,b:2});
+        try {
+          eval("({a,b}) = {a:3,b:4};");
+        }
+        catch(e) {
+          return a === 1 && b === 2;
+        }
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        typescript:   true,
         safari71_8:   true,
         webkit:       true,
       },

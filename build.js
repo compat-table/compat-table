@@ -64,6 +64,8 @@ process.nextTick(function () {
   var traceur     = require('traceur');
   var jstransform = require('jstransform/simple');
   var tss         = require('typescript-simple');
+  var esprima     = require('esprima');
+  var jshint     = require('jshint');
   [
     {
       name: 'es5-shim',
@@ -131,6 +133,39 @@ process.nextTick(function () {
           throw new Error('\n' + result.errors.join('\n'));
         };
       }()),
+    },
+    {
+      name: 'esprima',
+      url: 'http://esprima.org/',
+      target_file: 'es6/compilers/esprima.html',
+      compiler: function(code) {
+        try {
+          esprima.parse(code);
+          return "(function(){return true;})";
+        } catch(e) {
+          return "/*\n" + e.message + "\n*/\n(function(){return false;})";
+        }
+      },
+    },
+    {
+      name: 'jshint',
+      url: 'http://jshint.com/',
+      target_file: 'es6/compilers/jshint.html',
+      compiler: function(code) {
+        var result = jshint.JSHINT(code,{
+          asi:true, boss:true, elision:true, eqnull:true, esnext:true,
+          evil:true, expr:true, laxbreak:true, laxcomma:true, loopfunc:true,
+          multistr: true, noyield:true, plusplus:true, proto:true, sub:true,
+          supernew: true, validthis:true, withstmt:true, nonstandard:true, typed:true,
+          "-W032":true,
+        });
+        if (result) {
+          return "(function(){return true;})";
+        } else {
+          return "/*\n" + jshint.JSHINT.errors.map(function(e){ return (e && e.reason) || ""; }).join('\n')
+            + "\n*/\n(function(){return false;})";
+        }
+      },
     },
     {
       name: 'JSX',
