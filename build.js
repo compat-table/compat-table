@@ -65,6 +65,7 @@ process.nextTick(function () {
   var jstransform = require('jstransform/simple');
   var tss         = require('typescript-simple');
   var esprima     = require('esprima');
+  var espree      = require('espree');
   var jshint     = require('jshint');
   [
     {
@@ -141,6 +142,42 @@ process.nextTick(function () {
       compiler: function(code) {
         try {
           esprima.parse(code);
+          return "(function(){return true;})";
+        } catch(e) {
+          return "/*\n" + e.message + "\n*/\n(function(){return false;})";
+        }
+      },
+    },
+    {
+      name: 'espree',
+      url: 'http://espree.org/',
+      target_file: 'es6/compilers/espree.html',
+      compiler: function(code) {
+        try {
+          espree.parse(code,{
+            ecmaFeatures: {
+            arrowFunctions: true,
+            blockBindings: true,
+            destructuring: true,
+            regexYFlag: true,
+            regexUFlag: true,
+            templateStrings: true,
+            binaryLiterals: true,
+            octalLiterals: true,
+            unicodeCodePointEscapes: true,
+            defaultParams: true,
+            restParams: true,
+            forOf: true,
+            objectLiteralComputedProperties: true,
+            objectLiteralShorthandMethods: true,
+            objectLiteralShorthandProperties: true,
+            objectLiteralDuplicateProperties: true,
+            generators: true,
+            spread: true,
+            classes: true,
+            modules: true,
+            globalReturn: true
+          }});
           return "(function(){return true;})";
         } catch(e) {
           return "/*\n" + e.message + "\n*/\n(function(){return false;})";

@@ -186,6 +186,22 @@ exports.tests = [
   },
 },
 {
+  name: 'function.sent',
+  category: 'draft',
+  link: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
+  exec: function () {/*
+    var result;
+    function* generator() {
+      result = function.sent;
+    }
+    var iter = generator();
+    iter.next('tromple');
+    return result === 'tromple';
+  */},
+  res: {
+  }
+},
+{
   name: 'Object.values',
   link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
   category: 'pre-strawman',
