@@ -178,7 +178,7 @@
 <th class="platform safari6 desktop obsolete" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
-<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r185544">WK</abbr></a></th>
+<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r185853">WK</abbr></a></th>
 <th class="platform opera desktop obsolete" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ<br>4.14</abbr><a href="#khtml-note"><sup>[5]</sup></a></a></th>
 <th class="platform rhino17 engine obsolete" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
@@ -4285,7 +4285,7 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/32</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/32</td>
 <td data-browser="safari71_8" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">16/32</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.53125" style="background-color:hsl(63,62%,50%)">17/32</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.78125" style="background-color:hsl(93,51%,50%)">25/32</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/32</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/32</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/32</td>
@@ -4502,7 +4502,7 @@ return c === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -4648,7 +4648,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -4721,7 +4721,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -4795,7 +4795,7 @@ return closed;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -5006,7 +5006,7 @@ return a === 1;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -5226,7 +5226,7 @@ return a === 1;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -6303,7 +6303,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -6454,7 +6454,7 @@ return a === 1 &amp;&amp; b === 2;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -16913,7 +16913,7 @@ return typeof Int8Array[Symbol.species] === &quot;function&quot; &amp;&amp;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/15</td>
 <td data-browser="safari71_8" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.8666666666666667" style="background-color:hsl(104,47%,50%)">13/15</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.9333333333333333" style="background-color:hsl(112,44%,50%)">14/15</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/15</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/15</td>
@@ -17918,7 +17918,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -18054,7 +18054,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/15</td>
 <td data-browser="safari71_8" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.8666666666666667" style="background-color:hsl(104,47%,50%)">13/15</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.9333333333333333" style="background-color:hsl(112,44%,50%)">14/15</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/15</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/15</td>
@@ -19064,7 +19064,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -27239,7 +27239,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/8</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/8</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/8</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/8</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/8</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/8</td>
@@ -27807,7 +27807,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -29202,7 +29202,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/10</td>
 <td data-browser="safari71_8" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td data-browser="webkit" class="unstable tally" data-tally="1">10/10</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/10</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/10</td>
@@ -29833,7 +29833,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>

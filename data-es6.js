@@ -311,7 +311,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r185544',
+    full: 'WebKit r185853',
     short: 'WK',
     unstable: true,
   },
@@ -3844,6 +3844,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        webkit:      true,
       },
     },
     'Map[Symbol.species]': {
@@ -4154,6 +4155,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        webkit:      true,
       },
     },
     'Set[Symbol.species]': {
@@ -5156,6 +5158,7 @@ exports.tests = [
         typescript:  true,
         ejs:         true,
         firefox34:   true,
+        webkit:      true,
       },
     },
     'with generator instances': {
@@ -5185,6 +5188,7 @@ exports.tests = [
         tr:           true,
         typescript:   temp.typescriptFallthrough,
         firefox34:    true,
+        webkit:       true,
         babel:        true,
       },
     },
@@ -5201,6 +5205,7 @@ exports.tests = [
         babel:        true,
         typescript:   temp.typescriptFallthrough,
         firefox36:    true,
+        webkit:       true,
       },
     },
     'iterator closing': {
@@ -5215,6 +5220,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
+        webkit:      true,
       },
     },
     'iterable destructuring expression': {
@@ -5254,7 +5260,7 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit:       false,
+        webkit:       true,
         safari71_8:   false,
         babel:        true,
         tr:           false,
@@ -5303,7 +5309,7 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit:       false,
+        webkit:       true,
         safari71_8:   false,
       }),
     },
@@ -5371,6 +5377,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
+        webkit:       true,
       }),
     },
     'computed properties': {
@@ -5536,6 +5543,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         closure:     true,
+        webkit:      true,
       },
     },
     'defaults in parameters': {
@@ -5570,6 +5578,7 @@ exports.tests = [
       res: {
         babel:        flag,
         typescript:   temp.typescriptFallthrough,
+        webkit:       true,
       },
     },
     'defaults in parameters, separate scope': {
@@ -6464,6 +6473,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        webkit:      true,
       },
     },
   },
@@ -7497,6 +7507,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        webkit:      true,
       },
     },
     'Array.prototype[Symbol.unscopables]': {
