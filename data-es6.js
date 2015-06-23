@@ -3011,7 +3011,7 @@ exports.tests = [
               f.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(f, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3031,7 +3031,7 @@ exports.tests = [
               f.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(f, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3051,7 +3051,7 @@ exports.tests = [
               f.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(f, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3071,7 +3071,7 @@ exports.tests = [
               C.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(C, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3089,7 +3089,7 @@ exports.tests = [
               }
             }
             var boundF = Function.prototype.bind.call(C, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(function(){})
             && correctProtoBound(Array)
