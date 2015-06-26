@@ -3067,10 +3067,11 @@ exports.tests = [
               }
             }
             var boundF = Function.prototype.bind.call(C, null);
-            return Object.getPrototypeOf(boundF) === superclass;
+            return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);
           }
           return correctProtoBound(function(){})
-            && correctProtoBound(Array);
+            && correctProtoBound(Array)
+            && correctProtoBound(null);
       */},
       res: {
       },
