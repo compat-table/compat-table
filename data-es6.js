@@ -311,7 +311,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r185853',
+    full: 'WebKit r185990',
     short: 'WK',
     unstable: true,
   },
@@ -450,6 +450,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        webkit:      true,
         node:        flag,
       },
     },
@@ -470,6 +471,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        webkit:      true,
         node:        flag,
       },
     },
@@ -490,6 +492,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        webkit:      true,
         node:        flag,
       },
     },
@@ -5495,6 +5498,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         firefox34:   true,
+        webkit:      true,
       },
     },
     'nested rest': {
