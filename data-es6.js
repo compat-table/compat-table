@@ -4275,6 +4275,19 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'WeakMap.prototype.clear is missing': {
+      exec: function () {/*
+        return !("clear" in WeakMap.prototype);
+      */},
+      res: {
+        firefox38:   false,
+        firefox40:   false,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'WeakMap[Symbol.species] is missing': {
       exec: function () {/*
         return !(Symbol.species in WeakMap);
@@ -4388,6 +4401,19 @@ exports.tests = [
         chrome36:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'WeakSet.prototype.clear is missing': {
+      exec: function () {/*
+        return !("clear" in WeakSet.prototype);
+      */},
+      res: {
+        firefox38:   false,
+        firefox40:   false,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
