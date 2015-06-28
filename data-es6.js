@@ -8236,6 +8236,36 @@ exports.tests = [
         typescript:  temp.typescriptFallthrough,
       },
     },
+    'Promise.all supports iterables': {
+      exec: function () {/*
+        class P extends Promise {}
+        var fulfills = P.all(new Set([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+        ]));
+        var rejects = P.all(new Set([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+        ]));
+        var score = +(fulfills instanceof P);
+        fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
+        rejects.catch(function(result) { score += (result === "qux"); check(); });
+
+        function check() {
+          if (score === 3) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel:       true,
+        typescript:  temp.typescriptFallthrough,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        false,
+      },
+    },
     'Promise.race': {
       exec: function () {/*
         class P extends Promise {}
@@ -8257,6 +8287,36 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
+      },
+    },
+    'Promise.race supports iterables': {
+      exec: function () {/*
+        class P extends Promise {}
+        var fulfills = P.race(new Set([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+        ]));
+        var rejects = P.race(new Set([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+        ]));
+        var score = +(fulfills instanceof P);
+        fulfills.then(function(result) { score += (result === "foo"); check(); });
+        rejects.catch(function(result) { score += (result === "baz"); check(); });
+
+        function check() {
+          if (score === 3) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel:       true,
+        typescript:  temp.typescriptFallthrough,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        false,
       },
     },
   },
