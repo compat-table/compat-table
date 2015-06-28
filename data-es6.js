@@ -4275,13 +4275,18 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakMap[Symbol.species]': {
+    'WeakMap[Symbol.species] is missing': {
       exec: function () {/*
-        var prop = Object.getOwnPropertyDescriptor(WeakMap, Symbol.species);
-        return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
+        return !(Symbol.species in WeakMap);
       */},
       res: {
-        babel:       true,
+        babel:       false,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
       },
     },
   },
@@ -4386,13 +4391,18 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakSet[Symbol.species]': {
+    'WeakSet[Symbol.species] is missing': {
       exec: function () {/*
-        var prop = Object.getOwnPropertyDescriptor(WeakSet, Symbol.species);
-        return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
+        return !(Symbol.species in WeakSet);
       */},
       res: {
-        babel:       true,
+        babel:       false,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
       },
     },
   },
