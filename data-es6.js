@@ -3586,6 +3586,27 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new Map(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'iterator closing': {
       exec: function () {/*
         var closed = false;
@@ -3890,6 +3911,27 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new Set(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4200,6 +4242,27 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new WeakMap(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'frozen objects as keys': {
       exec: function () {/*
         var f = Object.freeze({});
@@ -4349,6 +4412,27 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new WeakSet(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
