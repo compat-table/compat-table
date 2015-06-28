@@ -21,23 +21,23 @@ $('#body tbody tr').each(function (index) {
     , test = function test (expression) {
       results[index] = results[index] || expression
     }
-	, asyncPassed = function asyncPassed () {
-	  results[index] = true
+    , asyncPassed = function asyncPassed () {
+      results[index] = true
     }
-  global.__createIterableObject = function(a, b, c) {
-    if (typeof Symbol === "function" && Symbol.iterator) {
-      var arr = [a, b, c, ,]
-        , iterable = {
-          next: function() {
-            return { value: arr.shift(), done: arr.length <= 0 }
-          }
-        }
-      iterable[Symbol.iterator] = function(){ return iterable; }
-      return iterable;
-    }
-    else {
-      return eval("(function*() { yield a; yield b; yield c; }())")
-    }
+  global.__createIterableObject = function (arr, methods) {
+    if (typeof Symbol !== 'function' || !Symbol.iterator)
+      return {};
+    arr.length++;
+    var iterator = {
+      next: function() {
+        return { value: arr.shift(), done: arr.length <= 0 };
+      },
+      'return': methods['return'],
+      'throw': methods['throw']
+    };
+    var iterable = {};
+    iterable[Symbol.iterator] = function(){ return iterator; }
+    return iterable;
   }
   
   results[index] = null
