@@ -3070,7 +3070,7 @@ exports.tests = [
               }
             }
             var boundF = Function.prototype.bind.call(C, null);
-            return Object.getPrototypeOf(boundF) === proto;
+            return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);
           }
           return correctProtoBound(function(){})
             && correctProtoBound(Array)
