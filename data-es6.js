@@ -3607,6 +3607,33 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor invokes set': {
+      exec: function () {/*
+        var passed = false;
+        var _set = Map.prototype.set;
+
+        Map.prototype.set = function(k, v) {
+          passed = true;
+        };
+
+        new Map([ [1, 2] ]);
+        Map.prototype.set = _set;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'iterator closing': {
       exec: function () {/*
         var closed = false;
@@ -3921,6 +3948,33 @@ exports.tests = [
         } catch (ex) {
           return false;
         }
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor invokes add': {
+      exec: function () {/*
+        var passed = false;
+        var _add = Set.prototype.add;
+
+        Set.prototype.add = function(v) {
+          passed = true;
+        };
+
+        new Set([ 1 ]);
+        Set.prototype.add = _add;
+
+        return passed;
       */},
       res: {
         babel:       true,
@@ -4263,6 +4317,33 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor invokes set': {
+      exec: function () {/*
+        var passed = false;
+        var _set = WeakMap.prototype.set;
+
+        WeakMap.prototype.set = function(k, v) {
+          passed = true;
+        };
+
+        new WeakMap([ [{ }, 42] ]);
+        WeakMap.prototype.set = _set;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'frozen objects as keys': {
       exec: function () {/*
         var f = Object.freeze({});
@@ -4422,6 +4503,33 @@ exports.tests = [
         } catch (ex) {
           return false;
         }
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor invokes add': {
+      exec: function () {/*
+        var passed = false;
+        var _add = WeakSet.prototype.add;
+
+        WeakSet.prototype.add = function(v) {
+          passed = true;
+        };
+
+        new WeakSet([ { } ]);
+        WeakSet.prototype.add = _add;
+
+        return passed;
       */},
       res: {
         babel:       true,
