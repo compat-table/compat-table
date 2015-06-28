@@ -8735,6 +8735,28 @@ exports.tests = [
       res: {
       },
     },
+    'function "length" is configurable': {
+      exec: function(){/*
+        var fn = function(a, b) {};
+
+        var desc = Object.getOwnPropertyDescriptor(fn, "length");
+        if (desc.configurable) {
+          Object.defineProperty(fn, "length", { value: 1 });
+          return fn.length === 1;
+        }
+
+        return false;
+      */},
+      res: {
+        babel:       false,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      false,
+        iojs:        false,
+      },
+    },
   },
 },
 ];
