@@ -3588,22 +3588,14 @@ exports.tests = [
     },
     'constructor accepts null': {
       exec: function () {/*
-        try {
-          new Map(null); return true;
-        } catch (ex) {
-          return false;
-        }
+        new Map(null);
+        return true;
       */},
       res: {
         babel:       true,
         es6shim:     true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -3625,13 +3617,8 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -3945,22 +3932,14 @@ exports.tests = [
     },
     'constructor accepts null': {
       exec: function () {/*
-        try {
-          new Set(null); return true;
-        } catch (ex) {
-          return false;
-        }
+        new Set(null);
+        return true;
       */},
       res: {
         babel:       true,
         es6shim:     true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -3974,20 +3953,16 @@ exports.tests = [
           passed = true;
         };
 
-        new Set([ 1 ]);
+        new Set([1]);
         Set.prototype.add = _add;
 
         return passed;
       */},
       res: {
         babel:       true,
-        firefox36:   false,
+        es6shim:     true,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -4301,22 +4276,13 @@ exports.tests = [
     },
     'constructor accepts null': {
       exec: function () {/*
-        try {
-          new WeakMap(null); return true;
-        } catch (ex) {
-          return false;
-        }
+        new WeakMap(null);
+        return true;
       */},
       res: {
         babel:       true,
-        es6shim:     true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -4337,13 +4303,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -4423,29 +4384,19 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakMap.prototype.clear is missing': {
+    'no WeakMap.prototype.clear method': {
       exec: function () {/*
-        return typeof WeakMap !== "undefined" && !("clear" in WeakMap.prototype);
+        if (!("clear" in WeakMap.prototype)) {
+          return true;
+        }
+        var m = new WeakMap();
+        var key = {};
+        m.set(key, 2);
+        m.clear();
+        return m.has(key);
       */},
       res: {
-        firefox38:   false,
-        firefox40:   false,
         chrome43:    true,
-        chrome45:    true,
-        webkit:      true,
-        iojs:        true,
-      },
-    },
-    'WeakMap[Symbol.species] is missing': {
-      exec: function () {/*
-        return !(Symbol.species in WeakMap);
-      */},
-      res: {
-        babel:       false,
-        firefox38:   true,
-        firefox40:   true,
-        chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -4502,22 +4453,13 @@ exports.tests = [
     },
     'constructor accepts null': {
       exec: function () {/*
-        try {
-          new WeakSet(null); return true;
-        } catch (ex) {
-          return false;
-        }
+        new WeakSet(null);
+        return true;
       */},
       res: {
         babel:       true,
-        es6shim:     true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -4538,14 +4480,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        es6shim:     true,
-        firefox36:   false,
         firefox37:   true,
-        firefox38:   true,
-        firefox39:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -4602,29 +4538,19 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakSet.prototype.clear is missing': {
+    'no WeakSet.prototype.clear method': {
       exec: function () {/*
-        return typeof WeakSet !== "undefined" && !("clear" in WeakSet.prototype);
+        if (!("clear" in WeakSet.prototype)) {
+          return true;
+        }
+        var s = new WeakSet();
+        var key = {};
+        s.add(key);
+        s.clear();
+        return s.has(key);
       */},
       res: {
-        firefox38:   false,
-        firefox40:   false,
         chrome43:    true,
-        chrome45:    true,
-        webkit:      true,
-        iojs:        true,
-      },
-    },
-    'WeakSet[Symbol.species] is missing': {
-      exec: function () {/*
-        return !(Symbol.species in WeakSet);
-      */},
-      res: {
-        babel:       false,
-        firefox38:   true,
-        firefox40:   true,
-        chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        true,
       },
@@ -5902,13 +5828,13 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'Promise.all supports iterables': {
+    'Promise.all, generic iterables': {
       exec: function () {/*
-        var fulfills = Promise.all(new Set([
+        var fulfills = Promise.all(global.__createIterableObject([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
           new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
         ]));
-        var rejects = Promise.all(new Set([
+        var rejects = Promise.all(global.__createIterableObject([
           new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
           new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
         ]));
@@ -5929,7 +5855,6 @@ exports.tests = [
         chrome43:    true,
         chrome45:    true,
         webkit:      true,
-        iojs:        false,
       },
     },
     'Promise.race': {
@@ -5965,13 +5890,13 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'Promise.race supports iterables': {
+    'Promise.race, generic iterables': {
       exec: function () {/*
-        var fulfills = Promise.race(new Set([
+        var fulfills = Promise.race(global.__createIterableObject([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
           new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
         ]));
-        var rejects = Promise.race(new Set([
+        var rejects = Promise.race(global.__createIterableObject([
           new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
           new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
         ]));
@@ -8959,7 +8884,7 @@ exports.tests = [
       res: {
       },
     },
-    'function "length" is configurable': {
+    'function \'length\' is configurable': {
       exec: function(){/*
         var fn = function(a, b) {};
 
@@ -8972,13 +8897,8 @@ exports.tests = [
         return false;
       */},
       res: {
-        babel:       false,
         firefox38:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
-        webkit:      false,
-        iojs:        false,
       },
     },
   },
