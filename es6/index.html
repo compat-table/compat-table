@@ -16865,7 +16865,7 @@ return typeof Int8Array[Symbol.species] === &quot;function&quot; &amp;&amp;
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/17</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/17</td>
-<td data-browser="es6shim" class="tally" data-tally="0.6470588235294118" style="background-color:hsl(77,57%,50%)">11/17</td>
+<td data-browser="es6shim" class="tally" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11" class="tally" data-tally="0.29411764705882354" style="background-color:hsl(35,73%,50%)">5/17</td>
 <td data-browser="edge" class="unstable tally" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
@@ -17086,7 +17086,7 @@ try {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
@@ -18158,7 +18158,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/17</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/17</td>
-<td data-browser="es6shim" class="tally" data-tally="0.6470588235294118" style="background-color:hsl(77,57%,50%)">11/17</td>
+<td data-browser="es6shim" class="tally" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11" class="tally" data-tally="0.29411764705882354" style="background-color:hsl(35,73%,50%)">5/17</td>
 <td data-browser="edge" class="unstable tally" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
@@ -18379,7 +18379,7 @@ try {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
@@ -19456,7 +19456,7 @@ return &apos;get&apos; in prop &amp;&amp; Set[Symbol.species] === Set;
 <td data-browser="closure" class="tally" data-tally="0">0/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/10</td>
-<td data-browser="es6shim" class="tally" data-tally="0">0/10</td>
+<td data-browser="es6shim" class="tally" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td data-browser="edge" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
@@ -19677,7 +19677,7 @@ try {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
@@ -20104,8 +20104,8 @@ return typeof WeakMap.prototype.delete === &quot;function&quot;;
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
 <tr class="subtest" data-parent="WeakMap" id="WeakMap_WeakMap.prototype.clear_is_missing"><td><span><a class="anchor" href="#WeakMap_WeakMap.prototype.clear_is_missing">&#xA7;</a>WeakMap.prototype.clear is missing</span><script data-source="
-return !(&quot;clear&quot; in WeakMap.prototype);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");return Function("asyncTestPassed","\nreturn !(\"clear\" in WeakMap.prototype);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return typeof WeakMap !== &quot;undefined&quot; &amp;&amp; !(&quot;clear&quot; in WeakMap.prototype);
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");return Function("asyncTestPassed","\nreturn typeof WeakMap !== \"undefined\" && !(\"clear\" in WeakMap.prototype);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -20248,7 +20248,7 @@ return !(Symbol.species in WeakMap);
 <td data-browser="closure" class="tally" data-tally="0">0/9</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/9</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/9</td>
-<td data-browser="es6shim" class="tally" data-tally="0">0/9</td>
+<td data-browser="es6shim" class="tally" data-tally="0.1111111111111111" style="background-color:hsl(13,81%,50%)">1/9</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/9</td>
 <td data-browser="edge" class="unstable tally" data-tally="0.4444444444444444" style="background-color:hsl(53,66%,50%)">4/9</td>
@@ -20468,7 +20468,7 @@ try {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
@@ -20823,8 +20823,8 @@ return typeof WeakSet.prototype.delete === &quot;function&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="WeakSet" id="WeakSet_WeakSet.prototype.clear_is_missing"><td><span><a class="anchor" href="#WeakSet_WeakSet.prototype.clear_is_missing">&#xA7;</a>WeakSet.prototype.clear is missing</span><script data-source="
-return !(&quot;clear&quot; in WeakSet.prototype);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("283");return Function("asyncTestPassed","\nreturn !(\"clear\" in WeakSet.prototype);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+return typeof WeakSet !== &quot;undefined&quot; &amp;&amp; !(&quot;clear&quot; in WeakSet.prototype);
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("283");return Function("asyncTestPassed","\nreturn typeof WeakSet !== \"undefined\" && !(\"clear\" in WeakSet.prototype);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -23806,7 +23806,7 @@ return Reflect.construct(function(a, b, c) {
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/6</td>
 <td data-browser="typescript" class="tally" data-tally="0">0/6</td>
-<td data-browser="es6shim" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
+<td data-browser="es6shim" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/6</td>
 <td data-browser="edge" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
@@ -24062,7 +24062,7 @@ function check() {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
@@ -24228,7 +24228,7 @@ function check() {
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
-<td class="no" data-browser="es6shim">No</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
