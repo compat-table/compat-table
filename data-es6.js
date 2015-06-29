@@ -3586,6 +3586,55 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new Map(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor invokes set': {
+      exec: function () {/*
+        var passed = false;
+        var _set = Map.prototype.set;
+
+        Map.prototype.set = function(k, v) {
+          passed = true;
+        };
+
+        new Map([ [1, 2] ]);
+        Map.prototype.set = _set;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'iterator closing': {
       exec: function () {/*
         var closed = false;
@@ -3890,6 +3939,55 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new Set(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor invokes add': {
+      exec: function () {/*
+        var passed = false;
+        var _add = Set.prototype.add;
+
+        Set.prototype.add = function(v) {
+          passed = true;
+        };
+
+        new Set([ 1 ]);
+        Set.prototype.add = _add;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4200,6 +4298,55 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new WeakMap(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor invokes set': {
+      exec: function () {/*
+        var passed = false;
+        var _set = WeakMap.prototype.set;
+
+        WeakMap.prototype.set = function(k, v) {
+          passed = true;
+        };
+
+        new WeakMap([ [{ }, 42] ]);
+        WeakMap.prototype.set = _set;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'frozen objects as keys': {
       exec: function () {/*
         var f = Object.freeze({});
@@ -4275,13 +4422,31 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakMap[Symbol.species]': {
+    'WeakMap.prototype.clear is missing': {
       exec: function () {/*
-        var prop = Object.getOwnPropertyDescriptor(WeakMap, Symbol.species);
-        return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
+        return typeof WeakMap !== "undefined" && !("clear" in WeakMap.prototype);
       */},
       res: {
-        babel:       true,
+        firefox38:   false,
+        firefox40:   false,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'WeakMap[Symbol.species] is missing': {
+      exec: function () {/*
+        return !(Symbol.species in WeakMap);
+      */},
+      res: {
+        babel:       false,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
       },
     },
   },
@@ -4331,6 +4496,55 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        try {
+          new WeakSet(null); return true;
+        } catch (ex) {
+          return false;
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor invokes add': {
+      exec: function () {/*
+        var passed = false;
+        var _add = WeakSet.prototype.add;
+
+        WeakSet.prototype.add = function(v) {
+          passed = true;
+        };
+
+        new WeakSet([ { } ]);
+        WeakSet.prototype.add = _add;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        firefox36:   false,
+        firefox37:   true,
+        firefox38:   true,
+        firefox39:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4386,13 +4600,31 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakSet[Symbol.species]': {
+    'WeakSet.prototype.clear is missing': {
       exec: function () {/*
-        var prop = Object.getOwnPropertyDescriptor(WeakSet, Symbol.species);
-        return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
+        return typeof WeakSet !== "undefined" && !("clear" in WeakSet.prototype);
       */},
       res: {
-        babel:       true,
+        firefox38:   false,
+        firefox40:   false,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'WeakSet[Symbol.species] is missing': {
+      exec: function () {/*
+        return !(Symbol.species in WeakSet);
+      */},
+      res: {
+        babel:       false,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        true,
       },
     },
   },
@@ -5668,6 +5900,36 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Promise.all supports iterables': {
+      exec: function () {/*
+        var fulfills = Promise.all(new Set([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+        ]));
+        var rejects = Promise.all(new Set([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+        ]));
+        var score = 0;
+        fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
+        rejects.catch(function(result) { score += (result === "qux"); check(); });
+
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        typescript:  temp.typescriptFallthrough,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        false,
+      },
+    },
     'Promise.race': {
       exec: function () {/*
         var fulfills = Promise.race([
@@ -5699,6 +5961,36 @@ exports.tests = [
         safari71_8:  true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'Promise.race supports iterables': {
+      exec: function () {/*
+        var fulfills = Promise.race(new Set([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+        ]));
+        var rejects = Promise.race(new Set([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+        ]));
+        var score = 0;
+        fulfills.then(function(result) { score += (result === "foo"); check(); });
+        rejects.catch(function(result) { score += (result === "baz"); check(); });
+
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        typescript:  temp.typescriptFallthrough,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      true,
+        iojs:        false,
       },
     },
     'Promise[Symbol.species]': {
@@ -8663,6 +8955,28 @@ exports.tests = [
         return true;
       */},
       res: {
+      },
+    },
+    'function "length" is configurable': {
+      exec: function(){/*
+        var fn = function(a, b) {};
+
+        var desc = Object.getOwnPropertyDescriptor(fn, "length");
+        if (desc.configurable) {
+          Object.defineProperty(fn, "length", { value: 1 });
+          return fn.length === 1;
+        }
+
+        return false;
+      */},
+      res: {
+        babel:       false,
+        firefox38:   true,
+        firefox40:   true,
+        chrome43:    true,
+        chrome45:    true,
+        webkit:      false,
+        iojs:        false,
       },
     },
   },
