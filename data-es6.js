@@ -3596,6 +3596,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox36:   false,
         firefox37:   true,
         firefox38:   true,
@@ -3951,6 +3952,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox36:   false,
         firefox37:   true,
         firefox38:   true,
@@ -4306,6 +4308,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox36:   false,
         firefox37:   true,
         firefox38:   true,
@@ -4421,7 +4424,7 @@ exports.tests = [
     },
     'WeakMap.prototype.clear is missing': {
       exec: function () {/*
-        return !("clear" in WeakMap.prototype);
+        return typeof WeakMap !== "undefined" && !("clear" in WeakMap.prototype);
       */},
       res: {
         firefox38:   false,
@@ -4506,6 +4509,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox36:   false,
         firefox37:   true,
         firefox38:   true,
@@ -4598,7 +4602,7 @@ exports.tests = [
     },
     'WeakSet.prototype.clear is missing': {
       exec: function () {/*
-        return !("clear" in WeakSet.prototype);
+        return typeof WeakSet !== "undefined" && !("clear" in WeakSet.prototype);
       */},
       res: {
         firefox38:   false,
@@ -5916,6 +5920,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         typescript:  temp.typescriptFallthrough,
         firefox38:   true,
         firefox40:   true,
@@ -5978,6 +5983,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         typescript:  temp.typescriptFallthrough,
         firefox38:   true,
         firefox40:   true,
