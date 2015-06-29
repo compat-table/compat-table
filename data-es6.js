@@ -3624,6 +3624,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox36:   false,
         firefox37:   true,
         firefox38:   true,
@@ -3865,7 +3866,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -4225,7 +4226,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -4537,6 +4538,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox36:   false,
         firefox37:   true,
         firefox38:   true,
@@ -6736,7 +6738,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -7770,7 +7772,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
