@@ -3319,7 +3319,7 @@ exports.tests = [
         var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
         return view[0] === 0xFF;
       */},
-      res: {
+      res: (temp.clampedArrayResults = {
         ejs:         true,
         firefox11:   true,
         edge:        true,
@@ -3330,7 +3330,7 @@ exports.tests = [
         node:        true,
         iojs:        true,
         typescript:  temp.typescriptFallthrough,
-      },
+      }),
     },
     'Int16Array': {
       exec: function(){/*
@@ -3469,6 +3469,38 @@ exports.tests = [
       */},
       res: {},
     },
+    'constructors require new': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var constructors = [
+          'ArrayBuffer',
+          'DataView',
+          'Int8Array',
+          'Uint8Array',
+          'Uint8ClampedArray',
+          'Int16Array',
+          'Uint16Array',
+          'Int32Array',
+          'Uint32Array',
+          'Float32Array',
+          'Float64Array'
+        ];
+        for(var i = 0; i < constructors.length; i+=1) {
+          try {
+            if (constructors[i] in global) {
+              global[constructors[i]](constructors[i] === "ArrayBuffer" ? 64 : buffer);
+            }
+            return false;
+          } catch(e) {
+          }
+        }
+        return true;
+      */},
+      res: Object.assign({}, temp.clampedArrayResults, {
+        edge:     false,
+        safari6:  false,
+      }),
+    },
   },
   (function(){
     var methods = {
@@ -3547,7 +3579,7 @@ exports.tests = [
 
         return map.has(key) && map.get(key) === 123;
       */},
-      res: {
+      res: (temp.basicMap = {
         tr:          true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
@@ -3561,7 +3593,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -3586,19 +3618,32 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'constructor accepts null': {
+    'constructor requires new': {
       exec: function () {/*
-        new Map(null);
-        return true;
+        new Map();
+        try {
+          Map();
+          return false;
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         babel:       true,
         es6shim:     true,
+        ie11:        true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
       },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new Map(null);
+        return true;
+      */},
+      res: temp.basicMap,
     },
     'constructor invokes set': {
       exec: function () {/*
@@ -3617,6 +3662,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        edge:        true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
@@ -3892,7 +3938,7 @@ exports.tests = [
 
         return set.has(123);
       */},
-      res: {
+      res: (temp.basicSet = {
         tr:          true,
         babel:       true,
         typescript:  temp.typescriptFallthrough,
@@ -3906,7 +3952,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -3930,10 +3976,15 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'constructor accepts null': {
+    'constructor requires new': {
       exec: function () {/*
-        new Set(null);
-        return true;
+        new Set();
+        try {
+          Set();
+          return false;
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         babel:       true,
@@ -3943,6 +3994,13 @@ exports.tests = [
         webkit:      true,
         iojs:        true,
       },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new Set(null);
+        return true;
+      */},
+      res: temp.basicSet,
     },
     'constructor invokes add': {
       exec: function () {/*
@@ -3961,6 +4019,7 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
+        edge:        true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
@@ -4239,7 +4298,7 @@ exports.tests = [
 
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
-      res: {
+      res: (temp.basicWeakMap = {
         babel:       true,
         ejs:         true,
         typescript:  temp.typescriptFallthrough,
@@ -4251,7 +4310,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -4274,18 +4333,31 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'constructor accepts null': {
+    'constructor requires new': {
       exec: function () {/*
-        new WeakMap(null);
-        return true;
+        new WeapMap();
+        try {
+          WeakMap();
+          return false;
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
       },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new WeakMap(null);
+        return true;
+      */},
+      res: temp.basicWeakMap,
     },
     'constructor invokes set': {
       exec: function () {/*
@@ -4303,6 +4375,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        edge:        true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
@@ -4419,7 +4492,7 @@ exports.tests = [
 
         return weakset.has(obj1);
       */},
-      res: {
+      res: (temp.basicWeakSet = {
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         ejs:         true,
@@ -4430,7 +4503,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -4451,18 +4524,31 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'constructor accepts null': {
+    'constructor requires new': {
       exec: function () {/*
-        new WeakSet(null);
-        return true;
+        new WeakSet();
+        try {
+          WeakSet();
+          return false;
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         babel:       true,
+        es6shim:     true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
       },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new WeakSet(null);
+        return true;
+      */},
+      res: temp.basicWeakSet,
     },
     'constructor invokes add': {
       exec: function () {/*
@@ -4480,6 +4566,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        edge:        true,
         firefox37:   true,
         chrome43:    true,
         webkit:      true,
@@ -4563,6 +4650,23 @@ exports.tests = [
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
+    'constructor requires new': {
+      exec: function () {/*
+        new Proxy({}, {});
+        try {
+          Proxy({}, {});
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        ejs:         true,
+        typescript:  temp.typescriptFallthrough,
+        edge:        true,
+        firefox18:   true,
+      },
+    },
     '"get" handler': {
       exec: function () {/*
         var proxied = { };
@@ -5795,6 +5899,25 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor requires new': {
+      exec: function () {/*
+        new Promise(function(){});
+        try {
+          Promise(function(){});
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'Promise.all': {
       exec: function () {/*
         var fulfills = Promise.all([
@@ -5850,10 +5973,9 @@ exports.tests = [
         babel:       true,
         es6shim:     true,
         typescript:  temp.typescriptFallthrough,
+        edge:        true,
         firefox38:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
       },
     },
@@ -5912,10 +6034,9 @@ exports.tests = [
         babel:       true,
         es6shim:     true,
         typescript:  temp.typescriptFallthrough,
+        edge:        true,
         firefox38:   true,
-        firefox40:   true,
         chrome43:    true,
-        chrome45:    true,
         webkit:      true,
         iojs:        false,
       },
@@ -8897,8 +9018,9 @@ exports.tests = [
         return false;
       */},
       res: {
-        firefox38:   true,
+        firefox37:   true,
         chrome43:    true,
+        edge:        true,
       },
     },
   },
