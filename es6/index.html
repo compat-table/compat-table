@@ -9252,6 +9252,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="arrow_functions" id="arrow_functions_lexical_super_binding"><td><span><a class="anchor" href="#arrow_functions_lexical_super_binding">&#xA7;</a>lexical &quot;super&quot; binding</span><script data-source="
+&quot;use strict&quot;;
 class B {
   qux() {
     return &quot;quux&quot;;
@@ -9264,7 +9265,7 @@ class C extends B {
 }
 var arrow = new C().baz();
 return arrow() === &quot;quux&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");return Function("asyncTestPassed","\nclass B {\n  qux() {\n    return \"quux\";\n  }\n}\nclass C extends B {\n  baz() {\n    return x => super.qux();\n  }\n}\nvar arrow = new C().baz();\nreturn arrow() === \"quux\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");return Function("asyncTestPassed","\n\"use strict\";\nclass B {\n  qux() {\n    return \"quux\";\n  }\n}\nclass C extends B {\n  baz() {\n    return x => super.qux();\n  }\n}\nvar arrow = new C().baz();\nreturn arrow() === \"quux\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9540,6 +9541,7 @@ return typeof C === &quot;function&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_is_block-scoped"><td><span><a class="anchor" href="#class_is_block-scoped">&#xA7;</a>is block-scoped</span><script data-source="
+&quot;use strict&quot;;
 class C {}
 var c1 = C;
 {
@@ -9547,7 +9549,7 @@ var c1 = C;
   var c2 = C;
 }
 return C === c1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");return Function("asyncTestPassed","\nclass C {}\nvar c1 = C;\n{\n  class C {}\n  var c2 = C;\n}\nreturn C === c1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");return Function("asyncTestPassed","\n\"use strict\";\nclass C {}\nvar c1 = C;\n{\n  class C {}\n  var c2 = C;\n}\nreturn C === c1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9615,8 +9617,9 @@ return C === c1;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_class_expression"><td><span><a class="anchor" href="#class_class_expression">&#xA7;</a>class expression</span><script data-source="
+&quot;use strict&quot;;
 return typeof class C {} === &quot;function&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("132");return Function("asyncTestPassed","\nreturn typeof class C {} === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("132");return Function("asyncTestPassed","\n\"use strict\";\nreturn typeof class C {} === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9684,8 +9687,9 @@ return typeof class C {} === &quot;function&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_anonymous_class"><td><span><a class="anchor" href="#class_anonymous_class">&#xA7;</a>anonymous class</span><script data-source="
+&quot;use strict&quot;;
 return typeof class {} === &quot;function&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("133");return Function("asyncTestPassed","\nreturn typeof class {} === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("133");return Function("asyncTestPassed","\n\"use strict\";\nreturn typeof class {} === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9753,12 +9757,13 @@ return typeof class {} === &quot;function&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_constructor"><td><span><a class="anchor" href="#class_constructor">&#xA7;</a>constructor</span><script data-source="
+&quot;use strict&quot;;
 class C {
   constructor() { this.x = 1; }
 }
 return C.prototype.constructor === C
   &amp;&amp; new C().x === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("134");return Function("asyncTestPassed","\nclass C {\n  constructor() { this.x = 1; }\n}\nreturn C.prototype.constructor === C\n  && new C().x === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("134");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  constructor() { this.x = 1; }\n}\nreturn C.prototype.constructor === C\n  && new C().x === 1;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9826,12 +9831,13 @@ return C.prototype.constructor === C
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_prototype_methods"><td><span><a class="anchor" href="#class_prototype_methods">&#xA7;</a>prototype methods</span><script data-source="
+&quot;use strict&quot;;
 class C {
   method() { return 2; }
 }
 return typeof C.prototype.method === &quot;function&quot;
   &amp;&amp; new C().method() === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("135");return Function("asyncTestPassed","\nclass C {\n  method() { return 2; }\n}\nreturn typeof C.prototype.method === \"function\"\n  && new C().method() === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("135");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  method() { return 2; }\n}\nreturn typeof C.prototype.method === \"function\"\n  && new C().method() === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9899,12 +9905,13 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_string-keyed_methods"><td><span><a class="anchor" href="#class_string-keyed_methods">&#xA7;</a>string-keyed methods</span><script data-source="
+&quot;use strict&quot;;
 class C {
   &quot;foo bar&quot;() { return 2; }
 }
 return typeof C.prototype[&quot;foo bar&quot;] === &quot;function&quot;
   &amp;&amp; new C()[&quot;foo bar&quot;]() === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("136");return Function("asyncTestPassed","\nclass C {\n  \"foo bar\"() { return 2; }\n}\nreturn typeof C.prototype[\"foo bar\"] === \"function\"\n  && new C()[\"foo bar\"]() === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("136");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  \"foo bar\"() { return 2; }\n}\nreturn typeof C.prototype[\"foo bar\"] === \"function\"\n  && new C()[\"foo bar\"]() === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -9972,13 +9979,14 @@ return typeof C.prototype[&quot;foo bar&quot;] === &quot;function&quot;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_computed_prototype_methods"><td><span><a class="anchor" href="#class_computed_prototype_methods">&#xA7;</a>computed prototype methods</span><script data-source="
+&quot;use strict&quot;;
 var foo = &quot;method&quot;;
 class C {
   [foo]() { return 2; }
 }
 return typeof C.prototype.method === &quot;function&quot;
   &amp;&amp; new C().method() === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("137");return Function("asyncTestPassed","\nvar foo = \"method\";\nclass C {\n  [foo]() { return 2; }\n}\nreturn typeof C.prototype.method === \"function\"\n  && new C().method() === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("137");return Function("asyncTestPassed","\n\"use strict\";\nvar foo = \"method\";\nclass C {\n  [foo]() { return 2; }\n}\nreturn typeof C.prototype.method === \"function\"\n  && new C().method() === 2;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10046,12 +10054,13 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_static_methods"><td><span><a class="anchor" href="#class_static_methods">&#xA7;</a>static methods</span><script data-source="
+&quot;use strict&quot;;
 class C {
   static method() { return 3; }
 }
 return typeof C.method === &quot;function&quot;
   &amp;&amp; C.method() === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("138");return Function("asyncTestPassed","\nclass C {\n  static method() { return 3; }\n}\nreturn typeof C.method === \"function\"\n  && C.method() === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("138");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  static method() { return 3; }\n}\nreturn typeof C.method === \"function\"\n  && C.method() === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10119,13 +10128,14 @@ return typeof C.method === &quot;function&quot;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_computed_static_methods"><td><span><a class="anchor" href="#class_computed_static_methods">&#xA7;</a>computed static methods</span><script data-source="
+&quot;use strict&quot;;
 var foo = &quot;method&quot;;
 class C {
   static [foo]() { return 3; }
 }
 return typeof C.method === &quot;function&quot;
   &amp;&amp; C.method() === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("139");return Function("asyncTestPassed","\nvar foo = \"method\";\nclass C {\n  static [foo]() { return 3; }\n}\nreturn typeof C.method === \"function\"\n  && C.method() === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("139");return Function("asyncTestPassed","\n\"use strict\";\nvar foo = \"method\";\nclass C {\n  static [foo]() { return 3; }\n}\nreturn typeof C.method === \"function\"\n  && C.method() === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10193,6 +10203,7 @@ return typeof C.method === &quot;function&quot;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_accessor_properties"><td><span><a class="anchor" href="#class_accessor_properties">&#xA7;</a>accessor properties</span><script data-source="
+&quot;use strict&quot;;
 var baz = false;
 class C {
   get foo() { return &quot;foo&quot;; }
@@ -10200,7 +10211,7 @@ class C {
 }
 new C().bar = true;
 return new C().foo === &quot;foo&quot; &amp;&amp; baz;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("140");return Function("asyncTestPassed","\nvar baz = false;\nclass C {\n  get foo() { return \"foo\"; }\n  set bar(x) { baz = x; }\n}\nnew C().bar = true;\nreturn new C().foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("140");return Function("asyncTestPassed","\n\"use strict\";\nvar baz = false;\nclass C {\n  get foo() { return \"foo\"; }\n  set bar(x) { baz = x; }\n}\nnew C().bar = true;\nreturn new C().foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10268,6 +10279,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_computed_accessor_properties"><td><span><a class="anchor" href="#class_computed_accessor_properties">&#xA7;</a>computed accessor properties</span><script data-source="
+&quot;use strict&quot;;
 var garply = &quot;foo&quot;, grault = &quot;bar&quot;, baz = false;
 class C {
   get [garply]() { return &quot;foo&quot;; }
@@ -10275,7 +10287,7 @@ class C {
 }
 new C().bar = true;
 return new C().foo === &quot;foo&quot; &amp;&amp; baz;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("141");return Function("asyncTestPassed","\nvar garply = \"foo\", grault = \"bar\", baz = false;\nclass C {\n  get [garply]() { return \"foo\"; }\n  set [grault](x) { baz = x; }\n}\nnew C().bar = true;\nreturn new C().foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("141");return Function("asyncTestPassed","\n\"use strict\";\nvar garply = \"foo\", grault = \"bar\", baz = false;\nclass C {\n  get [garply]() { return \"foo\"; }\n  set [grault](x) { baz = x; }\n}\nnew C().bar = true;\nreturn new C().foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10343,6 +10355,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_static_accessor_properties"><td><span><a class="anchor" href="#class_static_accessor_properties">&#xA7;</a>static accessor properties</span><script data-source="
+&quot;use strict&quot;;
 var baz = false;
 class C {
   static get foo() { return &quot;foo&quot;; }
@@ -10350,7 +10363,7 @@ class C {
 }
 C.bar = true;
 return C.foo === &quot;foo&quot; &amp;&amp; baz;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("142");return Function("asyncTestPassed","\nvar baz = false;\nclass C {\n  static get foo() { return \"foo\"; }\n  static set bar(x) { baz = x; }\n}\nC.bar = true;\nreturn C.foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("142");return Function("asyncTestPassed","\n\"use strict\";\nvar baz = false;\nclass C {\n  static get foo() { return \"foo\"; }\n  static set bar(x) { baz = x; }\n}\nC.bar = true;\nreturn C.foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10418,6 +10431,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_computed_static_accessor_properties"><td><span><a class="anchor" href="#class_computed_static_accessor_properties">&#xA7;</a>computed static accessor properties</span><script data-source="
+&quot;use strict&quot;;
 var garply = &quot;foo&quot;, grault = &quot;bar&quot;, baz = false;
 class C {
   static get [garply]() { return &quot;foo&quot;; }
@@ -10425,7 +10439,7 @@ class C {
 }
 C.bar = true;
 return C.foo === &quot;foo&quot; &amp;&amp; baz;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("143");return Function("asyncTestPassed","\nvar garply = \"foo\", grault = \"bar\", baz = false;\nclass C {\n  static get [garply]() { return \"foo\"; }\n  static set [grault](x) { baz = x; }\n}\nC.bar = true;\nreturn C.foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("143");return Function("asyncTestPassed","\n\"use strict\";\nvar garply = \"foo\", grault = \"bar\", baz = false;\nclass C {\n  static get [garply]() { return \"foo\"; }\n  static set [grault](x) { baz = x; }\n}\nC.bar = true;\nreturn C.foo === \"foo\" && baz;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10493,13 +10507,14 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_class_name_is_lexically_scoped"><td><span><a class="anchor" href="#class_class_name_is_lexically_scoped">&#xA7;</a>class name is lexically scoped</span><script data-source="
+&quot;use strict&quot;;
 class C {
   method() { return typeof C === &quot;function&quot;; }
 }
 var M = C.prototype.method;
 C = undefined;
 return C === undefined &amp;&amp; M();
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("144");return Function("asyncTestPassed","\nclass C {\n  method() { return typeof C === \"function\"; }\n}\nvar M = C.prototype.method;\nC = undefined;\nreturn C === undefined && M();\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("144");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  method() { return typeof C === \"function\"; }\n}\nvar M = C.prototype.method;\nC = undefined;\nreturn C === undefined && M();\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10567,6 +10582,7 @@ return C === undefined &amp;&amp; M();
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_computed_names,_temporal_dead_zone"><td><span><a class="anchor" href="#class_computed_names,_temporal_dead_zone">&#xA7;</a>computed names, temporal dead zone</span><script data-source="
+&quot;use strict&quot;;
 try {
   var B = class C {
     [C](){}
@@ -10574,7 +10590,7 @@ try {
 } catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("145");return Function("asyncTestPassed","\ntry {\n  var B = class C {\n    [C](){}\n  }\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("145");return Function("asyncTestPassed","\n\"use strict\";\ntry {\n  var B = class C {\n    [C](){}\n  }\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -10642,12 +10658,13 @@ try {
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_methods_aren&apos;t_enumerable"><td><span><a class="anchor" href="#class_methods_aren&apos;t_enumerable">&#xA7;</a>methods aren&apos;t enumerable</span><script data-source="
+&quot;use strict&quot;;
 class C {
   foo() {}
   static bar() {}
 }
 return !C.prototype.propertyIsEnumerable(&quot;foo&quot;) &amp;&amp; !C.propertyIsEnumerable(&quot;bar&quot;);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");return Function("asyncTestPassed","\nclass C {\n  foo() {}\n  static bar() {}\n}\nreturn !C.prototype.propertyIsEnumerable(\"foo\") && !C.propertyIsEnumerable(\"bar\");\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  foo() {}\n  static bar() {}\n}\nreturn !C.prototype.propertyIsEnumerable(\"foo\") && !C.propertyIsEnumerable(\"bar\");\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10787,6 +10804,7 @@ return (0,C.method)();
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_constructor_requires_new"><td><span><a class="anchor" href="#class_constructor_requires_new">&#xA7;</a>constructor requires new</span><script data-source="
+&quot;use strict&quot;;
 class C {}
 try {
   C();
@@ -10794,7 +10812,7 @@ try {
 catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("148");return Function("asyncTestPassed","\nclass C {}\ntry {\n  C();\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("148");return Function("asyncTestPassed","\n\"use strict\";\nclass C {}\ntry {\n  C();\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -10862,11 +10880,12 @@ catch(e) {
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_extends"><td><span><a class="anchor" href="#class_extends">&#xA7;</a>extends</span><script data-source="
+&quot;use strict&quot;;
 class B {}
 class C extends B {}
 return new C() instanceof B
   &amp;&amp; B.isPrototypeOf(C);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("149");return Function("asyncTestPassed","\nclass B {}\nclass C extends B {}\nreturn new C() instanceof B\n  && B.isPrototypeOf(C);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("149");return Function("asyncTestPassed","\n\"use strict\";\nclass B {}\nclass C extends B {}\nreturn new C() instanceof B\n  && B.isPrototypeOf(C);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -10934,11 +10953,12 @@ return new C() instanceof B
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_extends_expressions"><td><span><a class="anchor" href="#class_extends_expressions">&#xA7;</a>extends expressions</span><script data-source="
+&quot;use strict&quot;;
 var B;
 class C extends (B = class {}) {}
 return new C() instanceof B
   &amp;&amp; B.isPrototypeOf(C);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("150");return Function("asyncTestPassed","\nvar B;\nclass C extends (B = class {}) {}\nreturn new C() instanceof B\n  && B.isPrototypeOf(C);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("150");return Function("asyncTestPassed","\n\"use strict\";\nvar B;\nclass C extends (B = class {}) {}\nreturn new C() instanceof B\n  && B.isPrototypeOf(C);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -11006,12 +11026,13 @@ return new C() instanceof B
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_extends_null"><td><span><a class="anchor" href="#class_extends_null">&#xA7;</a>extends null</span><script data-source="
+&quot;use strict&quot;;
 class C extends null {
   constructor() { return Object.create(null); }
 }
 return Function.prototype.isPrototypeOf(C)
   &amp;&amp; Object.getPrototypeOf(C.prototype) === null;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("151");return Function("asyncTestPassed","\nclass C extends null {\n  constructor() { return Object.create(null); }\n}\nreturn Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("151");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends null {\n  constructor() { return Object.create(null); }\n}\nreturn Function.prototype.isPrototypeOf(C)\n  && Object.getPrototypeOf(C.prototype) === null;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -11079,6 +11100,7 @@ return Function.prototype.isPrototypeOf(C)
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="class" id="class_new.target"><td><span><a class="anchor" href="#class_new.target">&#xA7;</a>new.target</span><script data-source="
+&quot;use strict&quot;;
 var passed = false;
 new function f() {
   passed = new.target === f;
@@ -11092,7 +11114,7 @@ class A {
 class B extends A {}
 new B();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("152");return Function("asyncTestPassed","\nvar passed = false;\nnew function f() {\n  passed = new.target === f;\n}();\n\nclass A {\n  constructor() {\n    passed &= new.target === B;\n  }\n}\nclass B extends A {}\nnew B();\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("152");return Function("asyncTestPassed","\n\"use strict\";\nvar passed = false;\nnew function f() {\n  passed = new.target === f;\n}();\n\nclass A {\n  constructor() {\n    passed &= new.target === B;\n  }\n}\nclass B extends A {}\nnew B();\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -11226,6 +11248,7 @@ return passed;
 <td data-browser="ios8" class="tally" data-tally="0">0/7</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_statement_in_constructors"><td><span><a class="anchor" href="#super_statement_in_constructors">&#xA7;</a>statement in constructors</span><script data-source="
+&quot;use strict&quot;;
 var passed = false;
 class B {
   constructor(a) { passed = (a === &quot;barbaz&quot;); }
@@ -11235,7 +11258,7 @@ class C extends B {
 }
 new C(&quot;baz&quot;);
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("154");return Function("asyncTestPassed","\nvar passed = false;\nclass B {\n  constructor(a) { passed = (a === \"barbaz\"); }\n}\nclass C extends B {\n  constructor(a) { super(\"bar\" + a); }\n}\nnew C(\"baz\");\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("154");return Function("asyncTestPassed","\n\"use strict\";\nvar passed = false;\nclass B {\n  constructor(a) { passed = (a === \"barbaz\"); }\n}\nclass C extends B {\n  constructor(a) { super(\"bar\" + a); }\n}\nnew C(\"baz\");\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -11303,6 +11326,7 @@ return passed;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_expression_in_constructors"><td><span><a class="anchor" href="#super_expression_in_constructors">&#xA7;</a>expression in constructors</span><script data-source="
+&quot;use strict&quot;;
 class B {
   constructor(a) { return [&quot;foo&quot; + a]; }
 }
@@ -11310,7 +11334,7 @@ class C extends B {
   constructor(a) { return super(&quot;bar&quot; + a); }
 }
 return new C(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("155");return Function("asyncTestPassed","\nclass B {\n  constructor(a) { return [\"foo\" + a]; }\n}\nclass C extends B {\n  constructor(a) { return super(\"bar\" + a); }\n}\nreturn new C(\"baz\")[0] === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("155");return Function("asyncTestPassed","\n\"use strict\";\nclass B {\n  constructor(a) { return [\"foo\" + a]; }\n}\nclass C extends B {\n  constructor(a) { return super(\"bar\" + a); }\n}\nreturn new C(\"baz\")[0] === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -11378,6 +11402,7 @@ return new C(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_in_methods,_property_access"><td><span><a class="anchor" href="#super_in_methods,_property_access">&#xA7;</a>in methods, property access</span><script data-source="
+&quot;use strict&quot;;
 class B {}
 B.prototype.qux = &quot;foo&quot;;
 B.prototype.corge = &quot;baz&quot;;
@@ -11386,7 +11411,7 @@ class C extends B {
 }
 C.prototype.qux = &quot;garply&quot;;
 return new C().quux(&quot;bar&quot;) === &quot;foobarbaz&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("156");return Function("asyncTestPassed","\nclass B {}\nB.prototype.qux = \"foo\";\nB.prototype.corge = \"baz\";\nclass C extends B {\n  quux(a) { return super.qux + a + super[\"corge\"]; }\n}\nC.prototype.qux = \"garply\";\nreturn new C().quux(\"bar\") === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("156");return Function("asyncTestPassed","\n\"use strict\";\nclass B {}\nB.prototype.qux = \"foo\";\nB.prototype.corge = \"baz\";\nclass C extends B {\n  quux(a) { return super.qux + a + super[\"corge\"]; }\n}\nC.prototype.qux = \"garply\";\nreturn new C().quux(\"bar\") === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -11454,6 +11479,7 @@ return new C().quux(&quot;bar&quot;) === &quot;foobarbaz&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_in_methods,_method_calls"><td><span><a class="anchor" href="#super_in_methods,_method_calls">&#xA7;</a>in methods, method calls</span><script data-source="
+&quot;use strict&quot;;
 class B {
   qux(a) { return &quot;foo&quot; + a; }
 }
@@ -11461,7 +11487,7 @@ class C extends B {
   qux(a) { return super.qux(&quot;bar&quot; + a); }
 }
 return new C().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("157");return Function("asyncTestPassed","\nclass B {\n  qux(a) { return \"foo\" + a; }\n}\nclass C extends B {\n  qux(a) { return super.qux(\"bar\" + a); }\n}\nreturn new C().qux(\"baz\") === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("157");return Function("asyncTestPassed","\n\"use strict\";\nclass B {\n  qux(a) { return \"foo\" + a; }\n}\nclass C extends B {\n  qux(a) { return super.qux(\"bar\" + a); }\n}\nreturn new C().qux(\"baz\") === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -11529,6 +11555,7 @@ return new C().qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_method_calls_use_correct_this_binding"><td><span><a class="anchor" href="#super_method_calls_use_correct_this_binding">&#xA7;</a>method calls use correct &quot;this&quot; binding</span><script data-source="
+&quot;use strict&quot;;
 class B {
   qux(a) { return this.foo + a; }
 }
@@ -11538,7 +11565,7 @@ class C extends B {
 var obj = new C();
 obj.foo = &quot;foo&quot;;
 return obj.qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("158");return Function("asyncTestPassed","\nclass B {\n  qux(a) { return this.foo + a; }\n}\nclass C extends B {\n  qux(a) { return super.qux(\"bar\" + a); }\n}\nvar obj = new C();\nobj.foo = \"foo\";\nreturn obj.qux(\"baz\") === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("158");return Function("asyncTestPassed","\n\"use strict\";\nclass B {\n  qux(a) { return this.foo + a; }\n}\nclass C extends B {\n  qux(a) { return super.qux(\"bar\" + a); }\n}\nvar obj = new C();\nobj.foo = \"foo\";\nreturn obj.qux(\"baz\") === \"foobarbaz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -11606,6 +11633,7 @@ return obj.qux(&quot;baz&quot;) === &quot;foobarbaz&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_constructor_calls_use_correct_new.target_binding"><td><span><a class="anchor" href="#super_constructor_calls_use_correct_new.target_binding">&#xA7;</a>constructor calls use correct &quot;new.target&quot; binding</span><script data-source="
+&quot;use strict&quot;;
 var passed;
 class B {
   constructor() { passed = (new.target === C); }
@@ -11615,7 +11643,7 @@ class C extends B {
 }
 new C();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("159");return Function("asyncTestPassed","\nvar passed;\nclass B {\n  constructor() { passed = (new.target === C); }\n}\nclass C extends B {\n  constructor() { super(); }\n}\nnew C();\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("159");return Function("asyncTestPassed","\n\"use strict\";\nvar passed;\nclass B {\n  constructor() { passed = (new.target === C); }\n}\nclass C extends B {\n  constructor() { super(); }\n}\nnew C();\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -11683,6 +11711,7 @@ return passed;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="super" id="super_is_statically_bound"><td><span><a class="anchor" href="#super_is_statically_bound">&#xA7;</a>is statically bound</span><script data-source="
+&quot;use strict&quot;;
 class B {
   qux() { return &quot;bar&quot;; }
 }
@@ -11694,7 +11723,7 @@ var obj = {
   corge: &quot;ley&quot;
 };
 return obj.qux() === &quot;barley&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("160");return Function("asyncTestPassed","\nclass B {\n  qux() { return \"bar\"; }\n}\nclass C extends B {\n  qux() { return super.qux() + this.corge; }\n}\nvar obj = {\n  qux: C.prototype.qux,\n  corge: \"ley\"\n};\nreturn obj.qux() === \"barley\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("160");return Function("asyncTestPassed","\n\"use strict\";\nclass B {\n  qux() { return \"bar\"; }\n}\nclass C extends B {\n  qux() { return super.qux() + this.corge; }\n}\nvar obj = {\n  qux: C.prototype.qux,\n  corge: \"ley\"\n};\nreturn obj.qux() === \"barley\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -13419,6 +13448,7 @@ return passed;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="generators" id="generators_shorthand_generator_methods,_classes"><td><span><a class="anchor" href="#generators_shorthand_generator_methods,_classes">&#xA7;</a>shorthand generator methods, classes</span><script data-source="
+&quot;use strict&quot;;
 class C {
   * generator() {
     yield 5; yield 6;
@@ -13432,7 +13462,7 @@ passed    &amp;= item.value === 6 &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("182");return Function("asyncTestPassed","\nclass C {\n  * generator() {\n    yield 5; yield 6;\n  }\n};\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("182");return Function("asyncTestPassed","\n\"use strict\";\nclass C {\n  * generator() {\n    yield 5; yield 6;\n  }\n};\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -13500,6 +13530,7 @@ return passed;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="generators" id="generators_computed_shorthand_generators,_classes"><td><span><a class="anchor" href="#generators_computed_shorthand_generators,_classes">&#xA7;</a>computed shorthand generators, classes</span><script data-source="
+&quot;use strict&quot;;
 var garply = &quot;generator&quot;;
 class C {
   * [garply] () {
@@ -13514,7 +13545,7 @@ passed    &amp;= item.value === 6 &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("183");return Function("asyncTestPassed","\nvar garply = \"generator\";\nclass C {\n  * [garply] () {\n    yield 5; yield 6;\n  }\n}\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("183");return Function("asyncTestPassed","\n\"use strict\";\nvar garply = \"generator\";\nclass C {\n  * [garply] () {\n    yield 5; yield 6;\n  }\n}\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -27796,11 +27827,12 @@ return o[sym1].name === &quot;[foo]&quot; &amp;&amp;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="function_name_property" id="function_name_property_class_statements"><td><span><a class="anchor" href="#function_name_property_class_statements">&#xA7;</a>class statements</span><script data-source="
+&quot;use strict&quot;;
 class foo {};
 class bar { static name() {} };
 return foo.name === &quot;foo&quot; &amp;&amp;
   typeof bar.name === &quot;function&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("377");return Function("asyncTestPassed","\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("377");return Function("asyncTestPassed","\n\"use strict\";\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[25]</sup></a></td>
@@ -27868,9 +27900,10 @@ return foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="function_name_property" id="function_name_property_class_expressions"><td><span><a class="anchor" href="#function_name_property_class_expressions">&#xA7;</a>class expressions</span><script data-source="
+&quot;use strict&quot;;
 return class foo {}.name === &quot;foo&quot; &amp;&amp;
   typeof class bar { static name() {} }.name === &quot;function&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("378");return Function("asyncTestPassed","\nreturn class foo {}.name === \"foo\" &&\n  typeof class bar { static name() {} }.name === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("378");return Function("asyncTestPassed","\n\"use strict\";\nreturn class foo {}.name === \"foo\" &&\n  typeof class bar { static name() {} }.name === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[25]</sup></a></td>
@@ -27938,13 +27971,14 @@ return class foo {}.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="function_name_property" id="function_name_property_variables_(class)"><td><span><a class="anchor" href="#function_name_property_variables_(class)">&#xA7;</a>variables (class)</span><script data-source="
+&quot;use strict&quot;;
 var foo = class {};
 var bar = class baz {};
 var qux = class { static name() {} };
 return foo.name === &quot;foo&quot; &amp;&amp;
        bar.name === &quot;baz&quot; &amp;&amp;
        typeof qux.name === &quot;function&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("379");return Function("asyncTestPassed","\nvar foo = class {};\nvar bar = class baz {};\nvar qux = class { static name() {} };\nreturn foo.name === \"foo\" &&\n       bar.name === \"baz\" &&\n       typeof qux.name === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("379");return Function("asyncTestPassed","\n\"use strict\";\nvar foo = class {};\nvar bar = class baz {};\nvar qux = class { static name() {} };\nreturn foo.name === \"foo\" &&\n       bar.name === \"baz\" &&\n       typeof qux.name === \"function\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -28012,12 +28046,13 @@ return foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="function_name_property" id="function_name_property_object_methods_(class)"><td><span><a class="anchor" href="#function_name_property_object_methods_(class)">&#xA7;</a>object methods (class)</span><script data-source="
+&quot;use strict&quot;;
 var o = { foo: class {}, bar: class baz {}};
 o.qux = class {};
 return o.foo.name === &quot;foo&quot; &amp;&amp;
        o.bar.name === &quot;baz&quot; &amp;&amp;
        o.qux.name === &quot;&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("380");return Function("asyncTestPassed","\nvar o = { foo: class {}, bar: class baz {}};\no.qux = class {};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("380");return Function("asyncTestPassed","\n\"use strict\";\nvar o = { foo: class {}, bar: class baz {}};\no.qux = class {};\nreturn o.foo.name === \"foo\" &&\n       o.bar.name === \"baz\" &&\n       o.qux.name === \"\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -28085,9 +28120,10 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="function_name_property" id="function_name_property_class_prototype_methods"><td><span><a class="anchor" href="#function_name_property_class_prototype_methods">&#xA7;</a>class prototype methods</span><script data-source="
+&quot;use strict&quot;;
 class C { foo(){} };
 return (new C).foo.name === &quot;foo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("381");return Function("asyncTestPassed","\nclass C { foo(){} };\nreturn (new C).foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("381");return Function("asyncTestPassed","\n\"use strict\";\nclass C { foo(){} };\nreturn (new C).foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -28155,9 +28191,10 @@ return (new C).foo.name === &quot;foo&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="function_name_property" id="function_name_property_class_static_methods"><td><span><a class="anchor" href="#function_name_property_class_static_methods">&#xA7;</a>class static methods</span><script data-source="
+&quot;use strict&quot;;
 class C { static foo(){} };
 return C.foo.name === &quot;foo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("382");return Function("asyncTestPassed","\nclass C { static foo(){} };\nreturn C.foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("382");return Function("asyncTestPassed","\n\"use strict\";\nclass C { static foo(){} };\nreturn C.foo.name === \"foo\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -33097,13 +33134,14 @@ return Math.hypot() === 0 &amp;&amp;
 <td data-browser="ios8" class="tally" data-tally="0">0/7</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_length_property_(accessing)"><td><span><a class="anchor" href="#Array_is_subclassable_length_property_(accessing)">&#xA7;</a>length property (accessing)</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 var c = new C();
 var len1 = c.length;
 c[2] = &apos;foo&apos;;
 var len2 = c.length;
 return len1 === 0 &amp;&amp; len2 === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("453");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nvar len1 = c.length;\nc[2] = 'foo';\nvar len2 = c.length;\nreturn len1 === 0 && len2 === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("453");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nvar c = new C();\nvar len1 = c.length;\nc[2] = 'foo';\nvar len2 = c.length;\nreturn len1 === 0 && len2 === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -33171,12 +33209,13 @@ return len1 === 0 &amp;&amp; len2 === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_length_property_(setting)"><td><span><a class="anchor" href="#Array_is_subclassable_length_property_(setting)">&#xA7;</a>length property (setting)</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 var c = new C();
 c[2] = &apos;foo&apos;;
 c.length = 1;
 return c.length === 1 &amp;&amp; !(2 in c);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("454");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nc[2] = 'foo';\nc.length = 1;\nreturn c.length === 1 && !(2 in c);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("454");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nvar c = new C();\nc[2] = 'foo';\nc.length = 1;\nreturn c.length === 1 && !(2 in c);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -33244,10 +33283,11 @@ return c.length === 1 &amp;&amp; !(2 in c);
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_correct_prototype_chain"><td><span><a class="anchor" href="#Array_is_subclassable_correct_prototype_chain">&#xA7;</a>correct prototype chain</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 var c = new C();
 return c instanceof C &amp;&amp; c instanceof Array &amp;&amp; Object.getPrototypeOf(C) === Array;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("455");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nreturn c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("455");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nvar c = new C();\nreturn c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -33315,9 +33355,10 @@ return c instanceof C &amp;&amp; c instanceof Array &amp;&amp; Object.getPrototy
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_Array.isArray_support"><td><span><a class="anchor" href="#Array_is_subclassable_Array.isArray_support">&#xA7;</a>Array.isArray support</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 return Array.isArray(new C());
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("456");return Function("asyncTestPassed","\nclass C extends Array {}\nreturn Array.isArray(new C());\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("456");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nreturn Array.isArray(new C());\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -33385,11 +33426,12 @@ return Array.isArray(new C());
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_Array.prototype.slice"><td><span><a class="anchor" href="#Array_is_subclassable_Array.prototype.slice">&#xA7;</a>Array.prototype.slice</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 var c = new C();
 c.push(2,4,6);
 return c.slice(1,2) instanceof C;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("457");return Function("asyncTestPassed","\nclass C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.slice(1,2) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("457");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.slice(1,2) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -33457,9 +33499,10 @@ return c.slice(1,2) instanceof C;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_Array.from"><td><span><a class="anchor" href="#Array_is_subclassable_Array.from">&#xA7;</a>Array.from</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 return C.from({ length: 0 }) instanceof C;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("458");return Function("asyncTestPassed","\nclass C extends Array {}\nreturn C.from({ length: 0 }) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("458");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nreturn C.from({ length: 0 }) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -33527,9 +33570,10 @@ return C.from({ length: 0 }) instanceof C;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Array_is_subclassable" id="Array_is_subclassable_Array.of"><td><span><a class="anchor" href="#Array_is_subclassable_Array.of">&#xA7;</a>Array.of</span><script data-source="
+&quot;use strict&quot;;
 class C extends Array {}
 return C.of(0) instanceof C;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("459");return Function("asyncTestPassed","\nclass C extends Array {}\nreturn C.of(0) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("459");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Array {}\nreturn C.of(0) instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -33663,10 +33707,11 @@ return C.of(0) instanceof C;
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
 </tr>
 <tr class="subtest" data-parent="RegExp_is_subclassable" id="RegExp_is_subclassable_basic_functionality"><td><span><a class="anchor" href="#RegExp_is_subclassable_basic_functionality">&#xA7;</a>basic functionality</span><script data-source="
+&quot;use strict&quot;;
 class R extends RegExp {}
 var r = new R(&quot;baz&quot;,&quot;g&quot;);
 return r.global &amp;&amp; r.source === &quot;baz&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("461");return Function("asyncTestPassed","\nclass R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.global && r.source === \"baz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("461");return Function("asyncTestPassed","\n\"use strict\";\nclass R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.global && r.source === \"baz\";\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -33734,10 +33779,11 @@ return r.global &amp;&amp; r.source === &quot;baz&quot;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="RegExp_is_subclassable" id="RegExp_is_subclassable_correct_prototype_chain"><td><span><a class="anchor" href="#RegExp_is_subclassable_correct_prototype_chain">&#xA7;</a>correct prototype chain</span><script data-source="
+&quot;use strict&quot;;
 class R extends RegExp {}
 var r = new R(&quot;baz&quot;,&quot;g&quot;);
 return r instanceof R &amp;&amp; r instanceof RegExp &amp;&amp; Object.getPrototypeOf(R) === RegExp;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("462");return Function("asyncTestPassed","\nclass R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("462");return Function("asyncTestPassed","\n\"use strict\";\nclass R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -33805,10 +33851,11 @@ return r instanceof R &amp;&amp; r instanceof RegExp &amp;&amp; Object.getProtot
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="RegExp_is_subclassable" id="RegExp_is_subclassable_RegExp.prototype.exec"><td><span><a class="anchor" href="#RegExp_is_subclassable_RegExp.prototype.exec">&#xA7;</a>RegExp.prototype.exec</span><script data-source="
+&quot;use strict&quot;;
 class R extends RegExp {}
 var r = new R(&quot;baz&quot;,&quot;g&quot;);
 return r.exec(&quot;foobarbaz&quot;)[0] === &quot;baz&quot; &amp;&amp; r.lastIndex === 9;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("463");return Function("asyncTestPassed","\nclass R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.exec(\"foobarbaz\")[0] === \"baz\" && r.lastIndex === 9;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("463");return Function("asyncTestPassed","\n\"use strict\";\nclass R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.exec(\"foobarbaz\")[0] === \"baz\" && r.lastIndex === 9;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -33876,10 +33923,11 @@ return r.exec(&quot;foobarbaz&quot;)[0] === &quot;baz&quot; &amp;&amp; r.lastInd
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="RegExp_is_subclassable" id="RegExp_is_subclassable_RegExp.prototype.test"><td><span><a class="anchor" href="#RegExp_is_subclassable_RegExp.prototype.test">&#xA7;</a>RegExp.prototype.test</span><script data-source="
+&quot;use strict&quot;;
 class R extends RegExp {}
 var r = new R(&quot;baz&quot;);
 return r.test(&quot;foobarbaz&quot;);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("464");return Function("asyncTestPassed","\nclass R extends RegExp {}\nvar r = new R(\"baz\");\nreturn r.test(\"foobarbaz\");\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("464");return Function("asyncTestPassed","\n\"use strict\";\nclass R extends RegExp {}\nvar r = new R(\"baz\");\nreturn r.test(\"foobarbaz\");\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34013,10 +34061,11 @@ return r.test(&quot;foobarbaz&quot;);
 <td data-browser="ios8" class="tally" data-tally="0">0/6</td>
 </tr>
 <tr class="subtest" data-parent="Function_is_subclassable" id="Function_is_subclassable_can_be_called"><td><span><a class="anchor" href="#Function_is_subclassable_can_be_called">&#xA7;</a>can be called</span><script data-source="
+&quot;use strict&quot;;
 class C extends Function {}
 var c = new C(&quot;return &apos;foo&apos;;&quot;);
 return c() === &apos;foo&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("466");return Function("asyncTestPassed","\nclass C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c() === 'foo';\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("466");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c() === 'foo';\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34084,10 +34133,11 @@ return c() === &apos;foo&apos;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Function_is_subclassable" id="Function_is_subclassable_correct_prototype_chain"><td><span><a class="anchor" href="#Function_is_subclassable_correct_prototype_chain">&#xA7;</a>correct prototype chain</span><script data-source="
+&quot;use strict&quot;;
 class C extends Function {}
 var c = new C(&quot;return &apos;foo&apos;;&quot;);
 return c instanceof C &amp;&amp; c instanceof Function &amp;&amp; Object.getPrototypeOf(C) === Function;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("467");return Function("asyncTestPassed","\nclass C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("467");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#compiler-proto-note"><sup>[15]</sup></a></td>
@@ -34155,11 +34205,12 @@ return c instanceof C &amp;&amp; c instanceof Function &amp;&amp; Object.getProt
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Function_is_subclassable" id="Function_is_subclassable_can_be_used_with_new"><td><span><a class="anchor" href="#Function_is_subclassable_can_be_used_with_new">&#xA7;</a>can be used with &quot;new&quot;</span><script data-source="
+&quot;use strict&quot;;
 class C extends Function {}
 var c = new C(&quot;this.bar = 2;&quot;);
 c.prototype.baz = 3;
 return new c().bar === 2 &amp;&amp; new c().baz === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("468");return Function("asyncTestPassed","\nclass C extends Function {}\nvar c = new C(\"this.bar = 2;\");\nc.prototype.baz = 3;\nreturn new c().bar === 2 && new c().baz === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("468");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Function {}\nvar c = new C(\"this.bar = 2;\");\nc.prototype.baz = 3;\nreturn new c().bar === 2 && new c().baz === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34227,10 +34278,11 @@ return new c().bar === 2 &amp;&amp; new c().baz === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Function_is_subclassable" id="Function_is_subclassable_Function.prototype.call"><td><span><a class="anchor" href="#Function_is_subclassable_Function.prototype.call">&#xA7;</a>Function.prototype.call</span><script data-source="
+&quot;use strict&quot;;
 class C extends Function {}
 var c = new C(&quot;x&quot;, &quot;return this.bar + x;&quot;);
 return c.call({bar:1}, 2) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("469");return Function("asyncTestPassed","\nclass C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.call({bar:1}, 2) === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("469");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.call({bar:1}, 2) === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34298,10 +34350,11 @@ return c.call({bar:1}, 2) === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Function_is_subclassable" id="Function_is_subclassable_Function.prototype.apply"><td><span><a class="anchor" href="#Function_is_subclassable_Function.prototype.apply">&#xA7;</a>Function.prototype.apply</span><script data-source="
+&quot;use strict&quot;;
 class C extends Function {}
 var c = new C(&quot;x&quot;, &quot;return this.bar + x;&quot;);
 return c.apply({bar:1}, [2]) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("470");return Function("asyncTestPassed","\nclass C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.apply({bar:1}, [2]) === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("470");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.apply({bar:1}, [2]) === 3;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34369,10 +34422,11 @@ return c.apply({bar:1}, [2]) === 3;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Function_is_subclassable" id="Function_is_subclassable_Function.prototype.bind"><td><span><a class="anchor" href="#Function_is_subclassable_Function.prototype.bind">&#xA7;</a>Function.prototype.bind</span><script data-source="
+&quot;use strict&quot;;
 class C extends Function {}
 var c = new C(&quot;x&quot;, &quot;y&quot;, &quot;return this.bar + x + y;&quot;).bind({bar:1}, 2);
 return c(6) === 9 &amp;&amp; c instanceof C;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("471");return Function("asyncTestPassed","\nclass C extends Function {}\nvar c = new C(\"x\", \"y\", \"return this.bar + x + y;\").bind({bar:1}, 2);\nreturn c(6) === 9 && c instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("471");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Function {}\nvar c = new C(\"x\", \"y\", \"return this.bar + x + y;\").bind({bar:1}, 2);\nreturn c(6) === 9 && c instanceof C;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34506,6 +34560,7 @@ return c(6) === 9 &amp;&amp; c instanceof C;
 <td data-browser="ios8" class="tally" data-tally="0">0/4</td>
 </tr>
 <tr class="subtest" data-parent="Promise_is_subclassable" id="Promise_is_subclassable_basic_functionality"><td><span><a class="anchor" href="#Promise_is_subclassable_basic_functionality">&#xA7;</a>basic functionality</span><script data-source="
+&quot;use strict&quot;;
 class P extends Promise {}
 var p1 = new P(function(resolve, reject) { resolve(&quot;foo&quot;); });
 var p2 = new P(function(resolve, reject) { reject(&quot;quux&quot;); });
@@ -34529,7 +34584,7 @@ p1.then(function() {
 function check() {
   if (score === 5) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("473");return Function("asyncTestPassed","\nclass P extends Promise {}\nvar p1 = new P(function(resolve, reject) { resolve(\"foo\"); });\nvar p2 = new P(function(resolve, reject) { reject(\"quux\"); });\nvar score = +(p1 instanceof P);\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\np1.then(function() {\n  // P.prototype.then() should return a new P\n  score += p1.then() instanceof P && p1.then() !== p1;\n  check();\n});\n\nfunction check() {\n  if (score === 5) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("473");return Function("asyncTestPassed","\n\"use strict\";\nclass P extends Promise {}\nvar p1 = new P(function(resolve, reject) { resolve(\"foo\"); });\nvar p2 = new P(function(resolve, reject) { reject(\"quux\"); });\nvar score = +(p1 instanceof P);\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\np1.then(function() {\n  // P.prototype.then() should return a new P\n  score += p1.then() instanceof P && p1.then() !== p1;\n  check();\n});\n\nfunction check() {\n  if (score === 5) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34597,10 +34652,11 @@ function check() {
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Promise_is_subclassable" id="Promise_is_subclassable_correct_prototype_chain"><td><span><a class="anchor" href="#Promise_is_subclassable_correct_prototype_chain">&#xA7;</a>correct prototype chain</span><script data-source="
+&quot;use strict&quot;;
 class C extends Promise {}
 var c = new C(function(resolve, reject) { resolve(&quot;foo&quot;); });
 return c instanceof C &amp;&amp; c instanceof Promise &amp;&amp; Object.getPrototypeOf(C) === Promise;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("474");return Function("asyncTestPassed","\nclass C extends Promise {}\nvar c = new C(function(resolve, reject) { resolve(\"foo\"); });\nreturn c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("474");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Promise {}\nvar c = new C(function(resolve, reject) { resolve(\"foo\"); });\nreturn c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34668,6 +34724,7 @@ return c instanceof C &amp;&amp; c instanceof Promise &amp;&amp; Object.getProto
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Promise_is_subclassable" id="Promise_is_subclassable_Promise.all"><td><span><a class="anchor" href="#Promise_is_subclassable_Promise.all">&#xA7;</a>Promise.all</span><script data-source="
+&quot;use strict&quot;;
 class P extends Promise {}
 var fulfills = P.all([
   new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
@@ -34684,7 +34741,7 @@ rejects.catch(function(result) { score += (result === &quot;qux&quot;); check();
 function check() {
   if (score === 3) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("475");return Function("asyncTestPassed","\nclass P extends Promise {}\nvar fulfills = P.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = P.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("475");return Function("asyncTestPassed","\n\"use strict\";\nclass P extends Promise {}\nvar fulfills = P.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = P.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34752,6 +34809,7 @@ function check() {
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="Promise_is_subclassable" id="Promise_is_subclassable_Promise.race"><td><span><a class="anchor" href="#Promise_is_subclassable_Promise.race">&#xA7;</a>Promise.race</span><script data-source="
+&quot;use strict&quot;;
 class P extends Promise {}
 var fulfills = P.race([
   new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
@@ -34768,7 +34826,7 @@ rejects.catch(function(result) { score += (result === &quot;baz&quot;); check();
 function check() {
   if (score === 3) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("476");return Function("asyncTestPassed","\nclass P extends Promise {}\nvar fulfills = P.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = P.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("476");return Function("asyncTestPassed","\n\"use strict\";\nclass P extends Promise {}\nvar fulfills = P.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = P.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34902,11 +34960,12 @@ function check() {
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous_subclassables" id="miscellaneous_subclassables_Boolean_is_subclassable"><td><span><a class="anchor" href="#miscellaneous_subclassables_Boolean_is_subclassable">&#xA7;</a>Boolean is subclassable</span><script data-source="
+&quot;use strict&quot;;
 class C extends Boolean {}
 var c = new C(true);
 return c instanceof Boolean
   &amp;&amp; c == true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("478");return Function("asyncTestPassed","\nclass C extends Boolean {}\nvar c = new C(true);\nreturn c instanceof Boolean\n  && c == true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("478");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Boolean {}\nvar c = new C(true);\nreturn c instanceof Boolean\n  && c == true;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34974,11 +35033,12 @@ return c instanceof Boolean
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous_subclassables" id="miscellaneous_subclassables_Number_is_subclassable"><td><span><a class="anchor" href="#miscellaneous_subclassables_Number_is_subclassable">&#xA7;</a>Number is subclassable</span><script data-source="
+&quot;use strict&quot;;
 class C extends Number {}
 var c = new C(6);
 return c instanceof Number
   &amp;&amp; +c === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("479");return Function("asyncTestPassed","\nclass C extends Number {}\nvar c = new C(6);\nreturn c instanceof Number\n  && +c === 6;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("479");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends Number {}\nvar c = new C(6);\nreturn c instanceof Number\n  && +c === 6;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35046,13 +35106,14 @@ return c instanceof Number
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous_subclassables" id="miscellaneous_subclassables_String_is_subclassable"><td><span><a class="anchor" href="#miscellaneous_subclassables_String_is_subclassable">&#xA7;</a>String is subclassable</span><script data-source="
+&quot;use strict&quot;;
 class C extends String {}
 var c = new C(&quot;golly&quot;);
 return c instanceof String
   &amp;&amp; c + &apos;&apos; === &quot;golly&quot;
   &amp;&amp; c[0] === &quot;g&quot;
   &amp;&amp; c.length === 5;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("480");return Function("asyncTestPassed","\nclass C extends String {}\nvar c = new C(\"golly\");\nreturn c instanceof String\n  && c + '' === \"golly\"\n  && c[0] === \"g\"\n  && c.length === 5;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("480");return Function("asyncTestPassed","\n\"use strict\";\nclass C extends String {}\nvar c = new C(\"golly\");\nreturn c instanceof String\n  && c + '' === \"golly\"\n  && c[0] === \"g\"\n  && c.length === 5;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35120,6 +35181,7 @@ return c instanceof String
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous_subclassables" id="miscellaneous_subclassables_Map_is_subclassable"><td><span><a class="anchor" href="#miscellaneous_subclassables_Map_is_subclassable">&#xA7;</a>Map is subclassable</span><script data-source="
+&quot;use strict&quot;;
 var key = {};
 class M extends Map {}
 var map = new M();
@@ -35127,7 +35189,7 @@ var map = new M();
 map.set(key, 123);
 
 return map.has(key) &amp;&amp; map.get(key) === 123;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("481");return Function("asyncTestPassed","\nvar key = {};\nclass M extends Map {}\nvar map = new M();\n\nmap.set(key, 123);\n\nreturn map.has(key) && map.get(key) === 123;\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("481");return Function("asyncTestPassed","\n\"use strict\";\nvar key = {};\nclass M extends Map {}\nvar map = new M();\n\nmap.set(key, 123);\n\nreturn map.has(key) && map.get(key) === 123;\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35195,6 +35257,7 @@ return map.has(key) &amp;&amp; map.get(key) === 123;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous_subclassables" id="miscellaneous_subclassables_Set_is_subclassable"><td><span><a class="anchor" href="#miscellaneous_subclassables_Set_is_subclassable">&#xA7;</a>Set is subclassable</span><script data-source="
+&quot;use strict&quot;;
 var obj = {};
 class S extends Set {}
 var set = new S();
@@ -35203,7 +35266,7 @@ set.add(123);
 set.add(123);
 
 return set.has(123);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("482");return Function("asyncTestPassed","\nvar obj = {};\nclass S extends Set {}\nvar set = new S();\n\nset.add(123);\nset.add(123);\n\nreturn set.has(123);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("482");return Function("asyncTestPassed","\n\"use strict\";\nvar obj = {};\nclass S extends Set {}\nvar set = new S();\n\nset.add(123);\nset.add(123);\n\nreturn set.has(123);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35346,14 +35409,14 @@ function correctProtoBound(proto) {
   }
   else {
     f.__proto__ = proto;
-  } 
+  }
   var boundF = Function.prototype.bind.call(f, null);
   return Object.getPrototypeOf(boundF) === proto;
 }
 return correctProtoBound(Function.prototype)
   &amp;&amp; correctProtoBound({})
   &amp;&amp; correctProtoBound(null);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("484");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  var f = function(){};\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(f, proto);\n  }\n  else {\n    f.__proto__ = proto;\n  } \n  var boundF = Function.prototype.bind.call(f, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("484");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  var f = function(){};\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(f, proto);\n  }\n  else {\n    f.__proto__ = proto;\n  }\n  var boundF = Function.prototype.bind.call(f, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35428,14 +35491,14 @@ function correctProtoBound(proto) {
   }
   else {
     f.__proto__ = proto;
-  } 
+  }
   var boundF = Function.prototype.bind.call(f, null);
   return Object.getPrototypeOf(boundF) === proto;
 }
 return correctProtoBound(Function.prototype)
   &amp;&amp; correctProtoBound({})
   &amp;&amp; correctProtoBound(null);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("485");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  var f = function*(){};\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(f, proto);\n  }\n  else {\n    f.__proto__ = proto;\n  } \n  var boundF = Function.prototype.bind.call(f, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("485");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  var f = function*(){};\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(f, proto);\n  }\n  else {\n    f.__proto__ = proto;\n  }\n  var boundF = Function.prototype.bind.call(f, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35510,14 +35573,14 @@ function correctProtoBound(proto) {
   }
   else {
     f.__proto__ = proto;
-  } 
+  }
   var boundF = Function.prototype.bind.call(f, null);
   return Object.getPrototypeOf(boundF) === proto;
 }
 return correctProtoBound(Function.prototype)
   &amp;&amp; correctProtoBound({})
   &amp;&amp; correctProtoBound(null);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("486");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  var f = ()=>5;\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(f, proto);\n  }\n  else {\n    f.__proto__ = proto;\n  } \n  var boundF = Function.prototype.bind.call(f, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("486");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  var f = ()=>5;\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(f, proto);\n  }\n  else {\n    f.__proto__ = proto;\n  }\n  var boundF = Function.prototype.bind.call(f, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35585,6 +35648,7 @@ return correctProtoBound(Function.prototype)
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="prototype_of_bound_functions" id="prototype_of_bound_functions_classes"><td><span><a class="anchor" href="#prototype_of_bound_functions_classes">&#xA7;</a>classes</span><script data-source="
+&quot;use strict&quot;;
 function correctProtoBound(proto) {
   class C {}
   if (Object.setPrototypeOf) {
@@ -35592,14 +35656,14 @@ function correctProtoBound(proto) {
   }
   else {
     C.__proto__ = proto;
-  } 
+  }
   var boundF = Function.prototype.bind.call(C, null);
   return Object.getPrototypeOf(boundF) === proto;
 }
 return correctProtoBound(Function.prototype)
   &amp;&amp; correctProtoBound({})
   &amp;&amp; correctProtoBound(null);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("487");return Function("asyncTestPassed","\nfunction correctProtoBound(proto) {\n  class C {}\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(C, proto);\n  }\n  else {\n    C.__proto__ = proto;\n  } \n  var boundF = Function.prototype.bind.call(C, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("487");return Function("asyncTestPassed","\n\"use strict\";\nfunction correctProtoBound(proto) {\n  class C {}\n  if (Object.setPrototypeOf) {\n    Object.setPrototypeOf(C, proto);\n  }\n  else {\n    C.__proto__ = proto;\n  }\n  var boundF = Function.prototype.bind.call(C, null);\n  return Object.getPrototypeOf(boundF) === proto;\n}\nreturn correctProtoBound(Function.prototype)\n  && correctProtoBound({})\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -35667,6 +35731,7 @@ return correctProtoBound(Function.prototype)
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="prototype_of_bound_functions" id="prototype_of_bound_functions_subclasses"><td><span><a class="anchor" href="#prototype_of_bound_functions_subclasses">&#xA7;</a>subclasses</span><script data-source="
+&quot;use strict&quot;;
 function correctProtoBound(superclass) {
   class C extends superclass {
     constructor() {
@@ -35679,7 +35744,7 @@ function correctProtoBound(superclass) {
 return correctProtoBound(function(){})
   &amp;&amp; correctProtoBound(Array)
   &amp;&amp; correctProtoBound(null);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("488");return Function("asyncTestPassed","\nfunction correctProtoBound(superclass) {\n  class C extends superclass {\n    constructor() {\n      return Object.create(null);\n    }\n  }\n  var boundF = Function.prototype.bind.call(C, null);\n  return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);\n}\nreturn correctProtoBound(function(){})\n  && correctProtoBound(Array)\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("488");return Function("asyncTestPassed","\n\"use strict\";\nfunction correctProtoBound(superclass) {\n  class C extends superclass {\n    constructor() {\n      return Object.create(null);\n    }\n  }\n  var boundF = Function.prototype.bind.call(C, null);\n  return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);\n}\nreturn correctProtoBound(function(){})\n  && correctProtoBound(Array)\n  && correctProtoBound(null);\n      ")(asyncTestPassed);}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

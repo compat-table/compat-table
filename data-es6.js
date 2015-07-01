@@ -593,6 +593,7 @@ exports.tests = [
     },
     'lexical "super" binding': {
       exec: function(){/*
+        "use strict";
         class B {
           qux() {
             return "quux";
@@ -1413,6 +1414,7 @@ exports.tests = [
     },
     'is block-scoped': {
       exec: function () {/*
+        "use strict";
         class C {}
         var c1 = C;
         {
@@ -1431,6 +1433,7 @@ exports.tests = [
     },
     'class expression': {
       exec: function () {/*
+        "use strict";
         return typeof class C {} === "function";
       */},
       res: {
@@ -1448,6 +1451,7 @@ exports.tests = [
     },
     'anonymous class': {
       exec: function () {/*
+        "use strict";
         return typeof class {} === "function";
       */},
       res: {
@@ -1464,6 +1468,7 @@ exports.tests = [
     },
     'constructor': {
       exec: function () {/*
+        "use strict";
         class C {
           constructor() { this.x = 1; }
         }
@@ -1486,6 +1491,7 @@ exports.tests = [
     },
     'prototype methods': {
       exec: function () {/*
+        "use strict";
         class C {
           method() { return 2; }
         }
@@ -1508,6 +1514,7 @@ exports.tests = [
     },
     'string-keyed methods': {
       exec: function () {/*
+        "use strict";
         class C {
           "foo bar"() { return 2; }
         }
@@ -1529,6 +1536,7 @@ exports.tests = [
     },
     'computed prototype methods': {
       exec: function () {/*
+        "use strict";
         var foo = "method";
         class C {
           [foo]() { return 2; }
@@ -1549,6 +1557,7 @@ exports.tests = [
     },
     'static methods': {
       exec: function () {/*
+        "use strict";
         class C {
           static method() { return 3; }
         }
@@ -1571,6 +1580,7 @@ exports.tests = [
     },
     'computed static methods': {
       exec: function () {/*
+        "use strict";
         var foo = "method";
         class C {
           static [foo]() { return 3; }
@@ -1591,6 +1601,7 @@ exports.tests = [
     },
     'accessor properties': {
       exec: function () {/*
+        "use strict";
         var baz = false;
         class C {
           get foo() { return "foo"; }
@@ -1615,6 +1626,7 @@ exports.tests = [
     },
     'computed accessor properties': {
       exec: function () {/*
+        "use strict";
         var garply = "foo", grault = "bar", baz = false;
         class C {
           get [garply]() { return "foo"; }
@@ -1634,6 +1646,7 @@ exports.tests = [
     },
     'static accessor properties': {
       exec: function () {/*
+        "use strict";
         var baz = false;
         class C {
           static get foo() { return "foo"; }
@@ -1657,6 +1670,7 @@ exports.tests = [
     },
     'computed static accessor properties': {
       exec: function () {/*
+        "use strict";
         var garply = "foo", grault = "bar", baz = false;
         class C {
           static get [garply]() { return "foo"; }
@@ -1676,6 +1690,7 @@ exports.tests = [
     },
     'class name is lexically scoped': {
       exec: function () {/*
+        "use strict";
         class C {
           method() { return typeof C === "function"; }
         }
@@ -1695,6 +1710,7 @@ exports.tests = [
     },
     'computed names, temporal dead zone': {
       exec: function () {/*
+        "use strict";
         try {
           var B = class C {
             [C](){}
@@ -1709,6 +1725,7 @@ exports.tests = [
     },
     'methods aren\'t enumerable': {
       exec: function () {/*
+        "use strict";
         class C {
           foo() {}
           static bar() {}
@@ -1742,6 +1759,7 @@ exports.tests = [
     },
     'constructor requires new': {
       exec: function () {/*
+        "use strict";
         class C {}
         try {
           C();
@@ -1759,6 +1777,7 @@ exports.tests = [
     },
     'extends': {
       exec: function () {/*
+        "use strict";
         class B {}
         class C extends B {}
         return new C() instanceof B
@@ -1791,6 +1810,7 @@ exports.tests = [
     },
     'extends expressions': {
       exec: function () {/*
+        "use strict";
         var B;
         class C extends (B = class {}) {}
         return new C() instanceof B
@@ -1814,6 +1834,7 @@ exports.tests = [
     },
     'extends null': {
       exec: function () {/*
+        "use strict";
         class C extends null {
           constructor() { return Object.create(null); }
         }
@@ -1834,6 +1855,7 @@ exports.tests = [
     },
     'new.target': {
       exec: function () {/*
+        "use strict";
         var passed = false;
         new function f() {
           passed = new.target === f;
@@ -1860,6 +1882,7 @@ exports.tests = [
   subtests: {
     'statement in constructors': {
       exec: function() {/*
+        "use strict";
         var passed = false;
         class B {
           constructor(a) { passed = (a === "barbaz"); }
@@ -1886,6 +1909,7 @@ exports.tests = [
     },
     'expression in constructors': {
       exec: function() {/*
+        "use strict";
         class B {
           constructor(a) { return ["foo" + a]; }
         }
@@ -1909,6 +1933,7 @@ exports.tests = [
     },
     'in methods, property access': {
       exec: function() {/*
+        "use strict";
         class B {}
         B.prototype.qux = "foo";
         B.prototype.corge = "baz";
@@ -1937,6 +1962,7 @@ exports.tests = [
     },
     'in methods, method calls': {
       exec: function() {/*
+        "use strict";
         class B {
           qux(a) { return "foo" + a; }
         }
@@ -1961,6 +1987,7 @@ exports.tests = [
     },
     'method calls use correct "this" binding': {
       exec: function() {/*
+        "use strict";
         class B {
           qux(a) { return this.foo + a; }
         }
@@ -1987,6 +2014,7 @@ exports.tests = [
     },
     'constructor calls use correct "new.target" binding': {
       exec: function() {/*
+        "use strict";
         var passed;
         class B {
           constructor() { passed = (new.target === C); }
@@ -2002,6 +2030,7 @@ exports.tests = [
     },
     'is statically bound': {
       exec: function() {/*
+        "use strict";
         class B {
           qux() { return "bar"; }
         }
@@ -2926,6 +2955,7 @@ exports.tests = [
     },
     'shorthand generator methods, classes': {
       exec: function() {/*
+        "use strict";
         class C {
           * generator() {
             yield 5; yield 6;
@@ -2951,6 +2981,7 @@ exports.tests = [
     },
     'computed shorthand generators, classes': {
       exec: function() {/*
+        "use strict";
         var garply = "generator";
         class C {
           * [garply] () {
@@ -2990,7 +3021,7 @@ exports.tests = [
             }
             else {
               f.__proto__ = proto;
-            } 
+            }
             var boundF = Function.prototype.bind.call(f, null);
             return Object.getPrototypeOf(boundF) === proto;
           }
@@ -3010,7 +3041,7 @@ exports.tests = [
             }
             else {
               f.__proto__ = proto;
-            } 
+            }
             var boundF = Function.prototype.bind.call(f, null);
             return Object.getPrototypeOf(boundF) === proto;
           }
@@ -3030,7 +3061,7 @@ exports.tests = [
             }
             else {
               f.__proto__ = proto;
-            } 
+            }
             var boundF = Function.prototype.bind.call(f, null);
             return Object.getPrototypeOf(boundF) === proto;
           }
@@ -3043,6 +3074,7 @@ exports.tests = [
     },
     'classes': {
       exec: function() {/*
+          "use strict";
           function correctProtoBound(proto) {
             class C {}
             if (Object.setPrototypeOf) {
@@ -3050,7 +3082,7 @@ exports.tests = [
             }
             else {
               C.__proto__ = proto;
-            } 
+            }
             var boundF = Function.prototype.bind.call(C, null);
             return Object.getPrototypeOf(boundF) === proto;
           }
@@ -3063,6 +3095,7 @@ exports.tests = [
     },
     'subclasses': {
       exec: function() {/*
+          "use strict";
           function correctProtoBound(superclass) {
             class C extends superclass {
               constructor() {
@@ -6511,6 +6544,7 @@ exports.tests = [
     },
     'class statements': {
       exec: function() {/*
+        "use strict";
         class foo {};
         class bar { static name() {} };
         return foo.name === "foo" &&
@@ -6523,6 +6557,7 @@ exports.tests = [
     },
     'class expressions': {
       exec: function() {/*
+        "use strict";
         return class foo {}.name === "foo" &&
           typeof class bar { static name() {} }.name === "function";
       */},
@@ -6537,6 +6572,7 @@ exports.tests = [
     },
     'variables (class)': {
       exec: function() {/*
+        "use strict";
         var foo = class {};
         var bar = class baz {};
         var qux = class { static name() {} };
@@ -6551,6 +6587,7 @@ exports.tests = [
     },
     'object methods (class)': {
       exec: function() {/*
+        "use strict";
         var o = { foo: class {}, bar: class baz {}};
         o.qux = class {};
         return o.foo.name === "foo" &&
@@ -6564,6 +6601,7 @@ exports.tests = [
     },
     'class prototype methods': {
       exec: function() {/*
+        "use strict";
         class C { foo(){} };
         return (new C).foo.name === "foo";
       */},
@@ -6575,6 +6613,7 @@ exports.tests = [
     },
     'class static methods': {
       exec: function() {/*
+        "use strict";
         class C { static foo(){} };
         return C.foo.name === "foo";
       */},
@@ -8281,6 +8320,7 @@ exports.tests = [
   subtests: {
     'length property (accessing)': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         var c = new C();
         var len1 = c.length;
@@ -8296,6 +8336,7 @@ exports.tests = [
     },
     'length property (setting)': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         var c = new C();
         c[2] = 'foo';
@@ -8310,6 +8351,7 @@ exports.tests = [
     },
     'correct prototype chain': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         var c = new C();
         return c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;
@@ -8323,6 +8365,7 @@ exports.tests = [
     },
     'Array.isArray support': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         return Array.isArray(new C());
       */},
@@ -8332,6 +8375,7 @@ exports.tests = [
     },
     'Array.prototype.slice': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         var c = new C();
         c.push(2,4,6);
@@ -8342,6 +8386,7 @@ exports.tests = [
     },
     'Array.from': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         return C.from({ length: 0 }) instanceof C;
       */},
@@ -8353,6 +8398,7 @@ exports.tests = [
     },
     'Array.of': {
       exec: function () {/*
+        "use strict";
         class C extends Array {}
         return C.of(0) instanceof C;
       */},
@@ -8372,6 +8418,7 @@ exports.tests = [
   subtests: {
     'basic functionality': {
       exec: function () {/*
+        "use strict";
         class R extends RegExp {}
         var r = new R("baz","g");
         return r.global && r.source === "baz";
@@ -8384,6 +8431,7 @@ exports.tests = [
     },
     'correct prototype chain': {
       exec: function () {/*
+        "use strict";
         class R extends RegExp {}
         var r = new R("baz","g");
         return r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;
@@ -8398,6 +8446,7 @@ exports.tests = [
     },
     'RegExp.prototype.exec': {
       exec: function () {/*
+        "use strict";
         class R extends RegExp {}
         var r = new R("baz","g");
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
@@ -8410,6 +8459,7 @@ exports.tests = [
     },
     'RegExp.prototype.test': {
       exec: function () {/*
+        "use strict";
         class R extends RegExp {}
         var r = new R("baz");
         return r.test("foobarbaz");
@@ -8430,6 +8480,7 @@ exports.tests = [
   subtests: {
     'can be called': {
       exec: function () {/*
+        "use strict";
         class C extends Function {}
         var c = new C("return 'foo';");
         return c() === 'foo';
@@ -8441,6 +8492,7 @@ exports.tests = [
     },
     'correct prototype chain': {
       exec: function () {/*
+        "use strict";
         class C extends Function {}
         var c = new C("return 'foo';");
         return c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;
@@ -8453,6 +8505,7 @@ exports.tests = [
     },
     'can be used with "new"': {
       exec: function () {/*
+        "use strict";
         class C extends Function {}
         var c = new C("this.bar = 2;");
         c.prototype.baz = 3;
@@ -8465,6 +8518,7 @@ exports.tests = [
     },
     'Function.prototype.call': {
       exec: function () {/*
+        "use strict";
         class C extends Function {}
         var c = new C("x", "return this.bar + x;");
         return c.call({bar:1}, 2) === 3;
@@ -8476,6 +8530,7 @@ exports.tests = [
     },
     'Function.prototype.apply': {
       exec: function () {/*
+        "use strict";
         class C extends Function {}
         var c = new C("x", "return this.bar + x;");
         return c.apply({bar:1}, [2]) === 3;
@@ -8487,6 +8542,7 @@ exports.tests = [
     },
     'Function.prototype.bind': {
       exec: function () {/*
+        "use strict";
         class C extends Function {}
         var c = new C("x", "y", "return this.bar + x + y;").bind({bar:1}, 2);
         return c(6) === 9 && c instanceof C;
@@ -8505,6 +8561,7 @@ exports.tests = [
   subtests: {
     'basic functionality': {
       exec: function () {/*
+        "use strict";
         class P extends Promise {}
         var p1 = new P(function(resolve, reject) { resolve("foo"); });
         var p2 = new P(function(resolve, reject) { reject("quux"); });
@@ -8535,6 +8592,7 @@ exports.tests = [
     },
     'correct prototype chain': {
       exec: function () {/*
+        "use strict";
         class C extends Promise {}
         var c = new C(function(resolve, reject) { resolve("foo"); });
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
@@ -8545,6 +8603,7 @@ exports.tests = [
     },
     'Promise.all': {
       exec: function () {/*
+        "use strict";
         class P extends Promise {}
         var fulfills = P.all([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
@@ -8568,6 +8627,7 @@ exports.tests = [
     },
     'Promise.race': {
       exec: function () {/*
+        "use strict";
         class P extends Promise {}
         var fulfills = P.race([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
@@ -8599,6 +8659,7 @@ exports.tests = [
   subtests: {
     'Boolean is subclassable': {
       exec: function () {/*
+        "use strict";
         class C extends Boolean {}
         var c = new C(true);
         return c instanceof Boolean
@@ -8611,6 +8672,7 @@ exports.tests = [
     },
     'Number is subclassable': {
       exec: function () {/*
+        "use strict";
         class C extends Number {}
         var c = new C(6);
         return c instanceof Number
@@ -8623,6 +8685,7 @@ exports.tests = [
     },
     'String is subclassable': {
       exec: function () {/*
+        "use strict";
         class C extends String {}
         var c = new C("golly");
         return c instanceof String
@@ -8637,6 +8700,7 @@ exports.tests = [
     },
     'Map is subclassable': {
       exec: function () {/*
+        "use strict";
         var key = {};
         class M extends Map {}
         var map = new M();
@@ -8652,6 +8716,7 @@ exports.tests = [
     },
     'Set is subclassable': {
       exec: function () {/*
+        "use strict";
         var obj = {};
         class S extends Set {}
         var set = new S();
