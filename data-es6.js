@@ -577,6 +577,7 @@ exports.tests = [
         typescript:  true,
         edge:        true,
         firefox39:   true,
+        webkit:      true,
       },
     },
     'no "prototype" property': {
@@ -3500,6 +3501,7 @@ exports.tests = [
       res: Object.assign({}, temp.clampedArrayResults, {
         edge:     false,
         safari6:  false,
+        webkit:   false,
       }),
     },
   },
@@ -4336,7 +4338,7 @@ exports.tests = [
     },
     'constructor requires new': {
       exec: function () {/*
-        new WeapMap();
+        new WeakMap();
         try {
           WeakMap();
           return false;
@@ -5915,7 +5917,6 @@ exports.tests = [
         es6shim:     true,
         firefox37:   true,
         chrome43:    true,
-        webkit:      true,
         iojs:        true,
       },
     },
