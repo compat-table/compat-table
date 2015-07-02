@@ -64,6 +64,9 @@ process.nextTick(function () {
   var traceur     = require('traceur');
   var jstransform = require('jstransform/simple');
   var ts          = require('typescript');
+  var esprima     = require('esprima');
+  var espree      = require('espree');
+  var jshint      = require('jshint');
   [
     {
       name: 'es5-shim',
@@ -108,7 +111,7 @@ process.nextTick(function () {
       name: 'babel + polyfill',
       url: 'https://babeljs.io/',
       target_file: 'es6/compilers/babel-polyfill.html',
-      polyfills: ['node_modules/babel/node_modules/babel-core/browser-polyfill.js'],
+      polyfills: ['node_modules/babel-core/browser-polyfill.js'],
       compiler: function(code) {
         return babel.transform(code).code;
       },
@@ -131,6 +134,75 @@ process.nextTick(function () {
           throw new Error('\n' + result.errors.join('\n'));
         };
       }()),
+    },
+    {
+      name: 'esprima',
+      url: 'http://esprima.org/',
+      target_file: 'es6/compilers/esprima.html',
+      compiler: function(code) {
+        try {
+          esprima.parse(code);
+          return "(function(){return true;})";
+        } catch(e) {
+          return "/*\n" + e.message + "\n*/\n(function(){return false;})";
+        }
+      },
+    },
+    {
+      name: 'espree',
+      url: 'http://espree.org/',
+      target_file: 'es6/compilers/espree.html',
+      compiler: function(code) {
+        try {
+          espree.parse(code,{
+            ecmaFeatures: {
+            arrowFunctions: true,
+            blockBindings: true,
+            destructuring: true,
+            regexYFlag: true,
+            regexUFlag: true,
+            templateStrings: true,
+            binaryLiterals: true,
+            octalLiterals: true,
+            unicodeCodePointEscapes: true,
+            defaultParams: true,
+            restParams: true,
+            forOf: true,
+            objectLiteralComputedProperties: true,
+            objectLiteralShorthandMethods: true,
+            objectLiteralShorthandProperties: true,
+            objectLiteralDuplicateProperties: true,
+            generators: true,
+            spread: true,
+            classes: true,
+            modules: true,
+            globalReturn: true
+          }});
+          return "(function(){return true;})";
+        } catch(e) {
+          return "/*\n" + e.message + "\n*/\n(function(){return false;})";
+        }
+      },
+    },
+    {
+      name: 'jshint',
+      url: 'http://jshint.com/',
+      target_file: 'es6/compilers/jshint.html',
+      compiler: function(code) {
+        var result = jshint.JSHINT(code,{
+          asi:true, boss:true, elision:true, eqnull:true, esnext:true,
+          evil:true, expr:true, laxbreak:true, laxcomma:true, loopfunc:true,
+          multistr: true, noyield:true, plusplus:true, proto:true, sub:true,
+          supernew: true, validthis:true, withstmt:true, nonstandard:true, typed:true,
+          "-W032":true,
+        });
+        if (result) {
+          return "(function(){return true;})";
+        } else {
+          return "/*\n" + jshint.JSHINT.errors.map(function(e){ return (e && e.reason) || ""; }).join('\n')
+            + "\n*/\n(function(){return false;})";
+        }
+      },
     },
     {
       name: 'JSX',

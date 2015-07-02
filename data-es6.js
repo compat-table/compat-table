@@ -324,7 +324,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r185544',
+    full: 'WebKit r185990',
     short: 'WK',
     unstable: true,
   },
@@ -391,7 +391,7 @@ exports.tests = [
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tail-position-calls',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tail-position-calls',
   subtests: {
     'direct recursion': {
       exec: function() {/*
@@ -441,7 +441,7 @@ exports.tests = [
   name: 'arrow functions',
   category: 'functions',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-arrow-function-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-arrow-function-definitions',
   subtests: {
     '0 parameters': {
       exec: function(){/*
@@ -459,6 +459,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        webkit:      true,
         node:        flag,
       },
     },
@@ -479,6 +480,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        webkit:      true,
         node:        flag,
       },
     },
@@ -499,6 +501,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        webkit:      true,
         node:        flag,
       },
     },
@@ -638,7 +641,7 @@ exports.tests = [
   name: 'const',
   category: 'bindings',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
       exec: function() {/*
@@ -806,7 +809,7 @@ exports.tests = [
   name: 'let',
   category: 'bindings',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-let-and-const-declarations',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
   subtests: {
     'basic support': {
       exec: function(){/*
@@ -1017,7 +1020,7 @@ exports.tests = [
   name: 'default function parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   subtests: {
     'basic functionality': {
       exec: function(){/*
@@ -1080,6 +1083,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         edge:        flag,
       },
     },
@@ -1115,7 +1119,7 @@ exports.tests = [
   name: 'rest parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions',
   subtests: {
     'basic functionality': {
       exec: function() {/*
@@ -1210,7 +1214,7 @@ exports.tests = [
   name: 'spread (...) operator',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-argument-lists-runtime-semantics-argumentlistevaluation',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   subtests: {
     'with arrays, in function calls': {
       exec: function () {/*
@@ -1396,7 +1400,7 @@ exports.tests = [
   name: 'class',
   category: 'functions',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-class-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions',
   subtests: {
     'class statement': {
       exec: function () {/*
@@ -1414,7 +1418,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', note_html: 'Requires the <code>constructor</code> function to always be explicitly defined.' },
         typescript:  true,
       },
     },
@@ -1434,7 +1437,6 @@ exports.tests = [
         edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'class expression': {
@@ -1452,7 +1454,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'anonymous class': {
@@ -1470,7 +1471,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'constructor': {
@@ -1493,7 +1493,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'prototype methods': {
@@ -1516,7 +1515,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'string-keyed methods': {
@@ -1538,7 +1536,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed prototype methods': {
@@ -1559,7 +1556,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'static methods': {
@@ -1582,7 +1578,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed static methods': {
@@ -1603,7 +1598,6 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'accessor properties': {
@@ -1628,7 +1622,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed accessor properties': {
@@ -1648,7 +1641,6 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'static accessor properties': {
@@ -1671,7 +1663,6 @@ exports.tests = [
         edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
         webkit:      true,
       },
     },
@@ -1692,7 +1683,6 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'class name is lexically scoped': {
@@ -1712,7 +1702,6 @@ exports.tests = [
         edge:        flag,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'computed names, temporal dead zone': {
@@ -1727,7 +1716,6 @@ exports.tests = [
       */},
       res: {
         edge:        flag,
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'methods aren\'t enumerable': {
@@ -1761,7 +1749,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'constructor requires new': {
@@ -1811,7 +1798,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       }),
     },
     'extends expressions': {
@@ -1835,7 +1821,6 @@ exports.tests = [
         webkit:      true,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
       },
     },
     'extends null': {
@@ -1855,7 +1840,6 @@ exports.tests = [
         edge:        flag,
         iojs:        { val: flag, note_id: 'strict-required' },
         chrome41:    { val: flag, note_id: 'strict-required' },
-        firefox39:   { val: true, note_id: 'constructor-required', },
         webkit:      true,
       },
     },
@@ -1883,7 +1867,7 @@ exports.tests = [
   name: 'super',
   category: 'functions',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-super-keyword',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-super-keyword',
   subtests: {
     'statement in constructors': {
       exec: function() {/*
@@ -2116,7 +2100,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         edge:        true,
-        firefox34:   true,
+        firefox34:   { val: true, note_id: "ff-shorthand-methods", note_html: 'Firefox incorrectly produces an error in strict mode if the method is named "arguments", "eval", or "delete".' },
         chrome41:    flag,
         chrome43:    true,
         iojs:        true,
@@ -2129,6 +2113,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.shorthandMethodsResults, {
         closure:     false,
+        firefox34:   true,
       }),
     },
     'computed shorthand methods': {
@@ -2176,7 +2161,7 @@ exports.tests = [
   name: 'hoisted block-level function declaration',
   category: 'annex b',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
   exec: function () {/*
     // Note: only available outside of strict mode.
     { function f() { return 1; } }
@@ -2287,7 +2272,7 @@ exports.tests = [
   name: 'for..of loops',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-for-in-and-for-of-statements',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements',
   subtests: {
     'with arrays': {
       exec: function () {/*
@@ -2464,7 +2449,7 @@ exports.tests = [
   name: 'generators',
   category: 'functions',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions',
   subtests: {
     'basic functionality': {
       exec: function() {/*
@@ -2970,7 +2955,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        firefox39:   { val: true, note_id: 'constructor-required', },
         chrome41:    { val: flag, note_id: 'strict-required' },
         iojs:        { val: flag, note_id: 'strict-required' },
         edge:        flag,
@@ -2997,7 +2981,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        firefox39:   { val: true, note_id: 'constructor-required', },
         edge:        flag,
       },
     },
@@ -3007,7 +2990,7 @@ exports.tests = [
   name: 'prototype of bound functions',
   category: 'misc',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boundfunctioncreate',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boundfunctioncreate',
   subtests: {
     'basic functions': {
       exec: function () {/*
@@ -3020,7 +3003,7 @@ exports.tests = [
               f.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(f, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3040,7 +3023,7 @@ exports.tests = [
               f.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(f, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3060,7 +3043,7 @@ exports.tests = [
               f.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(f, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3080,7 +3063,7 @@ exports.tests = [
               C.__proto__ = proto;
             } 
             var boundF = Function.prototype.bind.call(C, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === proto;
           }
           return correctProtoBound(Function.prototype)
             && correctProtoBound({})
@@ -3098,7 +3081,7 @@ exports.tests = [
               }
             }
             var boundF = Function.prototype.bind.call(C, null);
-            return proto.isPrototypeOf(boundF);
+            return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);
           }
           return correctProtoBound(function(){})
             && correctProtoBound(Array)
@@ -3113,7 +3096,7 @@ exports.tests = [
   name: 'octal and binary literals',
   category: 'syntax',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-numeric-literals',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-numeric-literals',
   subtests: {
     'octal literals': {
       exec: function () {/*
@@ -3195,7 +3178,7 @@ exports.tests = [
   name: 'template strings',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literals',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -3277,7 +3260,7 @@ exports.tests = [
   name: 'RegExp "y" and "u" flags',
   category: 'syntax',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-get-regexp.prototype.sticky',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.sticky',
   subtests: {
     '"y" flag': {
       exec: function () {/*
@@ -3293,6 +3276,7 @@ exports.tests = [
         chrome40:    false,
         ejs:         true,
         edge:        flag,
+        typescript:  typescript.fallthrough
       },
     },
     '"u" flag': {
@@ -3302,6 +3286,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.fallthrough,
         edge:        true,
       },
     },
@@ -3311,7 +3296,7 @@ exports.tests = [
   name: 'typed arrays',
   category: 'built-ins',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-typedarray-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects',
   subtests: Object.assign({
     'Int8Array': {
       exec: function(){/*
@@ -3347,7 +3332,7 @@ exports.tests = [
         var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
         return view[0] === 0xFF;
       */},
-      res: {
+      res: (temp.clampedArrayResults = {
         ejs:         true,
         firefox11:   true,
         edge:        true,
@@ -3358,7 +3343,7 @@ exports.tests = [
         node:        true,
         iojs:        true,
         typescript:  typescript.fallthrough,
-      },
+      }),
     },
     'Int16Array': {
       exec: function(){/*
@@ -3497,6 +3482,38 @@ exports.tests = [
       */},
       res: {},
     },
+    'constructors require new': {
+      exec: function(){/*
+        var buffer = new ArrayBuffer(64);
+        var constructors = [
+          'ArrayBuffer',
+          'DataView',
+          'Int8Array',
+          'Uint8Array',
+          'Uint8ClampedArray',
+          'Int16Array',
+          'Uint16Array',
+          'Int32Array',
+          'Uint32Array',
+          'Float32Array',
+          'Float64Array'
+        ];
+        for(var i = 0; i < constructors.length; i+=1) {
+          try {
+            if (constructors[i] in global) {
+              global[constructors[i]](constructors[i] === "ArrayBuffer" ? 64 : buffer);
+            }
+            return false;
+          } catch(e) {
+          }
+        }
+        return true;
+      */},
+      res: Object.assign({}, temp.clampedArrayResults, {
+        edge:     false,
+        safari6:  false,
+      }),
+    },
   },
   (function(){
     var methods = {
@@ -3564,7 +3581,7 @@ exports.tests = [
   name: 'Map',
   category: 'built-ins',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -3575,7 +3592,7 @@ exports.tests = [
 
         return map.has(key) && map.get(key) === 123;
       */},
-      res: {
+      res: (temp.basicMap = {
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
@@ -3589,7 +3606,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -3611,6 +3628,59 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor requires new': {
+      exec: function () {/*
+        new Map();
+        try {
+          Map();
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+        typescript:  true,
+        es6shim:     true,
+        ie11:        true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new Map(null);
+        return true;
+      */},
+      res: temp.basicMap,
+    },
+    'constructor invokes set': {
+      exec: function () {/*
+        var passed = false;
+        var _set = Map.prototype.set;
+
+        Map.prototype.set = function(k, v) {
+          passed = true;
+        };
+
+        new Map([ [1, 2] ]);
+        Map.prototype.set = _set;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        es6shim:     true,
+        edge:        true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -3845,7 +3915,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -3855,6 +3925,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
+        webkit:      true,
       },
     },
     'Map[Symbol.species]': {
@@ -3864,6 +3935,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
@@ -3884,7 +3956,7 @@ exports.tests = [
 
         return set.has(123);
       */},
-      res: {
+      res: (temp.basicSet = {
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
@@ -3898,7 +3970,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -3919,6 +3991,58 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor requires new': {
+      exec: function () {/*
+        new Set();
+        try {
+          Set();
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+	typescript:  true,
+        es6shim:     true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new Set(null);
+        return true;
+      */},
+      res: temp.basicSet,
+    },
+    'constructor invokes add': {
+      exec: function () {/*
+        var passed = false;
+        var _add = Set.prototype.add;
+
+        Set.prototype.add = function(v) {
+          passed = true;
+        };
+
+        new Set([1]);
+        Set.prototype.add = _add;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+	typescript:  typescript.corejs,
+        es6shim:     true,
+        edge:        true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4157,7 +4281,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -4167,6 +4291,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
+        webkit:      true,
       },
     },
     'Set[Symbol.species]': {
@@ -4196,7 +4321,7 @@ exports.tests = [
 
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
-      res: {
+      res: (temp.basicWeakMap = {
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,
@@ -4208,7 +4333,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -4228,6 +4353,57 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor requires new': {
+      exec: function () {/*
+        new WeapMap();
+        try {
+          WeakMap();
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+	typescript:  true,
+        es6shim:     true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new WeakMap(null);
+        return true;
+      */},
+      res: temp.basicWeakMap,
+    },
+    'constructor invokes set': {
+      exec: function () {/*
+        var passed = false;
+        var _set = WeakMap.prototype.set;
+
+        WeakMap.prototype.set = function(k, v) {
+          passed = true;
+        };
+
+        new WeakMap([ [{ }, 42] ]);
+        WeakMap.prototype.set = _set;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        edge:        true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4306,14 +4482,23 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakMap[Symbol.species]': {
+    'no WeakMap.prototype.clear method': {
       exec: function () {/*
-        var prop = Object.getOwnPropertyDescriptor(WeakMap, Symbol.species);
-        return 'get' in prop && WeakMap[Symbol.species] === WeakMap;
+        if (!("clear" in WeakMap.prototype)) {
+          return true;
+        }
+        var m = new WeakMap();
+        var key = {};
+        m.set(key, 2);
+        m.clear();
+        return m.has(key);
       */},
       res: {
         babel:       true,
 	typescript:  typescript.corejs,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
       },
     },
   },
@@ -4322,7 +4507,7 @@ exports.tests = [
   name: 'WeakSet',
   category: 'built-ins',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakset-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -4334,7 +4519,7 @@ exports.tests = [
 
         return weakset.has(obj1);
       */},
-      res: {
+      res: (temp.basicWeakSet = {
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
@@ -4345,7 +4530,7 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
     },
     'constructor arguments': {
       exec: function () {/*
@@ -4363,6 +4548,57 @@ exports.tests = [
         chrome38:    true,
         webkit:      true,
         node:        true,
+        iojs:        true,
+      },
+    },
+    'constructor requires new': {
+      exec: function () {/*
+        new WeakSet();
+        try {
+          WeakSet();
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+	typescript:  true,
+        es6shim:     true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'constructor accepts null': {
+      exec: function () {/*
+        new WeakSet(null);
+        return true;
+      */},
+      res: temp.basicWeakSet,
+    },
+    'constructor invokes add': {
+      exec: function () {/*
+        var passed = false;
+        var _add = WeakSet.prototype.add;
+
+        WeakSet.prototype.add = function(v) {
+          passed = true;
+        };
+
+        new WeakSet([ { } ]);
+        WeakSet.prototype.add = _add;
+
+        return passed;
+      */},
+      res: {
+        babel:       true,
+	typescript:  typescript.corejs,
+        edge:        true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
         iojs:        true,
       },
     },
@@ -4418,14 +4654,22 @@ exports.tests = [
         iojs:        true,
       },
     },
-    'WeakSet[Symbol.species]': {
+    'no WeakSet.prototype.clear method': {
       exec: function () {/*
-        var prop = Object.getOwnPropertyDescriptor(WeakSet, Symbol.species);
-        return 'get' in prop && WeakSet[Symbol.species] === WeakSet;
+        if (!("clear" in WeakSet.prototype)) {
+          return true;
+        }
+        var s = new WeakSet();
+        var key = {};
+        s.add(key);
+        s.clear();
+        return s.has(key);
       */},
       res: {
-        babel:       true,
         typescript:  typescript.corejs,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
       },
     },
   },
@@ -4434,8 +4678,25 @@ exports.tests = [
   name: 'Proxy',
   category: 'built-ins',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
+    'constructor requires new': {
+      exec: function () {/*
+        new Proxy({}, {});
+        try {
+          Proxy({}, {});
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge:        true,
+        firefox18:   true,
+      },
+    },
     '"get" handler': {
       exec: function () {/*
         var proxied = { };
@@ -4831,7 +5092,7 @@ exports.tests = [
   name: 'Reflect',
   category: 'built-ins',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflection',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
   subtests: {
     'Reflect.get': {
       exec: function() {/*
@@ -5092,7 +5353,7 @@ exports.tests = [
   significance: 'small',
   note_id: 'block-level-function',
   note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-functiondeclarationinstantiation',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
     function f() { return 1; }
@@ -5116,7 +5377,7 @@ exports.tests = [
   name: 'destructuring',
   category: 'syntax',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-destructuring-assignment',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: {
     'with arrays': {
       exec: function(){/*
@@ -5172,6 +5433,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         ejs:         true,
         firefox34:   true,
+        webkit:      true,
       },
     },
     'with generator instances': {
@@ -5201,6 +5463,7 @@ exports.tests = [
         tr:           true,
         typescript:   typescript.fallthrough,
         firefox34:    true,
+        webkit:       true,
         babel:        true,
       },
     },
@@ -5217,6 +5480,7 @@ exports.tests = [
         babel:        true,
         typescript:   typescript.fallthrough,
         firefox36:    true,
+        webkit:       true,
       },
     },
     'iterator closing': {
@@ -5231,6 +5495,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.fallthrough,
+        webkit:      true,
       },
     },
     'iterable destructuring expression': {
@@ -5270,9 +5535,10 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit:       false,
+        webkit:       true,
         safari71_8:   false,
         babel:        true,
+	typescript:   true,
         tr:           false,
         closure:      false,
       }),
@@ -5292,12 +5558,9 @@ exports.tests = [
           note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
         },
         firefox16:    true,
-        webkit: {
-          val: true,
-          note_id: "webkit-object-destructuring",
-          note_html: "WebKit doesn't support parenthesised object destructuring patterns (e.g. <code>({f,g}) = {f:9,g:10}</code>)."
-        },
-        safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
+        webkit:       true,
+        safari71_8:   true,
+	typescript:   true
       }),
     },
     'object destructuring with primitives': {
@@ -5313,8 +5576,9 @@ exports.tests = [
           && match === String.prototype.match;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit:       { val: true, note_id: "webkit-object-destructuring"  },
-        safari71_8:   { val: true, note_id: "webkit-object-destructuring", },
+        webkit:       true,
+        safari71_8:   true,
+	typescript:   true
       }),
     },
     'trailing commas in object patterns': {
@@ -5323,8 +5587,9 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        webkit:       false,
+        webkit:       true,
         safari71_8:   false,
+	typescript:   true
       }),
     },
     'object destructuring expression': {
@@ -5338,6 +5603,25 @@ exports.tests = [
         typescript:   true,
         es6tr:        true,
         firefox16:    true,
+        safari71_8:   true,
+        webkit:       true,
+      },
+    },
+    'parenthesised left-hand-side is a syntax error': {
+      exec: function() {/*
+        var a, b;
+        ({a,b} = {a:1,b:2});
+        try {
+          eval("({a,b}) = {a:3,b:4};");
+        }
+        catch(e) {
+          return a === 1 && b === 2;
+        }
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        typescript:   true,
         safari71_8:   true,
         webkit:       true,
       },
@@ -5372,6 +5656,8 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
+        webkit:       true,
+	typescript:   true
       }),
     },
     'computed properties': {
@@ -5511,6 +5797,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         firefox34:   true,
+        webkit:      true,
       },
     },
     'nested rest': {
@@ -5522,6 +5809,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+	typescript:   true,
       },
     },
     'defaults': {
@@ -5537,6 +5825,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         closure:     true,
+        webkit:      true,
       },
     },
     'defaults in parameters': {
@@ -5570,7 +5859,8 @@ exports.tests = [
       */},
       res: {
         babel:        flag,
-        typescript:   typescript.fallthrough,
+        typescript:   true,
+        webkit:       true,
       },
     },
     'defaults in parameters, separate scope': {
@@ -5603,7 +5893,7 @@ exports.tests = [
   name: 'Promise',
   category: 'built-ins',
   significance: 'large',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -5645,6 +5935,26 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'constructor requires new': {
+      exec: function () {/*
+        new Promise(function(){});
+        try {
+          Promise(function(){});
+          return false;
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+	typescript:  true,
+        es6shim:     true,
+        firefox37:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'Promise.all': {
       exec: function () {/*
         var fulfills = Promise.all([
@@ -5678,6 +5988,34 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'Promise.all, generic iterables': {
+      exec: function () {/*
+        var fulfills = Promise.all(global.__createIterableObject([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+        ]));
+        var rejects = Promise.all(global.__createIterableObject([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+        ]));
+        var score = 0;
+        fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
+        rejects.catch(function(result) { score += (result === "qux"); check(); });
+
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        typescript:  typescript.corejs,
+        edge:        true,
+        firefox38:   true,
+        chrome43:    true,
+        webkit:      true,
+      },
+    },
     'Promise.race': {
       exec: function () {/*
         var fulfills = Promise.race([
@@ -5709,6 +6047,35 @@ exports.tests = [
         safari71_8:  true,
         node:        true,
         iojs:        true,
+      },
+    },
+    'Promise.race, generic iterables': {
+      exec: function () {/*
+        var fulfills = Promise.race(global.__createIterableObject([
+          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+        ]));
+        var rejects = Promise.race(global.__createIterableObject([
+          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+        ]));
+        var score = 0;
+        fulfills.then(function(result) { score += (result === "foo"); check(); });
+        rejects.catch(function(result) { score += (result === "baz"); check(); });
+
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel:       true,
+        es6shim:     true,
+        typescript:  typescript.corejs,
+        edge:        true,
+        firefox38:   true,
+        chrome43:    true,
+        webkit:      true,
+        iojs:        false,
       },
     },
     'Promise[Symbol.species]': {
@@ -6059,7 +6426,7 @@ exports.tests = [
   name: 'function "name" property',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-setfunctionname',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname',
   subtests: {
     'function statements': {
       exec: function () {/*
@@ -6257,7 +6624,6 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
-        firefox39:    { val: true, note_id: 'constructor-required', },
       },
     },
     'class static methods': {
@@ -6269,7 +6635,6 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
-        firefox39:    { val: true, note_id: 'constructor-required', },
       },
     },
     'isn\'t writable, is configurable': {
@@ -6480,7 +6845,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -6490,6 +6855,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
+        webkit:      true,
       },
     },
   },
@@ -6498,7 +6864,7 @@ exports.tests = [
   name: 'String.prototype HTML methods',
   category: 'annex b',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.anchor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor',
   subtests: {
     existence: {
       exec: function () {/*
@@ -6579,7 +6945,7 @@ exports.tests = [
   name: 'Unicode code point escapes',
   category: 'syntax',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-string-literals',
   subtests: {
     'in strings': {
       exec: function () {/*
@@ -6615,7 +6981,7 @@ exports.tests = [
   name: 'new.target',
   category: 'syntax',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-built-in-function-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects',
   subtests: {
     'in constructors': {
       exec: function () {/*
@@ -6684,7 +7050,7 @@ exports.tests = [
       res: {
         tr:          flag,
         babel:       flag,
-        typescript:  flag,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         edge:        true,
         firefox36:   true,
@@ -6903,7 +7269,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        typescript:  typescript.fallthrough,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox36:   true,
         webkit:      true,
@@ -7534,7 +7900,7 @@ exports.tests = [
         var proto1 = Object.getPrototypeOf(iterator);
         // %IteratorPrototype%
         var proto2 = Object.getPrototypeOf(proto1);
-        
+
         return proto2.hasOwnProperty(Symbol.iterator) &&
           !proto1    .hasOwnProperty(Symbol.iterator) &&
           !iterator  .hasOwnProperty(Symbol.iterator) &&
@@ -7544,6 +7910,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
+        webkit:      true,
       },
     },
     'Array.prototype[Symbol.unscopables]': {
@@ -7574,7 +7941,7 @@ exports.tests = [
   name: 'Number properties',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-isfinite-number',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-isfinite-number',
   subtests: {
     'Number.isFinite': {
       exec: function () {/*
@@ -7714,7 +8081,7 @@ exports.tests = [
   name: 'Math methods',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-math',
   subtests: (function(){
     var methods = {
       'clz32': {
@@ -8018,7 +8385,7 @@ exports.tests = [
   name: 'Array is subclassable',
   category: 'subclassing',
   significance: 'medium',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-array-constructor',
   subtests: {
     'length property (accessing)': {
       exec: function () {/*
@@ -8107,7 +8474,7 @@ exports.tests = [
 },
 {
   name: 'RegExp is subclassable',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8165,7 +8532,7 @@ exports.tests = [
 },
 {
   name: 'Function is subclassable',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8240,7 +8607,7 @@ exports.tests = [
 },
 {
   name: 'Promise is subclassable',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-function-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8334,7 +8701,7 @@ exports.tests = [
 },
 {
   name: 'miscellaneous subclassables',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-boolean-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boolean-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: {
@@ -8411,7 +8778,7 @@ exports.tests = [
 },
 {
   name: 'own property order',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
   category: 'misc',
   significance: 'small',
   subtests: {
@@ -8612,7 +8979,7 @@ exports.tests = [
   name: 'miscellaneous',
   category: 'misc',
   significance: 'small',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: {
     'no escaped reserved words as identifiers': {
       exec: function() {/*
@@ -8746,6 +9113,24 @@ exports.tests = [
         return true;
       */},
       res: {
+      },
+    },
+    'function \'length\' is configurable': {
+      exec: function(){/*
+        var fn = function(a, b) {};
+
+        var desc = Object.getOwnPropertyDescriptor(fn, "length");
+        if (desc.configurable) {
+          Object.defineProperty(fn, "length", { value: 1 });
+          return fn.length === 1;
+        }
+
+        return false;
+      */},
+      res: {
+        firefox37:   true,
+        chrome43:    true,
+        edge:        true,
       },
     },
   },

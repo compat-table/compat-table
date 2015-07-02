@@ -2,7 +2,10 @@
   "name": "es5-compat-table",
   "version": "0.0.0",
   "main": "node.js",
-  "engine": "node >= 0.11.12",
+  "engine": {
+    "node" : ">= 0.11.12",
+    "npm"  : ">= 3.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/rvagg/es5-compat-table.git"
@@ -19,13 +22,13 @@
     "traceur":        "*",
     "typescript":     "*",
     "jstransform":    "*",
+    "esprima":        "*",
+    "espree":         "*",
+    "jshint":         "*",
     "es5-shim": "*",
     "es6-shim": "*",
     "es7-shim": ">= 1.0.4",
     "core-js": "^0.9.9"
-  },
-  "devDependencies": {
-    "jshint": "2.6.x"
   },
   "scripts": {
     "lint": "jshint data-es5.js data-es6.js data-es7.js",
