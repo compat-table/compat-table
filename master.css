@@ -126,7 +126,7 @@ table.one-selected td.selected {
   font-size: 0.8em;
   display:none;
 }
-.subtest td.yes, .subtest td.no {
+.subtest td.yes, .subtest td.no, .subtest td.strict {
   border-left: solid 5px #eee;
   border-right: solid 5px #eee;
 }
@@ -134,12 +134,14 @@ table.one-selected td.selected {
 /* yes/no grid text colors */
 .yes a,
 .tally a,
-.no a {
+.no a,
+.strict a {
     color: #fff;
 }
 .yes,
 .tally,
 .no,
+.strict,
 .not-applicable {
     text-align: center; font-size: 0.8em; padding: 0.25em 0.5em; color: #fff;
 }
@@ -176,6 +178,7 @@ td:first-child, td:not([class]) {
 
 /* yes, but flagged */
 .flagged::after,
+.strict::after,
 [data-flagged-tally]::after {
 	content: "";
 	position: absolute;
@@ -192,20 +195,24 @@ td:first-child, td:not([class]) {
 
 /* no */
 .no,
+.strict,
 [data-tally="0"] {
     background: #e11;
 }
 
 /* not applicable */
 .not-applicable.no, .not-applicable[data-tally="0"] {
-    background: hsl(  0,  14%,  67%); background: #b69f9f; cursor: help;
+    background: hsl(  0,  14%,  67%); background: #b69f9f;
 }
 .not-applicable {
-    background: hsl(120,  14%,  67%); background: #9fb79f; cursor: help;
+    background: hsl(120,  14%,  67%); background: #9fb79f;
 }
 
 /*needs a polyfill or native support*/
 .needs-polyfill-or-native {
+    /* Nothing so far */
+}
+td[title] {
     cursor: help;
 }
 
