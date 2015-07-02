@@ -433,6 +433,9 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
         cell.attr('title', "Requires native support or a polyfill.");
         cell.addClass("needs-polyfill-or-native");
       }
+      else if (result === "strict") {
+        cell.addClass("strict").attr('title', "Support for this feature incorrectly requires strict mode.");
+      }
       cell.attr('data-browser', browserId).addClass(
         browsers[browserId].obsolete ? "obsolete" :
         browsers[browserId].unstable ? "unstable" :
@@ -453,7 +456,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
       }
 
       if (result !== null) {
-        cell.text(result === "flagged" ? "Flag" : result === true ? "Yes" : "No");
+        cell.text(result === "strict" ? "Strict" : result === "flagged" ? "Flag" : result === true ? "Yes" : "No");
       }
 
       if (footnote) {
@@ -504,7 +507,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
             var result = t.subtests[e].res[browserId];
 
             tally += testValue(result) === true;
-            flaggedTally += testValue(result) === 'flagged';
+            flaggedTally += ['flagged','strict'].indexOf(testValue(result)) > -1;
             outOf += 1;
           });
           var grade = (tally / outOf);
@@ -615,14 +618,31 @@ function testScript(fn, transformFn, rowNum) {
       var async = !!/asyncTestPassed/.exec(fn);
       var codeString = JSON.stringify(expr).replace(/\\r/g,'');
       var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + rowNum + '")';
+      var strictAsyncFn = 'global.__strictAsyncPassedFn && __strictAsyncPassedFn("' + rowNum + '")';
       var funcString =
         transformed ? '' + asyncFn + ' && eval(' + codeString + ')()'
-        : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed);';
+        : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed)';
+      var strictFuncString =
+        transformed ? '' + strictAsyncFn + ' && function(){"use strict";' + codeString + '}() && "Strict"'
+        : 'Function("asyncTestPassed","\'use strict\';"+' + codeString + ')(asyncTestPassed)';
 
       return cheerio.load('')('<script>' +
-        'test(function(){try{var asyncTestPassed=' + asyncFn + ';return ' +
-        funcString + '}catch(e){return false;}}()' +
-      ');\n</script>').attr('data-source', expr);
+         'test(function(){'
+        +  'try{'
+        +    'var asyncTestPassed=' + asyncFn + ';'
+        +    'try{'
+        +      'return ' + funcString
+        +    '}'
+        +    'catch(e){'
+        +      'asyncTestPassed=' + strictAsyncFn + ';'
+        +      'return ' + strictFuncString + '&&"Strict"'
+        +    '}'
+        +  '}'
+        +  'catch(e){'
+        +    'return false;'
+        +  '}'
+        +'}());'
+        +'\n</script>').attr('data-source', expr);
     }
   } else {
     // it's an array of objects like the following:

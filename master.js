@@ -16,7 +16,7 @@ var _gaq = [
 })();
 
 window.test = function(expression) {
-  var result = expression ? 'Yes' : 'No';
+  var result = (typeof expression === "string" ? expression : !!expression ? 'Yes' : 'No');
   document.write('<td class="' + result.toLowerCase() + ' current">' + result + '</td><td></td>');
 };
 
@@ -24,17 +24,20 @@ document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 // For async tests, this returned function is used to set results
 // instead of returning true/false.
-var __asyncPassedFn = function(rowNum) {
-  return function() {
-    var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
-    elem.className = "yes";
-    elem.textContent = "Yes";
-    if (global.__updateHeaderTotal) {
-      $(elem).parent().prevAll('.supertest').first().each(__updateSupertest);
-      $('th.current').each(__updateHeaderTotal);
+function makeAsyncPassedFn(className, textContent) {
+  return function(rowNum) {
+    return function() {
+      var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
+      elem.className = className;
+      elem.textContent = textContent;
+      if (global.__updateHeaderTotal) {
+        $(elem).parent().prevAll('.supertest').first().each(__updateSupertest);
+        $('th.current').each(__updateHeaderTotal);
+      }
     }
   }
 }
+var __asyncPassedFn = makeAsyncPassedFn('yes', "Yes"), __strictAsyncPassedFn = makeAsyncPassedFn("no strict", "Strict")
 
 $(function() {
   'use strict';

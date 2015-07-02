@@ -4,6 +4,7 @@ Object.assign = require('object-assign');
 
 var temp = {};
 var flag = "flagged";
+var strict = "strict";
 var fallthrough = "needs-polyfill-or-native";
 
 exports.name = 'ES6';
@@ -1406,8 +1407,8 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required', note_html: 'Support for this feature incorrectly requires strict mode.' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
         typescript:  true,
       },
     },
@@ -1425,8 +1426,8 @@ exports.tests = [
         babel:       true,
         jsx:         true,
         edge:        flag,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'class expression': {
@@ -1442,8 +1443,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'anonymous class': {
@@ -1458,8 +1459,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'constructor': {
@@ -1480,8 +1481,8 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'prototype methods': {
@@ -1502,8 +1503,8 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'string-keyed methods': {
@@ -1523,8 +1524,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'computed prototype methods': {
@@ -1565,8 +1566,8 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'computed static methods': {
@@ -1609,8 +1610,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
     'computed accessor properties': {
@@ -1650,8 +1651,8 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
         webkit:      true,
       },
     },
@@ -1689,8 +1690,8 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         edge:        flag,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'computed names, temporal dead zone': {
@@ -1718,7 +1719,7 @@ exports.tests = [
       res: {
         babel:       true,
         jsx:         true,
-        chrome42:    { val: flag, note_id: 'strict-required' },
+        chrome42:    strict,
         webkit:      true,
       },
     },
@@ -1736,8 +1737,8 @@ exports.tests = [
         jsx:         true,
         edge:        flag,
         webkit:      true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
       },
     },
     'constructor requires new': {
@@ -1754,7 +1755,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         webkit:      true,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
       },
     },
     'extends': {
@@ -1785,8 +1786,8 @@ exports.tests = [
         jsx:         { val: false, note_id: 'compiled-extends' },
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       }),
     },
     'extends expressions': {
@@ -1808,8 +1809,8 @@ exports.tests = [
         jsx:         { val: false, note_id: 'compiled-extends' },
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
     'extends null': {
@@ -1827,8 +1828,8 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         edge:        flag,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
         webkit:      true,
       },
     },
@@ -1880,8 +1881,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
     'expression in constructors': {
@@ -1904,7 +1905,7 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
       },
     },
     'in methods, property access': {
@@ -1931,8 +1932,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
     'in methods, method calls': {
@@ -1955,8 +1956,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
     'method calls use correct "this" binding': {
@@ -1981,8 +1982,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
     'constructor calls use correct "new.target" binding': {
@@ -2023,8 +2024,8 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         webkit:      true,
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome41:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome41:    strict,
       },
     },
   },
@@ -2944,8 +2945,8 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        chrome41:    { val: flag, note_id: 'strict-required' },
-        iojs:        { val: flag, note_id: 'strict-required' },
+        chrome41:    strict,
+        iojs:        strict,
         edge:        flag,
       },
     },
@@ -6519,6 +6520,7 @@ exports.tests = [
       res: {
         babel:       { val: false, note_id: "name-configurable", },
         edge:        flag,
+        chrome43:    strict,
       },
     },
     'class expressions': {
@@ -6533,6 +6535,7 @@ exports.tests = [
           note_html: 'Requires function "name" properties to be natively configurable',
         },
         edge:        flag,
+        chrome43:    strict,
       },
     },
     'variables (class)': {
@@ -6571,6 +6574,7 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
+        chrome43:     strict,
       },
     },
     'class static methods': {
@@ -6582,6 +6586,7 @@ exports.tests = [
         babel:        true,
         edge:         flag,
         webkit:       true,
+        chrome43:     strict,
       },
     },
     'isn\'t writable, is configurable': {
@@ -8289,8 +8294,8 @@ exports.tests = [
         return len1 === 0 && len2 === 3;
       */},
       res: {
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome43:    strict,
         webkit:      true,
       },
     },
@@ -8303,8 +8308,8 @@ exports.tests = [
         return c.length === 1 && !(2 in c);
       */},
       res: {
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome43:    strict,
         webkit:      true,
       },
     },
@@ -8316,8 +8321,8 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome43:    strict,
         edge:        flag,
       },
     },
@@ -8328,6 +8333,7 @@ exports.tests = [
       */},
       res: {
         webkit:      true,
+        chrome43:    strict,
       }
     },
     'Array.prototype.slice': {
@@ -8378,7 +8384,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
         webkit:      true,
       },
     },
@@ -8390,8 +8396,8 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        iojs:        { val: flag, note_id: 'strict-required' },
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        iojs:        strict,
+        chrome43:    strict,
         typescript:  temp.typescriptFallthrough,
         edge:        flag,
       },
@@ -8404,7 +8410,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
         webkit:      true,
       },
     },
@@ -8416,7 +8422,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
         webkit:      true,
       },
     },
@@ -8436,7 +8442,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
       },
     },
     'correct prototype chain': {
@@ -8460,7 +8466,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
       },
     },
     'Function.prototype.call': {
@@ -8471,7 +8477,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
       },
     },
     'Function.prototype.apply': {
@@ -8482,7 +8488,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
-        chrome44:    { val: flag, note_id: 'strict-required' },
+        chrome43:    strict,
       },
     },
     'Function.prototype.bind': {
@@ -8531,6 +8537,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
+        chrome43:    strict,
       },
     },
     'correct prototype chain': {
@@ -8540,7 +8547,8 @@ exports.tests = [
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       */},
       res: {
-        typescript:  temp.typescriptFallthrough
+        typescript:  temp.typescriptFallthrough,
+        chrome43:    strict,
       },
     },
     'Promise.all': {
@@ -8564,6 +8572,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
+        chrome43:    strict,
       },
     },
     'Promise.race': {
@@ -8587,6 +8596,7 @@ exports.tests = [
       */},
       res: {
         typescript:  temp.typescriptFallthrough,
+        chrome43:    strict,
       },
     },
   },
@@ -8607,6 +8617,7 @@ exports.tests = [
       res: {
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
+        chrome43:    strict,
       },
     },
     'Number is subclassable': {
@@ -8619,6 +8630,7 @@ exports.tests = [
       res: {
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
+        chrome43:    strict,
       },
     },
     'String is subclassable': {
@@ -8633,6 +8645,7 @@ exports.tests = [
       res: {
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
+        chrome43:    strict,
       },
     },
     'Map is subclassable': {
@@ -8648,6 +8661,7 @@ exports.tests = [
       res: {
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
+        chrome43:    strict,
       },
     },
     'Set is subclassable': {
@@ -8664,6 +8678,7 @@ exports.tests = [
       res: {
         typescript:  temp.typescriptFallthrough,
         webkit:      true,
+        chrome43:    strict,
       },
     },
   },
