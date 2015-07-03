@@ -8337,12 +8337,49 @@ exports.tests = [
         chrome43:    strict,
       }
     },
+    'Array.prototype.concat': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        return c.concat(1) instanceof C;
+      */},
+      res: {
+      }
+    },
+    'Array.prototype.filter': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        return c.filter(Boolean) instanceof C;
+      */},
+      res: {
+      }
+    },
+   'Array.prototype.map': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        return c.map(Boolean) instanceof C;
+      */},
+      res: {
+      }
+    },
     'Array.prototype.slice': {
       exec: function () {/*
         class C extends Array {}
         var c = new C();
         c.push(2,4,6);
         return c.slice(1,2) instanceof C;
+      */},
+      res: {
+      }
+    },
+   'Array.prototype.splice': {
+      exec: function () {/*
+        class C extends Array {}
+        var c = new C();
+        c.push(2,4,6);
+        return c.splice(1,2) instanceof C;
       */},
       res: {
       }
