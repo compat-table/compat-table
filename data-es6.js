@@ -172,12 +172,12 @@ exports.browsers = {
   },
   firefox38: {
     full: 'Firefox',
-    short: 'FF 38'
+    short: 'FF 38',
+    obsolete: true,
   },
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
-    unstable: true,
   },
   firefox40: {
     full: 'Firefox',
@@ -451,6 +451,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        chrome45:    true,
         webkit:      true,
         node:        flag,
       },
@@ -472,6 +473,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        chrome45:    true,
         webkit:      true,
         node:        flag,
       },
@@ -493,6 +495,7 @@ exports.tests = [
         firefox23:   true,
         chrome38:    flag,
         chrome40:    false,
+        chrome45:    true,
         webkit:      true,
         node:        flag,
       },
@@ -513,6 +516,7 @@ exports.tests = [
         closure:     true,
         edge:        true,
         firefox23:   true,
+        chrome45:    true,
       },
     },
     '"this" unchanged by call or apply': {
@@ -531,6 +535,7 @@ exports.tests = [
         ejs:         true,
         edge:        true,
         firefox23:   true,
+        chrome45:    true,
       },
     },
     'can\'t be bound, can be curried': {
@@ -549,6 +554,7 @@ exports.tests = [
         closure:     true,
         edge:        true,
         firefox23:   true,
+        chrome45:    true,
       },
     },
     'lexical "arguments" binding': {
@@ -563,6 +569,7 @@ exports.tests = [
         edge:        true,
         firefox23:   true,
         firefox24:   false,
+        chrome45:    true,
       },
     },
     'no line break between params and <code>=></code>': {
@@ -578,6 +585,7 @@ exports.tests = [
         edge:        true,
         firefox39:   true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'no "prototype" property': {
@@ -591,6 +599,7 @@ exports.tests = [
         firefox23:   true,
         chrome39:    flag,
         chrome40:    false,
+        chrome45:    true,
       },
     },
     'lexical "super" binding': {
@@ -616,6 +625,7 @@ exports.tests = [
         jsx:         true,
         typescript:  true,
         edge:        flag,
+        chrome45:    strict,
       },
     },
     'lexical "new.target" binding': {
@@ -1130,6 +1140,7 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
+        chrome45:    true,
       },
     },
     'function \'length\' property': {
@@ -1146,6 +1157,7 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
+        chrome45:    true,
       },
     },
     'arguments object interaction': {
@@ -1164,6 +1176,7 @@ exports.tests = [
         babel:       true,
         tr:          true,
         chrome44:    flag,
+        chrome45:    true,
         edge:        true,
       },
     },
@@ -1185,7 +1198,7 @@ exports.tests = [
         typescript:  true,
         edge:        true,
         firefox38:   true,
-        chrome45:    flag,
+        chrome45:    true,
       },
     },
     'new Function() support': {
@@ -1198,6 +1211,7 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
+        chrome45:    true,
       },
     },
   },
@@ -1225,6 +1239,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         chrome44:    flag,
+        chrome45:    true,
       },
     },
     'with arrays, in array literals': {
@@ -1242,6 +1257,7 @@ exports.tests = [
         firefox16:   true,
         safari71_8:  true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'with strings, in function calls': {
@@ -1255,6 +1271,7 @@ exports.tests = [
         edge:        true,
         firefox27:   true,
         chrome44:    flag,
+        chrome45:    true,
       },
     },
     'with strings, in array literals': {
@@ -1268,6 +1285,7 @@ exports.tests = [
         edge:        true,
         firefox17:   true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'with astral plane strings, in function calls': {
@@ -1280,6 +1298,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        chrome45:    true,
         edge:        true,
       },
     },
@@ -1294,6 +1313,7 @@ exports.tests = [
         firefox27:   true,
         webkit:      true,
         edge:        true,
+        chrome45:    true,
       },
     },
     'with generator instances, in calls': {
@@ -1307,6 +1327,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        chrome45:    true,
         edge:        flag,
       },
     },
@@ -1321,6 +1342,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        chrome45:    true,
         edge:        flag,
       },
     },
@@ -1340,6 +1362,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome44:    flag,
+        chrome45:    true,
         edge:        true,
       },
     },
@@ -1356,6 +1379,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'with instances of iterables, in calls': {
@@ -1369,6 +1393,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
         chrome44:    flag,
+        chrome45:    true,
         edge:        true
       },
     },
@@ -1384,6 +1409,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
+        chrome45:    true,
       },
     },
   }
@@ -1547,6 +1573,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
+        chrome45:    strict,
       },
     },
     'static methods': {
@@ -1589,6 +1616,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge:        flag,
+        chrome45:    strict,
       },
     },
     'accessor properties': {
@@ -1632,6 +1660,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
+        chrome45:    strict,
       },
     },
     'static accessor properties': {
@@ -1674,6 +1703,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge:        flag,
+        chrome45:    strict,
       },
     },
     'class name is lexically scoped': {
@@ -1707,6 +1737,7 @@ exports.tests = [
       */},
       res: {
         edge:        flag,
+        chrome45:    strict,
       },
     },
     'methods aren\'t enumerable': {
@@ -2973,6 +3004,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         edge:        flag,
+        chrome45:    strict,
       },
     },
   },
@@ -3502,13 +3534,14 @@ exports.tests = [
         edge:     false,
         safari6:  false,
         webkit:   false,
+        firefox11:false,
       }),
     },
   },
   (function(){
     var methods = {
-    '.from':                  { edge:    true, firefox38: true, },
-    '.of':                    { edge:    true, firefox38: true, },
+    '.from':                  { edge:    true, firefox38: true, chrome45: true, },
+    '.of':                    { edge:    true, firefox38: true, chrome45: true, },
     '.prototype.subarray':    {
         ejs:         true,
         edge:        true,
@@ -3520,27 +3553,27 @@ exports.tests = [
         node:        true,
         iojs:        true,
     },
-    '.prototype.join':        { edge:    true, firefox37: true, ejs: true },
-    '.prototype.indexOf':     { edge:    true, firefox37: true, ejs: true },
-    '.prototype.lastIndexOf': { edge:    true, firefox37: true, ejs: true },
-    '.prototype.slice':       { edge:    true, firefox38: true, ejs: true },
-    '.prototype.every':       { edge:    true, firefox37: true, ejs: true },
-    '.prototype.filter':      { edge:    true, firefox38: true },
-    '.prototype.forEach':     { edge:    true, firefox38: true, ejs: true },
-    '.prototype.map':         { edge:    true, firefox38: true },
-    '.prototype.reduce':      { edge:    true, firefox37: true, ejs: true },
-    '.prototype.reduceRight': { edge:    true, firefox37: true, ejs: true },
-    '.prototype.reverse':     { edge:    true, firefox37: true },
-    '.prototype.some':        { edge:    true, firefox37: true, ejs: true },
-    '.prototype.sort':        { edge:    true, },
-    '.prototype.copyWithin':  { edge:    true, firefox34: true },
-    '.prototype.find':        { edge:    true, firefox37: true, ejs: true },
-    '.prototype.findIndex':   { edge:    true, firefox37: true, ejs: true },
-    '.prototype.fill':        { edge:    true, firefox37: true, ejs: true },
-    '.prototype.keys':        { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
-    '.prototype.values':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
-    '.prototype.entries':     { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true },
-    '.prototype[Symbol.iterator]':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true },
+    '.prototype.join':        { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.indexOf':     { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.lastIndexOf': { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.slice':       { edge:    true, firefox38: true, ejs: true, chrome45: true, },
+    '.prototype.every':       { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.filter':      { edge:    true, firefox38: true, chrome45: true, },
+    '.prototype.forEach':     { edge:    true, firefox38: true, ejs: true, chrome45: true, },
+    '.prototype.map':         { edge:    true, firefox38: true, chrome45: true, },
+    '.prototype.reduce':      { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.reduceRight': { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.reverse':     { edge:    true, firefox37: true, chrome45: true, },
+    '.prototype.some':        { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.sort':        { edge:    true, chrome45: true, },
+    '.prototype.copyWithin':  { edge:    true, firefox34: true, chrome45: true, },
+    '.prototype.find':        { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.findIndex':   { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.fill':        { edge:    true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.keys':        { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.values':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.entries':     { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, chrome45: true, },
+    '.prototype[Symbol.iterator]':      { edge:    true, chrome38: true, node: true, iojs: true, firefox37: true, ejs: true, chrome45: true, },
     '[Symbol.species]':       {},
     };
     var eqFn = ' === "function"';
@@ -3635,7 +3668,6 @@ exports.tests = [
         babel:       true,
         es6shim:     true,
         ie11:        true,
-        firefox37:   true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
@@ -3912,6 +3944,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'Map[Symbol.species]': {
@@ -3992,7 +4025,6 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
-        firefox37:   true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
@@ -4273,6 +4305,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'Set[Symbol.species]': {
@@ -4349,7 +4382,6 @@ exports.tests = [
       res: {
         babel:       true,
         es6shim:     true,
-        firefox37:   true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
@@ -6073,7 +6105,7 @@ exports.tests = [
         edge:        true,
         firefox34:   true,
         webkit:      true,
-        chrome45:    flag,
+        chrome45:    true,
       },
     },
     'Object.is': {
@@ -6428,6 +6460,7 @@ exports.tests = [
       res: {
         ejs:         true,
         edge:        true,
+        chrome45:    true,
       },
     },
     'variables (function)': {
@@ -6800,6 +6833,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         webkit:      true,
+        chrome45:    true,
       },
     },
   },
@@ -7349,7 +7383,6 @@ exports.tests = [
         ejs:         true,
         typescript:  temp.typescriptFallthrough,
         chrome40:    flag,
-        chrome44:    true,
         iojs:        flag,
       },
     },
@@ -7363,7 +7396,6 @@ exports.tests = [
         babel:       true,
         typescript:  temp.typescriptFallthrough,
         chrome40:    flag,
-        chrome44:    true,
         iojs:        flag,
       },
     },
@@ -7514,6 +7546,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         firefox32:   true,
+        chrome45:    flag,
       }
     },
     'Array.from, generic iterables': {
@@ -7529,6 +7562,7 @@ exports.tests = [
         es6shim:     true,
         firefox32:   true,
         webkit:      true,
+        chrome45:    flag,
       }
     },
     'Array.from, instances of generic iterables': {
@@ -7537,11 +7571,12 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
-        babel:        true,
-        tr:           true,
-        edge:          true,
-        firefox36:    true,
+        babel:       true,
+        tr:          true,
+        edge:        true,
+        firefox36:   true,
         webkit:      true,
+        chrome45:    flag,
       }
     },
     'Array.from map function, array-like objects': {
@@ -7558,6 +7593,7 @@ exports.tests = [
         edge:        true,
         firefox32:   true,
         webkit:      true,
+        chrome45:    flag,
       }
     },
     'Array.from map function, generator instances': {
@@ -7574,6 +7610,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         firefox32:   true,
+        chrome45:    flag,
       }
     },
     'Array.from map function, generic iterables': {
@@ -7591,6 +7628,7 @@ exports.tests = [
         es6shim:     true,
         firefox32:   true,
         webkit:      true,
+        chrome45:    flag,
       }
     },
     'Array.from map function, instances of iterables': {
@@ -7606,6 +7644,7 @@ exports.tests = [
         edge:         true,
         firefox36:    true,
         webkit:       true,
+        chrome45:    flag,
       }
     },
     'Array.from, iterator closing': {
@@ -7639,6 +7678,7 @@ exports.tests = [
         firefox25:   true,
         chrome39:    flag,
         chrome40:    false,
+        chrome45:    flag,
         webkit:      true,
       },
     },
@@ -7670,6 +7710,7 @@ exports.tests = [
         edge:        true,
         firefox32:   true,
         webkit:      true,
+        chrome45:    true,
       },
     },
     'Array.prototype.find': {
@@ -7684,6 +7725,7 @@ exports.tests = [
         edge:        true,
         firefox25:   true,
         chrome30:    flag,
+        chrome45:    true,
         safari71_8:  true,
         webkit:      true,
         node:        flag,
@@ -7701,6 +7743,7 @@ exports.tests = [
         edge:        true,
         firefox25:   true,
         chrome30:    flag,
+        chrome45:    true,
         safari71_8:  true,
         webkit:      true,
         node:        flag,
@@ -7718,6 +7761,7 @@ exports.tests = [
         edge:        true,
         firefox31:   true,
         chrome36:    flag,
+        chrome45:    true,
         safari71_8:  true,
         webkit:      true,
         node:        flag,
@@ -8393,6 +8437,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         edge:        flag,
+        chrome45:    flag,
       }
     },
     'Array.of': {
@@ -8404,6 +8449,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         edge:        flag,
+        chrome45:    flag,
       }
     },
   },
@@ -8857,6 +8903,7 @@ exports.tests = [
       res: {
         edge:        { val: true, note_id: 'ie_property_order' },
         webkit:      true,
+        chrome45:    true,
       },
     },
     'JSON.stringify': {
