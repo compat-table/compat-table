@@ -143,9 +143,11 @@ $(function() {
         }
       })
       .on('mousemove', function (e) {
+/*
         if (!infoTooltip.data('locked-from')) {
           infoTooltip.moveHere(e)
         }
+*/
       })
       .on('click', function (e) {
         var lockedFrom = infoTooltip.data('locked-from');
