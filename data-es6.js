@@ -197,6 +197,11 @@ exports.browsers = {
     short: 'FF 40',
     unstable: true,
   },
+  firefox41: {
+    full: 'Firefox',
+    short: 'FF 41',
+    unstable: true,
+  },
   chrome: {
     full: 'Chrome',
     short: 'CH &lt;19',
@@ -645,6 +650,7 @@ exports.tests = [
         return new C()() === C && C()() === undefined;
       */},
       res: {
+        firefox41:    true,
       },
     },
   },
@@ -912,6 +918,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         ejs:         true,
         closure:     true,
+        firefox39:   { val: flag, note_id: 'fx-let', },
       },
     },
     'basic support (strict mode)': {
@@ -1024,6 +1031,7 @@ exports.tests = [
         chrome41:    true,
         node:        flag,
         iojs:        true,
+        firefox39:   { val: flag, note_id: 'fx-let', },
       },
     },
   },
@@ -2191,25 +2199,78 @@ exports.tests = [
   }
 },
 {
-  name: 'hoisted block-level function declaration',
+  name: 'non-strict function semantics',
   category: 'annex b',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-block-level-function-declarations-web-legacy-compatibility-semantics',
-  exec: function () {/*
-    // Note: only available outside of strict mode.
-    { function f() { return 1; } }
-      function g() { return 1; }
-    { function g() { return 2; } }
-    { function h() { return 1; } }
-      function h() { return 2; }
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additional-ecmascript-features-for-web-browserss',
+  subtests: {
+    'hoisted block-level function declaration': {
+      exec: function () {/*
+        // Note: only available outside of strict mode.
+        if (!this) return false;
+        { function f() { return 1; } }
+          function g() { return 1; }
+        { function g() { return 2; } }
+        { function h() { return 1; } }
+          function h() { return 2; }
 
-    return f() === 1 && g() === 2 && h() === 1;
-  */},
-  res: {
-    ie11:        true,
-    firefox11:   true,
-    rhino17:     true,
-  }
+        return f() === 1 && g() === 2 && h() === 1;
+      */},
+      res: {
+        ie11:        true,
+        firefox11:   true,
+        rhino17:     true,
+        chrome:      true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'labeled function statements': {
+      exec: function() {/*
+        // Note: only available outside of strict mode.
+        if (!this) return false;
+        
+        label: function foo() { return 2; }
+        return foo() === 2;
+      */},
+      res: {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+    'function statements in if-statement clauses': {
+      exec: function() {/*
+        // Note: only available outside of strict mode.
+        if (!this) return false;
+        
+        if(true) function foo() { return 2; }
+        if(false) {} else function bar() { return 3; }
+        if(true) function baz() { return 4; } else {}
+        if(false) function qux() { return 5; } else function qux() { return 6; }
+        return foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;
+      */},
+      res: {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+      },
+    },
+  },
 },
 {
   name: '__proto__ in object literals',
@@ -3972,6 +4033,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        firefox41:   true,
       },
     },
   },
@@ -4044,6 +4106,7 @@ exports.tests = [
         babel:       true,
 	typescript:  true,
         es6shim:     true,
+        ie11:        true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
@@ -4338,6 +4401,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        firefox41:   true,
       },
     },
   },
@@ -4406,6 +4470,7 @@ exports.tests = [
         babel:       true,
 	typescript:  true,
         es6shim:     true,
+        ie11:        true,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
@@ -5659,6 +5724,7 @@ exports.tests = [
         typescript:   true,
         safari71_8:   true,
         webkit:       true,
+        firefox41:    true,
       },
     },
     'chained object destructuring': {
@@ -7035,6 +7101,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        firefox41:   true,
       }
     },
     'can\'t be assigned to': {
@@ -7051,6 +7118,7 @@ exports.tests = [
         }
       */},
       res: {
+        firefox41:   true,
       }
     },
   }
@@ -7344,6 +7412,7 @@ exports.tests = [
         ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
+        firefox41:   true,
       },
     },
     'Symbol.species, Array.prototype.concat': {
@@ -7596,6 +7665,7 @@ exports.tests = [
         edge:        true,
         firefox32:   true,
         webkit:      true,
+        chrome45:    true,
       }
     },
     'Array.from, generator instances': {
@@ -7611,7 +7681,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         firefox32:   true,
-        chrome45:    flag,
+        chrome45:    true,
       }
     },
     'Array.from, generic iterables': {
@@ -7628,7 +7698,7 @@ exports.tests = [
         es6shim:     true,
         firefox32:   true,
         webkit:      true,
-        chrome45:    flag,
+        chrome45:    true,
       }
     },
     'Array.from, instances of generic iterables': {
@@ -7638,12 +7708,12 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:   typescript.corejs,
+        typescript:  typescript.corejs,
         tr:          true,
-        edge:          true,
+        edge:        true,
         firefox36:   true,
-        webkit:       true,
-        chrome45:    flag,
+        webkit:      true,
+        chrome45:    true,
       }
     },
     'Array.from map function, array-like objects': {
@@ -7661,7 +7731,7 @@ exports.tests = [
         edge:        true,
         firefox32:   true,
         webkit:      true,
-        chrome45:    flag,
+        chrome45:    true,
       }
     },
     'Array.from map function, generator instances': {
@@ -7679,7 +7749,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         firefox32:   true,
-        chrome45:    flag,
+        chrome45:    true,
       }
     },
     'Array.from map function, generic iterables': {
@@ -7698,7 +7768,7 @@ exports.tests = [
         es6shim:     true,
         firefox32:   true,
         webkit:      true,
-        chrome45:    flag,
+        chrome45:    true,
       }
     },
     'Array.from map function, instances of iterables': {
@@ -7715,7 +7785,7 @@ exports.tests = [
         edge:         true,
         firefox36:    true,
         webkit:       true,
-        chrome45:    flag,
+        chrome45:     true,
       }
     },
     'Array.from, iterator closing': {
@@ -7751,7 +7821,7 @@ exports.tests = [
         firefox25:   true,
         chrome39:    flag,
         chrome40:    false,
-        chrome45:    flag,
+        chrome45:    true,
         webkit:      true,
       },
     },
@@ -8545,7 +8615,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         edge:        flag,
-        chrome45:    flag,
+        chrome45:    strict,
       }
     },
     'Array.of': {
@@ -8557,7 +8627,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         edge:        flag,
-        chrome45:    flag,
+        chrome45:    strict,
       }
     },
   },
@@ -9160,6 +9230,7 @@ exports.tests = [
         edge:        true,
         chrome42:    true,
         iojs:        true,
+        firefox41:   true,
       },
     },
     'Invalid Date': {
