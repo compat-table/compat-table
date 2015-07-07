@@ -102,7 +102,7 @@ $(function() {
     .hide()
     .appendTo('body');
     
-  infoTooltip.fillAndShow(scriptTag) {
+  infoTooltip.fillAndShow = function (scriptTag) {
     return this.html(
       scriptTag.attr('data-source')
       // trim sides, and escape <
@@ -111,7 +111,7 @@ $(function() {
     .show();
   };
   
-  infoTooltip.unlockAndHide(lockedFrom) {
+  infoTooltip.unlockAndHide = function (lockedFrom) {
     lockedFrom.removeClass('tooltip-locked');
     return this
       .data('locked-from', null)
