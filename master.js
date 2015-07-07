@@ -103,16 +103,10 @@ $(function() {
     .appendTo('body');
     
   infoTooltip.fillAndShow = function (e, scriptTag) {
-    return this.html(
-      scriptTag.attr('data-source')
-      // trim sides, and escape <
-      .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
-    )
-    .offset({
-      left: e.pageX + 10,
-      top: e.pageY
-    });
-    .show();
+    return this
+      .text(scriptTag.attr('data-source').trim())
+      .moveHere(e)
+      .show();
   };
   
   infoTooltip.unlockAndHide = function (lockedFrom) {
@@ -122,9 +116,13 @@ $(function() {
       .hide();
   };
   
-  infoTooltip.doMove = function (e) {
+  infoTooltip.moveHere = function (e) {
+    return this.offset({
+      left: e.pageX + 10,
+      top: e.pageY
+    });
   };
-
+  
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
     var td = $(this);
@@ -144,6 +142,11 @@ $(function() {
           infoTooltip.hide();
         }
       })
+      .on('mousemove', function (e) {
+        if (!infoTooltip.data('locked-from')) {
+          infoTooltip.moveHere(e)
+        }
+      })
       .on('click', function (e) {
         var lockedFrom = infoTooltip.data('locked-from');
         if (lockedFrom) {
@@ -151,8 +154,8 @@ $(function() {
         }        
         var elem = $(this)
         if (!elem.is(lockedFrom)) {
-          infoTooltip.fillAndShow(e, scriptTag)
-            .doMove(e)
+          infoTooltip
+            .fillAndShow(e, scriptTag)
             .data('locked-from', elem);
           elem.addClass('tooltip-locked');
         }
