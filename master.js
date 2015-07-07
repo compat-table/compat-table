@@ -57,8 +57,6 @@ $(function() {
   $('#show-obsolete').attr('value', $('#show-obsolete').checked);
   $('#show-unstable').attr('value', $('#show-unstable').checked);
 
-  var mouseoverTimeout;
-
   window.__updateSupertest = function(){
     var tr = $(this);
     var subtests = tr.nextUntil('tr:not(.subtest)');
@@ -102,13 +100,7 @@ $(function() {
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
-    .appendTo('body')
-    .on('mouseleave', function() {
-      $(this).hide();
-    })
-    .on('mouseenter', function() {
-      mouseoverTimeout = null;
-    });
+    .appendTo('body');
 
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
@@ -117,25 +109,45 @@ $(function() {
     if (scriptTag.length === 0) {
       return;
     }
+    function showTooltip() {
+      infoTooltip.html(
+        scriptTag.attr('data-source')
+        // trim sides, and escape <
+        .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
+      )
+      .show();
+      infoTooltip.data('td-source') = td
+    }
     $('<span class="info">c</span>')
       .appendTo(td)
       .on('mouseenter', function(e) {
-        infoTooltip.html(
-            scriptTag.attr('data-source')
-            // trim sides, and escape <
-            .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
-          )
-          .show();
+        if (!infoTooltip.data('locked-from')) {
+          showTooltip();
+        }
       })
       .on('mouseleave', function() {
-        infoTooltip.hide();
+        if (!infoTooltip.data('locked-from')) {
+          infoTooltip.hide();
+        }
       })
       .on('mousemove', function(e) {
-        infoTooltip.offset({
-          left: e.pageX + 10,
-          top: e.pageY
-        });
-      });
+        if (!infoTooltip.data('locked-from')) {
+          infoTooltip.offset({
+            left: e.pageX + 10,
+            top: e.pageY
+          });
+        }
+      })
+      .on('click', function(e) {   
+        if (infoTooltip.data('locked-from') !== this) {
+          showTooltip();
+          infoTooltip.data('locked-from', this);
+        }
+        else {
+          infoTooltip.data('locked-from', undefined);
+          infoTooltip.hide();
+        }
+      })
   });
 
   // Function to retrieve the platform name of a given <td> cell
