@@ -162,7 +162,7 @@ $(function() {
   // Hide locked tooltip when clicking outside of it
   $(window).on('click', function(event) {
     var lockedFrom = infoTooltip.data('locked-from');
-    if (lockedFrom && !lockedFrom.has(event.target).length && !infoTooltip.has(event.target).length) {
+    if (lockedFrom && $(event.target).closest(infoTooltip.add(lockedFrom)).length === 0) {
       infoTooltip.unlockAndHide(lockedFrom);
     }
   });
