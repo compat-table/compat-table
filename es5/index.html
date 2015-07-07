@@ -1253,7 +1253,7 @@ return typeof Array.prototype.reduceRight == 'function';
 </tr>
 <tr significance="1"><td id="Getter_in_property_initializer"><span><a class="anchor" href="#Getter_in_property_initializer">&#xA7;</a>Getter in property initializer</span><script data-source="
 return ({ get x(){ return 1 } }).x === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");return Function("asyncTestPassed","\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1293,7 +1293,7 @@ return ({ get x(){ return 1 } }).x === 1;
 var value = 0;
 ({ set x(v){ value = v; } }).x = 1;
 return value === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");return Function("asyncTestPassed","\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1373,7 +1373,7 @@ return "foobar"[3] === "b";
 </tr>
 <tr significance="1"><td id="Reserved_words_as_property_names"><span><a class="anchor" href="#Reserved_words_as_property_names">&#xA7;</a>Reserved words as property names</span><script data-source="
 return ({ if: 1 }).if === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");return Function("asyncTestPassed","\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1414,7 +1414,7 @@ return ({ if: 1 }).if === 1;
 <tr significance="1"><td id="Zero-width_chars_in_identifiers"><span><a class="anchor" href="#Zero-width_chars_in_identifiers">&#xA7;</a>Zero-width chars in identifiers</span><script data-source="
 var _\u200c\u200d = true;
 return _\u200c\u200d;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");return Function("asyncTestPassed","\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1495,7 +1495,7 @@ undefined = 12345;
 var result = typeof undefined == &apos;undefined&apos;;
 undefined = void 0;
 return result;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");return Function("asyncTestPassed","\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed);}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
