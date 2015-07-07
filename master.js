@@ -105,8 +105,8 @@ $(function() {
   infoTooltip.fillAndShow = function (e, scriptTag) {
     return this
       .text(scriptTag.attr('data-source').trim())
-      .moveHere(e)
-      .show();
+      .show()
+      .moveHere(e);
   };
   
   infoTooltip.unlockAndHide = function (lockedFrom) {
