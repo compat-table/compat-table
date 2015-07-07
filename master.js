@@ -112,7 +112,7 @@ $(function() {
   };
   
   infoTooltip.unlockAndHide = function (lockedFrom) {
-    lockedFrom.removeClass('tooltip-locked');
+    $(lockedFrom).removeClass('tooltip-locked');
     return this
       .data('locked-from', null)
       .hide();
@@ -153,7 +153,7 @@ $(function() {
         if (this !== lockedFrom) {
           infoTooltip.fillAndShow(scriptTag, this)
             .data('locked-from', this);
-          this.addClass('tooltip-locked');
+          $(this).addClass('tooltip-locked');
         }
       })
   });
