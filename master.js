@@ -151,8 +151,7 @@ $(function() {
   $(window).on('click', function(event) {
     // hide locked tooltip when clicking outside of it
     if (infoTooltip.data('locked-from') && !infoTooltip.has(event.target).length) {
-      infoTooltip.data('locked-form', null);
-      infoTooltip.hide();
+      infoTooltip.data('locked-from', null).hide();
     }
   });
   
