@@ -148,13 +148,13 @@ $(function() {
         }
       })
   });
-  $('body').click(function(event) {
+  $(window).on('click', function(event) {
     // hide locked tooltip when clicking outside of it
     if (infoTooltip.data('locked-from') && !infoTooltip.has(event.target).length) {
       infoTooltip.data('locked-form', null);
       infoTooltip.hide();
     }
-  })
+  });
   
 
   // Function to retrieve the platform name of a given <td> cell
