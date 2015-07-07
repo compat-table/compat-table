@@ -100,7 +100,10 @@ $(function() {
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
-    .appendTo('body');
+    .appendTo('body')
+    .on('click', function (e) {
+      e.stopPropagation();
+    });    
     
   infoTooltip.fillAndShow = function (e, scriptTag) {
     return this
@@ -166,7 +169,7 @@ $(function() {
   // Hide locked tooltip when clicking outside of it
   $(window).on('click', function (event) {
     var lockedFrom = infoTooltip.data('locked-from');
-    if (lockedFrom && $(event.target).closest(infoTooltip).length === 0) {
+    if (lockedFrom) {
       infoTooltip.unlockAndHide(lockedFrom);
     }
   });
