@@ -116,7 +116,6 @@ $(function() {
         .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
       )
       .show();
-      infoTooltip.data('td-source') = td
     }
     $('<span class="info">c</span>')
       .appendTo(td)
