@@ -101,6 +101,22 @@ $(function() {
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
     .appendTo('body');
+    
+  infoTooltip.fillAndShow(scriptTag) {
+    return this.html(
+      scriptTag.attr('data-source')
+      // trim sides, and escape <
+      .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
+    )
+    .show();
+  };
+  
+  infoTooltip.unlockAndHide(lockedFrom) {
+    lockedFrom.removeClass('tooltip-locked');
+    return this
+      .data('locked-from', null)
+      .hide();
+  };
 
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
@@ -109,19 +125,11 @@ $(function() {
     if (scriptTag.length === 0) {
       return;
     }
-    function showTooltip() {
-      infoTooltip.html(
-        scriptTag.attr('data-source')
-        // trim sides, and escape <
-        .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
-      )
-      .show();
-    }
     $('<span class="info">c</span>')
       .appendTo(td)
       .on('mouseenter', function(e) {
         if (!infoTooltip.data('locked-from')) {
-          showTooltip();
+          infoTooltip.fillAndShow(scriptTag);
         }
       })
       .on('mouseleave', function() {
@@ -137,21 +145,24 @@ $(function() {
           });
         }
       })
-      .on('click', function(e) {   
-        if (infoTooltip.data('locked-from') !== this) {
-          showTooltip();
-          infoTooltip.data('locked-from', this);
+      .on('click', function(e) {
+        var lockedFrom = infoTooltip.data('locked-from');
+        if (lockedFrom) {
+          infoTooltip.unlockAndHide(lockedFrom);
         }
-        else {
-//           infoTooltip.data('locked-from', null);
-//           infoTooltip.hide();
+        if (this !== lockedFrom) {
+          infoTooltip.fillAndShow(scriptTag, this)
+            .data('locked-from', this);
+          this.addClass('tooltip-locked');
         }
       })
   });
+  
+  // Hide locked tooltip when clicking outside of it
   $(window).on('click', function(event) {
-    // hide locked tooltip when clicking outside of it
-    if (infoTooltip.data('locked-from') && !infoTooltip.has(event.target).length) {
-      infoTooltip.data('locked-from', null).hide();
+    var lockedFrom = infoTooltip.data('locked-from');
+    if (lockedFrom && !lockedFrom.has(event.target).length && !infoTooltip.has(event.target).length) {
+      infoTooltip.unlockAndHide(lockedFrom);
     }
   });
   
