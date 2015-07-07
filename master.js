@@ -112,7 +112,7 @@ $(function() {
   };
   
   infoTooltip.unlockAndHide = function (lockedFrom) {
-    $(lockedFrom).removeClass('tooltip-locked');
+    lockedFrom.removeClass('tooltip-locked');
     return this
       .data('locked-from', null)
       .hide();
@@ -149,11 +149,12 @@ $(function() {
         var lockedFrom = infoTooltip.data('locked-from');
         if (lockedFrom) {
           infoTooltip.unlockAndHide(lockedFrom);
-        }
-        if (this !== lockedFrom) {
-          infoTooltip.fillAndShow(scriptTag, this)
-            .data('locked-from', this);
-          $(this).addClass('tooltip-locked');
+        }        
+        var elem = $(this)
+        if (elem !== lockedFrom) {
+          infoTooltip.fillAndShow(scriptTag)
+            .data('locked-from', elem);
+          elem.addClass('tooltip-locked');
         }
       })
   });
