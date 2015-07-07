@@ -143,7 +143,7 @@ $(function() {
           infoTooltip.data('locked-from', this);
         }
         else {
-          infoTooltip.data('locked-from', undefined);
+          infoTooltip.data('locked-from', null);
           infoTooltip.hide();
         }
       })
