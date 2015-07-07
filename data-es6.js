@@ -2085,7 +2085,7 @@ exports.tests = [
   name: 'object literal extensions',
   category: 'syntax',
   significance: 'large',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object-initialiser',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-initialiser',
   subtests: {
     'computed properties': {
       exec: function() {/*
@@ -2278,7 +2278,7 @@ exports.tests = [
   significance: 'small',
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-__proto__-property-names-in-object-initializers',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers',
   subtests: {
     'basic support': {
       exec: function() {/*
@@ -4042,7 +4042,7 @@ exports.tests = [
   name: 'Set',
   category: 'built-ins',
   significance: 'small',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-set-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -4104,7 +4104,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  true,
+        typescript:  true,
         es6shim:     true,
         ie11:        true,
         chrome43:    true,
@@ -4135,7 +4135,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  typescript.corejs,
+        typescript:  typescript.corejs,
         es6shim:     true,
         edge:        true,
         firefox37:   true,
@@ -4410,7 +4410,7 @@ exports.tests = [
   name: 'WeakMap',
   category: 'built-ins',
   significance: 'small',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-objects',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -4468,7 +4468,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  true,
+        typescript:  true,
         es6shim:     true,
         ie11:        true,
         chrome43:    true,
@@ -4595,7 +4595,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  typescript.corejs,
+        typescript:  typescript.corejs,
         chrome43:    true,
         webkit:      true,
         iojs:        true,
@@ -4663,7 +4663,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  true,
+        typescript:  true,
         es6shim:     true,
         firefox37:   true,
         chrome43:    true,
@@ -4694,7 +4694,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  typescript.corejs,
+        typescript:  typescript.corejs,
         edge:        true,
         firefox37:   true,
         chrome43:    true,
@@ -5638,7 +5638,7 @@ exports.tests = [
         webkit:       true,
         safari71_8:   false,
         babel:        true,
-	typescript:   true,
+        typescript:   true,
         tr:           false,
         closure:      false,
       }),
@@ -5660,7 +5660,7 @@ exports.tests = [
         firefox16:    true,
         webkit:       true,
         safari71_8:   true,
-	typescript:   true
+        typescript:   true
       }),
     },
     'object destructuring with primitives': {
@@ -5678,7 +5678,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         webkit:       true,
         safari71_8:   true,
-	typescript:   true
+        typescript:   true
       }),
     },
     'trailing commas in object patterns': {
@@ -5689,7 +5689,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         webkit:       true,
         safari71_8:   false,
-	typescript:   true
+        typescript:   true
       }),
     },
     'object destructuring expression': {
@@ -5758,7 +5758,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
         webkit:       true,
-	typescript:   true
+        typescript:   true
       }),
     },
     'computed properties': {
@@ -5910,7 +5910,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
-	typescript:   true,
+        typescript:   true,
       },
     },
     'defaults': {
@@ -6048,7 +6048,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  true,
+        typescript:  true,
         es6shim:     true,
         firefox37:   true,
         chrome43:    true,
@@ -6194,7 +6194,7 @@ exports.tests = [
   name: 'Object static methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.assign': {
       exec: function () {/*
@@ -6283,7 +6283,7 @@ exports.tests = [
   name: 'Object static methods accept primitives',
   category: 'misc',
   significance: 'small',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-object-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.getPrototypeOf': {
       exec: function () {/*
@@ -6438,7 +6438,7 @@ exports.tests = [
   name: 'Object.prototype.__proto__',
   category: 'annex b',
   significance: 'small',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.__proto__',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.__proto__',
   subtests: {
     'get prototype': {
       exec: function() {/*
@@ -6761,7 +6761,7 @@ exports.tests = [
   name: 'String static methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-constructor',
   subtests: {
     'String.raw': {
       exec: function() {/*
@@ -6805,7 +6805,7 @@ exports.tests = [
   name: 'String.prototype methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-string-prototype-object',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-prototype-object',
   subtests: {
     'String.prototype.codePointAt': {
       exec: function () {/*
@@ -7127,7 +7127,7 @@ exports.tests = [
   name: 'Symbol',
   category: 'built-ins',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor',
   subtests: {
     'basic functionality': {
       exec: function(){/*
@@ -7334,7 +7334,7 @@ exports.tests = [
   name: 'well-known symbols',
   category: 'built-ins',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-well-known-symbols',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols',
   note_id: 'symbol-iterator-functionality',
   note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
     + 'the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, '
@@ -7558,7 +7558,7 @@ exports.tests = [
   name: 'RegExp.prototype properties',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype',
   subtests: {
     'RegExp.prototype.flags': {
       exec: function () {/*
@@ -7616,7 +7616,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-	typescript:  typescript.corejs,
+        typescript:  typescript.corejs,
       },
     },
   }
@@ -7626,7 +7626,7 @@ exports.tests = [
   name: 'RegExp.prototype.compile',
   category: 'annex b',
   significance: 'small',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.compile',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
   exec: function () {/*
     return typeof RegExp.prototype.compile === 'function';
   */},
@@ -7647,10 +7647,83 @@ exports.tests = [
   }
 },
 {
+  name: 'RegExp syntax extensions',
+  category: 'annex b',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
+  subtests: {
+    'hyphens in character sets': {
+      exec: function() {/*
+        return /[\w-_]/.exec("-")[0] === "-";
+      */},
+      res: (temp.regExpExtensions = {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        rhino17:     true,
+        node:        true,
+        iojs:        true,
+      }),
+    },
+    'invalid character escapes': {
+      exec: function() {/*
+        return /\z/.exec("\\z")[0] === "z"
+          && /[\z]/.exec("[\\z]")[0] === "z";
+      */},
+      res: temp.regExpExtensions,
+    },
+    'invalid control-character escapes': {
+      exec: function() {/*
+        return /\c2/.exec("\\c2")[0] === "\\c2";
+      */},
+      res: temp.regExpExtensions,
+    },
+    'invalid unicode escapes': {
+      exec: function() {/*
+        return /\u1/.exec("u1")[0] === "u1"
+          && /[\u1]/.exec("u")[0] === "u";
+      */},
+      res: Object.assign({}, temp.regExpExtensions, { opera: false }),
+    },
+    'invalid hexadecimal escapes': {
+      exec: function() {/*
+        return /\x1/.exec("x1")[0] === "x1"
+          && /[\x1]/.exec("x")[0] === "x";
+      */},
+      res: Object.assign({}, temp.regExpExtensions, { opera: false }),
+    },
+    'incomplete patterns and quantifiers': {
+      exec: function() {/*
+        return /x{1/.exec("x{1")[0] === "x{1"
+          && /x]1/.exec("x]1")[0] === "x]1";
+      */},
+      res: temp.regExpExtensions,
+    },
+    'octal escape sequences': {
+      exec: function() {/*
+        return /\041/.exec("!")[0] === "!"
+          && /[\041]/.exec("!")[0] === "!";
+      */},
+      res: temp.regExpExtensions,
+    },
+    'invalid backreferences become octal escapes': {
+      exec: function() {/*
+        return /\41/.exec("!")[0] === "!"
+          && /[\41]/.exec("!")[0] === "!";
+      */},
+      res: temp.regExpExtensions,
+    },
+  },
+},
+{
   name: 'Array static methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-constructor',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-constructor',
   subtests: {
     'Array.from, array-like objects': {
       exec: function () {/*
@@ -7676,7 +7749,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-	typescript:  typescript.fallthrough,
+        typescript:  typescript.fallthrough,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -7692,7 +7765,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-	typescript:  typescript.corejs,
+        typescript:  typescript.corejs,
         ejs:         true,
         edge:        true,
         es6shim:     true,
@@ -7841,7 +7914,7 @@ exports.tests = [
   name: 'Array.prototype methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-array-prototype-object',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-prototype-object',
   subtests: {
     'Array.prototype.copyWithin': {
       exec: function () {/*
