@@ -2202,7 +2202,7 @@ exports.tests = [
   name: 'non-strict function semantics',
   category: 'annex b',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additional-ecmascript-features-for-web-browserss',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations',
   subtests: {
     'hoisted block-level function declaration': {
       exec: function () {/*
@@ -7650,7 +7650,7 @@ exports.tests = [
   name: 'RegExp syntax extensions',
   category: 'annex b',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns',
   subtests: {
     'hyphens in character sets': {
       exec: function() {/*

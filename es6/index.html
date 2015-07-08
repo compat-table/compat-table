@@ -3135,12 +3135,12 @@ return result === &quot;123&quot;;
 </tr>
 <tr class="subtest" data-parent="for..of_loops" id="for..of_loops_with_generic_iterables"><td><span><a class="anchor" href="#for..of_loops_with_generic_iterables">&#xA7;</a>with generic iterables</span><script data-source="
 var result = &quot;&quot;;
-var iterable = global.__createIterableObject(1, 2, 3);
+var iterable = global.__createIterableObject([1, 2, 3]);
 for (var item of iterable) {
   result += item;
 }
 return result === &quot;123&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nvar result = \"\";\nvar iterable = global.__createIterableObject(1, 2, 3);\nfor (var item of iterable) {\n  result += item;\n}\nreturn result === \"123\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nvar result = \"\";\nvar iterable = global.__createIterableObject(1, 2, 3);\nfor (var item of iterable) {\n  result += item;\n}\nreturn result === \"123\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nvar result = \"\";\nvar iterable = global.__createIterableObject([1, 2, 3]);\nfor (var item of iterable) {\n  result += item;\n}\nreturn result === \"123\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nvar result = \"\";\nvar iterable = global.__createIterableObject([1, 2, 3]);\nfor (var item of iterable) {\n  result += item;\n}\nreturn result === \"123\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4650,12 +4650,12 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="destructuring" id="destructuring_with_generic_iterables"><td><span><a class="anchor" href="#destructuring_with_generic_iterables">&#xA7;</a>with generic iterables</span><script data-source="
-var [a, b, c] = global.__createIterableObject(1, 2);
+var [a, b, c] = global.__createIterableObject([1, 2]);
 var d, e;
-[d, e] = global.__createIterableObject(3, 4);
+[d, e] = global.__createIterableObject([3, 4]);
 return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
   &amp;&amp; d === 3 &amp;&amp; e === 4;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");try{return Function("asyncTestPassed","\nvar [a, b, c] = global.__createIterableObject(1, 2);\nvar d, e;\n[d, e] = global.__createIterableObject(3, 4);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("62");return Function("asyncTestPassed","'use strict';"+"\nvar [a, b, c] = global.__createIterableObject(1, 2);\nvar d, e;\n[d, e] = global.__createIterableObject(3, 4);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");try{return Function("asyncTestPassed","\nvar [a, b, c] = global.__createIterableObject([1, 2]);\nvar d, e;\n[d, e] = global.__createIterableObject([3, 4]);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("62");return Function("asyncTestPassed","'use strict';"+"\nvar [a, b, c] = global.__createIterableObject([1, 2]);\nvar d, e;\n[d, e] = global.__createIterableObject([3, 4]);\nreturn a === 1 && b === 2 && c === undefined\n  && d === 3 && e === 4;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -38627,7 +38627,7 @@ return false;
 </tr>
 <tr class="category"><td colspan="67">Annex b</td>
 </tr>
-<tr class="supertest optional-feature" significance="0.25"><td id="non-strict_function_semantics"><span><a class="anchor" href="#non-strict_function_semantics">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-additional-ecmascript-features-for-web-browserss">non-strict function semantics</a></span></td>
+<tr class="supertest optional-feature" significance="0.25"><td id="non-strict_function_semantics"><span><a class="anchor" href="#non-strict_function_semantics">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">non-strict function semantics</a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/3</td>
 <td data-browser="es6tr" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -40223,7 +40223,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
-<tr class="supertest optional-feature" significance="0.25"><td id="RegExp_syntax_extensions"><span><a class="anchor" href="#RegExp_syntax_extensions">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile">RegExp syntax extensions</a></span></td>
+<tr class="supertest optional-feature" significance="0.25"><td id="RegExp_syntax_extensions"><span><a class="anchor" href="#RegExp_syntax_extensions">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns">RegExp syntax extensions</a></span></td>
 <td data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
 <td data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
 <td data-browser="es6tr" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
