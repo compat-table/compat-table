@@ -2457,7 +2457,7 @@ exports.tests = [
     'with generic iterables': {
       exec: function () {/*
         var result = "";
-        var iterable = global.__createIterableObject(1, 2, 3);
+        var iterable = global.__createIterableObject([1, 2, 3]);
         for (var item of iterable) {
           result += item;
         }
@@ -5553,9 +5553,9 @@ exports.tests = [
     },
     'with generic iterables': {
       exec: function(){/*
-        var [a, b, c] = global.__createIterableObject(1, 2);
+        var [a, b, c] = global.__createIterableObject([1, 2]);
         var d, e;
-        [d, e] = global.__createIterableObject(3, 4);
+        [d, e] = global.__createIterableObject([3, 4]);
         return a === 1 && b === 2 && c === undefined
           && d === 3 && e === 4;
       */},
