@@ -57,8 +57,6 @@ $(function() {
   $('#show-obsolete').attr('value', $('#show-obsolete').checked);
   $('#show-unstable').attr('value', $('#show-unstable').checked);
 
-  var mouseoverTimeout;
-
   window.__updateSupertest = function(){
     var tr = $(this);
     var subtests = tr.nextUntil('tr:not(.subtest)');
@@ -103,13 +101,31 @@ $(function() {
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
     .appendTo('body')
-    .on('mouseleave', function() {
-      $(this).hide();
-    })
-    .on('mouseenter', function() {
-      mouseoverTimeout = null;
+    .on('click', function (e) {
+      e.stopPropagation();
+    });    
+    
+  infoTooltip.fillAndShow = function (e, scriptTag) {
+    return this
+      .text(scriptTag.attr('data-source').trim())
+      .show()
+      .moveHere(e);
+  };
+  
+  infoTooltip.unlockAndHide = function (lockedFrom) {
+    lockedFrom.removeClass('tooltip-locked');
+    return this
+      .data('locked-from', null)
+      .hide();
+  };
+  
+  infoTooltip.moveHere = function (e) {
+    return this.offset({
+      left: e.pageX + 10,
+      top: e.pageY
     });
-
+  };
+  
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
     var td = $(this);
@@ -119,24 +135,45 @@ $(function() {
     }
     $('<span class="info">c</span>')
       .appendTo(td)
-      .on('mouseenter', function(e) {
-        infoTooltip.html(
-            scriptTag.attr('data-source')
-            // trim sides, and escape <
-            .replace(/^\s*|\s*$/g, '').replace(/</g, '&lt;')
-          )
-          .show();
+      .on('mouseenter', function (e) {
+        if (!infoTooltip.data('locked-from')) {
+          infoTooltip.fillAndShow(e, scriptTag);
+        }
       })
-      .on('mouseleave', function() {
-        infoTooltip.hide();
+      .on('mouseleave', function () {
+        if (!infoTooltip.data('locked-from')) {
+          infoTooltip.hide();
+        }
       })
-      .on('mousemove', function(e) {
-        infoTooltip.offset({
-          left: e.pageX + 10,
-          top: e.pageY
-        });
-      });
+      .on('mousemove', function (e) {
+        if (!infoTooltip.data('locked-from')) {
+          infoTooltip.moveHere(e)
+        }
+      })
+      .on('click', function (e) {
+        var lockedFrom = infoTooltip.data('locked-from');
+        if (lockedFrom) {
+          infoTooltip.unlockAndHide(lockedFrom);
+        }        
+        var elem = $(this)
+        if (!elem.is(lockedFrom)) {
+          infoTooltip
+            .fillAndShow(e, scriptTag)
+            .data('locked-from', elem);
+          elem.addClass('tooltip-locked');
+        }
+        e.stopPropagation();
+      })
   });
+  
+  // Hide locked tooltip when clicking outside of it
+  $(window).on('click', function (event) {
+    var lockedFrom = infoTooltip.data('locked-from');
+    if (lockedFrom) {
+      infoTooltip.unlockAndHide(lockedFrom);
+    }
+  });
+  
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {

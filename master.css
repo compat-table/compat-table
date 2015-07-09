@@ -233,7 +233,7 @@ td[title] {
     font-size: 12px;
     cursor: help;
 }
-.info:hover {
+.info:hover, .info.tooltip-locked {
     background: #555
 }
 .info-tooltip {
