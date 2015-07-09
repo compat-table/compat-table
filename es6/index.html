@@ -26278,12 +26278,13 @@ return &quot;species&quot; in Symbol;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="well-known_symbols" id="well-known_symbols_Symbol.species,_Array.prototype.concat"><td><span><a class="anchor" href="#well-known_symbols_Symbol.species,_Array.prototype.concat">&#xA7;</a>Symbol.species, Array.prototype.concat</span><script data-source="
-var obj = { constructor: false };
-obj[Symbol.species] = function() {
-  return { foo: 1 };
+var obj = [];
+obj.constructor = {};
+obj.constructor[Symbol.species] = function() {
+    return { foo: 1 };
 };
 return Array.prototype.concat.call(obj, []).foo === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("351");try{return Function("asyncTestPassed","\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.concat.call(obj, []).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("351");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.concat.call(obj, []).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("351");try{return Function("asyncTestPassed","\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.concat.call(obj, []).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("351");return Function("asyncTestPassed","'use strict';"+"\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.concat.call(obj, []).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -26352,12 +26353,13 @@ return Array.prototype.concat.call(obj, []).foo === 1;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="well-known_symbols" id="well-known_symbols_Symbol.species,_Array.prototype.filter"><td><span><a class="anchor" href="#well-known_symbols_Symbol.species,_Array.prototype.filter">&#xA7;</a>Symbol.species, Array.prototype.filter</span><script data-source="
-var obj = { constructor: false };
-obj[Symbol.species] = function() {
-  return { foo: 1 };
+var obj = [];
+obj.constructor = {};
+obj.constructor[Symbol.species] = function() {
+    return { foo: 1 };
 };
 return Array.prototype.filter.call(obj, Boolean).foo === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("352");try{return Function("asyncTestPassed","\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.filter.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("352");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.filter.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("352");try{return Function("asyncTestPassed","\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.filter.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("352");return Function("asyncTestPassed","'use strict';"+"\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.filter.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -26426,12 +26428,13 @@ return Array.prototype.filter.call(obj, Boolean).foo === 1;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="well-known_symbols" id="well-known_symbols_Symbol.species,_Array.prototype.map"><td><span><a class="anchor" href="#well-known_symbols_Symbol.species,_Array.prototype.map">&#xA7;</a>Symbol.species, Array.prototype.map</span><script data-source="
-var obj = { constructor: false };
-obj[Symbol.species] = function() {
-  return { foo: 1 };
+var obj = [];
+obj.constructor = {};
+obj.constructor[Symbol.species] = function() {
+    return { foo: 1 };
 };
 return Array.prototype.map.call(obj, Boolean).foo === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("353");try{return Function("asyncTestPassed","\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.map.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("353");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.map.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("353");try{return Function("asyncTestPassed","\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.map.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("353");return Function("asyncTestPassed","'use strict';"+"\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.map.call(obj, Boolean).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -26500,12 +26503,13 @@ return Array.prototype.map.call(obj, Boolean).foo === 1;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="well-known_symbols" id="well-known_symbols_Symbol.species,_Array.prototype.slice"><td><span><a class="anchor" href="#well-known_symbols_Symbol.species,_Array.prototype.slice">&#xA7;</a>Symbol.species, Array.prototype.slice</span><script data-source="
-var obj = { constructor: false };
-obj[Symbol.species] = function() {
-  return { foo: 1 };
+var obj = [];
+obj.constructor = {};
+obj.constructor[Symbol.species] = function() {
+    return { foo: 1 };
 };
 return Array.prototype.slice.call(obj, 0).foo === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("354");try{return Function("asyncTestPassed","\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.slice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("354");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.slice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("354");try{return Function("asyncTestPassed","\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.slice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("354");return Function("asyncTestPassed","'use strict';"+"\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.slice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -26574,12 +26578,13 @@ return Array.prototype.slice.call(obj, 0).foo === 1;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="subtest" data-parent="well-known_symbols" id="well-known_symbols_Symbol.species,_Array.prototype.splice"><td><span><a class="anchor" href="#well-known_symbols_Symbol.species,_Array.prototype.splice">&#xA7;</a>Symbol.species, Array.prototype.splice</span><script data-source="
-var obj = { constructor: false };
-obj[Symbol.species] = function() {
-  return { foo: 1 };
+var obj = [];
+obj.constructor = {};
+obj.constructor[Symbol.species] = function() {
+    return { foo: 1 };
 };
 return Array.prototype.splice.call(obj, 0).foo === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("355");try{return Function("asyncTestPassed","\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.splice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("355");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { constructor: false };\nobj[Symbol.species] = function() {\n  return { foo: 1 };\n};\nreturn Array.prototype.splice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("355");try{return Function("asyncTestPassed","\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.splice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("355");return Function("asyncTestPassed","'use strict';"+"\nvar obj = [];\nobj.constructor = {};\nobj.constructor[Symbol.species] = function() {\n    return { foo: 1 };\n};\nreturn Array.prototype.splice.call(obj, 0).foo === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -26649,15 +26654,15 @@ return Array.prototype.splice.call(obj, 0).foo === 1;
 </tr>
 <tr class="subtest" data-parent="well-known_symbols" id="well-known_symbols_Symbol.species,_RegExp.prototype[Symbol.split]"><td><span><a class="anchor" href="#well-known_symbols_Symbol.species,_RegExp.prototype[Symbol.split]">&#xA7;</a>Symbol.species, RegExp.prototype[Symbol.split]</span><script data-source="
 var passed = false;
-var obj = { constructor: false };
+var obj = { constructor: {} };
 obj[Symbol.split] = RegExp.prototype[Symbol.split];
-obj[Symbol.species] = function() {
+obj.constructor[Symbol.species] = function() {
   passed = true;
   return /./;
 };
 &quot;&quot;.split(obj);
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("356");try{return Function("asyncTestPassed","\nvar passed = false;\nvar obj = { constructor: false };\nobj[Symbol.split] = RegExp.prototype[Symbol.split];\nobj[Symbol.species] = function() {\n  passed = true;\n  return /./;\n};\n\"\".split(obj);\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("356");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nvar obj = { constructor: false };\nobj[Symbol.split] = RegExp.prototype[Symbol.split];\nobj[Symbol.species] = function() {\n  passed = true;\n  return /./;\n};\n\"\".split(obj);\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("356");try{return Function("asyncTestPassed","\nvar passed = false;\nvar obj = { constructor: {} };\nobj[Symbol.split] = RegExp.prototype[Symbol.split];\nobj.constructor[Symbol.species] = function() {\n  passed = true;\n  return /./;\n};\n\"\".split(obj);\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("356");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nvar obj = { constructor: {} };\nobj[Symbol.split] = RegExp.prototype[Symbol.split];\nobj.constructor[Symbol.species] = function() {\n  passed = true;\n  return /./;\n};\n\"\".split(obj);\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

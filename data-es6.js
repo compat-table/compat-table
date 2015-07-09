@@ -7417,9 +7417,10 @@ exports.tests = [
     },
     'Symbol.species, Array.prototype.concat': {
       exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
+        var obj = [];
+        obj.constructor = {};
+        obj.constructor[Symbol.species] = function() {
+            return { foo: 1 };
         };
         return Array.prototype.concat.call(obj, []).foo === 1;
       */},
@@ -7428,9 +7429,10 @@ exports.tests = [
     },
     'Symbol.species, Array.prototype.filter': {
       exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
+        var obj = [];
+        obj.constructor = {};
+        obj.constructor[Symbol.species] = function() {
+            return { foo: 1 };
         };
         return Array.prototype.filter.call(obj, Boolean).foo === 1;
       */},
@@ -7439,9 +7441,10 @@ exports.tests = [
     },
     'Symbol.species, Array.prototype.map': {
       exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
+        var obj = [];
+        obj.constructor = {};
+        obj.constructor[Symbol.species] = function() {
+            return { foo: 1 };
         };
         return Array.prototype.map.call(obj, Boolean).foo === 1;
       */},
@@ -7450,9 +7453,10 @@ exports.tests = [
     },
     'Symbol.species, Array.prototype.slice': {
       exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
+        var obj = [];
+        obj.constructor = {};
+        obj.constructor[Symbol.species] = function() {
+            return { foo: 1 };
         };
         return Array.prototype.slice.call(obj, 0).foo === 1;
       */},
@@ -7461,9 +7465,10 @@ exports.tests = [
     },
     'Symbol.species, Array.prototype.splice': {
       exec: function () {/*
-        var obj = { constructor: false };
-        obj[Symbol.species] = function() {
-          return { foo: 1 };
+        var obj = [];
+        obj.constructor = {};
+        obj.constructor[Symbol.species] = function() {
+            return { foo: 1 };
         };
         return Array.prototype.splice.call(obj, 0).foo === 1;
       */},
@@ -7473,9 +7478,9 @@ exports.tests = [
     'Symbol.species, RegExp.prototype[Symbol.split]': {
       exec: function () {/*
         var passed = false;
-        var obj = { constructor: false };
+        var obj = { constructor: {} };
         obj[Symbol.split] = RegExp.prototype[Symbol.split];
-        obj[Symbol.species] = function() {
+        obj.constructor[Symbol.species] = function() {
           passed = true;
           return /./;
         };
