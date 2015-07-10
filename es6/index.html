@@ -7421,9 +7421,11 @@ try {
 </tr>
 <tr class="subtest" data-parent="const" id="const_temporal_dead_zone"><td><span><a class="anchor" href="#const_temporal_dead_zone">&#xA7;</a>temporal dead zone</span><script data-source="
 var passed = (function(){ try { qux; } catch(e) { return true; }}());
+function fn() { passed &amp;= qux === 456; }
 const qux = 456;
+fn();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nconst qux = 456;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nconst qux = 456;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nconst qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nconst qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no flagged" data-browser="babel">Flag</td>
@@ -7715,9 +7717,11 @@ try {
 <tr class="subtest" data-parent="const" id="const_temporal_dead_zone_(strict_mode)"><td><span><a class="anchor" href="#const_temporal_dead_zone_(strict_mode)">&#xA7;</a>temporal dead zone (strict mode)</span><script data-source="
 &apos;use strict&apos;;
 var passed = (function(){ try { qux; } catch(e) { return true; }}());
+function fn() { passed &amp;= qux === 456; }
 const qux = 456;
+fn();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\n'use strict';\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nconst qux = 456;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nconst qux = 456;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\n'use strict';\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nconst qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nvar passed = (function(){ try { qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nconst qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no flagged" data-browser="babel">Flag</td>
@@ -8069,9 +8073,11 @@ return baz === 1;
 </tr>
 <tr class="subtest" data-parent="let" id="let_temporal_dead_zone"><td><span><a class="anchor" href="#let_temporal_dead_zone">&#xA7;</a>temporal dead zone</span><script data-source="
 var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+function fn() { passed &amp;= qux === 456; }
 let qux = 456;
+fn();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nlet qux = 456;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nlet qux = 456;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nlet qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nlet qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no flagged" data-browser="babel">Flag</td>
@@ -8441,9 +8447,11 @@ return baz === 1;
 <tr class="subtest" data-parent="let" id="let_temporal_dead_zone_(strict_mode)"><td><span><a class="anchor" href="#let_temporal_dead_zone_(strict_mode)">&#xA7;</a>temporal dead zone (strict mode)</span><script data-source="
 &apos;use strict&apos;;
 var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+function fn() { passed &amp;= qux === 456; }
 let qux = 456;
+fn();
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\n'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nlet qux = 456;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nlet qux = 456;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\n'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nlet qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nlet qux = 456;\nfn();\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no flagged" data-browser="babel">Flag</td>

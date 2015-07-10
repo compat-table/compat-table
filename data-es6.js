@@ -724,7 +724,9 @@ exports.tests = [
     'temporal dead zone': {
       exec: function(){/*
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
         const qux = 456;
+        fn();
         return passed;
       */},
       res: {
@@ -807,7 +809,9 @@ exports.tests = [
       exec: function(){/*
         'use strict';
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
         const qux = 456;
+        fn();
         return passed;
       */},
       res: {
@@ -886,7 +890,9 @@ exports.tests = [
     'temporal dead zone': {
       exec: function(){/*
         var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
         let qux = 456;
+        fn();
         return passed;
       */},
       res: {
@@ -990,7 +996,9 @@ exports.tests = [
       exec: function(){/*
         'use strict';
         var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
         let qux = 456;
+        fn();
         return passed;
       */},
       res: {
