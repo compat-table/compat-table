@@ -5224,6 +5224,126 @@ exports.tests = [
   },
 },
 {
+  name: 'Proxy, internal \'get\' calls',
+  category: 'built-ins',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'Abstract Relational Comparison': {
+      exec: function() {/*
+        // Abstract Relational Comparison -> ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        p < 3;
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
+      */},
+      res: {},
+    },
+    'Abstract Equality Comparison': {
+      exec: function() {/*
+        // Abstract Equality Comparison -> ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        p == 3;
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
+      */},
+      res: {},
+    },
+    'Additive Expression Evaluation': {
+      exec: function() {/*
+        // Additive Expression Comparison -> ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        p + 3;
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
+      */},
+      res: {},
+    },
+    'Date constructor': {
+      exec: function() {/*
+        // Date -> ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        new Date(p);
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
+      */},
+      res: {},
+    },
+    'Date.prototype.toJSON': {
+      exec: function() {/*
+        // Date.prototype.toJSON -> ToPrimitive -> Get -> [[Get]]
+        // Date.prototype.toJSON -> Invoke -> GetMethod -> GetV -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Date.prototype.toJSON.call(p);
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
+      */},
+      res: {},
+    },
+    'ToNumber': {
+      exec: function() {/*
+        // ToNumber -> ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        +p;
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
+      */},
+      res: {},
+    },
+    'ToPropertyKey': {
+      exec: function() {/*
+        // ToPropertyKey -> ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        ({})[p];
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "toString";
+      */},
+      res: {},
+    },
+    'CreateListFromArrayLike': {
+      exec: function() {/*
+        // CreateListFromArrayLike -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Function.prototype.apply({}, p);
+        return get + '' === "length";
+      */},
+      res: {},
+    },
+    'instanceof operator': {
+      exec: function() {/*
+        // InstanceofOperator -> GetMethod -> GetV -> [[Get]]
+        // InstanceofOperator -> OrdinaryHasInstance -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function(), { get: function(o, v) { get.push(v); return o[v]; }});
+        ({}) instanceof p;
+        return get[0] === Symbol.hasInstance && get.slice(1) + '' === "length";
+      */},
+      res: {},
+    },
+    'CreateDynamicFunction': {
+      exec: function() {/*
+        // CreateDynamicFunction -> GetPrototypeFromConstructor -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function, { get: function(o, v) { get.push(v); return o[v]; }});
+        new p;
+        return get + '' === "prototype";
+      */},
+      res: {},
+    },
+    'ClassDefinitionEvaluation': {
+      exec: function() {/*
+        // ClassDefinitionEvaluation -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function(), { get: function(o, v) { get.push(v); return o[v]; }});
+        class extends p {}
+        return get + '' === "prototype";
+      */},
+      res: {},
+    },
+  },
+},
+{
   name: 'Reflect',
   category: 'built-ins',
   significance: 'medium',
