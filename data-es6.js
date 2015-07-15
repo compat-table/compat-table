@@ -5344,6 +5344,136 @@ exports.tests = [
   },
 },
 {
+  name: 'Proxy, internal \'deleteProperty\' calls',
+  category: 'built-ins',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'ArraySetLength': {
+      exec: function() {/*
+        // ArraySetLength -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.length = 1;
+        return del + '' === "5,4,3,2,1";
+      */},
+      res: {},
+    },
+    'Array.prototype.copyWithin': {
+      exec: function() {/*
+        // Array.prototype.copyWithin -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0,,,,], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.copyWithin(0,3);
+        return del + '' === "0,1,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.pop': {
+      exec: function() {/*
+        // Array.prototype.pop -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.pop();
+        return del + '' === "2";
+      */},
+      res: {},
+    },
+    'Array.prototype.reverse': {
+      exec: function() {/*
+        // Array.prototype.reverse -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,,2,,4,,], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.reverse();
+        return del + '' === "0,4,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.shift': {
+      exec: function() {/*
+        // Array.prototype.shift -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,,0,,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.shift();
+        return del + '' === "0,2,5";
+      */},
+      res: {},
+    },
+    'Array.prototype.splice': {
+      exec: function() {/*
+        // Array.prototype.splice -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.splice(2,2,0);
+        return del + '' === "2,3,5";
+      */},
+      res: {},
+    },
+    'Array.prototype.unshift': {
+      exec: function() {/*
+        // Array.prototype.unshift -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.unshift(0);
+        return del + '' === "3,5";
+      */},
+      res: {},
+    },
+    'DeleteBinding': {
+      exec: function() {/*
+        // DeleteBinding -> [[Delete]]
+        var del = [];
+        var p = new Proxy({foo:1,bar:2}, { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        with(p) {
+          delete foo;
+          delete bar;
+          delete baz;
+        }
+        return del + '' === "foo,bar";
+      */},
+      res: {},
+    }
+  },
+},
+{
+  name: 'Proxy, internal \'ownKeys\' calls',
+  category: 'built-ins',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'SetIntegrityLevel': {
+      exec: function() {/*
+        // SetIntegrityLevel -> [[OwnPropertyKeys]]
+        var ownKeysCalled = 0;
+        var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        Object.freeze(p);
+        return ownKeysCalled === 1;
+      */},
+      res: {},
+    },
+    'TestIntegrityLevel': {
+      exec: function() {/*
+        // TestIntegrityLevel -> [[OwnPropertyKeys]]
+        var ownKeysCalled = 0;
+        var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        Object.isFrozen(p);
+        return ownKeysCalled === 1;
+      */},
+      res: {},
+    },
+    'SerializeJSONObject': {
+      exec: function() {/*
+        // SerializeJSONObject -> EnumerableOwnNames -> [[OwnPropertyKeys]]
+        var ownKeysCalled = 0;
+        var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        JSON.stringify({a:p,b:p});
+        return ownKeysCalled === 2;
+      */},
+      res: {},
+    },
+  },
+},
+{
   name: 'Reflect',
   category: 'built-ins',
   significance: 'medium',
