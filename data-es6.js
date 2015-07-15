@@ -5229,42 +5229,12 @@ exports.tests = [
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
-    'Abstract Relational Comparison': {
+    'ToPrimitive': {
       exec: function() {/*
-        // Abstract Relational Comparison -> ToPrimitive -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        p < 3;
-        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
-      */},
-      res: {},
-    },
-    'Abstract Equality Comparison': {
-      exec: function() {/*
-        // Abstract Equality Comparison -> ToPrimitive -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        p == 3;
-        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
-      */},
-      res: {},
-    },
-    'Additive Expression Evaluation': {
-      exec: function() {/*
-        // Additive Expression Comparison -> ToPrimitive -> Get -> [[Get]]
+        // ToPrimitive -> Get -> [[Get]]
         var get = [];
         var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
         p + 3;
-        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
-      */},
-      res: {},
-    },
-    'Date constructor': {
-      exec: function() {/*
-        // Date -> ToPrimitive -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        new Date(p);
         return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
       */},
       res: {},
@@ -5277,26 +5247,6 @@ exports.tests = [
         var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
         Date.prototype.toJSON.call(p);
         return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
-      */},
-      res: {},
-    },
-    'ToNumber': {
-      exec: function() {/*
-        // ToNumber -> ToPrimitive -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        +p;
-        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
-      */},
-      res: {},
-    },
-    'ToPropertyKey': {
-      exec: function() {/*
-        // ToPropertyKey -> ToPrimitive -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        ({})[p];
-        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "toString";
       */},
       res: {},
     },
@@ -5338,6 +5288,46 @@ exports.tests = [
         var p = new Proxy(Function(), { get: function(o, v) { get.push(v); return o[v]; }});
         class extends p {}
         return get + '' === "prototype";
+      */},
+      res: {},
+    },
+    'IsRegExp': {
+      exec: function() {/*
+        // IsRegExp -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        RegExp(p);
+        return get[0] === Symbol.match && get.length === 1;
+      */},
+      res: {},
+    },
+    'IteratorComplete, IteratorValue': {
+      exec: function() {/*
+        // IteratorComplete -> Get -> [[Get]]
+        // IteratorValue -> Get -> [[Get]]
+        var get = [];
+        var iterable = {};
+        iterable[Symbol.iterator] = function() {
+          return {
+            next: function() {
+              return new Proxy({ value: 2, done: false }, { get: function(o, v) { get.push(v); return o[v]; }});
+            }
+          };
+        }
+        var [a,b] = iterable;
+        return get + '' === "done,value,done,value";
+      */},
+      res: {},
+    },
+    'ArraySpeciesCreate': {
+      exec: function() {/*
+        // ArraySpeciesCreate -> Get -> [[Get]]
+        var get = [];
+        var arr = [];
+        arr.constructor = null;
+        var p = new Proxy(arr, { get: function(o, v) { get.push(v); return o[v]; }});
+        p.concat();
+        return get[0] === "constructor" && get[1] === Symbol.species && get.length === 2;
       */},
       res: {},
     },
