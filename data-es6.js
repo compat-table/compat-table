@@ -5239,17 +5239,6 @@ exports.tests = [
       */},
       res: {},
     },
-    'Date.prototype.toJSON': {
-      exec: function() {/*
-        // Date.prototype.toJSON -> ToPrimitive -> Get -> [[Get]]
-        // Date.prototype.toJSON -> Invoke -> GetMethod -> GetV -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        Date.prototype.toJSON.call(p);
-        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
-      */},
-      res: {},
-    },
     'CreateListFromArrayLike': {
       exec: function() {/*
         // CreateListFromArrayLike -> Get -> [[Get]]
@@ -5304,16 +5293,6 @@ exports.tests = [
       */},
       res: {},
     },
-    'IsRegExp': {
-      exec: function() {/*
-        // IsRegExp -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
-        RegExp(p);
-        return get[0] === Symbol.match && get.length === 1;
-      */},
-      res: {},
-    },
     'IteratorComplete, IteratorValue': {
       exec: function() {/*
         // IteratorComplete -> Get -> [[Get]]
@@ -5342,7 +5321,7 @@ exports.tests = [
         var arr = [];
         arr.constructor = null;
         var p = new Proxy(arr, { get: function(o, v) { get.push(v); return o[v]; }});
-        p.concat();
+        Array.prototype.concat.call(p);
         return get[0] === "constructor" && get[1] === Symbol.species && get.length === 2;
       */},
       res: {},
@@ -5362,6 +5341,134 @@ exports.tests = [
         } catch(e) {
           return get + '' === "enumerable,configurable,value,writable,get,set";
         }
+      */},
+      res: {},
+    },
+    'Object.assign': {
+      exec: function() {/*
+        // Object.assign -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({foo:1, bar:2}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Object.assign({}, p);
+        return get + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Object.defineProperties': {
+      exec: function() {/*
+        // Object.defineProperties -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({foo:{}, bar:{}}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Object.defineProperties({}, p);
+        return get + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Function.prototype.bind': {
+      exec: function() {/*
+        // Function.prototype.bind -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function(), { get: function(o, v) { get.push(v); return o[v]; }});
+        Function.prototype.bind.call(p);
+        return get + '' === "length,name";
+      */},
+      res: {},
+    },
+    'Error.prototype.toString': {
+      exec: function() {/*
+        // Error.prototype.toString -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Error.prototype.toString.call(p);
+        return get + '' === "name,message";
+      */},
+      res: {},
+    },
+    'String.raw': {
+      exec: function() {/*
+        // String.raw -> Get -> [[Get]]
+        var get = [];
+        var raw = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, v) { get.push(v); return o[v]; }});
+        var p = new Proxy({raw: raw}, { get: function(o, v) { get.push(v); return o[v]; }});
+        String.raw(p);
+        return get + '' === "raw,length,0,1";
+      */},
+      res: {},
+    },
+    'RegExp constructor': {
+      exec: function() {/*
+        // RegExp -> Get -> [[Get]]
+        var get = [];
+        var re = { constructor: null };
+        re[Symbol.match] = true;
+        var p = new Proxy(re, { get: function(o, v) { get.push(v); return o[v]; }});
+        RegExp(p);
+        return get + '' === "constructor,source,flags";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.match]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.match] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, v) { get.push(v); return o[v]; }});
+        RegExp.prototype[Symbol.match].call(p);
+        p.global = true;
+        RegExp.prototype[Symbol.match].call(p);
+        return get + '' === "global,exec,global,unicode,exec";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.replace]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.replace] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, v) { get.push(v); return o[v]; }});
+        RegExp.prototype[Symbol.replace].call(p);
+        p.global = true;
+        RegExp.prototype[Symbol.replace].call(p);
+        return get + '' === "global,exec,global,unicode,exec";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.search]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.search] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, v) { get.push(v); return o[v]; }});
+        RegExp.prototype[Symbol.search].call(p);
+        return get + '' === "lastIndex,exec";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.split]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.split] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, v) { get.push(v); return o[v]; }});
+        RegExp.prototype[Symbol.split].call(p);
+        return get + '' === "flags,exec";
+      */},
+      res: {},
+    },
+    'Array.from': {
+      exec: function() {/*
+        // Array.from -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Array.from(p);
+        return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
+      */},
+      res: {},
+    },
+    'Date.prototype.toJSON': {
+      exec: function() {/*
+        // Date.prototype.toJSON -> ToPrimitive -> Get -> [[Get]]
+        // Date.prototype.toJSON -> Invoke -> GetMethod -> GetV -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Date.prototype.toJSON.call(p);
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
       */},
       res: {},
     },
@@ -5471,7 +5578,7 @@ exports.tests = [
         var gopd = [];
         var p = new Proxy({},
           { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
-        p.foo; p.bar;
+        p.foo === 5; p.bar === 5;
         return gopd + '' === "foo,bar";
       */},
       res: {},
