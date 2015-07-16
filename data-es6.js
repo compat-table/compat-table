@@ -5314,18 +5314,6 @@ exports.tests = [
       */},
       res: {},
     },
-    'ArraySpeciesCreate': {
-      exec: function() {/*
-        // ArraySpeciesCreate -> Get -> [[Get]]
-        var get = [];
-        var arr = [];
-        arr.constructor = null;
-        var p = new Proxy(arr, { get: function(o, v) { get.push(v); return o[v]; }});
-        Array.prototype.concat.call(p);
-        return get[0] === "constructor" && get[1] === Symbol.species && get.length === 2;
-      */},
-      res: {},
-    },
     'ToPropertyDescriptor': {
       exec: function() {/*
         // ToPropertyDescriptor -> Get -> [[Get]]
@@ -5458,6 +5446,55 @@ exports.tests = [
         var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, v) { get.push(v); return o[v]; }});
         Array.from(p);
         return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
+      */},
+      res: {},
+    },
+    'Array.prototype.concat': {
+      exec: function() {/*
+        // Array.prototype.concat -> Get -> [[Get]]
+        var get = [];
+        var arr = [1];
+        arr.constructor = null;
+        var p = new Proxy(arr, { get: function(o, v) { get.push(v); return o[v]; }});
+        Array.prototype.concat.call(p,p);
+        return get[0] === "constructor" && get[1] === Symbol.species
+          && get[2] === Symbol.isConcatSpreadable
+          && get[3] === "length"
+          && get[4] === "0"
+          && get.length === 5;
+      */},
+      res: {},
+    },
+    'Array.prototype iteration methods': {
+      exec: function() {/*
+        // Array.prototype methods -> Get -> [[Get]]
+        var methods = ['copyWithin', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach',
+          'indexOf', 'join', 'lastIndexOf', 'map', 'reduce', 'reduceRight', 'some'];
+        var get;
+        var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, v) { get.push(v); return o[v]; }});
+        for(var i = 0; i < methods.length; i+=1) {
+          get = [];
+          Array.prototype[methods[i]].call(p, Function());
+          if (get + '' !== (
+            methods[i] === 'fill' ? "length" :
+            methods[i] === 'every' ? "length,0" :
+            methods[i] === 'lastIndexOf' || methods[i] === 'reduceRight' ? "length,1,0" :
+            "length,0,1"
+          )) {
+            return false;
+          }
+        }
+        return true;
+      */},
+      res: {},
+    },
+    'Array.prototype.toString': {
+      exec: function() {/*
+        // Array.prototype.toString -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        Array.prototype.toString.call(p);
+        return get + '' === "join";
       */},
       res: {},
     },
