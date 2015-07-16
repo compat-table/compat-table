@@ -5225,7 +5225,7 @@ exports.tests = [
 },
 {
   name: 'Proxy, internal \'get\' calls',
-  category: 'built-ins',
+  category: 'misc',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
@@ -5254,9 +5254,9 @@ exports.tests = [
       exec: function() {/*
         // CreateListFromArrayLike -> Get -> [[Get]]
         var get = [];
-        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        var p = new Proxy({length:2, 0:0, 1:0}, { get: function(o, v) { get.push(v); return o[v]; }});
         Function.prototype.apply({}, p);
-        return get + '' === "length";
+        return get + '' === "length,0,1";
       */},
       res: {},
     },
@@ -5267,7 +5267,20 @@ exports.tests = [
         var get = [];
         var p = new Proxy(Function(), { get: function(o, v) { get.push(v); return o[v]; }});
         ({}) instanceof p;
-        return get[0] === Symbol.hasInstance && get.slice(1) + '' === "length";
+        return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
+      */},
+      res: {},
+    },
+    'HasBinding': {
+      exec: function() {/*
+        // HasBinding -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, v) { get.push(v); return o[v]; }});
+        p[Symbol.unscopables] = p;
+        with(p) {
+          typeof foo;
+        }
+        return get[0] === Symbol.unscopables && get.slice(1) + '' === "foo";
       */},
       res: {},
     },
@@ -5314,7 +5327,10 @@ exports.tests = [
             }
           };
         }
-        var [a,b] = iterable;
+        var i = 0;
+        for(var e of iterable) {
+          if (++i >= 2) break;
+        }
         return get + '' === "done,value,done,value";
       */},
       res: {},
@@ -5331,11 +5347,29 @@ exports.tests = [
       */},
       res: {},
     },
+    'ToPropertyDescriptor': {
+      exec: function() {/*
+        // ToPropertyDescriptor -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({
+            enumerable: true, configurable: true, value: true,
+            writable: true, get: Function(), set: Function()
+          }, { get: function(o, v) { get.push(v); return o[v]; }});
+        try {
+          // This will throw, since it will have true for both "get" and "value",
+          // but not before performing a Get on every property.
+          Object.defineProperty({}, "foo", p);
+        } catch(e) {
+          return get + '' === "enumerable,configurable,value,writable,get,set";
+        }
+      */},
+      res: {},
+    },
   },
 },
 {
   name: 'Proxy, internal \'deleteProperty\' calls',
-  category: 'built-ins',
+  category: 'misc',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
@@ -5395,7 +5429,7 @@ exports.tests = [
         var del = [];
         var p = new Proxy([0,0,0,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
         p.splice(2,2,0);
-        return del + '' === "2,3,5";
+        return del + '' === "3,5";
       */},
       res: {},
     },
@@ -5405,7 +5439,7 @@ exports.tests = [
         var del = [];
         var p = new Proxy([0,0,,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
         p.unshift(0);
-        return del + '' === "3,5";
+        return del + '' === "5,3";
       */},
       res: {},
     },
@@ -5426,8 +5460,71 @@ exports.tests = [
   },
 },
 {
+  name: 'Proxy, internal \'getOwnPropertyDescriptor\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    '[[Get]]': {
+      exec: function() {/*
+        // [[Get]] -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.foo; p.bar;
+        return gopd + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    '[[Set]]': {
+      exec: function() {/*
+        // [[Set]] -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.foo = 1; p.bar = 1;
+        return gopd + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Object.assign': {
+      exec: function() {/*
+        // Object.assign -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({foo:1, bar:2},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        Object.assign({}, p);
+        return gopd + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Object.prototype.hasOwnProperty': {
+      exec: function() {/*
+        // Object.prototype.hasOwnProperty -> HasOwnProperty -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({foo:1, bar:2},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.hasOwnProperty('garply');
+        return gopd + '' === "garply";
+      */},
+      res: {},
+    },
+    'Function.prototype.bind': {
+      exec: function() {/*
+        // Function.prototype.bind -> HasOwnProperty -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy(Function(),
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.bind();
+        return gopd + '' === "length";
+      */},
+      res: {},
+    },
+  },
+},
+{
   name: 'Proxy, internal \'ownKeys\' calls',
-  category: 'built-ins',
+  category: 'misc',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
