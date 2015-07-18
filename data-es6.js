@@ -2208,6 +2208,8 @@ exports.tests = [
 },
 {
   name: 'non-strict function semantics',
+  note_id: 'hoisted-block-functions',
+  note_html: 'The current version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.',
   category: 'annex b',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations',
