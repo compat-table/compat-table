@@ -5384,6 +5384,38 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
+        
+        var expected = [];
+        for (var key in obj) { expected.push(key); }
+
+        return Reflect.ownKeys(obj).join('') === expected.join('');
+      */},
+      res: {
+        babel:       true,
+        typescript:  true,
+        ejs:         true,
+        es6shim:     true,
+        edge:        true,
+      },
+    },
+    'Reflect.ownKeys, key order': {
+      exec: function() {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          D:    true,
+          B:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj[2];
+        obj[2] = true;
 
         return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
       */},
