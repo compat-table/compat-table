@@ -5384,11 +5384,8 @@ exports.tests = [
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
-        
-        var expected = [];
-        for (var key in obj) { expected.push(key); }
 
-        return Reflect.ownKeys(obj).join('') === expected.join('');
+        return Reflect.ownKeys(obj).sort().join('') === ' -1012349ABCD';
       */},
       res: {
         babel:       true,
