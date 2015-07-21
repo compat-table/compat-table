@@ -7506,6 +7506,50 @@ exports.tests = [
       res: {
       }
     },
+    'Symbol.match': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.match] = function(){
+          return 42;
+        };
+        return ''.match(O) === 42;
+      */},
+      res: {
+      }
+    },
+    'Symbol.replace': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.replace] = function(){
+          return 42;
+        };
+        return ''.replace(O) === 42;
+      */},
+      res: {
+      }
+    },
+    'Symbol.search': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.search] = function(){
+          return 42;
+        };
+        return ''.search(O) === 42;
+      */},
+      res: {
+      }
+    },
+    'Symbol.split': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.split] = function(){
+          return 42;
+        };
+        return ''.split(O) === 42;
+      */},
+      res: {
+      }
+    },
     'Symbol.toPrimitive': {
       exec: function() {/*
         var a = {}, b = {}, c = {};
