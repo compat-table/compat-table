@@ -4779,6 +4779,7 @@ exports.tests = [
         return s.has(key);
       */},
       res: {
+        babel:       true,
         typescript:  typescript.corejs,
         chrome43:    true,
         webkit:      true,
