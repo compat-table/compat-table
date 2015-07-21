@@ -7370,6 +7370,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        babel:       flag,
         typescript:  typescript.fallthrough,
         ejs:         true,
       },

@@ -25857,7 +25857,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 </tr>
 <tr class="supertest" significance="0.5"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols">well-known symbols</a><a href="#symbol-iterator-functionality-note"><sup>[23]</sup></a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.05263157894736842" style="background-color:hsl(6,83%,50%)">1/19</td>
-<td data-browser="babel" class="tally" data-tally="0.42105263157894735" style="background-color:hsl(50,67%,50%)">8/19</td>
+<td data-browser="babel" class="tally" data-tally="0.42105263157894735" style="background-color:hsl(50,67%,50%)" data-flagged-tally="0.47368421052631576">8/19</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/19</td>
 <td data-browser="closure" class="tally" data-tally="0.05263157894736842" style="background-color:hsl(6,83%,50%)">1/19</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/19</td>
@@ -25934,7 +25934,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("346");try{return Function("asyncTestPassed","\nvar passed = false;\nvar obj = { foo: true };\nvar C = function(){};\nObject.defineProperty(C, Symbol.hasInstance, {\n  value: function(inst) { passed = inst.foo; return false; }\n});\nobj instanceof C;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("346");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nvar obj = { foo: true };\nvar C = function(){};\nObject.defineProperty(C, Symbol.hasInstance, {\n  value: function(inst) { passed = inst.foo; return false; }\n});\nobj instanceof C;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no flagged" data-browser="babel">Flag</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
