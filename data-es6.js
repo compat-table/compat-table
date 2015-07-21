@@ -7515,6 +7515,8 @@ exports.tests = [
         return ''.match(O) === 42;
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
       }
     },
     'Symbol.replace': {
@@ -7526,6 +7528,8 @@ exports.tests = [
         return ''.replace(O) === 42;
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
       }
     },
     'Symbol.search': {
@@ -7537,6 +7541,8 @@ exports.tests = [
         return ''.search(O) === 42;
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
       }
     },
     'Symbol.split': {
@@ -7548,6 +7554,8 @@ exports.tests = [
         return ''.split(O) === 42;
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
       }
     },
     'Symbol.toPrimitive': {
@@ -7644,7 +7652,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp.prototype[Symbol.replace]': {
@@ -7653,7 +7662,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp.prototype[Symbol.split]': {
@@ -7662,7 +7672,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp.prototype[Symbol.search]': {
@@ -7671,7 +7682,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp[Symbol.species]': {

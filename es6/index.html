@@ -25857,11 +25857,11 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 </tr>
 <tr class="supertest" significance="0.5"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols">well-known symbols</a><a href="#symbol-iterator-functionality-note"><sup>[23]</sup></a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.05263157894736842" style="background-color:hsl(6,83%,50%)">1/19</td>
-<td data-browser="babel" class="tally" data-tally="0.21052631578947367" style="background-color:hsl(25,76%,50%)">4/19</td>
+<td data-browser="babel" class="tally" data-tally="0.42105263157894735" style="background-color:hsl(50,67%,50%)">8/19</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/19</td>
 <td data-browser="closure" class="tally" data-tally="0.05263157894736842" style="background-color:hsl(6,83%,50%)">1/19</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/19</td>
-<td data-browser="typescript" class="tally" data-tally="0.21052631578947367" style="background-color:hsl(25,76%,50%)">4/19</td>
+<td data-browser="typescript" class="tally" data-tally="0.42105263157894735" style="background-color:hsl(50,67%,50%)">8/19</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/19</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/19</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/19</td>
@@ -26747,11 +26747,11 @@ return &apos;&apos;.match(O) === 42;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("357");try{return Function("asyncTestPassed","\nvar O = {};\nO[Symbol.match] = function(){\n  return 42;\n};\nreturn ''.match(O) === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("357");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nO[Symbol.match] = function(){\n  return 42;\n};\nreturn ''.match(O) === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -26821,11 +26821,11 @@ return &apos;&apos;.replace(O) === 42;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("358");try{return Function("asyncTestPassed","\nvar O = {};\nO[Symbol.replace] = function(){\n  return 42;\n};\nreturn ''.replace(O) === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("358");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nO[Symbol.replace] = function(){\n  return 42;\n};\nreturn ''.replace(O) === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -26895,11 +26895,11 @@ return &apos;&apos;.search(O) === 42;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("359");try{return Function("asyncTestPassed","\nvar O = {};\nO[Symbol.search] = function(){\n  return 42;\n};\nreturn ''.search(O) === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("359");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nO[Symbol.search] = function(){\n  return 42;\n};\nreturn ''.search(O) === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -26969,11 +26969,11 @@ return &apos;&apos;.split(O) === 42;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("360");try{return Function("asyncTestPassed","\nvar O = {};\nO[Symbol.split] = function(){\n  return 42;\n};\nreturn ''.split(O) === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("360");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nO[Symbol.split] = function(){\n  return 42;\n};\nreturn ''.split(O) === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29842,11 +29842,11 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 </tr>
 <tr class="supertest" significance="0.25"><td id="RegExp.prototype_properties"><span><a class="anchor" href="#RegExp.prototype_properties">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype">RegExp.prototype properties</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/6</td>
-<td data-browser="babel" class="tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">2/6</td>
+<td data-browser="babel" class="tally" data-tally="1">6/6</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="closure" class="tally" data-tally="0">0/6</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/6</td>
-<td data-browser="typescript" class="tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">2/6</td>
+<td data-browser="typescript" class="tally" data-tally="1">6/6</td>
 <td data-browser="es6shim" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/6</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/6</td>
@@ -29982,11 +29982,11 @@ return typeof RegExp.prototype[Symbol.match] === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("402");try{return Function("asyncTestPassed","\nreturn typeof RegExp.prototype[Symbol.match] === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("402");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof RegExp.prototype[Symbol.match] === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -30052,11 +30052,11 @@ return typeof RegExp.prototype[Symbol.replace] === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("403");try{return Function("asyncTestPassed","\nreturn typeof RegExp.prototype[Symbol.replace] === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("403");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof RegExp.prototype[Symbol.replace] === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -30122,11 +30122,11 @@ return typeof RegExp.prototype[Symbol.split] === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("404");try{return Function("asyncTestPassed","\nreturn typeof RegExp.prototype[Symbol.split] === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("404");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof RegExp.prototype[Symbol.split] === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -30192,11 +30192,11 @@ return typeof RegExp.prototype[Symbol.search] === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("405");try{return Function("asyncTestPassed","\nreturn typeof RegExp.prototype[Symbol.search] === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("405");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof RegExp.prototype[Symbol.search] === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
