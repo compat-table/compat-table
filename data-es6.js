@@ -699,6 +699,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox36:   true,
+        webkit:      true,
       }
     },
     'redefining a const is an error': {
@@ -719,6 +720,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox36:   true,
+        webkit:      true,
       }
     },
     'temporal dead zone': {
@@ -734,6 +736,7 @@ exports.tests = [
         typescript:  true,
         ie11:        true,
         firefox36:   true,
+        webkit:      true,
       },
     },
    'basic support (strict mode)': {
@@ -753,6 +756,7 @@ exports.tests = [
         firefox11:   true,
         chrome:      flag,
         chrome41:    true,
+        webkit:      true,
         konq49:      true,
         node:        flag,
         iojs:        true,
@@ -776,6 +780,7 @@ exports.tests = [
         chrome41:    true,
         ie11:        true,
         firefox36:   true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       }
@@ -801,6 +806,7 @@ exports.tests = [
         firefox11:   true,
         chrome21dev: flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       }
@@ -821,6 +827,7 @@ exports.tests = [
         firefox36:   true,
         chrome19dev: flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -851,6 +858,7 @@ exports.tests = [
           note_id: 'fx-let',
           note_html: 'Available for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
         },
+        webkit:      true,
       },
     },
     'is block-scoped': {
@@ -868,6 +876,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
+        webkit:      true,
       },
     },
     'for-loop statement scope': {
@@ -885,6 +894,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
+        webkit:      true,
       },
     },
     'temporal dead zone': {
@@ -901,6 +911,7 @@ exports.tests = [
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
+        webkit:      true,
       },
     },
     'for-loop iteration scope': {
@@ -925,6 +936,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         firefox39:   { val: flag, note_id: 'fx-let', },
+        webkit:      true,
       },
     },
     'basic support (strict mode)': {
@@ -946,6 +958,7 @@ exports.tests = [
         node:        flag,
         iojs:        true,
         firefox11:   { val: flag, note_id: 'fx-let' },
+        webkit:      true,
       },
     },
     'is block-scoped (strict mode)': {
@@ -966,6 +979,7 @@ exports.tests = [
         firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -988,6 +1002,7 @@ exports.tests = [
         firefox11:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -1009,6 +1024,7 @@ exports.tests = [
         firefox35:   { val: flag, note_id: 'fx-let', },
         chrome19dev: flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
       },
@@ -1037,6 +1053,7 @@ exports.tests = [
         closure:     true,
         chrome37:    flag,
         chrome41:    true,
+        webkit:      true,
         node:        flag,
         iojs:        true,
         firefox39:   { val: flag, note_id: 'fx-let', },
@@ -1908,7 +1925,9 @@ exports.tests = [
         new B();
         return passed;
       */},
-      res: {},
+      res: {
+        webkit:      true,
+      },
     },
   },
 },
@@ -2058,6 +2077,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        webkit:      true,
       },
     },
     'is statically bound': {
@@ -7118,6 +7138,7 @@ exports.tests = [
       */},
       res: {
         firefox41:   true,
+        webkit:      true,
       }
     },
     'can\'t be assigned to': {
