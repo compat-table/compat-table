@@ -293,11 +293,11 @@ $(function() {
     var yesResults = results.filter('.yes').length;
     var totalResults = results.length;
     /*
-        Add annex b results, weighted to 1/5
+        Add annex b results
     */
     results = table.find('tr:not([class*=test]).optional-feature td:not(.not-applicable)' + name);
-    yesResults += results.filter('.yes').length/5;
-    totalResults += results.length/5;
+    yesResults += results.filter('.yes').length;
+    totalResults += results.length;
 
     var flaggedResults = yesResults;
 

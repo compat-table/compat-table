@@ -36,9 +36,13 @@ body:not(.es6) td {
     text-align:center;
     display:inline-block;
 }
+.es6 [significance="0.125"]  td:first-child:before {
+    content: "⬤";
+    font-size:3px;
+}
 .es6 [significance="0.25"] td:first-child:before {
     content: "⬤";
-    font-size:5px;
+    font-size:6px;
 }
 .es6 [significance="0.5"] td:first-child:before {
     content: "⬤";
@@ -53,7 +57,7 @@ td .anchor {
     display: block; position: absolute; top: -5px; left: -17px; text-decoration: none; padding: 5px; color: #fff;
 }
 td:first-child {
-    min-width: 320px;
+    min-width: 360px;
 }
 a[href^='#'] {
     text-decoration: none;

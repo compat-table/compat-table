@@ -409,6 +409,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')
       .attr("significance",
+        t.significance === "tiny" ? 0.125 :
         t.significance === "small" ? 0.25 :
         t.significance === "medium" ? 0.5 : 1)
       .addClass(isOptional(t.category) ? 'optional-feature' : '')

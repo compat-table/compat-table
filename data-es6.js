@@ -2231,7 +2231,7 @@ exports.tests = [
   note_id: 'hoisted-block-functions',
   note_html: 'The current version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.',
   category: 'annex b',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations',
   subtests: {
     'hoisted block-level function declaration': {
@@ -2305,7 +2305,7 @@ exports.tests = [
 {
   name: '__proto__ in object literals',
   category: 'annex b',
-  significance: 'small',
+  significance: 'tiny',
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers',
@@ -3114,7 +3114,7 @@ exports.tests = [
 {
   name: 'prototype of bound functions',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boundfunctioncreate',
   subtests: {
     'basic functions': {
@@ -5226,7 +5226,7 @@ exports.tests = [
 {
   name: 'Proxy, internal \'get\' calls',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     'ToPrimitive': {
@@ -5247,7 +5247,10 @@ exports.tests = [
         Function.prototype.apply({}, p);
         return get + '' === "length,0,1";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'instanceof operator': {
       exec: function() {/*
@@ -5312,7 +5315,10 @@ exports.tests = [
         }
         return get + '' === "done,value,done,value";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox36:   true,
+      },
     },
     'ToPropertyDescriptor': {
       exec: function() {/*
@@ -5330,7 +5336,9 @@ exports.tests = [
           return get + '' === "enumerable,configurable,value,writable,get,set";
         }
       */},
-      res: {},
+      res: {
+        firefox18:   true,
+      },
     },
     'Object.assign': {
       exec: function() {/*
@@ -5340,7 +5348,10 @@ exports.tests = [
         Object.assign({}, p);
         return get + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox34:   true,
+      },
     },
     'Object.defineProperties': {
       exec: function() {/*
@@ -5350,7 +5361,10 @@ exports.tests = [
         Object.defineProperties({}, p);
         return get + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Function.prototype.bind': {
       exec: function() {/*
@@ -5360,7 +5374,10 @@ exports.tests = [
         Function.prototype.bind.call(p);
         return get + '' === "length,name";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox38:   true,
+      },
     },
     'Error.prototype.toString': {
       exec: function() {/*
@@ -5370,7 +5387,10 @@ exports.tests = [
         Error.prototype.toString.call(p);
         return get + '' === "name,message";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'String.raw': {
       exec: function() {/*
@@ -5381,7 +5401,10 @@ exports.tests = [
         String.raw(p);
         return get + '' === "raw,length,0,1";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox34:   true,
+      },
     },
     'RegExp constructor': {
       exec: function() {/*
@@ -5403,7 +5426,10 @@ exports.tests = [
         Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
         return get + '' === "global,ignoreCase,multiline,unicode,sticky";
       */},
-      res: {},
+      res: {
+        firefox37:   true,
+        firefox39:   false,
+      },
     },
     'RegExp.prototype[Symbol.match]': {
       exec: function() {/*
@@ -5457,7 +5483,9 @@ exports.tests = [
         Array.from(p);
         return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
       */},
-      res: {},
+      res: {
+        firefox36:   true,
+      },
     },
     'Array.prototype.concat': {
       exec: function() {/*
@@ -5496,7 +5524,10 @@ exports.tests = [
         }
         return true;
       */},
-      res: {},
+      res: {
+        firefox31:   true,
+        edge:        true,
+      },
     },
     'Array.prototype.pop': {
       exec: function() {/*
@@ -5506,7 +5537,10 @@ exports.tests = [
         Array.prototype.pop.call(p);
         return get + '' === "length,3";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Array.prototype.reverse': {
       exec: function() {/*
@@ -5516,7 +5550,10 @@ exports.tests = [
         Array.prototype.reverse.call(p);
         return get + '' === "length,0,4,2";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Array.prototype.shift': {
       exec: function() {/*
@@ -5526,7 +5563,10 @@ exports.tests = [
         Array.prototype.shift.call(p);
         return get + '' === "length,0,1,2,3";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Array.prototype.splice': {
       exec: function() {/*
@@ -5537,7 +5577,10 @@ exports.tests = [
         Array.prototype.splice.call(p,1,0,1);
         return get + '' === "length,1,2,3,length,2,1";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Array.prototype.toString': {
       exec: function() {/*
@@ -5547,7 +5590,10 @@ exports.tests = [
         Array.prototype.toString.call(p);
         return get + '' === "join";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'JSON.stringify': {
       exec: function() {/*
@@ -5557,7 +5603,10 @@ exports.tests = [
         JSON.stringify(p);
         return get + '' === "toJSON";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Promise resolve functions': {
       exec: function() {/*
@@ -5567,7 +5616,10 @@ exports.tests = [
         new Promise(function(resolve){ resolve(p); });
         return get + '' === "then";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox29:   true,
+      },
     },
     'String.prototype.match': {
       exec: function() {/*
@@ -5625,7 +5677,7 @@ exports.tests = [
 {
   name: 'Proxy, internal \'set\' calls',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     'Object.assign': {
@@ -5636,7 +5688,10 @@ exports.tests = [
         Object.assign(p, { foo: 1, bar: 2 });
         return set + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox34:   true,
+      },
     },
     'Array.from': {
       exec: function() {/*
@@ -5646,7 +5701,10 @@ exports.tests = [
         Array.from.call(function(){ return p; }, {length:2, 0:1, 1:2});
         return set + '' === "length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox31:   true,
+      },
     },
     'Array.of': {
       exec: function() {/*
@@ -5656,7 +5714,10 @@ exports.tests = [
         Array.of.call(function(){ return p; }, 1, 2, 3);
         return set + '' === "length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox25:   true,
+      },
     },
     'Array.prototype.copyWithin': {
       exec: function() {/*
@@ -5666,7 +5727,10 @@ exports.tests = [
         p.copyWithin(0, 3);
         return set + '' === "0,1,2";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox41:   true,
+      },
     },
     'Array.prototype.fill': {
       exec: function() {/*
@@ -5676,7 +5740,10 @@ exports.tests = [
         p.fill(0, 3);
         return set + '' === "3,4,5";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox41:   true,
+      },
     },
     'Array.prototype.pop': {
       exec: function() {/*
@@ -5686,7 +5753,10 @@ exports.tests = [
         p.pop();
         return set + '' === "length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Array.prototype.push': {
       exec: function() {/*
@@ -5696,7 +5766,10 @@ exports.tests = [
         p.push(0,0,0);
         return set + '' === "0,1,2,length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
     'Array.prototype.reverse': {
       exec: function() {/*
@@ -5706,7 +5779,10 @@ exports.tests = [
         p.reverse();
         return set + '' === "3,1,2";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox41:   true,
+      },
     },
     'Array.prototype.shift': {
       exec: function() {/*
@@ -5716,7 +5792,12 @@ exports.tests = [
         p.shift();
         return set + '' === "0,2,length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+        firefox23:   false,
+        firefox41:   true,
+      },
     },
     'Array.prototype.splice': {
       exec: function() {/*
@@ -5743,7 +5824,7 @@ exports.tests = [
 {
   name: 'Proxy, internal \'defineProperty\' calls',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     '[[Set]]': {
@@ -5754,7 +5835,10 @@ exports.tests = [
         p.foo = 2; p.bar = 4;
         return def + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox37:   true,
+      },
     },
     'SetIntegrityLevel': {
       exec: function() {/*
@@ -5764,14 +5848,17 @@ exports.tests = [
         Object.freeze(p);
         return def + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+      },
     },
   },
 },
 {
   name: 'Proxy, internal \'deleteProperty\' calls',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     'ArraySetLength': {
@@ -5792,7 +5879,10 @@ exports.tests = [
         p.copyWithin(0,3);
         return del + '' === "0,1,2";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox41:   true,
+      },
     },
     'Array.prototype.pop': {
       exec: function() {/*
@@ -5802,7 +5892,12 @@ exports.tests = [
         p.pop();
         return del + '' === "2";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+        firefox23:   false,
+        firefox40:   true,
+      },
     },
     'Array.prototype.reverse': {
       exec: function() {/*
@@ -5812,7 +5907,12 @@ exports.tests = [
         p.reverse();
         return del + '' === "0,4,2";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+        firefox23:   false,
+        firefox40:   true,
+      },
     },
     'Array.prototype.shift': {
       exec: function() {/*
@@ -5822,7 +5922,12 @@ exports.tests = [
         p.shift();
         return del + '' === "0,2,5";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+        firefox23:   false,
+        firefox40:   true,
+      },
     },
     'Array.prototype.splice': {
       exec: function() {/*
@@ -5832,7 +5937,12 @@ exports.tests = [
         p.splice(2,2,0);
         return del + '' === "3,5";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+        firefox23:   false,
+        firefox40:   true,
+      },
     },
     'Array.prototype.unshift': {
       exec: function() {/*
@@ -5842,28 +5952,19 @@ exports.tests = [
         p.unshift(0);
         return del + '' === "5,3";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox18:   true,
+        firefox23:   false,
+        firefox40:   true,
+      },
     },
-    'DeleteBinding': {
-      exec: function() {/*
-        // DeleteBinding -> [[Delete]]
-        var del = [];
-        var p = new Proxy({foo:1,bar:2}, { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
-        with(p) {
-          delete foo;
-          delete bar;
-          delete baz;
-        }
-        return del + '' === "foo,bar";
-      */},
-      res: {},
-    }
   },
 },
 {
   name: 'Proxy, internal \'getOwnPropertyDescriptor\' calls',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     '[[Get]]': {
@@ -5886,7 +5987,10 @@ exports.tests = [
         p.foo = 1; p.bar = 1;
         return gopd + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox37:   true,
+      },
     },
     'Object.assign': {
       exec: function() {/*
@@ -5897,7 +6001,10 @@ exports.tests = [
         Object.assign({}, p);
         return gopd + '' === "foo,bar";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox34:   true,
+      },
     },
     'Object.prototype.hasOwnProperty': {
       exec: function() {/*
@@ -5908,7 +6015,10 @@ exports.tests = [
         p.hasOwnProperty('garply');
         return gopd + '' === "garply";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox32:   true,
+      },
     },
     'Function.prototype.bind': {
       exec: function() {/*
@@ -5919,14 +6029,17 @@ exports.tests = [
         p.bind();
         return gopd + '' === "length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox38:   true,
+      },
     },
   },
 },
 {
   name: 'Proxy, internal \'ownKeys\' calls',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
     'SetIntegrityLevel': {
@@ -5937,7 +6050,10 @@ exports.tests = [
         Object.freeze(p);
         return ownKeysCalled === 1;
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox32:   true,
+      },
     },
     'TestIntegrityLevel': {
       exec: function() {/*
@@ -5947,24 +6063,29 @@ exports.tests = [
         Object.isFrozen(p);
         return ownKeysCalled === 1;
       */},
-      res: {},
+      res: {
+        edge:        true,
+        firefox32:   true,
+      },
     },
     'SerializeJSONObject': {
       exec: function() {/*
         // SerializeJSONObject -> EnumerableOwnNames -> [[OwnPropertyKeys]]
         var ownKeysCalled = 0;
-        var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
         JSON.stringify({a:p,b:p});
         return ownKeysCalled === 2;
       */},
-      res: {},
+      res: {
+        firefox32:   true,
+      },
     },
   },
 },
 {
   name: 'Reflect',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
   subtests: {
     'Reflect.get': {
@@ -7057,7 +7178,7 @@ exports.tests = [
 {
   name: 'Object static methods accept primitives',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
   subtests: {
     'Object.getPrototypeOf': {
@@ -7212,7 +7333,7 @@ exports.tests = [
 {
   name: 'Object.prototype.__proto__',
   category: 'annex b',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.__proto__',
   subtests: {
     'get prototype': {
@@ -7744,7 +7865,7 @@ exports.tests = [
 {
   name: 'String.prototype HTML methods',
   category: 'annex b',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor',
   subtests: {
     existence: {
@@ -8109,7 +8230,7 @@ exports.tests = [
 {
   name: 'well-known symbols',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols',
   note_id: 'symbol-iterator-functionality',
   note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
@@ -8463,7 +8584,7 @@ exports.tests = [
 {
   name: 'RegExp.prototype.compile',
   category: 'annex b',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
   exec: function () {/*
     return typeof RegExp.prototype.compile === 'function';
@@ -8487,7 +8608,7 @@ exports.tests = [
 {
   name: 'RegExp syntax extensions',
   category: 'annex b',
-  significance: 'small',
+  significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns',
   subtests: {
     'hyphens in character sets': {
@@ -9413,7 +9534,7 @@ exports.tests = [
 {
   name: 'Array is subclassable',
   category: 'subclassing',
-  significance: 'medium',
+  significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-array-constructor',
   subtests: {
     'length property (accessing)': {
@@ -9545,7 +9666,7 @@ exports.tests = [
   name: 'RegExp is subclassable',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor',
   category: 'subclassing',
-  significance: 'small',
+  significance: 'tiny',
   subtests: {
     'basic functionality': {
       exec: function () {/*
@@ -9603,7 +9724,7 @@ exports.tests = [
   name: 'Function is subclassable',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
-  significance: 'small',
+  significance: 'tiny',
   subtests: {
     'can be called': {
       exec: function () {/*
@@ -9776,7 +9897,7 @@ exports.tests = [
   name: 'miscellaneous subclassables',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boolean-constructor',
   category: 'subclassing',
-  significance: 'small',
+  significance: 'tiny',
   subtests: {
     'Boolean is subclassable': {
       exec: function () {/*
@@ -9858,7 +9979,7 @@ exports.tests = [
   name: 'own property order',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
   category: 'misc',
-  significance: 'small',
+  significance: 'tiny',
   subtests: {
     'for..in': {
       exec: function () {/*
