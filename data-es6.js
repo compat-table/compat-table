@@ -4799,6 +4799,7 @@ exports.tests = [
         return s.has(key);
       */},
       res: {
+        babel:       true,
         typescript:  typescript.corejs,
         chrome43:    true,
         webkit:      true,
@@ -7390,6 +7391,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        babel:       flag,
         typescript:  typescript.fallthrough,
         ejs:         true,
       },
@@ -7527,6 +7529,58 @@ exports.tests = [
       res: {
       }
     },
+    'Symbol.match': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.match] = function(){
+          return 42;
+        };
+        return ''.match(O) === 42;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    'Symbol.replace': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.replace] = function(){
+          return 42;
+        };
+        return ''.replace(O) === 42;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    'Symbol.search': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.search] = function(){
+          return 42;
+        };
+        return ''.search(O) === 42;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    'Symbol.split': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.split] = function(){
+          return 42;
+        };
+        return ''.split(O) === 42;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
     'Symbol.toPrimitive': {
       exec: function() {/*
         var a = {}, b = {}, c = {};
@@ -7621,7 +7675,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp.prototype[Symbol.replace]': {
@@ -7630,7 +7685,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp.prototype[Symbol.split]': {
@@ -7639,7 +7695,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp.prototype[Symbol.search]': {
@@ -7648,7 +7705,8 @@ exports.tests = [
       */},
       res: {
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
     'RegExp[Symbol.species]': {
