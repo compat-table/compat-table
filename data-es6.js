@@ -5224,6 +5224,744 @@ exports.tests = [
   },
 },
 {
+  name: 'Proxy, internal \'get\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'ToPrimitive': {
+      exec: function() {/*
+        // ToPrimitive -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        p + 3;
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
+      */},
+      res: {},
+    },
+    'CreateListFromArrayLike': {
+      exec: function() {/*
+        // CreateListFromArrayLike -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({length:2, 0:0, 1:0}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Function.prototype.apply({}, p);
+        return get + '' === "length,0,1";
+      */},
+      res: {},
+    },
+    'instanceof operator': {
+      exec: function() {/*
+        // InstanceofOperator -> GetMethod -> GetV -> [[Get]]
+        // InstanceofOperator -> OrdinaryHasInstance -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
+        ({}) instanceof p;
+        return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
+      */},
+      res: {},
+    },
+    'HasBinding': {
+      exec: function() {/*
+        // HasBinding -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        p[Symbol.unscopables] = p;
+        with(p) {
+          typeof foo;
+        }
+        return get[0] === Symbol.unscopables && get.slice(1) + '' === "foo";
+      */},
+      res: {},
+    },
+    'CreateDynamicFunction': {
+      exec: function() {/*
+        // CreateDynamicFunction -> GetPrototypeFromConstructor -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function, { get: function(o, k) { get.push(k); return o[k]; }});
+        new p;
+        return get + '' === "prototype";
+      */},
+      res: {},
+    },
+    'ClassDefinitionEvaluation': {
+      exec: function() {/*
+        // ClassDefinitionEvaluation -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
+        class extends p {}
+        return get + '' === "prototype";
+      */},
+      res: {},
+    },
+    'IteratorComplete, IteratorValue': {
+      exec: function() {/*
+        // IteratorComplete -> Get -> [[Get]]
+        // IteratorValue -> Get -> [[Get]]
+        var get = [];
+        var iterable = {};
+        iterable[Symbol.iterator] = function() {
+          return {
+            next: function() {
+              return new Proxy({ value: 2, done: false }, { get: function(o, k) { get.push(k); return o[k]; }});
+            }
+          };
+        }
+        var i = 0;
+        for(var e of iterable) {
+          if (++i >= 2) break;
+        }
+        return get + '' === "done,value,done,value";
+      */},
+      res: {},
+    },
+    'ToPropertyDescriptor': {
+      exec: function() {/*
+        // ToPropertyDescriptor -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({
+            enumerable: true, configurable: true, value: true,
+            writable: true, get: Function(), set: Function()
+          }, { get: function(o, k) { get.push(k); return o[k]; }});
+        try {
+          // This will throw, since it will have true for both "get" and "value",
+          // but not before performing a Get on every property.
+          Object.defineProperty({}, "foo", p);
+        } catch(e) {
+          return get + '' === "enumerable,configurable,value,writable,get,set";
+        }
+      */},
+      res: {},
+    },
+    'Object.assign': {
+      exec: function() {/*
+        // Object.assign -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({foo:1, bar:2}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Object.assign({}, p);
+        return get + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Object.defineProperties': {
+      exec: function() {/*
+        // Object.defineProperties -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({foo:{}, bar:{}}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Object.defineProperties({}, p);
+        return get + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Function.prototype.bind': {
+      exec: function() {/*
+        // Function.prototype.bind -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
+        Function.prototype.bind.call(p);
+        return get + '' === "length,name";
+      */},
+      res: {},
+    },
+    'Error.prototype.toString': {
+      exec: function() {/*
+        // Error.prototype.toString -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Error.prototype.toString.call(p);
+        return get + '' === "name,message";
+      */},
+      res: {},
+    },
+    'String.raw': {
+      exec: function() {/*
+        // String.raw -> Get -> [[Get]]
+        var get = [];
+        var raw = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+        var p = new Proxy({raw: raw}, { get: function(o, k) { get.push(k); return o[k]; }});
+        String.raw(p);
+        return get + '' === "raw,length,0,1";
+      */},
+      res: {},
+    },
+    'RegExp constructor': {
+      exec: function() {/*
+        // RegExp -> Get -> [[Get]]
+        var get = [];
+        var re = { constructor: null };
+        re[Symbol.match] = true;
+        var p = new Proxy(re, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp(p);
+        return get + '' === "constructor,source,flags";
+      */},
+      res: {},
+    },
+    'RegExp.prototype.flags': {
+      exec: function() {/*
+        // RegExp.prototype.flags -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
+        return get + '' === "global,ignoreCase,multiline,unicode,sticky";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.match]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.match] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp.prototype[Symbol.match].call(p);
+        p.global = true;
+        RegExp.prototype[Symbol.match].call(p);
+        return get + '' === "global,exec,global,unicode,exec";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.replace]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.replace] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp.prototype[Symbol.replace].call(p);
+        p.global = true;
+        RegExp.prototype[Symbol.replace].call(p);
+        return get + '' === "global,exec,global,unicode,exec";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.search]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.search] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp.prototype[Symbol.search].call(p);
+        return get + '' === "lastIndex,exec";
+      */},
+      res: {},
+    },
+    'RegExp.prototype[Symbol.split]': {
+      exec: function() {/*
+        // RegExp.prototype[Symbol.split] -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp.prototype[Symbol.split].call(p);
+        return get + '' === "flags,exec";
+      */},
+      res: {},
+    },
+    'Array.from': {
+      exec: function() {/*
+        // Array.from -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.from(p);
+        return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
+      */},
+      res: {},
+    },
+    'Array.prototype.concat': {
+      exec: function() {/*
+        // Array.prototype.concat -> Get -> [[Get]]
+        var get = [];
+        var arr = [1];
+        arr.constructor = null;
+        var p = new Proxy(arr, { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.concat.call(p,p);
+        return get[0] === "constructor" && get[1] === Symbol.species
+          && get[2] === Symbol.isConcatSpreadable
+          && get[3] === "length"
+          && get[4] === "0"
+          && get.length === 5;
+      */},
+      res: {},
+    },
+    'Array.prototype iteration methods': {
+      exec: function() {/*
+        // Array.prototype methods -> Get -> [[Get]]
+        var methods = ['copyWithin', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach',
+          'indexOf', 'join', 'lastIndexOf', 'map', 'reduce', 'reduceRight', 'some'];
+        var get;
+        var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+        for(var i = 0; i < methods.length; i+=1) {
+          get = [];
+          Array.prototype[methods[i]].call(p, Function());
+          if (get + '' !== (
+            methods[i] === 'fill' ? "length" :
+            methods[i] === 'every' ? "length,0" :
+            methods[i] === 'lastIndexOf' || methods[i] === 'reduceRight' ? "length,1,0" :
+            "length,0,1"
+          )) {
+            return false;
+          }
+        }
+        return true;
+      */},
+      res: {},
+    },
+    'Array.prototype.pop': {
+      exec: function() {/*
+        // Array.prototype.pop -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.pop.call(p);
+        return get + '' === "length,3";
+      */},
+      res: {},
+    },
+    'Array.prototype.reverse': {
+      exec: function() {/*
+        // Array.prototype.reverse -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy([0,,2,,4,,], { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.reverse.call(p);
+        return get + '' === "length,0,4,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.shift': {
+      exec: function() {/*
+        // Array.prototype.shift -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.shift.call(p);
+        return get + '' === "length,0,1,2,3";
+      */},
+      res: {},
+    },
+    'Array.prototype.splice': {
+      exec: function() {/*
+        // Array.prototype.splice -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.splice.call(p,1,1);
+        Array.prototype.splice.call(p,1,0,1);
+        return get + '' === "length,1,2,3,length,2,1";
+      */},
+      res: {},
+    },
+    'Array.prototype.toString': {
+      exec: function() {/*
+        // Array.prototype.toString -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.toString.call(p);
+        return get + '' === "join";
+      */},
+      res: {},
+    },
+    'JSON.stringify': {
+      exec: function() {/*
+        // JSON.stringify -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        JSON.stringify(p);
+        return get + '' === "toJSON";
+      */},
+      res: {},
+    },
+    'Promise resolve functions': {
+      exec: function() {/*
+        // Promise resolve functions -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        new Promise(function(resolve){ resolve(p); });
+        return get + '' === "then";
+      */},
+      res: {},
+    },
+    'String.prototype.match': {
+      exec: function() {/*
+        // String.prototype.match functions -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        String.prototype.match.call(p);
+        return get[0] === Symbol.match && get.length === 1;
+      */},
+      res: {},
+    },
+    'String.prototype.replace': {
+      exec: function() {/*
+        // String.prototype.replace functions -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        String.prototype.replace.call(p);
+        return get[0] === Symbol.replace && get.length === 1;
+      */},
+      res: {},
+    },
+    'String.prototype.search': {
+      exec: function() {/*
+        // String.prototype.search functions -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        String.prototype.search.call(p);
+        return get[0] === Symbol.search && get.length === 1;
+      */},
+      res: {},
+    },
+    'String.prototype.split': {
+      exec: function() {/*
+        // String.prototype.split functions -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        String.prototype.split.call(p);
+        return get[0] === Symbol.split && get.length === 1;
+      */},
+      res: {},
+    },
+    'Date.prototype.toJSON': {
+      exec: function() {/*
+        // Date.prototype.toJSON -> ToPrimitive -> Get -> [[Get]]
+        // Date.prototype.toJSON -> Invoke -> GetMethod -> GetV -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Date.prototype.toJSON.call(p);
+        return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
+      */},
+      res: {},
+    },
+  },
+},
+{
+  name: 'Proxy, internal \'set\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'Object.assign': {
+      exec: function() {/*
+        // Object.assign -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        Object.assign(p, { foo: 1, bar: 2 });
+        return set + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Array.from': {
+      exec: function() {/*
+        // Array.from -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        Array.from.call(function(){ return p; }, {length:2, 0:1, 1:2});
+        return set + '' === "length";
+      */},
+      res: {},
+    },
+    'Array.of': {
+      exec: function() {/*
+        // Array.from -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        Array.of.call(function(){ return p; }, 1, 2, 3);
+        return set + '' === "length";
+      */},
+      res: {},
+    },
+    'Array.prototype.copyWithin': {
+      exec: function() {/*
+        // Array.prototype.copyWithin -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([1,2,3,4,5,6], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.copyWithin(0, 3);
+        return set + '' === "0,1,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.fill': {
+      exec: function() {/*
+        // Array.prototype.fill -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([1,2,3,4,5,6], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.fill(0, 3);
+        return set + '' === "3,4,5";
+      */},
+      res: {},
+    },
+    'Array.prototype.pop': {
+      exec: function() {/*
+        // Array.prototype.pop -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.pop();
+        return set + '' === "length";
+      */},
+      res: {},
+    },
+    'Array.prototype.push': {
+      exec: function() {/*
+        // Array.prototype.push -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.push(0,0,0);
+        return set + '' === "0,1,2,length";
+      */},
+      res: {},
+    },
+    'Array.prototype.reverse': {
+      exec: function() {/*
+        // Array.prototype.reverse -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([0,0,0,,], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.reverse();
+        return set + '' === "3,1,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.shift': {
+      exec: function() {/*
+        // Array.prototype.shift -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([0,0,,0], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.shift();
+        return set + '' === "0,2,length";
+      */},
+      res: {},
+    },
+    'Array.prototype.splice': {
+      exec: function() {/*
+        // Array.prototype.splice -> Set -> [[Set]]
+        var set = [];
+        var p = new Proxy([1,2,3], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.splice(1,0,0);
+        return set + '' === "1,2,3,length";
+      */},
+      res: {},
+    },
+    'Array.prototype.unshift': {
+      exec: function() {/*
+        // Array.prototype.unshift -> DeletePropertyOrThrow -> [[Delete]]
+        var set = [];
+        var p = new Proxy([0,0,,0], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+        p.unshift(0,1);
+        return set + '' === "5,3,2,0,1";
+      */},
+      res: {},
+    },
+  },
+},
+{
+  name: 'Proxy, internal \'defineProperty\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    '[[Set]]': {
+      exec: function() {/*
+        // [[Set]] -> [[DefineOwnProperty]]
+        var def = [];
+        var p = new Proxy({foo:1, bar:2}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+        p.foo = 2; p.bar = 4;
+        return def + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'SetIntegrityLevel': {
+      exec: function() {/*
+        // SetIntegrityLevel -> DefinePropertyOrThrow -> [[DefineOwnProperty]]
+        var def = [];
+        var p = new Proxy({foo:1, bar:2}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+        Object.freeze(p);
+        return def + '' === "foo,bar";
+      */},
+      res: {},
+    },
+  },
+},
+{
+  name: 'Proxy, internal \'deleteProperty\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'ArraySetLength': {
+      exec: function() {/*
+        // ArraySetLength -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.length = 1;
+        return del + '' === "5,4,3,2,1";
+      */},
+      res: {},
+    },
+    'Array.prototype.copyWithin': {
+      exec: function() {/*
+        // Array.prototype.copyWithin -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0,,,,], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.copyWithin(0,3);
+        return del + '' === "0,1,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.pop': {
+      exec: function() {/*
+        // Array.prototype.pop -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.pop();
+        return del + '' === "2";
+      */},
+      res: {},
+    },
+    'Array.prototype.reverse': {
+      exec: function() {/*
+        // Array.prototype.reverse -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,,2,,4,,], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.reverse();
+        return del + '' === "0,4,2";
+      */},
+      res: {},
+    },
+    'Array.prototype.shift': {
+      exec: function() {/*
+        // Array.prototype.shift -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,,0,,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.shift();
+        return del + '' === "0,2,5";
+      */},
+      res: {},
+    },
+    'Array.prototype.splice': {
+      exec: function() {/*
+        // Array.prototype.splice -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,0,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.splice(2,2,0);
+        return del + '' === "3,5";
+      */},
+      res: {},
+    },
+    'Array.prototype.unshift': {
+      exec: function() {/*
+        // Array.prototype.unshift -> DeletePropertyOrThrow -> [[Delete]]
+        var del = [];
+        var p = new Proxy([0,0,,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        p.unshift(0);
+        return del + '' === "5,3";
+      */},
+      res: {},
+    },
+    'DeleteBinding': {
+      exec: function() {/*
+        // DeleteBinding -> [[Delete]]
+        var del = [];
+        var p = new Proxy({foo:1,bar:2}, { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+        with(p) {
+          delete foo;
+          delete bar;
+          delete baz;
+        }
+        return del + '' === "foo,bar";
+      */},
+      res: {},
+    }
+  },
+},
+{
+  name: 'Proxy, internal \'getOwnPropertyDescriptor\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    '[[Get]]': {
+      exec: function() {/*
+        // [[Get]] -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.foo === 5; p.bar === 5;
+        return gopd + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    '[[Set]]': {
+      exec: function() {/*
+        // [[Set]] -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.foo = 1; p.bar = 1;
+        return gopd + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Object.assign': {
+      exec: function() {/*
+        // Object.assign -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({foo:1, bar:2},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        Object.assign({}, p);
+        return gopd + '' === "foo,bar";
+      */},
+      res: {},
+    },
+    'Object.prototype.hasOwnProperty': {
+      exec: function() {/*
+        // Object.prototype.hasOwnProperty -> HasOwnProperty -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy({foo:1, bar:2},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.hasOwnProperty('garply');
+        return gopd + '' === "garply";
+      */},
+      res: {},
+    },
+    'Function.prototype.bind': {
+      exec: function() {/*
+        // Function.prototype.bind -> HasOwnProperty -> [[GetOwnProperty]]
+        var gopd = [];
+        var p = new Proxy(Function(),
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        p.bind();
+        return gopd + '' === "length";
+      */},
+      res: {},
+    },
+  },
+},
+{
+  name: 'Proxy, internal \'ownKeys\' calls',
+  category: 'misc',
+  significance: 'small',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: {
+    'SetIntegrityLevel': {
+      exec: function() {/*
+        // SetIntegrityLevel -> [[OwnPropertyKeys]]
+        var ownKeysCalled = 0;
+        var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        Object.freeze(p);
+        return ownKeysCalled === 1;
+      */},
+      res: {},
+    },
+    'TestIntegrityLevel': {
+      exec: function() {/*
+        // TestIntegrityLevel -> [[OwnPropertyKeys]]
+        var ownKeysCalled = 0;
+        var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        Object.isFrozen(p);
+        return ownKeysCalled === 1;
+      */},
+      res: {},
+    },
+    'SerializeJSONObject': {
+      exec: function() {/*
+        // SerializeJSONObject -> EnumerableOwnNames -> [[OwnPropertyKeys]]
+        var ownKeysCalled = 0;
+        var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+        JSON.stringify({a:p,b:p});
+        return ownKeysCalled === 2;
+      */},
+      res: {},
+    },
+  },
+},
+{
   name: 'Reflect',
   category: 'built-ins',
   significance: 'medium',
