@@ -5395,62 +5395,6 @@ exports.tests = [
         edge:        true,
       },
     },
-    'Reflect.ownKeys, key order': {
-      exec: function() {/*
-        var obj = {
-          2:    true,
-          0:    true,
-          1:    true,
-          ' ':  true,
-          9:    true,
-          D:    true,
-          B:    true,
-          '-1': true,
-        };
-        obj.A = true;
-        obj[3] = true;
-        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
-        Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj[2];
-        obj[2] = true;
-
-        return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
-      */},
-      res: {
-        babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
-        typescript:  { val: false, note_id: "forin-order" },
-        ejs:         true,
-        es6shim:     { val: false, note_id: "forin-order" },
-        edge:        true,
-      },
-    },
-    'Reflect.ownKeys, symbol order': {
-      exec: function() {/*
-        var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
-        var obj = {
-          1:    true,
-          A:    true,
-        };
-        obj.B = true;
-        obj[sym1] = true;
-        obj[2] = true;
-        obj[sym2] = true;
-        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
-        Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
-        Object.defineProperty(obj, 'D', { value: true, enumerable: true });
-
-        var result = Reflect.ownKeys(obj);
-        var l = result.length;
-        return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
-      */},
-      res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        ejs:         true,
-        es6shim:     true,
-        edge:        true,
-      }
-    },
     'Reflect.apply': {
       exec: function() {/*
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
@@ -9263,6 +9207,90 @@ exports.tests = [
         safari51:      true,
         webkit:        true,
       },
+    },
+    'Reflect.enumerate': {
+      exec: function() {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          D:    true,
+          B:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj[2];
+        obj[2] = true;
+
+        var keys = [];
+        var iterator = Reflect.enumerate(obj);
+        var item;
+        while (!(item = iterator.next()).done) {
+            keys.push(item.value);
+        }
+        return keys.join('') === "012349 DB-1AC";
+      */},
+      res: {
+        edge:          { val: true, note_id: 'ie_property_order' },
+      },
+    },
+    'Reflect.ownKeys': {
+      exec: function() {/*
+        var obj = {
+          2:    true,
+          0:    true,
+          1:    true,
+          ' ':  true,
+          9:    true,
+          D:    true,
+          B:    true,
+          '-1': true,
+        };
+        obj.A = true;
+        obj[3] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        delete obj[2];
+        obj[2] = true;
+
+        return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
+      */},
+      res: {
+        ejs:         true,
+        edge:        { val: true, note_id: 'ie_property_order' },
+      },
+    },
+    'Reflect.ownKeys, symbols': {
+      exec: function() {/*
+        var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
+        var obj = {
+          1:    true,
+          A:    true,
+        };
+        obj.B = true;
+        obj[sym1] = true;
+        obj[2] = true;
+        obj[sym2] = true;
+        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+        Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
+        Object.defineProperty(obj, 'D', { value: true, enumerable: true });
+
+        var result = Reflect.ownKeys(obj);
+        var l = result.length;
+        return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        ejs:         true,
+        es6shim:     true,
+        edge:        { val: true, note_id: 'ie_property_order' },
+      }
     },
   },
 },
