@@ -295,17 +295,23 @@ exports.browsers = {
   chrome43: {
     full: 'Chrome, Opera',
     short: 'CH 43,<br>OP&nbsp;30',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome44: {
     full: 'Chrome, Opera',
     short: 'CH 44,<br>OP&nbsp;31',
-    unstable: true,
     note_id: 'experimental-flag',
   },
   chrome45: {
     full: 'Chrome, Opera',
     short: 'CH 45,<br>OP&nbsp;32',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
+  chrome46: {
+    full: 'Chrome, Opera',
+    short: 'CH 46,<br>OP&nbsp;33',
     unstable: true,
     note_id: 'experimental-flag',
   },
@@ -651,6 +657,7 @@ exports.tests = [
       */},
       res: {
         firefox41:    true,
+        chrome46:     flag,
       },
     },
   },
@@ -1183,7 +1190,6 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
-        chrome45:    true,
       },
     },
     'function \'length\' property': {
@@ -1200,7 +1206,6 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
-        chrome45:    true,
       },
     },
     'arguments object interaction': {
@@ -1219,7 +1224,6 @@ exports.tests = [
         babel:       true,
         tr:          true,
         chrome44:    flag,
-        chrome45:    true,
         edge:        true,
       },
     },
@@ -1241,7 +1245,6 @@ exports.tests = [
         typescript:  true,
         edge:        true,
         firefox38:   true,
-        chrome45:    true,
       },
     },
     'new Function() support': {
@@ -1254,7 +1257,6 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
-        chrome45:    true,
       },
     },
   },
@@ -1927,6 +1929,7 @@ exports.tests = [
       */},
       res: {
         webkit:      true,
+        chrome46:    flag,
       },
     },
   },
@@ -2078,6 +2081,7 @@ exports.tests = [
       */},
       res: {
         webkit:      true,
+        chrome46:    flag,
       },
     },
     'is statically bound': {
@@ -2238,21 +2242,24 @@ exports.tests = [
       exec: function () {/*
         // Note: only available outside of strict mode.
         if (!this) return false;
-        { function f() { return 1; } }
-          function g() { return 1; }
-        { function g() { return 2; } }
+        var passed = f() === 1;
+        function f() { return 1; }
+        
+        passed &= typeof g === 'undefined';
+        { function g() { return 1; } }
+        passed &= g() === 1;
+        
+        passed &= h() === 2;
         { function h() { return 1; } }
-          function h() { return 2; }
+        function h() { return 2; }
+        passed &= h() === 1;
 
-        return f() === 1 && g() === 2 && h() === 1;
+        return passed;
       */},
       res: {
         ie11:        true,
         firefox11:   true,
         rhino17:     true,
-        chrome:      true,
-        node:        true,
-        iojs:        true,
       },
     },
     'labeled function statements': {
@@ -3135,6 +3142,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        chrome46:    true,
       },
     },
     'generator functions': {
@@ -3155,6 +3163,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        chrome46:    true,
       },
     },
     'arrow functions': {
@@ -3175,6 +3184,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        chrome46:    true,
       },
     },
     'classes': {
@@ -3195,6 +3205,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        chrome46:    strict,
       },
     },
     'subclasses': {
@@ -3213,6 +3224,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        chrome46:    strict,
       },
     },
   },
@@ -7988,9 +8000,10 @@ exports.tests = [
       res: {
         firefox41:   true,
         webkit:      true,
+        chrome46:    flag,
       }
     },
-    'can\'t be assigned to': {
+    'assignment is an early error': {
       exec: function(){/*
         var passed = false;
         new function f() {
