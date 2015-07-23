@@ -37280,9 +37280,9 @@ return get + &apos;&apos; === &quot;prototype&quot;;
 // ClassDefinitionEvaluation -&gt; Get -&gt; [[Get]]
 var get = [];
 var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
-class extends p {}
+class C extends p {}
 return get + &apos;&apos; === &quot;prototype&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("503");try{return Function("asyncTestPassed","\n// ClassDefinitionEvaluation -> Get -> [[Get]]\nvar get = [];\nvar p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});\nclass extends p {}\nreturn get + '' === \"prototype\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("503");return Function("asyncTestPassed","'use strict';"+"\n// ClassDefinitionEvaluation -> Get -> [[Get]]\nvar get = [];\nvar p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});\nclass extends p {}\nreturn get + '' === \"prototype\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("503");try{return Function("asyncTestPassed","\n// ClassDefinitionEvaluation -> Get -> [[Get]]\nvar get = [];\nvar p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});\nclass C extends p {}\nreturn get + '' === \"prototype\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("503");return Function("asyncTestPassed","'use strict';"+"\n// ClassDefinitionEvaluation -> Get -> [[Get]]\nvar get = [];\nvar p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});\nclass C extends p {}\nreturn get + '' === \"prototype\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
