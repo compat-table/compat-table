@@ -5967,17 +5967,6 @@ exports.tests = [
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: {
-    '[[Get]]': {
-      exec: function() {/*
-        // [[Get]] -> [[GetOwnProperty]]
-        var gopd = [];
-        var p = new Proxy({},
-          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
-        p.foo === 5; p.bar === 5;
-        return gopd + '' === "foo,bar";
-      */},
-      res: {},
-    },
     '[[Set]]': {
       exec: function() {/*
         // [[Set]] -> [[GetOwnProperty]]
