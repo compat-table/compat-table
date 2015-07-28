@@ -1086,6 +1086,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox16:   true,
+        webkit:      true,
         edge:        flag,
       },
     },
@@ -1101,6 +1102,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox18:   true,
+        webkit:      true,
         edge:        flag,
       },
     },
@@ -1116,6 +1118,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox16:   true,
+        webkit:      true,
         edge:        flag,
       },
     },
@@ -1136,6 +1139,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        webkit:      true,
         edge:        flag,
       },
     },
@@ -1151,6 +1155,7 @@ exports.tests = [
       res: {
         babel:       true,
         closure:     true,
+        webkit:      true,
         edge:        flag,
       },
     },
@@ -1162,6 +1167,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+        webkit:      true,
         edge:        flag,
       },
     },
@@ -6170,6 +6176,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.getOwnPropertyDescriptor': {
@@ -6238,6 +6245,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.preventExtensions': {
@@ -6305,6 +6313,7 @@ exports.tests = [
         ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
         edge:        true,
+        webkit:      true,
       },
     },
     'Reflect.ownKeys, symbol order': {
@@ -6332,6 +6341,7 @@ exports.tests = [
         ejs:         true,
         es6shim:     true,
         edge:        true,
+        webkit:      true,
       }
     },
     'Reflect.apply': {
@@ -6344,6 +6354,7 @@ exports.tests = [
         ejs:         true,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.construct': {
@@ -6870,6 +6881,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         closure:     true,
+        webkit:      true,
       },
     },
     'defaults, let temporal dead zone': {
@@ -6912,6 +6924,7 @@ exports.tests = [
         )({b:2, c:undefined, x:4});
       */},
       res: {
+        webkit:       true,
         typescript:   typescript.fallthrough,
       },
     },
@@ -10294,6 +10307,7 @@ exports.tests = [
         chrome42:    true,
         iojs:        true,
         firefox41:   true,
+        webkit:      true,
       },
     },
     'Invalid Date': {
