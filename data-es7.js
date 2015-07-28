@@ -149,7 +149,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'exponentiation (**) operator',
-  category: 'draft',
+  category: 'candidate',
   link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
   exec: function () {/*
     return 2 ** 3 === 8;
