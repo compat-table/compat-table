@@ -486,7 +486,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/6</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/6</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0">0/6</td>
+<td data-browser="webkit" class="unstable tally" data-tally="1">6/6</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/6</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/6</td>
@@ -557,7 +557,7 @@ return (function (a = 1, b = 2) { return a === 3 &amp;&amp; b === 2; }(3));
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -628,7 +628,7 @@ return (function (a = 1, b = 2) { return a === 1 &amp;&amp; b === 3; }(undefined
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -699,7 +699,7 @@ return (function (a, b = a) { return b === 5; }(5));
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -780,7 +780,7 @@ return (function(x = 1) {
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -856,7 +856,7 @@ return (function(a=function(){
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -929,7 +929,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -4404,7 +4404,7 @@ return &quot;&#x20BB7;&quot;.match(/^.$/u)[0].length === 2;
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/32</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/32</td>
 <td data-browser="safari71_8" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">16/32</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.8125" style="background-color:hsl(97,50%,50%)">26/32</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">28/32</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/32</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/32</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/32</td>
@@ -6553,7 +6553,7 @@ return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -6782,7 +6782,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}&quot;,
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -15461,14 +15461,14 @@ var prototype = Object.getPrototypeOf(Int8Array.prototype);
 for(var i = 0; i &lt; constructors.length; i+=1) {
   if (!(constructors[i] in global
       &amp;&amp; Object.getPrototypeOf(global[constructors[i]]) === constructor
-      &amp;&amp; Object.getPrototypeOf(global[constructors[i]].prototype) == prototype
+      &amp;&amp; Object.getPrototypeOf(global[constructors[i]].prototype) === prototype
       &amp;&amp; Object.getOwnPropertyNames(global[constructors[i]].prototype).sort() + &apos;&apos;
         === &quot;BYTES_PER_ELEMENT,constructor&quot;)) {
     return false;
   }
 }
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("204");try{return Function("asyncTestPassed","\nvar constructors = [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nvar constructor = Object.getPrototypeOf(Int8Array);\nvar prototype = Object.getPrototypeOf(Int8Array.prototype);\nfor(var i = 0; i < constructors.length; i+=1) {\n  if (!(constructors[i] in global\n      && Object.getPrototypeOf(global[constructors[i]]) === constructor\n      && Object.getPrototypeOf(global[constructors[i]].prototype) == prototype\n      && Object.getOwnPropertyNames(global[constructors[i]].prototype).sort() + ''\n        === \"BYTES_PER_ELEMENT,constructor\")) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("204");return Function("asyncTestPassed","'use strict';"+"\nvar constructors = [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nvar constructor = Object.getPrototypeOf(Int8Array);\nvar prototype = Object.getPrototypeOf(Int8Array.prototype);\nfor(var i = 0; i < constructors.length; i+=1) {\n  if (!(constructors[i] in global\n      && Object.getPrototypeOf(global[constructors[i]]) === constructor\n      && Object.getPrototypeOf(global[constructors[i]].prototype) == prototype\n      && Object.getOwnPropertyNames(global[constructors[i]].prototype).sort() + ''\n        === \"BYTES_PER_ELEMENT,constructor\")) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("204");try{return Function("asyncTestPassed","\nvar constructors = [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nvar constructor = Object.getPrototypeOf(Int8Array);\nvar prototype = Object.getPrototypeOf(Int8Array.prototype);\nfor(var i = 0; i < constructors.length; i+=1) {\n  if (!(constructors[i] in global\n      && Object.getPrototypeOf(global[constructors[i]]) === constructor\n      && Object.getPrototypeOf(global[constructors[i]].prototype) === prototype\n      && Object.getOwnPropertyNames(global[constructors[i]].prototype).sort() + ''\n        === \"BYTES_PER_ELEMENT,constructor\")) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("204");return Function("asyncTestPassed","'use strict';"+"\nvar constructors = [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nvar constructor = Object.getPrototypeOf(Int8Array);\nvar prototype = Object.getPrototypeOf(Int8Array.prototype);\nfor(var i = 0; i < constructors.length; i+=1) {\n  if (!(constructors[i] in global\n      && Object.getPrototypeOf(global[constructors[i]]) === constructor\n      && Object.getPrototypeOf(global[constructors[i]].prototype) === prototype\n      && Object.getOwnPropertyNames(global[constructors[i]].prototype).sort() + ''\n        === \"BYTES_PER_ELEMENT,constructor\")) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -23677,7 +23677,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/16</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/16</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0">0/16</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.3125" style="background-color:hsl(37,72%,50%)">5/16</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="konq49" class="tally" data-tally="0">0/16</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/16</td>
@@ -23965,7 +23965,7 @@ return !(&quot;bar&quot; in obj);
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -24328,7 +24328,7 @@ return Reflect.isExtensible({}) &amp;&amp;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -24572,7 +24572,7 @@ return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -24658,7 +24658,7 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -24729,7 +24729,7 @@ return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -43904,7 +43904,7 @@ return result === &quot;012349 DB-1AC&quot;;
 <td data-browser="safari6" class="obsolete tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
 <td data-browser="safari7" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
 <td data-browser="safari71_8" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
-<td data-browser="webkit" class="unstable tally" data-tally="0.4444444444444444" style="background-color:hsl(53,66%,50%)">4/9</td>
+<td data-browser="webkit" class="unstable tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
 <td data-browser="opera" class="obsolete tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">3/9</td>
 <td data-browser="konq49" class="tally" data-tally="0.1111111111111111" style="background-color:hsl(13,81%,50%)">1/9</td>
 <td data-browser="rhino17" class="obsolete tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
@@ -44274,7 +44274,7 @@ try {
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
