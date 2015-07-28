@@ -111,11 +111,45 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="25">Draft</td>
+      <tr class="category"><td colspan="25">Candidate</td>
+</tr>
+<tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
+return [1, 2, 3].includes(1)
+  &amp;&amp; ![1, 2, 3].includes(4)
+  &amp;&amp; ![1, 2, 3].includes(1, 1)
+  &amp;&amp; [NaN].includes(NaN)
+  &amp;&amp; Array(1).includes();
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+</tr>
+<tr class="category"><td colspan="25">Draft</td>
 </tr>
 <tr significance="1"><td id="exponentiation_(**)_operator"><span><a class="anchor" href="#exponentiation_(**)_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">exponentiation (**) operator</a></span><script data-source="
 return 2 ** 3 === 8;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("1");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -149,7 +183,7 @@ function* generator() {
 var iter = generator();
 iter.next(&apos;tromple&apos;);
 return result === &apos;tromple&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("1");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("2");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -184,7 +218,7 @@ Object.observe(obj, function(changes){
   }
 });
 obj.x = 2;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");try{return Function("asyncTestPassed","\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("2");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -209,38 +243,6 @@ obj.x = 2;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
-</tr>
-<tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
-return [1, 2, 3].includes(1)
-  &amp;&amp; ![1, 2, 3].includes(4)
-  &amp;&amp; ![1, 2, 3].includes(1, 1)
-  &amp;&amp; [NaN].includes(NaN)
-  &amp;&amp; Array(1).includes();
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="es7shim">Yes</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no unstable" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no" data-browser="chrome41">No</td>
-<td class="no unstable" data-browser="chrome42">No</td>
-<td class="no unstable" data-browser="chrome43">No</td>
-<td class="yes unstable" data-browser="webkit">Yes</td>
-<td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="SIMD_(Single_Instruction,_Multiple_Data)"><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)">&#xA7;</a><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD (Single Instruction, Multiple Data)</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/50</td>

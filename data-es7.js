@@ -259,7 +259,7 @@ exports.tests = [
 {
   name: 'Array.prototype.includes',
   link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
-  category: 'draft',
+  category: 'candidate',
   exec: function () {/*
     return [1, 2, 3].includes(1)
       && ![1, 2, 3].includes(4)
