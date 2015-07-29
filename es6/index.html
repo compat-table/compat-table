@@ -41276,11 +41276,14 @@ return def + &apos;&apos; === &quot;foo,bar&quot;;
 </tr>
 <tr class="subtest" data-parent="Proxy,_internal_&apos;deleteProperty&apos;_calls" id="Proxy,_internal_&apos;deleteProperty&apos;_calls_ArraySetLength"><td><span><a class="anchor" href="#Proxy,_internal_&apos;deleteProperty&apos;_calls_ArraySetLength">&#xA7;</a>ArraySetLength</span><script data-source="
 // ArraySetLength -&gt; [[Delete]]
+if (global.navigator &amp;&amp; global.navigator.userAgent.indexOf(&apos;Edge/12&apos;) &gt; -1) {
+  return false;
+}
 var del = [];
 var p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
 p.length = 1;
 return del + &apos;&apos; === &quot;5,4,3,2,1&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("549");try{return Function("asyncTestPassed","\n// ArraySetLength -> [[Delete]]\nvar del = [];\nvar p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});\np.length = 1;\nreturn del + '' === \"5,4,3,2,1\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("549");return Function("asyncTestPassed","'use strict';"+"\n// ArraySetLength -> [[Delete]]\nvar del = [];\nvar p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});\np.length = 1;\nreturn del + '' === \"5,4,3,2,1\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("549");try{return Function("asyncTestPassed","\n// ArraySetLength -> [[Delete]]\nif (global.navigator && global.navigator.userAgent.indexOf('Edge/12') > -1) {\n  return false;\n}\nvar del = [];\nvar p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});\np.length = 1;\nreturn del + '' === \"5,4,3,2,1\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("549");return Function("asyncTestPassed","'use strict';"+"\n// ArraySetLength -> [[Delete]]\nif (global.navigator && global.navigator.userAgent.indexOf('Edge/12') > -1) {\n  return false;\n}\nvar del = [];\nvar p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});\np.length = 1;\nreturn del + '' === \"5,4,3,2,1\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

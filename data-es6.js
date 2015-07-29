@@ -5913,6 +5913,9 @@ exports.tests = [
     'ArraySetLength': {
       exec: function() {/*
         // ArraySetLength -> [[Delete]]
+        if (global.navigator && global.navigator.userAgent.indexOf('Edge/12') > -1) {
+          return false;
+        }
         var del = [];
         var p = new Proxy([0,0,0,0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
         p.length = 1;
