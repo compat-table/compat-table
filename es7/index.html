@@ -2587,11 +2587,11 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="string_padding"><span><a class="anchor" href="#string_padding">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:string_padding">string padding</a></span></td>
+<tr class="supertest" significance="1"><td id="String_padding"><span><a class="anchor" href="#String_padding">&#xA7;</a><a href="https://github.com/ljharb/proposal-string-pad-left-right">String padding</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
-<td data-browser="babel" class="tally" data-tally="1">2/2</td>
+<td data-browser="babel" class="tally" data-tally="0">0/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
-<td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
+<td data-browser="es7shim" class="tally" data-tally="1">2/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
@@ -2615,15 +2615,17 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
 <td data-browser="edge" class="unstable tally" data-tally="0">0/2</td>
 </tr>
-<tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.lpad"><td><span><a class="anchor" href="#string_padding_String.prototype.lpad">&#xA7;</a>String.prototype.lpad</span><script data-source="
-return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
-  &amp;&amp; &apos;hello&apos;.lpad(10, &apos;1234&apos;) === &apos;41234hello&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.lpad(10) === '     hello'\n  && 'hello'.lpad(10, '1234') === '41234hello';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="String_padding" id="String_padding_String.prototype.padLeft"><td><span><a class="anchor" href="#String_padding_String.prototype.padLeft">&#xA7;</a>String.prototype.padLeft</span><script data-source="
+return &apos;hello&apos;.padLeft(10) === &apos;     hello&apos;
+  &amp;&amp; &apos;hello&apos;.padLeft(10, &apos;1234&apos;) === &apos;41234hello&apos;
+  &amp;&amp; &apos;hello&apos;.padLeft() === &apos;hello&apos;
+  &amp;&amp; &apos;hello&apos;.padLeft(6, &apos;123&apos;) === &apos;3hello&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nreturn 'hello'.padLeft(10) === '     hello'\n  && 'hello'.padLeft(10, '1234') === '41234hello'\n  && 'hello'.padLeft() === 'hello'\n  && 'hello'.padLeft(6, '123') === '3hello';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padLeft(10) === '     hello'\n  && 'hello'.padLeft(10, '1234') === '41234hello'\n  && 'hello'.padLeft() === 'hello'\n  && 'hello'.padLeft(6, '123') === '3hello';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="es7shim">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2647,15 +2649,17 @@ return &apos;hello&apos;.lpad(10) === &apos;     hello&apos;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr class="subtest" data-parent="string_padding" id="string_padding_String.prototype.rpad"><td><span><a class="anchor" href="#string_padding_String.prototype.rpad">&#xA7;</a>String.prototype.rpad</span><script data-source="
-return &apos;hello&apos;.rpad(10) === &apos;hello     &apos;
-  &amp;&amp; &apos;hello&apos;.rpad(10, &apos;1234&apos;) === &apos;hello12341&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.rpad(10) === 'hello     '\n  && 'hello'.rpad(10, '1234') === 'hello12341';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="String_padding" id="String_padding_String.prototype.padRight"><td><span><a class="anchor" href="#String_padding_String.prototype.padRight">&#xA7;</a>String.prototype.padRight</span><script data-source="
+return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
+  &amp;&amp; &apos;hello&apos;.padRight(10, &apos;1234&apos;) === &apos;hello12341&apos;
+  &amp;&amp; &apos;hello&apos;.padRight() === &apos;hello&apos;
+  &amp;&amp; &apos;hello&apos;.padRight(6, &apos;123&apos;) === &apos;hello1&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nreturn 'hello'.padRight(10) === 'hello     '\n  && 'hello'.padRight(10, '1234') === 'hello12341'\n  && 'hello'.padRight() === 'hello'\n  && 'hello'.padRight(6, '123') === 'hello1';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padRight(10) === 'hello     '\n  && 'hello'.padRight(10, '1234') === 'hello12341'\n  && 'hello'.padRight() === 'hello'\n  && 'hello'.padRight(6, '123') === 'hello1';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="es7shim">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>

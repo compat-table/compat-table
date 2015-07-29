@@ -1055,26 +1055,30 @@ exports.tests = [
   }
 },
 {
-  name: 'string padding',
+  name: 'String padding',
   category: 'strawman',
-  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:string_padding',
+  link: 'https://github.com/ljharb/proposal-string-pad-left-right',
   subtests: {
-    'String.prototype.lpad' : {
+    'String.prototype.padLeft' : {
       exec: function(){/*
-        return 'hello'.lpad(10) === '     hello'
-          && 'hello'.lpad(10, '1234') === '41234hello';
+        return 'hello'.padLeft(10) === '     hello'
+          && 'hello'.padLeft(10, '1234') === '41234hello'
+          && 'hello'.padLeft() === 'hello'
+          && 'hello'.padLeft(6, '123') === '3hello';
       */},
       res: {
-        babel:       true,
+        es7shim: true,
       }
     },
-    'String.prototype.rpad' : {
+    'String.prototype.padRight' : {
       exec: function(){/*
-        return 'hello'.rpad(10) === 'hello     '
-          && 'hello'.rpad(10, '1234') === 'hello12341';
+        return 'hello'.padRight(10) === 'hello     '
+          && 'hello'.padRight(10, '1234') === 'hello12341'
+          && 'hello'.padRight() === 'hello'
+          && 'hello'.padRight(6, '123') === 'hello1';
       */},
       res: {
-        babel:       true,
+        es7shim: true,
       }
     }
   }
