@@ -1073,6 +1073,36 @@ exports.tests = [
     babel:       true,
     es7shim:     true,
   }
+},
+{
+  name: 'String.prototype.trimLeft',
+  category: 'candidate',
+  link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
+  exec: function(){/*
+    return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
+  */},
+  res: {
+    firefox39: true,
+    chrome43: true,
+    node: true,
+    iojs: true,
+    webkit: true,
+  }
+},
+{
+  name: 'String.prototype.trimRight',
+  category: 'candidate',
+  link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
+  exec: function(){/*
+    return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
+  */},
+  res: {
+    firefox39: true,
+    chrome43: true,
+    node: true,
+    iojs: true,
+    webkit: true,
+  }
 }
 ];
 
