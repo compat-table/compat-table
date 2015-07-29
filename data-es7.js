@@ -144,6 +144,23 @@ exports.browsers = {
     short: 'io.js',
     platformtype: 'engine',
   },
+  ie10: {
+    full: 'Internet Explorer',
+    short: 'IE 10',
+    obsolete: false // no EOL any time soon
+  },
+  ie11: {
+    full: 'Internet Explorer',
+    short: 'IE 11',
+    obsolete: false
+  },
+  edge: {
+    full: 'Internet Explorer, Microsoft Edge',
+    short: 'Edge',
+    unstable: true,
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
 };
 
 exports.tests = [
@@ -1082,11 +1099,29 @@ exports.tests = [
     return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
   */},
   res: {
+    ie10: false,
+    ie11: false,
+    edge: true,
+    firefox31: true,
+    firefox32: true,
+    firefox34: true,
+    firefox35: true,
     firefox39: true,
+    chrome30: true,
+    chrome33: true,
+    chrome34: true,
+    chrome35: true,
+    chrome37: true,
+    chrome38: true,
+    chrome39: true,
+    chrome40: true,
+    chrome41: true,
+    chrome42: true,
     chrome43: true,
     node: true,
     iojs: true,
     webkit: true,
+    es7shim: true,
   }
 },
 {
@@ -1097,11 +1132,29 @@ exports.tests = [
     return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
   */},
   res: {
+    ie10: false,
+    ie11: false,
+    edge: true,
+    firefox31: true,
+    firefox32: true,
+    firefox34: true,
+    firefox35: true,
     firefox39: true,
+    chrome30: true,
+    chrome33: true,
+    chrome34: true,
+    chrome35: true,
+    chrome37: true,
+    chrome38: true,
+    chrome39: true,
+    chrome40: true,
+    chrome41: true,
+    chrome42: true,
     chrome43: true,
     node: true,
     iojs: true,
     webkit: true,
+    es7shim: true,
   }
 }
 ];
