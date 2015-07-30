@@ -1092,71 +1092,72 @@ exports.tests = [
   }
 },
 {
-  name: 'String.prototype.trimLeft',
+  name: 'String trimming',
   category: 'candidate',
   link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
-  exec: function(){/*
-    return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
-  */},
-  res: {
-    ie10: false,
-    ie11: false,
-    edge: true,
-    firefox31: true,
-    firefox32: true,
-    firefox34: true,
-    firefox35: true,
-    firefox39: true,
-    chrome30: true,
-    chrome33: true,
-    chrome34: true,
-    chrome35: true,
-    chrome37: true,
-    chrome38: true,
-    chrome39: true,
-    chrome40: true,
-    chrome41: true,
-    chrome42: true,
-    chrome43: true,
-    node: true,
-    iojs: true,
-    webkit: true,
-    es7shim: true,
+  subtests: {
+    'String.prototype.trimLeft': {
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
+      */},
+      res: {
+        ie10: false,
+        ie11: false,
+        edge: true,
+        firefox31: true,
+        firefox32: true,
+        firefox34: true,
+        firefox35: true,
+        firefox39: true,
+        chrome30: true,
+        chrome33: true,
+        chrome34: true,
+        chrome35: true,
+        chrome37: true,
+        chrome38: true,
+        chrome39: true,
+        chrome40: true,
+        chrome41: true,
+        chrome42: true,
+        chrome43: true,
+        node: true,
+        iojs: true,
+        webkit: true,
+        es7shim: true,
+      }
+    },
+    'String.prototype.trimRight': {
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
+      */},
+      res: {
+        ie10: false,
+        ie11: false,
+        edge: true,
+        firefox31: true,
+        firefox32: true,
+        firefox34: true,
+        firefox35: true,
+        firefox39: true,
+        chrome30: true,
+        chrome33: true,
+        chrome34: true,
+        chrome35: true,
+        chrome37: true,
+        chrome38: true,
+        chrome39: true,
+        chrome40: true,
+        chrome41: true,
+        chrome42: true,
+        chrome43: true,
+        node: true,
+        iojs: true,
+        webkit: true,
+        es7shim: true,
+      }
+    }
   }
 },
-{
-  name: 'String.prototype.trimRight',
-  category: 'candidate',
-  link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
-  exec: function(){/*
-    return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
-  */},
-  res: {
-    ie10: false,
-    ie11: false,
-    edge: true,
-    firefox31: true,
-    firefox32: true,
-    firefox34: true,
-    firefox35: true,
-    firefox39: true,
-    chrome30: true,
-    chrome33: true,
-    chrome34: true,
-    chrome35: true,
-    chrome37: true,
-    chrome38: true,
-    chrome39: true,
-    chrome40: true,
-    chrome41: true,
-    chrome42: true,
-    chrome43: true,
-    node: true,
-    iojs: true,
-    webkit: true,
-    es7shim: true,
-  }
-}
 ];
 
 //Shift annex B features to the bottom
