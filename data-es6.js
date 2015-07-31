@@ -5531,8 +5531,8 @@ exports.tests = [
         var constructor = Function();
         constructor[Symbol.species] = Object;
         var p = new Proxy({ constructor: constructor, flags: '', exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
-        RegExp.prototype[Symbol.split].call(p);
-        return get + '' === "flags";
+        RegExp.prototype[Symbol.split].call(p, "");
+        return get + '' === "constructor,flags,exec";
       */},
       res: {},
     },
@@ -5689,7 +5689,7 @@ exports.tests = [
         proxied[Symbol.toPrimitive] = Function();
         var p = new Proxy(proxied, { get: function(o, k) { get.push(k); return o[k]; }});
         "".match(p);
-        return get[0] === Symbol.match && get.length === 1;
+        return get[0] === Symbol.match && get[1] === Symbol.toPrimitive && get.length === 2;
       */},
       res: {},
     },
