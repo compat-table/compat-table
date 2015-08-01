@@ -1261,8 +1261,7 @@ exports.tests = [
       */},
       res: {
         edge:        true,
-        firefox16:   true,
-        chrome44:    flag,
+        firefox16:   true, chrome44:    flag,
       },
     },
   },
@@ -1290,7 +1289,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         chrome44:    flag,
-        chrome45:    true,
       },
     },
     'with arrays, in array literals': {
@@ -1308,7 +1306,6 @@ exports.tests = [
         firefox16:   true,
         safari71_8:  true,
         webkit:      true,
-        chrome45:    true,
       },
     },
     'with strings, in function calls': {
@@ -1322,7 +1319,6 @@ exports.tests = [
         edge:        true,
         firefox27:   true,
         chrome44:    flag,
-        chrome45:    true,
       },
     },
     'with strings, in array literals': {
@@ -1336,7 +1332,6 @@ exports.tests = [
         edge:        true,
         firefox17:   true,
         webkit:      true,
-        chrome45:    true,
       },
     },
     'with astral plane strings, in function calls': {
@@ -1349,7 +1344,6 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
-        chrome45:    true,
         edge:        true,
       },
     },
@@ -1364,7 +1358,6 @@ exports.tests = [
         firefox27:   true,
         webkit:      true,
         edge:        true,
-        chrome45:    true,
       },
     },
     'with generator instances, in calls': {
@@ -1378,7 +1371,6 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
-        chrome45:    true,
         edge:        flag,
       },
     },
@@ -1393,7 +1385,6 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
-        chrome45:    true,
         edge:        flag,
       },
     },
@@ -1413,7 +1404,6 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome44:    flag,
-        chrome45:    true,
         edge:        true,
       },
     },
@@ -1430,7 +1420,6 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
-        chrome45:    true,
       },
     },
     'with instances of iterables, in calls': {
@@ -1444,7 +1433,6 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
         chrome44:    flag,
-        chrome45:    true,
         edge:        true
       },
     },
@@ -1460,7 +1448,6 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         webkit:      true,
-        chrome45:    true,
       },
     },
   }

@@ -1432,8 +1432,8 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="chrome42" class="obsolete tally" data-tally="0">0/12</td>
 <td data-browser="chrome43" class="obsolete tally" data-tally="0">0/12</td>
 <td data-browser="chrome44" class="tally" data-tally="0" data-flagged-tally="0.5833333333333334">0/12</td>
-<td data-browser="chrome45" class="unstable tally" data-tally="1">12/12</td>
-<td data-browser="chrome46" class="unstable tally" data-tally="1">12/12</td>
+<td data-browser="chrome45" class="unstable tally" data-tally="0" data-flagged-tally="0.5833333333333334">0/12</td>
+<td data-browser="chrome46" class="unstable tally" data-tally="0" data-flagged-tally="0.5833333333333334">0/12</td>
 <td data-browser="safari51" class="obsolete tally" data-tally="0">0/12</td>
 <td data-browser="safari6" class="obsolete tally" data-tally="0">0/12</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/12</td>
@@ -1503,8 +1503,8 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1574,8 +1574,8 @@ return [...[1, 2, 3]][2] === 3;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no" data-browser="chrome44">No</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1645,8 +1645,8 @@ return Math.max(...&quot;1234&quot;) === 4;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1716,8 +1716,8 @@ return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no" data-browser="chrome44">No</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1787,8 +1787,8 @@ return Array(...&quot;&#x20BB7;&#x20BB6;&quot;)[0] === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1858,8 +1858,8 @@ return [...&quot;&#x20BB7;&#x20BB6;&quot;][0] === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no" data-browser="chrome44">No</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -1930,8 +1930,8 @@ return Math.max(...iterable) === 3;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -2002,8 +2002,8 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -2074,8 +2074,8 @@ return Math.max(...iterable) === 3;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -2146,8 +2146,8 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no" data-browser="chrome44">No</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -2218,8 +2218,8 @@ return Math.max(...Object.create(iterable)) === 3;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no flagged" data-browser="chrome44">Flag</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no flagged unstable" data-browser="chrome45">Flag</td>
+<td class="no flagged unstable" data-browser="chrome46">Flag</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -2290,8 +2290,8 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no" data-browser="chrome44">No</td>
-<td class="yes unstable" data-browser="chrome45">Yes</td>
-<td class="yes unstable" data-browser="chrome46">Yes</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
