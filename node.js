@@ -25,6 +25,7 @@ $('#body tbody tr').each(function (index) {
       results[index] = true
     }
   global.__createIterableObject = function (arr, methods) {
+    methods = methods || {};
     if (typeof Symbol !== 'function' || !Symbol.iterator)
       return {};
     arr.length++;
@@ -60,7 +61,7 @@ setTimeout(function(){
       console.log('\u25BC\t' + name.replace('§',''))
     }
     else {
-      console.log(chalk[result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (name[0]!== '§' ? '\t' + name : name.slice(1)) + '\t'))
+      console.log(chalk[result === "Strict" ? 'cyan' : result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (name[0]!== '§' ? '\t' + name : name.slice(1)) + '\t'))
     }
   })
 },500)

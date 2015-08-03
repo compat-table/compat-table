@@ -373,7 +373,7 @@ exports.browsers = {
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag'
   },
   iojs: {
-    full: 'io.js 2.0.0',
+    full: 'io.js 2.5.0',
     short: 'io.js',
     platformtype: 'engine',
     note_id: 'harmony-flag',
@@ -1792,6 +1792,7 @@ exports.tests = [
         jsx:         true,
         chrome42:    strict,
         webkit:      true,
+        iojs:        strict,
       },
     },
     'implicit strict mode': {
@@ -1827,6 +1828,7 @@ exports.tests = [
         typescript:  true,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'extends': {
@@ -1980,6 +1982,7 @@ exports.tests = [
         edge:        flag,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'in methods, property access': {
@@ -5862,7 +5865,9 @@ exports.tests = [
         p.splice(1,0,0);
         return set + '' === "3,2,1,length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+      },
     },
     'Array.prototype.unshift': {
       exec: function() {/*
@@ -5872,7 +5877,9 @@ exports.tests = [
         p.unshift(0,1);
         return set + '' === "5,3,2,0,1,length";
       */},
-      res: {},
+      res: {
+        edge:        true,
+      },
     },
   },
 },
@@ -6256,6 +6263,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.enumerate': {
@@ -6280,6 +6288,7 @@ exports.tests = [
         ejs:         true,
         es6shim:     true,
         edge:        true,
+        webkit:      true,
       },
     },
     'Reflect.ownKeys': {
@@ -7247,7 +7256,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true,
       },
     },
     'Object.getOwnPropertyNames': {
@@ -7611,6 +7621,7 @@ exports.tests = [
         babel:       { val: false, note_id: "name-configurable", },
         edge:        flag,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'class expressions': {
@@ -7626,6 +7637,7 @@ exports.tests = [
         },
         edge:        flag,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'variables (class)': {
@@ -7665,6 +7677,7 @@ exports.tests = [
         edge:         flag,
         webkit:       true,
         chrome43:     strict,
+        iojs:        strict,
       },
     },
     'class static methods': {
@@ -7677,6 +7690,7 @@ exports.tests = [
         edge:         flag,
         webkit:       true,
         chrome43:     strict,
+        iojs:        strict,
       },
     },
     'isn\'t writable, is configurable': {
@@ -9082,6 +9096,7 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         node:        true,
+        iojs:        true,
       },
     },
     'Array iterator prototype chain': {
@@ -9720,6 +9735,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         webkit:      true,
+        iojs:        strict,
       },
     },
     'correct prototype chain': {
@@ -9777,6 +9793,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'correct prototype chain': {
@@ -9801,6 +9818,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Function.prototype.call': {
@@ -9812,6 +9830,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Function.prototype.apply': {
@@ -9823,6 +9842,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Function.prototype.bind': {
@@ -9883,6 +9903,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Promise.all': {
@@ -9952,6 +9973,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Number is subclassable': {
@@ -9965,6 +9987,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'String is subclassable': {
@@ -9980,6 +10003,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Map is subclassable': {
@@ -9996,6 +10020,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
     'Set is subclassable': {
@@ -10013,6 +10038,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         webkit:      true,
         chrome43:    strict,
+        iojs:        strict,
       },
     },
   },
