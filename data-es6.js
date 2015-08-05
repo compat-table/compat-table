@@ -46,7 +46,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20150505',
+    full: 'Closure Compiler v20150729',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -1490,6 +1490,7 @@ exports.tests = [
       res: {
         babel:       true,
         jsx:         true,
+        closure:     true,
         edge:        flag,
         chrome41:    strict,
         iojs:        strict,
@@ -1717,6 +1718,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         jsx:         true,
+        closure:     true,
         es6tr:       true,
         ejs:         true,
         edge:        flag,
