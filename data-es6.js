@@ -373,7 +373,7 @@ exports.browsers = {
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag'
   },
   iojs: {
-    full: 'io.js 2.5.0',
+    full: 'io.js 3.0.0',
     short: 'io.js',
     platformtype: 'engine',
     note_id: 'harmony-flag',
@@ -1209,6 +1209,7 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
+        iojs:        flag,
       },
     },
     'function \'length\' property': {
@@ -1225,6 +1226,7 @@ exports.tests = [
         edge:        true,
         firefox16:   true,
         chrome44:    flag,
+        iojs:        flag,
       },
     },
     'arguments object interaction': {
@@ -1244,6 +1246,7 @@ exports.tests = [
         tr:          true,
         chrome44:    flag,
         edge:        true,
+        iojs:        flag,
       },
     },
     'can\'t be used in setters': {
@@ -1274,7 +1277,9 @@ exports.tests = [
       */},
       res: {
         edge:        true,
-        firefox16:   true, chrome44:    flag,
+        firefox16:   true,
+        chrome44:    flag,
+        iojs:        flag,
       },
     },
   },
@@ -1302,6 +1307,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         chrome44:    flag,
+        iojs:        flag,
       },
     },
     'with arrays, in array literals': {
@@ -1332,6 +1338,7 @@ exports.tests = [
         edge:        true,
         firefox27:   true,
         chrome44:    flag,
+        iojs:        flag,
       },
     },
     'with strings, in array literals': {
@@ -1358,6 +1365,7 @@ exports.tests = [
         firefox27:   true,
         chrome44:    flag,
         edge:        true,
+        iojs:        flag,
       },
     },
     'with astral plane strings, in array literals': {
@@ -1385,6 +1393,7 @@ exports.tests = [
         firefox27:   true,
         chrome44:    flag,
         edge:        flag,
+        iojs:        flag,
       },
     },
     'with generator instances, in arrays': {
@@ -1418,6 +1427,7 @@ exports.tests = [
         firefox36:   true,
         chrome44:    flag,
         edge:        true,
+        iojs:        flag,
       },
     },
     'with generic iterables, in arrays': {
@@ -1446,7 +1456,8 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
         chrome44:    flag,
-        edge:        true
+        edge:        true,
+        iojs:        flag,
       },
     },
     'with instances of iterables, in arrays': {
@@ -1627,6 +1638,7 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         chrome45:    strict,
+        iojs:        strict,
       },
     },
     'static methods': {
@@ -1670,6 +1682,7 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         chrome45:    strict,
+        iojs:        strict,
       },
     },
     'accessor properties': {
@@ -1714,6 +1727,7 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         chrome45:    strict,
+        iojs:        strict,
       },
     },
     'static accessor properties': {
@@ -1758,6 +1772,7 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         chrome45:    strict,
+        iojs:        strict,
       },
     },
     'class name is lexically scoped': {
@@ -1792,6 +1807,7 @@ exports.tests = [
       res: {
         edge:        flag,
         chrome45:    strict,
+        iojs:        strict,
       },
     },
     'methods aren\'t enumerable': {
@@ -2147,7 +2163,8 @@ exports.tests = [
         firefox34:   true,
         safari71_8:  true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'shorthand properties': {
@@ -2215,7 +2232,8 @@ exports.tests = [
         es6tr:       true,
         firefox34:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       }
     },
     'computed accessors': {
@@ -2236,7 +2254,8 @@ exports.tests = [
         tr:          true,
         es6tr:       true,
         firefox34:   true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       }
     }
   }
@@ -2377,6 +2396,7 @@ exports.tests = [
         safari71_8:   true,
         webkit:       true,
         chrome44:     true,
+        iojs:         true,
       },
     },
     'not a shorthand property': {
@@ -3075,6 +3095,7 @@ exports.tests = [
         ejs:         true,
         chrome44:    true,
         edge:        flag,
+        iojs:        true,
       },
     },
     'shorthand generator methods, classes': {
@@ -3125,6 +3146,7 @@ exports.tests = [
         closure:     true,
         edge:        flag,
         chrome45:    strict,
+        iojs:        strict,
       },
     },
   },
@@ -7075,6 +7097,7 @@ exports.tests = [
         firefox38:   true,
         chrome43:    true,
         webkit:      true,
+        iojs:        true,
       },
     },
     'Promise.race': {
@@ -7136,7 +7159,7 @@ exports.tests = [
         firefox38:   true,
         chrome43:    true,
         webkit:      true,
-        iojs:        false,
+        iojs:        true,
       },
     },
     'Promise[Symbol.species]': {
@@ -7257,7 +7280,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.getOwnPropertyDescriptor': {
@@ -7304,7 +7328,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.freeze': {
@@ -7318,7 +7343,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.preventExtensions': {
@@ -7332,7 +7358,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.isSealed': {
@@ -7346,7 +7373,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.isFrozen': {
@@ -7360,7 +7388,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.isExtensible': {
@@ -7374,7 +7403,8 @@ exports.tests = [
         edge:        true,
         firefox35:   true,
         webkit:      true,
-        chrome44:    true
+        chrome44:    true,
+        iojs:        true
       },
     },
     'Object.keys': {
@@ -7719,6 +7749,7 @@ exports.tests = [
         edge:         true,
         firefox38:    true,
         chrome43:     true,
+        iojs:         true,
       },
     },
   },
@@ -8034,6 +8065,7 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         firefox40:   true,
+        iojs:        true,
       }
     },
     'in identifiers': {
@@ -10407,6 +10439,7 @@ exports.tests = [
         firefox37:   true,
         chrome43:    true,
         edge:        true,
+        iojs:        true
       },
     },
   },
