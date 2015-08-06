@@ -167,6 +167,7 @@ exports.tests = [
 {
   name: 'exponentiation (**) operator',
   category: 'candidate',
+  significance: 'small',
   link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
   exec: function () {/*
     return 2 ** 3 === 8;
@@ -180,6 +181,7 @@ exports.tests = [
   name: 'bind (::) operator',
   link: 'https://github.com/zenparsing/es-function-bind',
   category: 'strawman',
+  significance: 'medium',
   subtests: {
     'binary form': {
       exec: function () {/*
@@ -205,6 +207,7 @@ exports.tests = [
 {
   name: 'function.sent',
   category: 'draft',
+  significance: 'small',
   link: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
   exec: function () {/*
     var result;
@@ -222,6 +225,7 @@ exports.tests = [
   name: 'Object.values',
   link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
   category: 'pre-strawman',
+  significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
@@ -236,6 +240,7 @@ exports.tests = [
   name: 'Object.entries',
   link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
   category: 'pre-strawman',
+  significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
@@ -254,6 +259,7 @@ exports.tests = [
   name: 'Object.observe',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
   category: 'draft',
+  significance: 'large',
   exec: function () {/*
     var obj = {x: 1};
     Object.observe(obj, function(changes){
@@ -277,6 +283,7 @@ exports.tests = [
   name: 'Array.prototype.includes',
   link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
   category: 'candidate',
+  significance: 'small',
   exec: function () {/*
     return [1, 2, 3].includes(1)
       && ![1, 2, 3].includes(4)
@@ -294,6 +301,7 @@ exports.tests = [
   name: 'trailing commas in function syntax',
   link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
   category: 'proposal',
+  significance: 'small',
   subtests: {
     'in parameter lists': {
       exec: function(){/*
@@ -316,6 +324,7 @@ exports.tests = [
 {
   name: 'async functions',
   category: 'proposal',
+  significance: 'large',
   link: 'https://github.com/lukehoban/ecmascript-asyncawait',
   subtests: {
     'basic support' : {
@@ -343,6 +352,7 @@ exports.tests = [
 {
   name: 'typed objects',
   category: 'proposal',
+  significance: 'large',
   link: 'https://github.com/dslomov-chromium/typed-objects-es7',
   exec: function () {/*
     return typeof StructType === "function";
@@ -354,6 +364,7 @@ exports.tests = [
   name: 'Object.getOwnPropertyDescriptors',
   link: 'https://gist.github.com/WebReflection/9353781',
   category: 'strawman',
+  significance: 'small',
   exec: function () {/*
     var object = {a: 1};
     var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
@@ -374,6 +385,7 @@ exports.tests = [
   name: 'ArrayBuffer.transfer',
   link: 'https://gist.github.com/lukewagner/2735af7eea411e18cf20',
   category: 'proposal',
+  significance: 'small',
   exec: function(){/*
     return typeof ArrayBuffer.transfer === 'function';
   */},
@@ -386,6 +398,7 @@ exports.tests = [
   name: 'parallel JavaScript',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism',
   category: 'pre-strawman',
+  significance: 'large',
   subtests: {
     'Array.prototype.mapPar' : {
       exec: function(){/*
@@ -448,6 +461,7 @@ exports.tests = [
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
   category: 'draft',
+  significance: 'large',
   link: 'https://github.com/johnmccutchan/ecmascript_simd',
   subtests: {
     'basic support' : {
@@ -856,6 +870,7 @@ exports.tests = [
 {
   name: 'class decorators',
   category: 'proposal',
+  significance: 'medium',
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
     class A {
@@ -876,6 +891,7 @@ exports.tests = [
   name: 'async generators',
   link: 'https://github.com/jhusain/asyncgenerator',
   category: 'proposal',
+  significance: 'small',
   exec: function(){/*
     async function * nums() {
       yield 1;
@@ -897,6 +913,7 @@ exports.tests = [
 {
   name: 'array comprehensions',
   category: 'pre-strawman',
+  significance: 'medium',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
     return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
@@ -914,6 +931,7 @@ exports.tests = [
 {
   name: 'generator comprehensions',
   category: 'pre-strawman',
+  significance: 'medium',
   link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
   exec: function () {/*
     var iterator = (for (a of [1,2]) a + 4);
@@ -938,6 +956,7 @@ exports.tests = [
 {
   name: 'destructuring in comprehensions',
   category: 'pre-strawman',
+  significance: 'medium',
   link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
   exec: function () {/*
     return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
@@ -950,6 +969,7 @@ exports.tests = [
 {
   name: 'class properties',
   category: 'strawman',
+  significance: 'medium',
   link: 'https://gist.github.com/jeffmo/054df782c05639da2adb',
   exec: function () {/*
     class C {
@@ -966,6 +986,7 @@ exports.tests = [
 {
   name: 'Map.prototype.toJSON',
   category: 'strawman',
+  significance: 'tiny',
   link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
     var map = new Map();
@@ -981,6 +1002,7 @@ exports.tests = [
 {
   name: 'Reflect.Realm',
   category: 'pre-strawman',
+  significance: 'small',
   link: 'https://gist.github.com/dherman/7568885',
   exec: function () {/*
     var i, names =
@@ -1004,6 +1026,7 @@ exports.tests = [
 {
   name: 'Set.prototype.toJSON',
   category: 'strawman',
+  significance: 'tiny',
   link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
     var set = new Set();
@@ -1017,6 +1040,7 @@ exports.tests = [
 },
 {
   name: 'object rest properties',
+  significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   category: 'proposal',
   exec: function () {/*
@@ -1031,6 +1055,7 @@ exports.tests = [
 {
   name: 'object spread properties',
   category: 'proposal',
+  significance: 'medium',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
     var spread = {b: 2, c: 3};
@@ -1044,6 +1069,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.at',
+  significance: 'small',
   link: 'https://github.com/mathiasbynens/String.prototype.at',
   category: 'strawman',
   exec: function () {/*
@@ -1057,6 +1083,7 @@ exports.tests = [
 {
   name: 'String padding',
   category: 'strawman',
+  significance: 'small',
   link: 'https://github.com/ljharb/proposal-string-pad-left-right',
   subtests: {
     'String.prototype.padLeft' : {
@@ -1086,6 +1113,7 @@ exports.tests = [
 {
   name: 'RegExp.escape',
   category: 'strawman',
+  significance: 'small',
   link: 'https://github.com/benjamingr/RexExp.escape',
   exec: function(){/*
     return RegExp.escape('Hello, \\^$*+?.()|[]{}!') === 'Hello, \\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!';
@@ -1098,6 +1126,7 @@ exports.tests = [
 {
   name: 'String trimming',
   category: 'candidate',
+  significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
   subtests: {
     'String.prototype.trimLeft': {
@@ -1105,29 +1134,13 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
       res: {
-        ie10: false,
-        ie11: false,
-        edge: true,
-        firefox31: true,
-        firefox32: true,
-        firefox34: true,
-        firefox35: true,
-        firefox39: true,
-        chrome30: true,
-        chrome33: true,
-        chrome34: true,
-        chrome35: true,
-        chrome37: true,
-        chrome38: true,
-        chrome39: true,
-        chrome40: true,
-        chrome41: true,
-        chrome42: true,
-        chrome43: true,
-        node: true,
-        iojs: true,
-        webkit: true,
-        es7shim: true,
+        edge:       true,
+        firefox31:  true,
+        chrome30:   true,
+        node:       true,
+        iojs:       true,
+        webkit:     true,
+        es7shim:    true,
       }
     },
     'String.prototype.trimRight': {
@@ -1135,38 +1148,69 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
       res: {
-        ie10: false,
-        ie11: false,
-        edge: true,
-        firefox31: true,
-        firefox32: true,
-        firefox34: true,
-        firefox35: true,
-        firefox39: true,
-        chrome30: true,
-        chrome33: true,
-        chrome34: true,
-        chrome35: true,
-        chrome37: true,
-        chrome38: true,
-        chrome39: true,
-        chrome40: true,
-        chrome41: true,
-        chrome42: true,
-        chrome43: true,
-        node: true,
-        iojs: true,
-        webkit: true,
-        es7shim: true,
+        edge:       true,
+        firefox31:  true,
+        chrome30:   true,
+        node:       true,
+        iojs:       true,
+        webkit:     true,
+        es7shim:    true,
       }
     }
+  }
+},
+{
+  name: 'generator functions can\'t be used with "new"',
+  category: 'errata',
+  significance: 'tiny',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction',
+  exec: function(){/*
+    function * generator() {
+      yield 3;
+    }
+    try {
+      new generator();
+    } catch(e) {
+      return true;
+    }
+  */},
+  res: {
+  }
+},
+{
+  name: 'strict fn w/ non-strict non-simple params is error',
+  category: 'errata',
+  significance: 'tiny',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists',
+  exec: function(){/*
+    function foo(...a){}
+    try {
+      Function("function bar(...a){'use strict';}")();
+    } catch(e) {
+      return true;
+    }
+  */},
+  res: {
+  }
+},
+{
+  name: 'nested rest destructuring',
+  category: 'errata',
+  significance: 'tiny',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
+  exec: function(){/*
+    var [x, ...[y, ...z]] = [1,2,3,4];
+    return x === 1 && y === 2 && z + '' === '3,4';
+  */},
+  res: {
+    babel:       true,
   }
 },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman', 'pre-strawman'].indexOf(e.category);
+  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman', 'pre-strawman', 'errata'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES7 category!');
   }

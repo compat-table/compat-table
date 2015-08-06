@@ -67,6 +67,11 @@
       <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
       <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
       <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
+      <br>
+      <span><span style="opacity:0.2;font-size:3px;">&#x2B24;</span> Minor difference (1 point)</span>
+      <span><span style="opacity:0.2;font-size:6px;">&#x2B24;</span> Useful feature (2 point)</span>
+      <span><span style="opacity:0.2;font-size:9px;">&#x2B24;</span> Significant feature (4 points)</span>
+      <span><span style="opacity:0.2;font-size:14px;">&#x2B24;</span> Landmark feature (8 points)</span>
     </div>
 
     <table id="table-wrapper">
@@ -116,7 +121,7 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="28">Candidate</td>
 </tr>
-<tr significance="1"><td id="exponentiation_(**)_operator"><span><a class="anchor" href="#exponentiation_(**)_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">exponentiation (**) operator</a></span><script data-source="
+<tr significance="0.25"><td id="exponentiation_(**)_operator"><span><a class="anchor" href="#exponentiation_(**)_operator">&#xA7;</a><a href="https://gist.github.com/rwaldron/ebe0f4d2d267370be882">exponentiation (**) operator</a></span><script data-source="
 return 2 ** 3 === 8;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
@@ -147,7 +152,7 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
+<tr significance="0.25"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
 return [1, 2, 3].includes(1)
   &amp;&amp; ![1, 2, 3].includes(4)
   &amp;&amp; ![1, 2, 3].includes(1, 1)
@@ -182,7 +187,7 @@ return [1, 2, 3].includes(1)
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="String_trimming"><span><a class="anchor" href="#String_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">String trimming</a></span></td>
+<tr class="supertest" significance="0.25"><td id="String_trimming"><span><a class="anchor" href="#String_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">String trimming</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
 <td data-browser="babel" class="tally" data-tally="0">0/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
@@ -274,7 +279,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 </tr>
 <tr class="category"><td colspan="28">Draft</td>
 </tr>
-<tr significance="1"><td id="function.sent"><span><a class="anchor" href="#function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
+<tr significance="0.25"><td id="function.sent"><span><a class="anchor" href="#function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
 var result;
 function* generator() {
   result = function.sent;
@@ -1929,7 +1934,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 </tr>
 <tr class="category"><td colspan="28">Proposal</td>
 </tr>
-<tr class="supertest" significance="1"><td id="trailing_commas_in_function_syntax"><span><a class="anchor" href="#trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf">trailing commas in function syntax</a></span></td>
+<tr class="supertest" significance="0.25"><td id="trailing_commas_in_function_syntax"><span><a class="anchor" href="#trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf">trailing commas in function syntax</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
@@ -2142,7 +2147,7 @@ return typeof StructType === &quot;function&quot;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="ArrayBuffer.transfer"><span><a class="anchor" href="#ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
+<tr significance="0.25"><td id="ArrayBuffer.transfer"><span><a class="anchor" href="#ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
 return typeof ArrayBuffer.transfer === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nreturn typeof ArrayBuffer.transfer === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ArrayBuffer.transfer === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
@@ -2173,7 +2178,7 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="class_decorators"><span><a class="anchor" href="#class_decorators">&#xA7;</a><a href="https://github.com/wycats/javascript-decorators">class decorators</a></span><script data-source="
+<tr significance="0.5"><td id="class_decorators"><span><a class="anchor" href="#class_decorators">&#xA7;</a><a href="https://github.com/wycats/javascript-decorators">class decorators</a></span><script data-source="
 class A {
   @nonconf
   get B() {}
@@ -2212,7 +2217,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="async_generators"><span><a class="anchor" href="#async_generators">&#xA7;</a><a href="https://github.com/jhusain/asyncgenerator">async generators</a></span><script data-source="
+<tr significance="0.25"><td id="async_generators"><span><a class="anchor" href="#async_generators">&#xA7;</a><a href="https://github.com/jhusain/asyncgenerator">async generators</a></span><script data-source="
 async function * nums() {
   yield 1;
   yield 2;
@@ -2255,7 +2260,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="object_rest_properties"><span><a class="anchor" href="#object_rest_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object rest properties</a></span><script data-source="
+<tr significance="0.25"><td id="object_rest_properties"><span><a class="anchor" href="#object_rest_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object rest properties</a></span><script data-source="
 var {a, ...rest} = {a: 1, b: 2, c: 3};
 return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp; rest.c === 3;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\nvar {a, ...rest} = {a: 1, b: 2, c: 3};\nreturn a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\nvar {a, ...rest} = {a: 1, b: 2, c: 3};\nreturn a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
@@ -2287,7 +2292,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="object_spread_properties"><span><a class="anchor" href="#object_spread_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object spread properties</a></span><script data-source="
+<tr significance="0.5"><td id="object_spread_properties"><span><a class="anchor" href="#object_spread_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object spread properties</a></span><script data-source="
 var spread = {b: 2, c: 3};
 var O = {a: 1, ...spread};
 return O.a + O.b + O.c === 6;
@@ -2322,7 +2327,7 @@ return O.a + O.b + O.c === 6;
 </tr>
 <tr class="category"><td colspan="28">Strawman</td>
 </tr>
-<tr class="supertest" significance="1"><td id="bind_(::)_operator"><span><a class="anchor" href="#bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
+<tr class="supertest" significance="0.5"><td id="bind_(::)_operator"><span><a class="anchor" href="#bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
@@ -2415,7 +2420,7 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
+<tr significance="0.25"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
 var object = {a: 1};
 var B = typeof Symbol === &apos;function&apos; ? Symbol(&apos;b&apos;) : &apos;b&apos;;
 object[B] = 2;
@@ -2454,7 +2459,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="class_properties"><span><a class="anchor" href="#class_properties">&#xA7;</a><a href="https://gist.github.com/jeffmo/054df782c05639da2adb">class properties</a></span><script data-source="
+<tr significance="0.5"><td id="class_properties"><span><a class="anchor" href="#class_properties">&#xA7;</a><a href="https://gist.github.com/jeffmo/054df782c05639da2adb">class properties</a></span><script data-source="
 class C {
   x = &apos;x&apos;;
   static y = &apos;y&apos;;
@@ -2489,7 +2494,7 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="Map.prototype.toJSON"><span><a class="anchor" href="#Map.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Map.prototype.toJSON</a></span><script data-source="
+<tr significance="0.125"><td id="Map.prototype.toJSON"><span><a class="anchor" href="#Map.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Map.prototype.toJSON</a></span><script data-source="
 var map = new Map();
 map.set(&apos;a&apos;, &apos;b&apos;);
 map.set(&apos;c&apos;, &apos;d&apos;);
@@ -2523,7 +2528,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="Set.prototype.toJSON"><span><a class="anchor" href="#Set.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Set.prototype.toJSON</a></span><script data-source="
+<tr significance="0.125"><td id="Set.prototype.toJSON"><span><a class="anchor" href="#Set.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Set.prototype.toJSON</a></span><script data-source="
 var set = new Set();
 [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
 return JSON.stringify(set) === &apos;[1,2,3]&apos;;
@@ -2556,7 +2561,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="String.prototype.at"><span><a class="anchor" href="#String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
+<tr significance="0.25"><td id="String.prototype.at"><span><a class="anchor" href="#String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");try{return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("77");return Function("asyncTestPassed","'use strict';"+"\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
@@ -2587,7 +2592,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="String_padding"><span><a class="anchor" href="#String_padding">&#xA7;</a><a href="https://github.com/ljharb/proposal-string-pad-left-right">String padding</a></span></td>
+<tr class="supertest" significance="0.25"><td id="String_padding"><span><a class="anchor" href="#String_padding">&#xA7;</a><a href="https://github.com/ljharb/proposal-string-pad-left-right">String padding</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
 <td data-browser="babel" class="tally" data-tally="0">0/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
@@ -2683,7 +2688,7 @@ return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
 <td class="no" data-browser="ie11">No</td>
 <td class="no unstable" data-browser="edge">No</td>
 </tr>
-<tr significance="1"><td id="RegExp.escape"><span><a class="anchor" href="#RegExp.escape">&#xA7;</a><a href="https://github.com/benjamingr/RexExp.escape">RegExp.escape</a></span><script data-source="
+<tr significance="0.25"><td id="RegExp.escape"><span><a class="anchor" href="#RegExp.escape">&#xA7;</a><a href="https://github.com/benjamingr/RexExp.escape">RegExp.escape</a></span><script data-source="
 return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
@@ -2716,7 +2721,7 @@ return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\
 </tr>
 <tr class="category"><td colspan="28">Pre-strawman</td>
 </tr>
-<tr significance="1" class="optional-feature"><td id="Object.values"><span><a class="anchor" href="#Object.values">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.values</a></span><script data-source="
+<tr significance="0.25" class="optional-feature"><td id="Object.values"><span><a class="anchor" href="#Object.values">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var v = Object.values(obj);
@@ -2750,7 +2755,7 @@ return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr significance="1" class="optional-feature"><td id="Object.entries"><span><a class="anchor" href="#Object.entries">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.entries</a></span><script data-source="
+<tr significance="0.25" class="optional-feature"><td id="Object.entries"><span><a class="anchor" href="#Object.entries">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.entries</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var e = Object.entries(obj);
@@ -3064,7 +3069,7 @@ return typeof Array.prototype.scatterPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr significance="1" class="optional-feature"><td id="array_comprehensions"><span><a class="anchor" href="#array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">array comprehensions</a></span><script data-source="
+<tr significance="0.5" class="optional-feature"><td id="array_comprehensions"><span><a class="anchor" href="#array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">array comprehensions</a></span><script data-source="
 return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
@@ -3095,7 +3100,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr significance="1" class="optional-feature"><td id="generator_comprehensions"><span><a class="anchor" href="#generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">generator comprehensions</a></span><script data-source="
+<tr significance="0.5" class="optional-feature"><td id="generator_comprehensions"><span><a class="anchor" href="#generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">generator comprehensions</a></span><script data-source="
 var iterator = (for (a of [1,2]) a + 4);
 var item = iterator.next();
 var passed = item.value === 5 &amp;&amp; item.done === false;
@@ -3133,7 +3138,7 @@ return passed;
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr significance="1" class="optional-feature"><td id="destructuring_in_comprehensions"><span><a class="anchor" href="#destructuring_in_comprehensions">&#xA7;</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980828">destructuring in comprehensions</a></span><script data-source="
+<tr significance="0.5" class="optional-feature"><td id="destructuring_in_comprehensions"><span><a class="anchor" href="#destructuring_in_comprehensions">&#xA7;</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980828">destructuring in comprehensions</a></span><script data-source="
 return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
@@ -3164,7 +3169,7 @@ return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&ap
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr significance="1" class="optional-feature"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
+<tr significance="0.25" class="optional-feature"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
   [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;,
   &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;];
@@ -3207,6 +3212,114 @@ return true;
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+</tr>
+<tr class="category"><td colspan="28">Errata</td>
+</tr>
+<tr significance="0.125"><td id="generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
+function * generator() {
+  yield 3;
+}
+try {
+  new generator();
+} catch(e) {
+  return true;
+}
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nfunction * generator() {\n  yield 3;\n}\ntry {\n  new generator();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator() {\n  yield 3;\n}\ntry {\n  new generator();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no unstable" data-browser="edge">No</td>
+</tr>
+<tr significance="0.125"><td id="strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">strict fn w/ non-strict non-simple params is error</a></span><script data-source="
+function foo(...a){}
+try {
+  Function(&quot;function bar(...a){&apos;use strict&apos;;}&quot;)();
+} catch(e) {
+  return true;
+}
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("98");try{return Function("asyncTestPassed","\nfunction foo(...a){}\ntry {\n  Function(\"function bar(...a){'use strict';}\")();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("98");return Function("asyncTestPassed","'use strict';"+"\nfunction foo(...a){}\ntry {\n  Function(\"function bar(...a){'use strict';}\")();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no unstable" data-browser="edge">No</td>
+</tr>
+<tr significance="0.125"><td id="nested_rest_destructuring"><span><a class="anchor" href="#nested_rest_destructuring">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring</a></span><script data-source="
+var [x, ...[y, ...z]] = [1,2,3,4];
+return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no unstable" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no" data-browser="chrome41">No</td>
+<td class="no unstable" data-browser="chrome42">No</td>
+<td class="no unstable" data-browser="chrome43">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no unstable" data-browser="edge">No</td>
 </tr>
 </tbody>
     </table>

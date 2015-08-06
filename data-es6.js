@@ -608,6 +608,19 @@ exports.tests = [
         chrome45:    true,
       },
     },
+    'correct precedence': {
+      exec: function(){/*
+        return (() => {
+          try { Function("0 || () => 2")(); } catch(e) { return true; }
+        })();
+      */},
+      res: {
+        closure:     true,
+        tr:          true,
+        firefox23:   true,
+        webkit:      true,
+      },
+    },
     'no "prototype" property': {
       exec: function(){/*
         var a = () => 5;
@@ -10367,15 +10380,6 @@ exports.tests = [
     },
     'built-in prototypes are not instances': {
       exec: function(){/*
-        try {
-          Boolean.prototype.valueOf(); return false;
-        } catch(e) {}
-        try {
-          Number.prototype.valueOf(); return false;
-        } catch(e) {}
-        try {
-          String.prototype.toString(); return false;
-        } catch(e) {}
         try {
           RegExp.prototype.source; return false;
         } catch(e) {}
