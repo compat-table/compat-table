@@ -187,7 +187,7 @@
 <th class="platform rhino17 engine obsolete" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node 0.12.0">Node</abbr><a href="#harmony-flag-note"><sup>[6]</sup></a></a></th>
-<th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 2.5.0">io.js</abbr><a href="#harmony-flag-note"><sup>[6]</sup></a></a></th>
+<th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 3.0.0">io.js</abbr><a href="#harmony-flag-note"><sup>[6]</sup></a></a></th>
 <th class="platform ejs engine unstable" data-browser="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
 <th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
@@ -1003,7 +1003,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/5</td>
 <td data-browser="node" class="tally" data-tally="0">0/5</td>
-<td data-browser="iojs" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs" class="tally" data-tally="0" data-flagged-tally="0.8">0/5</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
@@ -1076,7 +1076,7 @@ return (function (foo, ...args) {
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1147,7 +1147,7 @@ return function(a, ...b){}.length === 1 &amp;&amp; function(...c){}.length === 0
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1226,7 +1226,7 @@ return (function (foo, ...args) {
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1376,7 +1376,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1444,7 +1444,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/12</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/12</td>
 <td data-browser="node" class="tally" data-tally="0">0/12</td>
-<td data-browser="iojs" class="tally" data-tally="0">0/12</td>
+<td data-browser="iojs" class="tally" data-tally="0" data-flagged-tally="0.5">0/12</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/12</td>
 <td data-browser="ios8" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">2/12</td>
@@ -1515,7 +1515,7 @@ return Math.max(...[1, 2, 3]) === 3
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -1657,7 +1657,7 @@ return Math.max(...&quot;1234&quot;) === 4;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1799,7 +1799,7 @@ return Array(...&quot;&#x20BB7;&#x20BB6;&quot;)[0] === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -1942,7 +1942,7 @@ return Math.max(...iterable) === 3;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2086,7 +2086,7 @@ return Math.max(...iterable) === 3;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2230,7 +2230,7 @@ return Math.max(...Object.create(iterable)) === 3;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no flagged" data-browser="iojs">Flag</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2370,7 +2370,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/6</td>
 <td data-browser="node" class="tally" data-tally="0">0/6</td>
-<td data-browser="iojs" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
+<td data-browser="iojs" class="tally" data-tally="1">6/6</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/6</td>
 <td data-browser="ios8" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
@@ -2442,7 +2442,7 @@ return ({ [x]: 1 }).y === 1;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
@@ -2728,7 +2728,7 @@ return ({ [x](){ return 1 } }).y() === 1;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -2806,7 +2806,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -6856,7 +6856,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}&quot;,
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
-<td data-browser="iojs" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
@@ -6927,7 +6927,7 @@ return &apos;\u{1d306}&apos; == &apos;\ud834\udf06&apos;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -9808,7 +9808,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/23</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/23</td>
 <td data-browser="node" class="tally" data-tally="0">0/23</td>
-<td data-browser="iojs" class="tally" data-tally="0" data-flagged-tally="0.7391304347826086">0/23</td>
+<td data-browser="iojs" class="tally" data-tally="0" data-flagged-tally="0.9565217391304348">0/23</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/23</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/23</td>
@@ -10400,7 +10400,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10551,7 +10551,7 @@ return typeof C.method === &quot;function&quot;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10705,7 +10705,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -10859,7 +10859,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -11012,7 +11012,7 @@ try {
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -12230,7 +12230,7 @@ return obj.qux() === &quot;barley&quot;;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/22</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/22</td>
 <td data-browser="node" class="tally" data-tally="0" data-flagged-tally="0.5909090909090909">0/22</td>
-<td data-browser="iojs" class="tally" data-tally="0.6818181818181818" style="background-color:hsl(81,56%,50%)" data-flagged-tally="0.7272727272727273">15/22</td>
+<td data-browser="iojs" class="tally" data-tally="0.7272727272727273" style="background-color:hsl(87,54%,50%)" data-flagged-tally="0.8181818181818182">16/22</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">11/22</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/22</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/22</td>
@@ -13861,7 +13861,7 @@ return passed;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -14028,7 +14028,7 @@ return passed;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -25024,7 +25024,7 @@ return Reflect.construct(function(a, b, c) {
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/7</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/7</td>
 <td data-browser="node" class="tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
-<td data-browser="iojs" class="tally" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td data-browser="iojs" class="tally" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">6/7</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/7</td>
 <td data-browser="ios8" class="tally" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">3/7</td>
@@ -25363,7 +25363,7 @@ function check() {
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -25533,7 +25533,7 @@ function check() {
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -28292,7 +28292,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="phantom" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="node" class="tally" data-tally="0.11764705882352941" style="background-color:hsl(14,80%,50%)">2/17</td>
-<td data-browser="iojs" class="tally" data-tally="0.23529411764705882" style="background-color:hsl(28,75%,50%)" data-flagged-tally="0.47058823529411764">4/17</td>
+<td data-browser="iojs" class="tally" data-tally="0.29411764705882354" style="background-color:hsl(35,73%,50%)" data-flagged-tally="0.5294117647058824">5/17</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="ios7" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="ios8" class="tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
@@ -29541,7 +29541,7 @@ return descriptor.enumerable   === false &amp;&amp;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -42611,7 +42611,7 @@ return ownKeysCalled === 2;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="phantom" class="tally" data-tally="0">0/10</td>
 <td data-browser="node" class="tally" data-tally="0">0/10</td>
-<td data-browser="iojs" class="tally" data-tally="0.3" style="background-color:hsl(36,72%,50%)">3/10</td>
+<td data-browser="iojs" class="tally" data-tally="1">10/10</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0">0/10</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/10</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/10</td>
@@ -42682,7 +42682,7 @@ return Object.getPrototypeOf(&apos;a&apos;).constructor === String;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -42897,7 +42897,7 @@ return Object.seal(&apos;a&apos;) === &apos;a&apos;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -42968,7 +42968,7 @@ return Object.freeze(&apos;a&apos;) === &apos;a&apos;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -43039,7 +43039,7 @@ return Object.preventExtensions(&apos;a&apos;) === &apos;a&apos;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -43110,7 +43110,7 @@ return Object.isSealed(&apos;a&apos;) === true;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -43181,7 +43181,7 @@ return Object.isFrozen(&apos;a&apos;) === true;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -43252,7 +43252,7 @@ return Object.isExtensible(&apos;a&apos;) === false;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -43994,7 +43994,7 @@ return result === &quot;012349 DB-1AC&quot;;
 <td data-browser="rhino17" class="obsolete tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
 <td data-browser="phantom" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
 <td data-browser="node" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
-<td data-browser="iojs" class="tally" data-tally="0.4444444444444444" style="background-color:hsl(53,66%,50%)">4/9</td>
+<td data-browser="iojs" class="tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
 <td data-browser="ejs" class="unstable tally" data-tally="0.1111111111111111" style="background-color:hsl(13,81%,50%)">1/9</td>
 <td data-browser="ios7" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
 <td data-browser="ios8" class="tally" data-tally="0.2222222222222222" style="background-color:hsl(26,76%,50%)">2/9</td>
@@ -44662,7 +44662,7 @@ return false;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="node">No</td>
-<td class="no" data-browser="iojs">No</td>
+<td class="yes" data-browser="iojs">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
@@ -45038,7 +45038,7 @@ return foo() === 2 &amp;&amp; bar() === 3 &amp;&amp; baz() === 4 &amp;&amp; qux(
 <td data-browser="rhino17" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.2">1/5</td>
 <td data-browser="phantom" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">1/5</td>
 <td data-browser="node" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0.2">1/5</td>
-<td data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0.8">4/5</td>
+<td data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">5/5</td>
 <td data-browser="ejs" class="unstable not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/5</td>
 <td data-browser="ios7" class="tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">1/5</td>
 <td data-browser="ios8" class="tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
@@ -45261,7 +45261,7 @@ return !({ [a] : [] } instanceof Array);
 <td class="no obsolete not-applicable" data-browser="rhino17" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no not-applicable" data-browser="node" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="yes" data-browser="ios8">Yes</td>
