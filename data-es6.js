@@ -1327,6 +1327,39 @@ exports.tests = [
         webkit:      true,
       },
     },
+    'with sparse arrays, in function calls': {
+      exec: function () {/*
+        var a = Array(...[,,]);
+        return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        edge:        true,
+        firefox27:   true,
+        safari71_8:  true,
+        webkit:      true,
+        chrome44:    flag,
+      },
+    },
+    'with sparse arrays, in array literals': {
+      exec: function() {/*
+        var a = [...[,,]];
+        return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        firefox16:   true,
+        safari71_8:  true,
+        webkit:      true,
+      },
+    },
     'with strings, in function calls': {
       exec: function() {/*
        return Math.max(..."1234") === 4;
@@ -2442,7 +2475,7 @@ exports.tests = [
         for (var item of arr)
           return item === 5;
       */},
-      res: {
+      res: (temp.basicForOf = {
         tr:          true,
         babel:       true,
         typescript:  true,
@@ -2457,7 +2490,17 @@ exports.tests = [
         webkit:      true,
         node:        true,
         iojs:        true,
-      },
+      }),
+    },
+    'with sparse arrays': {
+      exec: function () {/*
+        var arr = [,,];
+        var count = 0;
+        for (var item of arr)
+          count += (item === undefined);
+        return count === 2;
+      */},
+      res: temp.basicForOf,
     },
     'with strings': {
       exec: function () {/*
@@ -2822,7 +2865,7 @@ exports.tests = [
         passed    &= item.value === undefined && item.done === true;
         return passed;
       */},
-      res: {
+      res: (temp.yieldArrays = {
         tr:          true,
         babel:       true,
         closure:     true,
@@ -2833,7 +2876,22 @@ exports.tests = [
         iojs:        true,
         ejs:         true,
         edge:        flag,
-      },
+      }),
+    },
+    'yield *, sparse arrays': {
+      exec: function () {/*
+        var iterator = (function * generator() {
+          yield * [,,];
+        }());
+        var item = iterator.next();
+        var passed = item.value === undefined && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: temp.yieldArrays,
     },
     'yield *, strings': {
       exec: function () {/*
@@ -3365,6 +3423,22 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         edge:        true,
+        firefox34:   true,
+        chrome41:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
+    'toString conversion': {
+      exec: function () {/*
+        var a = {
+          toString: function() { return "foo"; },
+          valueOf: function() { return "bar"; },
+        };
+        return `${a}` === "foo";
+      */},
+      res: {
+        ejs:         true,
         firefox34:   true,
         chrome41:    true,
         webkit:      true,
@@ -6480,6 +6554,13 @@ exports.tests = [
         webkit:      true,
       }),
     },
+    'with sparse arrays': {
+      exec: function(){/*
+        var [a, b] = [,,];
+        return a === undefined && b === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
     'with strings': {
       exec: function(){/*
         var [a, b, c] = "ab";
@@ -6801,6 +6882,26 @@ exports.tests = [
         webkit:      true,
       },
     },
+    'in parameters, \'arguments\' interaction': {
+      exec: function(){/*
+        return (function({a, x:b, y:e}, [c, d]) {
+          return arguments[0].a === 1 && arguments[0].x === 2
+            && !("y" in arguments[0]) && arguments[1] + '' === "3,4";
+        }({a:1, x:2}, [3, 4]));
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+      },
+    },
     'in parameters, new Function() support': {
       exec: function(){/*
         return new Function("{a, x:b, y:e}","[c, d]",
@@ -6892,6 +6993,28 @@ exports.tests = [
         babel:        true,
         typescript:   true,
       },
+    },
+    'empty patterns': {
+      exec: function(){/*
+        [] = [1,2];
+        ({} = {a:1,b:2});
+        return true;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        safari71_8:  false,
+      }),
+    },
+    'empty patterns in parameters': {
+      exec: function(){/*
+        return function ([],{}){
+          return arguments[0] + '' === "3,4" && arguments[1].x === "foo";
+        }([3,4],{x:"foo"});
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        safari71_8:  false,
+        jsx:         false,
+        typescript:  false,
+      }),
     },
     'defaults': {
       exec: function(){/*
