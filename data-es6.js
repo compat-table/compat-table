@@ -150,8 +150,8 @@ exports.browsers = {
   },
   firefox31: {
     full: 'Firefox',
-    short: 'FF 31<br>ESR',
-    obsolete: false // ESR (EOL at Aug 2015)
+    short: 'FF 31',
+    obsolete: true 
   },
   firefox32: {
     full: 'Firefox',
@@ -185,8 +185,8 @@ exports.browsers = {
   },
   firefox38: {
     full: 'Firefox',
-    short: 'FF 38',
-    obsolete: true,
+    short: 'FF 38<br> ESR',
+    obsolete: false, // ESR (EOL at Mar 2016)
   },
   firefox39: {
     full: 'Firefox',
