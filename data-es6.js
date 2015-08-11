@@ -1507,6 +1507,27 @@ exports.tests = [
         webkit:      true,
       },
     },
+    'spreading non-iterables is a runtime error': {
+      exec: function () {/*
+        try {
+          Math.max(...2);
+        } catch(e) {
+          return Math.max(...[1, 2, 3]) === 3;
+        }
+      */},
+      res: {
+        tr:          true,
+        typescript:  true,
+        es6tr:       true,
+        ejs:         true,
+        edge:        true,
+        firefox27:   true,
+        safari71_8:  true,
+        webkit:      true,
+        chrome44:    flag,
+        iojs:        flag,
+      },
+    },
   }
 },
 {
@@ -3016,6 +3037,32 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
+        firefox36:   true,
+        chrome35:    flag,
+        chrome39:    true,
+        node:        flag,
+        iojs:        true,
+        edge:        flag,
+      },
+    },
+    'yield * on non-iterables is a runtime error': {
+      exec: function () {/*
+        var iterator = (function * generator() {
+          yield * [5];
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        iterator = (function * generator() {
+          yield * 5;
+        }());
+        try {
+          iterator.next();
+        } catch (e) {
+          return passed;
+        }
+      */},
+      res: {
+        tr:          true,
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
