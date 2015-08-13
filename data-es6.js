@@ -1572,6 +1572,7 @@ exports.tests = [
         edge:        flag,
         chrome41:    strict,
         iojs:        strict,
+        webkit:      true,
       },
     },
     'class expression': {
@@ -3556,11 +3557,25 @@ exports.tests = [
   subtests: {
     '"y" flag': {
       exec: function () {/*
-        var re = new RegExp('\\w');
-        var re2 = new RegExp('\\w', 'y');
+        var re = new RegExp('\\w', 'y');
         re.exec('xy');
-        re2.exec('xy');
-        return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+        return (re.exec('xy')[0] === 'y');
+      */},
+      res: {
+        firefox11:   true,
+        chrome39:    flag,
+        chrome40:    false,
+        ejs:         true,
+        edge:        flag,
+        typescript:  typescript.fallthrough
+      },
+    },
+    '"y" flag, lastIndex': {
+      exec: function () {/*
+        var re = new RegExp('yy', 'y');
+        re.lastIndex = 3;
+        var result = re.exec('xxxyyxx')[0];
+        return result === 'yy' && re.lastIndex === 5;
       */},
       res: {
         firefox11:   true,
@@ -3574,6 +3589,17 @@ exports.tests = [
     '"u" flag': {
       exec: function() {/*
         return "𠮷".match(/^.$/u)[0].length === 2;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  typescript.fallthrough,
+        edge:        true,
+      },
+    },
+    '"u" flag, Unicode code point escapes': {
+      exec: function() {/*
+        return "𝌆".match(/\u{1d306}/u)[0].length === 2;
       */},
       res: {
         tr:          true,
