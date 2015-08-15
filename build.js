@@ -20,7 +20,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-var assign     = require('object-assign');
+require('object.assign').shim();
 
 var fs         = require('fs');
 var path       = require('path');
@@ -76,7 +76,7 @@ process.nextTick(function () {
       compiler: String,
     },
   ].forEach(function(e){
-    assign(es5, e);
+    Object.assign(es5, e);
     es5.browsers = {};
     es5.skeleton_file = 'es5/compiler-skeleton.html';
     handle(es5);
@@ -248,7 +248,7 @@ process.nextTick(function () {
       },
     },
   ].forEach(function(e){
-    assign(es6, e);
+    Object.assign(es6, e);
     es6.browsers = {};
     es6.skeleton_file = 'es6/compiler-skeleton.html';
     handle(es6);
@@ -272,7 +272,7 @@ process.nextTick(function () {
       },
     },
   ].forEach(function(e){
-    assign(es7, e);
+    Object.assign(es7, e);
     es7.browsers = {};
     es7.skeleton_file = 'es7/compiler-skeleton.html';
     handle(es7);

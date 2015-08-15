@@ -1,6 +1,6 @@
 // exports browsers and tests
 
-Object.assign = require('object-assign');
+require('object.assign').shim();
 
 var temp = {};
 var flag = "flagged";
@@ -2329,11 +2329,11 @@ exports.tests = [
         if (!this) return false;
         var passed = f() === 1;
         function f() { return 1; }
-        
+
         passed &= typeof g === 'undefined';
         { function g() { return 1; } }
         passed &= g() === 1;
-        
+
         passed &= h() === 2;
         { function h() { return 1; } }
         function h() { return 2; }
@@ -2351,7 +2351,7 @@ exports.tests = [
       exec: function() {/*
         // Note: only available outside of strict mode.
         if (!this) return false;
-        
+
         label: function foo() { return 2; }
         return foo() === 2;
       */},
@@ -2372,7 +2372,7 @@ exports.tests = [
       exec: function() {/*
         // Note: only available outside of strict mode.
         if (!this) return false;
-        
+
         if(true) function foo() { return 2; }
         if(false) {} else function bar() { return 3; }
         if(true) function baz() { return 4; } else {}
