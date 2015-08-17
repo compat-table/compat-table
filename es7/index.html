@@ -113,7 +113,7 @@
 <th class="platform iojs engine" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js 1.0.0">io.js</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
-<th class="platform edge desktop unstable" data-browser="edge"><a href="#edge" class="browser-name"><abbr title="Internet Explorer, Microsoft Edge">Edge</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
+<th class="platform edge desktop" data-browser="edge"><a href="#edge" class="browser-name"><abbr title="Internet Explorer, Microsoft Edge">Edge</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
 </tr>
 
       </thead>
@@ -150,7 +150,7 @@ return 2 ** 3 === 8;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="Array.prototype.includes"><span><a class="anchor" href="#Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes/blob/master/spec.md">Array.prototype.includes</a></span><script data-source="
 return [1, 2, 3].includes(1)
@@ -185,7 +185,7 @@ return [1, 2, 3].includes(1)
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="String_trimming"><span><a class="anchor" href="#String_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">String trimming</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
@@ -213,7 +213,7 @@ return [1, 2, 3].includes(1)
 <td data-browser="iojs" class="tally" data-tally="1">2/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge" class="unstable tally" data-tally="1">2/2</td>
+<td data-browser="edge" class="tally" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="String_trimming_String.prototype.trimLeft"><td><span><a class="anchor" href="#String_trimming_String.prototype.trimLeft">&#xA7;</a>String.prototype.trimLeft</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
@@ -244,7 +244,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes unstable" data-browser="edge">Yes</td>
+<td class="yes" data-browser="edge">Yes</td>
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="String_trimming_String.prototype.trimRight"><td><span><a class="anchor" href="#String_trimming_String.prototype.trimRight">&#xA7;</a>String.prototype.trimRight</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
@@ -275,7 +275,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes unstable" data-browser="edge">Yes</td>
+<td class="yes" data-browser="edge">Yes</td>
 </tr>
 <tr class="category"><td colspan="28">Draft</td>
 </tr>
@@ -314,7 +314,7 @@ return result === &apos;tromple&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="1"><td id="Object.observe"><span><a class="anchor" href="#Object.observe">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe">Object.observe</a></span><script data-source="
 var obj = {x: 1};
@@ -352,7 +352,7 @@ obj.x = 2;
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="SIMD_(Single_Instruction,_Multiple_Data)"><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)">&#xA7;</a><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD (Single Instruction, Multiple Data)</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/50</td>
@@ -380,7 +380,7 @@ obj.x = 2;
 <td data-browser="iojs" class="tally" data-tally="0">0/50</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/50</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/50</td>
-<td data-browser="edge" class="unstable tally" data-tally="0">0/50</td>
+<td data-browser="edge" class="tally" data-tally="0">0/50</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_basic_support"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof SIMD !== &apos;undefined&apos;;
@@ -411,7 +411,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Float32x4"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Float32x4">&#xA7;</a>Float32x4</span><script data-source="
 return typeof SIMD.Float32x4 === &apos;function&apos;;
@@ -442,7 +442,7 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Float64x2"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Float64x2">&#xA7;</a>Float64x2</span><script data-source="
 return typeof SIMD.Float64x2 === &apos;function&apos;;
@@ -473,7 +473,7 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Int32x4"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Int32x4">&#xA7;</a>Int32x4</span><script data-source="
 return typeof SIMD.Int32x4 === &apos;function&apos;;
@@ -504,7 +504,7 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Int16x8"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Int16x8">&#xA7;</a>Int16x8</span><script data-source="
 return typeof SIMD.Int16x8 === &apos;function&apos;;
@@ -535,7 +535,7 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Int8x16"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Int8x16">&#xA7;</a>Int8x16</span><script data-source="
 return typeof SIMD.Int8x16 === &apos;function&apos;;
@@ -566,7 +566,7 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Bool32x4"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Bool32x4">&#xA7;</a>Bool32x4</span><script data-source="
 return typeof SIMD.Bool32x4 === &apos;function&apos;;
@@ -597,7 +597,7 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Bool16x8"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Bool16x8">&#xA7;</a>Bool16x8</span><script data-source="
 return typeof SIMD.Bool16x8 === &apos;function&apos;;
@@ -628,7 +628,7 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Bool8x16"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Bool8x16">&#xA7;</a>Bool8x16</span><script data-source="
 return typeof SIMD.Bool8x16 === &apos;function&apos;;
@@ -659,7 +659,7 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.abs"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.abs">&#xA7;</a>SIMD.%type%.abs</span><script data-source="
 return typeof SIMD.Float32x4.abs === &apos;function&apos;;
@@ -690,7 +690,7 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.add"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.add">&#xA7;</a>SIMD.%type%.add</span><script data-source="
 return typeof SIMD.Float32x4.add === &apos;function&apos;;
@@ -721,7 +721,7 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.addSaturate"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.addSaturate">&#xA7;</a>SIMD.%integerType%.addSaturate</span><script data-source="
 return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
@@ -752,7 +752,7 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.and"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.and">&#xA7;</a>SIMD.%booleanType%.and</span><script data-source="
 return typeof SIMD.Bool16x8.and === &apos;function&apos;;
@@ -783,7 +783,7 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.anyTrue"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.anyTrue">&#xA7;</a>SIMD.%booleanType%.anyTrue</span><script data-source="
 return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
@@ -814,7 +814,7 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.allTrue"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.allTrue">&#xA7;</a>SIMD.%booleanType%.allTrue</span><script data-source="
 return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
@@ -845,7 +845,7 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.check"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.check">&#xA7;</a>SIMD.%type%.check</span><script data-source="
 return typeof SIMD.Float32x4.check === &apos;function&apos;;
@@ -876,7 +876,7 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.equal"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.equal">&#xA7;</a>SIMD.%type%.equal</span><script data-source="
 return typeof SIMD.Float32x4.equal === &apos;function&apos;;
@@ -907,7 +907,7 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.extractLane"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.extractLane">&#xA7;</a>SIMD.%type%.extractLane</span><script data-source="
 return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
@@ -938,7 +938,7 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThan"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThan">&#xA7;</a>SIMD.%type%.greaterThan</span><script data-source="
 return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
@@ -969,7 +969,7 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThanOrEqual"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThanOrEqual">&#xA7;</a>SIMD.%type%.greaterThanOrEqual</span><script data-source="
 return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
@@ -1000,7 +1000,7 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThan"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThan">&#xA7;</a>SIMD.%type%.lessThan</span><script data-source="
 return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
@@ -1031,7 +1031,7 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThanOrEqual"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThanOrEqual">&#xA7;</a>SIMD.%type%.lessThanOrEqual</span><script data-source="
 return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
@@ -1062,7 +1062,7 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.mul"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.mul">&#xA7;</a>SIMD.%type%.mul</span><script data-source="
 return typeof SIMD.Float32x4.mul === &apos;function&apos;;
@@ -1093,7 +1093,7 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.div"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.div">&#xA7;</a>SIMD.%type%.div</span><script data-source="
 return typeof SIMD.Float32x4.div === &apos;function&apos;;
@@ -1124,7 +1124,7 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.max"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.max">&#xA7;</a>SIMD.%type%.max</span><script data-source="
 return typeof SIMD.Float32x4.max === &apos;function&apos;;
@@ -1155,7 +1155,7 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.maxNum"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.maxNum">&#xA7;</a>SIMD.%type%.maxNum</span><script data-source="
 return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
@@ -1186,7 +1186,7 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.min"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.min">&#xA7;</a>SIMD.%type%.min</span><script data-source="
 return typeof SIMD.Float32x4.min === &apos;function&apos;;
@@ -1217,7 +1217,7 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.minNum"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.minNum">&#xA7;</a>SIMD.%type%.minNum</span><script data-source="
 return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
@@ -1248,7 +1248,7 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.neg"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.neg">&#xA7;</a>SIMD.%type%.neg</span><script data-source="
 return typeof SIMD.Float32x4.neg === &apos;function&apos;;
@@ -1279,7 +1279,7 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.not"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.not">&#xA7;</a>SIMD.%booleanType%.not</span><script data-source="
 return typeof SIMD.Bool16x8.not === &apos;function&apos;;
@@ -1310,7 +1310,7 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.notEqual"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.notEqual">&#xA7;</a>SIMD.%type%.notEqual</span><script data-source="
 return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
@@ -1341,7 +1341,7 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalApproximation"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalApproximation">&#xA7;</a>SIMD.%type%.reciprocalApproximation</span><script data-source="
 return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
@@ -1372,7 +1372,7 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalSqrtApproximation"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalSqrtApproximation">&#xA7;</a>SIMD.%type%.reciprocalSqrtApproximation</span><script data-source="
 return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos;;
@@ -1403,7 +1403,7 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.replaceLane"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.replaceLane">&#xA7;</a>SIMD.%type%.replaceLane</span><script data-source="
 return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
@@ -1434,7 +1434,7 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.select"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.select">&#xA7;</a>SIMD.%type%.select</span><script data-source="
 return typeof SIMD.Float32x4.select === &apos;function&apos;;
@@ -1465,7 +1465,7 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.selectBits"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.selectBits">&#xA7;</a>SIMD.%integerType%.selectBits</span><script data-source="
 return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
@@ -1496,7 +1496,7 @@ return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftLeftByScalar"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftLeftByScalar">&#xA7;</a>SIMD.%integerType%.shiftLeftByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
@@ -1527,7 +1527,7 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightLogicalByScalar"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightLogicalByScalar">&#xA7;</a>SIMD.%integerType%.shiftRightLogicalByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
@@ -1558,7 +1558,7 @@ return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightArithmeticByScalar"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightArithmeticByScalar">&#xA7;</a>SIMD.%integerType%.shiftRightArithmeticByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;;
@@ -1589,7 +1589,7 @@ return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.shuffle"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.shuffle">&#xA7;</a>SIMD.%type%.shuffle</span><script data-source="
 return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
@@ -1620,7 +1620,7 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.splat"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.splat">&#xA7;</a>SIMD.%type%.splat</span><script data-source="
 return typeof SIMD.Float32x4.splat === &apos;function&apos;;
@@ -1651,7 +1651,7 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sqrt"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sqrt">&#xA7;</a>SIMD.%type%.sqrt</span><script data-source="
 return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
@@ -1682,7 +1682,7 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store">&#xA7;</a>SIMD.%type%.store</span><script data-source="
 return typeof SIMD.Float32x4.store === &apos;function&apos;;
@@ -1713,7 +1713,7 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store1"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store1">&#xA7;</a>SIMD.%type%.store1</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
@@ -1744,7 +1744,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store2"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store2">&#xA7;</a>SIMD.%type%.store2</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
@@ -1775,7 +1775,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store3"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store3">&#xA7;</a>SIMD.%type%.store3</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
@@ -1806,7 +1806,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sub"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sub">&#xA7;</a>SIMD.%type%.sub</span><script data-source="
 return typeof SIMD.Float32x4.sub === &apos;function&apos;;
@@ -1837,7 +1837,7 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.subSaturate"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.subSaturate">&#xA7;</a>SIMD.%integerType%.subSaturate</span><script data-source="
 return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
@@ -1868,7 +1868,7 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.swizzle"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.swizzle">&#xA7;</a>SIMD.%type%.swizzle</span><script data-source="
 return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
@@ -1899,7 +1899,7 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.xor"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.xor">&#xA7;</a>SIMD.%booleanType%.xor</span><script data-source="
 return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
@@ -1930,7 +1930,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="category"><td colspan="28">Proposal</td>
 </tr>
@@ -1960,7 +1960,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="edge" class="tally" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="trailing_commas_in_function_syntax_in_parameter_lists"><td><span><a class="anchor" href="#trailing_commas_in_function_syntax_in_parameter_lists">&#xA7;</a>in parameter lists</span><script data-source="
 return typeof function f( a, b, ){} === &apos;function&apos;;
@@ -1991,7 +1991,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="trailing_commas_in_function_syntax_in_argument_lists"><td><span><a class="anchor" href="#trailing_commas_in_function_syntax_in_argument_lists">&#xA7;</a>in argument lists</span><script data-source="
 return Math.min(1,2,3,) === 1;
@@ -2022,7 +2022,7 @@ return Math.min(1,2,3,) === 1;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="async_functions"><span><a class="anchor" href="#async_functions">&#xA7;</a><a href="https://github.com/lukehoban/ecmascript-asyncawait">async functions</a></span></td>
 <td data-browser="tr" class="tally" data-tally="1">2/2</td>
@@ -2050,7 +2050,7 @@ return Math.min(1,2,3,) === 1;
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="edge" class="tally" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="async_functions_basic_support"><td><span><a class="anchor" href="#async_functions_basic_support">&#xA7;</a>basic support</span><script data-source="
 return (async function(){
@@ -2083,7 +2083,7 @@ return (async function(){
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="async_functions_arrow_async_functions"><td><span><a class="anchor" href="#async_functions_arrow_async_functions">&#xA7;</a>arrow async functions</span><script data-source="
 return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
@@ -2114,7 +2114,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="1"><td id="typed_objects"><span><a class="anchor" href="#typed_objects">&#xA7;</a><a href="https://github.com/dslomov-chromium/typed-objects-es7">typed objects</a></span><script data-source="
 return typeof StructType === &quot;function&quot;;
@@ -2145,7 +2145,7 @@ return typeof StructType === &quot;function&quot;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="ArrayBuffer.transfer"><span><a class="anchor" href="#ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
 return typeof ArrayBuffer.transfer === &apos;function&apos;;
@@ -2176,7 +2176,7 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.5"><td id="class_decorators"><span><a class="anchor" href="#class_decorators">&#xA7;</a><a href="https://github.com/wycats/javascript-decorators">class decorators</a></span><script data-source="
 class A {
@@ -2215,7 +2215,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="async_generators"><span><a class="anchor" href="#async_generators">&#xA7;</a><a href="https://github.com/jhusain/asyncgenerator">async generators</a></span><script data-source="
 async function * nums() {
@@ -2258,7 +2258,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="object_rest_properties"><span><a class="anchor" href="#object_rest_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object rest properties</a></span><script data-source="
 var {a, ...rest} = {a: 1, b: 2, c: 3};
@@ -2290,7 +2290,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.5"><td id="object_spread_properties"><span><a class="anchor" href="#object_spread_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object spread properties</a></span><script data-source="
 var spread = {b: 2, c: 3};
@@ -2323,7 +2323,7 @@ return O.a + O.b + O.c === 6;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="category"><td colspan="28">Strawman</td>
 </tr>
@@ -2353,7 +2353,7 @@ return O.a + O.b + O.c === 6;
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="edge" class="tally" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_binary_form"><td><span><a class="anchor" href="#bind_(::)_operator_binary_form">&#xA7;</a>binary form</span><script data-source="
 function foo() { this.garply += &quot;foo&quot;; return this; }
@@ -2386,7 +2386,7 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="bind_(::)_operator" id="bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
 var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
@@ -2418,7 +2418,7 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://gist.github.com/WebReflection/9353781">Object.getOwnPropertyDescriptors</a></span><script data-source="
 var object = {a: 1};
@@ -2457,7 +2457,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.5"><td id="class_properties"><span><a class="anchor" href="#class_properties">&#xA7;</a><a href="https://gist.github.com/jeffmo/054df782c05639da2adb">class properties</a></span><script data-source="
 class C {
@@ -2492,7 +2492,7 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.125"><td id="Map.prototype.toJSON"><span><a class="anchor" href="#Map.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Map.prototype.toJSON</a></span><script data-source="
 var map = new Map();
@@ -2526,7 +2526,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.125"><td id="Set.prototype.toJSON"><span><a class="anchor" href="#Set.prototype.toJSON">&#xA7;</a><a href="https://github.com/DavidBruant/Map-Set.prototype.toJSON">Set.prototype.toJSON</a></span><script data-source="
 var set = new Set();
@@ -2559,7 +2559,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="String.prototype.at"><span><a class="anchor" href="#String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
@@ -2590,7 +2590,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="String_padding"><span><a class="anchor" href="#String_padding">&#xA7;</a><a href="https://github.com/ljharb/proposal-string-pad-left-right">String padding</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/2</td>
@@ -2618,7 +2618,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td data-browser="iojs" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="edge" class="tally" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="String_padding_String.prototype.padLeft"><td><span><a class="anchor" href="#String_padding_String.prototype.padLeft">&#xA7;</a>String.prototype.padLeft</span><script data-source="
 return &apos;hello&apos;.padLeft(10) === &apos;     hello&apos;
@@ -2652,7 +2652,7 @@ return &apos;hello&apos;.padLeft(10) === &apos;     hello&apos;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="String_padding_String.prototype.padRight"><td><span><a class="anchor" href="#String_padding_String.prototype.padRight">&#xA7;</a>String.prototype.padRight</span><script data-source="
 return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
@@ -2686,7 +2686,7 @@ return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.25"><td id="RegExp.escape"><span><a class="anchor" href="#RegExp.escape">&#xA7;</a><a href="https://github.com/benjamingr/RexExp.escape">RegExp.escape</a></span><script data-source="
 return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!&apos;;
@@ -2717,7 +2717,7 @@ return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr class="category"><td colspan="28">Pre-strawman</td>
 </tr>
@@ -2753,7 +2753,7 @@ return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="Object.entries"><span><a class="anchor" href="#Object.entries">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues">Object.entries</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -2791,7 +2791,7 @@ return e instanceof Array
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="supertest optional-feature" significance="1"><td id="parallel_JavaScript"><span><a class="anchor" href="#parallel_JavaScript">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism">parallel JavaScript</a></span></td>
 <td data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
@@ -2819,7 +2819,7 @@ return e instanceof Array
 <td data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
 <td data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
 <td data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
-<td data-browser="edge" class="unstable not-applicable tally" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0">0/8</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.mapPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.mapPar">&#xA7;</a>Array.prototype.mapPar</span><script data-source="
 return typeof Array.prototype.mapPar === &apos;function&apos;;
@@ -2850,7 +2850,7 @@ return typeof Array.prototype.mapPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.filterPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.filterPar">&#xA7;</a>Array.prototype.filterPar</span><script data-source="
 return typeof Array.prototype.filterPar === &apos;function&apos;;
@@ -2881,7 +2881,7 @@ return typeof Array.prototype.filterPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.fromPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.fromPar">&#xA7;</a>Array.fromPar</span><script data-source="
 return typeof Array.fromPar === &apos;function&apos;;
@@ -2912,7 +2912,7 @@ return typeof Array.fromPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_TypedObject.fromPar"><td><span><a class="anchor" href="#parallel_JavaScript_TypedObject.fromPar">&#xA7;</a>TypedObject.fromPar</span><script data-source="
 return typeof TypedObject.fromPar === &apos;function&apos;;
@@ -2943,7 +2943,7 @@ return typeof TypedObject.fromPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.get"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.get">&#xA7;</a>Array.prototype.get</span><script data-source="
 return typeof Array.prototype.get === &apos;function&apos;;
@@ -2974,7 +2974,7 @@ return typeof Array.prototype.get === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.reducePar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.reducePar">&#xA7;</a>Array.prototype.reducePar</span><script data-source="
 return typeof Array.prototype.reducePar === &apos;function&apos;;
@@ -3005,7 +3005,7 @@ return typeof Array.prototype.reducePar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.scanPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.scanPar">&#xA7;</a>Array.prototype.scanPar</span><script data-source="
 return typeof Array.prototype.scanPar === &apos;function&apos;;
@@ -3036,7 +3036,7 @@ return typeof Array.prototype.scanPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="parallel_JavaScript" id="parallel_JavaScript_Array.prototype.scatterPar"><td><span><a class="anchor" href="#parallel_JavaScript_Array.prototype.scatterPar">&#xA7;</a>Array.prototype.scatterPar</span><script data-source="
 return typeof Array.prototype.scatterPar === &apos;function&apos;;
@@ -3067,7 +3067,7 @@ return typeof Array.prototype.scatterPar === &apos;function&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.5" class="optional-feature"><td id="array_comprehensions"><span><a class="anchor" href="#array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">array comprehensions</a></span><script data-source="
 return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
@@ -3098,7 +3098,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.5" class="optional-feature"><td id="generator_comprehensions"><span><a class="anchor" href="#generator_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">generator comprehensions</a></span><script data-source="
 var iterator = (for (a of [1,2]) a + 4);
@@ -3136,7 +3136,7 @@ return passed;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.5" class="optional-feature"><td id="destructuring_in_comprehensions"><span><a class="anchor" href="#destructuring_in_comprehensions">&#xA7;</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980828">destructuring in comprehensions</a></span><script data-source="
 return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&apos;;
@@ -3167,7 +3167,7 @@ return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&ap
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="Reflect.Realm"><span><a class="anchor" href="#Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
@@ -3211,7 +3211,7 @@ return true;
 <td class="no not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie10" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="category"><td colspan="28">Errata</td>
 </tr>
@@ -3251,7 +3251,7 @@ try {
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.125"><td id="strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">strict fn w/ non-strict non-simple params is error</a></span><script data-source="
 function foo(...a){}
@@ -3287,7 +3287,7 @@ try {
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 <tr significance="0.125"><td id="nested_rest_destructuring"><span><a class="anchor" href="#nested_rest_destructuring">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring</a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
@@ -3319,7 +3319,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no unstable" data-browser="edge">No</td>
+<td class="no" data-browser="edge">No</td>
 </tr>
 </tbody>
     </table>

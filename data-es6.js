@@ -84,7 +84,6 @@ exports.browsers = {
   edge: {
     full: 'Internet Explorer, Microsoft Edge',
     short: 'Edge',
-    unstable: true,
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
