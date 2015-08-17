@@ -336,7 +336,7 @@ exports.browsers = {
     obsolete: false
   },
   webkit: {
-    full: 'WebKit r185990',
+    full: 'WebKit r188520',
     short: 'WK',
     unstable: true,
   },
@@ -1694,6 +1694,7 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         iojs:        strict,
+        webkit:      true,
       },
     },
     'static methods': {
@@ -1738,6 +1739,7 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         iojs:        strict,
+        webkit:      true,
       },
     },
     'accessor properties': {
@@ -1863,6 +1865,7 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         iojs:        strict,
+        webkit:      true,
       },
     },
     'methods aren\'t enumerable': {
@@ -6349,6 +6352,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.deleteProperty': {
@@ -6393,6 +6397,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.getPrototypeOf': {
@@ -6405,6 +6410,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        webkit:      true,
       },
     },
     'Reflect.setPrototypeOf': {
@@ -6419,6 +6425,7 @@ exports.tests = [
         ejs:         true,
         edge:        true,
         es6shim:     { val: false, note_id: 'compiler-proto' },
+        webkit:      true,
       },
     },
     'Reflect.isExtensible': {
