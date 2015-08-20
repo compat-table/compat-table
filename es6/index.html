@@ -24988,12 +24988,12 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 </tr>
 <tr class="supertest" significance="0.25"><td id="Reflect"><span><a class="anchor" href="#Reflect">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-reflection">Reflect</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/16</td>
-<td data-browser="babel" class="tally" data-tally="0.8125" style="background-color:hsl(97,50%,50%)">13/16</td>
+<td data-browser="babel" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="closure" class="tally" data-tally="0">0/16</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/16</td>
-<td data-browser="typescript" class="tally" data-tally="0.8125" style="background-color:hsl(97,50%,50%)">13/16</td>
-<td data-browser="es6shim" class="tally" data-tally="0.8125" style="background-color:hsl(97,50%,50%)">13/16</td>
+<td data-browser="typescript" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
+<td data-browser="es6shim" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/16</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/16</td>
 <td data-browser="edge" class="tally" data-tally="0.9375" style="background-color:hsl(112,44%,50%)">15/16</td>
@@ -25020,7 +25020,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="firefox39" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="firefox40" class="tally" data-tally="0">0/16</td>
 <td data-browser="firefox41" class="unstable tally" data-tally="0">0/16</td>
-<td data-browser="firefox42" class="unstable tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
+<td data-browser="firefox42" class="unstable tally" data-tally="0.9375" style="background-color:hsl(112,44%,50%)">15/16</td>
 <td data-browser="chrome" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="chrome19dev" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="chrome21dev" class="obsolete tally" data-tally="0">0/16</td>
@@ -25873,34 +25873,21 @@ return passed === 1;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Reflect" id="Reflect_Reflect.ownKeys,_string_key_order"><td><span><a class="anchor" href="#Reflect_Reflect.ownKeys,_string_key_order">&#xA7;</a>Reflect.ownKeys, string key order</span><script data-source="
-var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  &apos; &apos;:  true,
-  9:    true,
-  D:    true,
-  B:    true,
-  &apos;-1&apos;: true,
-};
+<tr class="subtest" data-parent="Reflect" id="Reflect_Reflect.ownKeys,_string_keys"><td><span><a class="anchor" href="#Reflect_Reflect.ownKeys,_string_keys">&#xA7;</a>Reflect.ownKeys, string keys</span><script data-source="
+var obj = Object.create({ C: true });
 obj.A = true;
-obj[3] = true;
-Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
-Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
-delete obj[2];
-obj[2] = true;
+Object.defineProperty(obj, &apos;B&apos;, { value: true, enumerable: false });
 
-return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("337");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("337");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return Reflect.ownKeys(obj).sort() + &apos;&apos; === &quot;A,B&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("337");try{return Function("asyncTestPassed","\nvar obj = Object.create({ C: true });\nobj.A = true;\nObject.defineProperty(obj, 'B', { value: true, enumerable: false });\n\nreturn Reflect.ownKeys(obj).sort() + '' === \"A,B\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("337");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ C: true });\nobj.A = true;\nObject.defineProperty(obj, 'B', { value: true, enumerable: false });\n\nreturn Reflect.ownKeys(obj).sort() + '' === \"A,B\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[22]</sup></a></td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#forin-order-note"><sup>[22]</sup></a></td>
-<td class="no" data-browser="es6shim">No<a href="#forin-order-note"><sup>[22]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="edge">Yes</td>
@@ -25927,7 +25914,7 @@ return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
 <td class="no obsolete" data-browser="firefox39">No</td>
 <td class="no" data-browser="firefox40">No</td>
 <td class="no unstable" data-browser="firefox41">No</td>
-<td class="no unstable" data-browser="firefox42">No</td>
+<td class="yes unstable" data-browser="firefox42">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -25962,24 +25949,17 @@ return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Reflect" id="Reflect_Reflect.ownKeys,_symbol_key_order"><td><span><a class="anchor" href="#Reflect_Reflect.ownKeys,_symbol_key_order">&#xA7;</a>Reflect.ownKeys, symbol key order</span><script data-source="
-var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
-var obj = {
-  1:    true,
-  A:    true,
-};
-obj.B = true;
-obj[sym1] = true;
-obj[2] = true;
-obj[sym2] = true;
-Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
-Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
-Object.defineProperty(obj, &apos;D&apos;, { value: true, enumerable: true });
+<tr class="subtest" data-parent="Reflect" id="Reflect_Reflect.ownKeys,_symbol_keys"><td><span><a class="anchor" href="#Reflect_Reflect.ownKeys,_symbol_keys">&#xA7;</a>Reflect.ownKeys, symbol keys</span><script data-source="
+var s1 = Symbol(), s2 = Symbol(), s3 = Symbol();
+var proto = {};
+proto[s1] = true;
+var obj = Object.create(proto);
+obj[s2] = true;
+Object.defineProperty(obj, s3, { value: true, enumerable: false });
 
-var result = Reflect.ownKeys(obj);
-var l = result.length;
-return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-1] === sym3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("338");try{return Function("asyncTestPassed","\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("338");return Function("asyncTestPassed","'use strict';"+"\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+var keys = Reflect.ownKeys(obj);
+return keys.indexOf(s2) &gt;-1 &amp;&amp; keys.indexOf(s3) &gt;-1 &amp;&amp; keys.length === 2;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("338");try{return Function("asyncTestPassed","\nvar s1 = Symbol(), s2 = Symbol(), s3 = Symbol();\nvar proto = {};\nproto[s1] = true;\nvar obj = Object.create(proto);\nobj[s2] = true;\nObject.defineProperty(obj, s3, { value: true, enumerable: false });\n\nvar keys = Reflect.ownKeys(obj);\nreturn keys.indexOf(s2) >-1 && keys.indexOf(s3) >-1 && keys.length === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("338");return Function("asyncTestPassed","'use strict';"+"\nvar s1 = Symbol(), s2 = Symbol(), s3 = Symbol();\nvar proto = {};\nproto[s1] = true;\nvar obj = Object.create(proto);\nobj[s2] = true;\nObject.defineProperty(obj, s3, { value: true, enumerable: false });\n\nvar keys = Reflect.ownKeys(obj);\nreturn keys.indexOf(s2) >-1 && keys.indexOf(s3) >-1 && keys.length === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -27696,7 +27676,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols">well-known symbols</a><a href="#symbol-iterator-functionality-note"><sup>[23]</sup></a></span></td>
+<tr class="supertest" significance="0.25"><td id="well-known_symbols"><span><a class="anchor" href="#well-known_symbols">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols">well-known symbols</a><a href="#symbol-iterator-functionality-note"><sup>[22]</sup></a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.05263157894736842" style="background-color:hsl(6,83%,50%)">1/19</td>
 <td data-browser="babel" class="tally" data-tally="0.42105263157894735" style="background-color:hsl(50,67%,50%)" data-flagged-tally="0.47368421052631576">8/19</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/19</td>
@@ -29208,7 +29188,7 @@ with (a) {
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes" data-browser="iojs">Yes</td>
-<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[24]</sup></a></td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[23]</sup></a></td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -30403,7 +30383,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("396");try{return Function("asyncTestPassed","\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("396");return Function("asyncTestPassed","'use strict';"+"\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[25]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[24]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -30476,7 +30456,7 @@ return class foo {}.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("397");try{return Function("asyncTestPassed","\nreturn class foo {}.name === \"foo\" &&\n  typeof class bar { static name() {} }.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("397");return Function("asyncTestPassed","'use strict';"+"\nreturn class foo {}.name === \"foo\" &&\n  typeof class bar { static name() {} }.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[25]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[24]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -31583,39 +31563,39 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
 <td class="no obsolete" data-browser="firefox17">No</td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox31">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox33">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox34">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox36">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox37">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no" data-browser="firefox38">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="firefox39">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox31">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox33">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox34">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox36">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox37">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no" data-browser="firefox38">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="firefox39">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
 <td class="yes" data-browser="firefox40">Yes</td>
 <td class="yes unstable" data-browser="firefox41">Yes</td>
 <td class="yes unstable" data-browser="firefox42">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
-<td class="no obsolete" data-browser="chrome30">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome31">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome33">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome34">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome35">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome36">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome37">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome38">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome39">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
-<td class="no obsolete" data-browser="chrome40">No<a href="#string-contains-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="chrome30">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome31">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome33">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome34">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome35">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome36">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome37">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome38">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome39">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
+<td class="no obsolete" data-browser="chrome40">No<a href="#string-contains-note"><sup>[25]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
 <td class="yes obsolete" data-browser="chrome42">Yes</td>
 <td class="yes obsolete" data-browser="chrome43">Yes</td>
@@ -31631,7 +31611,7 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no flagged" data-browser="node">Flag<a href="#string-contains-note"><sup>[26]</sup></a></td>
+<td class="no flagged" data-browser="node">Flag<a href="#string-contains-note"><sup>[25]</sup></a></td>
 <td class="yes" data-browser="iojs">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="ios7">No</td>
@@ -33623,27 +33603,27 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
-<td class="no obsolete" data-browser="firefox17">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox36">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="firefox37">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no" data-browser="firefox38">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="firefox39">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no" data-browser="firefox40">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no unstable" data-browser="firefox41">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no unstable" data-browser="firefox42">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
+<td class="no obsolete" data-browser="firefox17">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox36">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="firefox37">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no" data-browser="firefox38">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="firefox39">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no" data-browser="firefox40">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no unstable" data-browser="firefox41">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no unstable" data-browser="firefox42">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
 <td class="no obsolete" data-browser="chrome21dev">No</td>
@@ -33654,15 +33634,15 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="chrome35">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome36">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome37">Flag</td>
-<td class="no obsolete" data-browser="chrome38">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="chrome39">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="chrome40">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="chrome41">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="chrome42">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="chrome43">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no" data-browser="chrome44">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no unstable" data-browser="chrome45">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
-<td class="no unstable" data-browser="chrome46">No<a href="#array-prototype-iterator-note"><sup>[29]</sup></a></td>
+<td class="no obsolete" data-browser="chrome38">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="chrome39">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="chrome40">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="chrome41">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="chrome42">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="chrome43">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no" data-browser="chrome44">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no unstable" data-browser="chrome45">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
+<td class="no unstable" data-browser="chrome46">No<a href="#array-prototype-iterator-note"><sup>[28]</sup></a></td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
@@ -33767,20 +33747,20 @@ return typeof Array.prototype[Symbol.iterator] === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
-<td class="no obsolete" data-browser="firefox17">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox18">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox23">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox24">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox25">No<a href="#fx-array-prototype-values-note"><sup>[27]</sup></a></td>
-<td class="no obsolete" data-browser="firefox27">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox28">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox29">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox30">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[28]</sup></a></td>
+<td class="no obsolete" data-browser="firefox17">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox18">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox23">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox24">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox25">No<a href="#fx-array-prototype-values-note"><sup>[26]</sup></a></td>
+<td class="no obsolete" data-browser="firefox27">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox28">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox29">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox30">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox31">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox32">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox33">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox34">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[27]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox36">Yes</td>
 <td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox38">Yes</td>
@@ -34738,7 +34718,7 @@ return typeof Math.imul === &quot;function&quot;;
 <td class="yes unstable" data-browser="firefox42">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome19dev">No</td>
-<td class="yes obsolete" data-browser="chrome21dev">Yes<a href="#chromu-imul-note"><sup>[30]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome21dev">Yes<a href="#chromu-imul-note"><sup>[29]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome31">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
@@ -35656,7 +35636,7 @@ return typeof Math.fround === &quot;function&quot;;
 <td class="no obsolete" data-browser="firefox23">No</td>
 <td class="no obsolete" data-browser="firefox24">No</td>
 <td class="no obsolete" data-browser="firefox25">No</td>
-<td class="yes obsolete" data-browser="firefox27">Yes<a href="#fx-fround-note"><sup>[31]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox27">Yes<a href="#fx-fround-note"><sup>[30]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox29">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
@@ -44888,73 +44868,73 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest" significance="0.125"><td id="own_property_order"><span><a class="anchor" href="#own_property_order">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys">own property order</a></span></td>
-<td data-browser="tr" class="tally" data-tally="0">0/6</td>
-<td data-browser="babel" class="tally" data-tally="0">0/6</td>
-<td data-browser="es6tr" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="closure" class="tally" data-tally="0">0/6</td>
-<td data-browser="jsx" class="tally" data-tally="0">0/6</td>
-<td data-browser="typescript" class="tally" data-tally="0">0/6</td>
-<td data-browser="es6shim" class="tally" data-tally="0">0/6</td>
-<td data-browser="ie10" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="ie11" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="edge" class="tally" data-tally="1">6/6</td>
-<td data-browser="firefox11" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="firefox13" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="firefox17" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="firefox18" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="firefox23" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox24" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox25" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox27" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox28" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox29" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox30" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox31" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox32" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox33" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox34" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox35" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox36" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox37" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox38" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox39" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox40" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox41" class="unstable tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="firefox42" class="unstable tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="chrome" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome19dev" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome21dev" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome30" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome31" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome33" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome34" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome35" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome36" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="chrome37" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome38" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome39" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome40" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome41" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome42" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome43" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome44" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="chrome45" class="unstable tally" data-tally="1">6/6</td>
-<td data-browser="chrome46" class="unstable tally" data-tally="1">6/6</td>
-<td data-browser="safari51" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="safari6" class="obsolete tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="safari7" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="safari71_8" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="webkit" class="unstable tally" data-tally="1">6/6</td>
-<td data-browser="opera" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="konq49" class="tally" data-tally="0">0/6</td>
-<td data-browser="rhino17" class="obsolete tally" data-tally="0">0/6</td>
-<td data-browser="phantom" class="tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td data-browser="node" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="iojs" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/6</td>
-<td data-browser="ios7" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td data-browser="ios8" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
+<td data-browser="tr" class="tally" data-tally="0">0/8</td>
+<td data-browser="babel" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="es6tr" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="closure" class="tally" data-tally="0">0/8</td>
+<td data-browser="jsx" class="tally" data-tally="0">0/8</td>
+<td data-browser="typescript" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="es6shim" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="ie10" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="ie11" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="edge" class="tally" data-tally="1">8/8</td>
+<td data-browser="firefox11" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="firefox13" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="firefox16" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="firefox17" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="firefox18" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="firefox23" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox24" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox25" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox27" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox28" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox29" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox30" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox31" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox32" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox33" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox34" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox35" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox36" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox37" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox38" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox39" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox40" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox41" class="unstable tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="firefox42" class="unstable tally" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
+<td data-browser="chrome" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome19dev" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome21dev" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome30" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome31" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome33" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome34" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome35" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome36" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="chrome37" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome38" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome39" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome40" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome41" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome42" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome43" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome44" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="chrome45" class="unstable tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
+<td data-browser="chrome46" class="unstable tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
+<td data-browser="safari51" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="safari6" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="safari7" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="safari71_8" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="webkit" class="unstable tally" data-tally="1">8/8</td>
+<td data-browser="opera" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="konq49" class="tally" data-tally="0">0/8</td>
+<td data-browser="rhino17" class="obsolete tally" data-tally="0">0/8</td>
+<td data-browser="phantom" class="tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
+<td data-browser="node" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="iojs" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
+<td data-browser="ios7" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td data-browser="ios8" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 </tr>
 <tr class="subtest" data-parent="own_property_order" id="own_property_order_for..in"><td><span><a class="anchor" href="#own_property_order_for..in">&#xA7;</a>for..in</span><script data-source="
 var obj = {
@@ -44988,9 +44968,9 @@ return result === &quot;012349 DB-1AC&quot;;
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -45077,9 +45057,9 @@ return Object.keys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -45166,9 +45146,9 @@ return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 DB-1A
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -45267,7 +45247,7 @@ return result === &quot;012349 DB-1AC&quot;;
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -45355,9 +45335,9 @@ return JSON.stringify(obj) ===
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -45435,9 +45415,9 @@ return result === &quot;012349 DB-1AC&quot;;
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
-<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[32]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
+<td class="yes" data-browser="edge">Yes<a href="#ie_property_order-note"><sup>[31]</sup></a></td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
@@ -45495,6 +45475,182 @@ return result === &quot;012349 DB-1AC&quot;;
 <td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
+</tr>
+<tr class="subtest" data-parent="own_property_order" id="own_property_order_Reflect.ownKeys,_string_key_order"><td><span><a class="anchor" href="#own_property_order_Reflect.ownKeys,_string_key_order">&#xA7;</a>Reflect.ownKeys, string key order</span><script data-source="
+var obj = {
+  2:    true,
+  0:    true,
+  1:    true,
+  &apos; &apos;:  true,
+  9:    true,
+  D:    true,
+  B:    true,
+  &apos;-1&apos;: true,
+};
+obj.A = true;
+obj[3] = true;
+Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
+Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
+delete obj[2];
+obj[2] = true;
+
+return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AC&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("597");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("597");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true,\n};\nobj.A = true;\nobj[3] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[32]</sup></a></td>
+<td class="no obsolete" data-browser="es6tr">No</td>
+<td class="no" data-browser="closure">No</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="no" data-browser="typescript">No<a href="#forin-order-note"><sup>[32]</sup></a></td>
+<td class="no" data-browser="es6shim">No<a href="#forin-order-note"><sup>[32]</sup></a></td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes" data-browser="edge">Yes</td>
+<td class="no obsolete" data-browser="firefox11">No</td>
+<td class="no obsolete" data-browser="firefox13">No</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="no obsolete" data-browser="firefox17">No</td>
+<td class="no obsolete" data-browser="firefox18">No</td>
+<td class="no obsolete" data-browser="firefox23">No</td>
+<td class="no obsolete" data-browser="firefox24">No</td>
+<td class="no obsolete" data-browser="firefox25">No</td>
+<td class="no obsolete" data-browser="firefox27">No</td>
+<td class="no obsolete" data-browser="firefox28">No</td>
+<td class="no obsolete" data-browser="firefox29">No</td>
+<td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox33">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox36">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
+<td class="no" data-browser="firefox38">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no" data-browser="firefox40">No</td>
+<td class="no unstable" data-browser="firefox41">No</td>
+<td class="no unstable" data-browser="firefox42">No</td>
+<td class="no obsolete" data-browser="chrome">No</td>
+<td class="no obsolete" data-browser="chrome19dev">No</td>
+<td class="no obsolete" data-browser="chrome21dev">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome31">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome36">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no" data-browser="chrome44">No</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no obsolete" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="opera">No</td>
+<td class="no" data-browser="konq49">No</td>
+<td class="no obsolete" data-browser="rhino17">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
+</tr>
+<tr class="subtest" data-parent="own_property_order" id="own_property_order_Reflect.ownKeys,_symbol_key_order"><td><span><a class="anchor" href="#own_property_order_Reflect.ownKeys,_symbol_key_order">&#xA7;</a>Reflect.ownKeys, symbol key order</span><script data-source="
+var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
+var obj = {
+  1:    true,
+  A:    true,
+};
+obj.B = true;
+obj[sym1] = true;
+obj[2] = true;
+obj[sym2] = true;
+Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
+Object.defineProperty(obj, sym3,{ value: true, enumerable: true });
+Object.defineProperty(obj, &apos;D&apos;, { value: true, enumerable: true });
+
+var result = Reflect.ownKeys(obj);
+var l = result.length;
+return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-1] === sym3;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("598");try{return Function("asyncTestPassed","\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("598");return Function("asyncTestPassed","'use strict';"+"\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no obsolete" data-browser="es6tr">No</td>
+<td class="no" data-browser="closure">No</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="yes" data-browser="es6shim">Yes</td>
+<td class="no" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes" data-browser="edge">Yes</td>
+<td class="no obsolete" data-browser="firefox11">No</td>
+<td class="no obsolete" data-browser="firefox13">No</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="no obsolete" data-browser="firefox17">No</td>
+<td class="no obsolete" data-browser="firefox18">No</td>
+<td class="no obsolete" data-browser="firefox23">No</td>
+<td class="no obsolete" data-browser="firefox24">No</td>
+<td class="no obsolete" data-browser="firefox25">No</td>
+<td class="no obsolete" data-browser="firefox27">No</td>
+<td class="no obsolete" data-browser="firefox28">No</td>
+<td class="no obsolete" data-browser="firefox29">No</td>
+<td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox33">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox36">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
+<td class="no" data-browser="firefox38">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no" data-browser="firefox40">No</td>
+<td class="no unstable" data-browser="firefox41">No</td>
+<td class="yes unstable" data-browser="firefox42">Yes</td>
+<td class="no obsolete" data-browser="chrome">No</td>
+<td class="no obsolete" data-browser="chrome19dev">No</td>
+<td class="no obsolete" data-browser="chrome21dev">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome31">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome36">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no" data-browser="chrome44">No</td>
+<td class="no unstable" data-browser="chrome45">No</td>
+<td class="no unstable" data-browser="chrome46">No</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no obsolete" data-browser="safari6">No</td>
+<td class="no" data-browser="safari7">No</td>
+<td class="no" data-browser="safari71_8">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="opera">No</td>
+<td class="no" data-browser="konq49">No</td>
+<td class="no obsolete" data-browser="rhino17">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no" data-browser="ios7">No</td>
+<td class="no" data-browser="ios8">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="miscellaneous"><span><a class="anchor" href="#miscellaneous">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0.1111111111111111" style="background-color:hsl(13,81%,50%)">1/9</td>
@@ -45572,7 +45728,7 @@ try {
 } catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("598");try{return Function("asyncTestPassed","\nvar \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("598");return Function("asyncTestPassed","'use strict';"+"\nvar \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("600");try{return Function("asyncTestPassed","\nvar \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("600");return Function("asyncTestPassed","'use strict';"+"\nvar \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -45645,7 +45801,7 @@ try {
 <tr class="subtest" data-parent="miscellaneous" id="miscellaneous_duplicate_property_names_in_strict_mode"><td><span><a class="anchor" href="#miscellaneous_duplicate_property_names_in_strict_mode">&#xA7;</a>duplicate property names in strict mode</span><script data-source="
 &apos;use strict&apos;;
 return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("599");try{return Function("asyncTestPassed","\n'use strict';\nreturn this === undefined && ({ a:1, a:1 }).a === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("599");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nreturn this === undefined && ({ a:1, a:1 }).a === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("601");try{return Function("asyncTestPassed","\n'use strict';\nreturn this === undefined && ({ a:1, a:1 }).a === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("601");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nreturn this === undefined && ({ a:1, a:1 }).a === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -45717,7 +45873,7 @@ return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="miscellaneous_no_semicolon_needed_after_do-while"><td><span><a class="anchor" href="#miscellaneous_no_semicolon_needed_after_do-while">&#xA7;</a>no semicolon needed after do-while</span><script data-source="
 do {} while (false) return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("600");try{return Function("asyncTestPassed","\ndo {} while (false) return true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("600");return Function("asyncTestPassed","'use strict';"+"\ndo {} while (false) return true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("602");try{return Function("asyncTestPassed","\ndo {} while (false) return true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("602");return Function("asyncTestPassed","'use strict';"+"\ndo {} while (false) return true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -45794,7 +45950,7 @@ try {
 catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("601");try{return Function("asyncTestPassed","\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("601");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("603");try{return Function("asyncTestPassed","\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("603");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -45870,7 +46026,7 @@ try {
 } catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("602");try{return Function("asyncTestPassed","\ntry {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("602");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("604");try{return Function("asyncTestPassed","\ntry {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("604");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -45942,7 +46098,7 @@ try {
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="miscellaneous_Invalid_Date"><td><span><a class="anchor" href="#miscellaneous_Invalid_Date">&#xA7;</a>Invalid Date</span><script data-source="
 return new Date(NaN) + &quot;&quot; === &quot;Invalid Date&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("603");try{return Function("asyncTestPassed","\nreturn new Date(NaN) + \"\" === \"Invalid Date\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("603");return Function("asyncTestPassed","'use strict';"+"\nreturn new Date(NaN) + \"\" === \"Invalid Date\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("605");try{return Function("asyncTestPassed","\nreturn new Date(NaN) + \"\" === \"Invalid Date\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("605");return Function("asyncTestPassed","'use strict';"+"\nreturn new Date(NaN) + \"\" === \"Invalid Date\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -46014,7 +46170,7 @@ return new Date(NaN) + &quot;&quot; === &quot;Invalid Date&quot;;
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="miscellaneous_RegExp_constructor_can_alter_flags"><td><span><a class="anchor" href="#miscellaneous_RegExp_constructor_can_alter_flags">&#xA7;</a>RegExp constructor can alter flags</span><script data-source="
 return new RegExp(/./im, &quot;g&quot;).global === true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("604");try{return Function("asyncTestPassed","\nreturn new RegExp(/./im, \"g\").global === true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("604");return Function("asyncTestPassed","'use strict';"+"\nreturn new RegExp(/./im, \"g\").global === true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("606");try{return Function("asyncTestPassed","\nreturn new RegExp(/./im, \"g\").global === true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("606");return Function("asyncTestPassed","'use strict';"+"\nreturn new RegExp(/./im, \"g\").global === true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -46092,7 +46248,7 @@ try {
   Date.prototype.valueOf(); return false;
 } catch(e) {}
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("605");try{return Function("asyncTestPassed","\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("605");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("607");try{return Function("asyncTestPassed","\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("607");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -46172,7 +46328,7 @@ if (desc.configurable) {
 }
 
 return false;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("606");try{return Function("asyncTestPassed","\nvar fn = function(a, b) {};\n\nvar desc = Object.getOwnPropertyDescriptor(fn, \"length\");\nif (desc.configurable) {\n  Object.defineProperty(fn, \"length\", { value: 1 });\n  return fn.length === 1;\n}\n\nreturn false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("606");return Function("asyncTestPassed","'use strict';"+"\nvar fn = function(a, b) {};\n\nvar desc = Object.getOwnPropertyDescriptor(fn, \"length\");\nif (desc.configurable) {\n  Object.defineProperty(fn, \"length\", { value: 1 });\n  return fn.length === 1;\n}\n\nreturn false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("608");try{return Function("asyncTestPassed","\nvar fn = function(a, b) {};\n\nvar desc = Object.getOwnPropertyDescriptor(fn, \"length\");\nif (desc.configurable) {\n  Object.defineProperty(fn, \"length\", { value: 1 });\n  return fn.length === 1;\n}\n\nreturn false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("608");return Function("asyncTestPassed","'use strict';"+"\nvar fn = function(a, b) {};\n\nvar desc = Object.getOwnPropertyDescriptor(fn, \"length\");\nif (desc.configurable) {\n  Object.defineProperty(fn, \"length\", { value: 1 });\n  return fn.length === 1;\n}\n\nreturn false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -46329,7 +46485,7 @@ function h() { return 2; }
 passed &amp;= h() === 1;
 
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("608");try{return Function("asyncTestPassed","\n// Note: only available outside of strict mode.\nif (!this) return false;\nvar passed = f() === 1;\nfunction f() { return 1; }\n\npassed &= typeof g === 'undefined';\n{ function g() { return 1; } }\npassed &= g() === 1;\n\npassed &= h() === 2;\n{ function h() { return 1; } }\nfunction h() { return 2; }\npassed &= h() === 1;\n\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("608");return Function("asyncTestPassed","'use strict';"+"\n// Note: only available outside of strict mode.\nif (!this) return false;\nvar passed = f() === 1;\nfunction f() { return 1; }\n\npassed &= typeof g === 'undefined';\n{ function g() { return 1; } }\npassed &= g() === 1;\n\npassed &= h() === 2;\n{ function h() { return 1; } }\nfunction h() { return 2; }\npassed &= h() === 1;\n\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("610");try{return Function("asyncTestPassed","\n// Note: only available outside of strict mode.\nif (!this) return false;\nvar passed = f() === 1;\nfunction f() { return 1; }\n\npassed &= typeof g === 'undefined';\n{ function g() { return 1; } }\npassed &= g() === 1;\n\npassed &= h() === 2;\n{ function h() { return 1; } }\nfunction h() { return 2; }\npassed &= h() === 1;\n\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("610");return Function("asyncTestPassed","'use strict';"+"\n// Note: only available outside of strict mode.\nif (!this) return false;\nvar passed = f() === 1;\nfunction f() { return 1; }\n\npassed &= typeof g === 'undefined';\n{ function g() { return 1; } }\npassed &= g() === 1;\n\npassed &= h() === 2;\n{ function h() { return 1; } }\nfunction h() { return 2; }\npassed &= h() === 1;\n\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46405,7 +46561,7 @@ if (!this) return false;
 
 label: function foo() { return 2; }
 return foo() === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("609");try{return Function("asyncTestPassed","\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nlabel: function foo() { return 2; }\nreturn foo() === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("609");return Function("asyncTestPassed","'use strict';"+"\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nlabel: function foo() { return 2; }\nreturn foo() === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("611");try{return Function("asyncTestPassed","\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nlabel: function foo() { return 2; }\nreturn foo() === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("611");return Function("asyncTestPassed","'use strict';"+"\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nlabel: function foo() { return 2; }\nreturn foo() === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46484,7 +46640,7 @@ if(false) {} else function bar() { return 3; }
 if(true) function baz() { return 4; } else {}
 if(false) function qux() { return 5; } else function qux() { return 6; }
 return foo() === 2 &amp;&amp; bar() === 3 &amp;&amp; baz() === 4 &amp;&amp; qux() === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("610");try{return Function("asyncTestPassed","\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nif(true) function foo() { return 2; }\nif(false) {} else function bar() { return 3; }\nif(true) function baz() { return 4; } else {}\nif(false) function qux() { return 5; } else function qux() { return 6; }\nreturn foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("610");return Function("asyncTestPassed","'use strict';"+"\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nif(true) function foo() { return 2; }\nif(false) {} else function bar() { return 3; }\nif(true) function baz() { return 4; } else {}\nif(false) function qux() { return 5; } else function qux() { return 6; }\nreturn foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("612");try{return Function("asyncTestPassed","\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nif(true) function foo() { return 2; }\nif(false) {} else function bar() { return 3; }\nif(true) function baz() { return 4; } else {}\nif(false) function qux() { return 5; } else function qux() { return 6; }\nreturn foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("612");return Function("asyncTestPassed","'use strict';"+"\n// Note: only available outside of strict mode.\nif (!this) return false;\n\nif(true) function foo() { return 2; }\nif(false) {} else function bar() { return 3; }\nif(true) function baz() { return 4; } else {}\nif(false) function qux() { return 5; } else function qux() { return 6; }\nreturn foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46626,7 +46782,7 @@ return foo() === 2 &amp;&amp; bar() === 3 &amp;&amp; baz() === 4 &amp;&amp; qux(
 <tr class="subtest" data-parent="__proto___in_object_literals" id="__proto___in_object_literals_basic_support"><td><span><a class="anchor" href="#__proto___in_object_literals_basic_support">&#xA7;</a>basic support</span><script data-source="
 return { __proto__ : [] } instanceof Array
   &amp;&amp; !({ __proto__ : null } instanceof Object);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("612");try{return Function("asyncTestPassed","\nreturn { __proto__ : [] } instanceof Array\n  && !({ __proto__ : null } instanceof Object);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("612");return Function("asyncTestPassed","'use strict';"+"\nreturn { __proto__ : [] } instanceof Array\n  && !({ __proto__ : null } instanceof Object);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("614");try{return Function("asyncTestPassed","\nreturn { __proto__ : [] } instanceof Array\n  && !({ __proto__ : null } instanceof Object);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("614");return Function("asyncTestPassed","'use strict';"+"\nreturn { __proto__ : [] } instanceof Array\n  && !({ __proto__ : null } instanceof Object);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46703,7 +46859,7 @@ try {
 catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("613");try{return Function("asyncTestPassed","\ntry {\n  eval(\"({ __proto__ : [], __proto__: {} })\");\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("613");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  eval(\"({ __proto__ : [], __proto__: {} })\");\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("615");try{return Function("asyncTestPassed","\ntry {\n  eval(\"({ __proto__ : [], __proto__: {} })\");\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("615");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  eval(\"({ __proto__ : [], __proto__: {} })\");\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46779,7 +46935,7 @@ if (!({ __proto__ : [] } instanceof Array)) {
 }
 var a = &quot;__proto__&quot;;
 return !({ [a] : [] } instanceof Array);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("614");try{return Function("asyncTestPassed","\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("614");return Function("asyncTestPassed","'use strict';"+"\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("616");try{return Function("asyncTestPassed","\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("616");return Function("asyncTestPassed","'use strict';"+"\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46855,7 +47011,7 @@ if (!({ __proto__ : [] } instanceof Array)) {
 }
 var __proto__ = [];
 return !({ __proto__ } instanceof Array);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("615");try{return Function("asyncTestPassed","\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("615");return Function("asyncTestPassed","'use strict';"+"\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("617");try{return Function("asyncTestPassed","\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("617");return Function("asyncTestPassed","'use strict';"+"\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -46930,7 +47086,7 @@ if (!({ __proto__ : [] } instanceof Array)) {
   return false;
 }
 return !({ __proto__(){} } instanceof Function);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("616");try{return Function("asyncTestPassed","\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("616");return Function("asyncTestPassed","'use strict';"+"\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("618");try{return Function("asyncTestPassed","\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("618");return Function("asyncTestPassed","'use strict';"+"\nif (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47072,7 +47228,7 @@ return !({ __proto__(){} } instanceof Function);
 <tr class="subtest" data-parent="Object.prototype.__proto__" id="Object.prototype.__proto___get_prototype"><td><span><a class="anchor" href="#Object.prototype.__proto___get_prototype">&#xA7;</a>get prototype</span><script data-source="
 var A = function(){};
 return (new A()).__proto__ === A.prototype;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("618");try{return Function("asyncTestPassed","\nvar A = function(){};\nreturn (new A()).__proto__ === A.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("618");return Function("asyncTestPassed","'use strict';"+"\nvar A = function(){};\nreturn (new A()).__proto__ === A.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("620");try{return Function("asyncTestPassed","\nvar A = function(){};\nreturn (new A()).__proto__ === A.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("620");return Function("asyncTestPassed","'use strict';"+"\nvar A = function(){};\nreturn (new A()).__proto__ === A.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47146,7 +47302,7 @@ return (new A()).__proto__ === A.prototype;
 var o = {};
 o.__proto__ = Array.prototype;
 return o instanceof Array;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("619");try{return Function("asyncTestPassed","\nvar o = {};\no.__proto__ = Array.prototype;\nreturn o instanceof Array;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("619");return Function("asyncTestPassed","'use strict';"+"\nvar o = {};\no.__proto__ = Array.prototype;\nreturn o instanceof Array;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("621");try{return Function("asyncTestPassed","\nvar o = {};\no.__proto__ = Array.prototype;\nreturn o instanceof Array;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("621");return Function("asyncTestPassed","'use strict';"+"\nvar o = {};\no.__proto__ = Array.prototype;\nreturn o instanceof Array;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47220,7 +47376,7 @@ return o instanceof Array;
 var o = Object.create(null), p = {};
 o.__proto__ = p;
 return Object.getPrototypeOf(o) !== p;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("620");try{return Function("asyncTestPassed","\nvar o = Object.create(null), p = {};\no.__proto__ = p;\nreturn Object.getPrototypeOf(o) !== p;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("620");return Function("asyncTestPassed","'use strict';"+"\nvar o = Object.create(null), p = {};\no.__proto__ = p;\nreturn Object.getPrototypeOf(o) !== p;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("622");try{return Function("asyncTestPassed","\nvar o = Object.create(null), p = {};\no.__proto__ = p;\nreturn Object.getPrototypeOf(o) !== p;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("622");return Function("asyncTestPassed","'use strict';"+"\nvar o = Object.create(null), p = {};\no.__proto__ = p;\nreturn Object.getPrototypeOf(o) !== p;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47292,7 +47448,7 @@ return Object.getPrototypeOf(o) !== p;
 </tr>
 <tr class="subtest" data-parent="Object.prototype.__proto__" id="Object.prototype.__proto___present_in_hasOwnProperty()"><td><span><a class="anchor" href="#Object.prototype.__proto___present_in_hasOwnProperty()">&#xA7;</a>present in hasOwnProperty()</span><script data-source="
 return Object.prototype.hasOwnProperty(&apos;__proto__&apos;);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("621");try{return Function("asyncTestPassed","\nreturn Object.prototype.hasOwnProperty('__proto__');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("621");return Function("asyncTestPassed","'use strict';"+"\nreturn Object.prototype.hasOwnProperty('__proto__');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("623");try{return Function("asyncTestPassed","\nreturn Object.prototype.hasOwnProperty('__proto__');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("623");return Function("asyncTestPassed","'use strict';"+"\nreturn Object.prototype.hasOwnProperty('__proto__');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47371,7 +47527,7 @@ return (desc
   &amp;&amp; &quot;set&quot; in desc
   &amp;&amp; desc.configurable
   &amp;&amp; !desc.enumerable);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("622");try{return Function("asyncTestPassed","\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("622");return Function("asyncTestPassed","'use strict';"+"\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("624");try{return Function("asyncTestPassed","\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("624");return Function("asyncTestPassed","'use strict';"+"\nvar desc = Object.getOwnPropertyDescriptor(Object.prototype,\"__proto__\");\nvar A = function(){};\n\nreturn (desc\n  && \"get\" in desc\n  && \"set\" in desc\n  && desc.configurable\n  && !desc.enumerable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47443,7 +47599,7 @@ return (desc
 </tr>
 <tr class="subtest" data-parent="Object.prototype.__proto__" id="Object.prototype.__proto___present_in_Object.getOwnPropertyNames()"><td><span><a class="anchor" href="#Object.prototype.__proto___present_in_Object.getOwnPropertyNames()">&#xA7;</a>present in Object.getOwnPropertyNames()</span><script data-source="
 return Object.getOwnPropertyNames(Object.prototype).indexOf(&apos;__proto__&apos;) &gt; -1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("623");try{return Function("asyncTestPassed","\nreturn Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("623");return Function("asyncTestPassed","'use strict';"+"\nreturn Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("625");try{return Function("asyncTestPassed","\nreturn Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("625");return Function("asyncTestPassed","'use strict';"+"\nreturn Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47591,7 +47747,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("625");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("625");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("627");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("627");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47670,7 +47826,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("626");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]().toLowerCase() !== \"\"[names[i]]()) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("626");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]().toLowerCase() !== \"\"[names[i]]()) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("628");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]().toLowerCase() !== \"\"[names[i]]()) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("628");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]().toLowerCase() !== \"\"[names[i]]()) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47748,7 +47904,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("627");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"fontcolor\", \"fontsize\", \"link\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]('\"') !== \"\"[names[i]]('&' + 'quot;')) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("627");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"fontcolor\", \"fontsize\", \"link\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]('\"') !== \"\"[names[i]]('&' + 'quot;')) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("629");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"fontcolor\", \"fontsize\", \"link\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]('\"') !== \"\"[names[i]]('&' + 'quot;')) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("629");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"fontcolor\", \"fontsize\", \"link\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]('\"') !== \"\"[names[i]]('&' + 'quot;')) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47820,7 +47976,7 @@ return true;
 </tr>
 <tr significance="0.125" class="optional-feature"><td id="RegExp.prototype.compile"><span><a class="anchor" href="#RegExp.prototype.compile">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile">RegExp.prototype.compile</a></span><script data-source="
 return typeof RegExp.prototype.compile === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("628");try{return Function("asyncTestPassed","\nreturn typeof RegExp.prototype.compile === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("628");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof RegExp.prototype.compile === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("630");try{return Function("asyncTestPassed","\nreturn typeof RegExp.prototype.compile === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("630");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof RegExp.prototype.compile === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -47961,7 +48117,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_hyphens_in_character_sets"><td><span><a class="anchor" href="#RegExp_syntax_extensions_hyphens_in_character_sets">&#xA7;</a>hyphens in character sets</span><script data-source="
 return /[\w-_]/.exec(&quot;-&quot;)[0] === &quot;-&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("630");try{return Function("asyncTestPassed","\nreturn /[\\w-_]/.exec(\"-\")[0] === \"-\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("630");return Function("asyncTestPassed","'use strict';"+"\nreturn /[\\w-_]/.exec(\"-\")[0] === \"-\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("632");try{return Function("asyncTestPassed","\nreturn /[\\w-_]/.exec(\"-\")[0] === \"-\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("632");return Function("asyncTestPassed","'use strict';"+"\nreturn /[\\w-_]/.exec(\"-\")[0] === \"-\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48034,7 +48190,7 @@ return /[\w-_]/.exec(&quot;-&quot;)[0] === &quot;-&quot;;
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_invalid_character_escapes"><td><span><a class="anchor" href="#RegExp_syntax_extensions_invalid_character_escapes">&#xA7;</a>invalid character escapes</span><script data-source="
 return /\z/.exec(&quot;\\z&quot;)[0] === &quot;z&quot;
   &amp;&amp; /[\z]/.exec(&quot;[\\z]&quot;)[0] === &quot;z&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("631");try{return Function("asyncTestPassed","\nreturn /\\z/.exec(\"\\\\z\")[0] === \"z\"\n  && /[\\z]/.exec(\"[\\\\z]\")[0] === \"z\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("631");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\z/.exec(\"\\\\z\")[0] === \"z\"\n  && /[\\z]/.exec(\"[\\\\z]\")[0] === \"z\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("633");try{return Function("asyncTestPassed","\nreturn /\\z/.exec(\"\\\\z\")[0] === \"z\"\n  && /[\\z]/.exec(\"[\\\\z]\")[0] === \"z\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("633");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\z/.exec(\"\\\\z\")[0] === \"z\"\n  && /[\\z]/.exec(\"[\\\\z]\")[0] === \"z\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48106,7 +48262,7 @@ return /\z/.exec(&quot;\\z&quot;)[0] === &quot;z&quot;
 </tr>
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_invalid_control-character_escapes"><td><span><a class="anchor" href="#RegExp_syntax_extensions_invalid_control-character_escapes">&#xA7;</a>invalid control-character escapes</span><script data-source="
 return /\c2/.exec(&quot;\\c2&quot;)[0] === &quot;\\c2&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("632");try{return Function("asyncTestPassed","\nreturn /\\c2/.exec(\"\\\\c2\")[0] === \"\\\\c2\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("632");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\c2/.exec(\"\\\\c2\")[0] === \"\\\\c2\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("634");try{return Function("asyncTestPassed","\nreturn /\\c2/.exec(\"\\\\c2\")[0] === \"\\\\c2\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("634");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\c2/.exec(\"\\\\c2\")[0] === \"\\\\c2\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48179,7 +48335,7 @@ return /\c2/.exec(&quot;\\c2&quot;)[0] === &quot;\\c2&quot;;
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_invalid_unicode_escapes"><td><span><a class="anchor" href="#RegExp_syntax_extensions_invalid_unicode_escapes">&#xA7;</a>invalid unicode escapes</span><script data-source="
 return /\u1/.exec(&quot;u1&quot;)[0] === &quot;u1&quot;
   &amp;&amp; /[\u1]/.exec(&quot;u&quot;)[0] === &quot;u&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("633");try{return Function("asyncTestPassed","\nreturn /\\u1/.exec(\"u1\")[0] === \"u1\"\n  && /[\\u1]/.exec(\"u\")[0] === \"u\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("633");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\u1/.exec(\"u1\")[0] === \"u1\"\n  && /[\\u1]/.exec(\"u\")[0] === \"u\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("635");try{return Function("asyncTestPassed","\nreturn /\\u1/.exec(\"u1\")[0] === \"u1\"\n  && /[\\u1]/.exec(\"u\")[0] === \"u\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("635");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\u1/.exec(\"u1\")[0] === \"u1\"\n  && /[\\u1]/.exec(\"u\")[0] === \"u\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48252,7 +48408,7 @@ return /\u1/.exec(&quot;u1&quot;)[0] === &quot;u1&quot;
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_invalid_hexadecimal_escapes"><td><span><a class="anchor" href="#RegExp_syntax_extensions_invalid_hexadecimal_escapes">&#xA7;</a>invalid hexadecimal escapes</span><script data-source="
 return /\x1/.exec(&quot;x1&quot;)[0] === &quot;x1&quot;
   &amp;&amp; /[\x1]/.exec(&quot;x&quot;)[0] === &quot;x&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("634");try{return Function("asyncTestPassed","\nreturn /\\x1/.exec(\"x1\")[0] === \"x1\"\n  && /[\\x1]/.exec(\"x\")[0] === \"x\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("634");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\x1/.exec(\"x1\")[0] === \"x1\"\n  && /[\\x1]/.exec(\"x\")[0] === \"x\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("636");try{return Function("asyncTestPassed","\nreturn /\\x1/.exec(\"x1\")[0] === \"x1\"\n  && /[\\x1]/.exec(\"x\")[0] === \"x\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("636");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\x1/.exec(\"x1\")[0] === \"x1\"\n  && /[\\x1]/.exec(\"x\")[0] === \"x\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48325,7 +48481,7 @@ return /\x1/.exec(&quot;x1&quot;)[0] === &quot;x1&quot;
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_incomplete_patterns_and_quantifiers"><td><span><a class="anchor" href="#RegExp_syntax_extensions_incomplete_patterns_and_quantifiers">&#xA7;</a>incomplete patterns and quantifiers</span><script data-source="
 return /x{1/.exec(&quot;x{1&quot;)[0] === &quot;x{1&quot;
   &amp;&amp; /x]1/.exec(&quot;x]1&quot;)[0] === &quot;x]1&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("635");try{return Function("asyncTestPassed","\nreturn /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("635");return Function("asyncTestPassed","'use strict';"+"\nreturn /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("637");try{return Function("asyncTestPassed","\nreturn /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("637");return Function("asyncTestPassed","'use strict';"+"\nreturn /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48398,7 +48554,7 @@ return /x{1/.exec(&quot;x{1&quot;)[0] === &quot;x{1&quot;
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_octal_escape_sequences"><td><span><a class="anchor" href="#RegExp_syntax_extensions_octal_escape_sequences">&#xA7;</a>octal escape sequences</span><script data-source="
 return /\041/.exec(&quot;!&quot;)[0] === &quot;!&quot;
   &amp;&amp; /[\041]/.exec(&quot;!&quot;)[0] === &quot;!&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("636");try{return Function("asyncTestPassed","\nreturn /\\041/.exec(\"!\")[0] === \"!\"\n  && /[\\041]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("636");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\041/.exec(\"!\")[0] === \"!\"\n  && /[\\041]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("638");try{return Function("asyncTestPassed","\nreturn /\\041/.exec(\"!\")[0] === \"!\"\n  && /[\\041]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("638");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\041/.exec(\"!\")[0] === \"!\"\n  && /[\\041]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48471,7 +48627,7 @@ return /\041/.exec(&quot;!&quot;)[0] === &quot;!&quot;
 <tr class="subtest" data-parent="RegExp_syntax_extensions" id="RegExp_syntax_extensions_invalid_backreferences_become_octal_escapes"><td><span><a class="anchor" href="#RegExp_syntax_extensions_invalid_backreferences_become_octal_escapes">&#xA7;</a>invalid backreferences become octal escapes</span><script data-source="
 return /\41/.exec(&quot;!&quot;)[0] === &quot;!&quot;
   &amp;&amp; /[\41]/.exec(&quot;!&quot;)[0] === &quot;!&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("637");try{return Function("asyncTestPassed","\nreturn /\\41/.exec(\"!\")[0] === \"!\"\n  && /[\\41]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("637");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\41/.exec(\"!\")[0] === \"!\"\n  && /[\\41]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("639");try{return Function("asyncTestPassed","\nreturn /\\41/.exec(\"!\")[0] === \"!\"\n  && /[\\41]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("639");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\41/.exec(\"!\")[0] === \"!\"\n  && /[\\41]/.exec(\"!\")[0] === \"!\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -48549,7 +48705,7 @@ return /\41/.exec(&quot;!&quot;)[0] === &quot;!&quot;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="edge-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[8]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[9]</sup> This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff-shorthand-methods-note">  <sup>[10]</sup> Firefox incorrectly produces an error in strict mode if the method is named &quot;arguments&quot;, &quot;eval&quot;, or &quot;delete&quot;.</p><p id="typescript-core-js-note">  <sup>[11]</sup> This feature is supported when using TypeScript with core-js, or when a native ES6 host is used.</p><p id="ff11-object-destructuring-note">  <sup>[12]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="compiler-proto-note">  <sup>[15]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[16]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[17]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="typescript-property-access-note">  <sup>[18]</sup> TypeScript does not support computed <code>super</code> property access.</p><p id="fx-proxy-get-note">  <sup>[19]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[20]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[21]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="forin-order-note">  <sup>[22]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="symbol-iterator-functionality-note">  <sup>[23]</sup> Functionality for <code>Symbol.iterator</code> is tested by the &quot;generic iterators&quot; subtests for the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, <a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, and <a href="#Array_static_methods">Array.from</a>.</p><p id="ejs-no-with-note">  <sup>[24]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[25]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[26]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[27]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[28]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[29]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[30]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[31]</sup> Available since Firefox 26</p><p id="ie_property_order-note">  <sup>[32]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="hoisted-block-functions-note">  <sup>[33]</sup> The current version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.</p><p id="proto-in-object-literals-note">  <sup>[34]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="edge-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag</p><p id="khtml-note">  <sup>[5]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[6]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[7]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[8]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[9]</sup> This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff-shorthand-methods-note">  <sup>[10]</sup> Firefox incorrectly produces an error in strict mode if the method is named &quot;arguments&quot;, &quot;eval&quot;, or &quot;delete&quot;.</p><p id="typescript-core-js-note">  <sup>[11]</sup> This feature is supported when using TypeScript with core-js, or when a native ES6 host is used.</p><p id="ff11-object-destructuring-note">  <sup>[12]</sup> Firefox &lt; 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals.</p><p id="fx-let-note">  <sup>[13]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[14]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="compiler-proto-note">  <sup>[15]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[16]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[17]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="typescript-property-access-note">  <sup>[18]</sup> TypeScript does not support computed <code>super</code> property access.</p><p id="fx-proxy-get-note">  <sup>[19]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s &quot;get&quot; handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s &quot;has&quot; handler reports it as present).</p><p id="fx-proxy-getown-note">  <sup>[20]</sup> From Firefox 18 up to 29, the <code>getOwnPropertyDescriptor</code> handler can only report non-existent properties if the proxy target is non-extensible rather than extensible</p><p id="fx-proxy-ownkeys-note">  <sup>[21]</sup> Available from Firefox 18 up to 33 as the draft standard <code>keys</code> handler</p><p id="symbol-iterator-functionality-note">  <sup>[22]</sup> Functionality for <code>Symbol.iterator</code> is tested by the &quot;generic iterators&quot; subtests for the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, <a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, and <a href="#Array_static_methods">Array.from</a>.</p><p id="ejs-no-with-note">  <sup>[23]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[24]</sup> Requires function &quot;name&quot; properties to be natively configurable</p><p id="string-contains-note">  <sup>[25]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-note">  <sup>[26]</sup> Available from Firefox 17 up to 27 as the non-standard <code>Array.prototype.iterator</code></p><p id="fx-array-prototype-values-2-note">  <sup>[27]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[28]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="chromu-imul-note">  <sup>[29]</sup> Available since Chrome 28</p><p id="fx-fround-note">  <sup>[30]</sup> Available since Firefox 26</p><p id="ie_property_order-note">  <sup>[31]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="forin-order-note">  <sup>[32]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="hoisted-block-functions-note">  <sup>[33]</sup> The current version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.</p><p id="proto-in-object-literals-note">  <sup>[34]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
