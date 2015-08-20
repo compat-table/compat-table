@@ -371,3 +371,39 @@ label[for="sort"] {
     position: relative;
     top: 7px;
 }
+
+td[data-browser] {
+    position: relative;
+}
+
+tr:hover>td[data-browser]::before {
+    content: attr(data-browser);
+    position: absolute;
+    bottom: 100%;
+    top: auto;
+    left: -1px;
+    right: -1px;
+    background: none;
+    background: #000;
+    opacity: 1;
+    white-space: normal;
+    word-break: break-all;
+    padding: .2em;
+    line-height: 1.6em;
+    height: 3.6em;
+    margin: 0;
+    border: 0;
+}
+
+.subtest>td[data-browser].yes::before, .subtest>td[data-browser].no::before {
+    left: -6px;
+    right: -6px;
+}
+
+td[data-browser]:hover::before {
+    font-weight: bold;
+}
+
+.yes, .tally, .no, .not-applicable {
+    padding: .25em;
+}
