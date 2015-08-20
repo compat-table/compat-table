@@ -190,15 +190,20 @@ exports.browsers = {
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
+    obsolete: true,
   },
   firefox40: {
     full: 'Firefox',
     short: 'FF 40',
-    unstable: true,
   },
   firefox41: {
     full: 'Firefox',
     short: 'FF 41',
+    unstable: true,
+  },
+  firefox42: {
+    full: 'Firefox',
+    short: 'FF 42',
     unstable: true,
   },
   chrome: {
@@ -4002,6 +4007,7 @@ exports.tests = [
         chrome43:    true,
         webkit:      true,
         iojs:        true,
+        firefox42:   true,
       },
     },
     'constructor accepts null': {
@@ -4366,6 +4372,7 @@ exports.tests = [
         chrome43:    true,
         webkit:      true,
         iojs:        true,
+        firefox42:   true,
       },
     },
     'constructor accepts null': {
@@ -4730,6 +4737,7 @@ exports.tests = [
         chrome43:    true,
         webkit:      true,
         iojs:        true,
+        firefox42:   true,
       },
     },
     'constructor accepts null': {
@@ -5641,7 +5649,9 @@ exports.tests = [
         RegExp(p);
         return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
       */},
-      res: {},
+      res: {
+        firefox42:   true,
+      },
     },
     'RegExp.prototype.flags': {
       exec: function() {/*
@@ -6053,6 +6063,7 @@ exports.tests = [
       */},
       res: {
         edge:        true,
+        firefox42:   true,
       },
     },
     'Array.prototype.unshift': {
@@ -6065,6 +6076,7 @@ exports.tests = [
       */},
       res: {
         edge:        true,
+        firefox42:   true,
       },
     },
   },
@@ -6325,6 +6337,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        firefox42:   true,
       },
     },
     'Reflect.set': {
@@ -6339,6 +6352,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        firefox42:   true,
       },
     },
     'Reflect.has': {
@@ -6352,6 +6366,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.deleteProperty': {
@@ -6367,6 +6382,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.getOwnPropertyDescriptor': {
@@ -6382,6 +6398,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         edge:        true,
         es6shim:     true,
+        firefox42:   true,
       },
     },
     'Reflect.defineProperty': {
@@ -6397,6 +6414,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.getPrototypeOf': {
@@ -6410,6 +6428,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.setPrototypeOf': {
@@ -6425,6 +6444,7 @@ exports.tests = [
         edge:        true,
         es6shim:     { val: false, note_id: 'compiler-proto' },
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.isExtensible': {
@@ -6439,6 +6459,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.preventExtensions': {
@@ -6454,6 +6475,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.enumerate': {
@@ -6481,7 +6503,7 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Reflect.ownKeys': {
+    'Reflect.ownKeys, string key order': {
       exec: function() {/*
         var obj = {
           2:    true,
@@ -6511,7 +6533,7 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Reflect.ownKeys, symbol order': {
+    'Reflect.ownKeys, symbol key order': {
       exec: function() {/*
         var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
         var obj = {
@@ -6537,6 +6559,7 @@ exports.tests = [
         es6shim:     true,
         edge:        true,
         webkit:      true,
+        firefox42:   true,
       }
     },
     'Reflect.apply': {
@@ -6550,6 +6573,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         webkit:      true,
+        firefox42:   true,
       },
     },
     'Reflect.construct': {
@@ -6564,6 +6588,7 @@ exports.tests = [
         ejs:         true,
         edge:        true,
         es6shim:     true,
+        firefox42:   true,
       },
     },
     'Reflect.construct, new.target': {
@@ -6575,7 +6600,8 @@ exports.tests = [
         }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
       */},
       res: {
-          typescript:  typescript.fallthrough,
+        typescript:  typescript.fallthrough,
+        firefox42:   true,
       },
     },
   },
