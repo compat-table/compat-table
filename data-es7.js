@@ -329,13 +329,30 @@ exports.tests = [
     'basic support' : {
       exec: function () {/*
         return (async function(){
-          return 42 + await Promise.resolve(42)
+          return 42;
         })() instanceof Promise
       */},
       res: {
         tr:          true,
         babel:       true,
       }
+    },
+    'await support' : {
+      exec: function () {/*
+        return (async function(){
+          return 10 + await Promise.resolve(10);
+        })() instanceof Promise
+      */},
+      res: {
+      }
+    }, 
+    'await * support' : {
+      exec: function () {/*
+      return (async function(){
+        var g = await * Promise.all([Promise.resolve(10), Promise.resolve(1)]);
+        return g === 12;
+      })() instanceof Promise
+      */}
     },
     'arrow async functions' : {
       exec: function () {/*
