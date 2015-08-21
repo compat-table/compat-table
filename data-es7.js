@@ -1190,6 +1190,59 @@ exports.tests = [
   res: {
     babel:       true,
   }
+},
+{
+  name: 'Observable',
+  category: 'proposal',
+  significance: 'large',
+  link: 'https://github.com/zenparsing/es-observable',
+  'subtests': {
+    'basic support': {
+      exec: function () {/*
+        return typeof Observable !== 'undefined';
+      */}
+    },
+    'Symbol.observable well known symbol': {
+      exec: function () {/*
+        return typeof Symbol.observable === 'symbol';
+      */}
+    },
+    'Observable.prototype.subscribe': {
+      exec: function () {/*
+        return 'subscribe' in Observable.prototype;
+      */}
+    },
+    'Observable.prototype.forEach': {
+      exec: function () {/*
+        return 'forEach' in Observable.prototype;
+      */}
+    },
+    'Observable.prototype.filter': {
+      exec: function () {/*
+        return 'filter' in Observable.prototype;
+      */}
+    },
+    'Observable.prototype.map': {
+      exec: function () {/*
+        return 'map' in Observable.prototype;
+      */}
+    },
+    'Observable.prototype.@@observable': {
+      exec: function () {/*
+        return Symbol.observable in Observable.prototype;
+      */}
+    },
+    'Observable.of': {
+      exec: function () {/*
+        return Observable.of(1, 2, 3) instanceof Observable;
+      */}
+    },
+    'Observable.from': {
+      exec: function () {/*
+        return Observable.from([1,2,3,4]) instanceof Observable;
+      */}
+    }
+  }
 }
 ];
 
