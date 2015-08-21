@@ -345,14 +345,6 @@ exports.tests = [
       */},
       res: {
       }
-    }, 
-    'await * support' : {
-      exec: function () {/*
-      return (async function(){
-        var g = await * Promise.all([Promise.resolve(10), Promise.resolve(1)]);
-        return g === 12;
-      })() instanceof Promise
-      */}
     },
     'arrow async functions' : {
       exec: function () {/*
@@ -1198,7 +1190,7 @@ exports.tests = [
   res: {
     babel:       true,
   }
-},
+}
 ];
 
 //Shift annex B features to the bottom
