@@ -887,29 +887,6 @@ exports.tests = [
   }
 },
 {
-  name: 'async generators',
-  link: 'https://github.com/jhusain/asyncgenerator',
-  category: 'proposal',
-  significance: 'small',
-  exec: function(){/*
-    async function * nums() {
-      yield 1;
-      yield 2;
-      yield 3;
-    }
-    var result = '';
-    // data consumer
-    async function printData() {
-      for(var x on nums()) {
-        result += x;
-      }
-    }
-    return result === "123";
-  */},
-  res: {
-  }
-},
-{
   name: 'array comprehensions',
   category: 'pre-strawman',
   significance: 'medium',
