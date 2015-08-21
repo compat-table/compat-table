@@ -541,6 +541,7 @@ exports.tests = [
         edge:        true,
         firefox23:   true,
         chrome45:    true,
+        webkit:      true,
       },
     },
     '"this" unchanged by call or apply': {
@@ -560,6 +561,7 @@ exports.tests = [
         edge:        true,
         firefox23:   true,
         chrome45:    true,
+        webkit:      true,
       },
     },
     'can\'t be bound, can be curried': {
@@ -579,6 +581,7 @@ exports.tests = [
         edge:        true,
         firefox23:   true,
         chrome45:    true,
+        webkit:      true,
       },
     },
     'lexical "arguments" binding': {
@@ -6340,6 +6343,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         firefox42:   true,
+        webkit:      true,
       },
     },
     'Reflect.set': {
@@ -6401,6 +6405,7 @@ exports.tests = [
         edge:        true,
         es6shim:     true,
         firefox42:   true,
+        webkit:      true,
       },
     },
     'Reflect.defineProperty': {
