@@ -1230,7 +1230,7 @@ exports.tests = [
         return 'map' in Observable.prototype && o.map(function(e){return e}) instanceof Observable;
       */}
     },
-    'Observable.prototype.@@observable': {
+    'Observable.prototype[Symbol.observable]': {
       exec: function () {/*
         var o = new Observable();
         return Symbol.observable in Observable.prototype && o[Symbol.observable] === o;
