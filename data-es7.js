@@ -1213,23 +1213,27 @@ exports.tests = [
       */}
     },
     'Observable.prototype.forEach': {
-      exec: function () {/*
-        return 'forEach' in Observable.prototype;
+      exec: function () {/*        
+        var o = new Observable();
+        return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
       */}
     },
     'Observable.prototype.filter': {
       exec: function () {/*
-        return 'filter' in Observable.prototype;
+        var o = new Observable();
+        return 'filter' in Observable.prototype && o.filter(function(e){return true}) instanceof Observable;
       */}
     },
     'Observable.prototype.map': {
       exec: function () {/*
-        return 'map' in Observable.prototype;
+        var o = new Observable();
+        return 'map' in Observable.prototype && o.map(function(e){return e}) instanceof Observable;
       */}
     },
     'Observable.prototype.@@observable': {
       exec: function () {/*
-        return Symbol.observable in Observable.prototype;
+        var o = new Observable();
+        return Symbol.observable in Observable.prototype && o[Symbol.observable] === o;
       */}
     },
     'Observable.of': {
@@ -1239,7 +1243,7 @@ exports.tests = [
     },
     'Observable.from': {
       exec: function () {/*
-        return Observable.from([1,2,3,4]) instanceof Observable;
+        return (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);
       */}
     }
   }
