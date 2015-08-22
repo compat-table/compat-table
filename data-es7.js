@@ -329,12 +329,21 @@ exports.tests = [
     'basic support' : {
       exec: function () {/*
         return (async function(){
-          return 42 + await Promise.resolve(42)
+          return 42;
         })() instanceof Promise
       */},
       res: {
         tr:          true,
         babel:       true,
+      }
+    },
+    'await support' : {
+      exec: function () {/*
+        return (async function(){
+          return 10 + await Promise.resolve(10);
+        })() instanceof Promise
+      */},
+      res: {
       }
     },
     'arrow async functions' : {
@@ -1181,7 +1190,7 @@ exports.tests = [
   res: {
     babel:       true,
   }
-},
+}
 ];
 
 //Shift annex B features to the bottom
