@@ -344,6 +344,8 @@ exports.tests = [
         })() instanceof Promise
       */},
       res: {
+        tr:          true,
+        babel:       true,
       }
     },
     'arrow async functions' : {
