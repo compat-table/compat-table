@@ -4,6 +4,8 @@ exports.name = 'ES7';
 exports.target_file = 'es7/index.html';
 exports.skeleton_file = 'es7/skeleton.html';
 
+var flag = "flagged";
+
 exports.browsers = {
   tr: {
     full: 'Traceur',
@@ -479,6 +481,7 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
+        edge:        flag,
         firefox39:   true,
         es7shim: true,
       }
@@ -1182,6 +1185,7 @@ exports.tests = [
     }
   */},
   res: {
+    edge:       true,
   }
 },
 {
