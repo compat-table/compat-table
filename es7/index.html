@@ -380,7 +380,7 @@ obj.x = 2;
 <td data-browser="iojs" class="tally" data-tally="0">0/50</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/50</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/50</td>
-<td data-browser="edge" class="tally" data-tally="0">0/50</td>
+<td data-browser="edge" class="tally" data-tally="0" data-flagged-tally="0.02">0/50</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_basic_support"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof SIMD !== &apos;undefined&apos;;
@@ -411,7 +411,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge">No</td>
+<td class="no flagged" data-browser="edge">Flag</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="SIMD_(Single_Instruction,_Multiple_Data)_Float32x4"><td><span><a class="anchor" href="#SIMD_(Single_Instruction,_Multiple_Data)_Float32x4">&#xA7;</a>Float32x4</span><script data-source="
 return typeof SIMD.Float32x4 === &apos;function&apos;;
@@ -3277,7 +3277,7 @@ try {
 <td class="no" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge">No</td>
+<td class="yes" data-browser="edge">Yes</td>
 </tr>
 <tr significance="0.125"><td id="nested_rest_destructuring"><span><a class="anchor" href="#nested_rest_destructuring">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring</a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
