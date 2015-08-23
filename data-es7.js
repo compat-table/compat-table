@@ -1079,6 +1079,7 @@ exports.tests = [
           && 'hello'.padLeft(6, '123') === '3hello';
       */},
       res: {
+        babel:   true,
         es7shim: true,
       }
     },
@@ -1090,6 +1091,7 @@ exports.tests = [
           && 'hello'.padRight(6, '123') === 'hello1';
       */},
       res: {
+        babel:   true,
         es7shim: true,
       }
     }
@@ -1119,6 +1121,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
       res: {
+        babel:      true,
         edge:       true,
         firefox31:  true,
         chrome30:   true,
@@ -1133,6 +1136,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
       res: {
+        babel:      true,
         edge:       true,
         firefox31:  true,
         chrome30:   true,
