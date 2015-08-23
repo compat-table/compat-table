@@ -6412,13 +6412,13 @@ exports.tests = [
       exec: function() {/*
         var obj = {};
         Reflect.defineProperty(obj, "foo", { value: 123 });
-        return obj.foo === 123;
+        return obj.foo === 123 &&
+          Reflect.defineProperty(Object.freeze({}), "foo", { value: 123 }) === false;
       */},
       res: {
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,
-        edge:        true,
         es6shim:     true,
         webkit:      true,
         firefox42:   true,

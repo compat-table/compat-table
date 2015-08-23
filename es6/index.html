@@ -24996,7 +24996,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="es6shim" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/16</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/16</td>
-<td data-browser="edge" class="tally" data-tally="0.9375" style="background-color:hsl(112,44%,50%)">15/16</td>
+<td data-browser="edge" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td data-browser="firefox11" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="firefox13" class="obsolete tally" data-tally="0">0/16</td>
 <td data-browser="firefox16" class="obsolete tally" data-tally="0">0/16</td>
@@ -25425,8 +25425,9 @@ return desc.value === 789 &amp;&amp;
 <tr class="subtest" data-parent="Reflect" id="Reflect_Reflect.defineProperty"><td><span><a class="anchor" href="#Reflect_Reflect.defineProperty">&#xA7;</a>Reflect.defineProperty</span><script data-source="
 var obj = {};
 Reflect.defineProperty(obj, &quot;foo&quot;, { value: 123 });
-return obj.foo === 123;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("331");try{return Function("asyncTestPassed","\nvar obj = {};\nReflect.defineProperty(obj, \"foo\", { value: 123 });\nreturn obj.foo === 123;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("331");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nReflect.defineProperty(obj, \"foo\", { value: 123 });\nreturn obj.foo === 123;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return obj.foo === 123 &amp;&amp;
+  Reflect.defineProperty(Object.freeze({}), &quot;foo&quot;, { value: 123 }) === false;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("331");try{return Function("asyncTestPassed","\nvar obj = {};\nReflect.defineProperty(obj, \"foo\", { value: 123 });\nreturn obj.foo === 123 &&\n  Reflect.defineProperty(Object.freeze({}), \"foo\", { value: 123 }) === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("331");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nReflect.defineProperty(obj, \"foo\", { value: 123 });\nreturn obj.foo === 123 &&\n  Reflect.defineProperty(Object.freeze({}), \"foo\", { value: 123 }) === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -25437,7 +25438,7 @@ return obj.foo === 123;
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes" data-browser="edge">Yes</td>
+<td class="no" data-browser="edge">No</td>
 <td class="no obsolete" data-browser="firefox11">No</td>
 <td class="no obsolete" data-browser="firefox13">No</td>
 <td class="no obsolete" data-browser="firefox16">No</td>
