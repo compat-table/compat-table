@@ -2588,6 +2588,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
+        edge:        flag,
         typescript:  typescript.fallthrough,
         ejs:         true,
         firefox27:   true,
@@ -5532,7 +5533,9 @@ exports.tests = [
         class C extends p {}
         return get + '' === "prototype";
       */},
-      res: {},
+      res: {
+        edge:        flag,
+      },
     },
     'IteratorComplete, IteratorValue': {
       exec: function() {/*
@@ -9032,6 +9035,7 @@ exports.tests = [
         es6shim:     true,
         firefox32:   true,
         chrome45:    true,
+        edge:        flag,
       }
     },
     'Array.from, generic iterables': {
@@ -9099,6 +9103,7 @@ exports.tests = [
         es6shim:     true,
         firefox32:   true,
         chrome45:    true,
+        edge:        flag,
       }
     },
     'Array.from map function, generic iterables': {
