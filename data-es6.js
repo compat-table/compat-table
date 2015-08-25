@@ -2812,6 +2812,30 @@ exports.tests = [
         edge:        flag,
       },
     },
+    '%GeneratorPrototype%.constructor': {
+      exec: function () {/*
+        function * g (){}
+        var iterator = new g.constructor("a","b","c","yield a; yield b; yield c;")(5,6,7);
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 7 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      */},
+      res: {
+        firefox27:   true,
+        chrome21dev: flag,
+        chrome39:    true,
+        node:        flag,
+        iojs:        true,
+        ejs:         true,
+        edge:        flag,
+      },
+    },
     '%GeneratorPrototype%.throw': {
       exec: function() {/*
         var passed = false;
@@ -8963,7 +8987,7 @@ exports.tests = [
       */},
       res: temp.regExpExtensions,
     },
-    'invalid unicode escapes': {
+    'invalid Unicode escapes': {
       exec: function() {/*
         return /\u1/.exec("u1")[0] === "u1"
           && /[\u1]/.exec("u")[0] === "u";
@@ -10720,6 +10744,13 @@ exports.tests = [
         chrome43:    true,
         edge:        true,
         iojs:        true
+      },
+    },
+    'String.prototype case methods, Unicode support': {
+      exec: function(){/*
+        return "𐐘".toLowerCase() === "𐑀" && "𐑀".toUpperCase() === "𐐘";
+      */},
+      res: {
       },
     },
   },
