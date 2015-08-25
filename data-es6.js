@@ -3560,6 +3560,25 @@ exports.tests = [
         iojs:        true,
       },
     },
+    'passed array is frozen': {
+      exec: function () {/*
+        return (function(parts) {
+          return Object.isFrozen(parts) && Object.isFrozen(parts.raw);
+        }) `foo${0}bar${0}baz`;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        babel:       true,
+        es6tr:       true,
+        jsx:         true,
+        edge:        true,
+        firefox34:   true,
+        chrome41:    true,
+        webkit:      true,
+        iojs:        true,
+      },
+    },
     'line break normalisation': {
       /* For some reason, this .fromCharCode stuff is necessary instead of \r\n. */
       exec: function () {/*
