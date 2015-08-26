@@ -1142,6 +1142,21 @@ exports.tests = [
         edge:        flag,
       },
     },
+    'arguments object interaction': {
+      exec: function(){/*
+        var args = (function (a = 1, b = 2, c = 3) { return arguments; }(5, undefined));
+        return args[0] === 5 && args[1] === undefined && args.length === 2;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        ejs:         true,
+        firefox16:   true,
+        webkit:      true,
+        edge:        flag,
+      },
+    },
     'temporal dead zone': {
       exec: function(){/*
         return (function(x = 1) {
@@ -10770,9 +10785,35 @@ exports.tests = [
         return "𐐘".toLowerCase() === "𐑀" && "𐑀".toUpperCase() === "𐐘";
       */},
       res: {
+        safari71_8:  true,
+        webkit:      true,
       },
     },
   },
+},
+{
+  name: 'HTML-style comments',
+  category: 'annex b',
+  significance: 'tiny',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-html-like-comments',
+  exec: function () {/*
+    --> A comment
+    <!-- Another comment
+    var a = 3; <!-- Another comment
+    return a === 3;
+  */},
+  res: {
+    ie10:        true,
+    firefox11:   true,
+    chrome:      true,
+    safari51:    true,
+    webkit:      true,
+    opera:       true,
+    konq49:      true,
+    rhino17:     true,
+    node:        true,
+    iojs:        true,
+  }
 },
 ];
 
