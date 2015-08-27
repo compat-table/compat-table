@@ -271,10 +271,41 @@ td[title] {
 }
 #header {
     background: #454545; margin-bottom: 0.5em; color: #eee; text-decoration: none; width: 100%;
-    padding: 0.5em; font-size: 1.25em; overflow: hidden
+    font-size: 1.25em; overflow: hidden
 }
 #header a {
     color: inherit;
+}
+#header #nav {
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+#logo {
+    display: block;
+    float: left;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #3a3a3a;
+}
+#logo:hover {
+    background-color: #333;
+}
+#logo:active {
+    background-color: #2a2a2a;
+}
+#logo img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+#header .social {
+    font-size:0.8em;
+    float:right;
+    font-weight:normal;
+    margin: 14px;
 }
 
 #header .versions {

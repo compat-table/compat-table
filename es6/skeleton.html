@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
     <title>ECMAScript 6 compatibility table</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
@@ -43,20 +44,22 @@
 </head>
 <body class="es6">
   <div id="header">
+    <a href="../" id="logo"><img src="../logo.png" alt="JS compat"></a>
+    <div id="nav">
+      ECMAScript
+      <span class="versions">
+        <a href="../es5">5</a><!--
+        --><a href="../es6" class="current">6</a><!--
+        --><a href="../es7">7</a><!--
+        --><a href="../esintl">intl</a><!--
+        --><a href="../non-standard">non-standard</a>
+      </span>
+      compatibility table
+    </div>
 
-    ECMAScript
-    <span class="versions">
-      <a href="../es5">5</a><!--
-      --><a href="../es6" class="current">6</a><!--
-      --><a href="../es7">7</a><!--
-      --><a href="../esintl">intl</a><!--
-      --><a href="../non-standard">non-standard</a>
-    </span>
-    compatibility table
+    <div class="social">
 
-    <span style="font-size:0.8em;float:right;font-weight:normal;">
-
-      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es6/"></a>
+      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
 
       <script async src="https://www.google-analytics.com/ga.js"></script>
       <span class="by">
@@ -69,7 +72,7 @@
 
       <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
         frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
-    </span>
+    </div>
   </div>
   <div id="body">
     <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
