@@ -13,6 +13,21 @@ body {
 :target {
     background: #ffc
 }
+@media (max-width: 468px) {
+    .hidden-tiny {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .hidden-mobile {
+        display: none !important;
+    }
+}
+@media (max-width: 1024px) {
+    .hidden-tablet {
+        display: none !important;
+    }
+}
 table {
     margin-bottom: 2em; width: 100%;
 }
@@ -266,7 +281,7 @@ td[title] {
 
 /* page header */
 #body {
-    padding-left: 1em; position: relative; min-width: 1250px;
+    padding-left: 1em; position: relative; overflow-x: auto;
     width: 100%;
 }
 #header {
@@ -280,6 +295,20 @@ td[title] {
     float: left;
     margin-top: 13px;
     margin-left: 10px;
+}
+@media (max-width: 1360px) {
+    #header #nav {
+        margin-top: 16px;
+        margin-left: 5px;
+        font-size: .8em;
+    }
+}
+@media (max-width: 850px) {
+    #header #nav {
+        margin-top: 17px;
+        margin-left: 5px;
+        font-size: .7em;
+    }
 }
 #logo {
     display: block;
@@ -306,6 +335,11 @@ td[title] {
     float:right;
     font-weight:normal;
     margin: 14px;
+}
+@media (max-width: 600px) {
+    #header .social {
+        display: none !important;
+    }
 }
 
 #header .versions {

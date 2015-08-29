@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>ECMAScript 5 compatibility table</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
@@ -29,7 +30,7 @@
   <div id="header">
     <a href="../" id="logo"><img src="../logo.png" alt="JS compat"></a>
     <div id="nav">
-      ECMAScript
+      <span class="hidden-mobile">ECMAScript</span>
       <span class="versions">
         <a href="../es5" class="current">5</a><!--
         --><a href="../es6">6</a><!--
@@ -37,12 +38,14 @@
         --><a href="../esintl">intl</a><!--
         --><a href="../non-standard">non-standard</a>
       </span>
-      compatibility table
+      <span class="hidden-mobile">compatibility table</span>
     </div>
 
     <div class="social">
 
-      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
+      <span class="hidden-tablet">
+        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
+      </span>
 
       <script async src="https://www.google-analytics.com/ga.js"></script>
       <span class="by">
@@ -53,7 +56,7 @@
         <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
       </span>
 
-      <iframe src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
+      <iframe class="hidden-tablet" src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
         frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
     </div>
   </div>

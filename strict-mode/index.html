@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Strict mode support test — Strict mode support</title>
     <style>
       body { font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif; margin: 0; }
@@ -36,6 +37,7 @@
         &larr; Back to the main table
       </a>
     </p>
+    <div id="results" style="overflow-x: auto;"></div>
     <script>
       // enable strict globally
 
@@ -46,7 +48,7 @@
       function print(message) {
         var el = document.createElement('p');
         el.innerHTML = message;
-        document.body.appendChild(el);
+        document.getElementById('results').appendChild(el);
       }
 
       function colorResult(result) {
