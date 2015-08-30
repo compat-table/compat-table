@@ -6640,7 +6640,7 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.construct, new.target': {
+    'Reflect.construct sets new.target meta property': {
       exec: function() {/*
         return Reflect.construct(function(a, b, c) {
           if (new.target === Object) {
@@ -6651,6 +6651,16 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         firefox42:   true,
+      },
+    },
+    'Reflect.construct creates instance from newTarget argument': {
+      exec: function() {/*
+        function F(){}
+        return Reflect.construct(function(){}, [], F) instanceof F;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
       },
     },
   },
