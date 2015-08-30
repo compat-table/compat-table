@@ -8586,6 +8586,23 @@ exports.tests = [
         webkit:      true,
       },
     },
+    'JSON.stringify ignores symbols': {
+      exec: function() {/*
+        var object = {foo: Symbol()};
+        object[Symbol()] = 1;
+        var array = [Symbol()];
+        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]';
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        firefox36:   true,
+        chrome35:    flag,
+        chrome38:    true,
+        node:        true,
+        iojs:        true,
+      },
+    },
     'global symbol registry': {
       exec: function() {/*
         var symbol = Symbol.for('foo');
