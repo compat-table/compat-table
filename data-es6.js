@@ -8604,13 +8604,14 @@ exports.tests = [
         return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]';
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        firefox36:   true,
-        chrome35:    flag,
-        chrome38:    true,
-        node:        true,
-        iojs:        true,
+        babel: true,
+        typescript: typescript.corejs,
+        firefox36: true,
+        chrome35: flag,
+        chrome38: true,
+        node: true,
+        iojs: true,
+        webkit: true,
       },
     },
     'global symbol registry': {
