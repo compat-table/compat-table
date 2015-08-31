@@ -6659,8 +6659,9 @@ exports.tests = [
         return Reflect.construct(function(){}, [], F) instanceof F;
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        es6shim: true,
+        typescript: typescript.corejs,
       },
     },
   },
