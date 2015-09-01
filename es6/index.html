@@ -109,7 +109,7 @@
 
           <th colspan="6" class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
 
-          <th colspan="14" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+          <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
 
           <th colspan="4" class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
 
@@ -28273,8 +28273,8 @@ return typeof symbolObject === &quot;object&quot; &amp;&amp;
 var object = {foo: Symbol()};
 object[Symbol()] = 1;
 var array = [Symbol()];
-return JSON.stringify(object) === &apos;{}&apos; &amp;&amp; JSON.stringify(array) === &apos;[null]&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("363");try{return Function("asyncTestPassed","\nvar object = {foo: Symbol()};\nobject[Symbol()] = 1;\nvar array = [Symbol()];\nreturn JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("363");return Function("asyncTestPassed","'use strict';"+"\nvar object = {foo: Symbol()};\nobject[Symbol()] = 1;\nvar array = [Symbol()];\nreturn JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return JSON.stringify(object) === &apos;{}&apos; &amp;&amp; JSON.stringify(array) === &apos;[null]&apos; &amp;&amp; JSON.stringify(Symbol()) === undefined;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("363");try{return Function("asyncTestPassed","\nvar object = {foo: Symbol()};\nobject[Symbol()] = 1;\nvar array = [Symbol()];\nreturn JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("363");return Function("asyncTestPassed","'use strict';"+"\nvar object = {foo: Symbol()};\nobject[Symbol()] = 1;\nvar array = [Symbol()];\nreturn JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
