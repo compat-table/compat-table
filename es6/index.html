@@ -35704,11 +35704,19 @@ return typeof symbolObject === &quot;object&quot; &amp;&amp;
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Symbol" id="test-Symbol_JSON.stringify_ignores_symbols"><td><span><a class="anchor" href="#test-Symbol_JSON.stringify_ignores_symbols">&#xA7;</a>JSON.stringify ignores symbols</span><script data-source="
-var object = {foo: Symbol()};
-object[Symbol()] = 1;
-var array = [Symbol()];
-return JSON.stringify(object) === &apos;{}&apos; &amp;&amp; JSON.stringify(array) === &apos;[null]&apos; &amp;&amp; JSON.stringify(Symbol()) === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("439");try{return Function("asyncTestPassed","\nvar object = {foo: Symbol()};\nobject[Symbol()] = 1;\nvar array = [Symbol()];\nreturn JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("439");return Function("asyncTestPassed","'use strict';"+"\nvar object = {foo: Symbol()};\nobject[Symbol()] = 1;\nvar array = [Symbol()];\nreturn JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+var testSymbol = function (sym) {
+  var object = { foo: sym };
+  object[Symbol.prototype.valueOf.call(sym)] = 1;
+  var array = [sym];
+  var expectedJSON = typeof sym === &apos;object&apos; ? &apos;{}&apos; : undefined;
+  return JSON.stringify(object) === &apos;{}&apos; &amp;&amp; JSON.stringify(array) === &apos;[null]&apos; &amp;&amp; JSON.stringify(sym) === expectedJSON;
+};
+var sym = Symbol();
+var objSym = Object(sym);
+var symNoToJSON = Object(sym);
+symNoToJSON.toJSON = null; // ensure it overrides the prototype, but is not callable
+return testSymbol(sym) &amp;&amp; testSymbol(objSym) &amp;&amp; testSymbol(symNoToJSON);
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("439");try{return Function("asyncTestPassed","\nvar testSymbol = function (sym) {\n  var object = { foo: sym };\n  object[Symbol.prototype.valueOf.call(sym)] = 1;\n  var array = [sym];\n  var expectedJSON = typeof sym === 'object' ? '{}' : undefined;\n  return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(sym) === expectedJSON;\n};\nvar sym = Symbol();\nvar objSym = Object(sym);\nvar symNoToJSON = Object(sym);\nsymNoToJSON.toJSON = null; // ensure it overrides the prototype, but is not callable\nreturn testSymbol(sym) && testSymbol(objSym) && testSymbol(symNoToJSON);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("439");return Function("asyncTestPassed","'use strict';"+"\nvar testSymbol = function (sym) {\n  var object = { foo: sym };\n  object[Symbol.prototype.valueOf.call(sym)] = 1;\n  var array = [sym];\n  var expectedJSON = typeof sym === 'object' ? '{}' : undefined;\n  return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(sym) === expectedJSON;\n};\nvar sym = Symbol();\nvar objSym = Object(sym);\nvar symNoToJSON = Object(sym);\nsymNoToJSON.toJSON = null; // ensure it overrides the prototype, but is not callable\nreturn testSymbol(sym) && testSymbol(objSym) && testSymbol(symNoToJSON);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

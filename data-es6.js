@@ -13922,10 +13922,18 @@ exports.tests = [
     {
       name: 'JSON.stringify ignores symbols',
       exec: function() {/*
-        var object = {foo: Symbol()};
-        object[Symbol()] = 1;
-        var array = [Symbol()];
-        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
+        var testSymbol = function (sym) {
+          var object = { foo: sym };
+          object[Symbol.prototype.valueOf.call(sym)] = 1;
+          var array = [sym];
+          var expectedJSON = typeof sym === 'object' ? '{}' : undefined;
+          return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(sym) === expectedJSON;
+        };
+        var sym = Symbol();
+        var objSym = Object(sym);
+        var symNoToJSON = Object(sym);
+        symNoToJSON.toJSON = null; // ensure it overrides the prototype, but is not callable
+        return testSymbol(sym) && testSymbol(objSym) && testSymbol(symNoToJSON);
       */},
       res: {
         babel:       true,
