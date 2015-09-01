@@ -8602,7 +8602,7 @@ exports.tests = [
         var object = {foo: Symbol()};
         object[Symbol()] = 1;
         var array = [Symbol()];
-        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]';
+        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
       */},
       res: {
         babel: true,
