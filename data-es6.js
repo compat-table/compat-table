@@ -305,12 +305,12 @@ exports.browsers = {
   chrome44: {
     full: 'Chrome, Opera',
     short: 'CH 44,<br>OP&nbsp;31',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome45: {
     full: 'Chrome, Opera',
     short: 'CH 45,<br>OP&nbsp;32',
-    unstable: true,
     note_id: 'experimental-flag',
   },
   chrome46: {
