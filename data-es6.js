@@ -1163,7 +1163,6 @@ exports.tests = [
         babel:       true,
         es6tr:       true,
         ejs:         true,
-        firefox16:   true,
         webkit:      true,
       },
     },
