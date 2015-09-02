@@ -16,6 +16,18 @@ body {
 table {
     margin-bottom: 2em; width: 100%;
 }
+thead > tr:nth-child(2) {
+    background: white;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+thead > tr:nth-child(2) > th {
+    box-shadow: 0 0 0 2px white;
+}
 th {
     font-weight: normal; text-align: center; padding: 1em 0.45em; position: relative; min-width: 40px; font-size: 13px; background: #eee; vertical-align: middle;
 }
