@@ -1149,8 +1149,14 @@ exports.tests = [
     },
     'arguments object interaction': {
       exec: function(){/*
-        var args = (function (a = 1, b = 2, c = 3) { return arguments; }(5, undefined));
-        return args[0] === 5 && args[1] === undefined && args.length === 2;
+        return (function (a = "baz", b = "qux", c = "quux") {
+          a = "corge";
+          // The arguments object is not mapped to the
+          // parameters, even outside of strict mode.
+          return arguments.length === 2
+            && arguments[0] === "foo"
+            && arguments[1] === "bar";
+        }("foo", "bar"));
       */},
       res: {
         tr:          true,
@@ -1159,7 +1165,6 @@ exports.tests = [
         ejs:         true,
         firefox16:   true,
         webkit:      true,
-        edge:        flag,
       },
     },
     'temporal dead zone': {
