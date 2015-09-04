@@ -129,7 +129,7 @@
 <th class="platform safari6 desktop" data-browser="safari6"><a href="#safari6" class="browser-name"><abbr title="Safari">SF 6</abbr></a></th>
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 7.0</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
-<th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r179984">WK</abbr></a></th>
+<th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r189313">WK</abbr></a></th>
 <th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform node10 engine" data-browser="node10"><a href="#node10" class="browser-name"><abbr title="Node 0.10">Node .10</abbr></a></th>
 <th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr><a href="#only-english-note"><sup>[1]</sup></a></a></th>
@@ -163,7 +163,7 @@
 <td data-browser="safari6" class="tally" data-tally="0">0/2</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/2</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/2</td>
-<td data-browser="webkit" class="tally" data-tally="0">0/2</td>
+<td data-browser="webkit" class="tally" data-tally="1">2/2</td>
 <td data-browser="opera" class="tally" data-tally="0">0/2</td>
 <td data-browser="node10" class="tally" data-tally="0">0/2</td>
 <td data-browser="node12" class="tally" data-tally="1">2/2</td>
@@ -196,7 +196,7 @@ return typeof Intl === &apos;object&apos;;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -229,7 +229,7 @@ return Intl.constructor === Object;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -259,7 +259,7 @@ return Intl.constructor === Object;
 <td data-browser="safari6" class="tally" data-tally="0">0/5</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/5</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
-<td data-browser="webkit" class="tally" data-tally="0">0/5</td>
+<td data-browser="webkit" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="opera" class="tally" data-tally="0">0/5</td>
 <td data-browser="node10" class="tally" data-tally="0">0/5</td>
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
@@ -292,7 +292,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -325,7 +325,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -358,7 +358,7 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -457,7 +457,7 @@ try {
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -487,7 +487,7 @@ try {
 <td data-browser="safari6" class="tally" data-tally="0">0/1</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/1</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/1</td>
-<td data-browser="webkit" class="tally" data-tally="0">0/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="0">0/1</td>
 <td data-browser="node10" class="tally" data-tally="0">0/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
@@ -520,7 +520,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -550,7 +550,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td data-browser="safari6" class="tally" data-tally="0">0/1</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/1</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/1</td>
-<td data-browser="webkit" class="tally" data-tally="0">0/1</td>
+<td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="0">0/1</td>
 <td data-browser="node10" class="tally" data-tally="0">0/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
@@ -583,7 +583,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -613,7 +613,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td data-browser="safari6" class="tally" data-tally="0">0/5</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/5</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
-<td data-browser="webkit" class="tally" data-tally="0">0/5</td>
+<td data-browser="webkit" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="opera" class="tally" data-tally="0">0/5</td>
 <td data-browser="node10" class="tally" data-tally="0">0/5</td>
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
@@ -646,7 +646,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -679,7 +679,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -712,7 +712,7 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -811,7 +811,7 @@ try {
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -841,7 +841,7 @@ try {
 <td data-browser="safari6" class="tally" data-tally="0">0/5</td>
 <td data-browser="safari7" class="tally" data-tally="0">0/5</td>
 <td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
-<td data-browser="webkit" class="tally" data-tally="0">0/5</td>
+<td data-browser="webkit" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="opera" class="tally" data-tally="0">0/5</td>
 <td data-browser="node10" class="tally" data-tally="0">0/5</td>
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
@@ -874,7 +874,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -907,7 +907,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -940,7 +940,7 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -1039,7 +1039,7 @@ try {
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
