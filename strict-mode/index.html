@@ -213,10 +213,10 @@
       (function(){
         var error;
         try {
-          eval('delete (function(){}).length;');
+          eval('delete (function(){}).prototype;');
         }
         catch (err) { error = err; }
-        print('<span class="test"><code>delete (function(){}).length;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
+        print('<span class="test"><code>delete (function(){}).prototype;<\/code> is a TypeError<\/span>' + colorResult(error instanceof TypeError));
       })();
 
       (function(){
