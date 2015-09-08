@@ -62,6 +62,7 @@ process.nextTick(function () {
   var closure     = require('closurecompiler');
   var babel       = require('babel');
   var traceur     = require('traceur');
+  var esdown      = require('esdown');
   var jstransform = require('jstransform/simple');
   var ts          = require('typescript');
   var esprima     = require('esprima');
@@ -134,6 +135,15 @@ process.nextTick(function () {
           throw new Error('\n' + result.errors.join('\n'));
         };
       }()),
+    },
+    {
+      name: 'esdown',
+      url: 'https://github.com/zenparsing/esdown',
+      target_file: 'es6/compilers/esdown.html',
+      polyfills: [],
+      compiler: function(code) {
+        return esdown.transform(code, { runtime: true, polyfill: true });
+      },
     },
     {
       name: 'esprima',

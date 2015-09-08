@@ -319,6 +319,12 @@ exports.browsers = {
     unstable: true,
     note_id: 'experimental-flag',
   },
+  chrome47: {
+    full: 'Chrome, Opera',
+    short: 'CH 47,<br>OP&nbsp;34',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
   safari51: {
     full: 'Safari',
     short: 'SF 5.1',
@@ -631,6 +637,7 @@ exports.tests = [
         tr:          true,
         firefox23:   true,
         webkit:      true,
+        chrome47:    true,
       },
     },
     'no "prototype" property': {
@@ -645,6 +652,7 @@ exports.tests = [
         chrome39:    flag,
         chrome40:    false,
         chrome45:    true,
+        webkit:      true,
       },
     },
     'lexical "super" binding': {
@@ -683,6 +691,7 @@ exports.tests = [
       res: {
         firefox41:    true,
         chrome46:     flag,
+        chrome47:     true,
       },
     },
   },
@@ -1298,6 +1307,7 @@ exports.tests = [
         typescript:  true,
         edge:        true,
         firefox38:   true,
+        chrome47:    flag,
       },
     },
     'new Function() support': {
@@ -1338,6 +1348,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         chrome44:    flag,
+        chrome47:    true,
         iojs:        flag,
       },
     },
@@ -1356,6 +1367,7 @@ exports.tests = [
         firefox16:   true,
         safari71_8:  true,
         webkit:      true,
+        chrome47:    true,
       },
     },
     'with sparse arrays, in function calls': {
@@ -1376,6 +1388,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         chrome44:    flag,
+        chrome47:    true,
       },
     },
     'with sparse arrays, in array literals': {
@@ -1389,6 +1402,7 @@ exports.tests = [
         firefox16:   true,
         safari71_8:  true,
         webkit:      true,
+        chrome47:    true,
       },
     },
     'with strings, in function calls': {
@@ -1402,6 +1416,7 @@ exports.tests = [
         edge:        true,
         firefox27:   true,
         chrome44:    flag,
+        chrome47:    true,
         iojs:        flag,
       },
     },
@@ -1417,6 +1432,7 @@ exports.tests = [
         firefox17:   true,
         safari9:     true,
         webkit:      true,
+        chrome47:    true,
       },
     },
     'with astral plane strings, in function calls': {
@@ -1429,6 +1445,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        chrome47:    true,
         edge:        true,
         iojs:        flag,
       },
@@ -1445,6 +1462,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         edge:        true,
+        chrome47:    true,
       },
     },
     'with generator instances, in calls': {
@@ -1458,6 +1476,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        chrome47:    true,
         edge:        flag,
         iojs:        flag,
       },
@@ -1473,6 +1492,7 @@ exports.tests = [
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
+        chrome47:    true,
         edge:        flag,
       },
     },
@@ -1492,6 +1512,7 @@ exports.tests = [
         ejs:         true,
         firefox36:   true,
         chrome44:    flag,
+        chrome47:    true,
         edge:        true,
         iojs:        flag,
       },
@@ -1510,6 +1531,7 @@ exports.tests = [
         firefox36:   true,
         safari9:     true,
         webkit:      true,
+        chrome47:    true,
       },
     },
     'with instances of iterables, in calls': {
@@ -1523,6 +1545,7 @@ exports.tests = [
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
         chrome44:    flag,
+        chrome47:    true,
         edge:        true,
         iojs:        flag,
       },
@@ -1539,6 +1562,7 @@ exports.tests = [
         edge:        true,
         firefox36:   true,
         safari9:     true,
+        chrome47:    true,
         webkit:      true,
       },
     },
@@ -1560,6 +1584,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         chrome44:    flag,
+        chrome47:    true,
         iojs:        flag,
       },
     },
@@ -8516,6 +8541,7 @@ exports.tests = [
         firefox41:   true,
         webkit:      true,
         chrome46:    flag,
+        chrome47:    true,
       }
     },
     'assignment is an early error': {
@@ -8533,6 +8559,7 @@ exports.tests = [
       */},
       res: {
         firefox41:   true,
+        chrome47:    true,
       }
     },
   }

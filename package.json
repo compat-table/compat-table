@@ -25,10 +25,11 @@
     "esprima":        "latest",
     "espree":         "latest",
     "jshint":         "latest",
-    "es5-shim": "latest",
-    "es6-shim": "latest",
-    "es7-shim": "latest",
-    "core-js": "latest"
+    "es5-shim":       "latest",
+    "es6-shim":       "latest",
+    "es7-shim":       "latest",
+    "core-js":        "latest",
+    "esdown":         "latest"
   },
   "scripts": {
     "lint": "jshint data-es5.js data-es6.js data-es7.js",
