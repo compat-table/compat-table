@@ -386,7 +386,6 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
-    obsolete: true,
   },
   iojs: {
     full: 'Node.js',
