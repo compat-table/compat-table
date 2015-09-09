@@ -382,23 +382,25 @@ exports.browsers = {
   },
   node012: {
     full: 'Node.js',
-    short: 'Node 0.12',
+    short: 'Node<br>0.12',
     platformtype: 'engine',
     note_id: 'harmony-flag',
-    note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag'
+    note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
+    obsolete: true,
+  },
+  iojs: {
+    full: 'Node.js',
+    short: 'io.js<br>3.3',
+    platformtype: 'engine',
+    note_id: 'harmony-flag',
+    equals: 'chrome44',
+    obsolete: true,
   },
   node4:  {
     full: 'Node.js',
-    short: 'Node 4.0',
+    short: 'Node<br>4.0',
     platformtype: 'engine',
     note_id: 'harmony-flag',
-  },
-  iojs:  {
-    full: 'io.js',
-    short: 'io.js 3.3',
-    platformtype: 'engine',
-    note_id: 'harmony-flag',
-    obsolete: true,
   },
   ejs: {
     full: 'Echo JS',
@@ -497,7 +499,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        flag,
       },
     },
     '1 parameter, no brackets': {
@@ -521,7 +522,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        flag,
       },
     },
     'multiple parameters': {
@@ -545,7 +545,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        flag,
       },
     },
     'lexical "this" binding': {
@@ -742,7 +741,6 @@ exports.tests = [
         opera:       true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       }
     },
     'is block-scoped': {
@@ -821,7 +819,6 @@ exports.tests = [
         konq49:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       }
     },
     'is block-scoped (strict mode)': {
@@ -845,7 +842,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       }
     },
     'redefining a const (strict mode)': {
@@ -872,7 +868,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       }
     },
     'temporal dead zone (strict mode)': {
@@ -894,7 +889,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
   }
@@ -1022,7 +1016,6 @@ exports.tests = [
         chrome41:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         firefox11:   { val: flag, note_id: 'fx-let' },
         webkit:      true,
       },
@@ -1048,7 +1041,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'for-loop statement scope (strict mode)': {
@@ -1072,7 +1064,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'temporal dead zone (strict mode)': {
@@ -1095,7 +1086,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'for-loop iteration scope (strict mode)': {
@@ -1125,7 +1115,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         firefox39:   { val: flag, note_id: 'fx-let', },
       },
     },
@@ -1279,7 +1268,6 @@ exports.tests = [
         firefox16:   true,
         chrome44:    flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'function \'length\' property': {
@@ -1297,7 +1285,6 @@ exports.tests = [
         firefox16:   true,
         chrome44:    flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'arguments object interaction': {
@@ -1318,7 +1305,6 @@ exports.tests = [
         chrome44:    flag,
         edge:        true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'can\'t be used in setters': {
@@ -1354,7 +1340,6 @@ exports.tests = [
         firefox16:   true,
         chrome44:    flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
   },
@@ -1384,7 +1369,6 @@ exports.tests = [
         chrome44:    flag,
         chrome47:    true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with arrays, in array literals': {
@@ -1426,7 +1410,6 @@ exports.tests = [
         chrome44:    flag,
         chrome47:    true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with sparse arrays, in array literals': {
@@ -1457,7 +1440,6 @@ exports.tests = [
         chrome44:    flag,
         chrome47:    true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with strings, in array literals': {
@@ -1489,7 +1471,6 @@ exports.tests = [
         chrome47:    true,
         edge:        true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with astral plane strings, in array literals': {
@@ -1522,7 +1503,6 @@ exports.tests = [
         chrome47:    true,
         edge:        flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with generator instances, in arrays': {
@@ -1535,11 +1515,9 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         firefox27:   true,
-        chrome44:    flag,
         chrome47:    true,
         edge:        flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with generic iterables, in calls': {
@@ -1561,7 +1539,6 @@ exports.tests = [
         chrome47:    true,
         edge:        true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with generic iterables, in arrays': {
@@ -1596,7 +1573,6 @@ exports.tests = [
         chrome47:    true,
         edge:        true,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'with instances of iterables, in arrays': {
@@ -1636,7 +1612,6 @@ exports.tests = [
         chrome44:    flag,
         chrome47:    true,
         node4:       flag,
-        iojs:        flag,
       },
     },
   }
@@ -1663,7 +1638,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
         typescript:  true,
       },
@@ -1685,7 +1659,6 @@ exports.tests = [
         edge:        flag,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
         webkit:      true,
       },
     },
@@ -1705,7 +1678,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'anonymous class': {
@@ -1724,7 +1696,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'constructor': {
@@ -1748,7 +1719,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'prototype methods': {
@@ -1772,7 +1742,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'string-keyed methods': {
@@ -1795,7 +1764,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'computed prototype methods': {
@@ -1818,7 +1786,6 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
-        iojs:        strict,
         webkit:      true,
       },
     },
@@ -1843,7 +1810,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'computed static methods': {
@@ -1866,7 +1832,6 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
-        iojs:        strict,
         webkit:      true,
       },
     },
@@ -1892,7 +1857,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -1915,7 +1879,6 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'static accessor properties': {
@@ -1938,7 +1901,6 @@ exports.tests = [
         ejs:         true,
         edge:        flag,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
         safari9:     true,
         webkit:      true,
@@ -1963,7 +1925,6 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'class name is lexically scoped': {
@@ -1983,7 +1944,6 @@ exports.tests = [
         edge:        flag,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'computed names, temporal dead zone': {
@@ -2000,7 +1960,6 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
-        iojs:        strict,
         webkit:      true,
       },
     },
@@ -2019,7 +1978,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'implicit strict mode': {
@@ -2039,7 +1997,6 @@ exports.tests = [
         webkit:      true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'constructor requires new': {
@@ -2059,7 +2016,6 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'extends': {
@@ -2092,7 +2048,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       }),
     },
@@ -2117,7 +2072,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -2137,7 +2091,6 @@ exports.tests = [
         jsx:         true,
         edge:        flag,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
         safari9:     true,
         webkit:      true,
@@ -2196,7 +2149,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -2223,7 +2175,6 @@ exports.tests = [
         safari9:     true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'in methods, property access': {
@@ -2252,7 +2203,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -2278,7 +2228,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -2306,7 +2255,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -2352,7 +2300,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
         chrome41:    strict,
       },
     },
@@ -2383,7 +2330,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'shorthand properties': {
@@ -2404,7 +2350,6 @@ exports.tests = [
         chrome41:    flag,
         chrome43:    true,
         node4:       true,
-        iojs:        true,
         safari9:     true,
         webkit:      true,
       },
@@ -2426,7 +2371,6 @@ exports.tests = [
         chrome41:    flag,
         chrome43:    true,
         node4:       true,
-        iojs:        true,
         safari9:     true,
         webkit:      true,
       }),
@@ -2458,7 +2402,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       }
     },
     'computed accessors': {
@@ -2481,7 +2424,6 @@ exports.tests = [
         firefox34:   true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       }
     }
   }
@@ -2536,7 +2478,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
     'function statements in if-statement clauses': {
@@ -2560,7 +2501,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -2589,7 +2529,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
     'multiple __proto__ is an error': {
@@ -2608,7 +2547,6 @@ exports.tests = [
         webkit:       true,
         chrome42:     true,
         node4:        true,
-        iojs:         true,
       },
     },
     'not a computed property': {
@@ -2626,7 +2564,6 @@ exports.tests = [
         webkit:       true,
         chrome44:     true,
         node4:        true,
-        iojs:         true,
       },
     },
     'not a shorthand property': {
@@ -2643,7 +2580,6 @@ exports.tests = [
         webkit:       true,
         chrome42:     true,
         node4:        true,
-        iojs:         true,
       },
     },
     'not a shorthand method': {
@@ -2659,7 +2595,6 @@ exports.tests = [
         webkit:       true,
         chrome42:     true,
         node4:        true,
-        iojs:         true,
       },
     },
   },
@@ -2690,7 +2625,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'with sparse arrays': {
@@ -2722,7 +2656,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'with astral plane strings': {
@@ -2743,7 +2676,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'with generator instances': {
@@ -2766,7 +2698,6 @@ exports.tests = [
         chrome21dev: flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'with generic iterables': {
@@ -2792,7 +2723,6 @@ exports.tests = [
         chrome21dev: flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'with instances of generic iterables': {
@@ -2817,7 +2747,6 @@ exports.tests = [
         chrome35:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'iterator closing, break': {
@@ -2887,7 +2816,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       }),
@@ -2960,7 +2888,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -2986,7 +2913,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         edge:        flag,
       },
     },
@@ -3010,7 +2936,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -3039,7 +2964,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -3085,7 +3009,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -3112,7 +3035,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       }),
@@ -3154,7 +3076,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -3180,7 +3101,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         edge:        flag,
       },
     },
@@ -3208,7 +3128,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         edge:        flag,
       },
     },
@@ -3236,7 +3155,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         edge:        flag,
       },
     },
@@ -3264,7 +3182,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         edge:        flag,
       },
     },
@@ -3291,7 +3208,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         edge:        flag,
       },
     },
@@ -3368,7 +3284,6 @@ exports.tests = [
         chrome42:    true,
         firefox34:   true,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -3396,7 +3311,6 @@ exports.tests = [
         chrome42:    true,
         firefox34:   true,
         node4:       true,
-        iojs:        true,
         ejs:         true,
         edge:        flag,
       },
@@ -3427,7 +3341,6 @@ exports.tests = [
         chrome44:    true,
         edge:        flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'shorthand generator methods, classes': {
@@ -3452,7 +3365,6 @@ exports.tests = [
         closure:     true,
         chrome41:    strict,
         node4:       strict,
-        iojs:        strict,
         edge:        flag,
       },
     },
@@ -3480,7 +3392,6 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
   },
@@ -3621,7 +3532,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'binary literals': {
@@ -3643,7 +3553,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'octal supported by Number()': {
@@ -3663,7 +3572,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'binary supported by Number()': {
@@ -3683,7 +3591,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
   },
@@ -3714,7 +3621,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'toString conversion': {
@@ -3732,7 +3638,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'tagged template strings': {
@@ -3764,7 +3669,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'passed array is frozen': {
@@ -3785,7 +3689,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'line break normalisation': {
@@ -3811,7 +3714,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
   },
@@ -3899,7 +3801,6 @@ exports.tests = [
         opera:       true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
         typescript:  typescript.fallthrough,
       }),
     },
@@ -3926,7 +3827,6 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node012:     true,
-        iojs:        true,
         typescript:  typescript.fallthrough,
       }),
     },
@@ -3994,7 +3894,6 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node012:     true,
-        iojs:        true,
         typescript:  typescript.fallthrough,
       }),
     },
@@ -4146,7 +4045,6 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node012:     true,
-        iojs:        true,
     },
     '.prototype.join':        { edge:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
     '.prototype.indexOf':     { edge:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
@@ -4165,10 +4063,10 @@ exports.tests = [
     '.prototype.find':        { edge:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
     '.prototype.findIndex':   { edge:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
     '.prototype.fill':        { edge:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.keys':        { edge:    true, chrome38: true, node012: true, iojs: true, firefox37: true, ejs: true, chrome45: true, },
-    '.prototype.values':      { edge:    true, chrome38: true, node012: true, iojs: true, firefox37: true, ejs: true, chrome45: true, },
-    '.prototype.entries':     { edge:    true, chrome38: true, node012: true, iojs: true, firefox37: true, chrome45: true, },
-    '.prototype[Symbol.iterator]':      { edge:    true, chrome38: true, node012: true, iojs: true, firefox37: true, ejs: true, chrome45: true, },
+    '.prototype.keys':        { edge:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
+    '.prototype.values':      { edge:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
+    '.prototype.entries':     { edge:    true, chrome38: true, node012: true, firefox37: true,},
+    '.prototype[Symbol.iterator]':      { edge:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
     '[Symbol.species]':       {},
     };
     var eqFn = ' === "function"';
@@ -4223,7 +4121,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'constructor arguments': {
@@ -4247,7 +4144,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'constructor requires new': {
@@ -4269,7 +4165,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
         firefox42:   true,
       },
     },
@@ -4304,7 +4199,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'iterator closing': {
@@ -4343,7 +4237,6 @@ exports.tests = [
         webkit:      true,
         node012:     true,
         node4:       true,
-        iojs:        true,
       },
     },
     '-0 key converts to +0': {
@@ -4367,7 +4260,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
       },
     },
@@ -4393,7 +4285,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype.delete': {
@@ -4413,7 +4304,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype.clear': {
@@ -4433,7 +4323,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype.forEach': {
@@ -4453,7 +4342,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype.keys': {
@@ -4473,7 +4361,6 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype.values': {
@@ -4493,7 +4380,6 @@ exports.tests = [
         chrome36:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype.entries': {
@@ -4513,7 +4399,6 @@ exports.tests = [
         chrome36:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map.prototype[Symbol.iterator]': {
@@ -4532,7 +4417,6 @@ exports.tests = [
         webkit:      true,
         edge:        true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Map iterator prototype chain': {
@@ -4601,7 +4485,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'constructor arguments': {
@@ -4624,7 +4507,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'constructor requires new': {
@@ -4646,7 +4528,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
         firefox42:   true,
       },
     },
@@ -4681,7 +4562,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'iterator closing': {
@@ -4722,7 +4602,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     '-0 key converts to +0': {
@@ -4746,7 +4625,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
         ejs:         true,
       },
     },
@@ -4774,7 +4652,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype.delete': {
@@ -4794,7 +4671,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype.clear': {
@@ -4814,7 +4690,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype.forEach': {
@@ -4834,7 +4709,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype.keys': {
@@ -4853,7 +4727,6 @@ exports.tests = [
         webkit:      true,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype.values': {
@@ -4873,7 +4746,6 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype.entries': {
@@ -4893,7 +4765,6 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set.prototype[Symbol.iterator]': {
@@ -4912,7 +4783,6 @@ exports.tests = [
         webkit:      true,
         edge:        true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Set iterator prototype chain': {
@@ -4978,7 +4848,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'constructor arguments': {
@@ -5000,7 +4869,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'constructor requires new': {
@@ -5022,7 +4890,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
         firefox42:   true,
       },
     },
@@ -5056,7 +4923,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'frozen objects as keys': {
@@ -5077,7 +4943,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'iterator closing': {
@@ -5114,7 +4979,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'WeakMap.prototype.delete': {
@@ -5132,7 +4996,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'no WeakMap.prototype.clear method': {
@@ -5154,7 +5017,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
   },
@@ -5186,7 +5048,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'constructor arguments': {
@@ -5206,7 +5067,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'constructor requires new': {
@@ -5229,7 +5089,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'constructor accepts null': {
@@ -5262,7 +5121,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'iterator closing': {
@@ -5299,7 +5157,6 @@ exports.tests = [
         webkit:      true,
         firefox34:   true,
         node012:     true,
-        iojs:        true,
       },
     },
     'WeakSet.prototype.delete': {
@@ -5317,7 +5174,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'no WeakSet.prototype.clear method': {
@@ -5339,7 +5195,6 @@ exports.tests = [
         webkit:      true,
         edge:        true,
         node4:       true,
-        iojs:        true,
       },
     },
   },
@@ -6928,7 +6783,6 @@ exports.tests = [
     chrome41:    true,
     node012:     flag,
     node4:       true,
-    iojs:        true,
   }
 },
 {
@@ -7555,7 +7409,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'constructor requires new': {
@@ -7576,7 +7429,6 @@ exports.tests = [
         edge:        true,
         chrome43:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Promise.all': {
@@ -7609,7 +7461,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Promise.all, generic iterables': {
@@ -7640,7 +7491,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Promise.race': {
@@ -7673,7 +7523,6 @@ exports.tests = [
         webkit:      true,
         safari71_8:  true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Promise.race, generic iterables': {
@@ -7704,7 +7553,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Promise[Symbol.species]': {
@@ -7763,7 +7611,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Object.getOwnPropertySymbols': {
@@ -7790,7 +7637,6 @@ exports.tests = [
         chrome34:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Object.setPrototypeOf': {
@@ -7808,7 +7654,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -7833,7 +7678,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.getOwnPropertyDescriptor': {
@@ -7850,7 +7694,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.getOwnPropertyNames': {
@@ -7866,7 +7709,6 @@ exports.tests = [
         firefox33:   true,
         chrome40:    true,
         node4:       true,
-        iojs:        true,
         es6shim:     true,
         safari9:     true,
         webkit:      true,
@@ -7887,7 +7729,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.freeze': {
@@ -7904,7 +7745,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.preventExtensions': {
@@ -7921,7 +7761,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.isSealed': {
@@ -7938,7 +7777,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.isFrozen': {
@@ -7955,7 +7793,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.isExtensible': {
@@ -7972,7 +7809,6 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'Object.keys': {
@@ -7990,7 +7826,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
         chrome44:    true,
       },
     },
@@ -8017,7 +7852,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'set prototype': {
@@ -8043,7 +7877,6 @@ exports.tests = [
         opera:       true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'present in hasOwnProperty()': {
@@ -8109,7 +7942,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'function expressions': {
@@ -8194,7 +8026,6 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         node4:        true,
-        iojs:         true,
       },
     },
     'shorthand methods (no lexical binding)': {
@@ -8210,7 +8041,6 @@ exports.tests = [
         chrome41:     flag,
         chrome42:     true,
         node4:        true,
-        iojs:         true,
       },
     },
     'symbol-keyed methods': {
@@ -8241,7 +8071,6 @@ exports.tests = [
         edge:        flag,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'class expressions': {
@@ -8258,7 +8087,6 @@ exports.tests = [
         edge:        flag,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'variables (class)': {
@@ -8300,7 +8128,6 @@ exports.tests = [
         webkit:       true,
         chrome43:     strict,
         node4:        strict,
-        iojs:         strict,
       },
     },
     'class static methods': {
@@ -8315,7 +8142,6 @@ exports.tests = [
         webkit:       true,
         chrome43:     strict,
         node4:        strict,
-        iojs:         strict,
       },
     },
     'isn\'t writable, is configurable': {
@@ -8330,7 +8156,6 @@ exports.tests = [
         firefox38:    true,
         chrome43:     true,
         node4:        true,
-        iojs:         true,
       },
     },
   },
@@ -8357,7 +8182,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.fromCodePoint': {
@@ -8378,7 +8202,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
   },
@@ -8407,7 +8230,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.prototype.normalize': {
@@ -8422,7 +8244,6 @@ exports.tests = [
         chrome34:    true,
         chrome41:    true,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.prototype.repeat': {
@@ -8444,7 +8265,6 @@ exports.tests = [
         chrome41:    true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.prototype.startsWith': {
@@ -8466,7 +8286,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.prototype.endsWith': {
@@ -8488,7 +8307,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.prototype.includes': {
@@ -8514,7 +8332,6 @@ exports.tests = [
         webkit:      true,
         node012:     { val: flag, note_id: 'string-contains' },
         node4:       true,
-        iojs:        true,
         edge:        true,
       },
     },
@@ -8534,7 +8351,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'String iterator prototype chain': {
@@ -8591,7 +8407,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
     'tags\' names are lowercase': {
@@ -8616,7 +8431,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
     'quotes in arguments are escaped': {
@@ -8639,7 +8453,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -8667,7 +8480,6 @@ exports.tests = [
         chrome44:    true,
         firefox40:   true,
         node4:       true,
-        iojs:        true,
       }
     },
     'in identifiers': {
@@ -8681,7 +8493,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       }
     },
   }
@@ -8756,7 +8567,6 @@ exports.tests = [
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'typeof support': {
@@ -8775,7 +8585,6 @@ exports.tests = [
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'symbol keys are hidden to pre-ES6 code': {
@@ -8805,7 +8614,6 @@ exports.tests = [
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Object.defineProperty support': {
@@ -8833,7 +8641,6 @@ exports.tests = [
         chrome30:    flag, // Actually Chrome 29
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'cannot coerce to string or number': {
@@ -8862,7 +8669,6 @@ exports.tests = [
         webkit:      true,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'can convert with String()': {
@@ -8878,7 +8684,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'new Symbol() throws': {
@@ -8902,7 +8707,6 @@ exports.tests = [
         chrome35:   flag,
         chrome38:   true,
         node012:    true,
-        iojs:       true,
       },
     },
     'Object(symbol)': {
@@ -8939,7 +8743,6 @@ exports.tests = [
         chrome35: flag,
         chrome38: true,
         node012: true,
-        iojs:    true,
         webkit: true,
       },
     },
@@ -8960,7 +8763,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -9022,7 +8824,6 @@ exports.tests = [
         chrome38:    true,
         ejs:         true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Symbol.iterator, arguments object': {
@@ -9038,7 +8839,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
         edge:        true,
       },
     },
@@ -9210,7 +9010,6 @@ exports.tests = [
         typescript:  typescript.corejs,
         chrome40:    flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'Symbol.toStringTag, misc. built-ins': {
@@ -9224,7 +9023,6 @@ exports.tests = [
         typescript:  typescript.corejs,
         chrome40:    flag,
         node4:       flag,
-        iojs:        flag,
       },
     },
     'Symbol.unscopables': {
@@ -9247,7 +9045,6 @@ exports.tests = [
         },
         typescript:  typescript.fallthrough,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -9346,7 +9143,6 @@ exports.tests = [
     konq49:      true,
     rhino17:     true,
     node012:     true,
-    iojs:        true,
   }
 },
 {
@@ -9369,7 +9165,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       }),
     },
     'invalid character escapes': {
@@ -9730,7 +9525,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Array.prototype.values': {
@@ -9764,7 +9558,6 @@ exports.tests = [
         chrome30:    flag,
         chrome38:    { val: false, note_id: 'array-prototype-iterator' },
         node012:     true,
-        iojs:        true,
       },
     },
     'Array.prototype.entries': {
@@ -9784,7 +9577,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Array.prototype[Symbol.iterator]': {
@@ -9811,7 +9603,6 @@ exports.tests = [
         chrome37:    flag,
         chrome38:    true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Array iterator prototype chain': {
@@ -9856,7 +9647,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -9884,7 +9674,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Number.isInteger': {
@@ -9904,7 +9693,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Number.isSafeInteger': {
@@ -9924,7 +9712,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Number.isNaN': {
@@ -9944,7 +9731,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Number.EPSILON': {
@@ -9963,7 +9749,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Number.MIN_SAFE_INTEGER': {
@@ -9983,7 +9768,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
     'Number.MAX_SAFE_INTEGER': {
@@ -10003,7 +9787,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     },
   },
@@ -10028,7 +9811,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
       'imul': {
         ejs:         true,
@@ -10048,7 +9830,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'sign': {
         ejs:         true,
@@ -10064,7 +9845,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'log10': {
         ejs:         true,
@@ -10080,7 +9860,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'log2': {
         ejs:         true,
@@ -10096,7 +9875,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'log1p': {
         ejs:         true,
@@ -10112,7 +9890,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'expm1': {
         ejs:         true,
@@ -10127,7 +9904,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
       'cosh': {
         ejs:         true,
@@ -10143,7 +9919,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'sinh': {
         ejs:         true,
@@ -10159,7 +9934,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'tanh': {
         ejs:         true,
@@ -10175,7 +9949,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'acosh': {
         ejs:         true,
@@ -10191,7 +9964,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'asinh': {
         ejs:         true,
@@ -10206,7 +9978,6 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        iojs:        true,
       },
       'atanh': {
         ejs:         true,
@@ -10222,7 +9993,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'trunc': {
         ejs:         true,
@@ -10238,7 +10008,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'fround': {
         ejs:         true,
@@ -10259,7 +10028,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
       'cbrt': {
         ejs:         true,
@@ -10275,7 +10043,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       },
     };
     var eqFn = ' === "function"';
@@ -10308,7 +10075,6 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        iojs:        true,
       }
     };
     return obj;
@@ -10331,7 +10097,6 @@ exports.tests = [
       */},
       res: {
         node4:       strict,
-        iojs:        strict,
         chrome43:    strict,
         safari9:     true,
         webkit:      true,
@@ -10347,7 +10112,6 @@ exports.tests = [
       */},
       res: {
         node4:       strict,
-        iojs:        strict,
         chrome43:    strict,
         safari9:     true,
         webkit:      true,
@@ -10362,7 +10126,6 @@ exports.tests = [
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
         node4:       strict,
-        iojs:        strict,
         chrome43:    strict,
         edge:        flag,
       },
@@ -10469,7 +10232,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'correct prototype chain': {
@@ -10481,7 +10243,6 @@ exports.tests = [
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
         node4:       strict,
-        iojs:        strict,
         chrome43:    strict,
         typescript:  typescript.fallthrough,
         edge:        flag,
@@ -10531,7 +10292,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'correct prototype chain': {
@@ -10557,7 +10317,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Function.prototype.call': {
@@ -10570,7 +10329,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Function.prototype.apply': {
@@ -10583,7 +10341,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Function.prototype.bind': {
@@ -10645,7 +10402,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Promise.all': {
@@ -10717,7 +10473,6 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Number is subclassable': {
@@ -10733,7 +10488,6 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'String is subclassable': {
@@ -10751,7 +10505,6 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Map is subclassable': {
@@ -10770,7 +10523,6 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
     'Set is subclassable': {
@@ -10790,7 +10542,6 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
-        iojs:        strict,
       },
     },
   },
@@ -10830,7 +10581,6 @@ exports.tests = [
         ie10:          { val: true, note_id: 'ie_property_order' },
         chrome:        true,
         node012:       true,
-        iojs:          true,
         opera:         true,
         safari7:       true,
         webkit:        true,
@@ -10861,7 +10611,6 @@ exports.tests = [
         ie10:          { val: true, note_id: 'ie_property_order' },
         chrome:        true,
         node012:       true,
-        iojs:          true,
         opera:         true,
         safari7:       true,
         webkit:        true,
@@ -10892,7 +10641,6 @@ exports.tests = [
         ie10:          { val: true, note_id: 'ie_property_order' },
         chrome37:      true,
         node4:         true,
-        iojs:          true,
         opera:         true,
         safari71_8:    true,
         webkit:        true,
@@ -10963,7 +10711,6 @@ exports.tests = [
         ie10:          { val: true, note_id: 'ie_property_order' },
         chrome:        true,
         node012:       true,
-        iojs:          true,
         opera:         true,
         safari7:       true,
         webkit:        true,
@@ -10990,7 +10737,6 @@ exports.tests = [
         firefox23:     true, // Actually Firefox 21
         chrome:        true,
         node012:       true,
-        iojs:          true,
         opera:         true,
         safari51:      true,
         webkit:        true,
@@ -11098,7 +10844,6 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        iojs:        true,
       },
     },
     'no semicolon needed after do-while': {
@@ -11116,7 +10861,6 @@ exports.tests = [
         opera:       true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
     'no assignments allowed in for-in head': {
@@ -11145,7 +10889,6 @@ exports.tests = [
         edge:        true,
         chrome42:    true,
         node4:       true,
-        iojs:        true,
         firefox41:   true,
         webkit:      true,
       },
@@ -11166,7 +10909,6 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
-        iojs:        true,
       },
     },
     'RegExp constructor can alter flags': {
@@ -11211,7 +10953,6 @@ exports.tests = [
         chrome43:    true,
         edge:        true,
         node4:       true,
-        iojs:        true,
       },
     },
     'String.prototype case methods, Unicode support': {
@@ -11246,7 +10987,6 @@ exports.tests = [
     konq49:      true,
     rhino17:     true,
     node012:     true,
-    iojs:        true,
   }
 },
 ];
