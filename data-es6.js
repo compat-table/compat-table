@@ -10471,12 +10471,13 @@ exports.tests = [
         class C extends Boolean {}
         var c = new C(true);
         return c instanceof Boolean
+          && c instanceof C
           && c == true;
       */},
       res: {
         typescript:  typescript.fallthrough,
-        safari9:     true,
-        webkit:      true,
+        safari9:     false,
+        webkit:      false,
         chrome43:    strict,
         node4:       strict,
       },
@@ -10486,12 +10487,13 @@ exports.tests = [
         class C extends Number {}
         var c = new C(6);
         return c instanceof Number
+          && c instanceof C
           && +c === 6;
       */},
       res: {
         typescript:  typescript.fallthrough,
-        safari9:     true,
-        webkit:      true,
+        safari9:     false,
+        webkit:      false,
         chrome43:    strict,
         node4:       strict,
       },
@@ -10501,14 +10503,15 @@ exports.tests = [
         class C extends String {}
         var c = new C("golly");
         return c instanceof String
+          && c instanceof C
           && c + '' === "golly"
           && c[0] === "g"
           && c.length === 5;
       */},
       res: {
         typescript:  typescript.fallthrough,
-        safari9:     true,
-        webkit:      true,
+        safari9:     false,
+        webkit:      false,
         chrome43:    strict,
         node4:       strict,
       },
@@ -10521,12 +10524,12 @@ exports.tests = [
 
         map.set(key, 123);
 
-        return map.has(key) && map.get(key) === 123;
+        return map instanceof M && map.has(key) && map.get(key) === 123;
       */},
       res: {
         typescript:  typescript.fallthrough,
-        safari9:     true,
-        webkit:      true,
+        safari9:     false,
+        webkit:      false,
         chrome43:    strict,
         node4:       strict,
       },
@@ -10540,12 +10543,12 @@ exports.tests = [
         set.add(123);
         set.add(123);
 
-        return set.has(123);
+        return set instanceof S && set.has(123);
       */},
       res: {
         typescript:  typescript.fallthrough,
-        safari9:     true,
-        webkit:      true,
+        safari9:     false,
+        webkit:      false,
         chrome43:    strict,
         node4:       strict,
       },
