@@ -1878,6 +1878,7 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
+        webkit:      true,
       },
     },
     'static accessor properties': {
@@ -1924,6 +1925,7 @@ exports.tests = [
         edge:        flag,
         chrome45:    strict,
         node4:       strict,
+        webkit:      true,
       },
     },
     'class name is lexically scoped': {
@@ -2423,6 +2425,7 @@ exports.tests = [
         firefox34:   true,
         chrome44:    true,
         node4:       true,
+        webkit:      true,
       }
     }
   }
@@ -3420,6 +3423,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    true,
+        webkit:      true,
       },
     },
     'generator functions': {
@@ -3462,6 +3466,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    true,
+        webkit:      true,
       },
     },
     'classes': {
@@ -3483,6 +3488,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    strict,
+        webkit:      true,
       },
     },
     'subclasses': {
@@ -3502,6 +3508,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    strict,
+        webkit:      true,
       },
     },
   },
