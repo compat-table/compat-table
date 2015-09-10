@@ -2303,6 +2303,7 @@ exports.tests = [
         node4:       strict,
         chrome41:    strict,
       },
+    },
     'super() invokes the correct constructor': {
       exec: function() {/*
         // checks that super() is *not* a synonym of super.constructor()
