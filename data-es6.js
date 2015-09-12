@@ -2321,7 +2321,12 @@ exports.tests = [
         return passed;
       */},
       res: {
-        // to be completed...
+        node4:       strict,
+        chrome41:    strict,
+        tr:          true,
+        jsx:         true,
+        es6tr:       true,
+        typescript:  true,
       },
     },
   },
