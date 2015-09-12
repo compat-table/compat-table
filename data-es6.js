@@ -2304,6 +2304,26 @@ exports.tests = [
         chrome41:    strict,
       },
     },
+    'super() invokes the correct constructor': {
+      exec: function() {/*
+        // checks that super() is *not* a synonym of super.constructor()
+        var passed;
+        class B { 
+            constructor() { 
+                passed = true; 
+            } 
+        };
+        B.prototype.constructor = function () { 
+            passed = false;
+        };
+        class C extends B { };
+        new C;
+        return passed;
+      */},
+      res: {
+        // to be completed...
+      },
+    },
   },
 },
 {
