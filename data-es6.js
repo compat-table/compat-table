@@ -9012,6 +9012,18 @@ exports.tests = [
         typescript:  typescript.corejs,
       }
     },
+    'Symbol.match, RegExp constructor': {
+      exec: function () {/*
+        var re = /./;
+        re[Symbol.match] = false;
+        var foo = {constructor: RegExp};
+        foo[Symbol.match] = true;
+        return RegExp(re) !== re && RegExp(foo) === foo;
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+      }
+    },
     'Symbol.match, String.prototype.startsWith': {
       exec: function () {/*
         var re = /./;
