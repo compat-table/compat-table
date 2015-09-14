@@ -717,6 +717,7 @@ exports.tests = [
         firefox41:    true,
         chrome46:     flag,
         chrome47:     true,
+        edge13:      true,
       },
     },
   },
@@ -1197,6 +1198,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'temporal dead zone': {
@@ -1431,6 +1433,7 @@ exports.tests = [
         webkit:      true,
         chrome47:    true,
         node4:       flag,
+        edge13:      flag,
       },
     },
     'with strings, in function calls': {
@@ -1641,6 +1644,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -1663,6 +1667,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         chrome41:    strict,
         node4:       strict,
         webkit:      true,
@@ -1680,6 +1685,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -1698,6 +1704,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -1721,6 +1728,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -1744,6 +1752,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -1766,6 +1775,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -1790,6 +1800,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
         node4:       strict,
         webkit:      true,
@@ -1812,6 +1823,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -1836,6 +1848,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
         node4:       strict,
         webkit:      true,
@@ -1860,6 +1873,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -1883,6 +1897,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
         node4:       strict,
         webkit:      true,
@@ -1907,6 +1922,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         node4:       strict,
         chrome41:    strict,
         safari9:     true,
@@ -1930,6 +1946,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
         node4:       strict,
         webkit:      true,
@@ -1950,6 +1967,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         edge12:      flag,
+        edge13:      true,
         chrome41:    strict,
         node4:       strict,
       },
@@ -1966,6 +1984,7 @@ exports.tests = [
       */},
       res: {
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
         node4:       strict,
         webkit:      true,
@@ -1986,6 +2005,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
+        edge13:      true,
       },
     },
     'implicit strict mode': {
@@ -2001,6 +2021,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
@@ -2024,6 +2045,7 @@ exports.tests = [
         webkit:      true,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'extends': {
@@ -2053,6 +2075,7 @@ exports.tests = [
         },
         jsx:         { val: false, note_id: 'compiled-extends' },
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2077,6 +2100,7 @@ exports.tests = [
         ejs:         true,
         jsx:         { val: false, note_id: 'compiled-extends' },
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2098,6 +2122,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         edge12:      flag,
+        edge13:      true,
         node4:       strict,
         chrome41:    strict,
         safari9:     true,
@@ -2123,6 +2148,7 @@ exports.tests = [
       res: {
         webkit:      true,
         chrome46:    flag,
+        edge13:      true,
       },
     },
   },
@@ -2154,6 +2180,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2179,6 +2206,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         webkit:      true,
         safari9:     true,
         chrome43:    strict,
@@ -2208,6 +2236,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2233,6 +2262,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2260,6 +2290,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2281,6 +2312,7 @@ exports.tests = [
       res: {
         webkit:      true,
         chrome46:    flag,
+        edge13:      true,
       },
     },
     'is statically bound': {
@@ -2305,6 +2337,7 @@ exports.tests = [
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2330,6 +2363,7 @@ exports.tests = [
       res: {
         node4:       strict,
         chrome41:    strict,
+        edge13:      true,
         tr:          true,
         jsx:         true,
         es6tr:       true,
@@ -2614,6 +2648,7 @@ exports.tests = [
         webkit:       true,
         chrome42:     true,
         node4:        true,
+        edge13:       true,
       },
     },
     'not a shorthand method': {
@@ -2629,6 +2664,7 @@ exports.tests = [
         webkit:       true,
         chrome42:     true,
         node4:        true,
+        edge13:       true,
       },
     },
   },
@@ -3456,6 +3492,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         webkit:      true,
+        edge13:      true,
       },
     },
     'generator functions': {
@@ -3477,6 +3514,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    true,
+        edge13:      flag,
       },
     },
     'arrow functions': {
@@ -3499,6 +3537,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         webkit:      true,
+        edge13:      true,
       },
     },
     'classes': {
@@ -3521,6 +3560,7 @@ exports.tests = [
       res: {
         chrome46:    strict,
         webkit:      true,
+        edge13:      true,
       },
     },
     'subclasses': {
@@ -3541,6 +3581,7 @@ exports.tests = [
       res: {
         chrome46:    strict,
         webkit:      true,
+        edge13:      true,
       },
     },
   },
@@ -4002,7 +4043,9 @@ exports.tests = [
       exec: function(){/*
         return typeof ArrayBuffer[Symbol.species] === 'function';
       */},
-      res: {},
+      res: {
+        edge13:      true,
+      },
     },
     'constructors require new': {
       exec: function(){/*
@@ -4032,7 +4075,7 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.clampedArrayResults, {
-        edge12:     false,
+        edge12:   false,
         safari6:  false,
         webkit:   false,
         firefox11:false,
@@ -4105,7 +4148,7 @@ exports.tests = [
     '.prototype.values':      { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
     '.prototype.entries':     { edge12:    true, chrome38: true, node012: true, firefox37: true,},
     '.prototype[Symbol.iterator]':      { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
-    '[Symbol.species]':       {},
+    '[Symbol.species]':       { edge13:    true},
     };
     var eqFn = ' === "function"';
     var obj = {};
@@ -4490,6 +4533,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         firefox41:   true,
+        edge13:      true,
       },
     },
   },
@@ -4856,6 +4900,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         firefox41:   true,
+        edge13:      true,
       },
     },
   },
@@ -5724,6 +5769,7 @@ exports.tests = [
       */},
       res: {
         edge12:      flag,
+        edge13:      true,
       },
     },
     'IteratorComplete, IteratorValue': {
@@ -5768,6 +5814,7 @@ exports.tests = [
       */},
       res: {
         firefox18:   true,
+        edge13:      true,
       },
     },
     'Object.assign': {
@@ -5929,6 +5976,7 @@ exports.tests = [
       */},
       res: {
         firefox36:   true,
+        edge13:      true,
       },
     },
     'Array.prototype.concat': {
@@ -6023,6 +6071,7 @@ exports.tests = [
         return get + '' === "length,constructor,1,2,3,length,constructor,2,1";
       */},
       res: {
+        edge13:      true,
       },
     },
     'Array.prototype.toString': {
@@ -6614,6 +6663,7 @@ exports.tests = [
         es6shim:     true,
         webkit:      true,
         firefox42:   true,
+        edge13:      true,
       },
     },
     'Reflect.getPrototypeOf': {
@@ -6782,6 +6832,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         firefox42:   true,
+        edge13:      true,
       },
     },
     'Reflect.construct creates instance from newTarget argument': {
@@ -6848,6 +6899,7 @@ exports.tests = [
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       }),
     },
     'with sparse arrays': {
@@ -6876,6 +6928,7 @@ exports.tests = [
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'with astral plane strings': {
@@ -6892,6 +6945,7 @@ exports.tests = [
         firefox34:   true,
         safari9:     true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'with generator instances': {
@@ -6907,6 +6961,7 @@ exports.tests = [
         typescript:   typescript.fallthrough,
         firefox34:    true,
         babel:        true,
+        edge13:       flag,
       },
     },
     'with generic iterables': {
@@ -6924,6 +6979,7 @@ exports.tests = [
         safari9:     true,
         webkit:       true,
         babel:        true,
+        edge13:       flag,
       },
     },
     'with instances of generic iterables': {
@@ -6939,8 +6995,9 @@ exports.tests = [
         babel:        true,
         typescript:   typescript.fallthrough,
         firefox36:    true,
-        safari9:     true,
+        safari9:      true,
         webkit:       true,
+        edge13:       flag,
       },
     },
     'iterator closing': {
@@ -6972,6 +7029,7 @@ exports.tests = [
         firefox11:    true,
         safari71_8:   true,
         webkit:       true,
+        edge13:       flag,
       },
     },
     'chained iterable destructuring': {
@@ -6988,6 +7046,7 @@ exports.tests = [
         firefox11:    true,
         safari71_8:   true,
         webkit:       true,
+        edge13:       flag,
       },
     },
     'trailing commas in iterable patterns': {
@@ -7003,6 +7062,7 @@ exports.tests = [
         typescript:   true,
         tr:           false,
         closure:      false,
+        edge13:       flag,
       }),
     },
     'with objects': {
@@ -7022,7 +7082,8 @@ exports.tests = [
         firefox16:    true,
         webkit:       true,
         safari71_8:   true,
-        typescript:   true
+        typescript:   true,
+        edge13:       flag,
       }),
     },
     'object destructuring with primitives': {
@@ -7040,7 +7101,8 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         webkit:       true,
         safari71_8:   true,
-        typescript:   true
+        typescript:   true,
+        edge13:       flag,
       }),
     },
     'trailing commas in object patterns': {
@@ -7052,7 +7114,8 @@ exports.tests = [
         safari71_8:   false,
         safari9:     true,
         webkit:       true,
-        typescript:   true
+        typescript:   true,
+        edge13:       flag,
       }),
     },
     'object destructuring expression': {
@@ -7068,6 +7131,7 @@ exports.tests = [
         firefox16:    true,
         safari71_8:   true,
         webkit:       true,
+        edge13:       flag,
       },
     },
     'parenthesised left-hand-side is a syntax error': {
@@ -7088,6 +7152,7 @@ exports.tests = [
         safari71_8:   true,
         webkit:       true,
         firefox41:    true,
+        edge13:       flag,
       },
     },
     'chained object destructuring': {
@@ -7104,6 +7169,7 @@ exports.tests = [
         es6tr:        true,
         webkit:       true,
         safari71_8:   true,
+        edge13:       flag,
       },
     },
     'throws on null and undefined': {
@@ -7120,9 +7186,10 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
-        safari9:     true,
+        safari9:      true,
         webkit:       true,
-        typescript:   true
+        typescript:   true,
+        edge13:       flag,
       }),
     },
     'computed properties': {
@@ -7137,6 +7204,7 @@ exports.tests = [
         tr:          true,
         es6tr:       true,
         firefox35:   true,
+        edge13:      flag,
       },
     },
     'multiples in a single var statement': {
@@ -7155,6 +7223,7 @@ exports.tests = [
         firefox11:   true,
         safari9:     true,
         webkit:      true,
+        edge13:       flag,
       },
     },
     'nested': {
@@ -7184,6 +7253,7 @@ exports.tests = [
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'in parameters, \'arguments\' interaction': {
@@ -7204,6 +7274,7 @@ exports.tests = [
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'in parameters, new Function() support': {
@@ -7217,6 +7288,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         typescript:  typescript.fallthrough,
+        edge13:       flag,
       },
     },
     'in parameters, function \'length\' property': {
@@ -7234,6 +7306,7 @@ exports.tests = [
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'in for-in loop heads': {
@@ -7266,6 +7339,7 @@ exports.tests = [
         firefox13:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'rest': {
@@ -7285,6 +7359,7 @@ exports.tests = [
         firefox34:   true,
         safari9:     true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'nested rest': {
@@ -7297,6 +7372,7 @@ exports.tests = [
         tr:           true,
         babel:        true,
         typescript:   true,
+        edge13:       flag,
       },
     },
     'empty patterns': {
@@ -7308,6 +7384,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:  false,
         safari9:     true,
+        edge13:      flag,
       }),
     },
     'empty patterns in parameters': {
@@ -7321,6 +7398,7 @@ exports.tests = [
         safari9:     true,
         jsx:         false,
         typescript:  false,
+        edge13:      flag,
       }),
     },
     'defaults': {
@@ -7338,6 +7416,7 @@ exports.tests = [
         closure:     true,
         safari9:     true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'defaults in parameters': {
@@ -7355,6 +7434,7 @@ exports.tests = [
         es6tr:       true,
         closure:     true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     'defaults, let temporal dead zone': {
@@ -7373,8 +7453,9 @@ exports.tests = [
       res: {
         babel:        flag,
         typescript:   true,
-        safari9:     true,
+        safari9:      true,
         webkit:       true,
+        edge13:       flag,
       },
     },
     'defaults in parameters, separate scope': {
@@ -7400,6 +7481,7 @@ exports.tests = [
       res: {
         webkit:       true,
         typescript:   typescript.fallthrough,
+        edge13:       flag,
       },
     },
   },
@@ -7601,6 +7683,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge13:      true,
       },
     },
   },
@@ -8107,6 +8190,7 @@ exports.tests = [
       res: {
         babel:       { val: false, note_id: "name-configurable", },
         edge12:      flag,
+        edge13:      true,
         chrome43:    strict,
         node4:       strict,
       },
@@ -8123,6 +8207,7 @@ exports.tests = [
           note_html: 'Requires function "name" properties to be natively configurable',
         },
         edge12:      flag,
+        edge13:      true,
         chrome43:    strict,
         node4:       strict,
       },
@@ -8139,6 +8224,7 @@ exports.tests = [
       res: {
         babel:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     'object methods (class)': {
@@ -8152,6 +8238,7 @@ exports.tests = [
       res: {
         babel:        true,
         edge12:       flag,
+        edge13:       true,
       },
     },
     'class prototype methods': {
@@ -8162,6 +8249,7 @@ exports.tests = [
       res: {
         babel:        true,
         edge12:       flag,
+        edge13:       true,
         safari9:      true,
         webkit:       true,
         chrome43:     strict,
@@ -8176,6 +8264,7 @@ exports.tests = [
       res: {
         babel:        true,
         edge12:       flag,
+        edge13:       true,
         safari9:      true,
         webkit:       true,
         chrome43:     strict,
@@ -8557,6 +8646,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    flag,
         chrome47:    true,
+        edge13:      true,
       }
     },
     'assignment is an early error': {
@@ -8575,6 +8665,7 @@ exports.tests = [
       res: {
         firefox41:   true,
         chrome47:    true,
+        edge13:      true,
       }
     },
   }
@@ -8890,6 +8981,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         firefox41:   true,
+        edge13:      true,
       },
     },
     'Symbol.species, Array.prototype.concat': {
@@ -8902,6 +8994,7 @@ exports.tests = [
         return Array.prototype.concat.call(obj, []).foo === 1;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Symbol.species, Array.prototype.filter': {
@@ -8914,6 +9007,7 @@ exports.tests = [
         return Array.prototype.filter.call(obj, Boolean).foo === 1;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Symbol.species, Array.prototype.map': {
@@ -8926,6 +9020,7 @@ exports.tests = [
         return Array.prototype.map.call(obj, Boolean).foo === 1;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Symbol.species, Array.prototype.slice': {
@@ -8938,6 +9033,7 @@ exports.tests = [
         return Array.prototype.slice.call(obj, 0).foo === 1;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Symbol.species, Array.prototype.splice': {
@@ -8950,6 +9046,7 @@ exports.tests = [
         return Array.prototype.splice.call(obj, 0).foo === 1;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Symbol.species, RegExp.prototype[Symbol.split]': {
@@ -9210,6 +9307,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge13:      true,
       },
     },
   }
@@ -9514,6 +9612,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge13:      true,
       },
     },
   },
@@ -10193,6 +10292,7 @@ exports.tests = [
         chrome43:    strict,
         safari9:     true,
         webkit:      true,
+        edge13:      true,
       },
     },
     'length property (setting)': {
@@ -10208,6 +10308,7 @@ exports.tests = [
         chrome43:    strict,
         safari9:     true,
         webkit:      true,
+        edge13:      true,
       },
     },
     'correct prototype chain': {
@@ -10221,6 +10322,7 @@ exports.tests = [
         node4:       strict,
         chrome43:    strict,
         edge12:      flag,
+        edge13:      true,
       },
     },
     'Array.isArray support': {
@@ -10232,6 +10334,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome43:    strict,
+        edge13:      true,
       }
     },
     'Array.prototype.concat': {
@@ -10241,6 +10344,7 @@ exports.tests = [
         return c.concat(1) instanceof C;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Array.prototype.filter': {
@@ -10250,6 +10354,7 @@ exports.tests = [
         return c.filter(Boolean) instanceof C;
       */},
       res: {
+        edge13:      true,
       }
     },
    'Array.prototype.map': {
@@ -10259,6 +10364,7 @@ exports.tests = [
         return c.map(Boolean) instanceof C;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Array.prototype.slice': {
@@ -10269,6 +10375,7 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
+        edge13:      true,
       }
     },
    'Array.prototype.splice': {
@@ -10279,6 +10386,7 @@ exports.tests = [
         return c.splice(1,2) instanceof C;
       */},
       res: {
+        edge13:      true,
       }
     },
     'Array.from': {
@@ -10290,6 +10398,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
       }
     },
@@ -10302,6 +10411,7 @@ exports.tests = [
         tr:          { val: false, note_id: 'compiler-proto' },
         babel:       { val: false, note_id: 'compiler-proto' },
         edge12:      flag,
+        edge13:      true,
         chrome45:    strict,
       }
     },
@@ -10325,6 +10435,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       strict,
+        edge13:      true,
       },
     },
     'correct prototype chain': {
@@ -10339,6 +10450,7 @@ exports.tests = [
         chrome43:    strict,
         typescript:  typescript.fallthrough,
         edge12:      flag,
+        edge13:      true,
       },
     },
     'RegExp.prototype.exec': {
@@ -10352,6 +10464,7 @@ exports.tests = [
         chrome43:    strict,
         safari9:     true,
         webkit:      true,
+        edge13:      true,
       },
     },
     'RegExp.prototype.test': {
@@ -10365,6 +10478,7 @@ exports.tests = [
         chrome43:    strict,
         safari9:     true,
         webkit:      true,
+        edge13:      true,
       },
     },
   },
@@ -10385,6 +10499,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'correct prototype chain': {
@@ -10397,6 +10512,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         typescript:  typescript.fallthrough,
         edge12:      flag,
+        edge13:      true,
       },
     },
     'can be used with "new"': {
@@ -10410,6 +10526,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Function.prototype.call': {
@@ -10422,6 +10539,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Function.prototype.apply': {
@@ -10434,6 +10552,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Function.prototype.bind': {
@@ -10444,6 +10563,7 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
+        edge13:      true,
       },
     },
   },
@@ -10483,6 +10603,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        edge13:      true,
       },
     },
     'correct prototype chain': {
@@ -10495,6 +10616,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Promise.all': {
@@ -10519,6 +10641,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        edge13:      true,
       },
     },
     'Promise.race': {
@@ -10543,6 +10666,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        edge13:      true,
       },
     },
   },
@@ -10567,6 +10691,7 @@ exports.tests = [
         webkit:      false,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Number is subclassable': {
@@ -10583,6 +10708,7 @@ exports.tests = [
         webkit:      false,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'String is subclassable': {
@@ -10601,6 +10727,7 @@ exports.tests = [
         webkit:      false,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Map is subclassable': {
@@ -10619,6 +10746,7 @@ exports.tests = [
         webkit:      false,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
     'Set is subclassable': {
@@ -10638,6 +10766,7 @@ exports.tests = [
         webkit:      false,
         chrome43:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
   },
