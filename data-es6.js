@@ -8960,19 +8960,6 @@ exports.tests = [
       res: {
       }
     },
-    'Symbol.match': {
-      exec: function () {/*
-        var O = {};
-        O[Symbol.match] = function(){
-          return 42;
-        };
-        return ''.match(O) === 42;
-      */},
-      res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-      }
-    },
     'Symbol.replace': {
       exec: function () {/*
         var O = {};
@@ -9010,6 +8997,61 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+      }
+    },
+    'Symbol.match': {
+      exec: function () {/*
+        var O = {};
+        O[Symbol.match] = function(){
+          return 42;
+        };
+        return ''.match(O) === 42;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    'Symbol.match, String.prototype.startsWith': {
+      exec: function () {/*
+        var re = /./;
+        try {
+          '/./'.startsWith(re);
+        } catch(e){
+          re[Symbol.match] = false;
+          return '/./'.startsWith(re);
+        }
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+      }
+    },
+    'Symbol.match, String.prototype.endsWith': {
+      exec: function () {/*
+        var re = /./;
+        try {
+          '/./'.endsWith(re);
+        } catch(e){
+          re[Symbol.match] = false;
+          return '/./'.endsWith(re);
+        }
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+      }
+    },
+    'Symbol.match, String.prototype.includes': {
+      exec: function () {/*
+        var re = /./;
+        try {
+          '/./'.includes(re);
+        } catch(e){
+          re[Symbol.match] = false;
+          return '/./'.includes(re);
+        }
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
       }
     },
     'Symbol.toPrimitive': {
