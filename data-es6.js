@@ -91,7 +91,8 @@ exports.browsers = {
     full: 'Internet Explorer, Microsoft Edge for preview Builds',
     short: 'Edge 13',
     note_id: 'edge-experimental-flag',
-    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags',
+    unstable: true,
   },
   firefox11: {
     full: 'Firefox',
