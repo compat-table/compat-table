@@ -896,7 +896,7 @@ exports.tests = [
   name: 'class properties',
   category: 'strawman',
   significance: 'medium',
-  link: 'https://gist.github.com/jeffmo/054df782c05639da2adb',
+  link: 'https://github.com/jeffmo/es-class-properties',
   exec: function () {/*
     class C {
       x = 'x';
