@@ -355,7 +355,7 @@ exports.browsers = {
   safari9: {
     full: 'Safari',
     short: 'SF 9',
-    obsolete: false
+    unstable: true,
   },
   webkit: {
     full: 'WebKit r188520',
