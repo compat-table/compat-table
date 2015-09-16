@@ -169,7 +169,7 @@ exports.tests = [
   name: 'exponentiation (**) operator',
   category: 'candidate',
   significance: 'small',
-  link: 'https://gist.github.com/rwaldron/ebe0f4d2d267370be882',
+  link: 'https://github.com/rwaldron/exponentiation-operator',
   exec: function () {/*
     return 2 ** 3 === 8;
   */},
@@ -258,7 +258,7 @@ exports.tests = [
 },
 {
   name: 'Object.observe',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:observe',
+  link: 'https://arv.github.io/ecmascript-object-observe/',
   category: 'draft',
   significance: 'large',
   exec: function () {/*
@@ -282,7 +282,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.includes',
-  link: 'https://github.com/tc39/Array.prototype.includes/blob/master/spec.md',
+  link: 'https://github.com/tc39/Array.prototype.includes',
   category: 'candidate',
   significance: 'small',
   exec: function () {/*
@@ -326,7 +326,7 @@ exports.tests = [
   name: 'async functions',
   category: 'proposal',
   significance: 'large',
-  link: 'https://github.com/lukehoban/ecmascript-asyncawait',
+  link: 'https://tc39.github.io/ecmascript-asyncawait/',
   subtests: {
     'basic support' : {
       exec: function () {/*
@@ -410,7 +410,7 @@ exports.tests = [
   name: 'SIMD (Single Instruction, Multiple Data)',
   category: 'draft',
   significance: 'large',
-  link: 'https://github.com/johnmccutchan/ecmascript_simd',
+  link: 'https://tc39.github.io/ecmascript_simd/',
   subtests: {
     'basic support' : {
       exec: function () {/*
