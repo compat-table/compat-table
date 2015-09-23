@@ -414,6 +414,20 @@ exports.browsers = {
     unstable: true,
     platformtype: 'engine',
   },
+  android44: {
+    full: 'Android Browser',
+    short: 'Android 4.4',
+    platformtype: 'mobile',
+    equals: 'chrome30',
+    ignore_flagged: true,
+  },
+  android50: {
+    full: 'Android Browser',
+    short: 'Android 5.0',
+    platformtype: 'mobile',
+    equals: 'chrome37',
+    ignore_flagged: true,
+  },
   android51: {
     full: 'Android Browser',
     short: 'Android 5.1',
