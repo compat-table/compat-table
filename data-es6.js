@@ -202,11 +202,11 @@ exports.browsers = {
   firefox40: {
     full: 'Firefox',
     short: 'FF 40',
+    obsolete: true,
   },
   firefox41: {
     full: 'Firefox',
     short: 'FF 41',
-    unstable: true,
   },
   firefox42: {
     full: 'Firefox',
