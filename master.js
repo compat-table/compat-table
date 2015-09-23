@@ -245,11 +245,11 @@ $(function() {
       return "hsla(35, 100%, 50%, .5)";
     }
     /* JavaScriptCore */
-    if (/^(webkit|safari|phantom|ios)/.exec(name)) {
+    if (/^(webkit|safari|phantom|ios|android40)/.exec(name)) {
       return "hsla(220, 25%, 70%, .5)";
     }
     /* V8 */
-    if (/^(chrome|node|iojs)/.exec(name)) {
+    if (/^(chrome|node|iojs|android4[1-9]|android[5-9])/.exec(name)) {
       return "hsla(79, 100%, 37%, .5)";
     }
     /* Carakan */
