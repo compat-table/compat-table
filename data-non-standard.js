@@ -148,7 +148,18 @@ exports.browsers = {
     short: 'Phantom',
     obsolete: false,
     platformtype: 'engine',
-  }
+  },
+  android40: {
+    full: 'Android Browser',
+    short: 'Android 4.0',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
+  android41: {
+    full: 'Android Browser',
+    short: 'Android 4.1+',
+    platformtype: 'mobile',
+  },
 };
 
 exports.tests = [
@@ -185,7 +196,7 @@ exports.tests = [
     konq49: false,
     besen: false,
     rhino: true,
-    phantom: false
+    phantom: false,
   }
 },
 {
@@ -266,7 +277,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: false,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -339,7 +351,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: true,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -521,7 +534,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: true,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -558,7 +572,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: true,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -602,7 +617,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: true,
-    phantom: true
+    phantom: true,
+    android40: true,
   },
   separator: 'after',
 },
@@ -1137,7 +1153,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: true,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -1176,7 +1193,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: true,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -1276,7 +1294,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: false,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -1311,7 +1330,8 @@ exports.tests = [
     konq49: true,
     besen: false,
     rhino: false,
-    phantom: true
+    phantom: true,
+    android40: true,
   }
 },
 {
@@ -1555,7 +1575,8 @@ exports.tests = [
     konq49: false,
     besen: false,
     rhino: false,
-    phantom: false
+    phantom: false,
+    android40: true,
   }
 },
 {
