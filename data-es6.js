@@ -414,6 +414,12 @@ exports.browsers = {
     unstable: true,
     platformtype: 'engine',
   },
+  android40: {
+    full: 'Android Browser',
+    short: 'Android 4.0',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
   android44: {
     full: 'Android Browser',
     short: 'Android 4.4',
@@ -770,6 +776,7 @@ exports.tests = [
         opera:       true,
         konq49:      true,
         node012:     true,
+        android40:   true,
       }
     },
     'is block-scoped': {
@@ -2568,6 +2575,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
     'function statements in if-statement clauses': {
@@ -2591,6 +2599,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
   },
@@ -2619,6 +2628,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
     'multiple __proto__ is an error': {
@@ -3902,6 +3912,7 @@ exports.tests = [
         opera:       true,
         konq49:      true,
         node012:     true,
+        android40:   true,
         typescript:  typescript.fallthrough,
       }),
     },
@@ -3977,7 +3988,9 @@ exports.tests = [
         var view = new Float64Array(buffer);       view[0] = 0.1;
         return view[0] === 0.1;
       */},
-      res: temp.basicTypedArrayResults,
+      res: Object.assign({}, temp.basicTypedArrayResults, {
+        android40:   false,
+      }),
     },
     'DataView (Int8)': {
       exec: function(){/*
@@ -3995,6 +4008,7 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node012:     true,
+        android40:   true,
         typescript:  typescript.fallthrough,
       }),
     },
@@ -8019,6 +8033,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       }),
     },
     'set prototype': {
@@ -8053,6 +8068,7 @@ exports.tests = [
       res: Object.assign({}, temp.advancedProtoResults, {
         konq49:      true,
         safari51:    true,
+        android40:   true,
       }),
     },
     'correct property descriptor': {
@@ -8109,6 +8125,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       }),
     },
     'function expressions': {
@@ -8129,6 +8146,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         rhino17:     true,
+        android40:   true,
       },
     },
     'bound functions': {
@@ -8580,6 +8598,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
     'tags\' names are lowercase': {
@@ -8604,6 +8623,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
     'quotes in arguments are escaped': {
@@ -8626,6 +8646,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
   },
@@ -9384,6 +9405,7 @@ exports.tests = [
     konq49:      true,
     rhino17:     true,
     node012:     true,
+    android40:   true,
   }
 },
 {
@@ -9406,6 +9428,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       }),
     },
     'invalid character escapes': {
@@ -10859,6 +10882,7 @@ exports.tests = [
         opera:         true,
         safari7:       true,
         webkit:        true,
+        android40:     true,
       },
     },
     'Object.keys': {
@@ -10889,6 +10913,7 @@ exports.tests = [
         opera:         true,
         safari7:       true,
         webkit:        true,
+        android40:     true,
       },
     },
     'Object.getOwnPropertyNames': {
@@ -10989,6 +11014,7 @@ exports.tests = [
         opera:         true,
         safari7:       true,
         webkit:        true,
+        android40:     true,
       },
     },
     'JSON.parse': {
@@ -11015,6 +11041,7 @@ exports.tests = [
         opera:         true,
         safari51:      true,
         webkit:        true,
+        android40:     true,
       },
     },
     'Reflect.ownKeys, string key order': {
@@ -11136,6 +11163,7 @@ exports.tests = [
         opera:       true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
     'no assignments allowed in for-in head': {
@@ -11184,6 +11212,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         node012:     true,
+        android40:   true,
       },
     },
     'RegExp constructor can alter flags': {
@@ -11262,6 +11291,7 @@ exports.tests = [
     konq49:      true,
     rhino17:     true,
     node012:     true,
+    android40:   true,
   }
 },
 ];
