@@ -1041,7 +1041,7 @@ exports.tests = [
 },
 {
   name: 'String padding',
-  category: 'strawman',
+  category: 'proposal',
   significance: 'small',
   link: 'https://github.com/ljharb/proposal-string-pad-left-right',
   subtests: {
