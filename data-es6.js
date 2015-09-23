@@ -9151,6 +9151,7 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
+        firefox40:   true,
       }
     },
     'Symbol.match, String.prototype.startsWith': {
@@ -9165,6 +9166,7 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
+        firefox40:   true,
       }
     },
     'Symbol.match, String.prototype.endsWith': {
@@ -9179,6 +9181,7 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
+        firefox40:   true,
       }
     },
     'Symbol.match, String.prototype.includes': {
@@ -9193,6 +9196,7 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.fallthrough,
+        firefox40:   true,
       }
     },
     'Symbol.toPrimitive': {
