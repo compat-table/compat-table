@@ -162,6 +162,39 @@ exports.browsers = {
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
+  android40: {
+    full: 'Android Browser',
+    short: 'Android 4.0',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
+  android41: {
+    full: 'Android Browser',
+    short: 'Android 4.1 - 4.3',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
+  android44: {
+    full: 'Android Browser',
+    short: 'Android 4.4',
+    platformtype: 'mobile',
+    equals: 'chrome30',
+    ignore_flagged: true,
+  },
+  android50: {
+    full: 'Android Browser',
+    short: 'Android 5.0',
+    platformtype: 'mobile',
+    equals: 'chrome37',
+    ignore_flagged: true,
+  },
+  android51: {
+    full: 'Android Browser',
+    short: 'Android 5.1',
+    platformtype: 'mobile',
+    equals: 'chrome39',
+    ignore_flagged: true,
+  },
 };
 
 exports.tests = [
@@ -1070,6 +1103,7 @@ exports.tests = [
         iojs:       true,
         webkit:     true,
         es7shim:    true,
+        android40:  true,
       }
     },
     'String.prototype.trimRight': {
@@ -1085,6 +1119,7 @@ exports.tests = [
         iojs:       true,
         webkit:     true,
         es7shim:    true,
+        android40:  true,
       }
     }
   }
