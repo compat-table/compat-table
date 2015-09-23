@@ -257,8 +257,8 @@ exports.tests = [
 },
 {
   name: 'Object.values',
-  link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
-  category: 'pre-strawman',
+  link: 'https://github.com/ljharb/proposal-object-values-entries',
+  category: 'draft',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
@@ -272,8 +272,8 @@ exports.tests = [
 },
 {
   name: 'Object.entries',
-  link: 'https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues',
-  category: 'pre-strawman',
+  link: 'https://github.com/ljharb/proposal-object-values-entries',
+  category: 'draft',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
