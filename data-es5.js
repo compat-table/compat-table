@@ -180,6 +180,25 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
+  android40: {
+    full: 'Android Browser',
+    short: 'Android 4.0',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
+  android41: {
+    full: 'Android Browser',
+    short: 'Android 4.1 - 4.3',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
+  android44: {
+    full: 'Android Browser',
+    short: 'Android 4.4+',
+    platformtype: 'mobile',
+    equals: 'chrome23',
+    ignore_flagged: true,
+  },
   ios78: {
     full: 'iOS Safari 7/8',
     short: 'iOS7/8',
@@ -239,7 +258,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -296,7 +316,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -344,7 +365,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -392,7 +414,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -440,7 +463,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -488,7 +512,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -536,7 +561,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -584,7 +610,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -632,7 +659,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -680,7 +708,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -728,7 +757,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -781,7 +811,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -829,7 +860,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   },
   separator: 'after'
 },
@@ -878,7 +910,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: false,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -926,7 +959,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -974,7 +1008,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1022,7 +1057,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1070,7 +1106,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1118,7 +1155,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   },
   separator: 'after'
 },
@@ -1167,7 +1205,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1215,7 +1254,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1263,7 +1303,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1311,7 +1352,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1359,7 +1401,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1407,7 +1450,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1455,7 +1499,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1503,7 +1548,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1551,7 +1597,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   },
   separator: 'after'
 },
@@ -1598,7 +1645,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1646,7 +1694,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   },
   separator: 'after'
 },
@@ -1693,7 +1742,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   }
 },
 {
@@ -1739,7 +1789,8 @@ exports.tests = [
     rhino: false,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android40: true,
   },
   separator: 'after'
 },
@@ -1791,7 +1842,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android41: true,
   }
 },
 {
@@ -1839,7 +1891,8 @@ exports.tests = [
     rhino: false,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android44: true,
   }
 },
 {
@@ -1888,7 +1941,8 @@ exports.tests = [
     rhino: true,
     phantom: true,
     ejs: false,
-    ios78: true
+    ios78: true,
+    android41: true,
   }
 },
 {
@@ -1944,7 +1998,8 @@ exports.tests = [
     rhino: false,
     phantom: true,
     ejs: true,
-    ios78: true
+    ios78: true,
+    android41: true,
   }
 }
 ];
