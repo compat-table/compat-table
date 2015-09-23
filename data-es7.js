@@ -334,7 +334,7 @@ exports.tests = [
 {
   name: 'trailing commas in function syntax',
   link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
-  category: 'proposal',
+  category: 'draft',
   significance: 'small',
   subtests: {
     'in parameter lists': {
@@ -441,7 +441,7 @@ exports.tests = [
 },
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
-  category: 'draft',
+  category: 'candidate',
   significance: 'large',
   link: 'https://tc39.github.io/ecmascript_simd/',
   subtests: {
@@ -927,7 +927,7 @@ exports.tests = [
 },
 {
   name: 'class properties',
-  category: 'strawman',
+  category: 'proposal',
   significance: 'medium',
   link: 'https://github.com/jeffmo/es-class-properties',
   exec: function () {/*
