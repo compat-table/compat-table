@@ -346,7 +346,8 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     for (var bid in browsers) {
       browser = browsers[bid];
       if (browser.equals) {
-        res[bid] = res[browser.equals];
+        result = res[browser.equals];
+        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result; 
       }
     }
   }
