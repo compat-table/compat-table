@@ -426,6 +426,18 @@ exports.browsers = {
     platformtype: 'mobile',
     obsolete: true,
   },
+  android42: {
+    full: 'Android Browser',
+    short: 'Android 4.2',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
+  android43: {
+    full: 'Android Browser',
+    short: 'Android 4.3',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
   android44: {
     full: 'Android Browser',
     short: 'Android 4.4',
