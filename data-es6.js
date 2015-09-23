@@ -420,6 +420,12 @@ exports.browsers = {
     platformtype: 'mobile',
     obsolete: true,
   },
+  android41: {
+    full: 'Android Browser',
+    short: 'Android 4.1',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
   android44: {
     full: 'Android Browser',
     short: 'Android 4.4',
@@ -3990,6 +3996,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.basicTypedArrayResults, {
         android40:   false,
+        android41:   true,
       }),
     },
     'DataView (Int8)': {
@@ -7792,6 +7799,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
+        android41:   true,
       },
     },
     'Object.getOwnPropertySymbols': {
@@ -8069,6 +8077,7 @@ exports.tests = [
         konq49:      true,
         safari51:    true,
         android40:   true,
+        android41:   false,
       }),
     },
     'correct property descriptor': {
@@ -8147,6 +8156,7 @@ exports.tests = [
         konq49:      true,
         rhino17:     true,
         android40:   true,
+        android41:   false,
       },
     },
     'bound functions': {
@@ -9939,6 +9949,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
+        android41:   true,
       },
     },
     'Number.isInteger': {
@@ -9996,6 +10007,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
+        android41:   true,
       },
     },
     'Number.EPSILON': {
