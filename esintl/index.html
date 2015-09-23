@@ -93,11 +93,11 @@
         <tr>
           <th colspan="3" class="platformtype"></th>
 
-          <th colspan="15" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+          <th colspan="14" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
 
-          <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
+          <th colspan="4" class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
 
-          <th colspan="2" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
+          <th colspan="3" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
 
         </tr>
 
@@ -135,6 +135,9 @@
 <th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr><a href="#only-english-note"><sup>[1]</sup></a></a></th>
 <th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
 <th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
+<th class="platform android40 mobile obsolete" data-browser="android40"><a href="#android40" class="browser-name"><abbr title="Android Browser">Android 4.0</abbr></a></th>
+<th class="platform android41 mobile obsolete" data-browser="android41"><a href="#android41" class="browser-name"><abbr title="Android Browser">Android 4.1 - 4.3</abbr></a></th>
+<th class="platform android44 mobile" data-browser="android44"><a href="#android44" class="browser-name"><abbr title="Android Browser">Android 4.4+</abbr></a></th>
 <th class="platform ios7 mobile" data-browser="ios7"><a href="#ios7" class="browser-name"><abbr title="iOS Safari">iOS7</abbr></a></th>
 <th class="platform ios8 mobile" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS8</abbr></a></th>
 </tr>
@@ -169,6 +172,9 @@
 <td data-browser="node12" class="tally" data-tally="1">2/2</td>
 <td data-browser="iojs1_0" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs1_1" class="tally" data-tally="0">0/2</td>
+<td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="android44" class="tally" data-tally="1">2/2</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/2</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/2</td>
 </tr>
@@ -202,6 +208,9 @@ return typeof Intl === &apos;object&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -235,6 +244,9 @@ return Intl.constructor === Object;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -265,6 +277,9 @@ return Intl.constructor === Object;
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
 <td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
 <td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="android44" class="tally" data-tally="1">5/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
@@ -298,6 +313,9 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -331,6 +349,9 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -364,6 +385,9 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -402,6 +426,9 @@ try {
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -463,6 +490,9 @@ try {
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -493,6 +523,9 @@ try {
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="0">0/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="0">0/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/1</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/1</td>
 </tr>
@@ -526,6 +559,9 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -556,6 +592,9 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="0">0/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="0">0/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/1</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/1</td>
 </tr>
@@ -589,6 +628,9 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -619,6 +661,9 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
 <td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
 <td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="android44" class="tally" data-tally="1">5/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
@@ -652,6 +697,9 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -685,6 +733,9 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -718,6 +769,9 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -756,6 +810,9 @@ try {
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -817,6 +874,9 @@ try {
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -847,6 +907,9 @@ try {
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
 <td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
 <td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="android44" class="tally" data-tally="1">5/5</td>
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
@@ -880,6 +943,9 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -913,6 +979,9 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -946,6 +1015,9 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -984,6 +1056,9 @@ try {
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -1045,6 +1120,9 @@ try {
 <td class="yes" data-browser="node12">Yes</td>
 <td class="no" data-browser="iojs1_0">No</td>
 <td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
@@ -1075,6 +1153,9 @@ try {
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1108,6 +1189,9 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
@@ -1138,6 +1222,9 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1171,6 +1258,9 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
@@ -1201,6 +1291,9 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1234,6 +1327,9 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
@@ -1264,6 +1360,9 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1297,6 +1396,9 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
@@ -1327,6 +1429,9 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1360,6 +1465,9 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
@@ -1390,6 +1498,9 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1423,6 +1534,9 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
@@ -1453,6 +1567,9 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
 <td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="android44" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios7" class="tally" data-tally="1">1/1</td>
 <td data-browser="ios8" class="tally" data-tally="1">1/1</td>
 </tr>
@@ -1486,6 +1603,9 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes" data-browser="node12">Yes</td>
 <td class="yes" data-browser="iojs1_0">Yes</td>
 <td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios7">Yes</td>
 <td class="yes" data-browser="ios8">Yes</td>
 </tr>
