@@ -204,11 +204,17 @@ exports.tests = [
   significance: 'small',
   link: 'https://github.com/rwaldron/exponentiation-operator',
   exec: function () {/*
-    return 2 ** 3 === 8;
+    if (2 ** 3 !== 8 || -(5 ** 2) !== -25 || (-5) ** 2 !== 25) {
+      return false;
+    }
+    try {
+      -5 ** 2; // should throw a SyntaxError
+    } catch (e) {
+      return e instanceof SyntaxError;
+    }
+    return false;
   */},
   res: {
-    tr: true,
-    babel: true,
   }
 },
 {

@@ -134,11 +134,19 @@
       <tr class="category"><td colspan="33">Candidate</td>
 </tr>
 <tr significance="0.25"><td id="exponentiation_(**)_operator"><span><a class="anchor" href="#exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span><script data-source="
-return 2 ** 3 === 8;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+if (2 ** 3 !== 8 || -(5 ** 2) !== -25 || (-5) ** 2 !== 25) {
+  return false;
+}
+try {
+  -5 ** 2; // should throw a SyntaxError
+} catch (e) {
+  return e instanceof SyntaxError;
+}
+return false;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nif (2 ** 3 !== 8 || -(5 ** 2) !== -25 || (-5) ** 2 !== 25) {\n  return false;\n}\ntry {\n  -5 ** 2; // should throw a SyntaxError\n} catch (e) {\n  return e instanceof SyntaxError;\n}\nreturn false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nif (2 ** 3 !== 8 || -(5 ** 2) !== -25 || (-5) ** 2 !== 25) {\n  return false;\n}\ntry {\n  -5 ** 2; // should throw a SyntaxError\n} catch (e) {\n  return e instanceof SyntaxError;\n}\nreturn false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
