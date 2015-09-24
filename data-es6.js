@@ -4118,10 +4118,10 @@ exports.tests = [
           'Float32Array',
           'Float64Array'
         ];
-        for(var i = 0; i < constructors.length; i+=1) {
+        constructors.forEach(function (constructor) {
           try {
-            if (constructors[i] in global) {
-              global[constructors[i]](constructors[i] === "ArrayBuffer" ? 64 : buffer);
+            if (constructor in global) {
+              global[constructor](constructor === "ArrayBuffer" ? 64 : buffer);
             }
             return false;
           } catch(e) {

@@ -20610,17 +20610,17 @@ var constructors = [
   &apos;Float32Array&apos;,
   &apos;Float64Array&apos;
 ];
-for(var i = 0; i &lt; constructors.length; i+=1) {
+constructors.forEach(function (constructor) {
   try {
-    if (constructors[i] in global) {
-      global[constructors[i]](constructors[i] === &quot;ArrayBuffer&quot; ? 64 : buffer);
+    if (constructor in global) {
+      global[constructor](constructor === &quot;ArrayBuffer&quot; ? 64 : buffer);
     }
     return false;
   } catch(e) {
   }
 }
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("230");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar constructors = [\n  'ArrayBuffer',\n  'DataView',\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nfor(var i = 0; i < constructors.length; i+=1) {\n  try {\n    if (constructors[i] in global) {\n      global[constructors[i]](constructors[i] === \"ArrayBuffer\" ? 64 : buffer);\n    }\n    return false;\n  } catch(e) {\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("230");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar constructors = [\n  'ArrayBuffer',\n  'DataView',\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nfor(var i = 0; i < constructors.length; i+=1) {\n  try {\n    if (constructors[i] in global) {\n      global[constructors[i]](constructors[i] === \"ArrayBuffer\" ? 64 : buffer);\n    }\n    return false;\n  } catch(e) {\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("230");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar constructors = [\n  'ArrayBuffer',\n  'DataView',\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nconstructors.forEach(function (constructor) {\n  try {\n    if (constructor in global) {\n      global[constructor](constructor === \"ArrayBuffer\" ? 64 : buffer);\n    }\n    return false;\n  } catch(e) {\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("230");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar constructors = [\n  'ArrayBuffer',\n  'DataView',\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nconstructors.forEach(function (constructor) {\n  try {\n    if (constructor in global) {\n      global[constructor](constructor === \"ArrayBuffer\" ? 64 : buffer);\n    }\n    return false;\n  } catch(e) {\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
