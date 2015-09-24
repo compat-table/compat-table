@@ -203,19 +203,29 @@ exports.tests = [
   category: 'candidate',
   significance: 'small',
   link: 'https://github.com/rwaldron/exponentiation-operator',
-  exec: function () {/*
-    if (2 ** 3 !== 8 || -(5 ** 2) !== -25 || (-5) ** 2 !== 25) {
-      return false;
-    }
-    try {
-      -5 ** 2; // should throw a SyntaxError
-    } catch (e) {
-      return e instanceof SyntaxError;
-    }
-    return false;
-  */},
-  res: {
-  }
+  subtests: {
+    'correct answers': {
+      exec: function () {/*
+        return 2 ** 3 !== 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
+      */},
+      res: {
+        tr: true,
+        babel: true
+      }
+    },
+    'early syntax error for unary negation without parens': {
+      exec: function () {/*
+        if (2 ** 3 !== 8) { return false; }
+        try {
+          Function("-5 ** 2")();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+      }
+    },
+  },
 },
 {
   name: 'bind (::) operator',
