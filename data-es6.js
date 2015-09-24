@@ -19,6 +19,42 @@ var typescript = {
         note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
     }
 };
+var basicTypedArrayResults = {
+  ejs: true,
+  ie10: true,
+  firefox11: true,
+  chrome: true,
+  safari51: true,
+  webkit: true,
+  opera: true,
+  konq49: true,
+  node012: true,
+  android40: true,
+  typescript: typescript.fallthrough,
+};
+var basicDataViewResults = {
+  ejs: true,
+  ie10: true,
+  firefox16: true,
+  chrome: true,
+  safari51: true,
+  webkit: true,
+  opera: true,
+  node012: true,
+  android40: true,
+  typescript: typescript.fallthrough,
+};
+var clampedArrayResults = {
+  ejs: true,
+  firefox11: true,
+  edge12: true,
+  chrome: true,
+  safari6: true,
+  webkit: true,
+  opera: true,
+  node012: true,
+  typescript: typescript.fallthrough,
+};
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
@@ -3920,19 +3956,7 @@ exports.tests = [
         var view = new Int8Array(buffer);         view[0] = 0x80;
         return view[0] === -0x80;
       */},
-      res: (temp.basicTypedArrayResults = {
-        ejs:         true,
-        ie10:        true,
-        firefox11:   true,
-        chrome:      true,
-        safari51:    true,
-        webkit:      true,
-        opera:       true,
-        konq49:      true,
-        node012:     true,
-        android40:   true,
-        typescript:  typescript.fallthrough,
-      }),
+      res: basicTypedArrayResults,
     },
     'Uint8Array': {
       exec: function(){/*
@@ -3940,7 +3964,7 @@ exports.tests = [
         var view = new Uint8Array(buffer);        view[0] = 0x100;
         return view[0] === 0;
       */},
-      res: temp.basicTypedArrayResults,
+      res: basicTypedArrayResults,
     },
     'Uint8ClampedArray': {
       exec: function(){/*
@@ -3948,17 +3972,7 @@ exports.tests = [
         var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
         return view[0] === 0xFF;
       */},
-      res: (temp.clampedArrayResults = {
-        ejs:         true,
-        firefox11:   true,
-        edge12:      true,
-        chrome:      true,
-        safari6:     true,
-        webkit:      true,
-        opera:       true,
-        node012:     true,
-        typescript:  typescript.fallthrough,
-      }),
+      res: clampedArrayResults,
     },
     'Int16Array': {
       exec: function(){/*
@@ -3966,7 +3980,7 @@ exports.tests = [
         var view = new Int16Array(buffer);        view[0] = 0x8000;
         return view[0] === -0x8000;
       */},
-      res: temp.basicTypedArrayResults,
+      res: basicTypedArrayResults,
     },
     'Uint16Array': {
       exec: function(){/*
@@ -3974,7 +3988,7 @@ exports.tests = [
         var view = new Uint16Array(buffer);       view[0] = 0x10000;
         return view[0] === 0;
       */},
-      res: temp.basicTypedArrayResults,
+      res: basicTypedArrayResults,
     },
     'Int32Array': {
       exec: function(){/*
@@ -3982,7 +3996,7 @@ exports.tests = [
         var view = new Int32Array(buffer);        view[0] = 0x80000000;
         return view[0] === -0x80000000;
       */},
-      res: temp.basicTypedArrayResults,
+      res: basicTypedArrayResults,
     },
     'Uint32Array': {
       exec: function(){/*
@@ -3990,7 +4004,7 @@ exports.tests = [
         var view = new Uint32Array(buffer);       view[0] = 0x100000000;
         return view[0] === 0;
       */},
-      res: temp.basicTypedArrayResults,
+      res: basicTypedArrayResults,
     },
     'Float32Array': {
       exec: function(){/*
@@ -3998,7 +4012,7 @@ exports.tests = [
         var view = new Float32Array(buffer);       view[0] = 0.1;
         return view[0] === 0.10000000149011612;
       */},
-      res: temp.basicTypedArrayResults,
+      res: basicTypedArrayResults,
     },
     'Float64Array': {
       exec: function(){/*
@@ -4006,7 +4020,7 @@ exports.tests = [
         var view = new Float64Array(buffer);       view[0] = 0.1;
         return view[0] === 0.1;
       */},
-      res: Object.assign({}, temp.basicTypedArrayResults, {
+      res: Object.assign({}, basicTypedArrayResults, {
         android40:   false,
         android41:   true,
       }),
@@ -4018,18 +4032,7 @@ exports.tests = [
         view.setInt8 (0, 0x80);
         return view.getInt8(0) === -0x80;
       */},
-      res: (temp.basicDataViewResults = {
-        ejs:         true,
-        ie10:        true,
-        firefox16:   true,
-        chrome:      true,
-        safari51:    true,
-        webkit:      true,
-        opera:       true,
-        node012:     true,
-        android40:   true,
-        typescript:  typescript.fallthrough,
-      }),
+      res: basicDataViewResults,
     },
     'DataView (Uint8)': {
       exec: function(){/*
@@ -4038,7 +4041,7 @@ exports.tests = [
         view.setUint8(0, 0x100);
         return view.getUint8(0) === 0;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'DataView (Int16)': {
       exec: function(){/*
@@ -4047,7 +4050,7 @@ exports.tests = [
         view.setInt16(0, 0x8000);
         return view.getInt16(0) === -0x8000;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'DataView (Uint16)': {
       exec: function(){/*
@@ -4056,7 +4059,7 @@ exports.tests = [
         view.setUint16(0, 0x10000);
         return view.getUint16(0) === 0;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'DataView (Int32)': {
       exec: function(){/*
@@ -4065,7 +4068,7 @@ exports.tests = [
         view.setInt32(0, 0x80000000);
         return view.getInt32(0) === -0x80000000;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'DataView (Uint32)': {
       exec: function(){/*
@@ -4074,7 +4077,7 @@ exports.tests = [
         view.setUint32(0, 0x100000000);
         return view.getUint32(0) === 0;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'DataView (Float32)': {
       exec: function(){/*
@@ -4083,7 +4086,7 @@ exports.tests = [
         view.setFloat32(0, 0.1);
         return view.getFloat32(0) === 0.10000000149011612;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'DataView (Float64)': {
       exec: function(){/*
@@ -4092,7 +4095,7 @@ exports.tests = [
         view.setFloat64(0, 0.1);
         return view.getFloat64(0) === 0.1;
       */},
-      res: temp.basicDataViewResults,
+      res: basicDataViewResults,
     },
     'ArrayBuffer[Symbol.species]': {
       exec: function(){/*
@@ -4129,11 +4132,11 @@ exports.tests = [
         }
         return true;
       */},
-      res: Object.assign({}, temp.clampedArrayResults, {
-        edge12:   false,
-        safari6:  false,
-        webkit:   false,
-        firefox11:false,
+      res: Object.assign({}, clampedArrayResults, {
+        edge12: false,
+        safari6: false,
+        webkit: false,
+        firefox11: false,
       }),
     },
     'constructors accepts generic iterables': {
