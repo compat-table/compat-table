@@ -33,6 +33,7 @@
   },
   "scripts": {
     "lint": "jshint data-es5.js data-es6.js data-es7.js",
+    "build": "node build.js",
     "build:compilers": "node build.js compilers"
   }
 }
