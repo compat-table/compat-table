@@ -264,10 +264,11 @@ exports.tests = [
     var obj = Object.create({ a: "qux", d: "qux" });
     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
     var v = Object.values(obj);
-    return v instanceof Array && v + '' === "foo,bar,baz";
+    return Array.isArray(v) && String(v) === "foo,bar,baz";
   */},
   res: {
-    babel:       true,
+    babel: true,
+    es7shim: true,
   }
 },
 {
@@ -279,14 +280,15 @@ exports.tests = [
     var obj = Object.create({ a: "qux", d: "qux" });
     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
     var e = Object.entries(obj);
-    return e instanceof Array
-      && e[0] + '' === "a,foo"
-      && e[1] + '' === "b,bar"
-      && e[2] + '' === "c,baz"
-      && e.length === 3;
+    return Array.isArray(e)
+      && e.length === 3
+      && String(e[0]) === "a,foo"
+      && String(e[1]) === "b,bar"
+      && String(e[2]) === "c,baz";
   */},
   res: {
-    babel:       true,
+    babel: true,
+    es7shim: true,
   }
 },
 {

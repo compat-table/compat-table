@@ -2195,13 +2195,13 @@ return result === &apos;tromple&apos;;
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var v = Object.values(obj);
-return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn v instanceof Array && v + '' === \"foo,bar,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn v instanceof Array && v + '' === \"foo,bar,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="es7shim">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2234,17 +2234,17 @@ return v instanceof Array &amp;&amp; v + &apos;&apos; === &quot;foo,bar,baz&quot
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var e = Object.entries(obj);
-return e instanceof Array
-  &amp;&amp; e[0] + &apos;&apos; === &quot;a,foo&quot;
-  &amp;&amp; e[1] + &apos;&apos; === &quot;b,bar&quot;
-  &amp;&amp; e[2] + &apos;&apos; === &quot;c,baz&quot;
-  &amp;&amp; e.length === 3;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn e instanceof Array\n  && e[0] + '' === \"a,foo\"\n  && e[1] + '' === \"b,bar\"\n  && e[2] + '' === \"c,baz\"\n  && e.length === 3;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn e instanceof Array\n  && e[0] + '' === \"a,foo\"\n  && e[1] + '' === \"b,bar\"\n  && e[2] + '' === \"c,baz\"\n  && e.length === 3;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return Array.isArray(e)
+  &amp;&amp; e.length === 3
+  &amp;&amp; String(e[0]) === &quot;a,foo&quot;
+  &amp;&amp; String(e[1]) === &quot;b,bar&quot;
+  &amp;&amp; String(e[2]) === &quot;c,baz&quot;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n  && e.length === 3\n  && String(e[0]) === \"a,foo\"\n  && String(e[1]) === \"b,bar\"\n  && String(e[2]) === \"c,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n  && e.length === 3\n  && String(e[0]) === \"a,foo\"\n  && String(e[1]) === \"b,bar\"\n  && String(e[2]) === \"c,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="es7shim">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
