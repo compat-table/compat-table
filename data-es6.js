@@ -4239,7 +4239,7 @@ exports.tests = [
       methods[m].typescript = typescript.fallthrough;
 
       obj['%TypedArray%' + m] = {
-        exec: Function('/*return typeof '
+        exec: new Function('/*return typeof '
           + [
             'Int8Array',
             'Uint8Array',
