@@ -8,9 +8,9 @@ var strict = "strict";
 var fallthrough = "needs-polyfill-or-native";
 
 var typescript = {
-    corejs: { 
-        val: true, 
-        note_id: "typescript-core-js", 
+    corejs: {
+        val: true,
+        note_id: "typescript-core-js",
         note_html: "This feature is supported when using TypeScript with core-js, or when a native ES6 host is used."
     },
     fallthrough: {
@@ -193,7 +193,7 @@ exports.browsers = {
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
-    obsolete: true 
+    obsolete: true
   },
   firefox32: {
     full: 'Firefox',
@@ -2431,12 +2431,12 @@ exports.tests = [
       exec: function() {/*
         // checks that super() is *not* a synonym of super.constructor()
         var passed;
-        class B { 
-            constructor() { 
-                passed = true; 
-            } 
+        class B {
+            constructor() {
+                passed = true;
+            }
         };
-        B.prototype.constructor = function () { 
+        B.prototype.constructor = function () {
             passed = false;
         };
         class C extends B { };

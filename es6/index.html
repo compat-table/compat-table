@@ -15243,18 +15243,18 @@ return passed;
 <tr class="subtest" data-parent="super" id="super_super()_invokes_the_correct_constructor"><td><span><a class="anchor" href="#super_super()_invokes_the_correct_constructor">&#xA7;</a>super() invokes the correct constructor</span><script data-source="
 // checks that super() is *not* a synonym of super.constructor()
 var passed;
-class B { 
-    constructor() { 
-        passed = true; 
-    } 
+class B {
+    constructor() {
+        passed = true;
+    }
 };
-B.prototype.constructor = function () { 
+B.prototype.constructor = function () {
     passed = false;
 };
 class C extends B { };
 new C;
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("175");try{return Function("asyncTestPassed","\n// checks that super() is *not* a synonym of super.constructor()\nvar passed;\nclass B { \n    constructor() { \n        passed = true; \n    } \n};\nB.prototype.constructor = function () { \n    passed = false;\n};\nclass C extends B { };\nnew C;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("175");return Function("asyncTestPassed","'use strict';"+"\n// checks that super() is *not* a synonym of super.constructor()\nvar passed;\nclass B { \n    constructor() { \n        passed = true; \n    } \n};\nB.prototype.constructor = function () { \n    passed = false;\n};\nclass C extends B { };\nnew C;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("175");try{return Function("asyncTestPassed","\n// checks that super() is *not* a synonym of super.constructor()\nvar passed;\nclass B {\n    constructor() {\n        passed = true;\n    }\n};\nB.prototype.constructor = function () {\n    passed = false;\n};\nclass C extends B { };\nnew C;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("175");return Function("asyncTestPassed","'use strict';"+"\n// checks that super() is *not* a synonym of super.constructor()\nvar passed;\nclass B {\n    constructor() {\n        passed = true;\n    }\n};\nB.prototype.constructor = function () {\n    passed = false;\n};\nclass C extends B { };\nnew C;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="no" data-browser="babel">No</td>
