@@ -283,9 +283,37 @@ return Intl.constructor === Object;
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_exists_on_intl_object"><td><span><a class="anchor" href="#Intl.Collator_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.Collator === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_accepts_valid_language_tags"><td><span><a class="anchor" href="#Intl.Collator_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
+try {
+  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+  var validLanguageTags = [
+    &quot;de&quot;, // ISO 639 language code
+    &quot;de-DE&quot;, // + ISO 3166-1 country code
+    &quot;DE-de&quot;, // tags are case-insensitive
+    &quot;cmn&quot;, // ISO 639 language code
+    &quot;cmn-Hans&quot;, // + script code
+    &quot;CMN-hANS&quot;, // tags are case-insensitive
+    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+    &quot;es-419&quot;, // + UN M.49 region code
+    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+    &quot;i-klingon&quot;, // grandfathered tag
+    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+    &quot;x-en-US-12345&quot;, // anything goes in private use tags
+    &quot;x-12345-12345-en-US&quot;,
+    &quot;x-en-US-12345-12345&quot;,
+    &quot;x-en-u-foo&quot;,
+    &quot;x-en-u-foo-u-bar&quot;
+  ];
+  for (var i in validLanguageTags) {
+    Intl.Collator(validLanguageTags[i]);
+  }
+  return true;
+} catch(e) {
+  return false;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -301,7 +329,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="yes" data-browser="firefox35">Yes</td>
 <td class="yes" data-browser="firefox36">Yes</td>
 <td class="no obsolete" data-browser="chrome22">No</td>
-<td class="yes" data-browser="chrome24">Yes</td>
+<td class="no" data-browser="chrome24">No</td>
 <td class="yes" data-browser="chrome29">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no" data-browser="safari6">No</td>
@@ -319,9 +347,14 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_creates_new_Collator_instances"><td><span><a class="anchor" href="#Intl.Collator_creates_new_Collator_instances">&#xA7;</a>creates new Collator instances</span><script data-source="
-return new Intl.Collator() instanceof Intl.Collator;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_calling_Collator_with_Collator_instance_throws_error"><td><span><a class="anchor" href="#Intl.Collator_calling_Collator_with_Collator_instance_throws_error">&#xA7;</a>calling Collator with Collator instance throws error</span><script data-source="
+try {
+  Intl.Collator.call(Intl.Collator());
+  return false;
+} catch(e) {
+  return e instanceof TypeError;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\ntry {\n  Intl.Collator.call(Intl.Collator());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  Intl.Collator.call(Intl.Collator());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -343,7 +376,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="yes" data-browser="webkit">Yes</td>
+<td class="no" data-browser="webkit">No</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -391,14 +424,9 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_calling_Collator_with_Collator_instance_throws_error"><td><span><a class="anchor" href="#Intl.Collator_calling_Collator_with_Collator_instance_throws_error">&#xA7;</a>calling Collator with Collator instance throws error</span><script data-source="
-try {
-  Intl.Collator.call(Intl.Collator());
-  return false;
-} catch(e) {
-  return e instanceof TypeError;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\ntry {\n  Intl.Collator.call(Intl.Collator());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  Intl.Collator.call(Intl.Collator());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_creates_new_Collator_instances"><td><span><a class="anchor" href="#Intl.Collator_creates_new_Collator_instances">&#xA7;</a>creates new Collator instances</span><script data-source="
+return new Intl.Collator() instanceof Intl.Collator;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -420,7 +448,7 @@ try {
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -432,37 +460,9 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_accepts_valid_language_tags"><td><span><a class="anchor" href="#Intl.Collator_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
-try {
-  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-  var validLanguageTags = [
-    &quot;de&quot;, // ISO 639 language code
-    &quot;de-DE&quot;, // + ISO 3166-1 country code
-    &quot;DE-de&quot;, // tags are case-insensitive
-    &quot;cmn&quot;, // ISO 639 language code
-    &quot;cmn-Hans&quot;, // + script code
-    &quot;CMN-hANS&quot;, // tags are case-insensitive
-    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
-    &quot;es-419&quot;, // + UN M.49 region code
-    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
-    &quot;i-klingon&quot;, // grandfathered tag
-    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
-    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
-    &quot;x-en-US-12345&quot;, // anything goes in private use tags
-    &quot;x-12345-12345-en-US&quot;,
-    &quot;x-en-US-12345-12345&quot;,
-    &quot;x-en-u-foo&quot;,
-    &quot;x-en-u-foo-u-bar&quot;
-  ];
-  for (var i in validLanguageTags) {
-    Intl.Collator(validLanguageTags[i]);
-  }
-  return true;
-} catch(e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="Intl.Collator" id="Intl.Collator_exists_on_intl_object"><td><span><a class="anchor" href="#Intl.Collator_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
+return typeof Intl.Collator === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -478,7 +478,7 @@ try {
 <td class="yes" data-browser="firefox35">Yes</td>
 <td class="yes" data-browser="firefox36">Yes</td>
 <td class="no obsolete" data-browser="chrome22">No</td>
-<td class="no" data-browser="chrome24">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
 <td class="yes" data-browser="chrome29">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no" data-browser="safari6">No</td>
@@ -667,9 +667,37 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.NumberFormat === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#NumberFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
+try {
+  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+  var validLanguageTags = [
+    &quot;de&quot;, // ISO 639 language code
+    &quot;de-DE&quot;, // + ISO 3166-1 country code
+    &quot;DE-de&quot;, // tags are case-insensitive
+    &quot;cmn&quot;, // ISO 639 language code
+    &quot;cmn-Hans&quot;, // + script code
+    &quot;CMN-hANS&quot;, // tags are case-insensitive
+    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+    &quot;es-419&quot;, // + UN M.49 region code
+    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+    &quot;i-klingon&quot;, // grandfathered tag
+    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+    &quot;x-en-US-12345&quot;, // anything goes in private use tags
+    &quot;x-12345-12345-en-US&quot;,
+    &quot;x-en-US-12345-12345&quot;,
+    &quot;x-en-u-foo&quot;,
+    &quot;x-en-u-foo-u-bar&quot;
+  ];
+  for (var i in validLanguageTags) {
+    Intl.NumberFormat(validLanguageTags[i]);
+  }
+  return true;
+} catch(e) {
+  return false;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -685,7 +713,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes" data-browser="firefox35">Yes</td>
 <td class="yes" data-browser="firefox36">Yes</td>
 <td class="no obsolete" data-browser="chrome22">No</td>
-<td class="yes" data-browser="chrome24">Yes</td>
+<td class="no" data-browser="chrome24">No</td>
 <td class="yes" data-browser="chrome29">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no" data-browser="safari6">No</td>
@@ -703,9 +731,14 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_creates_new_NumberFormat_instances"><td><span><a class="anchor" href="#NumberFormat_creates_new_NumberFormat_instances">&#xA7;</a>creates new NumberFormat instances</span><script data-source="
-return new Intl.NumberFormat() instanceof Intl.NumberFormat;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_calling_NumberFormat_with_NumberFormat_instance_throws_error"><td><span><a class="anchor" href="#NumberFormat_calling_NumberFormat_with_NumberFormat_instance_throws_error">&#xA7;</a>calling NumberFormat with NumberFormat instance throws error</span><script data-source="
+try {
+  Intl.NumberFormat.call(Intl.NumberFormat());
+  return false;
+} catch(e) {
+  return e instanceof TypeError;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\ntry {\n  Intl.NumberFormat.call(Intl.NumberFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  Intl.NumberFormat.call(Intl.NumberFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -727,7 +760,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="yes" data-browser="webkit">Yes</td>
+<td class="no" data-browser="webkit">No</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -775,14 +808,9 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_calling_NumberFormat_with_NumberFormat_instance_throws_error"><td><span><a class="anchor" href="#NumberFormat_calling_NumberFormat_with_NumberFormat_instance_throws_error">&#xA7;</a>calling NumberFormat with NumberFormat instance throws error</span><script data-source="
-try {
-  Intl.NumberFormat.call(Intl.NumberFormat());
-  return false;
-} catch(e) {
-  return e instanceof TypeError;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\ntry {\n  Intl.NumberFormat.call(Intl.NumberFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  Intl.NumberFormat.call(Intl.NumberFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_creates_new_NumberFormat_instances"><td><span><a class="anchor" href="#NumberFormat_creates_new_NumberFormat_instances">&#xA7;</a>creates new NumberFormat instances</span><script data-source="
+return new Intl.NumberFormat() instanceof Intl.NumberFormat;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -804,7 +832,7 @@ try {
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -816,37 +844,9 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#NumberFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
-try {
-  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-  var validLanguageTags = [
-    &quot;de&quot;, // ISO 639 language code
-    &quot;de-DE&quot;, // + ISO 3166-1 country code
-    &quot;DE-de&quot;, // tags are case-insensitive
-    &quot;cmn&quot;, // ISO 639 language code
-    &quot;cmn-Hans&quot;, // + script code
-    &quot;CMN-hANS&quot;, // tags are case-insensitive
-    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
-    &quot;es-419&quot;, // + UN M.49 region code
-    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
-    &quot;i-klingon&quot;, // grandfathered tag
-    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
-    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
-    &quot;x-en-US-12345&quot;, // anything goes in private use tags
-    &quot;x-12345-12345-en-US&quot;,
-    &quot;x-en-US-12345-12345&quot;,
-    &quot;x-en-u-foo&quot;,
-    &quot;x-en-u-foo-u-bar&quot;
-  ];
-  for (var i in validLanguageTags) {
-    Intl.NumberFormat(validLanguageTags[i]);
-  }
-  return true;
-} catch(e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="NumberFormat" id="NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
+return typeof Intl.NumberFormat === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -862,7 +862,7 @@ try {
 <td class="yes" data-browser="firefox35">Yes</td>
 <td class="yes" data-browser="firefox36">Yes</td>
 <td class="no obsolete" data-browser="chrome22">No</td>
-<td class="no" data-browser="chrome24">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
 <td class="yes" data-browser="chrome29">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no" data-browser="safari6">No</td>
@@ -913,9 +913,37 @@ try {
 <td data-browser="ios7" class="tally" data-tally="0">0/5</td>
 <td data-browser="ios8" class="tally" data-tally="0">0/5</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_exists_on_intl_object"><td><span><a class="anchor" href="#DateTimeFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.DateTimeFormat === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#DateTimeFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
+try {
+  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+  var validLanguageTags = [
+    &quot;de&quot;, // ISO 639 language code
+    &quot;de-DE&quot;, // + ISO 3166-1 country code
+    &quot;DE-de&quot;, // tags are case-insensitive
+    &quot;cmn&quot;, // ISO 639 language code
+    &quot;cmn-Hans&quot;, // + script code
+    &quot;CMN-hANS&quot;, // tags are case-insensitive
+    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+    &quot;es-419&quot;, // + UN M.49 region code
+    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+    &quot;i-klingon&quot;, // grandfathered tag
+    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+    &quot;x-en-US-12345&quot;, // anything goes in private use tags
+    &quot;x-12345-12345-en-US&quot;,
+    &quot;x-en-US-12345-12345&quot;,
+    &quot;x-en-u-foo&quot;,
+    &quot;x-en-u-foo-u-bar&quot;
+  ];
+  for (var i in validLanguageTags) {
+    Intl.DateTimeFormat(validLanguageTags[i]);
+  }
+  return true;
+} catch(e) {
+  return false;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -931,7 +959,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="yes" data-browser="firefox35">Yes</td>
 <td class="yes" data-browser="firefox36">Yes</td>
 <td class="no obsolete" data-browser="chrome22">No</td>
-<td class="yes" data-browser="chrome24">Yes</td>
+<td class="no" data-browser="chrome24">No</td>
 <td class="yes" data-browser="chrome29">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no" data-browser="safari6">No</td>
@@ -949,9 +977,14 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_creates_new_DateTimeFormat_instances"><td><span><a class="anchor" href="#DateTimeFormat_creates_new_DateTimeFormat_instances">&#xA7;</a>creates new DateTimeFormat instances</span><script data-source="
-return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_calling_DateTimeFormat_with_DateTimeFormat_instance_throws_error"><td><span><a class="anchor" href="#DateTimeFormat_calling_DateTimeFormat_with_DateTimeFormat_instance_throws_error">&#xA7;</a>calling DateTimeFormat with DateTimeFormat instance throws error</span><script data-source="
+try {
+  Intl.DateTimeFormat.call(Intl.DateTimeFormat());
+  return false;
+} catch(e) {
+  return e instanceof TypeError;
+}
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\ntry {\n  Intl.DateTimeFormat.call(Intl.DateTimeFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  Intl.DateTimeFormat.call(Intl.DateTimeFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -973,7 +1006,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="yes" data-browser="webkit">Yes</td>
+<td class="no" data-browser="webkit">No</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -1021,14 +1054,9 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_calling_DateTimeFormat_with_DateTimeFormat_instance_throws_error"><td><span><a class="anchor" href="#DateTimeFormat_calling_DateTimeFormat_with_DateTimeFormat_instance_throws_error">&#xA7;</a>calling DateTimeFormat with DateTimeFormat instance throws error</span><script data-source="
-try {
-  Intl.DateTimeFormat.call(Intl.DateTimeFormat());
-  return false;
-} catch(e) {
-  return e instanceof TypeError;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\ntry {\n  Intl.DateTimeFormat.call(Intl.DateTimeFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  Intl.DateTimeFormat.call(Intl.DateTimeFormat());\n  return false;\n} catch(e) {\n  return e instanceof TypeError;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_creates_new_DateTimeFormat_instances"><td><span><a class="anchor" href="#DateTimeFormat_creates_new_DateTimeFormat_instances">&#xA7;</a>creates new DateTimeFormat instances</span><script data-source="
+return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -1050,7 +1078,7 @@ try {
 <td class="no" data-browser="safari6">No</td>
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="webkit">No</td>
+<td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
 <td class="no" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
@@ -1062,37 +1090,9 @@ try {
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#DateTimeFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
-try {
-  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-  var validLanguageTags = [
-    &quot;de&quot;, // ISO 639 language code
-    &quot;de-DE&quot;, // + ISO 3166-1 country code
-    &quot;DE-de&quot;, // tags are case-insensitive
-    &quot;cmn&quot;, // ISO 639 language code
-    &quot;cmn-Hans&quot;, // + script code
-    &quot;CMN-hANS&quot;, // tags are case-insensitive
-    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
-    &quot;es-419&quot;, // + UN M.49 region code
-    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
-    &quot;i-klingon&quot;, // grandfathered tag
-    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
-    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
-    &quot;x-en-US-12345&quot;, // anything goes in private use tags
-    &quot;x-12345-12345-en-US&quot;,
-    &quot;x-en-US-12345-12345&quot;,
-    &quot;x-en-u-foo&quot;,
-    &quot;x-en-u-foo-u-bar&quot;
-  ];
-  for (var i in validLanguageTags) {
-    Intl.DateTimeFormat(validLanguageTags[i]);
-  }
-  return true;
-} catch(e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr class="subtest" data-parent="DateTimeFormat" id="DateTimeFormat_exists_on_intl_object"><td><span><a class="anchor" href="#DateTimeFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
+return typeof Intl.DateTimeFormat === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie9">No</td>
 <td class="no" data-browser="ie10">No</td>
@@ -1108,7 +1108,7 @@ try {
 <td class="yes" data-browser="firefox35">Yes</td>
 <td class="yes" data-browser="firefox36">Yes</td>
 <td class="no obsolete" data-browser="chrome22">No</td>
-<td class="no" data-browser="chrome24">No</td>
+<td class="yes" data-browser="chrome24">Yes</td>
 <td class="yes" data-browser="chrome29">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no" data-browser="safari6">No</td>

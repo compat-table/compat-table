@@ -4230,12 +4230,13 @@ exports.tests = [
     '[Symbol.species]':       { edge13:    true},
     };
     var eqFn = ' === "function"';
-    var obj = {};
-    for (var m in methods) {
+    var methodNames = Object.keys(methods);
+    methodNames.sort(function (a, b) { return a.localeCompare(b); });
+    return methodNames.reduce(function (obj, m) {
       methods[m].typescript = typescript.fallthrough;
 
       obj['%TypedArray%' + m] = {
-        exec: eval('0,function(){/*\n  return typeof '
+        exec: Function('/*return typeof '
           + [
             'Int8Array',
             'Uint8Array',
@@ -4246,11 +4247,11 @@ exports.tests = [
             'Uint32Array',
             'Float32Array',
             'Float64Array'
-          ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/}'),
+          ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/'),
         res: methods[m]
       };
-    }
-    return obj;
+      return obj;
+    }, {});
   }())),
 },
 {

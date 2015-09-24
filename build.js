@@ -486,7 +486,7 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
     // Print all the results for the subtests
     if ("subtests" in t) {
-      Object.keys(t.subtests).forEach(function(subtestName, subtestNum) {
+      Object.keys(t.subtests).sort(function (a, b) { return a.localeCompare(b); }).forEach(function(subtestName, subtestNum) {
         var subtest = t.subtests[subtestName];
 
         var subtestId = id + '_' + escapeTestName(subtestName);
