@@ -4,6 +4,7 @@ require('object.assign').shim();
 
 var temp = {};
 var flag = "flagged";
+var very = "very";
 var strict = "strict";
 var fallthrough = "needs-polyfill-or-native";
 
@@ -97,62 +98,62 @@ exports.browsers = {
   firefox11: {
     full: 'Firefox',
     short: 'FF 11-12',
-    obsolete: true
+    obsolete: very
   },
   firefox13: {
     full: 'Firefox',
     short: 'FF 13',
-    obsolete: true
+    obsolete: very
   },
   firefox16: {
     full: 'Firefox',
     short: 'FF 16',
-    obsolete: true
+    obsolete: very
   },
   firefox17: {
     full: 'Firefox',
     short: 'FF 17',
-    obsolete: true
+    obsolete: very
   },
   firefox18: {
     full: 'Firefox',
     short: 'FF 18',
-    obsolete: true
+    obsolete: very
   },
   firefox23: {
     full: 'Firefox',
     short: 'FF 23',
-    obsolete: true
+    obsolete: very
   },
   firefox24: {
     full: 'Firefox',
     short: 'FF 24',
-    obsolete: true
+    obsolete: very
   },
   firefox25: {
     full: 'Firefox',
     short: 'FF 25',
-    obsolete: true
+    obsolete: very
   },
   firefox27: {
     full: 'Firefox',
     short: 'FF 27',
-    obsolete: true
+    obsolete: very
   },
   firefox28: {
     full: 'Firefox',
     short: 'FF 28',
-    obsolete: true
+    obsolete: very
   },
   firefox29: {
     full: 'Firefox',
     short: 'FF 29',
-    obsolete: true
+    obsolete: very
   },
   firefox30: {
     full: 'Firefox',
     short: 'FF 30',
-    obsolete: true
+    obsolete: very
   },
   firefox31: {
     full: 'Firefox',
@@ -221,38 +222,38 @@ exports.browsers = {
   chrome19dev: {
     full: 'Chrome',
     short: 'CH 19',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
     note_html: 'Flagged features have to be enabled via "Experimental Javascript features" flag'
   },
   chrome21dev: {
     full: 'Chrome',
     short: 'CH 21-29',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome30: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;30,<br>OP&nbsp;17',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome31: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;31,<br>OP&nbsp;18',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome33: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;32-33,<br>OP&nbsp;19-20',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome34: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;34,<br>OP&nbsp;21',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome35: {
@@ -416,58 +417,58 @@ exports.browsers = {
   },
   android40: {
     full: 'Android Browser',
-    short: 'Android 4.0',
+    short: 'AN 4.0',
     platformtype: 'mobile',
     obsolete: true,
   },
   android41: {
     full: 'Android Browser',
-    short: 'Android 4.1',
+    short: 'AN 4.1',
     platformtype: 'mobile',
     obsolete: true,
   },
   android42: {
     full: 'Android Browser',
-    short: 'Android 4.2',
+    short: 'AN 4.2',
     platformtype: 'mobile',
     obsolete: true,
   },
   android43: {
     full: 'Android Browser',
-    short: 'Android 4.3',
+    short: 'AN 4.3',
     platformtype: 'mobile',
     obsolete: true,
   },
   android44: {
     full: 'Android Browser',
-    short: 'Android 4.4',
+    short: 'AN 4.4',
     platformtype: 'mobile',
     equals: 'chrome30',
     ignore_flagged: true,
   },
   android50: {
     full: 'Android Browser',
-    short: 'Android 5.0',
+    short: 'AN 5.0',
     platformtype: 'mobile',
     equals: 'chrome37',
     ignore_flagged: true,
   },
   android51: {
     full: 'Android Browser',
-    short: 'Android 5.1',
+    short: 'AN 5.1',
     platformtype: 'mobile',
     equals: 'chrome39',
     ignore_flagged: true,
   },
   ios7: {
     full: 'iOS Safari',
-    short: 'iOS7',
+    short: 'iOS 7',
     platformtype: 'mobile',
     equals: 'safari7',
   },
   ios8: {
     full: 'iOS Safari',
-    short: 'iOS8',
+    short: 'iOS 8',
     platformtype: 'mobile',
     equals: 'safari71_8',
   }

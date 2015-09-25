@@ -315,19 +315,28 @@ function handle(options, compiler) {
   }
 }
 
-function dataToHtml(skeleton, browsers, tests, compiler) {
+function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   var $ = cheerio.load(skeleton);
   var head = $('table thead tr:last-child');
   var body = $('table tbody');
   var footnoteIndex = {};
   var rowNum = 0;
+  // rawBrowsers includes very obsolete browsers which mustn't be printed, but should
+  // be used by interpolateResults(). All other uses should use this, which filters
+  // the very obsolete ones out.
+  var browsers = Object.keys(rawBrowsers).reduce(function(obj,e) {
+    if (rawBrowsers[e].obsolete !== "very") {
+      obj[e] = rawBrowsers[e];
+    }
+    return obj;
+  },{});
 
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid, j;
     // For each browser, check if the previous browser has the same
     // browser full name as this one.
-    for (var bid in browsers) {
-      browser = browsers[bid];
+    for (var bid in rawBrowsers) {
+      browser = rawBrowsers[bid];
       if (prevBrowser &&
           prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'')) {
         // For each test, check if the previous browser has a result
@@ -343,8 +352,8 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     }
     // For browsers that are essentially equal to other browsers,
     // copy over the results.
-    for (var bid in browsers) {
-      browser = browsers[bid];
+    for (var bid in rawBrowsers) {
+      browser = rawBrowsers[bid];
       if (browser.equals) {
         result = res[browser.equals];
         res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result; 
