@@ -931,6 +931,19 @@ exports.tests = [
         iojs1_1: false,
       },
     },
+    'resolvedOptions().timeZone defaults to the host environment': {
+      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-6.4',
+      exec: function(){/*
+        try {
+          var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+          return tz !== undefined && tz.length > 0;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+      },
+    },
   },
 },
 {
