@@ -408,8 +408,8 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
     var subtests;
     // Calculate the result totals for tests which consist solely of subtests.
     if ("subtests" in t) {
-      Object.keys(t.subtests).forEach(function(e) {
-        interpolateResults(t.subtests[e].res);
+      t.subtests.forEach(function(e) {
+        interpolateResults(e.res);
       });
     }
     else interpolateResults(t.res);
@@ -486,8 +486,8 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
     // Print all the results for the subtests
     if ("subtests" in t) {
-      Object.keys(t.subtests).sort(function (a, b) { return a.localeCompare(b); }).forEach(function(subtestName, subtestNum) {
-        var subtest = t.subtests[subtestName];
+      t.subtests.forEach(function(subtest, subtestNum) {
+        var subtestName = subtest.name;
 
         var subtestId = id + '_' + escapeTestName(subtestName);
 
@@ -522,8 +522,8 @@ function dataToHtml(skeleton, browsers, tests, compiler) {
 
           var tally = 0, outOf = 0, flaggedTally = 0;
 
-          Object.keys(t.subtests).forEach(function(e) {
-            var result = t.subtests[e].res[browserId];
+          t.subtests.forEach(function(e) {
+            var result = e.res[browserId];
 
             tally += testValue(result) === true;
             flaggedTally += ['flagged','strict'].indexOf(testValue(result)) > -1;

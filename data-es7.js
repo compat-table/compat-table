@@ -203,8 +203,9 @@ exports.tests = [
   category: 'candidate',
   significance: 'small',
   link: 'https://github.com/rwaldron/exponentiation-operator',
-  subtests: {
-    'correct answers': {
+  subtests: [
+    {
+      name: 'basic support',
       exec: function () {/*
         return 2 ** 3 !== 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
       */},
@@ -213,7 +214,8 @@ exports.tests = [
         babel: true
       }
     },
-    'early syntax error for unary negation without parens': {
+    {
+      name: 'early syntax error for unary negation without parens',
       exec: function () {/*
         if (2 ** 3 !== 8) { return false; }
         try {
@@ -225,15 +227,16 @@ exports.tests = [
       res: {
       }
     },
-  },
+  ],
 },
 {
   name: 'bind (::) operator',
   link: 'https://github.com/zenparsing/es-function-bind',
   category: 'strawman',
   significance: 'medium',
-  subtests: {
-    'binary form': {
+  subtests: [
+    {
+      name: 'binary form',
       exec: function () {/*
         function foo() { this.garply += "foo"; return this; }
         var obj = { garply: "bar" };
@@ -243,7 +246,8 @@ exports.tests = [
         babel:       true,
       }
     },
-    'unary form': {
+    {
+      name: 'unary form',
       exec: function () {/*
         var obj = { garply: "bar", foo: function() { this.garply += "foo"; return this; } };
         return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
@@ -252,7 +256,7 @@ exports.tests = [
         babel:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'function.sent',
@@ -354,8 +358,9 @@ exports.tests = [
   link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
   category: 'draft',
   significance: 'small',
-  subtests: {
-    'in parameter lists': {
+  subtests: [
+    {
+      name: 'in parameter lists',
       exec: function(){/*
         return typeof function f( a, b, ){} === 'function';
       */},
@@ -363,7 +368,8 @@ exports.tests = [
         babel:       true,
       }
     },
-    'in argument lists': {
+    {
+      name: 'in argument lists',
       exec: function(){/*
         return Math.min(1,2,3,) === 1;
       */},
@@ -371,15 +377,16 @@ exports.tests = [
         babel:       true,
       }
     },
-  },
+  ],
 },
 {
   name: 'async functions',
   category: 'proposal',
   significance: 'large',
   link: 'https://tc39.github.io/ecmascript-asyncawait/',
-  subtests: {
-    'basic support' : {
+  subtests: [
+    {
+      name: 'basic support',
       exec: function () {/*
         return (async function(){
           return 42;
@@ -390,7 +397,8 @@ exports.tests = [
         babel:       true,
       }
     },
-    'await support' : {
+    {
+      name: 'await support',
       exec: function () {/*
         return (async function(){
           return 10 + await Promise.resolve(10);
@@ -401,7 +409,8 @@ exports.tests = [
         babel:       true,
       }
     },
-    'arrow async functions' : {
+    {
+      name: 'arrow async functions',
       exec: function () {/*
         return (async () => 42 + await Promise.resolve(42))() instanceof Promise
       */},
@@ -410,7 +419,7 @@ exports.tests = [
         babel:       true,
       }
     }
-  }
+  ]
 },
 {
   name: 'typed objects',
@@ -462,8 +471,9 @@ exports.tests = [
   category: 'candidate',
   significance: 'large',
   link: 'https://tc39.github.io/ecmascript_simd/',
-  subtests: {
-    'basic support' : {
+  subtests: [
+    {
+      name: 'basic support',
       exec: function () {/*
         return typeof SIMD !== 'undefined';
       */},
@@ -473,7 +483,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Float32x4' : {
+    {
+      name: 'Float32x4',
       exec: function(){/*
         return typeof SIMD.Float32x4 === 'function';
       */},
@@ -481,7 +492,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Float64x2' : {
+    {
+      name: 'Float64x2',
       exec: function(){/*
         return typeof SIMD.Float64x2 === 'function';
       */},
@@ -489,7 +501,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Int32x4' : {
+    {
+      name: 'Int32x4',
       exec: function(){/*
         return typeof SIMD.Int32x4 === 'function';
       */},
@@ -497,7 +510,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Int16x8' : {
+    {
+      name: 'Int16x8',
       exec: function(){/*
         return typeof SIMD.Int16x8 === 'function';
       */},
@@ -505,7 +519,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Int8x16' : {
+    {
+      name: 'Int8x16',
       exec: function(){/*
         return typeof SIMD.Int8x16 === 'function';
       */},
@@ -513,7 +528,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Bool32x4' : {
+    {
+      name: 'Bool32x4',
       exec: function(){/*
         return typeof SIMD.Bool32x4 === 'function';
       */},
@@ -521,7 +537,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Bool16x8' : {
+    {
+      name: 'Bool16x8',
       exec: function(){/*
         return typeof SIMD.Bool16x8 === 'function';
       */},
@@ -529,7 +546,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'Bool8x16' : {
+    {
+      name: 'Bool8x16',
       exec: function(){/*
         return typeof SIMD.Bool8x16 === 'function';
       */},
@@ -537,7 +555,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.abs' : {
+    {
+      name: 'SIMD.%type%.abs',
       exec: function(){/*
         return typeof SIMD.Float32x4.abs === 'function';
       */},
@@ -545,7 +564,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.add' : {
+    {
+      name: 'SIMD.%type%.add',
       exec: function(){/*
         return typeof SIMD.Float32x4.add === 'function';
       */},
@@ -553,7 +573,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%integerType%.addSaturate' : {
+    {
+      name: 'SIMD.%integerType%.addSaturate',
       exec: function(){/*
         return typeof SIMD.Int16x8.addSaturate === 'function';
       */},
@@ -561,7 +582,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%booleanType%.and' : {
+    {
+      name: 'SIMD.%booleanType%.and',
       exec: function(){/*
         return typeof SIMD.Bool16x8.and === 'function';
       */},
@@ -569,7 +591,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%booleanType%.anyTrue' : {
+    {
+      name: 'SIMD.%booleanType%.anyTrue',
       exec: function(){/*
         return typeof SIMD.Bool32x4.anyTrue === 'function';
       */},
@@ -577,7 +600,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%booleanType%.allTrue' : {
+    {
+      name: 'SIMD.%booleanType%.allTrue',
       exec: function(){/*
         return typeof SIMD.Bool32x4.allTrue === 'function';
       */},
@@ -585,7 +609,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.check' : {
+    {
+      name: 'SIMD.%type%.check',
       exec: function(){/*
         return typeof SIMD.Float32x4.check === 'function';
       */},
@@ -593,7 +618,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.equal' : {
+    {
+      name: 'SIMD.%type%.equal',
       exec: function(){/*
         return typeof SIMD.Float32x4.equal === 'function';
       */},
@@ -601,7 +627,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.extractLane' : {
+    {
+      name: 'SIMD.%type%.extractLane',
       exec: function(){/*
         return typeof SIMD.Float32x4.extractLane === 'function';
       */},
@@ -609,7 +636,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.greaterThan' : {
+    {
+      name: 'SIMD.%type%.greaterThan',
       exec: function(){/*
         return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
@@ -617,7 +645,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.greaterThanOrEqual' : {
+    {
+      name: 'SIMD.%type%.greaterThanOrEqual',
       exec: function(){/*
         return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
@@ -625,7 +654,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.lessThan' : {
+    {
+      name: 'SIMD.%type%.lessThan',
       exec: function(){/*
         return typeof SIMD.Float32x4.lessThan === 'function';
       */},
@@ -633,7 +663,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.lessThanOrEqual' : {
+    {
+      name: 'SIMD.%type%.lessThanOrEqual',
       exec: function(){/*
         return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
@@ -641,7 +672,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.mul' : {
+    {
+      name: 'SIMD.%type%.mul',
       exec: function(){/*
         return typeof SIMD.Float32x4.mul === 'function';
       */},
@@ -649,7 +681,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.div' : {
+    {
+      name: 'SIMD.%type%.div',
       exec: function(){/*
         return typeof SIMD.Float32x4.div === 'function';
       */},
@@ -657,7 +690,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.max' : {
+    {
+      name: 'SIMD.%type%.max',
       exec: function(){/*
         return typeof SIMD.Float32x4.max === 'function';
       */},
@@ -665,7 +699,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.maxNum' : {
+    {
+      name: 'SIMD.%type%.maxNum',
       exec: function(){/*
         return typeof SIMD.Float32x4.maxNum === 'function';
       */},
@@ -673,7 +708,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.min' : {
+    {
+      name: 'SIMD.%type%.min',
       exec: function(){/*
         return typeof SIMD.Float32x4.min === 'function';
       */},
@@ -681,7 +717,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.minNum' : {
+    {
+      name: 'SIMD.%type%.minNum',
       exec: function(){/*
         return typeof SIMD.Float32x4.minNum === 'function';
       */},
@@ -689,7 +726,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.neg' : {
+    {
+      name: 'SIMD.%type%.neg',
       exec: function(){/*
         return typeof SIMD.Float32x4.neg === 'function';
       */},
@@ -697,7 +735,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%booleanType%.not' : {
+    {
+      name: 'SIMD.%booleanType%.not',
       exec: function(){/*
         return typeof SIMD.Bool16x8.not === 'function';
       */},
@@ -705,7 +744,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.notEqual' : {
+    {
+      name: 'SIMD.%type%.notEqual',
       exec: function(){/*
         return typeof SIMD.Float32x4.notEqual === 'function';
       */},
@@ -713,7 +753,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.reciprocalApproximation' : {
+    {
+      name: 'SIMD.%type%.reciprocalApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
       */},
@@ -721,7 +762,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.reciprocalSqrtApproximation' : {
+    {
+      name: 'SIMD.%type%.reciprocalSqrtApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';
       */},
@@ -729,7 +771,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.replaceLane' : {
+    {
+      name: 'SIMD.%type%.replaceLane',
       exec: function(){/*
         return typeof SIMD.Float32x4.replaceLane === 'function';
       */},
@@ -737,7 +780,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.select' : {
+    {
+      name: 'SIMD.%type%.select',
       exec: function(){/*
         return typeof SIMD.Float32x4.select === 'function';
       */},
@@ -745,7 +789,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%integerType%.selectBits' : {
+    {
+      name: 'SIMD.%integerType%.selectBits',
       exec: function(){/*
         return typeof SIMD.Int16x8.selectBits === 'function';
       */},
@@ -753,7 +798,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%integerType%.shiftLeftByScalar' : {
+    {
+      name: 'SIMD.%integerType%.shiftLeftByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftLeftByScalar === 'function';
       */},
@@ -761,7 +807,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%integerType%.shiftRightLogicalByScalar' : {
+    {
+      name: 'SIMD.%integerType%.shiftRightLogicalByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';
       */},
@@ -769,7 +816,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%integerType%.shiftRightArithmeticByScalar' : {
+    {
+      name: 'SIMD.%integerType%.shiftRightArithmeticByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';
       */},
@@ -777,7 +825,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.shuffle' : {
+    {
+      name: 'SIMD.%type%.shuffle',
       exec: function(){/*
         return typeof SIMD.Float32x4.shuffle === 'function';
       */},
@@ -785,7 +834,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.splat' : {
+    {
+      name: 'SIMD.%type%.splat',
       exec: function(){/*
         return typeof SIMD.Float32x4.splat === 'function';
       */},
@@ -793,7 +843,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.sqrt' : {
+    {
+      name: 'SIMD.%type%.sqrt',
       exec: function(){/*
         return typeof SIMD.Float32x4.sqrt === 'function';
       */},
@@ -801,7 +852,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.store' : {
+    {
+      name: 'SIMD.%type%.store',
       exec: function(){/*
         return typeof SIMD.Float32x4.store === 'function';
       */},
@@ -809,7 +861,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.store1' : {
+    {
+      name: 'SIMD.%type%.store1',
       exec: function(){/*
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
@@ -817,7 +870,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.store2' : {
+    {
+      name: 'SIMD.%type%.store2',
       exec: function(){/*
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
@@ -825,7 +879,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.store3' : {
+    {
+      name: 'SIMD.%type%.store3',
       exec: function(){/*
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
@@ -833,7 +888,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.sub' : {
+    {
+      name: 'SIMD.%type%.sub',
       exec: function(){/*
         return typeof SIMD.Float32x4.sub === 'function';
       */},
@@ -841,7 +897,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%integerType%.subSaturate' : {
+    {
+      name: 'SIMD.%integerType%.subSaturate',
       exec: function(){/*
         return typeof SIMD.Int16x8.subSaturate === 'function';
       */},
@@ -849,7 +906,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%type%.swizzle' : {
+    {
+      name: 'SIMD.%type%.swizzle',
       exec: function(){/*
         return typeof SIMD.Float32x4.swizzle === 'function';
       */},
@@ -857,7 +915,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'SIMD.%booleanType%.xor' : {
+    {
+      name: 'SIMD.%booleanType%.xor',
       exec: function(){/*
         return typeof SIMD.Bool16x8.xor === 'function';
       */},
@@ -865,7 +924,7 @@ exports.tests = [
         es7shim: true,
       }
     }
-  }
+  ]
 },
 {
   name: 'class decorators',
@@ -1062,8 +1121,9 @@ exports.tests = [
   category: 'proposal',
   significance: 'small',
   link: 'https://github.com/ljharb/proposal-string-pad-left-right',
-  subtests: {
-    'String.prototype.padLeft' : {
+  subtests: [
+    {
+      name: 'String.prototype.padLeft',
       exec: function(){/*
         return 'hello'.padLeft(10) === '     hello'
           && 'hello'.padLeft(10, '1234') === '41234hello'
@@ -1075,7 +1135,8 @@ exports.tests = [
         es7shim: true,
       }
     },
-    'String.prototype.padRight' : {
+    {
+      name: 'String.prototype.padRight',
       exec: function(){/*
         return 'hello'.padRight(10) === 'hello     '
           && 'hello'.padRight(10, '1234') === 'hello12341'
@@ -1087,7 +1148,7 @@ exports.tests = [
         es7shim: true,
       }
     }
-  }
+  ]
 },
 {
   name: 'RegExp.escape',
@@ -1107,8 +1168,9 @@ exports.tests = [
   category: 'candidate',
   significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
-  subtests: {
-    'String.prototype.trimLeft': {
+  subtests: [
+    {
+      name: 'String.prototype.trimLeft',
       exec: function(){/*
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
@@ -1124,7 +1186,8 @@ exports.tests = [
         android40:  true,
       }
     },
-    'String.prototype.trimRight': {
+    {
+      name: 'String.prototype.trimRight',
       exec: function(){/*
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
@@ -1140,7 +1203,7 @@ exports.tests = [
         android40:  true,
       }
     }
-  }
+  ]
 },
 {
   name: 'generator functions can\'t be used with "new"',

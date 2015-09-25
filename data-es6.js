@@ -19,42 +19,6 @@ var typescript = {
         note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
     }
 };
-var basicTypedArrayResults = {
-  ejs: true,
-  ie10: true,
-  firefox11: true,
-  chrome: true,
-  safari51: true,
-  webkit: true,
-  opera: true,
-  konq49: true,
-  node012: true,
-  android40: true,
-  typescript: typescript.fallthrough,
-};
-var basicDataViewResults = {
-  ejs: true,
-  ie10: true,
-  firefox16: true,
-  chrome: true,
-  safari51: true,
-  webkit: true,
-  opera: true,
-  node012: true,
-  android40: true,
-  typescript: typescript.fallthrough,
-};
-var clampedArrayResults = {
-  ejs: true,
-  firefox11: true,
-  edge12: true,
-  chrome: true,
-  safari6: true,
-  webkit: true,
-  opera: true,
-  node012: true,
-  typescript: typescript.fallthrough,
-};
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
@@ -515,8 +479,9 @@ exports.tests = [
   category: 'optimisation',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tail-position-calls',
-  subtests: {
-    'direct recursion': {
+  subtests: [
+    {
+      name: 'direct recursion',
       exec: function() {/*
         "use strict";
         return (function f(n){
@@ -536,7 +501,8 @@ exports.tests = [
         typescript:  typescript.fallthrough,
       },
     },
-    'mutual recursion': {
+    {
+      name: 'mutual recursion',
       exec: function() {/*
         "use strict";
         function f(n){
@@ -558,15 +524,16 @@ exports.tests = [
         typescript:  typescript.fallthrough
       },
     }
-  }
+  ]
 },
 {
   name: 'arrow functions',
   category: 'functions',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-arrow-function-definitions',
-  subtests: {
-    '0 parameters': {
+  subtests: [
+    {
+      name: '0 parameters',
       exec: function(){/*
         return (() => 5)() === 5;
       */},
@@ -588,7 +555,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    '1 parameter, no brackets': {
+    {
+      name: '1 parameter, no brackets',
       exec: function(){/*
         var b = x => x + "foo";
         return (b("fee fie foe ") === "fee fie foe foo");
@@ -611,7 +579,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'multiple parameters': {
+    {
+      name: 'multiple parameters',
       exec: function(){/*
         var c = (v, w, x, y, z) => "" + v + w + x + y + z;
         return (c(6, 5, 4, 3, 2) === "65432");
@@ -634,7 +603,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'lexical "this" binding': {
+    {
+      name: 'lexical "this" binding',
       exec: function(){/*
         var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
         var e = { x : "baz", y : d };
@@ -655,7 +625,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    '"this" unchanged by call or apply': {
+    {
+      name: '"this" unchanged by call or apply',
       exec: function(){/*
         var d = { x : "foo", y : function() { return () => this.x; }};
         var e = { x : "bar" };
@@ -676,7 +647,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'can\'t be bound, can be curried': {
+    {
+      name: 'can\'t be bound, can be curried',
       exec: function(){/*
         var d = { x : "bar", y : function() { return z => this.x + z; }};
         var e = { x : "baz" };
@@ -697,7 +669,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'lexical "arguments" binding': {
+    {
+      name: 'lexical "arguments" binding',
       exec: function(){/*
         var f = (function() { return z => arguments[0]; }(5));
         return f(6) === 5;
@@ -713,7 +686,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'no line break between params and <code>=></code>': {
+    {
+      name: 'no line break between params and <code>=></code>',
       exec: function(){/*
         return (() => {
           try { Function("x\n => 2")(); } catch(e) { return true; }
@@ -730,7 +704,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'correct precedence': {
+    {
+      name: 'correct precedence',
       exec: function(){/*
         return (() => {
           try { Function("0 || () => 2")(); } catch(e) { return true; }
@@ -744,7 +719,8 @@ exports.tests = [
         chrome47:    true,
       },
     },
-    'no "prototype" property': {
+    {
+      name: 'no "prototype" property',
       exec: function(){/*
         var a = () => 5;
         return !a.hasOwnProperty("prototype");
@@ -760,7 +736,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'lexical "super" binding': {
+    {
+      name: 'lexical "super" binding',
       exec: function(){/*
         class B {
           qux() {
@@ -788,7 +765,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'lexical "new.target" binding': {
+    {
+      name: 'lexical "new.target" binding',
       exec: function(){/*
         function C() {
           return x => new.target;
@@ -802,15 +780,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'const',
   category: 'bindings',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
-  subtests: {
-    'basic support': {
+  subtests: [
+    {
+      name: 'basic support',
       exec: function() {/*
         const foo = 123;
         return (foo === 123);
@@ -833,7 +812,8 @@ exports.tests = [
         android40:   true,
       }
     },
-    'is block-scoped': {
+    {
+      name: 'is block-scoped',
       exec: function() {/*
         const bar = 123;
         { const bar = 456; }
@@ -851,7 +831,8 @@ exports.tests = [
         webkit:      true,
       }
     },
-    'redefining a const is an error': {
+    {
+      name: 'redefining a const is an error',
       exec: function() {/*
         const baz = 1;
         try {
@@ -872,7 +853,8 @@ exports.tests = [
         webkit:      true,
       }
     },
-    'temporal dead zone': {
+    {
+      name: 'temporal dead zone',
       exec: function(){/*
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
         function fn() { passed &= qux === 456; }
@@ -888,7 +870,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-   'basic support (strict mode)': {
+    {
+      name: 'basic support (strict mode)',
       exec: function() {/*
         "use strict";
         const foo = 123;
@@ -911,7 +894,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'is block-scoped (strict mode)': {
+    {
+      name: 'is block-scoped (strict mode)',
       exec: function() {/*
         'use strict';
         const bar = 123;
@@ -934,7 +918,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'redefining a const (strict mode)': {
+    {
+      name: 'redefining a const (strict mode)',
       exec: function() {/*
         'use strict';
         const baz = 1;
@@ -960,7 +945,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'temporal dead zone (strict mode)': {
+    {
+      name: 'temporal dead zone (strict mode)',
       exec: function(){/*
         'use strict';
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
@@ -973,23 +959,23 @@ exports.tests = [
         babel:       flag,
         typescript:  true,
         ie11:        true,
-        firefox36:   true,
-        chrome19dev: flag,
+        firefox36:   true, chrome19dev: flag,
         chrome41:    true,
         webkit:      true,
         node012:     flag,
         node4:       true,
       },
     },
-  }
+  ]
 },
 {
   name: 'let',
   category: 'bindings',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
-  subtests: {
-    'basic support': {
+  subtests: [
+    {
+      name: 'basic support',
       exec: function(){/*
         let foo = 123;
         return (foo === 123);
@@ -1010,7 +996,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'is block-scoped': {
+    {
+      name: 'is block-scoped',
       exec: function(){/*
         let bar = 123;
         { let bar = 456; }
@@ -1028,7 +1015,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'for-loop statement scope': {
+    {
+      name: 'for-loop statement scope',
       exec: function(){/*
         let baz = 1;
         for(let baz = 0; false; false) {}
@@ -1046,7 +1034,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'temporal dead zone': {
+    {
+      name: 'temporal dead zone',
       exec: function(){/*
         var passed = (function(){ try {  qux; } catch(e) { return true; }}());
         function fn() { passed &= qux === 456; }
@@ -1063,7 +1052,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'for-loop iteration scope': {
+    {
+      name: 'for-loop iteration scope',
       exec: function(){/*
         let scopes = [];
         for(let i = 0; i < 2; i++) {
@@ -1088,7 +1078,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'basic support (strict mode)': {
+    {
+      name: 'basic support (strict mode)',
       exec: function(){/*
         'use strict';
         let foo = 123;
@@ -1110,7 +1101,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'is block-scoped (strict mode)': {
+    {
+      name: 'is block-scoped (strict mode)',
       exec: function(){/*
         'use strict';
         let bar = 123;
@@ -1133,7 +1125,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'for-loop statement scope (strict mode)': {
+    {
+      name: 'for-loop statement scope (strict mode)',
       exec: function(){/*
         'use strict';
         let baz = 1;
@@ -1156,7 +1149,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'temporal dead zone (strict mode)': {
+    {
+      name: 'temporal dead zone (strict mode)',
       exec: function(){/*
         'use strict';
         var passed = (function(){ try {  qux; } catch(e) { return true; }}());
@@ -1178,7 +1172,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'for-loop iteration scope (strict mode)': {
+    {
+      name: 'for-loop iteration scope (strict mode)',
       exec: function(){/*
         'use strict';
         let scopes = [];
@@ -1208,15 +1203,16 @@ exports.tests = [
         firefox39:   { val: flag, note_id: 'fx-let', },
       },
     },
-  },
+  ],
 },
 {
   name: 'default function parameters',
   category: 'syntax',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function(){/*
         return (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
       */},
@@ -1232,7 +1228,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'explicit undefined defers to the default': {
+    {
+      name: 'explicit undefined defers to the default',
       exec: function(){/*
         return (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
       */},
@@ -1248,7 +1245,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'defaults can refer to previous params': {
+    {
+      name: 'defaults can refer to previous params',
       exec: function(){/*
         return (function (a, b = a) { return b === 5; }(5));
       */},
@@ -1264,7 +1262,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'arguments object interaction': {
+    {
+      name: 'arguments object interaction',
       exec: function(){/*
         return (function (a = "baz", b = "qux", c = "quux") {
           a = "corge";
@@ -1284,7 +1283,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'temporal dead zone': {
+    {
+      name: 'temporal dead zone',
       exec: function(){/*
         return (function(x = 1) {
           try {
@@ -1305,7 +1305,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'separate scope': {
+    {
+      name: 'separate scope',
       exec: function(){/*
         return (function(a=function(){
           return typeof b === 'undefined';
@@ -1321,7 +1322,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'new Function() support': {
+    {
+      name: 'new Function() support',
       exec: function() {/*
         return new Function("a = 1", "b = 2",
           "return a === 3 && b === 2;"
@@ -1333,15 +1335,16 @@ exports.tests = [
         edge12:      flag,
       },
     },
-  }
+  ]
 },
 {
   name: 'rest parameters',
   category: 'syntax',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function() {/*
         return (function (foo, ...args) {
           return args instanceof Array && args + "" === "bar,baz";
@@ -1361,7 +1364,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'function \'length\' property': {
+    {
+      name: 'function \'length\' property',
       exec: function() {/*
         return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
       */},
@@ -1378,7 +1382,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'arguments object interaction': {
+    {
+      name: 'arguments object interaction',
       exec: function() {/*
         return (function (foo, ...args) {
           foo = "qux";
@@ -1398,7 +1403,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'can\'t be used in setters': {
+    {
+      name: 'can\'t be used in setters',
       exec: function() {/*
         return (function (...args) {
           try {
@@ -1420,7 +1426,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'new Function() support': {
+    {
+      name: 'new Function() support',
       exec: function() {/*
         return new Function("a", "...b",
           "return b instanceof Array && a+b === 'foobar,baz';"
@@ -1433,15 +1440,16 @@ exports.tests = [
         node4:       flag,
       },
     },
-  },
+  ],
 },
 {
   name: 'spread (...) operator',
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
-  subtests: {
-    'with arrays, in function calls': {
+  subtests: [
+    {
+      name: 'with arrays, in function calls',
       exec: function () {/*
         return Math.max(...[1, 2, 3]) === 3
       */},
@@ -1462,7 +1470,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with arrays, in array literals': {
+    {
+      name: 'with arrays, in array literals',
       exec: function() {/*
        return [...[1, 2, 3]][2] === 3;
       */},
@@ -1481,7 +1490,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with sparse arrays, in function calls': {
+    {
+      name: 'with sparse arrays, in function calls',
       exec: function () {/*
         var a = Array(...[,,]);
         return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
@@ -1503,7 +1513,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with sparse arrays, in array literals': {
+    {
+      name: 'with sparse arrays, in array literals',
       exec: function() {/*
         var a = [...[,,]];
         return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
@@ -1519,7 +1530,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'with strings, in function calls': {
+    {
+      name: 'with strings, in function calls',
       exec: function() {/*
        return Math.max(..."1234") === 4;
       */},
@@ -1534,7 +1546,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with strings, in array literals': {
+    {
+      name: 'with strings, in array literals',
       exec: function() {/*
        return ["a", ..."bcd", "e"][3] === "d";
       */},
@@ -1550,7 +1563,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with astral plane strings, in function calls': {
+    {
+      name: 'with astral plane strings, in function calls',
       exec: function() {/*
        return Array(..."𠮷𠮶")[0] === "𠮷";
       */},
@@ -1565,7 +1579,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with astral plane strings, in array literals': {
+    {
+      name: 'with astral plane strings, in array literals',
       exec: function() {/*
        return [..."𠮷𠮶"][0] === "𠮷";
       */},
@@ -1581,7 +1596,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with generator instances, in calls': {
+    {
+      name: 'with generator instances, in calls',
       exec: function () {/*
         var iterable = (function*(){ yield 1; yield 2; yield 3; }());
         return Math.max(...iterable) === 3;
@@ -1597,7 +1613,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with generator instances, in arrays': {
+    {
+      name: 'with generator instances, in arrays',
       exec: function () {/*
         var iterable = (function*(){ yield "b"; yield "c"; yield "d"; }());
         return ["a", ...iterable, "e"][3] === "d";
@@ -1612,7 +1629,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with generic iterables, in calls': {
+    {
+      name: 'with generic iterables, in calls',
       exec: function () {/*
         var iterable = global.__createIterableObject([1, 2, 3]);
         return Math.max(...iterable) === 3;
@@ -1633,7 +1651,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with generic iterables, in arrays': {
+    {
+      name: 'with generic iterables, in arrays',
       exec: function () {/*
         var iterable = global.__createIterableObject(["b", "c", "d"]);
         return ["a", ...iterable, "e"][3] === "d";
@@ -1651,7 +1670,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with instances of iterables, in calls': {
+    {
+      name: 'with instances of iterables, in calls',
       exec: function () {/*
         var iterable = global.__createIterableObject([1, 2, 3]);
         return Math.max(...Object.create(iterable)) === 3;
@@ -1667,7 +1687,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'with instances of iterables, in arrays': {
+    {
+      name: 'with instances of iterables, in arrays',
       exec: function () {/*
         var iterable = global.__createIterableObject(["b", "c", "d"]);
         return ["a", ...Object.create(iterable), "e"][3] === "d";
@@ -1684,7 +1705,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'spreading non-iterables is a runtime error': {
+    {
+      name: 'spreading non-iterables is a runtime error',
       exec: function () {/*
         try {
           Math.max(...2);
@@ -1706,15 +1728,16 @@ exports.tests = [
         node4:       flag,
       },
     },
-  }
+  ]
 },
 {
   name: 'class',
   category: 'functions',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions',
-  subtests: {
-    'class statement': {
+  subtests: [
+    {
+      name: 'class statement',
       exec: function () {/*
         class C {}
         return typeof C === "function";
@@ -1735,7 +1758,8 @@ exports.tests = [
         typescript:  true,
       },
     },
-    'is block-scoped': {
+    {
+      name: 'is block-scoped',
       exec: function () {/*
         class C {}
         var c1 = C;
@@ -1756,7 +1780,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'class expression': {
+    {
+      name: 'class expression',
       exec: function () {/*
         return typeof class C {} === "function";
       */},
@@ -1775,7 +1800,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'anonymous class': {
+    {
+      name: 'anonymous class',
       exec: function () {/*
         return typeof class {} === "function";
       */},
@@ -1794,7 +1820,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'constructor': {
+    {
+      name: 'constructor',
       exec: function () {/*
         class C {
           constructor() { this.x = 1; }
@@ -1818,7 +1845,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'prototype methods': {
+    {
+      name: 'prototype methods',
       exec: function () {/*
         class C {
           method() { return 2; }
@@ -1842,7 +1870,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'string-keyed methods': {
+    {
+      name: 'string-keyed methods',
       exec: function () {/*
         class C {
           "foo bar"() { return 2; }
@@ -1865,7 +1894,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'computed prototype methods': {
+    {
+      name: 'computed prototype methods',
       exec: function () {/*
         var foo = "method";
         class C {
@@ -1889,7 +1919,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'static methods': {
+    {
+      name: 'static methods',
       exec: function () {/*
         class C {
           static method() { return 3; }
@@ -1913,7 +1944,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'computed static methods': {
+    {
+      name: 'computed static methods',
       exec: function () {/*
         var foo = "method";
         class C {
@@ -1937,7 +1969,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'accessor properties': {
+    {
+      name: 'accessor properties',
       exec: function () {/*
         var baz = false;
         class C {
@@ -1963,7 +1996,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'computed accessor properties': {
+    {
+      name: 'computed accessor properties',
       exec: function () {/*
         var garply = "foo", grault = "bar", baz = false;
         class C {
@@ -1986,7 +2020,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'static accessor properties': {
+    {
+      name: 'static accessor properties',
       exec: function () {/*
         var baz = false;
         class C {
@@ -2012,7 +2047,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'computed static accessor properties': {
+    {
+      name: 'computed static accessor properties',
       exec: function () {/*
         var garply = "foo", grault = "bar", baz = false;
         class C {
@@ -2035,7 +2071,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'class name is lexically scoped': {
+    {
+      name: 'class name is lexically scoped',
       exec: function () {/*
         class C {
           method() { return typeof C === "function"; }
@@ -2055,7 +2092,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'computed names, temporal dead zone': {
+    {
+      name: 'computed names, temporal dead zone',
       exec: function () {/*
         try {
           var B = class C {
@@ -2073,7 +2111,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'methods aren\'t enumerable': {
+    {
+      name: 'methods aren\'t enumerable',
       exec: function () {/*
         class C {
           foo() {}
@@ -2091,7 +2130,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'implicit strict mode': {
+    {
+      name: 'implicit strict mode',
       exec: function () {/*
         class C {
           static method() { return this === undefined; }
@@ -2111,7 +2151,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'constructor requires new': {
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         class C {}
         try {
@@ -2131,7 +2172,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'extends': {
+    {
+      name: 'extends',
       exec: function () {/*
         class B {}
         class C extends B {}
@@ -2165,7 +2207,8 @@ exports.tests = [
         chrome41:    strict,
       }),
     },
-    'extends expressions': {
+    {
+      name: 'extends expressions',
       exec: function () {/*
         var B;
         class C extends (B = class {}) {}
@@ -2190,7 +2233,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'extends null': {
+    {
+      name: 'extends null',
       exec: function () {/*
         class C extends null {
           constructor() { return Object.create(null); }
@@ -2212,7 +2256,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'new.target': {
+    {
+      name: 'new.target',
       exec: function () {/*
         var passed = false;
         new function f() {
@@ -2234,15 +2279,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'super',
   category: 'functions',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-super-keyword',
-  subtests: {
-    'statement in constructors': {
+  subtests: [
+    {
+      name: 'statement in constructors',
       exec: function() {/*
         var passed = false;
         class B {
@@ -2270,7 +2316,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'expression in constructors': {
+    {
+      name: 'expression in constructors',
       exec: function() {/*
         class B {
           constructor(a) { return ["foo" + a]; }
@@ -2296,7 +2343,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'in methods, property access': {
+    {
+      name: 'in methods, property access',
       exec: function() {/*
         class B {}
         B.prototype.qux = "foo";
@@ -2326,7 +2374,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'in methods, method calls': {
+    {
+      name: 'in methods, method calls',
       exec: function() {/*
         class B {
           qux(a) { return "foo" + a; }
@@ -2352,7 +2401,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'method calls use correct "this" binding': {
+    {
+      name: 'method calls use correct "this" binding',
       exec: function() {/*
         class B {
           qux(a) { return this.foo + a; }
@@ -2380,7 +2430,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'constructor calls use correct "new.target" binding': {
+    {
+      name: 'constructor calls use correct "new.target" binding',
       exec: function() {/*
         var passed;
         class B {
@@ -2398,7 +2449,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'is statically bound': {
+    {
+      name: 'is statically bound',
       exec: function() {/*
         class B {
           qux() { return "bar"; }
@@ -2427,7 +2479,8 @@ exports.tests = [
         chrome41:    strict,
       },
     },
-    'super() invokes the correct constructor': {
+    {
+      name: 'super() invokes the correct constructor',
       exec: function() {/*
         // checks that super() is *not* a synonym of super.constructor()
         var passed;
@@ -2453,15 +2506,16 @@ exports.tests = [
         typescript:  true,
       },
     },
-  },
+  ],
 },
 {
   name: 'object literal extensions',
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-initialiser',
-  subtests: {
-    'computed properties': {
+  subtests: [
+    {
+      name: 'computed properties',
       exec: function() {/*
         var x = 'y';
         return ({ [x]: 1 }).y === 1;
@@ -2482,7 +2536,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'shorthand properties': {
+    {
+      name: 'shorthand properties',
       exec: function () {/*
         var a = 7, b = 8, c = {a,b};
         return c.a === 7 && c.b === 8;
@@ -2504,7 +2559,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'shorthand methods': {
+    {
+      name: 'shorthand methods',
       exec: function() {/*
         return ({ y() { return 2; } }).y() === 2;
       */},
@@ -2525,7 +2581,8 @@ exports.tests = [
         webkit:      true,
       }),
     },
-    'string-keyed shorthand methods': {
+    {
+      name: 'string-keyed shorthand methods',
       exec: function() {/*
         return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
       */},
@@ -2534,7 +2591,8 @@ exports.tests = [
         firefox34:   true,
       }),
     },
-    'computed shorthand methods': {
+    {
+      name: 'computed shorthand methods',
       exec: function() {/*
         var x = 'y';
         return ({ [x](){ return 1 } }).y() === 1;
@@ -2554,7 +2612,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'computed accessors': {
+    {
+      name: 'computed accessors',
       exec: function() {/*
         var x = 'y',
             valueSet,
@@ -2577,7 +2636,7 @@ exports.tests = [
         webkit:      true,
       }
     }
-  }
+  ]
 },
 {
   name: 'non-strict function semantics',
@@ -2586,8 +2645,9 @@ exports.tests = [
   category: 'annex b',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations',
-  subtests: {
-    'hoisted block-level function declaration': {
+  subtests: [
+    {
+      name: 'hoisted block-level function declaration',
       exec: function () {/*
         // Note: only available outside of strict mode.
         if (!this) return false;
@@ -2611,7 +2671,8 @@ exports.tests = [
         rhino17:     true,
       },
     },
-    'labeled function statements': {
+    {
+      name: 'labeled function statements',
       exec: function() {/*
         // Note: only available outside of strict mode.
         if (!this) return false;
@@ -2632,7 +2693,8 @@ exports.tests = [
         android40:   true,
       },
     },
-    'function statements in if-statement clauses': {
+    {
+      name: 'function statements in if-statement clauses',
       exec: function() {/*
         // Note: only available outside of strict mode.
         if (!this) return false;
@@ -2656,7 +2718,7 @@ exports.tests = [
         android40:   true,
       },
     },
-  },
+  ],
 },
 {
   name: '__proto__ in object literals',
@@ -2665,8 +2727,9 @@ exports.tests = [
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers',
-  subtests: {
-    'basic support': {
+  subtests: [
+    {
+      name: 'basic support',
       exec: function() {/*
         return { __proto__ : [] } instanceof Array
           && !({ __proto__ : null } instanceof Object);
@@ -2685,7 +2748,8 @@ exports.tests = [
         android40:   true,
       },
     },
-    'multiple __proto__ is an error': {
+    {
+      name: 'multiple __proto__ is an error',
       exec: function() {/*
         try {
           eval("({ __proto__ : [], __proto__: {} })");
@@ -2703,7 +2767,8 @@ exports.tests = [
         node4:        true,
       },
     },
-    'not a computed property': {
+    {
+      name: 'not a computed property',
       exec: function() {/*
         if (!({ __proto__ : [] } instanceof Array)) {
           return false;
@@ -2720,7 +2785,8 @@ exports.tests = [
         node4:        true,
       },
     },
-    'not a shorthand property': {
+    {
+      name: 'not a shorthand property',
       exec: function() {/*
         if (!({ __proto__ : [] } instanceof Array)) {
           return false;
@@ -2737,7 +2803,8 @@ exports.tests = [
         edge13:       true,
       },
     },
-    'not a shorthand method': {
+    {
+      name: 'not a shorthand method',
       exec: function() {/*
         if (!({ __proto__ : [] } instanceof Array)) {
           return false;
@@ -2753,15 +2820,16 @@ exports.tests = [
         edge13:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'for..of loops',
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements',
-  subtests: {
-    'with arrays': {
+  subtests: [
+    {
+      name: 'with arrays',
       exec: function () {/*
         var arr = [5];
         for (var item of arr)
@@ -2783,7 +2851,8 @@ exports.tests = [
         node012:     true,
       }),
     },
-    'with sparse arrays': {
+    {
+      name: 'with sparse arrays',
       exec: function () {/*
         var arr = [,,];
         var count = 0;
@@ -2793,7 +2862,8 @@ exports.tests = [
       */},
       res: temp.basicForOf,
     },
-    'with strings': {
+    {
+      name: 'with strings',
       exec: function () {/*
         var str = "";
         for (var item of "foo")
@@ -2814,7 +2884,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'with astral plane strings': {
+    {
+      name: 'with astral plane strings',
       exec: function () {/*
         var str = "";
         for (var item of "𠮷𠮶")
@@ -2834,7 +2905,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'with generator instances': {
+    {
+      name: 'with generator instances',
       exec: function () {/*
         var result = "";
         var iterable = (function*(){ yield 1; yield 2; yield 3; }());
@@ -2856,7 +2928,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'with generic iterables': {
+    {
+      name: 'with generic iterables',
       exec: function () {/*
         var result = "";
         var iterable = global.__createIterableObject([1, 2, 3]);
@@ -2881,7 +2954,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'with instances of generic iterables': {
+    {
+      name: 'with instances of generic iterables',
       exec: function () {/*
         var result = "";
         var iterable = global.__createIterableObject([1, 2, 3]);
@@ -2905,7 +2979,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'iterator closing, break': {
+    {
+      name: 'iterator closing, break',
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject([1, 2, 3], {
@@ -2922,7 +2997,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'iterator closing, throw': {
+    {
+      name: 'iterator closing, throw',
       exec: function () {/*
         var closed = false;
         var iter = __createIterableObject([1, 2, 3], {
@@ -2941,15 +3017,16 @@ exports.tests = [
         webkit:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'generators',
   category: 'functions',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function() {/*
         function * generator(){
           yield 5; yield 6;
@@ -2976,7 +3053,8 @@ exports.tests = [
         edge12:      flag,
       }),
     },
-    'generator function expressions': {
+    {
+      name: 'generator function expressions',
       exec: function() {/*
         var generator = function * (){
           yield 5; yield 6;
@@ -2992,7 +3070,8 @@ exports.tests = [
       */},
       res: temp.basicGenerators,
     },
-    'correct "this" binding': {
+    {
+      name: 'correct "this" binding',
       exec: function() {/*
         function * generator(){
           yield this.x; yield this.y;
@@ -3008,7 +3087,8 @@ exports.tests = [
       */},
       res: temp.basicGenerators,
     },
-    'can\'t use "this" with new': {
+    {
+      name: 'can\'t use "this" with new',
       exec: function() {/*
         function * generator(){
           yield this.x; yield this.y;
@@ -3023,7 +3103,8 @@ exports.tests = [
       res: {
       },
     },
-    'sending': {
+    {
+      name: 'sending',
       exec: function() {/*
         var sent;
         function * generator(){
@@ -3048,7 +3129,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    '%GeneratorPrototype%': {
+    {
+      name: '%GeneratorPrototype%',
       exec: function() {/*
         function * generatorFn(){}
         var ownProto = Object.getPrototypeOf(generatorFn());
@@ -3072,7 +3154,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    '%GeneratorPrototype%.constructor': {
+    {
+      name: '%GeneratorPrototype%.constructor',
       exec: function () {/*
         function * g (){}
         var iterator = new g.constructor("a","b","c","yield a; yield b; yield c;")(5,6,7);
@@ -3096,7 +3179,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    '%GeneratorPrototype%.throw': {
+    {
+      name: '%GeneratorPrototype%.throw',
       exec: function() {/*
         var passed = false;
         function * generator(){
@@ -3124,7 +3208,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    '%GeneratorPrototype%.return': {
+    {
+      name: '%GeneratorPrototype%.return',
       exec: function() {/*
         function * generator(){
           yield 5; yield 6;
@@ -3145,7 +3230,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield operator precedence': {
+    {
+      name: 'yield operator precedence',
       exec: function() {/*
         var passed;
         function * generator(){
@@ -3169,7 +3255,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, arrays': {
+    {
+      name: 'yield *, arrays',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * [5, 6];
@@ -3195,7 +3282,8 @@ exports.tests = [
         edge12:      flag,
       }),
     },
-    'yield *, sparse arrays': {
+    {
+      name: 'yield *, sparse arrays',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * [,,];
@@ -3210,7 +3298,8 @@ exports.tests = [
       */},
       res: temp.yieldArrays,
     },
-    'yield *, strings': {
+    {
+      name: 'yield *, strings',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * "56";
@@ -3236,7 +3325,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, astral plane strings': {
+    {
+      name: 'yield *, astral plane strings',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * "𠮷𠮶";
@@ -3260,7 +3350,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, generator instances': {
+    {
+      name: 'yield *, generator instances',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * (function*(){ yield 5; yield 6; yield 7; }());
@@ -3287,7 +3378,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, generic iterables': {
+    {
+      name: 'yield *, generic iterables',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * global.__createIterableObject([5, 6, 7]);
@@ -3314,7 +3406,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, instances of iterables': {
+    {
+      name: 'yield *, instances of iterables',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * Object.create(__createIterableObject([5, 6, 7]));
@@ -3341,7 +3434,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield * on non-iterables is a runtime error': {
+    {
+      name: 'yield * on non-iterables is a runtime error',
       exec: function () {/*
         var iterator = (function * generator() {
           yield * [5];
@@ -3367,7 +3461,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, iterator closing': {
+    {
+      name: 'yield *, iterator closing',
       exec: function () {/*
         var closed = '';
         var iter = __createIterableObject([1, 2, 3], {
@@ -3393,7 +3488,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'yield *, iterator closing via throw()': {
+    {
+      name: 'yield *, iterator closing via throw()',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -3416,7 +3512,8 @@ exports.tests = [
         babel:       true,
       },
     },
-    'shorthand generator methods': {
+    {
+      name: 'shorthand generator methods',
       exec: function() {/*
         var o = {
           * generator() {
@@ -3444,7 +3541,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'string-keyed shorthand generator methods': {
+    {
+      name: 'string-keyed shorthand generator methods',
       exec: function() {/*
         var o = {
           * "foo bar"() {
@@ -3471,7 +3569,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'computed shorthand generators': {
+    {
+      name: 'computed shorthand generators',
       exec: function() {/*
         var garply = "generator";
         var o = {
@@ -3499,7 +3598,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'shorthand generator methods, classes': {
+    {
+      name: 'shorthand generator methods, classes',
       exec: function() {/*
         class C {
           * generator() {
@@ -3524,7 +3624,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'computed shorthand generators, classes': {
+    {
+      name: 'computed shorthand generators, classes',
       exec: function() {/*
         var garply = "generator";
         class C {
@@ -3550,15 +3651,16 @@ exports.tests = [
         node4:       strict,
       },
     },
-  },
+  ],
 },
 {
   name: 'prototype of bound functions',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boundfunctioncreate',
-  subtests: {
-    'basic functions': {
+  subtests: [
+    {
+      name: 'basic functions',
       exec: function () {/*
           function correctProtoBound(proto) {
             var f = function(){};
@@ -3581,7 +3683,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'generator functions': {
+    {
+      name: 'generator functions',
       exec: function() {/*
           function correctProtoBound(proto) {
             var f = function*(){};
@@ -3603,7 +3706,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'arrow functions': {
+    {
+      name: 'arrow functions',
       exec: function() {/*
           function correctProtoBound(proto) {
             var f = ()=>5;
@@ -3626,7 +3730,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'classes': {
+    {
+      name: 'classes',
       exec: function() {/*
           function correctProtoBound(proto) {
             class C {}
@@ -3649,7 +3754,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'subclasses': {
+    {
+      name: 'subclasses',
       exec: function() {/*
           function correctProtoBound(superclass) {
             class C extends superclass {
@@ -3670,15 +3776,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'octal and binary literals',
   category: 'syntax',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-numeric-literals',
-  subtests: {
-    'octal literals': {
+  subtests: [
+    {
+      name: 'octal literals',
       exec: function () {/*
         return 0o10 === 8 && 0O10 === 8;
       */},
@@ -3699,7 +3806,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'binary literals': {
+    {
+      name: 'binary literals',
       exec: function () {/*
         return 0b10 === 2 && 0B10 === 2;
       */},
@@ -3720,7 +3828,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'octal supported by Number()': {
+    {
+      name: 'octal supported by Number()',
       exec: function () {/*
         return Number('0o1') === 1;
       */},
@@ -3739,7 +3848,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'binary supported by Number()': {
+    {
+      name: 'binary supported by Number()',
       exec: function () {/*
         return Number('0b1') === 1;
       */},
@@ -3758,15 +3868,16 @@ exports.tests = [
         node4:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'template strings',
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         var a = "ba", b = "QUX";
         return `foo bar
@@ -3788,7 +3899,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'toString conversion': {
+    {
+      name: 'toString conversion',
       exec: function () {/*
         var a = {
           toString: function() { return "foo"; },
@@ -3805,7 +3917,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'tagged template strings': {
+    {
+      name: 'tagged template strings',
       exec: function () {/*
         var called = false;
         function fn(parts, a, b) {
@@ -3836,7 +3949,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'passed array is frozen': {
+    {
+      name: 'passed array is frozen',
       exec: function () {/*
         return (function(parts) {
           return Object.isFrozen(parts) && Object.isFrozen(parts.raw);
@@ -3856,7 +3970,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'line break normalisation': {
+    {
+      name: 'line break normalisation',
       /* For some reason, this .fromCharCode stuff is necessary instead of \r\n. */
       exec: function () {/*
         var cr   = eval("`x" + String.fromCharCode(13)    + "y`");
@@ -3881,15 +3996,16 @@ exports.tests = [
         node4:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'RegExp "y" and "u" flags',
   category: 'syntax',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.sticky',
-  subtests: {
-    '"y" flag': {
+  subtests: [
+    {
+      name: '"y" flag',
       exec: function () {/*
         var re = new RegExp('\\w', 'y');
         re.exec('xy');
@@ -3904,7 +4020,8 @@ exports.tests = [
         typescript:  typescript.fallthrough
       },
     },
-    '"y" flag, lastIndex': {
+    {
+      name: '"y" flag, lastIndex',
       exec: function () {/*
         var re = new RegExp('yy', 'y');
         re.lastIndex = 3;
@@ -3920,7 +4037,8 @@ exports.tests = [
         typescript:  typescript.fallthrough
       },
     },
-    '"u" flag': {
+    {
+      name: '"u" flag',
       exec: function() {/*
         return "𠮷".match(/^.$/u)[0].length === 2;
       */},
@@ -3931,7 +4049,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    '"u" flag, Unicode code point escapes': {
+    {
+      name: '"u" flag, Unicode code point escapes',
       exec: function() {/*
         return "𝌆".match(/\u{1d306}/u)[0].length === 2;
       */},
@@ -3942,162 +4061,213 @@ exports.tests = [
         edge12:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'typed arrays',
   category: 'built-ins',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects',
-  subtests: Object.assign({
-    'Int8Array': {
+  subtests: [
+    {
+      name: 'Int8Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Int8Array(buffer);         view[0] = 0x80;
         return view[0] === -0x80;
       */},
-      res: basicTypedArrayResults,
+      res: (temp.basicTypedArrayResults = {
+        ejs:         true,
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        konq49:      true,
+        node012:     true,
+        android40:   true,
+        typescript:  typescript.fallthrough,
+      }),
     },
-    'Uint8Array': {
+    {
+      name: 'Uint8Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint8Array(buffer);        view[0] = 0x100;
         return view[0] === 0;
       */},
-      res: basicTypedArrayResults,
+      res: temp.basicTypedArrayResults,
     },
-    'Uint8ClampedArray': {
+    {
+      name: 'Uint8ClampedArray',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
         return view[0] === 0xFF;
       */},
-      res: clampedArrayResults,
+      res: (temp.clampedArrayResults = {
+        ejs:         true,
+        firefox11:   true,
+        edge12:      true,
+        chrome:      true,
+        safari6:     true,
+        webkit:      true,
+        opera:       true,
+        node012:     true,
+        typescript:  typescript.fallthrough,
+      }),
     },
-    'Int16Array': {
+    {
+      name: 'Int16Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Int16Array(buffer);        view[0] = 0x8000;
         return view[0] === -0x8000;
       */},
-      res: basicTypedArrayResults,
+      res: temp.basicTypedArrayResults,
     },
-    'Uint16Array': {
+    {
+      name: 'Uint16Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint16Array(buffer);       view[0] = 0x10000;
         return view[0] === 0;
       */},
-      res: basicTypedArrayResults,
+      res: temp.basicTypedArrayResults,
     },
-    'Int32Array': {
+    {
+      name: 'Int32Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Int32Array(buffer);        view[0] = 0x80000000;
         return view[0] === -0x80000000;
       */},
-      res: basicTypedArrayResults,
+      res: temp.basicTypedArrayResults,
     },
-    'Uint32Array': {
+    {
+      name: 'Uint32Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint32Array(buffer);       view[0] = 0x100000000;
         return view[0] === 0;
       */},
-      res: basicTypedArrayResults,
+      res: temp.basicTypedArrayResults,
     },
-    'Float32Array': {
+    {
+      name: 'Float32Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Float32Array(buffer);       view[0] = 0.1;
         return view[0] === 0.10000000149011612;
       */},
-      res: basicTypedArrayResults,
+      res: temp.basicTypedArrayResults,
     },
-    'Float64Array': {
+    {
+      name: 'Float64Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Float64Array(buffer);       view[0] = 0.1;
         return view[0] === 0.1;
       */},
-      res: Object.assign({}, basicTypedArrayResults, {
+      res: Object.assign({}, temp.basicTypedArrayResults, {
         android40:   false,
         android41:   true,
       }),
     },
-    'DataView (Int8)': {
+    {
+      name: 'DataView (Int8)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setInt8 (0, 0x80);
         return view.getInt8(0) === -0x80;
       */},
-      res: basicDataViewResults,
+      res: (temp.basicDataViewResults = {
+        ejs:         true,
+        ie10:        true,
+        firefox16:   true,
+        chrome:      true,
+        safari51:    true,
+        webkit:      true,
+        opera:       true,
+        node012:     true,
+        android40:   true,
+        typescript:  typescript.fallthrough,
+      }),
     },
-    'DataView (Uint8)': {
+    {
+      name: 'DataView (Uint8)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setUint8(0, 0x100);
         return view.getUint8(0) === 0;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'DataView (Int16)': {
+    {
+      name: 'DataView (Int16)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setInt16(0, 0x8000);
         return view.getInt16(0) === -0x8000;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'DataView (Uint16)': {
+    {
+      name: 'DataView (Uint16)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setUint16(0, 0x10000);
         return view.getUint16(0) === 0;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'DataView (Int32)': {
+    {
+      name: 'DataView (Int32)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setInt32(0, 0x80000000);
         return view.getInt32(0) === -0x80000000;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'DataView (Uint32)': {
+    {
+      name: 'DataView (Uint32)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setUint32(0, 0x100000000);
         return view.getUint32(0) === 0;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'DataView (Float32)': {
+    {
+      name: 'DataView (Float32)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setFloat32(0, 0.1);
         return view.getFloat32(0) === 0.10000000149011612;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'DataView (Float64)': {
+    {
+      name: 'DataView (Float64)',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
         view.setFloat64(0, 0.1);
         return view.getFloat64(0) === 0.1;
       */},
-      res: basicDataViewResults,
+      res: temp.basicDataViewResults,
     },
-    'ArrayBuffer[Symbol.species]': {
+    {
+      name: 'ArrayBuffer[Symbol.species]',
       exec: function(){/*
         return typeof ArrayBuffer[Symbol.species] === 'function';
       */},
@@ -4105,7 +4275,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'constructors require new': {
+    {
+      name: 'constructors require new',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var constructors = [
@@ -4132,14 +4303,15 @@ exports.tests = [
         }
         return true;
       */},
-      res: Object.assign({}, clampedArrayResults, {
-        edge12: false,
-        safari6: false,
-        webkit: false,
-        firefox11: false,
+      res: Object.assign({}, temp.clampedArrayResults, {
+        edge12:   false,
+        safari6:  false,
+        webkit:   false,
+        firefox11:false,
       }),
     },
-    'constructors accepts generic iterables': {
+    {
+      name: 'constructors accepts generic iterables',
       exec: function(){/*
         var constructors = [
           'Int8Array',
@@ -4163,7 +4335,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'correct prototype chains': {
+    {
+      name: 'correct prototype chains',
       exec: function(){/*
         var constructors = [
           'Int8Array',
@@ -4194,12 +4367,10 @@ exports.tests = [
         edge12:      true,
       },
     },
-  },
-  (function(){
-    var methods = {
-    '.from':                  { edge12:    true, firefox38: true, chrome45: true, node4: true, },
-    '.of':                    { edge12:    true, firefox38: true, chrome45: true, node4: true, },
-    '.prototype.subarray':    {
+  ].concat([
+    { name: '.from',                  res: { edge12:    true, firefox38: true, chrome45: true, node4: true, }},
+    { name: '.of',                    res: { edge12:    true, firefox38: true, chrome45: true, node4: true, }},
+    { name: '.prototype.subarray',    res: {
         ejs:         true,
         edge12:      true,
         firefox16:   true,
@@ -4208,62 +4379,56 @@ exports.tests = [
         webkit:      true,
         opera:       true,
         node012:     true,
-    },
-    '.prototype.join':        { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.indexOf':     { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.lastIndexOf': { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.slice':       { edge12:    true, firefox38: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.every':       { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.filter':      { edge12:    true, firefox38: true, chrome45: true, node4: true, },
-    '.prototype.forEach':     { edge12:    true, firefox38: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.map':         { edge12:    true, firefox38: true, chrome45: true, node4: true, },
-    '.prototype.reduce':      { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.reduceRight': { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.reverse':     { edge12:    true, firefox37: true, chrome45: true, node4: true, },
-    '.prototype.some':        { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.sort':        { edge12:    true, chrome45: true, node4: true, },
-    '.prototype.copyWithin':  { edge12:    true, firefox34: true, chrome45: true, node4: true, },
-    '.prototype.find':        { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.findIndex':   { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.fill':        { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, },
-    '.prototype.keys':        { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
-    '.prototype.values':      { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
-    '.prototype.entries':     { edge12:    true, chrome38: true, node012: true, firefox37: true,},
-    '.prototype[Symbol.iterator]':      { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,},
-    '[Symbol.species]':       { edge13:    true},
-    };
-    var eqFn = ' === "function"';
-    var methodNames = Object.keys(methods);
-    methodNames.sort(function (a, b) { return a.localeCompare(b); });
-    return methodNames.reduce(function (obj, m) {
-      methods[m].typescript = typescript.fallthrough;
-
-      obj['%TypedArray%' + m] = {
-        exec: new Function('/*return typeof '
-          + [
-            'Int8Array',
-            'Uint8Array',
-            'Uint8ClampedArray',
-            'Int16Array',
-            'Uint16Array',
-            'Int32Array',
-            'Uint32Array',
-            'Float32Array',
-            'Float64Array'
-          ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/'),
-        res: methods[m]
-      };
-      return obj;
-    }, {});
-  }())),
+    }},
+    { name: '.prototype.join',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.indexOf',     res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.lastIndexOf', res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.slice',       res: { edge12:    true, firefox38: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.every',       res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.filter',      res: { edge12:    true, firefox38: true, chrome45: true, node4: true, }},
+    { name: '.prototype.forEach',     res: { edge12:    true, firefox38: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.map',         res: { edge12:    true, firefox38: true, chrome45: true, node4: true, }},
+    { name: '.prototype.reduce',      res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.reduceRight', res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.reverse',     res: { edge12:    true, firefox37: true, chrome45: true, node4: true, }},
+    { name: '.prototype.some',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.sort',        res: { edge12:    true, chrome45: true, node4: true, }},
+    { name: '.prototype.copyWithin',  res: { edge12:    true, firefox34: true, chrome45: true, node4: true, }},
+    { name: '.prototype.find',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.findIndex',   res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.fill',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, }},
+    { name: '.prototype.keys',        res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,}},
+    { name: '.prototype.values',      res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,}},
+    { name: '.prototype.entries',     res: { edge12:    true, chrome38: true, node012: true, firefox37: true,}},
+    { name: '.prototype[Symbol.iterator]', res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,}},
+    { name: '[Symbol.species]',       res: { edge13:    true}},
+    ].map(function(m) {
+      var eqFn = ' === "function"';
+      m.name = '%TypedArray%' + m;
+      m.exec = new Function('/*return typeof '
+        + [
+          'Int8Array',
+          'Uint8Array',
+          'Uint8ClampedArray',
+          'Int16Array',
+          'Uint16Array',
+          'Int32Array',
+          'Uint32Array',
+          'Float32Array',
+          'Float64Array'
+        ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/');
+      return m;
+    })
+  ),
 },
 {
   name: 'Map',
   category: 'built-ins',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         var key = {};
         var map = new Map();
@@ -4287,7 +4452,8 @@ exports.tests = [
         node012:     true,
       }),
     },
-    'constructor arguments': {
+    {
+      name: 'constructor arguments',
       exec: function () {/*
         var key1 = {};
         var key2 = {};
@@ -4310,7 +4476,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'constructor requires new': {
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         new Map();
         try {
@@ -4332,14 +4499,16 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'constructor accepts null': {
+    {
+      name: 'constructor accepts null',
       exec: function () {/*
         new Map(null);
         return true;
       */},
       res: temp.basicMap,
     },
-    'constructor invokes set': {
+    {
+      name: 'constructor invokes set',
       exec: function () {/*
         var passed = false;
         var _set = Map.prototype.set;
@@ -4365,7 +4534,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'iterator closing': {
+    {
+      name: 'iterator closing',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -4383,7 +4553,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Map.prototype.set returns this': {
+    {
+      name: 'Map.prototype.set returns this',
       exec: function () {/*
         var map = new Map();
         return map.set(0, 0) === map;
@@ -4403,7 +4574,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    '-0 key converts to +0': {
+    {
+      name: '-0 key converts to +0',
       exec: function () {/*
         var map = new Map();
         map.set(-0, "foo");
@@ -4427,7 +4599,8 @@ exports.tests = [
         ejs:         true,
       },
     },
-    'Map.prototype.size': {
+    {
+      name: 'Map.prototype.size',
       exec: function () {/*
         var key = {};
         var map = new Map();
@@ -4451,7 +4624,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype.delete': {
+    {
+      name: 'Map.prototype.delete',
       exec: function () {/*
         return typeof Map.prototype.delete === "function";
       */},
@@ -4470,7 +4644,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype.clear': {
+    {
+      name: 'Map.prototype.clear',
       exec: function () {/*
         return typeof Map.prototype.clear === "function";
       */},
@@ -4489,7 +4664,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype.forEach': {
+    {
+      name: 'Map.prototype.forEach',
       exec: function () {/*
         return typeof Map.prototype.forEach === "function";
       */},
@@ -4508,7 +4684,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype.keys': {
+    {
+      name: 'Map.prototype.keys',
       exec: function () {/*
         return typeof Map.prototype.keys === "function";
       */},
@@ -4527,7 +4704,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype.values': {
+    {
+      name: 'Map.prototype.values',
       exec: function () {/*
         return typeof Map.prototype.values === "function";
       */},
@@ -4546,7 +4724,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype.entries': {
+    {
+      name: 'Map.prototype.entries',
       exec: function () {/*
         return typeof Map.prototype.entries === "function";
       */},
@@ -4565,7 +4744,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map.prototype[Symbol.iterator]': {
+    {
+      name: 'Map.prototype[Symbol.iterator]',
       exec: function () {/*
         return typeof Map.prototype[Symbol.iterator] === "function";
       */},
@@ -4583,7 +4763,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Map iterator prototype chain': {
+    {
+      name: 'Map iterator prototype chain',
       exec: function () {/*
         // Iterator instance
         var iterator = new Map()[Symbol.iterator]();
@@ -4607,7 +4788,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Map[Symbol.species]': {
+    {
+      name: 'Map[Symbol.species]',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Map, Symbol.species);
         return 'get' in prop && Map[Symbol.species] === Map;
@@ -4619,15 +4801,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Set',
   category: 'built-ins',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         var obj = {};
         var set = new Set();
@@ -4652,7 +4835,8 @@ exports.tests = [
         node012:     true,
       }),
     },
-    'constructor arguments': {
+    {
+      name: 'constructor arguments',
       exec: function () {/*
         var obj1 = {};
         var obj2 = {};
@@ -4674,7 +4858,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'constructor requires new': {
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         new Set();
         try {
@@ -4696,14 +4881,16 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'constructor accepts null': {
+    {
+      name: 'constructor accepts null',
       exec: function () {/*
         new Set(null);
         return true;
       */},
       res: temp.basicSet,
     },
-    'constructor invokes add': {
+    {
+      name: 'constructor invokes add',
       exec: function () {/*
         var passed = false;
         var _add = Set.prototype.add;
@@ -4729,7 +4916,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'iterator closing': {
+    {
+      name: 'iterator closing',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -4750,7 +4938,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Set.prototype.add returns this': {
+    {
+      name: 'Set.prototype.add returns this',
       exec: function () {/*
         var set = new Set();
         return set.add(0) === set;
@@ -4769,7 +4958,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    '-0 key converts to +0': {
+    {
+      name: '-0 key converts to +0',
       exec: function () {/*
         var set = new Set();
         set.add(-0);
@@ -4793,7 +4983,8 @@ exports.tests = [
         ejs:         true,
       },
     },
-    'Set.prototype.size': {
+    {
+      name: 'Set.prototype.size',
       exec: function () {/*
         var obj = {};
         var set = new Set();
@@ -4819,7 +5010,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype.delete': {
+    {
+      name: 'Set.prototype.delete',
       exec: function () {/*
         return typeof Set.prototype.delete === "function";
       */},
@@ -4838,7 +5030,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype.clear': {
+    {
+      name: 'Set.prototype.clear',
       exec: function () {/*
         return typeof Set.prototype.clear === "function";
       */},
@@ -4857,7 +5050,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype.forEach': {
+    {
+      name: 'Set.prototype.forEach',
       exec: function () {/*
         return typeof Set.prototype.forEach === "function";
       */},
@@ -4876,7 +5070,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype.keys': {
+    {
+      name: 'Set.prototype.keys',
       exec: function () {/*
         return typeof Set.prototype.keys === "function";
       */},
@@ -4894,7 +5089,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype.values': {
+    {
+      name: 'Set.prototype.values',
       exec: function () {/*
         return typeof Set.prototype.values === "function";
       */},
@@ -4913,7 +5109,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype.entries': {
+    {
+      name: 'Set.prototype.entries',
       exec: function () {/*
         return typeof Set.prototype.entries === "function";
       */},
@@ -4932,7 +5129,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set.prototype[Symbol.iterator]': {
+    {
+      name: 'Set.prototype[Symbol.iterator]',
       exec: function () {/*
         return typeof Set.prototype[Symbol.iterator] === "function";
       */},
@@ -4950,7 +5148,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Set iterator prototype chain': {
+    {
+      name: 'Set iterator prototype chain',
       exec: function () {/*
         // Iterator instance
         var iterator = new Set()[Symbol.iterator]();
@@ -4974,7 +5173,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Set[Symbol.species]': {
+    {
+      name: 'Set[Symbol.species]',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Set, Symbol.species);
         return 'get' in prop && Set[Symbol.species] === Set;
@@ -4986,15 +5186,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'WeakMap',
   category: 'built-ins',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         var key = {};
         var weakmap = new WeakMap();
@@ -5016,7 +5217,8 @@ exports.tests = [
         node012:     true,
       }),
     },
-    'constructor arguments': {
+    {
+      name: 'constructor arguments',
       exec: function () {/*
         var key1 = {};
         var key2 = {};
@@ -5037,7 +5239,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'constructor requires new': {
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         new WeakMap();
         try {
@@ -5059,14 +5262,16 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'constructor accepts null': {
+    {
+      name: 'constructor accepts null',
       exec: function () {/*
         new WeakMap(null);
         return true;
       */},
       res: temp.basicWeakMap,
     },
-    'constructor invokes set': {
+    {
+      name: 'constructor invokes set',
       exec: function () {/*
         var passed = false;
         var _set = WeakMap.prototype.set;
@@ -5091,7 +5296,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'frozen objects as keys': {
+    {
+      name: 'frozen objects as keys',
       exec: function () {/*
         var f = Object.freeze({});
         var m = new WeakMap;
@@ -5111,7 +5317,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'iterator closing': {
+    {
+      name: 'iterator closing',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -5129,7 +5336,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'WeakMap.prototype.set returns this': {
+    {
+      name: 'WeakMap.prototype.set returns this',
       exec: function () {/*
         var weakmap = new WeakMap();
         var key = {};
@@ -5147,7 +5355,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'WeakMap.prototype.delete': {
+    {
+      name: 'WeakMap.prototype.delete',
       exec: function () {/*
         return typeof WeakMap.prototype.delete === "function";
       */},
@@ -5164,7 +5373,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'no WeakMap.prototype.clear method': {
+    {
+      name: 'no WeakMap.prototype.clear method',
       exec: function () {/*
         if (!("clear" in WeakMap.prototype)) {
           return true;
@@ -5185,15 +5395,16 @@ exports.tests = [
         node4:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'WeakSet',
   category: 'built-ins',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         var obj1 = {};
         var weakset = new WeakSet();
@@ -5216,7 +5427,8 @@ exports.tests = [
         node012:     true,
       }),
     },
-    'constructor arguments': {
+    {
+      name: 'constructor arguments',
       exec: function () {/*
         var obj1 = {}, obj2 = {};
         var weakset = new WeakSet([obj1, obj2]);
@@ -5235,7 +5447,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'constructor requires new': {
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         new WeakSet();
         try {
@@ -5257,14 +5470,16 @@ exports.tests = [
         node4:       true,
       },
     },
-    'constructor accepts null': {
+    {
+      name: 'constructor accepts null',
       exec: function () {/*
         new WeakSet(null);
         return true;
       */},
       res: temp.basicWeakSet,
     },
-    'constructor invokes add': {
+    {
+      name: 'constructor invokes add',
       exec: function () {/*
         var passed = false;
         var _add = WeakSet.prototype.add;
@@ -5289,7 +5504,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'iterator closing': {
+    {
+      name: 'iterator closing',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -5307,7 +5523,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'WeakSet.prototype.add returns this': {
+    {
+      name: 'WeakSet.prototype.add returns this',
       exec: function () {/*
         var weakset = new WeakSet();
         var obj = {};
@@ -5325,7 +5542,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'WeakSet.prototype.delete': {
+    {
+      name: 'WeakSet.prototype.delete',
       exec: function () {/*
         return typeof WeakSet.prototype.delete === "function";
       */},
@@ -5342,7 +5560,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'no WeakSet.prototype.clear method': {
+    {
+      name: 'no WeakSet.prototype.clear method',
       exec: function () {/*
         if (!("clear" in WeakSet.prototype)) {
           return true;
@@ -5363,15 +5582,16 @@ exports.tests = [
         node4:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Proxy',
   category: 'built-ins',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    'constructor requires new': {
+  subtests: [
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         new Proxy({}, {});
         try {
@@ -5388,7 +5608,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"get" handler': {
+    {
+      name: '"get" handler',
       exec: function () {/*
         var proxied = { };
         var proxy = new Proxy(proxied, {
@@ -5405,7 +5626,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"get" handler, instances of proxies': {
+    {
+      name: '"get" handler, instances of proxies',
       exec: function () {/*
         var proxied = { };
         var proxy = Object.create(new Proxy(proxied, {
@@ -5427,7 +5649,8 @@ exports.tests = [
         firefox38:   true,
       },
     },
-    '"set" handler': {
+    {
+      name: '"set" handler',
       exec: function () {/*
         var proxied = { };
         var passed = false;
@@ -5446,7 +5669,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"set" handler, instances of proxies': {
+    {
+      name: '"set" handler, instances of proxies',
       exec: function () {/*
         var proxied = { };
         var passed = false;
@@ -5465,7 +5689,8 @@ exports.tests = [
         firefox37:   true,
       },
     },
-    '"has" handler': {
+    {
+      name: '"has" handler',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5483,7 +5708,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"has" handler, instances of proxies': {
+    {
+      name: '"has" handler, instances of proxies',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5501,7 +5727,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"deleteProperty" handler': {
+    {
+      name: '"deleteProperty" handler',
       exec: function () {/*
       var proxied = {};
         var passed = false;
@@ -5519,7 +5746,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"getOwnPropertyDescriptor" handler': {
+    {
+      name: '"getOwnPropertyDescriptor" handler',
       exec: function () {/*
         var proxied = {};
         var fakeDesc = { value: "foo", configurable: true };
@@ -5549,7 +5777,8 @@ exports.tests = [
         firefox30:   true,
       },
     },
-    '"defineProperty" handler': {
+    {
+      name: '"defineProperty" handler',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5572,7 +5801,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"getPrototypeOf" handler': {
+    {
+      name: '"getPrototypeOf" handler',
       exec: function () {/*
         var proxied = {};
         var fakeProto = {};
@@ -5589,7 +5819,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    '"setPrototypeOf" handler': {
+    {
+      name: '"setPrototypeOf" handler',
       exec: function () {/*
         var proxied = {};
         var newProto = {};
@@ -5611,7 +5842,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    '"isExtensible" handler': {
+    {
+      name: '"isExtensible" handler',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5631,7 +5863,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    '"preventExtensions" handler': {
+    {
+      name: '"preventExtensions" handler',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5652,7 +5885,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    '"enumerate" handler': {
+    {
+      name: '"enumerate" handler',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5674,7 +5908,8 @@ exports.tests = [
         firefox37:   true,
       },
     },
-    '"ownKeys" handler': {
+    {
+      name: '"ownKeys" handler',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -5699,7 +5934,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    '"apply" handler': {
+    {
+      name: '"apply" handler',
       exec: function () {/*
         var proxied = function(){};
         var passed = false;
@@ -5719,7 +5955,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    '"construct" handler': {
+    {
+      name: '"construct" handler',
       exec: function () {/*
         var proxied = function(){};
         var passed = false;
@@ -5737,7 +5974,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Proxy.revocable': {
+    {
+      name: 'Proxy.revocable',
       exec: function () {/*
         var obj = Proxy.revocable({}, { get: function() { return 5; } });
         var passed = (obj.proxy.foo === 5);
@@ -5755,7 +5993,8 @@ exports.tests = [
         firefox34:   true,
       },
     },
-    'Array.isArray support': {
+    {
+      name: 'Array.isArray support',
       exec: function () {/*
         return Array.isArray(new Proxy([], {}));
       */},
@@ -5765,7 +6004,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    'JSON.stringify support': {
+    {
+      name: 'JSON.stringify support',
       exec: function () {/*
         return JSON.stringify(new Proxy(['foo'], {})) === '["foo"]';
       */},
@@ -5777,15 +6017,16 @@ exports.tests = [
         edge12:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Proxy, internal \'get\' calls',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    'ToPrimitive': {
+  subtests: [
+    {
+      name: 'ToPrimitive',
       exec: function() {/*
         // ToPrimitive -> Get -> [[Get]]
         var get = [];
@@ -5795,7 +6036,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'CreateListFromArrayLike': {
+    {
+      name: 'CreateListFromArrayLike',
       exec: function() {/*
         // CreateListFromArrayLike -> Get -> [[Get]]
         var get = [];
@@ -5808,7 +6050,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'instanceof operator': {
+    {
+      name: 'instanceof operator',
       exec: function() {/*
         // InstanceofOperator -> GetMethod -> GetV -> [[Get]]
         // InstanceofOperator -> OrdinaryHasInstance -> Get -> [[Get]]
@@ -5819,7 +6062,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'HasBinding': {
+    {
+      name: 'HasBinding',
       exec: function() {/*
         // HasBinding -> Get -> [[Get]]
         var get = [];
@@ -5832,7 +6076,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'CreateDynamicFunction': {
+    {
+      name: 'CreateDynamicFunction',
       exec: function() {/*
         // CreateDynamicFunction -> GetPrototypeFromConstructor -> Get -> [[Get]]
         var get = [];
@@ -5842,7 +6087,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'ClassDefinitionEvaluation': {
+    {
+      name: 'ClassDefinitionEvaluation',
       exec: function() {/*
         // ClassDefinitionEvaluation -> Get -> [[Get]]
         var get = [];
@@ -5855,7 +6101,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'IteratorComplete, IteratorValue': {
+    {
+      name: 'IteratorComplete, IteratorValue',
       exec: function() {/*
         // IteratorComplete -> Get -> [[Get]]
         // IteratorValue -> Get -> [[Get]]
@@ -5879,7 +6126,8 @@ exports.tests = [
         firefox36:   true,
       },
     },
-    'ToPropertyDescriptor': {
+    {
+      name: 'ToPropertyDescriptor',
       exec: function() {/*
         // ToPropertyDescriptor -> Get -> [[Get]]
         var get = [];
@@ -5900,7 +6148,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Object.assign': {
+    {
+      name: 'Object.assign',
       exec: function() {/*
         // Object.assign -> Get -> [[Get]]
         var get = [];
@@ -5913,7 +6162,8 @@ exports.tests = [
         firefox34:   true,
       },
     },
-    'Object.defineProperties': {
+    {
+      name: 'Object.defineProperties',
       exec: function() {/*
         // Object.defineProperties -> Get -> [[Get]]
         var get = [];
@@ -5926,7 +6176,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Function.prototype.bind': {
+    {
+      name: 'Function.prototype.bind',
       exec: function() {/*
         // Function.prototype.bind -> Get -> [[Get]]
         var get = [];
@@ -5939,7 +6190,8 @@ exports.tests = [
         firefox38:   true,
       },
     },
-    'Error.prototype.toString': {
+    {
+      name: 'Error.prototype.toString',
       exec: function() {/*
         // Error.prototype.toString -> Get -> [[Get]]
         var get = [];
@@ -5952,7 +6204,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'String.raw': {
+    {
+      name: 'String.raw',
       exec: function() {/*
         // String.raw -> Get -> [[Get]]
         var get = [];
@@ -5966,7 +6219,8 @@ exports.tests = [
         firefox34:   true,
       },
     },
-    'RegExp constructor': {
+    {
+      name: 'RegExp constructor',
       exec: function() {/*
         // RegExp -> Get -> [[Get]]
         var get = [];
@@ -5980,7 +6234,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'RegExp.prototype.flags': {
+    {
+      name: 'RegExp.prototype.flags',
       exec: function() {/*
         // RegExp.prototype.flags -> Get -> [[Get]]
         var get = [];
@@ -5993,7 +6248,8 @@ exports.tests = [
         firefox39:   false,
       },
     },
-    'RegExp.prototype.test': {
+    {
+      name: 'RegExp.prototype.test',
       exec: function() {/*
         // RegExp.prototype.test -> RegExpExec -> Get -> [[Get]]
         var get = [];
@@ -6003,7 +6259,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'RegExp.prototype[Symbol.match]': {
+    {
+      name: 'RegExp.prototype[Symbol.match]',
       exec: function() {/*
         // RegExp.prototype[Symbol.match] -> Get -> [[Get]]
         var get = [];
@@ -6015,7 +6272,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'RegExp.prototype[Symbol.replace]': {
+    {
+      name: 'RegExp.prototype[Symbol.replace]',
       exec: function() {/*
         // RegExp.prototype[Symbol.replace] -> Get -> [[Get]]
         var get = [];
@@ -6027,7 +6285,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'RegExp.prototype[Symbol.search]': {
+    {
+      name: 'RegExp.prototype[Symbol.search]',
       exec: function() {/*
         // RegExp.prototype[Symbol.search] -> Get -> [[Get]]
         var get = [];
@@ -6037,7 +6296,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'RegExp.prototype[Symbol.split]': {
+    {
+      name: 'RegExp.prototype[Symbol.split]',
       exec: function() {/*
         // RegExp.prototype[Symbol.split] -> Get -> [[Get]]
         var get = [];
@@ -6049,7 +6309,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'Array.from': {
+    {
+      name: 'Array.from',
       exec: function() {/*
         // Array.from -> Get -> [[Get]]
         var get = [];
@@ -6062,7 +6323,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Array.prototype.concat': {
+    {
+      name: 'Array.prototype.concat',
       exec: function() {/*
         // Array.prototype.concat -> Get -> [[Get]]
         var get = [];
@@ -6079,7 +6341,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'Array.prototype iteration methods': {
+    {
+      name: 'Array.prototype iteration methods',
       exec: function() {/*
         // Array.prototype methods -> Get -> [[Get]]
         var methods = ['copyWithin', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach',
@@ -6105,7 +6368,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    'Array.prototype.pop': {
+    {
+      name: 'Array.prototype.pop',
       exec: function() {/*
         // Array.prototype.pop -> Get -> [[Get]]
         var get = [];
@@ -6118,7 +6382,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Array.prototype.reverse': {
+    {
+      name: 'Array.prototype.reverse',
       exec: function() {/*
         // Array.prototype.reverse -> Get -> [[Get]]
         var get = [];
@@ -6131,7 +6396,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Array.prototype.shift': {
+    {
+      name: 'Array.prototype.shift',
       exec: function() {/*
         // Array.prototype.shift -> Get -> [[Get]]
         var get = [];
@@ -6144,7 +6410,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Array.prototype.splice': {
+    {
+      name: 'Array.prototype.splice',
       exec: function() {/*
         // Array.prototype.splice -> Get -> [[Get]]
         var get = [];
@@ -6157,7 +6424,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Array.prototype.toString': {
+    {
+      name: 'Array.prototype.toString',
       exec: function() {/*
         // Array.prototype.toString -> Get -> [[Get]]
         var get = [];
@@ -6170,7 +6438,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'JSON.stringify': {
+    {
+      name: 'JSON.stringify',
       exec: function() {/*
         // JSON.stringify -> Get -> [[Get]]
         var get = [];
@@ -6183,7 +6452,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Promise resolve functions': {
+    {
+      name: 'Promise resolve functions',
       exec: function() {/*
         // Promise resolve functions -> Get -> [[Get]]
         var get = [];
@@ -6196,7 +6466,8 @@ exports.tests = [
         firefox29:   true,
       },
     },
-    'String.prototype.match': {
+    {
+      name: 'String.prototype.match',
       exec: function() {/*
         // String.prototype.match -> Get -> [[Get]]
         var get = [];
@@ -6208,7 +6479,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'String.prototype.replace': {
+    {
+      name: 'String.prototype.replace',
       exec: function() {/*
         // String.prototype.replace functions -> Get -> [[Get]]
         var get = [];
@@ -6220,7 +6492,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'String.prototype.search': {
+    {
+      name: 'String.prototype.search',
       exec: function() {/*
         // String.prototype.search functions -> Get -> [[Get]]
         var get = [];
@@ -6232,7 +6505,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'String.prototype.split': {
+    {
+      name: 'String.prototype.split',
       exec: function() {/*
         // String.prototype.split functions -> Get -> [[Get]]
         var get = [];
@@ -6244,7 +6518,8 @@ exports.tests = [
       */},
       res: {},
     },
-    'Date.prototype.toJSON': {
+    {
+      name: 'Date.prototype.toJSON',
       exec: function() {/*
         // Date.prototype.toJSON -> ToPrimitive -> Get -> [[Get]]
         // Date.prototype.toJSON -> Invoke -> GetMethod -> GetV -> [[Get]]
@@ -6255,15 +6530,16 @@ exports.tests = [
       */},
       res: {},
     },
-  },
+  ],
 },
 {
   name: 'Proxy, internal \'set\' calls',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    'Object.assign': {
+  subtests: [
+    {
+      name: 'Object.assign',
       exec: function() {/*
         // Object.assign -> Set -> [[Set]]
         var set = [];
@@ -6276,7 +6552,8 @@ exports.tests = [
         firefox34:   true,
       },
     },
-    'Array.from': {
+    {
+      name: 'Array.from',
       exec: function() {/*
         // Array.from -> Set -> [[Set]]
         var set = [];
@@ -6289,7 +6566,8 @@ exports.tests = [
         firefox31:   true,
       },
     },
-    'Array.of': {
+    {
+      name: 'Array.of',
       exec: function() {/*
         // Array.from -> Set -> [[Set]]
         var set = [];
@@ -6302,7 +6580,8 @@ exports.tests = [
         firefox25:   true,
       },
     },
-    'Array.prototype.copyWithin': {
+    {
+      name: 'Array.prototype.copyWithin',
       exec: function() {/*
         // Array.prototype.copyWithin -> Set -> [[Set]]
         var set = [];
@@ -6315,7 +6594,8 @@ exports.tests = [
         firefox41:   true,
       },
     },
-    'Array.prototype.fill': {
+    {
+      name: 'Array.prototype.fill',
       exec: function() {/*
         // Array.prototype.fill -> Set -> [[Set]]
         var set = [];
@@ -6328,7 +6608,8 @@ exports.tests = [
         firefox41:   true,
       },
     },
-    'Array.prototype.pop': {
+    {
+      name: 'Array.prototype.pop',
       exec: function() {/*
         // Array.prototype.pop -> Set -> [[Set]]
         var set = [];
@@ -6341,7 +6622,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Array.prototype.push': {
+    {
+      name: 'Array.prototype.push',
       exec: function() {/*
         // Array.prototype.push -> Set -> [[Set]]
         var set = [];
@@ -6354,7 +6636,8 @@ exports.tests = [
         firefox18:   true,
       },
     },
-    'Array.prototype.reverse': {
+    {
+      name: 'Array.prototype.reverse',
       exec: function() {/*
         // Array.prototype.reverse -> Set -> [[Set]]
         var set = [];
@@ -6367,7 +6650,8 @@ exports.tests = [
         firefox41:   true,
       },
     },
-    'Array.prototype.shift': {
+    {
+      name: 'Array.prototype.shift',
       exec: function() {/*
         // Array.prototype.shift -> Set -> [[Set]]
         var set = [];
@@ -6382,7 +6666,8 @@ exports.tests = [
         firefox41:   true,
       },
     },
-    'Array.prototype.splice': {
+    {
+      name: 'Array.prototype.splice',
       exec: function() {/*
         // Array.prototype.splice -> Set -> [[Set]]
         var set = [];
@@ -6395,7 +6680,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Array.prototype.unshift': {
+    {
+      name: 'Array.prototype.unshift',
       exec: function() {/*
         // Array.prototype.unshift -> Set -> [[Set]]
         var set = [];
@@ -6408,15 +6694,16 @@ exports.tests = [
         firefox42:   true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Proxy, internal \'defineProperty\' calls',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    '[[Set]]': {
+  subtests: [
+    {
+      name: '[[Set]]',
       exec: function() {/*
         // [[Set]] -> [[DefineOwnProperty]]
         var def = [];
@@ -6429,7 +6716,8 @@ exports.tests = [
         firefox37:   true,
       },
     },
-    'SetIntegrityLevel': {
+    {
+      name: 'SetIntegrityLevel',
       exec: function() {/*
         // SetIntegrityLevel -> DefinePropertyOrThrow -> [[DefineOwnProperty]]
         var def = [];
@@ -6442,15 +6730,16 @@ exports.tests = [
         firefox18:   true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Proxy, internal \'deleteProperty\' calls',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    'Array.prototype.copyWithin': {
+  subtests: [
+    {
+      name: 'Array.prototype.copyWithin',
       exec: function() {/*
         // Array.prototype.copyWithin -> DeletePropertyOrThrow -> [[Delete]]
         var del = [];
@@ -6463,7 +6752,8 @@ exports.tests = [
         firefox41:   true,
       },
     },
-    'Array.prototype.pop': {
+    {
+      name: 'Array.prototype.pop',
       exec: function() {/*
         // Array.prototype.pop -> DeletePropertyOrThrow -> [[Delete]]
         var del = [];
@@ -6478,7 +6768,8 @@ exports.tests = [
         firefox40:   true,
       },
     },
-    'Array.prototype.reverse': {
+    {
+      name: 'Array.prototype.reverse',
       exec: function() {/*
         // Array.prototype.reverse -> DeletePropertyOrThrow -> [[Delete]]
         var del = [];
@@ -6493,7 +6784,8 @@ exports.tests = [
         firefox40:   true,
       },
     },
-    'Array.prototype.shift': {
+    {
+      name: 'Array.prototype.shift',
       exec: function() {/*
         // Array.prototype.shift -> DeletePropertyOrThrow -> [[Delete]]
         var del = [];
@@ -6508,7 +6800,8 @@ exports.tests = [
         firefox40:   true,
       },
     },
-    'Array.prototype.splice': {
+    {
+      name: 'Array.prototype.splice',
       exec: function() {/*
         // Array.prototype.splice -> DeletePropertyOrThrow -> [[Delete]]
         var del = [];
@@ -6523,7 +6816,8 @@ exports.tests = [
         firefox40:   true,
       },
     },
-    'Array.prototype.unshift': {
+    {
+      name: 'Array.prototype.unshift',
       exec: function() {/*
         // Array.prototype.unshift -> DeletePropertyOrThrow -> [[Delete]]
         var del = [];
@@ -6538,15 +6832,16 @@ exports.tests = [
         firefox40:   true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Proxy, internal \'getOwnPropertyDescriptor\' calls',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    '[[Set]]': {
+  subtests: [
+    {
+      name: '[[Set]]',
       exec: function() {/*
         // [[Set]] -> [[GetOwnProperty]]
         var gopd = [];
@@ -6560,7 +6855,8 @@ exports.tests = [
         firefox37:   true,
       },
     },
-    'Object.assign': {
+    {
+      name: 'Object.assign',
       exec: function() {/*
         // Object.assign -> [[GetOwnProperty]]
         var gopd = [];
@@ -6574,7 +6870,8 @@ exports.tests = [
         firefox34:   true,
       },
     },
-    'Object.prototype.hasOwnProperty': {
+    {
+      name: 'Object.prototype.hasOwnProperty',
       exec: function() {/*
         // Object.prototype.hasOwnProperty -> HasOwnProperty -> [[GetOwnProperty]]
         var gopd = [];
@@ -6588,7 +6885,8 @@ exports.tests = [
         firefox32:   true,
       },
     },
-    'Function.prototype.bind': {
+    {
+      name: 'Function.prototype.bind',
       exec: function() {/*
         // Function.prototype.bind -> HasOwnProperty -> [[GetOwnProperty]]
         var gopd = [];
@@ -6602,15 +6900,16 @@ exports.tests = [
         firefox38:   true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Proxy, internal \'ownKeys\' calls',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: {
-    'SetIntegrityLevel': {
+  subtests: [
+    {
+      name: 'SetIntegrityLevel',
       exec: function() {/*
         // SetIntegrityLevel -> [[OwnPropertyKeys]]
         var ownKeysCalled = 0;
@@ -6623,7 +6922,8 @@ exports.tests = [
         firefox32:   true,
       },
     },
-    'TestIntegrityLevel': {
+    {
+      name: 'TestIntegrityLevel',
       exec: function() {/*
         // TestIntegrityLevel -> [[OwnPropertyKeys]]
         var ownKeysCalled = 0;
@@ -6636,7 +6936,8 @@ exports.tests = [
         firefox32:   true,
       },
     },
-    'SerializeJSONObject': {
+    {
+      name: 'SerializeJSONObject',
       exec: function() {/*
         // SerializeJSONObject -> EnumerableOwnNames -> [[OwnPropertyKeys]]
         var ownKeysCalled = 0;
@@ -6648,15 +6949,16 @@ exports.tests = [
         firefox32:   true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Reflect',
   category: 'built-ins',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
-  subtests: {
-    'Reflect.get': {
+  subtests: [
+    {
+      name: 'Reflect.get',
       exec: function() {/*
         return Reflect.get({ qux: 987 }, "qux") === 987;
       */},
@@ -6670,7 +6972,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Reflect.set': {
+    {
+      name: 'Reflect.set',
       exec: function() {/*
         var obj = {};
         Reflect.set(obj, "quux", 654);
@@ -6685,7 +6988,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.has': {
+    {
+      name: 'Reflect.has',
       exec: function() {/*
         return Reflect.has({ qux: 987 }, "qux");
       */},
@@ -6699,7 +7003,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.deleteProperty': {
+    {
+      name: 'Reflect.deleteProperty',
       exec: function() {/*
         var obj = { bar: 456 };
         Reflect.deleteProperty(obj, "bar");
@@ -6715,7 +7020,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.getOwnPropertyDescriptor': {
+    {
+      name: 'Reflect.getOwnPropertyDescriptor',
       exec: function() {/*
         var obj = { baz: 789 };
         var desc = Reflect.getOwnPropertyDescriptor(obj, "baz");
@@ -6732,7 +7038,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Reflect.defineProperty': {
+    {
+      name: 'Reflect.defineProperty',
       exec: function() {/*
         var obj = {};
         Reflect.defineProperty(obj, "foo", { value: 123 });
@@ -6749,7 +7056,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Reflect.getPrototypeOf': {
+    {
+      name: 'Reflect.getPrototypeOf',
       exec: function() {/*
         return Reflect.getPrototypeOf([]) === Array.prototype;
       */},
@@ -6763,7 +7071,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.setPrototypeOf': {
+    {
+      name: 'Reflect.setPrototypeOf',
       exec: function() {/*
         var obj = {};
         Reflect.setPrototypeOf(obj, Array.prototype);
@@ -6779,7 +7088,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.isExtensible': {
+    {
+      name: 'Reflect.isExtensible',
       exec: function() {/*
         return Reflect.isExtensible({}) &&
           !Reflect.isExtensible(Object.preventExtensions({}));
@@ -6794,7 +7104,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.preventExtensions': {
+    {
+      name: 'Reflect.preventExtensions',
       exec: function() {/*
         var obj = {};
         Reflect.preventExtensions(obj);
@@ -6810,7 +7121,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.enumerate': {
+    {
+      name: 'Reflect.enumerate',
       exec: function() {/*
         var obj = { foo: 1, bar: 2 };
         var iterator = Reflect.enumerate(obj);
@@ -6835,7 +7147,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Reflect.ownKeys, string keys': {
+    {
+      name: 'Reflect.ownKeys, string keys',
       exec: function() {/*
         var obj = Object.create({ C: true });
         obj.A = true;
@@ -6853,7 +7166,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.ownKeys, symbol keys': {
+    {
+      name: 'Reflect.ownKeys, symbol keys',
       exec: function() {/*
         var s1 = Symbol(), s2 = Symbol(), s3 = Symbol();
         var proto = {};
@@ -6875,7 +7189,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.apply': {
+    {
+      name: 'Reflect.apply',
       exec: function() {/*
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       */},
@@ -6889,7 +7204,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.construct': {
+    {
+      name: 'Reflect.construct',
       exec: function() {/*
         return Reflect.construct(function(a, b, c) {
           this.qux = a + b + c;
@@ -6904,7 +7220,8 @@ exports.tests = [
         firefox42:   true,
       },
     },
-    'Reflect.construct sets new.target meta property': {
+    {
+      name: 'Reflect.construct sets new.target meta property',
       exec: function() {/*
         return Reflect.construct(function(a, b, c) {
           if (new.target === Object) {
@@ -6918,7 +7235,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Reflect.construct creates instance from newTarget argument': {
+    {
+      name: 'Reflect.construct creates instance from newTarget argument',
       exec: function() {/*
         function F(){}
         return Reflect.construct(function(){}, [], F) instanceof F;
@@ -6929,7 +7247,7 @@ exports.tests = [
         typescript: typescript.corejs,
       },
     },
-  },
+  ],
 },
 {
   name: 'block-level function declaration',
@@ -6962,8 +7280,9 @@ exports.tests = [
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
-  subtests: {
-    'with arrays': {
+  subtests: [
+    {
+      name: 'with arrays',
       exec: function(){/*
         var [a, , [b], c] = [5, null, [6]];
         var d, e;
@@ -6985,14 +7304,16 @@ exports.tests = [
         edge13:      flag,
       }),
     },
-    'with sparse arrays': {
+    {
+      name: 'with sparse arrays',
       exec: function(){/*
         var [a, b] = [,,];
         return a === undefined && b === undefined;
       */},
       res: temp.destructuringResults,
     },
-    'with strings': {
+    {
+      name: 'with strings',
       exec: function(){/*
         var [a, b, c] = "ab";
         var d, e;
@@ -7014,7 +7335,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'with astral plane strings': {
+    {
+      name: 'with astral plane strings',
       exec: function(){/*
         var c;
         [c] = "𠮷𠮶";
@@ -7031,7 +7353,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'with generator instances': {
+    {
+      name: 'with generator instances',
       exec: function(){/*
         var [a, b, c] = (function*(){ yield 1; yield 2; }());
         var d, e;
@@ -7047,7 +7370,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'with generic iterables': {
+    {
+      name: 'with generic iterables',
       exec: function(){/*
         var [a, b, c] = global.__createIterableObject([1, 2]);
         var d, e;
@@ -7065,7 +7389,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'with instances of generic iterables': {
+    {
+      name: 'with instances of generic iterables',
       exec: function(){/*
         var [a, b, c] = Object.create(global.__createIterableObject([1, 2]))
         var d, e;
@@ -7083,7 +7408,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'iterator closing': {
+    {
+      name: 'iterator closing',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -7099,7 +7425,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'iterable destructuring expression': {
+    {
+      name: 'iterable destructuring expression',
       exec: function() {/*
         var a, b, iterable = [1,2];
         return ([a, b] = iterable) === iterable;
@@ -7115,7 +7442,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'chained iterable destructuring': {
+    {
+      name: 'chained iterable destructuring',
       exec: function() {/*
         var a,b,c,d;
         [a,b] = [c,d] = [1,2];
@@ -7132,7 +7460,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'trailing commas in iterable patterns': {
+    {
+      name: 'trailing commas in iterable patterns',
       exec: function(){/*
         var [a,] = [1];
         return a === 1;
@@ -7148,7 +7477,8 @@ exports.tests = [
         edge13:       flag,
       }),
     },
-    'with objects': {
+    {
+      name: 'with objects',
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
         var f, g;
@@ -7169,7 +7499,8 @@ exports.tests = [
         edge13:       flag,
       }),
     },
-    'object destructuring with primitives': {
+    {
+      name: 'object destructuring with primitives',
       exec: function(){/*
         var {toFixed} = 2;
         var {slice} = '';
@@ -7188,7 +7519,8 @@ exports.tests = [
         edge13:       flag,
       }),
     },
-    'trailing commas in object patterns': {
+    {
+      name: 'trailing commas in object patterns',
       exec: function(){/*
         var {a,} = {a:1};
         return a === 1;
@@ -7201,7 +7533,8 @@ exports.tests = [
         edge13:       flag,
       }),
     },
-    'object destructuring expression': {
+    {
+      name: 'object destructuring expression',
       exec: function() {/*
         var a, b, obj = { a:1, b:2 };
         return ({a,b} = obj) === obj;
@@ -7217,7 +7550,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'parenthesised left-hand-side is a syntax error': {
+    {
+      name: 'parenthesised left-hand-side is a syntax error',
       exec: function() {/*
         var a, b;
         ({a,b} = {a:1,b:2});
@@ -7238,7 +7572,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'chained object destructuring': {
+    {
+      name: 'chained object destructuring',
       exec: function() {/*
         var a,b,c,d;
         ({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
@@ -7255,7 +7590,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'throws on null and undefined': {
+    {
+      name: 'throws on null and undefined',
       exec: function(){/*
         try {
           var {a} = null;
@@ -7275,7 +7611,8 @@ exports.tests = [
         edge13:       flag,
       }),
     },
-    'computed properties': {
+    {
+      name: 'computed properties',
       exec: function(){/*
         var qux = "corge";
         var { [qux]: grault } = { corge: "garply" };
@@ -7290,7 +7627,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'multiples in a single var statement': {
+    {
+      name: 'multiples in a single var statement',
       exec: function() {/*
         var [a,b] = [5,6], {c,d} = {c:7,d:8};
         return a === 5 && b === 6 && c === 7 && d === 8;
@@ -7309,7 +7647,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'nested': {
+    {
+      name: 'nested',
       exec: function(){/*
         var [e, {x:f, g}] = [9, {x:10}];
         var {h, x:[i]} = {h:11, x:[12]};
@@ -7318,7 +7657,8 @@ exports.tests = [
       */},
       res: temp.destructuringResults,
     },
-    'in parameters': {
+    {
+      name: 'in parameters',
       exec: function(){/*
         return (function({a, x:b, y:e}, [c, d]) {
           return a === 1 && b === 2 && c === 3 &&
@@ -7339,7 +7679,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'in parameters, \'arguments\' interaction': {
+    {
+      name: 'in parameters, \'arguments\' interaction',
       exec: function(){/*
         return (function({a, x:b, y:e}, [c, d]) {
           return arguments[0].a === 1 && arguments[0].x === 2
@@ -7360,7 +7701,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'in parameters, new Function() support': {
+    {
+      name: 'in parameters, new Function() support',
       exec: function(){/*
         return new Function("{a, x:b, y:e}","[c, d]",
           "return a === 1 && b === 2 && c === 3 && "
@@ -7374,7 +7716,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'in parameters, function \'length\' property': {
+    {
+      name: 'in parameters, function \'length\' property',
       exec: function(){/*
         return function({a, b}, [c, d]){}.length === 2;
       */},
@@ -7392,7 +7735,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'in for-in loop heads': {
+    {
+      name: 'in for-in loop heads',
       exec: function(){/*
         for(var [i, j, k] in { qux: 1 }) {
           return i === "q" && j === "u" && k === "x";
@@ -7407,7 +7751,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'in for-of loop heads': {
+    {
+      name: 'in for-of loop heads',
       exec: function(){/*
         for(var [i, j, k] of [[1,2,3]]) {
           return i === 1 && j === 2 && k === 3;
@@ -7425,7 +7770,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'rest': {
+    {
+      name: 'rest',
       exec: function(){/*
         var [a, ...b] = [3, 4, 5];
         var [c, ...d] = [6];
@@ -7445,7 +7791,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'nested rest': {
+    {
+      name: 'nested rest',
       exec: function(){/*
         var a = [1, 2, 3], first, last;
         [first, ...[a[2], last]] = a;
@@ -7458,7 +7805,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'empty patterns': {
+    {
+      name: 'empty patterns',
       exec: function(){/*
         [] = [1,2];
         ({} = {a:1,b:2});
@@ -7470,7 +7818,8 @@ exports.tests = [
         edge13:      flag,
       }),
     },
-    'empty patterns in parameters': {
+    {
+      name: 'empty patterns in parameters',
       exec: function(){/*
         return function ([],{}){
           return arguments[0] + '' === "3,4" && arguments[1].x === "foo";
@@ -7484,7 +7833,8 @@ exports.tests = [
         edge13:      flag,
       }),
     },
-    'defaults': {
+    {
+      name: 'defaults',
       exec: function(){/*
         var {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};
         var [d = 0, e = 5, f = 6] = [4,,undefined];
@@ -7502,7 +7852,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'defaults in parameters': {
+    {
+      name: 'defaults in parameters',
       exec: function(){/*
         return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
             [f = 6, g = 0, h = 8]) {
@@ -7520,7 +7871,8 @@ exports.tests = [
         edge13:      flag,
       },
     },
-    'defaults, let temporal dead zone': {
+    {
+      name: 'defaults, let temporal dead zone',
       exec: function(){/*
         var {a, b = 2} = {a:1};
         try {
@@ -7541,7 +7893,8 @@ exports.tests = [
         edge13:       flag,
       },
     },
-    'defaults in parameters, separate scope': {
+    {
+      name: 'defaults in parameters, separate scope',
       exec: function(){/*
         return (function({a=function(){
           return typeof b === 'undefined';
@@ -7555,7 +7908,8 @@ exports.tests = [
         closure:     true,
       },
     },
-    'defaults in parameters, new Function() support': {
+    {
+      name: 'defaults in parameters, new Function() support',
       exec: function(){/*
         return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}",
           "return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;"
@@ -7567,15 +7921,16 @@ exports.tests = [
         edge13:       flag,
       },
     },
-  },
+  ],
 },
 {
   name: 'Promise',
   category: 'built-ins',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
         var p2 = new Promise(function(resolve, reject) { reject("quux"); });
@@ -7614,7 +7969,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'constructor requires new': {
+    {
+      name: 'constructor requires new',
       exec: function () {/*
         new Promise(function(){});
         try {
@@ -7634,7 +7990,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Promise.all': {
+    {
+      name: 'Promise.all',
       exec: function () {/*
         var fulfills = Promise.all([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
@@ -7666,7 +8023,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Promise.all, generic iterables': {
+    {
+      name: 'Promise.all, generic iterables',
       exec: function () {/*
         var fulfills = Promise.all(global.__createIterableObject([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
@@ -7696,7 +8054,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Promise.race': {
+    {
+      name: 'Promise.race',
       exec: function () {/*
         var fulfills = Promise.race([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
@@ -7728,7 +8087,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Promise.race, generic iterables': {
+    {
+      name: 'Promise.race, generic iterables',
       exec: function () {/*
         var fulfills = Promise.race(global.__createIterableObject([
           new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
@@ -7758,7 +8118,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Promise[Symbol.species]': {
+    {
+      name: 'Promise[Symbol.species]',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Promise, Symbol.species);
         return 'get' in prop && Promise[Symbol.species] === Promise;
@@ -7769,15 +8130,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Object static methods',
   category: 'built-in extensions',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
-  subtests: {
-    'Object.assign': {
+  subtests: [
+    {
+      name: 'Object.assign',
       exec: function () {/*
         var o = Object.assign({a:true}, {b:true}, {c:true});
         return "a" in o && "b" in o && "c" in o;
@@ -7796,7 +8158,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.is': {
+    {
+      name: 'Object.is',
       exec: function () {/*
         return typeof Object.is === 'function' &&
           Object.is(NaN, NaN) &&
@@ -7818,7 +8181,8 @@ exports.tests = [
         android41:   true,
       },
     },
-    'Object.getOwnPropertySymbols': {
+    {
+      name: 'Object.getOwnPropertySymbols',
       exec: function () {/*
         var o = {};
         var sym = Symbol(), sym2 = Symbol(), sym3 = Symbol();
@@ -7844,7 +8208,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Object.setPrototypeOf': {
+    {
+      name: 'Object.setPrototypeOf',
       exec: function () {/*
         return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
       */},
@@ -7861,15 +8226,16 @@ exports.tests = [
         node012:     true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Object static methods accept primitives',
   category: 'misc',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
-  subtests: {
-    'Object.getPrototypeOf': {
+  subtests: [
+    {
+      name: 'Object.getPrototypeOf',
       exec: function () {/*
         return Object.getPrototypeOf('a').constructor === String;
       */},
@@ -7885,7 +8251,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.getOwnPropertyDescriptor': {
+    {
+      name: 'Object.getOwnPropertyDescriptor',
       exec: function () {/*
         return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
       */},
@@ -7901,7 +8268,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.getOwnPropertyNames': {
+    {
+      name: 'Object.getOwnPropertyNames',
       exec: function () {/*
         var s = Object.getOwnPropertyNames('a');
         return s.length === 2 &&
@@ -7920,7 +8288,8 @@ exports.tests = [
         chrome44:    true
       },
     },
-    'Object.seal': {
+    {
+      name: 'Object.seal',
       exec: function () {/*
         return Object.seal('a') === 'a';
       */},
@@ -7936,7 +8305,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.freeze': {
+    {
+      name: 'Object.freeze',
       exec: function () {/*
         return Object.freeze('a') === 'a';
       */},
@@ -7952,7 +8322,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.preventExtensions': {
+    {
+      name: 'Object.preventExtensions',
       exec: function () {/*
         return Object.preventExtensions('a') === 'a';
       */},
@@ -7968,7 +8339,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.isSealed': {
+    {
+      name: 'Object.isSealed',
       exec: function () {/*
         return Object.isSealed('a') === true;
       */},
@@ -7984,7 +8356,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.isFrozen': {
+    {
+      name: 'Object.isFrozen',
       exec: function () {/*
         return Object.isFrozen('a') === true;
       */},
@@ -8000,7 +8373,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.isExtensible': {
+    {
+      name: 'Object.isExtensible',
       exec: function () {/*
         return Object.isExtensible('a') === false;
       */},
@@ -8016,7 +8390,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Object.keys': {
+    {
+      name: 'Object.keys',
       exec: function () {/*
         var s = Object.keys('a');
         return s.length === 1 && s[0] === '0';
@@ -8034,15 +8409,16 @@ exports.tests = [
         chrome44:    true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Object.prototype.__proto__',
   category: 'annex b',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.__proto__',
-  subtests: {
-    'get prototype': {
+  subtests: [
+    {
+      name: 'get prototype',
       exec: function() {/*
         var A = function(){};
         return (new A()).__proto__ === A.prototype;
@@ -8060,7 +8436,8 @@ exports.tests = [
         android40:   true,
       }),
     },
-    'set prototype': {
+    {
+      name: 'set prototype',
       exec: function() {/*
         var o = {};
         o.__proto__ = Array.prototype;
@@ -8068,7 +8445,8 @@ exports.tests = [
       */},
       res: temp.basicProtoResults,
     },
-    'absent from Object.create(null)': {
+    {
+      name: 'absent from Object.create(null)',
       exec: function () {/*
         var o = Object.create(null), p = {};
         o.__proto__ = p;
@@ -8085,7 +8463,8 @@ exports.tests = [
         node012:     true,
       }),
     },
-    'present in hasOwnProperty()': {
+    {
+      name: 'present in hasOwnProperty()',
       exec: function () {/*
         return Object.prototype.hasOwnProperty('__proto__');
       */},
@@ -8096,7 +8475,8 @@ exports.tests = [
         android41:   false,
       }),
     },
-    'correct property descriptor': {
+    {
+      name: 'correct property descriptor',
       exec: function () {/*
         var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
         var A = function(){};
@@ -8113,7 +8493,8 @@ exports.tests = [
         firefox17: true,
       }),
     },
-    'present in Object.getOwnPropertyNames()': {
+    {
+      name: 'present in Object.getOwnPropertyNames()',
       exec: function () {/*
         return Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;
       */},
@@ -8123,15 +8504,16 @@ exports.tests = [
         rhino17:   false,
       }),
     },
-  },
+  ],
 },
 {
   name: 'function "name" property',
   category: 'built-in extensions',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname',
-  subtests: {
-    'function statements': {
+  subtests: [
+    {
+      name: 'function statements',
       exec: function () {/*
         function foo(){};
         return foo.name === 'foo' &&
@@ -8153,14 +8535,16 @@ exports.tests = [
         android40:   true,
       }),
     },
-    'function expressions': {
+    {
+      name: 'function expressions',
       exec: function () {/*
         return (function foo(){}).name === 'foo' &&
           (function(){}).name === '';
       */},
       res: temp.legacyFunctionNameResults,
     },
-    'new Function': {
+    {
+      name: 'new Function',
       exec: function () {/*
         return (new Function).name === "anonymous";
       */},
@@ -8175,7 +8559,8 @@ exports.tests = [
         android41:   false,
       },
     },
-    'bound functions': {
+    {
+      name: 'bound functions',
       exec: function() {/*
         function foo() {};
         return foo.bind({}).name === "bound foo" &&
@@ -8188,7 +8573,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'variables (function)': {
+    {
+      name: 'variables (function)',
       exec: function() {/*
         var foo = function() {};
         var bar = function baz() {};
@@ -8199,7 +8585,8 @@ exports.tests = [
         babel:       true,
       },
     },
-    'object methods (function)': {
+    {
+      name: 'object methods (function)',
       exec: function() {/*
         var o = { foo: function(){}, bar: function baz(){}};
         o.qux = function(){};
@@ -8212,7 +8599,8 @@ exports.tests = [
         edge12:      flag,
       },
     },
-    'accessor properties': {
+    {
+      name: 'accessor properties',
       exec: function() {/*
         var o = { get foo(){}, set foo(x){} };
         var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -8223,7 +8611,8 @@ exports.tests = [
         edge12:        true,
       },
     },
-    'shorthand methods': {
+    {
+      name: 'shorthand methods',
       exec: function() {/*
         var o = { foo(){} };
         return o.foo.name === "foo";
@@ -8239,7 +8628,8 @@ exports.tests = [
         node4:        true,
       },
     },
-    'shorthand methods (no lexical binding)': {
+    {
+      name: 'shorthand methods (no lexical binding)',
       exec: function() {/*
         var f = "foo";
         return ({f() { return f; }}).f() === "foo";
@@ -8254,7 +8644,8 @@ exports.tests = [
         node4:        true,
       },
     },
-    'symbol-keyed methods': {
+    {
+      name: 'symbol-keyed methods',
       exec: function() {/*
         var sym1 = Symbol("foo");
         var sym2 = Symbol();
@@ -8270,7 +8661,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    'class statements': {
+    {
+      name: 'class statements',
       exec: function() {/*
         class foo {};
         class bar { static name() {} };
@@ -8285,7 +8677,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'class expressions': {
+    {
+      name: 'class expressions',
       exec: function() {/*
         return class foo {}.name === "foo" &&
           typeof class bar { static name() {} }.name === "function";
@@ -8302,7 +8695,8 @@ exports.tests = [
         node4:       strict,
       },
     },
-    'variables (class)': {
+    {
+      name: 'variables (class)',
       exec: function() {/*
         var foo = class {};
         var bar = class baz {};
@@ -8317,7 +8711,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'object methods (class)': {
+    {
+      name: 'object methods (class)',
       exec: function() {/*
         var o = { foo: class {}, bar: class baz {}};
         o.qux = class {};
@@ -8331,7 +8726,8 @@ exports.tests = [
         edge13:       true,
       },
     },
-    'class prototype methods': {
+    {
+      name: 'class prototype methods',
       exec: function() {/*
         class C { foo(){} };
         return (new C).foo.name === "foo";
@@ -8346,7 +8742,8 @@ exports.tests = [
         node4:        strict,
       },
     },
-    'class static methods': {
+    {
+      name: 'class static methods',
       exec: function() {/*
         class C { static foo(){} };
         return C.foo.name === "foo";
@@ -8361,7 +8758,8 @@ exports.tests = [
         node4:        strict,
       },
     },
-    'isn\'t writable, is configurable': {
+    {
+      name: 'isn\'t writable, is configurable',
       exec: function () {/*
         var descriptor = Object.getOwnPropertyDescriptor(function f(){},"name");
         return descriptor.enumerable   === false &&
@@ -8375,15 +8773,16 @@ exports.tests = [
         node4:        true,
       },
     },
-  },
+  ],
 },
 {
   name: 'String static methods',
   category: 'built-in extensions',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-constructor',
-  subtests: {
-    'String.raw': {
+  subtests: [
+    {
+      name: 'String.raw',
       exec: function() {/*
         return typeof String.raw === 'function';
       */},
@@ -8401,7 +8800,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.fromCodePoint': {
+    {
+      name: 'String.fromCodePoint',
       exec: function() {/*
         return typeof String.fromCodePoint === 'function';
       */},
@@ -8421,15 +8821,16 @@ exports.tests = [
         node4:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'String.prototype methods',
   category: 'built-in extensions',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-prototype-object',
-  subtests: {
-    'String.prototype.codePointAt': {
+  subtests: [
+    {
+      name: 'String.prototype.codePointAt',
       exec: function () {/*
         return typeof String.prototype.codePointAt === 'function';
       */},
@@ -8449,7 +8850,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.prototype.normalize': {
+    {
+      name: 'String.prototype.normalize',
       exec: function () {/*
         return typeof String.prototype.normalize === "function"
           && "c\u0327\u0301".normalize("NFC") === "\u1e09"
@@ -8463,7 +8865,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.prototype.repeat': {
+    {
+      name: 'String.prototype.repeat',
       exec: function () {/*
         return typeof String.prototype.repeat === 'function'
           && "foo".repeat(3) === "foofoofoo";
@@ -8484,7 +8887,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.prototype.startsWith': {
+    {
+      name: 'String.prototype.startsWith',
       exec: function () {/*
         return typeof String.prototype.startsWith === 'function'
           && "foobar".startsWith("foo");
@@ -8505,7 +8909,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.prototype.endsWith': {
+    {
+      name: 'String.prototype.endsWith',
       exec: function () {/*
         return typeof String.prototype.endsWith === 'function'
           && "foobar".endsWith("bar");
@@ -8526,7 +8931,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.prototype.includes': {
+    {
+      name: 'String.prototype.includes',
       exec: function () {/*
         return typeof String.prototype.includes === 'function'
           && "foobar".includes("oba");
@@ -8552,7 +8958,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    'String.prototype[Symbol.iterator]': {
+    {
+      name: 'String.prototype[Symbol.iterator]',
       exec: function () {/*
         return typeof String.prototype[Symbol.iterator] === 'function';
       */},
@@ -8570,7 +8977,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'String iterator prototype chain': {
+    {
+      name: 'String iterator prototype chain',
       exec: function () {/*
         // Iterator instance
         var iterator = ''[Symbol.iterator]();
@@ -8594,15 +9002,16 @@ exports.tests = [
         node4:       true,
       },
     },
-  },
+  ],
 },
 {
   name: 'String.prototype HTML methods',
   category: 'annex b',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor',
-  subtests: {
-    existence: {
+  subtests: [
+    {
+      name: 'existence',
       exec: function () {/*
         var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
           "italics", "link", "small", "strike", "sub", "sup"];
@@ -8627,7 +9036,8 @@ exports.tests = [
         android40:   true,
       },
     },
-    'tags\' names are lowercase': {
+    {
+      name: 'tags\' names are lowercase',
       exec: function () {/*
         var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
           "italics", "link", "small", "strike", "sub", "sup"];
@@ -8652,7 +9062,8 @@ exports.tests = [
         android40:   true,
       },
     },
-    'quotes in arguments are escaped': {
+    {
+      name: 'quotes in arguments are escaped',
       exec: function () {/*
         var i, names = ["anchor", "fontcolor", "fontsize", "link"];
         for (i = 0; i < names.length; i++) {
@@ -8675,15 +9086,16 @@ exports.tests = [
         android40:   true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Unicode code point escapes',
   category: 'syntax',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-string-literals',
-  subtests: {
-    'in strings': {
+  subtests: [
+    {
+      name: 'in strings',
       exec: function () {/*
         return '\u{1d306}' == '\ud834\udf06';
       */},
@@ -8702,7 +9114,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'in identifiers': {
+    {
+      name: 'in identifiers',
       exec: function(){/*
         var \u{102C0} = { \u{102C0} : 2 };
         return \u{102C0}['\ud800\udec0'] === 2;
@@ -8715,15 +9128,16 @@ exports.tests = [
         node4:       true,
       }
     },
-  }
+  ]
 },
 {
   name: 'new.target',
   category: 'syntax',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects',
-  subtests: {
-    'in constructors': {
+  subtests: [
+    {
+      name: 'in constructors',
       exec: function () {/*
         var passed = false;
         new function f() {
@@ -8742,7 +9156,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'assignment is an early error': {
+    {
+      name: 'assignment is an early error',
       exec: function(){/*
         var passed = false;
         new function f() {
@@ -8761,15 +9176,16 @@ exports.tests = [
         edge13:      true,
       }
     },
-  }
+  ]
 },
 {
   name: 'Symbol',
   category: 'built-ins',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function(){/*
         var object = {};
         var symbol = Symbol();
@@ -8791,7 +9207,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'typeof support': {
+    {
+      name: 'typeof support',
       exec: function(){/*
         return typeof Symbol() === "symbol";
       */},
@@ -8809,7 +9226,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'symbol keys are hidden to pre-ES6 code': {
+    {
+      name: 'symbol keys are hidden to pre-ES6 code',
       exec: function(){/*
         var object = {};
         var symbol = Symbol();
@@ -8838,7 +9256,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Object.defineProperty support': {
+    {
+      name: 'Object.defineProperty support',
       exec: function(){/*
         var object = {};
         var symbol = Symbol();
@@ -8865,7 +9284,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'cannot coerce to string or number': {
+    {
+      name: 'cannot coerce to string or number',
       exec: function(){/*
         var symbol = Symbol();
 
@@ -8893,7 +9313,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'can convert with String()': {
+    {
+      name: 'can convert with String()',
       exec: function(){/*
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
@@ -8908,7 +9329,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'new Symbol() throws': {
+    {
+      name: 'new Symbol() throws',
       exec: function(){/*
         var symbol = Symbol();
         try {
@@ -8931,7 +9353,8 @@ exports.tests = [
         node012:    true,
       },
     },
-    'Object(symbol)': {
+    {
+      name: 'Object(symbol)',
       exec: function(){/*
         var symbol = Symbol();
         var symbolObject = Object(symbol);
@@ -8952,7 +9375,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'JSON.stringify ignores symbols': {
+    {
+      name: 'JSON.stringify ignores symbols',
       exec: function() {/*
         var object = {foo: Symbol()};
         object[Symbol()] = 1;
@@ -8969,7 +9393,8 @@ exports.tests = [
         webkit: true,
       },
     },
-    'global symbol registry': {
+    {
+      name: 'global symbol registry',
       exec: function() {/*
         var symbol = Symbol.for('foo');
         return Symbol.for('foo') === symbol &&
@@ -8988,7 +9413,7 @@ exports.tests = [
         node012:     true,
       },
     },
-  },
+  ],
 },
 {
   name: 'well-known symbols',
@@ -9000,8 +9425,9 @@ exports.tests = [
     + 'the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, '
     + '<a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, '
     + 'and <a href="#Array_static_methods">Array.from</a>.',
-  subtests: {
-    'Symbol.hasInstance': {
+  subtests: [
+    {
+      name: 'Symbol.hasInstance',
       exec: function() {/*
         var passed = false;
         var obj = { foo: true };
@@ -9018,7 +9444,8 @@ exports.tests = [
         ejs:         true,
       },
     },
-    'Symbol.isConcatSpreadable': {
+    {
+      name: 'Symbol.isConcatSpreadable',
       exec: function() {/*
         var a = [], b = [];
         b[Symbol.isConcatSpreadable] = false;
@@ -9030,7 +9457,8 @@ exports.tests = [
         ejs:        true,
       },
     },
-    'Symbol.iterator, existence': {
+    {
+      name: 'Symbol.iterator, existence',
       exec: function() {/*
         return "iterator" in Symbol;
       */},
@@ -9049,7 +9477,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Symbol.iterator, arguments object': {
+    {
+      name: 'Symbol.iterator, arguments object',
       exec: function() {/*
         return (function() {
           return typeof arguments[Symbol.iterator] === 'function'
@@ -9065,7 +9494,8 @@ exports.tests = [
         edge12:      true,
       },
     },
-    'Symbol.species, existence': {
+    {
+      name: 'Symbol.species, existence',
       exec: function() {/*
         return "species" in Symbol;
       */},
@@ -9077,7 +9507,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Symbol.species, Array.prototype.concat': {
+    {
+      name: 'Symbol.species, Array.prototype.concat',
       exec: function () {/*
         var obj = [];
         obj.constructor = {};
@@ -9090,7 +9521,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Symbol.species, Array.prototype.filter': {
+    {
+      name: 'Symbol.species, Array.prototype.filter',
       exec: function () {/*
         var obj = [];
         obj.constructor = {};
@@ -9103,7 +9535,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Symbol.species, Array.prototype.map': {
+    {
+      name: 'Symbol.species, Array.prototype.map',
       exec: function () {/*
         var obj = [];
         obj.constructor = {};
@@ -9116,7 +9549,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Symbol.species, Array.prototype.slice': {
+    {
+      name: 'Symbol.species, Array.prototype.slice',
       exec: function () {/*
         var obj = [];
         obj.constructor = {};
@@ -9129,7 +9563,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Symbol.species, Array.prototype.splice': {
+    {
+      name: 'Symbol.species, Array.prototype.splice',
       exec: function () {/*
         var obj = [];
         obj.constructor = {};
@@ -9142,7 +9577,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Symbol.species, RegExp.prototype[Symbol.split]': {
+    {
+      name: 'Symbol.species, RegExp.prototype[Symbol.split]',
       exec: function () {/*
         var passed = false;
         var obj = { constructor: {} };
@@ -9157,7 +9593,8 @@ exports.tests = [
       res: {
       }
     },
-    'Symbol.replace': {
+    {
+      name: 'Symbol.replace',
       exec: function () {/*
         var O = {};
         O[Symbol.replace] = function(){
@@ -9170,7 +9607,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       }
     },
-    'Symbol.search': {
+    {
+      name: 'Symbol.search',
       exec: function () {/*
         var O = {};
         O[Symbol.search] = function(){
@@ -9183,7 +9621,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       }
     },
-    'Symbol.split': {
+    {
+      name: 'Symbol.split',
       exec: function () {/*
         var O = {};
         O[Symbol.split] = function(){
@@ -9196,7 +9635,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       }
     },
-    'Symbol.match': {
+    {
+      name: 'Symbol.match',
       exec: function () {/*
         var O = {};
         O[Symbol.match] = function(){
@@ -9209,7 +9649,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       }
     },
-    'Symbol.match, RegExp constructor': {
+    {
+      name: 'Symbol.match, RegExp constructor',
       exec: function () {/*
         var re = /./;
         re[Symbol.match] = false;
@@ -9222,7 +9663,8 @@ exports.tests = [
         firefox40:   true,
       }
     },
-    'Symbol.match, String.prototype.startsWith': {
+    {
+      name: 'Symbol.match, String.prototype.startsWith',
       exec: function () {/*
         var re = /./;
         try {
@@ -9237,7 +9679,8 @@ exports.tests = [
         firefox40:   true,
       }
     },
-    'Symbol.match, String.prototype.endsWith': {
+    {
+      name: 'Symbol.match, String.prototype.endsWith',
       exec: function () {/*
         var re = /./;
         try {
@@ -9252,7 +9695,8 @@ exports.tests = [
         firefox40:   true,
       }
     },
-    'Symbol.match, String.prototype.includes': {
+    {
+      name: 'Symbol.match, String.prototype.includes',
       exec: function () {/*
         var re = /./;
         try {
@@ -9267,7 +9711,8 @@ exports.tests = [
         firefox40:   true,
       }
     },
-    'Symbol.toPrimitive': {
+    {
+      name: 'Symbol.toPrimitive',
       exec: function() {/*
         var a = {}, b = {}, c = {};
         var passed = 0;
@@ -9285,7 +9730,8 @@ exports.tests = [
         typescript:  typescript.fallthrough,
       },
     },
-    'Symbol.toStringTag': {
+    {
+      name: 'Symbol.toStringTag',
       exec: function() {/*
         var a = {};
         a[Symbol.toStringTag] = "foo";
@@ -9299,7 +9745,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'Symbol.toStringTag, misc. built-ins': {
+    {
+      name: 'Symbol.toStringTag, misc. built-ins',
       exec: function() {/*
         var s = Symbol.toStringTag;
         return Math[s] === "Math"
@@ -9312,7 +9759,8 @@ exports.tests = [
         node4:       flag,
       },
     },
-    'Symbol.unscopables': {
+    {
+      name: 'Symbol.unscopables',
       exec: function() {/*
         var a = { foo: 1, bar: 2 };
         a[Symbol.unscopables] = { bar: true };
@@ -9334,15 +9782,16 @@ exports.tests = [
         node012:     true,
       },
     },
-  },
+  ],
 },
 {
   name: 'RegExp.prototype properties',
   category: 'built-in extensions',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype',
-  subtests: {
-    'RegExp.prototype.flags': {
+  subtests: [
+    {
+      name: 'RegExp.prototype.flags',
       exec: function () {/*
         return /./igm.flags === "gim" && /./.flags === "";
       */},
@@ -9356,7 +9805,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'RegExp.prototype[Symbol.match]': {
+    {
+      name: 'RegExp.prototype[Symbol.match]',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.match] === 'function';
       */},
@@ -9366,7 +9816,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       },
     },
-    'RegExp.prototype[Symbol.replace]': {
+    {
+      name: 'RegExp.prototype[Symbol.replace]',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.replace] === 'function';
       */},
@@ -9376,7 +9827,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       },
     },
-    'RegExp.prototype[Symbol.split]': {
+    {
+      name: 'RegExp.prototype[Symbol.split]',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.split] === 'function';
       */},
@@ -9386,7 +9838,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       },
     },
-    'RegExp.prototype[Symbol.search]': {
+    {
+      name: 'RegExp.prototype[Symbol.search]',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.search] === 'function';
       */},
@@ -9396,7 +9849,8 @@ exports.tests = [
         typescript:  typescript.corejs,
       },
     },
-    'RegExp[Symbol.species]': {
+    {
+      name: 'RegExp[Symbol.species]',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(RegExp, Symbol.species);
         return 'get' in prop && RegExp[Symbol.species] === RegExp;
@@ -9407,7 +9861,7 @@ exports.tests = [
         edge13:      true,
       },
     },
-  }
+  ]
 },
 // As this one is Annex B, it is separate from the above.
 {
@@ -9439,8 +9893,9 @@ exports.tests = [
   category: 'annex b',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns',
-  subtests: {
-    'hyphens in character sets': {
+  subtests: [
+    {
+      name: 'hyphens in character sets',
       exec: function() {/*
         return /[\w-_]/.exec("-")[0] === "-";
       */},
@@ -9457,63 +9912,71 @@ exports.tests = [
         android40:   true,
       }),
     },
-    'invalid character escapes': {
+    {
+      name: 'invalid character escapes',
       exec: function() {/*
         return /\z/.exec("\\z")[0] === "z"
           && /[\z]/.exec("[\\z]")[0] === "z";
       */},
       res: temp.regExpExtensions,
     },
-    'invalid control-character escapes': {
+    {
+      name: 'invalid control-character escapes',
       exec: function() {/*
         return /\c2/.exec("\\c2")[0] === "\\c2";
       */},
       res: temp.regExpExtensions,
     },
-    'invalid Unicode escapes': {
+    {
+      name: 'invalid Unicode escapes',
       exec: function() {/*
         return /\u1/.exec("u1")[0] === "u1"
           && /[\u1]/.exec("u")[0] === "u";
       */},
       res: Object.assign({}, temp.regExpExtensions, { opera: false }),
     },
-    'invalid hexadecimal escapes': {
+    {
+      name: 'invalid hexadecimal escapes',
       exec: function() {/*
         return /\x1/.exec("x1")[0] === "x1"
           && /[\x1]/.exec("x")[0] === "x";
       */},
       res: Object.assign({}, temp.regExpExtensions, { opera: false }),
     },
-    'incomplete patterns and quantifiers': {
+    {
+      name: 'incomplete patterns and quantifiers',
       exec: function() {/*
         return /x{1/.exec("x{1")[0] === "x{1"
           && /x]1/.exec("x]1")[0] === "x]1";
       */},
       res: temp.regExpExtensions,
     },
-    'octal escape sequences': {
+    {
+      name: 'octal escape sequences',
       exec: function() {/*
         return /\041/.exec("!")[0] === "!"
           && /[\041]/.exec("!")[0] === "!";
       */},
       res: temp.regExpExtensions,
     },
-    'invalid backreferences become octal escapes': {
+    {
+      name: 'invalid backreferences become octal escapes',
       exec: function() {/*
         return /\41/.exec("!")[0] === "!"
           && /[\41]/.exec("!")[0] === "!";
       */},
       res: temp.regExpExtensions,
     },
-  },
+  ],
 },
 {
   name: 'Array static methods',
   category: 'built-in extensions',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-constructor',
-  subtests: {
-    'Array.from, array-like objects': {
+  subtests: [
+    {
+      name: 'Array.from, array-like objects',
       exec: function () {/*
         return Array.from({ 0: "foo", 1: "bar", length: 2 }) + '' === "foo,bar";
       */},
@@ -9531,7 +9994,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from, generator instances': {
+    {
+      name: 'Array.from, generator instances',
       exec: function () {/*
         var iterable = (function*(){ yield 1; yield 2; yield 3; }());
         return Array.from(iterable) + '' === "1,2,3";
@@ -9548,7 +10012,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from, generic iterables': {
+    {
+      name: 'Array.from, generic iterables',
       exec: function () {/*
         var iterable = global.__createIterableObject([1, 2, 3]);
         return Array.from(iterable) + '' === "1,2,3";
@@ -9567,7 +10032,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from, instances of generic iterables': {
+    {
+      name: 'Array.from, instances of generic iterables',
       exec: function () {/*
         var iterable = global.__createIterableObject([1, 2, 3]);
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
@@ -9584,7 +10050,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from map function, array-like objects': {
+    {
+      name: 'Array.from map function, array-like objects',
       exec: function () {/*
         return Array.from({ 0: "foo", 1: "bar", length: 2 }, function(e, i) {
           return e + this.baz + i;
@@ -9604,7 +10071,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from map function, generator instances': {
+    {
+      name: 'Array.from map function, generator instances',
       exec: function () {/*
         var iterable = (function*(){ yield "foo"; yield "bar"; yield "bal"; }());
         return Array.from(iterable, function(e, i) {
@@ -9623,7 +10091,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from map function, generic iterables': {
+    {
+      name: 'Array.from map function, generic iterables',
       exec: function () {/*
         var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
         return Array.from(iterable, function(e, i) {
@@ -9644,7 +10113,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from map function, instances of iterables': {
+    {
+      name: 'Array.from map function, instances of iterables',
       exec: function () {/*
         var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
         return Array.from(Object.create(iterable), function(e, i) {
@@ -9663,7 +10133,8 @@ exports.tests = [
         node4:       true,
       }
     },
-    'Array.from, iterator closing': {
+    {
+      name: 'Array.from, iterator closing',
       exec: function () {/*
         var closed = false;
         var iter = global.__createIterableObject([1, 2, 3], {
@@ -9682,7 +10153,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Array.of': {
+    {
+      name: 'Array.of',
       exec: function () {/*
         return typeof Array.of === 'function' &&
           Array.of(2)[0] === 2;
@@ -9703,7 +10175,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Array[Symbol.species]': {
+    {
+      name: 'Array[Symbol.species]',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Array, Symbol.species);
         return 'get' in prop && Array[Symbol.species] === Array;
@@ -9714,15 +10187,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Array.prototype methods',
   category: 'built-in extensions',
   significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-prototype-object',
-  subtests: {
-    'Array.prototype.copyWithin': {
+  subtests: [
+    {
+      name: 'Array.prototype.copyWithin',
       exec: function () {/*
         return typeof Array.prototype.copyWithin === 'function';
       */},
@@ -9739,7 +10213,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Array.prototype.find': {
+    {
+      name: 'Array.prototype.find',
       exec: function () {/*
         return typeof Array.prototype.find === 'function';
       */},
@@ -9759,7 +10234,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Array.prototype.findIndex': {
+    {
+      name: 'Array.prototype.findIndex',
       exec: function () {/*
         return typeof Array.prototype.findIndex === 'function';
       */},
@@ -9779,7 +10255,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Array.prototype.fill': {
+    {
+      name: 'Array.prototype.fill',
       exec: function () {/*
         return typeof Array.prototype.fill === 'function';
       */},
@@ -9799,7 +10276,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'Array.prototype.keys': {
+    {
+      name: 'Array.prototype.keys',
       exec: function () {/*
         return typeof Array.prototype.keys === 'function';
       */},
@@ -9818,7 +10296,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Array.prototype.values': {
+    {
+      name: 'Array.prototype.values',
       exec: function () {/*
         return typeof Array.prototype.values === 'function';
       */},
@@ -9851,7 +10330,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Array.prototype.entries': {
+    {
+      name: 'Array.prototype.entries',
       exec: function () {/*
         return typeof Array.prototype.entries === 'function';
       */},
@@ -9870,7 +10350,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Array.prototype[Symbol.iterator]': {
+    {
+      name: 'Array.prototype[Symbol.iterator]',
       exec: function () {/*
         return typeof Array.prototype[Symbol.iterator] === 'function';
       */},
@@ -9896,7 +10377,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Array iterator prototype chain': {
+    {
+      name: 'Array iterator prototype chain',
       exec: function () {/*
         // Iterator instance
         var iterator = [][Symbol.iterator]();
@@ -9918,7 +10400,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Array.prototype[Symbol.unscopables]': {
+    {
+      name: 'Array.prototype[Symbol.unscopables]',
       exec: function () {/*
         var unscopables = Array.prototype[Symbol.unscopables];
         if (!unscopables) {
@@ -9940,15 +10423,16 @@ exports.tests = [
         node012:     true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Number properties',
   category: 'built-in extensions',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-isfinite-number',
-  subtests: {
-    'Number.isFinite': {
+  subtests: [
+    {
+      name: 'Number.isFinite',
       exec: function () {/*
         return typeof Number.isFinite === 'function';
       */},
@@ -9968,7 +10452,8 @@ exports.tests = [
         android41:   true,
       },
     },
-    'Number.isInteger': {
+    {
+      name: 'Number.isInteger',
       exec: function () {/*
         return typeof Number.isInteger === 'function';
       */},
@@ -9987,7 +10472,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Number.isSafeInteger': {
+    {
+      name: 'Number.isSafeInteger',
       exec: function () {/*
         return typeof Number.isSafeInteger === 'function';
       */},
@@ -10006,7 +10492,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Number.isNaN': {
+    {
+      name: 'Number.isNaN',
       exec: function () {/*
         return typeof Number.isNaN === 'function';
       */},
@@ -10026,7 +10513,8 @@ exports.tests = [
         android41:   true,
       },
     },
-    'Number.EPSILON': {
+    {
+      name: 'Number.EPSILON',
       exec: function () {/*
         return typeof Number.EPSILON === 'number';
       */},
@@ -10044,7 +10532,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Number.MIN_SAFE_INTEGER': {
+    {
+      name: 'Number.MIN_SAFE_INTEGER',
       exec: function () {/*
         return typeof Number.MIN_SAFE_INTEGER === 'number';
       */},
@@ -10063,7 +10552,8 @@ exports.tests = [
         node012:     true,
       },
     },
-    'Number.MAX_SAFE_INTEGER': {
+    {
+      name: 'Number.MAX_SAFE_INTEGER',
       exec: function () {/*
         return typeof Number.MAX_SAFE_INTEGER === 'number';
       */},
@@ -10082,7 +10572,7 @@ exports.tests = [
         node012:     true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Math methods',
@@ -10339,15 +10829,15 @@ exports.tests = [
       },
     };
     var eqFn = ' === "function"';
-    var obj = {};
-    for (var m in methods) {
-      obj['Math.' + m] = {
+    return Object.keys(methods).map(function(m) {
+      return {
+        name: 'Math.' + m,
         exec: eval('0,function(){/*\n  return typeof Math.' +
           m + eqFn + ';\n*/}'),
         res: methods[m]
       };
-    }
-    obj['Math.hypot'] = {
+    }).concat({
+      name: 'Math.hypot',
       exec: function(){/*
         return Math.hypot() === 0 &&
           Math.hypot(1) === 1 &&
@@ -10369,8 +10859,7 @@ exports.tests = [
         konq49:      true,
         node012:     true,
       }
-    };
-    return obj;
+    });
   }()),
 },
 {
@@ -10378,8 +10867,9 @@ exports.tests = [
   category: 'subclassing',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-array-constructor',
-  subtests: {
-    'length property (accessing)': {
+  subtests: [
+    {
+      name: 'length property (accessing)',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10396,7 +10886,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'length property (setting)': {
+    {
+      name: 'length property (setting)',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10412,7 +10903,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'correct prototype chain': {
+    {
+      name: 'correct prototype chain',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10426,7 +10918,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Array.isArray support': {
+    {
+      name: 'Array.isArray support',
       exec: function () {/*
         class C extends Array {}
         return Array.isArray(new C());
@@ -10438,7 +10931,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Array.prototype.concat': {
+    {
+      name: 'Array.prototype.concat',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10448,7 +10942,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Array.prototype.filter': {
+    {
+      name: 'Array.prototype.filter',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10458,7 +10953,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-   'Array.prototype.map': {
+    {
+      name: 'Array.prototype.map',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10468,7 +10964,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Array.prototype.slice': {
+    {
+      name: 'Array.prototype.slice',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10479,7 +10976,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-   'Array.prototype.splice': {
+    {
+      name: 'Array.prototype.splice',
       exec: function () {/*
         class C extends Array {}
         var c = new C();
@@ -10490,7 +10988,8 @@ exports.tests = [
         edge13:      true,
       }
     },
-    'Array.from': {
+    {
+      name: 'Array.from',
       exec: function () {/*
         class C extends Array {}
         return C.from({ length: 0 }) instanceof C;
@@ -10503,7 +11002,8 @@ exports.tests = [
         chrome45:    strict,
       }
     },
-    'Array.of': {
+    {
+      name: 'Array.of',
       exec: function () {/*
         class C extends Array {}
         return C.of(0) instanceof C;
@@ -10516,15 +11016,16 @@ exports.tests = [
         chrome45:    strict,
       }
     },
-  },
+  ],
 },
 {
   name: 'RegExp is subclassable',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor',
   category: 'subclassing',
   significance: 'tiny',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         class R extends RegExp {}
         var r = new R("baz","g");
@@ -10539,7 +11040,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'correct prototype chain': {
+    {
+      name: 'correct prototype chain',
       exec: function () {/*
         class R extends RegExp {}
         var r = new R("baz","g");
@@ -10554,7 +11056,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'RegExp.prototype.exec': {
+    {
+      name: 'RegExp.prototype.exec',
       exec: function () {/*
         class R extends RegExp {}
         var r = new R("baz","g");
@@ -10568,7 +11071,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'RegExp.prototype.test': {
+    {
+      name: 'RegExp.prototype.test',
       exec: function () {/*
         class R extends RegExp {}
         var r = new R("baz");
@@ -10582,15 +11086,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Function is subclassable',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'tiny',
-  subtests: {
-    'can be called': {
+  subtests: [
+    {
+      name: 'can be called',
       exec: function () {/*
         class C extends Function {}
         var c = new C("return 'foo';");
@@ -10603,7 +11108,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'correct prototype chain': {
+    {
+      name: 'correct prototype chain',
       exec: function () {/*
         class C extends Function {}
         var c = new C("return 'foo';");
@@ -10616,7 +11122,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'can be used with "new"': {
+    {
+      name: 'can be used with "new"',
       exec: function () {/*
         class C extends Function {}
         var c = new C("this.bar = 2;");
@@ -10630,7 +11137,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Function.prototype.call': {
+    {
+      name: 'Function.prototype.call',
       exec: function () {/*
         class C extends Function {}
         var c = new C("x", "return this.bar + x;");
@@ -10643,7 +11151,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Function.prototype.apply': {
+    {
+      name: 'Function.prototype.apply',
       exec: function () {/*
         class C extends Function {}
         var c = new C("x", "return this.bar + x;");
@@ -10656,7 +11165,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Function.prototype.bind': {
+    {
+      name: 'Function.prototype.bind',
       exec: function () {/*
         class C extends Function {}
         var c = new C("x", "y", "return this.bar + x + y;").bind({bar:1}, 2);
@@ -10667,15 +11177,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Promise is subclassable',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'small',
-  subtests: {
-    'basic functionality': {
+  subtests: [
+    {
+      name: 'basic functionality',
       exec: function () {/*
         class P extends Promise {}
         var p1 = new P(function(resolve, reject) { resolve("foo"); });
@@ -10707,7 +11218,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'correct prototype chain': {
+    {
+      name: 'correct prototype chain',
       exec: function () {/*
         class C extends Promise {}
         var c = new C(function(resolve, reject) { resolve("foo"); });
@@ -10720,7 +11232,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Promise.all': {
+    {
+      name: 'Promise.all',
       exec: function () {/*
         class P extends Promise {}
         var fulfills = P.all([
@@ -10745,7 +11258,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Promise.race': {
+    {
+      name: 'Promise.race',
       exec: function () {/*
         class P extends Promise {}
         var fulfills = P.race([
@@ -10770,15 +11284,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'miscellaneous subclassables',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boolean-constructor',
   category: 'subclassing',
   significance: 'tiny',
-  subtests: {
-    'Boolean is subclassable': {
+  subtests: [
+    {
+      name: 'Boolean is subclassable',
       exec: function () {/*
         class C extends Boolean {}
         var c = new C(true);
@@ -10795,7 +11310,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Number is subclassable': {
+    {
+      name: 'Number is subclassable',
       exec: function () {/*
         class C extends Number {}
         var c = new C(6);
@@ -10812,7 +11328,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'String is subclassable': {
+    {
+      name: 'String is subclassable',
       exec: function () {/*
         class C extends String {}
         var c = new C("golly");
@@ -10831,7 +11348,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Map is subclassable': {
+    {
+      name: 'Map is subclassable',
       exec: function () {/*
         var key = {};
         class M extends Map {}
@@ -10850,7 +11368,8 @@ exports.tests = [
         edge13:      true,
       },
     },
-    'Set is subclassable': {
+    {
+      name: 'Set is subclassable',
       exec: function () {/*
         var obj = {};
         class S extends Set {}
@@ -10870,15 +11389,16 @@ exports.tests = [
         edge13:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'own property order',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
   category: 'misc',
   significance: 'tiny',
-  subtests: {
-    'for..in': {
+  subtests: [
+    {
+      name: 'for..in',
       exec: function () {/*
         var obj = {
           2:    true,
@@ -10913,7 +11433,8 @@ exports.tests = [
         android40:     true,
       },
     },
-    'Object.keys': {
+    {
+      name: 'Object.keys',
       exec: function () {/*
         var obj = {
           2:    true,
@@ -10944,7 +11465,8 @@ exports.tests = [
         android40:     true,
       },
     },
-    'Object.getOwnPropertyNames': {
+    {
+      name: 'Object.getOwnPropertyNames',
       exec: function () {/*
         var obj = {
           2:    true,
@@ -10974,7 +11496,8 @@ exports.tests = [
         webkit:        true,
       },
     },
-    'Object.assign': {
+    {
+      name: 'Object.assign',
       exec: function () {/*
         function f(key) {
           return {
@@ -11013,7 +11536,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'JSON.stringify': {
+    {
+      name: 'JSON.stringify',
       exec: function () {/*
         var obj = {
           2:    true,
@@ -11045,7 +11569,8 @@ exports.tests = [
         android40:     true,
       },
     },
-    'JSON.parse': {
+    {
+      name: 'JSON.parse',
       exec: function () {/*
         var result = '';
         JSON.parse(
@@ -11072,7 +11597,8 @@ exports.tests = [
         android40:     true,
       },
     },
-    'Reflect.ownKeys, string key order': {
+    {
+      name: 'Reflect.ownKeys, string key order',
       exec: function() {/*
         var obj = {
           2:    true,
@@ -11102,7 +11628,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Reflect.ownKeys, symbol key order': {
+    {
+      name: 'Reflect.ownKeys, symbol key order',
       exec: function() {/*
         var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
         var obj = {
@@ -11131,15 +11658,16 @@ exports.tests = [
         firefox42:   true,
       }
     },
-  },
+  ],
 },
 {
   name: 'miscellaneous',
   category: 'misc',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
-  subtests: {
-    'no escaped reserved words as identifiers': {
+  subtests: [
+    {
+      name: 'no escaped reserved words as identifiers',
       exec: function() {/*
         var \u0061;
         try {
@@ -11162,7 +11690,8 @@ exports.tests = [
         opera:       true,
       },
     },
-    'duplicate property names in strict mode': {
+    {
+      name: 'duplicate property names in strict mode',
       exec: function(){/*
         'use strict';
         return this === undefined && ({ a:1, a:1 }).a === 1;
@@ -11176,7 +11705,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'no semicolon needed after do-while': {
+    {
+      name: 'no semicolon needed after do-while',
       exec: function(){/*
         do {} while (false) return true;
       */},
@@ -11194,7 +11724,8 @@ exports.tests = [
         android40:   true,
       },
     },
-    'no assignments allowed in for-in head': {
+    {
+      name: 'no assignments allowed in for-in head',
       exec: function(){/*
         try {
           eval('for (var i = 0 in {}) {}');
@@ -11208,7 +11739,8 @@ exports.tests = [
         typescript: true
       },
     },
-    'accessors aren\'t constructors': {
+    {
+      name: 'accessors aren\'t constructors',
       exec: function(){/*
         try {
           new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
@@ -11224,7 +11756,8 @@ exports.tests = [
         webkit:      true,
       },
     },
-    'Invalid Date': {
+    {
+      name: 'Invalid Date',
       exec: function(){/*
         return new Date(NaN) + "" === "Invalid Date";
       */},
@@ -11243,7 +11776,8 @@ exports.tests = [
         android40:   true,
       },
     },
-    'RegExp constructor can alter flags': {
+    {
+      name: 'RegExp constructor can alter flags',
       exec: function(){/*
         return new RegExp(/./im, "g").global === true;
       */},
@@ -11255,7 +11789,8 @@ exports.tests = [
         firefox39:   true,
       },
     },
-    'built-in prototypes are not instances': {
+    {
+      name: 'built-in prototypes are not instances',
       exec: function(){/*
         try {
           RegExp.prototype.source; return false;
@@ -11268,7 +11803,8 @@ exports.tests = [
       res: {
       },
     },
-    'function \'length\' is configurable': {
+    {
+      name: 'function \'length\' is configurable',
       exec: function(){/*
         var fn = function(a, b) {};
 
@@ -11287,7 +11823,8 @@ exports.tests = [
         node4:       true,
       },
     },
-    'String.prototype case methods, Unicode support': {
+    {
+      name: 'String.prototype case methods, Unicode support',
       exec: function(){/*
         return "𐐘".toLowerCase() === "𐑀" && "𐑀".toUpperCase() === "𐐘";
       */},
@@ -11296,7 +11833,7 @@ exports.tests = [
         webkit:      true,
       },
     },
-  },
+  ],
 },
 {
   name: 'HTML-style comments',

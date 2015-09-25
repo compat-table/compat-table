@@ -114,7 +114,6 @@ exports.browsers = {
   node10: {
     full: 'Node 0.10',
     short: 'Node .10',
-    obsolete: false,
     platformtype: 'engine',
   },
   node12: {
@@ -176,184 +175,92 @@ exports.tests = [
 {
   name: 'Intl object',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-8',
-  subtests: {
-    'exists on global': {
+  subtests: [
+    {
+      name: 'exists on global',
       exec: function(){/*
         return typeof Intl === 'object';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'has prototype of Object': {
+    {
+      name: 'has prototype of Object',
       exec: function(){/*
         return Intl.constructor === Object;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-  },
+  ],
 },
 {
   name: 'Intl.Collator',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10',
-  subtests: {
-    'exists on intl object': {
+  subtests: [
+    {
+      name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.Collator === 'function';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'exists on intl object': {
-      exec: function(){/*
-        return typeof Intl.Collator === 'function';
-      */},
-      res: {
-        ie9: false,
-        ie10: false,
-        ie11: true,
-        edge: true,
-        firefox16: false,
-        firefox29: true,
-        chrome22: false,
-        chrome24: true,
-        chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
-        webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
-        node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
-      },
-    },
-    'creates new Collator instances': {
+    {
+      name: 'creates new Collator instances',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.Collator() instanceof Intl.Collator;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'constructor called without new creates instances': {
+    {
+      name: 'constructor called without new creates instances',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.Collator() instanceof Intl.Collator;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'calling Collator with Collator instance throws error': {
+    {
+      name: 'calling Collator with Collator instance throws error',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
       exec: function(){/*
         try {
@@ -364,30 +271,16 @@ exports.tests = [
         }
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
-        webkit: false,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'accepts valid language tags': {
+    {
+      name: 'accepts valid language tags',
       exec: function(){/*
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
@@ -420,218 +313,126 @@ exports.tests = [
         }
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
-        chrome24: false,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-  },
+  ],
 },
 {
   name: 'Intl.Collator.prototype.compare',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
-  subtests: {
-    'exists on Collator prototype': {
+  subtests: [
+    {
+      name: 'exists on Collator prototype',
       exec: function(){/*
         return typeof Intl.Collator().compare === 'function';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-  },
+  ],
 },
 {
   name: 'Intl.Collator.prototype.resolvedOptions',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
-  subtests: {
-    'exists on Collator prototype': {
+  subtests: [
+    {
+      name: 'exists on Collator prototype',
       exec: function(){/*
         return typeof Intl.Collator().resolvedOptions === 'function';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-  },
+  ],
 },
 {
   name: 'NumberFormat',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-11',
-  subtests: {
-    'exists on intl object': {
+  subtests: [
+    {
+      name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.NumberFormat === 'function';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'exists on intl object': {
+    {
+      name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.NumberFormat === 'function';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'creates new NumberFormat instances': {
+    {
+      name: 'creates new NumberFormat instances',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.NumberFormat() instanceof Intl.NumberFormat;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'constructor called without new creates instances': {
+    {
+      name: 'constructor called without new creates instances',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.NumberFormat() instanceof Intl.NumberFormat;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'calling NumberFormat with NumberFormat instance throws error': {
+    {
+      name: 'calling NumberFormat with NumberFormat instance throws error',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
       exec: function(){/*
         try {
@@ -642,30 +443,16 @@ exports.tests = [
         }
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
-        webkit: false,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'accepts valid language tags': {
+    {
+      name: 'accepts valid language tags',
       exec: function(){/*
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
@@ -698,150 +485,69 @@ exports.tests = [
         }
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
-        chrome24: false,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-  },
+  ],
 },
 {
   name: 'DateTimeFormat',
   link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-12',
-  subtests: {
-    'exists on intl object': {
+  subtests: [
+    {
+      name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.DateTimeFormat === 'function';
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'exists on intl object': {
-      exec: function(){/*
-        return typeof Intl.DateTimeFormat === 'function';
-      */},
-      res: {
-        ie9: false,
-        ie10: false,
-        ie11: true,
-        edge: true,
-        firefox16: false,
-        firefox29: true,
-        chrome22: false,
-        chrome24: true,
-        chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
-        webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
-        node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
-      },
-    },
-    'creates new DateTimeFormat instances': {
+    {
+      name: 'creates new DateTimeFormat instances',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'constructor called without new creates instances': {
+    {
+      name: 'constructor called without new creates instances',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'calling DateTimeFormat with DateTimeFormat instance throws error': {
+    {
+      name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
       link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
       exec: function(){/*
         try {
@@ -852,30 +558,16 @@ exports.tests = [
         }
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
         chrome24: true,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
-        webkit: false,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-    'accepts valid language tags': {
+    {
+      name: 'accepts valid language tags',
       exec: function(){/*
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
@@ -908,36 +600,22 @@ exports.tests = [
         }
       */},
       res: {
-        ie9: false,
-        ie10: false,
         ie11: true,
         edge: true,
-        firefox16: false,
         firefox29: true,
-        chrome22: false,
-        chrome24: false,
         chrome29: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
         webkit: true,
-        opera: false,
-        ios7: false,
-        ios9: false,
-        node10: false,
         node12: true,
-        iojs1_0: false,
-        iojs1_1: false,
       },
     },
-  },
+  ],
 },
 {
   name: 'String.prototype.localeCompare',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.localecompare',
-  subtests: {
-    'exists on String prototype': {
+  subtests: [
+    {
+      name: 'exists on String prototype',
       exec: function(){/*
         return typeof String.prototype.localeCompare === 'function';
       */},
@@ -966,13 +644,14 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Number.prototype.toLocaleString',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
-  subtests: {
-    'exists on Number prototype': {
+  subtests: [
+    {
+      name: 'exists on Number prototype',
       exec: function(){/*
         return typeof Number.prototype.toLocaleString === 'function';
       */},
@@ -1001,13 +680,14 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Array.prototype.toLocaleString',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
-  subtests: {
-    'exists on Array prototype': {
+  subtests: [
+    {
+      name: 'exists on Array prototype',
       exec: function(){/*
         return typeof Array.prototype.toLocaleString === 'function';
       */},
@@ -1036,13 +716,14 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Object.prototype.toLocaleString',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
-  subtests: {
-    'exists on Object prototype': {
+  subtests: [
+    {
+      name: 'exists on Object prototype',
       exec: function(){/*
         return typeof Object.prototype.toLocaleString === 'function';
       */},
@@ -1071,13 +752,14 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Date.prototype.toLocaleString',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
-  subtests: {
-    'exists on Date prototype': {
+  subtests: [
+    {
+      name: 'exists on Date prototype',
       exec: function(){/*
         return typeof Date.prototype.toLocaleString === 'function';
       */},
@@ -1106,13 +788,14 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Date.prototype.toLocaleDateString',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
-  subtests: {
-    'exists on Date prototype': {
+  subtests: [
+    {
+      name: 'exists on Date prototype',
       exec: function(){/*
         return typeof Date.prototype.toLocaleDateString === 'function';
       */},
@@ -1141,13 +824,14 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 {
   name: 'Date.prototype.toLocaleTimeString',
   link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
-  subtests: {
-    'exists on Date prototype': {
+  subtests: [
+    {
+      name: 'exists on Date prototype',
       exec: function(){/*
         return typeof Date.prototype.toLocaleTimeString === 'function';
       */},
@@ -1176,6 +860,6 @@ exports.tests = [
         android40: true,
       },
     },
-  },
+  ],
 },
 ];
