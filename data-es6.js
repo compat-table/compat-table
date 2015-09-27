@@ -9387,6 +9387,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+		es6shim: true,
         firefox36: true,
         chrome35: flag,
         chrome38: true,
