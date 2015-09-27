@@ -10329,6 +10329,7 @@ exports.tests = [
         chrome30:    flag,
         chrome38:    { val: false, note_id: 'array-prototype-iterator' },
         node012:     true,
+        node4:       false,
       },
     },
     {
