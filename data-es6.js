@@ -9660,7 +9660,8 @@ exports.tests = [
         return RegExp(re) !== re && RegExp(foo) === foo;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
         firefox40:   true,
       }
     },
@@ -9676,7 +9677,8 @@ exports.tests = [
         }
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
         firefox40:   true,
       }
     },
@@ -9692,7 +9694,8 @@ exports.tests = [
         }
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
         firefox40:   true,
       }
     },
@@ -9708,7 +9711,8 @@ exports.tests = [
         }
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        babel:       true,
+        typescript:  typescript.corejs,
         firefox40:   true,
       }
     },
