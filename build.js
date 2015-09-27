@@ -434,7 +434,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         t.significance === "medium" ? 0.5 : 1)
       .addClass(isOptional(t.category) ? 'optional-feature' : '')
       .append($('<td></td>')
-        .attr('id',id)
+        .attr('id', 'test-' + id)
         .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
         .append(testScript(t.exec, compiler, rowNum++))
       );
