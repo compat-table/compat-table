@@ -13920,36 +13920,73 @@ exports.tests = [
       },
     },
     {
-      name: 'JSON.stringify ignores symbols',
+      name: 'JSON.stringify ignores symbol primitives',
       exec: function() {/*
-        var testSymbol = function (sym) {
-          var object = { foo: sym };
-          object[Symbol.prototype.valueOf.call(sym)] = 1;
-          var array = [sym];
-          var expectedJSON = typeof sym === 'object' ? '{}' : undefined;
-          return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(sym) === expectedJSON;
-        };
-        var sym = Symbol();
-        var objSym = Object(sym);
-        var symNoToJSON = Object(sym);
-        symNoToJSON.toJSON = null; // ensure it overrides the prototype, but is not callable
-        return testSymbol(sym) && testSymbol(objSym) && testSymbol(symNoToJSON);
+        var object = { foo: Symbol() };
+        object[Symbol()] = 1;
+        var array = [Symbol()];
+        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        es6shim:     true,
-        firefox36:   true,
-        chrome35:    flag,
-        chrome38:    true,
-        node012:     true,
-        safaritp:    true,
-        safari10:    true,
-        webkit:      true,
-        edge13:      true,
-        xs6:         true,
-        jxa:         true,
+        babel: true,
+        typescript: typescript.corejs,
+        edge13: true,
+        es6shim: true,
+        firefox35: false,
+        firefox36: true,
+        firefox48: true,
+        chrome35: flag,
+        chrome38: true,
+        chrome49: true,
+        chrome52: true,
+        node012: true,
+        node4: true,
+        node6: true,
+        safari9: false,
+        safaritp: true,
+        safari10: true,
+        webkit: true,
+        xs6: true,
+        jxa: true,
       },
+    },
+    {
+      name: 'JSON.stringify ignores symbol objects',
+      exec: function() {/*
+        var testSymbolObject = function (sym) {
+          var object = { foo: sym };
+          try {
+            // some browsers throw a TypeError when setting symbol object keys.
+            // this isn't part of this test, so, ignore it if so.
+            object[sym] = 1;
+          } catch (e) {} // some browsers throw a TypeError when setting symbol object keys.
+          var array = [sym];
+          return JSON.stringify(object) === '{"foo":{}}' && JSON.stringify(array) === '[{}]' && JSON.stringify(sym) === '{}';
+        };
+        var objSym = Object(Symbol());
+        var symNoToJSON = Object(Symbol());
+        Object.defineProperty(symNoToJSON, 'toJSON', { enumerable: false, value: null }); // ensure it overrides the prototype, but is not callable
+        return testSymbolObject(objSym) && testSymbolObject(symNoToJSON);
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+        edge13: true,
+        es6shim: true,
+        firefox35: false,
+        firefox36: true,
+        firefox48: true,
+        node012: false,
+        node4: false,
+        node6: true,
+        chrome38: false,
+        chrome48: false,
+        chrome49: true,
+        safari9: true,
+        webkit: true,
+        xs6: true,
+        jxa: true,
+      }
     },
     {
       name: 'global symbol registry',
