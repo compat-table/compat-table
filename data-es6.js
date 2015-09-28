@@ -5254,7 +5254,6 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
-        es6shim:     true,
         ie11:        true,
         chrome36:    true,
         safari9:     true,
@@ -5462,7 +5461,6 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
-        es6shim:     true,
         firefox37:   true,
         edge12:      true,
         chrome36:    true,
