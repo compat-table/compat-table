@@ -361,6 +361,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     }
   }
 
+  function getHtmlId(id) {
+    return 'test-' + id;
+  }
+
   function footnoteHTML(obj) {
     if (obj && obj.note_id) {
       if (!footnoteIndex[obj.note_id]) {
@@ -434,8 +438,8 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         t.significance === "medium" ? 0.5 : 1)
       .addClass(isOptional(t.category) ? 'optional-feature' : '')
       .append($('<td></td>')
-        .attr('id', 'test-' + id)
-        .append('<span><a class="anchor" href="#' + id + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
+        .attr('id', getHtmlId(id))
+        .append('<span><a class="anchor" href="#' + getHtmlId(id) + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
         .append(testScript(t.exec, compiler, rowNum++))
       );
     body.append(testRow);
@@ -502,11 +506,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
         subtestRow = $('<tr class="subtest"></tr>')
           .attr('data-parent', id)
-          .attr('id', subtestId)
+          .attr('id', getHtmlId(subtestId))
 
           .append(
             $('<td></td>')
-              .append('<span><a class="anchor" href="#' + subtestId + '">&sect;</a>' + subtestName + '</span>')
+              .append('<span><a class="anchor" href="#' + getHtmlId(subtestId) + '">&sect;</a>' + subtestName + '</span>')
               .append(testScript(subtest.exec, compiler, rowNum++))
           );
         body.append(subtestRow);
