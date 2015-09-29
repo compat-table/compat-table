@@ -2908,10 +2908,10 @@ return O.a + O.b + O.c === 6;
 </tr>
 <tr class="subtest" data-parent="String_padding" id="String_padding_String.prototype.padLeft"><td><span><a class="anchor" href="#String_padding_String.prototype.padLeft">&#xA7;</a>String.prototype.padLeft</span><script data-source="
 return &apos;hello&apos;.padLeft(10) === &apos;     hello&apos;
-  &amp;&amp; &apos;hello&apos;.padLeft(10, &apos;1234&apos;) === &apos;41234hello&apos;
+  &amp;&amp; &apos;hello&apos;.padLeft(10, &apos;1234&apos;) === &apos;12341hello&apos;
   &amp;&amp; &apos;hello&apos;.padLeft() === &apos;hello&apos;
-  &amp;&amp; &apos;hello&apos;.padLeft(6, &apos;123&apos;) === &apos;3hello&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("76");try{return Function("asyncTestPassed","\nreturn 'hello'.padLeft(10) === '     hello'\n  && 'hello'.padLeft(10, '1234') === '41234hello'\n  && 'hello'.padLeft() === 'hello'\n  && 'hello'.padLeft(6, '123') === '3hello';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("76");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padLeft(10) === '     hello'\n  && 'hello'.padLeft(10, '1234') === '41234hello'\n  && 'hello'.padLeft() === 'hello'\n  && 'hello'.padLeft(6, '123') === '3hello';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  &amp;&amp; &apos;hello&apos;.padLeft(6, &apos;123&apos;) === &apos;1hello&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("76");try{return Function("asyncTestPassed","\nreturn 'hello'.padLeft(10) === '     hello'\n  && 'hello'.padLeft(10, '1234') === '12341hello'\n  && 'hello'.padLeft() === 'hello'\n  && 'hello'.padLeft(6, '123') === '1hello';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("76");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padLeft(10) === '     hello'\n  && 'hello'.padLeft(10, '1234') === '12341hello'\n  && 'hello'.padLeft() === 'hello'\n  && 'hello'.padLeft(6, '123') === '1hello';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

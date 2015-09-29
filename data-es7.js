@@ -1126,9 +1126,9 @@ exports.tests = [
       name: 'String.prototype.padLeft',
       exec: function(){/*
         return 'hello'.padLeft(10) === '     hello'
-          && 'hello'.padLeft(10, '1234') === '41234hello'
+          && 'hello'.padLeft(10, '1234') === '12341hello'
           && 'hello'.padLeft() === 'hello'
-          && 'hello'.padLeft(6, '123') === '3hello';
+          && 'hello'.padLeft(6, '123') === '1hello';
       */},
       res: {
         babel:   true,
