@@ -1020,6 +1020,25 @@ exports.tests = [
   }
 },
 {
+  name: 'call constructor',
+  category: 'proposal',
+  significance: 'medium',
+  link: 'https://gist.github.com/wycats/952929fab0bc1f000c24',
+  exec: function () {/*
+    class C {
+      constructor(){
+        this.x = 'x';
+      }
+      call constructor(){
+        return 'y';
+      }
+    }
+    return new C().x + C() === 'xy';
+  */},
+  res: {
+  }
+},
+{
   name: 'Map.prototype.toJSON',
   category: 'strawman',
   significance: 'tiny',
