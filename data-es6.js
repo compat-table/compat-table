@@ -4404,7 +4404,7 @@ exports.tests = [
     { name: '.prototype[Symbol.iterator]', res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,}},
     { name: '[Symbol.species]',       res: { edge13:    true}},
     ].map(function(m) {
-      var eqFn = ' === "function"'
+      var eqFn = ' === "function"';
       var name = m.name;
       m.name = '%TypedArray%' + name;
       m.exec = eval('0,function(){/*\nreturn typeof '
