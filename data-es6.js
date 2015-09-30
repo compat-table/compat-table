@@ -4293,16 +4293,16 @@ exports.tests = [
           'Float32Array',
           'Float64Array'
         ];
-        constructors.forEach(function (constructor) {
+        return constructors.every(function (constructor) {
           try {
             if (constructor in global) {
               global[constructor](constructor === "ArrayBuffer" ? 64 : buffer);
             }
             return false;
           } catch(e) {
+            return true;
           }
-        }
-        return true;
+        });
       */},
       res: Object.assign({}, temp.clampedArrayResults, {
         edge12:   false,
@@ -4404,9 +4404,10 @@ exports.tests = [
     { name: '.prototype[Symbol.iterator]', res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true,}},
     { name: '[Symbol.species]',       res: { edge13:    true}},
     ].map(function(m) {
-      var eqFn = ' === "function"';
-      m.name = '%TypedArray%' + m;
-      m.exec = new Function('/*return typeof '
+      var eqFn = ' === "function"'
+      var name = m.name;
+      m.name = '%TypedArray%' + name;
+      m.exec = eval('0,function(){/*\nreturn typeof '
         + [
           'Int8Array',
           'Uint8Array',
@@ -4417,7 +4418,7 @@ exports.tests = [
           'Uint32Array',
           'Float32Array',
           'Float64Array'
-        ].join(m + eqFn + ' &&\n    typeof ') + m + eqFn + ';\n*/');
+        ].join(name + eqFn + ' &&\n    typeof ') + name + eqFn + ';\n*/}');
       return m;
     })
   ),
