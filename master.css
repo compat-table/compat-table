@@ -293,8 +293,7 @@ td[title] {
 
 /* page header */
 #body {
-    padding-left: 1em;
-    overflow-x: auto;
+    padding-left: 1em; position: relative; min-width: 1250px;
     width: 100%;
 }
 #header {
