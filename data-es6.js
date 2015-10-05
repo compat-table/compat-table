@@ -356,7 +356,6 @@ exports.browsers = {
   safari9: {
     full: 'Safari',
     short: 'SF 9',
-    unstable: true,
   },
   webkit: {
     full: 'WebKit r188520',
@@ -471,6 +470,12 @@ exports.browsers = {
     short: 'iOS 8',
     platformtype: 'mobile',
     equals: 'safari71_8',
+  },
+  ios9: {
+    full: 'iOS Safari',
+    short: 'iOS 9',
+    platformtype: 'mobile',
+    equals: 'safari9',
   }
 };
 
