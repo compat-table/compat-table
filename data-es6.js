@@ -9736,6 +9736,7 @@ exports.tests = [
       res: {
         ejs:         true,
         typescript:  typescript.fallthrough,
+        chrome47:    true,
       },
     },
     {
