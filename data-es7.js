@@ -1097,7 +1097,7 @@ exports.tests = [
   name: 'object rest properties',
   significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: 'proposal',
+  category: 'draft',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -1109,7 +1109,7 @@ exports.tests = [
 },
 {
   name: 'object spread properties',
-  category: 'proposal',
+  category: 'draft',
   significance: 'medium',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
