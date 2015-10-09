@@ -381,7 +381,7 @@ exports.tests = [
 },
 {
   name: 'async functions',
-  category: 'proposal',
+  category: 'candidate',
   significance: 'large',
   link: 'https://tc39.github.io/ecmascript-asyncawait/',
   subtests: [
