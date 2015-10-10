@@ -11808,10 +11808,13 @@ exports.tests = [
         try {
           Date.prototype.valueOf(); return false;
         } catch(e) {}
-        if (Object.prototype.toString.call(Error.prototype)  !== '[object Object]')
+        
+        if (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {
+            return Object.prototype.toString.call(E.prototype) === '[object Object]';
+        })) {
           return false;
-        if (Object.prototype.toString.call(TypeError.prototype) !== '[object Object]')
-          return false;
+        }
+        
         return true;
       */},
       res: {
