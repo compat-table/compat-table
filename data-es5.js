@@ -1017,6 +1017,58 @@ exports.tests = [
   }
 },
 {
+  name: 'Date.parse on invalid dates',
+  exec: function () {
+    var brokenOnFirefox = !isNaN(Date.parse('2012-04-04T24:00:00.500Z'));
+    var brokenOnIE10 = !isNaN(Date.parse('2012-12-31T24:01:00.000Z'));
+    var brokenOnChrome = !isNaN(Date.parse('2011-02-29T12:00:00.000Z'));
+    return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
+  },
+  res: {
+    es5shim: true,
+
+    ie7: false,
+    ie8: false,
+    ie9: false,
+    ie10: false,
+
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: false,
+    firefox21: false,
+
+    safari3: false,
+    safari4: true,
+    safari5: true,
+    safari51: true,
+    safari6: true,
+    webkit: true,
+
+    chrome5: false,
+    chrome6: false,
+    chrome7: false,
+    chrome13: false,
+    chrome19: false,
+    chrome23: false,
+
+    opera10_10: true,
+    opera10_50: true,
+    opera12: true,
+    opera12_10: true,
+
+    konq43: true,
+    konq49: true,
+    konq413: true,
+
+    besen: true,
+    rhino: true,
+    phantom: true,
+    ejs: true,
+    ios78: true,
+    android40: true,
+  }
+},
+{
   name: 'Array.isArray',
   exec: function () {
     return typeof Array.isArray == 'function';
