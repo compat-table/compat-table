@@ -74,7 +74,7 @@ exports.browsers = {
     obsolete: true
   },
   safari6: {
-    full: 'Safari 6.0, Safari 7.0, Safari 7.1, Safari 8',
+    full: 'Safari 6.0, Safari 7.0, Safari 7.1, Safari 8, Safari 9',
     short: 'SF 6+',
     obsolete: false
   },
@@ -964,9 +964,13 @@ exports.tests = [
   }
 },
 {
-  name: 'Array.isArray',
+  name: 'Date.prototype.toJSON',
   exec: function () {
-    return typeof Array.isArray == 'function';
+    try {
+      return Date.prototype.toJSON.call(new Date(NaN)) === null;
+    } catch (e) {
+      return false;
+    }
   },
   res: {
     es5shim: true,
@@ -987,6 +991,55 @@ exports.tests = [
     safari51: true,
     safari6: true,
     webkit: true,
+
+    chrome5: true,
+    chrome6: true,
+    chrome7: true,
+    chrome13: true,
+    chrome19: true,
+    chrome23: true,
+
+    opera10_10: false,
+    opera10_50: false,
+    opera12: true,
+    opera12_10: true,
+
+    konq43: true,
+    konq49: true,
+    konq413: true,
+
+    besen: true,
+    rhino: true,
+    phantom: true,
+    ejs: true,
+    ios78: false,
+    android40: true,
+  }
+},
+{
+  name: 'Array.isArray',
+  exec: function () {
+    return typeof Array.isArray == 'function';
+  },
+  res: {
+    es5shim: true,
+
+    ie7: false,
+    ie8: false,
+    ie9: true,
+    ie10: true,
+
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: true,
+    firefox21: true,
+
+    safari3: false,
+    safari4: false,
+    safari5: false,
+    safari51: false,
+    safari6: false,
+    webkit: false,
 
     chrome5: true,
     chrome6: true,
