@@ -131,10 +131,11 @@
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
 <th class="platform webkit desktop" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r189313">WK</abbr></a></th>
 <th class="platform opera desktop" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
-<th class="platform node10 engine" data-browser="node10"><a href="#node10" class="browser-name"><abbr title="Node 0.10">Node .10</abbr></a></th>
+<th class="platform node10 engine obsolete" data-browser="node10"><a href="#node10" class="browser-name"><abbr title="Node 0.10">Node .10</abbr></a></th>
 <th class="platform node12 engine" data-browser="node12"><a href="#node12" class="browser-name"><abbr title="Node 0.12">Node .12</abbr><a href="#only-english-note"><sup>[1]</sup></a></a></th>
-<th class="platform iojs1_0 engine" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
-<th class="platform iojs1_1 engine" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
+<th class="platform iojs1_0 engine obsolete" data-browser="iojs1_0"><a href="#iojs1_0" class="browser-name"><abbr title="io.js 1.0.0">io 1.0</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
+<th class="platform iojs1_1 engine obsolete" data-browser="iojs1_1"><a href="#iojs1_1" class="browser-name"><abbr title="io.js 1.1.0">io 1.1</abbr><a href="#build-with-intl-note"><sup>[2]</sup></a></a></th>
+<th class="platform node4 engine" data-browser="node4"><a href="#node4" class="browser-name"><abbr title="Node 4.0">Node 4.0</abbr><a href="#only-english-note"><sup>[1]</sup></a></a></th>
 <th class="platform android40 mobile obsolete" data-browser="android40"><a href="#android40" class="browser-name"><abbr title="Android Browser">Android 4.0</abbr></a></th>
 <th class="platform android41 mobile obsolete" data-browser="android41"><a href="#android41" class="browser-name"><abbr title="Android Browser">Android 4.1 - 4.3</abbr></a></th>
 <th class="platform android44 mobile" data-browser="android44"><a href="#android44" class="browser-name"><abbr title="Android Browser">Android 4.4+</abbr></a></th>
@@ -168,10 +169,11 @@
 <td data-browser="safari71_8" class="tally" data-tally="0">0/2</td>
 <td data-browser="webkit" class="tally" data-tally="1">2/2</td>
 <td data-browser="opera" class="tally" data-tally="0">0/2</td>
-<td data-browser="node10" class="tally" data-tally="0">0/2</td>
+<td data-browser="node10" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="node12" class="tally" data-tally="1">2/2</td>
-<td data-browser="iojs1_0" class="tally" data-tally="0">0/2</td>
-<td data-browser="iojs1_1" class="tally" data-tally="0">0/2</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="0">0/2</td>
+<td data-browser="node4" class="tally" data-tally="1">2/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android44" class="tally" data-tally="1">2/2</td>
@@ -204,10 +206,11 @@ return typeof Intl === &apos;object&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -240,10 +243,11 @@ return Intl.constructor === Object;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -273,10 +277,11 @@ return Intl.constructor === Object;
 <td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
 <td data-browser="webkit" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="opera" class="tally" data-tally="0">0/5</td>
-<td data-browser="node10" class="tally" data-tally="0">0/5</td>
+<td data-browser="node10" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
-<td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
-<td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="node4" class="tally" data-tally="1">5/5</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android44" class="tally" data-tally="1">5/5</td>
@@ -309,10 +314,11 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -345,10 +351,11 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -381,10 +388,11 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -422,10 +430,11 @@ try {
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="webkit">No</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -486,10 +495,11 @@ try {
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -519,10 +529,11 @@ try {
 <td data-browser="safari71_8" class="tally" data-tally="0">0/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="0">0/1</td>
-<td data-browser="node10" class="tally" data-tally="0">0/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="0">0/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="0">0/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -555,10 +566,11 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -588,10 +600,11 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="0">0/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="0">0/1</td>
-<td data-browser="node10" class="tally" data-tally="0">0/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="0">0/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="0">0/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="0">0/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -624,10 +637,11 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -657,10 +671,11 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="0">0/6</td>
 <td data-browser="webkit" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="opera" class="tally" data-tally="0">0/6</td>
-<td data-browser="node10" class="tally" data-tally="0">0/6</td>
+<td data-browser="node10" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="node12" class="tally" data-tally="1">6/6</td>
-<td data-browser="iojs1_0" class="tally" data-tally="0">0/6</td>
-<td data-browser="iojs1_1" class="tally" data-tally="0">0/6</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="0">0/6</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="0">0/6</td>
+<td data-browser="node4" class="tally" data-tally="1">6/6</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="android44" class="tally" data-tally="1">6/6</td>
@@ -693,10 +708,11 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -729,10 +745,11 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -765,10 +782,11 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -801,10 +819,11 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -842,10 +861,11 @@ try {
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="webkit">No</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -906,10 +926,11 @@ try {
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -939,10 +960,11 @@ try {
 <td data-browser="safari71_8" class="tally" data-tally="0">0/5</td>
 <td data-browser="webkit" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="opera" class="tally" data-tally="0">0/5</td>
-<td data-browser="node10" class="tally" data-tally="0">0/5</td>
+<td data-browser="node10" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="node12" class="tally" data-tally="1">5/5</td>
-<td data-browser="iojs1_0" class="tally" data-tally="0">0/5</td>
-<td data-browser="iojs1_1" class="tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="0">0/5</td>
+<td data-browser="node4" class="tally" data-tally="1">5/5</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android44" class="tally" data-tally="1">5/5</td>
@@ -975,10 +997,11 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1011,10 +1034,11 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1047,10 +1071,11 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1088,10 +1113,11 @@ try {
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="webkit">No</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1152,10 +1178,11 @@ try {
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="no" data-browser="opera">No</td>
-<td class="no" data-browser="node10">No</td>
+<td class="no obsolete" data-browser="node10">No</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="no" data-browser="iojs1_0">No</td>
-<td class="no" data-browser="iojs1_1">No</td>
+<td class="no obsolete" data-browser="iojs1_0">No</td>
+<td class="no obsolete" data-browser="iojs1_1">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1185,10 +1212,11 @@ try {
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1221,10 +1249,11 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1254,10 +1283,11 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1290,10 +1320,11 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1323,10 +1354,11 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1359,10 +1391,11 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1392,10 +1425,11 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1428,10 +1462,11 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1461,10 +1496,11 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1497,10 +1533,11 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1530,10 +1567,11 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1566,10 +1604,11 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -1599,10 +1638,11 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td data-browser="safari71_8" class="tally" data-tally="1">1/1</td>
 <td data-browser="webkit" class="tally" data-tally="1">1/1</td>
 <td data-browser="opera" class="tally" data-tally="1">1/1</td>
-<td data-browser="node10" class="tally" data-tally="1">1/1</td>
+<td data-browser="node10" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="node12" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_0" class="tally" data-tally="1">1/1</td>
-<td data-browser="iojs1_1" class="tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_0" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="iojs1_1" class="obsolete tally" data-tally="1">1/1</td>
+<td data-browser="node4" class="tally" data-tally="1">1/1</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">1/1</td>
 <td data-browser="android44" class="tally" data-tally="1">1/1</td>
@@ -1635,10 +1675,11 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="opera">Yes</td>
-<td class="yes" data-browser="node10">Yes</td>
+<td class="yes obsolete" data-browser="node10">Yes</td>
 <td class="yes" data-browser="node12">Yes</td>
-<td class="yes" data-browser="iojs1_0">Yes</td>
-<td class="yes" data-browser="iojs1_1">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_0">Yes</td>
+<td class="yes obsolete" data-browser="iojs1_1">Yes</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>

@@ -114,6 +114,7 @@ exports.browsers = {
   node10: {
     full: 'Node 0.10',
     short: 'Node .10',
+    obsolete: true,
     platformtype: 'engine',
   },
   node12: {
@@ -127,7 +128,7 @@ exports.browsers = {
   iojs1_0: {
     full: 'io.js 1.0.0',
     short: 'io 1.0',
-    obsolete: false, // current version
+    obsolete: true,
     platformtype: 'engine',
     note_id: 'build-with-intl',
     note_html: 'Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed'
@@ -135,10 +136,18 @@ exports.browsers = {
   iojs1_1: {
     full: 'io.js 1.1.0',
     short: 'io 1.1',
-    obsolete: false, // current version
+    obsolete: true,
     platformtype: 'engine',
     note_id: 'build-with-intl',
     note_html: 'Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed'
+  },
+  node4: {
+    full: 'Node 4.0',
+    short: 'Node 4.0',
+    obsolete: false, // current version
+    platformtype: 'engine',
+    note_id: 'only-english',
+    note_html: 'Intl support only English by default, it needs to build with full ICU data if needs all locales supported'
   },
   android40: {
     full: 'Android Browser',
@@ -189,6 +198,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -204,6 +214,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
   ],
@@ -225,6 +236,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -241,6 +253,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -257,6 +270,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -277,6 +291,7 @@ exports.tests = [
         chrome24: true,
         chrome29: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -319,6 +334,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
   ],
@@ -340,6 +356,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
   ],
@@ -361,6 +378,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
   ],
@@ -382,6 +400,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -397,6 +416,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -413,6 +433,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -429,6 +450,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -449,6 +471,7 @@ exports.tests = [
         chrome24: true,
         chrome29: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -491,6 +514,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
   ],
@@ -512,6 +536,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -528,6 +553,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -544,6 +570,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -564,6 +591,7 @@ exports.tests = [
         chrome24: true,
         chrome29: true,
         node12: true,
+        node4: true,
       },
     },
     {
@@ -606,6 +634,7 @@ exports.tests = [
         chrome29: true,
         webkit: true,
         node12: true,
+        node4: true,
       },
     },
   ],
@@ -641,6 +670,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
@@ -677,6 +707,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
@@ -713,6 +744,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
@@ -749,6 +781,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
@@ -785,6 +818,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
@@ -821,6 +855,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
@@ -857,6 +892,7 @@ exports.tests = [
         node12: true,
         iojs1_0: true,
         iojs1_1: true,
+        node4: true,
         android40: true,
       },
     },
