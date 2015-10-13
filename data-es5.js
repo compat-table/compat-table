@@ -987,9 +987,9 @@ exports.tests = [
 
     safari3: false,
     safari4: false,
-    safari5: true,
-    safari51: true,
-    safari6: true,
+    safari5: false,
+    safari51: false,
+    safari6: false,
     webkit: true,
 
     chrome5: true,
@@ -1088,10 +1088,10 @@ exports.tests = [
 
     safari3: false,
     safari4: false,
-    safari5: false,
-    safari51: false,
-    safari6: false,
-    webkit: false,
+    safari5: true,
+    safari51: true,
+    safari6: true,
+    webkit: true,
 
     chrome5: true,
     chrome6: true,
