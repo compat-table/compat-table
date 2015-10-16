@@ -2101,6 +2101,7 @@ exports.tests = [
         es6tr:       true,
         edge12:      flag,
         edge13:      true,
+        webkit:      true,
         chrome41:    strict,
         node4:       strict,
       },
@@ -2517,6 +2518,7 @@ exports.tests = [
         jsx:         true,
         es6tr:       true,
         typescript:  true,
+        webkit:      true,
       },
     },
   ],
@@ -4343,6 +4345,7 @@ exports.tests = [
       res: {
         chrome45:    true,
         node4:       true,
+        webkit:      true,
       },
     },
     {
@@ -4379,8 +4382,8 @@ exports.tests = [
       },
     },
   ].concat([
-    { name: '.from',                  res: { edge12:    true, firefox38: true, chrome45: true, node4: true, }},
-    { name: '.of',                    res: { edge12:    true, firefox38: true, chrome45: true, node4: true, }},
+    { name: '.from',                  res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, }},
+    { name: '.of',                    res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, }},
     { name: '.prototype.subarray',    res: {
         ejs:         true,
         edge12:      true,
