@@ -8876,6 +8876,7 @@ exports.tests = [
         chrome34:    true,
         chrome41:    true,
         node4:       true,
+        webkit:      true,
       },
     },
     {
