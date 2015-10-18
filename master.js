@@ -88,8 +88,19 @@ $(function() {
 
     tr.on('click', function(event) {
       if (!$(event.target).is('a')) {
-        subtests.toggle();
-        tr.find(".folddown").css('transform', 'rotate(' + (subtests.is(':visible') ? '90deg' : '0deg') + ')');
+
+        // toggle manually for perf. reasons
+        // it would be even better to toggle this via higher-level CSS (on a parent)
+        // but current optimization (getting rid of `toggle`)
+        // already brings time from ~500ms to ~15ms
+        // (mostly due to removal of recalc-heavy `css` for each element)
+        // so this is probably sufficient for now
+        subtests.each(function(i, el) {
+          el.style.display = el.style.display === 'table-row' ? 'none' : 'table-row';
+        });
+
+        var deg = subtests[0].style.display === 'table-row' ? '90deg' : '0deg';
+        tr.find(".folddown").css('transform', 'rotate(' + deg + ')');
       }
     });
 
@@ -97,35 +108,57 @@ $(function() {
     tr.each(__updateSupertest);
   });
 
+
+  var globalFoldDown = $('<span class="folddown">&#9658;</span>');
+  if ($('tr.supertest').size()) {
+    $('.test-name').append(globalFoldDown);
+  }
+  globalFoldDown.data('is-expanded', false);
+
+  globalFoldDown.on('click', function(e) {
+    e.stopPropagation();
+
+    // let's horribly cheat here for now
+
+    $('tr.supertest').click();
+    globalFoldDown.data('is-expanded', !globalFoldDown.data('is-expanded'));
+
+    var deg = globalFoldDown.data('is-expanded') ? '90deg' : '0deg';
+    globalFoldDown.css('transform', 'rotate(' + deg + ')')
+  })
+  .css('cursor', 'pointer')
+  .prop('title', 'Expand/Collapse all tests');
+
+
   // Set up the tooltip HTML
   var infoTooltip = $('<pre class="info-tooltip">')
     .hide()
     .appendTo('body')
     .on('click', function (e) {
       e.stopPropagation();
-    });    
-    
+    });
+
   infoTooltip.fillAndShow = function (e, scriptTag) {
     return this
       .text(scriptTag.attr('data-source').trim())
       .show()
       .moveHere(e);
   };
-  
+
   infoTooltip.unlockAndHide = function (lockedFrom) {
     lockedFrom.removeClass('tooltip-locked');
     return this
       .data('locked-from', null)
       .hide();
   };
-  
+
   infoTooltip.moveHere = function (e) {
     return this.offset({
       left: e.pageX + 10,
       top: e.pageY
     });
   };
-  
+
   // Attach tooltip buttons to each feature <tr>
   $('#table-wrapper td:first-child').each(function() {
     var td = $(this);
@@ -154,7 +187,7 @@ $(function() {
         var lockedFrom = infoTooltip.data('locked-from');
         if (lockedFrom) {
           infoTooltip.unlockAndHide(lockedFrom);
-        }        
+        }
         var elem = $(this)
         if (!elem.is(lockedFrom)) {
           infoTooltip
@@ -165,7 +198,7 @@ $(function() {
         e.stopPropagation();
       })
   });
-  
+
   // Hide locked tooltip when clicking outside of it
   $(window).on('click', function (event) {
     var lockedFrom = infoTooltip.data('locked-from');
@@ -173,7 +206,7 @@ $(function() {
       infoTooltip.unlockAndHide(lockedFrom);
     }
   });
-  
+
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
