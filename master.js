@@ -210,7 +210,7 @@ $(function() {
 
   // Function to retrieve the platform name of a given <td> cell
   function platformOf(elem) {
-    return $(elem).attr('data-browser') || '';
+    return elem.getAttribute('data-browser') || '';
   }
 
   // Since you can't add a :hover effect for columns,
@@ -372,6 +372,7 @@ $(function() {
   var ordering = [];
 
   $('#sort').on('click', function() {
+
     var elem = $(this);
     var sortByFeatures = elem.prop('checked');
     var comparator;
@@ -399,18 +400,22 @@ $(function() {
       ordering[sortByFeatures] = $.map(cells, platformOf);
     }
 
+    var ord = ordering[sortByFeatures];
+
     // Define a comparison function using the orderings
     comparator = function(a, b) {
-      return ordering[sortByFeatures].indexOf(platformOf(a))
-           - ordering[sortByFeatures].indexOf(platformOf(b));
+      return ord.indexOf(platformOf(a)) - ord.indexOf(platformOf(b));
     };
 
     // Now sort the columns using the comparison function
-    table.detach().find('tr').each(function() {
-      var row = $(this);
-      var cells = [].slice.call(row.children(), 3 + row.children('script').length)
+    table.detach().find('tr').each(function(i, row) {
+
+      var cells = [].slice.call(row.cells, 3 + (row.querySelector('script') ? 1 : 0))
         .sort(comparator);
-      row.append(cells);
+
+      for (var j = 0, jlen = cells.length; j < jlen; j++) {
+        row.appendChild(cells[j]);
+      }
     });
     table.insertBefore('#footnotes');
   });
