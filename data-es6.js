@@ -875,7 +875,6 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  true,
         ie11:        true,
         firefox36:   true,
         webkit:      true,
@@ -968,7 +967,6 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  true,
         ie11:        true,
         firefox36:   true, chrome19dev: flag,
         chrome41:    true,
@@ -1056,7 +1054,6 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  true,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -1172,7 +1169,6 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  true,
         ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
@@ -1784,6 +1780,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         jsx:         true,
         closure:     true,
         edge12:      flag,
@@ -2178,7 +2175,6 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  true,
         safari9:     true,
         webkit:      true,
         chrome43:    strict,
@@ -2258,6 +2254,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         tr:          true,
         ejs:         true,
         es6tr:       true,
@@ -2373,11 +2370,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         jsx:         true,
-        typescript:  {
-          val: false,
-          note_id: 'typescript-property-access',
-          note_html: 'TypeScript does not support computed <code>super</code> property access.'
-        },
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
@@ -7842,7 +7835,6 @@ exports.tests = [
         safari71_8:  false,
         safari9:     true,
         jsx:         false,
-        typescript:  false,
         edge13:      flag,
       }),
     },
