@@ -363,7 +363,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   webkit: {
-    full: 'WebKit r190846',
+    full: 'WebKit r191276',
     short: 'WK',
     unstable: true,
   },
@@ -8001,6 +8001,7 @@ exports.tests = [
         edge12:      true,
         chrome33:    true,
         node4:       true,
+        webkit:      true,
       },
     },
     {
@@ -11235,6 +11236,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         edge13:      true,
+        webkit:      true,
       },
     },
     {
@@ -11249,6 +11251,7 @@ exports.tests = [
         chrome43:    strict,
         node4:       strict,
         edge13:      true,
+        webkit:      true,
       },
     },
     {
@@ -11275,6 +11278,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         edge13:      true,
+        webkit:      true,
       },
     },
     {
@@ -11301,6 +11305,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         edge13:      true,
+        webkit:      true,
       },
     },
   ],
