@@ -155,6 +155,11 @@ table.one-selected td.selected {
     left: 1px;
     top: 1px;
 }
+.supertest.is-open .folddown {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 .subtest td:first-child {
   padding-left: 1.2em;
   font-style: italic;
@@ -162,6 +167,9 @@ table.one-selected td.selected {
 .subtest {
   font-size: 0.8em;
   display:none;
+}
+.js-applied .subtest {
+    display: table-row;
 }
 .subtest td.yes, .subtest td.no, .subtest td.strict {
   border-left: solid 5px #eee;
@@ -287,7 +295,7 @@ td[title] {
 }
 /* for IE compatibility, this must be a separate rule. */
 #show-obsolete[value='on'] ~ table .obsolete,
-#show-unstable[value='on'] ~ table .unstable, {
+#show-unstable[value='on'] ~ table .unstable {
     display: table-cell;
 }
 
