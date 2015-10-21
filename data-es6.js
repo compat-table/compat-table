@@ -778,6 +778,29 @@ exports.tests = [
       },
     },
     {
+      name: 'lexical super-constructor binding',
+      exec: function(){/*
+        var received
+
+        class B {
+          constructor (arg) {
+            received = arg
+          }
+        }
+        class C extends B {
+          constructor () {
+            var callSuper = () => super('foo')
+            callSuper()
+          }
+        }
+
+	return new C instanceof C && received === 'foo'
+      */},
+      res: {
+      	/* TBD */
+      },
+    },
+    {
       name: 'lexical "new.target" binding',
       exec: function(){/*
         function C() {
