@@ -338,6 +338,12 @@ exports.browsers = {
     unstable: true,
     note_id: 'experimental-flag',
   },
+  chrome48: {
+    full: 'Chrome, Opera',
+    short: 'CH 48,<br>OP&nbsp;35',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
   safari51: {
     full: 'Safari',
     short: 'SF 5.1',
@@ -1034,6 +1040,7 @@ exports.tests = [
           note_html: 'Available for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
         },
         webkit:      true,
+        chrome48:    flag,
       },
     },
     {
@@ -1053,6 +1060,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
         webkit:      true,
+        chrome48:    flag,
       },
     },
     {
@@ -1072,6 +1080,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
         webkit:      true,
+        chrome48:    flag,
       },
     },
     {
@@ -1089,6 +1098,7 @@ exports.tests = [
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
         webkit:      true,
+        chrome48:    flag,
       },
     },
     {
@@ -1115,6 +1125,7 @@ exports.tests = [
         closure:     true,
         firefox39:   { val: flag, note_id: 'fx-let', },
         webkit:      true,
+        chrome48:    flag,
       },
     },
     {
@@ -1400,6 +1411,7 @@ exports.tests = [
         edge12:      true,
         firefox16:   true,
         chrome44:    flag,
+        chrome48:    true,
         node4:       flag,
       },
     },
@@ -1418,6 +1430,7 @@ exports.tests = [
         edge12:      true,
         firefox16:   true,
         chrome44:    flag,
+        chrome48:    true,
         node4:       flag,
       },
     },
@@ -1438,6 +1451,7 @@ exports.tests = [
         babel:       true,
         tr:          true,
         chrome44:    flag,
+        chrome48:    true,
         edge12:      true,
         node4:       flag,
         firefox43:   true,
@@ -1463,6 +1477,7 @@ exports.tests = [
         edge12:      true,
         firefox38:   true,
         chrome47:    flag,
+        chrome48:    true,
         node4:       flag,
       },
     },
@@ -1477,6 +1492,7 @@ exports.tests = [
         edge12:      true,
         firefox16:   true,
         chrome44:    flag,
+        chrome48:    true,
         node4:       flag,
       },
     },
@@ -8594,6 +8610,7 @@ exports.tests = [
         rhino17:     true,
         android40:   true,
         android41:   false,
+        chrome48:    true,
       },
     },
     {
@@ -9492,6 +9509,7 @@ exports.tests = [
       res: {
         typescript: typescript.fallthrough,
         ejs:        true,
+        chrome48:    true,
       },
     },
     {
@@ -11845,13 +11863,13 @@ exports.tests = [
         try {
           Date.prototype.valueOf(); return false;
         } catch(e) {}
-        
+
         if (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {
             return Object.prototype.toString.call(E.prototype) === '[object Object]';
         })) {
           return false;
         }
-        
+
         return true;
       */},
       res: {
