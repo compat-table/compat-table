@@ -2333,7 +2333,7 @@ exports.tests = [
       */},
       res: {
         webkit:      true,
-        chrome46:    flag,
+        chrome46:    strict,
         edge13:      true,
       },
     },
@@ -2499,7 +2499,7 @@ exports.tests = [
       */},
       res: {
         webkit:      true,
-        chrome46:    flag,
+        chrome46:    strict,
         edge13:      true,
       },
     },
