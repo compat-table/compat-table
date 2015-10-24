@@ -126,8 +126,8 @@ exports.browsers = {
     obsolete: true
   },
   opera12: {
-    full: 'Opera 12 (build 1065)',
-    short: 'OP 12',
+    full: 'Opera 11.60 (build 1185), Opera 11.64 (build 1403), Opera 12 (build 1065)',
+    short: 'OP 11.60-OP 12',
     obsolete: true
   },
   opera12_10: {
@@ -1001,7 +1001,11 @@ exports.tests = [
 
     opera10_10: false,
     opera10_50: false,
-    opera12: true,
+    opera12: {
+      val: true,
+      note_id: 'Date.prototype.toJSON-OP11_60-OP11_64',
+      note_html: 'In Opera 11.60-11.64 Date.prototype.toJSON is undefined.'
+    },
     opera12_10: true,
 
     konq43: true,
