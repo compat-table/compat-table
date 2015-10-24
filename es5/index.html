@@ -116,7 +116,7 @@
 <th class="platform chrome23 desktop" data-browser="chrome23"><a href="#chrome23" class="browser-name"><abbr title="Chrome 23+, Opera 15+">CH 23+,<br>OP 15+</abbr></a></th>
 <th class="platform opera10_10 desktop obsolete" data-browser="opera10_10"><a href="#opera10_10" class="browser-name"><abbr title="Opera 10.10">OP 10.1</abbr></a></th>
 <th class="platform opera10_50 desktop obsolete" data-browser="opera10_50"><a href="#opera10_50" class="browser-name"><abbr title="Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156), Opera 11.10 (build 2048), Opera 11.11 (build 2109), Opera 11.50 (build 1074)">OP 10.50-11.50</abbr></a></th>
-<th class="platform opera12 desktop obsolete" data-browser="opera12"><a href="#opera12" class="browser-name"><abbr title="Opera 12 (build 1065)">OP 12</abbr></a></th>
+<th class="platform opera12 desktop obsolete" data-browser="opera12"><a href="#opera12" class="browser-name"><abbr title="Opera 11.60 (build 1185), Opera 11.64 (build 1403), Opera 12 (build 1065)">OP 11.60-OP 12</abbr></a></th>
 <th class="platform opera12_10 desktop" data-browser="opera12_10"><a href="#opera12_10" class="browser-name"><abbr title="Opera 12.15">OP 12.10</abbr></a></th>
 <th class="platform konq43 desktop obsolete" data-browser="konq43"><a href="#konq43" class="browser-name"><abbr title="Konqueror 4.3">Konq 4.3</abbr></a></th>
 <th class="platform konq49 desktop obsolete" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.9">Konq 4.9</abbr></a></th>
@@ -818,7 +818,7 @@ try {
 <td class="yes" data-browser="chrome23">Yes</td>
 <td class="no obsolete" data-browser="opera10_10">No</td>
 <td class="no obsolete" data-browser="opera10_50">No</td>
-<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes obsolete" data-browser="opera12">Yes<a href="#Date.prototype.toJSON-OP11_60-OP11_64-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="opera12_10">Yes</td>
 <td class="yes obsolete" data-browser="konq43">Yes</td>
 <td class="yes obsolete" data-browser="konq49">Yes</td>
@@ -1147,7 +1147,7 @@ return typeof Array.prototype.every == &apos;function&apos;;
 function () {
 return typeof Array.prototype.every == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1190,7 +1190,7 @@ return typeof Array.prototype.some == &apos;function&apos;;
 function () {
 return typeof Array.prototype.some == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1233,7 +1233,7 @@ return typeof Array.prototype.forEach == &apos;function&apos;;
 function () {
 return typeof Array.prototype.forEach == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1276,7 +1276,7 @@ return typeof Array.prototype.map == &apos;function&apos;;
 function () {
 return typeof Array.prototype.map == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1319,7 +1319,7 @@ return typeof Array.prototype.filter == &apos;function&apos;;
 function () {
 return typeof Array.prototype.filter == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1362,7 +1362,7 @@ return typeof Array.prototype.reduce == &apos;function&apos;;
 function () {
 return typeof Array.prototype.reduce == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1405,7 +1405,7 @@ return typeof Array.prototype.reduceRight == &apos;function&apos;;
 function () {
 return typeof Array.prototype.reduceRight == 'function';
   }())</script></td>
-<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="es5shim">Yes<a href="#sparse_arrays-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes" data-browser="ie9">Yes</td>
@@ -1628,7 +1628,7 @@ return _\u200c\u200d;
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="no obsolete" data-browser="firefox3">No</td>
 <td class="no obsolete" data-browser="firefox3_5">No</td>
-<td class="yes obsolete" data-browser="firefox4">Yes<a href="#zero-width-char-note"><sup>[5]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox4">Yes<a href="#zero-width-char-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="firefox21">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1757,11 +1757,11 @@ return !this;
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no" data-browser="ie9">No</td>
-<td class="yes" data-browser="ie10">Yes<a href="#strict-mode-ie10-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="ie10">Yes<a href="#strict-mode-ie10-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="firefox3">No</td>
 <td class="no obsolete" data-browser="firefox3_5">No</td>
 <td class="yes obsolete" data-browser="firefox4">Yes</td>
-<td class="yes" data-browser="firefox21">Yes<a href="#strict-mode-ff21-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="firefox21">Yes<a href="#strict-mode-ff21-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
 <td class="no obsolete" data-browser="safari5">No</td>
@@ -1794,7 +1794,7 @@ return !this;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="sparse_arrays-note">  <sup>[4]</sup> Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays.</p><p id="zero-width-char-note">  <sup>[5]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[6]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p><p id="strict-mode-ff21-note">  <sup>[7]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
+    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="Date.prototype.toJSON-OP11_60-OP11_64-note">  <sup>[4]</sup> In Opera 11.60-11.64 Date.prototype.toJSON is undefined.</p><p id="sparse_arrays-note">  <sup>[5]</sup> Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays.</p><p id="zero-width-char-note">  <sup>[6]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[7]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p><p id="strict-mode-ff21-note">  <sup>[8]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
