@@ -368,7 +368,9 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   function footnoteHTML(obj) {
     if (obj && obj.note_id) {
       if (!footnoteIndex[obj.note_id]) {
-        footnoteIndex[obj.note_id] = obj.note_html;
+        if (obj.note_html) {
+          footnoteIndex[obj.note_id] = obj.note_html;
+        }
       }
       var num = Object.keys(footnoteIndex).indexOf(obj.note_id) + 1;
       return '<a href="#' + obj.note_id + '-note"><sup>[' + num + ']</sup></a>';
@@ -379,6 +381,9 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   function allFootnotes() {
     var ret = $('<p>');
     Object.keys(footnoteIndex).forEach(function(e,id) {
+      if (!(e in footnoteIndex)) {
+        console.error("There's no footnote with id '" + e + "'");
+      }
       ret.append('<p id="' + e + '-note">' +
       '\t<sup>[' + (id + 1) + ']</sup> ' + footnoteIndex[e] +
       '</p>');
