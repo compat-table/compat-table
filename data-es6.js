@@ -11468,19 +11468,32 @@ exports.tests = [
       name: 'for..in',
       exec: function () {/*
         var obj = {
+          // Non-negative integer names appear first in value order
           2:    true,
           0:    true,
           1:    true,
+          // Other string names appear in source order
           ' ':  true,
+          // Non-negative integers are sorted above other names
           9:    true,
           D:    true,
           B:    true,
+          // Negative integers are treated as other names
           '-1': true,
         };
+        // Other string names are added in order of creation
         obj.A = true;
+        // Non-negative integer names, conversely, ignore order of creation
         obj[3] = true;
+        // Having a total of 20+ properties doesn't affect property order
+        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
+        for (var i in a) {
+          obj[a[i]] = true;
+        }
+        // Object.defineProperty doesn't affect the above rules
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        // Deleting and reinserting a property doesn't preserve its position
         delete obj[2];
         obj[2] = true;
 
@@ -11488,7 +11501,7 @@ exports.tests = [
         for(var i in obj) {
           result += i;
         }
-        return result === "012349 DB-1AC";
+        return result === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
@@ -11511,16 +11524,20 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
+        for (var i in a) {
+          obj[a[i]] = true;
+        }
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
-        return Object.keys(obj).join('') === "012349 DB-1AC";
+        return Object.keys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
@@ -11543,21 +11560,23 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
+        for (var i in a) {
+          obj[a[i]] = true;
+        }
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
-        return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AC";
+        return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
-        chrome37:      true,
-        node4:         true,
         opera:         true,
         safari71_8:    true,
         webkit:        true,
@@ -11582,10 +11601,14 @@ exports.tests = [
           9:    f(9),
           D:    f('D'),
           B:    f('B'),
-          '-1': f('-1'),
+          '-1': f('-1')
         });
         Object.defineProperty(obj,'A',f('A'));
         Object.defineProperty(obj,'3',f('3'));
+        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
+        for (var i in a) {
+          obj[a[i]] = f(a[i]);
+        }
         Object.defineProperty(obj,'C',f('C'));
         Object.defineProperty(obj,'4',f('4'));
         delete obj[2];
@@ -11593,13 +11616,12 @@ exports.tests = [
 
         Object.assign({}, obj);
 
-        return result === "012349 DB-1AC";
+        return result === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         edge12:      { val: true, note_id: 'ie_property_order' },
         safari9:     true,
         webkit:      true,
-        chrome45:    true,
         node4:       true,
       },
     },
@@ -11614,22 +11636,24 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
+        for (var i in a) {
+          obj[a[i]] = true;
+        }
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
         return JSON.stringify(obj) ===
-          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}';
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"E":true,"F":true,"G":true,"H":true,"I":true,"J":true,"K":true,"L":true,"A":true,"C":true}';
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
-        chrome:        true,
-        node012:       true,
         opera:         true,
         safari7:       true,
         webkit:        true,
@@ -11641,13 +11665,13 @@ exports.tests = [
       exec: function () {/*
         var result = '';
         JSON.parse(
-          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}',
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"E":true,"F":true,"G":true,"H":true,"I":true,"J":true,"K":true,"L":true,"A":true,"C":true}',
           function reviver(k,v) {
             result += k;
             return v;
           }
         );
-        return result === "012349 DB-1AC";
+        return result === "012349 DB-1EFGHIJKLAC";
       */},
       res: {
         ie10:          {
@@ -11675,16 +11699,20 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
+        for (var i in a) {
+          obj[a[i]] = true;
+        }
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
-        return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
+        return Reflect.ownKeys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
