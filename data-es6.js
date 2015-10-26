@@ -516,6 +516,7 @@ exports.tests = [
         },
         babel:       true,
         typescript:  typescript.fallthrough,
+        webkit:      true,
       },
     },
     {
@@ -538,7 +539,8 @@ exports.tests = [
       */},
       res: {
         tr:          { val: flag, note_id: 'tr-tco' },
-        typescript:  typescript.fallthrough
+        typescript:  typescript.fallthrough,
+        webkit:      true,
       },
     }
   ]
