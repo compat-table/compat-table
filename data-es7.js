@@ -274,6 +274,21 @@ exports.tests = [
   ],
 },
 {
+  name: 'do expression',
+  category: 'strawman',
+  significance: 'small',
+  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
+  exec: function () {/*
+    return do { 
+      let x = 23;
+      x + 19;
+    } === 42;
+  */},
+  res: {
+    babel:       true,
+  }
+},
+{
   name: 'function.sent',
   category: 'draft',
   significance: 'small',
