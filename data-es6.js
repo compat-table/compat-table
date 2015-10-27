@@ -11605,10 +11605,6 @@ exports.tests = [
         });
         Object.defineProperty(obj,'A',f('A'));
         Object.defineProperty(obj,'3',f('3'));
-        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
-        for (var i in a) {
-          obj[a[i]] = f(a[i]);
-        }
         Object.defineProperty(obj,'C',f('C'));
         Object.defineProperty(obj,'4',f('4'));
         delete obj[2];
@@ -11616,7 +11612,14 @@ exports.tests = [
 
         Object.assign({}, obj);
 
-        return result === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
+        var obj2 = {};
+
+        "ABCDEFGHIJKLMNOPQRST".split('').forEach(function(key){
+          obj2[key] = true;
+        });
+
+        return result === "012349 DB-1AC"
+          && Object.keys(Object.assign({}, obj2)).join('') === "ABCDEFGHIJKLMNOPQRST";
       */},
       res: {
         edge12:      { val: true, note_id: 'ie_property_order' },

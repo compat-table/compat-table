@@ -43781,10 +43781,6 @@ var obj = Object.defineProperties({}, {
 });
 Object.defineProperty(obj,&apos;A&apos;,f(&apos;A&apos;));
 Object.defineProperty(obj,&apos;3&apos;,f(&apos;3&apos;));
-var a = &quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;);
-for (var i in a) {
-  obj[a[i]] = f(a[i]);
-}
 Object.defineProperty(obj,&apos;C&apos;,f(&apos;C&apos;));
 Object.defineProperty(obj,&apos;4&apos;,f(&apos;4&apos;));
 delete obj[2];
@@ -43792,8 +43788,15 @@ obj[2] = true;
 
 Object.assign({}, obj);
 
-return result === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("606");try{return Function("asyncTestPassed","\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1')\n});\nObject.defineProperty(obj,'A',f('A'));\nObject.defineProperty(obj,'3',f('3'));\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = f(a[i]);\n}\nObject.defineProperty(obj,'C',f('C'));\nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nreturn result === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("606");return Function("asyncTestPassed","'use strict';"+"\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1')\n});\nObject.defineProperty(obj,'A',f('A'));\nObject.defineProperty(obj,'3',f('3'));\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = f(a[i]);\n}\nObject.defineProperty(obj,'C',f('C'));\nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nreturn result === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+var obj2 = {};
+
+&quot;ABCDEFGHIJKLMNOPQRST&quot;.split(&apos;&apos;).forEach(function(key){
+  obj2[key] = true;
+});
+
+return result === &quot;012349 DB-1AC&quot;
+  &amp;&amp; Object.keys(Object.assign({}, obj2)).join(&apos;&apos;) === &quot;ABCDEFGHIJKLMNOPQRST&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("606");try{return Function("asyncTestPassed","\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1')\n});\nObject.defineProperty(obj,'A',f('A'));\nObject.defineProperty(obj,'3',f('3'));\nObject.defineProperty(obj,'C',f('C'));\nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nvar obj2 = {};\n\n\"ABCDEFGHIJKLMNOPQRST\".split('').forEach(function(key){\n  obj2[key] = true;\n});\n\nreturn result === \"012349 DB-1AC\"\n  && Object.keys(Object.assign({}, obj2)).join('') === \"ABCDEFGHIJKLMNOPQRST\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("606");return Function("asyncTestPassed","'use strict';"+"\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1')\n});\nObject.defineProperty(obj,'A',f('A'));\nObject.defineProperty(obj,'3',f('3'));\nObject.defineProperty(obj,'C',f('C'));\nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nvar obj2 = {};\n\n\"ABCDEFGHIJKLMNOPQRST\".split('').forEach(function(key){\n  obj2[key] = true;\n});\n\nreturn result === \"012349 DB-1AC\"\n  && Object.keys(Object.assign({}, obj2)).join('') === \"ABCDEFGHIJKLMNOPQRST\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
