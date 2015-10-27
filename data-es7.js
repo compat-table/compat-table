@@ -5,6 +5,7 @@ exports.target_file = 'es7/index.html';
 exports.skeleton_file = 'es7/skeleton.html';
 
 var flag = "flagged";
+/* jshint unused:false */
 var very = "very";
 var strict = "strict";
 
