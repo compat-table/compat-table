@@ -11486,10 +11486,9 @@ exports.tests = [
         // Non-negative integer names, conversely, ignore order of creation
         obj[3] = true;
         // Having a total of 20+ properties doesn't affect property order
-        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
-        for (var i in a) {
-          obj[a[i]] = true;
-        }
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         // Object.defineProperty doesn't affect the above rules
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
@@ -11528,10 +11527,9 @@ exports.tests = [
         };
         obj.A = true;
         obj[3] = true;
-        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
-        for (var i in a) {
-          obj[a[i]] = true;
-        }
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
@@ -11564,10 +11562,9 @@ exports.tests = [
         };
         obj.A = true;
         obj[3] = true;
-        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
-        for (var i in a) {
-          obj[a[i]] = true;
-        }
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
@@ -11643,10 +11640,9 @@ exports.tests = [
         };
         obj.A = true;
         obj[3] = true;
-        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
-        for (var i in a) {
-          obj[a[i]] = true;
-        }
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
@@ -11708,10 +11704,9 @@ exports.tests = [
         };
         obj.A = true;
         obj[3] = true;
-        var a = "EFGHIJKLMNOPQRSTUVWXYZ".split('');
-        for (var i in a) {
-          obj[a[i]] = true;
-        }
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];

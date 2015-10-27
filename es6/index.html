@@ -43500,10 +43500,9 @@ obj.A = true;
 // Non-negative integer names, conversely, ignore order of creation
 obj[3] = true;
 // Having a total of 20+ properties doesn&apos;t affect property order
-var a = &quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;);
-for (var i in a) {
-  obj[a[i]] = true;
-}
+&quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;).forEach(function(key){
+  obj[key] = true;
+});
 // Object.defineProperty doesn&apos;t affect the above rules
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
@@ -43516,7 +43515,7 @@ for(var i in obj) {
   result += i;
 }
 return result === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("603");try{return Function("asyncTestPassed","\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2:    true,\n  0:    true,\n  1:    true,\n  // Other string names appear in source order\n  ' ':  true,\n  // Non-negative integers are sorted above other names\n  9:    true,\n  D:    true,\n  B:    true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar result = '';\nfor(var i in obj) {\n  result += i;\n}\nreturn result === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("603");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2:    true,\n  0:    true,\n  1:    true,\n  // Other string names appear in source order\n  ' ':  true,\n  // Non-negative integers are sorted above other names\n  9:    true,\n  D:    true,\n  B:    true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar result = '';\nfor(var i in obj) {\n  result += i;\n}\nreturn result === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("603");try{return Function("asyncTestPassed","\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2:    true,\n  0:    true,\n  1:    true,\n  // Other string names appear in source order\n  ' ':  true,\n  // Non-negative integers are sorted above other names\n  9:    true,\n  D:    true,\n  B:    true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar result = '';\nfor(var i in obj) {\n  result += i;\n}\nreturn result === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("603");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2:    true,\n  0:    true,\n  1:    true,\n  // Other string names appear in source order\n  ' ':  true,\n  // Non-negative integers are sorted above other names\n  9:    true,\n  D:    true,\n  B:    true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar result = '';\nfor(var i in obj) {\n  result += i;\n}\nreturn result === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -43595,17 +43594,16 @@ var obj = {
 };
 obj.A = true;
 obj[3] = true;
-var a = &quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;);
-for (var i in a) {
-  obj[a[i]] = true;
-}
+&quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;).forEach(function(key){
+  obj[key] = true;
+});
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
 delete obj[2];
 obj[2] = true;
 
 return Object.keys(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("604");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.keys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("604");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.keys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("604");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.keys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("604");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.keys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -43684,17 +43682,16 @@ var obj = {
 };
 obj.A = true;
 obj[3] = true;
-var a = &quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;);
-for (var i in a) {
-  obj[a[i]] = true;
-}
+&quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;).forEach(function(key){
+  obj[key] = true;
+});
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
 delete obj[2];
 obj[2] = true;
 
 return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("605");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("605");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("605");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("605");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -43875,10 +43872,9 @@ var obj = {
 };
 obj.A = true;
 obj[3] = true;
-var a = &quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;);
-for (var i in a) {
-  obj[a[i]] = true;
-}
+&quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;).forEach(function(key){
+  obj[key] = true;
+});
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
 delete obj[2];
@@ -43886,7 +43882,7 @@ obj[2] = true;
 
 return JSON.stringify(obj) ===
   &apos;{&quot;0&quot;:true,&quot;1&quot;:true,&quot;2&quot;:true,&quot;3&quot;:true,&quot;4&quot;:true,&quot;9&quot;:true,&quot; &quot;:true,&quot;D&quot;:true,&quot;B&quot;:true,&quot;-1&quot;:true,&quot;A&quot;:true,&quot;E&quot;:true,&quot;F&quot;:true,&quot;G&quot;:true,&quot;H&quot;:true,&quot;I&quot;:true,&quot;J&quot;:true,&quot;K&quot;:true,&quot;L&quot;:true,&quot;M&quot;:true,&quot;N&quot;:true,&quot;O&quot;:true,&quot;P&quot;:true,&quot;Q&quot;:true,&quot;R&quot;:true,&quot;S&quot;:true,&quot;T&quot;:true,&quot;U&quot;:true,&quot;V&quot;:true,&quot;W&quot;:true,&quot;X&quot;:true,&quot;Y&quot;:true,&quot;Z&quot;:true,&quot;C&quot;:true}&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("607");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("607");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("607");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("607");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -44041,17 +44037,16 @@ var obj = {
 };
 obj.A = true;
 obj[3] = true;
-var a = &quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;);
-for (var i in a) {
-  obj[a[i]] = true;
-}
+&quot;EFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&apos;&apos;).forEach(function(key){
+  obj[key] = true;
+});
 Object.defineProperty(obj, &apos;C&apos;, { value: true, enumerable: true });
 Object.defineProperty(obj, &apos;4&apos;, { value: true, enumerable: true });
 delete obj[2];
 obj[2] = true;
 
 return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("609");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("609");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\nvar a = \"EFGHIJKLMNOPQRSTUVWXYZ\".split('');\nfor (var i in a) {\n  obj[a[i]] = true;\n}\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("609");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("609");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[24]</sup></a></td>
