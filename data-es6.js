@@ -11582,41 +11582,32 @@ exports.tests = [
     {
       name: 'Object.assign',
       exec: function () {/*
-        function f(key) {
-          return {
-            get: function() { result += key; return true; },
-            set: Object,
-            enumerable: true
-          };
-        };
         var result = '';
-        var obj = Object.defineProperties({}, {
-          2:    f(2),
-          0:    f(0),
-          1:    f(1),
-          ' ':  f(' '),
-          9:    f(9),
-          D:    f('D'),
-          B:    f('B'),
-          '-1': f('-1')
+        var target = {};
+
+        "012349 DBACEFGHIJKLMNOPQRST".split('').concat(-1).forEach(function(key){
+          Object.defineProperty(target, key, {
+            set: function(){
+              result += key;
+            }
+          })
         });
-        Object.defineProperty(obj,'A',f('A'));
-        Object.defineProperty(obj,'3',f('3'));
-        Object.defineProperty(obj,'C',f('C'));
-        Object.defineProperty(obj,'4',f('4'));
+
+        var obj = {2: 2, 0: 0, 1: 1, ' ': ' ', 9: 9, D: 'D', B: 'B', '-1': '-1'};
+        Object.defineProperty(obj, 'A', {value: 'A',  enumerable: true});
+        Object.defineProperty(obj, '3', {value: '3',  enumerable: true});
+        Object.defineProperty(obj, 'C', {value: 'C',  enumerable: true});
+        Object.defineProperty(obj, '4', {value: '4',  enumerable: true});
         delete obj[2];
         obj[2] = true;
 
-        Object.assign({}, obj);
-
-        var obj2 = {};
-
-        "ABCDEFGHIJKLMNOPQRST".split('').forEach(function(key){
-          obj2[key] = true;
+        "EFGHIJKLMNOPQRST".split('').forEach(function(key){
+          obj[key] = key;
         });
 
-        return result === "012349 DB-1AC"
-          && Object.keys(Object.assign({}, obj2)).join('') === "ABCDEFGHIJKLMNOPQRST";
+        Object.assign(target, obj);
+
+        return result === "012349 DB-1ACEFGHIJKLMNOPQRST";
       */},
       res: {
         edge12:      { val: true, note_id: 'ie_property_order' },

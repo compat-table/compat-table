@@ -43758,42 +43758,33 @@ return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 DB-1A
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="own_property_order" id="test-own_property_order_Object.assign"><td><span><a class="anchor" href="#test-own_property_order_Object.assign">&#xA7;</a>Object.assign</span><script data-source="
-function f(key) {
-  return {
-    get: function() { result += key; return true; },
-    set: Object,
-    enumerable: true
-  };
-};
 var result = &apos;&apos;;
-var obj = Object.defineProperties({}, {
-  2:    f(2),
-  0:    f(0),
-  1:    f(1),
-  &apos; &apos;:  f(&apos; &apos;),
-  9:    f(9),
-  D:    f(&apos;D&apos;),
-  B:    f(&apos;B&apos;),
-  &apos;-1&apos;: f(&apos;-1&apos;)
+var target = {};
+
+&quot;012349 DBACEFGHIJKLMNOPQRST&quot;.split(&apos;&apos;).concat(-1).forEach(function(key){
+  Object.defineProperty(target, key, {
+    set: function(){
+      result += key;
+    }
+  })
 });
-Object.defineProperty(obj,&apos;A&apos;,f(&apos;A&apos;));
-Object.defineProperty(obj,&apos;3&apos;,f(&apos;3&apos;));
-Object.defineProperty(obj,&apos;C&apos;,f(&apos;C&apos;));
-Object.defineProperty(obj,&apos;4&apos;,f(&apos;4&apos;));
+
+var obj = {2: 2, 0: 0, 1: 1, &apos; &apos;: &apos; &apos;, 9: 9, D: &apos;D&apos;, B: &apos;B&apos;, &apos;-1&apos;: &apos;-1&apos;};
+Object.defineProperty(obj, &apos;A&apos;, {value: &apos;A&apos;,  enumerable: true});
+Object.defineProperty(obj, &apos;3&apos;, {value: &apos;3&apos;,  enumerable: true});
+Object.defineProperty(obj, &apos;C&apos;, {value: &apos;C&apos;,  enumerable: true});
+Object.defineProperty(obj, &apos;4&apos;, {value: &apos;4&apos;,  enumerable: true});
 delete obj[2];
 obj[2] = true;
 
-Object.assign({}, obj);
-
-var obj2 = {};
-
-&quot;ABCDEFGHIJKLMNOPQRST&quot;.split(&apos;&apos;).forEach(function(key){
-  obj2[key] = true;
+&quot;EFGHIJKLMNOPQRST&quot;.split(&apos;&apos;).forEach(function(key){
+  obj[key] = key;
 });
 
-return result === &quot;012349 DB-1AC&quot;
-  &amp;&amp; Object.keys(Object.assign({}, obj2)).join(&apos;&apos;) === &quot;ABCDEFGHIJKLMNOPQRST&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("606");try{return Function("asyncTestPassed","\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1')\n});\nObject.defineProperty(obj,'A',f('A'));\nObject.defineProperty(obj,'3',f('3'));\nObject.defineProperty(obj,'C',f('C'));\nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nvar obj2 = {};\n\n\"ABCDEFGHIJKLMNOPQRST\".split('').forEach(function(key){\n  obj2[key] = true;\n});\n\nreturn result === \"012349 DB-1AC\"\n  && Object.keys(Object.assign({}, obj2)).join('') === \"ABCDEFGHIJKLMNOPQRST\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("606");return Function("asyncTestPassed","'use strict';"+"\nfunction f(key) {\n  return {\n    get: function() { result += key; return true; },\n    set: Object,\n    enumerable: true\n  };\n};\nvar result = '';\nvar obj = Object.defineProperties({}, {\n  2:    f(2),\n  0:    f(0),\n  1:    f(1),\n  ' ':  f(' '),\n  9:    f(9),\n  D:    f('D'),\n  B:    f('B'),\n  '-1': f('-1')\n});\nObject.defineProperty(obj,'A',f('A'));\nObject.defineProperty(obj,'3',f('3'));\nObject.defineProperty(obj,'C',f('C'));\nObject.defineProperty(obj,'4',f('4'));\ndelete obj[2];\nobj[2] = true;\n\nObject.assign({}, obj);\n\nvar obj2 = {};\n\n\"ABCDEFGHIJKLMNOPQRST\".split('').forEach(function(key){\n  obj2[key] = true;\n});\n\nreturn result === \"012349 DB-1AC\"\n  && Object.keys(Object.assign({}, obj2)).join('') === \"ABCDEFGHIJKLMNOPQRST\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+Object.assign(target, obj);
+
+return result === &quot;012349 DB-1ACEFGHIJKLMNOPQRST&quot;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("606");try{return Function("asyncTestPassed","\nvar result = '';\nvar target = {};\n\n\"012349 DBACEFGHIJKLMNOPQRST\".split('').concat(-1).forEach(function(key){\n  Object.defineProperty(target, key, {\n    set: function(){\n      result += key;\n    }\n  })\n});\n\nvar obj = {2: 2, 0: 0, 1: 1, ' ': ' ', 9: 9, D: 'D', B: 'B', '-1': '-1'};\nObject.defineProperty(obj, 'A', {value: 'A',  enumerable: true});\nObject.defineProperty(obj, '3', {value: '3',  enumerable: true});\nObject.defineProperty(obj, 'C', {value: 'C',  enumerable: true});\nObject.defineProperty(obj, '4', {value: '4',  enumerable: true});\ndelete obj[2];\nobj[2] = true;\n\n\"EFGHIJKLMNOPQRST\".split('').forEach(function(key){\n  obj[key] = key;\n});\n\nObject.assign(target, obj);\n\nreturn result === \"012349 DB-1ACEFGHIJKLMNOPQRST\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("606");return Function("asyncTestPassed","'use strict';"+"\nvar result = '';\nvar target = {};\n\n\"012349 DBACEFGHIJKLMNOPQRST\".split('').concat(-1).forEach(function(key){\n  Object.defineProperty(target, key, {\n    set: function(){\n      result += key;\n    }\n  })\n});\n\nvar obj = {2: 2, 0: 0, 1: 1, ' ': ' ', 9: 9, D: 'D', B: 'B', '-1': '-1'};\nObject.defineProperty(obj, 'A', {value: 'A',  enumerable: true});\nObject.defineProperty(obj, '3', {value: '3',  enumerable: true});\nObject.defineProperty(obj, 'C', {value: 'C',  enumerable: true});\nObject.defineProperty(obj, '4', {value: '4',  enumerable: true});\ndelete obj[2];\nobj[2] = true;\n\n\"EFGHIJKLMNOPQRST\".split('').forEach(function(key){\n  obj[key] = key;\n});\n\nObject.assign(target, obj);\n\nreturn result === \"012349 DB-1ACEFGHIJKLMNOPQRST\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
