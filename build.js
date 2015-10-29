@@ -60,7 +60,7 @@ process.nextTick(function () {
     fs.mkdirSync('es7/compilers');
   }
   var closure     = require('closurecompiler');
-  var babel       = require('babel');
+  var babel       = require('babel-core');
   var traceur     = require('traceur');
   var esdown      = require('esdown');
   var jstransform = require('jstransform/simple');
@@ -105,16 +105,16 @@ process.nextTick(function () {
       target_file: 'es6/compilers/babel.html',
       polyfills: [],
       compiler: function(code) {
-        return babel.transform(code).code;
+        return babel.transform(code, {presets: ['es2015']}).code;
       },
     },
     {
       name: 'babel + polyfill',
       url: 'https://babeljs.io/',
       target_file: 'es6/compilers/babel-polyfill.html',
-      polyfills: ['node_modules/babel-core/browser-polyfill.js'],
+      polyfills: ['node_modules/babel-polyfill/browser.js'],
       compiler: function(code) {
-        return babel.transform(code).code;
+        return babel.transform(code, {presets: ['es2015']}).code;
       },
     },
     {
