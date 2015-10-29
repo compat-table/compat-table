@@ -419,6 +419,12 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
   },
+  node5:  {
+    full: 'Node.js',
+    short: 'Node<br>5.0',
+    platformtype: 'engine',
+    note_id: 'harmony-flag',
+  },
   ejs: {
     full: 'Echo JS',
     short: 'Echo JS',
@@ -828,6 +834,7 @@ exports.tests = [
         firefox41:    true,
         chrome46:     true,
         edge13:       true,
+        node5:        true,
       },
     },
   ],
@@ -1526,6 +1533,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1546,6 +1554,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1569,6 +1578,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1585,6 +1595,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
         edge13:      flag,
       },
     },
@@ -1602,6 +1613,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1619,6 +1631,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1635,6 +1648,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1652,6 +1666,7 @@ exports.tests = [
         edge12:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1669,6 +1684,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      flag,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1685,6 +1701,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      flag,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1707,6 +1724,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1726,6 +1744,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1743,6 +1762,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1761,6 +1781,7 @@ exports.tests = [
         chrome46:    true,
         webkit:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1784,6 +1805,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
   ]
@@ -2337,6 +2359,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
   ],
@@ -2503,6 +2526,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
     {
@@ -3738,6 +3762,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -3761,6 +3786,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         edge13:      flag,
+        node5:       true,
       },
     },
     {
@@ -3784,6 +3810,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -3807,6 +3834,7 @@ exports.tests = [
       res: {
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
     {
@@ -3828,6 +3856,7 @@ exports.tests = [
       res: {
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
   ],
@@ -9209,6 +9238,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       }
     },
     {
@@ -9229,6 +9259,7 @@ exports.tests = [
         firefox41:   true,
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       }
     },
   ]
@@ -11132,6 +11163,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         edge13:      true,
+        node5:       strict,
       },
     },
     {
@@ -11147,6 +11179,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         edge13:      true,
+        node5:       strict,
       },
     },
   ],
@@ -11280,6 +11313,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
     {
@@ -11295,6 +11329,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
     {
@@ -11322,6 +11357,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
     {
@@ -11349,6 +11385,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
   ],
@@ -11613,7 +11650,6 @@ exports.tests = [
         edge12:      { val: true, note_id: 'ie_property_order' },
         safari9:     true,
         webkit:      true,
-        node4:       true,
       },
     },
     {
