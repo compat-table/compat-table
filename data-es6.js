@@ -8726,7 +8726,11 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        babel:       { val: false, note_id: "name-configurable", },
+        babel:       {
+          val: false,
+          note_id: "name-configurable",
+          note_html: 'Requires function "name" properties to be natively configurable',
+        },
         edge12:      flag,
         edge13:      true,
         chrome43:    strict,
@@ -8740,11 +8744,7 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        babel:       {
-          val: false,
-          note_id: "name-configurable",
-          note_html: 'Requires function "name" properties to be natively configurable',
-        },
+        babel:       { val: false, note_id: "name-configurable" },
         edge12:      flag,
         edge13:      true,
         chrome43:    strict,
@@ -8762,7 +8762,7 @@ exports.tests = [
                typeof qux.name === "function";
       */},
       res: {
-        babel:       true,
+        babel:       { val: false, note_id: "name-configurable" },
         edge12:      flag,
         edge13:      true,
       },

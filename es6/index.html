@@ -28929,7 +28929,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-function_name_property"><span><a class="anchor" href="#test-function_name_property">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">function &quot;name&quot; property</a></span></td>
 <td data-browser="tr" class="tally" data-tally="0">0/17</td>
-<td data-browser="babel" class="tally" data-tally="0.5882352941176471" style="background-color:hsl(70,60%,50%)">10/17</td>
+<td data-browser="babel" class="tally" data-tally="0.5294117647058824" style="background-color:hsl(63,62%,50%)">9/17</td>
 <td data-browser="es6tr" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="closure" class="tally" data-tally="0">0/17</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/17</td>
@@ -29704,7 +29704,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("408");try{return Function("asyncTestPassed","\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("408");return Function("asyncTestPassed","'use strict';"+"\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[0]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
@@ -29846,7 +29846,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("410");try{return Function("asyncTestPassed","\nvar foo = class {};\nvar bar = class baz {};\nvar qux = class { static name() {} };\nreturn foo.name === \"foo\" &&\n       bar.name === \"baz\" &&\n       typeof qux.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("410");return Function("asyncTestPassed","'use strict';"+"\nvar foo = class {};\nvar bar = class baz {};\nvar qux = class { static name() {} };\nreturn foo.name === \"foo\" &&\n       bar.name === \"baz\" &&\n       typeof qux.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
