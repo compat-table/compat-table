@@ -248,7 +248,8 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true
+        babel: true,
+        edge13: flag,
       }
     },
     {
@@ -519,6 +520,7 @@ exports.tests = [
   */},
   res : {
     chrome41:  true,
+    edge13:    flag,
   }
 },
 {
@@ -545,6 +547,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -554,6 +557,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -563,6 +567,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -581,6 +586,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -617,6 +623,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -626,6 +633,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -671,6 +679,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -680,6 +689,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -689,6 +699,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -698,6 +709,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -707,6 +719,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -716,6 +729,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -725,6 +739,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -734,6 +749,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -743,6 +759,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -752,6 +769,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -770,6 +788,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -788,6 +807,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -806,6 +826,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -833,6 +854,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -842,6 +864,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -887,6 +910,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -896,6 +920,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -905,6 +930,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -914,6 +940,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -923,6 +950,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -932,6 +960,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -941,6 +970,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -950,6 +980,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -968,6 +999,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -1287,6 +1319,7 @@ exports.tests = [
     }
   */},
   res: {
+      edge13: true,
   }
 },
 {
@@ -1317,6 +1350,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    edge13:      flag,
   }
 }
 ];

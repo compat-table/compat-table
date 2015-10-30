@@ -168,7 +168,7 @@
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="edge12" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.5">0/2</td>
 <td data-browser="node4" class="tally" data-tally="0">0/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -209,7 +209,7 @@ return 2 ** 3 !== 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -503,7 +503,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/50</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/50</td>
 <td data-browser="edge12" class="tally" data-tally="0" data-flagged-tally="0.02">0/50</td>
-<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.02">0/50</td>
+<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.62">0/50</td>
 <td data-browser="node4" class="tally" data-tally="0">0/50</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/50</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/50</td>
@@ -585,7 +585,7 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -626,7 +626,7 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -667,7 +667,7 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -749,7 +749,7 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -913,7 +913,7 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -954,7 +954,7 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1159,7 +1159,7 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1200,7 +1200,7 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1241,7 +1241,7 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1282,7 +1282,7 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1323,7 +1323,7 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1364,7 +1364,7 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1405,7 +1405,7 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1446,7 +1446,7 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1487,7 +1487,7 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1528,7 +1528,7 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1610,7 +1610,7 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1692,7 +1692,7 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1774,7 +1774,7 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1897,7 +1897,7 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1938,7 +1938,7 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2143,7 +2143,7 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2184,7 +2184,7 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2225,7 +2225,7 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2266,7 +2266,7 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2307,7 +2307,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2348,7 +2348,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2389,7 +2389,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2430,7 +2430,7 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2512,7 +2512,7 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3151,7 +3151,7 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -4043,7 +4043,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -4131,7 +4131,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
