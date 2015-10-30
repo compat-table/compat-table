@@ -12021,7 +12021,6 @@ exports.tests = [
     return a === 3;
   */},
   res: {
-    ie10:        true,
     firefox11:   true,
     chrome:      true,
     safari51:    true,
