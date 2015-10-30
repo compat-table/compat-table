@@ -177,11 +177,6 @@ exports.browsers = {
     short: 'IE 10',
     obsolete: false // no EOL any time soon
   },
-  ie11: {
-    full: 'Internet Explorer',
-    short: 'IE 11',
-    obsolete: false
-  },
   edge12: {
     full: 'Internet Explorer, Microsoft Edge',
     short: 'Edge 12',
