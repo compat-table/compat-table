@@ -33,17 +33,6 @@ exports.browsers = {
     short: 'es7-shim',
     platformtype: 'compiler',
   },
-  ie11: {
-    full: 'Internet Explorer',
-    short: 'IE 10-11',
-    obsolete: false // no EOL any time soon
-  },
-  edge: {
-    full: 'Internet Explorer, Microsoft Edge',
-    short: 'Edge 12',
-    note_id: 'edge-experimental-flag',
-    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
-  },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
@@ -172,9 +161,9 @@ exports.browsers = {
     obsolete: true,
     platformtype: 'engine',
   },
-  ie10: {
+  ie11: {
     full: 'Internet Explorer',
-    short: 'IE 10',
+    short: 'IE 10-11',
     obsolete: false // no EOL any time soon
   },
   edge12: {
