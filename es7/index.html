@@ -99,6 +99,9 @@
 <th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel">Babel +<br><nobr>core-js</nobr></abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr></a></th>
 <th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
+<th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 10-11</abbr></a></th>
+<th class="platform edge12 desktop" data-browser="edge12"><a href="#edge12" class="browser-name"><abbr title="Internet Explorer, Microsoft Edge">Edge 12</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
+<th class="platform edge13 desktop" data-browser="edge13"><a href="#edge13" class="browser-name"><abbr title="Internet Explorer, Microsoft Edge for preview Builds">Edge 13</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
 <th class="platform firefox31 desktop obsolete" data-browser="firefox31"><a href="#firefox31" class="browser-name"><abbr title="Firefox">FF 31</abbr></a></th>
 <th class="platform firefox32 desktop obsolete" data-browser="firefox32"><a href="#firefox32" class="browser-name"><abbr title="Firefox">FF 32</abbr></a></th>
 <th class="platform firefox34 desktop obsolete" data-browser="firefox34"><a href="#firefox34" class="browser-name"><abbr title="Firefox">FF34</abbr></a></th>
@@ -120,9 +123,6 @@
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r184046">WK</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node.js">Node 0.12</abbr></a></th>
 <th class="platform iojs engine obsolete" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="Node.js, io.js">io.js</abbr></a></th>
-<th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 10-11</abbr></a></th>
-<th class="platform edge12 desktop" data-browser="edge12"><a href="#edge12" class="browser-name"><abbr title="Internet Explorer, Microsoft Edge">Edge 12</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
-<th class="platform edge13 desktop" data-browser="edge13"><a href="#edge13" class="browser-name"><abbr title="Internet Explorer, Microsoft Edge for preview Builds">Edge 13</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
 <th class="platform node4 engine" data-browser="node4"><a href="#node4" class="browser-name"><abbr title="Node.js">Node 4.0</abbr></a></th>
 <th class="platform android40 mobile obsolete" data-browser="android40"><a href="#android40" class="browser-name"><abbr title="Android Browser">Android 4.0</abbr></a></th>
 <th class="platform android41 mobile obsolete" data-browser="android41"><a href="#android41" class="browser-name"><abbr title="Android Browser">Android 4.1 - 4.3</abbr></a></th>
@@ -141,6 +141,9 @@
 <td data-browser="babel" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.5">0/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
@@ -162,9 +165,6 @@
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/2</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.5">0/2</td>
 <td data-browser="node4" class="tally" data-tally="0">0/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -180,6 +180,9 @@ return 2 ** 3 !== 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -201,9 +204,6 @@ return 2 ** 3 !== 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -224,6 +224,9 @@ try {
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -245,9 +248,6 @@ try {
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -267,6 +267,9 @@ return [1, 2, 3].includes(1)
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -288,9 +291,6 @@ return [1, 2, 3].includes(1)
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -303,6 +303,9 @@ return [1, 2, 3].includes(1)
 <td data-browser="babel" class="tally" data-tally="1">3/3</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/3</td>
 <td data-browser="es7shim" class="tally" data-tally="0">0/3</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/3</td>
+<td data-browser="edge12" class="tally" data-tally="0">0/3</td>
+<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="1">0/3</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/3</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/3</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/3</td>
@@ -324,9 +327,6 @@ return [1, 2, 3].includes(1)
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/3</td>
 <td data-browser="node" class="tally" data-tally="0">0/3</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/3</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/3</td>
-<td data-browser="edge12" class="tally" data-tally="0">0/3</td>
-<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="1">0/3</td>
 <td data-browser="node4" class="tally" data-tally="0">0/3</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/3</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/3</td>
@@ -344,6 +344,9 @@ return (async function(){
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -365,9 +368,6 @@ return (async function(){
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -385,6 +385,9 @@ return (async function(){
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -406,9 +409,6 @@ return (async function(){
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -424,6 +424,9 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -445,9 +448,6 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -460,6 +460,9 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td data-browser="babel" class="tally" data-tally="0">0/50</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/50</td>
 <td data-browser="es7shim" class="tally" data-tally="1">50/50</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/50</td>
+<td data-browser="edge12" class="tally" data-tally="0" data-flagged-tally="0.02">0/50</td>
+<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.62">0/50</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/50</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/50</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/50</td>
@@ -481,9 +484,6 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/50</td>
 <td data-browser="node" class="tally" data-tally="0">0/50</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/50</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/50</td>
-<td data-browser="edge12" class="tally" data-tally="0" data-flagged-tally="0.02">0/50</td>
-<td data-browser="edge13" class="tally" data-tally="0" data-flagged-tally="0.62">0/50</td>
 <td data-browser="node4" class="tally" data-tally="0">0/50</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/50</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/50</td>
@@ -499,6 +499,9 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no flagged" data-browser="edge12">Flag</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -520,9 +523,6 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -538,6 +538,9 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -559,9 +562,6 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -577,6 +577,9 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -598,9 +601,6 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -616,6 +616,9 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -637,9 +640,6 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -655,6 +655,9 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -676,9 +679,6 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -694,6 +694,9 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -715,9 +718,6 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -733,6 +733,9 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -754,9 +757,6 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -772,6 +772,9 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -793,9 +796,6 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -811,6 +811,9 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -832,9 +835,6 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -850,6 +850,9 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -871,9 +874,6 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -889,6 +889,9 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -910,9 +913,6 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -928,6 +928,9 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -949,9 +952,6 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -967,6 +967,9 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -988,9 +991,6 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1006,6 +1006,9 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1027,9 +1030,6 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1045,6 +1045,9 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1066,9 +1069,6 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1084,6 +1084,9 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1105,9 +1108,6 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1123,6 +1123,9 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1144,9 +1147,6 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1162,6 +1162,9 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1183,9 +1186,6 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1201,6 +1201,9 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1222,9 +1225,6 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1240,6 +1240,9 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1261,9 +1264,6 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1279,6 +1279,9 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1300,9 +1303,6 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1318,6 +1318,9 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1339,9 +1342,6 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1357,6 +1357,9 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1378,9 +1381,6 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1396,6 +1396,9 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1417,9 +1420,6 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1435,6 +1435,9 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1456,9 +1459,6 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1474,6 +1474,9 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1495,9 +1498,6 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1513,6 +1513,9 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1534,9 +1537,6 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1552,6 +1552,9 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1573,9 +1576,6 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1591,6 +1591,9 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1612,9 +1615,6 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1630,6 +1630,9 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1651,9 +1654,6 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1669,6 +1669,9 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1690,9 +1693,6 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1708,6 +1708,9 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1729,9 +1732,6 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1747,6 +1747,9 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1768,9 +1771,6 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1786,6 +1786,9 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1807,9 +1810,6 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1825,6 +1825,9 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1846,9 +1849,6 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1864,6 +1864,9 @@ return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1885,9 +1888,6 @@ return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1903,6 +1903,9 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1924,9 +1927,6 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1942,6 +1942,9 @@ return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -1963,9 +1966,6 @@ return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1981,6 +1981,9 @@ return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2002,9 +2005,6 @@ return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2020,6 +2020,9 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2041,9 +2044,6 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2059,6 +2059,9 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2080,9 +2083,6 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2098,6 +2098,9 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2119,9 +2122,6 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2137,6 +2137,9 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2158,9 +2161,6 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2176,6 +2176,9 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2197,9 +2200,6 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2215,6 +2215,9 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2236,9 +2239,6 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2254,6 +2254,9 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2275,9 +2278,6 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2293,6 +2293,9 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2314,9 +2317,6 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2332,6 +2332,9 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2353,9 +2356,6 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2371,6 +2371,9 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2392,9 +2395,6 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2410,6 +2410,9 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2431,9 +2434,6 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2446,6 +2446,9 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="es7shim" class="tally" data-tally="1">2/2</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge12" class="tally" data-tally="1">2/2</td>
+<td data-browser="edge13" class="tally" data-tally="1">2/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="1">2/2</td>
@@ -2467,10 +2470,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td data-browser="webkit" class="unstable tally" data-tally="1">2/2</td>
 <td data-browser="node" class="tally" data-tally="1">2/2</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="1">2/2</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge12" class="tally" data-tally="1">2/2</td>
-<td data-browser="edge13" class="tally" data-tally="1">2/2</td>
-<td data-browser="node4" class="tally" data-tally="0">0/2</td>
+<td data-browser="node4" class="tally" data-tally="1">2/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="android44" class="tally" data-tally="1">2/2</td>
@@ -2485,6 +2485,9 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes" data-browser="edge12">Yes</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox34">Yes</td>
@@ -2506,10 +2509,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="yes" data-browser="edge12">Yes</td>
-<td class="yes" data-browser="edge13">Yes</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -2524,6 +2524,9 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes" data-browser="edge12">Yes</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox34">Yes</td>
@@ -2545,10 +2548,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="yes" data-browser="edge12">Yes</td>
-<td class="yes" data-browser="edge13">Yes</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -2571,6 +2571,9 @@ return result === &apos;tromple&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2592,9 +2595,6 @@ return result === &apos;tromple&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2613,6 +2613,9 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2634,9 +2637,6 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2659,6 +2659,9 @@ return Array.isArray(e)
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2680,9 +2683,6 @@ return Array.isArray(e)
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2705,6 +2705,9 @@ obj.x = 2;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2726,10 +2729,7 @@ obj.x = 2;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2741,6 +2741,9 @@ obj.x = 2;
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
@@ -2762,9 +2765,6 @@ obj.x = 2;
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/2</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
 <td data-browser="node4" class="tally" data-tally="0">0/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -2780,6 +2780,9 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2801,9 +2804,6 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2819,6 +2819,9 @@ return Math.min(1,2,3,) === 1;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2840,9 +2843,6 @@ return Math.min(1,2,3,) === 1;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2859,6 +2859,9 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2880,9 +2883,6 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2900,6 +2900,9 @@ return O.a + O.b + O.c === 6;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes" data-browser="jsx">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2921,9 +2924,6 @@ return O.a + O.b + O.c === 6;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2941,6 +2941,9 @@ return typeof StructType === &quot;function&quot;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -2962,9 +2965,6 @@ return typeof StructType === &quot;function&quot;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2980,6 +2980,9 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3001,9 +3004,6 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3027,6 +3027,9 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3048,9 +3051,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3070,6 +3070,9 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3091,9 +3094,6 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3117,6 +3117,9 @@ return new C().x + C() === &apos;xy&apos;;
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3138,9 +3141,6 @@ return new C().x + C() === &apos;xy&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3153,6 +3153,9 @@ return new C().x + C() === &apos;xy&apos;;
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="es7shim" class="tally" data-tally="1">2/2</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
@@ -3174,9 +3177,6 @@ return new C().x + C() === &apos;xy&apos;;
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/2</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
 <td data-browser="node4" class="tally" data-tally="0">0/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -3195,6 +3195,9 @@ return &apos;hello&apos;.padLeft(10) === &apos;     hello&apos;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3216,9 +3219,6 @@ return &apos;hello&apos;.padLeft(10) === &apos;     hello&apos;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3237,6 +3237,9 @@ return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3258,9 +3261,6 @@ return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3275,6 +3275,9 @@ return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
 <td data-browser="babel" class="tally" data-tally="1">2/2</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/2</td>
 <td data-browser="es7shim" class="tally" data-tally="0">0/2</td>
+<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
+<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox34" class="obsolete tally" data-tally="0">0/2</td>
@@ -3296,9 +3299,6 @@ return &apos;hello&apos;.padRight(10) === &apos;hello     &apos;
 <td data-browser="webkit" class="unstable tally" data-tally="0">0/2</td>
 <td data-browser="node" class="tally" data-tally="0">0/2</td>
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/2</td>
-<td data-browser="ie11" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge12" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge13" class="tally" data-tally="0">0/2</td>
 <td data-browser="node4" class="tally" data-tally="0">0/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -3316,6 +3316,9 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3337,9 +3340,6 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3356,6 +3356,9 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3377,9 +3380,6 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3398,6 +3398,9 @@ return do {
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3419,9 +3422,6 @@ return do {
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3445,6 +3445,9 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3466,9 +3469,6 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3487,6 +3487,9 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3508,9 +3511,6 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3528,6 +3528,9 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3549,9 +3552,6 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3567,6 +3567,9 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3588,9 +3591,6 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3608,6 +3608,9 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3629,9 +3632,6 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3654,6 +3654,9 @@ return passed;
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3675,9 +3678,6 @@ return passed;
 <td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3693,6 +3693,9 @@ return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&ap
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3714,9 +3717,6 @@ return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&ap
 <td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3745,6 +3745,9 @@ return true;
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3766,9 +3769,6 @@ return true;
 <td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3784,6 +3784,9 @@ return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox31" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox32" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="firefox34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3805,9 +3808,6 @@ return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\
 <td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3832,6 +3832,9 @@ try {
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3853,9 +3856,6 @@ try {
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="yes" data-browser="edge13">Yes</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3876,6 +3876,9 @@ try {
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes" data-browser="edge12">Yes</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3897,9 +3900,6 @@ try {
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="yes" data-browser="edge12">Yes</td>
-<td class="yes" data-browser="edge13">Yes</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3916,6 +3916,9 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox34">No</td>
@@ -3937,9 +3940,6 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>

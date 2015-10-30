@@ -33,6 +33,23 @@ exports.browsers = {
     short: 'es7-shim',
     platformtype: 'compiler',
   },
+  ie11: {
+    full: 'Internet Explorer',
+    short: 'IE 10-11',
+    obsolete: false // no EOL any time soon
+  },
+  edge12: {
+    full: 'Internet Explorer, Microsoft Edge',
+    short: 'Edge 12',
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
+  edge13: {
+    full: 'Internet Explorer, Microsoft Edge for preview Builds',
+    short: 'Edge 13',
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
@@ -161,23 +178,6 @@ exports.browsers = {
     obsolete: true,
     platformtype: 'engine',
   },
-  ie11: {
-    full: 'Internet Explorer',
-    short: 'IE 10-11',
-    obsolete: false // no EOL any time soon
-  },
-  edge12: {
-    full: 'Internet Explorer, Microsoft Edge',
-    short: 'Edge 12',
-    note_id: 'edge-experimental-flag',
-    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
-  },
-  edge13: {
-    full: 'Internet Explorer, Microsoft Edge for preview Builds',
-    short: 'Edge 13',
-    note_id: 'edge-experimental-flag',
-    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
-  },
   node4: {
     full: 'Node.js',
     short: 'Node 4.0',
@@ -231,8 +231,8 @@ exports.tests = [
         return 2 ** 3 !== 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
       */},
       res: {
-        tr: true,
-        babel: true,
+        tr:     true,
+        babel:  true,
         edge13: flag,
       }
     },
@@ -324,7 +324,7 @@ exports.tests = [
     return Array.isArray(v) && String(v) === "foo,bar,baz";
   */},
   res: {
-    babel: true,
+    babel:   true,
     es7shim: true,
   }
 },
@@ -344,7 +344,7 @@ exports.tests = [
       && String(e[2]) === "c,baz";
   */},
   res: {
-    babel: true,
+    babel:   true,
     es7shim: true,
   }
 },
@@ -490,7 +490,7 @@ exports.tests = [
       && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
   */},
   res: {
-    babel: true,
+    babel:   true,
     es7shim: true,
   }
 },
@@ -519,9 +519,9 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        edge12:        flag,
-        firefox39:   true,
-        es7shim: true,
+        edge12:    flag,
+        firefox39: true,
+        es7shim:   true,
       }
     },
     {
@@ -1258,7 +1258,7 @@ exports.tests = [
       */},
       res: {
         babel:      true,
-        edge12:       true,
+        edge12:     true,
         firefox31:  true,
         chrome30:   true,
         node:       true,
@@ -1275,7 +1275,7 @@ exports.tests = [
       */},
       res: {
         babel:      true,
-        edge12:       true,
+        edge12:     true,
         firefox31:  true,
         chrome30:   true,
         node:       true,
@@ -1320,7 +1320,7 @@ exports.tests = [
     }
   */},
   res: {
-    edge12:       true,
+    edge12: true,
   }
 },
 {
