@@ -156,9 +156,15 @@ exports.browsers = {
     short: 'IE 11',
     obsolete: false
   },
-  edge: {
+  edge12: {
     full: 'Internet Explorer, Microsoft Edge',
-    short: 'Edge',
+    short: 'Edge 12',
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
+  edge13: {
+    full: 'Internet Explorer, Microsoft Edge for preview Builds',
+    short: 'Edge 13',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
@@ -395,6 +401,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge13:      flag,
       }
     },
     {
@@ -407,6 +414,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge13:      flag,
       }
     },
     {
@@ -417,6 +425,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge13:      flag,
       }
     }
   ]
@@ -478,7 +487,7 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        edge:        flag,
+        edge12:        flag,
         firefox39:   true,
         es7shim: true,
       }
@@ -1195,7 +1204,7 @@ exports.tests = [
       */},
       res: {
         babel:      true,
-        edge:       true,
+        edge12:       true,
         firefox31:  true,
         chrome30:   true,
         node:       true,
@@ -1212,7 +1221,7 @@ exports.tests = [
       */},
       res: {
         babel:      true,
-        edge:       true,
+        edge12:       true,
         firefox31:  true,
         chrome30:   true,
         node:       true,
@@ -1256,7 +1265,7 @@ exports.tests = [
     }
   */},
   res: {
-    edge:       true,
+    edge12:       true,
   }
 },
 {
