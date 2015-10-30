@@ -419,6 +419,12 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
   },
+  node5:  {
+    full: 'Node.js',
+    short: 'Node<br>5.0',
+    platformtype: 'engine',
+    note_id: 'harmony-flag',
+  },
   ejs: {
     full: 'Echo JS',
     short: 'Echo JS',
@@ -516,6 +522,7 @@ exports.tests = [
         },
         babel:       true,
         typescript:  typescript.fallthrough,
+        webkit:      true,
       },
     },
     {
@@ -538,7 +545,8 @@ exports.tests = [
       */},
       res: {
         tr:          { val: flag, note_id: 'tr-tco' },
-        typescript:  typescript.fallthrough
+        typescript:  typescript.fallthrough,
+        webkit:      true,
       },
     }
   ]
@@ -827,6 +835,7 @@ exports.tests = [
         firefox41:    true,
         chrome46:     true,
         edge13:       true,
+        node5:        true,
       },
     },
   ],
@@ -1525,6 +1534,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1545,6 +1555,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1568,6 +1579,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1584,6 +1596,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
         edge13:      true,
       },
     },
@@ -1601,6 +1614,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1618,6 +1632,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1634,6 +1649,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1651,6 +1667,7 @@ exports.tests = [
         edge12:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1669,6 +1686,7 @@ exports.tests = [
         edge12:      flag,
         node4:       flag,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -1686,6 +1704,7 @@ exports.tests = [
         edge12:      flag,
         node4:       flag,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -1708,6 +1727,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1727,6 +1747,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1744,6 +1765,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1762,6 +1784,7 @@ exports.tests = [
         chrome46:    true,
         webkit:      true,
         node4:       flag,
+        node5:       true,
       },
     },
     {
@@ -1785,6 +1808,7 @@ exports.tests = [
         chrome44:    flag,
         chrome46:    true,
         node4:       flag,
+        node5:       true,
       },
     },
   ]
@@ -2338,6 +2362,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
   ],
@@ -2504,6 +2529,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
     {
@@ -3762,6 +3788,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -3785,6 +3812,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -3808,6 +3836,7 @@ exports.tests = [
       res: {
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       },
     },
     {
@@ -3831,6 +3860,7 @@ exports.tests = [
       res: {
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
     {
@@ -3852,6 +3882,7 @@ exports.tests = [
       res: {
         chrome46:    strict,
         edge13:      true,
+        node5:       strict,
       },
     },
   ],
@@ -8764,7 +8795,11 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        babel:       { val: false, note_id: "name-configurable", },
+        babel:       {
+          val: false,
+          note_id: "name-configurable",
+          note_html: 'Requires function "name" properties to be natively configurable',
+        },
         edge12:      flag,
         edge13:      true,
         chrome43:    strict,
@@ -8778,11 +8813,7 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        babel:       {
-          val: false,
-          note_id: "name-configurable",
-          note_html: 'Requires function "name" properties to be natively configurable',
-        },
+        babel:       { val: false, note_id: "name-configurable" },
         edge12:      flag,
         edge13:      true,
         chrome43:    strict,
@@ -8800,7 +8831,7 @@ exports.tests = [
                typeof qux.name === "function";
       */},
       res: {
-        babel:       true,
+        babel:       { val: false, note_id: "name-configurable" },
         edge12:      flag,
         edge13:      true,
       },
@@ -9248,6 +9279,7 @@ exports.tests = [
         webkit:      true,
         chrome46:    true,
         edge13:      true,
+        node5:       true,
       }
     },
     {
@@ -9267,7 +9299,8 @@ exports.tests = [
       res: {
         firefox41:   true,
         chrome46:    true,
-        //edge13:      true, // not sure why
+        //edge13:      true,
+        node5:       true,
       }
     },
   ]
@@ -11175,6 +11208,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         edge13:      true,
+        node5:       strict,
       },
     },
     {
@@ -11190,6 +11224,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         edge13:      true,
+        node5:       strict,
       },
     },
   ],
@@ -11323,6 +11358,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
     {
@@ -11338,6 +11374,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
     {
@@ -11365,6 +11402,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
     {
@@ -11392,6 +11430,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         webkit:      true,
+        node5:       strict,
       },
     },
   ],
@@ -11511,19 +11550,31 @@ exports.tests = [
       name: 'for..in',
       exec: function () {/*
         var obj = {
+          // Non-negative integer names appear first in value order
           2:    true,
           0:    true,
           1:    true,
+          // Other string names appear in source order
           ' ':  true,
+          // Non-negative integers are sorted above other names
           9:    true,
           D:    true,
           B:    true,
+          // Negative integers are treated as other names
           '-1': true,
         };
+        // Other string names are added in order of creation
         obj.A = true;
+        // Non-negative integer names, conversely, ignore order of creation
         obj[3] = true;
+        // Having a total of 20+ properties doesn't affect property order
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
+        // Object.defineProperty doesn't affect the above rules
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
+        // Deleting and reinserting a property doesn't preserve its position
         delete obj[2];
         obj[2] = true;
 
@@ -11531,7 +11582,7 @@ exports.tests = [
         for(var i in obj) {
           result += i;
         }
-        return result === "012349 DB-1AC";
+        return result === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
@@ -11554,16 +11605,19 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
-        return Object.keys(obj).join('') === "012349 DB-1AC";
+        return Object.keys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
@@ -11586,21 +11640,22 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
-        return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AC";
+        return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
-        chrome37:      true,
-        node4:         true,
         opera:         true,
         safari71_8:    true,
         webkit:        true,
@@ -11609,41 +11664,37 @@ exports.tests = [
     {
       name: 'Object.assign',
       exec: function () {/*
-        function f(key) {
-          return {
-            get: function() { result += key; return true; },
-            set: Object,
-            enumerable: true
-          };
-        };
         var result = '';
-        var obj = Object.defineProperties({}, {
-          2:    f(2),
-          0:    f(0),
-          1:    f(1),
-          ' ':  f(' '),
-          9:    f(9),
-          D:    f('D'),
-          B:    f('B'),
-          '-1': f('-1'),
+        var target = {};
+
+        "012349 DBACEFGHIJKLMNOPQRST".split('').concat(-1).forEach(function(key){
+          Object.defineProperty(target, key, {
+            set: function(){
+              result += key;
+            }
+          })
         });
-        Object.defineProperty(obj,'A',f('A'));
-        Object.defineProperty(obj,'3',f('3'));
-        Object.defineProperty(obj,'C',f('C'));
-        Object.defineProperty(obj,'4',f('4'));
+
+        var obj = {2: 2, 0: 0, 1: 1, ' ': ' ', 9: 9, D: 'D', B: 'B', '-1': '-1'};
+        Object.defineProperty(obj, 'A', {value: 'A',  enumerable: true});
+        Object.defineProperty(obj, '3', {value: '3',  enumerable: true});
+        Object.defineProperty(obj, 'C', {value: 'C',  enumerable: true});
+        Object.defineProperty(obj, '4', {value: '4',  enumerable: true});
         delete obj[2];
         obj[2] = true;
 
-        Object.assign({}, obj);
+        "EFGHIJKLMNOPQRST".split('').forEach(function(key){
+          obj[key] = key;
+        });
 
-        return result === "012349 DB-1AC";
+        Object.assign(target, obj);
+
+        return result === "012349 DB-1ACEFGHIJKLMNOPQRST";
       */},
       res: {
         edge12:      { val: true, note_id: 'ie_property_order' },
         safari9:     true,
         webkit:      true,
-        chrome45:    true,
-        node4:       true,
       },
     },
     {
@@ -11657,17 +11708,20 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
         return JSON.stringify(obj) ===
-          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}';
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"E":true,"F":true,"G":true,"H":true,"I":true,"J":true,"K":true,"L":true,"M":true,"N":true,"O":true,"P":true,"Q":true,"R":true,"S":true,"T":true,"U":true,"V":true,"W":true,"X":true,"Y":true,"Z":true,"C":true}';
       */},
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
@@ -11684,13 +11738,13 @@ exports.tests = [
       exec: function () {/*
         var result = '';
         JSON.parse(
-          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"C":true}',
+          '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"E":true,"F":true,"G":true,"H":true,"I":true,"J":true,"K":true,"L":true,"A":true,"C":true}',
           function reviver(k,v) {
             result += k;
             return v;
           }
         );
-        return result === "012349 DB-1AC";
+        return result === "012349 DB-1EFGHIJKLAC";
       */},
       res: {
         ie10:          {
@@ -11718,16 +11772,19 @@ exports.tests = [
           9:    true,
           D:    true,
           B:    true,
-          '-1': true,
+          '-1': true
         };
         obj.A = true;
         obj[3] = true;
+        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+          obj[key] = true;
+        });
         Object.defineProperty(obj, 'C', { value: true, enumerable: true });
         Object.defineProperty(obj, '4', { value: true, enumerable: true });
         delete obj[2];
         obj[2] = true;
 
-        return Reflect.ownKeys(obj).join('') === "012349 DB-1AC";
+        return Reflect.ownKeys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },

@@ -5,6 +5,9 @@ exports.target_file = 'es7/index.html';
 exports.skeleton_file = 'es7/skeleton.html';
 
 var flag = "flagged";
+/* jshint unused:false */
+var very = "very";
+var strict = "strict";
 
 exports.browsers = {
   tr: {
@@ -30,6 +33,17 @@ exports.browsers = {
     short: 'es7-shim',
     platformtype: 'compiler',
   },
+  ie11: {
+    full: 'Internet Explorer',
+    short: 'IE 10-11',
+    obsolete: false // no EOL any time soon
+  },
+  edge: {
+    full: 'Internet Explorer, Microsoft Edge',
+    short: 'Edge 12',
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
@@ -47,13 +61,17 @@ exports.browsers = {
   },
   firefox35: {
     full: 'Firefox',
-    short: 'FF35',
+    short: 'FF 35',
     obsolete: true,
   },
   firefox39: {
     full: 'Firefox',
-    short: 'FF39',
-    unstable: true,
+    short: 'FF 39',
+    obsolete: true,
+  },
+  firefox41: {
+    full: 'Firefox',
+    short: 'FF 41',
   },
   chrome30: {
     full: 'Chrome',
@@ -114,20 +132,27 @@ exports.browsers = {
   chrome41: {
     full: 'Chrome',
     short: 'CH 41',
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome42: {
     full: 'Chrome',
     short: 'CH 42',
-    unstable: true,
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome43: {
     full: 'Chrome',
     short: 'CH 43',
-    unstable: true,
+    obsolete: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome46: {
+    full: 'Chrome',
+    short: 'CH 46',
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
@@ -137,13 +162,14 @@ exports.browsers = {
     unstable: true,
   },
   node: {
-    full: 'Node 0.12',
-    short: 'Node',
+    full: 'Node.js',
+    short: 'Node 0.12',
     platformtype: 'engine',
   },
   iojs: {
-    full: 'io.js 1.0.0',
+    full: 'Node.js, io.js',
     short: 'io.js',
+    obsolete: true,
     platformtype: 'engine',
   },
   ie10: {
@@ -167,6 +193,11 @@ exports.browsers = {
     short: 'Edge 13',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
+  node4: {
+    full: 'Node.js',
+    short: 'Node 4.0',
+    platformtype: 'engine',
   },
   android40: {
     full: 'Android Browser',
@@ -265,6 +296,21 @@ exports.tests = [
   ],
 },
 {
+  name: 'do expression',
+  category: 'strawman',
+  significance: 'small',
+  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
+  exec: function () {/*
+    return do {
+      let x = 23;
+      x + 19;
+    } === 42;
+  */},
+  res: {
+    babel:       true,
+  }
+},
+{
   name: 'function.sent',
   category: 'draft',
   significance: 'small',
@@ -357,6 +403,7 @@ exports.tests = [
     babel:           true,
     es7shim:         true,
     webkit:          true,
+    chrome46:        true,
   }
 },
 {
@@ -471,8 +518,7 @@ exports.tests = [
     return typeof ArrayBuffer.transfer === 'function';
   */},
   res : {
-    firefox39: true,
-    chrome41:  true
+    chrome41:  true,
   }
 },
 {
@@ -967,10 +1013,6 @@ exports.tests = [
     tr:          true,
     babel:       true,
     firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    firefox35:   true,
   }
 },
 {
@@ -992,10 +1034,6 @@ exports.tests = [
     tr:          true,
     babel:       true,
     firefox31:   true,
-    firefox32:   true,
-    firefox33:   true,
-    firefox34:   true,
-    firefox35:   true,
   }
 },
 {
