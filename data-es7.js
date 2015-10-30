@@ -38,9 +38,15 @@ exports.browsers = {
     short: 'IE 10-11',
     obsolete: false // no EOL any time soon
   },
-  edge: {
+  edge12: {
     full: 'Internet Explorer, Microsoft Edge',
     short: 'Edge 12',
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
+  edge13: {
+    full: 'Internet Explorer, Microsoft Edge for preview Builds',
+    short: 'Edge 13',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
@@ -225,8 +231,9 @@ exports.tests = [
         return 2 ** 3 !== 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
       */},
       res: {
-        tr: true,
-        babel: true
+        tr:     true,
+        babel:  true,
+        edge13: flag,
       }
     },
     {
@@ -279,7 +286,7 @@ exports.tests = [
   significance: 'small',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
   exec: function () {/*
-    return do { 
+    return do {
       let x = 23;
       x + 19;
     } === 42;
@@ -317,7 +324,7 @@ exports.tests = [
     return Array.isArray(v) && String(v) === "foo,bar,baz";
   */},
   res: {
-    babel: true,
+    babel:   true,
     es7shim: true,
   }
 },
@@ -337,7 +344,7 @@ exports.tests = [
       && String(e[2]) === "c,baz";
   */},
   res: {
-    babel: true,
+    babel:   true,
     es7shim: true,
   }
 },
@@ -426,6 +433,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge13:      flag,
       }
     },
     {
@@ -438,6 +446,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge13:      flag,
       }
     },
     {
@@ -448,6 +457,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        edge13:      flag,
       }
     }
   ]
@@ -480,7 +490,7 @@ exports.tests = [
       && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
   */},
   res: {
-    babel: true,
+    babel:   true,
     es7shim: true,
   }
 },
@@ -494,6 +504,7 @@ exports.tests = [
   */},
   res : {
     chrome41:  true,
+    edge13:    flag,
   }
 },
 {
@@ -508,8 +519,9 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        edge:        flag,
-        es7shim:     true,
+        edge12:    flag,
+        firefox39: true,
+        es7shim:   true,
       }
     },
     {
@@ -519,6 +531,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -528,6 +541,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -537,6 +551,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -555,6 +570,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -591,6 +607,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -600,6 +617,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -645,6 +663,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -654,6 +673,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -663,6 +683,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -672,6 +693,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -681,6 +703,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -690,6 +713,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -699,6 +723,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -708,6 +733,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -717,6 +743,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -726,6 +753,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -744,6 +772,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -762,6 +791,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -780,6 +810,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -807,6 +838,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -816,6 +848,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -861,6 +894,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -870,6 +904,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -879,6 +914,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -888,6 +924,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -897,6 +934,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -906,6 +944,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -915,6 +954,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -924,6 +964,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -942,6 +983,7 @@ exports.tests = [
       */},
       res: {
         es7shim: true,
+        edge13:  flag,
       }
     },
     {
@@ -1216,7 +1258,7 @@ exports.tests = [
       */},
       res: {
         babel:      true,
-        edge:       true,
+        edge12:     true,
         firefox31:  true,
         chrome30:   true,
         node:       true,
@@ -1233,7 +1275,7 @@ exports.tests = [
       */},
       res: {
         babel:      true,
-        edge:       true,
+        edge12:     true,
         firefox31:  true,
         chrome30:   true,
         node:       true,
@@ -1261,6 +1303,7 @@ exports.tests = [
     }
   */},
   res: {
+      edge13: true,
   }
 },
 {
@@ -1277,7 +1320,7 @@ exports.tests = [
     }
   */},
   res: {
-    edge:       true,
+    edge12: true,
   }
 },
 {
@@ -1291,6 +1334,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    edge13:      flag,
   }
 }
 ];

@@ -743,6 +743,7 @@ exports.tests = [
         firefox23:   true,
         webkit:      true,
         chrome47:    true,
+        edge13:      true,
       },
     },
     {
@@ -1596,7 +1597,7 @@ exports.tests = [
         chrome46:    true,
         node4:       flag,
         node5:       true,
-        edge13:      flag,
+        edge13:      true,
       },
     },
     {
@@ -1684,6 +1685,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      flag,
         node4:       flag,
+        edge13:      true,
         node5:       true,
       },
     },
@@ -1701,6 +1703,7 @@ exports.tests = [
         chrome46:    true,
         edge12:      flag,
         node4:       flag,
+        edge13:      true,
         node5:       true,
       },
     },
@@ -3007,6 +3010,7 @@ exports.tests = [
         chrome21dev: flag,
         chrome38:    true,
         node012:     true,
+        edge13:      true,
       },
     },
     {
@@ -3132,6 +3136,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       }),
     },
     {
@@ -3183,6 +3188,7 @@ exports.tests = [
       */},
       res: {
         firefox43:   true,
+        edge13:      true,
       },
     },
     {
@@ -3209,6 +3215,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3234,6 +3241,7 @@ exports.tests = [
         node012:     flag,
         node4:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3259,6 +3267,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3288,6 +3297,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3309,7 +3319,8 @@ exports.tests = [
         tr:        true,
         babel:     true,
         firefox38: true,
-        edge12:      flag,
+        edge12:    flag,
+        edge13:    true,
       },
     },
     {
@@ -3335,6 +3346,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3362,6 +3374,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       }),
     },
     {
@@ -3405,6 +3418,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3430,6 +3444,7 @@ exports.tests = [
         node012:     flag,
         node4:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3458,6 +3473,7 @@ exports.tests = [
         node012:     flag,
         node4:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3486,6 +3502,7 @@ exports.tests = [
         node012:     flag,
         node4:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3514,6 +3531,7 @@ exports.tests = [
         node012:     flag,
         node4:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3541,6 +3559,7 @@ exports.tests = [
         node012:     flag,
         node4:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3568,6 +3587,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3592,6 +3612,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        edge13:      true,
       },
     },
     {
@@ -3621,6 +3642,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3649,6 +3671,7 @@ exports.tests = [
         node4:       true,
         ejs:         true,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3678,6 +3701,7 @@ exports.tests = [
         chrome44:    true,
         edge12:      flag,
         node4:       true,
+        edge13:      true,
       },
     },
     {
@@ -3704,6 +3728,7 @@ exports.tests = [
         chrome41:    strict,
         node4:       strict,
         edge12:      flag,
+        edge13:      true,
       },
     },
     {
@@ -3731,6 +3756,7 @@ exports.tests = [
         edge12:      flag,
         chrome45:    strict,
         node4:       strict,
+        edge13:      true,
       },
     },
   ],
@@ -3785,7 +3811,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    true,
-        edge13:      flag,
+        edge13:      true,
         node5:       true,
       },
     },
@@ -3998,6 +4024,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
+        edge13:      true,
       },
     },
     {
@@ -4100,7 +4127,8 @@ exports.tests = [
         chrome40:    false,
         ejs:         true,
         edge12:      flag,
-        typescript:  typescript.fallthrough
+        typescript:  typescript.fallthrough,
+        edge13:      true,
       },
     },
     {
@@ -4117,7 +4145,8 @@ exports.tests = [
         chrome40:    false,
         ejs:         true,
         edge12:      flag,
-        typescript:  typescript.fallthrough
+        typescript:  typescript.fallthrough,
+        edge13:      true,
       },
     },
     {
@@ -4130,6 +4159,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.fallthrough,
         edge12:      true,
+        edge13:      true,
       },
     },
     {
@@ -4142,6 +4172,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.fallthrough,
         edge12:      true,
+        edge13:      true,
       },
     },
   ],
@@ -4872,6 +4903,7 @@ exports.tests = [
         webkit:      true,
         chrome45:    true,
         node4:       true,
+        edge13:      true,
       },
     },
     {
@@ -5257,6 +5289,7 @@ exports.tests = [
         webkit:      true,
         chrome45:    true,
         node4:       true,
+        edge13:      true,
       },
     },
     {
@@ -6169,7 +6202,9 @@ exports.tests = [
         new p;
         return get + '' === "prototype";
       */},
-      res: {},
+      res: {
+        edge13:      true,
+      },
     },
     {
       name: 'ClassDefinitionEvaluation',
@@ -7031,6 +7066,7 @@ exports.tests = [
       */},
       res: {
         firefox32:   true,
+        edge13:      true,
       },
     },
   ],
@@ -7329,6 +7365,7 @@ exports.tests = [
         babel: true,
         es6shim: true,
         typescript: typescript.corejs,
+        edge13:      true,
       },
     },
   ],
@@ -7833,6 +7870,7 @@ exports.tests = [
         firefox11:   true,
         safari71_8:  true,
         webkit:      true,
+        edge13:      flag,
       },
     },
     {
@@ -7989,6 +8027,7 @@ exports.tests = [
       res: {
         babel:       true,
         closure:     true,
+        edge13:      flag,
       },
     },
     {
@@ -8617,6 +8656,7 @@ exports.tests = [
         rhino17:     true,
         node012:     true,
         android40:   true,
+        edge13:      false,
       }),
     },
     {
@@ -9085,6 +9125,7 @@ exports.tests = [
         webkit:      true,
         chrome45:    true,
         node4:       true,
+        edge13:      true,
       },
     },
   ],
@@ -9258,7 +9299,7 @@ exports.tests = [
       res: {
         firefox41:   true,
         chrome46:    true,
-        edge13:      true,
+        //edge13:      true,
         node5:       true,
       }
     },
@@ -9470,14 +9511,15 @@ exports.tests = [
         return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
       */},
       res: {
-        babel: true,
-        typescript: typescript.corejs,
-		es6shim: true,
-        firefox36: true,
-        chrome35: flag,
-        chrome38: true,
-        node012: true,
-        webkit: true,
+        babel:       true,
+        typescript:  typescript.corejs,
+		es6shim:     true,
+        firefox36:   true,
+        chrome35:    flag,
+        chrome38:    true,
+        node012:     true,
+        webkit:      true,
+        edge13:      true,
       },
     },
     {
@@ -10103,6 +10145,7 @@ exports.tests = [
         chrome45:    true,
         edge12:      flag,
         node4:       true,
+        edge13:      true,
       }
     },
     {
@@ -10182,6 +10225,7 @@ exports.tests = [
         chrome45:    true,
         edge12:      flag,
         node4:       true,
+        edge13:      true,
       }
     },
     {
@@ -10492,6 +10536,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         safari9:     true,
         webkit:      true,
+        edge13:      true,
       },
     },
     {
@@ -11986,6 +12031,7 @@ exports.tests = [
     rhino17:     true,
     node012:     true,
     android40:   true,
+    edge13:      false,
   }
 },
 ];

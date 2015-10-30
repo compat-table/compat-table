@@ -1440,7 +1440,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="ie10" class="tally" data-tally="0">0/15</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/15</td>
 <td data-browser="edge12" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)" data-flagged-tally="0.9333333333333333">12/15</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)" data-flagged-tally="1">12/15</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">15/15</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
@@ -1718,7 +1718,7 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; &apos;&apos; 
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -2064,7 +2064,7 @@ return Math.max(...iterable) === 3;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -2134,7 +2134,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -3043,7 +3043,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="ie10" class="tally" data-tally="0">0/9</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/9</td>
 <td data-browser="edge12" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)" data-flagged-tally="0.7777777777777778">6/9</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)" data-flagged-tally="0.7777777777777778">6/9</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.7777777777777778" style="background-color:hsl(93,51%,50%)">7/9</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
@@ -3405,7 +3405,7 @@ return result === &quot;123&quot;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -4111,7 +4111,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/5</td>
 <td data-browser="edge12" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">5/5</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0">0/5</td>
@@ -4255,7 +4255,7 @@ return `${a}` === &quot;foo&quot;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -4546,7 +4546,7 @@ return cr.length === 3 &amp;&amp; lf.length === 3 &amp;&amp; crlf.length === 3
 <td data-browser="ie10" class="tally" data-tally="0">0/4</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/4</td>
 <td data-browser="edge12" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)" data-flagged-tally="1">2/4</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)" data-flagged-tally="1">2/4</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">4/4</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -4617,7 +4617,7 @@ return (re.exec(&apos;xy&apos;)[0] === &apos;y&apos;);
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -4689,7 +4689,7 @@ return result === &apos;yy&apos; &amp;&amp; re.lastIndex === 5;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -4893,7 +4893,7 @@ return &quot;&#x1D306;&quot;.match(/\u{1d306}/u)[0].length === 2;
 <td data-browser="ie10" class="tally" data-tally="0">0/36</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/36</td>
 <td data-browser="edge12" class="tally" data-tally="0">0/36</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0" data-flagged-tally="0.9166666666666666">0/36</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0" data-flagged-tally="0.9722222222222222">0/36</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.5833333333333334" style="background-color:hsl(70,60%,50%)">21/36</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.5833333333333334" style="background-color:hsl(70,60%,50%)">21/36</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.5833333333333334" style="background-color:hsl(70,60%,50%)">21/36</td>
@@ -6767,7 +6767,7 @@ for(var [i, j, k] in { qux: 1 }) {
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="no flagged unstable" data-browser="edge13">Flag</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -7420,7 +7420,7 @@ return (function({a=function(){
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="no flagged unstable" data-browser="edge13">Flag</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -7762,7 +7762,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 <td data-browser="ie10" class="tally" data-tally="0">0/2</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/2</td>
 <td data-browser="edge12" class="tally" data-tally="0">0/2</td>
-<td data-browser="edge13" class="unstable tally" data-tally="1">2/2</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0">0/2</td>
@@ -7916,7 +7916,7 @@ try {
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="yes unstable" data-browser="edge13">Yes</td>
+<td class="no unstable" data-browser="edge13">No</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -9507,7 +9507,7 @@ return f() === 1;
 <td data-browser="ie10" class="tally" data-tally="0">0/13</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/13</td>
 <td data-browser="edge12" class="tally" data-tally="0.6923076923076923" style="background-color:hsl(83,55%,50%)" data-flagged-tally="0.8461538461538461">9/13</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.9230769230769231" style="background-color:hsl(110,45%,50%)">12/13</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">13/13</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.6153846153846154" style="background-color:hsl(73,58%,50%)">8/13</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.6153846153846154" style="background-color:hsl(73,58%,50%)">8/13</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.6153846153846154" style="background-color:hsl(73,58%,50%)">8/13</td>
@@ -10141,7 +10141,7 @@ return (() =&gt; {
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -12950,7 +12950,7 @@ return passed;
 <td data-browser="ie10" class="tally" data-tally="0">0/25</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/25</td>
 <td data-browser="edge12" class="tally" data-tally="0" data-flagged-tally="0.92">0/25</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0" data-flagged-tally="0.92">0/25</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">25/25</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.52" style="background-color:hsl(62,63%,50%)">13/25</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.52" style="background-color:hsl(62,63%,50%)">13/25</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.52" style="background-color:hsl(62,63%,50%)">13/25</td>
@@ -13029,7 +13029,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13108,7 +13108,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13187,7 +13187,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13264,7 +13264,7 @@ catch (e) {
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -13341,7 +13341,7 @@ return sent[0] === &quot;foo&quot; &amp;&amp; sent[1] === &quot;bar&quot;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13419,7 +13419,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13498,7 +13498,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13578,7 +13578,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13657,7 +13657,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -13733,7 +13733,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13811,7 +13811,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13889,7 +13889,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -13967,7 +13967,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -14045,7 +14045,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -14125,7 +14125,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -14205,7 +14205,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14285,7 +14285,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14366,7 +14366,7 @@ try {
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14451,7 +14451,7 @@ return closed === &apos;ab&apos;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14535,7 +14535,7 @@ return closed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14616,7 +14616,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14697,7 +14697,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14779,7 +14779,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14860,7 +14860,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -14942,7 +14942,7 @@ return passed;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -18552,7 +18552,7 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;
 <td data-browser="ie10" class="tally" data-tally="0">0/18</td>
 <td data-browser="ie11" class="tally" data-tally="0.3888888888888889" style="background-color:hsl(46,68%,50%)">7/18</td>
 <td data-browser="edge12" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">15/18</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.9444444444444444" style="background-color:hsl(113,44%,50%)">17/18</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.6111111111111112" style="background-color:hsl(73,59%,50%)">11/18</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.6111111111111112" style="background-color:hsl(73,59%,50%)">11/18</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">12/18</td>
@@ -19781,7 +19781,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -19917,7 +19917,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td data-browser="ie10" class="tally" data-tally="0">0/18</td>
 <td data-browser="ie11" class="tally" data-tally="0.3888888888888889" style="background-color:hsl(46,68%,50%)">7/18</td>
 <td data-browser="edge12" class="tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">15/18</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.9444444444444444" style="background-color:hsl(113,44%,50%)">17/18</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.6111111111111112" style="background-color:hsl(73,59%,50%)">11/18</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.6111111111111112" style="background-color:hsl(73,59%,50%)">11/18</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">12/18</td>
@@ -21151,7 +21151,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -24498,7 +24498,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="ie10" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/17</td>
 <td data-browser="edge12" class="tally" data-tally="0.8235294117647058" style="background-color:hsl(98,49%,50%)">14/17</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">17/17</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0">0/17</td>
@@ -25717,7 +25717,7 @@ return Reflect.construct(function(){}, [], F) instanceof F;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -26416,7 +26416,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/10</td>
 <td data-browser="edge12" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">10/10</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0">0/10</td>
@@ -27090,7 +27090,7 @@ return JSON.stringify(object) === &apos;{}&apos; &amp;&amp; JSON.stringify(array
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -29336,7 +29336,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="ie10" class="tally" data-tally="0">0/17</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/17</td>
 <td data-browser="edge12" class="tally" data-tally="0.47058823529411764" style="background-color:hsl(56,65%,50%)" data-flagged-tally="1">8/17</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.8235294117647058" style="background-color:hsl(98,49%,50%)" data-flagged-tally="1">14/17</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)" data-flagged-tally="0.8823529411764706">12/17</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
@@ -29407,7 +29407,7 @@ return foo.name === &apos;foo&apos; &amp;&amp;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="edge12">Yes</td>
-<td class="yes unstable" data-browser="edge13">Yes</td>
+<td class="no unstable" data-browser="edge13">No</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -29477,7 +29477,7 @@ return (function foo(){}).name === &apos;foo&apos; &amp;&amp;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="edge12">Yes</td>
-<td class="yes unstable" data-browser="edge13">Yes</td>
+<td class="no unstable" data-browser="edge13">No</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -30821,7 +30821,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="ie10" class="tally" data-tally="0">0/8</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/8</td>
 <td data-browser="edge12" class="tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">8/8</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
@@ -31389,7 +31389,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -31936,7 +31936,7 @@ return &apos;get&apos; in prop &amp;&amp; RegExp[Symbol.species] === RegExp;
 <td data-browser="ie10" class="tally" data-tally="0">0/11</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/11</td>
 <td data-browser="edge12" class="tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)" data-flagged-tally="0.8181818181818182">7/11</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.7272727272727273" style="background-color:hsl(87,54%,50%)" data-flagged-tally="0.9090909090909091">8/11</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.9090909090909091" style="background-color:hsl(109,46%,50%)">10/11</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.09090909090909091" style="background-color:hsl(10,82%,50%)">1/11</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
@@ -32075,7 +32075,7 @@ return Array.from(iterable) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -32358,7 +32358,7 @@ return Array.from(iterable, function(e, i) {
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no flagged" data-browser="edge12">Flag</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -32784,7 +32784,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/10</td>
 <td data-browser="edge12" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">10/10</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
@@ -33415,7 +33415,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -37881,7 +37881,7 @@ return set instanceof S &amp;&amp; set.has(123);
 <td data-browser="ie10" class="tally" data-tally="0">0/5</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/5</td>
 <td data-browser="edge12" class="tally" data-tally="0">0/5</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)" data-flagged-tally="1">4/5</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">5/5</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0">0/5</td>
@@ -38045,7 +38045,7 @@ return correctProtoBound(Function.prototype)
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no flagged unstable" data-browser="edge13">Flag</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -38355,7 +38355,7 @@ return correctProtoBound(function(){})
 <td data-browser="ie10" class="tally" data-tally="0">0/35</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/35</td>
 <td data-browser="edge12" class="tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)" data-flagged-tally="0.42857142857142855">14/35</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.5142857142857142" style="background-color:hsl(61,63%,50%)">18/35</td>
+<td data-browser="edge13" class="unstable tally" data-tally="0.5428571428571428" style="background-color:hsl(65,62%,50%)">19/35</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0.3142857142857143" style="background-color:hsl(37,72%,50%)">11/35</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="0.3142857142857143" style="background-color:hsl(37,72%,50%)">11/35</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="0.3142857142857143" style="background-color:hsl(37,72%,50%)">11/35</td>
@@ -38724,7 +38724,7 @@ return get + &apos;&apos; === &quot;prototype&quot;;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox32">No</td>
 <td class="no obsolete" data-browser="firefox33">No</td>
@@ -42985,7 +42985,7 @@ return gopd + &apos;&apos; === &quot;length&quot;;
 <td data-browser="ie10" class="tally" data-tally="0">0/3</td>
 <td data-browser="ie11" class="tally" data-tally="0">0/3</td>
 <td data-browser="edge12" class="tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
-<td data-browser="edge13" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td data-browser="edge13" class="unstable tally" data-tally="1">3/3</td>
 <td data-browser="firefox31" class="obsolete tally" data-tally="0">0/3</td>
 <td data-browser="firefox32" class="obsolete tally" data-tally="1">3/3</td>
 <td data-browser="firefox33" class="obsolete tally" data-tally="1">3/3</td>
@@ -43204,7 +43204,7 @@ return ownKeysCalled === 2;
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no unstable" data-browser="edge13">No</td>
+<td class="yes unstable" data-browser="edge13">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
@@ -47813,7 +47813,7 @@ return a === 3;
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes" data-browser="edge12">Yes</td>
-<td class="yes unstable" data-browser="edge13">Yes</td>
+<td class="no unstable" data-browser="edge13">No</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox32">Yes</td>
 <td class="yes obsolete" data-browser="firefox33">Yes</td>
