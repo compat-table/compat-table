@@ -410,8 +410,7 @@ $(function() {
     // Now sort the columns using the comparison function
     table.detach().find('tr').each(function(i, row) {
 
-      var cells = [].slice.call(row.cells, 3 + (row.querySelector('script') ? 1 : 0))
-        .sort(comparator);
+      var cells = [].slice.call(row.cells, 3).sort(comparator);
 
       for (var j = 0, jlen = cells.length; j < jlen; j++) {
         row.appendChild(cells[j]);
