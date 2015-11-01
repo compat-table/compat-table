@@ -495,7 +495,7 @@ exports.browsers = {
     equals: 'safari9',
   },
   xs6: {
-    full: 'XS6',
+    full: 'Kinoma XS6',
     short: 'XS6',
     platformtype: 'engine'
   }
