@@ -431,6 +431,11 @@ exports.browsers = {
     unstable: true,
     platformtype: 'engine',
   },
+  xs6: {
+    full: 'Kinoma XS6',
+    short: 'XS6',
+    platformtype: 'engine'
+  },
   android40: {
     full: 'Android Browser',
     short: 'AN 4.0',
@@ -493,11 +498,6 @@ exports.browsers = {
     short: 'iOS 9',
     platformtype: 'mobile',
     equals: 'safari9',
-  },
-  xs6: {
-    full: 'Kinoma XS6',
-    short: 'XS6',
-    platformtype: 'engine'
   }
 };
 
