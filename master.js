@@ -82,30 +82,34 @@ $(function() {
     if (subtests.length === 0) {
       return;
     }
+
+    // store and detach subtests
+    tr.data('subtests', subtests);
+    subtests.detach();
+
     // Attach dropdown indicator and onclick to those tests with subtests
     $('<span class="folddown">&#9658;</span>')
       .appendTo(tr.children()[0]);
 
-    tr.on('click', function(event) {
-      if (!$(event.target).is('a')) {
-
-        // toggle manually for perf. reasons
-        // it would be even better to toggle this via higher-level CSS (on a parent)
-        // but current optimization (getting rid of `toggle`)
-        // already brings time from ~500ms to ~15ms
-        // (mostly due to removal of recalc-heavy `css` for each element)
-        // so this is probably sufficient for now
-        subtests.each(function(i, el) {
-          el.style.display = el.style.display === 'table-row' ? 'none' : 'table-row';
-        });
-
-        var deg = subtests[0].style.display === 'table-row' ? '90deg' : '0deg';
-        tr.find(".folddown").css('transform', 'rotate(' + deg + ')');
-      }
-    });
-
     // Also, work out tallies for the current browser's tally features
     tr.each(__updateSupertest);
+  });
+
+  $(document).on('click', 'tr.supertest', function(event) {// click delegation
+    var tr = $(this);
+
+    if (!$(event.target).is('a')) {
+      var subtests = tr.data('subtests');
+
+      // detach/attach subtests
+      if (tr.hasClass('is-open')) {
+        subtests.detach();
+        tr.removeClass('is-open');
+      } else {
+        tr.after(subtests);
+        tr.addClass('is-open');
+      }
+    }
   });
 
 
@@ -419,4 +423,8 @@ $(function() {
     });
     table.insertBefore('#footnotes');
   });
+
+  // global class to reset specific CSS rules
+  // which are applied until JS is not invoked
+  $(document.documentElement).addClass('js-applied')
 });
