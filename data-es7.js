@@ -78,6 +78,16 @@ exports.browsers = {
   firefox41: {
     full: 'Firefox',
     short: 'FF 41',
+    obsolete: true,
+  },
+  firefox42: {
+    full: 'Firefox',
+    short: 'FF 42',
+  },
+  firefox44: {
+    full: 'Firefox',
+    short: 'FF 44',
+    unstable: true,
   },
   chrome30: {
     full: 'Chrome',
@@ -389,6 +399,8 @@ exports.tests = [
     es7shim:         true,
     webkit:          true,
     chrome46:        true,
+    firefox42:       false,
+    firefox44:       true,
   }
 },
 {
@@ -521,6 +533,8 @@ exports.tests = [
       res: {
         edge12:    flag,
         firefox39: true,
+        firefox42: false,
+        firefox44: false,
         es7shim:   true,
       }
     },
@@ -1303,7 +1317,8 @@ exports.tests = [
     }
   */},
   res: {
-      edge13: true,
+      edge13:    true,
+      firefox44: true,
   }
 },
 {
