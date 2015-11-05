@@ -1047,7 +1047,8 @@ exports.tests = [
       res: {
         babel:       flag,
         ie11:        true,
-        firefox36:   true, chrome19dev: flag,
+        firefox36:   true,
+        chrome19dev: flag,
         chrome41:    true,
         webkit:      true,
         node012:     flag,
@@ -1174,8 +1175,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         ejs:         true,
         closure:     true,
-        firefox39:   { val: flag, note_id: 'fx-let', },
-        firefox44:   false,
         webkit:      true,
         chrome48:    flag,
         xs6:         true,
@@ -1310,8 +1309,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        firefox39:   { val: flag, note_id: 'fx-let', },
-        firefox44:   false,
         xs6:         true,
       },
     },
@@ -4605,7 +4602,7 @@ exports.tests = [
       }),
     },
     {
-      name: 'constructors accepts generic iterables',
+      name: 'constructors accept generic iterables',
       exec: function(){/*
         var constructors = [
           'Int8Array',
