@@ -1011,7 +1011,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-function-ctor-note"><sup>[0]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1079,7 +1079,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="0.8">0/5</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="1">0/5</td>
 <td data-browser="node5" class="tally" data-tally="0" data-flagged-tally="1">0/5</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td data-browser="xs6" class="tally" data-tally="1">5/5</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
@@ -1223,7 +1223,7 @@ return function(a, ...b){}.length === 1 &amp;&amp; function(...c){}.length === 0
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="no flagged" data-browser="node5">Flag</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1302,7 +1302,7 @@ return (function (foo, ...args) {
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="no flagged" data-browser="node5">Flag</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1379,7 +1379,7 @@ return (function (...args) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="no flagged" data-browser="node5">Flag</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1452,7 +1452,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="no flagged" data-browser="node5">Flag</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-function-ctor-note"><sup>[0]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1520,7 +1520,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="0.5333333333333333">0/15</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="1">0/15</td>
 <td data-browser="node5" class="tally" data-tally="1">15/15</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8666666666666667" style="background-color:hsl(104,47%,50%)">13/15</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">10/15</td>
 <td data-browser="xs6" class="tally" data-tally="1">15/15</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/15</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/15</td>
@@ -1806,7 +1806,7 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; &apos;&apos; 
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -1948,7 +1948,7 @@ return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2090,7 +2090,7 @@ return [...&quot;&#x20BB7;&#x20BB6;&quot;][0] === &quot;&#x20BB7;&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2234,7 +2234,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2450,7 +2450,7 @@ return Math.max(...Object.create(iterable)) === 3;
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2522,7 +2522,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2597,7 +2597,7 @@ try {
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -2665,7 +2665,7 @@ try {
 <td data-browser="iojs" class="obsolete tally" data-tally="1">6/6</td>
 <td data-browser="node4" class="tally" data-tally="1">6/6</td>
 <td data-browser="node5" class="tally" data-tally="1">6/6</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td data-browser="xs6" class="tally" data-tally="1">6/6</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/6</td>
@@ -3023,7 +3023,7 @@ return ({ [x](){ return 1 } }).y() === 1;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3169,7 +3169,7 @@ return obj.y === 1 &amp;&amp; valueSet === &apos;foo&apos;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.7777777777777778" style="background-color:hsl(93,51%,50%)">7/9</td>
 <td data-browser="node4" class="tally" data-tally="0.7777777777777778" style="background-color:hsl(93,51%,50%)">7/9</td>
 <td data-browser="node5" class="tally" data-tally="0.7777777777777778" style="background-color:hsl(93,51%,50%)">7/9</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">6/9</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.7777777777777778" style="background-color:hsl(93,51%,50%)">7/9</td>
 <td data-browser="xs6" class="tally" data-tally="1">9/9</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/9</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/9</td>
@@ -3693,7 +3693,7 @@ return result === &quot;123&quot;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -3915,7 +3915,7 @@ return closed;
 <td data-browser="iojs" class="obsolete tally" data-tally="1">4/4</td>
 <td data-browser="node4" class="tally" data-tally="1">4/4</td>
 <td data-browser="node5" class="tally" data-tally="1">4/4</td>
-<td data-browser="ejs" class="unstable tally" data-tally="1">4/4</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td data-browser="xs6" class="tally" data-tally="1">4/4</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/4</td>
@@ -4128,7 +4128,7 @@ return Number(&apos;0o1&apos;) === 1;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -4199,7 +4199,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -4267,7 +4267,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td data-browser="iojs" class="obsolete tally" data-tally="1">5/5</td>
 <td data-browser="node4" class="tally" data-tally="1">5/5</td>
 <td data-browser="node5" class="tally" data-tally="1">5/5</td>
-<td data-browser="ejs" class="unstable tally" data-tally="1">5/5</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="xs6" class="tally" data-tally="1">5/5</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
@@ -4340,7 +4340,7 @@ ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -5441,7 +5441,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -5516,7 +5516,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -5591,7 +5591,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === undefined
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -5739,7 +5739,7 @@ return ([a, b] = iterable) === iterable;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -5812,7 +5812,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 1 &amp;&amp; d === 2;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -5959,7 +5959,7 @@ return c === 7 &amp;&amp; d === 8 &amp;&amp; e === undefined
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -6631,7 +6631,7 @@ return e === 9 &amp;&amp; f === 10 &amp;&amp; g === undefined
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -6705,7 +6705,7 @@ return (function({a, x:b, y:e}, [c, d]) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -6779,7 +6779,7 @@ return (function({a, x:b, y:e}, [c, d]) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -6924,7 +6924,7 @@ return function({a, b}, [c, d]){}.length === 2;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -7741,7 +7741,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}&quot;,
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-function-ctor-note"><sup>[0]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -7809,7 +7809,7 @@ return new Function(&quot;{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}&quot;,
 <td data-browser="iojs" class="obsolete tally" data-tally="1">2/2</td>
 <td data-browser="node4" class="tally" data-tally="1">2/2</td>
 <td data-browser="node5" class="tally" data-tally="1">2/2</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">2/2</td>
 <td data-browser="xs6" class="tally" data-tally="0">0/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -7952,7 +7952,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="xs6">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -8020,7 +8020,7 @@ return \u{102C0}[&apos;\ud800\udec0&apos;] === 2;
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="node4" class="tally" data-tally="0">0/2</td>
 <td data-browser="node5" class="tally" data-tally="1">2/2</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/2</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">2/2</td>
 <td data-browser="xs6" class="tally" data-tally="1">2/2</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/2</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/2</td>
@@ -8098,7 +8098,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -8178,7 +8178,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -8248,7 +8248,7 @@ try {
 <td data-browser="iojs" class="obsolete tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 <td data-browser="node4" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
 <td data-browser="node5" class="tally" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="xs6" class="tally" data-tally="1">8/8</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
@@ -8469,7 +8469,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -8768,7 +8768,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -8863,7 +8863,7 @@ return passed;
 <td data-browser="es6tr" class="obsolete tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="closure" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td data-browser="jsx" class="tally" data-tally="0">0/10</td>
-<td data-browser="typescript" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
+<td data-browser="typescript" class="tally" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
 <td data-browser="es6shim" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie10" class="tally" data-tally="0">0/10</td>
 <td data-browser="ie11" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
@@ -8912,7 +8912,7 @@ return passed;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td data-browser="node4" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td data-browser="node5" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td data-browser="ejs" class="unstable tally" data-tally="1">10/10</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td data-browser="xs6" class="tally" data-tally="1">10/10</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/10</td>
@@ -9205,7 +9205,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -9287,7 +9287,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -9535,7 +9535,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -9584,7 +9584,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -9667,7 +9667,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -10319,7 +10319,7 @@ return f(6) === 5;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -10537,7 +10537,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -10845,7 +10845,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="0.7391304347826086">0/23</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="0.9565217391304348">0/23</td>
 <td data-browser="node5" class="tally" data-tally="0" data-flagged-tally="1">0/23</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9130434782608695" style="background-color:hsl(109,45%,50%)">21/23</td>
 <td data-browser="xs6" class="tally" data-tally="1">23/23</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/23</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/23</td>
@@ -10994,7 +10994,7 @@ return C === c1;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -11972,7 +11972,7 @@ return C === undefined &amp;&amp; M();
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12124,7 +12124,7 @@ return !C.prototype.propertyIsEnumerable(&quot;foo&quot;) &amp;&amp; !C.property
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12198,7 +12198,7 @@ return (0,C.method)();
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12275,7 +12275,7 @@ catch(e) {
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12498,7 +12498,7 @@ return Function.prototype.isPrototypeOf(C)
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12581,7 +12581,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12728,7 +12728,7 @@ return passed;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -12805,7 +12805,7 @@ return new C(&quot;baz&quot;)[0] === &quot;foobarbaz&quot;;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -13118,7 +13118,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -13282,7 +13282,7 @@ return passed;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -13350,7 +13350,7 @@ return passed;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.76" style="background-color:hsl(91,52%,50%)" data-flagged-tally="0.8">19/25</td>
 <td data-browser="node4" class="tally" data-tally="0.76" style="background-color:hsl(91,52%,50%)" data-flagged-tally="0.84">19/25</td>
 <td data-browser="node5" class="tally" data-tally="0.76" style="background-color:hsl(91,52%,50%)" data-flagged-tally="0.84">19/25</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.52" style="background-color:hsl(62,63%,50%)">13/25</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.64" style="background-color:hsl(76,57%,50%)">16/25</td>
 <td data-browser="xs6" class="tally" data-tally="1">25/25</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/25</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/25</td>
@@ -13912,7 +13912,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -14473,7 +14473,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -14555,7 +14555,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -14637,7 +14637,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -14719,7 +14719,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -15462,7 +15462,7 @@ return passed;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">23/46</td>
 <td data-browser="node4" class="tally" data-tally="0.9347826086956522" style="background-color:hsl(112,44%,50%)">43/46</td>
 <td data-browser="node5" class="tally" data-tally="0.9347826086956522" style="background-color:hsl(112,44%,50%)">43/46</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.7391304347826086" style="background-color:hsl(88,53%,50%)">34/46</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8043478260869565" style="background-color:hsl(96,50%,50%)">37/46</td>
 <td data-browser="xs6" class="tally" data-tally="1">46/46</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0.32608695652173914" style="background-color:hsl(39,71%,50%)">15/46</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0.34782608695652173" style="background-color:hsl(41,70%,50%)">16/46</td>
@@ -15681,7 +15681,7 @@ return view[0] === 0xFF;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -16782,7 +16782,7 @@ return typeof ArrayBuffer[Symbol.species] === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -17213,7 +17213,7 @@ typeof Float64Array.of === &quot;function&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -17608,7 +17608,7 @@ typeof Float64Array.prototype.slice === &quot;function&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -18161,7 +18161,7 @@ typeof Float64Array.prototype.reverse === &quot;function&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -18398,7 +18398,7 @@ typeof Float64Array.prototype.copyWithin === &quot;function&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -19030,7 +19030,7 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -19098,7 +19098,7 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">15/18</td>
 <td data-browser="node4" class="tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
 <td data-browser="node5" class="tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.7222222222222222" style="background-color:hsl(86,54%,50%)">13/18</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
 <td data-browser="xs6" class="tally" data-tally="1">18/18</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/18</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/18</td>
@@ -19327,7 +19327,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -19480,7 +19480,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -19707,7 +19707,7 @@ return k === Infinity &amp;&amp; map.get(+0) == &quot;foo&quot;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -20361,7 +20361,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -20433,7 +20433,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -20501,7 +20501,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">15/18</td>
 <td data-browser="node4" class="tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
 <td data-browser="node5" class="tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">16/18</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.7222222222222222" style="background-color:hsl(86,54%,50%)">13/18</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9444444444444444" style="background-color:hsl(113,44%,50%)">17/18</td>
 <td data-browser="xs6" class="tally" data-tally="1">18/18</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/18</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/18</td>
@@ -20730,7 +20730,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -20883,7 +20883,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -21769,7 +21769,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -21841,7 +21841,7 @@ return &apos;get&apos; in prop &amp;&amp; Set[Symbol.species] === Set;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -21909,7 +21909,7 @@ return &apos;get&apos; in prop &amp;&amp; Set[Symbol.species] === Set;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="node4" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="node5" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td data-browser="xs6" class="tally" data-tally="1">10/10</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/10</td>
@@ -22138,7 +22138,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -22291,7 +22291,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -22365,7 +22365,7 @@ return m.get(f) === 42;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -22665,7 +22665,7 @@ return m.has(key);
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -22733,7 +22733,7 @@ return m.has(key);
 <td data-browser="iojs" class="obsolete tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">8/9</td>
 <td data-browser="node4" class="tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">8/9</td>
 <td data-browser="node5" class="tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">8/9</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8888888888888888" style="background-color:hsl(106,46%,50%)">8/9</td>
 <td data-browser="xs6" class="tally" data-tally="1">9/9</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/9</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/9</td>
@@ -22961,7 +22961,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -23114,7 +23114,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -23414,7 +23414,7 @@ return s.has(key);
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -23482,7 +23482,7 @@ return s.has(key);
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/21</td>
 <td data-browser="node4" class="tally" data-tally="0">0/21</td>
 <td data-browser="node5" class="tally" data-tally="0">0/21</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">14/21</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.7619047619047619" style="background-color:hsl(91,52%,50%)">16/21</td>
 <td data-browser="xs6" class="tally" data-tally="0.9523809523809523" style="background-color:hsl(114,44%,50%)">20/21</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/21</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/21</td>
@@ -24189,7 +24189,7 @@ return (returnedDesc.value     === fakeDesc.value
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -24757,7 +24757,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -25067,7 +25067,7 @@ return Array.isArray(new Proxy([], {}));
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -25138,7 +25138,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="xs6">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -25206,7 +25206,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="node4" class="tally" data-tally="0">0/17</td>
 <td data-browser="node5" class="tally" data-tally="0">0/17</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8823529411764706" style="background-color:hsl(105,47%,50%)">15/17</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8235294117647058" style="background-color:hsl(98,49%,50%)">14/17</td>
 <td data-browser="xs6" class="tally" data-tally="1">17/17</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/17</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/17</td>
@@ -25494,7 +25494,7 @@ return !(&quot;bar&quot; in obj);
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -25642,7 +25642,7 @@ return obj.foo === 123 &amp;&amp;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -26014,7 +26014,7 @@ return passed === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -26387,7 +26387,7 @@ return Reflect.construct(function(a, b, c) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -26459,7 +26459,7 @@ return Reflect.construct(function(){}, [], F) instanceof F;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -26696,7 +26696,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -26781,7 +26781,7 @@ function check() {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -26951,7 +26951,7 @@ function check() {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -27108,7 +27108,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -27176,7 +27176,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="node4" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="node5" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.3" style="background-color:hsl(36,72%,50%)">3/10</td>
 <td data-browser="xs6" class="tally" data-tally="1">10/10</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/10</td>
@@ -27405,7 +27405,7 @@ return passed;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -27569,7 +27569,7 @@ return true;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -27640,7 +27640,7 @@ return String(Symbol(&quot;foo&quot;)) === &quot;Symbol(foo)&quot;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -27716,7 +27716,7 @@ try {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -27941,7 +27941,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28009,7 +28009,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.13043478260869565" style="background-color:hsl(15,80%,50%)" data-flagged-tally="0.21739130434782608">3/23</td>
 <td data-browser="node4" class="tally" data-tally="0.13043478260869565" style="background-color:hsl(15,80%,50%)" data-flagged-tally="0.21739130434782608">3/23</td>
 <td data-browser="node5" class="tally" data-tally="0.13043478260869565" style="background-color:hsl(15,80%,50%)" data-flagged-tally="0.21739130434782608">3/23</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.2608695652173913" style="background-color:hsl(31,74%,50%)">6/23</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9565217391304348" style="background-color:hsl(114,43%,50%)">22/23</td>
 <td data-browser="xs6" class="tally" data-tally="1">23/23</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/23</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/23</td>
@@ -28306,7 +28306,7 @@ return (function() {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28453,7 +28453,7 @@ return Array.prototype.concat.call(obj, []).foo === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28529,7 +28529,7 @@ return Array.prototype.filter.call(obj, Boolean).foo === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28605,7 +28605,7 @@ return Array.prototype.map.call(obj, Boolean).foo === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28681,7 +28681,7 @@ return Array.prototype.slice.call(obj, 0).foo === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28757,7 +28757,7 @@ return Array.prototype.splice.call(obj, 0).foo === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28836,7 +28836,7 @@ return passed;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28911,7 +28911,7 @@ return &apos;&apos;.replace(O) === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -28986,7 +28986,7 @@ return &apos;&apos;.search(O) === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29061,7 +29061,7 @@ return &apos;&apos;.split(O) === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29136,7 +29136,7 @@ return &apos;&apos;.match(O) === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29211,7 +29211,7 @@ return RegExp(re) !== re &amp;&amp; RegExp(foo) === foo;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29288,7 +29288,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29365,7 +29365,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29442,7 +29442,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -29668,7 +29668,7 @@ return Math[s] === &quot;Math&quot;
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="no flagged" data-browser="node4">Flag</td>
 <td class="no flagged" data-browser="node5">Flag</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -30176,7 +30176,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.29411764705882354" style="background-color:hsl(35,73%,50%)" data-flagged-tally="0.5294117647058824">5/17</td>
 <td data-browser="node4" class="tally" data-tally="0.35294117647058826" style="background-color:hsl(42,70%,50%)" data-flagged-tally="0.5882352941176471">6/17</td>
 <td data-browser="node5" class="tally" data-tally="0.35294117647058826" style="background-color:hsl(42,70%,50%)" data-flagged-tally="0.5882352941176471">6/17</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.29411764705882354" style="background-color:hsl(35,73%,50%)">5/17</td>
 <td data-browser="xs6" class="tally" data-tally="1">17/17</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0.17647058823529413" style="background-color:hsl(21,78%,50%)">3/17</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0.11764705882352941" style="background-color:hsl(14,80%,50%)">2/17</td>
@@ -30392,7 +30392,7 @@ return (new Function).name === &quot;anonymous&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-function-ctor-note"><sup>[0]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -30831,7 +30831,7 @@ return ({f() { return f; }}).f() === &quot;foo&quot;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -31351,7 +31351,7 @@ return C.foo.name === &quot;foo&quot;;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -31703,7 +31703,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td data-browser="node4" class="tally" data-tally="1">8/8</td>
 <td data-browser="node5" class="tally" data-tally="1">8/8</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td data-browser="xs6" class="tally" data-tally="1">8/8</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/8</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/8</td>
@@ -32287,7 +32287,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -32355,7 +32355,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="node4" class="tally" data-tally="0">0/6</td>
 <td data-browser="node5" class="tally" data-tally="0">0/6</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">6/6</td>
 <td data-browser="xs6" class="tally" data-tally="1">6/6</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/6</td>
@@ -32782,7 +32782,7 @@ return &apos;get&apos; in prop &amp;&amp; RegExp[Symbol.species] === RegExp;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -32850,7 +32850,7 @@ return &apos;get&apos; in prop &amp;&amp; RegExp[Symbol.species] === RegExp;
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/11</td>
 <td data-browser="node4" class="tally" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
 <td data-browser="node5" class="tally" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">7/11</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5454545454545454" style="background-color:hsl(65,62%,50%)">6/11</td>
 <td data-browser="xs6" class="tally" data-tally="1">11/11</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/11</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/11</td>
@@ -33137,7 +33137,7 @@ return Array.from(Object.create(iterable)) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -33210,7 +33210,7 @@ return Array.from({ 0: &quot;foo&quot;, 1: &quot;bar&quot;, length: 2 }, functio
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -33284,7 +33284,7 @@ return Array.from(iterable, function(e, i) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -33358,7 +33358,7 @@ return Array.from(iterable, function(e, i) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no unstable" data-browser="ejs">No</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -33654,7 +33654,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -33722,7 +33722,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.4" style="background-color:hsl(48,68%,50%)" data-flagged-tally="0.7">4/10</td>
 <td data-browser="node4" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td data-browser="node5" class="tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="xs6" class="tally" data-tally="1">10/10</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/10</td>
@@ -34371,7 +34371,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36363,7 +36363,7 @@ return Math.hypot() === 0 &amp;&amp;
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="0.36363636363636365">0/11</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="0.2727272727272727">0/11</td>
 <td data-browser="node5" class="tally" data-tally="0" data-flagged-tally="0.2727272727272727">0/11</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/11</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">11/11</td>
 <td data-browser="xs6" class="tally" data-tally="1">11/11</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/11</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/11</td>
@@ -36439,7 +36439,7 @@ return len1 === 0 &amp;&amp; len2 === 3;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36514,7 +36514,7 @@ return c.length === 1 &amp;&amp; !(2 in c);
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36587,7 +36587,7 @@ return c instanceof C &amp;&amp; c instanceof Array &amp;&amp; Object.getPrototy
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36659,7 +36659,7 @@ return Array.isArray(new C());
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36732,7 +36732,7 @@ return c.concat(1) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36805,7 +36805,7 @@ return c.filter(Boolean) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36878,7 +36878,7 @@ return c.map(Boolean) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -36952,7 +36952,7 @@ return c.slice(1,2) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37026,7 +37026,7 @@ return c.splice(1,2) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37098,7 +37098,7 @@ return C.from({ length: 0 }) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37170,7 +37170,7 @@ return C.of(0) instanceof C;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37238,7 +37238,7 @@ return C.of(0) instanceof C;
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="1">0/4</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="0.5">0/4</td>
 <td data-browser="node5" class="tally" data-tally="0" data-flagged-tally="1">0/4</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/4</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">4/4</td>
 <td data-browser="xs6" class="tally" data-tally="1">4/4</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/4</td>
@@ -37311,7 +37311,7 @@ return r.global &amp;&amp; r.source === &quot;baz&quot;;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37384,7 +37384,7 @@ return r instanceof R &amp;&amp; r instanceof RegExp &amp;&amp; Object.getProtot
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37457,7 +37457,7 @@ return r.exec(&quot;foobarbaz&quot;)[0] === &quot;baz&quot; &amp;&amp; r.lastInd
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -37530,7 +37530,7 @@ return r.test(&quot;foobarbaz&quot;);
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38105,7 +38105,7 @@ return c(6) === 9 &amp;&amp; c instanceof C;
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="1">0/4</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="0.25">0/4</td>
 <td data-browser="node5" class="tally" data-tally="0" data-flagged-tally="1">0/4</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/4</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td data-browser="xs6" class="tally" data-tally="1">4/4</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/4</td>
@@ -38198,7 +38198,7 @@ function check() {
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38271,7 +38271,7 @@ return c instanceof C &amp;&amp; c instanceof Promise &amp;&amp; Object.getProto
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38511,7 +38511,7 @@ function check() {
 <td data-browser="iojs" class="obsolete tally" data-tally="0" data-flagged-tally="1">0/5</td>
 <td data-browser="node4" class="tally" data-tally="0" data-flagged-tally="1">0/5</td>
 <td data-browser="node5" class="tally" data-tally="0" data-flagged-tally="1">0/5</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/5</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">5/5</td>
 <td data-browser="xs6" class="tally" data-tally="1">5/5</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
@@ -38586,7 +38586,7 @@ return c instanceof Boolean
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38661,7 +38661,7 @@ return c instanceof Number
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38738,7 +38738,7 @@ return c instanceof String
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38815,7 +38815,7 @@ return map instanceof M &amp;&amp; map.has(key) &amp;&amp; map.get(key) === 123;
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38893,7 +38893,7 @@ return set instanceof S &amp;&amp; set.has(123);
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="iojs">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -38963,7 +38963,7 @@ return set instanceof S &amp;&amp; set.has(123);
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="node4" class="tally" data-tally="0">0/5</td>
 <td data-browser="node5" class="tally" data-tally="0.6" style="background-color:hsl(72,59%,50%)" data-flagged-tally="1">3/5</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/5</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td data-browser="xs6" class="tally" data-tally="1">5/5</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/5</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/5</td>
@@ -39047,7 +39047,7 @@ return correctProtoBound(Function.prototype)
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39131,7 +39131,7 @@ return correctProtoBound(Function.prototype)
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39215,7 +39215,7 @@ return correctProtoBound(Function.prototype)
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39299,7 +39299,7 @@ return correctProtoBound(Function.prototype)
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39449,7 +39449,7 @@ return correctProtoBound(function(){})
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/35</td>
 <td data-browser="node4" class="tally" data-tally="0">0/35</td>
 <td data-browser="node5" class="tally" data-tally="0">0/35</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/35</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5428571428571428" style="background-color:hsl(65,62%,50%)">19/35</td>
 <td data-browser="xs6" class="tally" data-tally="0.9428571428571428" style="background-color:hsl(113,44%,50%)">33/35</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/35</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/35</td>
@@ -39524,7 +39524,7 @@ return get[0] === Symbol.toPrimitive &amp;&amp; get.slice(1) + &apos;&apos; === 
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39599,7 +39599,7 @@ return get + &apos;&apos; === &quot;length,0,1&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39753,7 +39753,7 @@ return get[0] === Symbol.unscopables &amp;&amp; get.slice(1) + &apos;&apos; === 
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39903,7 +39903,7 @@ return get + &apos;&apos; === &quot;prototype&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -39989,7 +39989,7 @@ return get + &apos;&apos; === &quot;done,value,done,value&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -40072,7 +40072,7 @@ try {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -40372,7 +40372,7 @@ return get + &apos;&apos; === &quot;name,message&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -40448,7 +40448,7 @@ return get + &apos;&apos; === &quot;raw,length,0,1&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="xs6">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -40525,7 +40525,7 @@ return get[0] === Symbol.match &amp;&amp; get.slice(1) + &apos;&apos; === &quot;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -40981,7 +40981,7 @@ return get + &apos;&apos; === &quot;constructor,flags,exec&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41056,7 +41056,7 @@ return get[0] === Symbol.iterator &amp;&amp; get.slice(1) + &apos;&apos; === &qu
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41138,7 +41138,7 @@ return get[0] === &quot;constructor&quot;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41301,7 +41301,7 @@ return get + &apos;&apos; === &quot;length,3&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41451,7 +41451,7 @@ return get + &apos;&apos; === &quot;length,0,1,2,3&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41527,7 +41527,7 @@ return get + &apos;&apos; === &quot;length,constructor,1,2,3,length,constructor,
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41602,7 +41602,7 @@ return get + &apos;&apos; === &quot;join&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41677,7 +41677,7 @@ return get + &apos;&apos; === &quot;toJSON&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="xs6">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41752,7 +41752,7 @@ return get + &apos;&apos; === &quot;then&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -41906,7 +41906,7 @@ return get[0] === Symbol.replace &amp;&amp; get[1] === Symbol.toPrimitive &amp;&
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -42060,7 +42060,7 @@ return get[0] === Symbol.split &amp;&amp; get[1] === Symbol.toPrimitive &amp;&am
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -42204,7 +42204,7 @@ return get[0] === Symbol.toPrimitive &amp;&amp; get.slice(1) + &apos;&apos; === 
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/11</td>
 <td data-browser="node4" class="tally" data-tally="0">0/11</td>
 <td data-browser="node5" class="tally" data-tally="0">0/11</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/11</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.2727272727272727" style="background-color:hsl(32,74%,50%)">3/11</td>
 <td data-browser="xs6" class="tally" data-tally="1">11/11</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/11</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/11</td>
@@ -42279,7 +42279,7 @@ return set + &apos;&apos; === &quot;foo,bar&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -42354,7 +42354,7 @@ return set + &apos;&apos; === &quot;length&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -42429,7 +42429,7 @@ return set + &apos;&apos; === &quot;length&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -43315,7 +43315,7 @@ return def + &apos;&apos; === &quot;foo,bar&quot;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="node4" class="tally" data-tally="0">0/6</td>
 <td data-browser="node5" class="tally" data-tally="0">0/6</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/6</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
 <td data-browser="xs6" class="tally" data-tally="1">6/6</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/6</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/6</td>
@@ -43465,7 +43465,7 @@ return del + &apos;&apos; === &quot;2&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -43833,7 +43833,7 @@ return del + &apos;&apos; === &quot;5,3&quot;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="node4" class="tally" data-tally="0">0/4</td>
 <td data-browser="node5" class="tally" data-tally="0">0/4</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/4</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td data-browser="xs6" class="tally" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/4</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/4</td>
@@ -43909,7 +43909,7 @@ return gopd + &apos;&apos; === &quot;foo,bar&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="no" data-browser="xs6">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44061,7 +44061,7 @@ return gopd + &apos;&apos; === &quot;garply&quot;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44205,7 +44205,7 @@ return gopd + &apos;&apos; === &quot;length&quot;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0">0/3</td>
 <td data-browser="node4" class="tally" data-tally="0">0/3</td>
 <td data-browser="node5" class="tally" data-tally="0">0/3</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/3</td>
+<td data-browser="ejs" class="unstable tally" data-tally="1">3/3</td>
 <td data-browser="xs6" class="tally" data-tally="1">3/3</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/3</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/3</td>
@@ -44280,7 +44280,7 @@ return ownKeysCalled === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44355,7 +44355,7 @@ return ownKeysCalled === 1;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44430,7 +44430,7 @@ return ownKeysCalled === 2;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44498,7 +44498,7 @@ return ownKeysCalled === 2;
 <td data-browser="iojs" class="obsolete tally" data-tally="1">10/10</td>
 <td data-browser="node4" class="tally" data-tally="1">10/10</td>
 <td data-browser="node5" class="tally" data-tally="1">10/10</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0">0/10</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="xs6" class="tally" data-tally="1">10/10</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0">0/10</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0">0/10</td>
@@ -44569,7 +44569,7 @@ return Object.getPrototypeOf(&apos;a&apos;).constructor === String;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44640,7 +44640,7 @@ return Object.getOwnPropertyDescriptor(&apos;a&apos;, &apos;foo&apos;) === undef
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44713,7 +44713,7 @@ return s.length === 2 &amp;&amp;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44784,7 +44784,7 @@ return Object.seal(&apos;a&apos;) === &apos;a&apos;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44855,7 +44855,7 @@ return Object.freeze(&apos;a&apos;) === &apos;a&apos;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44926,7 +44926,7 @@ return Object.preventExtensions(&apos;a&apos;) === &apos;a&apos;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -44997,7 +44997,7 @@ return Object.isSealed(&apos;a&apos;) === true;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -45068,7 +45068,7 @@ return Object.isFrozen(&apos;a&apos;) === true;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -45139,7 +45139,7 @@ return Object.isExtensible(&apos;a&apos;) === false;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -45279,7 +45279,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <td data-browser="iojs" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="node4" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="node5" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="xs6" class="tally" data-tally="1">8/8</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
@@ -45474,7 +45474,7 @@ return Object.keys(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNOPQRS
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -45753,7 +45753,7 @@ return JSON.stringify(obj) ===
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -46077,7 +46077,7 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 <td data-browser="iojs" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td data-browser="node4" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td data-browser="node5" class="tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td data-browser="ejs" class="unstable tally" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
+<td data-browser="ejs" class="unstable tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td data-browser="xs6" class="tally" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
@@ -46225,7 +46225,7 @@ return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -46296,7 +46296,7 @@ do {} while (false) return true;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -46372,7 +46372,7 @@ catch(e) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -46589,7 +46589,7 @@ return new RegExp(/./im, &quot;g&quot;).global === true;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -47639,7 +47639,7 @@ return !({ __proto__(){} } instanceof Function);
 <td data-browser="iojs" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">6/6</td>
 <td data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">6/6</td>
 <td data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">6/6</td>
-<td data-browser="ejs" class="unstable not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/6</td>
+<td data-browser="ejs" class="unstable not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.3333333333333333">2/6</td>
 <td data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">6/6</td>
 <td data-browser="android40" class="obsolete tally" data-tally="0.5" style="background-color:hsl(60,64%,50%)">3/6</td>
 <td data-browser="android41" class="obsolete tally" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">2/6</td>
@@ -47711,7 +47711,7 @@ return (new A()).__proto__ === A.prototype;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -47857,7 +47857,7 @@ return Object.getPrototypeOf(o) !== p;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
@@ -48517,7 +48517,7 @@ return typeof RegExp.prototype.compile === &apos;function&apos;;
 <td data-browser="iojs" class="obsolete not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">8/8</td>
 <td data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">8/8</td>
 <td data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="1">8/8</td>
-<td data-browser="ejs" class="unstable not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td data-browser="ejs" class="unstable not-applicable tally" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.5">4/8</td>
 <td data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." class="not-applicable tally" data-tally="0.625">5/8</td>
 <td data-browser="android40" class="obsolete tally" data-tally="1">8/8</td>
 <td data-browser="android41" class="obsolete tally" data-tally="1">8/8</td>
@@ -48588,7 +48588,7 @@ return /[\w-_]/.exec(&quot;-&quot;)[0] === &quot;-&quot;;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -48947,7 +48947,7 @@ return /x{1/.exec(&quot;x{1&quot;)[0] === &quot;x{1&quot;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -49019,7 +49019,7 @@ return /\041/.exec(&quot;!&quot;)[0] === &quot;!&quot;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -49091,7 +49091,7 @@ return /\41/.exec(&quot;!&quot;)[0] === &quot;!&quot;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
@@ -49165,7 +49165,7 @@ return a === 3;
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes unstable not-applicable" data-browser="ejs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="xs6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>

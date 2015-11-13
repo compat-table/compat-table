@@ -719,6 +719,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        ejs:         true,
         babel:       true,
         closure:     true,
         edge12:      true,
@@ -773,7 +774,6 @@ exports.tests = [
         return !a.hasOwnProperty("prototype");
       */},
       res: {
-        ejs:         true,
         edge12:      true,
         firefox23:   true,
         chrome39:    flag,
@@ -930,7 +930,6 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         es6tr:       true,
-        ejs:         true,
         closure:     true,
         ie11:        true,
         firefox36:   true,
@@ -1021,7 +1020,6 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         es6tr:       true,
-        ejs:         true,
         closure:     true,
         ie11:        true,
         firefox11:   true,
@@ -1143,7 +1141,6 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        ejs:         true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
@@ -1172,7 +1169,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.fallthrough,
-        ejs:         true,
         closure:     true,
         webkit:      true,
         chrome48:    flag,
@@ -1240,10 +1236,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        ejs:         true,
         babel:       true,
         typescript:  true,
         es6tr:       true,
-        ejs:         true,
         closure:     true,
         ie11:        true,
         firefox11:   { val: flag, note_id: 'fx-let', },
@@ -1268,7 +1264,7 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        ejs:         true,
+        typescript:  true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
@@ -1301,7 +1297,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.fallthrough,
-        ejs:         true,
         closure:     true,
         chrome37:    flag,
         chrome41:    true,
@@ -1449,6 +1444,7 @@ exports.tests = [
         webkit:      true,
         edge12:      flag,
         xs6:         true,
+        ejs:         { val: false, note_id: 'ejs-no-function-ctor' },
       },
     },
   ]
@@ -1491,7 +1487,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         es6tr:       true,
-        ejs:         true,
         jsx:         true,
         typescript:  true,
         edge12:      true,
@@ -1518,6 +1513,7 @@ exports.tests = [
       res: {
         babel:       true,
         tr:          true,
+        ejs:         true,
         chrome44:    flag,
         chrome48:    true,
         edge12:      true,
@@ -1540,6 +1536,7 @@ exports.tests = [
       res: {
         babel:       true,
         tr:          true,
+        ejs:         true,
         closure:     true,
         jsx:         true,
         typescript:  true,
@@ -1565,6 +1562,7 @@ exports.tests = [
         chrome48:    true,
         node4:       flag,
         xs6:         true,
+        ejs:         { val: false, note_id: 'ejs-no-function-ctor' },
       },
     },
   ],
@@ -1629,11 +1627,11 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        ejs:         true,
         babel:       true,
         typescript:  true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         closure:     true,
         edge12:      true,
         firefox27:   true,
@@ -1654,7 +1652,6 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        ejs:         true,
         firefox16:   true,
         safari71_8:  true,
         webkit:      true,
@@ -1672,8 +1669,8 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
         ejs:         true,
+        babel:       true,
         edge12:      true,
         firefox27:   true,
         chrome44:    flag,
@@ -1691,7 +1688,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        ejs:         true,
         edge12:      true,
         firefox17:   true,
         safari9:     true,
@@ -1709,8 +1705,8 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
         ejs:         true,
+        babel:       true,
         firefox27:   true,
         chrome44:    flag,
         chrome46:    true,
@@ -1728,7 +1724,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        ejs:         true,
         firefox27:   true,
         safari9:     true,
         webkit:      true,
@@ -1768,7 +1763,6 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        ejs:         true,
         firefox27:   true,
         chrome46:    true,
         edge12:      flag,
@@ -1832,6 +1826,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
         chrome44:    flag,
@@ -1851,6 +1846,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge12:      true,
         firefox36:   true,
@@ -1875,7 +1871,6 @@ exports.tests = [
         tr:          true,
         typescript:  true,
         es6tr:       true,
-        ejs:         true,
         edge12:      true,
         firefox27:   true,
         safari71_8:  true,
@@ -1934,6 +1929,7 @@ exports.tests = [
         typescript:  true,
         jsx:         true,
         closure:     true,
+        ejs:         true,
         edge12:      flag,
         edge13:      true,
         chrome41:    strict,
@@ -2048,10 +2044,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         typescript:  true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         edge12:      flag,
         edge13:      true,
         safari9:     true,
@@ -2258,6 +2254,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         typescript:  true,
         es6tr:       true,
         edge12:      flag,
@@ -2299,6 +2296,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         jsx:         true,
         chrome42:    strict,
         safari9:     true,
@@ -2321,6 +2319,7 @@ exports.tests = [
         babel:       true,
         es6tr:       true,
         jsx:         true,
+        ejs:         true,
         edge12:      flag,
         edge13:      true,
         safari9:     true,
@@ -2349,6 +2348,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -2427,7 +2427,6 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         tr:          true,
-        ejs:         true,
         es6tr:       true,
         jsx:         true,
         edge12:      flag,
@@ -2462,6 +2461,7 @@ exports.tests = [
         edge13:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
   ],
@@ -2492,7 +2492,7 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         es6tr:       true,
-        ejs:         true,
+        ejs:         false,
         edge12:      flag,
         edge13:      true,
         safari9:     true,
@@ -2520,7 +2520,7 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         es6tr:       true,
-        ejs:         true,
+        ejs:         false,
         edge12:      flag,
         edge13:      true,
         webkit:      true,
@@ -2635,6 +2635,7 @@ exports.tests = [
         edge13:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -2690,6 +2691,7 @@ exports.tests = [
         chrome41:    strict,
         edge13:      true,
         tr:          true,
+        ejs:         true,
         jsx:         true,
         es6tr:       true,
         typescript:  true,
@@ -2782,6 +2784,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.shorthandMethodsResults, {
         closure:     false,
+        ejs:         true,
         firefox34:   true,
         xs6:         true,
       }),
@@ -2797,6 +2800,7 @@ exports.tests = [
         tr:          true,
         closure:     true,
         babel:       true,
+        ejs:         true,
         typescript:  true,
         jsx:         true,
         es6tr:       true,
@@ -3126,10 +3130,10 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         closure:     true,
         edge12:      flag,
         typescript:  typescript.fallthrough,
-        ejs:         true,
         firefox27:   true,
         chrome21dev: flag,
         chrome38:    true,
@@ -3179,6 +3183,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
+        ejs:         true,
         typescript:  typescript.fallthrough,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge12:      true,
@@ -3338,13 +3343,13 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        ejs:         true,
         edge12:      flag,
         edge13:      true,
         xs6:         true,
@@ -3398,7 +3403,6 @@ exports.tests = [
         chrome39:    true,
         node012:     flag,
         node4:       true,
-        ejs:         true,
         edge12:      flag,
         edge13:      true,
         xs6:         true,
@@ -3576,6 +3580,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         tr:          true,
         firefox27:   true,
         chrome38:    flag,
@@ -3606,6 +3611,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -3636,6 +3642,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         closure:     true,
         firefox36:   true,
         chrome21dev: flag,
@@ -3665,6 +3672,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        ejs:         true,
         babel:       true,
         closure:     true,
         firefox36:   true,
@@ -3941,6 +3949,7 @@ exports.tests = [
         edge13:      true,
         node5:       true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -3966,6 +3975,7 @@ exports.tests = [
         edge13:      true,
         node5:       true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -3991,6 +4001,7 @@ exports.tests = [
         edge13:      true,
         node5:       true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -4016,6 +4027,7 @@ exports.tests = [
         edge13:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -4101,7 +4113,6 @@ exports.tests = [
         return Number('0o1') === 1;
       */},
       res: {
-        ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
         edge12:      true,
@@ -4122,7 +4133,6 @@ exports.tests = [
         return Number('0b1') === 1;
       */},
       res: {
-        ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
         edge12:      true,
@@ -4157,7 +4167,6 @@ exports.tests = [
         babel:       true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         closure:     true,
         typescript:  true,
         edge12:      true,
@@ -4207,10 +4216,10 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        ejs:         true,
         babel:       true,
         es6tr:       true,
         jsx:         true,
+        ejs:         true,
         closure:     true,
         typescript:  true,
         edge12:      true,
@@ -4391,7 +4400,6 @@ exports.tests = [
         return view[0] === 0xFF;
       */},
       res: (temp.clampedArrayResults = {
-        ejs:         true,
         firefox11:   true,
         edge12:      true,
         chrome:      true,
@@ -4561,6 +4569,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -4598,6 +4607,7 @@ exports.tests = [
         firefox11:false,
         firefox44:true,
         xs6:      true,
+        ejs:      true,
       }),
     },
     {
@@ -4663,7 +4673,7 @@ exports.tests = [
     },
   ].concat([		//@@ jph
     { name: '.from',                  res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
-    { name: '.of',                    res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
+    { name: '.of',                    res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, xs6: true, ejs: true, }},
     { name: '.prototype.subarray',    res: {
         ejs:         true,
         edge12:      true,
@@ -4678,17 +4688,17 @@ exports.tests = [
     { name: '.prototype.join',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.indexOf',     res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.lastIndexOf', res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
-    { name: '.prototype.slice',       res: { edge12:    true, firefox38: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
+    { name: '.prototype.slice',       res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.every',       res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.filter',      res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.forEach',     res: { edge12:    true, firefox38: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.map',         res: { edge12:    true, firefox38: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.reduce',      res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.reduceRight', res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
-    { name: '.prototype.reverse',     res: { edge12:    true, firefox37: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
+    { name: '.prototype.reverse',     res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.some',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.sort',        res: { edge12:    true, chrome45: true, node4: true, webkit: true, xs6: true, }},
-    { name: '.prototype.copyWithin',  res: { edge12:    true, firefox34: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
+    { name: '.prototype.copyWithin',  res: { edge12:    true, firefox34: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.find',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.findIndex',   res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
     { name: '.prototype.fill',        res: { edge12:    true, firefox37: true, ejs: true, chrome45: true, node4: true, webkit: true, xs6: true, }},
@@ -4696,7 +4706,7 @@ exports.tests = [
     { name: '.prototype.values',      res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true, webkit: true, xs6: true, }},
     { name: '.prototype.entries',     res: { edge12:    true, chrome38: true, node012: true, firefox37: true, webkit: true, xs6: true, }},
     { name: '.prototype[Symbol.iterator]', res: { edge12:    true, chrome38: true, node012: true, firefox37: true, ejs: true, webkit: true, xs6: true, }},
-    { name: '[Symbol.species]',       res: { edge13:    true, xs6: true, }},
+    { name: '[Symbol.species]',       res: { edge13:    true, xs6: true, ejs: true, }},
     ].map(function(m) {
       var eqFn = ' === "function"';
       var name = m.name;
@@ -4787,6 +4797,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  true,
         es6shim:     true,
         ie11:        true,
@@ -4822,6 +4833,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
         es6shim:     true,
@@ -4898,7 +4910,6 @@ exports.tests = [
         webkit:      true,
         node012:     flag,
         node4:       true,
-        ejs:         true,
         xs6:         true,
       },
     },
@@ -5092,6 +5103,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         safari9:     true,
         webkit:      true,
@@ -5109,6 +5121,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         firefox41:   true,
         edge13:      true,
@@ -5187,6 +5200,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  true,
         es6shim:     true,
         ie11:        true,
@@ -5223,6 +5237,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         es6shim:     true,
         edge12:      true,
@@ -5496,6 +5511,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
+        ejs:         true,
         safari9:     true,
         webkit:      true,
         chrome45:    true,
@@ -5512,6 +5528,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         firefox41:   true,
         edge13:      true,
@@ -5586,6 +5603,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  true,
         ie11:        true,
         chrome36:    true,
@@ -5621,6 +5639,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
         firefox37:   true,
@@ -5641,7 +5660,6 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
         firefox11:   true,
@@ -5726,6 +5744,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         chrome43:    true,
         edge12:      true,
@@ -5803,6 +5822,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         firefox37:   true,
         edge12:      true,
         chrome36:    true,
@@ -5837,6 +5857,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
         firefox37:   true,
@@ -5921,6 +5942,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        ejs:         true,
         chrome43:    true,
         safari9:     true,
         webkit:      true,
@@ -6120,7 +6142,7 @@ exports.tests = [
           && returnedDesc.enumerable   === false);
       */},
       res: {
-        ejs:         true,
+        ejs:         false,
         typescript:  typescript.fallthrough,
         edge12:      true,
         firefox18:   {
@@ -6295,6 +6317,7 @@ exports.tests = [
         firefox33:   true,
         edge12:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -6365,6 +6388,7 @@ exports.tests = [
         return Array.isArray(new Proxy([], {}));
       */},
       res: {
+        ejs:         true,
         typescript:  typescript.fallthrough,
         firefox18:   true,
         edge12:      true,
@@ -6377,6 +6401,7 @@ exports.tests = [
         return JSON.stringify(new Proxy(['foo'], {})) === '["foo"]';
       */},
       res: {
+        ejs:         true,
         typescript:  typescript.fallthrough,
         firefox18:   true,  // a bug in FF18
         firefox23:   false,
@@ -6405,7 +6430,8 @@ exports.tests = [
       res: {
         xs6:         true,
         firefox44:   true,
-	  },
+        ejs:         true,
+      },
     },
     {
       name: 'CreateListFromArrayLike',
@@ -6417,6 +6443,7 @@ exports.tests = [
         return get + '' === "length,0,1";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         xs6:         true,
@@ -6450,7 +6477,8 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+        ejs:         { val: false, note_id: 'ejs-no-with' },
+      },
     },
     {
       name: 'CreateDynamicFunction',
@@ -6479,6 +6507,7 @@ exports.tests = [
         edge12:      flag,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -6502,6 +6531,7 @@ exports.tests = [
         return get + '' === "done,value,done,value";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox36:   true,
         xs6:         true,
@@ -6525,6 +6555,7 @@ exports.tests = [
         }
       */},
       res: {
+        ejs:         true,
         firefox18:   true,
         edge13:      true,
         xs6:         true,
@@ -6585,6 +6616,7 @@ exports.tests = [
         return get + '' === "name,message";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         xs6:         true,
@@ -6601,6 +6633,7 @@ exports.tests = [
         return get + '' === "raw,length,0,1";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox34:   true,
         xs6:         false,
@@ -6620,6 +6653,7 @@ exports.tests = [
       res: {
         firefox42:   true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -6706,7 +6740,8 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+        ejs:         true,
+      },
     },
     {
       name: 'Array.from',
@@ -6718,6 +6753,7 @@ exports.tests = [
         return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
       */},
       res: {
+        ejs:         true,
         firefox36:   true,
         edge13:      true,
         xs6:         true,
@@ -6741,7 +6777,8 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+        ejs:         true,
+      },
     },
     {
       name: 'Array.prototype iteration methods',
@@ -6781,6 +6818,7 @@ exports.tests = [
         return get + '' === "length,3";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         xs6:         true,
@@ -6811,6 +6849,7 @@ exports.tests = [
         return get + '' === "length,0,1,2,3";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         xs6:         true,
@@ -6827,6 +6866,7 @@ exports.tests = [
         return get + '' === "length,constructor,1,2,3,length,constructor,2,1";
       */},
       res: {
+        ejs:         true,
         edge13:      true,
         xs6:         true,
       },
@@ -6841,6 +6881,7 @@ exports.tests = [
         return get + '' === "join";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         xs6:         true,
@@ -6856,6 +6897,7 @@ exports.tests = [
         return get + '' === "toJSON";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         xs6:         false,
@@ -6871,6 +6913,7 @@ exports.tests = [
         return get + '' === "then";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox29:   true,
         xs6:         true,
@@ -6889,7 +6932,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'String.prototype.replace',
@@ -6904,7 +6947,8 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+        ejs:         true,
+      },
     },
     {
       name: 'String.prototype.search',
@@ -6934,7 +6978,8 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+        ejs:         true,
+      },
     },
     {
       name: 'Date.prototype.toJSON',
@@ -6969,6 +7014,7 @@ exports.tests = [
         return set + '' === "foo,bar";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox34:   true,
         xs6:         true,
@@ -6985,6 +7031,7 @@ exports.tests = [
       */},
       res: {
         edge12:      true,
+        ejs:         true,
         firefox31:   true,
         xs6:         true,
       },
@@ -7000,6 +7047,7 @@ exports.tests = [
       */},
       res: {
         edge12:      true,
+        ejs:         true,
         firefox25:   true,
         xs6:         true,
       },
@@ -7197,6 +7245,7 @@ exports.tests = [
         return del + '' === "2";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox18:   true,
         firefox23:   false,
@@ -7291,6 +7340,7 @@ exports.tests = [
         return gopd + '' === "foo,bar";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox37:   true,
         xs6:         false,
@@ -7323,6 +7373,7 @@ exports.tests = [
         return gopd + '' === "garply";
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox32:   true,
         xs6:         true,
@@ -7362,6 +7413,7 @@ exports.tests = [
         return ownKeysCalled === 1;
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox32:   true,
         xs6:         true,
@@ -7377,6 +7429,7 @@ exports.tests = [
         return ownKeysCalled === 1;
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox32:   true,
         xs6:         true,
@@ -7392,6 +7445,7 @@ exports.tests = [
         return ownKeysCalled === 2;
       */},
       res: {
+        ejs:         true,
         firefox32:   true,
         edge13:      true,
         xs6:         true,
@@ -7463,7 +7517,6 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
         es6shim:     true,
@@ -7501,7 +7554,6 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        ejs:         true,
         typescript:  typescript.corejs,
         es6shim:     true,
         webkit:      true,
@@ -7599,7 +7651,6 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         es6shim:     true,
         edge12:      true,
         webkit:      true,
@@ -7675,8 +7726,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  typescript.corejs,
         ejs:         true,
+        typescript:  typescript.corejs,
         edge12:      true,
         es6shim:     true,
         firefox42:   true,
@@ -7697,6 +7748,7 @@ exports.tests = [
         firefox42:   true,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -7706,8 +7758,9 @@ exports.tests = [
         return Reflect.construct(function(){}, [], F) instanceof F;
       */},
       res: {
-        babel: true,
-        es6shim: true,
+        ejs:         true,
+        babel:       true,
+        es6shim:     true,
         typescript: typescript.corejs,
         edge13:      true,
         firefox44:   true,
@@ -7761,9 +7814,9 @@ exports.tests = [
       res: (temp.destructuringResults = {
         tr:          true,
         babel:       true,
+        ejs:         true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         closure:     true,
         typescript:  true,
         firefox11:   true,
@@ -7779,7 +7832,7 @@ exports.tests = [
         var [a, b] = [,,];
         return a === undefined && b === undefined;
       */},
-      res: temp.destructuringResults,
+      res: temp.destructuringResults
     },
     {
       name: 'with strings',
@@ -7815,8 +7868,8 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
         ejs:         true,
+        typescript:  typescript.fallthrough,
         firefox34:   true,
         safari9:     true,
         webkit:      true,
@@ -7838,6 +7891,7 @@ exports.tests = [
         typescript:   typescript.fallthrough,
         firefox34:    true,
         babel:        true,
+        ejs:          true,
         edge13:       flag,
         xs6:         true,
       },
@@ -7853,6 +7907,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
+        ejs:          true,
         typescript:   typescript.fallthrough,
         firefox34:    true,
         safari9:     true,
@@ -7874,6 +7929,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        ejs:          true,
         typescript:   typescript.fallthrough,
         firefox36:    true,
         safari9:      true,
@@ -7909,6 +7965,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        ejs:          true,
         typescript:   true,
         es6tr:        true,
         firefox11:    true,
@@ -7928,6 +7985,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        ejs:          true,
         typescript:   true,
         es6tr:        true,
         firefox11:    true,
@@ -7970,6 +8028,7 @@ exports.tests = [
           note_id: "ff11-object-destructuring",
           note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
         },
+        ejs:          false,
         firefox16:    true,
         webkit:       true,
         safari71_8:   true,
@@ -8142,7 +8201,9 @@ exports.tests = [
         return e === 9 && f === 10 && g === undefined
           && h === 11 && i === 12;
       */},
-      res: temp.destructuringResults,
+      res: Object.assign({}, temp.destructuringResults, {
+        ejs:          false,
+      }),
     },
     {
       name: 'in parameters',
@@ -8158,7 +8219,6 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
@@ -8181,7 +8241,6 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
@@ -8217,7 +8276,6 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         jsx:         true,
-        ejs:         true,
         closure:     true,
         firefox11:   true,
         safari71_8:  true,
@@ -8309,6 +8367,7 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        ejs:         true,
         safari71_8:  false,
         safari9:     true,
         edge13:      flag,
@@ -8323,6 +8382,7 @@ exports.tests = [
         }([3,4],{x:"foo"});
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        ejs:         true,
         safari71_8:  false,
         safari9:     true,
         jsx:         false,
@@ -8422,6 +8482,7 @@ exports.tests = [
         typescript:   typescript.fallthrough,
         edge13:       flag,
         xs6:          true,
+        ejs:         { val: false, note_id: 'ejs-no-function-ctor' },
       },
     },
   ],
@@ -8487,6 +8548,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         firefox37:   true,
         edge12:      true,
@@ -8519,7 +8581,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox29:   true,
@@ -8585,7 +8646,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox29:   true,
@@ -8635,6 +8695,7 @@ exports.tests = [
         return 'get' in prop && Promise[Symbol.species] === Promise;
       */},
       res: {
+        ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
         edge13:      true,
@@ -8757,6 +8818,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8775,6 +8837,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8795,6 +8858,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         edge12:      true,
         firefox33:   true,
         chrome40:    true,
@@ -8814,6 +8878,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8832,6 +8897,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8850,6 +8916,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8868,6 +8935,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8886,6 +8954,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8904,6 +8973,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        ejs:         true,
         es6shim:     true,
         edge12:      true,
         firefox35:   true,
@@ -8960,6 +9030,7 @@ exports.tests = [
         node012:     true,
         android40:   true,
         xs6:         true,
+        ejs:         true,
       }),
     },
     {
@@ -8969,7 +9040,9 @@ exports.tests = [
         o.__proto__ = Array.prototype;
         return o instanceof Array;
       */},
-      res: temp.basicProtoResults,
+      res: Object.assign({}, temp.basicProtoResults, {
+        ejs:         false,
+      }),
     },
     {
       name: 'absent from Object.create(null)',
@@ -8988,6 +9061,7 @@ exports.tests = [
         rhino17:     true,
         node012:     true,
         xs6:         true,
+        ejs:         true,
       }),
     },
     {
@@ -9001,6 +9075,7 @@ exports.tests = [
         android40:   true,
         android41:   false,
         xs6:         true,
+        ejs:         false,
       }),
     },
     {
@@ -9020,6 +9095,7 @@ exports.tests = [
         rhino17:   false,
         firefox17: true,
         xs6:         true,
+        ejs:       false,
       }),
     },
     {
@@ -9032,6 +9108,7 @@ exports.tests = [
         firefox39: true,
         rhino17:   false,
         xs6:         true,
+        ejs:       false,
       }),
     },
   ],
@@ -9091,6 +9168,7 @@ exports.tests = [
         android41:   false,
         chrome48:    true,
         xs6:         true,
+        ejs:         { val: false, note_id: 'ejs-no-function-ctor' },
       },
     },
     {
@@ -9182,6 +9260,7 @@ exports.tests = [
         chrome42:     true,
         node4:        true,
         xs6:         true,
+        ejs:          true,
       },
     },
     {
@@ -9296,6 +9375,7 @@ exports.tests = [
       */},
       res: {
         babel:        true,
+        ejs:          true,
         edge12:       flag,
         edge13:       true,
         safari9:      true,
@@ -9552,6 +9632,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         safari9:     true,
         webkit:      true,
@@ -9684,6 +9765,7 @@ exports.tests = [
         return \u{102C0}['\ud800\udec0'] === 2;
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         chrome44:    true,
         safari9:     true,
@@ -9719,6 +9801,7 @@ exports.tests = [
         edge13:      true,
         node5:       true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -9741,6 +9824,7 @@ exports.tests = [
         //edge13:      true,
         node5:       true,
         xs6:         true,
+        ejs:         true,
       }
     },
   ]
@@ -9815,7 +9899,6 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         edge12:      true,
         firefox36:   true,
         safari9:     true,
@@ -9874,7 +9957,6 @@ exports.tests = [
         return true;
       */},
       res: {
-        ejs:         true,
         typescript:  true,
         edge12:      true,
         firefox36:   true,
@@ -9891,7 +9973,6 @@ exports.tests = [
         return String(Symbol("foo")) === "Symbol(foo)";
       */},
       res: {
-        ejs:         true,
         typescript:  typescript.fallthrough,
         edge12:      true,
         chrome39:    true,
@@ -9913,7 +9994,6 @@ exports.tests = [
         }
       */},
       res: {
-        ejs:        true,
         tr:         true,
         babel:      true,
         typescript: true,
@@ -9981,7 +10061,6 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         edge12:      true,
         firefox36:   true,
         chrome35:    flag,
@@ -10076,6 +10155,7 @@ exports.tests = [
         node012:     true,
         edge12:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -10103,6 +10183,7 @@ exports.tests = [
         return Array.prototype.concat.call(obj, []).foo === 1;
       */},
       res: {
+        ejs:         true,
         edge13:      true,
         xs6:         true,
       }
@@ -10118,6 +10199,7 @@ exports.tests = [
         return Array.prototype.filter.call(obj, Boolean).foo === 1;
       */},
       res: {
+        ejs:         true,
         edge13:      true,
         xs6:         true,
       }
@@ -10133,6 +10215,7 @@ exports.tests = [
         return Array.prototype.map.call(obj, Boolean).foo === 1;
       */},
       res: {
+        ejs:         true,
         edge13:      true,
         xs6:         true,
       }
@@ -10150,6 +10233,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -10163,6 +10247,7 @@ exports.tests = [
         return Array.prototype.splice.call(obj, 0).foo === 1;
       */},
       res: {
+        ejs:         true,
         edge13:      true,
         xs6:         true,
       }
@@ -10182,6 +10267,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -10195,6 +10281,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         xs6:         true,
       }
@@ -10210,6 +10297,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         xs6:         true,
       }
@@ -10225,6 +10313,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         xs6:         true,
       }
@@ -10240,6 +10329,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         xs6:         true,
       }
@@ -10255,6 +10345,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
         xs6:         true,
@@ -10273,6 +10364,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
         xs6:         true,
@@ -10291,6 +10383,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
         xs6:         true,
@@ -10309,6 +10402,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
         xs6:         true,
@@ -10361,6 +10455,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         chrome40:    flag,
         node4:       flag,
@@ -10470,6 +10565,7 @@ exports.tests = [
         return 'get' in prop && RegExp[Symbol.species] === RegExp;
       */},
       res: {
+        ejs:         true,
         babel:       true,
         typescript:  typescript.corejs,
         edge13:      true,
@@ -10516,6 +10612,7 @@ exports.tests = [
         return /[\w-_]/.exec("-")[0] === "-";
       */},
       res: (temp.regExpExtensions = {
+        ejs:         true,
         ie10:        true,
         firefox11:   true,
         chrome:      true,
@@ -10535,14 +10632,14 @@ exports.tests = [
         return /\z/.exec("\\z")[0] === "z"
           && /[\z]/.exec("[\\z]")[0] === "z";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { xs6: false }),
+      res: Object.assign({}, temp.regExpExtensions, { xs6: false, ejs: false, }),
     },
     {
       name: 'invalid control-character escapes',
       exec: function() {/*
         return /\c2/.exec("\\c2")[0] === "\\c2";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { xs6: false }),
+      res: Object.assign({}, temp.regExpExtensions, { xs6: false, ejs: false, }),
     },
     {
       name: 'invalid Unicode escapes',
@@ -10550,7 +10647,7 @@ exports.tests = [
         return /\u1/.exec("u1")[0] === "u1"
           && /[\u1]/.exec("u")[0] === "u";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { opera: false }),
+      res: Object.assign({}, temp.regExpExtensions, { opera: false, ejs: false }),
     },
     {
       name: 'invalid hexadecimal escapes',
@@ -10558,7 +10655,7 @@ exports.tests = [
         return /\x1/.exec("x1")[0] === "x1"
           && /[\x1]/.exec("x")[0] === "x";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { opera: false, xs6: false }),
+      res: Object.assign({}, temp.regExpExtensions, { opera: false, xs6: false, ejs: false, }),
     },
     {
       name: 'incomplete patterns and quantifiers',
@@ -10620,9 +10717,9 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        ejs:         true,
         babel:       true,
         typescript:  typescript.fallthrough,
-        ejs:         true,
         es6shim:     true,
         firefox32:   true,
         chrome45:    true,
@@ -10641,8 +10738,8 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.corejs,
         ejs:         true,
+        typescript:  typescript.corejs,
         edge12:      true,
         es6shim:     true,
         firefox32:   true,
@@ -10662,6 +10759,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        ejs:         true,
         tr:          true,
         edge12:      true,
         firefox36:   true,
@@ -10684,7 +10782,6 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         es6shim:     true,
-        ejs:         true,
         edge12:      true,
         firefox32:   true,
         safari9:     true,
@@ -10706,7 +10803,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.fallthrough,
-        ejs:         true,
         es6shim:     true,
         firefox32:   true,
         chrome45:    true,
@@ -10728,7 +10824,6 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         edge12:      true,
         es6shim:     true,
         firefox32:   true,
@@ -10812,6 +10907,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         edge13:      true,
         xs6:         true,
@@ -11034,6 +11130,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        ejs:         true,
         typescript:  typescript.corejs,
         safari9:     true,
         webkit:      true,
@@ -11551,6 +11648,7 @@ exports.tests = [
         webkit:      true,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11569,6 +11667,7 @@ exports.tests = [
         webkit:      true,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11585,6 +11684,7 @@ exports.tests = [
         edge12:      flag,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11599,6 +11699,7 @@ exports.tests = [
         chrome43:    strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -11611,6 +11712,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -11623,6 +11725,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -11635,6 +11738,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -11648,6 +11752,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -11661,6 +11766,7 @@ exports.tests = [
       res: {
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       }
     },
     {
@@ -11674,6 +11780,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         edge12:      flag,
         edge13:      true,
+        ejs:         true,
         chrome45:    strict,
         xs6:         true,
       }
@@ -11690,6 +11797,7 @@ exports.tests = [
         edge12:      flag,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
         chrome45:    strict,
       }
     },
@@ -11716,6 +11824,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11733,6 +11842,7 @@ exports.tests = [
         edge12:      flag,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11750,6 +11860,7 @@ exports.tests = [
         edge13:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11767,6 +11878,7 @@ exports.tests = [
         edge13:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
   ],
@@ -11908,6 +12020,7 @@ exports.tests = [
         webkit:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -11925,6 +12038,7 @@ exports.tests = [
         webkit:      true,
         node5:       strict,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -12010,6 +12124,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -12029,6 +12144,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -12050,6 +12166,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -12071,6 +12188,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -12093,6 +12211,7 @@ exports.tests = [
         node4:       strict,
         edge13:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
   ],
@@ -12188,6 +12307,7 @@ exports.tests = [
         webkit:        true,
         android40:     true,
         xs6:         true,
+        ejs:           true,
       },
     },
     {
@@ -12291,6 +12411,7 @@ exports.tests = [
       res: {
         ie10:          { val: true, note_id: 'ie_property_order' },
         firefox44:     true,
+        ejs:           true,
         chrome:        true,
         node012:       true,
         opera:         true,
@@ -12357,12 +12478,12 @@ exports.tests = [
       res: {
         babel:       { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
         typescript:  { val: false, note_id: "forin-order" },
-        ejs:         true,
         es6shim:     { val: false, note_id: "forin-order" },
         firefox44:   true,
         edge12:      true,
         webkit:      true,
         xs6:         true,
+        ejs:         true,
       },
     },
     {
@@ -12388,12 +12509,12 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
-        ejs:         true,
         es6shim:     true,
         edge12:      true,
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        ejs:         true,
       }
     },
   ],
@@ -12436,6 +12557,7 @@ exports.tests = [
         return this === undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
+        ejs:         true,
         edge12:      true,
         firefox34:   true,
         chrome42:    true,
@@ -12451,6 +12573,7 @@ exports.tests = [
         do {} while (false) return true;
       */},
       res: {
+        ejs:         true,
         babel:       true,
         typescript:  true,
         ie10:        true,
@@ -12476,8 +12599,9 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
-        typescript: true,
+        ejs:         true,
+        babel:       true,
+        typescript:  true,
         xs6:         true,
       },
     },
@@ -12527,6 +12651,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        ejs:         true,
         typescript:  true,
         es6shim:     true,
         edge12:      true,
@@ -12602,6 +12727,7 @@ exports.tests = [
     return a === 3;
   */},
   res: {
+    ejs:         true,
     firefox11:   true,
     chrome:      true,
     safari51:    true,
