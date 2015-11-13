@@ -9252,6 +9252,7 @@ exports.tests = [
       res: {
         babel:       true,
         edge12:      flag,
+        edge13:      true,
         xs6:         true,
       },
     },
@@ -9278,6 +9279,7 @@ exports.tests = [
         babel:        true,
         firefox34:    true,
         edge12:       flag,
+        edge13:       true,
         chrome41:     flag,
         chrome42:     true,
         safari9:      true,
