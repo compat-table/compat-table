@@ -89,7 +89,8 @@ exports.browsers = {
     family: 'Chakra',
     short: 'Edge 12',
     note_id: 'edge-experimental-flag',
-    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags',
+    obsolete: true,
   },
   edge13: {
     full: 'Microsoft Edge',
