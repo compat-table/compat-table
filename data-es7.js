@@ -39,13 +39,13 @@ exports.browsers = {
     obsolete: false // no EOL any time soon
   },
   edge12: {
-    full: 'Internet Explorer, Microsoft Edge',
+    full: 'Microsoft Edge',
     short: 'Edge 12',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
   edge13: {
-    full: 'Internet Explorer, Microsoft Edge for preview Builds',
+    full: 'Microsoft Edge',
     short: 'Edge 13',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
