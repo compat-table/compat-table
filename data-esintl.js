@@ -6,21 +6,25 @@ exports.skeleton_file = 'esintl/skeleton.html';
 exports.browsers = {
   ie9: {
     full: 'Internet Explorer',
+    family: 'Chakra',
     short: 'IE 9',
     obsolete: false
   },
   ie10: {
     full: 'Internet Explorer',
+    family: 'Chakra',
     short: 'IE 10',
     obsolete: false
   },
   ie11: {
     full: 'Internet Explorer',
+    family: 'Chakra',
     short: 'IE 11',
     obsolete: false
   },
   edge: {
     full: 'Microsoft Edge',
+    family: 'Chakra',
     short: 'Edge',
     unstable: true
   },
@@ -42,7 +46,7 @@ exports.browsers = {
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
-    obsolete: false // ESR (EOL at Aug 2015)
+    obsolete: true
   },
   firefox32: {
     full: 'Firefox',
@@ -56,28 +60,33 @@ exports.browsers = {
   },
   firefox34: {
     full: 'Firefox',
-    short: 'FF 34'
+    short: 'FF 34',
+    obsolete: true
   },
   firefox35: {
     full: 'Firefox',
-    short: 'FF 35'
+    short: 'FF 35',
+    obsolete: true
   },
   firefox36: {
     full: 'Firefox',
-    short: 'FF 36'
+    short: 'FF 36+'
   },
   chrome22: {
     full: 'Chrome 22',
+    family: 'Blink',
     short: 'CH 22',
     obsolete: true
   },
   chrome24: {
     full: 'Chrome 24-29, Opera 16+',
+    family: 'Blink',
     short: 'CH 24-29,<br>OP 15+',
-    obsolete: false
+    obsolete: true
   },
   chrome29: {
     full: 'Chrome 29+, Opera 16+',
+    family: 'Blink',
     short: 'CH 29+,<br>OP 16+',
     obsolete: false
   },
@@ -89,7 +98,7 @@ exports.browsers = {
   safari6: {
     full: 'Safari',
     short: 'SF 6',
-    obsolete: false // EOLs together with OS X 10.8
+    obsolete: true,
   },
   safari7: {
     full: 'Safari',
@@ -109,17 +118,19 @@ exports.browsers = {
   opera: {
     full: 'Opera 12.16',
     short: 'OP 12',
-    obsolete: false // still supported
+    obsolete: true
   },
   node10: {
-    full: 'Node 0.10',
-    short: 'Node .10',
+    full: 'Node.js 0.10',
+    short: 'Node<br>0.10',
+    family: 'Node.js',
     obsolete: true,
     platformtype: 'engine',
   },
   node12: {
-    full: 'Node 0.12',
-    short: 'Node .12',
+    full: 'Node.js 0.12',
+    short: 'Node<br>0.12',
+    family: 'Node.js',
     obsolete: false, // current version
     platformtype: 'engine',
     note_id: 'only-english',
@@ -127,7 +138,8 @@ exports.browsers = {
   },
   iojs1_0: {
     full: 'io.js 1.0.0',
-    short: 'io 1.0',
+    short: 'io.js<br>1.0',
+    family: 'Node.js',
     obsolete: true,
     platformtype: 'engine',
     note_id: 'build-with-intl',
@@ -135,7 +147,8 @@ exports.browsers = {
   },
   iojs1_1: {
     full: 'io.js 1.1.0',
-    short: 'io 1.1',
+    short: 'io.js<br>1.1',
+    family: 'Node.js',
     obsolete: true,
     platformtype: 'engine',
     note_id: 'build-with-intl',
@@ -143,7 +156,8 @@ exports.browsers = {
   },
   node4: {
     full: 'Node 4.0',
-    short: 'Node 4.0',
+    short: 'Node<br>4.0',
+    family: 'Node.js',
     obsolete: false, // current version
     platformtype: 'engine',
     note_id: 'only-english',
@@ -151,31 +165,31 @@ exports.browsers = {
   },
   android40: {
     full: 'Android Browser',
-    short: 'Android 4.0',
+    short: 'AN 4.0',
     platformtype: 'mobile',
     obsolete: true,
   },
   android41: {
     full: 'Android Browser',
-    short: 'Android 4.1 - 4.3',
+    short: 'AN 4.1 - 4.3',
     platformtype: 'mobile',
     obsolete: true,
   },
   android44: {
     full: 'Android Browser',
-    short: 'Android 4.4+',
+    short: 'AN 4.4+',
     platformtype: 'mobile',
     equals: 'chrome29',
     ignore_flagged: true,
   },
   ios7: {
     full: 'iOS Safari',
-    short: 'iOS7',
+    short: 'iOS 7',
     platformtype: 'mobile',
   },
   ios8: {
     full: 'iOS Safari',
-    short: 'iOS8',
+    short: 'iOS 8',
     platformtype: 'mobile',
   }
 };

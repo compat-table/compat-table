@@ -35,17 +35,20 @@ exports.browsers = {
   },
   ie11: {
     full: 'Internet Explorer',
+    family: 'Chakra',
     short: 'IE 10-11',
     obsolete: false // no EOL any time soon
   },
   edge12: {
     full: 'Microsoft Edge',
+    family: 'Chakra',
     short: 'Edge 12',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
   edge13: {
     full: 'Microsoft Edge',
+    family: 'Chakra',
     short: 'Edge 13',
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
@@ -179,29 +182,32 @@ exports.browsers = {
   },
   node: {
     full: 'Node.js',
+    family: 'Node.js',
     short: 'Node 0.12',
     platformtype: 'engine',
   },
   iojs: {
-    full: 'Node.js, io.js',
+    full: 'io.js',
+    family: 'Node.js',
     short: 'io.js',
     obsolete: true,
     platformtype: 'engine',
   },
   node4: {
     full: 'Node.js',
+    family: 'Node.js',
     short: 'Node 4.0',
     platformtype: 'engine',
   },
   android40: {
     full: 'Android Browser',
-    short: 'Android 4.0',
+    short: 'AN 4.0',
     platformtype: 'mobile',
     obsolete: true,
   },
   android41: {
     full: 'Android Browser',
-    short: 'Android 4.1 - 4.3',
+    short: 'AN 4.1 - 4.3',
     platformtype: 'mobile',
     obsolete: true,
   },
@@ -214,14 +220,14 @@ exports.browsers = {
   },
   android50: {
     full: 'Android Browser',
-    short: 'Android 5.0',
+    short: 'AN 5.0',
     platformtype: 'mobile',
     equals: 'chrome37',
     ignore_flagged: true,
   },
   android51: {
     full: 'Android Browser',
-    short: 'Android 5.1',
+    short: 'AN 5.1',
     platformtype: 'mobile',
     equals: 'chrome39',
     ignore_flagged: true,

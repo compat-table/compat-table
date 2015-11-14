@@ -334,11 +334,12 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid, j;
     // For each browser, check if the previous browser has the same
-    // browser full name as this one.
+    // browser full name (e.g. Firefox) or family name (e.g. Chakra) as this one.
     for (var bid in rawBrowsers) {
       browser = rawBrowsers[bid];
       if (prevBrowser &&
-          prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'')) {
+          (prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'') ||
+          (browser.family !== undefined && prevBrowser.family === browser.family))) {
         // For each test, check if the previous browser has a result
         // that this browser lacks.
         result     = res[bid];
