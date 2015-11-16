@@ -919,6 +919,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox36:   true,
+        chrome48:    flag,
         webkit:      true,
         xs6:         true,
       }
@@ -941,6 +942,7 @@ exports.tests = [
         closure:     true,
         ie11:        true,
         firefox36:   true,
+        chrome48:    flag,
         webkit:      true,
         xs6:         true,
       }
@@ -958,6 +960,7 @@ exports.tests = [
         babel:       flag,
         ie11:        true,
         firefox36:   true,
+        chrome48:    flag,
         webkit:      true,
         xs6:         true,
       },
@@ -1335,6 +1338,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox16:   true,
+        chrome48:    flag,
         webkit:      true,
         edge12:      flag,
         xs6:         true,
@@ -1353,6 +1357,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox18:   true,
+        chrome48:    flag,
         webkit:      true,
         edge12:      flag,
         xs6:         true,
@@ -1371,6 +1376,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         firefox16:   true,
+        chrome48:    flag,
         webkit:      true,
         edge12:      flag,
         xs6:         true,
@@ -1396,6 +1402,7 @@ exports.tests = [
         webkit:      true,
         edge13:      flag,
         firefox43:   true,
+        chrome48:    flag,
         xs6:         true,
       },
     },
@@ -1437,6 +1444,7 @@ exports.tests = [
         closure:     true,
         webkit:      true,
         edge12:      flag,
+        chrome48:    flag,
         xs6:         true,
       },
     },
@@ -1450,6 +1458,7 @@ exports.tests = [
       res: {
         typescript: typescript.fallthrough,
         webkit:      true,
+        chrome48:    flag,
         edge12:      flag,
         xs6:         true,
         ejs:         { val: false, note_id: 'ejs-no-function-ctor' },
@@ -7837,7 +7846,7 @@ exports.tests = [
     {
       name: 'with sparse arrays',
       exec: function(){/*
-        var [a, b] = [,,];
+        var [a, , b] = [,,,];
         return a === undefined && b === undefined;
       */},
       res: temp.destructuringResults
@@ -8328,6 +8337,27 @@ exports.tests = [
         webkit:      true,
         edge13:      flag,
         xs6:         true,
+      },
+    },
+    {
+      name: 'in catch heads',
+      exec: function(){/*
+        try {
+          throw [1,2];
+        } catch([i,j]) {
+          try {
+            throw { k: 3, l: 4 };
+          } catch({k, l}) {
+            return i === 1 && j === 2 && k === 3 && l === 4;
+          }
+        }
+      */},
+      res: {
+        firefox11:   true,
+        babel:       true,
+        tr:          true,
+        jsx:         true,
+        closure:     true,
       },
     },
     {
@@ -10035,6 +10065,7 @@ exports.tests = [
         firefox36:   true,
         chrome30:    flag,
         chrome35:    false,
+        chrome48:    true,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -10051,7 +10082,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
-		es6shim:     true,
+        es6shim:     true,
         firefox36:   true,
         chrome35:    flag,
         chrome38:    true,
@@ -10452,6 +10483,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         chrome40:    flag,
+        chrome48:    true,
         node4:       flag,
         xs6:         true,
       },
@@ -10468,6 +10500,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         chrome40:    flag,
+        chrome48:    true,
         node4:       flag,
         xs6:         true,
       },
@@ -11986,6 +12019,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge13:      true,
         xs6:         true,
+        chrome48:    flag,
       },
     },
   ],
