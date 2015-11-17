@@ -1220,33 +1220,33 @@ exports.tests = [
 },
 {
   name: 'String padding',
-  category: 'proposal',
+  category: 'candidate',
   significance: 'small',
-  link: 'https://github.com/ljharb/proposal-string-pad-left-right',
+  link: 'https://github.com/tc39/proposal-string-pad-start-end',
   subtests: [
     {
-      name: 'String.prototype.padLeft',
+      name: 'String.prototype.padStart',
       exec: function(){/*
-        return 'hello'.padLeft(10) === '     hello'
-          && 'hello'.padLeft(10, '1234') === '12341hello'
-          && 'hello'.padLeft() === 'hello'
-          && 'hello'.padLeft(6, '123') === '1hello';
+        return 'hello'.padStart(10) === '     hello'
+          && 'hello'.padStart(10, '1234') === '12341hello'
+          && 'hello'.padStart() === 'hello'
+          && 'hello'.padStart(6, '123') === '1hello';
       */},
       res: {
-        babel:   true,
+        babel: false,
         es7shim: true,
       }
     },
     {
-      name: 'String.prototype.padRight',
+      name: 'String.prototype.padEnd',
       exec: function(){/*
-        return 'hello'.padRight(10) === 'hello     '
-          && 'hello'.padRight(10, '1234') === 'hello12341'
-          && 'hello'.padRight() === 'hello'
-          && 'hello'.padRight(6, '123') === 'hello1';
+        return 'hello'.padEnd(10) === 'hello     '
+          && 'hello'.padEnd(10, '1234') === 'hello12341'
+          && 'hello'.padEnd() === 'hello'
+          && 'hello'.padEnd(6, '123') === 'hello1';
       */},
       res: {
-        babel:   true,
+        babel: false,
         es7shim: true,
       }
     }
