@@ -263,13 +263,105 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
+<tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
+var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
+obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
+var v = Object.values(obj);
+return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="firefox41">No</td>
+<td class="no" data-browser="firefox42">No</td>
+<td class="no unstable" data-browser="firefox44">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no" data-browser="chrome46">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+</tr>
+<tr significance="0.25"><td id="test-Object.entries"><span><a class="anchor" href="#test-Object.entries">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.entries</a></span><script data-source="
+var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
+obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
+var e = Object.entries(obj);
+return Array.isArray(e)
+  &amp;&amp; e.length === 3
+  &amp;&amp; String(e[0]) === &quot;a,foo&quot;
+  &amp;&amp; String(e[1]) === &quot;b,bar&quot;
+  &amp;&amp; String(e[2]) === &quot;c,baz&quot;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n  && e.length === 3\n  && String(e[0]) === \"a,foo\"\n  && String(e[1]) === \"b,bar\"\n  && String(e[2]) === \"c,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n  && e.length === 3\n  && String(e[0]) === \"a,foo\"\n  && String(e[1]) === \"b,bar\"\n  && String(e[2]) === \"c,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="firefox41">No</td>
+<td class="no" data-browser="firefox42">No</td>
+<td class="no unstable" data-browser="firefox44">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no" data-browser="chrome46">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+</tr>
 <tr significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes">Array.prototype.includes</a></span><script data-source="
 return [1, 2, 3].includes(1)
   &amp;&amp; ![1, 2, 3].includes(4)
   &amp;&amp; ![1, 2, 3].includes(1, 1)
   &amp;&amp; [NaN].includes(NaN)
   &amp;&amp; Array(1).includes();
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -350,7 +442,7 @@ return [1, 2, 3].includes(1)
 return (async function(){
   return 42;
 })() instanceof Promise
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn (async function(){\n  return 42;\n})() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function(){\n  return 42;\n})() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn (async function(){\n  return 42;\n})() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function(){\n  return 42;\n})() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -393,7 +485,7 @@ return (async function(){
 return (async function(){
   return 10 + await Promise.resolve(10);
 })() instanceof Promise
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nreturn (async function(){\n  return 10 + await Promise.resolve(10);\n})() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function(){\n  return 10 + await Promise.resolve(10);\n})() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nreturn (async function(){\n  return 10 + await Promise.resolve(10);\n})() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function(){\n  return 10 + await Promise.resolve(10);\n})() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -434,7 +526,7 @@ return (async function(){
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_arrow_async_functions"><td><span><a class="anchor" href="#test-async_functions_arrow_async_functions">&#xA7;</a>arrow async functions</span><script data-source="
 return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -513,7 +605,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_basic_support"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof SIMD !== &apos;undefined&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -554,7 +646,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Float32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Float32x4">&#xA7;</a>Float32x4</span><script data-source="
 return typeof SIMD.Float32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -595,7 +687,7 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Float64x2"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Float64x2">&#xA7;</a>Float64x2</span><script data-source="
 return typeof SIMD.Float64x2 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float64x2 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float64x2 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float64x2 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float64x2 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -636,7 +728,7 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Int32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Int32x4">&#xA7;</a>Int32x4</span><script data-source="
 return typeof SIMD.Int32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -677,7 +769,7 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Int16x8"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Int16x8">&#xA7;</a>Int16x8</span><script data-source="
 return typeof SIMD.Int16x8 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -718,7 +810,7 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Int8x16"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Int8x16">&#xA7;</a>Int8x16</span><script data-source="
 return typeof SIMD.Int8x16 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -759,7 +851,7 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Bool32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Bool32x4">&#xA7;</a>Bool32x4</span><script data-source="
 return typeof SIMD.Bool32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -800,7 +892,7 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Bool16x8"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Bool16x8">&#xA7;</a>Bool16x8</span><script data-source="
 return typeof SIMD.Bool16x8 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -841,7 +933,7 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Bool8x16"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Bool8x16">&#xA7;</a>Bool8x16</span><script data-source="
 return typeof SIMD.Bool8x16 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -882,7 +974,7 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.abs"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.abs">&#xA7;</a>SIMD.%type%.abs</span><script data-source="
 return typeof SIMD.Float32x4.abs === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.abs === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.abs === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.abs === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.abs === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -923,7 +1015,7 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.add"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.add">&#xA7;</a>SIMD.%type%.add</span><script data-source="
 return typeof SIMD.Float32x4.add === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.add === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.add === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.add === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.add === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -964,7 +1056,7 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.addSaturate"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.addSaturate">&#xA7;</a>SIMD.%integerType%.addSaturate</span><script data-source="
 return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8.addSaturate === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8.addSaturate === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8.addSaturate === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8.addSaturate === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1005,7 +1097,7 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.and"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.and">&#xA7;</a>SIMD.%booleanType%.and</span><script data-source="
 return typeof SIMD.Bool16x8.and === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8.and === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8.and === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8.and === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8.and === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1046,7 +1138,7 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.anyTrue"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.anyTrue">&#xA7;</a>SIMD.%booleanType%.anyTrue</span><script data-source="
 return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4.anyTrue === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4.anyTrue === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4.anyTrue === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4.anyTrue === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1087,7 +1179,7 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.allTrue"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.allTrue">&#xA7;</a>SIMD.%booleanType%.allTrue</span><script data-source="
 return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4.allTrue === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4.allTrue === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4.allTrue === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4.allTrue === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1128,7 +1220,7 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.check"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.check">&#xA7;</a>SIMD.%type%.check</span><script data-source="
 return typeof SIMD.Float32x4.check === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.check === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.check === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.check === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("26");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.check === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1169,7 +1261,7 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.equal"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.equal">&#xA7;</a>SIMD.%type%.equal</span><script data-source="
 return typeof SIMD.Float32x4.equal === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.equal === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.equal === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.equal === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.equal === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1210,7 +1302,7 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.extractLane"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.extractLane">&#xA7;</a>SIMD.%type%.extractLane</span><script data-source="
 return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.extractLane === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("26");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.extractLane === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.extractLane === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.extractLane === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1251,7 +1343,7 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThan"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThan">&#xA7;</a>SIMD.%type%.greaterThan</span><script data-source="
 return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.greaterThan === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.greaterThan === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.greaterThan === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.greaterThan === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1292,7 +1384,7 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThanOrEqual"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThanOrEqual">&#xA7;</a>SIMD.%type%.greaterThanOrEqual</span><script data-source="
 return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.greaterThanOrEqual === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.greaterThanOrEqual === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.greaterThanOrEqual === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.greaterThanOrEqual === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1333,7 +1425,7 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThan"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThan">&#xA7;</a>SIMD.%type%.lessThan</span><script data-source="
 return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.lessThan === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.lessThan === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.lessThan === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.lessThan === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1374,7 +1466,7 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThanOrEqual"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThanOrEqual">&#xA7;</a>SIMD.%type%.lessThanOrEqual</span><script data-source="
 return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.lessThanOrEqual === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.lessThanOrEqual === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.lessThanOrEqual === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.lessThanOrEqual === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1415,7 +1507,7 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.mul"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.mul">&#xA7;</a>SIMD.%type%.mul</span><script data-source="
 return typeof SIMD.Float32x4.mul === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.mul === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.mul === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.mul === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.mul === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1456,7 +1548,7 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.div"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.div">&#xA7;</a>SIMD.%type%.div</span><script data-source="
 return typeof SIMD.Float32x4.div === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.div === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.div === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.div === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.div === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1497,7 +1589,7 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.max"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.max">&#xA7;</a>SIMD.%type%.max</span><script data-source="
 return typeof SIMD.Float32x4.max === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.max === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.max === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.max === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.max === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1538,7 +1630,7 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.maxNum"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.maxNum">&#xA7;</a>SIMD.%type%.maxNum</span><script data-source="
 return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.maxNum === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.maxNum === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.maxNum === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.maxNum === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1579,7 +1671,7 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.min"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.min">&#xA7;</a>SIMD.%type%.min</span><script data-source="
 return typeof SIMD.Float32x4.min === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.min === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.min === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.min === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.min === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1620,7 +1712,7 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.minNum"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.minNum">&#xA7;</a>SIMD.%type%.minNum</span><script data-source="
 return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.minNum === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.minNum === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.minNum === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.minNum === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1661,7 +1753,7 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.neg"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.neg">&#xA7;</a>SIMD.%type%.neg</span><script data-source="
 return typeof SIMD.Float32x4.neg === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.neg === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.neg === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.neg === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.neg === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1702,7 +1794,7 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.not"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.not">&#xA7;</a>SIMD.%booleanType%.not</span><script data-source="
 return typeof SIMD.Bool16x8.not === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8.not === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8.not === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8.not === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8.not === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1743,7 +1835,7 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.notEqual"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.notEqual">&#xA7;</a>SIMD.%type%.notEqual</span><script data-source="
 return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.notEqual === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.notEqual === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.notEqual === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.notEqual === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1784,7 +1876,7 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalApproximation"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalApproximation">&#xA7;</a>SIMD.%type%.reciprocalApproximation</span><script data-source="
 return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.reciprocalApproximation === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.reciprocalApproximation === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.reciprocalApproximation === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.reciprocalApproximation === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1825,7 +1917,7 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalSqrtApproximation"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalSqrtApproximation">&#xA7;</a>SIMD.%type%.reciprocalSqrtApproximation</span><script data-source="
 return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1866,7 +1958,7 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.replaceLane"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.replaceLane">&#xA7;</a>SIMD.%type%.replaceLane</span><script data-source="
 return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.replaceLane === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.replaceLane === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.replaceLane === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.replaceLane === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1907,7 +1999,7 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.select"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.select">&#xA7;</a>SIMD.%type%.select</span><script data-source="
 return typeof SIMD.Float32x4.select === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.select === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.select === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.select === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.select === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1948,7 +2040,7 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.selectBits"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.selectBits">&#xA7;</a>SIMD.%integerType%.selectBits</span><script data-source="
 return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8.selectBits === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8.selectBits === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8.selectBits === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8.selectBits === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -1989,7 +2081,7 @@ return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftLeftByScalar"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftLeftByScalar">&#xA7;</a>SIMD.%integerType%.shiftLeftByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4.shiftLeftByScalar === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4.shiftLeftByScalar === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4.shiftLeftByScalar === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4.shiftLeftByScalar === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2030,7 +2122,7 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightLogicalByScalar"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightLogicalByScalar">&#xA7;</a>SIMD.%integerType%.shiftRightLogicalByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2071,7 +2163,7 @@ return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightArithmeticByScalar"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightArithmeticByScalar">&#xA7;</a>SIMD.%integerType%.shiftRightArithmeticByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2112,7 +2204,7 @@ return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.shuffle"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.shuffle">&#xA7;</a>SIMD.%type%.shuffle</span><script data-source="
 return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.shuffle === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.shuffle === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.shuffle === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.shuffle === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2153,7 +2245,7 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.splat"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.splat">&#xA7;</a>SIMD.%type%.splat</span><script data-source="
 return typeof SIMD.Float32x4.splat === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.splat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.splat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.splat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("51");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.splat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2194,7 +2286,7 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sqrt"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sqrt">&#xA7;</a>SIMD.%type%.sqrt</span><script data-source="
 return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.sqrt === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.sqrt === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.sqrt === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.sqrt === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2235,7 +2327,7 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store">&#xA7;</a>SIMD.%type%.store</span><script data-source="
 return typeof SIMD.Float32x4.store === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("51");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2276,7 +2368,7 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store1"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store1">&#xA7;</a>SIMD.%type%.store1</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2317,7 +2409,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store2"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store2">&#xA7;</a>SIMD.%type%.store2</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("55");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2358,7 +2450,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store3"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store3">&#xA7;</a>SIMD.%type%.store3</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.store1 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2399,7 +2491,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sub"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sub">&#xA7;</a>SIMD.%type%.sub</span><script data-source="
 return typeof SIMD.Float32x4.sub === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.sub === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("55");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.sub === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.sub === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.sub === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2440,7 +2532,7 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.subSaturate"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.subSaturate">&#xA7;</a>SIMD.%integerType%.subSaturate</span><script data-source="
 return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8.subSaturate === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8.subSaturate === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8.subSaturate === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8.subSaturate === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2481,7 +2573,7 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.swizzle"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.swizzle">&#xA7;</a>SIMD.%type%.swizzle</span><script data-source="
 return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.swizzle === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.swizzle === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.swizzle === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("59");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.swizzle === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2522,7 +2614,7 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.xor"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.xor">&#xA7;</a>SIMD.%booleanType%.xor</span><script data-source="
 return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8.xor === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8.xor === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8.xor === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8.xor === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2571,104 +2663,12 @@ function* generator() {
 var iter = generator();
 iter.next(&apos;tromple&apos;);
 return result === &apos;tromple&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("59");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("61");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
 <td class="no" data-browser="jsx">No</td>
 <td class="no" data-browser="es7shim">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no" data-browser="firefox42">No</td>
-<td class="no unstable" data-browser="firefox44">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no obsolete" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="chrome42">No</td>
-<td class="no obsolete" data-browser="chrome43">No</td>
-<td class="no" data-browser="chrome46">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-</tr>
-<tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
-var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
-obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
-var v = Object.values(obj);
-return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="es7shim">Yes</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no" data-browser="firefox42">No</td>
-<td class="no unstable" data-browser="firefox44">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no obsolete" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="chrome42">No</td>
-<td class="no obsolete" data-browser="chrome43">No</td>
-<td class="no" data-browser="chrome46">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-</tr>
-<tr significance="0.25"><td id="test-Object.entries"><span><a class="anchor" href="#test-Object.entries">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.entries</a></span><script data-source="
-var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
-obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
-var e = Object.entries(obj);
-return Array.isArray(e)
-  &amp;&amp; e.length === 3
-  &amp;&amp; String(e[0]) === &quot;a,foo&quot;
-  &amp;&amp; String(e[1]) === &quot;b,bar&quot;
-  &amp;&amp; String(e[2]) === &quot;c,baz&quot;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n  && e.length === 3\n  && String(e[0]) === \"a,foo\"\n  && String(e[1]) === \"b,bar\"\n  && String(e[2]) === \"c,baz\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("61");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n  && e.length === 3\n  && String(e[0]) === \"a,foo\"\n  && String(e[1]) === \"b,bar\"\n  && String(e[2]) === \"c,baz\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
 <td class="no" data-browser="edge13">No</td>

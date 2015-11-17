@@ -331,7 +331,7 @@ exports.tests = [
 {
   name: 'Object.values',
   link: 'https://github.com/ljharb/proposal-object-values-entries',
-  category: 'draft',
+  category: 'candidate',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
@@ -347,7 +347,7 @@ exports.tests = [
 {
   name: 'Object.entries',
   link: 'https://github.com/ljharb/proposal-object-values-entries',
-  category: 'draft',
+  category: 'candidate',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
