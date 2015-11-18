@@ -391,7 +391,7 @@ exports.tests = [
 {
   name: 'Array.prototype.includes',
   link: 'https://github.com/tc39/Array.prototype.includes',
-  category: 'candidate',
+  category: 'finished',
   significance: 'small',
   exec: function () {/*
     return [1, 2, 3].includes(1)
