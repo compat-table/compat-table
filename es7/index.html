@@ -2950,54 +2950,6 @@ return result === &apos;tromple&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr significance="1"><td id="test-Object.observe"><span><a class="anchor" href="#test-Object.observe">&#xA7;</a><a href="https://arv.github.io/ecmascript-object-observe/">Object.observe</a></span><script data-source="
-var obj = {x: 1};
-Object.observe(obj, function(changes){
-  var data = changes[0];
-  if(data.name === &apos;x&apos; &amp;&amp; data.type === &apos;update&apos; &amp;&amp; data.oldValue === 1 &amp;&amp; data.object.x === 2){
-    asyncTestPassed();
-  }
-});
-obj.x = 2;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {x: 1};\nObject.observe(obj, function(changes){\n  var data = changes[0];\n  if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){\n    asyncTestPassed();\n  }\n});\nobj.x = 2;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="es7shim">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no" data-browser="firefox42">No</td>
-<td class="no unstable" data-browser="firefox44">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="yes obsolete" data-browser="chrome33">Yes</td>
-<td class="yes obsolete" data-browser="chrome34">Yes</td>
-<td class="yes obsolete" data-browser="chrome35">Yes</td>
-<td class="yes obsolete" data-browser="chrome37">Yes</td>
-<td class="yes obsolete" data-browser="chrome38">Yes</td>
-<td class="yes obsolete" data-browser="chrome39">Yes</td>
-<td class="yes obsolete" data-browser="chrome40">Yes</td>
-<td class="yes obsolete" data-browser="chrome41">Yes</td>
-<td class="yes obsolete" data-browser="chrome42">Yes</td>
-<td class="yes obsolete" data-browser="chrome43">Yes</td>
-<td class="yes" data-browser="chrome46">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="yes" data-browser="node">Yes</td>
-<td class="yes obsolete" data-browser="iojs">Yes</td>
-<td class="yes" data-browser="node4">Yes</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="yes" data-browser="android50">Yes</td>
-<td class="yes" data-browser="android51">Yes</td>
-</tr>
 <tr significance="0.25"><td id="test-object_rest_properties"><span><a class="anchor" href="#test-object_rest_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object rest properties</a></span><script data-source="
 var {a, ...rest} = {a: 1, b: 2, c: 3};
 return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp; rest.c === 3;
