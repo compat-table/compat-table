@@ -481,17 +481,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'typed objects',
-  category: 'proposal',
-  significance: 'large',
-  link: 'https://github.com/dslomov-chromium/typed-objects-es7',
-  exec: function () {/*
-    return typeof StructType === "function";
-  */},
-  res: {
-  }
-},
-{
   name: 'Object.getOwnPropertyDescriptors',
   link: 'https://gist.github.com/WebReflection/9353781',
   category: 'strawman',
