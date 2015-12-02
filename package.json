@@ -1,5 +1,5 @@
 {
-  "name": "es5-compat-table",
+  "name": "compat-table",
   "version": "0.0.0",
   "main": "node.js",
   "engine": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rvagg/es5-compat-table.git"
+    "url": "git://github.com/kangax/compat-table.git"
   },
   "private": true,
   "dependencies": {
@@ -37,5 +37,8 @@
     "lint": "jshint data-es5.js data-es6.js data-es7.js",
     "build": "node build.js",
     "build:compilers": "node build.js compilers"
+  },
+  "config": {
+    "unsafe-perm": true
   }
 }

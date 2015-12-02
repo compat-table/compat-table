@@ -8215,6 +8215,7 @@ exports.tests = [
         es6tr:       true,
         firefox35:   true,
         edge13:      flag,
+        webkit:      true,
         xs6:         true,
         webkit:      true,
       },

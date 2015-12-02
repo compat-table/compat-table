@@ -281,6 +281,13 @@ process.nextTick(function () {
         return ret.code || ret;
       },
     },
+    {
+      name: 'TypeScript + polyfill',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es7/compilers/typescript-polyfill.html',
+      polyfills: ["node_modules/core-js/client/core.js"],
+      compiler: ts.transpile
+    },
   ].forEach(function(e){
     Object.assign(es7, e);
     es7.browsers = {};

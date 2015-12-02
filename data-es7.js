@@ -28,6 +28,12 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
+  typescript: {
+    full: 'TypeScript 1.7',
+    short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
+    obsolete: false,
+    platformtype: 'compiler'
+  },
   es7shim: {
     full: 'es7-shim',
     short: 'es7-shim',
@@ -247,9 +253,22 @@ exports.tests = [
         return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
       */},
       res: {
-        tr:     true,
-        babel:  true,
-        edge13: flag,
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        edge13:      flag,
+      }
+    },
+    {
+      name: 'assignment',
+      exec: function () {/*
+        var a = 2; a **= 3; return a === 8;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        edge13:      flag,
       }
     },
     {
@@ -340,8 +359,9 @@ exports.tests = [
     return Array.isArray(v) && String(v) === "foo,bar,baz";
   */},
   res: {
-    babel:   true,
-    es7shim: true,
+    babel:      true,
+    es7shim:    true,
+    typescript: true,
   }
 },
 {
@@ -360,8 +380,9 @@ exports.tests = [
       && String(e[2]) === "c,baz";
   */},
   res: {
-    babel:   true,
-    es7shim: true,
+    babel:      true,
+    es7shim:    true,
+    typescript: true,
   }
 },
 {
@@ -403,6 +424,7 @@ exports.tests = [
   res: {
     babel:           true,
     es7shim:         true,
+    typescript:      true,
     webkit:          true,
     chrome46:        true,
     firefox42:       false,
@@ -422,6 +444,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
       }
     },
     {
@@ -431,6 +454,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
       }
     },
   ],
@@ -497,8 +521,9 @@ exports.tests = [
       && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
   */},
   res: {
-    babel:   true,
-    es7shim: true,
+    babel:       true,
+    es7shim:     true,
+    typescript:  true,
   }
 },
 {
@@ -1023,7 +1048,8 @@ exports.tests = [
     return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
   */},
   res: {
-    babel: true,
+    babel:       true,
+    typescript:  true,
   }
 },
 {
@@ -1089,6 +1115,7 @@ exports.tests = [
   res: {
     babel:       true,
     tr:          true,
+    typescript:  true,
   }
 },
 {
@@ -1124,6 +1151,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
+    typescript:  true,
   }
 },
 {
@@ -1163,6 +1191,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
+    typescript:  true,
   }
 },
 {
@@ -1252,6 +1281,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
+    typescript:  true,
   }
 },
 {
@@ -1275,6 +1305,7 @@ exports.tests = [
         webkit:     true,
         es7shim:    true,
         android40:  true,
+        typescript: true,
       }
     },
     {
@@ -1292,6 +1323,7 @@ exports.tests = [
         webkit:     true,
         es7shim:    true,
         android40:  true,
+        typescript: true,
       }
     }
   ]
@@ -1345,6 +1377,7 @@ exports.tests = [
   res: {
     babel:       true,
     edge13:      flag,
+    typescript:  true,
   }
 }
 ];
