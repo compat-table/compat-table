@@ -8217,7 +8217,6 @@ exports.tests = [
         edge13:      flag,
         webkit:      true,
         xs6:         true,
-        webkit:      true,
       },
     },
     {
