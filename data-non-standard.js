@@ -1474,9 +1474,8 @@ exports.tests = [
 {
   name: 'Object.observe',
   link: 'https://arv.github.io/ecmascript-object-observe/',
-  category: 'draft',
   significance: 'large',
-  exec: function () {
+	exec: function () {/*
     var obj = {x: 1};
     Object.observe(obj, function(changes){
       var data = changes[0];
@@ -1485,7 +1484,7 @@ exports.tests = [
       }
     });
     obj.x = 2;
-  },
+  */},
   res: {
     android50: true,
     android51: true,
