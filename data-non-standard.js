@@ -20,6 +20,20 @@ exports.browsers = {
     short: 'io.js',
     platformtype: 'engine',
   },
+	node4:  {
+		full: 'Node.js',
+		family: 'Node.js',
+		short: 'Node<br>4.0',
+		platformtype: 'engine',
+		note_id: 'harmony-flag',
+	},
+	node5:  {
+		full: 'Node.js',
+		family: 'Node.js',
+		short: 'Node<br>5.0',
+		platformtype: 'engine',
+		note_id: 'harmony-flag',
+	},
   firefox3: {
     full: 'Firefox 3',
     short: 'FF 3',
@@ -110,6 +124,12 @@ exports.browsers = {
     short: 'CH 11+,<br>OP 15+',
     obsolete: false
   },
+	chrome33: {
+		full: 'Chrome, Opera',
+		short: 'CH&nbsp;32-33,<br>OP&nbsp;19-20',
+		obsolete: true,
+		note_id: 'experimental-flag',
+	},
   opera10_10: {
     full: 'Opera 10.10',
     short: 'OP 10.10',
@@ -160,6 +180,20 @@ exports.browsers = {
     short: 'Android 4.1+',
     platformtype: 'mobile',
   },
+	android50: {
+		full: 'Android Browser',
+		short: 'AN 5.0',
+		platformtype: 'mobile',
+		equals: 'chrome37',
+		ignore_flagged: true,
+	},
+	android51: {
+		full: 'Android Browser',
+		short: 'AN 5.1',
+		platformtype: 'mobile',
+		equals: 'chrome39',
+		ignore_flagged: true,
+	}
 };
 
 exports.tests = [
@@ -1442,7 +1476,7 @@ exports.tests = [
   link: 'https://arv.github.io/ecmascript-object-observe/',
   category: 'draft',
   significance: 'large',
-  exec: function () {/*
+  exec: function () {
     var obj = {x: 1};
     Object.observe(obj, function(changes){
       var data = changes[0];
@@ -1451,14 +1485,18 @@ exports.tests = [
       }
     });
     obj.x = 2;
-  */},
+  },
   res: {
-    chrome33:        true,
-    chrome34:        true,
-    chrome35:        true,
-    chrome37:        true,
-    node:            true,
-    iojs:            true,
+    android50: true,
+    android51: true,
+    chrome33: true,
+    chrome34: true,
+    chrome35: true,
+    chrome37: true,
+    node: true,
+    node4: true,
+		node5: true,
+    iojs: true,
   }
 },
 {
