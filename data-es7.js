@@ -29,7 +29,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   typescript: {
-    full: 'TypeScript 1.7',
+    full: 'TypeScript 1.7 + core-js 1.2',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -1233,6 +1233,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
+    typescript:  true,
     es7shim:     true,
   }
 },
