@@ -4698,6 +4698,7 @@ exports.tests = [
         ];
         var constructor = Object.getPrototypeOf(Int8Array);
         var prototype = Object.getPrototypeOf(Int8Array.prototype);
+        if(constructor === Function.prototype || prototype === Object.prototype)return false;
         for(var i = 0; i < constructors.length; i+=1) {
           if (!(constructors[i] in global
               && Object.getPrototypeOf(global[constructors[i]]) === constructor
