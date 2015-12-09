@@ -2790,7 +2790,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         edge12:      true,
-        firefox34:   { val: true, note_id: "ff-shorthand-methods", note_html: 'Firefox incorrectly produces an error in strict mode if the method is named "arguments", "eval", or "delete".' },
+        firefox34:   { val: true, note_id: "ff-shorthand-methods", note_html: 'Firefox incorrectly produces an error in strict mode if the method is named <code>"arguments"</code>, <code>"eval"</code>, or <code>"delete"</code>.' },
         chrome41:    flag,
         chrome43:    true,
         node4:       true,
@@ -6061,7 +6061,7 @@ exports.tests = [
         firefox18:   {
           val: false,
           note_id: 'fx-proxy-get',
-          note_html: 'Firefox 18 up to 37 doesn\'t allow a proxy\'s "get" handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy\'s "has" handler reports it as present).'
+          note_html: 'Firefox 18 up to 37 doesn\'t allow a proxy\'s <code>"get"</code> handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy\'s <code>"has"</code> handler reports it as present).'
         },
         firefox38:   true,
         xs6:         true,
@@ -9365,7 +9365,7 @@ exports.tests = [
         babel:       {
           val: false,
           note_id: "name-configurable",
-          note_html: 'Requires function "name" properties to be natively configurable',
+          note_html: 'Requires function <code>"name"</code> properties to be natively configurable',
         },
         edge12:      flag,
         edge13:      true,
