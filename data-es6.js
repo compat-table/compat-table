@@ -7843,7 +7843,7 @@ exports.tests = [
   }
 },
 {
-  name: 'destructuring',
+  name: 'destructuring, declarations',
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
@@ -7852,10 +7852,7 @@ exports.tests = [
       name: 'with arrays',
       exec: function(){/*
         var [a, , [b], c] = [5, null, [6]];
-        var d, e;
-        [d,e] = [7,8];
-        return a === 5 && b === 6 && c === undefined
-          && d === 7 && e === 8;
+        return a === 5 && b === 6 && c === undefined;
       */},
       res: (temp.destructuringResults = {
         tr:          true,
@@ -7884,10 +7881,7 @@ exports.tests = [
       name: 'with strings',
       exec: function(){/*
         var [a, b, c] = "ab";
-        var d, e;
-        [d,e] = "de";
-        return a === "a" && b === "b" && c === undefined
-          && d === "d" && e === "e";
+        return a === "a" && b === "b" && c === undefined;
       */},
       res: {
         tr:          true,
@@ -7907,8 +7901,7 @@ exports.tests = [
     {
       name: 'with astral plane strings',
       exec: function(){/*
-        var c;
-        [c] = "𠮷𠮶";
+        var [c] = "𠮷𠮶";
         return c === "𠮷";
       */},
       res: {
@@ -7927,10 +7920,7 @@ exports.tests = [
       name: 'with generator instances',
       exec: function(){/*
         var [a, b, c] = (function*(){ yield 1; yield 2; }());
-        var d, e;
-        [d, e] = (function*(){ yield 3; yield 4; }());
-        return a === 1 && b === 2 && c === undefined
-          && d === 3 && e === 4;
+        return a === 1 && b === 2 && c === undefined;
       */},
       res: {
         tr:           true,
@@ -7947,10 +7937,7 @@ exports.tests = [
       name: 'with generic iterables',
       exec: function(){/*
         var [a, b, c] = global.__createIterableObject([1, 2]);
-        var d, e;
-        [d, e] = global.__createIterableObject([3, 4]);
-        return a === 1 && b === 2 && c === undefined
-          && d === 3 && e === 4;
+        return a === 1 && b === 2 && c === undefined;
       */},
       res: {
         tr:           true,
@@ -7967,11 +7954,8 @@ exports.tests = [
     {
       name: 'with instances of generic iterables',
       exec: function(){/*
-        var [a, b, c] = Object.create(global.__createIterableObject([1, 2]))
-        var d, e;
-        [d, e] = Object.create(global.__createIterableObject([3, 4]));
-        return a === 1 && b === 2 && c === undefined
-          && d === 3 && e === 4;
+        var [a, b, c] = Object.create(global.__createIterableObject([1, 2]));
+        return a === 1 && b === 2 && c === undefined;
       */},
       res: {
         tr:           true,
@@ -8004,45 +7988,6 @@ exports.tests = [
       },
     },
     {
-      name: 'iterable destructuring expression',
-      exec: function() {/*
-        var a, b, iterable = [1,2];
-        return ([a, b] = iterable) === iterable;
-      */},
-      res: {
-        tr:           true,
-        babel:        true,
-        ejs:          true,
-        typescript:   true,
-        es6tr:        true,
-        firefox11:    true,
-        safari71_8:   true,
-        webkit:       true,
-        edge13:       flag,
-        xs6:         true,
-      },
-    },
-    {
-      name: 'chained iterable destructuring',
-      exec: function() {/*
-        var a,b,c,d;
-        [a,b] = [c,d] = [1,2];
-        return a === 1 && b === 2 && c === 1 && d === 2;
-      */},
-      res: {
-        tr:           true,
-        babel:        true,
-        ejs:          true,
-        typescript:   true,
-        es6tr:        true,
-        firefox11:    true,
-        safari71_8:   true,
-        webkit:       true,
-        edge13:       flag,
-        xs6:         true,
-      },
-    },
-    {
       name: 'trailing commas in iterable patterns',
       exec: function(){/*
         var [a,] = [1];
@@ -8064,10 +8009,7 @@ exports.tests = [
       name: 'with objects',
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
-        var f, g;
-        ({f,g} = {f:9,g:10});
-        return c === 7 && d === 8 && e === undefined
-          && f === 9 && g === 10;
+        return c === 7 && d === 8 && e === undefined;
       */},
       res: Object.assign({}, temp.destructuringResults, {
         firefox11:    {
@@ -8089,13 +8031,8 @@ exports.tests = [
       exec: function(){/*
         var {toFixed} = 2;
         var {slice} = '';
-        var toString, match;
-        ({toString} = 2);
-        ({match} = '');
         return toFixed === Number.prototype.toFixed
-          && toString === Number.prototype.toString
-          && slice === String.prototype.slice
-          && match === String.prototype.match;
+          && slice === String.prototype.slice;
       */},
       res: Object.assign({}, temp.destructuringResults, {
         webkit:       true,
@@ -8119,66 +8056,6 @@ exports.tests = [
         edge13:       flag,
         xs6:          true,
       }),
-    },
-    {
-      name: 'object destructuring expression',
-      exec: function() {/*
-        var a, b, obj = { a:1, b:2 };
-        return ({a,b} = obj) === obj;
-      */},
-      res: {
-        tr:           true,
-        babel:        true,
-        typescript:   true,
-        es6tr:        true,
-        firefox16:    true,
-        safari71_8:   true,
-        webkit:       true,
-        edge13:       flag,
-        xs6:		  true,
-      },
-    },
-    {
-      name: 'parenthesised left-hand-side is a syntax error',
-      exec: function() {/*
-        var a, b;
-        ({a,b} = {a:1,b:2});
-        try {
-          eval("({a,b}) = {a:3,b:4};");
-        }
-        catch(e) {
-          return a === 1 && b === 2;
-        }
-      */},
-      res: {
-        tr:           true,
-        babel:        true,
-        typescript:   true,
-        safari71_8:   true,
-        webkit:       true,
-        firefox41:    true,
-        edge13:       flag,
-        xs6:          true,
-      },
-    },
-    {
-      name: 'chained object destructuring',
-      exec: function() {/*
-        var a,b,c,d;
-        ({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
-        return a === 1 && b === 2 && c === 3 && d === 4;
-      */},
-      res: {
-        tr:           true,
-        firefox16:    true,
-        babel:        true,
-        typescript:   true,
-        es6tr:        true,
-        webkit:       true,
-        safari71_8:   true,
-        edge13:       flag,
-        xs6:          true,
-      },
     },
     {
       name: 'throws on null and undefined',
@@ -8252,85 +8129,6 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         ejs:          false,
       }),
-    },
-    {
-      name: 'in parameters',
-      exec: function(){/*
-        return (function({a, x:b, y:e}, [c, d]) {
-          return a === 1 && b === 2 && c === 3 &&
-            d === 4 && e === undefined;
-        }({a:1, x:2}, [3, 4]));
-      */},
-      res: {
-        tr:          true,
-        babel:       true,
-        typescript:  true,
-        es6tr:       true,
-        jsx:         true,
-        closure:     true,
-        firefox11:   true,
-        safari71_8:  true,
-        webkit:      true,
-        edge13:      flag,
-        xs6:         true,
-      },
-    },
-    {
-      name: 'in parameters, \'arguments\' interaction',
-      exec: function(){/*
-        return (function({a, x:b, y:e}, [c, d]) {
-          return arguments[0].a === 1 && arguments[0].x === 2
-            && !("y" in arguments[0]) && arguments[1] + '' === "3,4";
-        }({a:1, x:2}, [3, 4]));
-      */},
-      res: {
-        tr:          true,
-        babel:       true,
-        typescript:  true,
-        es6tr:       true,
-        jsx:         true,
-        closure:     true,
-        firefox11:   true,
-        safari71_8:  true,
-        webkit:      true,
-        edge13:      flag,
-        xs6:         true,
-      },
-    },
-    {
-      name: 'in parameters, new Function() support',
-      exec: function(){/*
-        return new Function("{a, x:b, y:e}","[c, d]",
-          "return a === 1 && b === 2 && c === 3 && "
-          + "d === 4 && e === undefined;"
-        )({a:1, x:2}, [3, 4]);
-      */},
-      res: {
-        safari71_8:  true,
-        webkit:      true,
-        typescript:  typescript.fallthrough,
-        edge13:       flag,
-        xs6:         true,
-      },
-    },
-    {
-      name: 'in parameters, function \'length\' property',
-      exec: function(){/*
-        return function({a, b}, [c, d]){}.length === 2;
-      */},
-      res: {
-        tr:          true,
-        babel:       true,
-        typescript:  true,
-        es6tr:       true,
-        jsx:         true,
-        closure:     true,
-        firefox11:   true,
-        safari71_8:  true,
-        webkit:      true,
-        edge13:      flag,
-        xs6:         true,
-      },
     },
     {
       name: 'in for-in loop heads',
@@ -8414,6 +8212,441 @@ exports.tests = [
       },
     },
     {
+      name: 'defaults',
+      exec: function(){/*
+        var {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};
+        var [d = 0, e = 5, f = 6] = [4,,undefined];
+        return a === 1 && b === 2 && c === 3
+          && d === 4 && e === 5 && f === 6;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        closure:     true,
+        safari9:     true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'defaults, let temporal dead zone',
+      exec: function(){/*
+        var {a, b = 2} = {a:1};
+        try {
+          eval("let {c = c} = {};");
+          return false;
+        } catch(e){}
+        try {
+          eval("let {c = d, d} = {d:1};");
+          return false;
+        } catch(e){}
+        return a === 1 && b === 2;
+      */},
+      res: {
+        babel:        flag,
+        typescript:   true,
+        safari9:      true,
+        webkit:       true,
+        edge13:       flag,
+        xs6:         true,
+      },
+    },
+  ],
+},
+{
+  name: 'destructuring, assignment',
+  category: 'syntax',
+  significance: 'large',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  subtests: [
+    {
+      name: 'with arrays',
+      exec: function(){/*
+        var a,b,c;
+        [a, , [b], c] = [5, null, [6]];
+        return a === 5 && b === 6 && c === undefined;
+      */},
+      res: temp.destructuringResults,
+    },
+    {
+      name: 'with sparse arrays',
+      exec: function(){/*
+        var a, b;
+        [a, , b] = [,,,];
+        return a === undefined && b === undefined;
+      */},
+      res: temp.destructuringResults
+    },
+    {
+      name: 'with strings',
+      exec: function(){/*
+        var a,b,c;
+        [a, b, c] = "ab";
+        return a === "a" && b === "b" && c === undefined;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        typescript:  true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'with astral plane strings',
+      exec: function(){/*
+        var c;
+        [c] = "𠮷𠮶";
+        return c === "𠮷";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        firefox34:   true,
+        safari9:     true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'with generator instances',
+      exec: function(){/*
+        var a,b,c;
+        [a, b, c] = (function*(){ yield 1; yield 2; }());
+        return a === 1 && b === 2 && c === undefined;
+      */},
+      res: {
+        tr:           true,
+        typescript:   typescript.fallthrough,
+        firefox34:    true,
+        babel:        true,
+        ejs:          true,
+        edge13:       flag,
+        xs6:         true,
+        webkit:       true,
+      },
+    },
+    {
+      name: 'with generic iterables',
+      exec: function(){/*
+        var a,b,c;
+        [a, b, c] = global.__createIterableObject([1, 2]);
+        return a === 1 && b === 2 && c === undefined;
+      */},
+      res: {
+        tr:           true,
+        ejs:          true,
+        typescript:   typescript.fallthrough,
+        firefox34:    true,
+        safari9:     true,
+        webkit:       true,
+        babel:        true,
+        edge13:       flag,
+        xs6:          true,
+      },
+    },
+    {
+      name: 'with instances of generic iterables',
+      exec: function(){/*
+        var a,b,c;
+        [a, b, c] = Object.create(global.__createIterableObject([1, 2]));
+        return a === 1 && b === 2 && c === undefined;
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        ejs:          true,
+        typescript:   typescript.fallthrough,
+        firefox36:    true,
+        safari9:      true,
+        webkit:       true,
+        edge13:       flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'iterator closing',
+      exec: function () {/*
+        var closed = false;
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
+        var a,b;
+        [a, b] = iter;
+        return closed;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.fallthrough,
+        safari9:     true,
+        webkit:      true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'iterable destructuring expression',
+      exec: function() {/*
+        var a, b, iterable = [1,2];
+        return ([a, b] = iterable) === iterable;
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        ejs:          true,
+        typescript:   true,
+        es6tr:        true,
+        firefox11:    true,
+        safari71_8:   true,
+        webkit:       true,
+        edge13:       flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'chained iterable destructuring',
+      exec: function() {/*
+        var a,b,c,d;
+        [a,b] = [c,d] = [1,2];
+        return a === 1 && b === 2 && c === 1 && d === 2;
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        ejs:          true,
+        typescript:   true,
+        es6tr:        true,
+        firefox11:    true,
+        safari71_8:   true,
+        webkit:       true,
+        edge13:       flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'trailing commas in iterable patterns',
+      exec: function(){/*
+        var a;
+        [a,] = [1];
+        return a === 1;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        safari71_8:   false,
+        safari9:     true,
+        webkit:       true,
+        babel:        true,
+        typescript:   true,
+        tr:           false,
+        closure:      false,
+        edge13:       flag,
+        xs6:         true,
+      }),
+    },
+    {
+      name: 'with objects',
+      exec: function(){/*
+        var c,d,e;
+        ({c, x:d, e} = {c:7, x:8});
+        return c === 7 && d === 8 && e === undefined;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        firefox11:    {
+          val: true,
+          note_id: "ff11-object-destructuring",
+          note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
+        },
+        ejs:          false,
+        firefox16:    true,
+        webkit:       true,
+        safari71_8:   true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:         true,
+      }),
+    },
+    {
+      name: 'object destructuring with primitives',
+      exec: function(){/*
+        var toFixed, slice;
+        ({toFixed} = 2);
+        ({slice} = '');
+        return toFixed === Number.prototype.toFixed
+          && slice === String.prototype.slice;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        webkit:       true,
+        safari71_8:   true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:          true,
+      }),
+    },
+    {
+      name: 'trailing commas in object patterns',
+      exec: function(){/*
+        var a;
+        ({a,} = {a:1});
+        return a === 1;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        safari71_8:   false,
+        safari9:     true,
+        webkit:       true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:          true,
+      }),
+    },
+    {
+      name: 'object destructuring expression',
+      exec: function() {/*
+        var a, b, obj = { a:1, b:2 };
+        return ({a,b} = obj) === obj;
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        typescript:   true,
+        es6tr:        true,
+        firefox16:    true,
+        safari71_8:   true,
+        webkit:       true,
+        edge13:       flag,
+        xs6:          true,
+      },
+    },
+    {
+      name: 'parenthesised left-hand-side is a syntax error',
+      exec: function() {/*
+        var a, b;
+        ({a,b} = {a:1,b:2});
+        try {
+          eval("({a,b}) = {a:3,b:4};");
+        }
+        catch(e) {
+          return a === 1 && b === 2;
+        }
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        typescript:   true,
+        safari71_8:   true,
+        webkit:       true,
+        firefox41:    true,
+        edge13:       flag,
+        xs6:          true,
+      },
+    },
+    {
+      name: 'chained object destructuring',
+      exec: function() {/*
+        var a,b,c,d;
+        ({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
+        return a === 1 && b === 2 && c === 3 && d === 4;
+      */},
+      res: {
+        tr:           true,
+        firefox16:    true,
+        babel:        true,
+        typescript:   true,
+        es6tr:        true,
+        webkit:       true,
+        safari71_8:   true,
+        edge13:       flag,
+        xs6:          true,
+      },
+    },
+    {
+      name: 'throws on null and undefined',
+      exec: function(){/*
+        var a,b;
+        try {
+          ({a} = null);
+          return false;
+        } catch(e) {}
+        try {
+          ({b} = undefined);
+          return false;
+        } catch(e) {}
+        return true;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        closure:      false,
+        safari9:      true,
+        webkit:       true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:          true,
+      }),
+    },
+    {
+      name: 'computed properties',
+      exec: function(){/*
+        var grault, qux = "corge";
+        ({ [qux]: grault } = { corge: "garply" });
+        return grault === "garply";
+      */},
+      res: {
+        babel:       true,
+        closure:     true,
+        tr:          true,
+        es6tr:       true,
+        firefox35:   true,
+        edge13:      flag,
+        webkit:      true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'nested',
+      exec: function(){/*
+        var e,f,g,h,i;
+        [e, {x:f, g}] = [9, {x:10}];
+        ({h, x:[i]} = {h:11, x:[12]});
+        return e === 9 && f === 10 && g === undefined
+          && h === 11 && i === 12;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        ejs:          false,
+      }),
+    },
+    {
+      name: 'rest',
+      exec: function(){/*
+        var a,b,c,d;
+        [a, ...b] = [3, 4, 5];
+        [c, ...d] = [6];
+        return a === 3 && b instanceof Array && (b + "") === "4,5" &&
+           c === 6 && d instanceof Array && d.length === 0;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        closure:     true,
+        firefox34:   true,
+        safari9:     true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
       name: 'nested rest',
       exec: function(){/*
         var a = [1, 2, 3], first, last;
@@ -8445,7 +8678,386 @@ exports.tests = [
       }),
     },
     {
-      name: 'empty patterns in parameters',
+      name: 'defaults',
+      exec: function(){/*
+        var a,b,c,d,e,f;
+        ({a = 1, b = 0, z:c = 3} = {b:2, z:undefined});
+        [d = 0, e = 5, f = 6] = [4,,undefined];
+        return a === 1 && b === 2 && c === 3
+          && d === 4 && e === 5 && f === 6;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        closure:     true,
+        safari9:     true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+  ],
+},
+{
+  name: 'destructuring, parameters',
+  category: 'syntax',
+  significance: 'large',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  subtests: [
+    {
+      name: 'with arrays',
+      exec: function(){/*
+        return function([a, , [b], c]) {
+          return a === 5 && b === 6 && c === undefined;
+        }([5, null, [6]]);
+      */},
+      res: (temp.destructuringResults = {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        es6tr:       true,
+        jsx:         true,
+        closure:     true,
+        typescript:  true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      }),
+    },
+    {
+      name: 'with sparse arrays',
+      exec: function(){/*
+        return function([a, , b]) {
+          return a === undefined && b === undefined;
+        }([,,,]);
+      */},
+      res: temp.destructuringResults
+    },
+    {
+      name: 'with strings',
+      exec: function(){/*
+        return function([a, b, c]) {
+          return a === "a" && b === "b" && c === undefined;
+        }("ab");
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        typescript:  true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'with astral plane strings',
+      exec: function(){/*
+        return function([c]) {
+          return c === "𠮷";
+        }("𠮷𠮶");
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        firefox34:   true,
+        safari9:     true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'with generator instances',
+      exec: function(){/*
+        return function([a, b, c]) {
+          return a === 1 && b === 2 && c === undefined;
+        }(function*(){ yield 1; yield 2; }());
+      */},
+      res: {
+        tr:           true,
+        typescript:   typescript.fallthrough,
+        firefox34:    true,
+        babel:        true,
+        ejs:          true,
+        edge13:       flag,
+        xs6:         true,
+        webkit:       true,
+      },
+    },
+    {
+      name: 'with generic iterables',
+      exec: function(){/*
+        return function([a, b, c]) {
+          return a === 1 && b === 2 && c === undefined;
+        }(global.__createIterableObject([1, 2]));
+      */},
+      res: {
+        tr:           true,
+        ejs:          true,
+        typescript:   typescript.fallthrough,
+        firefox34:    true,
+        safari9:     true,
+        webkit:       true,
+        babel:        true,
+        edge13:       flag,
+        xs6:          true,
+      },
+    },
+    {
+      name: 'with instances of generic iterables',
+      exec: function(){/*
+        return function([a, b, c]) {
+          return a === 1 && b === 2 && c === undefined;
+        }(Object.create(global.__createIterableObject([1, 2])));
+      */},
+      res: {
+        tr:           true,
+        babel:        true,
+        ejs:          true,
+        typescript:   typescript.fallthrough,
+        firefox36:    true,
+        safari9:      true,
+        webkit:       true,
+        edge13:       flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'iterator closing',
+      exec: function () {/*
+        var closed = false;
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
+        (function([a,b]) {}(iter));
+        return closed;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.fallthrough,
+        safari9:     true,
+        webkit:      true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'trailing commas in iterable patterns',
+      exec: function(){/*
+        return function([a,]) {
+          return a === 1;
+        }([1]);
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        safari71_8:   false,
+        safari9:     true,
+        webkit:       true,
+        babel:        true,
+        typescript:   true,
+        tr:           false,
+        closure:      false,
+        edge13:       flag,
+        xs6:         true,
+      }),
+    },
+    {
+      name: 'with objects',
+      exec: function(){/*
+        return function({c, x:d, e}) {
+          return c === 7 && d === 8 && e === undefined;
+        }({c:7, x:8});
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        firefox11:    {
+          val: true,
+          note_id: "ff11-object-destructuring",
+          note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
+        },
+        ejs:          false,
+        firefox16:    true,
+        webkit:       true,
+        safari71_8:   true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:         true,
+      }),
+    },
+    {
+      name: 'object destructuring with primitives',
+      exec: function(){/*
+        return function({toFixed}, {slice}) {
+          return toFixed === Number.prototype.toFixed
+            && slice === String.prototype.slice;
+        }(2,'');
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        webkit:       true,
+        safari71_8:   true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:          true,
+      }),
+    },
+    {
+      name: 'trailing commas in object patterns',
+      exec: function(){/*
+        return function({a,}) {
+          return a === 1;
+        }({a:1});
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        safari71_8:   false,
+        safari9:     true,
+        webkit:       true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:          true,
+      }),
+    },
+    {
+      name: 'throws on null and undefined',
+      exec: function(){/*
+        try {
+          (function({a}){}(null));
+          return false;
+        } catch(e) {}
+        try {
+          (function({b}){}(undefined));
+          return false;
+        } catch(e) {}
+        return true;
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        closure:      false,
+        safari9:      true,
+        webkit:       true,
+        typescript:   true,
+        edge13:       flag,
+        xs6:          true,
+      }),
+    },
+    {
+      name: 'computed properties',
+      exec: function(){/*
+        var qux = "corge";
+        return function({ [qux]: grault }) {
+          return grault === "garply";
+        }({ corge: "garply" });
+      */},
+      res: {
+        babel:       true,
+        closure:     true,
+        tr:          true,
+        es6tr:       true,
+        firefox35:   true,
+        edge13:      flag,
+        webkit:      true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'nested',
+      exec: function(){/*
+        return function([e, {x:f, g}], {h, x:[i]}) {
+          return e === 9 && f === 10 && g === undefined
+            && h === 11 && i === 12;
+        }([9, {x:10}],{h:11, x:[12]});
+      */},
+      res: Object.assign({}, temp.destructuringResults, {
+        ejs:          false,
+      }),
+    },
+    {
+      name: '\'arguments\' interaction',
+      exec: function(){/*
+        return (function({a, x:b, y:e}, [c, d]) {
+          return arguments[0].a === 1 && arguments[0].x === 2
+            && !("y" in arguments[0]) && arguments[1] + '' === "3,4";
+        }({a:1, x:2}, [3, 4]));
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'new Function() support',
+      exec: function(){/*
+        return new Function("{a, x:b, y:e}","[c, d]",
+          "return a === 1 && b === 2 && c === 3 && "
+          + "d === 4 && e === undefined;"
+        )({a:1, x:2}, [3, 4]);
+      */},
+      res: {
+        safari71_8:  true,
+        webkit:      true,
+        typescript:  typescript.fallthrough,
+        edge13:       flag,
+        xs6:         true,
+      },
+    },{
+      name: 'in parameters, function \'length\' property',
+      exec: function(){/*
+        return function({a, b}, [c, d]){}.length === 2;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        closure:     true,
+        firefox11:   true,
+        safari71_8:  true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'rest',
+      exec: function(){/*
+        return function([a, ...b], [c, ...d]) {
+          return a === 3 && b instanceof Array && (b + "") === "4,5" &&
+             c === 6 && d instanceof Array && d.length === 0;
+        }([3, 4, 5], [6]);
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        closure:     true,
+        firefox34:   true,
+        safari9:     true,
+        webkit:      true,
+        edge13:      flag,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'empty patterns',
       exec: function(){/*
         return function ([],{}){
           return arguments[0] + '' === "3,4" && arguments[1].x === "foo";
@@ -8462,26 +9074,6 @@ exports.tests = [
     },
     {
       name: 'defaults',
-      exec: function(){/*
-        var {a = 1, b = 0, z:c = 3} = {b:2, z:undefined};
-        var [d = 0, e = 5, f = 6] = [4,,undefined];
-        return a === 1 && b === 2 && c === 3
-          && d === 4 && e === 5 && f === 6;
-      */},
-      res: {
-        tr:          true,
-        babel:       true,
-        typescript:  true,
-        es6tr:       true,
-        closure:     true,
-        safari9:     true,
-        webkit:      true,
-        edge13:      flag,
-        xs6:         true,
-      },
-    },
-    {
-      name: 'defaults in parameters',
       exec: function(){/*
         return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
             [f = 6, g = 0, h = 8]) {
@@ -8501,30 +9093,7 @@ exports.tests = [
       },
     },
     {
-      name: 'defaults, let temporal dead zone',
-      exec: function(){/*
-        var {a, b = 2} = {a:1};
-        try {
-          eval("let {c = c} = {};");
-          return false;
-        } catch(e){}
-        try {
-          eval("let {c = d, d} = {d:1};");
-          return false;
-        } catch(e){}
-        return a === 1 && b === 2;
-      */},
-      res: {
-        babel:        flag,
-        typescript:   true,
-        safari9:      true,
-        webkit:       true,
-        edge13:       flag,
-        xs6:         true,
-      },
-    },
-    {
-      name: 'defaults in parameters, separate scope',
+      name: 'defaults, separate scope',
       exec: function(){/*
         return (function({a=function(){
           return typeof b === 'undefined';
@@ -8541,7 +9110,7 @@ exports.tests = [
       },
     },
     {
-      name: 'defaults in parameters, new Function() support',
+      name: 'defaults, new Function() support',
       exec: function(){/*
         return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}",
           "return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;"
