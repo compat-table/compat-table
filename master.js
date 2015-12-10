@@ -233,8 +233,16 @@ $(function() {
 
     elem.addClass('selected');
 
+    // Trigger `click` event on supertest to open dropdown.
     if (!elem.is('.parent') && elem.is('.subtest:hidden')) {
-      elem.prevUntil('.supertest').prev().click();
+      var supertest = elem.prevUntil('.supertest').prev();
+      // If there are no other subtests before this, `prevUntil`
+      // will return an empty jQuery object. To select the supertest,
+      // we can just select the previous element.
+      if (!supertest.length) {
+        supertest = elem.prev();
+      }
+      supertest.click();
     }
 
     table.addClass('one-selected').insertBefore('#footnotes');
