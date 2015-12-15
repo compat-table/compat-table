@@ -501,7 +501,13 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       }
 
       if (result !== null) {
-        cell.text(result === "strict" ? "Strict" : result === "flagged" ? "Flag" : result === true ? "Yes" : "No");
+        var texts = {
+          strict: 'Strict',
+          flagged: 'Flag',
+          'true': 'Yes',
+          'false': 'No'
+        };
+        cell.text(texts[result] || '?');
       }
 
       if (footnote) {
