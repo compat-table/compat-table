@@ -1444,9 +1444,147 @@ return typeof Array.prototype.reduceRight == 'function';
 </tr>
 <tr><th colspan="39" class="separator"></th>
 </tr>
+<tr significance="1"><td id="test-Array.prototype.sort_throws_when_given_a_non-undefined_non-function_compareFn"><span><a class="anchor" href="#test-Array.prototype.sort_throws_when_given_a_non-undefined_non-function_compareFn">&#xA7;</a>Array.prototype.sort throws when given a non-undefined non-function compareFn</span><script data-source="function () {
+try {
+  [1,2].sort(null);
+  return false;
+} catch (enull) {}
+try {
+  [1,2].sort(true);
+  return false;
+} catch (etrue) {}
+try {
+  [1,2].sort({});
+  return false;
+} catch (eobj) {}
+try {
+  [1,2].sort([]);
+  return false;
+} catch (earr) {}
+try {
+  [1,2].sort(/a/g);
+  return false;
+} catch (eregex) {}
+return true;
+  }">test(
+function () {
+try {
+  [1,2].sort(null);
+  return false;
+} catch (enull) {}
+try {
+  [1,2].sort(true);
+  return false;
+} catch (etrue) {}
+try {
+  [1,2].sort({});
+  return false;
+} catch (eobj) {}
+try {
+  [1,2].sort([]);
+  return false;
+} catch (earr) {}
+try {
+  [1,2].sort(/a/g);
+  return false;
+} catch (eregex) {}
+return true;
+  }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="yes obsolete" data-browser="firefox3">Yes</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="no obsolete" data-browser="firefox4">No</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no" data-browser="safari6">No</td>
+<td class="no" data-browser="webkit">No</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="no obsolete" data-browser="chrome13">No</td>
+<td class="no obsolete" data-browser="chrome19">No</td>
+<td class="no" data-browser="chrome23">No</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="yes obsolete" data-browser="opera10_50">Yes</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="no" data-browser="besen">No</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no" data-browser="ejs">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="ios78">No</td>
+</tr>
+<tr significance="1"><td id="test-Array.prototype.sort:_does_not_throw_when_given_undefined_compareFn"><span><a class="anchor" href="#test-Array.prototype.sort:_does_not_throw_when_given_undefined_compareFn">&#xA7;</a>Array.prototype.sort: does not throw when given undefined compareFn</span><script data-source="function () {
+try {
+  var arr = [2, 1];
+  return arr.sort(undefined) === arr &amp;&amp; arr[0] === 1 &amp;&amp; arr[1] === 2;
+} catch (e) {
+  return false;
+}
+  }">test(
+function () {
+try {
+  var arr = [2, 1];
+  return arr.sort(undefined) === arr && arr[0] === 1 && arr[1] === 2;
+} catch (e) {
+  return false;
+}
+  }())</script></td>
+<td class="yes" data-browser="es5shim">Yes</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="yes" data-browser="ie9">Yes</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="yes obsolete" data-browser="safari4">Yes</td>
+<td class="yes obsolete" data-browser="safari5">Yes</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="yes obsolete" data-browser="opera10_50">Yes</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="no" data-browser="besen">No</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="no" data-browser="ejs">No</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr><th colspan="39" class="separator"></th>
+</tr>
 <tr significance="1"><td id="test-Getter_in_property_initializer"><span><a class="anchor" href="#test-Getter_in_property_initializer">&#xA7;</a>Getter in property initializer</span><script data-source="
 return ({ get x(){ return 1 } }).x === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nreturn ({ get x(){ return 1 } }).x === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1489,7 +1627,7 @@ return ({ get x(){ return 1 } }).x === 1;
 var value = 0;
 ({ set x(v){ value = v; } }).x = 1;
 return value === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nvar value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1575,7 +1713,7 @@ return "foobar"[3] === "b";
 </tr>
 <tr significance="1"><td id="test-Reserved_words_as_property_names"><span><a class="anchor" href="#test-Reserved_words_as_property_names">&#xA7;</a>Reserved words as property names</span><script data-source="
 return ({ if: 1 }).if === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nreturn ({ if: 1 }).if === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1619,7 +1757,7 @@ return ({ if: 1 }).if === 1;
 <tr significance="1"><td id="test-Zero-width_chars_in_identifiers"><span><a class="anchor" href="#test-Zero-width_chars_in_identifiers">&#xA7;</a>Zero-width chars in identifiers</span><script data-source="
 var _\u200c\u200d = true;
 return _\u200c\u200d;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nvar _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
@@ -1706,7 +1844,7 @@ undefined = 12345;
 var result = typeof undefined == &apos;undefined&apos;;
 undefined = void 0;
 return result;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nundefined = 12345;\nvar result = typeof undefined == 'undefined';\nundefined = void 0;\nreturn result;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>

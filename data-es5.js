@@ -1712,6 +1712,120 @@ exports.tests = [
   separator: 'after'
 },
 {
+  name: 'Array.prototype.sort throws when given a non-undefined non-function compareFn',
+  exec: function () {
+    try {
+      [1,2].sort(null);
+      return false;
+    } catch (enull) {}
+    try {
+      [1,2].sort(true);
+      return false;
+    } catch (etrue) {}
+    try {
+      [1,2].sort({});
+      return false;
+    } catch (eobj) {}
+    try {
+      [1,2].sort([]);
+      return false;
+    } catch (earr) {}
+    try {
+      [1,2].sort(/a/g);
+      return false;
+    } catch (eregex) {}
+    return true;
+  },
+  res: {
+    es5shim: true,
+
+    ie7: false,
+    ie8: false,
+    ie9: true,
+    ie10: true,
+
+    firefox3: true,
+    firefox3_5: false,
+    firefox4: false,
+    firefox21: true,
+
+    safari4: false,
+    safari5: false,
+    safari51: false,
+    safari6: false,
+    webkit: false,
+
+    chrome13: false,
+    chrome19: false,
+    chrome23: false,
+
+    opera10_50: true,
+    opera12: true,
+    opera12_10: true,
+
+    konq43: undefined,
+    konq49: undefined,
+    konq413: undefined,
+
+    besen: undefined,
+    rhino: undefined,
+    phantom: false,
+    ejs: undefined,
+    ios78: false,
+    android40: false,
+  },
+},
+{
+  name: 'Array.prototype.sort: does not throw when given undefined compareFn',
+  exec: function () {
+    try {
+      var arr = [2, 1];
+      return arr.sort(undefined) === arr && arr[0] === 1 && arr[1] === 2;
+    } catch (e) {
+      return false;
+    }
+  },
+  res: {
+    es5shim: true,
+
+    ie7: false,
+    ie8: false,
+    ie9: true,
+    ie10: true,
+
+    firefox3: false,
+    firefox3_5: false,
+    firefox4: true,
+    firefox21: true,
+
+    safari4: true,
+    safari5: true,
+    safari51: true,
+    safari6: true,
+    webkit: true,
+
+    chrome13: true,
+    chrome19: true,
+    chrome23: true,
+
+    opera10_50: true,
+    opera12: true,
+    opera12_10: true,
+
+    konq43: undefined,
+    konq49: undefined,
+    konq413: undefined,
+
+    besen: undefined,
+    rhino: undefined,
+    phantom: true,
+    ejs: undefined,
+    ios78: true,
+    android40: true,
+  },
+  separator: 'after'
+},
+{
   name: 'Getter in property initializer',
   exec: function () {/*
     return ({ get x(){ return 1 } }).x === 1;
