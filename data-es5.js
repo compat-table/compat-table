@@ -1831,6 +1831,8 @@ exports.tests = [
     return ({ get x(){ return 1 } }).x === 1;
   */},
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1880,6 +1882,8 @@ exports.tests = [
     return value === 1;
   */},
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -1928,6 +1932,8 @@ exports.tests = [
     return "foobar"[3] === "b";
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: true,
     ie9: true,
@@ -1975,6 +1981,8 @@ exports.tests = [
     return ({ if: 1 }).if === 1;
   */},
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -2024,6 +2032,8 @@ exports.tests = [
     return _\u200c\u200d;
   */},
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -2127,6 +2137,8 @@ exports.tests = [
     return result;
   */},
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: true,
@@ -2176,6 +2188,8 @@ exports.tests = [
     return !this;
   },
   res: {
+    es5shim: false,
+
     ie7: false,
     ie8: false,
     ie9: false,
