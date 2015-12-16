@@ -3220,6 +3220,47 @@ exports.tests = [
       },
     },
     {
+      name: 'with an arguments object',
+      exec: function () {/*
+        var result = (function () {
+          var args = "";
+          for (var item of arguments) {
+            args += item;
+          }
+          return args;
+        }(1, 2, 3));
+        return result === "123";
+      */},
+      res: {
+        tr: undefined,
+        babel: undefined,
+        es6shim: false,
+        closure: undefined,
+        ejs: undefined,
+        typescript: typescript.fallthrough,
+        es6tr: { val: undefined, note_id: 'compiler-iterable' },
+        edge12: undefined,
+        firefox35: false,
+        firefox36: false,
+        firefox37: false,
+        firefox38: false,
+        firefox39: false,
+        firefox40: false,
+        firefox41: false,
+        firefox42: false,
+        firefox43: false,
+        firefox44: false,
+        safari9: true,
+        webkit: true,
+        chrome47: true,
+        chrome48: true,
+        node012: false,
+        node4: true,
+        node5: true,
+        xs6: undefined,
+      },
+    },
+    {
       name: 'iterator closing, break',
       exec: function () {/*
         var closed = false;
