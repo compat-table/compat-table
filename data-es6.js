@@ -2514,7 +2514,6 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         es6tr:       true,
-        ejs:         false,
         edge12:      flag,
         edge13:      true,
         safari9:     true,
@@ -2542,7 +2541,6 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         es6tr:       true,
-        ejs:         false,
         edge12:      flag,
         edge13:      true,
         webkit:      true,
@@ -2892,7 +2890,6 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         rhino17:     true,
-        xs6:         false,
       },
     },
     {
@@ -4381,7 +4378,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         edge13:      true,
-        xs6:         false,
       },
     },
     {
@@ -4395,7 +4391,6 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         edge13:      true,
-        xs6:         false,
       },
     },
   ],
@@ -6188,7 +6183,6 @@ exports.tests = [
           && returnedDesc.enumerable   === false);
       */},
       res: {
-        ejs:         false,
         typescript:  typescript.fallthrough,
         edge12:      true,
         firefox18:   {
@@ -6453,7 +6447,6 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         edge12:      true,
-        xs6:         false,
       },
     },
   ],
@@ -6682,7 +6675,6 @@ exports.tests = [
         ejs:         true,
         edge12:      true,
         firefox34:   true,
-        xs6:         false,
       },
     },
     {
@@ -6946,7 +6938,6 @@ exports.tests = [
         ejs:         true,
         edge12:      true,
         firefox18:   true,
-        xs6:         false,
       },
     },
     {
@@ -7240,7 +7231,6 @@ exports.tests = [
       res: {
         edge12:      true,
         firefox37:   true,
-        xs6:         false,
       },
     },
     {
@@ -7389,7 +7379,6 @@ exports.tests = [
         ejs:         true,
         edge12:      true,
         firefox37:   true,
-        xs6:         false,
       },
     },
     {
@@ -7995,14 +7984,9 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
-        safari9:     true,
-        webkit:       true,
-        babel:        true,
-        typescript:   true,
+        safari9:      true,
         tr:           false,
         closure:      false,
-        edge13:       flag,
-        xs6:         true,
       }),
     },
     {
@@ -8019,11 +8003,6 @@ exports.tests = [
         },
         ejs:          false,
         firefox16:    true,
-        webkit:       true,
-        safari71_8:   true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:         true,
       }),
     },
     {
@@ -8034,13 +8013,7 @@ exports.tests = [
         return toFixed === Number.prototype.toFixed
           && slice === String.prototype.slice;
       */},
-      res: Object.assign({}, temp.destructuringResults, {
-        webkit:       true,
-        safari71_8:   true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
-      }),
+      res: temp.destructuringResults,
     },
     {
       name: 'trailing commas in object patterns',
@@ -8050,11 +8023,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
-        safari9:     true,
-        webkit:       true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
+        safari9:      true,
       }),
     },
     {
@@ -8072,11 +8041,6 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
-        safari9:      true,
-        webkit:       true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
       }),
     },
     {
@@ -8251,7 +8215,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         edge13:       flag,
-        xs6:         true,
+        xs6:          true,
       },
     },
   ],
@@ -8335,7 +8299,7 @@ exports.tests = [
         babel:        true,
         ejs:          true,
         edge13:       flag,
-        xs6:         true,
+        xs6:          true,
         webkit:       true,
       },
     },
@@ -8351,7 +8315,7 @@ exports.tests = [
         ejs:          true,
         typescript:   typescript.fallthrough,
         firefox34:    true,
-        safari9:     true,
+        safari9:      true,
         webkit:       true,
         babel:        true,
         edge13:       flag,
@@ -8374,7 +8338,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         edge13:       flag,
-        xs6:         true,
+        xs6:          true,
       },
     },
     {
@@ -8412,7 +8376,7 @@ exports.tests = [
         safari71_8:   true,
         webkit:       true,
         edge13:       flag,
-        xs6:         true,
+        xs6:          true,
       },
     },
     {
@@ -8432,7 +8396,7 @@ exports.tests = [
         safari71_8:   true,
         webkit:       true,
         edge13:       flag,
-        xs6:         true,
+        xs6:          true,
       },
     },
     {
@@ -8444,14 +8408,9 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
-        safari9:     true,
-        webkit:       true,
-        babel:        true,
-        typescript:   true,
+        safari9:      true,
         tr:           false,
         closure:      false,
-        edge13:       flag,
-        xs6:         true,
       }),
     },
     {
@@ -8469,11 +8428,6 @@ exports.tests = [
         },
         ejs:          false,
         firefox16:    true,
-        webkit:       true,
-        safari71_8:   true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:         true,
       }),
     },
     {
@@ -8485,13 +8439,7 @@ exports.tests = [
         return toFixed === Number.prototype.toFixed
           && slice === String.prototype.slice;
       */},
-      res: Object.assign({}, temp.destructuringResults, {
-        webkit:       true,
-        safari71_8:   true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
-      }),
+      res: temp.destructuringResults,
     },
     {
       name: 'trailing commas in object patterns',
@@ -8502,11 +8450,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
-        safari9:     true,
-        webkit:       true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
+        safari9:      true,
       }),
     },
     {
@@ -8585,11 +8529,6 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
-        safari9:      true,
-        webkit:       true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
       }),
     },
     {
@@ -8673,8 +8612,6 @@ exports.tests = [
         ejs:         true,
         safari71_8:  false,
         safari9:     true,
-        edge13:      flag,
-        xs6:         true,
       }),
     },
     {
@@ -8713,20 +8650,7 @@ exports.tests = [
           return a === 5 && b === 6 && c === undefined;
         }([5, null, [6]]);
       */},
-      res: (temp.destructuringResults = {
-        tr:          true,
-        babel:       true,
-        ejs:         true,
-        es6tr:       true,
-        jsx:         true,
-        closure:     true,
-        typescript:  true,
-        firefox11:   true,
-        safari71_8:  true,
-        webkit:      true,
-        edge13:      flag,
-        xs6:         true,
-      }),
+      res: temp.destructuringResults,
     },
     {
       name: 'with sparse arrays',
@@ -8866,14 +8790,9 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
-        safari9:     true,
-        webkit:       true,
-        babel:        true,
-        typescript:   true,
+        safari9:      true,
         tr:           false,
         closure:      false,
-        edge13:       flag,
-        xs6:         true,
       }),
     },
     {
@@ -8891,11 +8810,6 @@ exports.tests = [
         },
         ejs:          false,
         firefox16:    true,
-        webkit:       true,
-        safari71_8:   true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:         true,
       }),
     },
     {
@@ -8906,13 +8820,7 @@ exports.tests = [
             && slice === String.prototype.slice;
         }(2,'');
       */},
-      res: Object.assign({}, temp.destructuringResults, {
-        webkit:       true,
-        safari71_8:   true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
-      }),
+      res: temp.destructuringResults,
     },
     {
       name: 'trailing commas in object patterns',
@@ -8923,11 +8831,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
-        safari9:     true,
-        webkit:       true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
+        safari9:      true,
       }),
     },
     {
@@ -8946,10 +8850,6 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
         safari9:      true,
-        webkit:       true,
-        typescript:   true,
-        edge13:       flag,
-        xs6:          true,
       }),
     },
     {
@@ -9073,8 +8973,6 @@ exports.tests = [
         safari71_8:  false,
         safari9:     true,
         jsx:         false,
-        edge13:      flag,
-        xs6:         true,
       }),
     },
     {
