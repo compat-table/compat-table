@@ -179,8 +179,12 @@ table.one-selected td.selected {
 .tally,
 .no,
 .strict,
-.not-applicable {
+.not-applicable,
+.unknown {
     text-align: center; font-size: 0.8em; padding: 0.25em 0.5em; color: #fff;
+}
+.unknown {
+	color: #000;
 }
 
 /* yes/no/tally grid cell colors */

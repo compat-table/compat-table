@@ -470,17 +470,23 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
       // Create the cell, and add classes and attributes
       var cell = $('<td></td>');
-      cell.addClass(result === true ? "yes" : result !== null ? "no" : "");
-      if (result === "flagged") {
-        cell.addClass("flagged");
-      }
-      else if (result === "needs-polyfill-or-native") {
+      cell.addClass({
+      	'true': "yes",
+      	'false': "no",
+      	'undefined': "no",
+      	'tally': 'tally',
+      	'flagged': 'no flagged',
+      	'needs-polyfill-or-native': 'no needs-polyfill-or-native',
+      	'strict': 'no strict',
+      	'null': 'unknown',
+      }[result] || '');
+      if (result === "needs-polyfill-or-native") {
         cell.attr('title', "Requires native support or a polyfill.");
-        cell.addClass("needs-polyfill-or-native");
       }
       else if (result === "strict") {
-        cell.addClass("strict").attr('title', "Support for this feature incorrectly requires strict mode.");
+        cell.attr('title', "Support for this feature incorrectly requires strict mode.");
       }
+      
       cell.attr('data-browser', browserId).addClass(
         browsers[browserId].obsolete ? "obsolete" :
         browsers[browserId].unstable ? "unstable" :
@@ -500,14 +506,13 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         cell.addClass("not-applicable");
       }
 
-      if (result !== null) {
-        var texts = {
+      if (result !== 'tally') {
+        cell.text({
           strict: 'Strict',
           flagged: 'Flag',
           'true': 'Yes',
-          'false': 'No'
-        };
-        cell.text(texts[result] || '?');
+          'null': '?',
+        }[result] || 'No');
       }
 
       if (footnote) {
@@ -562,9 +567,8 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
             outOf += 1;
           });
           var grade = (tally / outOf);
-          var cell = resultCell(browserId, null)
+          var cell = resultCell(browserId, 'tally')
             .text((tally|0) + "/" + outOf)
-            .addClass('tally')
             .attr('data-tally', grade);
           if (grade > 0 && grade < 1 && !cell.hasClass('not-applicable')) {
             cell.attr('style','background-color:hsl(' + (120*grade|0) + ','
