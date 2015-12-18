@@ -8921,6 +8921,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         ejs:          false,
+        chrome49:    true,
       }),
     },
     {
