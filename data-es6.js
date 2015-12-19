@@ -6462,6 +6462,7 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         edge12:      true,
+        xs6:         true,
       },
     },
   ],
@@ -6689,6 +6690,7 @@ exports.tests = [
       res: {
         ejs:         true,
         edge12:      true,
+        xs6:         true,
         firefox34:   true,
       },
     },
@@ -6952,6 +6954,7 @@ exports.tests = [
       res: {
         ejs:         true,
         edge12:      true,
+        xs6:         true,
         firefox18:   true,
       },
     },
