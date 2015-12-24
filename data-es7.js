@@ -1342,6 +1342,26 @@ exports.tests = [
         es7shim:     true,
         android40:   true,
       }
+    },
+    {
+      name: 'String.prototype.trimStart',
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    {
+      name: 'String.prototype.trimEnd',
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
     }
   ]
 },
