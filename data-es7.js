@@ -257,7 +257,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'exponentiation (**) operator',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'small',
   link: 'https://github.com/rwaldron/exponentiation-operator',
   subtests: [
@@ -303,7 +303,7 @@ exports.tests = [
 {
   name: 'bind (::) operator',
   link: 'https://github.com/zenparsing/es-function-bind',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'medium',
   subtests: [
     {
@@ -331,7 +331,7 @@ exports.tests = [
 },
 {
   name: 'do expression',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'small',
   link: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
   exec: function () {/*
@@ -346,7 +346,7 @@ exports.tests = [
 },
 {
   name: 'function.sent',
-  category: 'draft',
+  category: 'draft (stage 2)',
   significance: 'small',
   link: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
   exec: function () {/*
@@ -364,7 +364,7 @@ exports.tests = [
 {
   name: 'Object.values',
   link: 'https://github.com/ljharb/proposal-object-values-entries',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
@@ -381,7 +381,7 @@ exports.tests = [
 {
   name: 'Object.entries',
   link: 'https://github.com/ljharb/proposal-object-values-entries',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
@@ -402,7 +402,7 @@ exports.tests = [
 {
   name: 'Object.observe',
   link: 'https://arv.github.io/ecmascript-object-observe/',
-  category: 'draft',
+  category: 'draft (stage 2)',
   significance: 'large',
   exec: function () {/*
     var obj = {x: 1};
@@ -426,7 +426,7 @@ exports.tests = [
 {
   name: 'Array.prototype.includes',
   link: 'https://github.com/tc39/Array.prototype.includes',
-  category: 'finished',
+  category: 'finished (stage 4)',
   significance: 'small',
   exec: function () {/*
     return [1, 2, 3].includes(1)
@@ -448,7 +448,7 @@ exports.tests = [
 {
   name: 'trailing commas in function syntax',
   link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'small',
   subtests: [
     {
@@ -475,7 +475,7 @@ exports.tests = [
 },
 {
   name: 'async functions',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'large',
   link: 'https://tc39.github.io/ecmascript-asyncawait/',
   subtests: [
@@ -521,7 +521,7 @@ exports.tests = [
 {
   name: 'Object.getOwnPropertyDescriptors',
   link: 'https://gist.github.com/WebReflection/9353781',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'small',
   exec: function () {/*
     var object = {a: 1};
@@ -543,7 +543,7 @@ exports.tests = [
 {
   name: 'ArrayBuffer.transfer',
   link: 'https://gist.github.com/lukewagner/2735af7eea411e18cf20',
-  category: 'proposal',
+  category: 'proposal (stage 1)',
   significance: 'small',
   exec: function(){/*
     return typeof ArrayBuffer.transfer === 'function';
@@ -555,7 +555,7 @@ exports.tests = [
 },
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'large',
   link: 'https://tc39.github.io/ecmascript_simd/',
   subtests: [
@@ -1047,7 +1047,7 @@ exports.tests = [
 },
 {
   name: 'class decorators',
-  category: 'proposal',
+  category: 'proposal (stage 1)',
   significance: 'medium',
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
@@ -1116,7 +1116,7 @@ exports.tests = [
 },
 {
   name: 'class properties',
-  category: 'proposal',
+  category: 'proposal (stage 1)',
   significance: 'medium',
   link: 'https://github.com/jeffmo/es-class-properties',
   exec: function () {/*
@@ -1134,7 +1134,7 @@ exports.tests = [
 },
 {
   name: 'call constructor',
-  category: 'proposal',
+  category: 'proposal (stage 1)',
   significance: 'medium',
   link: 'https://gist.github.com/wycats/952929fab0bc1f000c24',
   exec: function () {/*
@@ -1153,7 +1153,7 @@ exports.tests = [
 },
 {
   name: 'Map.prototype.toJSON',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'tiny',
   link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
@@ -1194,7 +1194,7 @@ exports.tests = [
 },
 {
   name: 'Set.prototype.toJSON',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'tiny',
   link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
   exec: function(){/*
@@ -1212,7 +1212,7 @@ exports.tests = [
   name: 'object rest properties',
   significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: 'draft',
+  category: 'draft (stage 2)',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -1224,7 +1224,7 @@ exports.tests = [
 },
 {
   name: 'object spread properties',
-  category: 'draft',
+  category: 'draft (stage 2)',
   significance: 'medium',
   link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
@@ -1241,7 +1241,7 @@ exports.tests = [
   name: 'String.prototype.at',
   significance: 'small',
   link: 'https://github.com/mathiasbynens/String.prototype.at',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   exec: function () {/*
     return 'a𠮷b'.at(1) === '𠮷';
   */},
@@ -1253,7 +1253,7 @@ exports.tests = [
 },
 {
   name: 'String padding',
-  category: 'candidate',
+  category: 'candidate (stage 3)',
   significance: 'small',
   link: 'https://github.com/tc39/proposal-string-pad-start-end',
   subtests: [
@@ -1303,7 +1303,7 @@ exports.tests = [
 },
 {
   name: 'String trimming',
-  category: 'proposal',
+  category: 'proposal (stage 1)',
   significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
   subtests: [
@@ -1419,7 +1419,7 @@ exports.tests = [
 },
 {
   name: 'System.global',
-  category: 'proposal',
+  category: 'proposal (stage 1)',
   significance: 'small',
   link: 'https://github.com/tc39/proposal-global',
   exec: function(){/*
@@ -1433,7 +1433,7 @@ exports.tests = [
 },
 {
   name: 'Error.isError',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'tiny',
   link: 'https://github.com/ljharb/proposal-is-error',
   exec: function(){/*
@@ -1446,7 +1446,7 @@ exports.tests = [
 },
 {
   name: 'Math methods for 64-bit integers',
-  category: 'strawman',
+  category: 'strawman (stage 0)',
   significance: 'tiny',
   link: 'https://gist.github.com/BrendanEich/4294d5c212a6d2254703',
   subtests: [
@@ -1496,7 +1496,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['finished', 'candidate', 'draft', 'proposal', 'strawman', 'pre-strawman', 'errata'].indexOf(e.category);
+  var index = ['finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman', 'errata'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES7 category!');
   }
