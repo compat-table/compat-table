@@ -1430,6 +1430,19 @@ exports.tests = [
     babel:       true,
     typescript:  typescript.corejs,
   }
+},
+{
+  name: 'Error.isError',
+  category: 'strawman',
+  significance: 'tiny',
+  link: 'https://github.com/ljharb/proposal-is-error',
+  exec: function(){/*
+    return Error.isError(new TypeError()) && !Error.isError(Object.create(TypeError.prototype));
+  */},
+  res: {
+    babel:       true,
+    typescript:  typescript.corejs,
+  }
 }
 ];
 
