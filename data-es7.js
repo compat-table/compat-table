@@ -400,30 +400,6 @@ exports.tests = [
   }
 },
 {
-  name: 'Object.observe',
-  link: 'https://arv.github.io/ecmascript-object-observe/',
-  category: 'draft (stage 2)',
-  significance: 'large',
-  exec: function () {/*
-    var obj = {x: 1};
-    Object.observe(obj, function(changes){
-      var data = changes[0];
-      if(data.name === 'x' && data.type === 'update' && data.oldValue === 1 && data.object.x === 2){
-        asyncTestPassed();
-      }
-    });
-    obj.x = 2;
-  */},
-  res: {
-    chrome33:        true,
-    chrome34:        true,
-    chrome35:        true,
-    chrome37:        true,
-    node:            true,
-    iojs:            true,
-  }
-},
-{
   name: 'Array.prototype.includes',
   link: 'https://github.com/tc39/Array.prototype.includes',
   category: 'finished (stage 4)',
