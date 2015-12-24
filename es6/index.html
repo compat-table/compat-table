@@ -132,11 +132,11 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel">Babel +<br><nobr>core-js</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
+<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 5.8 + core-js 2.0">Babel +<br><nobr>core-js</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
 <th class="platform es6tr compiler obsolete" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Trans-<br>piler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20150729">Closure</abbr></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.6.2">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.6.2 + core-js 2.0">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
@@ -18445,11 +18445,11 @@ return passed;
 </tr>
 <tr class="supertest" significance="1"><td id="test-typed_arrays"><span><a class="anchor" href="#test-typed_arrays">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects">typed arrays</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/46</td>
-<td class="tally" data-browser="babel" data-tally="0">0/46</td>
+<td class="tally" data-browser="babel" data-tally="0.9782608695652174" style="background-color:hsl(117,42%,50%)">45/46</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/46</td>
 <td class="tally" data-browser="closure" data-tally="0">0/46</td>
 <td class="tally" data-browser="jsx" data-tally="0">0/46</td>
-<td class="tally" data-browser="typescript" data-tally="0">0/46</td>
+<td class="tally" data-browser="typescript" data-tally="0.9782608695652174" style="background-color:hsl(117,42%,50%)">45/46</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/46</td>
 <td class="tally" data-browser="ie10" data-tally="0.34782608695652173" style="background-color:hsl(41,70%,50%)">16/46</td>
 <td class="tally" data-browser="ie11" data-tally="0.34782608695652173" style="background-color:hsl(41,70%,50%)">16/46</td>
@@ -18520,11 +18520,11 @@ return view[0] === -0x80;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("239");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Int8Array(buffer);         view[0] = 0x80;\nreturn view[0] === -0x80;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("239");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Int8Array(buffer);         view[0] = 0x80;\nreturn view[0] === -0x80;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -18595,11 +18595,11 @@ return view[0] === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("240");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint8Array(buffer);        view[0] = 0x100;\nreturn view[0] === 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("240");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint8Array(buffer);        view[0] = 0x100;\nreturn view[0] === 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -18670,11 +18670,11 @@ return view[0] === 0xFF;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("241");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint8ClampedArray(buffer); view[0] = 0x100;\nreturn view[0] === 0xFF;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("241");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint8ClampedArray(buffer); view[0] = 0x100;\nreturn view[0] === 0xFF;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -18745,11 +18745,11 @@ return view[0] === -0x8000;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("242");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Int16Array(buffer);        view[0] = 0x8000;\nreturn view[0] === -0x8000;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("242");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Int16Array(buffer);        view[0] = 0x8000;\nreturn view[0] === -0x8000;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -18820,11 +18820,11 @@ return view[0] === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("243");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint16Array(buffer);       view[0] = 0x10000;\nreturn view[0] === 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("243");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint16Array(buffer);       view[0] = 0x10000;\nreturn view[0] === 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -18895,11 +18895,11 @@ return view[0] === -0x80000000;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("244");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Int32Array(buffer);        view[0] = 0x80000000;\nreturn view[0] === -0x80000000;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("244");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Int32Array(buffer);        view[0] = 0x80000000;\nreturn view[0] === -0x80000000;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -18970,11 +18970,11 @@ return view[0] === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("245");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint32Array(buffer);       view[0] = 0x100000000;\nreturn view[0] === 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("245");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Uint32Array(buffer);       view[0] = 0x100000000;\nreturn view[0] === 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19045,11 +19045,11 @@ return view[0] === 0.10000000149011612;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Float32Array(buffer);       view[0] = 0.1;\nreturn view[0] === 0.10000000149011612;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("246");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Float32Array(buffer);       view[0] = 0.1;\nreturn view[0] === 0.10000000149011612;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19120,11 +19120,11 @@ return view[0] === 0.1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("247");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new Float64Array(buffer);       view[0] = 0.1;\nreturn view[0] === 0.1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("247");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new Float64Array(buffer);       view[0] = 0.1;\nreturn view[0] === 0.1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19196,11 +19196,11 @@ return view.getInt8(0) === -0x80;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("248");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt8 (0, 0x80);\nreturn view.getInt8(0) === -0x80;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("248");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt8 (0, 0x80);\nreturn view.getInt8(0) === -0x80;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19272,11 +19272,11 @@ return view.getUint8(0) === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("249");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100);\nreturn view.getUint8(0) === 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("249");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint8(0, 0x100);\nreturn view.getUint8(0) === 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19348,11 +19348,11 @@ return view.getInt16(0) === -0x8000;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("250");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000);\nreturn view.getInt16(0) === -0x8000;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("250");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt16(0, 0x8000);\nreturn view.getInt16(0) === -0x8000;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19424,11 +19424,11 @@ return view.getUint16(0) === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("251");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000);\nreturn view.getUint16(0) === 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("251");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint16(0, 0x10000);\nreturn view.getUint16(0) === 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19500,11 +19500,11 @@ return view.getInt32(0) === -0x80000000;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("252");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000);\nreturn view.getInt32(0) === -0x80000000;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("252");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setInt32(0, 0x80000000);\nreturn view.getInt32(0) === -0x80000000;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19576,11 +19576,11 @@ return view.getUint32(0) === 0;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("253");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000);\nreturn view.getUint32(0) === 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("253");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setUint32(0, 0x100000000);\nreturn view.getUint32(0) === 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19652,11 +19652,11 @@ return view.getFloat32(0) === 0.10000000149011612;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("254");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1);\nreturn view.getFloat32(0) === 0.10000000149011612;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("254");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat32(0, 0.1);\nreturn view.getFloat32(0) === 0.10000000149011612;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19728,11 +19728,11 @@ return view.getFloat64(0) === 0.1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("255");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1);\nreturn view.getFloat64(0) === 0.1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("255");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setFloat64(0, 0.1);\nreturn view.getFloat64(0) === 0.1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -19801,11 +19801,11 @@ return typeof ArrayBuffer[Symbol.species] === &apos;function&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("256");try{return Function("asyncTestPassed","\nreturn typeof ArrayBuffer[Symbol.species] === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("256");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ArrayBuffer[Symbol.species] === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19897,11 +19897,11 @@ return constructors.every(function (constructor) {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("257");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar constructors = [\n  'ArrayBuffer',\n  'DataView',\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nreturn constructors.every(function (constructor) {\n  try {\n    if (constructor in global) {\n      global[constructor](constructor === \"ArrayBuffer\" ? 64 : buffer);\n    }\n    return false;\n  } catch(e) {\n    return true;\n  }\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("257");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar constructors = [\n  'ArrayBuffer',\n  'DataView',\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nreturn constructors.every(function (constructor) {\n  try {\n    if (constructor in global) {\n      global[constructor](constructor === \"ArrayBuffer\" ? 64 : buffer);\n    }\n    return false;\n  } catch(e) {\n    return true;\n  }\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -19985,11 +19985,11 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("258");try{return Function("asyncTestPassed","\nvar constructors = [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nfor(var i = 0; i < constructors.length; i++){\n  var arr = new global[constructors[i]](__createIterableObject([1, 2, 3]));\n  if(arr.length !== 3 || arr[0] !== 1 || arr[1] !== 2 || arr[2] !== 3)return false;\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("258");return Function("asyncTestPassed","'use strict';"+"\nvar constructors = [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n];\nfor(var i = 0; i < constructors.length; i++){\n  var arr = new global[constructors[i]](__createIterableObject([1, 2, 3]));\n  if(arr.length !== 3 || arr[0] !== 1 || arr[1] !== 2 || arr[2] !== 3)return false;\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20162,11 +20162,11 @@ typeof Float64Array.from === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("260");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.from === \"function\" &&\ntypeof Uint8Array.from === \"function\" &&\ntypeof Uint8ClampedArray.from === \"function\" &&\ntypeof Int16Array.from === \"function\" &&\ntypeof Uint16Array.from === \"function\" &&\ntypeof Int32Array.from === \"function\" &&\ntypeof Uint32Array.from === \"function\" &&\ntypeof Float32Array.from === \"function\" &&\ntypeof Float64Array.from === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("260");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.from === \"function\" &&\ntypeof Uint8Array.from === \"function\" &&\ntypeof Uint8ClampedArray.from === \"function\" &&\ntypeof Int16Array.from === \"function\" &&\ntypeof Uint16Array.from === \"function\" &&\ntypeof Int32Array.from === \"function\" &&\ntypeof Uint32Array.from === \"function\" &&\ntypeof Float32Array.from === \"function\" &&\ntypeof Float64Array.from === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20243,11 +20243,11 @@ typeof Float64Array.of === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("261");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.of === \"function\" &&\ntypeof Uint8Array.of === \"function\" &&\ntypeof Uint8ClampedArray.of === \"function\" &&\ntypeof Int16Array.of === \"function\" &&\ntypeof Uint16Array.of === \"function\" &&\ntypeof Int32Array.of === \"function\" &&\ntypeof Uint32Array.of === \"function\" &&\ntypeof Float32Array.of === \"function\" &&\ntypeof Float64Array.of === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("261");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.of === \"function\" &&\ntypeof Uint8Array.of === \"function\" &&\ntypeof Uint8ClampedArray.of === \"function\" &&\ntypeof Int16Array.of === \"function\" &&\ntypeof Uint16Array.of === \"function\" &&\ntypeof Int32Array.of === \"function\" &&\ntypeof Uint32Array.of === \"function\" &&\ntypeof Float32Array.of === \"function\" &&\ntypeof Float64Array.of === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20324,11 +20324,11 @@ typeof Float64Array.prototype.subarray === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("262");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.subarray === \"function\" &&\ntypeof Uint8Array.prototype.subarray === \"function\" &&\ntypeof Uint8ClampedArray.prototype.subarray === \"function\" &&\ntypeof Int16Array.prototype.subarray === \"function\" &&\ntypeof Uint16Array.prototype.subarray === \"function\" &&\ntypeof Int32Array.prototype.subarray === \"function\" &&\ntypeof Uint32Array.prototype.subarray === \"function\" &&\ntypeof Float32Array.prototype.subarray === \"function\" &&\ntypeof Float64Array.prototype.subarray === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("262");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.subarray === \"function\" &&\ntypeof Uint8Array.prototype.subarray === \"function\" &&\ntypeof Uint8ClampedArray.prototype.subarray === \"function\" &&\ntypeof Int16Array.prototype.subarray === \"function\" &&\ntypeof Uint16Array.prototype.subarray === \"function\" &&\ntypeof Int32Array.prototype.subarray === \"function\" &&\ntypeof Uint32Array.prototype.subarray === \"function\" &&\ntypeof Float32Array.prototype.subarray === \"function\" &&\ntypeof Float64Array.prototype.subarray === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20405,11 +20405,11 @@ typeof Float64Array.prototype.join === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("263");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.join === \"function\" &&\ntypeof Uint8Array.prototype.join === \"function\" &&\ntypeof Uint8ClampedArray.prototype.join === \"function\" &&\ntypeof Int16Array.prototype.join === \"function\" &&\ntypeof Uint16Array.prototype.join === \"function\" &&\ntypeof Int32Array.prototype.join === \"function\" &&\ntypeof Uint32Array.prototype.join === \"function\" &&\ntypeof Float32Array.prototype.join === \"function\" &&\ntypeof Float64Array.prototype.join === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("263");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.join === \"function\" &&\ntypeof Uint8Array.prototype.join === \"function\" &&\ntypeof Uint8ClampedArray.prototype.join === \"function\" &&\ntypeof Int16Array.prototype.join === \"function\" &&\ntypeof Uint16Array.prototype.join === \"function\" &&\ntypeof Int32Array.prototype.join === \"function\" &&\ntypeof Uint32Array.prototype.join === \"function\" &&\ntypeof Float32Array.prototype.join === \"function\" &&\ntypeof Float64Array.prototype.join === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20486,11 +20486,11 @@ typeof Float64Array.prototype.indexOf === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("264");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.indexOf === \"function\" &&\ntypeof Uint8Array.prototype.indexOf === \"function\" &&\ntypeof Uint8ClampedArray.prototype.indexOf === \"function\" &&\ntypeof Int16Array.prototype.indexOf === \"function\" &&\ntypeof Uint16Array.prototype.indexOf === \"function\" &&\ntypeof Int32Array.prototype.indexOf === \"function\" &&\ntypeof Uint32Array.prototype.indexOf === \"function\" &&\ntypeof Float32Array.prototype.indexOf === \"function\" &&\ntypeof Float64Array.prototype.indexOf === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("264");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.indexOf === \"function\" &&\ntypeof Uint8Array.prototype.indexOf === \"function\" &&\ntypeof Uint8ClampedArray.prototype.indexOf === \"function\" &&\ntypeof Int16Array.prototype.indexOf === \"function\" &&\ntypeof Uint16Array.prototype.indexOf === \"function\" &&\ntypeof Int32Array.prototype.indexOf === \"function\" &&\ntypeof Uint32Array.prototype.indexOf === \"function\" &&\ntypeof Float32Array.prototype.indexOf === \"function\" &&\ntypeof Float64Array.prototype.indexOf === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20567,11 +20567,11 @@ typeof Float64Array.prototype.lastIndexOf === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("265");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint8Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint8ClampedArray.prototype.lastIndexOf === \"function\" &&\ntypeof Int16Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint16Array.prototype.lastIndexOf === \"function\" &&\ntypeof Int32Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint32Array.prototype.lastIndexOf === \"function\" &&\ntypeof Float32Array.prototype.lastIndexOf === \"function\" &&\ntypeof Float64Array.prototype.lastIndexOf === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("265");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint8Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint8ClampedArray.prototype.lastIndexOf === \"function\" &&\ntypeof Int16Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint16Array.prototype.lastIndexOf === \"function\" &&\ntypeof Int32Array.prototype.lastIndexOf === \"function\" &&\ntypeof Uint32Array.prototype.lastIndexOf === \"function\" &&\ntypeof Float32Array.prototype.lastIndexOf === \"function\" &&\ntypeof Float64Array.prototype.lastIndexOf === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20648,11 +20648,11 @@ typeof Float64Array.prototype.slice === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("266");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.slice === \"function\" &&\ntypeof Uint8Array.prototype.slice === \"function\" &&\ntypeof Uint8ClampedArray.prototype.slice === \"function\" &&\ntypeof Int16Array.prototype.slice === \"function\" &&\ntypeof Uint16Array.prototype.slice === \"function\" &&\ntypeof Int32Array.prototype.slice === \"function\" &&\ntypeof Uint32Array.prototype.slice === \"function\" &&\ntypeof Float32Array.prototype.slice === \"function\" &&\ntypeof Float64Array.prototype.slice === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("266");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.slice === \"function\" &&\ntypeof Uint8Array.prototype.slice === \"function\" &&\ntypeof Uint8ClampedArray.prototype.slice === \"function\" &&\ntypeof Int16Array.prototype.slice === \"function\" &&\ntypeof Uint16Array.prototype.slice === \"function\" &&\ntypeof Int32Array.prototype.slice === \"function\" &&\ntypeof Uint32Array.prototype.slice === \"function\" &&\ntypeof Float32Array.prototype.slice === \"function\" &&\ntypeof Float64Array.prototype.slice === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20729,11 +20729,11 @@ typeof Float64Array.prototype.every === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("267");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.every === \"function\" &&\ntypeof Uint8Array.prototype.every === \"function\" &&\ntypeof Uint8ClampedArray.prototype.every === \"function\" &&\ntypeof Int16Array.prototype.every === \"function\" &&\ntypeof Uint16Array.prototype.every === \"function\" &&\ntypeof Int32Array.prototype.every === \"function\" &&\ntypeof Uint32Array.prototype.every === \"function\" &&\ntypeof Float32Array.prototype.every === \"function\" &&\ntypeof Float64Array.prototype.every === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("267");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.every === \"function\" &&\ntypeof Uint8Array.prototype.every === \"function\" &&\ntypeof Uint8ClampedArray.prototype.every === \"function\" &&\ntypeof Int16Array.prototype.every === \"function\" &&\ntypeof Uint16Array.prototype.every === \"function\" &&\ntypeof Int32Array.prototype.every === \"function\" &&\ntypeof Uint32Array.prototype.every === \"function\" &&\ntypeof Float32Array.prototype.every === \"function\" &&\ntypeof Float64Array.prototype.every === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20810,11 +20810,11 @@ typeof Float64Array.prototype.filter === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("268");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.filter === \"function\" &&\ntypeof Uint8Array.prototype.filter === \"function\" &&\ntypeof Uint8ClampedArray.prototype.filter === \"function\" &&\ntypeof Int16Array.prototype.filter === \"function\" &&\ntypeof Uint16Array.prototype.filter === \"function\" &&\ntypeof Int32Array.prototype.filter === \"function\" &&\ntypeof Uint32Array.prototype.filter === \"function\" &&\ntypeof Float32Array.prototype.filter === \"function\" &&\ntypeof Float64Array.prototype.filter === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("268");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.filter === \"function\" &&\ntypeof Uint8Array.prototype.filter === \"function\" &&\ntypeof Uint8ClampedArray.prototype.filter === \"function\" &&\ntypeof Int16Array.prototype.filter === \"function\" &&\ntypeof Uint16Array.prototype.filter === \"function\" &&\ntypeof Int32Array.prototype.filter === \"function\" &&\ntypeof Uint32Array.prototype.filter === \"function\" &&\ntypeof Float32Array.prototype.filter === \"function\" &&\ntypeof Float64Array.prototype.filter === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20891,11 +20891,11 @@ typeof Float64Array.prototype.forEach === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("269");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.forEach === \"function\" &&\ntypeof Uint8Array.prototype.forEach === \"function\" &&\ntypeof Uint8ClampedArray.prototype.forEach === \"function\" &&\ntypeof Int16Array.prototype.forEach === \"function\" &&\ntypeof Uint16Array.prototype.forEach === \"function\" &&\ntypeof Int32Array.prototype.forEach === \"function\" &&\ntypeof Uint32Array.prototype.forEach === \"function\" &&\ntypeof Float32Array.prototype.forEach === \"function\" &&\ntypeof Float64Array.prototype.forEach === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("269");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.forEach === \"function\" &&\ntypeof Uint8Array.prototype.forEach === \"function\" &&\ntypeof Uint8ClampedArray.prototype.forEach === \"function\" &&\ntypeof Int16Array.prototype.forEach === \"function\" &&\ntypeof Uint16Array.prototype.forEach === \"function\" &&\ntypeof Int32Array.prototype.forEach === \"function\" &&\ntypeof Uint32Array.prototype.forEach === \"function\" &&\ntypeof Float32Array.prototype.forEach === \"function\" &&\ntypeof Float64Array.prototype.forEach === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -20972,11 +20972,11 @@ typeof Float64Array.prototype.map === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("270");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.map === \"function\" &&\ntypeof Uint8Array.prototype.map === \"function\" &&\ntypeof Uint8ClampedArray.prototype.map === \"function\" &&\ntypeof Int16Array.prototype.map === \"function\" &&\ntypeof Uint16Array.prototype.map === \"function\" &&\ntypeof Int32Array.prototype.map === \"function\" &&\ntypeof Uint32Array.prototype.map === \"function\" &&\ntypeof Float32Array.prototype.map === \"function\" &&\ntypeof Float64Array.prototype.map === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("270");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.map === \"function\" &&\ntypeof Uint8Array.prototype.map === \"function\" &&\ntypeof Uint8ClampedArray.prototype.map === \"function\" &&\ntypeof Int16Array.prototype.map === \"function\" &&\ntypeof Uint16Array.prototype.map === \"function\" &&\ntypeof Int32Array.prototype.map === \"function\" &&\ntypeof Uint32Array.prototype.map === \"function\" &&\ntypeof Float32Array.prototype.map === \"function\" &&\ntypeof Float64Array.prototype.map === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21053,11 +21053,11 @@ typeof Float64Array.prototype.reduce === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("271");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.reduce === \"function\" &&\ntypeof Uint8Array.prototype.reduce === \"function\" &&\ntypeof Uint8ClampedArray.prototype.reduce === \"function\" &&\ntypeof Int16Array.prototype.reduce === \"function\" &&\ntypeof Uint16Array.prototype.reduce === \"function\" &&\ntypeof Int32Array.prototype.reduce === \"function\" &&\ntypeof Uint32Array.prototype.reduce === \"function\" &&\ntypeof Float32Array.prototype.reduce === \"function\" &&\ntypeof Float64Array.prototype.reduce === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("271");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.reduce === \"function\" &&\ntypeof Uint8Array.prototype.reduce === \"function\" &&\ntypeof Uint8ClampedArray.prototype.reduce === \"function\" &&\ntypeof Int16Array.prototype.reduce === \"function\" &&\ntypeof Uint16Array.prototype.reduce === \"function\" &&\ntypeof Int32Array.prototype.reduce === \"function\" &&\ntypeof Uint32Array.prototype.reduce === \"function\" &&\ntypeof Float32Array.prototype.reduce === \"function\" &&\ntypeof Float64Array.prototype.reduce === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21134,11 +21134,11 @@ typeof Float64Array.prototype.reduceRight === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("272");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.reduceRight === \"function\" &&\ntypeof Uint8Array.prototype.reduceRight === \"function\" &&\ntypeof Uint8ClampedArray.prototype.reduceRight === \"function\" &&\ntypeof Int16Array.prototype.reduceRight === \"function\" &&\ntypeof Uint16Array.prototype.reduceRight === \"function\" &&\ntypeof Int32Array.prototype.reduceRight === \"function\" &&\ntypeof Uint32Array.prototype.reduceRight === \"function\" &&\ntypeof Float32Array.prototype.reduceRight === \"function\" &&\ntypeof Float64Array.prototype.reduceRight === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("272");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.reduceRight === \"function\" &&\ntypeof Uint8Array.prototype.reduceRight === \"function\" &&\ntypeof Uint8ClampedArray.prototype.reduceRight === \"function\" &&\ntypeof Int16Array.prototype.reduceRight === \"function\" &&\ntypeof Uint16Array.prototype.reduceRight === \"function\" &&\ntypeof Int32Array.prototype.reduceRight === \"function\" &&\ntypeof Uint32Array.prototype.reduceRight === \"function\" &&\ntypeof Float32Array.prototype.reduceRight === \"function\" &&\ntypeof Float64Array.prototype.reduceRight === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21215,11 +21215,11 @@ typeof Float64Array.prototype.reverse === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.reverse === \"function\" &&\ntypeof Uint8Array.prototype.reverse === \"function\" &&\ntypeof Uint8ClampedArray.prototype.reverse === \"function\" &&\ntypeof Int16Array.prototype.reverse === \"function\" &&\ntypeof Uint16Array.prototype.reverse === \"function\" &&\ntypeof Int32Array.prototype.reverse === \"function\" &&\ntypeof Uint32Array.prototype.reverse === \"function\" &&\ntypeof Float32Array.prototype.reverse === \"function\" &&\ntypeof Float64Array.prototype.reverse === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("273");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.reverse === \"function\" &&\ntypeof Uint8Array.prototype.reverse === \"function\" &&\ntypeof Uint8ClampedArray.prototype.reverse === \"function\" &&\ntypeof Int16Array.prototype.reverse === \"function\" &&\ntypeof Uint16Array.prototype.reverse === \"function\" &&\ntypeof Int32Array.prototype.reverse === \"function\" &&\ntypeof Uint32Array.prototype.reverse === \"function\" &&\ntypeof Float32Array.prototype.reverse === \"function\" &&\ntypeof Float64Array.prototype.reverse === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21296,11 +21296,11 @@ typeof Float64Array.prototype.some === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("274");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.some === \"function\" &&\ntypeof Uint8Array.prototype.some === \"function\" &&\ntypeof Uint8ClampedArray.prototype.some === \"function\" &&\ntypeof Int16Array.prototype.some === \"function\" &&\ntypeof Uint16Array.prototype.some === \"function\" &&\ntypeof Int32Array.prototype.some === \"function\" &&\ntypeof Uint32Array.prototype.some === \"function\" &&\ntypeof Float32Array.prototype.some === \"function\" &&\ntypeof Float64Array.prototype.some === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("274");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.some === \"function\" &&\ntypeof Uint8Array.prototype.some === \"function\" &&\ntypeof Uint8ClampedArray.prototype.some === \"function\" &&\ntypeof Int16Array.prototype.some === \"function\" &&\ntypeof Uint16Array.prototype.some === \"function\" &&\ntypeof Int32Array.prototype.some === \"function\" &&\ntypeof Uint32Array.prototype.some === \"function\" &&\ntypeof Float32Array.prototype.some === \"function\" &&\ntypeof Float64Array.prototype.some === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21377,11 +21377,11 @@ typeof Float64Array.prototype.sort === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("275");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.sort === \"function\" &&\ntypeof Uint8Array.prototype.sort === \"function\" &&\ntypeof Uint8ClampedArray.prototype.sort === \"function\" &&\ntypeof Int16Array.prototype.sort === \"function\" &&\ntypeof Uint16Array.prototype.sort === \"function\" &&\ntypeof Int32Array.prototype.sort === \"function\" &&\ntypeof Uint32Array.prototype.sort === \"function\" &&\ntypeof Float32Array.prototype.sort === \"function\" &&\ntypeof Float64Array.prototype.sort === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("275");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.sort === \"function\" &&\ntypeof Uint8Array.prototype.sort === \"function\" &&\ntypeof Uint8ClampedArray.prototype.sort === \"function\" &&\ntypeof Int16Array.prototype.sort === \"function\" &&\ntypeof Uint16Array.prototype.sort === \"function\" &&\ntypeof Int32Array.prototype.sort === \"function\" &&\ntypeof Uint32Array.prototype.sort === \"function\" &&\ntypeof Float32Array.prototype.sort === \"function\" &&\ntypeof Float64Array.prototype.sort === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21458,11 +21458,11 @@ typeof Float64Array.prototype.copyWithin === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("276");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.copyWithin === \"function\" &&\ntypeof Uint8Array.prototype.copyWithin === \"function\" &&\ntypeof Uint8ClampedArray.prototype.copyWithin === \"function\" &&\ntypeof Int16Array.prototype.copyWithin === \"function\" &&\ntypeof Uint16Array.prototype.copyWithin === \"function\" &&\ntypeof Int32Array.prototype.copyWithin === \"function\" &&\ntypeof Uint32Array.prototype.copyWithin === \"function\" &&\ntypeof Float32Array.prototype.copyWithin === \"function\" &&\ntypeof Float64Array.prototype.copyWithin === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("276");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.copyWithin === \"function\" &&\ntypeof Uint8Array.prototype.copyWithin === \"function\" &&\ntypeof Uint8ClampedArray.prototype.copyWithin === \"function\" &&\ntypeof Int16Array.prototype.copyWithin === \"function\" &&\ntypeof Uint16Array.prototype.copyWithin === \"function\" &&\ntypeof Int32Array.prototype.copyWithin === \"function\" &&\ntypeof Uint32Array.prototype.copyWithin === \"function\" &&\ntypeof Float32Array.prototype.copyWithin === \"function\" &&\ntypeof Float64Array.prototype.copyWithin === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21539,11 +21539,11 @@ typeof Float64Array.prototype.find === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("277");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.find === \"function\" &&\ntypeof Uint8Array.prototype.find === \"function\" &&\ntypeof Uint8ClampedArray.prototype.find === \"function\" &&\ntypeof Int16Array.prototype.find === \"function\" &&\ntypeof Uint16Array.prototype.find === \"function\" &&\ntypeof Int32Array.prototype.find === \"function\" &&\ntypeof Uint32Array.prototype.find === \"function\" &&\ntypeof Float32Array.prototype.find === \"function\" &&\ntypeof Float64Array.prototype.find === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("277");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.find === \"function\" &&\ntypeof Uint8Array.prototype.find === \"function\" &&\ntypeof Uint8ClampedArray.prototype.find === \"function\" &&\ntypeof Int16Array.prototype.find === \"function\" &&\ntypeof Uint16Array.prototype.find === \"function\" &&\ntypeof Int32Array.prototype.find === \"function\" &&\ntypeof Uint32Array.prototype.find === \"function\" &&\ntypeof Float32Array.prototype.find === \"function\" &&\ntypeof Float64Array.prototype.find === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21620,11 +21620,11 @@ typeof Float64Array.prototype.findIndex === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("278");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.findIndex === \"function\" &&\ntypeof Uint8Array.prototype.findIndex === \"function\" &&\ntypeof Uint8ClampedArray.prototype.findIndex === \"function\" &&\ntypeof Int16Array.prototype.findIndex === \"function\" &&\ntypeof Uint16Array.prototype.findIndex === \"function\" &&\ntypeof Int32Array.prototype.findIndex === \"function\" &&\ntypeof Uint32Array.prototype.findIndex === \"function\" &&\ntypeof Float32Array.prototype.findIndex === \"function\" &&\ntypeof Float64Array.prototype.findIndex === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("278");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.findIndex === \"function\" &&\ntypeof Uint8Array.prototype.findIndex === \"function\" &&\ntypeof Uint8ClampedArray.prototype.findIndex === \"function\" &&\ntypeof Int16Array.prototype.findIndex === \"function\" &&\ntypeof Uint16Array.prototype.findIndex === \"function\" &&\ntypeof Int32Array.prototype.findIndex === \"function\" &&\ntypeof Uint32Array.prototype.findIndex === \"function\" &&\ntypeof Float32Array.prototype.findIndex === \"function\" &&\ntypeof Float64Array.prototype.findIndex === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21701,11 +21701,11 @@ typeof Float64Array.prototype.fill === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("279");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.fill === \"function\" &&\ntypeof Uint8Array.prototype.fill === \"function\" &&\ntypeof Uint8ClampedArray.prototype.fill === \"function\" &&\ntypeof Int16Array.prototype.fill === \"function\" &&\ntypeof Uint16Array.prototype.fill === \"function\" &&\ntypeof Int32Array.prototype.fill === \"function\" &&\ntypeof Uint32Array.prototype.fill === \"function\" &&\ntypeof Float32Array.prototype.fill === \"function\" &&\ntypeof Float64Array.prototype.fill === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("279");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.fill === \"function\" &&\ntypeof Uint8Array.prototype.fill === \"function\" &&\ntypeof Uint8ClampedArray.prototype.fill === \"function\" &&\ntypeof Int16Array.prototype.fill === \"function\" &&\ntypeof Uint16Array.prototype.fill === \"function\" &&\ntypeof Int32Array.prototype.fill === \"function\" &&\ntypeof Uint32Array.prototype.fill === \"function\" &&\ntypeof Float32Array.prototype.fill === \"function\" &&\ntypeof Float64Array.prototype.fill === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21782,11 +21782,11 @@ typeof Float64Array.prototype.keys === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("280");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.keys === \"function\" &&\ntypeof Uint8Array.prototype.keys === \"function\" &&\ntypeof Uint8ClampedArray.prototype.keys === \"function\" &&\ntypeof Int16Array.prototype.keys === \"function\" &&\ntypeof Uint16Array.prototype.keys === \"function\" &&\ntypeof Int32Array.prototype.keys === \"function\" &&\ntypeof Uint32Array.prototype.keys === \"function\" &&\ntypeof Float32Array.prototype.keys === \"function\" &&\ntypeof Float64Array.prototype.keys === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("280");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.keys === \"function\" &&\ntypeof Uint8Array.prototype.keys === \"function\" &&\ntypeof Uint8ClampedArray.prototype.keys === \"function\" &&\ntypeof Int16Array.prototype.keys === \"function\" &&\ntypeof Uint16Array.prototype.keys === \"function\" &&\ntypeof Int32Array.prototype.keys === \"function\" &&\ntypeof Uint32Array.prototype.keys === \"function\" &&\ntypeof Float32Array.prototype.keys === \"function\" &&\ntypeof Float64Array.prototype.keys === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21863,11 +21863,11 @@ typeof Float64Array.prototype.values === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("281");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.values === \"function\" &&\ntypeof Uint8Array.prototype.values === \"function\" &&\ntypeof Uint8ClampedArray.prototype.values === \"function\" &&\ntypeof Int16Array.prototype.values === \"function\" &&\ntypeof Uint16Array.prototype.values === \"function\" &&\ntypeof Int32Array.prototype.values === \"function\" &&\ntypeof Uint32Array.prototype.values === \"function\" &&\ntypeof Float32Array.prototype.values === \"function\" &&\ntypeof Float64Array.prototype.values === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("281");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.values === \"function\" &&\ntypeof Uint8Array.prototype.values === \"function\" &&\ntypeof Uint8ClampedArray.prototype.values === \"function\" &&\ntypeof Int16Array.prototype.values === \"function\" &&\ntypeof Uint16Array.prototype.values === \"function\" &&\ntypeof Int32Array.prototype.values === \"function\" &&\ntypeof Uint32Array.prototype.values === \"function\" &&\ntypeof Float32Array.prototype.values === \"function\" &&\ntypeof Float64Array.prototype.values === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -21944,11 +21944,11 @@ typeof Float64Array.prototype.entries === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("282");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype.entries === \"function\" &&\ntypeof Uint8Array.prototype.entries === \"function\" &&\ntypeof Uint8ClampedArray.prototype.entries === \"function\" &&\ntypeof Int16Array.prototype.entries === \"function\" &&\ntypeof Uint16Array.prototype.entries === \"function\" &&\ntypeof Int32Array.prototype.entries === \"function\" &&\ntypeof Uint32Array.prototype.entries === \"function\" &&\ntypeof Float32Array.prototype.entries === \"function\" &&\ntypeof Float64Array.prototype.entries === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("282");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype.entries === \"function\" &&\ntypeof Uint8Array.prototype.entries === \"function\" &&\ntypeof Uint8ClampedArray.prototype.entries === \"function\" &&\ntypeof Int16Array.prototype.entries === \"function\" &&\ntypeof Uint16Array.prototype.entries === \"function\" &&\ntypeof Int32Array.prototype.entries === \"function\" &&\ntypeof Uint32Array.prototype.entries === \"function\" &&\ntypeof Float32Array.prototype.entries === \"function\" &&\ntypeof Float64Array.prototype.entries === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -22025,11 +22025,11 @@ typeof Float64Array.prototype[Symbol.iterator] === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("283");try{return Function("asyncTestPassed","\nreturn typeof Int8Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint8Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint8ClampedArray.prototype[Symbol.iterator] === \"function\" &&\ntypeof Int16Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint16Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Int32Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint32Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Float32Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Float64Array.prototype[Symbol.iterator] === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("283");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint8Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint8ClampedArray.prototype[Symbol.iterator] === \"function\" &&\ntypeof Int16Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint16Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Int32Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Uint32Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Float32Array.prototype[Symbol.iterator] === \"function\" &&\ntypeof Float64Array.prototype[Symbol.iterator] === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -22106,11 +22106,11 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("284");try{return Function("asyncTestPassed","\nreturn typeof Int8Array[Symbol.species] === \"function\" &&\ntypeof Uint8Array[Symbol.species] === \"function\" &&\ntypeof Uint8ClampedArray[Symbol.species] === \"function\" &&\ntypeof Int16Array[Symbol.species] === \"function\" &&\ntypeof Uint16Array[Symbol.species] === \"function\" &&\ntypeof Int32Array[Symbol.species] === \"function\" &&\ntypeof Uint32Array[Symbol.species] === \"function\" &&\ntypeof Float32Array[Symbol.species] === \"function\" &&\ntypeof Float64Array[Symbol.species] === \"function\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("284");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Int8Array[Symbol.species] === \"function\" &&\ntypeof Uint8Array[Symbol.species] === \"function\" &&\ntypeof Uint8ClampedArray[Symbol.species] === \"function\" &&\ntypeof Int16Array[Symbol.species] === \"function\" &&\ntypeof Uint16Array[Symbol.species] === \"function\" &&\ntypeof Int32Array[Symbol.species] === \"function\" &&\ntypeof Uint32Array[Symbol.species] === \"function\" &&\ntypeof Float32Array[Symbol.species] === \"function\" &&\ntypeof Float64Array[Symbol.species] === \"function\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -22415,7 +22415,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -23856,7 +23856,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -25302,7 +25302,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -26147,7 +26147,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29357,7 +29357,7 @@ return Reflect.ownKeys(obj).sort() + &apos;&apos; === &quot;A,B&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -29980,7 +29980,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -30472,7 +30472,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/10</td>
 <td class="tally" data-browser="closure" data-tally="0">0/10</td>
 <td class="tally" data-browser="jsx" data-tally="0">0/10</td>
-<td class="tally" data-browser="typescript" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
+<td class="tally" data-browser="typescript" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td class="tally" data-browser="es6shim" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td class="tally" data-browser="ie10" data-tally="0">0/10</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/10</td>
@@ -30875,7 +30875,7 @@ return true;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript">No<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -31026,7 +31026,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -34225,7 +34225,7 @@ return ({f() { return f; }}).f() === &quot;foo&quot;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48335,7 +48335,7 @@ return Object.getPrototypeOf(&apos;a&apos;).constructor === String;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48408,7 +48408,7 @@ return Object.getOwnPropertyDescriptor(&apos;a&apos;, &apos;foo&apos;) === undef
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48483,7 +48483,7 @@ return s.length === 2 &amp;&amp;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48556,7 +48556,7 @@ return Object.seal(&apos;a&apos;) === &apos;a&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48629,7 +48629,7 @@ return Object.freeze(&apos;a&apos;) === &apos;a&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48702,7 +48702,7 @@ return Object.preventExtensions(&apos;a&apos;) === &apos;a&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48775,7 +48775,7 @@ return Object.isSealed(&apos;a&apos;) === true;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48848,7 +48848,7 @@ return Object.isFrozen(&apos;a&apos;) === true;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48921,7 +48921,7 @@ return Object.isExtensible(&apos;a&apos;) === false;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -48995,7 +48995,7 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -49877,11 +49877,11 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-miscellaneous"><span><a class="anchor" href="#test-miscellaneous">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
-<td class="tally" data-browser="babel" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
+<td class="tally" data-browser="babel" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td class="tally" data-browser="closure" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td class="tally" data-browser="jsx" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
-<td class="tally" data-browser="typescript" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
+<td class="tally" data-browser="typescript" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally" data-browser="es6shim" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally" data-browser="ie10" data-tally="0.3" style="background-color:hsl(36,72%,50%)">3/10</td>
 <td class="tally" data-browser="ie11" data-tally="0.3" style="background-color:hsl(36,72%,50%)">3/10</td>
@@ -50330,11 +50330,11 @@ return new Date(NaN) + &quot;&quot; === &quot;Invalid Date&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("652");try{return Function("asyncTestPassed","\nreturn new Date(NaN) + \"\" === \"Invalid Date\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("652");return Function("asyncTestPassed","'use strict';"+"\nreturn new Date(NaN) + \"\" === \"Invalid Date\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -50407,7 +50407,7 @@ return new RegExp(/./im, &quot;g&quot;).global === true;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="es6shim">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -52001,11 +52001,11 @@ return Object.getOwnPropertyNames(Object.prototype).indexOf(&apos;__proto__&apos
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-String.prototype_HTML_methods"><span><a class="anchor" href="#test-String.prototype_HTML_methods">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor">String.prototype HTML methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
-<td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">3/3</td>
 <td class="tally obsolete not-applicable" data-browser="es6tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
-<td class="tally not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">3/3</td>
 <td class="tally not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">3/3</td>
 <td class="tally" data-browser="ie10" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
 <td class="tally" data-browser="ie11" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
@@ -52081,11 +52081,11 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("675");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("675");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (typeof String.prototype[names[i]] !== 'function') {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete not-applicable" data-browser="es6tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -52161,11 +52161,11 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("676");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]().toLowerCase() !== \"\"[names[i]]()) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("676");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"big\", \"bold\", \"fixed\", \"fontcolor\", \"fontsize\",\n  \"italics\", \"link\", \"small\", \"strike\", \"sub\", \"sup\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]().toLowerCase() !== \"\"[names[i]]()) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete not-applicable" data-browser="es6tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -52240,11 +52240,11 @@ return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("677");try{return Function("asyncTestPassed","\nvar i, names = [\"anchor\", \"fontcolor\", \"fontsize\", \"link\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]('\"') !== \"\"[names[i]]('&' + 'quot;')) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("677");return Function("asyncTestPassed","'use strict';"+"\nvar i, names = [\"anchor\", \"fontcolor\", \"fontsize\", \"link\"];\nfor (i = 0; i < names.length; i++) {\n  if (\"\"[names[i]]('\"') !== \"\"[names[i]]('&' + 'quot;')) {\n    return false;\n  }\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete not-applicable" data-browser="es6tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="yes not-applicable" data-browser="es6shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -53125,7 +53125,7 @@ return a === 3;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="edge-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[6]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff-shorthand-methods-note">  <sup>[9]</sup> Firefox incorrectly produces an error in strict mode if the method is named <code>&quot;arguments&quot;</code>, <code>&quot;eval&quot;</code>, or <code>&quot;delete&quot;</code>.</p><p id="typescript-core-js-note">  <sup>[10]</sup> This feature is supported when using TypeScript with core-js, or when a native ES6 host is used.</p><p id="fx-let-note">  <sup>[11]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="compiler-proto-note">  <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[14]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[15]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[16]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s <code>&quot;get&quot;</code> handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s <code>&quot;has&quot;</code> handler reports it as present).</p><p id="symbol-iterator-functionality-note">  <sup>[17]</sup> Functionality for <code>Symbol.iterator</code> is tested by the &quot;generic iterators&quot; subtests for the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, <a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, and <a href="#Array_static_methods">Array.from</a>.</p><p id="ejs-no-with-note">  <sup>[18]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[19]</sup> Requires function <code>&quot;name&quot;</code> properties to be natively configurable</p><p id="string-contains-note">  <sup>[20]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-2-note">  <sup>[21]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[22]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="ie_property_order-note">  <sup>[23]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="forin-order-note">  <sup>[24]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="hoisted-block-functions-note">  <sup>[25]</sup> The current version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.</p><p id="proto-in-object-literals-note">  <sup>[26]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="edge-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[6]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff-shorthand-methods-note">  <sup>[9]</sup> Firefox incorrectly produces an error in strict mode if the method is named <code>&quot;arguments&quot;</code>, <code>&quot;eval&quot;</code>, or <code>&quot;delete&quot;</code>.</p><p id="typescript-core-js-note">  <sup>[10]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="fx-let-note">  <sup>[11]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="compiler-proto-note">  <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[14]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[15]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[16]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s <code>&quot;get&quot;</code> handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s <code>&quot;has&quot;</code> handler reports it as present).</p><p id="symbol-iterator-functionality-note">  <sup>[17]</sup> Functionality for <code>Symbol.iterator</code> is tested by the &quot;generic iterators&quot; subtests for the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, <a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, and <a href="#Array_static_methods">Array.from</a>.</p><p id="ejs-no-with-note">  <sup>[18]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[19]</sup> Requires function <code>&quot;name&quot;</code> properties to be natively configurable</p><p id="string-contains-note">  <sup>[20]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-2-note">  <sup>[21]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[22]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="ie_property_order-note">  <sup>[23]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="forin-order-note">  <sup>[24]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="hoisted-block-functions-note">  <sup>[25]</sup> The current version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.</p><p id="proto-in-object-literals-note">  <sup>[26]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

@@ -8,6 +8,20 @@ var flag = "flagged";
 /* jshint unused:false */
 var very = "very";
 var strict = "strict";
+var fallthrough = "needs-polyfill-or-native";
+
+var typescript = {
+    corejs: {
+        val: true,
+        note_id: "typescript-core-js",
+        note_html: "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+    },
+    fallthrough: {
+        val: fallthrough,
+        note_id: "typescript-es6",
+        note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+    }
+};
 
 exports.browsers = {
   tr: {
@@ -16,7 +30,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel',
+    full: 'Babel 5.8 + core-js 2.0',
     short: 'Babel +<br><nobr>core-js</nobr>',
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -29,7 +43,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   typescript: {
-    full: 'TypeScript 1.7 + core-js 1.2',
+    full: 'TypeScript 1.7 + core-js 2.0',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -361,7 +375,7 @@ exports.tests = [
   res: {
     babel:      true,
     es7shim:    true,
-    typescript: true,
+    typescript: typescript.corejs,
   }
 },
 {
@@ -382,7 +396,7 @@ exports.tests = [
   res: {
     babel:      true,
     es7shim:    true,
-    typescript: true,
+    typescript: typescript.corejs,
   }
 },
 {
@@ -424,7 +438,7 @@ exports.tests = [
   res: {
     babel:           true,
     es7shim:         true,
-    typescript:      true,
+    typescript:      typescript.corejs,
     webkit:          true,
     chrome46:        true,
     firefox42:       false,
@@ -523,7 +537,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
-    typescript:  true,
+    typescript:  typescript.corejs,
   }
 },
 {
@@ -1151,7 +1165,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
-    typescript:  true,
+    typescript:  typescript.corejs,
   }
 },
 {
@@ -1191,7 +1205,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
-    typescript:  true,
+    typescript:  typescript.corejs,
   }
 },
 {
@@ -1233,7 +1247,7 @@ exports.tests = [
   */},
   res: {
     babel:       true,
-    typescript:  true,
+    typescript:  typescript.corejs,
     es7shim:     true,
   }
 },
@@ -1252,8 +1266,9 @@ exports.tests = [
           && 'hello'.padStart(6, '123') === '1hello';
       */},
       res: {
-        babel: false,
-        es7shim: true,
+        babel:       true,
+        typescript:  typescript.corejs,
+        es7shim:     true,
       }
     },
     {
@@ -1265,8 +1280,9 @@ exports.tests = [
           && 'hello'.padEnd(6, '123') === 'hello1';
       */},
       res: {
-        babel: false,
-        es7shim: true,
+        babel:       true,
+        typescript:  typescript.corejs,
+        es7shim:     true,
       }
     }
   ]
@@ -1282,7 +1298,7 @@ exports.tests = [
   res: {
     babel:       true,
     es7shim:     true,
-    typescript:  true,
+    typescript:  typescript.corejs,
   }
 },
 {
@@ -1297,16 +1313,16 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
       res: {
-        babel:      true,
-        edge12:     true,
-        firefox31:  true,
-        chrome30:   true,
-        node:       true,
-        iojs:       true,
-        webkit:     true,
-        es7shim:    true,
-        android40:  true,
-        typescript: true,
+        babel:       true,
+        typescript:  typescript.corejs,
+        edge12:      true,
+        firefox31:   true,
+        chrome30:    true,
+        node:        true,
+        iojs:        true,
+        webkit:      true,
+        es7shim:     true,
+        android40:   true,
       }
     },
     {
@@ -1315,16 +1331,16 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
       res: {
-        babel:      true,
-        edge12:     true,
-        firefox31:  true,
-        chrome30:   true,
-        node:       true,
-        iojs:       true,
-        webkit:     true,
-        es7shim:    true,
-        android40:  true,
-        typescript: true,
+        babel:       true,
+        typescript:  typescript.corejs,
+        edge12:      true,
+        firefox31:   true,
+        chrome30:    true,
+        node:        true,
+        iojs:        true,
+        webkit:      true,
+        es7shim:     true,
+        android40:   true,
       }
     }
   ]

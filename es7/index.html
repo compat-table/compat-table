@@ -96,9 +96,9 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel">Babel +<br><nobr>core-js</nobr></abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 5.8 + core-js 2.0">Babel +<br><nobr>core-js</nobr></abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform jsx compiler" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.7 + core-js 1.2">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.7 + core-js 2.0">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 10-11</abbr></a></th>
 <th class="platform edge12 desktop" data-browser="edge12"><a href="#edge12" class="browser-name"><abbr title="Microsoft Edge">Edge 12</abbr><a href="#edge-experimental-flag-note"><sup>[2]</sup></a></a></th>
@@ -150,7 +150,7 @@ return [1, 2, 3].includes(1)
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -367,7 +367,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -416,7 +416,7 @@ return Array.isArray(e)
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -2884,9 +2884,9 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel" data-tally="1">2/2</td>
 <td class="tally" data-browser="jsx" data-tally="0">0/2</td>
-<td class="tally" data-browser="typescript" data-tally="0">0/2</td>
+<td class="tally" data-browser="typescript" data-tally="1">2/2</td>
 <td class="tally" data-browser="es7shim" data-tally="1">2/2</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/2</td>
 <td class="tally" data-browser="edge12" data-tally="0">0/2</td>
@@ -2929,9 +2929,9 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nreturn 'hello'.padStart(10) === '     hello'\n  && 'hello'.padStart(10, '1234') === '12341hello'\n  && 'hello'.padStart() === 'hello'\n  && 'hello'.padStart(6, '123') === '1hello';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padStart(10) === '     hello'\n  && 'hello'.padStart(10, '1234') === '12341hello'\n  && 'hello'.padStart() === 'hello'\n  && 'hello'.padStart(6, '123') === '1hello';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -2974,9 +2974,9 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");try{return Function("asyncTestPassed","\nreturn 'hello'.padEnd(10) === 'hello     '\n  && 'hello'.padEnd(10, '1234') === 'hello12341'\n  && 'hello'.padEnd() === 'hello'\n  && 'hello'.padEnd(6, '123') === 'hello1';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("67");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padEnd(10) === 'hello     '\n  && 'hello'.padEnd(10, '1234') === 'hello12341'\n  && 'hello'.padEnd() === 'hello'\n  && 'hello'.padEnd(6, '123') === 'hello1';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -3433,7 +3433,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="edge12">Yes</td>
@@ -3475,7 +3475,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="edge12">Yes</td>
@@ -3698,7 +3698,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -3743,7 +3743,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -3787,7 +3787,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -3829,7 +3829,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
@@ -4061,7 +4061,7 @@ return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
 <td class="yes not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4241,7 +4241,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via --stage 0 flag</p><p id="edge-experimental-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p></p></div>
+    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via --stage 0 flag</p><p id="edge-experimental-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="typescript-core-js-note">  <sup>[3]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
