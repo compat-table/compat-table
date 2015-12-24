@@ -651,6 +651,33 @@ exports.tests = [
         node4: true,
       },
     },
+    {
+      name: 'resolvedOptions().timeZone defaults to the host environment',
+      exec: function () {/*
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        return tz !== undefined && tz.length > 0;
+      */},
+      res: {
+        ie9: null,
+        ie10: null,
+        ie11: null,
+        edge: null,
+        firefox29: false,
+        chrome24: null,
+        chrome29: true,
+        safari51: null,
+        safari6: null,
+        safari7: null,
+        safari71_8: null,
+        webkit: false,
+        node12: true,
+        node4: true,
+        opera: null,
+        android40: null,
+        ios7: null,
+        ios9: null
+      }
+    } 
   ],
 },
 {
