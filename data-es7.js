@@ -1443,6 +1443,54 @@ exports.tests = [
     babel:       true,
     typescript:  typescript.corejs,
   }
+},
+{
+  name: 'Math methods for 64-bit integers',
+  category: 'strawman',
+  significance: 'tiny',
+  link: 'https://gist.github.com/BrendanEich/4294d5c212a6d2254703',
+  subtests: [
+    {
+      name: 'Math.iaddh',
+      exec: function(){/*
+        return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    {
+      name: 'Math.isubh',
+      exec: function(){/*
+        return Math.isubh(0, 4, 1, 1) === 2;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    {
+      name: 'Math.imulh',
+      exec: function(){/*
+        return Math.imulh(0xffffffff, 7) === -1;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+    {
+      name: 'Math.umulh',
+      exec: function(){/*
+        return Math.umulh(0xffffffff, 7) === 6;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+      }
+    },
+  ]
 }
 ];
 
