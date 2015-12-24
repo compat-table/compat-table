@@ -658,10 +658,10 @@ exports.tests = [
         return tz !== undefined && tz.length > 0;
       */},
       res: {
-        ie9: null,
-        ie10: null,
-        ie11: null,
-        edge: null,
+        ie9: false,
+        ie10: false,
+        ie11: false,
+        edge: false,
         firefox29: false,
         chrome24: null,
         chrome29: true,
