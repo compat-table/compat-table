@@ -3510,6 +3510,49 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 </tr>
+<tr significance="0.25"><td id="test-System.global"><span><a class="anchor" href="#test-System.global">&#xA7;</a><a href="https://github.com/tc39/proposal-global">System.global</a></span><script data-source="
+Function(&apos;return this&apos;)().__system_global_test__ = 42;
+return System.global.__system_global_test__ === 42;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="firefox41">No</td>
+<td class="no" data-browser="firefox42">No</td>
+<td class="no unstable" data-browser="firefox44">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no" data-browser="chrome46">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+</tr>
 <tr class="category"><td colspan="39">Strawman</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-bind_(::)_operator"><span><a class="anchor" href="#test-bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
@@ -3555,7 +3598,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 function foo() { this.garply += &quot;foo&quot;; return this; }
 var obj = { garply: &quot;bar&quot; };
 return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3598,7 +3641,7 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <tr class="subtest" data-parent="bind_(::)_operator" id="test-bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#test-bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
 var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
 return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3643,7 +3686,7 @@ return do {
   let x = 23;
   x + 19;
 } === 42;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3693,7 +3736,7 @@ var D = Object.getOwnPropertyDescriptors(O);
 return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configurable === true &amp;&amp; D.a.writable === true
   &amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
   &amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n  && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n  && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3738,7 +3781,7 @@ var map = new Map();
 map.set(&apos;a&apos;, &apos;b&apos;);
 map.set(&apos;c&apos;, &apos;d&apos;);
 return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quot;,&quot;d&quot;]]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3782,7 +3825,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 var set = new Set();
 [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
 return JSON.stringify(set) === &apos;[1,2,3]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3824,7 +3867,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 </tr>
 <tr significance="0.25"><td id="test-String.prototype.at"><span><a class="anchor" href="#test-String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3868,7 +3911,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 </tr>
 <tr significance="0.5" class="optional-feature"><td id="test-array_comprehensions"><span><a class="anchor" href="#test-array_comprehensions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions">array comprehensions</a></span><script data-source="
 return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nreturn [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3917,7 +3960,7 @@ passed    &amp;= item.value === 6 &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (for (a of [1,2]) a + 4);\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3959,7 +4002,7 @@ return passed;
 </tr>
 <tr significance="0.5" class="optional-feature"><td id="test-destructuring_in_comprehensions"><span><a class="anchor" href="#test-destructuring_in_comprehensions">&#xA7;</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=980828">destructuring in comprehensions</a></span><script data-source="
 return [for([a, b] of [[&apos;a&apos;, &apos;b&apos;]])a + b][0] === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nreturn [for([a, b] of [['a', 'b']])a + b][0] === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -4014,7 +4057,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4056,7 +4099,7 @@ return true;
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-RegExp.escape"><span><a class="anchor" href="#test-RegExp.escape">&#xA7;</a><a href="https://github.com/benjamingr/RexExp.escape">RegExp.escape</a></span><script data-source="
 return RegExp.escape(&apos;Hello, \\^$*+?.()|[]{}!&apos;) === &apos;Hello, \\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nreturn RegExp.escape('Hello, \\\\^$*+?.()|[]{}!') === 'Hello, \\\\\\\\\\\\^\\\\$\\\\*\\\\+\\\\?\\\\.\\\\(\\\\)\\\\|\\\\[\\\\]\\\\{\\\\}!';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -4107,7 +4150,7 @@ try {
 } catch(e) {
   return true;
 }
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nfunction * generator() {\n  yield 3;\n}\ntry {\n  new generator();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator() {\n  yield 3;\n}\ntry {\n  new generator();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nfunction * generator() {\n  yield 3;\n}\ntry {\n  new generator();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator() {\n  yield 3;\n}\ntry {\n  new generator();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4154,7 +4197,7 @@ try {
 } catch(e) {
   return true;
 }
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nfunction foo(...a){}\ntry {\n  Function(\"function bar(...a){'use strict';}\")();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nfunction foo(...a){}\ntry {\n  Function(\"function bar(...a){'use strict';}\")();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nfunction foo(...a){}\ntry {\n  Function(\"function bar(...a){'use strict';}\")();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nfunction foo(...a){}\ntry {\n  Function(\"function bar(...a){'use strict';}\")();\n} catch(e) {\n  return true;\n}\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4197,7 +4240,7 @@ try {
 <tr significance="0.125"><td id="test-nested_rest_destructuring"><span><a class="anchor" href="#test-nested_rest_destructuring">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring</a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
 return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

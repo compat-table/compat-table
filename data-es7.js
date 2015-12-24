@@ -1396,6 +1396,20 @@ exports.tests = [
     edge13:      flag,
     typescript:  true,
   }
+},
+{
+  name: 'System.global',
+  category: 'proposal',
+  significance: 'small',
+  link: 'https://github.com/tc39/proposal-global',
+  exec: function(){/*
+    Function('return this')().__system_global_test__ = 42;
+    return System.global.__system_global_test__ === 42;
+  */},
+  res: {
+    babel:       true,
+    typescript:  typescript.corejs,
+  }
 }
 ];
 
