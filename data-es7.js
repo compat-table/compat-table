@@ -1467,6 +1467,116 @@ exports.tests = [
       }
     },
   ]
+},
+{
+  name: 'Observable',
+  category: 'proposal (stage 1)',
+  significance: 'small',
+  link: 'https://github.com/zenparsing/es-observable',
+  'subtests': [
+    {
+      name: 'basic support',
+      exec: function () {/*
+        return typeof Observable !== 'undefined';
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Symbol.observable well known symbol',
+      exec: function () {/*
+        return typeof Symbol.observable === 'symbol';
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.prototype.subscribe',
+      exec: function () {/*
+        return 'subscribe' in Observable.prototype;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable constructor behavior',
+      exec: function () {/*
+        var nonCallableCheckPassed,
+            primitiveCheckPassed,
+            newCheckPassed;
+
+        try { new Observable({ }) } catch(e) { nonCallablePassed = true }
+        try { new Observable(false) } catch(e) { primitiveCheckPassed = true }
+        try { Observable(function() { }) } catch(e) { newCheckPassed = true }
+
+        return nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.prototype.forEach',
+      exec: function () {/*        
+        var o = new Observable(function() { });
+        return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.prototype.filter',
+      exec: function () {/*
+        var o = new Observable(function() { });
+        return 'filter' in Observable.prototype && o.filter(function(e){return true}) instanceof Observable;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.prototype.map',
+      exec: function () {/*
+        var o = new Observable(function() { });
+        return 'map' in Observable.prototype && o.map(function(e){return e}) instanceof Observable;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.prototype[Symbol.observable]',
+      exec: function () {/*
+        var o = new Observable(function() { });
+        return Symbol.observable in Observable.prototype && o[Symbol.observable] === o;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.of',
+      exec: function () {/*
+        return Observable.of(1, 2, 3) instanceof Observable;
+      */},
+      res: {
+
+      }
+    },
+    {
+      name: 'Observable.from',
+      exec: function () {/*
+        return (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);
+      */},
+      res: {
+
+      }
+    }
+  ]
 }
 ];
 
