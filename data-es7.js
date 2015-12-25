@@ -1529,26 +1529,6 @@ exports.tests = [
       }
     },
     {
-      name: 'Observable.prototype.filter',
-      exec: function () {/*
-        var o = new Observable(function() { });
-        return 'filter' in Observable.prototype && o.filter(function(e){return true}) instanceof Observable;
-      */},
-      res: {
-
-      }
-    },
-    {
-      name: 'Observable.prototype.map',
-      exec: function () {/*
-        var o = new Observable(function() { });
-        return 'map' in Observable.prototype && o.map(function(e){return e}) instanceof Observable;
-      */},
-      res: {
-
-      }
-    },
-    {
       name: 'Observable.prototype[Symbol.observable]',
       exec: function () {/*
         var o = new Observable(function() { });
