@@ -46,12 +46,16 @@ $(function() {
 
   table.floatThead = (function(floatThead) {
     var created = false;
-    var fn = function() {
+    var fn = function(methodName) {
       if (document.location.hash.indexOf('float') > -1) {
         //not the best place for it, but this still needs to happen:
         var cols = $("tr.supertest:first>td:visible").length;
         $("tr.category>td").attr('colspan', cols);
 
+        if (methodName === 'destroy') {
+          created = false;
+          return floatThead.call(this, "destroy");
+        }
         if( created ) {
           return floatThead.call(this, "reflow");
         }
@@ -422,6 +426,8 @@ $(function() {
 
   $('#sort').on('click', function() {
 
+    table.floatThead('destroy');
+
     var elem = $(this);
     var sortByFeatures = elem.prop('checked');
     var comparator;
@@ -466,5 +472,7 @@ $(function() {
       }
     });
     table.insertBefore('#footnotes');
+
+    table.floatThead();
   });
 });
