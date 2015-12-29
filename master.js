@@ -47,8 +47,11 @@ $(function() {
   table.floatThead = (function(floatThead) {
     var created = false;
     var fn = function(methodName) {
-      if (document.location.hash.indexOf('float') > -1) {
-        //not the best place for it, but this still needs to happen:
+
+      // leave quick switch for now, in case we'll want to disable it
+      if (true /*document.location.hash.indexOf('float') > -1*/) {
+
+        // not the best place for it, but this still needs to happen
         var cols = $("tr.supertest:first>td:visible").length;
         $("tr.category>td").attr('colspan', cols);
 
