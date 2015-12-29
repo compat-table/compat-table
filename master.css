@@ -285,13 +285,8 @@ td[title] {
 .obsolete, .unstable {
     display: none;
 }
-#show-obsolete:checked ~ table .obsolete,
-#show-unstable:checked ~ table .unstable {
-    display: table-cell;
-}
-/* for IE compatibility, this must be a separate rule. */
-#show-obsolete[value='on'] ~ table .obsolete,
-#show-unstable[value='on'] ~ table .unstable, {
+body.show-obsolete .obsolete,
+body.show-unstable .unstable {
     display: table-cell;
 }
 
@@ -451,4 +446,8 @@ label[for="sort"] {
 .by iframe {
     position: relative;
     top: 7px;
+}
+
+.floatThead-container {
+    background: #fff;
 }

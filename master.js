@@ -44,18 +44,43 @@ $(function() {
   var table = $('#table-wrapper');
   var currentBrowserSelector = ":nth-of-type(2)";
 
+  table.floatThead = (function(floatThead) {
+    return function() {
+      if (document.location.hash.indexOf('float') > -1) {
+        return floatThead.call(this);
+      }
+    };
+  })(table.floatThead);
+
   // Set up the Show Obsolete checkbox
   $('#show-obsolete, #show-unstable').on('click', function() {
-      var elem = $(this);
-      elem.attr('value', elem.attr('value') === 'on' ? 'off' : 'on');
-
+    setTimeout(function() {
       $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible' ).length);
       $('#compiler-header').prop('colSpan', $('.platform.compiler:visible').length);
       $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible'  ).length);
       $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible'  ).length);
-    })
-  $('#show-obsolete').attr('value', $('#show-obsolete').checked);
-  $('#show-unstable').attr('value', $('#show-unstable').checked);
+
+      table.floatThead();
+    }, 100);
+  });
+
+  function toggleObsoleteClass(state) {
+    $('body').toggleClass('show-obsolete', state);
+  }
+  function toggleUnstableClass(state) {
+    $('body').toggleClass('show-unstable', state);
+  }
+
+  $('#show-obsolete').on('click', function() {
+    toggleObsoleteClass(this.checked);
+  });
+
+  $('#show-unstable').on('click', function() {
+    toggleUnstableClass(this.checked);
+  });
+
+  toggleObsoleteClass($('#show-obsolete').prop('checked'));
+  toggleUnstableClass($('#show-unstable').prop('checked'));
 
   window.__updateSupertest = function(){
     var tr = $(this);
@@ -375,6 +400,8 @@ $(function() {
           : '')});
   };
   $('.browser-name, th.current').each(__updateHeaderTotal);
+
+  table.floatThead();
 
   // Cached array of sort orderings
   var ordering = [];
