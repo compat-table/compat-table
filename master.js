@@ -56,6 +56,9 @@ $(function() {
           created = false;
           return floatThead.call(this, "destroy");
         }
+        if (methodName && methodName.headerCellSelector) {
+          return floatThead.call(this, methodName);
+        }
         if( created ) {
           return floatThead.call(this, "reflow");
         }
@@ -473,6 +476,8 @@ $(function() {
     });
     table.insertBefore('#footnotes');
 
-    table.floatThead();
+    table.floatThead({
+      headerCellSelector: 'tr:last>*:visible'
+    });
   });
 });
