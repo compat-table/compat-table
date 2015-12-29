@@ -45,22 +45,36 @@ $(function() {
   var currentBrowserSelector = ":nth-of-type(2)";
 
   table.floatThead = (function(floatThead) {
-    return function() {
+    var created = false;
+    var fn = function() {
       if (document.location.hash.indexOf('float') > -1) {
-        return floatThead.call(this);
+        //not the best place for it, but this still needs to happen:
+        var cols = $("tr.supertest:first>td:visible").length;
+        $("tr.category>td").attr('colspan', cols);
+
+        if( created ) {
+          return floatThead.call(this, "reflow");
+        }
+        else {
+          created = true;
+          return floatThead.call(this);
+        }
       }
     };
+    return fn;
   })(table.floatThead);
 
   // Set up the Show Obsolete checkbox
   $('#show-obsolete, #show-unstable').on('click', function() {
     setTimeout(function() {
+
       $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible' ).length);
       $('#compiler-header').prop('colSpan', $('.platform.compiler:visible').length);
       $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible'  ).length);
       $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible'  ).length);
 
       table.floatThead();
+
     }, 100);
   });
 
