@@ -411,6 +411,7 @@ $(function() {
     elem
       .attr('data-num', i)
       .attr('data-features', featuresCount)
+      .attr('data-flagged-features', flaggedFeaturesCount)
       .find('.num-features').remove().end()
       .append('<sup class="num-features" title="Number of implemented features">' +
         // Don't bother with a HSL fallback for IE 8.
@@ -427,41 +428,55 @@ $(function() {
 
   table.floatThead();
 
-  // Cached array of sort orderings
-  var ordering = [];
+  // Cached arrays of sort orderings
+  var ordering = { };
 
-  $('#sort').on('click', function() {
+  $('#sort').on('change', function() {
 
     table.floatThead('destroy');
 
-    var elem = $(this);
-    var sortByFeatures = elem.prop('checked');
-    var comparator;
+    var elem = $(this),
+        sortByFeatures = this.value === 'features',
+        sortByFlaggedFeatures = this.value === 'flagged-features',
+        comparator,
+        orderingProp = sortByFeatures
+                        ? 'features'
+                        : sortByFlaggedFeatures
+                          ? 'flaggedFeatures'
+                          : 'engines';
 
     // First, hide the platformtype bar if we're sorting by features.
-    $('.platformtype')[sortByFeatures ? 'hide' : 'show']();
+    $('.platformtype')[(sortByFeatures || sortByFlaggedFeatures) ? 'hide' : 'show']();
 
     // Next, cache the sort orderings
-    if (!ordering[sortByFeatures]) {
-      comparator = sortByFeatures ? function(a, b) {
-        var numFeaturesPerA = parseFloat(a.getAttribute('data-features'));
-        var numFeaturesPerB = parseFloat(b.getAttribute('data-features'));
+    if (!ordering[orderingProp]) {
+      comparator = (sortByFeatures || sortByFlaggedFeatures)
+        ? function(a, b) {
 
-        return numFeaturesPerB - numFeaturesPerA;
-      } : function(a, b) {
-        var aNum = parseInt(a.getAttribute('data-num'), 10);
-        var bNum = parseInt(b.getAttribute('data-num'), 10);
+            var attr = sortByFeatures
+              ? 'data-features'
+              : 'data-flagged-features';
 
-        return aNum - bNum;
-      };
+            var numFeaturesPerA = parseFloat(a.getAttribute(attr));
+
+            var numFeaturesPerB = parseFloat(b.getAttribute(attr));
+
+            return numFeaturesPerB - numFeaturesPerA;
+          }
+        : function(a, b) {
+            var aNum = parseInt(a.getAttribute('data-num'), 10);
+            var bNum = parseInt(b.getAttribute('data-num'), 10);
+
+            return aNum - bNum;
+          };
 
       // Sort the platforms
       var cells = [].slice.call($('th.platform')).sort(comparator);
 
-      ordering[sortByFeatures] = $.map(cells, platformOf);
+      ordering[orderingProp] = $.map(cells, platformOf);
     }
 
-    var ord = ordering[sortByFeatures];
+    var ord = ordering[orderingProp];
 
     // Define a comparison function using the orderings
     comparator = function(a, b) {

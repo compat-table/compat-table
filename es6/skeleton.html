@@ -78,19 +78,29 @@
     </div>
   </div>
   <div id="body">
-    <p class="warning">Please note that <i>some of these tests</i> represent <strong>existence</strong>,
-      not functionality or full conformance.</p>
 
-    <label for="sort">Sort by number of features?</label>
-    <input id="sort" type="checkbox">
+    <div class="controls">
+      <label for="sort">
+        Sort by
+        <select id="sort">
+          <option value="engine-types">Engine types</option>
+          <option value="features">Features</option>
+          <option value="flagged-features">Flagged features</option>
+        </select>
+      </label>
 
-    <label for="show-obsolete">Show obsolete platforms?</label>
-    <input id="show-obsolete" type="checkbox">
+      <label for="show-obsolete">
+        Show obsolete platforms
+        <input id="show-obsolete" type="checkbox">
+      </label>
 
-    <label for="show-unstable">Show unstable platforms?</label>
-    <input id="show-unstable" type="checkbox" checked>
+      <label for="show-unstable">
+        Show unstable platforms
+        <input id="show-unstable" type="checkbox" checked>
+      </label>
+    </div><!--
 
-    <div class="legend">
+    --><div class="legend">
       <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
       <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
       <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
