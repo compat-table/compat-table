@@ -404,22 +404,45 @@ exports.tests = [
   link: 'https://github.com/tc39/Array.prototype.includes',
   category: 'finished (stage 4)',
   significance: 'small',
-  exec: function () {/*
-    return [1, 2, 3].includes(1)
-      && ![1, 2, 3].includes(4)
-      && ![1, 2, 3].includes(1, 1)
-      && [NaN].includes(NaN)
-      && Array(1).includes();
-  */},
-  res: {
-    babel:           true,
-    es7shim:         true,
-    typescript:      typescript.corejs,
-    webkit:          true,
-    chrome46:        true,
-    firefox42:       false,
-    firefox44:       true,
-  }
+  subtests: [
+    {
+      name: 'Array.prototype.includes',
+      exec: function(){/*
+        return [1, 2, 3].includes(1)
+          && ![1, 2, 3].includes(4)
+          && ![1, 2, 3].includes(1, 1)
+          && [NaN].includes(NaN)
+          && Array(1).includes();
+      */},
+      res: {
+        babel:           true,
+        es7shim:         true,
+        typescript:      typescript.corejs,
+        webkit:          true,
+        chrome47:        true,
+        firefox42:       false,
+        firefox43:       true,
+      }
+    },
+    {
+      name: '%TypedArray%.prototype.includes',
+      exec: function(){/*
+        return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
+          return new TypedArray([1, 2, 3]).includes(1)
+            && !new TypedArray([1, 2, 3]).includes(4)
+            && !new TypedArray([1, 2, 3]).includes(1, 1);
+        });
+      */},
+      res: {
+        babel:           true,
+        typescript:      typescript.corejs,
+        webkit:          true,
+        chrome47:        true,
+        firefox42:       false,
+        firefox43:       true,
+      }
+    },
+  ],
 },
 {
   name: 'trailing commas in function syntax',
