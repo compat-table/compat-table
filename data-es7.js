@@ -107,6 +107,10 @@ exports.browsers = {
     full: 'Firefox',
     short: 'FF 42',
   },
+  firefox43: {
+    full: 'Firefox',
+    short: 'FF 43',
+  },
   firefox44: {
     full: 'Firefox',
     short: 'FF 44',
@@ -192,6 +196,13 @@ exports.browsers = {
   chrome46: {
     full: 'Chrome',
     short: 'CH 46',
+    obsolete: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome47: {
+    full: 'Chrome',
+    short: 'CH 47',
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
@@ -1380,7 +1391,7 @@ exports.tests = [
   */},
   res: {
       edge13:    true,
-      firefox44: true,
+      firefox43: true,
   }
 },
 {
