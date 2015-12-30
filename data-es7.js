@@ -1408,7 +1408,8 @@ exports.tests = [
     }
   */},
   res: {
-    edge12: true,
+    edge12:      true,
+    chrome47:    true,
   }
 },
 {
