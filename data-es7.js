@@ -436,7 +436,6 @@ exports.tests = [
       res: {
         babel:           true,
         typescript:      typescript.corejs,
-        webkit:          true,
         chrome47:        true,
         firefox42:       false,
         firefox43:       true,
