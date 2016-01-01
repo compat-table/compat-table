@@ -1076,54 +1076,6 @@ exports.tests = [
   }
 },
 {
-  name: 'array comprehensions',
-  category: 'pre-strawman',
-  significance: 'medium',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
-  exec: function () {/*
-    return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    firefox31:   true,
-  }
-},
-{
-  name: 'generator comprehensions',
-  category: 'pre-strawman',
-  significance: 'medium',
-  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
-  exec: function () {/*
-    var iterator = (for (a of [1,2]) a + 4);
-    var item = iterator.next();
-    var passed = item.value === 5 && item.done === false;
-    item = iterator.next();
-    passed    &= item.value === 6 && item.done === false;
-    item = iterator.next();
-    passed    &= item.value === undefined && item.done === true;
-    return passed;
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-    firefox31:   true,
-  }
-},
-{
-  name: 'destructuring in comprehensions',
-  category: 'pre-strawman',
-  significance: 'medium',
-  link: 'https://bugzilla.mozilla.org/show_bug.cgi?id=980828',
-  exec: function () {/*
-    return [for([a, b] of [['a', 'b']])a + b][0] === 'ab';
-  */},
-  res: {
-    tr:          true,
-    babel:       true,
-  }
-},
-{
   name: 'class properties',
   category: 'proposal (stage 1)',
   significance: 'medium',
