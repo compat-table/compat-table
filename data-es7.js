@@ -1297,20 +1297,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'RegExp.escape',
-  category: 'pre-strawman',
-  significance: 'small',
-  link: 'https://github.com/benjamingr/RexExp.escape',
-  exec: function(){/*
-    return RegExp.escape('Hello, \\^$*+?.()|[]{}!') === 'Hello, \\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}!';
-  */},
-  res: {
-    babel:       true,
-    es7shim:     true,
-    typescript:  typescript.corejs,
-  }
-},
-{
   name: 'String trimming',
   category: 'proposal (stage 1)',
   significance: 'small',
