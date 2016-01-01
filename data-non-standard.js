@@ -66,8 +66,13 @@ exports.browsers = {
     obsolete: true
   },
   firefox28: {
-    full: 'Firefox 28+',
+    full: 'Firefox 28-29',
     short: 'FF 28',
+    obsolete: true
+  },
+  firefox30: {
+    full: 'Firefox 30+',
+    short: 'FF 30+',
     obsolete: false
   },
   safari3: {
@@ -186,6 +191,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -231,6 +237,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -269,6 +276,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: true,
     safari4: true,
     safari5: true,
@@ -345,6 +353,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: null,
     safari4: true,
     safari5: true,
@@ -383,6 +392,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -495,6 +505,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -533,6 +544,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: true,
     safari4: true,
     safari5: true,
@@ -572,6 +584,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: true,
     safari4: true,
     safari5: true,
@@ -618,6 +631,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: true,
     safari4: true,
     safari5: true,
@@ -656,6 +670,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -692,6 +707,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -712,7 +728,7 @@ exports.tests = [
   separator: 'after'
 },
 {
-  name: 'Array comprehensions (right-to-left)',
+  name: 'Array comprehensions (JS 1.8 style)',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions',
   exec: function () {/*
     var obj = { 2: true, "foo": true, 4: true };
@@ -732,6 +748,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -748,6 +765,17 @@ exports.tests = [
     besen: false,
     rhino: false,
     phantom: false
+  }
+},
+{
+  name: 'Array comprehensions (ES draft style)',
+  significance: 'medium',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  exec: function () {/*
+    return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
+  */},
+  res: {
+    firefox30:   true,
   }
 },
 {
@@ -768,6 +796,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -927,6 +956,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -980,6 +1010,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1045,6 +1076,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1064,7 +1096,7 @@ exports.tests = [
   },
 },
 {
-  name: 'Generator comprehensions (JS 1.8)',
+  name: 'Generator comprehensions (JS 1.8 style)',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions',
   exec: function () {/*
     var obj = { 2: true, "foo": true, 4: true };
@@ -1084,6 +1116,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1100,6 +1133,24 @@ exports.tests = [
     besen: false,
     rhino: false,
     phantom: false
+  }
+},
+{
+  name: 'Generator comprehensions (ES draft style)',
+  significance: 'medium',
+  link: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  exec: function () {/*
+    var iterator = (for (a of [1,2]) a + 4);
+    var item = iterator.next();
+    var passed = item.value === 5 && item.done === false;
+    item = iterator.next();
+    passed    &= item.value === 6 && item.done === false;
+    item = iterator.next();
+    passed    &= item.value === undefined && item.done === true;
+    return passed;
+  */},
+  res: {
+    firefox30:   true,
   },
   separator: 'after'
 },
@@ -1167,6 +1218,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: true,
     safari4: true,
     safari5: true,
@@ -1208,6 +1260,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: true,
     safari4: true,
     safari5: true,
@@ -1312,6 +1365,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: true,
@@ -1349,6 +1403,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: true,
@@ -1384,6 +1439,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1419,6 +1475,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     //safari3: false,
     //safari4: false,
     safari5: false,
@@ -1455,6 +1512,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1491,6 +1549,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1526,6 +1585,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1625,6 +1685,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1663,6 +1724,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1699,6 +1761,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
@@ -1736,6 +1799,7 @@ exports.tests = [
     firefox17: true,
     firefox20: true,
     firefox28: true,
+    firefox30: true,
     safari3: false,
     safari4: false,
     safari5: false,
