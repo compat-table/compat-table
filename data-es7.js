@@ -578,7 +578,6 @@ exports.tests = [
         firefox39: true,
         firefox42: false,
         firefox44: false,
-        es7shim:   true,
       }
     },
     {
@@ -587,7 +586,6 @@ exports.tests = [
         return typeof SIMD.Float32x4 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -597,7 +595,6 @@ exports.tests = [
         return typeof SIMD.Float64x2 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -607,7 +604,6 @@ exports.tests = [
         return typeof SIMD.Int32x4 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -617,7 +613,6 @@ exports.tests = [
         return typeof SIMD.Int16x8 === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -626,7 +621,6 @@ exports.tests = [
         return typeof SIMD.Int8x16 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -636,7 +630,6 @@ exports.tests = [
         return typeof SIMD.Bool32x4 === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -645,7 +638,6 @@ exports.tests = [
         return typeof SIMD.Bool16x8 === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -654,7 +646,6 @@ exports.tests = [
         return typeof SIMD.Bool8x16 === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -663,7 +654,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.abs === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -673,7 +663,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.add === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -683,7 +672,6 @@ exports.tests = [
         return typeof SIMD.Int16x8.addSaturate === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -692,7 +680,6 @@ exports.tests = [
         return typeof SIMD.Bool16x8.and === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -701,7 +688,6 @@ exports.tests = [
         return typeof SIMD.Bool32x4.anyTrue === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -710,7 +696,6 @@ exports.tests = [
         return typeof SIMD.Bool32x4.allTrue === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -719,7 +704,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.check === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -729,7 +713,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.equal === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -739,7 +722,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.extractLane === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -749,7 +731,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -759,7 +740,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -769,7 +749,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThan === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -779,7 +758,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -789,7 +767,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.mul === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -799,7 +776,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.div === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -809,7 +785,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.max === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -819,7 +794,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.maxNum === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -828,7 +802,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.min === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -838,7 +811,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.minNum === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -847,7 +819,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.neg === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -857,7 +828,6 @@ exports.tests = [
         return typeof SIMD.Bool16x8.not === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -866,7 +836,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.notEqual === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -876,7 +845,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -885,7 +853,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -894,7 +861,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.replaceLane === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -904,7 +870,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.select === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -914,7 +879,6 @@ exports.tests = [
         return typeof SIMD.Int16x8.selectBits === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -923,7 +887,6 @@ exports.tests = [
         return typeof SIMD.Int32x4.shiftLeftByScalar === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -932,7 +895,6 @@ exports.tests = [
         return typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -941,7 +903,6 @@ exports.tests = [
         return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -950,7 +911,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.shuffle === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -960,7 +920,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.splat === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -970,7 +929,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.sqrt === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -980,7 +938,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.store === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -990,7 +947,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -1000,7 +956,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -1010,7 +965,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -1020,7 +974,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.sub === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -1030,7 +983,6 @@ exports.tests = [
         return typeof SIMD.Int16x8.subSaturate === 'function';
       */},
       res: {
-        es7shim: true,
       }
     },
     {
@@ -1039,7 +991,6 @@ exports.tests = [
         return typeof SIMD.Float32x4.swizzle === 'function';
       */},
       res: {
-        es7shim: true,
         edge13:  flag,
       }
     },
@@ -1049,7 +1000,6 @@ exports.tests = [
         return typeof SIMD.Bool16x8.xor === 'function';
       */},
       res: {
-        es7shim: true,
       }
     }
   ]
