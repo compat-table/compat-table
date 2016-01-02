@@ -44,67 +44,43 @@ $(function() {
   var table = $('#table-wrapper');
   var currentBrowserSelector = ":nth-of-type(2)";
 
-  table.floatThead = (function(floatThead) {
-    var created = false;
-    var fn = function(methodName) {
 
-      // leave quick switch for now, in case we'll want to disable it
-      if (true /*document.location.hash.indexOf('float') > -1*/) {
+  if (false) { //set to true to disable floating headers
+    // to fully remove, search for floatThead and remove all
+    $.fn.floatThead = function(){ return this };
+  }
 
-        // not the best place for it, but this still needs to happen
-        var cols = $("tr.supertest:first>td:visible").length;
-        $("tr.category>td").attr('colspan', cols);
+  var initFloatingHeaders = function(){
+    table.floatThead({
+      headerCellSelector: 'tr:last>*:visible'
+    });
+  };
 
-        if (methodName === 'destroy') {
-          created = false;
-          return floatThead.call(this, "destroy");
-        }
-        if (methodName && methodName.headerCellSelector) {
-          return floatThead.call(this, methodName);
-        }
-        if( created ) {
-          return floatThead.call(this, "reflow");
-        }
-        else {
-          created = true;
-          return floatThead.call(this);
-        }
-      }
-    };
-    return fn;
-  })(table.floatThead);
+  var setColSpans = function() {
+    $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible').length);
+    $('#compiler-header').prop('colSpan', $('.platform.compiler:visible').length);
+    $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible').length);
+    $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible').length);
+    $('tr.category>td'  ).prop('colSpan', $('tr.supertest:first>td:visible').length);
+  };
+
+
+
+  table.on("floatThead", function (evt, isFloating, $container) {
+    $container[isFloating ? 'addClass' : 'removeClass']("floating-header");
+  });
+
 
   // Set up the Show Obsolete checkbox
   $('#show-obsolete, #show-unstable').on('click', function() {
+    $('body').toggleClass(this.id, this.checked);
     setTimeout(function() {
-
-      $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible' ).length);
-      $('#compiler-header').prop('colSpan', $('.platform.compiler:visible').length);
-      $('#engine-header'  ).prop('colSpan', $('.platform.engine:visible'  ).length);
-      $('#mobile-header'  ).prop('colSpan', $('.platform.mobile:visible'  ).length);
-
-      table.floatThead();
-
+      setColSpans();
+      table.triggerHandler('reflow'); //refresh floatThead
     }, 100);
-  });
-
-  function toggleObsoleteClass(state) {
-    $('body').toggleClass('show-obsolete', state);
-  }
-  function toggleUnstableClass(state) {
-    $('body').toggleClass('show-unstable', state);
-  }
-
-  $('#show-obsolete').on('click', function() {
-    toggleObsoleteClass(this.checked);
-  });
-
-  $('#show-unstable').on('click', function() {
-    toggleUnstableClass(this.checked);
-  });
-
-  toggleObsoleteClass($('#show-obsolete').prop('checked'));
-  toggleUnstableClass($('#show-unstable').prop('checked'));
+  }).each(function(){
+    if(this.checked) $(this).triggerHandler("click");
+  })
 
   window.__updateSupertest = function(){
     var tr = $(this);
@@ -426,17 +402,19 @@ $(function() {
   };
   $('.browser-name, th.current').each(__updateHeaderTotal);
 
-  table.floatThead();
+  setColSpans();
+  initFloatingHeaders();
 
   // Cached arrays of sort orderings
   var ordering = { };
 
+  var defaultSortVal = 'features';
+  var noPlatformtypeBar = $(".platformtype").length == 0;
+
   $('#sort').on('change', function() {
 
     table.floatThead('destroy');
-
-    var elem = $(this),
-        sortByFeatures = this.value === 'features',
+    var sortByFeatures = this.value === 'features',
         sortByFlaggedFeatures = this.value === 'flagged-features',
         comparator,
         orderingProp = sortByFeatures
@@ -446,7 +424,7 @@ $(function() {
                           : 'engines';
 
     // First, hide the platformtype bar if we're sorting by features.
-    $('.platformtype')[(sortByFeatures || sortByFlaggedFeatures) ? 'hide' : 'show']();
+    $('body')[(noPlatformtypeBar || sortByFeatures || sortByFlaggedFeatures) ? 'addClass' : 'removeClass']('hide-platformtype');
 
     // Next, cache the sort orderings
     if (!ordering[orderingProp]) {
@@ -484,7 +462,7 @@ $(function() {
     };
 
     // Now sort the columns using the comparison function
-    table.detach().find('tr').each(function(i, row) {
+    table.detach().floatThead('getRowGroups').find('tr').each(function(i, row) {
 
       var cells = [].slice.call(row.cells, 3).sort(comparator);
 
@@ -494,8 +472,9 @@ $(function() {
     });
     table.insertBefore('#footnotes');
 
-    table.floatThead({
-      headerCellSelector: 'tr:last>*:visible'
-    });
+    initFloatingHeaders();
   });
+  if($("#sort").val() !== defaultSortVal){
+    $("#sort").triggerHandler('change');
+  }
 });

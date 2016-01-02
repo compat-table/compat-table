@@ -29,7 +29,8 @@ body {
     }
 }
 table {
-    margin-bottom: 2em; width: 100%;
+    margin-bottom: 2em; 
+    min-width: 100%;
 }
 thead > tr:nth-child(2) {
     background: white;
@@ -442,6 +443,8 @@ label[for="sort"] {
 }
 .num-features {
     position: absolute; top: -15px; right: 0px; font-size: 11px;
+    transition-property: top;
+    transition-duration: .5s;
 }
 .num-features b {
     font-weight: bold;
@@ -469,4 +472,15 @@ label[for="sort"] {
 .floatThead-container {
     background: #fff;
     overflow: visible !important;
+}
+body.hide-platformtype .floatThead-container.floating-header sup.num-features { 
+    top: -3px;
+    display: inline-block;
+    padding-left: 3px;
+}
+body.hide-platformtype .platformtype {
+    display: none;
+}
+body.hide-platformtype sup.num-features {
+    background-color: #fff;
 }
