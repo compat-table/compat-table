@@ -462,7 +462,7 @@ $(function() {
     };
 
     // Now sort the columns using the comparison function
-    table.detach().floatThead('getRowGroups').find('tr').each(function(i, row) {
+    table.detach().find('tr').each(function(i, row) {
 
       var cells = [].slice.call(row.cells, 3).sort(comparator);
 
