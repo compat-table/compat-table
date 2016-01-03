@@ -67,7 +67,7 @@ $(function() {
 
 
   table.on("floatThead", function (evt, isFloating, $container) {
-    $container[isFloating ? 'addClass' : 'removeClass']("floating-header");
+    $container.toggleClass("floating-header", isFloating);
   });
 
 
@@ -213,7 +213,7 @@ $(function() {
         if (lockedFrom) {
           infoTooltip.unlockAndHide(lockedFrom);
         }
-        var elem = $(this)
+        var elem = $(this);
         if (!elem.is(lockedFrom)) {
           infoTooltip
             .fillAndShow(e, scriptTag)
@@ -254,6 +254,8 @@ $(function() {
 
   // Cell highlighting function
   function highlightSelected(elem) {
+    var win = $(window);
+    var left = win.scrollLeft();
     table.detach().find('.selected').removeClass('selected');
 
     elem.addClass('selected');
@@ -267,10 +269,12 @@ $(function() {
       if (!supertest.length) {
         supertest = elem.prev();
       }
-      supertest.click();
+      supertest.triggerHandler('click');
     }
 
     table.addClass('one-selected').insertBefore('#footnotes');
+    win.scrollLeft(left);
+    table.triggerHandler('reflow');
   }
 
   $(document).on('click', function removeHighlighting(event) {
@@ -408,56 +412,42 @@ $(function() {
   // Cached arrays of sort orderings
   var ordering = { };
 
-  var defaultSortVal = 'features';
-  var noPlatformtypeBar = $(".platformtype").length == 0;
+  var defaultSortVal = 'engine-types';
+  var noPlatformtype = $(".platformtype").length == 0;
+  if(noPlatformtype){
+    $('body').addClass('hide-platformtype');
+  }
 
   $('#sort').on('change', function() {
 
+    var sortSpecMap = {
+      'features':         {attr: 'data-features', order: 1, hidePlatformtype: true},
+      'flagged-features': {attr: 'data-flagged-features', order: 1, hidePlatformtype: true},
+      'engine-types':     {attr: 'data-num', order: -1, hidePlatformtype: false}
+    };
+
     table.floatThead('destroy');
-    var sortByFeatures = this.value === 'features',
-        sortByFlaggedFeatures = this.value === 'flagged-features',
-        comparator,
-        orderingProp = sortByFeatures
-                        ? 'features'
-                        : sortByFlaggedFeatures
-                          ? 'flaggedFeatures'
-                          : 'engines';
+
+    var sortSpec = sortSpecMap[this.value];
+    var sortAttr = sortSpec.attr;
 
     // First, hide the platformtype bar if we're sorting by features.
-    $('body')[(noPlatformtypeBar || sortByFeatures || sortByFlaggedFeatures) ? 'addClass' : 'removeClass']('hide-platformtype');
+    $('body').toggleClass('hide-platformtype', noPlatformtype || sortSpec.hidePlatformtype);
 
     // Next, cache the sort orderings
-    if (!ordering[orderingProp]) {
-      comparator = (sortByFeatures || sortByFlaggedFeatures)
-        ? function(a, b) {
-
-            var attr = sortByFeatures
-              ? 'data-features'
-              : 'data-flagged-features';
-
-            var numFeaturesPerA = parseFloat(a.getAttribute(attr));
-
-            var numFeaturesPerB = parseFloat(b.getAttribute(attr));
-
-            return numFeaturesPerB - numFeaturesPerA;
-          }
-        : function(a, b) {
-            var aNum = parseInt(a.getAttribute('data-num'), 10);
-            var bNum = parseInt(b.getAttribute('data-num'), 10);
-
-            return aNum - bNum;
-          };
-
+    if (!ordering[sortAttr]) {
       // Sort the platforms
-      var cells = [].slice.call($('th.platform')).sort(comparator);
 
-      ordering[orderingProp] = $.map(cells, platformOf);
+      var cells = [].slice.call($('th.platform')).sort(function(a, b) {
+        return sortSpec.order * (parseFloat(b.getAttribute(sortAttr)) - parseFloat(a.getAttribute(sortAttr)));
+      });
+      ordering[sortAttr] = $.map(cells, platformOf);
     }
 
-    var ord = ordering[orderingProp];
+    var ord = ordering[sortAttr];
 
     // Define a comparison function using the orderings
-    comparator = function(a, b) {
+    var comparator = function(a, b) {
       return ord.indexOf(platformOf(a)) - ord.indexOf(platformOf(b));
     };
 
