@@ -388,7 +388,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   webkit: {
-    full: 'WebKit r192919',
+    full: 'WebKit r194284',
     short: 'WK',
     unstable: true,
   },
@@ -834,6 +834,7 @@ exports.tests = [
         chrome45:    strict,
         node4:       strict,
         xs6:         false,
+        webkit:      true,
       },
     },
     {
@@ -881,6 +882,7 @@ exports.tests = [
         edge13:       true,
         node5:        true,
         xs6:          true,
+        webkit:       true,
       },
     },
   ],
@@ -11027,6 +11029,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         ejs:         true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
