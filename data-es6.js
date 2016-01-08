@@ -388,7 +388,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   webkit: {
-    full: 'WebKit r194284',
+    full: 'WebKit r194678',
     short: 'WK',
     unstable: true,
   },
@@ -866,6 +866,7 @@ exports.tests = [
         chrome45:    strict,
         node4:       strict,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -12629,6 +12630,7 @@ exports.tests = [
         firefox45:   true,
         xs6:         true,
         ejs:         true,
+        webkit:      true,
       },
     },
     {
@@ -12729,6 +12731,7 @@ exports.tests = [
         ejs:         true,
         chrome45:    strict,
         xs6:         true,
+        webkit:      true,
       }
     },
     {
@@ -12746,6 +12749,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         chrome45:    strict,
+        webkit:      true,
       }
     },
   ],
@@ -12792,6 +12796,7 @@ exports.tests = [
         firefox45:   true,
         xs6:         true,
         ejs:         true,
+        webkit:      true,
       },
     },
     {
@@ -13085,7 +13090,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         safari9:     false,
-        webkit:      false,
+        webkit:      true,
         chrome43:    strict,
         node4:       strict,
         edge13:      true,
@@ -13106,7 +13111,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         safari9:     false,
-        webkit:      false,
+        webkit:      true,
         chrome43:    strict,
         node4:       strict,
         edge13:      true,
@@ -13152,7 +13157,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         safari9:     false,
-        webkit:      false,
+        webkit:      true,
         chrome43:    strict,
         node4:       strict,
         edge13:      true,
@@ -13176,7 +13181,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         safari9:     false,
-        webkit:      false,
+        webkit:      true,
         chrome43:    strict,
         node4:       strict,
         edge13:      true,
