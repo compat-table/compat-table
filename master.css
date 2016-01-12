@@ -32,11 +32,9 @@ table {
     margin-bottom: 2em; 
     min-width: 100%;
 }
-thead > tr:nth-child(2) {
+thead {
     background: white;
     position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
     position: sticky;
     top: 0px;
     z-index: 1;
