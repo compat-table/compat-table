@@ -56,7 +56,7 @@ exports.browsers = {
   ie11: {
     full: 'Internet Explorer',
     family: 'Chakra',
-    short: 'IE 10-11',
+    short: 'IE 11',
     obsolete: false // no EOL any time soon
   },
   edge12: {

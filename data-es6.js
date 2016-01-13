@@ -76,7 +76,7 @@ exports.browsers = {
     full: 'Internet Explorer',
     family: 'Chakra',
     short: 'IE 10',
-    obsolete: false // no EOL any time soon
+    obsolete: true
   },
   ie11: {
     full: 'Internet Explorer',
@@ -6804,7 +6804,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'HasBinding',
@@ -6836,7 +6836,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'ClassDefinitionEvaluation',
@@ -7027,7 +7027,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'RegExp.prototype[Symbol.match]',
@@ -7042,7 +7042,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'RegExp.prototype[Symbol.replace]',
@@ -7057,7 +7057,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'RegExp.prototype[Symbol.search]',
@@ -7070,7 +7070,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'RegExp.prototype[Symbol.split]',
@@ -7308,7 +7308,7 @@ exports.tests = [
       */},
       res: {
         xs6:         true,
-	  },
+      },
     },
     {
       name: 'String.prototype.split',
@@ -7339,7 +7339,7 @@ exports.tests = [
       res: {
         xs6:         true,
         firefox44:   true,
-	  },
+      },
     },
   ],
 },
