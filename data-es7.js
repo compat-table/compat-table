@@ -106,6 +106,7 @@ exports.browsers = {
   firefox42: {
     full: 'Firefox',
     short: 'FF 42',
+    obsolete: true,
   },
   firefox43: {
     full: 'Firefox',
@@ -114,6 +115,11 @@ exports.browsers = {
   firefox44: {
     full: 'Firefox',
     short: 'FF 44',
+    unstable: true,
+  },
+  firefox45: {
+    full: 'Firefox',
+    short: 'FF 45',
     unstable: true,
   },
   chrome30: {
@@ -387,6 +393,7 @@ exports.tests = [
     babel:      true,
     es7shim:    true,
     typescript: typescript.corejs,
+    firefox45:  false, // limited to nightly builds atm
   }
 },
 {
@@ -408,6 +415,7 @@ exports.tests = [
     babel:      true,
     es7shim:    true,
     typescript: typescript.corejs,
+    firefox45:  false, // limited to nightly builds atm
   }
 },
 {
@@ -1442,7 +1450,7 @@ exports.tests = [
     },
     {
       name: 'Observable.prototype.forEach',
-      exec: function () {/*        
+      exec: function () {/*
         var o = new Observable(function() { });
         return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
       */},
