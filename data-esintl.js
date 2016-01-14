@@ -667,17 +667,17 @@ exports.tests = [
         chrome29: true,
         safari51: null,
         safari6: null,
-        safari7: null,
-        safari71_8: null,
+        safari7: false,
+        safari71_8: false,
         webkit: false,
         node12: true,
         node4: true,
         opera: null,
         android40: null,
-        ios7: null,
-        ios9: null
+        ios7: false,
+        ios9: false
       }
-    } 
+    }
   ],
 },
 {
