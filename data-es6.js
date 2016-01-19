@@ -832,6 +832,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         false,
         webkit:      true,
@@ -864,6 +865,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
         webkit:      true,
@@ -936,6 +938,7 @@ exports.tests = [
         ie11:        true,
         firefox36:   true,
         chrome48:    flag,
+        chrome49:    true,
         webkit:      true,
         xs6:         true,
       }
@@ -959,6 +962,7 @@ exports.tests = [
         ie11:        true,
         firefox36:   true,
         chrome48:    flag,
+        chrome49:    true,
         webkit:      true,
         xs6:         true,
       }
@@ -977,6 +981,7 @@ exports.tests = [
         ie11:        true,
         firefox36:   true,
         chrome48:    flag,
+        chrome49:    true,
         webkit:      true,
         xs6:         true,
       },
@@ -1110,6 +1115,7 @@ exports.tests = [
         firefox44:   true,
         webkit:      true,
         chrome48:    flag,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -1132,6 +1138,7 @@ exports.tests = [
         firefox44:   true,
         webkit:      true,
         chrome48:    flag,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -1154,6 +1161,7 @@ exports.tests = [
         firefox44:   true,
         webkit:      true,
         chrome48:    flag,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -1173,6 +1181,7 @@ exports.tests = [
         firefox44:   true,
         webkit:      true,
         chrome48:    flag,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -1199,6 +1208,7 @@ exports.tests = [
         closure:     true,
         webkit:      true,
         chrome48:    flag,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -1955,6 +1965,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         typescript:  true,
         xs6:         true,
       },
@@ -1980,6 +1991,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         webkit:      true,
         xs6:         true,
@@ -2003,6 +2015,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2025,6 +2038,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2052,6 +2066,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2079,6 +2094,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2105,6 +2121,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2131,6 +2148,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         webkit:      true,
         xs6:         true,
@@ -2159,6 +2177,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2185,6 +2204,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         webkit:      true,
         xs6:         true,
@@ -2216,6 +2236,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2240,6 +2261,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         webkit:      true,
         xs6:         true,
@@ -2269,6 +2291,7 @@ exports.tests = [
         firefox45:   true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -2295,6 +2318,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         webkit:      true,
         xs6:         true,
@@ -2321,6 +2345,7 @@ exports.tests = [
         firefox45:   true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2341,6 +2366,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         webkit:      true,
         xs6:         true,
@@ -2360,6 +2386,7 @@ exports.tests = [
         ejs:         true,
         jsx:         true,
         chrome42:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -2388,6 +2415,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2408,6 +2436,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -2449,6 +2478,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       }),
     },
@@ -2477,6 +2507,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2500,6 +2531,7 @@ exports.tests = [
         firefox45:   true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -2525,6 +2557,7 @@ exports.tests = [
       res: {
         webkit:      true,
         chrome46:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         node5:       strict,
@@ -2567,6 +2600,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2594,6 +2628,7 @@ exports.tests = [
         webkit:      true,
         safari9:     true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -2624,6 +2659,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2653,6 +2689,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2684,6 +2721,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2703,6 +2741,7 @@ exports.tests = [
       res: {
         webkit:      true,
         chrome46:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         node5:       strict,
@@ -2739,6 +2778,7 @@ exports.tests = [
         webkit:      true,
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         xs6:         true,
       },
     },
@@ -2762,6 +2802,7 @@ exports.tests = [
       res: {
         node4:       strict,
         chrome41:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         tr:          true,
@@ -2944,6 +2985,7 @@ exports.tests = [
         ie11:        true,
         firefox11:   true,
         rhino17:     true,
+        chrome49:    true,
       },
     },
     {
@@ -3977,6 +4019,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         chrome41:    strict,
+        chrome49:    true,
         node4:       strict,
         edge12:      flag,
         edge13:      true,
@@ -4009,6 +4052,7 @@ exports.tests = [
         closure:     true,
         edge12:      flag,
         chrome45:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -4125,6 +4169,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         node5:       strict,
@@ -4150,6 +4195,7 @@ exports.tests = [
       */},
       res: {
         chrome46:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         node5:       strict,
@@ -4402,7 +4448,7 @@ exports.tests = [
         firefox11:   true,
         chrome39:    flag,
         chrome40:    false,
-        chrome49:    flag,
+        chrome49:    true,
         ejs:         true,
         edge12:      flag,
         typescript:  typescript.fallthrough,
@@ -4422,7 +4468,7 @@ exports.tests = [
         firefox11:   true,
         chrome39:    flag,
         chrome40:    false,
-        chrome49:    flag,
+        chrome49:    true,
         ejs:         true,
         edge12:      flag,
         typescript:  typescript.fallthrough,
@@ -4780,6 +4826,7 @@ exports.tests = [
         edge12:      true,
         webkit:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ].concat([		//@@ jph
@@ -6320,6 +6367,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6339,6 +6387,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6363,6 +6412,7 @@ exports.tests = [
         },
         firefox38:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6384,6 +6434,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6405,6 +6456,7 @@ exports.tests = [
         edge12:      true,
         firefox37:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6425,6 +6477,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6445,6 +6498,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6465,6 +6519,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6496,6 +6551,7 @@ exports.tests = [
         firefox23:   { val: false, note_id: 'fx-proxy-getown' },
         firefox30:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6521,6 +6577,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6540,6 +6597,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6564,6 +6622,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6586,6 +6645,7 @@ exports.tests = [
         firefox31:   true,
         edge12:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6609,6 +6669,7 @@ exports.tests = [
         firefox23:   true,
         edge12:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6633,6 +6694,7 @@ exports.tests = [
         edge12:      true,
         firefox37:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6661,6 +6723,7 @@ exports.tests = [
         edge12:      true,
         xs6:         true,
         ejs:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6683,6 +6746,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6703,6 +6767,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6723,6 +6788,7 @@ exports.tests = [
         edge12:      true,
         firefox34:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6736,6 +6802,7 @@ exports.tests = [
         firefox18:   true,
         edge12:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6751,6 +6818,7 @@ exports.tests = [
         firefox40:   true,
         edge12:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -6774,6 +6842,7 @@ exports.tests = [
         xs6:         true,
         firefox44:   true,
         ejs:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6790,6 +6859,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6821,6 +6891,7 @@ exports.tests = [
       res: {
         xs6:         true,
         ejs:         { val: false, note_id: 'ejs-no-with' },
+        chrome49:    true,
       },
     },
     {
@@ -6836,6 +6907,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6853,6 +6925,7 @@ exports.tests = [
         firefox45:   true,
         xs6:         true,
         ejs:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6880,6 +6953,7 @@ exports.tests = [
         edge12:      true,
         firefox36:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6904,6 +6978,7 @@ exports.tests = [
         firefox18:   true,
         edge13:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6919,6 +6994,7 @@ exports.tests = [
         edge12:      true,
         firefox34:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6934,6 +7010,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6949,6 +7026,7 @@ exports.tests = [
         edge12:      true,
         firefox38:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6965,6 +7043,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -6982,6 +7061,7 @@ exports.tests = [
         edge12:      true,
         xs6:         true,
         firefox34:   true,
+        chrome49:    true,
       },
     },
     {
@@ -7014,6 +7094,7 @@ exports.tests = [
         firefox37:   true,
         firefox39:   false,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7102,6 +7183,7 @@ exports.tests = [
         firefox36:   true,
         edge13:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7167,6 +7249,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7182,6 +7265,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7198,6 +7282,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7230,6 +7315,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7246,6 +7332,7 @@ exports.tests = [
         edge12:      true,
         xs6:         true,
         firefox18:   true,
+        chrome49:    true,
       },
     },
     {
@@ -7262,6 +7349,7 @@ exports.tests = [
         edge12:      true,
         firefox29:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7339,6 +7427,7 @@ exports.tests = [
       res: {
         xs6:         true,
         firefox44:   true,
+        chrome49:    true,
       },
     },
   ],
@@ -7363,6 +7452,7 @@ exports.tests = [
         edge12:      true,
         firefox34:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7379,6 +7469,7 @@ exports.tests = [
         ejs:         true,
         firefox31:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7395,6 +7486,7 @@ exports.tests = [
         ejs:         true,
         firefox25:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7410,6 +7502,7 @@ exports.tests = [
         edge12:      true,
         firefox41:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7425,6 +7518,7 @@ exports.tests = [
         edge12:      true,
         firefox41:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7440,6 +7534,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7455,6 +7550,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7470,6 +7566,7 @@ exports.tests = [
         edge12:      true,
         firefox41:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7487,6 +7584,7 @@ exports.tests = [
         firefox23:   false,
         firefox41:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7502,6 +7600,7 @@ exports.tests = [
         edge12:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7517,6 +7616,7 @@ exports.tests = [
         edge12:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -7539,6 +7639,7 @@ exports.tests = [
       res: {
         edge12:      true,
         firefox37:   true,
+        chrome49:    true,
       },
     },
     {
@@ -7554,6 +7655,7 @@ exports.tests = [
         edge12:      true,
         firefox18:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -7577,6 +7679,7 @@ exports.tests = [
         edge12:      true,
         firefox41:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7595,6 +7698,7 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7612,6 +7716,7 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7629,6 +7734,7 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7646,6 +7752,7 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7663,6 +7770,7 @@ exports.tests = [
         firefox23:   false,
         firefox40:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -7687,6 +7795,7 @@ exports.tests = [
         ejs:         true,
         edge12:      true,
         firefox37:   true,
+        chrome49:    true,
       },
     },
     {
@@ -7703,6 +7812,7 @@ exports.tests = [
         edge12:      true,
         firefox34:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7720,6 +7830,7 @@ exports.tests = [
         edge12:      true,
         firefox32:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7736,6 +7847,7 @@ exports.tests = [
         edge12:      true,
         firefox38:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -7760,6 +7872,7 @@ exports.tests = [
         edge12:      true,
         firefox32:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7776,6 +7889,7 @@ exports.tests = [
         edge12:      true,
         firefox32:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7792,6 +7906,7 @@ exports.tests = [
         firefox32:   true,
         edge13:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -7816,6 +7931,7 @@ exports.tests = [
         firefox42:   true,
         webkit:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7833,6 +7949,7 @@ exports.tests = [
         es6shim:     true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7849,6 +7966,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7866,6 +7984,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7885,6 +8004,7 @@ exports.tests = [
         firefox42:   true,
         webkit:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7903,6 +8023,7 @@ exports.tests = [
         firefox42:   true,
         edge13:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7919,6 +8040,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7937,6 +8059,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7954,6 +8077,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7972,6 +8096,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -7998,6 +8123,7 @@ exports.tests = [
         edge12:      true,
         webkit:      true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -8018,6 +8144,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -8042,6 +8169,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -8058,6 +8186,7 @@ exports.tests = [
         webkit:      true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -8075,6 +8204,7 @@ exports.tests = [
         es6shim:     true,
         firefox42:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
     {
@@ -8092,6 +8222,7 @@ exports.tests = [
         edge13:      true,
         xs6:         true,
         ejs:         true,
+        chrome49:    true,
       },
     },
     {
@@ -8108,6 +8239,7 @@ exports.tests = [
         edge13:      true,
         firefox44:   true,
         xs6:         true,
+        chrome49:    true,
       },
     },
   ],
@@ -8607,7 +8739,7 @@ exports.tests = [
         webkit:      true,
         edge13:      flag,
         xs6:         true,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
     {
@@ -8627,7 +8759,7 @@ exports.tests = [
         webkit:      true,
         edge13:      flag,
         xs6:         true,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
     {
@@ -8646,7 +8778,7 @@ exports.tests = [
         edge13:       flag,
         xs6:          true,
         webkit:       true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8666,7 +8798,7 @@ exports.tests = [
         babel:        true,
         edge13:       flag,
         xs6:          true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8686,7 +8818,7 @@ exports.tests = [
         webkit:       true,
         edge13:       flag,
         xs6:          true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8725,7 +8857,7 @@ exports.tests = [
         webkit:       true,
         edge13:       flag,
         xs6:          true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8746,7 +8878,7 @@ exports.tests = [
         webkit:       true,
         edge13:       flag,
         xs6:          true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8761,6 +8893,7 @@ exports.tests = [
         safari9:      true,
         tr:           false,
         closure:      false,
+        chrome49:     true,
       }),
     },
     {
@@ -8778,6 +8911,7 @@ exports.tests = [
         },
         ejs:          false,
         firefox16:    true,
+        chrome49:     true,
       }),
     },
     {
@@ -8801,6 +8935,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
         safari9:      true,
+        chrome49:     true,
       }),
     },
     {
@@ -8819,7 +8954,7 @@ exports.tests = [
         webkit:       true,
         edge13:       flag,
         xs6:          true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8843,6 +8978,7 @@ exports.tests = [
         firefox41:    true,
         edge13:       flag,
         xs6:          true,
+        chrome49:     true,
       },
     },
     {
@@ -8862,7 +8998,7 @@ exports.tests = [
         safari71_8:   true,
         edge13:       flag,
         xs6:          true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8881,6 +9017,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         closure:      false,
+        chrome49:     true,
       }),
     },
     {
@@ -8899,7 +9036,7 @@ exports.tests = [
         edge13:      flag,
         webkit:      true,
         xs6:         true,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
     {
@@ -8913,6 +9050,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.destructuringResults, {
         ejs:          false,
+        chrome49:     true,
       }),
     },
     {
@@ -8936,7 +9074,7 @@ exports.tests = [
         webkit:      true,
         edge13:      flag,
         xs6:         true,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
     {
@@ -8953,7 +9091,7 @@ exports.tests = [
         edge13:       flag,
         xs6:          true,
         webkit:       true,
-        chrome49:     flag,
+        chrome49:     true,
       },
     },
     {
@@ -8967,6 +9105,7 @@ exports.tests = [
         ejs:         true,
         safari71_8:  false,
         safari9:     true,
+        chrome49:    true,
       }),
     },
     {
@@ -8988,7 +9127,7 @@ exports.tests = [
         webkit:      true,
         edge13:      flag,
         xs6:         true,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
   ],
@@ -10215,6 +10354,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -10231,6 +10371,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         xs6:         true,
       },
@@ -10282,6 +10423,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         chrome43:     strict,
+        chrome49:     true,
         node4:        strict,
         xs6:         true,
       },
@@ -10301,6 +10443,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         chrome43:     strict,
+        chrome49:     true,
         node4:        strict,
         xs6:          true,
       },
@@ -11446,7 +11589,7 @@ exports.tests = [
         webkit:      true,
         xs6:         true,
         chrome48:    flag,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
     {
@@ -12586,6 +12729,7 @@ exports.tests = [
       res: {
         node4:       strict,
         chrome43:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         edge13:      true,
@@ -12606,6 +12750,7 @@ exports.tests = [
       res: {
         node4:       strict,
         chrome43:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         edge13:      true,
@@ -12625,6 +12770,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         node4:       strict,
         chrome43:    strict,
+        chrome49:    true,
         edge12:      flag,
         edge13:      true,
         firefox45:   true,
@@ -12643,6 +12789,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         chrome43:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         xs6:         true,
@@ -12730,6 +12877,7 @@ exports.tests = [
         firefox45:   true,
         ejs:         true,
         chrome45:    strict,
+        chrome49:    true,
         xs6:         true,
         webkit:      true,
       }
@@ -12749,6 +12897,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         chrome45:    strict,
+        chrome49:    true,
         webkit:      true,
       }
     },
@@ -12770,6 +12919,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         node4:       strict,
@@ -12790,6 +12940,7 @@ exports.tests = [
         babel:       { val: false, note_id: 'compiler-proto' },
         node4:       strict,
         chrome43:    strict,
+        chrome49:    true,
         typescript:  typescript.fallthrough,
         edge12:      flag,
         edge13:      true,
@@ -12809,6 +12960,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         edge13:      true,
@@ -12828,6 +12980,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         safari9:     true,
         webkit:      true,
         edge13:      true,
@@ -12855,6 +13008,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -12876,7 +13030,7 @@ exports.tests = [
         firefox45:   true,
         xs6:         true,
         chrome48:    flag,
-        chrome49:    flag,
+        chrome49:    true,
       },
     },
     {
@@ -12891,7 +13045,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         chrome43:    strict,
         chrome48:    false,
-        chrome49:    flag,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -12908,6 +13062,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -12924,6 +13079,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -12943,6 +13099,7 @@ exports.tests = [
         firefox45:   true,
         xs6:         true,
         chrome48:    flag,
+        chrome49:    true,
       },
     },
   ],
@@ -12983,6 +13140,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         webkit:      true,
@@ -13001,6 +13159,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -13033,6 +13192,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         webkit:      true,
@@ -13063,6 +13223,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         chrome43:    strict,
+        chrome49:    true,
         edge13:      true,
         firefox45:   true,
         webkit:      true,
@@ -13092,6 +13253,7 @@ exports.tests = [
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -13113,6 +13275,7 @@ exports.tests = [
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -13136,6 +13299,7 @@ exports.tests = [
         safari9:     false,
         webkit:      false,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -13159,6 +13323,7 @@ exports.tests = [
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -13183,6 +13348,7 @@ exports.tests = [
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
+        chrome49:    true,
         node4:       strict,
         edge13:      true,
         firefox45:   true,
@@ -13462,6 +13628,7 @@ exports.tests = [
         webkit:      true,
         xs6:         true,
         ejs:         true,
+        chrome49:    true,
       },
     },
     {
@@ -13493,6 +13660,7 @@ exports.tests = [
         firefox42:   true,
         xs6:         true,
         ejs:         true,
+        chrome49:    true,
       }
     },
   ],
