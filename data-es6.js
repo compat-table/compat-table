@@ -388,7 +388,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   webkit: {
-    full: 'WebKit r194678',
+    full: 'WebKit r195440',
     short: 'WK',
     unstable: true,
   },
@@ -8623,6 +8623,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -13013,6 +13014,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -13031,6 +13033,7 @@ exports.tests = [
         xs6:         true,
         chrome48:    flag,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -13050,6 +13053,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -13067,6 +13071,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -13084,6 +13089,7 @@ exports.tests = [
         edge13:      true,
         firefox45:   true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -13297,7 +13303,7 @@ exports.tests = [
       res: {
         typescript:  typescript.fallthrough,
         safari9:     false,
-        webkit:      false,
+        webkit:      true,
         chrome43:    strict,
         chrome49:    true,
         node4:       strict,
