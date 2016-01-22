@@ -184,7 +184,7 @@
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
 <th class="platform safari9 desktop" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari">SF 9</abbr></a></th>
-<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r194678">WK</abbr></a></th>
+<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r195440">WK</abbr></a></th>
 <th class="platform opera desktop obsolete" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ<br>4.14</abbr><a href="#khtml-note"><sup>[4]</sup></a></a></th>
 <th class="platform rhino17 engine obsolete" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">RH</abbr></a></th>
@@ -5204,7 +5204,7 @@ return &quot;&#x1D306;&quot;.match(/\u{1d306}/u)[0].length === 2;
 <td class="tally" data-browser="safari7" data-tally="0">0/22</td>
 <td class="tally" data-browser="safari71_8" data-tally="0.4090909090909091" style="background-color:hsl(49,68%,50%)">9/22</td>
 <td class="tally" data-browser="safari9" data-tally="0.8636363636363636" style="background-color:hsl(103,48%,50%)">19/22</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0.9545454545454546" style="background-color:hsl(114,44%,50%)">21/22</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">22/22</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/22</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/22</td>
 <td class="tally obsolete" data-browser="rhino17" data-tally="0">0/22</td>
@@ -6635,7 +6635,7 @@ try {
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -41228,7 +41228,7 @@ return r.test(&quot;foobarbaz&quot;);
 <td class="tally" data-browser="safari7" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/6</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/6</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/6</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="rhino17" data-tally="0">0/6</td>
@@ -41303,7 +41303,7 @@ return c() === &apos;foo&apos;;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -41378,7 +41378,7 @@ return c instanceof C &amp;&amp; c instanceof Function &amp;&amp; Object.getProt
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -41454,7 +41454,7 @@ return new c().bar === 2 &amp;&amp; new c().baz === 3;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -41529,7 +41529,7 @@ return c.call({bar:1}, 2) === 3;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -41604,7 +41604,7 @@ return c.apply({bar:1}, [2]) === 3;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -42165,7 +42165,7 @@ function check() {
 <td class="tally" data-browser="safari7" data-tally="0">0/5</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/5</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/5</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/5</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="rhino17" data-tally="0">0/5</td>
@@ -42398,7 +42398,7 @@ return c instanceof String
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
