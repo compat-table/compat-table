@@ -363,6 +363,12 @@ exports.browsers = {
     unstable: true,
     note_id: 'experimental-flag',
   },
+  chrome50: {
+    full: 'Chrome, Opera',
+    short: 'CH 50,<br>OP&nbsp;37',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
   safari51: {
     full: 'Safari',
     short: 'SF 5.1',
@@ -3440,6 +3446,7 @@ exports.tests = [
       */},
       res: {
         firefox43:   true,
+        chrome50:    true,
         edge13:      true,
         xs6:         true,
         webkit:      true,
