@@ -131,7 +131,10 @@
 <th class="platform chrome42 desktop obsolete" data-browser="chrome42"><a href="#chrome42" class="browser-name"><abbr title="Chrome">CH 42</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome43 desktop obsolete" data-browser="chrome43"><a href="#chrome43" class="browser-name"><abbr title="Chrome">CH 43</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome46 desktop obsolete" data-browser="chrome46"><a href="#chrome46" class="browser-name"><abbr title="Chrome">CH 46</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
-<th class="platform chrome47 desktop" data-browser="chrome47"><a href="#chrome47" class="browser-name"><abbr title="Chrome">CH 47</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform chrome47 desktop obsolete" data-browser="chrome47"><a href="#chrome47" class="browser-name"><abbr title="Chrome">CH 47</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform chrome48 desktop" data-browser="chrome48"><a href="#chrome48" class="browser-name"><abbr title="Chrome">CH 48</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform chrome49 desktop unstable" data-browser="chrome49"><a href="#chrome49" class="browser-name"><abbr title="Chrome">CH 49</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
+<th class="platform chrome50 desktop unstable" data-browser="chrome50"><a href="#chrome50" class="browser-name"><abbr title="Chrome">CH 50</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r184046">WK</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node.js">Node 0.12</abbr></a></th>
 <th class="platform iojs engine obsolete" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js">io.js</abbr></a></th>
@@ -146,7 +149,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="42">Finished (stage 4)</td>
+      <tr class="category"><td colspan="45">Finished (stage 4)</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://github.com/tc39/Array.prototype.includes">Array.prototype.includes</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -179,7 +182,10 @@
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome47" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="1">2/2</td>
+<td class="tally" data-browser="chrome48" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td class="tally" data-browser="node" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
@@ -228,7 +234,10 @@ return [1, 2, 3].includes(1)
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="yes" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -277,7 +286,10 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="yes" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -288,7 +300,7 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="42">Candidate (stage 3)</td>
+<tr class="category"><td colspan="45">Candidate (stage 3)</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -321,7 +333,10 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/3</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/3</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/3</td>
 <td class="tally" data-browser="node" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/3</td>
@@ -366,7 +381,10 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -411,7 +429,10 @@ var a = 2; a **= 3; return a === 8;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -461,7 +482,10 @@ try {
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -509,7 +533,10 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -561,7 +588,10 @@ return Array.isArray(e)
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -603,7 +633,10 @@ return Array.isArray(e)
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/2</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
 <td class="tally" data-browser="node" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
@@ -648,7 +681,10 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -693,7 +729,10 @@ return Math.min(1,2,3,) === 1;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -735,7 +774,10 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/3</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/3</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/3</td>
 <td class="tally" data-browser="node" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/3</td>
@@ -782,7 +824,10 @@ return (async function(){
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -829,7 +874,10 @@ return (async function(){
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -874,7 +922,10 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -916,7 +967,10 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/50</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/50</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/50</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/50</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/50</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/50</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/50</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/50</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/50</td>
 <td class="tally" data-browser="node" data-tally="0">0/50</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/50</td>
@@ -961,7 +1015,10 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1006,7 +1063,10 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1051,7 +1111,10 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1096,7 +1159,10 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1141,7 +1207,10 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1186,7 +1255,10 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1231,7 +1303,10 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1276,7 +1351,10 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1321,7 +1399,10 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1366,7 +1447,10 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1411,7 +1495,10 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1456,7 +1543,10 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1501,7 +1591,10 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1546,7 +1639,10 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1591,7 +1687,10 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1636,7 +1735,10 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1681,7 +1783,10 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1726,7 +1831,10 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1771,7 +1879,10 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1816,7 +1927,10 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1861,7 +1975,10 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1906,7 +2023,10 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1951,7 +2071,10 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -1996,7 +2119,10 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2041,7 +2167,10 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2086,7 +2215,10 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2131,7 +2263,10 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2176,7 +2311,10 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2221,7 +2359,10 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2266,7 +2407,10 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2311,7 +2455,10 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2356,7 +2503,10 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2401,7 +2551,10 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2446,7 +2599,10 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2491,7 +2647,10 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2536,7 +2695,10 @@ return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2581,7 +2743,10 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2626,7 +2791,10 @@ return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2671,7 +2839,10 @@ return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2716,7 +2887,10 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2761,7 +2935,10 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2806,7 +2983,10 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2851,7 +3031,10 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2896,7 +3079,10 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2941,7 +3127,10 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -2986,7 +3175,10 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3031,7 +3223,10 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3076,7 +3271,10 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3121,7 +3319,10 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3166,7 +3367,10 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3208,7 +3412,10 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/2</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
 <td class="tally" data-browser="node" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
@@ -3256,7 +3463,10 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3304,7 +3514,10 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3315,7 +3528,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="42">Draft (stage 2)</td>
+<tr class="category"><td colspan="45">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-function.sent"><span><a class="anchor" href="#test-function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
 var result;
@@ -3357,7 +3570,10 @@ return result === &apos;tromple&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3403,7 +3619,10 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3450,7 +3669,10 @@ return O.a + O.b + O.c === 6;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3461,7 +3683,7 @@ return O.a + O.b + O.c === 6;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="42">Proposal (stage 1)</td>
+<tr class="category"><td colspan="45">Proposal (stage 1)</td>
 </tr>
 <tr significance="0.25"><td id="test-ArrayBuffer.transfer"><span><a class="anchor" href="#test-ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
 return typeof ArrayBuffer.transfer === &apos;function&apos;;
@@ -3497,7 +3719,10 @@ return typeof ArrayBuffer.transfer === &apos;function&apos;;
 <td class="yes obsolete" data-browser="chrome42">Yes</td>
 <td class="yes obsolete" data-browser="chrome43">Yes</td>
 <td class="yes obsolete" data-browser="chrome46">Yes</td>
-<td class="yes" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3550,7 +3775,10 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3599,7 +3827,10 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3652,7 +3883,10 @@ return new C().x + C() === &apos;xy&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3694,7 +3928,10 @@ return new C().x + C() === &apos;xy&apos;;
 <td class="tally obsolete" data-browser="chrome42" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
-<td class="tally" data-browser="chrome47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="chrome48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="node" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -3739,7 +3976,10 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes obsolete" data-browser="chrome42">Yes</td>
 <td class="yes obsolete" data-browser="chrome43">Yes</td>
 <td class="yes obsolete" data-browser="chrome46">Yes</td>
-<td class="yes" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
@@ -3784,7 +4024,10 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes obsolete" data-browser="chrome42">Yes</td>
 <td class="yes obsolete" data-browser="chrome43">Yes</td>
 <td class="yes obsolete" data-browser="chrome46">Yes</td>
-<td class="yes" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="node">Yes</td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
@@ -3829,7 +4072,10 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3874,7 +4120,10 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3920,7 +4169,10 @@ return System.global.__system_global_test__ === 42;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -3962,7 +4214,10 @@ return System.global.__system_global_test__ === 42;
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/8</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/8</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/8</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/8</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/8</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/8</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/8</td>
 <td class="tally" data-browser="node" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/8</td>
@@ -4007,7 +4262,10 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4052,7 +4310,10 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4097,7 +4358,10 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4150,7 +4414,10 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4196,7 +4463,10 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4242,7 +4512,10 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4287,7 +4560,10 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4332,7 +4608,10 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4343,7 +4622,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="42">Strawman (stage 0)</td>
+<tr class="category"><td colspan="45">Strawman (stage 0)</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-bind_(::)_operator"><span><a class="anchor" href="#test-bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -4376,7 +4655,10 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/2</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
 <td class="tally" data-browser="node" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
@@ -4423,7 +4705,10 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4469,7 +4754,10 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4517,7 +4805,10 @@ return do {
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4570,7 +4861,10 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4618,7 +4912,10 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4665,7 +4962,10 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4710,7 +5010,10 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4755,7 +5058,10 @@ return Error.isError(new TypeError()) &amp;&amp; !Error.isError(Object.create(Ty
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4797,7 +5103,10 @@ return Error.isError(new TypeError()) &amp;&amp; !Error.isError(Object.create(Ty
 <td class="tally obsolete" data-browser="chrome42" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/4</td>
-<td class="tally" data-browser="chrome47" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/4</td>
+<td class="tally" data-browser="chrome48" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/4</td>
 <td class="tally" data-browser="node" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/4</td>
@@ -4842,7 +5151,10 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4887,7 +5199,10 @@ return Math.isubh(0, 4, 1, 1) === 2;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4932,7 +5247,10 @@ return Math.imulh(0xffffffff, 7) === -1;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4977,7 +5295,10 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -4988,7 +5309,7 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="42">Pre-strawman</td>
+<tr class="category"><td colspan="45">Pre-strawman</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-Reflect.Realm"><span><a class="anchor" href="#test-Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
@@ -5037,7 +5358,10 @@ return true;
 <td class="no obsolete not-applicable" data-browser="chrome42" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome43" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="chrome47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="chrome48" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="chrome49" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="chrome50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -5048,7 +5372,7 @@ return true;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr class="category"><td colspan="42">Errata</td>
+<tr class="category"><td colspan="45">Errata</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
 function * generator() {
@@ -5091,7 +5415,10 @@ try {
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="no unstable" data-browser="chrome49">No</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -5141,7 +5468,10 @@ try {
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="yes" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
@@ -5187,7 +5517,10 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no" data-browser="chrome48">No</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>

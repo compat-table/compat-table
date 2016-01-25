@@ -209,6 +209,27 @@ exports.browsers = {
   chrome47: {
     full: 'Chrome',
     short: 'CH 47',
+    obsolete: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome48: {
+    full: 'Chrome',
+    short: 'CH 48',
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome49: {
+    full: 'Chrome',
+    short: 'CH 49',
+    unstable: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
+  chrome50: {
+    full: 'Chrome',
+    short: 'CH 50',
+    unstable: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
@@ -1288,6 +1309,7 @@ exports.tests = [
   res: {
       edge13:    true,
       firefox43: true,
+      chrome50:  true,
   }
 },
 {
@@ -1321,6 +1343,7 @@ exports.tests = [
     babel:       true,
     edge13:      flag,
     typescript:  true,
+    chrome49:    true,
   }
 },
 {
