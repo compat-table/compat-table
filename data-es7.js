@@ -587,7 +587,6 @@ exports.tests = [
     return typeof ArrayBuffer.transfer === 'function';
   */},
   res : {
-    chrome41:  true,
     edge13:    flag,
   }
 },
