@@ -1206,7 +1206,6 @@ exports.tests = [
       safari6: true,
       webkit: true,
       chrome23: true,
-      opera10_10: null,
       opera10_10: false,
       konq43: false,
       konq49: false,
