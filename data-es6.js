@@ -8281,7 +8281,7 @@ exports.tests = [
 {
   name: 'destructuring, declarations',
   category: 'syntax',
-  significance: 'large',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: [
     {
@@ -8706,7 +8706,7 @@ exports.tests = [
 {
   name: 'destructuring, assignment',
   category: 'syntax',
-  significance: 'large',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: [
     {
@@ -9143,7 +9143,7 @@ exports.tests = [
 {
   name: 'destructuring, parameters',
   category: 'syntax',
-  significance: 'large',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: [
     {
