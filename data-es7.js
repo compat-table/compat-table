@@ -558,7 +558,7 @@ exports.tests = [
 },
 {
   name: 'Object.getOwnPropertyDescriptors',
-  link: 'https://github.com/WebReflection/ES-Object.getOwnPropertyDescriptors',
+  link: 'https://github.com/ljharb/proposal-object-getownpropertydescriptors',
   category: 'draft (stage 2)',
   significance: 'small',
   exec: function () {/*
