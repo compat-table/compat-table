@@ -441,7 +441,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.includes',
-  link: 'https://github.com/tc39/Array.prototype.includes',
+  link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
   category: 'finished (stage 4)',
   significance: 'small',
   subtests: [

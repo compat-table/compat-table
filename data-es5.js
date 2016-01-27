@@ -234,6 +234,7 @@ var sparseNote = {
 exports.tests = [
 {
   name: 'Object/array literal extensions',
+  significance: 'large',
   subtests: [{
     name: 'Getter accessors',
     exec: function () {/*
