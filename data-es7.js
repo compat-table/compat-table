@@ -558,8 +558,8 @@ exports.tests = [
 },
 {
   name: 'Object.getOwnPropertyDescriptors',
-  link: 'https://gist.github.com/WebReflection/9353781',
-  category: 'strawman (stage 0)',
+  link: 'https://github.com/WebReflection/ES-Object.getOwnPropertyDescriptors',
+  category: 'draft (stage 2)',
   significance: 'small',
   exec: function () {/*
     var object = {a: 1};
