@@ -295,7 +295,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'exponentiation (**) operator',
-  category: 'candidate (stage 3)',
+  category: 'finished (stage 4)',
   significance: 'small',
   link: 'https://github.com/rwaldron/exponentiation-operator',
   subtests: [

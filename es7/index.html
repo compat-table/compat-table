@@ -151,157 +151,6 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="45">Finished (stage 4)</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="1">2/2</td>
-<td class="tally" data-browser="jsx" data-tally="0">0/2</td>
-<td class="tally" data-browser="typescript" data-tally="1">2/2</td>
-<td class="tally" data-browser="es7shim" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge12" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge13" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox31" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox32" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox34" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox35" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox39" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox41" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox42" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox43" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="firefox44" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="firefox45" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome33" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome34" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome35" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome37" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome38" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome39" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome40" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome41" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome42" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome43" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome47" data-tally="1">2/2</td>
-<td class="tally" data-browser="chrome48" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="chrome49" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="chrome50" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-<td class="tally" data-browser="node" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
-<td class="tally" data-browser="node4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
-<td class="tally" data-browser="android44" data-tally="0">0/2</td>
-<td class="tally" data-browser="android50" data-tally="0">0/2</td>
-<td class="tally" data-browser="android51" data-tally="0">0/2</td>
-</tr>
-<tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes">&#xA7;</a>Array.prototype.includes</span><script data-source="
-return [1, 2, 3].includes(1)
-  &amp;&amp; ![1, 2, 3].includes(4)
-  &amp;&amp; ![1, 2, 3].includes(1, 1)
-  &amp;&amp; [NaN].includes(NaN)
-  &amp;&amp; Array(1).includes();
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("1");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
-<td class="yes" data-browser="es7shim">Yes</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no obsolete" data-browser="firefox42">No</td>
-<td class="yes" data-browser="firefox43">Yes</td>
-<td class="yes unstable" data-browser="firefox44">Yes</td>
-<td class="yes unstable" data-browser="firefox45">Yes</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no obsolete" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="chrome42">No</td>
-<td class="no obsolete" data-browser="chrome43">No</td>
-<td class="no obsolete" data-browser="chrome46">No</td>
-<td class="yes obsolete" data-browser="chrome47">Yes</td>
-<td class="yes" data-browser="chrome48">Yes</td>
-<td class="yes unstable" data-browser="chrome49">Yes</td>
-<td class="yes unstable" data-browser="chrome50">Yes</td>
-<td class="yes unstable" data-browser="webkit">Yes</td>
-<td class="no" data-browser="node">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-</tr>
-<tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_%TypedArray%.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_%TypedArray%.prototype.includes">&#xA7;</a>%TypedArray%.prototype.includes</span><script data-source="
-return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
-  return new TypedArray([1, 2, 3]).includes(1)
-    &amp;&amp; !new TypedArray([1, 2, 3]).includes(4)
-    &amp;&amp; !new TypedArray([1, 2, 3]).includes(1, 1);
-});
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");try{return Function("asyncTestPassed","\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\n  return new TypedArray([1, 2, 3]).includes(1)\n    && !new TypedArray([1, 2, 3]).includes(4)\n    && !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("2");return Function("asyncTestPassed","'use strict';"+"\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\n  return new TypedArray([1, 2, 3]).includes(1)\n    && !new TypedArray([1, 2, 3]).includes(4)\n    && !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
-<td class="no" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
-<td class="no" data-browser="es7shim">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no obsolete" data-browser="firefox42">No</td>
-<td class="yes" data-browser="firefox43">Yes</td>
-<td class="yes unstable" data-browser="firefox44">Yes</td>
-<td class="yes unstable" data-browser="firefox45">Yes</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no obsolete" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="chrome42">No</td>
-<td class="no obsolete" data-browser="chrome43">No</td>
-<td class="no obsolete" data-browser="chrome46">No</td>
-<td class="yes obsolete" data-browser="chrome47">Yes</td>
-<td class="yes" data-browser="chrome48">Yes</td>
-<td class="yes unstable" data-browser="chrome49">Yes</td>
-<td class="yes unstable" data-browser="chrome50">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-</tr>
-<tr class="category"><td colspan="45">Candidate (stage 3)</td>
-</tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="babel" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -349,7 +198,7 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_basic_support"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_basic_support">&#xA7;</a>basic support</span><script data-source="
 return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("1");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -397,7 +246,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_assignment"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_assignment">&#xA7;</a>assignment</span><script data-source="
 var a = 2; a **= 3; return a === 8;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nvar a = 2; a **= 3; return a === 8;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nvar a = 2; a **= 3; return a === 8;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");try{return Function("asyncTestPassed","\nvar a = 2; a **= 3; return a === 8;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("2");return Function("asyncTestPassed","'use strict';"+"\nvar a = 2; a **= 3; return a === 8;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -450,7 +299,7 @@ try {
 } catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nif (2 ** 3 !== 8) { return false; }\ntry {\n  Function(\"-5 ** 2\")();\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nif (2 ** 3 !== 8) { return false; }\ntry {\n  Function(\"-5 ** 2\")();\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nif (2 ** 3 !== 8) { return false; }\ntry {\n  Function(\"-5 ** 2\")();\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nif (2 ** 3 !== 8) { return false; }\ntry {\n  Function(\"-5 ** 2\")();\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -495,6 +344,157 @@ try {
 <td class="no" data-browser="android44">No</td>
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
+</tr>
+<tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
+<td class="tally" data-browser="tr" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="jsx" data-tally="0">0/2</td>
+<td class="tally" data-browser="typescript" data-tally="1">2/2</td>
+<td class="tally" data-browser="es7shim" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
+<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge12" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge13" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox31" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox32" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox34" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox35" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox39" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox41" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox42" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox43" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox44" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox45" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome33" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome34" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome35" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome37" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome38" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome39" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome40" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome41" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome42" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome43" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="1">2/2</td>
+<td class="tally" data-browser="chrome48" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome49" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome50" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
+<td class="tally" data-browser="node" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
+<td class="tally" data-browser="node4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
+<td class="tally" data-browser="android44" data-tally="0">0/2</td>
+<td class="tally" data-browser="android50" data-tally="0">0/2</td>
+<td class="tally" data-browser="android51" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes">&#xA7;</a>Array.prototype.includes</span><script data-source="
+return [1, 2, 3].includes(1)
+  &amp;&amp; ![1, 2, 3].includes(4)
+  &amp;&amp; ![1, 2, 3].includes(1, 1)
+  &amp;&amp; [NaN].includes(NaN)
+  &amp;&amp; Array(1).includes();
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n  && ![1, 2, 3].includes(4)\n  && ![1, 2, 3].includes(1, 1)\n  && [NaN].includes(NaN)\n  && Array(1).includes();\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
+<td class="yes" data-browser="es7shim">Yes</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="firefox41">No</td>
+<td class="no obsolete" data-browser="firefox42">No</td>
+<td class="yes" data-browser="firefox43">Yes</td>
+<td class="yes unstable" data-browser="firefox44">Yes</td>
+<td class="yes unstable" data-browser="firefox45">Yes</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no obsolete" data-browser="chrome46">No</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no" data-browser="node">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+</tr>
+<tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_%TypedArray%.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_%TypedArray%.prototype.includes">&#xA7;</a>%TypedArray%.prototype.includes</span><script data-source="
+return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
+  return new TypedArray([1, 2, 3]).includes(1)
+    &amp;&amp; !new TypedArray([1, 2, 3]).includes(4)
+    &amp;&amp; !new TypedArray([1, 2, 3]).includes(1, 1);
+});
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\n  return new TypedArray([1, 2, 3]).includes(1)\n    && !new TypedArray([1, 2, 3]).includes(4)\n    && !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\n  return new TypedArray([1, 2, 3]).includes(1)\n    && !new TypedArray([1, 2, 3]).includes(4)\n    && !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="jsx">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[3]</sup></a></td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no obsolete" data-browser="firefox31">No</td>
+<td class="no obsolete" data-browser="firefox32">No</td>
+<td class="no obsolete" data-browser="firefox34">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="firefox41">No</td>
+<td class="no obsolete" data-browser="firefox42">No</td>
+<td class="yes" data-browser="firefox43">Yes</td>
+<td class="yes unstable" data-browser="firefox44">Yes</td>
+<td class="yes unstable" data-browser="firefox45">Yes</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no obsolete" data-browser="chrome46">No</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes" data-browser="chrome48">Yes</td>
+<td class="yes unstable" data-browser="chrome49">Yes</td>
+<td class="yes unstable" data-browser="chrome50">Yes</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+</tr>
+<tr class="category"><td colspan="45">Candidate (stage 3)</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
