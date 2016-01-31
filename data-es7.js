@@ -481,24 +481,6 @@ exports.tests = [
         firefox43:       true,
       }
     },
-    {
-      name: 'internal \'Get\' calls',
-      exec: function() {/*
-        // Array.prototype.includes -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
-        Array.prototype.includes.call(p, {});
-        if (get + '' !== "length,0,1,2") return;
-
-        get = [];
-        p = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
-        Array.prototype.includes.call(p, NaN, 1);
-        return (get + '' === "length,1,2");
-      */},
-      res: {
-        firefox43:       true,
-      },
-    }
   ],
 },
 {
@@ -1364,6 +1346,32 @@ exports.tests = [
   }
 },
 {
+  name: 'Proxy, internal calls',
+  category: 'misc',
+  significance: 'tiny',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  subtests: [
+    {
+      name: 'Array.prototype.includes',
+      exec: function() {/*
+        // Array.prototype.includes -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.includes.call(p, {});
+        if (get + '' !== "length,0,1,2") return;
+
+        get = [];
+        p = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+        Array.prototype.includes.call(p, NaN, 1);
+        return (get + '' === "length,1,2");
+      */},
+      res: {
+        firefox43:       true,
+      },
+    }
+  ]
+},
+{
   name: 'System.global',
   category: 'proposal (stage 1)',
   significance: 'small',
@@ -1532,7 +1540,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman', 'errata'].indexOf(e.category);
+  var index = ['finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman', 'errata', 'misc'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES7 category!');
   }
