@@ -1367,6 +1367,7 @@ exports.tests = [
       */},
       res: {
         firefox43:       true,
+        chrome49:        true,
       },
     }
   ]
