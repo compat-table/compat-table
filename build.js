@@ -41,8 +41,8 @@ process.nextTick(function () {
   handle(es5);
   var es6 = require('./data-es6');
   handle(es6);
-  var es7 = require('./data-es7');
-  handle(es7);
+  var esnext = require('./data-esnext');
+  handle(esnext);
   handle(require('./data-esintl'));
   handle(require('./data-non-standard'));
 
@@ -56,8 +56,8 @@ process.nextTick(function () {
   if (!fs.existsSync('es6/compilers')) {
     fs.mkdirSync('es6/compilers');
   }
-  if (!fs.existsSync('es7/compilers')) {
-    fs.mkdirSync('es7/compilers');
+  if (!fs.existsSync('esnext/compilers')) {
+    fs.mkdirSync('esnext/compilers');
   }
   var closure     = require('closurecompiler');
   var babel       = require('babel-core');
@@ -267,14 +267,14 @@ process.nextTick(function () {
     {
       name: 'es7-shim',
       url: 'https://github.com/es-shims/es7-shim/',
-      target_file: 'es7/compilers/es7-shim.html',
+      target_file: 'esnext/compilers/es7-shim.html',
       polyfills: ['node_modules/es7-shim/dist/es7-shim.js'],
       compiler: String,
     },
     {
       name: 'JSX',
       url: 'https://github.com/facebook/react',
-      target_file: 'es7/compilers/jsx.html',
+      target_file: 'esnext/compilers/jsx.html',
       polyfills: [],
       compiler: function(code) {
         var ret = jstransform.transform(code, { harmony:true });
@@ -284,15 +284,15 @@ process.nextTick(function () {
     {
       name: 'TypeScript + polyfill',
       url: 'https://www.typescriptlang.org/',
-      target_file: 'es7/compilers/typescript-polyfill.html',
+      target_file: 'esnext/compilers/typescript-polyfill.html',
       polyfills: ["node_modules/core-js/client/core.js"],
       compiler: ts.transpile
     },
   ].forEach(function(e){
-    Object.assign(es7, e);
-    es7.browsers = {};
-    es7.skeleton_file = 'es7/compiler-skeleton.html';
-    handle(es7);
+    Object.assign(esnext, e);
+    esnext.browsers = {};
+    esnext.skeleton_file = 'esnext/compiler-skeleton.html';
+    handle(esnext);
   });
 });
 

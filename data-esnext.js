@@ -1,8 +1,8 @@
 // exports browsers and tests
 // new browsers should only be added once they have at least a single 'true' result.
-exports.name = 'ES7';
-exports.target_file = 'es7/index.html';
-exports.skeleton_file = 'es7/skeleton.html';
+exports.name = 'ES Next';
+exports.target_file = 'esnext/index.html';
+exports.skeleton_file = 'esnext/skeleton.html';
 
 var flag = "flagged";
 /* jshint unused:false */
@@ -1543,7 +1543,7 @@ exports.tests = [
 exports.tests = exports.tests.reduce(function(a,e) {
   var index = ['finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman', 'errata', 'misc'].indexOf(e.category);
   if (index === -1) {
-    console.log('"' + a.category + '" is not an ES7 category!');
+    console.log('"' + a.category + '" is not an ESnext category!');
   }
   (a[index] = a[index] || []).push(e);
   return a;
