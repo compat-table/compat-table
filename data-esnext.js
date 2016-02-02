@@ -295,7 +295,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'exponentiation (**) operator',
-  category: 'finished (stage 4)',
+  category: '2016 features',
   significance: 'small',
   link: 'https://github.com/rwaldron/exponentiation-operator',
   subtests: [
@@ -442,7 +442,7 @@ exports.tests = [
 {
   name: 'Array.prototype.includes',
   link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
-  category: 'finished (stage 4)',
+  category: '2016 features',
   significance: 'small',
   subtests: [
     {
@@ -1292,7 +1292,7 @@ exports.tests = [
 },
 {
   name: 'generator functions can\'t be used with "new"',
-  category: 'errata',
+  category: '2016 misc',
   significance: 'tiny',
   link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction',
   exec: function(){/*
@@ -1313,7 +1313,7 @@ exports.tests = [
 },
 {
   name: 'strict fn w/ non-strict non-simple params is error',
-  category: 'errata',
+  category: '2016 misc',
   significance: 'tiny',
   link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists',
   exec: function(){/*
@@ -1331,7 +1331,7 @@ exports.tests = [
 },
 {
   name: 'nested rest destructuring',
-  category: 'errata',
+  category: '2016 misc',
   significance: 'tiny',
   link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
   exec: function(){/*
@@ -1346,31 +1346,26 @@ exports.tests = [
   }
 },
 {
-  name: 'Proxy, internal calls',
-  category: 'misc',
+  name: 'Proxy internal calls, Array.prototype.includes',
+  category: '2016 misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
-  subtests: [
-    {
-      name: 'Array.prototype.includes',
-      exec: function() {/*
-        // Array.prototype.includes -> Get -> [[Get]]
-        var get = [];
-        var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
-        Array.prototype.includes.call(p, {});
-        if (get + '' !== "length,0,1,2") return;
+  link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
+  exec: function() {/*
+    // Array.prototype.includes -> Get -> [[Get]]
+    var get = [];
+    var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+    Array.prototype.includes.call(p, {});
+    if (get + '' !== "length,0,1,2") return;
 
-        get = [];
-        p = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
-        Array.prototype.includes.call(p, NaN, 1);
-        return (get + '' === "length,1,2");
-      */},
-      res: {
-        firefox43:       true,
-        chrome49:        true,
-      },
-    }
-  ]
+    get = [];
+    p = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+    Array.prototype.includes.call(p, NaN, 1);
+    return (get + '' === "length,1,2");
+  */},
+  res: {
+    firefox43:       true,
+    chrome49:        true,
+  },
 },
 {
   name: 'System.global',
@@ -1541,7 +1536,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman', 'errata', 'misc'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }

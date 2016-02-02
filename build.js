@@ -32,7 +32,7 @@ var child_process = require('child_process');
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
 var isOptional = function isOptional(category) {
-  return category === 'annex b' || category === 'pre-strawman';
+  return category === 'annex b' || category === 'pre-strawman' || category === 'strawman (stage 0)';
 };
 
 // let prototypes declared below in this file be initialized
@@ -501,6 +501,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         var msg = {
           'annex b': "This feature is optional on non-browser platforms",
           'pre-strawman': "This proposal has not yet been accepted by ECMA Technical Committee 39",
+          'strawman (stage 0)': "This proposal has not yet reached ECMA TC39 stage 1",
         }[t.category] + ", and doesn't contribute to the platform's support percentage.";
         cell.attr('title', msg);
         cell.addClass("not-applicable");
@@ -606,7 +607,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 }
 
 function capitalise(s) {
-  return String.fromCharCode(s.charCodeAt(0) - 32) + s.slice(1);
+  return s[0].toUpperCase() + s.slice(1);
 }
 
 function replaceAndIndent(str, replacements) {
