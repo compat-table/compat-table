@@ -841,7 +841,7 @@ exports.tests = [
         chrome45:    strict,
         chrome49:    true,
         node4:       strict,
-        xs6:         false,
+        xs6:         true,
         webkit:      true,
       },
     },
@@ -7651,6 +7651,7 @@ exports.tests = [
         edge12:      true,
         firefox37:   true,
         chrome49:    true,
+        xs6:         true,
       },
     },
     {
@@ -7807,6 +7808,7 @@ exports.tests = [
         edge12:      true,
         firefox37:   true,
         chrome49:    true,
+        xs6:         true,
       },
     },
     {
@@ -10839,7 +10841,7 @@ exports.tests = [
         chrome44:    true,
         firefox40:   true,
         node4:       true,
-        xs6:         false,
+        xs6:         true,
       }
     },
     {
@@ -10855,7 +10857,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node4:       true,
-        xs6:         false,
+        xs6:         true,
       }
     },
   ]
