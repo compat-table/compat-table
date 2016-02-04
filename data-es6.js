@@ -47,7 +47,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20150729',
+    full: 'Closure Compiler v20160201',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -766,6 +766,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
         tr:          true,
         typescript:  true,
         edge12:      true,
@@ -1732,6 +1733,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         babel:       true,
+        closure:     true,
         edge12:      true,
         firefox27:   true,
         chrome44:    flag,
@@ -1749,6 +1751,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         edge12:      true,
         firefox17:   true,
         safari9:     true,
@@ -1804,6 +1807,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         ejs:         true,
         firefox27:   true,
         chrome44:    flag,
@@ -1824,6 +1828,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         firefox27:   true,
         chrome46:    true,
         edge12:      flag,
@@ -1843,6 +1848,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         es6tr:       {
           val: true,
           note_id: 'compiler-iterable',
@@ -1867,6 +1873,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge12:      true,
@@ -1888,6 +1895,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         ejs:         true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         firefox36:   true,
@@ -1908,6 +1916,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         ejs:         true,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge12:      true,
@@ -1931,6 +1940,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        closure:     true,
         typescript:  true,
         es6tr:       true,
         edge12:      true,
@@ -2290,7 +2300,6 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         jsx:         true,
-        closure:     true,
         es6tr:       true,
         ejs:         true,
         edge12:      flag,
@@ -3842,6 +3851,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
+        babel:       true,
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
@@ -8386,6 +8396,7 @@ exports.tests = [
         typescript:   typescript.fallthrough,
         firefox34:    true,
         babel:        true,
+        closure:      true,
         ejs:          true,
         edge13:       flag,
         xs6:          true,
@@ -8407,6 +8418,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         babel:        true,
+        closure:      true,
         edge13:       flag,
         xs6:          true,
         chrome49:     true,
@@ -8421,6 +8433,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        closure:      true,
         ejs:          true,
         typescript:   typescript.fallthrough,
         firefox36:    true,
@@ -8518,7 +8531,6 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        closure:      false,
         chrome49:     true,
       }),
     },
@@ -8788,6 +8800,7 @@ exports.tests = [
         typescript:   typescript.fallthrough,
         firefox34:    true,
         babel:        true,
+        closure:      true,
         ejs:          true,
         edge13:       flag,
         xs6:          true,
@@ -8810,6 +8823,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         babel:        true,
+        closure:      true,
         edge13:       flag,
         xs6:          true,
         chrome49:     true,
@@ -8825,6 +8839,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        closure:      true,
         ejs:          true,
         typescript:   typescript.fallthrough,
         firefox36:    true,
@@ -8986,6 +9001,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        closure:      true,
         typescript:   true,
         safari71_8:   true,
         webkit:       true,
@@ -9225,6 +9241,7 @@ exports.tests = [
         typescript: typescript.fallthrough,
         firefox34: true,
         babel: true,
+        closure: true,
         ejs: true,
         edge13: flag,
         xs6: true,
@@ -9252,6 +9269,7 @@ exports.tests = [
         safari9:      true,
         webkit:       true,
         babel:        true,
+        closure:      true,
         edge13:       flag,
         xs6:          true,
         chrome49:     true,
@@ -9267,6 +9285,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        closure:      true,
         ejs:          true,
         typescript:   typescript.fallthrough,
         firefox36:    true,
@@ -10934,6 +10953,7 @@ exports.tests = [
         tr:          true,
         ejs:         true,
         babel:       true,
+        closure:     true,
         typescript:  typescript.corejs,
         edge12:      true,
         firefox36:   true,
@@ -11014,6 +11034,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         ejs:         true,
         babel:       true,
+        closure:     true,
         edge12:      true,
         firefox36:   true,
         safari9:     true,
@@ -13745,6 +13766,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        closure:     true,
         typescript:  true,
         ie10:        true,
         firefox11:   true,
@@ -13771,6 +13793,7 @@ exports.tests = [
       res: {
         ejs:         true,
         babel:       true,
+        closure:     true,
         typescript:  true,
         xs6:         true,
         chrome49:    flag,
