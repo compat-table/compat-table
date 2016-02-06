@@ -6694,31 +6694,6 @@ exports.tests = [
       },
     },
     {
-      name: '"enumerate" handler',
-      exec: function () {/*
-        var proxied = {};
-        var passed = false;
-        for (var i in
-          new Proxy(proxied, {
-            enumerate: function (t) {
-              passed = t === proxied;
-              return {
-                next: function(){ return { done: true, value: null };}
-              };
-            }
-          })
-        ) { }
-        return passed;
-      */},
-      res: {
-        typescript:  typescript.fallthrough,
-        edge12:      true,
-        firefox37:   true,
-        xs6:         true,
-        chrome49:    true,
-      },
-    },
-    {
       name: '"ownKeys" handler',
       exec: function () {/*
         var proxied = {};
@@ -8118,33 +8093,6 @@ exports.tests = [
         es6shim:     true,
         webkit:      true,
         firefox42:   true,
-        xs6:         true,
-        chrome49:    true,
-      },
-    },
-    {
-      name: 'Reflect.enumerate',
-      exec: function() {/*
-        var obj = { foo: 1, bar: 2 };
-        var iterator = Reflect.enumerate(obj);
-        var passed = 1;
-        if (typeof Symbol === 'function' && 'iterator' in Symbol) {
-          passed &= Symbol.iterator in iterator;
-        }
-        var item = iterator.next();
-        passed &= item.value === "foo" && item.done === false;
-        item = iterator.next();
-        passed &= item.value === "bar" && item.done === false;
-        item = iterator.next();
-        passed &= item.value === undefined && item.done === true;
-        return passed === 1;
-      */},
-      res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        es6shim:     true,
-        edge12:      true,
-        webkit:      true,
         xs6:         true,
         chrome49:    true,
       },
