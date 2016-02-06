@@ -6214,7 +6214,6 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
-        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
