@@ -55,7 +55,7 @@ exports.browsers = {
   jsx: {
     full: 'JSX',
     short: 'JSX',
-    obsolete: false,
+    obsolete: true,
     platformtype: 'compiler',
     note_id: 'jsx-flag',
     note_html: 'Have to be enabled via <code>harmony</code> option'
