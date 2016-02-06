@@ -3914,6 +3914,7 @@ exports.tests = [
         return closed;
       */},
       res: {
+        tr:          true,
         babel:       true,
         edge13:      true,
         xs6:         true,
@@ -5966,6 +5967,7 @@ exports.tests = [
         return weakmap.has(key) && weakmap.get(key) === 123;
       */},
       res: (temp.basicWeakMap = {
+        tr:          true,
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,
@@ -6071,6 +6073,7 @@ exports.tests = [
         return m.get(f) === 42;
       */},
       res: {
+        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         edge12:      true,
@@ -6111,6 +6114,7 @@ exports.tests = [
         return weakmap.set(key, 0) === weakmap;
       */},
       res: {
+        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
@@ -6129,6 +6133,7 @@ exports.tests = [
         return typeof WeakMap.prototype.delete === "function";
       */},
       res: {
+        tr:          true,
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,
@@ -6186,6 +6191,7 @@ exports.tests = [
         return weakset.has(obj1);
       */},
       res: (temp.basicWeakSet = {
+        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
@@ -6208,6 +6214,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
+        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
@@ -6308,6 +6315,7 @@ exports.tests = [
         return weakset.add(obj) === weakset;
       */},
       res: {
+        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
@@ -6326,6 +6334,7 @@ exports.tests = [
         return typeof WeakSet.prototype.delete === "function";
       */},
       res: {
+        tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
@@ -8403,6 +8412,7 @@ exports.tests = [
         return closed;
       */},
       res: {
+        tr:          true,
         babel:       true,
         typescript:  typescript.fallthrough,
         safari9:     true,
@@ -8868,7 +8878,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
         safari9:      true,
-        tr:           false,
+        tr:           true,
         closure:      false,
         chrome49:     true,
       }),
@@ -9272,7 +9282,7 @@ exports.tests = [
       res: Object.assign({}, temp.destructuringResults, {
         safari71_8:   false,
         safari9:      true,
-        tr:           false,
+        tr:           true,
         closure:      false,
         chrome49:     true,
       }),
@@ -10676,7 +10686,6 @@ exports.tests = [
           iterator[Symbol.iterator]() === iterator;
       */},
       res: {
-        tr:          true,
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,
@@ -10919,7 +10928,7 @@ exports.tests = [
         return typeof Symbol() === "symbol";
       */},
       res: {
-        tr:          flag,
+        tr:          true,
         babel:       flag,
         typescript:  typescript.fallthrough,
         ejs:         true,
@@ -12199,7 +12208,6 @@ exports.tests = [
           iterator[Symbol.iterator]() === iterator;
       */},
       res: {
-        tr:          true,
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,

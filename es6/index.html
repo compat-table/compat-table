@@ -5224,7 +5224,7 @@ return &quot;&#x1D306;&quot;.match(/\u{1d306}/u)[0].length === 2;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-destructuring,_declarations"><span><a class="anchor" href="#test-destructuring,_declarations">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment">destructuring, declarations</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.8636363636363636" style="background-color:hsl(103,48%,50%)">19/22</td>
+<td class="tally" data-browser="tr" data-tally="0.9090909090909091" style="background-color:hsl(109,46%,50%)">20/22</td>
 <td class="tally" data-browser="babel" data-tally="0.9545454545454546" style="background-color:hsl(114,44%,50%)" data-flagged-tally="1">21/22</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">14/22</td>
 <td class="tally" data-browser="closure" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">18/22</td>
@@ -5828,7 +5828,7 @@ var [a, b] = iter;
 return closed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("74");try{return Function("asyncTestPassed","\nvar closed = false;\nvar iter = global.__createIterableObject([1, 2, 3], {\n  'return': function(){ closed = true; return {}; }\n});\nvar [a, b] = iter;\nreturn closed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("74");return Function("asyncTestPassed","'use strict';"+"\nvar closed = false;\nvar iter = global.__createIterableObject([1, 2, 3], {\n  'return': function(){ closed = true; return {}; }\n});\nvar [a, b] = iter;\nreturn closed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -6982,7 +6982,7 @@ return a === 1 &amp;&amp; b === 2;
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-destructuring,_assignment"><span><a class="anchor" href="#test-destructuring,_assignment">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment">destructuring, assignment</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">22/24</td>
+<td class="tally" data-browser="tr" data-tally="0.9583333333333334" style="background-color:hsl(115,43%,50%)">23/24</td>
 <td class="tally" data-browser="babel" data-tally="1">24/24</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.7083333333333334" style="background-color:hsl(85,54%,50%)">17/24</td>
 <td class="tally" data-browser="closure" data-tally="0.625" style="background-color:hsl(75,58%,50%)">15/24</td>
@@ -7821,7 +7821,7 @@ var a;
 return a === 1;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nvar a;\n[a,] = [1];\nreturn a === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nvar a;\n[a,] = [1];\nreturn a === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
@@ -8899,7 +8899,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-destructuring,_parameters"><span><a class="anchor" href="#test-destructuring,_parameters">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment">destructuring, parameters</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.782608695652174" style="background-color:hsl(93,51%,50%)">18/23</td>
+<td class="tally" data-browser="tr" data-tally="0.8260869565217391" style="background-color:hsl(99,49%,50%)">19/23</td>
 <td class="tally" data-browser="babel" data-tally="0.9130434782608695" style="background-color:hsl(109,45%,50%)">21/23</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
 <td class="tally" data-browser="closure" data-tally="0.7391304347826086" style="background-color:hsl(88,53%,50%)">17/23</td>
@@ -9586,7 +9586,7 @@ return function([a,]) {
 }([1]);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nreturn function([a,]) {\n  return a === 1;\n}([1]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nreturn function([a,]) {\n  return a === 1;\n}([1]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
@@ -16499,7 +16499,7 @@ return passed;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-generators"><span><a class="anchor" href="#test-generators">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions">generators</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.88" style="background-color:hsl(105,47%,50%)">22/25</td>
+<td class="tally" data-browser="tr" data-tally="0.92" style="background-color:hsl(110,45%,50%)">23/25</td>
 <td class="tally" data-browser="babel" data-tally="0.92" style="background-color:hsl(110,45%,50%)">23/25</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/25</td>
 <td class="tally" data-browser="closure" data-tally="0.64" style="background-color:hsl(76,57%,50%)">16/25</td>
@@ -18184,7 +18184,7 @@ gen[&apos;throw&apos;]();
 return closed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("232");try{return Function("asyncTestPassed","\nvar closed = false;\nvar iter = global.__createIterableObject([1, 2, 3], {\n  'throw': undefined,\n  'return': function() {\n    closed = true;\n    return {done: true};\n  }\n});\nvar gen = (function*(){\n  try {\n    yield *iter;\n  } catch(e){}\n})();\ngen.next();\ngen['throw']();\nreturn closed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("232");return Function("asyncTestPassed","'use strict';"+"\nvar closed = false;\nvar iter = global.__createIterableObject([1, 2, 3], {\n  'throw': undefined,\n  'return': function() {\n    closed = true;\n    return {done: true};\n  }\n});\nvar gen = (function*(){\n  try {\n    yield *iter;\n  } catch(e){}\n})();\ngen.next();\ngen['throw']();\nreturn closed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -25392,7 +25392,7 @@ return &apos;get&apos; in prop &amp;&amp; Set[Symbol.species] === Set;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-WeakMap"><span><a class="anchor" href="#test-WeakMap">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects">WeakMap</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0">0/10</td>
+<td class="tally" data-browser="tr" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally" data-browser="babel" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/10</td>
 <td class="tally" data-browser="closure" data-tally="0">0/10</td>
@@ -25471,7 +25471,7 @@ weakmap.set(key, 123);
 return weakmap.has(key) &amp;&amp; weakmap.get(key) === 123;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("324");try{return Function("asyncTestPassed","\nvar key = {};\nvar weakmap = new WeakMap();\n\nweakmap.set(key, 123);\n\nreturn weakmap.has(key) && weakmap.get(key) === 123;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("324");return Function("asyncTestPassed","'use strict';"+"\nvar key = {};\nvar weakmap = new WeakMap();\n\nweakmap.set(key, 123);\n\nreturn weakmap.has(key) && weakmap.get(key) === 123;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -25705,7 +25705,7 @@ new WeakMap(null);
 return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("327");try{return Function("asyncTestPassed","\nnew WeakMap(null);\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("327");return Function("asyncTestPassed","'use strict';"+"\nnew WeakMap(null);\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -25866,7 +25866,7 @@ m.set(f, 42);
 return m.get(f) === 42;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("329");try{return Function("asyncTestPassed","\nvar f = Object.freeze({});\nvar m = new WeakMap;\nm.set(f, 42);\nreturn m.get(f) === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("329");return Function("asyncTestPassed","'use strict';"+"\nvar f = Object.freeze({});\nvar m = new WeakMap;\nm.set(f, 42);\nreturn m.get(f) === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26023,7 +26023,7 @@ var key = {};
 return weakmap.set(key, 0) === weakmap;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("331");try{return Function("asyncTestPassed","\nvar weakmap = new WeakMap();\nvar key = {};\nreturn weakmap.set(key, 0) === weakmap;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("331");return Function("asyncTestPassed","'use strict';"+"\nvar weakmap = new WeakMap();\nvar key = {};\nreturn weakmap.set(key, 0) === weakmap;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26097,7 +26097,7 @@ return weakmap.set(key, 0) === weakmap;
 return typeof WeakMap.prototype.delete === &quot;function&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("332");try{return Function("asyncTestPassed","\nreturn typeof WeakMap.prototype.delete === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("332");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof WeakMap.prototype.delete === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26249,7 +26249,7 @@ return m.has(key);
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-WeakSet"><span><a class="anchor" href="#test-WeakSet">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects">WeakSet</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0">0/9</td>
+<td class="tally" data-browser="tr" data-tally="0.5555555555555556" style="background-color:hsl(66,61%,50%)">5/9</td>
 <td class="tally" data-browser="babel" data-tally="1">9/9</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/9</td>
 <td class="tally" data-browser="closure" data-tally="0">0/9</td>
@@ -26329,7 +26329,7 @@ weakset.add(obj1);
 return weakset.has(obj1);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("335");try{return Function("asyncTestPassed","\nvar obj1 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj1);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("335");return Function("asyncTestPassed","'use strict';"+"\nvar obj1 = {};\nvar weakset = new WeakSet();\n\nweakset.add(obj1);\nweakset.add(obj1);\n\nreturn weakset.has(obj1);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26406,7 +26406,7 @@ var weakset = new WeakSet([obj1, obj2]);
 return weakset.has(obj1) &amp;&amp; weakset.has(obj2);
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("336");try{return Function("asyncTestPassed","\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet([obj1, obj2]);\n\nreturn weakset.has(obj1) && weakset.has(obj2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("336");return Function("asyncTestPassed","'use strict';"+"\nvar obj1 = {}, obj2 = {};\nvar weakset = new WeakSet([obj1, obj2]);\n\nreturn weakset.has(obj1) && weakset.has(obj2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26561,7 +26561,7 @@ new WeakSet(null);
 return true;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("338");try{return Function("asyncTestPassed","\nnew WeakSet(null);\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("338");return Function("asyncTestPassed","'use strict';"+"\nnew WeakSet(null);\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26802,7 +26802,7 @@ var obj = {};
 return weakset.add(obj) === weakset;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("341");try{return Function("asyncTestPassed","\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === weakset;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("341");return Function("asyncTestPassed","'use strict';"+"\nvar weakset = new WeakSet();\nvar obj = {};\nreturn weakset.add(obj) === weakset;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -26876,7 +26876,7 @@ return weakset.add(obj) === weakset;
 return typeof WeakSet.prototype.delete === &quot;function&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("342");try{return Function("asyncTestPassed","\nreturn typeof WeakSet.prototype.delete === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("342");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof WeakSet.prototype.delete === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -30694,7 +30694,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Symbol"><span><a class="anchor" href="#test-Symbol">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor">Symbol</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.3" style="background-color:hsl(36,72%,50%)" data-flagged-tally="0.4">3/10</td>
+<td class="tally" data-browser="tr" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
 <td class="tally" data-browser="babel" data-tally="0.6" style="background-color:hsl(72,59%,50%)" data-flagged-tally="0.7">6/10</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/10</td>
 <td class="tally" data-browser="closure" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
@@ -30846,7 +30846,7 @@ return object[symbol] === value;
 return typeof Symbol() === &quot;symbol&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("392");try{return Function("asyncTestPassed","\nreturn typeof Symbol() === \"symbol\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("392");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol() === \"symbol\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="no flagged" data-browser="tr">Flag</td>
+<td class="yes" data-browser="tr">Yes</td>
 <td class="no flagged" data-browser="babel">Flag</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -35404,7 +35404,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-String.prototype_methods"><span><a class="anchor" href="#test-String.prototype_methods">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-prototype-object">String.prototype methods</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
+<td class="tally" data-browser="tr" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
 <td class="tally" data-browser="babel" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/8</td>
 <td class="tally" data-browser="closure" data-tally="0">0/8</td>
@@ -36012,7 +36012,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
   iterator[Symbol.iterator]() === iterator;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("459");try{return Function("asyncTestPassed","\n// Iterator instance\nvar iterator = ''[Symbol.iterator]();\n// %StringIteratorPrototype%\nvar proto1 = Object.getPrototypeOf(iterator);\n// %IteratorPrototype%\nvar proto2 = Object.getPrototypeOf(proto1);\n\nreturn proto2.hasOwnProperty(Symbol.iterator) &&\n  !proto1    .hasOwnProperty(Symbol.iterator) &&\n  !iterator  .hasOwnProperty(Symbol.iterator) &&\n  iterator[Symbol.iterator]() === iterator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("459");return Function("asyncTestPassed","'use strict';"+"\n// Iterator instance\nvar iterator = ''[Symbol.iterator]();\n// %StringIteratorPrototype%\nvar proto1 = Object.getPrototypeOf(iterator);\n// %IteratorPrototype%\nvar proto2 = Object.getPrototypeOf(proto1);\n\nreturn proto2.hasOwnProperty(Symbol.iterator) &&\n  !proto1    .hasOwnProperty(Symbol.iterator) &&\n  !iterator  .hasOwnProperty(Symbol.iterator) &&\n  iterator[Symbol.iterator]() === iterator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="yes" data-browser="tr">Yes</td>
+<td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
@@ -37507,7 +37507,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Array.prototype_methods"><span><a class="anchor" href="#test-Array.prototype_methods">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-prototype-object">Array.prototype methods</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td class="tally" data-browser="tr" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
 <td class="tally" data-browser="babel" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/10</td>
 <td class="tally" data-browser="closure" data-tally="0">0/10</td>
@@ -38183,7 +38183,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
   iterator[Symbol.iterator]() === iterator;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("488");try{return Function("asyncTestPassed","\n// Iterator instance\nvar iterator = [][Symbol.iterator]();\n// %ArrayIteratorPrototype%\nvar proto1 = Object.getPrototypeOf(iterator);\n// %IteratorPrototype%\nvar proto2 = Object.getPrototypeOf(proto1);\n\nreturn proto2.hasOwnProperty(Symbol.iterator) &&\n  !proto1    .hasOwnProperty(Symbol.iterator) &&\n  !iterator  .hasOwnProperty(Symbol.iterator) &&\n  iterator[Symbol.iterator]() === iterator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("488");return Function("asyncTestPassed","'use strict';"+"\n// Iterator instance\nvar iterator = [][Symbol.iterator]();\n// %ArrayIteratorPrototype%\nvar proto1 = Object.getPrototypeOf(iterator);\n// %IteratorPrototype%\nvar proto2 = Object.getPrototypeOf(proto1);\n\nreturn proto2.hasOwnProperty(Symbol.iterator) &&\n  !proto1    .hasOwnProperty(Symbol.iterator) &&\n  !iterator  .hasOwnProperty(Symbol.iterator) &&\n  iterator[Symbol.iterator]() === iterator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
-<td class="yes" data-browser="tr">Yes</td>
+<td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
