@@ -39,7 +39,7 @@ exports.browsers = {
   jsx: {
     full: 'JSX',
     short: 'JSX',
-    obsolete: false,
+    obsolete: true,
     platformtype: 'compiler',
   },
   typescript: {
