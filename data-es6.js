@@ -13403,10 +13403,10 @@ exports.tests = [
       res: {
         ie10:          true,
         chrome:        true,
-        firefox44:     true,
+        firefox31:     true,
         node012:       true,
         opera:         true,
-        safari7:       true,
+        safari51:      true,
         webkit:        true,
         android40:     true,
         xs6:           true,
