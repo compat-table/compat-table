@@ -13364,7 +13364,7 @@ exports.tests = [
   significance: 'tiny',
   subtests: [
     {
-      name: 'for..in',
+      name: 'Object.keys',
       exec: function () {/*
         var obj = {
           // Non-negative integer names appear first in value order
@@ -13395,14 +13395,13 @@ exports.tests = [
         delete obj[2];
         obj[2] = true;
 
-        var result = '';
-        for(var i in obj) {
-          result += i;
-        }
-        return result === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
+        var forInOrder = '';
+        for(var key in obj)forInOrder += key;
+        
+        return Object.keys(obj).join('') === forInOrder;
       */},
       res: {
-        ie10:          { val: true, note_id: 'ie_property_order' },
+        ie10:          true,
         chrome:        true,
         firefox44:     true,
         node012:       true,
@@ -13411,44 +13410,10 @@ exports.tests = [
         webkit:        true,
         android40:     true,
         xs6:           true,
-      },
-    },
-    {
-      name: 'Object.keys',
-      exec: function () {/*
-        var obj = {
-          2:    true,
-          0:    true,
-          1:    true,
-          ' ':  true,
-          9:    true,
-          D:    true,
-          B:    true,
-          '-1': true
-        };
-        obj.A = true;
-        obj[3] = true;
-        "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
-          obj[key] = true;
-        });
-        Object.defineProperty(obj, 'C', { value: true, enumerable: true });
-        Object.defineProperty(obj, '4', { value: true, enumerable: true });
-        delete obj[2];
-        obj[2] = true;
-
-        return Object.keys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
-      */},
-      res: {
-        ie10:          { val: true, note_id: 'ie_property_order' },
-        chrome:        true,
-        firefox44:     true,
-        node012:       true,
-        opera:         true,
-        safari7:       true,
-        webkit:        true,
-        android40:     true,
-        xs6:         true,
-        ejs:           true,
+        phantom:       true,
+        ejs:           false,
+        konq49:        null,
+        rhino17:       null,
       },
     },
     {
