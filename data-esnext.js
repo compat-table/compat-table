@@ -1346,6 +1346,29 @@ exports.tests = [
   }
 },
 {
+  name: 'Proxy, [[Enumerate]] trap removed',
+  category: '2016 misc',
+  significance: 'tiny',
+  link: 'https://github.com/tc39/ecma262/pull/367',
+  exec: function() {/*
+    var proxy = new Proxy({a: 1, b: 2}, {
+      ownKeys: function(){ return ['a']; },
+      enumerate: function(){
+        var first = true;
+        return {next: function(){ return first ? {done: first = false, value: 'b'} : {done: true}; }};
+      }
+    });
+
+    var keys = '';
+
+    for(var key in proxy)keys += key;
+
+    return keys === 'a';
+  */},
+  res: {
+  },
+},
+{
   name: 'Proxy internal calls, Array.prototype.includes',
   category: '2016 misc',
   significance: 'tiny',
