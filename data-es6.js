@@ -13812,6 +13812,14 @@ exports.tests = [
       },
     },
     {
+      name: 'RegExp.prototype.toString generic and uses "flags" property',
+      exec: function(){/*
+        return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';
+      */},
+      res: {
+      },
+    },
+    {
       name: 'built-in prototypes are not instances',
       exec: function(){/*
         try {
