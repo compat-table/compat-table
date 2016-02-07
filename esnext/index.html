@@ -4175,62 +4175,6 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr significance="0.5"><td id="test-call_constructor"><span><a class="anchor" href="#test-call_constructor">&#xA7;</a><a href="https://gist.github.com/wycats/952929fab0bc1f000c24">call constructor</a></span><script data-source="
-class C {
-  constructor(){
-    this.x = &apos;x&apos;;
-  }
-  call constructor(){
-    return &apos;y&apos;;
-  }
-}
-return new C().x + C() === &apos;xy&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nclass C {\n  constructor(){\n    this.x = 'x';\n  }\n  call constructor(){\n    return 'y';\n  }\n}\nreturn new C().x + C() === 'xy';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  constructor(){\n    this.x = 'x';\n  }\n  call constructor(){\n    return 'y';\n  }\n}\nreturn new C().x + C() === 'xy';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
-<td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="es7shim">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="firefox31">No</td>
-<td class="no obsolete" data-browser="firefox32">No</td>
-<td class="no obsolete" data-browser="firefox34">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no obsolete" data-browser="firefox42">No</td>
-<td class="no obsolete" data-browser="firefox43">No</td>
-<td class="no" data-browser="firefox44">No</td>
-<td class="no unstable" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no obsolete" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="chrome42">No</td>
-<td class="no obsolete" data-browser="chrome43">No</td>
-<td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no obsolete" data-browser="chrome47">No</td>
-<td class="no" data-browser="chrome48">No</td>
-<td class="no unstable" data-browser="chrome49">No</td>
-<td class="no unstable" data-browser="chrome50">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-</tr>
 <tr class="supertest" significance="0.25"><td id="test-String_trimming"><span><a class="anchor" href="#test-String_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">String trimming</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
 <td class="tally" data-browser="babel" data-tally="1">4/4</td>
@@ -4278,7 +4222,7 @@ return new C().x + C() === &apos;xy&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimLeft"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimLeft">&#xA7;</a>String.prototype.trimLeft</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4326,7 +4270,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimRight"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimRight">&#xA7;</a>String.prototype.trimRight</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4374,7 +4318,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimStart"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimStart">&#xA7;</a>String.prototype.trimStart</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4422,7 +4366,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimEnd"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimEnd">&#xA7;</a>String.prototype.trimEnd</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4471,7 +4415,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <tr significance="0.25"><td id="test-System.global"><span><a class="anchor" href="#test-System.global">&#xA7;</a><a href="https://github.com/tc39/proposal-global">System.global</a></span><script data-source="
 Function(&apos;return this&apos;)().__system_global_test__ = 42;
 return System.global.__system_global_test__ === 42;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -4564,7 +4508,7 @@ return System.global.__system_global_test__ === 42;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_basic_support"><td><span><a class="anchor" href="#test-Observable_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof Observable !== &apos;undefined&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4612,7 +4556,7 @@ return typeof Observable !== &apos;undefined&apos;;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Symbol.observable_well_known_symbol"><td><span><a class="anchor" href="#test-Observable_Symbol.observable_well_known_symbol">&#xA7;</a>Symbol.observable well known symbol</span><script data-source="
 return typeof Symbol.observable === &apos;symbol&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4660,7 +4604,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.subscribe"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.subscribe">&#xA7;</a>Observable.prototype.subscribe</span><script data-source="
 return &apos;subscribe&apos; in Observable.prototype;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4716,7 +4660,7 @@ try { new Observable(false) } catch(e) { primitiveCheckPassed = true }
 try { Observable(function() { }) } catch(e) { newCheckPassed = true }
 
 return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newCheckPassed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallablePassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallablePassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallablePassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallablePassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4765,7 +4709,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.forEach"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.forEach">&#xA7;</a>Observable.prototype.forEach</span><script data-source="
 var o = new Observable(function() { });
 return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function(e){return true}) instanceof Promise;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4814,7 +4758,7 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype[Symbol.observable]"><td><span><a class="anchor" href="#test-Observable_Observable.prototype[Symbol.observable]">&#xA7;</a>Observable.prototype[Symbol.observable]</span><script data-source="
 var o = new Observable(function() { });
 return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable] === o;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable] === o;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable] === o;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable] === o;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable] === o;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4862,7 +4806,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.of"><td><span><a class="anchor" href="#test-Observable_Observable.of">&#xA7;</a>Observable.of</span><script data-source="
 return Observable.of(1, 2, 3) instanceof Observable;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("96");try{return Function("asyncTestPassed","\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("96");return Function("asyncTestPassed","'use strict';"+"\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4910,7 +4854,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.from"><td><span><a class="anchor" href="#test-Observable_Observable.from">&#xA7;</a>Observable.from</span><script data-source="
 return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable.from(new Set([1, 2, 3])) instanceof Observable);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("96");try{return Function("asyncTestPassed","\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("96");return Function("asyncTestPassed","'use strict';"+"\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5007,7 +4951,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 function foo() { this.garply += &quot;foo&quot;; return this; }
 var obj = { garply: &quot;bar&quot; };
 return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("98");try{return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("98");return Function("asyncTestPassed","'use strict';"+"\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5056,7 +5000,7 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <tr class="subtest" data-parent="bind_(::)_operator" id="test-bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#test-bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
 var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
 return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5107,7 +5051,7 @@ return do {
   let x = 23;
   x + 19;
 } === 42;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("101");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("101");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5158,7 +5102,7 @@ var map = new Map();
 map.set(&apos;a&apos;, &apos;b&apos;);
 map.set(&apos;c&apos;, &apos;d&apos;);
 return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quot;,&quot;d&quot;]]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("101");try{return Function("asyncTestPassed","\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("101");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map();\nmap.set('a', 'b');\nmap.set('c', 'd');\nreturn JSON.stringify(map) === '[[\"a\",\"b\"],[\"c\",\"d\"]]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5208,7 +5152,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 var set = new Set();
 [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
 return JSON.stringify(set) === &apos;[1,2,3]&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("103");try{return Function("asyncTestPassed","\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("103");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set();\n[1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });\nreturn JSON.stringify(set) === '[1,2,3]';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5256,7 +5200,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-String.prototype.at"><span><a class="anchor" href="#test-String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("103");try{return Function("asyncTestPassed","\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("103");return Function("asyncTestPassed","'use strict';"+"\nreturn 'a𠮷b'.at(1) === '𠮷';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5304,7 +5248,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 </tr>
 <tr significance="0.125" class="optional-feature"><td id="test-Error.isError"><span><a class="anchor" href="#test-Error.isError">&#xA7;</a><a href="https://github.com/ljharb/proposal-is-error">Error.isError</a></span><script data-source="
 return Error.isError(new TypeError()) &amp;&amp; !Error.isError(Object.create(TypeError.prototype));
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("105");try{return Function("asyncTestPassed","\nreturn Error.isError(new TypeError()) && !Error.isError(Object.create(TypeError.prototype));\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("105");return Function("asyncTestPassed","'use strict';"+"\nreturn Error.isError(new TypeError()) && !Error.isError(Object.create(TypeError.prototype));\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nreturn Error.isError(new TypeError()) && !Error.isError(Object.create(TypeError.prototype));\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nreturn Error.isError(new TypeError()) && !Error.isError(Object.create(TypeError.prototype));\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5397,7 +5341,7 @@ return Error.isError(new TypeError()) &amp;&amp; !Error.isError(Object.create(Ty
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.iaddh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.iaddh">&#xA7;</a>Math.iaddh</span><script data-source="
 return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("106");try{return Function("asyncTestPassed","\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("106");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5445,7 +5389,7 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.isubh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.isubh">&#xA7;</a>Math.isubh</span><script data-source="
 return Math.isubh(0, 4, 1, 1) === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5493,7 +5437,7 @@ return Math.isubh(0, 4, 1, 1) === 2;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.imulh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.imulh">&#xA7;</a>Math.imulh</span><script data-source="
 return Math.imulh(0xffffffff, 7) === -1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5541,7 +5485,7 @@ return Math.imulh(0xffffffff, 7) === -1;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.umulh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.umulh">&#xA7;</a>Math.umulh</span><script data-source="
 return Math.umulh(0xffffffff, 7) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5604,7 +5548,7 @@ for (i = 0; i &lt; names.length; i++) {
   }
 }
 return true;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");try{return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("111");return Function("asyncTestPassed","'use strict';"+"\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nvar i, names =\n  [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\",\n  \"indirectEval\", \"initGlobal\", \"nonEval\"];\n\nif (typeof Reflect !== \"object\" || typeof Reflect.Realm !== \"function\"\n    || typeof Reflect.Realm.prototype !== \"object\") {\n  return false;\n}\nfor (i = 0; i < names.length; i++) {\n  if (!(names[i] in Reflect.Realm.prototype)) {\n    return false;\n  }\n}\nreturn true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
