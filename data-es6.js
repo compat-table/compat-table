@@ -13817,6 +13817,9 @@ exports.tests = [
         return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';
       */},
       res: {
+        firefox39:   true,
+        ejs:         null,
+        xs6:         null,
       },
     },
     {
