@@ -140,11 +140,11 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 5.8 + core-js 2.0">Babel +<br><nobr>core-js</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
+<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 5.8 + core-js 2.1">Babel +<br><nobr>core-js</nobr></abbr><a href="#babel-optional-note"><sup>[1]</sup></a></a></th>
 <th class="platform es6tr compiler obsolete" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Trans-<br>piler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20160201">Closure</abbr></a></th>
 <th class="platform jsx compiler obsolete" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.6.2 + core-js 2.0">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.6.2 + core-js 2.1">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop obsolete" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
@@ -50265,11 +50265,11 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-miscellaneous"><span><a class="anchor" href="#test-miscellaneous">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">miscellaneous</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.09090909090909091" style="background-color:hsl(10,82%,50%)">1/11</td>
-<td class="tally" data-browser="babel" data-tally="0.45454545454545453" style="background-color:hsl(54,66%,50%)">5/11</td>
+<td class="tally" data-browser="babel" data-tally="0.5454545454545454" style="background-color:hsl(65,62%,50%)">6/11</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.09090909090909091" style="background-color:hsl(10,82%,50%)">1/11</td>
 <td class="tally" data-browser="closure" data-tally="0.2727272727272727" style="background-color:hsl(32,74%,50%)">3/11</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.09090909090909091" style="background-color:hsl(10,82%,50%)">1/11</td>
-<td class="tally" data-browser="typescript" data-tally="0.45454545454545453" style="background-color:hsl(54,66%,50%)">5/11</td>
+<td class="tally" data-browser="typescript" data-tally="0.5454545454545454" style="background-color:hsl(65,62%,50%)">6/11</td>
 <td class="tally" data-browser="es6shim" data-tally="0.18181818181818182" style="background-color:hsl(21,78%,50%)">2/11</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0.2727272727272727" style="background-color:hsl(32,74%,50%)">3/11</td>
 <td class="tally" data-browser="ie11" data-tally="0.2727272727272727" style="background-color:hsl(32,74%,50%)">3/11</td>
@@ -50872,11 +50872,11 @@ return RegExp.prototype.toString.call({source: &apos;foo&apos;, flags: &apos;bar
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("651");try{return Function("asyncTestPassed","\nreturn RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("651");return Function("asyncTestPassed","'use strict';"+"\nreturn RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[10]</sup></a></td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>

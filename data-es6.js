@@ -33,7 +33,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 5.8 + core-js 2.0',
+    full: 'Babel 5.8 + core-js 2.1',
     short: 'Babel +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
@@ -61,7 +61,7 @@ exports.browsers = {
     note_html: 'Have to be enabled via <code>harmony</code> option'
   },
   typescript: {
-    full: 'TypeScript 1.6.2 + core-js 2.0',
+    full: 'TypeScript 1.6.2 + core-js 2.1',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -13782,6 +13782,8 @@ exports.tests = [
         return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
         firefox39:   true,
         ejs:         null,
         xs6:         null,
