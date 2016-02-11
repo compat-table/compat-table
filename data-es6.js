@@ -33,7 +33,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 5.8 + core-js 2.1',
+    full: 'Babel 6.5 + core-js 2.1',
     short: 'Babel +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
@@ -554,7 +554,7 @@ exports.tests = [
           note_id: 'tr-tco',
           note_html: 'Requires the <code>properTailCalls</code> compile option.'
         },
-        babel:       true,
+        babel:       false,
         typescript:  typescript.fallthrough,
         webkit:      true,
         xs6:         true,
@@ -831,7 +831,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       false,
         closure:     true,
         es6tr:       true,
         jsx:         true,
@@ -1460,7 +1460,7 @@ exports.tests = [
         }());
       */},
       res: {
-        babel:       true,
+        babel:       false,
         typescript:  true,
         webkit:      true,
         edge12:      flag,
@@ -1479,7 +1479,7 @@ exports.tests = [
         }());
       */},
       res: {
-        babel:       true,
+        babel:       false,
         closure:     true,
         webkit:      true,
         edge12:      flag,
@@ -1571,7 +1571,7 @@ exports.tests = [
         }("foo", "bar", "baz"));
       */},
       res: {
-        babel:       true,
+        babel:       false,
         tr:          true,
         ejs:         true,
         chrome44:    flag,
@@ -1595,7 +1595,7 @@ exports.tests = [
         }());
       */},
       res: {
-        babel:       true,
+        babel:       false,
         tr:          true,
         ejs:         true,
         closure:     true,
@@ -2537,7 +2537,7 @@ exports.tests = [
           && Object.getPrototypeOf(C.prototype) === null;
       */},
       res: {
-        babel:       true,
+        babel:       false,
         typescript:  true,
         tr:          true,
         es6tr:       true,
@@ -2604,7 +2604,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       false,
         jsx:         true,
         typescript:  true,
         closure:     true,
@@ -2633,7 +2633,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       false,
         jsx:         true,
         typescript:  true,
         closure:     true,
@@ -3851,7 +3851,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       false,
         firefox36:   true,
         chrome35:    flag,
         chrome39:    true,
@@ -9504,7 +9504,7 @@ exports.tests = [
         }({}));
       */},
       res: {
-        babel:       true,
+        babel:       false,
         closure:     true,
         edge13:      flag,
         xs6:         true,
@@ -10394,7 +10394,7 @@ exports.tests = [
                o.qux.name === "";
       */},
       res: {
-        babel:        true,
+        babel:        false,
         edge12:       flag,
         edge13:       true,
         xs6:          true,
