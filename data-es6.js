@@ -1571,7 +1571,7 @@ exports.tests = [
         }("foo", "bar", "baz"));
       */},
       res: {
-        babel:       false,
+        babel:       true,
         tr:          true,
         ejs:         true,
         chrome44:    flag,

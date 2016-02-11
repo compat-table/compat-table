@@ -1070,7 +1070,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-rest_parameters"><span><a class="anchor" href="#test-rest_parameters">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions">rest parameters</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
-<td class="tally" data-browser="babel" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
+<td class="tally" data-browser="babel" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td class="tally" data-browser="closure" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
@@ -1302,7 +1302,7 @@ return (function (foo, ...args) {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nreturn (function (foo, ...args) {\n  foo = \"qux\";\n  // The arguments object is not mapped to the\n  // parameters, even outside of strict mode.\n  return arguments.length === 3\n    && arguments[0] === \"foo\"\n    && arguments[1] === \"bar\"\n    && arguments[2] === \"baz\";\n}(\"foo\", \"bar\", \"baz\"));\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nreturn (function (foo, ...args) {\n  foo = \"qux\";\n  // The arguments object is not mapped to the\n  // parameters, even outside of strict mode.\n  return arguments.length === 3\n    && arguments[0] === \"foo\"\n    && arguments[1] === \"bar\"\n    && arguments[2] === \"baz\";\n}(\"foo\", \"bar\", \"baz\"));\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
