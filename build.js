@@ -265,6 +265,15 @@ process.nextTick(function () {
   });
   [
     {
+      name: 'babel + polyfill',
+      url: 'https://babeljs.io/',
+      target_file: 'esnext/compilers/babel-polyfill.html',
+      polyfills: ['node_modules/babel-polyfill/browser.js'],
+      compiler: function(code) {
+        return babel.transform(code, {presets: ['es2015', 'babel-preset-stage-0']}).code;
+      },
+    },
+    {
       name: 'es7-shim',
       url: 'https://github.com/es-shims/es7-shim/',
       target_file: 'esnext/compilers/es7-shim.html',

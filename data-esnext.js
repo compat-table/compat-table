@@ -30,7 +30,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 5.8 + core-js 2.1',
+    full: 'Babel 6.5 + core-js 2.1',
     short: 'Babel +<br><nobr>core-js</nobr>',
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -306,7 +306,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       false,
         typescript:  true,
         edge13:      flag,
       }
@@ -1049,7 +1049,7 @@ exports.tests = [
     return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
   */},
   res: {
-    babel:       true,
+    babel:       {val: false, note_id: "babel-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."},
     typescript:  true,
   }
 },
