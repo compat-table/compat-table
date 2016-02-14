@@ -334,6 +334,7 @@ exports.tests = [
         }
       */},
       res: {
+        babel:       true,
       }
     },
   ],
