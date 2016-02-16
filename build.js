@@ -45,6 +45,7 @@ process.nextTick(function () {
   handle(esnext);
   handle(require('./data-esintl'));
   handle(require('./data-non-standard'));
+  handle(require('./data-unicode-casing'));
 
   // ES6 compilers
   if (!useCompilers) {

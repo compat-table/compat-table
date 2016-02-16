@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <title>ECMAScript Unicode casing compatibility table</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
+    <link rel="stylesheet" href="../master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../master.js"></script>
+    <script>
+      (function() {
+        var s = document.createElement('script'),
+            t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        t.parentNode.insertBefore(s, t);
+      })();
+    </script>
+</head>
+<body class="esintl">
+  <div id="header">
+    <a href="../" id="logo"><img src="../logo.png" alt="JS compat"></a>
+    <div id="nav">
+      <span class="hidden-mobile">ECMAScript</span>
+      <span class="versions">
+        <a href="../es5">5</a><!--
+        --><a href="../es6">6</a><!--
+        --><a href="../esnext">next</a><!--
+        --><a href="../esintl">intl</a><!--
+        --><a href="../non-standard">non-standard</a>
+      </span>
+      <span class="hidden-mobile">compatibility table</span>
+    </div>
+
+    <div class="social">
+
+      <span class="hidden-tablet">
+        <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
+      </span>
+
+      <script async src="https://www.google-analytics.com/ga.js"></script>
+      <span class="by">
+        by
+        <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
+        <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
+        &amp;
+        <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
+        &amp;
+        <a href="https://github.com/zloirock" style="color:#eee">zloirock</a>
+      </span>
+
+      <iframe class="hidden-tablet" src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
+        frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
+    </div>
+  </div>
+  <div id="body">
+    <div style="background-color:hsl(30, 100%, 97%); padding:0.5em; display:inline-block;">
+      Note that these tests do not include locale or context-specific casing.
+    </div>
+    <div class="controls" style='display:none'>
+      <label for="sort">
+        Sort by
+        <select id="sort">
+          <option value="engine-types">Engine types</option>
+          <option value="features">Features</option>
+          <option value="flagged-features">Flagged features</option>
+        </select>
+      </label>
+
+      <label for="show-obsolete">
+        Show obsolete platforms
+        <input id="show-obsolete" type="checkbox">
+      </label>
+
+      <label for="show-unstable">
+        Show unstable platforms
+        <input id="show-unstable" type="checkbox" checked>
+      </label>
+    </div>
+    <!--
+
+    --><table id="table-wrapper">
+      <thead>
+        <tr>
+          <th class="test-name">Feature name</th>
+          <th class="current">Current browser</th>
+          <th></th>
+          <!-- TABLE HEADERS -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- TABLE BODY -->
+      </tbody>
+    </table>
+    <div id="footnotes">
+      <!-- FOOTNOTES -->
+    </div>
+  </div>
+  <pre class="info-tooltip" style="display:none"></pre>
+  <script src="../jquery.floatThead.min.js"></script>
+</body>
+</html>
