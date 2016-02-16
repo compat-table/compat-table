@@ -13849,17 +13849,6 @@ exports.tests = [
         xs6:         true,
       },
     },
-    {
-      name: 'String.prototype case methods, Unicode support',
-      exec: function(){/*
-        return "𐐘".toLowerCase() === "𐑀" && "𐑀".toUpperCase() === "𐐘";
-      */},
-      res: {
-        safari71_8:  true,
-        webkit:      true,
-        xs6:         true,
-      },
-    },
   ],
 },
 {
