@@ -7115,6 +7115,22 @@ exports.tests = [
       },
     },
     {
+      name: 'RegExp.prototype.toString',
+      exec: function() {/*
+        // RegExp.prototype.toString -> Get -> [[Get]]
+        var get = [];
+        var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp.prototype.toString.call(p);
+        return get + '' === "source,flags";
+      */},
+      res: {
+        firefox39:   null,
+        firefox44:   true,
+        xs6:         null,
+        echojs:      null,
+      },
+    },
+    {
       name: 'RegExp.prototype[Symbol.match]',
       exec: function() {/*
         // RegExp.prototype[Symbol.match] -> Get -> [[Get]]
