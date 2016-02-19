@@ -30697,7 +30697,7 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Symbol"><span><a class="anchor" href="#test-Symbol">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor">Symbol</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
-<td class="tally" data-browser="babel" data-tally="0.6" style="background-color:hsl(72,59%,50%)" data-flagged-tally="0.7">6/10</td>
+<td class="tally" data-browser="babel" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/10</td>
 <td class="tally" data-browser="closure" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/10</td>
@@ -30849,7 +30849,7 @@ return typeof Symbol() === &quot;symbol&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("392");try{return Function("asyncTestPassed","\nreturn typeof Symbol() === \"symbol\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("392");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol() === \"symbol\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="no flagged" data-browser="babel">Flag</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>

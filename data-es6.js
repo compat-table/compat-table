@@ -10944,7 +10944,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       flag,
+        babel:       true,
         typescript:  typescript.fallthrough,
         ejs:         true,
         edge12:      true,
