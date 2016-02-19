@@ -11156,7 +11156,7 @@ exports.tests = [
 {
   name: 'well-known symbols',
   category: 'built-ins',
-  significance: 'small',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols',
   note_id: 'symbol-iterator-functionality',
   note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
@@ -11353,6 +11353,23 @@ exports.tests = [
       res: {
         xs6:         true,
         ejs:         true,
+      }
+    },
+    {
+      name: 'Symbol.species, Promise.prototype.then',
+      exec: function () {/*
+        var promise      = new Promise(function(resolve){ resolve(42); });
+        var FakePromise1 = promise.constructor = function(exec){ exec(function(){}, function(){}); };
+        var FakePromise2 = function(exec){ exec(function(){}, function(){}); };
+        Object.defineProperty(FakePromise1, Symbol.species, {value: FakePromise2});
+        return promise.then(function(){}) instanceof FakePromise2;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        edge13:      null,
+        xs6:         null,
+        ejs:         null,
       }
     },
     {
