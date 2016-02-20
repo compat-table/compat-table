@@ -1328,24 +1328,19 @@ exports.tests = [
   }
 },
 {
-  name: 'Proxy, [[Enumerate]] trap removed',
+  name: 'Proxy, "enumerate" handler removed',
   category: '2016 misc',
   significance: 'tiny',
   link: 'https://github.com/tc39/ecma262/pull/367',
   exec: function() {/*
-    var proxy = new Proxy({a: 1, b: 2}, {
-      ownKeys: function(){ return ['a']; },
-      enumerate: function(){
-        var first = true;
-        return {next: function(){ return first ? {done: first = false, value: 'b'} : {done: true}; }};
+    var passed = true;
+    var proxy = new Proxy({}, {
+      enumerate: function() {
+        passed = false;
       }
     });
-
-    var keys = '';
-
-    for(var key in proxy)keys += key;
-
-    return keys === 'a';
+    for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
+    return passed;
   */},
   res: {
   },

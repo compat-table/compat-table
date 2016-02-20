@@ -655,21 +655,16 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr significance="0.125"><td id="test-Proxy,_[[Enumerate]]_trap_removed"><span><a class="anchor" href="#test-Proxy,_[[Enumerate]]_trap_removed">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/367">Proxy, [[Enumerate]] trap removed</a></span><script data-source="
-var proxy = new Proxy({a: 1, b: 2}, {
-  ownKeys: function(){ return [&apos;a&apos;]; },
-  enumerate: function(){
-    var first = true;
-    return {next: function(){ return first ? {done: first = false, value: &apos;b&apos;} : {done: true}; }};
+<tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/367">Proxy, &quot;enumerate&quot; handler removed</a></span><script data-source="
+var passed = true;
+var proxy = new Proxy({}, {
+  enumerate: function() {
+    passed = false;
   }
 });
-
-var keys = &apos;&apos;;
-
-for(var key in proxy)keys += key;
-
-return keys === &apos;a&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nvar proxy = new Proxy({a: 1, b: 2}, {\n  ownKeys: function(){ return ['a']; },\n  enumerate: function(){\n    var first = true;\n    return {next: function(){ return first ? {done: first = false, value: 'b'} : {done: true}; }};\n  }\n});\n\nvar keys = '';\n\nfor(var key in proxy)keys += key;\n\nreturn keys === 'a';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nvar proxy = new Proxy({a: 1, b: 2}, {\n  ownKeys: function(){ return ['a']; },\n  enumerate: function(){\n    var first = true;\n    return {next: function(){ return first ? {done: first = false, value: 'b'} : {done: true}; }};\n  }\n});\n\nvar keys = '';\n\nfor(var key in proxy)keys += key;\n\nreturn keys === 'a';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+for(var key in proxy); // Should not throw, nor execute the &apos;enumerate&apos; method.
+return passed;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nvar passed = true;\nvar proxy = new Proxy({}, {\n  enumerate: function() {\n    passed = false;\n  }\n});\nfor(var key in proxy); // Should not throw, nor execute the 'enumerate' method.\nreturn passed;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nvar passed = true;\nvar proxy = new Proxy({}, {\n  enumerate: function() {\n    passed = false;\n  }\n});\nfor(var key in proxy); // Should not throw, nor execute the 'enumerate' method.\nreturn passed;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
