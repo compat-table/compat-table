@@ -1312,13 +1312,30 @@ exports.tests = [
   }
 },
 {
-  name: 'nested rest destructuring',
+  name: 'nested rest destructuring, declarations',
   category: '2016 misc',
   significance: 'tiny',
   link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
   exec: function(){/*
     var [x, ...[y, ...z]] = [1,2,3,4];
     return x === 1 && y === 2 && z + '' === '3,4';
+  */},
+  res: {
+    babel:       true,
+    edge13:      flag,
+    typescript:  true,
+    chrome49:    true,
+  }
+},
+{
+  name: 'nested rest destructuring, parameters',
+  category: '2016 misc',
+  significance: 'tiny',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
+  exec: function(){/*
+    return function([x, ...[y, ...z]]) {
+      return x === 1 && y === 2 && z + '' === '3,4';
+    }([1,2,3,4]);
   */},
   res: {
     babel:       true,
