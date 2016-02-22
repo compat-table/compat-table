@@ -5139,7 +5139,7 @@ exports.tests = [
 {
   name: 'Map',
   category: 'built-ins',
-  significance: 'small',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
   subtests: [
     {
@@ -5544,7 +5544,7 @@ exports.tests = [
 {
   name: 'Set',
   category: 'built-ins',
-  significance: 'small',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects',
   subtests: [
     {
@@ -5953,7 +5953,7 @@ exports.tests = [
 {
   name: 'WeakMap',
   category: 'built-ins',
-  significance: 'small',
+  significance: 'medium',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects',
   subtests: [
     {
@@ -10909,7 +10909,7 @@ exports.tests = [
 {
   name: 'Symbol',
   category: 'built-ins',
-  significance: 'medium',
+  significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor',
   subtests: [
     {
