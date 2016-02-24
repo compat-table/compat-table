@@ -1294,6 +1294,34 @@ exports.tests = [
   }
 },
 {
+  name: 'generator throw() caught by inner generator',
+  category: '2016 misc',
+  significance: 'tiny',
+  link: 'https://github.com/tc39/ecma262/issues/293',
+  exec: function(){/*
+    function * generator() {
+      yield * (function * () {
+        try {
+          yield 'foo';
+        }
+        catch(e) {
+          return;
+        }
+      }());
+      yield 'bar';
+    }
+    var iter = generator();
+    iter.next();
+    return iter['throw']().value === 'bar';
+  */},
+  res: {
+      firefox31: true,
+      chrome39:  true,
+      node:      flag,
+      node4:     true,
+  }
+},
+{
   name: 'strict fn w/ non-strict non-simple params is error',
   category: '2016 misc',
   significance: 'tiny',
