@@ -1212,7 +1212,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         closure:     true,
         webkit:      true,
         chrome48:    flag,
@@ -1341,7 +1341,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         closure:     true,
         chrome37:    flag,
         chrome41:    true,
@@ -3237,7 +3237,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         ejs:         true,
         edge12:      true,
         firefox17:   true,
@@ -3264,7 +3264,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         edge12:      flag,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         firefox27:   true,
         chrome21dev: flag,
         chrome38:    true,
@@ -3288,7 +3288,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         ejs:         true,
         edge12:      true,
@@ -3316,7 +3316,7 @@ exports.tests = [
         babel:       true,
         closure:     true,
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         es6tr:       { val: true, note_id: 'compiler-iterable' },
         edge12:      true,
         firefox36:   true,
@@ -3341,7 +3341,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -3362,7 +3362,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -8348,7 +8348,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         firefox34:   true,
         safari9:     true,
         webkit:      true,
@@ -8365,7 +8365,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox34:    true,
         babel:        true,
         closure:      true,
@@ -8385,7 +8385,7 @@ exports.tests = [
       res: {
         tr:           true,
         ejs:          true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox34:    true,
         safari9:      true,
         webkit:       true,
@@ -8407,7 +8407,7 @@ exports.tests = [
         babel:        true,
         closure:      true,
         ejs:          true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox36:    true,
         safari9:      true,
         webkit:       true,
@@ -8429,7 +8429,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -8752,7 +8752,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         firefox34:   true,
         safari9:     true,
         webkit:      true,
@@ -8770,7 +8770,7 @@ exports.tests = [
       */},
       res: {
         tr:           true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox34:    true,
         babel:        true,
         closure:      true,
@@ -8791,7 +8791,7 @@ exports.tests = [
       res: {
         tr:           true,
         ejs:          true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox34:    true,
         safari9:      true,
         webkit:       true,
@@ -8814,7 +8814,7 @@ exports.tests = [
         babel:        true,
         closure:      true,
         ejs:          true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox36:    true,
         safari9:      true,
         webkit:       true,
@@ -8836,7 +8836,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -9193,7 +9193,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         ejs:         true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         firefox34:   true,
         safari9:     true,
         webkit:      true,
@@ -9210,20 +9210,20 @@ exports.tests = [
         }(function*(){ yield 1; yield 2; }());
       */},
       res: {
-        tr: true,
-        typescript: typescript.fallthrough,
-        firefox34: true,
-        babel: true,
-        closure: true,
-        ejs: true,
-        edge13: flag,
-        xs6: true,
-        safari51: false,
-        safari6: false,
-        safari7: false,
-        safari71_8: false,
-        safari9: false,
-        webkit: true,
+        tr:          true,
+        typescript:  false,
+        firefox34:   true,
+        babel:       true,
+        closure:     true,
+        ejs:         true,
+        edge13:      flag,
+        xs6:         true,
+        safari51:    false,
+        safari6:     false,
+        safari7:     false,
+        safari71_8:  false,
+        safari9:     false,
+        webkit:      true,
         chrome49:    true,
       },
     },
@@ -9237,7 +9237,7 @@ exports.tests = [
       res: {
         tr:           true,
         ejs:          true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox34:    true,
         safari9:      true,
         webkit:       true,
@@ -9260,7 +9260,7 @@ exports.tests = [
         babel:        true,
         closure:      true,
         ejs:          true,
-        typescript:   typescript.fallthrough,
+        typescript:   false,
         firefox36:    true,
         safari9:      true,
         webkit:       true,
@@ -9281,7 +9281,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     true,
         webkit:      true,
         xs6:         true,
@@ -9427,7 +9427,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         typescript:  typescript.fallthrough,
-        edge13:       flag,
+        edge13:      flag,
         xs6:         true,
         chrome49:    true,
       },
@@ -12944,7 +12944,7 @@ exports.tests = [
         return r.global && r.source === "baz";
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         safari9:     true,
@@ -12968,7 +12968,7 @@ exports.tests = [
         node4:       strict,
         chrome43:    strict,
         chrome49:    true,
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         edge12:      flag,
         edge13:      true,
         firefox45:   true,
@@ -12985,7 +12985,7 @@ exports.tests = [
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         safari9:     true,
@@ -13005,7 +13005,7 @@ exports.tests = [
         return r.test("foobarbaz");
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         safari9:     true,
@@ -13033,7 +13033,7 @@ exports.tests = [
         return c() === 'foo';
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         node4:       strict,
@@ -13052,7 +13052,7 @@ exports.tests = [
       */},
       res: {
         babel:       { val: false, note_id: 'compiler-proto' },
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         edge12:      flag,
         edge13:      true,
         firefox45:   true,
@@ -13071,7 +13071,7 @@ exports.tests = [
         return new c().bar === 2 && new c().baz === 3;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome48:    false,
         chrome49:    true,
@@ -13090,7 +13090,7 @@ exports.tests = [
         return c.call({bar:1}, 2) === 3;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         node4:       strict,
@@ -13108,7 +13108,7 @@ exports.tests = [
         return c.apply({bar:1}, [2]) === 3;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         node4:       strict,
@@ -13126,7 +13126,7 @@ exports.tests = [
         return c(6) === 9 && c instanceof C;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         edge13:      true,
         firefox45:   true,
         xs6:         true,
@@ -13170,7 +13170,7 @@ exports.tests = [
         }
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         edge13:      true,
@@ -13189,7 +13189,7 @@ exports.tests = [
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         node4:       strict,
@@ -13222,7 +13222,7 @@ exports.tests = [
         }
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         edge13:      true,
@@ -13253,7 +13253,7 @@ exports.tests = [
         }
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         chrome43:    strict,
         chrome49:    true,
         edge13:      true,
@@ -13281,7 +13281,7 @@ exports.tests = [
           && c == true;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
@@ -13303,7 +13303,7 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
@@ -13327,7 +13327,7 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
@@ -13351,7 +13351,7 @@ exports.tests = [
         return map instanceof M && map.has(key) && map.get(key) === 123;
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
@@ -13376,7 +13376,7 @@ exports.tests = [
         return set instanceof S && set.has(123);
       */},
       res: {
-        typescript:  typescript.fallthrough,
+        typescript:  false,
         safari9:     false,
         webkit:      true,
         chrome43:    strict,
