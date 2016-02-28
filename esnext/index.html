@@ -5236,8 +5236,12 @@ return typeof Atomics.xor == &apos;function&apos;;
 <tr class="category"><td colspan="46">Proposal (stage 1)</td>
 </tr>
 <tr significance="0.25"><td id="test-ArrayBuffer.transfer"><span><a class="anchor" href="#test-ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
-return typeof ArrayBuffer.transfer === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nreturn typeof ArrayBuffer.transfer === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ArrayBuffer.transfer === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+var buffer1 = new Uint8Array([1, 2, 3]).buffer;
+var buffer2 = ArrayBuffer.transfer(buffer1, 2);
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 2
+  &amp;&amp; new Uint8Array(buffer2)[0] === 1;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nvar buffer1 = new Uint8Array([1, 2, 3]).buffer;\nvar buffer2 = ArrayBuffer.transfer(buffer1, 2);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2\n  && new Uint8Array(buffer2)[0] === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nvar buffer1 = new Uint8Array([1, 2, 3]).buffer;\nvar buffer2 = ArrayBuffer.transfer(buffer1, 2);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2\n  && new Uint8Array(buffer2)[0] === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
