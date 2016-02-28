@@ -22,6 +22,13 @@ var typescript = {
         note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
     }
 };
+var firefox = {
+  nightly: {
+    val: false,
+    note_id: "firefox-nightly",
+    note_html: "The feature is enabled by default only in Firefox Nightly."
+  }
+};
 
 exports.browsers = {
   tr: {
@@ -120,6 +127,11 @@ exports.browsers = {
   firefox45: {
     full: 'Firefox',
     short: 'FF 45',
+    unstable: true,
+  },
+  firefox46: {
+    full: 'Firefox',
+    short: 'FF 46',
     unstable: true,
   },
   chrome30: {
@@ -415,7 +427,8 @@ exports.tests = [
     babel:      true,
     es7shim:    true,
     typescript: typescript.corejs,
-    firefox45:  false, // limited to nightly builds atm
+    firefox45:  firefox.nightly,
+    firefox46:  true,
   }
 },
 {
@@ -437,7 +450,8 @@ exports.tests = [
     babel:      true,
     es7shim:    true,
     typescript: typescript.corejs,
-    firefox45:  false, // limited to nightly builds atm
+    firefox45:  firefox.nightly,
+    firefox46:  true,
   }
 },
 {
