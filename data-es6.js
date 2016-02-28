@@ -61,7 +61,7 @@ exports.browsers = {
     note_html: 'Have to be enabled via <code>harmony</code> option'
   },
   typescript: {
-    full: 'TypeScript 1.6.2 + core-js 2.1',
+    full: 'TypeScript 1.8 + core-js 2.1',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -1212,7 +1212,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  false,
+        typescript:  true,
         closure:     true,
         webkit:      true,
         chrome48:    flag,
@@ -1309,7 +1309,6 @@ exports.tests = [
       */},
       res: {
         babel:       flag,
-        typescript:  true,
         ie11:        true,
         firefox35:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
@@ -1341,7 +1340,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
-        typescript:  false,
+        typescript:  true,
         closure:     true,
         chrome37:    flag,
         chrome41:    true,
@@ -1434,6 +1433,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         ejs:         true,
         webkit:      true,
@@ -1572,6 +1572,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         tr:          true,
         ejs:         true,
         chrome44:    flag,
@@ -2378,6 +2379,7 @@ exports.tests = [
         }
       */},
       res: {
+        typescript:  true,
         edge12:      flag,
         edge13:      true,
         firefox45:   true,
@@ -2422,6 +2424,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  true,
         es6tr:       true,
         jsx:         true,
         ejs:         true,
@@ -8516,6 +8519,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         closure:     true,
         tr:          true,
         es6tr:       true,
@@ -9032,6 +9036,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         closure:     true,
         tr:          true,
         es6tr:       true,
@@ -9369,6 +9374,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        typescript:  true,
         closure:     true,
         tr:          true,
         es6tr:       true,

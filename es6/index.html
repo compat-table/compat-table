@@ -144,7 +144,7 @@
 <th class="platform es6tr compiler obsolete" data-browser="es6tr"><a href="#es6tr" class="browser-name"><abbr title="ES6 Transpiler">ES6<br>Trans-<br>piler</abbr></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20160201">Closure</abbr></a></th>
 <th class="platform jsx compiler obsolete" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr><a href="#jsx-flag-note"><sup>[2]</sup></a></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.6.2 + core-js 2.1">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.1">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es6shim compiler" data-browser="es6shim"><a href="#es6shim" class="browser-name"><abbr title="es6-shim">es6-<br>shim</abbr></a></th>
 <th class="platform ie10 desktop obsolete" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
@@ -461,7 +461,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
 <td class="tally" data-browser="closure" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/7</td>
-<td class="tally" data-browser="typescript" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="typescript" data-tally="0.7142857142857143" style="background-color:hsl(85,54%,50%)">5/7</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/7</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/7</td>
@@ -764,7 +764,7 @@ return (function (a = &quot;baz&quot;, b = &quot;qux&quot;, c = &quot;quux&quot;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1074,7 +1074,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td class="tally" data-browser="closure" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
-<td class="tally" data-browser="typescript" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
+<td class="tally" data-browser="typescript" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/5</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/5</td>
@@ -1306,7 +1306,7 @@ return (function (foo, ...args) {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5231,7 +5231,7 @@ return &quot;&#x1D306;&quot;.match(/\u{1d306}/u)[0].length === 2;
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">14/22</td>
 <td class="tally" data-browser="closure" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">18/22</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.5454545454545454" style="background-color:hsl(65,62%,50%)">12/22</td>
-<td class="tally" data-browser="typescript" data-tally="0.6363636363636364" style="background-color:hsl(76,58%,50%)">14/22</td>
+<td class="tally" data-browser="typescript" data-tally="0.6818181818181818" style="background-color:hsl(81,56%,50%)">15/22</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/22</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/22</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/22</td>
@@ -6295,7 +6295,7 @@ return grault === &quot;garply&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -6989,7 +6989,7 @@ return a === 1 &amp;&amp; b === 2;
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.7083333333333334" style="background-color:hsl(85,54%,50%)">17/24</td>
 <td class="tally" data-browser="closure" data-tally="0.625" style="background-color:hsl(75,58%,50%)">15/24</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.4583333333333333" style="background-color:hsl(55,65%,50%)">11/24</td>
-<td class="tally" data-browser="typescript" data-tally="0.75" style="background-color:hsl(90,53%,50%)">18/24</td>
+<td class="tally" data-browser="typescript" data-tally="0.7916666666666666" style="background-color:hsl(95,51%,50%)">19/24</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/24</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/24</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/24</td>
@@ -8449,7 +8449,7 @@ return grault === &quot;garply&quot;;
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -8906,7 +8906,7 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
 <td class="tally" data-browser="closure" data-tally="0.7391304347826086" style="background-color:hsl(88,53%,50%)">17/23</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.5217391304347826" style="background-color:hsl(62,63%,50%)">12/23</td>
-<td class="tally" data-browser="typescript" data-tally="0.6086956521739131" style="background-color:hsl(73,59%,50%)">14/23</td>
+<td class="tally" data-browser="typescript" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/23</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/23</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/23</td>
@@ -9981,7 +9981,7 @@ return function({ [qux]: grault }) {
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -11891,7 +11891,7 @@ return passed;
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
 <td class="tally" data-browser="closure" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/10</td>
-<td class="tally" data-browser="typescript" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
+<td class="tally" data-browser="typescript" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/10</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/10</td>
 <td class="tally" data-browser="ie11" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
@@ -12281,7 +12281,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -12590,7 +12590,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes</td>
+<td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -12676,7 +12676,7 @@ return passed;
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -13902,7 +13902,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
 <td class="tally" data-browser="closure" data-tally="0.34782608695652173" style="background-color:hsl(41,70%,50%)">8/23</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0.6521739130434783" style="background-color:hsl(78,57%,50%)">15/23</td>
-<td class="tally" data-browser="typescript" data-tally="0.6956521739130435" style="background-color:hsl(83,55%,50%)">16/23</td>
+<td class="tally" data-browser="typescript" data-tally="0.782608695652174" style="background-color:hsl(93,51%,50%)">18/23</td>
 <td class="tally" data-browser="es6shim" data-tally="0">0/23</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/23</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/23</td>
@@ -15154,7 +15154,7 @@ try {
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -15309,7 +15309,7 @@ return (0,C.method)();
 <td class="yes obsolete" data-browser="es6tr">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="jsx">Yes</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es6shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
