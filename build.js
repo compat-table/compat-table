@@ -109,9 +109,9 @@ process.nextTick(function () {
       },
     },
     {
-      name: 'babel + polyfill',
+      name: 'babel + core-js',
       url: 'https://babeljs.io/',
-      target_file: 'es6/compilers/babel-polyfill.html',
+      target_file: 'es6/compilers/babel-core-js.html',
       polyfills: ['node_modules/babel-polyfill/browser.js'],
       compiler: function(code) {
         return babel.transform(code, {presets: ['es2015']}).code;
@@ -232,9 +232,9 @@ process.nextTick(function () {
       compiler: ts.transpile
     },
     {
-      name: 'TypeScript + polyfill',
+      name: 'TypeScript + core-js',
       url: 'https://www.typescriptlang.org/',
-      target_file: 'es6/compilers/typescript-polyfill.html',
+      target_file: 'es6/compilers/typescript-core-js.html',
       polyfills: ["node_modules/core-js/client/core.js"],
       compiler: ts.transpile
     },
@@ -265,9 +265,9 @@ process.nextTick(function () {
   });
   [
     {
-      name: 'babel + polyfill',
+      name: 'babel + core-js',
       url: 'https://babeljs.io/',
-      target_file: 'esnext/compilers/babel-polyfill.html',
+      target_file: 'esnext/compilers/babel-core-js.html',
       polyfills: ['node_modules/babel-polyfill/browser.js'],
       compiler: function(code) {
         return babel.transform(code, {presets: ['es2015', 'babel-preset-stage-0']}).code;
@@ -291,9 +291,9 @@ process.nextTick(function () {
       },
     },
     {
-      name: 'TypeScript + polyfill',
+      name: 'TypeScript + core-js',
       url: 'https://www.typescriptlang.org/',
-      target_file: 'esnext/compilers/typescript-polyfill.html',
+      target_file: 'esnext/compilers/typescript-core-js.html',
       polyfills: ["node_modules/core-js/client/core.js"],
       compiler: ts.transpile
     },
