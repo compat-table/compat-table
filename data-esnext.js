@@ -1504,7 +1504,7 @@ exports.tests = [
 {
   name: 'Observable',
   category: 'proposal (stage 1)',
-  significance: 'small',
+  significance: 'medium',
   link: 'https://github.com/zenparsing/es-observable',
   'subtests': [
     {
