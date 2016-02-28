@@ -20,7 +20,12 @@ var typescript = {
         val: fallthrough,
         note_id: "typescript-es6",
         note_html: "TypeScript's compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
-    }
+    },
+    asyncawait: {
+        val: true,
+        note_id: "typescript-async-await",
+        note_html: "TypeScript <code>async</code> / <code>await</code> requires native generators support."
+    },
 };
 var firefox = {
   nightly: {
@@ -50,7 +55,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   typescript: {
-    full: 'TypeScript 1.7 + core-js 2.1',
+    full: 'TypeScript 1.8 + core-js 2.1',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -542,6 +547,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.asyncawait,
         edge13:      flag,
       }
     },
@@ -555,6 +561,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  typescript.asyncawait,
         edge13:      flag,
       }
     },
@@ -566,6 +573,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        typescript:  false, // still buggy output
         edge13:      flag,
       }
     }
