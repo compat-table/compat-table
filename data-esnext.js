@@ -1798,6 +1798,44 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Additional meta properties',
+  category: 'strawman (stage 0)',
+  significance: 'medium',
+  link: 'https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md',
+  subtests: [
+    {
+      name: 'function.callee',
+      exec: function(){/*
+        var f = _ => function.callee === f;
+        return f();
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'function.count',
+      exec: function(){/*
+        return (_ => function.count)(1, 2, 3) === 3;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'function.arguments',
+      exec: function(){/*
+        var arr =  (_ => function.arguments)(1, 2, 3);
+        return Array.isArray(arr)
+          && arr.length === 3
+          && arr[0] === 1
+          && arr[1] === 2
+          && arr[2] === 3;
+      */},
+      res: {
+      }
+    }
+  ]
 }
 ];
 
