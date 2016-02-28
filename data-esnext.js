@@ -1611,6 +1611,193 @@ exports.tests = [
   */},
   res: {
   }
+},
+{
+  name: 'Shared memory and atomics',
+  category: 'draft (stage 2)',
+  significance: 'large',
+  link: 'https://github.com/tc39/ecmascript_sharedmem',
+  'subtests': [
+    {
+      name: 'SharedArrayBuffer',
+      exec: function () {/*
+        return typeof SharedArrayBuffer === 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'SharedArrayBuffer.isView',
+      exec: function () {/*
+        return typeof SharedArrayBuffer.isView === 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'SharedArrayBuffer[Symbol.species]',
+      exec: function () {/*
+        return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'SharedArrayBuffer.prototype.byteLength',
+      exec: function () {/*
+        return 'byteLength' in SharedArrayBuffer.prototype;
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'SharedArrayBuffer.prototype.slice',
+      exec: function () {/*
+        return typeof SharedArrayBuffer.prototype.slice === 'function';
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'SharedArrayBuffer.prototype[Symbol.toStringTag]',
+      exec: function () {/*
+        return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Atomics constants',
+      exec: function () {/*
+        return Atomics.OK === 0
+          && Atomics.NOTEQUAL === -1
+          && Atomics.TIMEDOUT === -2;
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.add',
+      exec: function () {/*
+        return typeof Atomics.add == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.and',
+      exec: function () {/*
+        return typeof Atomics.and == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.compareExchange',
+      exec: function () {/*
+        return typeof Atomics.compareExchange == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.exchange',
+      exec: function () {/*
+        return typeof Atomics.exchange == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.futexWait',
+      exec: function () {/*
+        return typeof Atomics.futexWait == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.futexWake',
+      exec: function () {/*
+        return typeof Atomics.futexWake == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.futexWakeOrRequeue',
+      exec: function () {/*
+        return typeof Atomics.futexWakeOrRequeue == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.isLockFree',
+      exec: function () {/*
+        return typeof Atomics.isLockFree == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.load',
+      exec: function () {/*
+        return typeof Atomics.load == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.or',
+      exec: function () {/*
+        return typeof Atomics.or == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.store',
+      exec: function () {/*
+        return typeof Atomics.store == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.sub',
+      exec: function () {/*
+        return typeof Atomics.sub == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    },
+    {
+      name: 'Atomics.xor',
+      exec: function () {/*
+        return typeof Atomics.xor == 'function';
+      */},
+      res: {
+        firefox46:    firefox.nightly,
+      }
+    }
+  ]
 }
 ];
 
