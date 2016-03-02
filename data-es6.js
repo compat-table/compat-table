@@ -4321,7 +4321,7 @@ exports.tests = [
   ],
 },
 {
-  name: 'template strings',
+  name: 'template literals',
   category: 'syntax',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
@@ -4370,7 +4370,7 @@ exports.tests = [
       },
     },
     {
-      name: 'tagged template strings',
+      name: 'tagged template literals',
       exec: function () {/*
         var called = false;
         function fn(parts, a, b) {

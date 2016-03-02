@@ -4388,7 +4388,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="supertest" significance="1"><td id="test-template_strings"><span><a class="anchor" href="#test-template_strings">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals">template strings</a></span></td>
+<tr class="supertest" significance="1"><td id="test-template_literals"><span><a class="anchor" href="#test-template_literals">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals">template literals</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally" data-browser="babel" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
@@ -4459,7 +4459,7 @@ return Number(&apos;0b1&apos;) === 1;
 <td class="tally" data-browser="ios8" data-tally="0">0/5</td>
 <td class="tally" data-browser="ios9" data-tally="1">5/5</td>
 </tr>
-<tr class="subtest" data-parent="template_strings" id="test-template_strings_basic_functionality"><td><span><a class="anchor" href="#test-template_strings_basic_functionality">&#xA7;</a>basic functionality</span><script data-source="
+<tr class="subtest" data-parent="template_literals" id="test-template_literals_basic_functionality"><td><span><a class="anchor" href="#test-template_literals_basic_functionality">&#xA7;</a>basic functionality</span><script data-source="
 var a = &quot;ba&quot;, b = &quot;QUX&quot;;
 return `foo bar
 ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
@@ -4535,7 +4535,7 @@ ${a + &quot;z&quot;} ${b.toLowerCase()}` === &quot;foo bar\nbaz qux&quot;;
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="subtest" data-parent="template_strings" id="test-template_strings_toString_conversion"><td><span><a class="anchor" href="#test-template_strings_toString_conversion">&#xA7;</a>toString conversion</span><script data-source="
+<tr class="subtest" data-parent="template_literals" id="test-template_literals_toString_conversion"><td><span><a class="anchor" href="#test-template_literals_toString_conversion">&#xA7;</a>toString conversion</span><script data-source="
 var a = {
   toString: function() { return &quot;foo&quot;; },
   valueOf: function() { return &quot;bar&quot;; },
@@ -4613,7 +4613,7 @@ return `${a}` === &quot;foo&quot;;
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="subtest" data-parent="template_strings" id="test-template_strings_tagged_template_strings"><td><span><a class="anchor" href="#test-template_strings_tagged_template_strings">&#xA7;</a>tagged template strings</span><script data-source="
+<tr class="subtest" data-parent="template_literals" id="test-template_literals_tagged_template_literals"><td><span><a class="anchor" href="#test-template_literals_tagged_template_literals">&#xA7;</a>tagged template literals</span><script data-source="
 var called = false;
 function fn(parts, a, b) {
   called = true;
@@ -4698,7 +4698,7 @@ return fn `foo${123}bar\n${456}` &amp;&amp; called;
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="subtest" data-parent="template_strings" id="test-template_strings_passed_array_is_frozen"><td><span><a class="anchor" href="#test-template_strings_passed_array_is_frozen">&#xA7;</a>passed array is frozen</span><script data-source="
+<tr class="subtest" data-parent="template_literals" id="test-template_literals_passed_array_is_frozen"><td><span><a class="anchor" href="#test-template_literals_passed_array_is_frozen">&#xA7;</a>passed array is frozen</span><script data-source="
 return (function(parts) {
   return Object.isFrozen(parts) &amp;&amp; Object.isFrozen(parts.raw);
 }) `foo${0}bar${0}baz`;
@@ -4774,7 +4774,7 @@ return (function(parts) {
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="subtest" data-parent="template_strings" id="test-template_strings_line_break_normalisation"><td><span><a class="anchor" href="#test-template_strings_line_break_normalisation">&#xA7;</a>line break normalisation</span><script data-source="
+<tr class="subtest" data-parent="template_literals" id="test-template_literals_line_break_normalisation"><td><span><a class="anchor" href="#test-template_literals_line_break_normalisation">&#xA7;</a>line break normalisation</span><script data-source="
 var cr   = eval(&quot;`x&quot; + String.fromCharCode(13)    + &quot;y`&quot;);
 var lf   = eval(&quot;`x&quot; + String.fromCharCode(10)    + &quot;y`&quot;);
 var crlf = eval(&quot;`x&quot; + String.fromCharCode(13,10) + &quot;y`&quot;);
