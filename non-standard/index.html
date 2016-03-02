@@ -114,7 +114,8 @@
 <th class="platform firefox17 desktop obsolete" data-browser="firefox17"><a href="#firefox17" class="browser-name"><abbr title="Firefox 17">FF 17</abbr></a></th>
 <th class="platform firefox20 desktop obsolete" data-browser="firefox20"><a href="#firefox20" class="browser-name"><abbr title="Firefox 20">FF 20</abbr></a></th>
 <th class="platform firefox28 desktop obsolete" data-browser="firefox28"><a href="#firefox28" class="browser-name"><abbr title="Firefox 28-29">FF 28</abbr></a></th>
-<th class="platform firefox30 desktop obsolete" data-browser="firefox30"><a href="#firefox30" class="browser-name"><abbr title="Firefox 30">FF 30</abbr></a></th>
+<th class="platform firefox30 desktop obsolete" data-browser="firefox30"><a href="#firefox30" class="browser-name"><abbr title="Firefox 30-36">FF 30</abbr></a></th>
+<th class="platform firefox37 desktop obsolete" data-browser="firefox37"><a href="#firefox37" class="browser-name"><abbr title="Firefox 37-43">FF 37</abbr></a></th>
 <th class="platform firefox44 desktop" data-browser="firefox44"><a href="#firefox44" class="browser-name"><abbr title="Firefox 44">FF 44</abbr></a></th>
 <th class="platform safari3 desktop obsolete" data-browser="safari3"><a href="#safari3" class="browser-name"><abbr title="Safari 3.2">SF 3.2</abbr></a></th>
 <th class="platform safari4 desktop obsolete" data-browser="safari4"><a href="#safari4" class="browser-name"><abbr title="Safari 4.0.5">SF 4</abbr></a></th>
@@ -159,6 +160,7 @@ return typeof uneval == 'function';
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -215,6 +217,7 @@ return 'toSource' in Object.prototype
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -235,7 +238,7 @@ return 'toSource' in Object.prototype
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-function_caller_property"><span><a class="anchor" href="#test-function_caller_property">&#xA7;</a>function &quot;caller&quot; property</span><script data-source="function () {
 return &apos;caller&apos; in (function(){});
@@ -257,6 +260,7 @@ return 'caller' in (function(){});
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -301,6 +305,7 @@ return (function (){}).arity === 0 &&
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -347,6 +352,7 @@ return f(1, 'boo');
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="unknown obsolete" data-browser="safari3">?</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -387,6 +393,7 @@ return typeof Function.prototype.isGenerator == 'function';
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -407,7 +414,7 @@ return typeof Function.prototype.isGenerator == 'function';
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-__count__"><span><a class="anchor" href="#test-__count__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype">__count__</a></span><script data-source="function () {
 return typeof ({}).__count__ === &apos;number&apos; &amp;&amp;
@@ -431,6 +438,7 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -471,6 +479,7 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -521,6 +530,7 @@ return executed;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -561,6 +571,7 @@ return '__defineGetter__' in {};
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -601,6 +612,7 @@ return '__defineSetter__' in {};
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -646,6 +658,7 @@ return typeof func === &quot;function&quot; &amp;&amp; func() === &quot;bar&quot
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -666,7 +679,7 @@ return typeof func === &quot;function&quot; &amp;&amp; func() === &quot;bar&quot
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes" data-browser="android41">Yes</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Array_generics"><span><a class="anchor" href="#test-Array_generics">&#xA7;</a>Array generics</span><script data-source="function () {
 return typeof Array.slice === &apos;function&apos; &amp;&amp; Array.slice(&apos;abc&apos;).length === 3;
@@ -688,6 +701,7 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -728,6 +742,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -748,7 +763,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Array_comprehensions_(JS_1.8_style)"><span><a class="anchor" href="#test-Array_comprehensions_(JS_1.8_style)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions">Array comprehensions (JS 1.8 style)</a></span><script data-source="
 var obj = { 2: true, &quot;foo&quot;: true, 4: true };
@@ -770,6 +785,7 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -808,6 +824,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -846,6 +863,7 @@ return (function(x)x)(1) === 1;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -884,6 +902,7 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -926,6 +945,7 @@ return str === &quot;foobarbaz&quot;;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -965,6 +985,7 @@ return arr[1] === arr;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="unknown obsolete" data-browser="safari3">?</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -985,7 +1006,7 @@ return arr[1] === arr;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Iterator"><span><a class="anchor" href="#test-Iterator">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span><script data-source="function () {
 try {
@@ -1031,6 +1052,7 @@ catch(e) {
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1103,6 +1125,7 @@ catch(e) {
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1180,6 +1203,7 @@ test(function () {
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1220,6 +1244,7 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1265,6 +1290,7 @@ return passed;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1285,7 +1311,7 @@ return passed;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-RegExp_x_flag"><span><a class="anchor" href="#test-RegExp_x_flag">&#xA7;</a>RegExp &quot;x&quot; flag</span><script data-source="function () {
 try {
@@ -1321,6 +1347,7 @@ try {
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1365,6 +1392,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -1411,6 +1439,7 @@ return true;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -1449,6 +1478,7 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="yes obsolete" data-browser="safari3">Yes</td>
 <td class="yes obsolete" data-browser="safari4">Yes</td>
@@ -1487,6 +1517,7 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;);
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="unknown obsolete" data-browser="safari3">?</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1507,7 +1538,7 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;);
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-String.prototype.trimLeft"><span><a class="anchor" href="#test-String.prototype.trimLeft">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft">String.prototype.trimLeft</a></span><script data-source="function () { return typeof String.prototype.trimLeft === &apos;function&apos; }">test(
 function () { return typeof String.prototype.trimLeft === 'function' }())</script></td>
@@ -1525,6 +1556,7 @@ function () { return typeof String.prototype.trimLeft === 'function' }())</scrip
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1561,6 +1593,7 @@ function () { return typeof String.prototype.trimRight === 'function' }())</scri
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1597,6 +1630,7 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1633,6 +1667,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1653,7 +1688,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Date.prototype.toLocaleFormat"><span><a class="anchor" href="#test-Date.prototype.toLocaleFormat">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a></span><script data-source="function () { return typeof Date.prototype.toLocaleFormat === &apos;function&apos; }">test(
 function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</script></td>
@@ -1671,6 +1706,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1691,7 +1727,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Object.prototype.watch"><span><a class="anchor" href="#test-Object.prototype.watch">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span><script data-source="function () { return typeof Object.prototype.watch == &apos;function&apos; }">test(
 function () { return typeof Object.prototype.watch == 'function' }())</script></td>
@@ -1709,6 +1745,7 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1745,6 +1782,7 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1781,6 +1819,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1801,7 +1840,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Object.observe"><span><a class="anchor" href="#test-Object.observe">&#xA7;</a><a href="https://arv.github.io/ecmascript-object-observe/">Object.observe</a></span><script data-source="
 var obj = {x: 1};
@@ -1828,6 +1867,7 @@ obj.x = 2;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1848,7 +1888,7 @@ obj.x = 2;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-error_stack"><span><a class="anchor" href="#test-error_stack">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error &quot;stack&quot;</a></span><script data-source="function () {
 try {
@@ -1878,6 +1918,7 @@ try {
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1918,6 +1959,7 @@ return 'lineNumber' in new Error;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1958,6 +2000,7 @@ return 'columnNumber' in new Error;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -1998,6 +2041,7 @@ return 'fileName' in new Error;
 <td class="yes obsolete" data-browser="firefox20">Yes</td>
 <td class="yes obsolete" data-browser="firefox28">Yes</td>
 <td class="yes obsolete" data-browser="firefox30">Yes</td>
+<td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox44">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -2038,6 +2082,7 @@ return 'description' in new Error;
 <td class="no obsolete" data-browser="firefox20">No</td>
 <td class="no obsolete" data-browser="firefox28">No</td>
 <td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
 <td class="no" data-browser="firefox44">No</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
@@ -2058,7 +2103,7 @@ return 'description' in new Error;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no" data-browser="android41">No</td>
 </tr>
-<tr><th colspan="36" class="separator"></th>
+<tr><th colspan="37" class="separator"></th>
 </tr>
 </tbody>
       </table>
