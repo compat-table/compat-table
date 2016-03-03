@@ -250,6 +250,13 @@ exports.browsers = {
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
+  chrome51: {
+    full: 'Chrome',
+    short: 'CH 51',
+    unstable: true,
+    note_id: 'experimental-flag',
+    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
+  },
   webkit: {
     full: 'WebKit r184046',
     short: 'WK',
@@ -434,6 +441,7 @@ exports.tests = [
     typescript: typescript.corejs,
     firefox45:  firefox.nightly,
     firefox46:  true,
+    chrome51:   flag,
   }
 },
 {
@@ -457,6 +465,7 @@ exports.tests = [
     typescript: typescript.corejs,
     firefox45:  firefox.nightly,
     firefox46:  true,
+    chrome51:   flag,
   }
 },
 {
@@ -599,6 +608,7 @@ exports.tests = [
     babel:       true,
     es7shim:     true,
     typescript:  typescript.corejs,
+    chrome51:    flag,
   }
 },
 {
@@ -1414,6 +1424,7 @@ exports.tests = [
     return passed;
   */},
   res: {
+    chrome51:    true,
   },
 },
 {
