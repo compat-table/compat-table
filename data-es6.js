@@ -355,12 +355,12 @@ exports.browsers = {
   chrome48: {
     full: 'Chrome, Opera',
     short: 'CH 48,<br>OP&nbsp;35',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome49: {
     full: 'Chrome, Opera',
     short: 'CH 49,<br>OP&nbsp;36',
-    unstable: true,
     note_id: 'experimental-flag',
   },
   chrome50: {
@@ -4849,7 +4849,6 @@ exports.tests = [
         edge12:      true,
         webkit:      true,
         xs6:         true,
-        chrome49:    true,
       },
     },
   ].concat([		//@@ jph
@@ -13848,7 +13847,6 @@ exports.tests = [
       */},
       res: {
         xs6:         false,
-        chrome49:    true,
       },
     },
     {
