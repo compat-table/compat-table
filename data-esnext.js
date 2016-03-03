@@ -233,13 +233,13 @@ exports.browsers = {
   chrome48: {
     full: 'Chrome',
     short: 'CH 48',
+    obsolete: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome49: {
     full: 'Chrome',
     short: 'CH 49',
-    unstable: true,
     note_id: 'experimental-flag',
     note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
