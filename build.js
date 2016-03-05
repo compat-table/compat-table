@@ -32,7 +32,7 @@ var child_process = require('child_process');
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
 var isOptional = function isOptional(category) {
-  return category === 'annex b' || category === 'pre-strawman' || category === 'strawman (stage 0)';
+  return (category || '').indexOf('annex b')>-1 || category === 'pre-strawman' || category === 'strawman (stage 0)';
 };
 
 // let prototypes declared below in this file be initialized
@@ -504,14 +504,15 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       // Add extra signifiers if the result is not applicable.
       if (isOptional(t.category) &&
         // Annex B is only optional for non-browsers.
-        (t.category !== "annex b" || (browsers[browserId].platformtype &&
+        (t.category.indexOf("annex b")===-1 || (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
           !browsers[browserId].needs_annex_b))) {
-        var msg = {
-          'annex b': "This feature is optional on non-browser platforms",
+        var msg = ({
           'pre-strawman': "This proposal has not yet been accepted by ECMA Technical Committee 39",
           'strawman (stage 0)': "This proposal has not yet reached ECMA TC39 stage 1",
-        }[t.category] + ", and doesn't contribute to the platform's support percentage.";
+        }[t.category]
+          || "This feature is optional on non-browser platforms")
+         + ", and doesn't contribute to the platform's support percentage.";
         cell.attr('title', msg);
         cell.addClass("not-applicable");
       }

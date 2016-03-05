@@ -4,6 +4,7 @@ exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
 
+var temp = {};
 var flag = "flagged";
 /* jshint unused:false */
 var very = "very";
@@ -1877,12 +1878,237 @@ exports.tests = [
   */},
   res : {
   }
+},
+{
+  name: 'Object.prototype getter/setter methods',
+  link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
+  category: '2017 annex b',
+  significance: 'tiny',
+  subtests: [{
+      name: '__defineGetter__',
+      exec: function () {/*
+        var obj = {};
+        function bar() { return "bar"; }
+        Object.prototype.__defineGetter__.call(obj, "foo", bar);
+        var prop = Object.getOwnPropertyDescriptor(obj, "foo");
+        return prop.get === bar && !prop.writable && prop.configurable
+          && prop.enumerable;
+      */},
+      res: (temp.basicDefineGetterResults = {
+        ie11:        true,
+        firefox31:   true,
+        chrome30:    true,
+        node:        true,
+        iojs:        true,
+        webkit:      true,
+        android40:   true,
+      })
+    },
+    {
+      name: '__defineGetter__, symbols',
+      exec: function () {/*
+        var obj = {};
+        var sym = Symbol();
+        function bar() { return "bar"; }
+        Object.prototype.__defineGetter__.call(obj, sym, bar);
+        var prop = Object.getOwnPropertyDescriptor(obj, sym);
+        return prop.get === bar && !prop.writable && prop.configurable
+          && prop.enumerable;
+      */},
+      res: (temp.defineGetterSymbolsResults = {
+        edge12:      true,
+        firefox36:   true,
+        chrome30:    flag,
+        chrome38:    true,
+        node:        true,
+        iojs:        true,
+        webkit:      true,
+        android40:   true,
+      })
+    },
+    {
+      name: '__defineSetter__',
+      exec: function () {/*
+        var obj = {};
+        function bar() {}
+        Object.prototype.__defineSetter__.call(obj, "foo", bar);
+        var prop = Object.getOwnPropertyDescriptor(obj, "foo");
+        return prop.set === bar && !prop.writable && prop.configurable
+          && prop.enumerable;
+      */},
+      res: temp.basicDefineGetterResults,
+    },
+    {
+      name: '__defineSetter__, symbols',
+      exec: function () {/*
+        var obj = {};
+        var sym = Symbol();
+        function bar(baz) {}
+        Object.prototype.__defineSetter__.call(obj, sym, bar);
+        var prop = Object.getOwnPropertyDescriptor(obj, sym);
+        return prop.set === bar && !prop.writable && prop.configurable
+          && prop.enumerable;
+      */},
+      res: temp.defineGetterSymbolsResults,
+    },
+    {
+      name: '__lookupGetter__',
+      exec: function () {/*
+        var obj = {
+          get foo() { return "bar"},
+          qux: 1
+        };
+        var foo = Object.prototype.__lookupGetter__.call(obj, "foo");
+        return foo() === "bar"
+          && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
+          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
+      */},
+      res: temp.basicDefineGetterResults,
+    },
+    {
+      name: '__lookupGetter__, prototype chain',
+      exec: function () {/*
+        var obj = {
+          get foo() { return "bar"},
+          qux: 1
+        };
+        var foo = Object.prototype.__lookupGetter__.call(Object.create(obj), "foo");
+        return foo() === "bar"
+          && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
+          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
+      */},
+      res: temp.basicDefineGetterResults,
+    },
+    {
+      name: '__lookupGetter__, symbols',
+      exec: function () {/*
+        var sym = Symbol();
+        var sym2 = Symbol();
+        var obj = {};
+        Object.defineProperty(obj, sym, { get: function() { return "bar"; }});
+        Object.defineProperty(obj, sym2, { value: 1 });
+        var foo = Object.prototype.__lookupGetter__.call(obj, sym);
+        return foo() === "bar"
+          && Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
+          && Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;
+      */},
+      res: temp.defineGetterSymbolsResults,
+    },
+    {
+      name: '__lookupSetter__',
+      exec: function () {/*
+        var obj = {
+          set foo(baz) { return "bar"; },
+          qux: 1
+        };
+        var foo = Object.prototype.__lookupSetter__.call(obj, "foo");
+        return foo() === "bar"
+          && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
+          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
+      */},
+      res: temp.basicDefineGetterResults,
+    },
+    {
+      name: '__lookupSetter__, prototype chain',
+      exec: function () {/*
+        var obj = {
+          set foo(baz) { return "bar"; },
+          qux: 1
+        };
+        var foo = Object.prototype.__lookupSetter__.call(Object.create(obj), "foo");
+        return foo() === "bar"
+          && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
+          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
+      */},
+      res: temp.basicDefineGetterResults,
+    },
+    {
+      name: '__lookupSetter__, symbols',
+      exec: function () {/*
+        var sym = Symbol();
+        var sym2 = Symbol();
+        var obj = {};
+        Object.defineProperty(obj, sym, { set: function(baz) { return "bar"; }});
+        Object.defineProperty(obj, sym2, { value: 1 });
+        var foo = Object.prototype.__lookupSetter__.call(obj, sym);
+        return foo() === "bar"
+          && Object.prototype.__lookupSetter__.call(obj, sym2) === undefined
+          && Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;
+      */},
+      res: temp.defineGetterSymbolsResults,
+    },
+  ]
+},
+{
+  name: 'Proxy internal calls, getter/setter methods',
+  link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
+  category: '2017 annex b',
+  significance: 'small',
+  subtests: [{
+      name: '__defineGetter__',
+      exec: function () {/*
+        // Object.prototype.__defineGetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]
+        var def = [];
+        var p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+        Object.prototype.__defineGetter__.call(p, "foo", Object);
+        return def + '' === "foo";
+      */},
+      res: {
+        firefox31:   true,
+      }
+    },
+    {
+      name: '__defineSetter__',
+      exec: function () {/*
+        // Object.prototype.__defineSetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]
+        var def = [];
+        var p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+        Object.prototype.__defineSetter__.call(p, "foo", Object);
+        return def + '' === "foo";
+      */},
+      res: {
+        firefox31:   true,
+      }
+    },
+    {
+      name: '__lookupGetter__',
+      exec: function () {/*
+        // Object.prototype.__lookupGetter__ -> [[GetOwnProperty]]
+        // Object.prototype.__lookupGetter__ -> [[GetPrototypeOf]]
+        var gopd = [];
+        var gpo = false;
+        var p = new Proxy({},
+          { getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); }},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        Object.prototype.__lookupGetter__.call(p, "foo");
+        return gopd + '' === "foo" && gpo;
+      */},
+      res: {
+      }
+    },
+    {
+      name: '__lookupSetter__',
+      exec: function () {/*
+        // Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]
+        // Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]
+        var gopd = [];
+        var gpo = false;
+        var p = new Proxy({},
+          { getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); }},
+          { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+        Object.prototype.__lookupSetter__.call(p, "foo");
+        return gopd + '' === "foo" && gpo;
+      */},
+      res: {
+      }
+    }
+  ]
 }
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
