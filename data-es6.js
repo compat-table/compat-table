@@ -958,6 +958,31 @@ exports.tests = [
       }
     },
     {
+      name: 'cannot be in statements',
+      exec: function() {/*
+        const bar = 1;
+        try {
+          Function("if(true) const baz = 1;")();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox36:   true,
+        chrome48:    flag,
+        chrome49:    true,
+        webkit:      true,
+        xs6:         true,
+      }
+    },
+    {
       name: 'redefining a const is an error',
       exec: function() {/*
         const baz = 1;
@@ -1032,6 +1057,34 @@ exports.tests = [
         const bar = 123;
         { const bar = 456; }
         return bar === 123;
+      */},
+      res: {
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        tr:          true,
+        ejs:         true,
+        closure:     true,
+        chrome19dev: flag,
+        chrome41:    true,
+        ie11:        true,
+        firefox36:   true,
+        webkit:      true,
+        node012:     flag,
+        node4:       true,
+        xs6:         true,
+      }
+    },
+    {
+      name: 'cannot be in statements (strict mode)',
+      exec: function() {/*
+        'use strict';
+        const bar = 1;
+        try {
+          Function("if(true) const baz = 1;")();
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         babel:       true,
@@ -1139,6 +1192,32 @@ exports.tests = [
         let bar = 123;
         { let bar = 456; }
         return bar === 123;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox44:   true,
+        webkit:      true,
+        chrome48:    flag,
+        chrome49:    true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'cannot be in statements',
+      exec: function(){/*
+        let bar = 1;
+        try {
+          Function("if(true) let baz = 1;")();
+        } catch(e) {
+          return true;
+        }
       */},
       res: {
         tr:          true,
@@ -1272,6 +1351,35 @@ exports.tests = [
         chrome19dev: flag,
         chrome41:    true,
         webkit:      true,
+        node012:     flag,
+        node4:       true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'cannot be in statements (strict mode)',
+      exec: function(){/*
+        'use strict';
+        let bar = 1;
+        try {
+          Function("if(true) let baz = 1;")();
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        ejs:         true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox44:   true,
+        webkit:      true,
+        chrome19dev: flag,
+        chrome41:    true,
         node012:     flag,
         node4:       true,
         xs6:         true,
