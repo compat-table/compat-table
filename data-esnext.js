@@ -1887,7 +1887,7 @@ exports.tests = [
 {
   name: 'Object.prototype getter/setter methods',
   link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
-  category: '2017 annex b',
+  category: '2016 annex b',
   significance: 'tiny',
   subtests: [{
       name: '__defineGetter__',
@@ -2047,7 +2047,7 @@ exports.tests = [
 {
   name: 'Proxy internal calls, getter/setter methods',
   link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
-  category: '2017 annex b',
+  category: '2016 annex b',
   significance: 'small',
   subtests: [{
       name: '__defineGetter__',
@@ -2113,7 +2113,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2016 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
