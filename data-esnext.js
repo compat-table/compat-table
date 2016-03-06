@@ -106,6 +106,11 @@ exports.browsers = {
     short: 'FF 35',
     obsolete: true,
   },
+  firefox36: {
+    full: 'Firefox',
+    short: 'FF 36',
+    obsolete: true,
+  },
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
