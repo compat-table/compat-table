@@ -12971,6 +12971,25 @@ exports.tests = [
   }()),
 },
 {
+  name: 'Date.prototype[Symbol.toPrimitive]',
+  category: 'built-in extensions',
+  significance: 'tiny',
+  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-date.prototype-@@toprimitive',
+  exec: function () {/*
+    var tp = Date.prototype[Symbol.toPrimitive];
+    return tp.call(Object(2), "number") === 2
+      && tp.call(Object(2), "string") === "2"
+      && tp.call(Object(2), "default") === "2";
+  */},
+  res: {
+    ejs:         true,
+    typescript:  typescript.fallthrough,
+    firefox44:   true,
+    chrome47:    true,
+    xs6:         true,
+  }
+},
+{
   name: 'Array is subclassable',
   category: 'subclassing',
   significance: 'small',
