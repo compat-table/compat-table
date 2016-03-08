@@ -2170,6 +2170,21 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'WeakRefs',
+  link: 'https://github.com/tc39/proposal-weakrefs',
+  category: 'strawman (stage 0)',
+  significance: 'large',
+  exec: function(){/*
+    var O = {};
+    var weakref = makeWeakRef(O);
+    var works = weakref.get() === O;
+    weakref.clear();
+    return works && weakref.get() === undefined;
+  */},
+  res : {
+  }
 }
 ];
 
