@@ -1932,6 +1932,21 @@ exports.tests = [
       })
     },
     {
+      name: '__defineGetter__, ToObject(this)',
+      exec: function () {/*
+        var key = '__accessors_test__';
+        __defineGetter__.call(1, key, function(){});
+        try {
+          __defineGetter__.call(null, key, function(){});
+        } catch(e){
+          return true;
+        }
+      */},
+      res: {
+        webkit:      true,
+      },
+    },
+    {
       name: '__defineSetter__',
       exec: function () {/*
         var obj = {};
@@ -1955,6 +1970,21 @@ exports.tests = [
           && prop.enumerable;
       */},
       res: temp.defineGetterSymbolsResults,
+    },
+    {
+      name: '__defineSetter__, ToObject(this)',
+      exec: function () {/*
+        var key = '__accessors_test__';
+        __defineSetter__.call(1, key, function(){});
+        try {
+          __defineSetter__.call(null, key, function(){});
+        } catch(e){
+          return true;
+        }
+      */},
+      res: {
+        webkit:      true,
+      },
     },
     {
       name: '__lookupGetter__',
@@ -2000,6 +2030,22 @@ exports.tests = [
       res: temp.defineGetterSymbolsResults,
     },
     {
+      name: '__lookupGetter__, ToObject(this)',
+      exec: function () {/*
+        __lookupGetter__.call(1, 'key');
+        try {
+          __lookupGetter__.call(null, 'key');
+        } catch(e){
+          return true;
+        }
+      */},
+      res: {
+        ie11:        true,
+        firefox31:   true,
+        webkit:      true,
+      },
+    },
+    {
       name: '__lookupSetter__',
       exec: function () {/*
         var obj = {
@@ -2042,6 +2088,22 @@ exports.tests = [
       */},
       res: temp.defineGetterSymbolsResults,
     },
+    {
+      name: '__lookupSetter__, ToObject(this)',
+      exec: function () {/*
+        __lookupSetter__.call(1, 'key');
+        try {
+          __lookupSetter__.call(null, 'key');
+        } catch(e){
+          return true;
+        }
+      */},
+      res: {
+        ie11:        true,
+        firefox31:   true,
+        webkit:      true,
+      },
+    }
   ]
 },
 {
