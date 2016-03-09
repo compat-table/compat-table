@@ -226,11 +226,11 @@ exports.browsers = {
   firefox44: {
     full: 'Firefox',
     short: 'FF 44',
+    obsolete: true,
   },
   firefox45: {
     full: 'Firefox',
     short: 'FF 45',
-    unstable: true,
   },
   chrome: {
     full: 'Chrome',
@@ -11870,6 +11870,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         edge13:      null,
+        firefox45:   true,
         chrome50:    flag,
         chrome51:    true,
         xs6:         null,
