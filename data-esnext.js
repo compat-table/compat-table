@@ -2256,6 +2256,24 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'RegExp named capture groups',
+  link: 'https://github.com/goyakin/es-regexp-named-groups',
+  category: 'strawman (stage 0)',
+  significance: 'small',
+  exec: function(){/*
+    var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
+    return result.groups.year === '2016'
+      && result.groups.month === '03'
+      && result.groups.day === '11'
+      && result.groups[0] === '2016-03-11'
+      && result.groups[1] === '2016'
+      && result.groups[2] === '03'
+      && result.groups[3] === '11';
+  */},
+  res : {
+  }
 }
 ];
 
