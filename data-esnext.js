@@ -2216,7 +2216,7 @@ exports.tests = [
   link: 'https://github.com/tc39/proposal-async-iteration',
   subtests: [
     {
-      name: 'Async generators',
+      name: 'async generators',
       exec: function(){/*
         async function*generator(){
           yield 42;
@@ -2248,7 +2248,7 @@ exports.tests = [
 
         (async function(){
           var result = '';
-          for async(var value of asyncIterable)result += value;
+          for await(var value of asyncIterable)result += value;
           if(result === 'ab')asyncTestPassed();
         })();
       */},

@@ -7617,7 +7617,7 @@ return a === &apos;1a2b&apos;
 <td class="tally" data-browser="android50" data-tally="0">0/2</td>
 <td class="tally" data-browser="android51" data-tally="0">0/2</td>
 </tr>
-<tr class="subtest" data-parent="Async_iteration" id="test-Async_iteration_Async_generators"><td><span><a class="anchor" href="#test-Async_iteration_Async_generators">&#xA7;</a>Async generators</span><script data-source="
+<tr class="subtest" data-parent="Async_iteration" id="test-Async_iteration_async_generators"><td><span><a class="anchor" href="#test-Async_iteration_async_generators">&#xA7;</a>async generators</span><script data-source="
 async function*generator(){
   yield 42;
 }
@@ -7691,10 +7691,10 @@ asyncIterable[Symbol.asyncIterator] = function(){
 
 (async function(){
   var result = &apos;&apos;;
-  for async(var value of asyncIterable)result += value;
+  for await(var value of asyncIterable)result += value;
   if(result === &apos;ab&apos;)asyncTestPassed();
 })();
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("143");try{return Function("asyncTestPassed","\nvar asyncIterable = {};\nasyncIterable[Symbol.asyncIterator] = function(){\n  var i = 0;\n  return {\n    next: function(){\n      switch(i++){\n        case 1: return Promise.resolve({done: false, value: 'a'});\n        case 2: return Promise.resolve({done: false, value: 'b'});\n      } return Promise.resolve({done: true});\n    }\n  };\n};\n\n(async function(){\n  var result = '';\n  for async(var value of asyncIterable)result += value;\n  if(result === 'ab')asyncTestPassed();\n})();\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("143");return Function("asyncTestPassed","'use strict';"+"\nvar asyncIterable = {};\nasyncIterable[Symbol.asyncIterator] = function(){\n  var i = 0;\n  return {\n    next: function(){\n      switch(i++){\n        case 1: return Promise.resolve({done: false, value: 'a'});\n        case 2: return Promise.resolve({done: false, value: 'b'});\n      } return Promise.resolve({done: true});\n    }\n  };\n};\n\n(async function(){\n  var result = '';\n  for async(var value of asyncIterable)result += value;\n  if(result === 'ab')asyncTestPassed();\n})();\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("143");try{return Function("asyncTestPassed","\nvar asyncIterable = {};\nasyncIterable[Symbol.asyncIterator] = function(){\n  var i = 0;\n  return {\n    next: function(){\n      switch(i++){\n        case 1: return Promise.resolve({done: false, value: 'a'});\n        case 2: return Promise.resolve({done: false, value: 'b'});\n      } return Promise.resolve({done: true});\n    }\n  };\n};\n\n(async function(){\n  var result = '';\n  for await(var value of asyncIterable)result += value;\n  if(result === 'ab')asyncTestPassed();\n})();\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("143");return Function("asyncTestPassed","'use strict';"+"\nvar asyncIterable = {};\nasyncIterable[Symbol.asyncIterator] = function(){\n  var i = 0;\n  return {\n    next: function(){\n      switch(i++){\n        case 1: return Promise.resolve({done: false, value: 'a'});\n        case 2: return Promise.resolve({done: false, value: 'b'});\n      } return Promise.resolve({done: true});\n    }\n  };\n};\n\n(async function(){\n  var result = '';\n  for await(var value of asyncIterable)result += value;\n  if(result === 'ab')asyncTestPassed();\n})();\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
