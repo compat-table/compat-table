@@ -3739,6 +3739,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        firefox45:   true,
         chrome45:    true,
         node012:     flag,
         node4:       true,
