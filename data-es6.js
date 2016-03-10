@@ -2330,6 +2330,39 @@ exports.tests = [
       },
     },
     {
+      name: 'optional semicolons',
+      exec: function () {/*
+        class C {
+          ;
+          method() { return 2; };
+          method2() { return 2; }
+          method3() { return 2; };
+        }
+        return typeof C.prototype.method === "function"
+          && typeof C.prototype.method2 === "function"
+          && typeof C.prototype.method3 === "function";
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        jsx:         true,
+        ejs:         true,
+        closure:     true,
+        edge12:      flag,
+        edge13:      true,
+        firefox45:   true,
+        safari9:     true,
+        webkit:      true,
+        chrome41:    strict,
+        chrome49:    true,
+        node4:       strict,
+        xs6:         true,
+        jxa:         true,
+      },
+    },
+    {
       name: 'static methods',
       exec: function () {/*
         class C {
