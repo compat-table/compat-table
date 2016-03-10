@@ -1867,6 +1867,29 @@ exports.tests = [
   ]
 },
 {
+  name: 'Method parameter decorators',
+  link: 'https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0',
+  category: 'strawman (stage 0)',
+  significance: 'small',
+  exec: function(){/*
+    var target, key, index;
+    function decorator(_target, _key, _index){
+      target = _target;
+      key    = _key;
+      index  = _index;
+    }
+    class C {
+      method(@decorator foo){ }
+    }
+    return target === C.prototype
+      && key === 'method'
+      && index === 0;
+  */},
+  res : {
+    typescript:  true,
+  }
+},
+{
   name: 'Function expression decorators',
   link: 'https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#',
   category: 'strawman (stage 0)',
