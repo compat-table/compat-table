@@ -3719,6 +3719,36 @@ exports.tests = [
       },
     },
     {
+      name: '%GeneratorPrototype% prototype chain',
+      exec: function () {/*
+        function * generatorFn(){}
+        var g = generatorFn();
+        var ownProto = Object.getPrototypeOf(g);
+        var passed = ownProto === generatorFn.prototype;
+
+        var sharedProto = Object.getPrototypeOf(ownProto);
+        var iterProto = Object.getPrototypeOf(sharedProto);
+
+        passed &= iterProto.hasOwnProperty(Symbol.iterator) &&
+          !sharedProto     .hasOwnProperty(Symbol.iterator) &&
+          !ownProto        .hasOwnProperty(Symbol.iterator) &&
+          g[Symbol.iterator]() === g;
+
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        chrome45:    true,
+        node012:     flag,
+        node4:       true,
+        edge12:      flag,
+        edge13:      true,
+        xs6:         true,
+        webkit:      true,
+      },
+    },
+    {
       name: '%GeneratorPrototype%.constructor',
       exec: function () {/*
         function * g (){}
@@ -3731,6 +3761,8 @@ exports.tests = [
         passed    &= item.value === 7 && item.done === false;
         item = iterator.next();
         passed    &= item.value === undefined && item.done === true;
+
+        passed &= g.constructor === (function*(){}).constructor;
         return passed;
       */},
       res: {
