@@ -2208,6 +2208,54 @@ exports.tests = [
   */},
   res : {
   }
+},
+{
+  name: 'Async iteration',
+  category: 'proposal (stage 1)',
+  significance: 'medium',
+  link: 'https://github.com/tc39/proposal-async-iteration',
+  subtests: [
+    {
+      name: 'Async generators',
+      exec: function(){/*
+        async function*generator(){
+          yield 42;
+        }
+
+        var iterator = generator();
+        iterator.next().then(function(step){
+          if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();
+        });
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'for-await-of loops',
+      exec: function(){/*
+        var asyncIterable = {};
+        asyncIterable[Symbol.asyncIterator] = function(){
+          var i = 0;
+          return {
+            next: function(){
+              switch(i++){
+                case 1: return Promise.resolve({done: false, value: 'a'});
+                case 2: return Promise.resolve({done: false, value: 'b'});
+              } return Promise.resolve({done: true});
+            }
+          };
+        };
+
+        (async function(){
+          var result = '';
+          for async(var value of asyncIterable)result += value;
+          if(result === 'ab')asyncTestPassed();
+        })();
+      */},
+      res: {
+      }
+    }
+  ]
 }
 ];
 
