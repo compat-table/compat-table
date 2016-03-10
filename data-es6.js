@@ -6814,6 +6814,22 @@ exports.tests = [
       },
     },
     {
+      name: 'no "prototype" property',
+      exec: function () {/*
+        new Proxy({}, {});
+        return !Proxy.hasOwnProperty('prototype');
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox18:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
       name: '"get" handler',
       exec: function () {/*
         var proxied = { };
@@ -11580,6 +11596,31 @@ exports.tests = [
         ejs:         true,
         babel:       true,
         closure:     true,
+        edge12:      true,
+        firefox36:   true,
+        safari9:     true,
+        webkit:      true,
+        chrome30:    flag, // Actually Chrome 29
+        chrome38:    true,
+        node012:     true,
+        xs6:         true,
+        jxa:         true,
+      },
+    },
+    {
+      name: 'symbols inherit from Symbol.prototype',
+      exec: function(){/*
+        var symbol = Symbol();
+        var passed = symbol.foo === undefined;
+        Symbol.prototype.foo = 2;
+        passed &= symbol.foo === 2;
+        delete Symbol.prototype.foo;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        babel:       true,
+        typescript:  typescript.corejs,
         edge12:      true,
         firefox36:   true,
         safari9:     true,
