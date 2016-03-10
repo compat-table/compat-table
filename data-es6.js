@@ -4347,6 +4347,32 @@ exports.tests = [
         webkit:      true,
       },
     },
+    {
+      name: 'shorthand generators can\'t be constructors',
+      exec: function() {/*
+        class C {
+          * generator() {
+            yield 5; yield 6;
+          }
+        };
+        try {
+          Function("class D { * constructor() { return {}; } }");
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        babel:       true,
+        chrome41:    strict,
+        chrome49:    true,
+        node4:       strict,
+        edge12:      flag,
+        edge13:      true,
+        firefox45:   true,
+        xs6:         true,
+        webkit:      true,
+      },
+    },
   ],
 },
 {
