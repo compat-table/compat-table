@@ -25,7 +25,13 @@ exports.browsers = {
   edge: {
     full: 'Microsoft Edge',
     family: 'Chakra',
-    short: 'Edge',
+    short: 'Edge 12-13',
+    unstable: false
+  },
+  edge14: {
+    full: 'Microsoft Edge',
+    family: 'Chakra',
+    short: 'Edge 14',
     unstable: true
   },
   firefox16: {
@@ -662,6 +668,7 @@ exports.tests = [
         ie10: false,
         ie11: false,
         edge: false,
+        edge14: true,		
         firefox29: false,
         chrome24: null,
         chrome29: true,
