@@ -2291,6 +2291,17 @@ exports.tests = [
   */},
   res : {
   }
+},
+{
+  name: 'RegExp lookbehind',
+  link: 'https://github.com/goyakin/es-regexp-lookbehind',
+  category: 'strawman (stage 0)',
+  significance: 'small',
+  exec: function(){/*
+    return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
+  */},
+  res : {
+  }
 }
 ];
 
