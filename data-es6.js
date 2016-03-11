@@ -1328,7 +1328,7 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         webkit:      true,
-		edge14:      true,
+        edge14:      true,
         chrome48:    flag,
         chrome49:    true,
         xs6:         true,
@@ -1488,7 +1488,7 @@ exports.tests = [
         chrome37:    flag,
         chrome41:    true,
         webkit:      true,
-		edge14:      true,
+        edge14:      true,
         node012:     flag,
         node4:       true,
         xs6:         true,
@@ -5109,7 +5109,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.clampedArrayResults, {
         edge12:   false,
-		edge14:   true,
+        edge14:   true,
         safari6:  false,
         webkit:   true,
         firefox11:false,
@@ -7352,7 +7352,7 @@ exports.tests = [
         ejs:         { val: false, note_id: 'ejs-no-with' },
         chrome49:    true,
         webkit:      true,
-		edge14:      true,
+        edge14:      true,
       },
     },
     {
@@ -7565,7 +7565,6 @@ exports.tests = [
         xs6:         true,
         chrome49:    true,
         edge14:      flag,
-
       },
     },
     {

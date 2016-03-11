@@ -502,7 +502,7 @@ exports.tests = [
         typescript:      typescript.corejs,
         webkit:          true,
         chrome47:        true,
-    	edge14:          flag,	
+        edge14:          flag,	
         firefox42:       false,
         firefox43:       true,
       }
@@ -520,7 +520,7 @@ exports.tests = [
         babel:           true,
         typescript:      typescript.corejs,
         chrome47:        true,
-    	edge14:          flag,	
+        edge14:          flag,	
         firefox42:       false,
         firefox43:       true,
       }
@@ -541,7 +541,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
-    	edge14:      true,
+        edge14:      true,
       }
     },
     {
@@ -552,7 +552,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
-		edge14:      true,
+        edge14:      true,
       }
     },
   ],
@@ -2159,7 +2159,7 @@ exports.tests = [
       */},
       res: {
         firefox31:   true,
-   		edge14:      true,
+        edge14:      true,
       }
     },
     {
@@ -2173,7 +2173,7 @@ exports.tests = [
       */},
       res: {
         firefox31:   true,
-    	edge14:      true,
+        edge14:      true,
       }
     },
     {
