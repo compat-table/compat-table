@@ -86,6 +86,13 @@ exports.browsers = {
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
+  edge14: {
+    full: 'Microsoft Edge',
+    family: 'Chakra',
+    short: 'Edge 14',
+    note_id: 'edge-experimental-flag',
+    note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
+  },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
@@ -495,6 +502,7 @@ exports.tests = [
         typescript:      typescript.corejs,
         webkit:          true,
         chrome47:        true,
+        edge14:          flag,	
         firefox42:       false,
         firefox43:       true,
       }
@@ -512,6 +520,7 @@ exports.tests = [
         babel:           true,
         typescript:      typescript.corejs,
         chrome47:        true,
+        edge14:          flag,	
         firefox42:       false,
         firefox43:       true,
       }
@@ -532,6 +541,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        edge14:      true,
       }
     },
     {
@@ -542,6 +552,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  true,
+        edge14:      true,
       }
     },
   ],
@@ -1393,6 +1404,7 @@ exports.tests = [
   res: {
     babel:       true,
     edge13:      flag,
+    edge14:      true,	
     typescript:  true,
     chrome49:    true,
   }
@@ -1410,6 +1422,7 @@ exports.tests = [
   res: {
     babel:       true,
     edge13:      flag,
+    edge14:      true,	
     typescript:  true,
     chrome49:    true,
   }
@@ -1453,6 +1466,7 @@ exports.tests = [
   res: {
     firefox43:       true,
     chrome49:        true,
+    edge14:          flag,
   },
 },
 {
@@ -2145,6 +2159,7 @@ exports.tests = [
       */},
       res: {
         firefox31:   true,
+        edge14:      true,
       }
     },
     {
@@ -2158,6 +2173,7 @@ exports.tests = [
       */},
       res: {
         firefox31:   true,
+        edge14:      true,
       }
     },
     {
