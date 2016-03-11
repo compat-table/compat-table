@@ -2302,6 +2302,34 @@ exports.tests = [
   */},
   res : {
   }
+},
+{
+  name: 'Reflect.isCallable / Reflect.isConstructor',
+  category: 'strawman (stage 0)',
+  significance: 'small',
+  link: 'https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md',
+  subtests: [
+    {
+      name: 'Reflect.isCallable',
+      exec: function(){/*
+        return Reflect.isCallable(function(){})
+          && Reflect.isCallable(_ => _)
+          && !Reflect.isCallable(class {});
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Reflect.isConstructor',
+      exec: function(){/*
+        return Reflect.isConstructor(function(){})
+          && !Reflect.isConstructor(_ => _)
+          && Reflect.isConstructor(class {});
+      */},
+      res: {
+      }
+    }
+  ]
 }
 ];
 
