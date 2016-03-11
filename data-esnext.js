@@ -2330,6 +2330,104 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Metadata reflection API',
+  category: 'pre-strawman',
+  significance: 'medium',
+  link: 'https://github.com/jonathandturner/decorators/blob/master/specs/metadata.md',
+  subtests: [
+    {
+      name: 'Reflect.defineMetadata',
+      exec: function(){/*
+        return typeof Reflect.defineMetadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.hasMetadata',
+      exec: function(){/*
+        return typeof Reflect.hasMetadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.hasOwnMetadata',
+      exec: function(){/*
+        return typeof Reflect.hasOwnMetadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.getMetadata',
+      exec: function(){/*
+        return typeof Reflect.getMetadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.getOwnMetadata',
+      exec: function(){/*
+        return typeof Reflect.getOwnMetadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.getMetadataKeys',
+      exec: function(){/*
+        return typeof Reflect.getMetadataKeys == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.getOwnMetadataKeys',
+      exec: function(){/*
+        return typeof Reflect.getOwnMetadataKeys == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.deleteMetadata',
+      exec: function(){/*
+        return typeof Reflect.deleteMetadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Reflect.metadata',
+      exec: function(){/*
+        return typeof Reflect.metadata == 'function';
+      */},
+      res: {
+        babel:      true,
+        typescript: typescript.corejs,
+      }
+    }
+  ]
 }
 ];
 
