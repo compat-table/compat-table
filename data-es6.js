@@ -5864,6 +5864,20 @@ exports.tests = [
       },
     },
     {
+      name: 'Map.prototype isn\'t an instance',
+      exec: function () {/*
+        new Map();
+        var obj = {};
+        try {
+          Map.prototype.has(obj);
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: temp.basicMap,
+    },
+    {
       name: 'Map iterator prototype chain',
       exec: function () {/*
         // Iterator instance
@@ -6293,6 +6307,20 @@ exports.tests = [
       },
     },
     {
+      name: 'Set.prototype isn\'t an instance',
+      exec: function () {/*
+        new Set();
+        var obj = {};
+        try {
+          Set.prototype.has(obj);
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: temp.basicSet,
+    },
+    {
       name: 'Set iterator prototype chain',
       exec: function () {/*
         // Iterator instance
@@ -6574,6 +6602,23 @@ exports.tests = [
         jxa:         true,
       },
     },
+    {
+      name: 'WeakMap.prototype isn\'t an instance',
+      exec: function () {/*
+        new WeakMap();
+        var obj = {};
+        try {
+          WeakMap.prototype.has(obj);
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: Object.assign({}, temp.basicWeakMap, {
+          firefox11: false,
+          firefox40: true,
+      }),
+    },
   ],
 },
 {
@@ -6783,6 +6828,20 @@ exports.tests = [
         xs6:         true,
         jxa:         true,
       },
+    },
+    {
+      name: 'WeakSet.prototype isn\'t an instance',
+      exec: function () {/*
+        new WeakSet();
+        var obj = {};
+        try {
+          WeakSet.prototype.has(obj);
+        }
+        catch(e) {
+          return true;
+        }
+      */},
+      res: temp.basicWeakSet,
     },
   ],
 },
@@ -10143,6 +10202,31 @@ exports.tests = [
         chrome33:    true,
         node4:       true,
         webkit:      true,
+        xs6:         true,
+      },
+    },
+    {
+      name: 'Promise.prototype isn\'t an instance',
+      exec: function () {/*
+        new Promise(function(){});
+        try {
+          Promise.prototype.then(function(){});
+        } catch (e) {
+          return true;
+        }
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  typescript.corejs,
+        ejs:         true,
+        es6shim:     true,
+        edge12:      true,
+        firefox29:   true,
+        chrome33:    true,
+        safari71_8:  true,
+        webkit:      true,
+        node012:     true,
         xs6:         true,
       },
     },
