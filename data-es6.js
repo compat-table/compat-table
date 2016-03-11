@@ -102,7 +102,7 @@ exports.browsers = {
     full: 'Microsoft Edge',
     family: 'Chakra',
     short: 'Edge 14',
-	unstable: true,
+    unstable: true,
     note_id: 'edge-experimental-flag',
     note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags',
   },
@@ -12169,7 +12169,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
-        edge13:      null,
+        edge13:      false,
         firefox45:   true,
         chrome50:    flag,
         chrome51:    true,
