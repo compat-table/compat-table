@@ -66,6 +66,12 @@ exports.browsers = {
     short: 'es7-shim',
     platformtype: 'compiler',
   },
+  ie10: {
+    full: 'Internet Explorer',
+    family: 'Chakra',
+    short: 'IE 10-',
+    obsolete: false,
+  },
   ie11: {
     full: 'Internet Explorer',
     family: 'Chakra',
