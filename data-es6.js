@@ -6624,6 +6624,28 @@ exports.tests = [
       },
     },
     {
+      name: '.has, .get and .delete methods accept primitives',
+      exec: function () {/*
+        var m = new WeakMap;
+        return m.has(1) === false
+          && m.get(1) === undefined
+          && m.delete(1) === false;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        ie11:        true,
+        firefox11:   true,
+        chrome41:    true,
+        safari71_8:  true,
+        webkit:      true,
+        iojs:        true,
+        ejs:         null,
+        xs6:         null,
+        jxa:         null,
+      },
+    },
+    {
       name: 'WeakMap.prototype isn\'t an instance',
       exec: function () {/*
         new WeakMap();
@@ -6848,6 +6870,27 @@ exports.tests = [
         node4:       true,
         xs6:         true,
         jxa:         true,
+      },
+    },
+    {
+      name: '.has and .delete methods accept primitives',
+      exec: function () {/*
+        var s = new WeakSet;
+        return s.has(1) === false
+          && s.delete(1) === false;
+      */},
+      res: {
+        babel:       true,
+        typescript:  typescript.corejs,
+        edge12:      true,
+        firefox34:   true,
+        chrome41:    true,
+        safari9:     true,
+        webkit:      true,
+        iojs:        true,
+        ejs:         null,
+        xs6:         null,
+        jxa:         null,
       },
     },
     {
