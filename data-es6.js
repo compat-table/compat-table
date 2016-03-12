@@ -250,6 +250,11 @@ exports.browsers = {
     short: 'FF 47',
     unstable: true,
   },
+  firefox48: {
+    full: 'Firefox',
+    short: 'FF 48',
+    unstable: true,
+  },
   chrome: {
     full: 'Chrome',
     short: 'CH &lt;19',
