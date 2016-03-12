@@ -124,6 +124,7 @@
 <th class="platform firefox44 desktop obsolete" data-browser="firefox44"><a href="#firefox44" class="browser-name"><abbr title="Firefox">FF 44</abbr></a></th>
 <th class="platform firefox45 desktop" data-browser="firefox45"><a href="#firefox45" class="browser-name"><abbr title="Firefox">FF 45</abbr></a></th>
 <th class="platform firefox46 desktop unstable" data-browser="firefox46"><a href="#firefox46" class="browser-name"><abbr title="Firefox">FF 46</abbr></a></th>
+<th class="platform firefox47 desktop unstable" data-browser="firefox47"><a href="#firefox47" class="browser-name"><abbr title="Firefox">FF 47</abbr></a></th>
 <th class="platform chrome30 desktop obsolete" data-browser="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome">CH 30</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome33 desktop obsolete" data-browser="chrome33"><a href="#chrome33" class="browser-name"><abbr title="Chrome">CH 33</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
 <th class="platform chrome34 desktop obsolete" data-browser="chrome34"><a href="#chrome34" class="browser-name"><abbr title="Chrome">CH 34</abbr><a href="#experimental-flag-note"><sup>[1]</sup></a></a></th>
@@ -155,7 +156,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="49">2016 features</td>
+      <tr class="category"><td colspan="50">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -179,6 +180,7 @@
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/3</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/3</td>
@@ -231,6 +233,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -283,6 +286,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -340,6 +344,7 @@ try {
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -389,6 +394,7 @@ try {
 <td class="tally obsolete" data-browser="firefox44" data-tally="1">2/2</td>
 <td class="tally" data-browser="firefox45" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/2</td>
@@ -445,6 +451,7 @@ return [1, 2, 3].includes(1)
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -501,6 +508,7 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -528,7 +536,7 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="49">2016 misc</td>
+<tr class="category"><td colspan="50">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
 function * generator() {
@@ -562,6 +570,7 @@ try {
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -627,6 +636,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -684,6 +694,7 @@ try {
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -737,6 +748,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -791,6 +803,7 @@ return function([x, ...[y, ...z]]) {
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -850,6 +863,7 @@ return passed;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -911,6 +925,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -938,7 +953,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="49">2017 annex b</td>
+<tr class="category"><td colspan="50">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/14</td>
@@ -962,6 +977,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally obsolete" data-browser="firefox44" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">12/14</td>
 <td class="tally" data-browser="firefox45" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">12/14</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">12/14</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">12/14</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)" data-flagged-tally="0.7142857142857143">6/14</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)" data-flagged-tally="0.7142857142857143">6/14</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)" data-flagged-tally="0.7142857142857143">6/14</td>
@@ -1019,6 +1035,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -1077,6 +1094,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome33">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome34">Flag</td>
@@ -1135,6 +1153,7 @@ try {
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -1192,6 +1211,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -1250,6 +1270,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome33">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome34">Flag</td>
@@ -1308,6 +1329,7 @@ try {
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -1367,6 +1389,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -1426,6 +1449,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -1486,6 +1510,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome33">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome34">Flag</td>
@@ -1543,6 +1568,7 @@ try {
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -1602,6 +1628,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -1661,6 +1688,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -1721,6 +1749,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome33">Flag</td>
 <td class="no flagged obsolete" data-browser="chrome34">Flag</td>
@@ -1778,6 +1807,7 @@ try {
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -1827,6 +1857,7 @@ try {
 <td class="tally obsolete" data-browser="firefox44" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="firefox45" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/4</td>
@@ -1883,6 +1914,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -1939,6 +1971,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2000,6 +2033,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2061,6 +2095,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2088,7 +2123,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="49">Candidate (stage 3)</td>
+<tr class="category"><td colspan="50">Candidate (stage 3)</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -2118,6 +2153,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2177,6 +2213,7 @@ return Array.isArray(e)
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2226,6 +2263,7 @@ return Array.isArray(e)
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/2</td>
@@ -2278,6 +2316,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2330,6 +2369,7 @@ return Math.min(1,2,3,) === 1;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2379,6 +2419,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/3</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/3</td>
@@ -2433,6 +2474,7 @@ return (async function(){
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2487,6 +2529,7 @@ return (async function(){
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2539,6 +2582,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2599,6 +2643,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2648,6 +2693,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/50</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/50</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/50</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/50</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/50</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/50</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/50</td>
@@ -2700,6 +2746,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2752,6 +2799,7 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2804,6 +2852,7 @@ return typeof SIMD.Float64x2 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2856,6 +2905,7 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2908,6 +2958,7 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -2960,6 +3011,7 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3012,6 +3064,7 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3064,6 +3117,7 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3116,6 +3170,7 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3168,6 +3223,7 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3220,6 +3276,7 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3272,6 +3329,7 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3324,6 +3382,7 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3376,6 +3435,7 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3428,6 +3488,7 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3480,6 +3541,7 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3532,6 +3594,7 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3584,6 +3647,7 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3636,6 +3700,7 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3688,6 +3753,7 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3740,6 +3806,7 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3792,6 +3859,7 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3844,6 +3912,7 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3896,6 +3965,7 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -3948,6 +4018,7 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4000,6 +4071,7 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4052,6 +4124,7 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4104,6 +4177,7 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4156,6 +4230,7 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4208,6 +4283,7 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4260,6 +4336,7 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4312,6 +4389,7 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4364,6 +4442,7 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4416,6 +4495,7 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4468,6 +4548,7 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4520,6 +4601,7 @@ return typeof SIMD.Int16x8.selectBits === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4572,6 +4654,7 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4624,6 +4707,7 @@ return typeof SIMD.Int32x4.shiftRightLogicalByScalar === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4676,6 +4760,7 @@ return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === &apos;function&apos;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4728,6 +4813,7 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4780,6 +4866,7 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4832,6 +4919,7 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4884,6 +4972,7 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4936,6 +5025,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -4988,6 +5078,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5040,6 +5131,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5092,6 +5184,7 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5144,6 +5237,7 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5196,6 +5290,7 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5248,6 +5343,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5297,6 +5393,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/2</td>
@@ -5352,6 +5449,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5407,6 +5505,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5434,7 +5533,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="49">Draft (stage 2)</td>
+<tr class="category"><td colspan="50">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-function.sent"><span><a class="anchor" href="#test-function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
 var result;
@@ -5467,6 +5566,7 @@ return result === &apos;tromple&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5520,6 +5620,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5574,6 +5675,7 @@ return O.a + O.b + O.c === 6;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5623,6 +5725,7 @@ return O.a + O.b + O.c === 6;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/20</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/20</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/20</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/20</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/20</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/20</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/20</td>
@@ -5675,6 +5778,7 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5727,6 +5831,7 @@ return typeof SharedArrayBuffer.isView === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5779,6 +5884,7 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5831,6 +5937,7 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5883,6 +5990,7 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5935,6 +6043,7 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -5989,6 +6098,7 @@ return Atomics.OK === 0
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6041,6 +6151,7 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6093,6 +6204,7 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6145,6 +6257,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6197,6 +6310,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6249,6 +6363,7 @@ return typeof Atomics.futexWait == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6301,6 +6416,7 @@ return typeof Atomics.futexWake == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6353,6 +6469,7 @@ return typeof Atomics.futexWakeOrRequeue == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6405,6 +6522,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6457,6 +6575,7 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6509,6 +6628,7 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6561,6 +6681,7 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6613,6 +6734,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6665,6 +6787,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6692,7 +6815,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="49">Proposal (stage 1)</td>
+<tr class="category"><td colspan="50">Proposal (stage 1)</td>
 </tr>
 <tr significance="0.25"><td id="test-ArrayBuffer.transfer"><span><a class="anchor" href="#test-ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
 var buffer1 = new Uint8Array([1, 2, 3]).buffer;
@@ -6723,6 +6846,7 @@ return buffer1.byteLength === 0
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6783,6 +6907,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6839,6 +6964,7 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -6888,6 +7014,7 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="firefox45" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -6940,6 +7067,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -6992,6 +7120,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes unstable" data-browser="firefox46">Yes</td>
+<td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome33">Yes</td>
 <td class="yes obsolete" data-browser="chrome34">Yes</td>
@@ -7044,6 +7173,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7096,6 +7226,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7149,6 +7280,7 @@ return System.global.__system_global_test__ === 42;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7198,6 +7330,7 @@ return System.global.__system_global_test__ === 42;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/8</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/8</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/8</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/8</td>
@@ -7250,6 +7383,7 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7302,6 +7436,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7354,6 +7489,7 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7414,6 +7550,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7467,6 +7604,7 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7520,6 +7658,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7572,6 +7711,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7624,6 +7764,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7686,6 +7827,7 @@ return a === &apos;1a2b&apos;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7735,6 +7877,7 @@ return a === &apos;1a2b&apos;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox46" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox47" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome33" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome34" data-tally="0">0/2</td>
@@ -7794,6 +7937,7 @@ iterator.next().then(function(step){
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7863,6 +8007,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome33">No</td>
 <td class="no obsolete" data-browser="chrome34">No</td>
@@ -7890,7 +8035,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
-<tr class="category"><td colspan="49">Strawman (stage 0)</td>
+<tr class="category"><td colspan="50">Strawman (stage 0)</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-bind_(::)_operator"><span><a class="anchor" href="#test-bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -7914,6 +8059,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="tally obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -7968,6 +8114,7 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8021,6 +8168,7 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8076,6 +8224,7 @@ return do {
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8131,6 +8280,7 @@ return JSON.stringify(map) === &apos;[[&quot;a&quot;,&quot;b&quot;],[&quot;c&quo
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8185,6 +8335,7 @@ return JSON.stringify(set) === &apos;[1,2,3]&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8237,6 +8388,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8289,6 +8441,7 @@ return Error.isError(new TypeError()) &amp;&amp; !Error.isError(Object.create(Ty
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8338,6 +8491,7 @@ return Error.isError(new TypeError()) &amp;&amp; !Error.isError(Object.create(Ty
 <td class="tally obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -8390,6 +8544,7 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8442,6 +8597,7 @@ return Math.isubh(0, 4, 1, 1) === 2;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8494,6 +8650,7 @@ return Math.imulh(0xffffffff, 7) === -1;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8546,6 +8703,7 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8595,6 +8753,7 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="tally obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -8648,6 +8807,7 @@ return f();
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8700,6 +8860,7 @@ return (_ =&gt; function.count)(1, 2, 3) === 3;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8757,6 +8918,7 @@ return Array.isArray(arr)
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8820,6 +8982,7 @@ return target === C.prototype
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8879,6 +9042,7 @@ return (@inverse function(it){
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8935,6 +9099,7 @@ return works &amp;&amp; weakref.get() === undefined;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8994,6 +9159,7 @@ return result.groups.year === &apos;2016&apos;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9046,6 +9212,7 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9095,6 +9262,7 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="tally obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -9149,6 +9317,7 @@ return Reflect.isCallable(function(){})
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9203,6 +9372,7 @@ return Reflect.isConstructor(function(){})
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9230,7 +9400,7 @@ return Reflect.isConstructor(function(){})
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr class="category"><td colspan="49">Pre-strawman</td>
+<tr class="category"><td colspan="50">Pre-strawman</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-Reflect.Realm"><span><a class="anchor" href="#test-Reflect.Realm">&#xA7;</a><a href="https://gist.github.com/dherman/7568885">Reflect.Realm</a></span><script data-source="
 var i, names =
@@ -9270,6 +9440,7 @@ return true;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9319,6 +9490,7 @@ return true;
 <td class="tally obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
+<td class="tally unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
@@ -9371,6 +9543,7 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9423,6 +9596,7 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9475,6 +9649,7 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9527,6 +9702,7 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9579,6 +9755,7 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9631,6 +9808,7 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9683,6 +9861,7 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9735,6 +9914,7 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9787,6 +9967,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no unstable not-applicable" data-browser="firefox46" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="firefox47" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome30" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome33" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="chrome34" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>

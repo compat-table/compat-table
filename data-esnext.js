@@ -153,6 +153,11 @@ exports.browsers = {
     short: 'FF 46',
     unstable: true,
   },
+  firefox47: {
+    full: 'Firefox',
+    short: 'FF 47',
+    unstable: true,
+  },
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
@@ -1405,7 +1410,8 @@ exports.tests = [
   res: {
     babel:       true,
     edge13:      flag,
-    edge14:      true,	
+    edge14:      true,
+    firefox47:   true,
     typescript:  true,
     chrome49:    true,
   }
@@ -1423,7 +1429,8 @@ exports.tests = [
   res: {
     babel:       true,
     edge13:      flag,
-    edge14:      true,	
+    edge14:      true,
+    firefox47:   true,
     typescript:  true,
     chrome49:    true,
   }
@@ -1444,6 +1451,7 @@ exports.tests = [
     return passed;
   */},
   res: {
+    firefox47:   true,
     chrome51:    true,
   },
 },
