@@ -158,6 +158,11 @@ exports.browsers = {
     short: 'FF 47',
     unstable: true,
   },
+  firefox48: {
+    full: 'Firefox',
+    short: 'FF 48',
+    unstable: true,
+  },
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
@@ -352,6 +357,7 @@ exports.tests = [
         babel:       false,
         typescript:  true,
         edge13:      flag,
+        firefox48:   firefox.nightly,
       }
     },
     {
@@ -364,6 +370,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         edge13:      flag,
+        firefox48:   firefox.nightly,
       }
     },
     {
@@ -666,6 +673,7 @@ exports.tests = [
         firefox39: true,
         firefox42: false,
         firefox44: false,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -674,7 +682,8 @@ exports.tests = [
         return typeof SIMD.Float32x4 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -683,7 +692,8 @@ exports.tests = [
         return typeof SIMD.Float64x2 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -692,7 +702,8 @@ exports.tests = [
         return typeof SIMD.Int32x4 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -701,6 +712,7 @@ exports.tests = [
         return typeof SIMD.Int16x8 === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -709,7 +721,8 @@ exports.tests = [
         return typeof SIMD.Int8x16 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -718,6 +731,7 @@ exports.tests = [
         return typeof SIMD.Bool32x4 === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -726,6 +740,7 @@ exports.tests = [
         return typeof SIMD.Bool16x8 === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -734,6 +749,7 @@ exports.tests = [
         return typeof SIMD.Bool8x16 === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -742,7 +758,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.abs === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -751,7 +768,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.add === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -760,6 +778,7 @@ exports.tests = [
         return typeof SIMD.Int16x8.addSaturate === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -768,6 +787,7 @@ exports.tests = [
         return typeof SIMD.Bool16x8.and === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -776,6 +796,7 @@ exports.tests = [
         return typeof SIMD.Bool32x4.anyTrue === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -784,6 +805,7 @@ exports.tests = [
         return typeof SIMD.Bool32x4.allTrue === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -792,7 +814,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.check === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -801,7 +824,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.equal === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -810,7 +834,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.extractLane === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -819,7 +844,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -828,7 +854,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -837,7 +864,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThan === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -846,7 +874,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -855,7 +884,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.mul === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -864,7 +894,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.div === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -873,7 +904,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.max === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -882,6 +914,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.maxNum === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -890,7 +923,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.min === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -899,6 +933,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.minNum === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -907,7 +942,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.neg === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -916,6 +952,7 @@ exports.tests = [
         return typeof SIMD.Bool16x8.not === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -924,7 +961,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.notEqual === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -933,6 +971,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -941,6 +980,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -949,7 +989,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.replaceLane === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -958,7 +999,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.select === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -975,6 +1017,7 @@ exports.tests = [
         return typeof SIMD.Int32x4.shiftLeftByScalar === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -999,7 +1042,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.shuffle === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1008,7 +1052,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.splat === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1017,7 +1062,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.sqrt === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1026,7 +1072,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.store === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1035,7 +1082,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1044,7 +1092,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1053,7 +1102,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1062,7 +1112,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.sub === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1071,6 +1122,7 @@ exports.tests = [
         return typeof SIMD.Int16x8.subSaturate === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1079,7 +1131,8 @@ exports.tests = [
         return typeof SIMD.Float32x4.swizzle === 'function';
       */},
       res: {
-        edge13:  flag,
+        edge13:    flag,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1088,6 +1141,7 @@ exports.tests = [
         return typeof SIMD.Bool16x8.xor === 'function';
       */},
       res: {
+        firefox48: firefox.nightly,
       }
     }
   ]
