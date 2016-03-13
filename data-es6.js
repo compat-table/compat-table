@@ -1038,6 +1038,29 @@ exports.tests = [
       }
     },
     {
+      name: 'for-loop statement scope',
+      exec: function(){/*
+       const baz = 1;
+       for(const baz = 0; false; false) {}
+       return baz === 1;
+       */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        es6tr:       true,
+        babel:       true,
+        typescript:  true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox44:   true,
+        webkit:      true,
+        chrome48:    flag,
+        chrome49:    true,
+        xs6:         true,
+      },
+    },
+    {
       name: 'temporal dead zone',
       exec: function(){/*
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
@@ -1055,6 +1078,28 @@ exports.tests = [
         webkit:      true,
         xs6:         true,
         jxa:         true,
+      },
+    },
+    {
+      name: 'for-loop iteration scope',
+      exec: function(){/*
+        let scopes = [];
+        for(const i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed = (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        closure:     true,
+        webkit:      true,
+        edge14:      true,
+        chrome48:    flag,
+        chrome49:    true,
+        xs6:         true,
       },
     },
     {
@@ -1139,6 +1184,32 @@ exports.tests = [
       }
     },
     {
+      name: 'for-loop statement scope (strict mode)',
+      exec: function(){/*
+        'use strict';
+        const baz = 1;
+        for(const baz = 0; false; false) {}
+        return baz === 1;
+      */},
+      res: {
+        tr:          true,
+        ejs:         true,
+        babel:       true,
+        typescript:  true,
+        es6tr:       true,
+        closure:     true,
+        ie11:        true,
+        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox44:   true,
+        chrome19dev: flag,
+        chrome41:    true,
+        webkit:      true,
+        node012:     flag,
+        node4:       true,
+        xs6:         true,
+      },
+    },
+    {
       name: 'redefining a const (strict mode)',
       exec: function() {/*
         'use strict';
@@ -1187,6 +1258,31 @@ exports.tests = [
         node4:       true,
         xs6:         true,
         jxa:         true,
+      },
+    },
+    {
+      name: 'for-loop iteration scope (strict mode)',
+      exec: function(){/*
+        'use strict';
+        let scopes = [];
+        for(const i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed = (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        closure:     true,
+        chrome37:    flag,
+        chrome41:    true,
+        webkit:      true,
+        edge14:      true,
+        node012:     flag,
+        node4:       true,
+        xs6:         true,
       },
     },
   ]
@@ -3617,6 +3713,34 @@ exports.tests = [
         xs6:         true,
         chrome51:    true,
         jxa:         true,
+      },
+    },
+    {
+      name: 'const/let iteration scope',
+      exec: function(){/*
+        let scopes = [];
+        for(const i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed = (scopes[0]() === "a" && scopes[1]() === "b");
+
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  true,
+        closure:     true,
+        webkit:      true,
+        edge14:      true,
+        chrome48:    flag,
+        chrome49:    true,
+        xs6:         true,
       },
     },
   ],
