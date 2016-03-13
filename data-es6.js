@@ -1038,7 +1038,7 @@ exports.tests = [
       }
     },
     {
-      name: 'for-loop statement scope',
+      name: 'for loop statement scope',
       exec: function(){/*
        const baz = 1;
        for(const baz = 0; false; false) {}
@@ -1081,7 +1081,7 @@ exports.tests = [
       },
     },
     {
-      name: 'for-loop iteration scope',
+      name: 'for-in loop iteration scope',
       exec: function(){/*
         let scopes = [];
         for(const i in { a:1, b:1 }) {
@@ -1184,7 +1184,7 @@ exports.tests = [
       }
     },
     {
-      name: 'for-loop statement scope (strict mode)',
+      name: 'for loop statement scope (strict mode)',
       exec: function(){/*
         'use strict';
         const baz = 1;
@@ -1261,7 +1261,7 @@ exports.tests = [
       },
     },
     {
-      name: 'for-loop iteration scope (strict mode)',
+      name: 'for-in loop iteration scope (strict mode)',
       exec: function(){/*
         'use strict';
         let scopes = [];
@@ -1369,7 +1369,7 @@ exports.tests = [
       },
     },
     {
-      name: 'for-loop statement scope',
+      name: 'for loop statement scope',
       exec: function(){/*
         let baz = 1;
         for(let baz = 0; false; false) {}
@@ -1412,7 +1412,7 @@ exports.tests = [
       },
     },
     {
-      name: 'for-loop iteration scope',
+      name: 'for/for-in loop iteration scope',
       exec: function(){/*
         let scopes = [];
         for(let i = 0; i < 2; i++) {
@@ -1520,7 +1520,7 @@ exports.tests = [
       },
     },
     {
-      name: 'for-loop statement scope (strict mode)',
+      name: 'for loop statement scope (strict mode)',
       exec: function(){/*
         'use strict';
         let baz = 1;
@@ -1569,7 +1569,7 @@ exports.tests = [
       },
     },
     {
-      name: 'for-loop iteration scope (strict mode)',
+      name: 'for/for-in loop iteration scope (strict mode)',
       exec: function(){/*
         'use strict';
         let scopes = [];
