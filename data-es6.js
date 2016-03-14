@@ -7000,6 +7000,48 @@ exports.tests = [
       },
     },
     {
+      name: '"get" handler invariants',
+      exec: function () {/*
+        var passed = false;
+        var proxied = { };
+        var proxy = new Proxy(proxied, {
+          get: function () {
+            passed = true;
+            return 4;
+          }
+        });
+        // The value reported for a property must be the same as the value of the corresponding
+        // target object property if the target object property is a non-writable,
+        // non-configurable own data property.
+        Object.defineProperty(proxied, "foo", { value: 5, enumerable: true });
+        try {
+          proxy.foo;
+          return false;
+        }
+        catch(e) {}
+        // The value reported for a property must be undefined if the corresponding target
+        // object property is a non-configurable own accessor property that has undefined
+        // as its [[Get]] attribute.
+        Object.defineProperty(proxied, "bar",
+          { set: function(){}, enumerable: true });
+        try {
+          proxy.bar;
+          return false;
+        }
+        catch(e) {}
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox18:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
       name: '"set" handler',
       exec: function () {/*
         var proxied = { };
@@ -7040,6 +7082,48 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         firefox37:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
+      name: '"set" handler invariants',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // Cannot change the value of a property to be different from the value of
+        // the corresponding target object if the corresponding target object
+        // property is a non-writable, non-configurable own data property.
+        var proxied = {};
+        var proxy = new Proxy(proxied, {
+          set: function () {
+            passed = true;
+            return true;
+          }
+        });
+        Object.defineProperty(proxied, "foo", { value: 2, enumerable: true });
+        proxy.foo = 2;
+        try {
+          proxy.foo = 4;
+          return false;
+        } catch(e) {}
+        // Cannot set the value of a property if the corresponding target
+        // object property is a non-configurable own accessor property
+        // that has undefined as its [[Set]] attribute.
+        Object.defineProperty(proxied, "bar",
+          { get: function(){}, enumerable: true });
+        try {
+          proxy.bar = 2;
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox18:   true,
         xs6:         true,
         chrome49:    true,
         webkit:      true,
@@ -7090,15 +7174,84 @@ exports.tests = [
       },
     },
     {
+      name: '"has" handler invariants',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // A property cannot be reported as non-existent, if it exists as a
+        // non-configurable own property of the target object.
+        var proxied = {};
+        var proxy = new Proxy(proxied, {
+          has: function () {
+            passed = true;
+            return false;
+          }
+        });
+        Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+        try {
+          'foo' in proxy;
+          return false;
+        } catch(e) {}
+        // A property cannot be reported as non-existent, if it exists as an
+        // own property of the target object and the target object is not extensible.
+        proxied.bar = 2;
+        Object.preventExtensions(proxied);
+        try {
+          'bar' in proxy;
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox18:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
       name: '"deleteProperty" handler',
       exec: function () {/*
-      var proxied = {};
+        var proxied = {};
         var passed = false;
         delete new Proxy(proxied, {
           deleteProperty: function (t, k) {
             passed = t === proxied && k === "foo";
           }
         }).foo;
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox18:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
+      name: '"deleteProperty" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // A property cannot be reported as deleted, if it exists as a non-configurable
+        // own property of the target object.
+        var proxied = {};
+        Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+        try {
+          delete new Proxy(proxied, {
+            deleteProperty: function () {
+              passed = true;
+              return true;
+            }
+          }).foo;
+          return false;
+        } catch(e) {}
         return passed;
       */},
       res: {
@@ -7145,6 +7298,70 @@ exports.tests = [
       },
     },
     {
+      name: '"getOwnPropertyDescriptor" handler invariants',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // A property cannot be reported as non-existent, if it exists as a non-configurable
+        // own property of the target object.
+        var proxied = {};
+        var proxy = new Proxy(proxied, {
+          getOwnPropertyDescriptor: function () {
+            passed = true;
+            return undefined;
+          }
+        });
+        Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+        try {
+          Object.getOwnPropertyDescriptor(proxy, "foo");
+          return false;
+        } catch(e) {}
+        // A property cannot be reported as non-existent, if it exists as an own property
+        // of the target object and the target object is not extensible.
+        proxied.bar = 3;
+        Object.preventExtensions(proxied);
+        try {
+          Object.getOwnPropertyDescriptor(proxy, "bar");
+          return false;
+        } catch(e) {}
+        // A property cannot be reported as existent, if it does not exists as an own property
+        // of the target object and the target object is not extensible.
+        try {
+          Object.getOwnPropertyDescriptor(new Proxy(proxied, {
+            getOwnPropertyDescriptor: function() {
+              return { value: 2, configurable: true, writable: true, enumerable: true };
+            }}), "baz");
+          return false;
+        } catch(e) {}
+        // A property cannot be reported as non-configurable, if it does not exists as an own
+        // property of the target object or if it exists as a configurable own property of
+        // the target object.
+        try {
+          Object.getOwnPropertyDescriptor(new Proxy({}, {
+            getOwnPropertyDescriptor: function() {
+              return { value: 2, configurable: false, writable: true, enumerable: true };
+            }}), "baz");
+          return false;
+        } catch(e) {}
+        try {
+          Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
+            getOwnPropertyDescriptor: function() {
+              return { value: 1, configurable: false, writable: true, enumerable: true };
+            }}), "baz");
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox32:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
       name: '"defineProperty" handler',
       exec: function () {/*
         var proxied = {};
@@ -7171,6 +7388,48 @@ exports.tests = [
       },
     },
     {
+      name: '"defineProperty" handler invariants',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // A property cannot be added, if the target object is not extensible.
+        var proxied = Object.preventExtensions({});
+        var proxy = new Proxy(proxied, {
+          defineProperty: function() {
+            passed = true;
+            return true;
+          }
+        });
+        try {
+          Object.defineProperty(proxy, "foo", { value: 2 });
+          return false;
+        } catch(e) {}
+        // A property cannot be non-configurable, unless there exists a corresponding
+        // non-configurable own property of the target object.
+        try {
+          Object.defineProperty(
+            new Proxy({ bar: true }, {
+              defineProperty: function () {
+                return true;
+              }
+            }),
+            "bar",
+            { value: 5, configurable: false, writable: true, enumerable: true }
+          );
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox32:   true,
+        xs6:         true,
+        chrome49:    true,
+      },
+    },
+    {
       name: '"getPrototypeOf" handler',
       exec: function () {/*
         var proxied = {};
@@ -7181,6 +7440,32 @@ exports.tests = [
           }
         });
         return Object.getPrototypeOf(proxy) === fakeProto;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        xs6:         true,
+        chrome49:    true,
+      },
+    },
+    {
+      name: '"getPrototypeOf" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // If the target object is not extensible, [[GetPrototypeOf]] applied to the proxy object
+        // must return the same value as [[GetPrototypeOf]] applied to the proxy object's target object.
+        try {
+          Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+            getPrototypeOf: function () {
+              passed = true;
+              return {};
+            }
+          }));
+          return false;
+        } catch(e) {}
+        return passed;
       */},
       res: {
         ejs:         true,
@@ -7216,6 +7501,34 @@ exports.tests = [
       },
     },
     {
+      name: '"setPrototypeOf" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        Object.setPrototypeOf({},{});
+        // If the target object is not extensible, the argument value must be the
+        // same as the result of [[GetPrototypeOf]] applied to target object.
+        try {
+          Object.setPrototypeOf(
+            new Proxy(Object.preventExtensions({}), {
+              setPrototypeOf: function () {
+                passed = true;
+                return true;
+              }
+            }),{});
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        xs6:         true,
+        chrome49:    true,
+      },
+    },
+    {
       name: '"isExtensible" handler',
       exec: function () {/*
         var proxied = {};
@@ -7240,6 +7553,42 @@ exports.tests = [
       },
     },
     {
+      name: '"isExtensible" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // [[IsExtensible]] applied to the proxy object must return the same value
+        // as [[IsExtensible]] applied to the proxy object's target object with the same argument.
+        try {
+          Object.isExtensible(new Proxy({}, {
+            isExtensible: function (t) {
+              passed = true;
+              return false;
+            }
+          }));
+          return false;
+        } catch(e) {}
+        try {
+          Object.isExtensible(new Proxy(Object.preventExtensions({}), {
+            isExtensible: function (t) {
+              return true;
+            }
+          }));
+          return false;
+        } catch(e) {}
+        return true;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        firefox31:   true,
+        edge12:      true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
       name: '"preventExtensions" handler',
       exec: function () {/*
         var proxied = {};
@@ -7252,6 +7601,34 @@ exports.tests = [
             }
           })
         );
+        return passed;
+      */},
+      res: {
+        ejs:         true,
+        typescript:  typescript.fallthrough,
+        firefox23:   true,
+        edge12:      true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
+      name: '"preventExtensions" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // [[PreventExtensions]] applied to the proxy object only returns true
+        // if [[IsExtensible]] applied to the proxy object's target object is false.
+        try {
+          Object.preventExtensions(new Proxy({}, {
+            preventExtensions: function () {
+              passed = true;
+              return true;
+            }
+          }));
+          return false;
+        } catch(e) {}
         return passed;
       */},
       res: {
@@ -7294,6 +7671,51 @@ exports.tests = [
       },
     },
     {
+      name: '"ownKeys" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // The Type of each result List element is either String or Symbol.
+        try {
+          Object.keys(new Proxy({}, {
+            ownKeys: function () {
+              passed = true;
+              return [2];
+            }}));
+          return false;
+        } catch(e) {}
+        // The result List must contain the keys of all non-configurable own properties of the target object. 
+        var proxied = {};
+        Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+        try {
+          Object.keys(new Proxy(proxied, {
+            ownKeys: function () {
+              return [];
+            }}));
+          return false;
+        } catch(e) {}
+        // If the target object is not extensible, then the result List must contain all the keys
+        // of the own properties of the target object and no other values.
+        try {
+          Object.keys(new Proxy(Object.preventExtensions({b:1}), {
+            ownKeys: function () {
+              return ['a'];
+            }}));
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+        firefox18:   { val: false, note_id: 'fx-proxy-ownkeys' },
+        firefox33:   true,
+        edge12:      true,
+        xs6:         true,
+        ejs:         true,
+        chrome49:    true,
+      },
+    },
+    {
       name: '"apply" handler',
       exec: function () {/*
         var proxied = function(){};
@@ -7318,6 +7740,32 @@ exports.tests = [
       },
     },
     {
+      name: '"apply" handler invariant',
+      exec: function () {/*
+        var passed = false;
+        new Proxy(function(){}, {
+            apply: function () { passed = true; }
+        })();
+        // A Proxy exotic object only has a [[Call]] internal method if the
+        // initial value of its [[ProxyTarget]] internal slot is an object
+        // that has a [[Call]] internal method.
+        try {
+          new Proxy({}, {
+            apply: function () {}
+          })();
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox18:   true,
+        xs6:         true,
+        webkit:      true,
+      },
+    },
+    {
       name: '"construct" handler',
       exec: function () {/*
         var proxied = function(){};
@@ -7334,6 +7782,43 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         firefox18:   true,
+        xs6:         true,
+        chrome49:    true,
+        webkit:      true,
+      },
+    },
+    {
+      name: '"construct" handler invariants',
+      exec: function () {/*
+        var passed = false;
+        new Proxy({},{});
+        // A Proxy exotic object only has a [[Construct]] internal method if the
+        // initial value of its [[ProxyTarget]] internal slot is an object
+        // that has a [[Construct]] internal method.
+        try {
+          new new Proxy({}, {
+            construct: function (t, args) {
+              return {};
+            }
+          })();
+          return false;
+        } catch(e) {}
+        // The result of [[Construct]] must be an Object.
+        try {
+          new new Proxy(function(){}, {
+            construct: function (t, args) {
+              passed = true;
+              return 5;
+            }
+          })();
+          return false;
+        } catch(e) {}
+        return passed;
+      */},
+      res: {
+        typescript:  typescript.fallthrough,
+        edge12:      true,
+        firefox45:   true,
         xs6:         true,
         chrome49:    true,
         webkit:      true,
