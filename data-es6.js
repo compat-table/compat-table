@@ -835,7 +835,6 @@ exports.tests = [
         return !a.hasOwnProperty("prototype");
       */},
       res: {
-        edge12:      true,
         firefox23:   true,
         chrome39:    flag,
         chrome40:    false,
