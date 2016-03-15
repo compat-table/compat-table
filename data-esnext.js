@@ -43,7 +43,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 6.5 + core-js 2.1',
+    full: 'Babel 6.5 + core-js 2.2',
     short: 'Babel +<br><nobr>core-js</nobr>',
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -56,7 +56,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   typescript: {
-    full: 'TypeScript 1.8 + core-js 2.1',
+    full: 'TypeScript 1.8 + core-js 2.2',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -1722,6 +1722,8 @@ exports.tests = [
       && c === 'ab';
   */},
   res: {
+    babel:       true,
+    typescript:  typescript.corejs,
   }
 },
 {
@@ -2006,6 +2008,8 @@ exports.tests = [
           && prop.enumerable;
       */},
       res: (temp.basicDefineGetterResults = {
+        babel:       true,
+        typescript:  typescript.corejs,
         ie11:        true,
         firefox31:   true,
         chrome30:    true,
@@ -2027,6 +2031,8 @@ exports.tests = [
           && prop.enumerable;
       */},
       res: (temp.defineGetterSymbolsResults = {
+        babel:       true,
+        typescript:  typescript.corejs,
         edge12:      true,
         firefox36:   true,
         chrome30:    flag,
@@ -2049,6 +2055,8 @@ exports.tests = [
         }
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
         webkit:      true,
       },
     },
@@ -2089,6 +2097,8 @@ exports.tests = [
         }
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
         webkit:      true,
       },
     },
@@ -2146,6 +2156,8 @@ exports.tests = [
         }
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
         ie11:        true,
         firefox31:   true,
         webkit:      true,
@@ -2205,6 +2217,8 @@ exports.tests = [
         }
       */},
       res: {
+        babel:       true,
+        typescript:  typescript.corejs,
         ie11:        true,
         firefox31:   true,
         webkit:      true,
