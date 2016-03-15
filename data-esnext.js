@@ -2057,6 +2057,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        firefox48:   true,
         webkit:      true,
       },
     },
@@ -2099,6 +2100,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        firefox48:   true,
         webkit:      true,
       },
     },
