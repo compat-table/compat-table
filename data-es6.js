@@ -33,7 +33,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 6.5 + core-js 2.1',
+    full: 'Babel 6.5 + core-js 2.2',
     short: 'Babel +<br><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler',
@@ -61,7 +61,7 @@ exports.browsers = {
     note_html: 'Have to be enabled via <code>harmony</code> option'
   },
   typescript: {
-    full: 'TypeScript 1.8 + core-js 2.1',
+    full: 'TypeScript 1.8 + core-js 2.2',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -14174,7 +14174,8 @@ exports.tests = [
   */},
   res: {
     ejs:         true,
-    typescript:  typescript.fallthrough,
+    babel:       true,
+    typescript:  typescript.corejs,
     firefox44:   true,
     chrome47:    true,
     xs6:         true,
