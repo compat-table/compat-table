@@ -1180,7 +1180,7 @@ exports.tests = [
         'use strict';
         const bar = 1;
         try {
-          Function("if(true) const baz = 1;")();
+          Function("'use strict'; if(true) const baz = 1;")();
         } catch(e) {
           return true;
         }
@@ -1272,7 +1272,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         closure:     true,
-        chrome37:    flag,
+        chrome40:    flag,
         chrome41:    true,
         webkit:      true,
         edge14:      true,
@@ -1298,8 +1298,8 @@ exports.tests = [
         closure:     true,
         webkit:      true,
         edge14:      true,
-        chrome48:    flag,
-        chrome49:    true,
+        chrome40:    flag,
+        chrome41:    true,
         xs6:         true,
       },
     },
@@ -1537,7 +1537,7 @@ exports.tests = [
         'use strict';
         let bar = 1;
         try {
-          Function("if(true) let baz = 1;")();
+          Function("'use strict'; if(true) let baz = 1;")();
         } catch(e) {
           return true;
         }
