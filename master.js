@@ -397,7 +397,7 @@ $(function() {
       .append('<sup class="num-features" title="Number of implemented features">' +
         // Don't bother with a HSL fallback for IE 8.
         '<b style="color:hsl(' + (featuresCount * 120|0) + ',100%,25%)">' +
-        (Math.round(featuresCount*100)) +
+        (Math.floor(featuresCount*100)) +
         '</b>%</sup>')
       // Fancy bar graph background garnish (again, no fallback required).
       .css({'background-image': gradient(colour, featuresCount) +
