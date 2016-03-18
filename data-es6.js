@@ -423,7 +423,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   webkit: {
-    full: 'WebKit r198208',
+    full: 'WebKit r198376',
     short: 'WK',
     unstable: true,
   },
@@ -8513,6 +8513,7 @@ exports.tests = [
         firefox18:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -8831,6 +8832,7 @@ exports.tests = [
         firefox41:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -8849,6 +8851,7 @@ exports.tests = [
         firefox41:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -8882,6 +8885,7 @@ exports.tests = [
         firefox42:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
   ],
@@ -8906,6 +8910,7 @@ exports.tests = [
         firefox37:   true,
         chrome49:    true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -8986,6 +8991,7 @@ exports.tests = [
         firefox40:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -9004,6 +9010,7 @@ exports.tests = [
         firefox40:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -9022,6 +9029,7 @@ exports.tests = [
         firefox40:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
     {
@@ -9040,6 +9048,7 @@ exports.tests = [
         firefox40:   true,
         xs6:         true,
         chrome49:    true,
+        webkit:      true,
       },
     },
   ],
@@ -9066,6 +9075,7 @@ exports.tests = [
         firefox37:   true,
         chrome49:    true,
         xs6:         true,
+        webkit:      true,
       },
     },
     {
@@ -11753,6 +11763,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         jxa:         true,
+        webkit:      true,
       },
     },
     {
@@ -11773,6 +11784,7 @@ exports.tests = [
         chrome50:    flag,
         xs6:         true,
         jxa:         true,
+        webkit:      true,
       },
     },
     {
@@ -15419,7 +15431,6 @@ exports.tests = [
         typescript:  true,
         xs6:         true,
         jxa:         true,
-        webkit:      true,
       },
     },
     {
