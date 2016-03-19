@@ -2514,6 +2514,70 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Zones',
+  category: 'strawman (stage 0)',
+  significance: 'large',
+  link: 'https://github.com/domenic/zones',
+  subtests: [
+    {
+      name: 'Zone',
+      exec: function(){/*
+        return typeof Zone == 'function';
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Zone.current',
+      exec: function(){/*
+        return 'current' in Zone;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Zone.prototype.name',
+      exec: function(){/*
+        return 'name' in Zone.prototype;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Zone.prototype.parent',
+      exec: function(){/*
+        return 'parent' in Zone.prototype;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Zone.prototype.fork',
+      exec: function(){/*
+        return typeof Zone.prototype.fork == 'function';
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Zone.prototype.run',
+      exec: function(){/*
+        return typeof Zone.prototype.run == 'function';
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Zone.prototype.wrap',
+      exec: function(){/*
+        return typeof Zone.prototype.wrap == 'function';
+      */},
+      res: {
+      }
+    }
+  ]
 }
 ];
 
