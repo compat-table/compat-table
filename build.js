@@ -432,8 +432,8 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       .attr("data-browser", browserId)
       .append(
         $('<a href="#' + browserId + '" class="browser-name"></a>')
-          .append('<abbr title="' + b.full + '">' + b.short + '</abbr>')
-          .append(footnoteHTML(b))
+          .append('<abbr title="' + b.full + '">' + b.short + '</abbr>'))
+      .append(footnoteHTML(b)
       )
     );
   });
