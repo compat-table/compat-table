@@ -548,7 +548,7 @@ exports.tests = [
 },
 {
   name: 'trailing commas in function syntax',
-  link: 'https://github.com/tc39/tc39-notes/raw/master/es6/2014-09/trailing_comma_proposal.pdf',
+  link: 'https://jeffmo.github.io/es-trailing-function-commas/',
   category: 'candidate (stage 3)',
   significance: 'small',
   subtests: [
