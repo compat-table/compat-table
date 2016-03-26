@@ -13166,11 +13166,9 @@ exports.tests = [
       */},
       res: {
         typescript:  typescript.corejs,
-        chrome40:    flag,
         chrome49:    true,
-        node4:       flag,
         xs6:         true,
-        webkit:      true,
+        webkit:      null,
         jxa:         true,
       },
     },
