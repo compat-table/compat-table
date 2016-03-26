@@ -13105,6 +13105,76 @@ exports.tests = [
       },
     },
     {
+      name: 'Symbol.toStringTag affects existing built-ins',
+      exec: function() {/*
+        var s = Symbol.toStringTag;
+        var passed = true;
+        [
+          [Array.prototype, []],
+          [String.prototype, ''],
+          [arguments, arguments],
+          [Function.prototype, function(){}],
+          [Error.prototype, new Error()],
+          [Boolean.prototype, true],
+          [Number.prototype, 2],
+          [Date.prototype, new Date()],
+          [RegExp.prototype, /./]
+        ].forEach(function(pair){
+          pair[0][s] = "foo";
+          passed &= (Object.prototype.toString.call(pair[1]) === "[object foo]");
+          delete pair[0][s];
+        });
+        return passed;
+      */},
+      res: {
+        babel:       true,
+        ejs:         true,
+        typescript:  typescript.corejs,
+        chrome40:    flag,
+        chrome49:    true,
+        node4:       flag,
+        xs6:         true,
+        webkit:      true,
+        jxa:         true,
+      },
+    },
+    {
+      name: 'Symbol.toStringTag, new built-ins',
+      exec: function() {/*
+        var passed = true;
+        var s = Symbol.toStringTag;
+        [
+          [String, "String Iterator"],
+          [Array, "Array Iterator"],
+          [Map, "Map Iterator"],
+          [Set, "Set Iterator"]
+        ].forEach(function(pair){
+          var iterProto = Object.getPrototypeOf(new pair[0]()[Symbol.iterator]());
+          passed &= iterProto.hasOwnProperty(s)
+            && iterProto[s] === pair[1];
+        });
+        passed &= Object.getPrototypeOf(function*(){})[s] === "GeneratorFunction"
+          && Object.getPrototypeOf(function*(){}())[s] === "Generator"
+          && Map.prototype[s] === "Map"
+          && Set.prototype[s] === "Set"
+          && ArrayBuffer.prototype[s] === "ArrayBuffer"
+          && DataView.prototype[s] === "DataView"
+          && Promise.prototype[s] === "Promise"
+          && Symbol.prototype[s] === "Symbol"
+          && typeof Object.getOwnPropertyDescriptor(
+            Object.getPrototypeOf(Int8Array).prototype, Symbol.toStringTag).get === "function";
+      */},
+      res: {
+        typescript:  typescript.corejs,
+        chrome40:    flag,
+        chrome49:    true,
+        node4:       flag,
+        xs6:         true,
+        webkit:      true,
+        jxa:         true,
+      },
+    },
+    {
       name: 'Symbol.toStringTag, misc. built-ins',
       exec: function() {/*
         var s = Symbol.toStringTag;
