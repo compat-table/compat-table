@@ -505,15 +505,52 @@ exports.tests = [
         typescript:      typescript.corejs,
         webkit:          true,
         chrome47:        true,
-        edge14:          flag,	
-        firefox42:       false,
+        edge14:          flag,
+        firefox43:       true,
+      }
+    },
+    {
+      name: 'Array.prototype.includes is generic',
+      exec: function(){/*
+        var passed = 0;
+        return [].includes.call({
+          get "0"() {
+            passed = NaN;
+            return 'foo';
+          },
+          get "11"() {
+            passed += 1;
+            return 0;
+          },
+          get "19"() {
+            passed += 1;
+            return 'foo';
+          },
+          get "21"() {
+            passed = NaN;
+            return 'foo';
+          },
+          get length() {
+            passed += 1;
+            return 24;
+          }
+        }, 'foo', 6) === true && passed === 3;
+      */},
+      res: {
+        babel:           true,
+        es7shim:         true,
+        typescript:      typescript.corejs,
+        webkit:          true,
+        chrome47:        true,
+        edge14:          flag,
         firefox43:       true,
       }
     },
     {
       name: '%TypedArray%.prototype.includes',
       exec: function(){/*
-        return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
+        return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
+            Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
           return new TypedArray([1, 2, 3]).includes(1)
             && !new TypedArray([1, 2, 3]).includes(4)
             && !new TypedArray([1, 2, 3]).includes(1, 1);
