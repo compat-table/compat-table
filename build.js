@@ -249,7 +249,7 @@ process.nextTick(function () {
         try {
           output = ""+child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
             fpath +
-            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5'
+            ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5 --rewrite_polyfills'
           );
         } catch(e) {
           throw new Error('\n' + e.stdout.toString().split(fpath).join(''));
