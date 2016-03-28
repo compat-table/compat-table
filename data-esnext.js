@@ -70,7 +70,7 @@ exports.browsers = {
     full: 'Internet Explorer',
     family: 'Chakra',
     short: 'IE 10-',
-    obsolete: false,
+    obsolete: true,
   },
   ie11: {
     full: 'Internet Explorer',
@@ -103,17 +103,17 @@ exports.browsers = {
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
-    obsolete: true,
+    obsolete: very
   },
   firefox32: {
     full: 'Firefox',
     short: 'FF 32',
-    obsolete: true,
+    obsolete: very
   },
   firefox34: {
     full: 'Firefox',
-    short: 'FF34',
-    obsolete: true,
+    short: 'FF 34',
+    obsolete: very
   },
   firefox35: {
     full: 'Firefox',
@@ -181,111 +181,95 @@ exports.browsers = {
     short: 'CH 33',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome34: {
     full: 'Chrome',
     short: 'CH 34',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome35: {
     full: 'Chrome',
     short: 'CH 35',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome37: {
     full: 'Chrome',
     short: 'CH 37',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome38: {
     full: 'Chrome',
     short: 'CH 38',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome39: {
     full: 'Chrome',
     short: 'CH 39',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome40: {
     full: 'Chrome',
     short: 'CH 40',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome41: {
     full: 'Chrome',
     short: 'CH 41',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome42: {
     full: 'Chrome',
     short: 'CH 42',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome43: {
     full: 'Chrome',
     short: 'CH 43',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome46: {
     full: 'Chrome',
     short: 'CH 46',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome47: {
     full: 'Chrome',
     short: 'CH 47',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome48: {
     full: 'Chrome',
     short: 'CH 48',
     obsolete: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome49: {
     full: 'Chrome',
     short: 'CH 49',
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome50: {
     full: 'Chrome',
     short: 'CH 50',
     unstable: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   chrome51: {
     full: 'Chrome',
     short: 'CH 51',
     unstable: true,
     note_id: 'experimental-flag',
-    note_html: 'Have to be enabled via "Experimental Javascript features" flag'
   },
   webkit: {
     full: 'WebKit r184046',
@@ -325,7 +309,7 @@ exports.browsers = {
   },
   android44: {
     full: 'Android Browser',
-    short: 'Android 4.4',
+    short: 'AN 4.4',
     platformtype: 'mobile',
     equals: 'chrome30',
     ignore_flagged: true,

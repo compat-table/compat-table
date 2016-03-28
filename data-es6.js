@@ -169,22 +169,22 @@ exports.browsers = {
   firefox31: {
     full: 'Firefox',
     short: 'FF 31',
-    obsolete: true
+    obsolete: very
   },
   firefox32: {
     full: 'Firefox',
     short: 'FF 32',
-    obsolete: true
+    obsolete: very
   },
   firefox33: {
     full: 'Firefox',
     short: 'FF 33',
-    obsolete: true
+    obsolete: very
   },
   firefox34: {
     full: 'Firefox',
     short: 'FF 34',
-    obsolete: true
+    obsolete: very
   },
   firefox35: {
     full: 'Firefox',
@@ -204,7 +204,7 @@ exports.browsers = {
   firefox38: {
     full: 'Firefox',
     short: 'FF 38<br> ESR',
-    obsolete: false, // ESR (EOL at Mar 2016)
+    obsolete: false, // ESR (EOL at May 2016)
   },
   firefox39: {
     full: 'Firefox',
@@ -238,7 +238,8 @@ exports.browsers = {
   },
   firefox45: {
     full: 'Firefox',
-    short: 'FF 45',
+    short: 'FF 45 ESR',
+    obsolete: false, // ESR (EOL at Mar 2017)
   },
   firefox46: {
     full: 'Firefox',
@@ -300,25 +301,25 @@ exports.browsers = {
   chrome35: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;35,<br>OP&nbsp;22',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome36: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;36,<br>OP&nbsp;23',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome37: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;37,<br>OP&nbsp;24',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome38: {
     full: 'Chrome, Opera',
     short: 'CH&nbsp;38,<br>OP&nbsp;25',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome39: {
@@ -459,6 +460,7 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
+    obsolete: false // Long-term support ends April 2017.
   },
   iojs: {
     full: 'io.js',
@@ -475,6 +477,7 @@ exports.browsers = {
     short: 'Node<br>4.0',
     platformtype: 'engine',
     note_id: 'harmony-flag',
+    obsolete: false // Long-term support ends April 2018.
   },
   node5:  {
     full: 'Node.js',
@@ -482,6 +485,7 @@ exports.browsers = {
     short: 'Node<br>5.0',
     platformtype: 'engine',
     note_id: 'harmony-flag',
+    obsolete: false // Long-term support ends April 2019.
   },
   ejs: {
     full: 'Echo JS',
