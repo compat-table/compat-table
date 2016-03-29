@@ -13188,10 +13188,12 @@ exports.tests = [
           [Set, "Set Iterator"]
         ].forEach(function(pair){
           var iterProto = Object.getPrototypeOf(new pair[0]()[Symbol.iterator]());
-          passed &= iterProto.hasOwnProperty(s)
+          passed = passed
+            && iterProto.hasOwnProperty(s)
             && iterProto[s] === pair[1];
         });
-        passed &= Object.getPrototypeOf(function*(){})[s] === "GeneratorFunction"
+        passed = passed
+          && Object.getPrototypeOf(function*(){})[s] === "GeneratorFunction"
           && Object.getPrototypeOf(function*(){}())[s] === "Generator"
           && Map.prototype[s] === "Map"
           && Set.prototype[s] === "Set"
@@ -13201,6 +13203,7 @@ exports.tests = [
           && Symbol.prototype[s] === "Symbol"
           && typeof Object.getOwnPropertyDescriptor(
             Object.getPrototypeOf(Int8Array).prototype, Symbol.toStringTag).get === "function";
+          return passed;
       */},
       res: {
         typescript:  typescript.corejs,
