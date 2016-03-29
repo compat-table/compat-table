@@ -1561,7 +1561,7 @@ exports.tests = [
 },
 {
   name: 'System.global',
-  category: 'proposal (stage 1)',
+  category: 'draft (stage 2)',
   significance: 'small',
   link: 'https://github.com/tc39/proposal-global',
   exec: function(){/*

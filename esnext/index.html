@@ -5678,6 +5678,59 @@ return O.a + O.b + O.c === 6;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 </tr>
+<tr significance="0.25"><td id="test-System.global"><span><a class="anchor" href="#test-System.global">&#xA7;</a><a href="https://github.com/tc39/proposal-global">System.global</a></span><script data-source="
+Function(&apos;return this&apos;)().__system_global_test__ = 42;
+return System.global.__system_global_test__ === 42;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no obsolete" data-browser="jsx">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no unstable" data-browser="edge14">No</td>
+<td class="no obsolete" data-browser="firefox35">No</td>
+<td class="no obsolete" data-browser="firefox36">No</td>
+<td class="no obsolete" data-browser="firefox39">No</td>
+<td class="no obsolete" data-browser="firefox41">No</td>
+<td class="no obsolete" data-browser="firefox42">No</td>
+<td class="no obsolete" data-browser="firefox43">No</td>
+<td class="no obsolete" data-browser="firefox44">No</td>
+<td class="no" data-browser="firefox45">No</td>
+<td class="no unstable" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
+<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="chrome30">No</td>
+<td class="no obsolete" data-browser="chrome33">No</td>
+<td class="no obsolete" data-browser="chrome34">No</td>
+<td class="no obsolete" data-browser="chrome35">No</td>
+<td class="no obsolete" data-browser="chrome37">No</td>
+<td class="no obsolete" data-browser="chrome38">No</td>
+<td class="no obsolete" data-browser="chrome39">No</td>
+<td class="no obsolete" data-browser="chrome40">No</td>
+<td class="no obsolete" data-browser="chrome41">No</td>
+<td class="no obsolete" data-browser="chrome42">No</td>
+<td class="no obsolete" data-browser="chrome43">No</td>
+<td class="no obsolete" data-browser="chrome46">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome48">No</td>
+<td class="no" data-browser="chrome49">No</td>
+<td class="no unstable" data-browser="chrome50">No</td>
+<td class="no unstable" data-browser="chrome51">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="node">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+</tr>
 <tr class="supertest" significance="1"><td id="test-Shared_memory_and_atomics"><span><a class="anchor" href="#test-Shared_memory_and_atomics">&#xA7;</a><a href="https://github.com/tc39/ecmascript_sharedmem">Shared memory and atomics</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/20</td>
 <td class="tally" data-browser="babel" data-tally="0">0/20</td>
@@ -5729,7 +5782,7 @@ return O.a + O.b + O.c === 6;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_SharedArrayBuffer"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_SharedArrayBuffer">&#xA7;</a>SharedArrayBuffer</span><script data-source="
 return typeof SharedArrayBuffer === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("103");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("103");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5781,7 +5834,7 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_SharedArrayBuffer.isView"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_SharedArrayBuffer.isView">&#xA7;</a>SharedArrayBuffer.isView</span><script data-source="
 return typeof SharedArrayBuffer.isView === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer.isView === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer.isView === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("105");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer.isView === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("105");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer.isView === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5833,7 +5886,7 @@ return typeof SharedArrayBuffer.isView === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]">&#xA7;</a>SharedArrayBuffer[Symbol.species]</span><script data-source="
 return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("105");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("105");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("106");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("106");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5885,7 +5938,7 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_SharedArrayBuffer.prototype.byteLength"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_SharedArrayBuffer.prototype.byteLength">&#xA7;</a>SharedArrayBuffer.prototype.byteLength</span><script data-source="
 return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("106");try{return Function("asyncTestPassed","\nreturn 'byteLength' in SharedArrayBuffer.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("106");return Function("asyncTestPassed","'use strict';"+"\nreturn 'byteLength' in SharedArrayBuffer.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nreturn 'byteLength' in SharedArrayBuffer.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nreturn 'byteLength' in SharedArrayBuffer.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5937,7 +5990,7 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_SharedArrayBuffer.prototype.slice"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_SharedArrayBuffer.prototype.slice">&#xA7;</a>SharedArrayBuffer.prototype.slice</span><script data-source="
 return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer.prototype.slice === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer.prototype.slice === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer.prototype.slice === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer.prototype.slice === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5989,7 +6042,7 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_SharedArrayBuffer.prototype[Symbol.toStringTag]"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_SharedArrayBuffer.prototype[Symbol.toStringTag]">&#xA7;</a>SharedArrayBuffer.prototype[Symbol.toStringTag]</span><script data-source="
 return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuffer&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6043,7 +6096,7 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 return Atomics.OK === 0
   &amp;&amp; Atomics.NOTEQUAL === -1
   &amp;&amp; Atomics.TIMEDOUT === -2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nreturn Atomics.OK === 0\n  && Atomics.NOTEQUAL === -1\n  && Atomics.TIMEDOUT === -2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nreturn Atomics.OK === 0\n  && Atomics.NOTEQUAL === -1\n  && Atomics.TIMEDOUT === -2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nreturn Atomics.OK === 0\n  && Atomics.NOTEQUAL === -1\n  && Atomics.TIMEDOUT === -2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nreturn Atomics.OK === 0\n  && Atomics.NOTEQUAL === -1\n  && Atomics.TIMEDOUT === -2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6095,7 +6148,7 @@ return Atomics.OK === 0
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.add"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.add">&#xA7;</a>Atomics.add</span><script data-source="
 return typeof Atomics.add == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nreturn typeof Atomics.add == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.add == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");try{return Function("asyncTestPassed","\nreturn typeof Atomics.add == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("111");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.add == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6147,7 +6200,7 @@ return typeof Atomics.add == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.and"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.and">&#xA7;</a>Atomics.and</span><script data-source="
 return typeof Atomics.and == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");try{return Function("asyncTestPassed","\nreturn typeof Atomics.and == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("111");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.and == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("112");try{return Function("asyncTestPassed","\nreturn typeof Atomics.and == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("112");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.and == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6199,7 +6252,7 @@ return typeof Atomics.and == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.compareExchange"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.compareExchange">&#xA7;</a>Atomics.compareExchange</span><script data-source="
 return typeof Atomics.compareExchange == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("112");try{return Function("asyncTestPassed","\nreturn typeof Atomics.compareExchange == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("112");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.compareExchange == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nreturn typeof Atomics.compareExchange == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.compareExchange == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6251,7 +6304,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.exchange"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.exchange">&#xA7;</a>Atomics.exchange</span><script data-source="
 return typeof Atomics.exchange == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nreturn typeof Atomics.exchange == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.exchange == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\nreturn typeof Atomics.exchange == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.exchange == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6303,7 +6356,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.futexWait"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.futexWait">&#xA7;</a>Atomics.futexWait</span><script data-source="
 return typeof Atomics.futexWait == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\nreturn typeof Atomics.futexWait == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.futexWait == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("115");try{return Function("asyncTestPassed","\nreturn typeof Atomics.futexWait == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("115");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.futexWait == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6355,7 +6408,7 @@ return typeof Atomics.futexWait == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.futexWake"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.futexWake">&#xA7;</a>Atomics.futexWake</span><script data-source="
 return typeof Atomics.futexWake == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("115");try{return Function("asyncTestPassed","\nreturn typeof Atomics.futexWake == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("115");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.futexWake == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");try{return Function("asyncTestPassed","\nreturn typeof Atomics.futexWake == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("116");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.futexWake == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6407,7 +6460,7 @@ return typeof Atomics.futexWake == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.futexWakeOrRequeue"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.futexWakeOrRequeue">&#xA7;</a>Atomics.futexWakeOrRequeue</span><script data-source="
 return typeof Atomics.futexWakeOrRequeue == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");try{return Function("asyncTestPassed","\nreturn typeof Atomics.futexWakeOrRequeue == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("116");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.futexWakeOrRequeue == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("117");try{return Function("asyncTestPassed","\nreturn typeof Atomics.futexWakeOrRequeue == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("117");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.futexWakeOrRequeue == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6459,7 +6512,7 @@ return typeof Atomics.futexWakeOrRequeue == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.isLockFree"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.isLockFree">&#xA7;</a>Atomics.isLockFree</span><script data-source="
 return typeof Atomics.isLockFree == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("117");try{return Function("asyncTestPassed","\nreturn typeof Atomics.isLockFree == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("117");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.isLockFree == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("118");try{return Function("asyncTestPassed","\nreturn typeof Atomics.isLockFree == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("118");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.isLockFree == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6511,7 +6564,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.load"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.load">&#xA7;</a>Atomics.load</span><script data-source="
 return typeof Atomics.load == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("118");try{return Function("asyncTestPassed","\nreturn typeof Atomics.load == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("118");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.load == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("119");try{return Function("asyncTestPassed","\nreturn typeof Atomics.load == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("119");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.load == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6563,7 +6616,7 @@ return typeof Atomics.load == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.or"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.or">&#xA7;</a>Atomics.or</span><script data-source="
 return typeof Atomics.or == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("119");try{return Function("asyncTestPassed","\nreturn typeof Atomics.or == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("119");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.or == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");try{return Function("asyncTestPassed","\nreturn typeof Atomics.or == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("120");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.or == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6615,7 +6668,7 @@ return typeof Atomics.or == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.store"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.store">&#xA7;</a>Atomics.store</span><script data-source="
 return typeof Atomics.store == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");try{return Function("asyncTestPassed","\nreturn typeof Atomics.store == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("120");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.store == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("121");try{return Function("asyncTestPassed","\nreturn typeof Atomics.store == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("121");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.store == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6667,7 +6720,7 @@ return typeof Atomics.store == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.sub"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.sub">&#xA7;</a>Atomics.sub</span><script data-source="
 return typeof Atomics.sub == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("121");try{return Function("asyncTestPassed","\nreturn typeof Atomics.sub == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("121");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.sub == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("122");try{return Function("asyncTestPassed","\nreturn typeof Atomics.sub == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("122");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.sub == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6719,7 +6772,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Shared_memory_and_atomics" id="test-Shared_memory_and_atomics_Atomics.xor"><td><span><a class="anchor" href="#test-Shared_memory_and_atomics_Atomics.xor">&#xA7;</a>Atomics.xor</span><script data-source="
 return typeof Atomics.xor == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("122");try{return Function("asyncTestPassed","\nreturn typeof Atomics.xor == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("122");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.xor == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nreturn typeof Atomics.xor == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.xor == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6777,7 +6830,7 @@ var buffer2 = ArrayBuffer.transfer(buffer1, 2);
 return buffer1.byteLength === 0
   &amp;&amp; buffer2.byteLength === 2
   &amp;&amp; new Uint8Array(buffer2)[0] === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nvar buffer1 = new Uint8Array([1, 2, 3]).buffer;\nvar buffer2 = ArrayBuffer.transfer(buffer1, 2);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2\n  && new Uint8Array(buffer2)[0] === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nvar buffer1 = new Uint8Array([1, 2, 3]).buffer;\nvar buffer2 = ArrayBuffer.transfer(buffer1, 2);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2\n  && new Uint8Array(buffer2)[0] === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("124");try{return Function("asyncTestPassed","\nvar buffer1 = new Uint8Array([1, 2, 3]).buffer;\nvar buffer2 = ArrayBuffer.transfer(buffer1, 2);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2\n  && new Uint8Array(buffer2)[0] === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("124");return Function("asyncTestPassed","'use strict';"+"\nvar buffer1 = new Uint8Array([1, 2, 3]).buffer;\nvar buffer2 = ArrayBuffer.transfer(buffer1, 2);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2\n  && new Uint8Array(buffer2)[0] === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6837,7 +6890,7 @@ function nonconf(target, name, descriptor) {
   return descriptor;
 }
 return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable === false;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("124");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("124");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("125");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("125");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#babel-decorators-legacy-note"><sup>[6]</sup></a></td>
@@ -6893,7 +6946,7 @@ class C {
   static y = &apos;y&apos;;
 }
 return new C().x + C.y === &apos;xy&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("125");try{return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("125");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("126");try{return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("126");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  x = 'x';\n  static y = 'y';\n}\nreturn new C().x + C.y === 'xy';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6994,7 +7047,7 @@ return new C().x + C.y === &apos;xy&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimLeft"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimLeft">&#xA7;</a>String.prototype.trimLeft</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("127");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("128");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("128");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7046,7 +7099,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimRight"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimRight">&#xA7;</a>String.prototype.trimRight</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("128");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("128");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("129");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("129");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7098,7 +7151,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimStart"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimStart">&#xA7;</a>String.prototype.trimStart</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("129");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("129");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("130");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("130");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7150,60 +7203,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 </tr>
 <tr class="subtest" data-parent="String_trimming" id="test-String_trimming_String.prototype.trimEnd"><td><span><a class="anchor" href="#test-String_trimming_String.prototype.trimEnd">&#xA7;</a>String.prototype.trimEnd</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("130");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("130");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
-<td class="no obsolete" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
-<td class="no" data-browser="es7shim">No</td>
-<td class="no obsolete" data-browser="ie10">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no unstable" data-browser="edge14">No</td>
-<td class="no obsolete" data-browser="firefox35">No</td>
-<td class="no obsolete" data-browser="firefox36">No</td>
-<td class="no obsolete" data-browser="firefox39">No</td>
-<td class="no obsolete" data-browser="firefox41">No</td>
-<td class="no obsolete" data-browser="firefox42">No</td>
-<td class="no obsolete" data-browser="firefox43">No</td>
-<td class="no obsolete" data-browser="firefox44">No</td>
-<td class="no" data-browser="firefox45">No</td>
-<td class="no unstable" data-browser="firefox46">No</td>
-<td class="no unstable" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
-<td class="no obsolete" data-browser="chrome30">No</td>
-<td class="no obsolete" data-browser="chrome33">No</td>
-<td class="no obsolete" data-browser="chrome34">No</td>
-<td class="no obsolete" data-browser="chrome35">No</td>
-<td class="no obsolete" data-browser="chrome37">No</td>
-<td class="no obsolete" data-browser="chrome38">No</td>
-<td class="no obsolete" data-browser="chrome39">No</td>
-<td class="no obsolete" data-browser="chrome40">No</td>
-<td class="no obsolete" data-browser="chrome41">No</td>
-<td class="no obsolete" data-browser="chrome42">No</td>
-<td class="no obsolete" data-browser="chrome43">No</td>
-<td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no obsolete" data-browser="chrome47">No</td>
-<td class="no obsolete" data-browser="chrome48">No</td>
-<td class="no" data-browser="chrome49">No</td>
-<td class="no unstable" data-browser="chrome50">No</td>
-<td class="no unstable" data-browser="chrome51">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="node">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-</tr>
-<tr significance="0.25"><td id="test-System.global"><span><a class="anchor" href="#test-System.global">&#xA7;</a><a href="https://github.com/tc39/proposal-global">System.global</a></span><script data-source="
-Function(&apos;return this&apos;)().__system_global_test__ = 42;
-return System.global.__system_global_test__ === 42;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nFunction('return this')().__system_global_test__ = 42;\nreturn System.global.__system_global_test__ === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
