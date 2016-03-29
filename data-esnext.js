@@ -1574,19 +1574,6 @@ exports.tests = [
   }
 },
 {
-  name: 'Error.isError',
-  category: 'strawman (stage 0)',
-  significance: 'tiny',
-  link: 'https://github.com/ljharb/proposal-is-error',
-  exec: function(){/*
-    return Error.isError(new TypeError()) && !Error.isError(Object.create(TypeError.prototype));
-  */},
-  res: {
-    babel:       true,
-    typescript:  typescript.corejs,
-  }
-},
-{
   name: 'Math methods for 64-bit integers',
   category: 'strawman (stage 0)',
   significance: 'tiny',
