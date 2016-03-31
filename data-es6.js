@@ -5002,6 +5002,20 @@ exports.tests = [
         webkit:      true,
       },
     },
+    {
+      name: '"u" flag, case folding',
+      exec: function() {/*
+        return "ſ".match(/S/iu) && "ſ".match(/\w/iu) && "ſ".match(/\W/iu)
+         && "S".match(/ſ/iu) && "S".match(/\w/iu) && "S".match(/\W/iu);
+      */},
+      res: {
+        tr:          true,
+        babel:       true,
+        typescript:  typescript.fallthrough,
+        firefox46:   true,
+        chrome50:    true,
+      },
+    },
   ],
 },
 {
