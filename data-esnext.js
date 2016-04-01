@@ -2275,7 +2275,7 @@ exports.tests = [
 {
   name: 'WeakRefs',
   link: 'https://github.com/tc39/proposal-weakrefs',
-  category: 'strawman (stage 0)',
+  category: 'proposal (stage 1)',
   significance: 'large',
   exec: function(){/*
     var O = {};
@@ -2492,7 +2492,7 @@ exports.tests = [
 },
 {
   name: 'Zones',
-  category: 'strawman (stage 0)',
+  category: 'proposal (stage 1)',
   significance: 'large',
   link: 'https://github.com/domenic/zones',
   subtests: [
