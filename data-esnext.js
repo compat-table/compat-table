@@ -1213,23 +1213,6 @@ exports.tests = [
   }
 },
 {
-  name: 'Map.prototype.toJSON',
-  category: 'strawman (stage 0)',
-  significance: 'tiny',
-  link : 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
-  exec: function(){/*
-    var map = new Map();
-    map.set('a', 'b');
-    map.set('c', 'd');
-    return JSON.stringify(map) === '[["a","b"],["c","d"]]';
-  */},
-  res: {
-    babel:       true,
-    es7shim:     true,
-    typescript:  typescript.corejs,
-  }
-},
-{
   name: 'Reflect.Realm',
   category: 'pre-strawman',
   significance: 'small',
@@ -1251,22 +1234,6 @@ exports.tests = [
     return true;
   */},
   res: {
-  }
-},
-{
-  name: 'Set.prototype.toJSON',
-  category: 'strawman (stage 0)',
-  significance: 'tiny',
-  link: 'https://github.com/DavidBruant/Map-Set.prototype.toJSON',
-  exec: function(){/*
-    var set = new Set();
-    [1, 2, 3, 2, 1].forEach(function (i) { set.add(i); });
-    return JSON.stringify(set) === '[1,2,3]';
-  */},
-  res: {
-    babel:       true,
-    es7shim:     true,
-    typescript:  typescript.corejs,
   }
 },
 {
