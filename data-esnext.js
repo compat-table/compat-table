@@ -1297,6 +1297,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         es7shim:     true,
+        firefox48:   firefox.nightly,
       }
     },
     {
@@ -1311,6 +1312,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         es7shim:     true,
+        firefox48:   firefox.nightly,
       }
     }
   ]
