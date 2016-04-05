@@ -2291,7 +2291,7 @@ exports.tests = [
 },
 {
   name: 'Async iteration',
-  category: 'proposal (stage 1)',
+  category: 'draft (stage 2)',
   significance: 'medium',
   link: 'https://github.com/tc39/proposal-async-iteration',
   subtests: [
