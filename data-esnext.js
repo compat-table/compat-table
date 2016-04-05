@@ -1761,17 +1761,6 @@ exports.tests = [
       }
     },
     {
-      name: 'Atomics constants',
-      exec: function () {/*
-        return Atomics.OK === 0
-          && Atomics.NOTEQUAL === -1
-          && Atomics.TIMEDOUT === -2;
-      */},
-      res: {
-        firefox46:    firefox.nightly,
-      }
-    },
-    {
       name: 'Atomics.add',
       exec: function () {/*
         return typeof Atomics.add == 'function';
@@ -1808,30 +1797,19 @@ exports.tests = [
       }
     },
     {
-      name: 'Atomics.futexWait',
+      name: 'Atomics.wait',
       exec: function () {/*
         return typeof Atomics.futexWait == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
       }
     },
     {
-      name: 'Atomics.futexWake',
+      name: 'Atomics.wake',
       exec: function () {/*
         return typeof Atomics.futexWake == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
-      }
-    },
-    {
-      name: 'Atomics.futexWakeOrRequeue',
-      exec: function () {/*
-        return typeof Atomics.futexWakeOrRequeue == 'function';
-      */},
-      res: {
-        firefox46:    firefox.nightly,
       }
     },
     {
