@@ -1213,25 +1213,15 @@ exports.tests = [
   }
 },
 {
-  name: 'Reflect.Realm',
+  name: 'Realms',
   category: 'pre-strawman',
-  significance: 'small',
+  significance: 'large',
   link: 'https://gist.github.com/dherman/7568885',
   exec: function () {/*
-    var i, names =
-      ["eval", "global", "intrinsics", "stdlib", "directEval",
-      "indirectEval", "initGlobal", "nonEval"];
-
-    if (typeof Reflect !== "object" || typeof Reflect.Realm !== "function"
-        || typeof Reflect.Realm.prototype !== "object") {
-      return false;
-    }
-    for (i = 0; i < names.length; i++) {
-      if (!(names[i] in Reflect.Realm.prototype)) {
-        return false;
-      }
-    }
-    return true;
+    return typeof Realm === "function"
+      && ["eval", "global", "intrinsics", "stdlib", "directEval", "indirectEval", "initGlobal", "nonEval"].every(function(key){
+        return key in Realm.prototype;
+      });
   */},
   res: {
   }
@@ -2533,6 +2523,18 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Frozen Realms',
+  category: 'proposal (stage 1)',
+  significance: 'medium',
+  link: 'https://github.com/FUDCo/frozen-realms',
+  exec: function () {/*
+    return typeof Reflect.Realm.immutableRoot === 'function'
+      && typeof Reflect.Realm.prototype.spawn === 'function';
+  */},
+  res: {
+  }
 }
 ];
 
