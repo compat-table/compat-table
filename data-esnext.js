@@ -1789,17 +1789,19 @@ exports.tests = [
     {
       name: 'Atomics.wait',
       exec: function () {/*
-        return typeof Atomics.futexWait == 'function';
+        return typeof Atomics.wait == 'function';
       */},
       res: {
+        firefox48:    firefox.nightly,
       }
     },
     {
       name: 'Atomics.wake',
       exec: function () {/*
-        return typeof Atomics.futexWake == 'function';
+        return typeof Atomics.wake == 'function';
       */},
       res: {
+        firefox48:    firefox.nightly,
       }
     },
     {
