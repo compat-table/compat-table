@@ -15669,7 +15669,7 @@ exports.tests = [
       name: 'built-in prototypes are not instances',
       exec: function(){/*
         try {
-          RegExp.prototype.source; return false;
+          RegExp.prototype.exec(); return false;
         } catch(e) {}
         try {
           Date.prototype.valueOf(); return false;

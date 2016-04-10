@@ -53062,7 +53062,7 @@ return RegExp.prototype.toString.call({source: &apos;foo&apos;, flags: &apos;bar
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="test-miscellaneous_built-in_prototypes_are_not_instances"><td><span><a class="anchor" href="#test-miscellaneous_built-in_prototypes_are_not_instances">&#xA7;</a>built-in prototypes are not instances</span><script data-source="
 try {
-  RegExp.prototype.source; return false;
+  RegExp.prototype.exec(); return false;
 } catch(e) {}
 try {
   Date.prototype.valueOf(); return false;
@@ -53075,7 +53075,7 @@ if (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIE
 }
 
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("693");try{return Function("asyncTestPassed","\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\n\nif (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {\n    return Object.prototype.toString.call(E.prototype) === '[object Object]';\n})) {\n  return false;\n}\n\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("693");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  RegExp.prototype.source; return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\n\nif (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {\n    return Object.prototype.toString.call(E.prototype) === '[object Object]';\n})) {\n  return false;\n}\n\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("693");try{return Function("asyncTestPassed","\ntry {\n  RegExp.prototype.exec(); return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\n\nif (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {\n    return Object.prototype.toString.call(E.prototype) === '[object Object]';\n})) {\n  return false;\n}\n\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("693");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  RegExp.prototype.exec(); return false;\n} catch(e) {}\ntry {\n  Date.prototype.valueOf(); return false;\n} catch(e) {}\n\nif (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {\n    return Object.prototype.toString.call(E.prototype) === '[object Object]';\n})) {\n  return false;\n}\n\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
