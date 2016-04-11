@@ -714,16 +714,6 @@ exports.tests = [
       }
     },
     {
-      name: 'Float64x2',
-      exec: function(){/*
-        return typeof SIMD.Float64x2 === 'function';
-      */},
-      res: {
-        edge13:    flag,
-        firefox48: firefox.nightly,
-      }
-    },
-    {
       name: 'Int32x4',
       exec: function(){/*
         return typeof SIMD.Int32x4 === 'function';
@@ -749,6 +739,33 @@ exports.tests = [
       */},
       res: {
         edge13:    flag,
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'Uint32x4',
+      exec: function(){/*
+        return typeof SIMD.Uint32x4 === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'Uint16x8',
+      exec: function(){/*
+        return typeof SIMD.Uint16x8 === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'Uint8x16',
+      exec: function(){/*
+        return typeof SIMD.Uint8x16 === 'function';
+      */},
+      res: {
         firefox48: firefox.nightly,
       }
     },
@@ -926,6 +943,42 @@ exports.tests = [
       }
     },
     {
+      name: 'SIMD.%type%.load',
+      exec: function(){/*
+        return typeof SIMD.Float32x4.load === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'SIMD.%type%.load1',
+      exec: function(){/*
+        return typeof SIMD.Float32x4.load1 === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'SIMD.%type%.load2',
+      exec: function(){/*
+        return typeof SIMD.Float32x4.load2 === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'SIMD.%type%.load3',
+      exec: function(){/*
+        return typeof SIMD.Float32x4.load3 === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
       name: 'SIMD.%type%.max',
       exec: function(){/*
         return typeof SIMD.Float32x4.max === 'function';
@@ -993,6 +1046,15 @@ exports.tests = [
       }
     },
     {
+      name: 'SIMD.%booleanType%.or',
+      exec: function(){/*
+        return typeof SIMD.Bool16x8.or === 'function';
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
       name: 'SIMD.%type%.reciprocalApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
@@ -1031,14 +1093,6 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%integerType%.selectBits',
-      exec: function(){/*
-        return typeof SIMD.Int16x8.selectBits === 'function';
-      */},
-      res: {
-      }
-    },
-    {
       name: 'SIMD.%integerType%.shiftLeftByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftLeftByScalar === 'function';
@@ -1048,19 +1102,12 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%integerType%.shiftRightLogicalByScalar',
+      name: 'SIMD.%integerType%.shiftRightByScalar',
       exec: function(){/*
-        return typeof SIMD.Int32x4.shiftRightLogicalByScalar === 'function';
+        return typeof SIMD.Int32x4.shiftRightByScalar === 'function';
       */},
       res: {
-      }
-    },
-    {
-      name: 'SIMD.%integerType%.shiftRightArithmeticByScalar',
-      exec: function(){/*
-        return typeof SIMD.Int32x4.shiftRightArithmeticByScalar === 'function';
-      */},
-      res: {
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1116,7 +1163,7 @@ exports.tests = [
     {
       name: 'SIMD.%type%.store2',
       exec: function(){/*
-        return typeof SIMD.Float32x4.store1 === 'function';
+        return typeof SIMD.Float32x4.store2 === 'function';
       */},
       res: {
         edge13:    flag,
@@ -1126,7 +1173,7 @@ exports.tests = [
     {
       name: 'SIMD.%type%.store3',
       exec: function(){/*
-        return typeof SIMD.Float32x4.store1 === 'function';
+        return typeof SIMD.Float32x4.store3 === 'function';
       */},
       res: {
         edge13:    flag,
@@ -1169,6 +1216,27 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'SIMD.%type%.fromTIMDBits',
+      exec: function(){/*
+        return 'Float32x4,Int32x4,Int8x16,Uint32x4,Uint16x8,Uint8x16'.split(',').every(function(type){
+          return typeof SIMD.Int16x8['from' + type + 'Bits'] === 'function';
+        });
+      */},
+      res: {
+        firefox48: firefox.nightly,
+      }
+    },
+    {
+      name: 'SIMD.%type%.fromTIMD',
+      exec: function(){/*
+        return 'Float32x4,Uint32x4'.split(',').every(function(type){
+          return typeof SIMD.Int32x4['from' + type] === 'function';
+        });
+      */},
+      res: {
       }
     }
   ]
