@@ -347,6 +347,7 @@ exports.tests = [
         babel:       false,
         typescript:  true,
         edge13:      flag,
+        edge14:      true,
         firefox48:   firefox.nightly,
       }
     },
@@ -360,6 +361,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         edge13:      flag,
+        edge14:      true,
         firefox48:   firefox.nightly,
       }
     },
@@ -375,6 +377,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        edge14:      true,
       }
     },
   ],
@@ -458,6 +461,7 @@ exports.tests = [
     firefox45:  firefox.nightly,
     firefox46:  true,
     chrome51:   flag,
+    edge14:     true,
   }
 },
 {
@@ -482,6 +486,7 @@ exports.tests = [
     firefox45:  firefox.nightly,
     firefox46:  true,
     chrome51:   flag,
+    edge14:     true,
   }
 },
 {
@@ -505,7 +510,7 @@ exports.tests = [
         typescript:      typescript.corejs,
         webkit:          true,
         chrome47:        true,
-        edge14:          flag,
+        edge14:          true,
         firefox43:       true,
       }
     },
@@ -542,7 +547,7 @@ exports.tests = [
         typescript:      typescript.corejs,
         webkit:          true,
         chrome47:        true,
-        edge14:          flag,
+        edge14:          true,
         firefox43:       true,
       }
     },
@@ -560,7 +565,7 @@ exports.tests = [
         babel:           true,
         typescript:      typescript.corejs,
         chrome47:        true,
-        edge14:          flag,	
+        edge14:          true,	
         firefox42:       false,
         firefox43:       true,
       }
@@ -615,6 +620,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.asyncawait,
         edge13:      flag,
+        edge14:      true,
       }
     },
     {
@@ -629,6 +635,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.asyncawait,
         edge13:      flag,
+        edge14:      true,
       }
     },
     {
@@ -641,6 +648,7 @@ exports.tests = [
         babel:       true,
         typescript:  false, // still buggy output
         edge13:      flag,
+        edge14:      true,
       }
     }
   ]
@@ -730,6 +738,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:      flag,
       }
     },
     {
@@ -749,6 +758,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -758,6 +768,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -767,6 +778,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -776,6 +788,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -785,6 +798,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -794,6 +808,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -823,6 +838,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -832,6 +848,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -841,6 +858,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -850,6 +868,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -949,6 +968,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -958,6 +978,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -967,6 +988,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -976,6 +998,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -995,6 +1018,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1014,6 +1038,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1033,6 +1058,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1052,6 +1078,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1061,6 +1088,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1070,6 +1098,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1099,6 +1128,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1108,6 +1138,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1216,6 +1247,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1227,6 +1259,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1356,6 +1389,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es7shim:     true,
         firefox48:   firefox.nightly,
+        edge14:      flag,
       }
     },
     {
@@ -1371,6 +1405,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es7shim:     true,
         firefox48:   firefox.nightly,
+        edge14:      flag,
       }
     }
   ]
@@ -1583,7 +1618,7 @@ exports.tests = [
   res: {
     firefox43:       true,
     chrome49:        true,
-    edge14:          flag,
+    edge14:          true,
   },
 },
 {
