@@ -738,6 +738,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:      flag,
       }
     },
     {
@@ -757,6 +758,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -766,6 +768,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+		edge14:    flag,
       }
     },
     {
@@ -775,6 +778,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -784,6 +788,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -793,6 +798,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -802,6 +808,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -831,6 +838,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -840,6 +848,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -849,6 +858,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -858,6 +868,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -957,6 +968,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -966,6 +978,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -975,6 +988,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -984,6 +998,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1003,6 +1018,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1022,6 +1038,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1041,6 +1058,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1060,6 +1078,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1069,6 +1088,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1078,6 +1098,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1107,6 +1128,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1116,6 +1138,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1224,6 +1247,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1235,6 +1259,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        edge14:    flag,
       }
     },
     {
@@ -1364,6 +1389,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es7shim:     true,
         firefox48:   firefox.nightly,
+        edge14:      flag,
       }
     },
     {
@@ -1379,6 +1405,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es7shim:     true,
         firefox48:   firefox.nightly,
+        edge14:      flag,
       }
     }
   ]
