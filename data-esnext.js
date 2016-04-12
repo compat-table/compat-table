@@ -768,7 +768,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-		edge14:    flag,
+        edge14:    flag,
       }
     },
     {
