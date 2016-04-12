@@ -8416,6 +8416,7 @@ exports.tests = [
         return get + '' === "global,exec,global,unicode,exec";
       */},
       res: {
+        edge14:      flag,
         xs6:         true,
       },
     },
@@ -8431,6 +8432,7 @@ exports.tests = [
         return get + '' === "global,exec,global,unicode,exec";
       */},
       res: {
+        edge14:      flag,
         xs6:         true,
       },
     },
@@ -8444,6 +8446,7 @@ exports.tests = [
         return get + '' === "lastIndex,exec";
       */},
       res: {
+        edge14:      flag,
         xs6:         true,
       },
     },
@@ -8459,6 +8462,7 @@ exports.tests = [
         return get + '' === "constructor,flags,exec";
       */},
       res: {
+        edge14:      flag,
         xs6:         true,
         ejs:         true,
       },
@@ -12947,6 +12951,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        edge14:      flag,
         xs6:         true,
         ejs:         true,
         jxa:         true,
@@ -12987,6 +12992,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         jxa:         true,
       }
@@ -13005,6 +13011,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         webkit:      true,
         jxa:         true,
@@ -13024,6 +13031,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         jxa:         true,
       }
@@ -13042,6 +13050,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         jxa:         true,
       }
@@ -13081,6 +13090,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
+        edge14:      flag,
         xs6:         true,
       }
     },
@@ -13100,6 +13110,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
+        edge14:      flag,
         xs6:         true,
       }
     },
@@ -13119,6 +13130,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         firefox40:   true,
+        edge14:      flag,
         xs6:         true,
       }
     },
@@ -13318,6 +13330,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         jxa:         true,
       },
@@ -13332,6 +13345,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         jxa:         true,
       },
@@ -13346,6 +13360,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         jxa:         true,
       },
@@ -13360,6 +13375,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         chrome50:    true,
+        edge14:      flag,
         xs6:         true,
         webkit:      true,
         jxa:         true,
