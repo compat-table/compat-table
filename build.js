@@ -480,14 +480,14 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       // Create the cell, and add classes and attributes
       var cell = $('<td></td>');
       cell.addClass({
-      	'true': "yes",
-      	'false': "no",
-      	'undefined': "no",
-      	'tally': 'tally',
-      	'flagged': 'no flagged',
-      	'needs-polyfill-or-native': 'no needs-polyfill-or-native',
-      	'strict': 'no strict',
-      	'null': 'unknown',
+        'true': "yes",
+        'false': "no",
+        'undefined': "no",
+        'tally': 'tally',
+        'flagged': 'no flagged',
+        'needs-polyfill-or-native': 'no needs-polyfill-or-native',
+        'strict': 'no strict',
+        'null': 'unknown',
       }[result] || '');
       if (result === "needs-polyfill-or-native") {
         cell.attr('title', "Requires native support or a polyfill.");
@@ -495,7 +495,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       else if (result === "strict") {
         cell.attr('title', "Support for this feature incorrectly requires strict mode.");
       }
-      
+
       cell.attr('data-browser', browserId).addClass(
         browsers[browserId].obsolete ? "obsolete" :
         browsers[browserId].unstable ? "unstable" :

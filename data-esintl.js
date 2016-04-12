@@ -668,7 +668,7 @@ exports.tests = [
         ie10: false,
         ie11: false,
         edge: false,
-        edge14: true,		
+        edge14: true,
         firefox29: false,
         chrome24: null,
         chrome29: true,

@@ -192,7 +192,7 @@ table.one-selected td.selected {
     text-align: center; font-size: 0.8em; padding: 0.25em 0.5em; color: #fff;
 }
 .unknown {
-	color: #000;
+    color: #000;
 }
 
 /* yes/no/tally grid cell colors */
@@ -229,17 +229,17 @@ td:first-child, td:not([class]) {
 .flagged::after,
 .strict::after,
 [data-flagged-tally]::after {
-	content: "";
-	position: absolute;
-	right: 0;
-	top: 0;
-	border-top: 1.2em solid #44ab44;
-	border-left: 1.2em solid transparent;
-	width: 0em;
-	height: 0em;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 1.2em solid #44ab44;
+    border-left: 1.2em solid transparent;
+    width: 0em;
+    height: 0em;
 }
 [data-flagged-tally]:not([data-flagged-tally="1"])::after {
-	border-top-color: #acc20a;
+    border-top-color: #acc20a;
 }
 
 /* no */
@@ -406,7 +406,7 @@ label[for="sort"] {
     font-weight: bold; color: blue !important; text-decoration: underline !important;
 }
 .platformtype {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 /* page-specific header colors */

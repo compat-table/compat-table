@@ -5361,7 +5361,7 @@ exports.tests = [
         jxa:         true,
       },
     },
-  ].concat([		//@@ jph
+  ].concat([ //@@ jph
     { name: '.from', res: {
       babel:       true,
       typescript:  typescript.corejs,
@@ -11479,7 +11479,7 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        xs6:		 true,
+        xs6:         true,
         jxa:         true,
       },
     },
@@ -11499,7 +11499,7 @@ exports.tests = [
         webkit:      true,
         chrome44:    true,
         node4:       true,
-        xs6:		 true,
+        xs6:         true,
         jxa:         true,
       },
     },
@@ -11683,7 +11683,7 @@ exports.tests = [
         node012:     true,
         android40:   true,
         edge13:      false,
-        edge14:      true,		
+        edge14:      true,
         xs6:         true,
         jxa:         true,
       }),
@@ -14219,7 +14219,7 @@ exports.tests = [
         safari9:     true,
         webkit:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'imul': {
@@ -14241,7 +14241,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'sign': {
@@ -14259,7 +14259,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'log10': {
@@ -14277,7 +14277,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'log2': {
@@ -14295,7 +14295,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'log1p': {
@@ -14313,7 +14313,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'expm1': {
@@ -14330,7 +14330,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'cosh': {
@@ -14348,7 +14348,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'sinh': {
@@ -14366,7 +14366,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'tanh': {
@@ -14384,7 +14384,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'acosh': {
@@ -14402,7 +14402,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'asinh': {
@@ -14419,7 +14419,7 @@ exports.tests = [
         safari71_8:  true,
         webkit:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'atanh': {
@@ -14437,7 +14437,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'trunc': {
@@ -14455,7 +14455,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'fround': {
@@ -14477,7 +14477,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
       'cbrt': {
@@ -14494,7 +14494,7 @@ exports.tests = [
         webkit:      true,
         konq49:      true,
         node012:     true,
-        xs6:    	 true,
+        xs6:         true,
         jxa:         true,
       },
     };

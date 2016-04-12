@@ -565,7 +565,7 @@ exports.tests = [
         babel:           true,
         typescript:      typescript.corejs,
         chrome47:        true,
-        edge14:          true,	
+        edge14:          true,
         firefox42:       false,
         firefox43:       true,
       }
