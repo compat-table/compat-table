@@ -257,12 +257,12 @@ exports.browsers = {
   chrome49: {
     full: 'Chrome',
     short: 'CH 49',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome50: {
     full: 'Chrome',
     short: 'CH 50',
-    unstable: true,
     note_id: 'experimental-flag',
   },
   chrome51: {
@@ -1604,7 +1604,7 @@ exports.tests = [
   */},
   res: {
     firefox47:   true,
-    chrome51:    true,
+    chrome50:    true,
   },
 },
 {
@@ -2446,7 +2446,7 @@ exports.tests = [
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
   */},
   res : {
-    chrome52:    flag,
+    chrome50:    flag,
   }
 },
 {
