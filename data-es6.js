@@ -385,12 +385,12 @@ exports.browsers = {
   chrome49: {
     full: 'Chrome, Opera',
     short: 'CH 49,<br>OP&nbsp;36',
+    obsolete: true,
     note_id: 'experimental-flag',
   },
   chrome50: {
     full: 'Chrome, Opera',
     short: 'CH 50,<br>OP&nbsp;37',
-    unstable: true,
     note_id: 'experimental-flag',
   },
   chrome51: {
@@ -7969,7 +7969,7 @@ exports.tests = [
         typescript:  typescript.fallthrough,
         edge12:      true,
         firefox18:   true,
-        chrome52:    true,
+        chrome50:    true,
         xs6:         true,
         webkit:      true,
       },
@@ -15745,7 +15745,7 @@ exports.tests = [
         xs6:         false,
         jxa:         true,
         edge14:      flag,
-        chrome52:    true,
+        chrome50:    true,
       },
     },
     {
