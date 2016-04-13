@@ -271,6 +271,12 @@ exports.browsers = {
     unstable: true,
     note_id: 'experimental-flag',
   },
+  chrome52: {
+    full: 'Chrome',
+    short: 'CH 52',
+    unstable: true,
+    note_id: 'experimental-flag',
+  },
   webkit: {
     full: 'WebKit r184046',
     short: 'WK',
@@ -349,6 +355,7 @@ exports.tests = [
         edge13:      flag,
         edge14:      true,
         firefox48:   firefox.nightly,
+        chrome52:    flag,
       }
     },
     {
@@ -363,6 +370,7 @@ exports.tests = [
         edge13:      flag,
         edge14:      true,
         firefox48:   firefox.nightly,
+        chrome52:    flag,
       }
     },
     {
@@ -378,6 +386,7 @@ exports.tests = [
       res: {
         babel:       true,
         edge14:      true,
+        chrome52:    flag,
       }
     },
   ],
@@ -2437,6 +2446,7 @@ exports.tests = [
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
   */},
   res : {
+    chrome52:    flag,
   }
 },
 {
