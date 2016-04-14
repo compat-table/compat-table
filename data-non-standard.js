@@ -133,11 +133,17 @@ exports.browsers = {
   chrome11: {
     full: 'Chrome 11-35',
     short: 'CH 11-35',
-    obsolete: false
+    obsolete: true
   },
   chrome36: {
-    full: 'Chrome 36+',
-    short: 'CH 36+'
+    full: 'Chrome 36-48',
+    short: 'CH 36-48',
+    obsolete: true
+  },
+  chrome49: {
+    full: 'Chrome 49+',
+    short: 'CH 49+',
+    obsolete: false
   },
   opera10_10: {
     full: 'Opera 10.10',
@@ -325,6 +331,7 @@ exports.tests = [
     opera10_50: true,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: true,
     konq49: true,
     besen: false,
@@ -406,6 +413,7 @@ exports.tests = [
     opera10_50: true,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: true,
     konq49: true,
     besen: false,
@@ -1191,6 +1199,7 @@ exports.tests = [
     opera10_50: true,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: true,
     konq49: true,
     besen: false,
@@ -1237,6 +1246,7 @@ exports.tests = [
     opera10_50: true,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: true,
     konq49: true,
     besen: false,
@@ -1346,6 +1356,7 @@ exports.tests = [
     opera10_50: false,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: false,
     konq49: true,
     besen: false,
@@ -1388,6 +1399,7 @@ exports.tests = [
     opera10_50: false,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: false,
     konq49: true,
     besen: false,
@@ -1636,6 +1648,7 @@ exports.tests = [
   */},
   res: {
     chrome36:        true,
+    chrome49:        false,
     node:            true,
     iojs:            true,
     android50:       true,
@@ -1682,6 +1695,7 @@ exports.tests = [
     opera10_50: true,
     chrome11: true,
     chrome36: true,
+    chrome49: true,
     konq44: false,
     konq49: false,
     besen: false,
