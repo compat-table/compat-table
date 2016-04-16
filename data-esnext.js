@@ -1324,9 +1324,9 @@ exports.tests = [
 },
 {
   name: 'Realms',
-  category: 'pre-strawman',
+  category: 'strawman (stage 0)',
   significance: 'large',
-  link: 'https://gist.github.com/dherman/7568885',
+  link: 'https://github.com/caridy/proposal-realms',
   exec: function () {/*
     return typeof Realm === "function"
       && ["eval", "global", "intrinsics", "stdlib", "directEval", "indirectEval", "initGlobal", "nonEval"].every(function(key){
