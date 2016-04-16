@@ -600,7 +600,7 @@ exports.tests = [
         },
         babel:       false,
         typescript:  typescript.fallthrough,
-        chrome52:    flag,
+        chrome51:    flag,
         webkit:      true,
         xs6:         true,
       },
@@ -626,7 +626,7 @@ exports.tests = [
       res: {
         tr:          { val: flag, note_id: 'tr-tco' },
         typescript:  typescript.fallthrough,
-        chrome52:    flag,
+        chrome51:    flag,
         webkit:      true,
         xs6:         true,
       },
