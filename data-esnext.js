@@ -2670,6 +2670,20 @@ exports.tests = [
   */},
   res: {
   }
+},
+{
+  name: 'asap',
+  link: 'https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask',
+  category: 'strawman (stage 0)',
+  significance: 'medium',
+  exec: function(){/*
+    var passed = false;
+    setTimeout(function(){ passed = false; }, 1);
+    asap(function(){ if(passed)asyncTestPassed(); });
+    passed = true;
+  */},
+  res : {
+  }
 }
 ];
 
