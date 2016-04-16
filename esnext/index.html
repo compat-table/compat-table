@@ -8382,11 +8382,11 @@ return a === &apos;1a2b&apos;
 </tr>
 <tr significance="1"><td id="test-WeakRefs"><span><a class="anchor" href="#test-WeakRefs">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs">WeakRefs</a></span><script data-source="
 var O = {};
-var weakref = makeWeakRef(O);
+var weakref = System.makeWeakRef(O);
 var works = weakref.get() === O;
 weakref.clear();
 return works &amp;&amp; weakref.get() === undefined;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("150");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("150");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("150");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("150");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

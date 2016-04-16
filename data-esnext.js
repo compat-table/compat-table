@@ -2363,7 +2363,7 @@ exports.tests = [
   significance: 'large',
   exec: function(){/*
     var O = {};
-    var weakref = makeWeakRef(O);
+    var weakref = System.makeWeakRef(O);
     var works = weakref.get() === O;
     weakref.clear();
     return works && weakref.get() === undefined;
