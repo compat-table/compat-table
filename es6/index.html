@@ -17302,7 +17302,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("225");try{return Function("asyncTestPassed","\nfunction * generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("225");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -17385,7 +17385,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("226");try{return Function("asyncTestPassed","\nvar generator = function * (){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("226");return Function("asyncTestPassed","'use strict';"+"\nvar generator = function * (){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -17468,7 +17468,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("227");try{return Function("asyncTestPassed","\nfunction * generator(){\n  yield this.x; yield this.y;\n};\nvar iterator = { g: generator, x: 5, y: 6 }.g();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("227");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator(){\n  yield this.x; yield this.y;\n};\nvar iterator = { g: generator, x: 5, y: 6 }.g();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -17630,7 +17630,7 @@ return sent[0] === &quot;foo&quot; &amp;&amp; sent[1] === &quot;bar&quot;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("229");try{return Function("asyncTestPassed","\nvar sent;\nfunction * generator(){\n  sent = [yield 5, yield 6];\n};\nvar iterator = generator();\niterator.next();\niterator.next(\"foo\");\niterator.next(\"bar\");\nreturn sent[0] === \"foo\" && sent[1] === \"bar\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("229");return Function("asyncTestPassed","'use strict';"+"\nvar sent;\nfunction * generator(){\n  sent = [yield 5, yield 6];\n};\nvar iterator = generator();\niterator.next();\niterator.next(\"foo\");\niterator.next(\"bar\");\nreturn sent[0] === \"foo\" && sent[1] === \"bar\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -17712,7 +17712,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("230");try{return Function("asyncTestPassed","\nfunction * generatorFn(){}\nvar ownProto = Object.getPrototypeOf(generatorFn());\nvar passed = ownProto === generatorFn.prototype;\n\nvar sharedProto = Object.getPrototypeOf(ownProto);\npassed &= sharedProto !== Object.prototype &&\n  sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&\n  sharedProto.hasOwnProperty('next');\n\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("230");return Function("asyncTestPassed","'use strict';"+"\nfunction * generatorFn(){}\nvar ownProto = Object.getPrototypeOf(generatorFn());\nvar passed = ownProto === generatorFn.prototype;\n\nvar sharedProto = Object.getPrototypeOf(ownProto);\npassed &= sharedProto !== Object.prototype &&\n  sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&\n  sharedProto.hasOwnProperty('next');\n\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -17798,7 +17798,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("231");try{return Function("asyncTestPassed","\nfunction * generatorFn(){}\nvar g = generatorFn();\nvar ownProto = Object.getPrototypeOf(g);\nvar passed = ownProto === generatorFn.prototype;\n\nvar sharedProto = Object.getPrototypeOf(ownProto);\nvar iterProto = Object.getPrototypeOf(sharedProto);\n\npassed &= iterProto.hasOwnProperty(Symbol.iterator) &&\n  !sharedProto     .hasOwnProperty(Symbol.iterator) &&\n  !ownProto        .hasOwnProperty(Symbol.iterator) &&\n  g[Symbol.iterator]() === g;\n\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("231");return Function("asyncTestPassed","'use strict';"+"\nfunction * generatorFn(){}\nvar g = generatorFn();\nvar ownProto = Object.getPrototypeOf(g);\nvar passed = ownProto === generatorFn.prototype;\n\nvar sharedProto = Object.getPrototypeOf(ownProto);\nvar iterProto = Object.getPrototypeOf(sharedProto);\n\npassed &= iterProto.hasOwnProperty(Symbol.iterator) &&\n  !sharedProto     .hasOwnProperty(Symbol.iterator) &&\n  !ownProto        .hasOwnProperty(Symbol.iterator) &&\n  g[Symbol.iterator]() === g;\n\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -17967,7 +17967,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("233");try{return Function("asyncTestPassed","\nvar passed = false;\nfunction * generator(){\n  try {\n    yield 5; yield 6;\n  } catch(e) {\n    passed = (e === \"foo\");\n  }\n};\nvar iterator = generator();\niterator.next();\niterator.throw(\"foo\");\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("233");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nfunction * generator(){\n  try {\n    yield 5; yield 6;\n  } catch(e) {\n    passed = (e === \"foo\");\n  }\n};\nvar iterator = generator();\niterator.next();\niterator.throw(\"foo\");\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18050,7 +18050,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("234");try{return Function("asyncTestPassed","\nfunction * generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.return(\"quxquux\");\npassed    &= item.value === \"quxquux\" && item.done === true;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("234");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator(){\n  yield 5; yield 6;\n};\nvar iterator = generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.return(\"quxquux\");\npassed    &= item.value === \"quxquux\" && item.done === true;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18130,7 +18130,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("235");try{return Function("asyncTestPassed","\nvar passed;\nfunction * generator(){\n  passed = yield 0 ? true : false;\n};\nvar iterator = generator();\niterator.next();\niterator.next(true);\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("235");return Function("asyncTestPassed","'use strict';"+"\nvar passed;\nfunction * generator(){\n  passed = yield 0 ? true : false;\n};\nvar iterator = generator();\niterator.next();\niterator.next(true);\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18212,7 +18212,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("236");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * [5, 6];\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("236");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * [5, 6];\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18294,7 +18294,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("237");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * [,,];\n}());\nvar item = iterator.next();\nvar passed = item.value === undefined && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("237");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * [,,];\n}());\nvar item = iterator.next();\nvar passed = item.value === undefined && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18376,7 +18376,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("238");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * \"56\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"5\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"6\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("238");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * \"56\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"5\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"6\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18458,7 +18458,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("239");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * \"𠮷𠮶\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"𠮷\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"𠮶\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("239");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * \"𠮷𠮶\";\n}());\nvar item = iterator.next();\nvar passed = item.value === \"𠮷\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === \"𠮶\" && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18542,7 +18542,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("240");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * (function*(){ yield 5; yield 6; yield 7; }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("240");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * (function*(){ yield 5; yield 6; yield 7; }());\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18626,7 +18626,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("241");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * global.__createIterableObject([5, 6, 7]);\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("241");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * global.__createIterableObject([5, 6, 7]);\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18710,7 +18710,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("242");try{return Function("asyncTestPassed","\nvar iterator = (function * generator() {\n  yield * Object.create(__createIterableObject([5, 6, 7]));\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("242");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = (function * generator() {\n  yield * Object.create(__createIterableObject([5, 6, 7]));\n}());\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 7 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18884,7 +18884,7 @@ return closed === &apos;ab&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("244");try{return Function("asyncTestPassed","\nvar closed = '';\nvar iter = __createIterableObject([1, 2, 3], {\n  'return': function(){\n    closed += 'a';\n    return {done: true};\n  }\n});\nvar gen = (function* generator(){\n  try {\n    yield *iter;\n  } finally {\n    closed += 'b';\n  }\n})();\ngen.next();\ngen['return']();\nreturn closed === 'ab';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("244");return Function("asyncTestPassed","'use strict';"+"\nvar closed = '';\nvar iter = __createIterableObject([1, 2, 3], {\n  'return': function(){\n    closed += 'a';\n    return {done: true};\n  }\n});\nvar gen = (function* generator(){\n  try {\n    yield *iter;\n  } finally {\n    closed += 'b';\n  }\n})();\ngen.next();\ngen['return']();\nreturn closed === 'ab';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -18972,7 +18972,7 @@ return closed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("245");try{return Function("asyncTestPassed","\nvar closed = false;\nvar iter = global.__createIterableObject([1, 2, 3], {\n  'throw': undefined,\n  'return': function() {\n    closed = true;\n    return {done: true};\n  }\n});\nvar gen = (function*(){\n  try {\n    yield *iter;\n  } catch(e){}\n})();\ngen.next();\ngen['throw']();\nreturn closed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("245");return Function("asyncTestPassed","'use strict';"+"\nvar closed = false;\nvar iter = global.__createIterableObject([1, 2, 3], {\n  'throw': undefined,\n  'return': function() {\n    closed = true;\n    return {done: true};\n  }\n});\nvar gen = (function*(){\n  try {\n    yield *iter;\n  } catch(e){}\n})();\ngen.next();\ngen['throw']();\nreturn closed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -19057,7 +19057,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("246");try{return Function("asyncTestPassed","\nvar o = {\n  * generator() {\n    yield 5; yield 6;\n  },\n};\nvar iterator = o.generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("246");return Function("asyncTestPassed","'use strict';"+"\nvar o = {\n  * generator() {\n    yield 5; yield 6;\n  },\n};\nvar iterator = o.generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -19142,7 +19142,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("247");try{return Function("asyncTestPassed","\nvar o = {\n  * \"foo bar\"() {\n    yield 5; yield 6;\n  },\n};\nvar iterator = o[\"foo bar\"]();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("247");return Function("asyncTestPassed","'use strict';"+"\nvar o = {\n  * \"foo bar\"() {\n    yield 5; yield 6;\n  },\n};\nvar iterator = o[\"foo bar\"]();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -19228,7 +19228,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("248");try{return Function("asyncTestPassed","\nvar garply = \"generator\";\nvar o = {\n  * [garply] () {\n    yield 5; yield 6;\n  },\n};\nvar iterator = o.generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("248");return Function("asyncTestPassed","'use strict';"+"\nvar garply = \"generator\";\nvar o = {\n  * [garply] () {\n    yield 5; yield 6;\n  },\n};\nvar iterator = o.generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -19313,7 +19313,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("249");try{return Function("asyncTestPassed","\nclass C {\n  * generator() {\n    yield 5; yield 6;\n  }\n};\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("249");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  * generator() {\n    yield 5; yield 6;\n  }\n};\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -19399,7 +19399,7 @@ return passed;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("250");try{return Function("asyncTestPassed","\nvar garply = \"generator\";\nclass C {\n  * [garply] () {\n    yield 5; yield 6;\n  }\n}\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("250");return Function("asyncTestPassed","'use strict';"+"\nvar garply = \"generator\";\nclass C {\n  * [garply] () {\n    yield 5; yield 6;\n  }\n}\nvar iterator = new C().generator();\nvar item = iterator.next();\nvar passed = item.value === 5 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === 6 && item.done === false;\nitem = iterator.next();\npassed    &= item.value === undefined && item.done === true;\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -19481,7 +19481,7 @@ try {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("251");try{return Function("asyncTestPassed","\nclass C {\n  * generator() {\n    yield 5; yield 6;\n  }\n};\ntry {\n  Function(\"class D { * constructor() { return {}; } }\");\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("251");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  * generator() {\n    yield 5; yield 6;\n  }\n};\ntry {\n  Function(\"class D { * constructor() { return {}; } }\");\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[16]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -28579,9 +28579,9 @@ return proxy.foo === 5;
 <td class="yes" data-browser="edge12">Yes</td>
 <td class="yes" data-browser="edge13">Yes</td>
 <td class="yes unstable" data-browser="edge14">Yes</td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#fx-proxy-get-note"><sup>[16]</sup></a></td>
-<td class="no obsolete" data-browser="firefox36">No<a href="#fx-proxy-get-note"><sup>[16]</sup></a></td>
-<td class="no obsolete" data-browser="firefox37">No<a href="#fx-proxy-get-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#fx-proxy-get-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox36">No<a href="#fx-proxy-get-note"><sup>[17]</sup></a></td>
+<td class="no obsolete" data-browser="firefox37">No<a href="#fx-proxy-get-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox38">Yes</td>
 <td class="yes obsolete" data-browser="firefox39">Yes</td>
 <td class="yes obsolete" data-browser="firefox40">Yes</td>
@@ -34208,7 +34208,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="test-well-known_symbols"><span><a class="anchor" href="#test-well-known_symbols">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols">well-known symbols</a><a href="#symbol-iterator-functionality-note"><sup>[17]</sup></a></span></td>
+<tr class="supertest" significance="0.5"><td id="test-well-known_symbols"><span><a class="anchor" href="#test-well-known_symbols">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols">well-known symbols</a><a href="#symbol-iterator-functionality-note"><sup>[18]</sup></a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.038461538461538464" style="background-color:hsl(4,84%,50%)">1/26</td>
 <td class="tally" data-browser="babel" data-tally="0.5384615384615384" style="background-color:hsl(64,62%,50%)" data-flagged-tally="0.5769230769230769">14/26</td>
 <td class="tally obsolete" data-browser="es6tr" data-tally="0">0/26</td>
@@ -36308,7 +36308,7 @@ with (a) {
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
-<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[18]</sup></a></td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[19]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
@@ -37529,7 +37529,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("480");try{return Function("asyncTestPassed","\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("480");return Function("asyncTestPassed","'use strict';"+"\nclass foo {};\nclass bar { static name() {} };\nreturn foo.name === \"foo\" &&\n  typeof bar.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[20]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -37603,7 +37603,7 @@ return class foo {}.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("481");try{return Function("asyncTestPassed","\nreturn class foo {}.name === \"foo\" &&\n  typeof class bar { static name() {} }.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("481");return Function("asyncTestPassed","'use strict';"+"\nreturn class foo {}.name === \"foo\" &&\n  typeof class bar { static name() {} }.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[20]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -37681,7 +37681,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("482");try{return Function("asyncTestPassed","\nvar foo = class {};\nvar bar = class baz {};\nvar qux = class { static name() {} };\nreturn foo.name === \"foo\" &&\n       bar.name === \"baz\" &&\n       typeof qux.name === \"function\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("482");return Function("asyncTestPassed","'use strict';"+"\nvar foo = class {};\nvar bar = class baz {};\nvar qux = class { static name() {} };\nreturn foo.name === \"foo\" &&\n       bar.name === \"baz\" &&\n       typeof qux.name === \"function\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[19]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#name-configurable-note"><sup>[20]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
@@ -38723,11 +38723,11 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="yes" data-browser="edge12">Yes</td>
 <td class="yes" data-browser="edge13">Yes</td>
 <td class="yes unstable" data-browser="edge14">Yes</td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no obsolete" data-browser="firefox36">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no obsolete" data-browser="firefox37">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="firefox38">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no obsolete" data-browser="firefox39">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox36">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox37">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="firefox38">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox39">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox40">Yes</td>
 <td class="yes obsolete" data-browser="firefox41">Yes</td>
 <td class="yes obsolete" data-browser="firefox42">Yes</td>
@@ -38738,8 +38738,8 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="yes unstable" data-browser="firefox47">Yes</td>
 <td class="yes unstable" data-browser="firefox48">Yes</td>
 <td class="no obsolete" data-browser="chrome">No</td>
-<td class="no obsolete" data-browser="chrome39">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no obsolete" data-browser="chrome40">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="chrome39">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="chrome40">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
 <td class="yes obsolete" data-browser="chrome42">Yes</td>
 <td class="yes obsolete" data-browser="chrome43">Yes</td>
@@ -38762,7 +38762,7 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no flagged" data-browser="node012">Flag<a href="#string-contains-note"><sup>[20]</sup></a></td>
+<td class="no flagged" data-browser="node012">Flag<a href="#string-contains-note"><sup>[21]</sup></a></td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes" data-browser="node5">Yes</td>
@@ -38773,9 +38773,9 @@ return typeof String.prototype.includes === &apos;function&apos;
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no obsolete" data-browser="android42">No</td>
 <td class="no obsolete" data-browser="android43">No</td>
-<td class="no" data-browser="android44">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="android50">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
-<td class="no" data-browser="android51">No<a href="#string-contains-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="android44">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="android50">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="android51">No<a href="#string-contains-note"><sup>[21]</sup></a></td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
@@ -40792,34 +40792,34 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="yes" data-browser="edge12">Yes</td>
 <td class="yes" data-browser="edge13">Yes</td>
 <td class="yes unstable" data-browser="edge14">Yes</td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
-<td class="no obsolete" data-browser="firefox36">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox37">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no" data-browser="firefox38">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox39">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox40">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox41">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox42">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox43">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="firefox44">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no" data-browser="firefox45">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no unstable" data-browser="firefox46">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no unstable" data-browser="firefox47">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no unstable" data-browser="firefox48">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[22]</sup></a></td>
+<td class="no obsolete" data-browser="firefox36">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox37">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no" data-browser="firefox38">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox39">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox40">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox41">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox42">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox43">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="firefox44">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no" data-browser="firefox45">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no unstable" data-browser="firefox46">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no unstable" data-browser="firefox47">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no unstable" data-browser="firefox48">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
 <td class="no obsolete" data-browser="chrome">No</td>
-<td class="no obsolete" data-browser="chrome39">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome40">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome41">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome42">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome43">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome44">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome45">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome46">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome47">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome48">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no obsolete" data-browser="chrome49">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no" data-browser="chrome50">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
-<td class="no unstable" data-browser="chrome51">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no obsolete" data-browser="chrome39">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome40">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome41">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome42">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome43">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome44">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome45">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome46">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome47">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome48">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no obsolete" data-browser="chrome49">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no" data-browser="chrome50">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
+<td class="no unstable" data-browser="chrome51">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
 <td class="yes unstable" data-browser="chrome52">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
@@ -40832,7 +40832,7 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no obsolete" data-browser="rhino17">No</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="node012">Yes</td>
-<td class="no obsolete" data-browser="iojs">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no obsolete" data-browser="iojs">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
@@ -40844,7 +40844,7 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="no obsolete" data-browser="android43">No</td>
 <td class="no" data-browser="android44">No</td>
 <td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No<a href="#array-prototype-iterator-note"><sup>[22]</sup></a></td>
+<td class="no" data-browser="android51">No<a href="#array-prototype-iterator-note"><sup>[23]</sup></a></td>
 <td class="no" data-browser="ios7">No</td>
 <td class="no" data-browser="ios8">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
@@ -40938,7 +40938,7 @@ return typeof Array.prototype[Symbol.iterator] === &apos;function&apos;;
 <td class="yes" data-browser="edge12">Yes</td>
 <td class="yes" data-browser="edge13">Yes</td>
 <td class="yes unstable" data-browser="edge14">Yes</td>
-<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="firefox35">No<a href="#fx-array-prototype-values-2-note"><sup>[22]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox36">Yes</td>
 <td class="yes obsolete" data-browser="firefox37">Yes</td>
 <td class="yes" data-browser="firefox38">Yes</td>
@@ -46668,7 +46668,7 @@ return get[0] === Symbol.unscopables &amp;&amp; get.slice(1) + &apos;&apos; === 
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no" data-browser="node5">No</td>
-<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[18]</sup></a></td>
+<td class="no unstable" data-browser="ejs">No<a href="#ejs-no-with-note"><sup>[19]</sup></a></td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="no" data-browser="jxa">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
@@ -52842,11 +52842,11 @@ return result === &quot;012349 DB-1EFGHIJKLAC&quot;;
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es6shim">No</td>
-<td class="yes obsolete" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[23]</sup></a></td>
-<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[23]</sup></a></td>
-<td class="yes" data-browser="edge12">Yes<a href="#ie_property_order-note"><sup>[23]</sup></a></td>
-<td class="yes" data-browser="edge13">Yes<a href="#ie_property_order-note"><sup>[23]</sup></a></td>
-<td class="yes unstable" data-browser="edge14">Yes<a href="#ie_property_order-note"><sup>[23]</sup></a></td>
+<td class="yes obsolete" data-browser="ie10">Yes<a href="#ie_property_order-note"><sup>[24]</sup></a></td>
+<td class="yes" data-browser="ie11">Yes<a href="#ie_property_order-note"><sup>[24]</sup></a></td>
+<td class="yes" data-browser="edge12">Yes<a href="#ie_property_order-note"><sup>[24]</sup></a></td>
+<td class="yes" data-browser="edge13">Yes<a href="#ie_property_order-note"><sup>[24]</sup></a></td>
+<td class="yes unstable" data-browser="edge14">Yes<a href="#ie_property_order-note"><sup>[24]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox35">Yes</td>
 <td class="yes obsolete" data-browser="firefox36">Yes</td>
 <td class="yes obsolete" data-browser="firefox37">Yes</td>
@@ -52929,12 +52929,12 @@ return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNO
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("682");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("682");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[24]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[25]</sup></a></td>
 <td class="no obsolete" data-browser="es6tr">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No<a href="#forin-order-note"><sup>[24]</sup></a></td>
-<td class="no" data-browser="es6shim">No<a href="#forin-order-note"><sup>[24]</sup></a></td>
+<td class="no" data-browser="typescript">No<a href="#forin-order-note"><sup>[25]</sup></a></td>
+<td class="no" data-browser="es6shim">No<a href="#forin-order-note"><sup>[25]</sup></a></td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes" data-browser="edge12">Yes</td>
@@ -53923,7 +53923,7 @@ return false;
 </tr>
 <tr class="category"><td colspan="70">Annex b</td>
 </tr>
-<tr class="supertest optional-feature" significance="0.125"><td id="test-non-strict_function_semantics"><span><a class="anchor" href="#test-non-strict_function_semantics">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">non-strict function semantics</a><a href="#hoisted-block-functions-note"><sup>[25]</sup></a></span></td>
+<tr class="supertest optional-feature" significance="0.125"><td id="test-non-strict_function_semantics"><span><a class="anchor" href="#test-non-strict_function_semantics">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">non-strict function semantics</a><a href="#hoisted-block-functions-note"><sup>[26]</sup></a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="es6tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -54237,7 +54237,7 @@ return foo() === 2 &amp;&amp; bar() === 3 &amp;&amp; baz() === 4 &amp;&amp; qux(
 <td class="yes" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="supertest optional-feature" significance="0.125"><td id="test-__proto___in_object_literals"><span><a class="anchor" href="#test-__proto___in_object_literals">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[26]</sup></a></span></td>
+<tr class="supertest optional-feature" significance="0.125"><td id="test-__proto___in_object_literals"><span><a class="anchor" href="#test-__proto___in_object_literals">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers">__proto__ in object literals</a><a href="#proto-in-object-literals-note"><sup>[27]</sup></a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/5</td>
 <td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/5</td>
 <td class="tally obsolete not-applicable" data-browser="es6tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/5</td>
@@ -56335,7 +56335,7 @@ return a === 3;
         <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
       </div>
       <!-- FOOTNOTES -->
-    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="edge-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[6]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff-shorthand-methods-note">  <sup>[9]</sup> Firefox incorrectly produces an error in strict mode if the method is named <code>&quot;arguments&quot;</code>, <code>&quot;eval&quot;</code>, or <code>&quot;delete&quot;</code>.</p><p id="typescript-core-js-note">  <sup>[10]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="fx-let-note">  <sup>[11]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="compiler-proto-note">  <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[14]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[15]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="fx-proxy-get-note">  <sup>[16]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s <code>&quot;get&quot;</code> handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s <code>&quot;has&quot;</code> handler reports it as present).</p><p id="symbol-iterator-functionality-note">  <sup>[17]</sup> Functionality for <code>Symbol.iterator</code> is tested by the &quot;generic iterators&quot; subtests for the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, <a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, and <a href="#Array_static_methods">Array.from</a>.</p><p id="ejs-no-with-note">  <sup>[18]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[19]</sup> Requires function <code>&quot;name&quot;</code> properties to be natively configurable</p><p id="string-contains-note">  <sup>[20]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-2-note">  <sup>[21]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[22]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="ie_property_order-note">  <sup>[23]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="forin-order-note">  <sup>[24]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="hoisted-block-functions-note">  <sup>[25]</sup> The 2015 version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.</p><p id="proto-in-object-literals-note">  <sup>[26]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
+    <p><p id="babel-optional-note">  <sup>[1]</sup> Flagged features require an optional transformer setting.</p><p id="jsx-flag-note">  <sup>[2]</sup> Have to be enabled via <code>harmony</code> option</p><p id="edge-experimental-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="khtml-note">  <sup>[4]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="tr-tco-note">  <sup>[6]</sup> Requires the <code>properTailCalls</code> compile option.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="compiler-iterable-note">  <sup>[8]</sup> This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>&quot;@@iterator&quot;</code> method.</p><p id="ff-shorthand-methods-note">  <sup>[9]</sup> Firefox incorrectly produces an error in strict mode if the method is named <code>&quot;arguments&quot;</code>, <code>&quot;eval&quot;</code>, or <code>&quot;delete&quot;</code>.</p><p id="typescript-core-js-note">  <sup>[10]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="fx-let-note">  <sup>[11]</sup> Available for code in a <code>&lt;script type=&quot;application/javascript;version=1.7&quot;&gt;</code> (or <code>version=1.8</code>) tag.</p><p id="block-level-function-note">  <sup>[12]</sup> Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.</p><p id="compiler-proto-note">  <sup>[13]</sup> Requires native support for <code>Object.prototype.__proto__</code></p><p id="compiled-extends-note">  <sup>[14]</sup> This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.</p><p id="typescript-extends-note">  <sup>[15]</sup> TypeScript transforms <code>extends</code> into code that copies static properties from the superclass (but uses the prototype chain for instance properties).</p><p id="babel-regenerator-note">  <sup>[16]</sup> This feature requires <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="fx-proxy-get-note">  <sup>[17]</sup> Firefox 18 up to 37 doesn&apos;t allow a proxy&apos;s <code>&quot;get&quot;</code> handler to be triggered via the prototype chain, unless the proxied object does possess the named property (or the proxy&apos;s <code>&quot;has&quot;</code> handler reports it as present).</p><p id="symbol-iterator-functionality-note">  <sup>[18]</sup> Functionality for <code>Symbol.iterator</code> is tested by the &quot;generic iterators&quot; subtests for the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, <a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, and <a href="#Array_static_methods">Array.from</a>.</p><p id="ejs-no-with-note">  <sup>[19]</sup> <code>with</code> is not supported in ejs</p><p id="name-configurable-note">  <sup>[20]</sup> Requires function <code>&quot;name&quot;</code> properties to be natively configurable</p><p id="string-contains-note">  <sup>[21]</sup> Available as the draft standard <code>String.prototype.contains</code></p><p id="fx-array-prototype-values-2-note">  <sup>[22]</sup> Available from Firefox 27 up to 35 as the non-standard <code>Array.prototype[&quot;@@iterator&quot;]</code></p><p id="array-prototype-iterator-note">  <sup>[23]</sup> Available as <code>Array.prototype[Symbol.iterator]</code></p><p id="ie_property_order-note">  <sup>[24]</sup> Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.</p><p id="forin-order-note">  <sup>[25]</sup> This uses native for-in enumeration order, rather than the correct order.</p><p id="hoisted-block-functions-note">  <sup>[26]</sup> The 2015 version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.</p><p id="proto-in-object-literals-note">  <sup>[27]</sup> Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>

@@ -8,6 +8,14 @@ var very = "very";
 var strict = "strict";
 var fallthrough = "needs-polyfill-or-native";
 
+var babel = {
+    regenerator: {
+        val: true,
+        note_id: "babel-regenerator",
+        note_html: "This feature requires <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+    }
+};
+
 var typescript = {
     corejs: {
         val: true,
@@ -3802,7 +3810,7 @@ exports.tests = [
       */},
       res: (temp.basicGenerators = {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -3886,7 +3894,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         ejs:         true,
         closure:     true,
         firefox27:   true,
@@ -3916,7 +3924,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         firefox27:   true,
         chrome21dev: flag,
         chrome39:    true,
@@ -3948,7 +3956,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         firefox45:   true,
         chrome45:    true,
         node012:     flag,
@@ -4006,7 +4014,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -4037,7 +4045,7 @@ exports.tests = [
       */},
       res: {
         tr:        true,
-        babel:     true,
+        babel:     babel.regenerator,
         firefox38: true,
         edge12:    flag,
         edge13:    true,
@@ -4060,7 +4068,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         firefox27:   true,
         chrome21dev: flag,
@@ -4090,7 +4098,7 @@ exports.tests = [
       */},
       res: (temp.yieldArrays = {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         firefox27:   true,
         chrome38:    flag,
@@ -4135,7 +4143,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         tr:          true,
         firefox27:   true,
@@ -4165,7 +4173,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel:       true,
+        babel:       babel.regenerator,
         ejs:         true,
         tr:          true,
         firefox27:   true,
@@ -4197,7 +4205,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         ejs:         true,
         closure:     true,
         firefox27:   true,
@@ -4229,7 +4237,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         ejs:         true,
         closure:     true,
         firefox36:   true,
@@ -4262,7 +4270,7 @@ exports.tests = [
       res: {
         tr:          true,
         ejs:         true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         firefox36:   true,
         chrome35:    flag,
@@ -4329,7 +4337,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         edge12:      flag,
         edge13:      true,
         chrome50:    true,
@@ -4359,7 +4367,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         edge13:      true,
         chrome50:    true,
         xs6:         true,
@@ -4385,7 +4393,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         chrome41:    flag,
         chrome42:    true,
@@ -4417,7 +4425,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         chrome41:    flag,
         chrome42:    true,
         firefox34:   true,
@@ -4449,7 +4457,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         firefox34:   true,
         ejs:         true,
@@ -4480,7 +4488,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         chrome41:    strict,
         chrome49:    true,
@@ -4512,7 +4520,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         closure:     true,
         edge12:      flag,
         chrome45:    strict,
@@ -4539,7 +4547,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel:       true,
+        babel:       babel.regenerator,
         chrome41:    strict,
         chrome49:    true,
         node4:       strict,
