@@ -11,6 +11,14 @@ var very = "very";
 var strict = "strict";
 var fallthrough = "needs-polyfill-or-native";
 
+var babel = {
+    regenerator: {
+        val: true,
+        note_id: "babel-regenerator",
+        note_html: "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+    }
+};
+
 var typescript = {
     corejs: {
         val: true,
@@ -626,7 +634,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         typescript:  typescript.asyncawait,
         edge13:      flag,
         edge14:      true,
@@ -641,7 +649,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         typescript:  typescript.asyncawait,
         edge13:      flag,
         edge14:      true,
@@ -654,7 +662,7 @@ exports.tests = [
       */},
       res: {
         tr:          true,
-        babel:       true,
+        babel:       babel.regenerator,
         typescript:  false, // still buggy output
         edge13:      flag,
         edge14:      true,

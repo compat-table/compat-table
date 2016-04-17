@@ -2532,9 +2532,9 @@ return (async function(){
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn (async function(){\n  return 42;\n})() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function(){\n  return 42;\n})() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2587,9 +2587,9 @@ return (async function(){
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn (async function(){\n  return 10 + await Promise.resolve(10);\n})() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function(){\n  return 10 + await Promise.resolve(10);\n})() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2640,7 +2640,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn (async () => 42 + await Promise.resolve(42))() instanceof Promise\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -7466,7 +7466,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("133");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("133");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#babel-decorators-legacy-note"><sup>[6]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#babel-decorators-legacy-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -10763,7 +10763,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via <code>babel-preset-stage-0</code> preset</p><p id="edge-experimental-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="firefox-nightly-note">  <sup>[3]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="typescript-core-js-note">  <sup>[4]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="typescript-async-await-note">  <sup>[5]</sup> TypeScript <code>async</code> / <code>await</code> requires native generators support.</p><p id="babel-decorators-legacy-note">  <sup>[6]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p></p></div>
+    <p><p id="experimental-flag-note">  <sup>[1]</sup> Have to be enabled via <code>babel-preset-stage-0</code> preset</p><p id="edge-experimental-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="firefox-nightly-note">  <sup>[3]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="typescript-core-js-note">  <sup>[4]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="babel-regenerator-note">  <sup>[5]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="typescript-async-await-note">  <sup>[6]</sup> TypeScript <code>async</code> / <code>await</code> requires native generators support.</p><p id="babel-decorators-legacy-note">  <sup>[7]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
