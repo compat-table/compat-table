@@ -363,7 +363,7 @@ exports.tests = [
         edge13:      flag,
         edge14:      true,
         firefox48:   firefox.nightly,
-        chrome52:    flag,
+        chrome51:    flag,
       }
     },
     {
@@ -378,7 +378,7 @@ exports.tests = [
         edge13:      flag,
         edge14:      true,
         firefox48:   firefox.nightly,
-        chrome52:    flag,
+        chrome51:    flag,
       }
     },
     {
@@ -394,7 +394,7 @@ exports.tests = [
       res: {
         babel:       true,
         edge14:      true,
-        chrome52:    flag,
+        chrome51:    flag,
       }
     },
   ],
