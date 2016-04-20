@@ -438,7 +438,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   safaritp: {
-    full: 'Safari Technology Preview',
+    full: 'Safari Technology Preview Release 2',
     short: 'SF TP',
     unstable: true
   },
