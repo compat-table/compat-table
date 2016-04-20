@@ -13296,7 +13296,7 @@ exports.tests = [
         chrome48:    true,
         xs6:         true,
         jxa:         true,
-        safaritp:    true,
+        safaritp:    false,
         webkit:      true,
       },
     },
