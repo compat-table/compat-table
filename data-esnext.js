@@ -285,6 +285,11 @@ exports.browsers = {
     unstable: true,
     note_id: 'experimental-flag',
   },
+  safaritp: {
+    full: 'Safari Technology Preview',
+    short: 'SF TP',
+    unstable: true
+  },
   webkit: {
     full: 'WebKit r184046',
     short: 'WK',
@@ -525,6 +530,7 @@ exports.tests = [
         babel:           true,
         es7shim:         true,
         typescript:      typescript.corejs,
+        safaritp:        true,
         webkit:          true,
         chrome47:        true,
         edge14:          true,
@@ -562,6 +568,7 @@ exports.tests = [
         babel:           true,
         es7shim:         true,
         typescript:      typescript.corejs,
+        safaritp:        true,
         webkit:          true,
         chrome47:        true,
         edge14:          true,
@@ -581,6 +588,7 @@ exports.tests = [
       res: {
         babel:           true,
         typescript:      typescript.corejs,
+        safaritp:        false,
         chrome47:        true,
         edge14:          true,
         firefox42:       false,
@@ -691,6 +699,7 @@ exports.tests = [
     es7shim:     true,
     typescript:  typescript.corejs,
     chrome51:    flag,
+    safaritp:    true,
   }
 },
 {
@@ -1407,6 +1416,7 @@ exports.tests = [
         es7shim:     true,
         firefox48:   firefox.nightly,
         edge14:      flag,
+        safaritp:    true,
       }
     },
     {
@@ -1423,6 +1433,7 @@ exports.tests = [
         es7shim:     true,
         firefox48:   firefox.nightly,
         edge14:      flag,
+        safaritp:    true,
       }
     }
   ]
@@ -1446,6 +1457,7 @@ exports.tests = [
         chrome30:    true,
         node:        true,
         iojs:        true,
+        safaritp:    true,
         webkit:      true,
         es7shim:     true,
         android40:   true,
@@ -1464,6 +1476,7 @@ exports.tests = [
         chrome30:    true,
         node:        true,
         iojs:        true,
+        safaritp:    true,
         webkit:      true,
         es7shim:     true,
         android40:   true,
@@ -1510,6 +1523,7 @@ exports.tests = [
       edge13:    true,
       firefox43: true,
       chrome50:  true,
+      safaritp:  true,
   }
 },
 {
@@ -1613,6 +1627,7 @@ exports.tests = [
   res: {
     firefox47:   true,
     chrome50:    true,
+    safaritp:    true,
   },
 },
 {
@@ -1636,6 +1651,7 @@ exports.tests = [
     firefox43:       true,
     chrome49:        true,
     edge14:          true,
+    safaritp:        true,
   },
 },
 {
@@ -2082,6 +2098,7 @@ exports.tests = [
         chrome30:    true,
         node:        true,
         iojs:        true,
+        safaritp:    true,
         webkit:      true,
         android40:   true,
       })
@@ -2106,6 +2123,7 @@ exports.tests = [
         chrome38:    true,
         node:        true,
         iojs:        true,
+        safaritp:    true,
         webkit:      true,
         android40:   true,
       })
@@ -2125,6 +2143,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         firefox48:   true,
+        safaritp:    true,
         webkit:      true,
       },
     },
@@ -2168,6 +2187,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         firefox48:   true,
+        safaritp:    true,
         webkit:      true,
       },
     },
@@ -2229,6 +2249,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         ie11:        true,
         firefox31:   true,
+        safaritp:    true,
         webkit:      true,
       },
     },
@@ -2290,6 +2311,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         ie11:        true,
         firefox31:   true,
+        safaritp:    true,
         webkit:      true,
       },
     }
@@ -2312,6 +2334,7 @@ exports.tests = [
       res: {
         firefox31:   true,
         edge14:      true,
+        safaritp:    true,
       }
     },
     {
@@ -2326,6 +2349,7 @@ exports.tests = [
       res: {
         firefox31:   true,
         edge14:      true,
+        safaritp:    true,
       }
     },
     {
