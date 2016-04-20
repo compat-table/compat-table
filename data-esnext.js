@@ -2688,20 +2688,39 @@ exports.tests = [
   category: 'proposal (stage 1)',
   significance: 'medium',
   link: 'https://github.com/zenparsing/es-private-fields',
-  exec: function () {/*
-    class C {
-      #x;
-      constructor(x){
-        this.#x = x;
+  subtests: [
+    {
+      name: 'Basic support',
+      exec: function () {/*
+        class C {
+          #x;
+          constructor(x){
+            this.#x = x;
+          }
+          x(){
+            return this.#x;
+          }
+        }
+        return new C(42).x() === 42;
+      */},
+      res: {
       }
-      x(){
-        return this.#x;
+    },
+    {
+      name: 'Initializers',
+      exec: function () {/*
+        class C {
+          #x = 42;
+          x(){
+            return this.#x;
+          }
+        }
+        return new C().x() === 42;
+      */},
+      res: {
       }
-    }
-    return new C(42).x() === 42;
-  */},
-  res: {
-  }
+    },
+  ]
 },
 {
   name: 'asap',
