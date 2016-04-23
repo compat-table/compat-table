@@ -2797,7 +2797,7 @@ exports.tests = [
         var passed = false;
         new class C extends null {
           constructor() {
-            passed = (this instanceof C && !this instanceof Object);
+            passed = (this instanceof C && !(this instanceof Object));
             return this;
           }
         };

@@ -1157,12 +1157,12 @@ return new C instanceof C;
 var passed = false;
 new class C extends null {
   constructor() {
-    passed = (this instanceof C &amp;&amp; !this instanceof Object);
+    passed = (this instanceof C &amp;&amp; !(this instanceof Object));
     return this;
   }
 };
 return passed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar passed = false;\nnew class C extends null {\n  constructor() {\n    passed = (this instanceof C && !this instanceof Object);\n    return this;\n  }\n};\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nnew class C extends null {\n  constructor() {\n    passed = (this instanceof C && !this instanceof Object);\n    return this;\n  }\n};\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar passed = false;\nnew class C extends null {\n  constructor() {\n    passed = (this instanceof C && !(this instanceof Object));\n    return this;\n  }\n};\nreturn passed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nnew class C extends null {\n  constructor() {\n    passed = (this instanceof C && !(this instanceof Object));\n    return this;\n  }\n};\nreturn passed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
