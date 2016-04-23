@@ -314,6 +314,14 @@ exports.browsers = {
     short: 'Node 4 - 5',
     platformtype: 'engine',
   },
+  node6: {
+    full: 'Node.js',
+    family: 'Node.js',
+    short: 'Node 6',
+    platformtype: 'engine',    
+    equals: 'chrome50',
+    unstable: true,
+  },
   android40: {
     full: 'Android Browser',
     short: 'AN 4.0',
