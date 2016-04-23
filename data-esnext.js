@@ -2321,7 +2321,7 @@ exports.tests = [
   name: 'Proxy internal calls, getter/setter methods',
   link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
   category: '2017 annex b',
-  significance: 'small',
+  significance: 'tiny',
   subtests: [{
       name: '__defineGetter__',
       exec: function () {/*
