@@ -2777,11 +2777,41 @@ exports.tests = [
     }
   ]
 },
+{
+  name: 'class extends null',
+  category: '2017 misc',
+  significance: 'tiny',
+  link: 'https://github.com/tc39/ecma262/issues/543',
+  subtests: [
+    {
+      name: 'proper default constructor',
+      exec: function() {/*
+        class C extends null {}
+        return new C instanceof C;
+      */},
+      res: {},
+    },
+    {
+      name: 'proper "this" binding',
+      exec: function() {/*
+        var passed = false;
+        new class C extends null {
+          constructor() {
+            passed = (this instanceof C && !this instanceof Object);
+            return this;
+          }
+        };
+        return passed;
+      */},
+      res: {},
+    },
+  ]
+},
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 misc', '2017 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
