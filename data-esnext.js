@@ -318,7 +318,7 @@ exports.browsers = {
     full: 'Node.js',
     family: 'Node.js',
     short: 'Node 6',
-    platformtype: 'engine',    
+    platformtype: 'engine',
     equals: 'chrome50',
     unstable: true,
   },

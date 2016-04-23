@@ -493,7 +493,7 @@ exports.browsers = {
   node4:  {
     full: 'Node.js',
     family: 'Node.js',
-    short: 'Node<br>4.0',
+    short: 'Node<br>4',
     platformtype: 'engine',
     note_id: 'harmony-flag',
     obsolete: false // Long-term support ends April 2018.
@@ -501,10 +501,19 @@ exports.browsers = {
   node5:  {
     full: 'Node.js',
     family: 'Node.js',
-    short: 'Node<br>5.0',
+    short: 'Node<br>5',
     platformtype: 'engine',
     note_id: 'harmony-flag',
     obsolete: false // Long-term support ends April 2019.
+  },
+  node6:  {
+    full: 'Node.js',
+    family: 'Node.js',
+    short: 'Node<br>6',
+    platformtype: 'engine',
+    note_id: 'harmony-flag',
+    equals: 'chrome50',
+    unstable: true,
   },
   ejs: {
     full: 'Echo JS',
