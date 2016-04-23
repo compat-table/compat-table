@@ -51,7 +51,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 6.5 + core-js 2.2',
+    full: 'Babel 6.5 + core-js 2.3',
     short: 'Babel +<br><nobr>core-js</nobr>',
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -64,7 +64,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   typescript: {
-    full: 'TypeScript 1.8 + core-js 2.2',
+    full: 'TypeScript 1.8 + core-js 2.3',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -1737,7 +1737,8 @@ exports.tests = [
         return typeof Symbol.observable === 'symbol';
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -2734,6 +2735,8 @@ exports.tests = [
     passed = true;
   */},
   res : {
+    babel:      true,
+    typescript: typescript.corejs,
   }
 },
 {

@@ -104,9 +104,9 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.2">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
+<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.3">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#experimental-flag-note"><sup>[1]</sup></a></th>
 <th class="platform jsx compiler obsolete" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.2">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.3">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
 <th class="platform ie10 desktop obsolete" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer">IE 10-</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
@@ -8145,9 +8145,9 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Observable"><span><a class="anchor" href="#test-Observable">&#xA7;</a><a href="https://github.com/zenparsing/es-observable">Observable</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/8</td>
-<td class="tally" data-browser="babel" data-tally="0">0/8</td>
+<td class="tally" data-browser="babel" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/8</td>
-<td class="tally" data-browser="typescript" data-tally="0">0/8</td>
+<td class="tally" data-browser="typescript" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/8</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/8</td>
@@ -8253,9 +8253,9 @@ return typeof Symbol.observable === &apos;symbol&apos;;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("145");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("145");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -10646,9 +10646,9 @@ passed = true;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("188");try{return Function("asyncTestPassed","\nvar passed = false;\nsetTimeout(function(){ passed = false; }, 1);\nasap(function(){ if(passed)asyncTestPassed(); });\npassed = true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("188");return Function("asyncTestPassed","'use strict';"+"\nvar passed = false;\nsetTimeout(function(){ passed = false; }, 1);\nasap(function(){ if(passed)asyncTestPassed(); });\npassed = true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ie10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
