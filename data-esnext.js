@@ -1439,7 +1439,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'String trimming',
+  name: 'string trimming',
   category: 'proposal (stage 1)',
   significance: 'small',
   link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
@@ -1830,7 +1830,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Shared memory and atomics',
+  name: 'shared memory and atomics',
   category: 'draft (stage 2)',
   significance: 'large',
   link: 'https://github.com/tc39/ecmascript_sharedmem',
@@ -1997,7 +1997,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'Additional meta properties',
+  name: 'additional meta properties',
   category: 'strawman (stage 0)',
   significance: 'medium',
   link: 'https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md',
@@ -2035,7 +2035,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'Method parameter decorators',
+  name: 'method parameter decorators',
   link: 'https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0',
   category: 'strawman (stage 0)',
   significance: 'small',
@@ -2058,7 +2058,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Function expression decorators',
+  name: 'function expression decorators',
   link: 'https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#',
   category: 'strawman (stage 0)',
   significance: 'small',
@@ -2389,7 +2389,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'WeakRefs',
+  name: 'weak references',
   link: 'https://github.com/tc39/proposal-weakrefs',
   category: 'proposal (stage 1)',
   significance: 'large',
@@ -2608,7 +2608,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'Zones',
+  name: 'zones',
   category: 'proposal (stage 1)',
   significance: 'large',
   link: 'https://github.com/domenic/zones',
@@ -2672,7 +2672,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'Frozen Realms',
+  name: 'frozen realms',
   category: 'proposal (stage 1)',
   significance: 'medium',
   link: 'https://github.com/FUDCo/frozen-realms',
@@ -2684,13 +2684,13 @@ exports.tests = [
   }
 },
 {
-  name: 'Private Fields',
+  name: 'private fields',
   category: 'proposal (stage 1)',
   significance: 'medium',
   link: 'https://github.com/zenparsing/es-private-fields',
   subtests: [
     {
-      name: 'Basic support',
+      name: 'basic support',
       exec: function () {/*
         class C {
           #x;
@@ -2707,7 +2707,7 @@ exports.tests = [
       }
     },
     {
-      name: 'Initializers',
+      name: 'initializers',
       exec: function () {/*
         class C {
           #x = 42;
@@ -2735,7 +2735,48 @@ exports.tests = [
   */},
   res : {
   }
-}
+},
+{
+  name: 'syntactic tail calls',
+  category: 'strawman (stage 0)',
+  significance: 'medium',
+  link: 'https://github.com/tc39/proposal-ptc-syntax',
+  subtests: [
+    {
+      name: 'direct recursion',
+      exec: function() {/*
+        "use strict";
+        return (function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return continue f(n - 1);
+        }(1e6)) === "foo";
+      */},
+      res: {},
+    },
+    {
+      name: 'mutual recursion',
+      exec: function() {/*
+        "use strict";
+        function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return continue g(n - 1);
+        }
+        function g(n){
+          if (n <= 0) {
+            return  "bar";
+          }
+          return continue f(n - 1);
+        }
+        return f(1e6) === "foo" && f(1e6+1) === "bar";
+      */},
+      res: {},
+    }
+  ]
+},
 ];
 
 //Shift annex B features to the bottom
