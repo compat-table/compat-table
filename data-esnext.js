@@ -311,7 +311,7 @@ exports.browsers = {
   node4: {
     full: 'Node.js',
     family: 'Node.js',
-    short: 'Node 4.0',
+    short: 'Node 4 - 5',
     platformtype: 'engine',
   },
   android40: {
