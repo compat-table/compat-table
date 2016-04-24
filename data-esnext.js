@@ -1781,7 +1781,7 @@ exports.tests = [
             primitiveCheckPassed,
             newCheckPassed;
 
-        try { new Observable({ }) } catch(e) { nonCallablePassed = true }
+        try { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }
         try { new Observable(false) } catch(e) { primitiveCheckPassed = true }
         try { Observable(function() { }) } catch(e) { newCheckPassed = true }
 
@@ -1805,7 +1805,7 @@ exports.tests = [
       name: 'Observable.prototype[Symbol.observable]',
       exec: function () {/*
         var o = new Observable(function() { });
-        return Symbol.observable in Observable.prototype && o[Symbol.observable] === o;
+        return Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;
       */},
       res: {
 
