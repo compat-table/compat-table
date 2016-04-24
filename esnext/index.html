@@ -156,12 +156,14 @@
 <th class="platform android50 mobile" data-browser="android50"><a href="#android50" class="browser-name"><abbr title="Android Browser">AN 5.0</abbr></a></th>
 <th class="platform android51 mobile" data-browser="android51"><a href="#android51" class="browser-name"><abbr title="Android Browser">AN 5.1</abbr></a></th>
 <th class="platform ios51 mobile obsolete" data-browser="ios51"><a href="#ios51" class="browser-name"><abbr title="iOS 5.1">iOS 5.1</abbr></a></th>
+<th class="platform ios6 mobile" data-browser="ios6"><a href="#ios6" class="browser-name"><abbr title="iOS 6-8">iOS<br>6-8</abbr></a></th>
+<th class="platform ios9 mobile" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS 9">iOS 9</abbr></a></th>
 </tr>
 
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="55">2016 features</td>
+      <tr class="category"><td colspan="57">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -217,6 +219,8 @@
 <td class="tally" data-browser="android50" data-tally="0">0/3</td>
 <td class="tally" data-browser="android51" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/3</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_basic_support"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_basic_support">&#xA7;</a>basic support</span><script data-source="
 return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
@@ -275,6 +279,8 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_assignment"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_assignment">&#xA7;</a>assignment</span><script data-source="
 var a = 2; a **= 3; return a === 8;
@@ -333,6 +339,8 @@ var a = 2; a **= 3; return a === 8;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens">&#xA7;</a>early syntax error for unary negation without parens</span><script data-source="
 if (2 ** 3 !== 8) { return false; }
@@ -396,6 +404,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
@@ -451,6 +461,8 @@ try {
 <td class="tally" data-browser="android50" data-tally="0">0/3</td>
 <td class="tally" data-browser="android51" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios9" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes">&#xA7;</a>Array.prototype.includes</span><script data-source="
 return [1, 2, 3].includes(1)
@@ -513,6 +525,8 @@ return [1, 2, 3].includes(1)
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes_is_generic"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes_is_generic">&#xA7;</a>Array.prototype.includes is generic</span><script data-source="
 var passed = 0;
@@ -593,6 +607,8 @@ return [].includes.call({
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_%TypedArray%.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_%TypedArray%.prototype.includes">&#xA7;</a>%TypedArray%.prototype.includes</span><script data-source="
 return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
@@ -656,8 +672,10 @@ return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">2016 misc</td>
+<tr class="category"><td colspan="57">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
 function * generator() {
@@ -723,6 +741,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/293">generator throw() caught by inner generator</a></span><script data-source="
 function * generator() {
@@ -794,6 +814,8 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">strict fn w/ non-strict non-simple params is error</a></span><script data-source="
 function foo(...a){}
@@ -857,6 +879,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring, declarations</a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
@@ -916,6 +940,8 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring, parameters</a></span><script data-source="
 return function([x, ...[y, ...z]]) {
@@ -976,6 +1002,8 @@ return function([x, ...[y, ...z]]) {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/367">Proxy, &quot;enumerate&quot; handler removed</a></span><script data-source="
 var passed = true;
@@ -1041,6 +1069,8 @@ return passed;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_internal_calls,_Array.prototype.includes"><span><a class="anchor" href="#test-Proxy_internal_calls,_Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Proxy internal calls, Array.prototype.includes</a></span><script data-source="
 // Array.prototype.includes -&gt; Get -&gt; [[Get]]
@@ -1108,8 +1138,10 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">2017 misc</td>
+<tr class="category"><td colspan="57">2017 misc</td>
 </tr>
 <tr class="supertest" significance="0.125"><td id="test-class_extends_null"><span><a class="anchor" href="#test-class_extends_null">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/543">class extends null</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -1165,6 +1197,8 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally" data-browser="android50" data-tally="0">0/2</td>
 <td class="tally" data-browser="android51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="class_extends_null" id="test-class_extends_null_proper_default_constructor"><td><span><a class="anchor" href="#test-class_extends_null_proper_default_constructor">&#xA7;</a>proper default constructor</span><script data-source="
 class C extends null {}
@@ -1224,6 +1258,8 @@ return new C instanceof C;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="class_extends_null" id="test-class_extends_null_proper_this_binding"><td><span><a class="anchor" href="#test-class_extends_null_proper_this_binding">&#xA7;</a>proper &quot;this&quot; binding</span><script data-source="
 var passed = false;
@@ -1289,8 +1325,10 @@ return passed;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">2017 annex b</td>
+<tr class="category"><td colspan="57">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/14</td>
@@ -1346,6 +1384,8 @@ return passed;
 <td class="tally" data-browser="android50" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">6/14</td>
 <td class="tally" data-browser="android51" data-tally="0.7142857142857143" style="background-color:hsl(85,54%,50%)">10/14</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0.42857142857142855" style="background-color:hsl(51,67%,50%)">6/14</td>
+<td class="tally" data-browser="ios6" data-tally="0.7142857142857143" style="background-color:hsl(85,54%,50%)">10/14</td>
+<td class="tally" data-browser="ios9" data-tally="1">14/14</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__">&#xA7;</a>__defineGetter__</span><script data-source="
 var obj = {};
@@ -1409,6 +1449,8 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__,_symbols">&#xA7;</a>__defineGetter__, symbols</span><script data-source="
 var obj = {};
@@ -1473,6 +1515,8 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no" data-browser="android50">No</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__,_ToObject(this)">&#xA7;</a>__defineGetter__, ToObject(this)</span><script data-source="
 var key = &apos;__accessors_test__&apos;;
@@ -1537,6 +1581,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__">&#xA7;</a>__defineSetter__</span><script data-source="
 var obj = {};
@@ -1600,6 +1646,8 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__,_symbols">&#xA7;</a>__defineSetter__, symbols</span><script data-source="
 var obj = {};
@@ -1664,6 +1712,8 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no" data-browser="android50">No</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__,_ToObject(this)">&#xA7;</a>__defineSetter__, ToObject(this)</span><script data-source="
 var key = &apos;__accessors_test__&apos;;
@@ -1728,6 +1778,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__">&#xA7;</a>__lookupGetter__</span><script data-source="
 var obj = {
@@ -1793,6 +1845,8 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_prototype_chain"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_prototype_chain">&#xA7;</a>__lookupGetter__, prototype chain</span><script data-source="
 var obj = {
@@ -1858,6 +1912,8 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_symbols">&#xA7;</a>__lookupGetter__, symbols</span><script data-source="
 var sym = Symbol();
@@ -1924,6 +1980,8 @@ return foo() === &quot;bar&quot;
 <td class="no" data-browser="android50">No</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_ToObject(this)">&#xA7;</a>__lookupGetter__, ToObject(this)</span><script data-source="
 __lookupGetter__.call(1, &apos;key&apos;);
@@ -1987,6 +2045,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__">&#xA7;</a>__lookupSetter__</span><script data-source="
 var obj = {
@@ -2052,6 +2112,8 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_prototype_chain"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_prototype_chain">&#xA7;</a>__lookupSetter__, prototype chain</span><script data-source="
 var obj = {
@@ -2117,6 +2179,8 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_symbols">&#xA7;</a>__lookupSetter__, symbols</span><script data-source="
 var sym = Symbol();
@@ -2183,6 +2247,8 @@ return foo() === &quot;bar&quot;
 <td class="no" data-browser="android50">No</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_ToObject(this)">&#xA7;</a>__lookupSetter__, ToObject(this)</span><script data-source="
 __lookupSetter__.call(1, &apos;key&apos;);
@@ -2246,6 +2312,8 @@ try {
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Proxy_internal_calls,_getter/setter_methods"><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Proxy internal calls, getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -2301,6 +2369,8 @@ try {
 <td class="tally" data-browser="android50" data-tally="0">0/4</td>
 <td class="tally" data-browser="android51" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/4</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___defineGetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___defineGetter__">&#xA7;</a>__defineGetter__</span><script data-source="
 // Object.prototype.__defineGetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
@@ -2363,6 +2433,8 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___defineSetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___defineSetter__">&#xA7;</a>__defineSetter__</span><script data-source="
 // Object.prototype.__defineSetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
@@ -2425,6 +2497,8 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___lookupGetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___lookupGetter__">&#xA7;</a>__lookupGetter__</span><script data-source="
 // Object.prototype.__lookupGetter__ -&gt; [[GetOwnProperty]]
@@ -2492,6 +2566,8 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___lookupSetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___lookupSetter__">&#xA7;</a>__lookupSetter__</span><script data-source="
 // Object.prototype.__lookupSetter__ -&gt; [[GetOwnProperty]]
@@ -2559,8 +2635,10 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">Finished (stage 4)</td>
+<tr class="category"><td colspan="57">Finished (stage 4)</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -2622,6 +2700,8 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.entries"><span><a class="anchor" href="#test-Object.entries">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.entries</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -2687,8 +2767,10 @@ return Array.isArray(e)
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">Candidate (stage 3)</td>
+<tr class="category"><td colspan="57">Candidate (stage 3)</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-trailing_commas_in_function_syntax"><span><a class="anchor" href="#test-trailing_commas_in_function_syntax">&#xA7;</a><a href="https://jeffmo.github.io/es-trailing-function-commas/">trailing commas in function syntax</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -2744,6 +2826,8 @@ return Array.isArray(e)
 <td class="tally" data-browser="android50" data-tally="0">0/2</td>
 <td class="tally" data-browser="android51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="test-trailing_commas_in_function_syntax_in_parameter_lists"><td><span><a class="anchor" href="#test-trailing_commas_in_function_syntax_in_parameter_lists">&#xA7;</a>in parameter lists</span><script data-source="
 return typeof function f( a, b, ){} === &apos;function&apos;;
@@ -2802,6 +2886,8 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="test-trailing_commas_in_function_syntax_in_argument_lists"><td><span><a class="anchor" href="#test-trailing_commas_in_function_syntax_in_argument_lists">&#xA7;</a>in argument lists</span><script data-source="
 return Math.min(1,2,3,) === 1;
@@ -2860,6 +2946,8 @@ return Math.min(1,2,3,) === 1;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecmascript-asyncawait/">async functions</a></span></td>
 <td class="tally" data-browser="tr" data-tally="1">3/3</td>
@@ -2915,6 +3003,8 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="android50" data-tally="0">0/3</td>
 <td class="tally" data-browser="android51" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/3</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_basic_support"><td><span><a class="anchor" href="#test-async_functions_basic_support">&#xA7;</a>basic support</span><script data-source="
 return (async function(){
@@ -2975,6 +3065,8 @@ return (async function(){
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_await_support"><td><span><a class="anchor" href="#test-async_functions_await_support">&#xA7;</a>await support</span><script data-source="
 return (async function(){
@@ -3035,6 +3127,8 @@ return (async function(){
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_arrow_async_functions"><td><span><a class="anchor" href="#test-async_functions_arrow_async_functions">&#xA7;</a>arrow async functions</span><script data-source="
 return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
@@ -3093,6 +3187,8 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Object.getOwnPropertyDescriptors</a></span><script data-source="
 var object = {a: 1};
@@ -3159,6 +3255,8 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-SIMD_(Single_Instruction,_Multiple_Data)"><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/">SIMD (Single Instruction, Multiple Data)</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/57</td>
@@ -3214,6 +3312,8 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="tally" data-browser="android50" data-tally="0">0/57</td>
 <td class="tally" data-browser="android51" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/57</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/57</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/57</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_basic_support"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof SIMD !== &apos;undefined&apos;;
@@ -3272,6 +3372,8 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Float32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Float32x4">&#xA7;</a>Float32x4</span><script data-source="
 return typeof SIMD.Float32x4 === &apos;function&apos;;
@@ -3330,6 +3432,8 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Int32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Int32x4">&#xA7;</a>Int32x4</span><script data-source="
 return typeof SIMD.Int32x4 === &apos;function&apos;;
@@ -3388,6 +3492,8 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Int16x8"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Int16x8">&#xA7;</a>Int16x8</span><script data-source="
 return typeof SIMD.Int16x8 === &apos;function&apos;;
@@ -3446,6 +3552,8 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Int8x16"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Int8x16">&#xA7;</a>Int8x16</span><script data-source="
 return typeof SIMD.Int8x16 === &apos;function&apos;;
@@ -3504,6 +3612,8 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Uint32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Uint32x4">&#xA7;</a>Uint32x4</span><script data-source="
 return typeof SIMD.Uint32x4 === &apos;function&apos;;
@@ -3562,6 +3672,8 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Uint16x8"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Uint16x8">&#xA7;</a>Uint16x8</span><script data-source="
 return typeof SIMD.Uint16x8 === &apos;function&apos;;
@@ -3620,6 +3732,8 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Uint8x16"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Uint8x16">&#xA7;</a>Uint8x16</span><script data-source="
 return typeof SIMD.Uint8x16 === &apos;function&apos;;
@@ -3678,6 +3792,8 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Bool32x4"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Bool32x4">&#xA7;</a>Bool32x4</span><script data-source="
 return typeof SIMD.Bool32x4 === &apos;function&apos;;
@@ -3736,6 +3852,8 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Bool16x8"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Bool16x8">&#xA7;</a>Bool16x8</span><script data-source="
 return typeof SIMD.Bool16x8 === &apos;function&apos;;
@@ -3794,6 +3912,8 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_Bool8x16"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_Bool8x16">&#xA7;</a>Bool8x16</span><script data-source="
 return typeof SIMD.Bool8x16 === &apos;function&apos;;
@@ -3852,6 +3972,8 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.abs"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.abs">&#xA7;</a>SIMD.%type%.abs</span><script data-source="
 return typeof SIMD.Float32x4.abs === &apos;function&apos;;
@@ -3910,6 +4032,8 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.add"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.add">&#xA7;</a>SIMD.%type%.add</span><script data-source="
 return typeof SIMD.Float32x4.add === &apos;function&apos;;
@@ -3968,6 +4092,8 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.addSaturate"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.addSaturate">&#xA7;</a>SIMD.%integerType%.addSaturate</span><script data-source="
 return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
@@ -4026,6 +4152,8 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.and"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.and">&#xA7;</a>SIMD.%booleanType%.and</span><script data-source="
 return typeof SIMD.Bool16x8.and === &apos;function&apos;;
@@ -4084,6 +4212,8 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.anyTrue"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.anyTrue">&#xA7;</a>SIMD.%booleanType%.anyTrue</span><script data-source="
 return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
@@ -4142,6 +4272,8 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.allTrue"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.allTrue">&#xA7;</a>SIMD.%booleanType%.allTrue</span><script data-source="
 return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
@@ -4200,6 +4332,8 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.check"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.check">&#xA7;</a>SIMD.%type%.check</span><script data-source="
 return typeof SIMD.Float32x4.check === &apos;function&apos;;
@@ -4258,6 +4392,8 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.equal"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.equal">&#xA7;</a>SIMD.%type%.equal</span><script data-source="
 return typeof SIMD.Float32x4.equal === &apos;function&apos;;
@@ -4316,6 +4452,8 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.extractLane"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.extractLane">&#xA7;</a>SIMD.%type%.extractLane</span><script data-source="
 return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
@@ -4374,6 +4512,8 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThan"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThan">&#xA7;</a>SIMD.%type%.greaterThan</span><script data-source="
 return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
@@ -4432,6 +4572,8 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThanOrEqual"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.greaterThanOrEqual">&#xA7;</a>SIMD.%type%.greaterThanOrEqual</span><script data-source="
 return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
@@ -4490,6 +4632,8 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThan"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThan">&#xA7;</a>SIMD.%type%.lessThan</span><script data-source="
 return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
@@ -4548,6 +4692,8 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThanOrEqual"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.lessThanOrEqual">&#xA7;</a>SIMD.%type%.lessThanOrEqual</span><script data-source="
 return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
@@ -4606,6 +4752,8 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.mul"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.mul">&#xA7;</a>SIMD.%type%.mul</span><script data-source="
 return typeof SIMD.Float32x4.mul === &apos;function&apos;;
@@ -4664,6 +4812,8 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.div"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.div">&#xA7;</a>SIMD.%type%.div</span><script data-source="
 return typeof SIMD.Float32x4.div === &apos;function&apos;;
@@ -4722,6 +4872,8 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load">&#xA7;</a>SIMD.%type%.load</span><script data-source="
 return typeof SIMD.Float32x4.load === &apos;function&apos;;
@@ -4780,6 +4932,8 @@ return typeof SIMD.Float32x4.load === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load1"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load1">&#xA7;</a>SIMD.%type%.load1</span><script data-source="
 return typeof SIMD.Float32x4.load1 === &apos;function&apos;;
@@ -4838,6 +4992,8 @@ return typeof SIMD.Float32x4.load1 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load2"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load2">&#xA7;</a>SIMD.%type%.load2</span><script data-source="
 return typeof SIMD.Float32x4.load2 === &apos;function&apos;;
@@ -4896,6 +5052,8 @@ return typeof SIMD.Float32x4.load2 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load3"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.load3">&#xA7;</a>SIMD.%type%.load3</span><script data-source="
 return typeof SIMD.Float32x4.load3 === &apos;function&apos;;
@@ -4954,6 +5112,8 @@ return typeof SIMD.Float32x4.load3 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.max"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.max">&#xA7;</a>SIMD.%type%.max</span><script data-source="
 return typeof SIMD.Float32x4.max === &apos;function&apos;;
@@ -5012,6 +5172,8 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.maxNum"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.maxNum">&#xA7;</a>SIMD.%type%.maxNum</span><script data-source="
 return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
@@ -5070,6 +5232,8 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.min"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.min">&#xA7;</a>SIMD.%type%.min</span><script data-source="
 return typeof SIMD.Float32x4.min === &apos;function&apos;;
@@ -5128,6 +5292,8 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.minNum"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.minNum">&#xA7;</a>SIMD.%type%.minNum</span><script data-source="
 return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
@@ -5186,6 +5352,8 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.neg"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.neg">&#xA7;</a>SIMD.%type%.neg</span><script data-source="
 return typeof SIMD.Float32x4.neg === &apos;function&apos;;
@@ -5244,6 +5412,8 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.not"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.not">&#xA7;</a>SIMD.%booleanType%.not</span><script data-source="
 return typeof SIMD.Bool16x8.not === &apos;function&apos;;
@@ -5302,6 +5472,8 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.notEqual"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.notEqual">&#xA7;</a>SIMD.%type%.notEqual</span><script data-source="
 return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
@@ -5360,6 +5532,8 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.or"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.or">&#xA7;</a>SIMD.%booleanType%.or</span><script data-source="
 return typeof SIMD.Bool16x8.or === &apos;function&apos;;
@@ -5418,6 +5592,8 @@ return typeof SIMD.Bool16x8.or === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalApproximation"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalApproximation">&#xA7;</a>SIMD.%type%.reciprocalApproximation</span><script data-source="
 return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
@@ -5476,6 +5652,8 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalSqrtApproximation"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.reciprocalSqrtApproximation">&#xA7;</a>SIMD.%type%.reciprocalSqrtApproximation</span><script data-source="
 return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos;;
@@ -5534,6 +5712,8 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.replaceLane"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.replaceLane">&#xA7;</a>SIMD.%type%.replaceLane</span><script data-source="
 return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
@@ -5592,6 +5772,8 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.select"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.select">&#xA7;</a>SIMD.%type%.select</span><script data-source="
 return typeof SIMD.Float32x4.select === &apos;function&apos;;
@@ -5650,6 +5832,8 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftLeftByScalar"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftLeftByScalar">&#xA7;</a>SIMD.%integerType%.shiftLeftByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
@@ -5708,6 +5892,8 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightByScalar"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.shiftRightByScalar">&#xA7;</a>SIMD.%integerType%.shiftRightByScalar</span><script data-source="
 return typeof SIMD.Int32x4.shiftRightByScalar === &apos;function&apos;;
@@ -5766,6 +5952,8 @@ return typeof SIMD.Int32x4.shiftRightByScalar === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.shuffle"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.shuffle">&#xA7;</a>SIMD.%type%.shuffle</span><script data-source="
 return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
@@ -5824,6 +6012,8 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.splat"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.splat">&#xA7;</a>SIMD.%type%.splat</span><script data-source="
 return typeof SIMD.Float32x4.splat === &apos;function&apos;;
@@ -5882,6 +6072,8 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sqrt"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sqrt">&#xA7;</a>SIMD.%type%.sqrt</span><script data-source="
 return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
@@ -5940,6 +6132,8 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store">&#xA7;</a>SIMD.%type%.store</span><script data-source="
 return typeof SIMD.Float32x4.store === &apos;function&apos;;
@@ -5998,6 +6192,8 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store1"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store1">&#xA7;</a>SIMD.%type%.store1</span><script data-source="
 return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
@@ -6056,6 +6252,8 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store2"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store2">&#xA7;</a>SIMD.%type%.store2</span><script data-source="
 return typeof SIMD.Float32x4.store2 === &apos;function&apos;;
@@ -6114,6 +6312,8 @@ return typeof SIMD.Float32x4.store2 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store3"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.store3">&#xA7;</a>SIMD.%type%.store3</span><script data-source="
 return typeof SIMD.Float32x4.store3 === &apos;function&apos;;
@@ -6172,6 +6372,8 @@ return typeof SIMD.Float32x4.store3 === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sub"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.sub">&#xA7;</a>SIMD.%type%.sub</span><script data-source="
 return typeof SIMD.Float32x4.sub === &apos;function&apos;;
@@ -6230,6 +6432,8 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.subSaturate"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%integerType%.subSaturate">&#xA7;</a>SIMD.%integerType%.subSaturate</span><script data-source="
 return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
@@ -6288,6 +6492,8 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.swizzle"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.swizzle">&#xA7;</a>SIMD.%type%.swizzle</span><script data-source="
 return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
@@ -6346,6 +6552,8 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.xor"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%booleanType%.xor">&#xA7;</a>SIMD.%booleanType%.xor</span><script data-source="
 return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
@@ -6404,6 +6612,8 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.fromTIMDBits"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.fromTIMDBits">&#xA7;</a>SIMD.%type%.fromTIMDBits</span><script data-source="
 return &apos;Float32x4,Int32x4,Int8x16,Uint32x4,Uint16x8,Uint8x16&apos;.split(&apos;,&apos;).every(function(type){
@@ -6464,6 +6674,8 @@ return &apos;Float32x4,Int32x4,Int8x16,Uint32x4,Uint16x8,Uint8x16&apos;.split(&a
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.fromTIMD"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_SIMD.%type%.fromTIMD">&#xA7;</a>SIMD.%type%.fromTIMD</span><script data-source="
 return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
@@ -6524,6 +6736,8 @@ return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -6579,6 +6793,8 @@ return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
 <td class="tally" data-browser="android50" data-tally="0">0/2</td>
 <td class="tally" data-browser="android51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="test-String_padding_String.prototype.padStart"><td><span><a class="anchor" href="#test-String_padding_String.prototype.padStart">&#xA7;</a>String.prototype.padStart</span><script data-source="
 return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
@@ -6640,6 +6856,8 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="test-String_padding_String.prototype.padEnd"><td><span><a class="anchor" href="#test-String_padding_String.prototype.padEnd">&#xA7;</a>String.prototype.padEnd</span><script data-source="
 return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
@@ -6701,8 +6919,10 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">Draft (stage 2)</td>
+<tr class="category"><td colspan="57">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-function.sent"><span><a class="anchor" href="#test-function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
 var result;
@@ -6767,6 +6987,8 @@ return result === &apos;tromple&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.25"><td id="test-object_rest_properties"><span><a class="anchor" href="#test-object_rest_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object rest properties</a></span><script data-source="
 var {a, ...rest} = {a: 1, b: 2, c: 3};
@@ -6826,6 +7048,8 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.5"><td id="test-object_spread_properties"><span><a class="anchor" href="#test-object_spread_properties">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-rest-spread">object spread properties</a></span><script data-source="
 var spread = {b: 2, c: 3};
@@ -6886,6 +7110,8 @@ return O.a + O.b + O.c === 6;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.25"><td id="test-System.global"><span><a class="anchor" href="#test-System.global">&#xA7;</a><a href="https://github.com/tc39/proposal-global">System.global</a></span><script data-source="
 Function(&apos;return this&apos;)().__system_global_test__ = 42;
@@ -6945,6 +7171,8 @@ return System.global.__system_global_test__ === 42;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-shared_memory_and_atomics"><span><a class="anchor" href="#test-shared_memory_and_atomics">&#xA7;</a><a href="https://github.com/tc39/ecmascript_sharedmem">shared memory and atomics</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/18</td>
@@ -7000,6 +7228,8 @@ return System.global.__system_global_test__ === 42;
 <td class="tally" data-browser="android50" data-tally="0">0/18</td>
 <td class="tally" data-browser="android51" data-tally="0">0/18</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/18</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/18</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/18</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer">&#xA7;</a>SharedArrayBuffer</span><script data-source="
 return typeof SharedArrayBuffer === &apos;function&apos;;
@@ -7058,6 +7288,8 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer.isView"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer.isView">&#xA7;</a>SharedArrayBuffer.isView</span><script data-source="
 return typeof SharedArrayBuffer.isView === &apos;function&apos;;
@@ -7116,6 +7348,8 @@ return typeof SharedArrayBuffer.isView === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]">&#xA7;</a>SharedArrayBuffer[Symbol.species]</span><script data-source="
 return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
@@ -7174,6 +7408,8 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer.prototype.byteLength"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer.prototype.byteLength">&#xA7;</a>SharedArrayBuffer.prototype.byteLength</span><script data-source="
 return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
@@ -7232,6 +7468,8 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer.prototype.slice"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer.prototype.slice">&#xA7;</a>SharedArrayBuffer.prototype.slice</span><script data-source="
 return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
@@ -7290,6 +7528,8 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer.prototype[Symbol.toStringTag]"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer.prototype[Symbol.toStringTag]">&#xA7;</a>SharedArrayBuffer.prototype[Symbol.toStringTag]</span><script data-source="
 return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuffer&apos;;
@@ -7348,6 +7588,8 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.add"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.add">&#xA7;</a>Atomics.add</span><script data-source="
 return typeof Atomics.add == &apos;function&apos;;
@@ -7406,6 +7648,8 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.and"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.and">&#xA7;</a>Atomics.and</span><script data-source="
 return typeof Atomics.and == &apos;function&apos;;
@@ -7464,6 +7708,8 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.compareExchange"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.compareExchange">&#xA7;</a>Atomics.compareExchange</span><script data-source="
 return typeof Atomics.compareExchange == &apos;function&apos;;
@@ -7522,6 +7768,8 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.exchange"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.exchange">&#xA7;</a>Atomics.exchange</span><script data-source="
 return typeof Atomics.exchange == &apos;function&apos;;
@@ -7580,6 +7828,8 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.wait"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.wait">&#xA7;</a>Atomics.wait</span><script data-source="
 return typeof Atomics.wait == &apos;function&apos;;
@@ -7638,6 +7888,8 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.wake"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.wake">&#xA7;</a>Atomics.wake</span><script data-source="
 return typeof Atomics.wake == &apos;function&apos;;
@@ -7696,6 +7948,8 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.isLockFree"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.isLockFree">&#xA7;</a>Atomics.isLockFree</span><script data-source="
 return typeof Atomics.isLockFree == &apos;function&apos;;
@@ -7754,6 +8008,8 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.load"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.load">&#xA7;</a>Atomics.load</span><script data-source="
 return typeof Atomics.load == &apos;function&apos;;
@@ -7812,6 +8068,8 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.or"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.or">&#xA7;</a>Atomics.or</span><script data-source="
 return typeof Atomics.or == &apos;function&apos;;
@@ -7870,6 +8128,8 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.store"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.store">&#xA7;</a>Atomics.store</span><script data-source="
 return typeof Atomics.store == &apos;function&apos;;
@@ -7928,6 +8188,8 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.sub"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.sub">&#xA7;</a>Atomics.sub</span><script data-source="
 return typeof Atomics.sub == &apos;function&apos;;
@@ -7986,6 +8248,8 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_Atomics.xor"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_Atomics.xor">&#xA7;</a>Atomics.xor</span><script data-source="
 return typeof Atomics.xor == &apos;function&apos;;
@@ -8044,6 +8308,8 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Async_iteration"><span><a class="anchor" href="#test-Async_iteration">&#xA7;</a><a href="https://github.com/tc39/proposal-async-iteration">Async iteration</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -8099,6 +8365,8 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="tally" data-browser="android50" data-tally="0">0/2</td>
 <td class="tally" data-browser="android51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="Async_iteration" id="test-Async_iteration_async_generators"><td><span><a class="anchor" href="#test-Async_iteration_async_generators">&#xA7;</a>async generators</span><script data-source="
 async function*generator(){
@@ -8164,6 +8432,8 @@ iterator.next().then(function(step){
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Async_iteration" id="test-Async_iteration_for-await-of_loops"><td><span><a class="anchor" href="#test-Async_iteration_for-await-of_loops">&#xA7;</a>for-await-of loops</span><script data-source="
 var asyncIterable = {};
@@ -8239,8 +8509,10 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">Proposal (stage 1)</td>
+<tr class="category"><td colspan="57">Proposal (stage 1)</td>
 </tr>
 <tr significance="0.25"><td id="test-ArrayBuffer.transfer"><span><a class="anchor" href="#test-ArrayBuffer.transfer">&#xA7;</a><a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a></span><script data-source="
 var buffer1 = new Uint8Array([1, 2, 3]).buffer;
@@ -8303,6 +8575,8 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.5"><td id="test-class_decorators"><span><a class="anchor" href="#test-class_decorators">&#xA7;</a><a href="https://github.com/wycats/javascript-decorators">class decorators</a></span><script data-source="
 class A {
@@ -8369,6 +8643,8 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.5"><td id="test-class_properties"><span><a class="anchor" href="#test-class_properties">&#xA7;</a><a href="https://github.com/jeffmo/es-class-properties">class properties</a></span><script data-source="
 class C {
@@ -8431,6 +8707,8 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-string_trimming"><span><a class="anchor" href="#test-string_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">string trimming</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
@@ -8486,6 +8764,8 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="tally" data-browser="android50" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="android51" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="ios6" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="ios9" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimLeft"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimLeft">&#xA7;</a>String.prototype.trimLeft</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
@@ -8544,6 +8824,8 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimRight"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimRight">&#xA7;</a>String.prototype.trimRight</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
@@ -8602,6 +8884,8 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes" data-browser="android50">Yes</td>
 <td class="yes" data-browser="android51">Yes</td>
 <td class="yes obsolete" data-browser="ios51">Yes</td>
+<td class="yes" data-browser="ios6">Yes</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimStart"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimStart">&#xA7;</a>String.prototype.trimStart</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
@@ -8660,6 +8944,8 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimEnd"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimEnd">&#xA7;</a>String.prototype.trimEnd</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
@@ -8718,6 +9004,8 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Observable"><span><a class="anchor" href="#test-Observable">&#xA7;</a><a href="https://github.com/zenparsing/es-observable">Observable</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/8</td>
@@ -8773,6 +9061,8 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally" data-browser="android50" data-tally="0">0/8</td>
 <td class="tally" data-browser="android51" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/8</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/8</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/8</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_basic_support"><td><span><a class="anchor" href="#test-Observable_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof Observable !== &apos;undefined&apos;;
@@ -8831,6 +9121,8 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Symbol.observable_well_known_symbol"><td><span><a class="anchor" href="#test-Observable_Symbol.observable_well_known_symbol">&#xA7;</a>Symbol.observable well known symbol</span><script data-source="
 return typeof Symbol.observable === &apos;symbol&apos;;
@@ -8889,6 +9181,8 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.subscribe"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.subscribe">&#xA7;</a>Observable.prototype.subscribe</span><script data-source="
 return &apos;subscribe&apos; in Observable.prototype;
@@ -8947,6 +9241,8 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable_constructor_behavior"><td><span><a class="anchor" href="#test-Observable_Observable_constructor_behavior">&#xA7;</a>Observable constructor behavior</span><script data-source="
 var nonCallableCheckPassed,
@@ -9013,6 +9309,8 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.forEach"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.forEach">&#xA7;</a>Observable.prototype.forEach</span><script data-source="
 var o = new Observable(function() { });
@@ -9072,6 +9370,8 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype[Symbol.observable]"><td><span><a class="anchor" href="#test-Observable_Observable.prototype[Symbol.observable]">&#xA7;</a>Observable.prototype[Symbol.observable]</span><script data-source="
 var o = new Observable(function() { });
@@ -9131,6 +9431,8 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.of"><td><span><a class="anchor" href="#test-Observable_Observable.of">&#xA7;</a>Observable.of</span><script data-source="
 return Observable.of(1, 2, 3) instanceof Observable;
@@ -9189,6 +9491,8 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.from"><td><span><a class="anchor" href="#test-Observable_Observable.from">&#xA7;</a>Observable.from</span><script data-source="
 return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable.from(new Set([1, 2, 3])) instanceof Observable);
@@ -9247,6 +9551,8 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.25"><td id="test-String.prototype.matchAll"><span><a class="anchor" href="#test-String.prototype.matchAll">&#xA7;</a><a href="https://github.com/tc39/String.prototype.matchAll">String.prototype.matchAll</a></span><script data-source="
 var iterator = &apos;11a2bb&apos;.matchAll(/(\d)(\D)/);
@@ -9315,6 +9621,8 @@ return a === &apos;1a2b&apos;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="1"><td id="test-weak_references"><span><a class="anchor" href="#test-weak_references">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs">weak references</a></span><script data-source="
 var O = {};
@@ -9377,6 +9685,8 @@ return works &amp;&amp; weakref.get() === undefined;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-zones"><span><a class="anchor" href="#test-zones">&#xA7;</a><a href="https://github.com/domenic/zones">zones</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/7</td>
@@ -9432,6 +9742,8 @@ return works &amp;&amp; weakref.get() === undefined;
 <td class="tally" data-browser="android50" data-tally="0">0/7</td>
 <td class="tally" data-browser="android51" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/7</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/7</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/7</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone"><td><span><a class="anchor" href="#test-zones_Zone">&#xA7;</a>Zone</span><script data-source="
 return typeof Zone == &apos;function&apos;;
@@ -9490,6 +9802,8 @@ return typeof Zone == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.current"><td><span><a class="anchor" href="#test-zones_Zone.current">&#xA7;</a>Zone.current</span><script data-source="
 return &apos;current&apos; in Zone;
@@ -9548,6 +9862,8 @@ return &apos;current&apos; in Zone;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.name"><td><span><a class="anchor" href="#test-zones_Zone.prototype.name">&#xA7;</a>Zone.prototype.name</span><script data-source="
 return &apos;name&apos; in Zone.prototype;
@@ -9606,6 +9922,8 @@ return &apos;name&apos; in Zone.prototype;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.parent"><td><span><a class="anchor" href="#test-zones_Zone.prototype.parent">&#xA7;</a>Zone.prototype.parent</span><script data-source="
 return &apos;parent&apos; in Zone.prototype;
@@ -9664,6 +9982,8 @@ return &apos;parent&apos; in Zone.prototype;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.fork"><td><span><a class="anchor" href="#test-zones_Zone.prototype.fork">&#xA7;</a>Zone.prototype.fork</span><script data-source="
 return typeof Zone.prototype.fork == &apos;function&apos;;
@@ -9722,6 +10042,8 @@ return typeof Zone.prototype.fork == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.run"><td><span><a class="anchor" href="#test-zones_Zone.prototype.run">&#xA7;</a>Zone.prototype.run</span><script data-source="
 return typeof Zone.prototype.run == &apos;function&apos;;
@@ -9780,6 +10102,8 @@ return typeof Zone.prototype.run == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.wrap"><td><span><a class="anchor" href="#test-zones_Zone.prototype.wrap">&#xA7;</a>Zone.prototype.wrap</span><script data-source="
 return typeof Zone.prototype.wrap == &apos;function&apos;;
@@ -9838,6 +10162,8 @@ return typeof Zone.prototype.wrap == &apos;function&apos;;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr significance="0.5"><td id="test-frozen_realms"><span><a class="anchor" href="#test-frozen_realms">&#xA7;</a><a href="https://github.com/FUDCo/frozen-realms">frozen realms</a></span><script data-source="
 return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
@@ -9897,6 +10223,8 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-private_fields"><span><a class="anchor" href="#test-private_fields">&#xA7;</a><a href="https://github.com/zenparsing/es-private-fields">private fields</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -9952,6 +10280,8 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="tally" data-browser="android50" data-tally="0">0/2</td>
 <td class="tally" data-browser="android51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios6" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="private_fields" id="test-private_fields_basic_support"><td><span><a class="anchor" href="#test-private_fields_basic_support">&#xA7;</a>basic support</span><script data-source="
 class C {
@@ -10019,6 +10349,8 @@ return new C(42).x() === 42;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="private_fields" id="test-private_fields_initializers"><td><span><a class="anchor" href="#test-private_fields_initializers">&#xA7;</a>initializers</span><script data-source="
 class C {
@@ -10083,8 +10415,10 @@ return new C().x() === 42;
 <td class="no" data-browser="android50">No</td>
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios51">No</td>
+<td class="no" data-browser="ios6">No</td>
+<td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="55">Strawman (stage 0)</td>
+<tr class="category"><td colspan="57">Strawman (stage 0)</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-bind_(::)_operator"><span><a class="anchor" href="#test-bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -10140,6 +10474,8 @@ return new C().x() === 42;
 <td class="tally not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="bind_(::)_operator" id="test-bind_(::)_operator_binary_form"><td><span><a class="anchor" href="#test-bind_(::)_operator_binary_form">&#xA7;</a>binary form</span><script data-source="
 function foo() { this.garply += &quot;foo&quot;; return this; }
@@ -10200,6 +10536,8 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="bind_(::)_operator" id="test-bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#test-bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
 var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
@@ -10259,6 +10597,8 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-do_expression"><span><a class="anchor" href="#test-do_expression">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions">do expression</a></span><script data-source="
 return do {
@@ -10320,6 +10660,8 @@ return do {
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="1" class="optional-feature"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/caridy/proposal-realms">Realms</a></span><script data-source="
 return typeof Realm === &quot;function&quot;
@@ -10381,6 +10723,8 @@ return typeof Realm === &quot;function&quot;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-String.prototype.at"><span><a class="anchor" href="#test-String.prototype.at">&#xA7;</a><a href="https://github.com/mathiasbynens/String.prototype.at">String.prototype.at</a></span><script data-source="
 return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
@@ -10439,6 +10783,8 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Math_methods_for_64-bit_integers"><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers">&#xA7;</a><a href="https://gist.github.com/BrendanEich/4294d5c212a6d2254703">Math methods for 64-bit integers</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -10494,6 +10840,8 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="tally not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.iaddh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.iaddh">&#xA7;</a>Math.iaddh</span><script data-source="
 return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
@@ -10552,6 +10900,8 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.isubh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.isubh">&#xA7;</a>Math.isubh</span><script data-source="
 return Math.isubh(0, 4, 1, 1) === 2;
@@ -10610,6 +10960,8 @@ return Math.isubh(0, 4, 1, 1) === 2;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.imulh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.imulh">&#xA7;</a>Math.imulh</span><script data-source="
 return Math.imulh(0xffffffff, 7) === -1;
@@ -10668,6 +11020,8 @@ return Math.imulh(0xffffffff, 7) === -1;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.umulh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.umulh">&#xA7;</a>Math.umulh</span><script data-source="
 return Math.umulh(0xffffffff, 7) === 6;
@@ -10726,6 +11080,8 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-additional_meta_properties"><span><a class="anchor" href="#test-additional_meta_properties">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md">additional meta properties</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -10781,6 +11137,8 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="tally not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 </tr>
 <tr class="subtest" data-parent="additional_meta_properties" id="test-additional_meta_properties_function.callee"><td><span><a class="anchor" href="#test-additional_meta_properties_function.callee">&#xA7;</a>function.callee</span><script data-source="
 var f = _ =&gt; function.callee === f;
@@ -10840,6 +11198,8 @@ return f();
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="additional_meta_properties" id="test-additional_meta_properties_function.count"><td><span><a class="anchor" href="#test-additional_meta_properties_function.count">&#xA7;</a>function.count</span><script data-source="
 return (_ =&gt; function.count)(1, 2, 3) === 3;
@@ -10898,6 +11258,8 @@ return (_ =&gt; function.count)(1, 2, 3) === 3;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="additional_meta_properties" id="test-additional_meta_properties_function.arguments"><td><span><a class="anchor" href="#test-additional_meta_properties_function.arguments">&#xA7;</a>function.arguments</span><script data-source="
 var arr =  (_ =&gt; function.arguments)(1, 2, 3);
@@ -10961,6 +11323,8 @@ return Array.isArray(arr)
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-method_parameter_decorators"><span><a class="anchor" href="#test-method_parameter_decorators">&#xA7;</a><a href="https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0">method parameter decorators</a></span><script data-source="
 var target, key, index;
@@ -11030,6 +11394,8 @@ return target === C.prototype
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-function_expression_decorators"><span><a class="anchor" href="#test-function_expression_decorators">&#xA7;</a><a href="https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&amp;pli=1#">function expression decorators</a></span><script data-source="
 function inverse(f){
@@ -11095,6 +11461,8 @@ return (@inverse function(it){
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-RegExp_named_capture_groups"><span><a class="anchor" href="#test-RegExp_named_capture_groups">&#xA7;</a><a href="https://github.com/goyakin/es-regexp-named-groups">RegExp named capture groups</a></span><script data-source="
 var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.exec(&apos;2016-03-11&apos;);
@@ -11160,6 +11528,8 @@ return result.groups.year === &apos;2016&apos;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-RegExp_lookbehind"><span><a class="anchor" href="#test-RegExp_lookbehind">&#xA7;</a><a href="https://github.com/goyakin/es-regexp-lookbehind">RegExp lookbehind</a></span><script data-source="
 return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&apos;);
@@ -11218,6 +11588,8 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.25"><td id="test-Reflect.isCallable_/_Reflect.isConstructor"><span><a class="anchor" href="#test-Reflect.isCallable_/_Reflect.isConstructor">&#xA7;</a><a href="https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md">Reflect.isCallable / Reflect.isConstructor</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -11273,6 +11645,8 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="tally not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="Reflect.isCallable_/_Reflect.isConstructor" id="test-Reflect.isCallable_/_Reflect.isConstructor_Reflect.isCallable"><td><span><a class="anchor" href="#test-Reflect.isCallable_/_Reflect.isConstructor_Reflect.isCallable">&#xA7;</a>Reflect.isCallable</span><script data-source="
 return Reflect.isCallable(function(){})
@@ -11333,6 +11707,8 @@ return Reflect.isCallable(function(){})
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Reflect.isCallable_/_Reflect.isConstructor" id="test-Reflect.isCallable_/_Reflect.isConstructor_Reflect.isConstructor"><td><span><a class="anchor" href="#test-Reflect.isCallable_/_Reflect.isConstructor_Reflect.isConstructor">&#xA7;</a>Reflect.isConstructor</span><script data-source="
 return Reflect.isConstructor(function(){})
@@ -11393,6 +11769,8 @@ return Reflect.isConstructor(function(){})
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr significance="0.5" class="optional-feature"><td id="test-asap"><span><a class="anchor" href="#test-asap">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask">asap</a></span><script data-source="
 var passed = false;
@@ -11454,6 +11832,8 @@ passed = true;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-syntactic_tail_calls"><span><a class="anchor" href="#test-syntactic_tail_calls">&#xA7;</a><a href="https://github.com/tc39/proposal-ptc-syntax">syntactic tail calls</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -11509,6 +11889,8 @@ passed = true;
 <td class="tally not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="syntactic_tail_calls" id="test-syntactic_tail_calls_direct_recursion"><td><span><a class="anchor" href="#test-syntactic_tail_calls_direct_recursion">&#xA7;</a>direct recursion</span><script data-source="
 &quot;use strict&quot;;
@@ -11573,6 +11955,8 @@ return (function f(n){
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="syntactic_tail_calls" id="test-syntactic_tail_calls_mutual_recursion"><td><span><a class="anchor" href="#test-syntactic_tail_calls_mutual_recursion">&#xA7;</a>mutual recursion</span><script data-source="
 &quot;use strict&quot;;
@@ -11644,8 +12028,10 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr class="category"><td colspan="55">Pre-strawman</td>
+<tr class="category"><td colspan="57">Pre-strawman</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-Metadata_reflection_API"><span><a class="anchor" href="#test-Metadata_reflection_API">&#xA7;</a><a href="https://github.com/jonathandturner/decorators/blob/master/specs/metadata.md">Metadata reflection API</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
@@ -11701,6 +12087,8 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="tally not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
+<td class="tally not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
+<td class="tally not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.defineMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.defineMetadata">&#xA7;</a>Reflect.defineMetadata</span><script data-source="
 return typeof Reflect.defineMetadata == &apos;function&apos;;
@@ -11759,6 +12147,8 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.hasMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.hasMetadata">&#xA7;</a>Reflect.hasMetadata</span><script data-source="
 return typeof Reflect.hasMetadata == &apos;function&apos;;
@@ -11817,6 +12207,8 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.hasOwnMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.hasOwnMetadata">&#xA7;</a>Reflect.hasOwnMetadata</span><script data-source="
 return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
@@ -11875,6 +12267,8 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getMetadata">&#xA7;</a>Reflect.getMetadata</span><script data-source="
 return typeof Reflect.getMetadata == &apos;function&apos;;
@@ -11933,6 +12327,8 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getOwnMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getOwnMetadata">&#xA7;</a>Reflect.getOwnMetadata</span><script data-source="
 return typeof Reflect.getOwnMetadata == &apos;function&apos;;
@@ -11991,6 +12387,8 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getMetadataKeys"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getMetadataKeys">&#xA7;</a>Reflect.getMetadataKeys</span><script data-source="
 return typeof Reflect.getMetadataKeys == &apos;function&apos;;
@@ -12049,6 +12447,8 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getOwnMetadataKeys"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getOwnMetadataKeys">&#xA7;</a>Reflect.getOwnMetadataKeys</span><script data-source="
 return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
@@ -12107,6 +12507,8 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.deleteMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.deleteMetadata">&#xA7;</a>Reflect.deleteMetadata</span><script data-source="
 return typeof Reflect.deleteMetadata == &apos;function&apos;;
@@ -12165,6 +12567,8 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.metadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.metadata">&#xA7;</a>Reflect.metadata</span><script data-source="
 return typeof Reflect.metadata == &apos;function&apos;;
@@ -12223,6 +12627,8 @@ return typeof Reflect.metadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="android50" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 </tbody>
     </table>

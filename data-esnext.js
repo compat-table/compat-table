@@ -371,6 +371,20 @@ exports.browsers = {
     platformtype: 'mobile',
     obsolete: true,
   },
+  ios6: {
+    full: 'iOS 6-8',
+    short: 'iOS<br />6-8',
+    platformtype: 'mobile',
+    equals: 'safari51',
+    obsolete: false,
+  },
+  ios9: {
+    full: 'iOS 9',
+    short: 'iOS 9',
+    platformtype: 'mobile',
+    equals: 'safari9',
+    obsolete: false,
+  },
 };
 
 exports.tests = [
