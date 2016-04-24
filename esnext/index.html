@@ -9245,6 +9245,8 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable_constructor_behavior"><td><span><a class="anchor" href="#test-Observable_Observable_constructor_behavior">&#xA7;</a>Observable constructor behavior</span><script data-source="
+if(!(new Observable(function(){}) instanceof Observable))return false;
+
 var nonCallableCheckPassed,
     primitiveCheckPassed,
     newCheckPassed;
@@ -9254,7 +9256,7 @@ try { new Observable(false) } catch(e) { primitiveCheckPassed = true }
 try { Observable(function() { }) } catch(e) { newCheckPassed = true }
 
 return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newCheckPassed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("147");try{return Function("asyncTestPassed","\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("147");return Function("asyncTestPassed","'use strict';"+"\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("147");try{return Function("asyncTestPassed","\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("147");return Function("asyncTestPassed","'use strict';"+"\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

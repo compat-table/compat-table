@@ -1799,6 +1799,8 @@ exports.tests = [
     {
       name: 'Observable constructor behavior',
       exec: function () {/*
+        if(!(new Observable(function(){}) instanceof Observable))return false;
+
         var nonCallableCheckPassed,
             primitiveCheckPassed,
             newCheckPassed;
