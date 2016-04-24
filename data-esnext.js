@@ -365,6 +365,12 @@ exports.browsers = {
     equals: 'chrome39',
     ignore_flagged: true,
   },
+  ios51: {
+    full: 'iOS 5.1',
+    short: 'iOS 5.1',
+    platformtype: 'mobile',
+    obsolete: true,
+  },
 };
 
 exports.tests = [
@@ -1483,6 +1489,7 @@ exports.tests = [
         webkit:      true,
         es7shim:     true,
         android40:   true,
+        ios51:       true,
       }
     },
     {
@@ -1504,6 +1511,7 @@ exports.tests = [
         webkit:      true,
         es7shim:     true,
         android40:   true,
+        ios51:       true,
       }
     },
     {
@@ -2128,6 +2136,7 @@ exports.tests = [
         safaritp:    true,
         webkit:      true,
         android40:   true,
+        ios51:       true,
       })
     },
     {
