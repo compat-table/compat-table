@@ -340,7 +340,7 @@ exports.browsers = {
     short: 'Node 6',
     platformtype: 'engine',
     equals: 'chrome50',
-    unstable: true,
+    obsolete: false,
   },
   android40: {
     full: 'Android Browser',

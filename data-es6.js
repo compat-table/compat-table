@@ -518,7 +518,7 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     equals: 'chrome50',
-    unstable: true,
+    obsolete: false,
   },
   ejs: {
     full: 'Echo JS',
