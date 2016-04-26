@@ -170,7 +170,7 @@ exports.browsers = {
   firefox46: {
     full: 'Firefox',
     short: 'FF 46',
-    unstable: true,
+    obsolete: false,
   },
   firefox47: {
     full: 'Firefox',
@@ -524,7 +524,7 @@ exports.tests = [
     es7shim:    true,
     typescript: typescript.corejs,
     firefox45:  firefox.nightly,
-    firefox46:  true,
+    firefox47:  true,
     chrome51:   flag,
     edge14:     true,
   }
@@ -549,7 +549,7 @@ exports.tests = [
     es7shim:    true,
     typescript: typescript.corejs,
     firefox45:  firefox.nightly,
-    firefox46:  true,
+    firefox47:  true,
     chrome51:   flag,
     edge14:     true,
   }
