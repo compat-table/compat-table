@@ -186,7 +186,7 @@
 <th class="platform safari7 desktop" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
 <th class="platform safari9 desktop" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari">SF 9</abbr></a></th>
-<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 2">SF TP</abbr></a></th>
+<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 3">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r200136">WK</abbr></a></th>
 <th class="platform opera desktop obsolete" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
 <th class="platform konq49 desktop" data-browser="konq49"><a href="#konq49" class="browser-name"><abbr title="Konqueror 4.14">KQ<br>4.14</abbr></a><a href="#khtml-note"><sup>[4]</sup></a></th>
@@ -5025,7 +5025,7 @@ return cr.length === 3 &amp;&amp; lf.length === 3 &amp;&amp; crlf.length === 3
 <td class="tally" data-browser="safari7" data-tally="0">0/5</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/5</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/5</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/5</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/5</td>
@@ -5411,7 +5411,7 @@ return &quot;&#x17F;&quot;.match(/S/iu) &amp;&amp; &quot;&#x17F;&quot;.match(/\w
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -35570,7 +35570,7 @@ return Symbol.for(&apos;foo&apos;) === symbol &amp;&amp;
 <td class="tally" data-browser="safari7" data-tally="0">0/26</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/26</td>
 <td class="tally" data-browser="safari9" data-tally="0.11538461538461539" style="background-color:hsl(13,80%,50%)">3/26</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.7692307692307693" style="background-color:hsl(92,52%,50%)">20/26</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0.9615384615384616" style="background-color:hsl(115,43%,50%)">25/26</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">26/26</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/26</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/26</td>
@@ -35732,7 +35732,7 @@ return a[0] === b;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -36452,7 +36452,7 @@ return passed;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -36772,7 +36772,7 @@ return &apos;&apos;.split(O) === 42;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -36932,7 +36932,7 @@ return RegExp(re) !== re &amp;&amp; RegExp(foo) === foo;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -37534,7 +37534,7 @@ passed = passed
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -40484,7 +40484,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="tally" data-browser="safari7" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari9" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/6</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/6</td>
@@ -40712,7 +40712,7 @@ return typeof RegExp.prototype[Symbol.replace] === &apos;function&apos;;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -48142,7 +48142,7 @@ return correctProtoBound(function(){})
 <td class="tally" data-browser="safari7" data-tally="0">0/36</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/36</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/36</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.7777777777777778" style="background-color:hsl(93,51%,50%)">28/36</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">33/36</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0.9722222222222222" style="background-color:hsl(116,43%,50%)">35/36</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/36</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/36</td>
@@ -49288,7 +49288,7 @@ return get[0] === Symbol.match &amp;&amp; get.slice(1) + &apos;&apos; === &quot;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -49772,7 +49772,7 @@ return get + &apos;&apos; === &quot;lastIndex,exec&quot;;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -49854,7 +49854,7 @@ return get + &apos;&apos; === &quot;constructor,flags,exec&quot;;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -50021,7 +50021,7 @@ return get[0] === &quot;constructor&quot;
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -51003,7 +51003,7 @@ return get[0] === Symbol.split &amp;&amp; get[1] === Symbol.toPrimitive &amp;&am
 <td class="no" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
