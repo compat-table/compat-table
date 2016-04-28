@@ -93,7 +93,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'Webkit r120398 (June 20, 2012)',
+    full: 'Webkit r200167 (April 28, 2016)',
     family: 'JavaScriptCore',
     short: 'WebKit',
     obsolete: false

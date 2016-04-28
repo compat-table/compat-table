@@ -448,7 +448,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'WebKit r200136',
+    full: 'WebKit r200167 (April 28, 2016)',
     short: 'WK',
     unstable: true,
   },
@@ -8872,7 +8872,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         safaritp:    true,
-        webkit:      true,
+        webkit:      false,
       },
     },
     {
@@ -13331,7 +13331,7 @@ exports.tests = [
         xs6:         true,
         jxa:         true,
         safaritp:    true,
-        webkit:      true,
+        webkit:      false,
       },
     },
     {
@@ -15547,7 +15547,7 @@ exports.tests = [
         chrome49:    true,
         safari9:     true,
         safaritp:    true,
-        webkit:      true,
+        webkit:      false,
         edge13:      true,
         firefox45:   true,
         node5:       strict,
