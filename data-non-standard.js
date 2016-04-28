@@ -126,7 +126,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'Webkit r72487 (Nov 24, 2010)',
+    full: 'Webkit r200167 (April 28, 2016)',
     short: 'WebKit',
     obsolete: false
   },
