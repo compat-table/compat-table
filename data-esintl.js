@@ -707,6 +707,33 @@ exports.tests = [
         ios7: false,
         ios9: false
       }
+    },
+    {
+      name: 'accepts IANA timezone names',
+      exec: function() {/*
+        try {
+          new Intl.DateTimeFormat('en-US', {
+            timeZone: 'Australia/Sydney',
+            timeZoneName: 'long'
+          }).format();
+          return true;
+        } catch (e) {
+          return false;
+        }
+      */},
+      res: {
+        ie9: false,
+        ie10: false,
+        ie11: false,
+        ie11: false,
+        edge: false,
+        edge14: true,
+        firefox29: false, // Firefox bug #1266290
+        chrome24: true,
+        chrome29: true,
+        node12: true,
+        node4: true,
+      }
     }
   ],
 },
