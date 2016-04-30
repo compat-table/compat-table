@@ -731,6 +731,8 @@ exports.tests = [
         firefox29: false, // Firefox bug #1266290
         chrome24: true,
         chrome29: true,
+        safaritp: true,
+        webkit: true,
         node12: true,
         node4: true,
       }
