@@ -208,7 +208,7 @@
 <td class="tally obsolete" data-browser="chrome49" data-tally="0">0/3</td>
 <td class="tally" data-browser="chrome50" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="chrome51" data-tally="0" data-flagged-tally="1">0/3</td>
-<td class="tally unstable" data-browser="chrome52" data-tally="0" data-flagged-tally="1">0/3</td>
+<td class="tally unstable" data-browser="chrome52" data-tally="1">3/3</td>
 <td class="tally" data-browser="safari51" data-tally="0">0/3</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/3</td>
@@ -270,7 +270,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no flagged unstable" data-browser="chrome51">Flag</td>
-<td class="no flagged unstable" data-browser="chrome52">Flag</td>
+<td class="yes unstable" data-browser="chrome52">Yes</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
@@ -332,7 +332,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no flagged unstable" data-browser="chrome51">Flag</td>
-<td class="no flagged unstable" data-browser="chrome52">Flag</td>
+<td class="yes unstable" data-browser="chrome52">Yes</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
@@ -399,7 +399,7 @@ try {
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no flagged unstable" data-browser="chrome51">Flag</td>
-<td class="no flagged unstable" data-browser="chrome52">Flag</td>
+<td class="yes unstable" data-browser="chrome52">Yes</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
@@ -2424,7 +2424,7 @@ try {
 <td class="tally obsolete" data-browser="chrome49" data-tally="0">0/4</td>
 <td class="tally" data-browser="chrome50" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="chrome51" data-tally="0">0/4</td>
-<td class="tally unstable" data-browser="chrome52" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="chrome52" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="safari51" data-tally="0">0/4</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -2490,7 +2490,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="chrome51">No</td>
-<td class="no unstable" data-browser="chrome52">No</td>
+<td class="yes unstable" data-browser="chrome52">Yes</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
@@ -2556,7 +2556,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="chrome51">No</td>
-<td class="no unstable" data-browser="chrome52">No</td>
+<td class="yes unstable" data-browser="chrome52">Yes</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
@@ -6994,7 +6994,7 @@ return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
 <td class="tally obsolete" data-browser="chrome49" data-tally="0">0/2</td>
 <td class="tally" data-browser="chrome50" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="chrome51" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="chrome52" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome52" data-tally="0" data-flagged-tally="1">0/2</td>
 <td class="tally" data-browser="safari51" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
@@ -7059,7 +7059,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="chrome51">No</td>
-<td class="no unstable" data-browser="chrome52">No</td>
+<td class="no flagged unstable" data-browser="chrome52">Flag</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
@@ -7124,7 +7124,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no obsolete" data-browser="chrome49">No</td>
 <td class="no" data-browser="chrome50">No</td>
 <td class="no unstable" data-browser="chrome51">No</td>
-<td class="no unstable" data-browser="chrome52">No</td>
+<td class="no flagged unstable" data-browser="chrome52">Flag</td>
 <td class="no" data-browser="safari51">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>

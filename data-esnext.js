@@ -417,6 +417,7 @@ exports.tests = [
         edge14:      true,
         firefox48:   firefox.nightly,
         chrome51:    flag,
+        chrome52:    true,
       }
     },
     {
@@ -432,6 +433,7 @@ exports.tests = [
         edge14:      true,
         firefox48:   firefox.nightly,
         chrome51:    flag,
+        chrome52:    true,
       }
     },
     {
@@ -448,6 +450,7 @@ exports.tests = [
         babel:       true,
         edge14:      true,
         chrome51:    flag,
+        chrome52:    true,
       }
     },
   ],
@@ -1467,6 +1470,7 @@ exports.tests = [
         es7shim:     true,
         firefox48:   firefox.nightly,
         edge14:      flag,
+        chrome52:    flag,
         safaritp:    true,
         webkit:      true,
       }
@@ -1485,6 +1489,7 @@ exports.tests = [
         es7shim:     true,
         firefox48:   firefox.nightly,
         edge14:      flag,
+        chrome52:    flag,
         safaritp:    true,
         webkit:      true,
       }
@@ -2412,6 +2417,7 @@ exports.tests = [
       res: {
         firefox31:   true,
         edge14:      true,
+        chrome52:    true,
         safaritp:    true,
         webkit:      true,
       }
@@ -2428,6 +2434,7 @@ exports.tests = [
       res: {
         firefox31:   true,
         edge14:      true,
+        chrome52:    true,
         safaritp:    true,
         webkit:      true,
       }
