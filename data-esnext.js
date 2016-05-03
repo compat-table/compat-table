@@ -2454,6 +2454,7 @@ exports.tests = [
         return gopd + '' === "foo" && gpo;
       */},
       res: {
+        firefox49:   true,
       }
     },
     {
@@ -2471,6 +2472,7 @@ exports.tests = [
         return gopd + '' === "foo" && gpo;
       */},
       res: {
+        firefox49:   true,
       }
     }
   ]
