@@ -10010,7 +10010,7 @@ exports.tests = [
       res: {
         ejs:         null,
         typescript: typescript.corejs,
-        edge13:      null,
+        edge13:      true,
         firefox45:   true,
         xs6:         null,
         chrome49:    true,
@@ -10029,7 +10029,7 @@ exports.tests = [
       res: {
         ejs:         null,
         typescript: typescript.corejs,
-        edge13:      null,
+        edge13:      true,
         firefox45:   true,
         firefox46:   false,
         xs6:         null,
@@ -10048,7 +10048,7 @@ exports.tests = [
       res: {
         ejs:         null,
         typescript: typescript.corejs,
-        edge13:      null,
+        edge13:      true,
         firefox45:   true,
         xs6:         null,
         chrome49:    true,
@@ -10088,8 +10088,7 @@ exports.tests = [
       */},
       res: {
         ejs:         null,
-        typescript: typescript.corejs,
-        edge13:      null,
+        typescript:  typescript.corejs,
         xs6:         null,
         firefox45:   true,
         chrome49:    true,
