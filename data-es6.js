@@ -9960,7 +9960,7 @@ exports.tests = [
       },
     },
     {
-      name: 'Reflect.construct sets new.target meta property',
+      name: 'Reflect.construct sets new.target meta-property',
       exec: function() {/*
         return Reflect.construct(function(a, b, c) {
           if (new.target === Object) {
@@ -9980,10 +9980,11 @@ exports.tests = [
       },
     },
     {
-      name: 'Reflect.construct creates instance from newTarget argument',
+      name: 'Reflect.construct creates instances from third argument',
       exec: function() {/*
         function F(){}
-        return Reflect.construct(function(){}, [], F) instanceof F;
+        var obj = Reflect.construct(function(){ this.y = 1; }, [], F);
+        return obj.y === 1 && obj instanceof F;
       */},
       res: {
         ejs:         true,
@@ -9996,6 +9997,104 @@ exports.tests = [
         chrome49:    true,
         safaritp:    true,
         webkit:      true,
+      },
+    },
+    {
+      name: 'Reflect.construct, Array subclassing',
+      exec: function() {/*
+        function F(){}
+        var obj = Reflect.construct(Array, [], F);
+        obj[2] = 'foo';
+        return obj.length === 3 && obj instanceof F;
+      */},
+      res: {
+        ejs:         null,
+        typescript: typescript.corejs,
+        edge13:      null,
+        firefox45:   true,
+        xs6:         null,
+        chrome49:    true,
+        safaritp:    null,
+        webkit:      null,
+      },
+    },
+    {
+      name: 'Reflect.construct, RegExp subclassing',
+      exec: function() {/*
+        function F(){}
+        var obj = Reflect.construct(RegExp, ["baz","g"], F);
+        return RegExp.prototype.exec.call(obj, "foobarbaz")[0] === "baz"
+          && obj.lastIndex === 9 && obj instanceof F;
+      */},
+      res: {
+        ejs:         null,
+        typescript: typescript.corejs,
+        edge13:      null,
+        firefox45:   true,
+        firefox46:   false,
+        xs6:         null,
+        chrome49:    true,
+        safaritp:    null,
+        webkit:      null,
+      },
+    },
+    {
+      name: 'Reflect.construct, Function subclassing',
+      exec: function() {/*
+        function F(){}
+        var obj = Reflect.construct(Function, ["return 2"], F);
+        return obj() === 2 && obj instanceof F;
+      */},
+      res: {
+        ejs:         null,
+        typescript: typescript.corejs,
+        edge13:      null,
+        firefox45:   true,
+        xs6:         null,
+        chrome49:    true,
+        safaritp:    null,
+        webkit:      null,
+      },
+    },
+    {
+      name: 'Reflect.construct, Promise subclassing',
+      exec: function() {/*
+        function F(){}
+        var p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve("foo"); }], F);
+        var p2 = Reflect.construct(Promise,[function(resolve, reject) { reject("quux"); }], F);
+        var score = +(p1 instanceof F && p2 instanceof F);
+
+        function thenFn(result)  { score += (result === "foo");  check(); }
+        function catchFn(result) { score += (result === "quux"); check(); }
+        function shouldNotRun(result)  { score = -Infinity;   }
+
+        p1.then = p2.then = Promise.prototype.then;
+        p1.catch = p2.catch = Promise.prototype.catch;
+
+        p1.then(thenFn, shouldNotRun);
+        p2.then(shouldNotRun, catchFn);
+        p1.catch(shouldNotRun);
+        p2.catch(catchFn);
+
+        p1.then(function() {
+          // P.prototype.then() should return a new F
+          score += p1.then() instanceof F && p1.then() !== p1;
+          check();
+        });
+
+        function check() {
+          if (score === 5) asyncTestPassed();
+        }
+      */},
+      res: {
+        ejs:         null,
+        typescript: typescript.corejs,
+        edge13:      null,
+        xs6:         null,
+        firefox45:   true,
+        chrome49:    true,
+        safaritp:    null,
+        webkit:      null,
       },
     },
   ],
