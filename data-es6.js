@@ -448,7 +448,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'WebKit r200167 (April 28, 2016)',
+    full: 'WebKit r200505 (May 6, 2016)',
     short: 'WK',
     unstable: true,
   },
@@ -8734,6 +8734,7 @@ exports.tests = [
         chrome52:    true,
         xs6:         true,
         safaritp:    false,
+        webkit:      true,
       },
     },
     {
@@ -8876,7 +8877,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         safaritp:    true,
-        webkit:      false,
+        webkit:      true,
       },
     },
     {
@@ -10015,7 +10016,7 @@ exports.tests = [
         xs6:         null,
         chrome49:    true,
         safaritp:    null,
-        webkit:      null,
+        webkit:      true,
       },
     },
     {
@@ -10035,7 +10036,7 @@ exports.tests = [
         xs6:         null,
         chrome49:    true,
         safaritp:    null,
-        webkit:      null,
+        webkit:      true,
       },
     },
     {
@@ -10053,7 +10054,7 @@ exports.tests = [
         xs6:         null,
         chrome49:    true,
         safaritp:    null,
-        webkit:      null,
+        webkit:      true,
       },
     },
     {
@@ -10088,7 +10089,7 @@ exports.tests = [
         firefox44:   true,
         chrome49:    true,
         safaritp:    null,
-        webkit:      null,
+        webkit:      true,
       },
     },
   ],
@@ -13429,7 +13430,7 @@ exports.tests = [
         xs6:         true,
         jxa:         true,
         safaritp:    true,
-        webkit:      false,
+        webkit:      true,
       },
     },
     {
@@ -15645,7 +15646,7 @@ exports.tests = [
         chrome49:    true,
         safari9:     true,
         safaritp:    true,
-        webkit:      false,
+        webkit:      true,
         edge13:      true,
         firefox45:   true,
         node5:       strict,
