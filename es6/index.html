@@ -32471,8 +32471,8 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/20</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/20</td>
 <td class="tally" data-browser="edge12" data-tally="0.65" style="background-color:hsl(78,57%,50%)">13/20</td>
-<td class="tally" data-browser="edge13" data-tally="0.95" style="background-color:hsl(114,44%,50%)">19/20</td>
-<td class="tally unstable" data-browser="edge14" data-tally="0.95" style="background-color:hsl(114,44%,50%)">19/20</td>
+<td class="tally" data-browser="edge13" data-tally="1">20/20</td>
+<td class="tally unstable" data-browser="edge14" data-tally="1">20/20</td>
 <td class="tally obsolete" data-browser="firefox35" data-tally="0">0/20</td>
 <td class="tally obsolete" data-browser="firefox36" data-tally="0">0/20</td>
 <td class="tally obsolete" data-browser="firefox37" data-tally="0">0/20</td>
@@ -32482,7 +32482,7 @@ return JSON.stringify(new Proxy([&apos;foo&apos;], {})) === &apos;[&quot;foo&quo
 <td class="tally obsolete" data-browser="firefox41" data-tally="0">0/20</td>
 <td class="tally obsolete" data-browser="firefox42" data-tally="0.75" style="background-color:hsl(90,53%,50%)">15/20</td>
 <td class="tally obsolete" data-browser="firefox43" data-tally="0.75" style="background-color:hsl(90,53%,50%)">15/20</td>
-<td class="tally obsolete" data-browser="firefox44" data-tally="0.8" style="background-color:hsl(96,50%,50%)">16/20</td>
+<td class="tally obsolete" data-browser="firefox44" data-tally="0.85" style="background-color:hsl(102,48%,50%)">17/20</td>
 <td class="tally" data-browser="firefox45" data-tally="1">20/20</td>
 <td class="tally" data-browser="firefox46" data-tally="0.95" style="background-color:hsl(114,44%,50%)">19/20</td>
 <td class="tally unstable" data-browser="firefox47" data-tally="0.95" style="background-color:hsl(114,44%,50%)">19/20</td>
@@ -34038,16 +34038,10 @@ p2.then(shouldNotRun, catchFn);
 p1.catch(shouldNotRun);
 p2.catch(catchFn);
 
-p1.then(function() {
-  // P.prototype.then() should return a new F
-  score += p1.then() instanceof F &amp;&amp; p1.then() !== p1;
-  check();
-});
-
 function check() {
-  if (score === 5) asyncTestPassed();
+  if (score === 4) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("419");try{return Function("asyncTestPassed","\nfunction F(){}\nvar p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve(\"foo\"); }], F);\nvar p2 = Reflect.construct(Promise,[function(resolve, reject) { reject(\"quux\"); }], F);\nvar score = +(p1 instanceof F && p2 instanceof F);\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then = p2.then = Promise.prototype.then;\np1.catch = p2.catch = Promise.prototype.catch;\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\np1.then(function() {\n  // P.prototype.then() should return a new F\n  score += p1.then() instanceof F && p1.then() !== p1;\n  check();\n});\n\nfunction check() {\n  if (score === 5) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("419");return Function("asyncTestPassed","'use strict';"+"\nfunction F(){}\nvar p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve(\"foo\"); }], F);\nvar p2 = Reflect.construct(Promise,[function(resolve, reject) { reject(\"quux\"); }], F);\nvar score = +(p1 instanceof F && p2 instanceof F);\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then = p2.then = Promise.prototype.then;\np1.catch = p2.catch = Promise.prototype.catch;\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\np1.then(function() {\n  // P.prototype.then() should return a new F\n  score += p1.then() instanceof F && p1.then() !== p1;\n  check();\n});\n\nfunction check() {\n  if (score === 5) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("419");try{return Function("asyncTestPassed","\nfunction F(){}\nvar p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve(\"foo\"); }], F);\nvar p2 = Reflect.construct(Promise,[function(resolve, reject) { reject(\"quux\"); }], F);\nvar score = +(p1 instanceof F && p2 instanceof F);\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then = p2.then = Promise.prototype.then;\np1.catch = p2.catch = Promise.prototype.catch;\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("419");return Function("asyncTestPassed","'use strict';"+"\nfunction F(){}\nvar p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve(\"foo\"); }], F);\nvar p2 = Reflect.construct(Promise,[function(resolve, reject) { reject(\"quux\"); }], F);\nvar score = +(p1 instanceof F && p2 instanceof F);\n\nfunction thenFn(result)  { score += (result === \"foo\");  check(); }\nfunction catchFn(result) { score += (result === \"quux\"); check(); }\nfunction shouldNotRun(result)  { score = -Infinity;   }\n\np1.then = p2.then = Promise.prototype.then;\np1.catch = p2.catch = Promise.prototype.catch;\n\np1.then(thenFn, shouldNotRun);\np2.then(shouldNotRun, catchFn);\np1.catch(shouldNotRun);\np2.catch(catchFn);\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -34059,8 +34053,8 @@ function check() {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
-<td class="no unstable" data-browser="edge14">No</td>
+<td class="yes" data-browser="edge13">Yes</td>
+<td class="yes unstable" data-browser="edge14">Yes</td>
 <td class="no obsolete" data-browser="firefox35">No</td>
 <td class="no obsolete" data-browser="firefox36">No</td>
 <td class="no obsolete" data-browser="firefox37">No</td>
@@ -34070,7 +34064,7 @@ function check() {
 <td class="no obsolete" data-browser="firefox41">No</td>
 <td class="no obsolete" data-browser="firefox42">No</td>
 <td class="no obsolete" data-browser="firefox43">No</td>
-<td class="no obsolete" data-browser="firefox44">No</td>
+<td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes" data-browser="firefox46">Yes</td>
 <td class="yes unstable" data-browser="firefox47">Yes</td>

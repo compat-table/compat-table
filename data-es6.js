@@ -10076,21 +10076,16 @@ exports.tests = [
         p1.catch(shouldNotRun);
         p2.catch(catchFn);
 
-        p1.then(function() {
-          // P.prototype.then() should return a new F
-          score += p1.then() instanceof F && p1.then() !== p1;
-          check();
-        });
-
         function check() {
-          if (score === 5) asyncTestPassed();
+          if (score === 4) asyncTestPassed();
         }
       */},
       res: {
         ejs:         null,
         typescript:  typescript.corejs,
         xs6:         null,
-        firefox45:   true,
+        edge13:      true,
+        firefox44:   true,
         chrome49:    true,
         safaritp:    null,
         webkit:      null,
