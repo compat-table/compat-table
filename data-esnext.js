@@ -51,7 +51,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   babel: {
-    full: 'Babel 6.5 + core-js 2.3',
+    full: 'Babel 6.5 + core-js 2.4',
     short: 'Babel +<br><nobr>core-js</nobr>',
     platformtype: 'compiler',
     note_id: 'experimental-flag',
@@ -64,7 +64,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   typescript: {
-    full: 'TypeScript 1.8 + core-js 2.3',
+    full: 'TypeScript 1.8 + core-js 2.4',
     short: 'Type-<br />Script +<br /><nobr>core-js</nobr>',
     obsolete: false,
     platformtype: 'compiler'
@@ -1796,7 +1796,8 @@ exports.tests = [
         return typeof Observable !== 'undefined';
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -1815,7 +1816,8 @@ exports.tests = [
         return 'subscribe' in Observable.prototype;
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -1834,7 +1836,8 @@ exports.tests = [
         return nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -1844,7 +1847,8 @@ exports.tests = [
         return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -1854,7 +1858,8 @@ exports.tests = [
         return Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -1863,7 +1868,8 @@ exports.tests = [
         return Observable.of(1, 2, 3) instanceof Observable;
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -1872,7 +1878,8 @@ exports.tests = [
         return (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);
       */},
       res: {
-
+        babel:      true,
+        typescript: typescript.corejs,
       }
     }
   ]
