@@ -1923,15 +1923,6 @@ exports.tests = [
       }
     },
     {
-      name: 'SharedArrayBuffer.isView',
-      exec: function () {/*
-        return typeof SharedArrayBuffer.isView === 'function';
-      */},
-      res: {
-        firefox46:    firefox.nightly,
-      }
-    },
-    {
       name: 'SharedArrayBuffer[Symbol.species]',
       exec: function () {/*
         return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
