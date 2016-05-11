@@ -2896,6 +2896,58 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Object enumerables',
+  category: 'strawman (stage 0)',
+  significance: 'small',
+  link: 'https://github.com/leobalter/object-enumerables',
+  subtests: [
+    {
+      name: 'Object.enumerableKeys',
+      exec: function() {/*
+        var O = Object.create({a: 1}, {c: {value: 3}});
+        O.b = 2;
+        var keys = Object.enumerableKeys(O);
+        return keys.length === 2
+          && !!~keys.indexOf('a')
+          && !!~keys.indexOf('b');
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'Object.enumerableValues',
+      exec: function() {/*
+        var O = Object.create({a: 1}, {c: {value: 3}});
+        O.b = 2;
+        var values = Object.enumerableValues(O);
+        return values.length === 2
+          && !!~values.indexOf(1)
+          && !!~values.indexOf(2);
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'Object.enumerableEntries',
+      exec: function() {/*
+        var O = Object.create({a: 1}, {c: {value: 3}});
+        O.b = 2;
+        var entries = Object.enumerableEntries(O);
+        entries.sort(function(x, y){
+          return x[1] - y[1];
+        });
+        return entries.length === 2
+          && entries[0][0] === 'a'
+          && entries[0][1] === 1
+          && entries[1][0] === 'b'
+          && entries[1][1] === 2;
+      */},
+      res: {
+      },
+    },
+  ]
+},
 ];
 
 //Shift annex B features to the bottom
