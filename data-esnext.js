@@ -306,7 +306,7 @@ exports.browsers = {
     obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 3',
+    full: 'Safari Technology Preview Release 4',
     short: 'SF TP',
     unstable: true
   },
@@ -1617,6 +1617,7 @@ exports.tests = [
       chrome39:  true,
       node:      flag,
       node4:     true,
+      safaritp:  true,
       webkit:    true,
   }
 },
