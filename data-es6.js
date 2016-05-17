@@ -15932,8 +15932,6 @@ exports.tests = [
           && c == true;
       */},
       res: {
-        typescript:  false,
-        safari9:     false,
         safaritp:    true,
         webkit:      true,
         chrome43:    strict,
@@ -15956,8 +15954,6 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
-        typescript:  false,
-        safari9:     false,
         safaritp:    true,
         webkit:      true,
         chrome43:    strict,
@@ -15982,8 +15978,28 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
-        typescript:  false,
-        safari9:     false,
+        safaritp:    true,
+        webkit:      true,
+        chrome43:    strict,
+        chrome49:    true,
+        node4:       strict,
+        edge13:      true,
+        firefox45:   true,
+        xs6:         true,
+        ejs:         true,
+        jxa:         true,
+      },
+    },
+    {
+      name: 'Error is subclassable',
+      exec: function () {/*
+        class C extends Error {}
+        var c = new C();
+        return c instanceof Error
+          && c instanceof C
+          && Object.prototype.toString.call(c) === "[object Error]";
+      */},
+      res: {
         safaritp:    true,
         webkit:      true,
         chrome43:    strict,
@@ -16008,8 +16024,6 @@ exports.tests = [
         return map instanceof M && map.has(key) && map.get(key) === 123;
       */},
       res: {
-        typescript:  false,
-        safari9:     false,
         safaritp:    true,
         webkit:      true,
         chrome43:    strict,
@@ -16035,8 +16049,6 @@ exports.tests = [
         return set instanceof S && set.has(123);
       */},
       res: {
-        typescript:  false,
-        safari9:     false,
         safaritp:    true,
         webkit:      true,
         chrome43:    strict,
