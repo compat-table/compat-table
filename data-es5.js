@@ -1,3 +1,6 @@
+require('object.assign').shim();
+var temp = {};
+
 // exports browsers and tests
 exports.name = 'ES5';
 exports.target_file = 'es5/index.html';
@@ -1322,7 +1325,6 @@ exports.tests = [
   },
   {
     name: 'Zero-width chars in identifiers',
-    significance: 'tiny',
     exec: function () {/*
       var _\u200c\u200d = true;
       return _\u200c\u200d;
@@ -1355,7 +1357,6 @@ exports.tests = [
   },
   {
     name: 'Unreserved words',
-    significance: 'tiny',
     exec: function () {/*
       var abstract, boolean, byte, char, double, final, float, goto, int, long,
         native, short, synchronized, transient, volatile;
@@ -1382,7 +1383,6 @@ exports.tests = [
   },
   {
     name: 'Enumerable properties can be shadowed by non-enumerables',
-    significance: 'tiny',
     exec: function () {/*
       var result = true;
       Object.prototype.length = 42;
@@ -1443,47 +1443,191 @@ exports.tests = [
 {
   name: 'Strict mode',
   significance: 'large',
-  link: '../strict-mode/',
-  exec: function () {
-    "use strict";
-    return !this;
+  subtests: [
+  {
+    name: 'reserved words',
+    exec: function() {/*
+      'use strict';
+      var words = 'implements,interface,let,package,private,protected,public,static,yield'.split(',');
+      for (var i = 0; i < 9; i+=1) {
+        try { eval('var ' + words[i]); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      }
+      return true;
+    */},
+    res: (temp.strict = {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      safaritp: true,
+      webkit: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios78: true,
+      android41: true,
+    }),
   },
-  res: {
-    ie7: false,
-    ie8: false,
-    ie9: false,
-    ie10: {
-      val: true,
-      note_id: 'strict-mode-ie10',
-      note_html: 'IE10 PP2 has a bug with strict mode which makes the following expression "fail", even though strict mode is more or less supported: <code>(function(){ "use strict"; return !this })()</code>'
-    },
-    firefox3: false,
-    firefox3_5: false,
-    firefox4: true,
-    firefox21: {
-      val: true,
-      note_id: 'strict-mode-ff21',
-      note_html: 'In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).'
-    },
-    safari51: true,
-    safaritp: true,
-    webkit: true,
-    chrome5: false,
-    chrome6: false,
-    chrome7: false,
-    chrome13: true,
-    chrome19: true,
-    chrome23: true,
-    opera12: true,
-    konq43: false,
-    konq49: false,
-    konq413: false,
-    besen: true,
-    rhino: false,
-    phantom: true,
-    ejs: true,
-    ios78: true,
-    android41: true,
-  }
+  {
+    name: '"this" is undefined in functions',
+    exec: function() {/*
+      'use strict';
+      return this === undefined && (function(){ return this === undefined; }).call();
+    */},
+    res: Object.assign({}, temp.strict, {
+      ie10: {
+        val: true,
+        note_id: 'strict-mode-ie10',
+        note_html: 'IE10 PP2 fails this test.</code>'
+      }
+    }),
+  },
+  {
+    name: '"this" is not coerced to object in primitive methods',
+    exec: function() {/*
+      'use strict';
+      return (function(){ return typeof this === 'string' }).call('')
+        && (function(){ return typeof this === 'number' }).call(1)
+        && (function(){ return typeof this === 'boolean' }).call(true);
+    */},
+    res: Object.assign({}, temp.strict, {
+      firefox4: {
+        val: true,
+        note_id: 'strict-mode-ff21',
+        note_html: 'In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).'
+      },
+    }),
+  },
+  {
+    name: 'legacy octal is a SyntaxError',
+    exec: function() {/*
+      'use strict';
+      try { eval('010'); }     catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('"\\010"'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      return true;
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'assignment to unresolvable identifiers is a ReferenceError',
+    exec: function() {/*
+      'use strict';
+      try { eval('__i_dont_exist = 1'); } catch (err) { return err instanceof ReferenceError; }
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'assignment to eval or arguments is a SyntaxError',
+    exec: function() {/*
+      'use strict';
+      try { eval('eval = 1'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('arguments = 1'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('eval++'); }        catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('arguments++'); }   catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      return true;
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'assignment to non-writable properties is a TypeError',
+    exec: function() {/*
+      'use strict';
+      try { Object.defineProperty({},"x",{ writable: false }).x = 1 } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { Object.preventExtensions({}).x = 1 }                      catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { ({ get x(){ } }).x = 1; }                                 catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { (function f() { f = 123; })() }                           catch (err) { if (!(err instanceof TypeError)) return false; }
+      return true;
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'eval or arguments bindings is a SyntaxError',
+    exec: function() {/*
+      'use strict';
+      try { eval('var eval'); }                catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('var arguments'); }           catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('(function(eval){})'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('(function(arguments){})'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('try{}catch(eval){}'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('try{}catch(arguments){}'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      return true;
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'arguments.caller and arguments.callee is a TypeError',
+    exec: function() {/*
+      'use strict';
+      try { arguments.caller; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { arguments.callee; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      return true;
+    */},
+    res: temp.strict,
+  },
+  {
+    name: '(function(){}).caller and (function(){}).arguments is a TypeError',
+    exec: function() {/*
+      'use strict';
+      try { (function(){}).caller; }    catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { (function(){}).arguments; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      return true;
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'arguments is unmapped',
+    exec: function() {/*
+      'use strict';
+      return (function(x){
+        x = 2;
+        return arguments[0] === 1;
+      })(1) && (function(x){
+        arguments[0] = 2;
+        return x === 1;
+      })(1);
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'eval() can\'t create bindings',
+    exec: function() {/*
+      'use strict';
+      try { eval('var __some_unique_variable;'); __some_unique_variable; } catch (err) { return err instanceof ReferenceError; }
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'deleting bindings is a SyntaxError',
+    exec: function() {/*
+      'use strict';
+      try { eval('var x; delete x;'); } catch (err) { return err instanceof SyntaxError; }
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'deleting non-configurable properties is a TypeError',
+    exec: function() {/*
+      'use strict';
+      try { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }
+    */},
+    res: temp.strict,
+  },
+  {
+    name: '"with" is a SyntaxError',
+    exec: function() {/*
+      'use strict';
+      try { eval('with({}){}'); } catch (err) { return err instanceof SyntaxError; }
+    */},
+    res: temp.strict,
+  },
+  {
+    name: 'repeated parameter names is a SyntaxError',
+    exec: function() {/*
+      'use strict';
+      try { eval('function f(x, x) { }'); } catch (err) { return err instanceof SyntaxError; }
+    */},
+    res: temp.strict,
+  },]
 }
 ];

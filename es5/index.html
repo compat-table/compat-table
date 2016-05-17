@@ -2642,14 +2642,97 @@ catch(e) {
 <td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr significance="1"><td id="test-Strict_mode"><span><a class="anchor" href="#test-Strict_mode">&#xA7;</a><a href="../strict-mode/">Strict mode</a></span><script data-source="function () {
-&quot;use strict&quot;;
-return !this;
-  }">test(
-function () {
-"use strict";
-return !this;
-  }())</script></td>
+<tr class="supertest" significance="1"><td id="test-Strict_mode"><span><a class="anchor" href="#test-Strict_mode">&#xA7;</a>Strict mode</span></td>
+<td class="tally" data-browser="es5shim" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="ie7" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="ie8" data-tally="0">0/16</td>
+<td class="tally" data-browser="ie9" data-tally="0">0/16</td>
+<td class="tally" data-browser="ie10" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="firefox3" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="firefox3_5" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="firefox4" data-tally="1">16/16</td>
+<td class="tally" data-browser="firefox21" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="safari3" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="safari4" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="safari5" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="safari51" data-tally="1">16/16</td>
+<td class="tally" data-browser="safari6" data-tally="1">16/16</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">16/16</td>
+<td class="tally" data-browser="webkit" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="chrome5" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="chrome6" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="chrome7" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="chrome13" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="chrome19" data-tally="1">16/16</td>
+<td class="tally" data-browser="chrome23" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="opera10_10" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="opera10_50" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="opera12" data-tally="1">16/16</td>
+<td class="tally" data-browser="opera12_10" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="konq43" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="konq49" data-tally="0">0/16</td>
+<td class="tally" data-browser="konq413" data-tally="0">0/16</td>
+<td class="tally" data-browser="besen" data-tally="1">16/16</td>
+<td class="tally" data-browser="rhino" data-tally="0">0/16</td>
+<td class="tally" data-browser="phantom" data-tally="1">16/16</td>
+<td class="tally unstable" data-browser="ejs" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="android40" data-tally="0">0/16</td>
+<td class="tally obsolete" data-browser="android41" data-tally="1">16/16</td>
+<td class="tally" data-browser="android44" data-tally="1">16/16</td>
+<td class="tally" data-browser="ios78" data-tally="1">16/16</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_reserved_words"><td><span><a class="anchor" href="#test-Strict_mode_reserved_words">&#xA7;</a>reserved words</span><script data-source="
+&apos;use strict&apos;;
+var words = &apos;implements,interface,let,package,private,protected,public,static,yield&apos;.split(&apos;,&apos;);
+for (var i = 0; i &lt; 9; i+=1) {
+  try { eval(&apos;var &apos; + words[i]); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+}
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\n'use strict';\nvar words = 'implements,interface,let,package,private,protected,public,static,yield'.split(',');\nfor (var i = 0; i < 9; i+=1) {\n  try { eval('var ' + words[i]); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }\n}\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nvar words = 'implements,interface,let,package,private,protected,public,static,yield'.split(',');\nfor (var i = 0; i < 9; i+=1) {\n  try { eval('var ' + words[i]); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }\n}\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_this_is_undefined_in_functions"><td><span><a class="anchor" href="#test-Strict_mode_this_is_undefined_in_functions">&#xA7;</a>&quot;this&quot; is undefined in functions</span><script data-source="
+&apos;use strict&apos;;
+return this === undefined &amp;&amp; (function(){ return this === undefined; }).call();
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\n'use strict';\nreturn this === undefined && (function(){ return this === undefined; }).call();\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nreturn this === undefined && (function(){ return this === undefined; }).call();\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -2658,7 +2741,637 @@ return !this;
 <td class="no obsolete" data-browser="firefox3">No</td>
 <td class="no obsolete" data-browser="firefox3_5">No</td>
 <td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_this_is_not_coerced_to_object_in_primitive_methods"><td><span><a class="anchor" href="#test-Strict_mode_this_is_not_coerced_to_object_in_primitive_methods">&#xA7;</a>&quot;this&quot; is not coerced to object in primitive methods</span><script data-source="
+&apos;use strict&apos;;
+return (function(){ return typeof this === &apos;string&apos; }).call(&apos;&apos;)
+  &amp;&amp; (function(){ return typeof this === &apos;number&apos; }).call(1)
+  &amp;&amp; (function(){ return typeof this === &apos;boolean&apos; }).call(true);
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");try{return Function("asyncTestPassed","\n'use strict';\nreturn (function(){ return typeof this === 'string' }).call('')\n  && (function(){ return typeof this === 'number' }).call(1)\n  && (function(){ return typeof this === 'boolean' }).call(true);\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("59");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nreturn (function(){ return typeof this === 'string' }).call('')\n  && (function(){ return typeof this === 'number' }).call(1)\n  && (function(){ return typeof this === 'boolean' }).call(true);\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes<a href="#strict-mode-ff21-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="firefox21">Yes<a href="#strict-mode-ff21-note"><sup>[8]</sup></a></td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_legacy_octal_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_legacy_octal_is_a_SyntaxError">&#xA7;</a>legacy octal is a SyntaxError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;010&apos;); }     catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;&quot;\\010&quot;&apos;); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('010'); }     catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('\"\\\\010\"'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('010'); }     catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('\"\\\\010\"'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_assignment_to_unresolvable_identifiers_is_a_ReferenceError"><td><span><a class="anchor" href="#test-Strict_mode_assignment_to_unresolvable_identifiers_is_a_ReferenceError">&#xA7;</a>assignment to unresolvable identifiers is a ReferenceError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;__i_dont_exist = 1&apos;); } catch (err) { return err instanceof ReferenceError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('__i_dont_exist = 1'); } catch (err) { return err instanceof ReferenceError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("61");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('__i_dont_exist = 1'); } catch (err) { return err instanceof ReferenceError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_assignment_to_eval_or_arguments_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_assignment_to_eval_or_arguments_is_a_SyntaxError">&#xA7;</a>assignment to eval or arguments is a SyntaxError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;eval = 1&apos;); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;arguments = 1&apos;); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;eval++&apos;); }        catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;arguments++&apos;); }   catch (err) { if (!(err instanceof SyntaxError)) return false; }
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('eval = 1'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('arguments = 1'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('eval++'); }        catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('arguments++'); }   catch (err) { if (!(err instanceof SyntaxError)) return false; }\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("62");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('eval = 1'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('arguments = 1'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('eval++'); }        catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('arguments++'); }   catch (err) { if (!(err instanceof SyntaxError)) return false; }\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_assignment_to_non-writable_properties_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_assignment_to_non-writable_properties_is_a_TypeError">&#xA7;</a>assignment to non-writable properties is a TypeError</span><script data-source="
+&apos;use strict&apos;;
+try { Object.defineProperty({},&quot;x&quot;,{ writable: false }).x = 1 } catch (err) { if (!(err instanceof TypeError)) return false; }
+try { Object.preventExtensions({}).x = 1 }                      catch (err) { if (!(err instanceof TypeError)) return false; }
+try { ({ get x(){ } }).x = 1; }                                 catch (err) { if (!(err instanceof TypeError)) return false; }
+try { (function f() { f = 123; })() }                           catch (err) { if (!(err instanceof TypeError)) return false; }
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("63");try{return Function("asyncTestPassed","\n'use strict';\ntry { Object.defineProperty({},\"x\",{ writable: false }).x = 1 } catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { Object.preventExtensions({}).x = 1 }                      catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { ({ get x(){ } }).x = 1; }                                 catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { (function f() { f = 123; })() }                           catch (err) { if (!(err instanceof TypeError)) return false; }\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("63");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { Object.defineProperty({},\"x\",{ writable: false }).x = 1 } catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { Object.preventExtensions({}).x = 1 }                      catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { ({ get x(){ } }).x = 1; }                                 catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { (function f() { f = 123; })() }                           catch (err) { if (!(err instanceof TypeError)) return false; }\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_eval_or_arguments_bindings_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_eval_or_arguments_bindings_is_a_SyntaxError">&#xA7;</a>eval or arguments bindings is a SyntaxError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;var eval&apos;); }                catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;var arguments&apos;); }           catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;(function(eval){})&apos;); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;(function(arguments){})&apos;); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;try{}catch(eval){}&apos;); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
+try { eval(&apos;try{}catch(arguments){}&apos;); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('var eval'); }                catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('var arguments'); }           catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('(function(eval){})'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('(function(arguments){})'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('try{}catch(eval){}'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('try{}catch(arguments){}'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("64");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('var eval'); }                catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('var arguments'); }           catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('(function(eval){})'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('(function(arguments){})'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('try{}catch(eval){}'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }\ntry { eval('try{}catch(arguments){}'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_arguments.caller_and_arguments.callee_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_arguments.caller_and_arguments.callee_is_a_TypeError">&#xA7;</a>arguments.caller and arguments.callee is a TypeError</span><script data-source="
+&apos;use strict&apos;;
+try { arguments.caller; } catch (err) { if (!(err instanceof TypeError)) return false; }
+try { arguments.callee; } catch (err) { if (!(err instanceof TypeError)) return false; }
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\n'use strict';\ntry { arguments.caller; } catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { arguments.callee; } catch (err) { if (!(err instanceof TypeError)) return false; }\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { arguments.caller; } catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { arguments.callee; } catch (err) { if (!(err instanceof TypeError)) return false; }\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_(function(){}).caller_and_(function(){}).arguments_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_(function(){}).caller_and_(function(){}).arguments_is_a_TypeError">&#xA7;</a>(function(){}).caller and (function(){}).arguments is a TypeError</span><script data-source="
+&apos;use strict&apos;;
+try { (function(){}).caller; }    catch (err) { if (!(err instanceof TypeError)) return false; }
+try { (function(){}).arguments; } catch (err) { if (!(err instanceof TypeError)) return false; }
+return true;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\n'use strict';\ntry { (function(){}).caller; }    catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { (function(){}).arguments; } catch (err) { if (!(err instanceof TypeError)) return false; }\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { (function(){}).caller; }    catch (err) { if (!(err instanceof TypeError)) return false; }\ntry { (function(){}).arguments; } catch (err) { if (!(err instanceof TypeError)) return false; }\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_arguments_is_unmapped"><td><span><a class="anchor" href="#test-Strict_mode_arguments_is_unmapped">&#xA7;</a>arguments is unmapped</span><script data-source="
+&apos;use strict&apos;;
+return (function(x){
+  x = 2;
+  return arguments[0] === 1;
+})(1) &amp;&amp; (function(x){
+  arguments[0] = 2;
+  return x === 1;
+})(1);
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");try{return Function("asyncTestPassed","\n'use strict';\nreturn (function(x){\n  x = 2;\n  return arguments[0] === 1;\n})(1) && (function(x){\n  arguments[0] = 2;\n  return x === 1;\n})(1);\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("67");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nreturn (function(x){\n  x = 2;\n  return arguments[0] === 1;\n})(1) && (function(x){\n  arguments[0] = 2;\n  return x === 1;\n})(1);\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_eval()_can&apos;t_create_bindings"><td><span><a class="anchor" href="#test-Strict_mode_eval()_can&apos;t_create_bindings">&#xA7;</a>eval() can&apos;t create bindings</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;var __some_unique_variable;&apos;); __some_unique_variable; } catch (err) { return err instanceof ReferenceError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('var __some_unique_variable;'); __some_unique_variable; } catch (err) { return err instanceof ReferenceError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('var __some_unique_variable;'); __some_unique_variable; } catch (err) { return err instanceof ReferenceError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_deleting_bindings_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_deleting_bindings_is_a_SyntaxError">&#xA7;</a>deleting bindings is a SyntaxError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;var x; delete x;&apos;); } catch (err) { return err instanceof SyntaxError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("69");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('var x; delete x;'); } catch (err) { return err instanceof SyntaxError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("69");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('var x; delete x;'); } catch (err) { return err instanceof SyntaxError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_deleting_non-configurable_properties_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_deleting_non-configurable_properties_is_a_TypeError">&#xA7;</a>deleting non-configurable properties is a TypeError</span><script data-source="
+&apos;use strict&apos;;
+try { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\n'use strict';\ntry { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_with_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_with_is_a_SyntaxError">&#xA7;</a>&quot;with&quot; is a SyntaxError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;with({}){}&apos;); } catch (err) { return err instanceof SyntaxError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('with({}){}'); } catch (err) { return err instanceof SyntaxError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("71");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('with({}){}'); } catch (err) { return err instanceof SyntaxError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="no obsolete" data-browser="safari4">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="yes obsolete" data-browser="safari51">Yes</td>
+<td class="yes" data-browser="safari6">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome5">No</td>
+<td class="no obsolete" data-browser="chrome6">No</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="yes obsolete" data-browser="chrome13">Yes</td>
+<td class="yes obsolete" data-browser="chrome19">Yes</td>
+<td class="yes" data-browser="chrome23">Yes</td>
+<td class="no obsolete" data-browser="opera10_10">No</td>
+<td class="no obsolete" data-browser="opera10_50">No</td>
+<td class="yes obsolete" data-browser="opera12">Yes</td>
+<td class="yes" data-browser="opera12_10">Yes</td>
+<td class="no obsolete" data-browser="konq43">No</td>
+<td class="no obsolete" data-browser="konq49">No</td>
+<td class="no" data-browser="konq413">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="no" data-browser="rhino">No</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="yes obsolete" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android44">Yes</td>
+<td class="yes" data-browser="ios78">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_repeated_parameter_names_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_repeated_parameter_names_is_a_SyntaxError">&#xA7;</a>repeated parameter names is a SyntaxError</span><script data-source="
+&apos;use strict&apos;;
+try { eval(&apos;function f(x, x) { }&apos;); } catch (err) { return err instanceof SyntaxError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("72");try{return Function("asyncTestPassed","\n'use strict';\ntry { eval('function f(x, x) { }'); } catch (err) { return err instanceof SyntaxError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("72");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { eval('function f(x, x) { }'); } catch (err) { return err instanceof SyntaxError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="es5shim">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no" data-browser="ie9">No</td>
+<td class="yes" data-browser="ie10">Yes</td>
+<td class="no obsolete" data-browser="firefox3">No</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="yes obsolete" data-browser="firefox4">Yes</td>
+<td class="yes" data-browser="firefox21">Yes</td>
 <td class="no obsolete" data-browser="safari3">No</td>
 <td class="no obsolete" data-browser="safari4">No</td>
 <td class="no obsolete" data-browser="safari5">No</td>
@@ -2692,7 +3405,7 @@ return !this;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="sparse_arrays-note">  <sup>[4]</sup> Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays.</p><p id="Date.prototype.toJSON-OP11_60-OP11_64-note">  <sup>[5]</sup> In Opera 11.60-11.64 Date.prototype.toJSON is undefined.</p><p id="zero-width-char-note">  <sup>[6]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[7]</sup> IE10 PP2 has a bug with strict mode which makes the following expression &quot;fail&quot;, even though strict mode is more or less supported: <code>(function(){ &quot;use strict&quot;; return !this })()</code></p><p id="strict-mode-ff21-note">  <sup>[8]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
+    <p><p id="define-property-ie-note">  <sup>[1]</sup> In Internet Explorer 8 <code>Object.defineProperty</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="define-property-webkit-note">  <sup>[2]</sup> In some versions of Safari 5, <code>Object.defineProperty</code> does <b>not</b> work with DOM objects.</p><p id="get-own-property-descriptor-ie-note">  <sup>[3]</sup> In Internet Explorer 8 <code>Object.getOwnPropertyDescriptor</code> only accepts DOM objects (<a href="http://msdn.microsoft.com/en-us/library/dd548687(VS.85).aspx">MSDN reference</a>).</p><p id="sparse_arrays-note">  <sup>[4]</sup> Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays.</p><p id="Date.prototype.toJSON-OP11_60-OP11_64-note">  <sup>[5]</sup> In Opera 11.60-11.64 Date.prototype.toJSON is undefined.</p><p id="zero-width-char-note">  <sup>[6]</sup> Firefox 4 &amp; 5 fail this test</p><p id="strict-mode-ie10-note">  <sup>[7]</sup> IE10 PP2 fails this test.</p><p id="strict-mode-ff21-note">  <sup>[8]</sup> In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).</p></p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
