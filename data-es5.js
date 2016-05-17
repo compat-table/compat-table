@@ -1609,7 +1609,7 @@ exports.tests = [
     name: 'deleting non-configurable properties is a TypeError',
     exec: function() {/*
       'use strict';
-      try { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }
+      try { delete Object.prototype; } catch (err) { return err instanceof TypeError; }
     */},
     res: temp.strict,
   },

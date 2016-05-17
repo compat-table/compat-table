@@ -3274,8 +3274,8 @@ try { eval(&apos;var x; delete x;&apos;); } catch (err) { return err instanceof 
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_deleting_non-configurable_properties_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_deleting_non-configurable_properties_is_a_TypeError">&#xA7;</a>deleting non-configurable properties is a TypeError</span><script data-source="
 &apos;use strict&apos;;
-try { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\n'use strict';\ntry { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { delete (function(){}).prototype; } catch (err) { return err instanceof TypeError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+try { delete Object.prototype; } catch (err) { return err instanceof TypeError; }
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\n'use strict';\ntry { delete Object.prototype; } catch (err) { return err instanceof TypeError; }\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry { delete Object.prototype; } catch (err) { return err instanceof TypeError; }\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>
