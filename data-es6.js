@@ -8877,7 +8877,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         safaritp:    false,
-        webkit:      true,
+        webkit:      false,
       },
     },
     {
@@ -13430,7 +13430,7 @@ exports.tests = [
         xs6:         true,
         jxa:         true,
         safaritp:    false,
-        webkit:      true,
+        webkit:      false,
       },
     },
     {
