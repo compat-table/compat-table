@@ -1452,7 +1452,7 @@ exports.tests = [
 },
 {
   name: 'String padding',
-  category: 'candidate (stage 3)',
+  category: 'finished (stage 4)',
   significance: 'small',
   link: 'https://github.com/tc39/proposal-string-pad-start-end',
   subtests: [
