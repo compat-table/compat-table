@@ -519,7 +519,7 @@ exports.tests = [
 {
   name: 'Object.values',
   link: 'https://github.com/ljharb/proposal-object-values-entries',
-  category: 'finished (stage 4)',
+  category: '2017 features',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
@@ -540,7 +540,7 @@ exports.tests = [
 {
   name: 'Object.entries',
   link: 'https://github.com/ljharb/proposal-object-values-entries',
-  category: 'finished (stage 4)',
+  category: '2017 features',
   significance: 'small',
   exec: function () {/*
     var obj = Object.create({ a: "qux", d: "qux" });
@@ -2953,7 +2953,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 misc', '2017 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', 'finished (stage 4)', 'candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
