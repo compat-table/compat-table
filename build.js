@@ -341,8 +341,13 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   // be used by interpolateResults(). All other uses should use this, which filters
   // the very obsolete ones out.
   var browsers = Object.keys(rawBrowsers).reduce(function(obj,e) {
-    if (rawBrowsers[e].obsolete !== "very") {
-      obj[e] = rawBrowsers[e];
+    var browser = rawBrowsers[e];
+    if (browser.obsolete !== "very") {
+      obj[e] = browser;
+    }
+    // Even if it's very obsolete, include its footnote if it has one
+    else if (browser.note_html && browser.note_id) {
+      footnoteIndex[browser.note_id] = browser.note_html;
     }
     return obj;
   },{});
