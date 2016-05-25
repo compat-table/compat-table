@@ -7396,6 +7396,8 @@ exports.tests = [
   category: 'built-ins',
   significance: 'large',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  note_id: 'proxy-enumerate',
+  note_html: 'The 2015 version of the specification also specifies an <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots-enumerate">"enumerate" handler</a>, which was removed in the 2016 version.',
   subtests: [
     {
       name: 'constructor requires new',
@@ -9680,6 +9682,8 @@ exports.tests = [
   category: 'built-ins',
   significance: 'small',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
+  note_id: 'reflect-enumerate',
+  note_html: 'The 2015 version of the specification also specifies <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.enumerate">Reflect.enumerate</a>, which was removed in the 2016 version.',
   subtests: [
     {
       name: 'Reflect.get',
@@ -13386,9 +13390,9 @@ exports.tests = [
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols',
   note_id: 'symbol-iterator-functionality',
   note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
-    + 'the <a href="#spread_(...)_operator">spread (...) operator</a>, <a href="#for..of_loops">for..of loops</a>, '
-    + '<a href="#destructuring">destructuring</a>, <a href="#generators">yield *</a>, '
-    + 'and <a href="#Array_static_methods">Array.from</a>.',
+    + 'the <a href="#test-spread_(...)_operator">spread (...) operator</a>, <a href="#test-for..of_loops">for..of loops</a>, '
+    + '<a href="#test-destructuring">destructuring</a>, <a href="#test-generators">yield *</a>, '
+    + 'and <a href="#test-Array_static_methods">Array.from</a>.',
   subtests: [
     {
       name: 'Symbol.hasInstance',
