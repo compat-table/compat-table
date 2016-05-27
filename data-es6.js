@@ -443,7 +443,7 @@ exports.browsers = {
     short: 'SF 9',
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 4',
+    full: 'Safari Technology Preview Release 5',
     short: 'SF TP',
     unstable: true
   },
@@ -9082,6 +9082,7 @@ exports.tests = [
         chrome50:    true,
         xs6:         true,
         ejs:         true,
+        safaritp:    true,
         webkit:      true,
       },
     },

@@ -306,7 +306,7 @@ exports.browsers = {
     obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 4',
+    full: 'Safari Technology Preview Release 5',
     short: 'SF TP',
     unstable: true
   },
