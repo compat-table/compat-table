@@ -311,7 +311,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'WebKit r200167 (April 28, 2016)',
+    full: 'WebKit r201494 (May 29, 2016)',
     short: 'WK',
     unstable: true,
   },
@@ -665,6 +665,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         edge14:      true,
+        webkit:      true,
       }
     },
     {
@@ -676,6 +677,7 @@ exports.tests = [
         babel:       true,
         typescript:  true,
         edge14:      true,
+        webkit:      true,
       }
     },
   ],
