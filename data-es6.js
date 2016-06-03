@@ -12756,7 +12756,7 @@ exports.tests = [
         return typeof String.prototype.startsWith === 'function'
           && "foobar".startsWith("foo");
       */},
-      res: {
+      res: (temp.startsWith = {
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
@@ -12774,7 +12774,22 @@ exports.tests = [
         node4:       true,
         xs6:         true,
         jxa:         true,
-      },
+      }),
+    },
+    {
+      name: 'String.prototype.startsWith throws on RegExp',
+      exec: function () {/*
+        try {
+          "a".startsWith(/./);
+        } catch(e) {
+          return typeof String.prototype.startsWith === 'function';
+      */},
+      res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
+        firefox17:   false,
+        firefox40:   true,
+        chrome30:    false,
+        chrome34:    flag,
+      })),
     },
     {
       name: 'String.prototype.endsWith',
@@ -12782,25 +12797,17 @@ exports.tests = [
         return typeof String.prototype.endsWith === 'function'
           && "foobar".endsWith("bar");
       */},
-      res: {
-        tr:          true,
-        babel:       true,
-        typescript:  typescript.corejs,
-        closure:     true,
-        ejs:         true,
-        es6shim:     true,
-        edge12:      true,
-        firefox17:   true,
-        chrome30:    flag,
-        chrome41:    true,
-        safari9:     true,
-        safaritp:    true,
-        webkit:      true,
-        node012:     flag,
-        node4:       true,
-        xs6:         true,
-        jxa:         true,
-      },
+      res: temp.startsWith,
+    },
+    {
+      name: 'String.prototype.endsWith throws on RegExp',
+      exec: function () {/*
+        try {
+          "a".endsWith(/./);
+        } catch(e) {
+          return typeof String.prototype.startsWith === 'function';
+      */},
+      res: temp.startsWith,
     },
     {
       name: 'String.prototype.includes',
