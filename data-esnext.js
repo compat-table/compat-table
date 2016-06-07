@@ -736,7 +736,7 @@ exports.tests = [
 {
   name: 'Object.getOwnPropertyDescriptors',
   link: 'https://github.com/tc39/proposal-object-getownpropertydescriptors',
-  category: 'finished (stage 4)',
+  category: '2017 features',
   significance: 'small',
   exec: function () {/*
     var object = {a: 1};
