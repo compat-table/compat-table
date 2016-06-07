@@ -40612,8 +40612,8 @@ return typeof String.prototype.endsWith === &apos;function&apos;
 try {
   &quot;a&quot;.endsWith(/./);
 } catch(e) {
-  return typeof String.prototype.startsWith === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("501");try{return Function("asyncTestPassed","\ntry {\n  \"a\".endsWith(/./);\n} catch(e) {\n  return typeof String.prototype.startsWith === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("501");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  \"a\".endsWith(/./);\n} catch(e) {\n  return typeof String.prototype.startsWith === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  return typeof String.prototype.endsWith === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("501");try{return Function("asyncTestPassed","\ntry {\n  \"a\".endsWith(/./);\n} catch(e) {\n  return typeof String.prototype.endsWith === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("501");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  \"a\".endsWith(/./);\n} catch(e) {\n  return typeof String.prototype.endsWith === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>

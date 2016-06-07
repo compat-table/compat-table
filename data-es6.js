@@ -12805,7 +12805,7 @@ exports.tests = [
         try {
           "a".endsWith(/./);
         } catch(e) {
-          return typeof String.prototype.startsWith === 'function';
+          return typeof String.prototype.endsWith === 'function';
       */},
       res: temp.startsWith,
     },
