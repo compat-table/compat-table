@@ -1628,6 +1628,27 @@ exports.tests = [
       try { eval('function f(x, x) { }'); } catch (err) { return err instanceof SyntaxError; }
     */},
     res: temp.strict,
-  },]
+  },
+  {
+    name: 'function expressions with matching name and argument are valid',
+    exec: function() {/*
+      var foo = function bar(bar) {'use strict'};
+      return typeof foo === 'function';
+    */},
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: false,
+      safaritp: false,
+      webkit: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios78: true,
+      android41: true,
+    }
+  }]
 }
 ];
