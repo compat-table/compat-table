@@ -55,7 +55,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20160315',
+    full: 'Closure Compiler v20160517',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -917,7 +917,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       false,
-        closure:     true,
+        closure:     false,
         es6tr:       true,
         jsx:         true,
         typescript:  true,
@@ -2749,6 +2749,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  true,
         es6tr:       true,
         ejs:         true,
@@ -2777,6 +2778,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  true,
         jsx:         true,
         es6tr:       true,
@@ -3329,6 +3331,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        closure:     true,
         node4:       strict,
         chrome41:    strict,
         chrome49:    true,
@@ -11061,6 +11064,7 @@ exports.tests = [
       res: {
         tr:           true,
         babel:        true,
+        closure:      true,
         typescript:   true,
         edge13:       flag,
         edge14:       true,
