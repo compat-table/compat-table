@@ -2235,56 +2235,6 @@ try {
 <td class="yes" data-browser="android44">Yes</td>
 <td class="yes" data-browser="ios78">Yes</td>
 </tr>
-<tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Date.parse_produces_NaN_for_invalid_dates"><td><span><a class="anchor" href="#test-Miscellaneous_Date.parse_produces_NaN_for_invalid_dates">&#xA7;</a>Date.parse produces NaN for invalid dates</span><script data-source="function () {
-var brokenOnFirefox = !isNaN(Date.parse(&apos;2012-04-04T24:00:00.500Z&apos;));
-var brokenOnIE10 = !isNaN(Date.parse(&apos;2012-12-31T24:01:00.000Z&apos;));
-var brokenOnChrome = !isNaN(Date.parse(&apos;2011-02-29T12:00:00.000Z&apos;));
-return !brokenOnFirefox &amp;&amp; !brokenOnIE10 &amp;&amp; !brokenOnChrome;
-    }">test(
-function () {
-var brokenOnFirefox = !isNaN(Date.parse('2012-04-04T24:00:00.500Z'));
-var brokenOnIE10 = !isNaN(Date.parse('2012-12-31T24:01:00.000Z'));
-var brokenOnChrome = !isNaN(Date.parse('2011-02-29T12:00:00.000Z'));
-return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
-    }())</script></td>
-<td class="yes" data-browser="es5shim">Yes</td>
-<td class="no obsolete" data-browser="ie7">No</td>
-<td class="no obsolete" data-browser="ie8">No</td>
-<td class="no" data-browser="ie9">No</td>
-<td class="no" data-browser="ie10">No</td>
-<td class="yes obsolete" data-browser="firefox3">Yes</td>
-<td class="yes obsolete" data-browser="firefox3_5">Yes</td>
-<td class="no obsolete" data-browser="firefox4">No</td>
-<td class="no" data-browser="firefox21">No</td>
-<td class="no obsolete" data-browser="safari3">No</td>
-<td class="yes obsolete" data-browser="safari4">Yes</td>
-<td class="yes obsolete" data-browser="safari5">Yes</td>
-<td class="yes obsolete" data-browser="safari51">Yes</td>
-<td class="yes" data-browser="safari6">Yes</td>
-<td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="yes" data-browser="webkit">Yes</td>
-<td class="no obsolete" data-browser="chrome5">No</td>
-<td class="no obsolete" data-browser="chrome6">No</td>
-<td class="no obsolete" data-browser="chrome7">No</td>
-<td class="no obsolete" data-browser="chrome13">No</td>
-<td class="no obsolete" data-browser="chrome19">No</td>
-<td class="no" data-browser="chrome23">No</td>
-<td class="yes obsolete" data-browser="opera10_10">Yes</td>
-<td class="yes obsolete" data-browser="opera10_50">Yes</td>
-<td class="yes obsolete" data-browser="opera12">Yes</td>
-<td class="yes" data-browser="opera12_10">Yes</td>
-<td class="yes obsolete" data-browser="konq43">Yes</td>
-<td class="yes obsolete" data-browser="konq49">Yes</td>
-<td class="yes" data-browser="konq413">Yes</td>
-<td class="yes" data-browser="besen">Yes</td>
-<td class="yes" data-browser="rhino">Yes</td>
-<td class="yes" data-browser="phantom">Yes</td>
-<td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes obsolete" data-browser="android40">Yes</td>
-<td class="yes obsolete" data-browser="android41">Yes</td>
-<td class="no" data-browser="android44">No</td>
-<td class="yes" data-browser="ios78">Yes</td>
-</tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Function.prototype.apply_permits_array-likes"><td><span><a class="anchor" href="#test-Miscellaneous_Function.prototype.apply_permits_array-likes">&#xA7;</a>Function.prototype.apply permits array-likes</span><script data-source="function () {
 return (function(a,b) { return a === 1 &amp;&amp; b === 2; }).apply({}, {0:1, 1:2, length:2});
     }">test(
