@@ -197,37 +197,37 @@ exports.browsers = {
   chrome33: {
     full: 'Chrome',
     short: 'CH 33',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome34: {
     full: 'Chrome',
     short: 'CH 34',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome35: {
     full: 'Chrome',
     short: 'CH 35',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome37: {
     full: 'Chrome',
     short: 'CH 37',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome38: {
     full: 'Chrome',
     short: 'CH 38',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome39: {
     full: 'Chrome',
     short: 'CH 39',
-    obsolete: true,
+    obsolete: very,
     note_id: 'experimental-flag',
   },
   chrome40: {
@@ -2951,6 +2951,22 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets',
+  category: '2017 misc',
+  significance: 'tiny',
+  link: 'https://github.com/tc39/ecma262/pull/594',
+  exec: function() {/*
+      var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, "b", {value:1})), {
+        ownKeys: function() {
+          return ['a','a','b','b'];
+        }
+      });
+      return Object.getOwnPropertyNames(P) + '' === "a,a,b,b";
+    */},
+    res: {
+    },
+  },
 ];
 
 //Shift annex B features to the bottom
