@@ -12787,6 +12787,7 @@ exports.tests = [
           "a".startsWith(/./);
         } catch(e) {
           return typeof String.prototype.startsWith === 'function';
+        }
       */},
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17:   false,
@@ -12810,6 +12811,7 @@ exports.tests = [
           "a".endsWith(/./);
         } catch(e) {
           return typeof String.prototype.endsWith === 'function';
+        }
       */},
       res: temp.startsWith,
     },
